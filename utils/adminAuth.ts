@@ -1,6 +1,6 @@
 // Admin authentication utilities (framework-agnostic minimal types)
 export type ApiRequest = {
-  headers: Record<string, string | string[] | undefined>;
+  headers: Record<string string | string[] | undefined>;
   [key: string]: any;
 };
 
@@ -31,16 +31,13 @@ const adminUsers: AdminUser[] = [
     email: 'admin@ziontechgroup.com',
     role: 'super_admin',
     permissions: ['*'],
-    lastLogin: new Date(),
-  },
+    lastLogin: new Date()},
   {
     id: 'admin_2',
     email: 'moderator@ziontechgroup.com',
     role: 'moderator',
     permissions: ['content_moderation', 'user_management'],
-    lastLogin: new Date(),
-  },
-];
+    lastLogin: new Date()}];
 
 export function createAdminSession(user: AdminUser, token: string): AdminSession {
   return {

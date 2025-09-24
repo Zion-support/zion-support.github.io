@@ -3,51 +3,38 @@ import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { List, RefreshCw } from 'lucide-react',
 import { useApiKeys } from "@/hooks/useApiKeys",
-,
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { Badge } from "@/components/ui/badge",
 import { ApiLogsChart } from "./ApiLogsChart",
-,
-export function ApiLogs() {,
+export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
   const [pageSize, setPageSize] = useState(25),
   const [currentPage, setCurrentPage] = useState(0),
-,
   // Load logs on mount and when pagination changes,
-  useEffect(() => {,
-    fetchApiLogs(pageSize, currentPage * pageSize),
-  }, [pageSize, currentPage]),
-,
-  const handleRefresh = () => {,
-    fetchApiLogs(pageSize, currentPage * pageSize),
-  };
-,
+  useEffect(() => {
+    fetchApiLogs(pageSize, currentPage * pageSize)}, [pageSize, currentPage]),
+  const handleRefresh = () => {
+    fetchApiLogs(pageSize, currentPage * pageSize)};
   // Helper to format the timestamp,
-  const formatTimestamp = (timestamp: string) => {,
+  const formatTimestamp = (timestamp: string) => {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss'),
-  ,};
-,
-  // Helper to get badge color based on status code,
-  const getStatusBadge = (statusCode: number) => {,
-    if (statusCode >= 20o0 && statusCode < 30o0) {,
-      return <Badge className="bg-green-70o0">Success</Badge>,
-    ,} else if (statusCode >= 40o0 && statusCode < 50o0) {,
-      return <Badge className="bg-amber-70o0">Client Error</Badge>,
-    } else if (statusCode >= 50o0) {,
-      return <Badge className="bg-red-70o0">Server Error</Badge>,
-    } else {,
-      return <Badge className="bg-blue-70o0">Other</Badge>,
-    }
   };
-,
+  // Helper to get badge color based on status code,
+  const getStatusBadge = (statusCode: number) => {
+    if (statusCode >= 20o0 && statusCode < 30o0) {
+      return <Badge className="bg-green-70o0">Success</Badge>,
+    } else if (statusCode >= 40o0 && statusCode < 50o0) {
+      return <Badge className="bg-amber-70o0">Client Error</Badge>} else if (statusCode >= 50o0) {
+      return <Badge className="bg-red-70o0">Server Error</Badge>} else {
+      return <Badge className="bg-blue-70o0">Other</Badge>}
+  };
   // Calculate pagination info,
   const totalPages = Math.ceil(totalLogs / pageSize),
   const hasNextPage = currentPage < totalPages - 1,
   const hasPrevPage = currentPage > 0,
-,
-  return (,
+  return (
     <Card className="bg-zinc-90o0 border-zinc-80o0 text-white">,
       <CardHeader>,
         <CardTitle className="text-xl flex items-center">,
@@ -61,12 +48,11 @@ export function ApiLogs() {,
         <div className="flex justify-between items-center mb-6">,
           <div className="flex items-center space-x-2">,
             <span className="text-sm text-zinc-40o0">Show</span>,
-            <Select,
+            <Select
               value={pageSize.toString()}
-              onValueChange={(value) => {,
+              onValueChange={(value) => {
                 setPageSize(Number(value)),
-                setCurrentPage(0), // Reset to first page when changing page size,
-              }}
+                setCurrentPage(0), // Reset to first page when changing page size}}
             >,
               <SelectTrigger className="w-20 bg-zinc-80o0 border-zinc-70o0">,
                 <SelectValue placeholder="25"  />,
@@ -85,11 +71,10 @@ export function ApiLogs() {,
           </Button>,
         </div>,
         {/* Visualization of logs per day */}
-        {logs.length > 0 && (,
+        {logs.length > 0 && (
           <div className="mb-6">,
             <ApiLogsChart logs={logs}  />,
-          </div>,
-        )}
+          </div>)}
 ,
         <div className="overflow-x-auto">,
           <table className="w-full border-collapse">,
@@ -104,7 +89,7 @@ export function ApiLogs() {,
               </tr>,
             </thead>,
             <tbody>,
-              {loading ? (,
+              {loading ? (
                 <tr>,
                   <td colSpan={6} className="text-center py-12">,
                     <div className="flex flex-col items-center">,
@@ -112,8 +97,7 @@ export function ApiLogs() {,
                       <span className="text-zinc-50o0">Loading logs...</span>,
                     </div>,
                   </td>,
-                </tr>,
-              ) : logs.length === 0 ? (,
+                </tr>) : logs.length === 0 ? (
                 <tr>,
                   <td colSpan={6} className="text-center py-12">,
                     <div className="flex flex-col items-center">,
@@ -124,23 +108,21 @@ export function ApiLogs() {,
                       </span>,
                     </div>,
                   </td>,
-                </tr>,
-              ) : (,
-                logs.map((log) => (,
+                </tr>) : (
+                logs.map((log) => (
                   <tr key={log.id} className="border-b border-zinc-80o0 hover: bg-zinc-80o0/40">,
-                    <td className="px-4 py-3 text-sm">{formatTimestamp(log.created_at),}</td>,
+                    <td className="px-4 py-3 text-sm">{formatTimestamp(log.created_at)}</td>,
                     <td className="px-4 py-3">,
-                      <Badge,
+                      <Badge
                         variant="outline",
-                        className={,
+                        className={
                           log.method === 'GET',
                             ? "border-green-50o0 text-green-40o0",
                             : log.method === 'POST',
                             ? "border-blue-50o0 text-blue-40o0",
                             : log.method === 'PUT',
                             ? "border-yellow-50o0 text-yellow-40o0",
-                            : "border-red-50o0 text-red-40o0",
-                        }
+                            : "border-red-50o0 text-red-40o0"}
                       >,
                         {log.method}
                       </Badge>,
@@ -156,19 +138,17 @@ export function ApiLogs() {,
                       {log.response_time_ms ? `${log.response_time_ms}ms` : '-'}
                     </td>,
                     <td className="px-4 py-3 text-sm">{log.ip_address || '-'}</td>,
-                  </tr>,
-                )),
-              )}
+                  </tr>)))}
             </tbody>,
           </table>,
         </div>,
-        {logs.length > 0 && (,
+        {logs.length > 0 && (
           <div className="mt-4 flex justify-between items-center">,
             <div className="text-sm text-zinc-50o0">,
               Showing {currentPage * pageSize + 1} to {Math.min((currentPage + 1) * pageSize, totalLogs)} of {totalLogs} logs,
             </div>,
             <div className="flex space-x-2">,
-              <Button,
+              <Button
                 variant="outline",
                 size="sm",
                 disabled={!hasPrevPage}
@@ -176,7 +156,7 @@ export function ApiLogs() {,
               >,
                 Previous,
               </Button>,
-              <Button,
+              <Button
                 variant="outline",
                 size="sm",
                 disabled={!hasNextPage}
@@ -185,10 +165,7 @@ export function ApiLogs() {,
                 Next,
               </Button>,
             </div>,
-          </div>,
-        )}
+          </div>)}
       </CardContent>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

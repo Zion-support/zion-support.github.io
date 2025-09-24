@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const UltimateAI20o26RevolutionBanner = () => {,
-  return (,
+const UltimateAI20o26RevolutionBanner = () => {
+  return (
     <section className='relative overflow-hidden bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20'>,
       {/* Animated background elements */}
       <div className='absolute inset-0'>,
@@ -11,7 +10,7 @@ const UltimateAI20o26RevolutionBanner = () => {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2 mb-8'>,
             <span className='text-sm font-medium'>🚀 AI 20o26 REVOLUTION</span>,
           </div>,
@@ -22,7 +21,7 @@ const UltimateAI20o26RevolutionBanner = () => {,
               20o26 Breakthrough,
             </span>,
           </h1>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl md: text-2xl opacity-90 mb-12 max-w-4xl mx-auto leading-relaxed'>,
             Experience the most advanced AI technologies that will transform,
             your business operations, deliver unprecedented ROI, and,
@@ -54,22 +53,20 @@ const UltimateAI20o26RevolutionBanner = () => {,
               </p>,
             </div>,
           </div>,
-          {/* CTA buttons */,}
+          {/* CTA buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o26-revolution',
-              className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Discover AI 20o26 →,
             </Link>,
-            <Link,
+            <Link
               href='/ai-20o26-revolution/demo',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0'>,
               Try Demo,
             </Link>,
           </div>,
-          {/* Stats */,}
+          {/* Stats */}
           <div className='mt-16 grid grid-cols-2 md: grid-cols-4 gap-8'>,
             <div className='text-center'>,
               <div className='text-3xl font-bold text-yellow-40o0'>10o00%</div>,
@@ -90,9 +87,6 @@ const UltimateAI20o26RevolutionBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default UltimateAI20o26RevolutionBanner,
-,
+    </section>),
+};
+export default UltimateAI20o26RevolutionBanner;

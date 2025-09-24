@@ -1,116 +1,109 @@
 'use client',
-,
 import React, { useState } from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  ArrowRight,;
-  Clock,;
-  TrendingUp,;
-  Zap,;
-  Shield,;
-  Users,;
-  Award,;
-  BookOpen,;
-  FileText,;
-  Download,;
-  ExternalLink,;
+import {
+  ArrowRight;
+  Clock;
+  TrendingUp;
+  Zap;
+  Shield;
+  Users;
+  Award;
+  BookOpen;
+  FileText;
+  Download;
+  ExternalLink;
 } from 'lucide-react',
-,
-const RoboticsContentShowcase20o25 = () => {,
+const RoboticsContentShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
-,
-  const contentData = {,
-    guides: [,
-      {,
-        id: 'robotics-revolution-guide',;
+  const contentData = {
+    guides: [
+      {
+        id: 'robotics-revolution-guide';
         title:,
-          'AI 20o25: The Advanced Robotics Revolution - Ultimate Enterprise Guide',;
+          'AI 20o25: The Advanced Robotics Revolution - Ultimate Enterprise Guide';
         description:,
-          'Transform manufacturing, healthcare, and service industries with AI-powered robotics achieving 80o0% ROI',;
-        url: '/blog/ai-20o25-advanced-robotics-revolution-ultimate-guide',;
-        type: 'Blog Post',;
-        readingTime: '18 min read',;
-        metrics: {,
-          roi: '80o0%',;
-          savings: '$5.2B',;
-          efficiency: '95%',;
-          quality: '99.7%',;
-        },;
-        tags: ['AI Robotics', 'Manufacturing', 'ROI', 'Enterprise'],;
-        featured: true,;
-      },;
-    ],;
-    caseStudies: [,
-      {,
-        id: 'fortune-50o0-robotics-success',;
+          'Transform manufacturing, healthcare, and service industries with AI-powered robotics achieving 80o0% ROI';
+        url: '/blog/ai-20o25-advanced-robotics-revolution-ultimate-guide';
+        type: 'Blog Post';
+        readingTime: '18 min read';
+        metrics: {
+          roi: '80o0%';
+          savings: '$5.2B';
+          efficiency: '95%';
+          quality: '99.7%';
+        };
+        tags: ['AI Robotics', 'Manufacturing', 'ROI', 'Enterprise'];
+        featured: true;
+      };
+    ];
+    caseStudies: [
+      {
+        id: 'fortune-50o0-robotics-success';
         title:,
-          'Fortune 50o0 Robotics Transformation: $5.2B Annual Savings with 80o0% ROI',;
+          'Fortune 50o0 Robotics Transformation: $5.2B Annual Savings with 80o0% ROI';
         description:,
-          'How a global manufacturing giant revolutionized operations with AI-powered robotics',;
-        url: '/case-studies/fortune-50o0-robotics-transformation-80o0-roi-success',;
-        type: 'Case Study',;
-        readingTime: '15 min read',;
-        metrics: {,
-          roi: '80o0%',;
-          savings: '$5.2B',;
-          efficiency: '95%',;
-          quality: '99.7%',;
-        },;
-        tags: ['Case Study', 'Fortune 50o0', 'Manufacturing', 'Success Story'],;
-        featured: true,;
-      },;
-    ],;
-    resources: [,
-      {,
-        id: 'robotics-implementation-guide',;
+          'How a global manufacturing giant revolutionized operations with AI-powered robotics';
+        url: '/case-studies/fortune-50o0-robotics-transformation-80o0-roi-success';
+        type: 'Case Study';
+        readingTime: '15 min read';
+        metrics: {
+          roi: '80o0%';
+          savings: '$5.2B';
+          efficiency: '95%';
+          quality: '99.7%';
+        };
+        tags: ['Case Study', 'Fortune 50o0', 'Manufacturing', 'Success Story'];
+        featured: true;
+      };
+    ];
+    resources: [
+      {
+        id: 'robotics-implementation-guide';
         title:,
-          'AI Robotics Implementation Master Guide 20o25: From Strategy to 80o0% ROI',;
+          'AI Robotics Implementation Master Guide 20o25: From Strategy to 80o0% ROI';
         description:,
-          'Complete framework for transforming your business with AI-powered robotics',;
-        url: '/resources/ai-robotics-implementation-master-guide-20o25',;
-        type: 'Resource',;
-        readingTime: '35 min read',;
-        metrics: {,
-          roi: '80o0%',;
-          success: '98%',;
-          timeline: '18 months',;
-          projects: '20o0+',;
-        },;
-        tags: ['Implementation Guide', 'Strategy', 'ROI', 'Framework'],;
-        featured: true,;
-      },;
-    ],;
+          'Complete framework for transforming your business with AI-powered robotics';
+        url: '/resources/ai-robotics-implementation-master-guide-20o25';
+        type: 'Resource';
+        readingTime: '35 min read';
+        metrics: {
+          roi: '80o0%';
+          success: '98%';
+          timeline: '18 months';
+          projects: '20o0+';
+        };
+        tags: ['Implementation Guide', 'Strategy', 'ROI', 'Framework'];
+        featured: true;
+      };
+    ];
   };
-,
-  const allContent = [,
-    ...contentData.guides,;
-    ...contentData.caseStudies,;
-    ...contentData.resources,;
+  const allContent = [
+    ...contentData.guides;
+    ...contentData.caseStudies;
+    ...contentData.resources;
   ],
-,
   const filteredContent =,
     activeCategory === 'all',
       ? allContent,
       : contentData[activeCategory as keyof typeof contentData] || [],
-,
-  const categories = [,
-    { id: 'all', label: 'All Content', count: allContent.length ,},;
-    { id: 'guides', label: 'Guides', count: contentData.guides.length ,},;
-    {,
-      id: 'caseStudies',;
-      label: 'Case Studies',;
-      count: contentData.caseStudies.length,;
-    },;
-    {,
-      id: 'resources',;
-      label: 'Resources',;
-      count: contentData.resources.length,;
-    },;
+  const categories = [
+    { id: 'all', label: 'All Content', count: allContent.length };
+    { id: 'guides', label: 'Guides', count: contentData.guides.length };
+    {
+      id: 'caseStudies';
+      label: 'Case Studies';
+      count: contentData.caseStudies.length;
+    };
+    {
+      id: 'resources';
+      label: 'Resources';
+      count: contentData.resources.length;
+    };
   ],
-,
-  const getTypeIcon = (type: string) => {,
-    switch (type) {,
+  const getTypeIcon = (type: string) => {
+    switch (type) {
       case 'Blog Post':,
         return <BookOpen className='w-4 h-4' />,
       case 'Case Study':,
@@ -119,11 +112,10 @@ const RoboticsContentShowcase20o25 = () => {,
         return <Download className='w-4 h-4' />,
       default:,
         return <BookOpen className='w-4 h-4' />,
-    ,}
+    }
   };
-,
-  const getTypeColor = (type: string) => {,
-    switch (type) {,
+  const getTypeColor = (type: string) => {
+    switch (type) {
       case 'Blog Post':,
         return 'bg-blue-50o0',
       case 'Case Study':,
@@ -132,13 +124,12 @@ const RoboticsContentShowcase20o25 = () => {,
         return 'bg-purple-50o0',
       default:,
         return 'bg-gray-50o0',
-    ,}
+    }
   };
-,
-  return (,
+  return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-12'>,
           <div className='inline-flex items-center space-x-2 bg-purple-10o0 text-purple-80o0 rounded-full px-4 py-2 mb-4'>,
             <Zap className='w-5 h-5' />,
@@ -162,11 +153,10 @@ const RoboticsContentShowcase20o25 = () => {,
         {/* Success Metrics Summary */}
         <div className='grid grid-cols-2 md: grid-cols-4 gap-6 mb-12'>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ delay: 0.1 ,}}
-            className='bg-white rounded-xl p-6 shadow-lg text-center',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className='bg-white rounded-xl p-6 shadow-lg text-center'>,
             <div className='w-12 h-12 bg-yellow-10o0 rounded-lg flex items-center justify-center mx-auto mb-4'>,
               <ArrowRight className='w-6 h-6 text-yellow-60o0' />,
             </div>,
@@ -176,11 +166,10 @@ const RoboticsContentShowcase20o25 = () => {,
             <div className='text-sm text-gray-60o0'>Average ROI</div>,
           </motion.div>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ delay: 0.2 ,}}
-            className='bg-white rounded-xl p-6 shadow-lg text-center',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className='bg-white rounded-xl p-6 shadow-lg text-center'>,
             <div className='w-12 h-12 bg-green-10o0 rounded-lg flex items-center justify-center mx-auto mb-4'>,
               <TrendingUp className='w-6 h-6 text-green-60o0' />,
             </div>,
@@ -188,11 +177,10 @@ const RoboticsContentShowcase20o25 = () => {,
             <div className='text-sm text-gray-60o0'>Annual Savings</div>,
           </motion.div>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ delay: 0.3 ,}}
-            className='bg-white rounded-xl p-6 shadow-lg text-center',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className='bg-white rounded-xl p-6 shadow-lg text-center'>,
             <div className='w-12 h-12 bg-blue-10o0 rounded-lg flex items-center justify-center mx-auto mb-4'>,
               <Zap className='w-6 h-6 text-blue-60o0' />,
             </div>,
@@ -200,11 +188,10 @@ const RoboticsContentShowcase20o25 = () => {,
             <div className='text-sm text-gray-60o0'>Efficiency Gain</div>,
           </motion.div>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ delay: 0.4 ,}}
-            className='bg-white rounded-xl p-6 shadow-lg text-center',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className='bg-white rounded-xl p-6 shadow-lg text-center'>,
             <div className='w-12 h-12 bg-purple-10o0 rounded-lg flex items-center justify-center mx-auto mb-4'>,
               <Shield className='w-6 h-6 text-purple-60o0' />,
             </div>,
@@ -216,35 +203,33 @@ const RoboticsContentShowcase20o25 = () => {,
         </div>,
         {/* Category Filter */}
         <div className='flex flex-wrap justify-center gap-4 mb-8'>,
-          {categories.map(category => (,
-            <button,
+          {categories.map(category => (
+            <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-20o0 ${,
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-20o0 ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white shadow-lg',
                   : 'bg-white text-gray-70o0 hover: bg-purple-50 hover:text-purple-70o0',
-              ,}`}
+              }`}
             >,
               {category.label} ({category.count}),
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* Content Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-          {filteredContent.map((content, index) => (,
+          {filteredContent.map((content, index) => (
             <motion.div,
               key={content.id}
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ delay: index * 0.1 ,}}
-              className='bg-white rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-30o0 overflow-hidden',
-            >,
-              {/* Content Header */,}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className='bg-white rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-30o0 overflow-hidden'>,
+              {/* Content Header */}
               <div className='p-6'>,
                 <div className='flex items-center justify-between mb-4'>,
                   <div className='flex items-center space-x-2'>,
-                    <div,
+                    <div
                       className={`w-8 h-8 ${getTypeColor(content.type)} rounded-lg flex items-center justify-center text-white`}
                     >,
                       {getTypeIcon(content.type)}
@@ -253,11 +238,10 @@ const RoboticsContentShowcase20o25 = () => {,
                       {content.type}
                     </span>,
                   </div>,
-                  {content.featured && (,
+                  {content.featured && (
                     <span className='bg-yellow-10o0 text-yellow-80o0 text-xs font-semibold px-2 py-1 rounded-full'>,
                       Featured,
-                    </span>,
-                  )}
+                    </span>)}
                 </div>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-3 line-clamp-2'>,
                   {content.title}
@@ -282,14 +266,12 @@ const RoboticsContentShowcase20o25 = () => {,
                 </div>,
                 {/* Tags */}
                 <div className='flex flex-wrap gap-2 mb-4'>,
-                  {content.tags.map((tag, tagIndex) => (,
-                    <span,
+                  {content.tags.map((tag, tagIndex) => (
+                    <span
                       key={tagIndex}
-                      className='bg-gray-10o0 text-gray-70o0 text-xs px-2 py-1 rounded',
-                    >,
+                      className='bg-gray-10o0 text-gray-70o0 text-xs px-2 py-1 rounded'>,
                       {tag}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
                 {/* Reading Time */}
                 <div className='flex items-center space-x-2 text-sm text-gray-50o0 mb-4'>,
@@ -297,24 +279,21 @@ const RoboticsContentShowcase20o25 = () => {,
                   <span>{content.readingTime}</span>,
                 </div>,
                 {/* CTA Button */}
-                <Link,
+                <Link
                   href={content.url}
-                  className='w-full bg-purple-60o0 hover: bg-purple-70o0 text-white px-4 py-3 rounded-lg font-semibold transition-colors duration-20o0 flex items-center justify-center space-x-2',
-                >,
-                  <span>Read {content.type,}</span>,
+                  className='w-full bg-purple-60o0 hover: bg-purple-70o0 text-white px-4 py-3 rounded-lg font-semibold transition-colors duration-20o0 flex items-center justify-center space-x-2'>,
+                  <span>Read {content.type}</span>,
                   <ArrowRight className='w-4 h-4' />,
                 </Link>,
               </div>,
-            </motion.div>,
-          ))}
+            </motion.div>))}
         </div>,
         {/* Call to Action Section */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          transition={{ delay: 0.5 ,}}
-          className='mt-16 bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white text-center',
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className='mt-16 bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white text-center'>,
           <h3 className='text-3xl font-bold mb-4'>,
             Ready to Transform Your Business with AI Robotics?,
           </h3>,
@@ -324,22 +303,20 @@ const RoboticsContentShowcase20o25 = () => {,
             framework.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors flex items-center justify-center space-x-2',
-            >,
+              className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors flex items-center justify-center space-x-2'>,
               <Users className='w-5 h-5' />,
               <span>Schedule Consultation</span>,
             </Link>,
-            <Link,
+            <Link
               href='/resources/ai-robotics-implementation-master-guide-20o25',
-              className='border-2 border-white text-white hover:bg-white hover:text-purple-60o0 px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2',
-            >,
+              className='border-2 border-white text-white hover:bg-white hover:text-purple-60o0 px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2'>,
               <Download className='w-5 h-5' />,
               <span>Download Implementation Guide</span>,
             </Link>,
           </div>,
-          {/* Trust Indicators */,}
+          {/* Trust Indicators */}
           <div className='mt-8 pt-6 border-t border-purple-40o0 border-opacity-30'>,
             <div className='grid grid-cols-2 md: grid-cols-4 gap-6 text-center'>,
               <div>,
@@ -368,9 +345,6 @@ const RoboticsContentShowcase20o25 = () => {,
           </div>,
         </motion.div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default RoboticsContentShowcase20o25,
-,
+    </section>),
+};
+export default RoboticsContentShowcase20o25;

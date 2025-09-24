@@ -2,21 +2,19 @@ import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
-,
-export default function DemoPage() {,
-  const contactInfo = {,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',;
+export default function DemoPage() {
+  const contactInfo = {
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
+    website: 'https://ziontechgroup.com';
   };
-,
-  return (,
+  return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>,
       <Head>,
         <title>Book a Demo | Zion Tech Group</title>,
         <link rel='canonical' href='https: //ziontechgroup.com/demo' />,
-        <meta,
+        <meta
           name='description',
           content='Schedule a live demo of our AI, cloud, and micro SaaS solutions. See features and pricing aligned to the market.',
         />,
@@ -27,12 +25,11 @@ export default function DemoPage() {,
             Book a Demo,
           </h1>,
           <Card className='p-6 bg-black/50 border border-gray-70o0/60'>,
-            <form,
+            <form
               action='https://formsubmit.co/kleber@ziontechgroup.com',
               method='POST',
-              className='space-y-4',
-            >,
-              <input,
+              className='space-y-4'>,
+              <input
                 type='hidden',
                 name='_subject',
                 value='Demo Request - ziontechgroup.com',
@@ -43,7 +40,7 @@ export default function DemoPage() {,
                   <label className='block text-sm text-gray-30o0 mb-1'>,
                     Name,
                   </label>,
-                  <input,
+                  <input
                     name='name',
                     required,
                     className='w-full px-4 py-2 rounded-lg bg-gray-90o0/60 border border-gray-70o0 focus:border-cyan-50o0 outline-none',
@@ -53,7 +50,7 @@ export default function DemoPage() {,
                   <label className='block text-sm text-gray-30o0 mb-1'>,
                     Email,
                   </label>,
-                  <input,
+                  <input
                     type='email',
                     name='email',
                     required,
@@ -65,7 +62,7 @@ export default function DemoPage() {,
                 <label className='block text-sm text-gray-30o0 mb-1'>,
                   Company,
                 </label>,
-                <input,
+                <input
                   name='company',
                   className='w-full px-4 py-2 rounded-lg bg-gray-90o0/60 border border-gray-70o0 focus:border-cyan-50o0 outline-none',
                 />,
@@ -74,7 +71,7 @@ export default function DemoPage() {,
                 <label className='block text-sm text-gray-30o0 mb-1'>,
                   Interested Service,
                 </label>,
-                <input,
+                <input
                   name='service',
                   placeholder='e.g., LLM Gateway',
                   className='w-full px-4 py-2 rounded-lg bg-gray-90o0/60 border border-gray-70o0 focus: border-cyan-50o0 outline-none',
@@ -84,26 +81,23 @@ export default function DemoPage() {,
                 <label className='block text-sm text-gray-30o0 mb-1'>,
                   Notes,
                 </label>,
-                <textarea,
+                <textarea
                   name='notes',
-                  rows={4,}
+                  rows={4}
                   className='w-full px-4 py-2 rounded-lg bg-gray-90o0/60 border border-gray-70o0 focus: border-cyan-50o0 outline-none',
                 />,
               </div>,
-              <Button,
+              <Button
                 type='submit',
-                className='w-full bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white',
-              >,
+                className='w-full bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white'>,
                 Request Demo,
               </Button>,
             </form>,
           </Card>,
           <div className='text-center text-sm text-gray-40o0'>,
-            Prefer email? {contactInfo.email,} • Call {contactInfo.mobile}
+            Prefer email? {contactInfo.email} • Call {contactInfo.mobile}
           </div>,
         </div>,
       </div>,
-    </UltraFuturisticBackground>,
-  ),
-}
+    </UltraFuturisticBackground>)}
 ,

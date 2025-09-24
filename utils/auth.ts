@@ -45,8 +45,7 @@ export function ensureDemoUsers(): void {
   if (demoUsers.length === 0) {
     demoUsers.push(
       { id: 'admin-1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' },
-      { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' },
-    )
+      { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' })
   }
 }
 
@@ -55,8 +54,7 @@ export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): De
     id: `user-${Date.now()}`,
     name,
     role,
-    email: `${name.toLowerCase().replace(/\s+/g, '.')}@zion.os`,
-  }
+    email: `${name.toLowerCase().replace(/\s+/g, '.')}@zion.os`}
 }
 
 export function upsertUser(user: DemoUser): void {

@@ -1,9 +1,7 @@
-export function ApplicationsTracker() {,
-  return (,
+export function ApplicationsTracker() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const QuantumAI20o30PromotionBanner: React.FC = () => {,
-  return (,
+const QuantumAI20o30PromotionBanner: React.FC = () => {
+  return (
     <section className='bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -118,30 +117,24 @@ const QuantumAI20o30PromotionBanner: React.FC = () => {,
             </div>,
           </div>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/blog/quantum-ai-20o30-business-transformation-ultimate-guide',
-              className='bg-white text-purple-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg',
-            >,
+              className='bg-white text-purple-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg'>,
               Read Ultimate Guide,
             </Link>,
-            <Link,
+            <Link
               href='/services/quantum-ai',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors text-lg',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors text-lg'>,
               Explore Services,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-70o0 hover:to-pink-70o0 transition-colors text-lg',
-            >,
+              className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-70o0 hover:to-pink-70o0 transition-colors text-lg'>,
               Start Quantum Journey,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default QuantumAI20o30PromotionBanner,
-,
+    </section>),
+};
+export default QuantumAI20o30PromotionBanner;

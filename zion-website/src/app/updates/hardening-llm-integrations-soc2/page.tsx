@@ -1,5 +1,5 @@
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <div className='min-h-screen bg-black'>,
       <article className='max-w-3xl mx-auto px-6 py-24'>,
         <header>,
@@ -7,7 +7,7 @@ export default function Page() {,
             Guide: Hardening LLM Integrations for SOC 2,
           </h1>,
           <p className='mt-2 text-gray-30o0'>,
-            Practical controls for secrets, PII redaction, change management,;
+            Practical controls for secrets, PII redaction, change management;
             and eval-backed releases.,
           </p>,
           <p className='mt-1 text-sm text-blue-40o0'>20o25-09-15</p>,
@@ -15,7 +15,7 @@ export default function Page() {,
         <section className='prose prose-lg prose-invert mt-8'>,
           <p>,
             This guide outlines a pragmatic approach to ship LLM-powered,
-            features while meeting SOC 2 controls. It focuses on data handling,;
+            features while meeting SOC 2 controls. It focuses on data handling;
             access management, and measurable guardrails validated by,
             evaluations.,
           </p>,
@@ -39,7 +39,5 @@ export default function Page() {,
           </p>,
         </section>,
       </article>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

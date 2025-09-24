@@ -1,34 +1,32 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
 import Link from 'next/link',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'Fortune 50o0 Digital Transformation Success: $2.8B Annual Savings - 30,0o00% ROI',;
+    'Fortune 50o0 Digital Transformation Success: $2.8B Annual Savings - 30,0o00% ROI';
   description:,
-    'Learn how a Fortune 50o0 manufacturing company achieved 30,0o00% ROI through strategic AI implementation, resulting in $2.8 billion in annual savings.',;
-  keywords: [,
-    'Case Study',;
-    'Fortune 50o0',;
-    'Digital Transformation',;
-    'ROI',;
-    'Success Story',;
-    '30,0o00% ROI',;
-  ],;
-  openGraph: {,
+    'Learn how a Fortune 50o0 manufacturing company achieved 30,0o00% ROI through strategic AI implementation, resulting in $2.8 billion in annual savings.';
+  keywords: [
+    'Case Study';
+    'Fortune 50o0';
+    'Digital Transformation';
+    'ROI';
+    'Success Story';
+    '30,0o00% ROI';
+  ];
+  openGraph: {
     title:,
-      'Fortune 50o0 Digital Transformation Success: $2.8B Annual Savings - 30,0o00% ROI',;
+      'Fortune 50o0 Digital Transformation Success: $2.8B Annual Savings - 30,0o00% ROI';
     description:,
-      'Learn how a Fortune 50o0 manufacturing company achieved 30,0o00% ROI through strategic AI implementation.',;
-    type: 'article',;
-    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z',;
-    authors: ['Zion Tech Group'],;
-    tags: ['Case Study', 'Fortune 50o0', 'Digital Transformation', 'ROI'],;
-  },;
+      'Learn how a Fortune 50o0 manufacturing company achieved 30,0o00% ROI through strategic AI implementation.';
+    type: 'article';
+    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z';
+    authors: ['Zion Tech Group'];
+    tags: ['Case Study', 'Fortune 50o0', 'Digital Transformation', 'ROI'];
+  };
 };
-,
-export default function Fortune50o0DigitalTransformationSuccessPage() {,
-  return (,
+export default function Fortune50o0DigitalTransformationSuccessPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {/* Hero Section */}
       <section className='bg-gradient-to-r from-green-90o0 via-blue-90o0 to-indigo-90o0 text-white py-20'>,
@@ -44,23 +42,21 @@ export default function Fortune50o0DigitalTransformationSuccessPage() {,
               $2.8B Annual Savings - 30,0o00% ROI Success Story,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/services',
-                className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get Similar Results,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors'>,
                 Contact Our Experts,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Success Metrics */,}
+      {/* Success Metrics */}
       <section className='py-16 bg-gray-50'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center'>,
@@ -203,7 +199,7 @@ export default function Fortune50o0DigitalTransformationSuccessPage() {,
                   Phase 1: Foundation (Months 1-6),
                 </h4>,
                 <p className='text-blue-70o0'>,
-                  AI readiness assessment, data infrastructure modernization,;
+                  AI readiness assessment, data infrastructure modernization;
                   team training and development, pilot project implementation,
                 </p>,
               </div>,
@@ -212,7 +208,7 @@ export default function Fortune50o0DigitalTransformationSuccessPage() {,
                   Phase 2: Core Implementation (Months 7-18),
                 </h4>,
                 <p className='text-purple-70o0'>,
-                  Production line automation, predictive maintenance systems,;
+                  Production line automation, predictive maintenance systems;
                   quality control AI, supply chain optimization,
                 </p>,
               </div>,
@@ -221,7 +217,7 @@ export default function Fortune50o0DigitalTransformationSuccessPage() {,
                   Phase 3: Advanced Features (Months 19-24),
                 </h4>,
                 <p className='text-indigo-70o0'>,
-                  Autonomous production systems, real-time optimization,;
+                  Autonomous production systems, real-time optimization;
                   advanced analytics, continuous learning,
                 </p>,
               </div>,
@@ -471,22 +467,19 @@ export default function Fortune50o0DigitalTransformationSuccessPage() {,
             strategic AI implementation.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/services',
-              className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Get Free Consultation,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors'>,
               Contact Our Experts,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

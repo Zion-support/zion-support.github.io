@@ -4,63 +4,60 @@ import { Button } from "@/components/ui/button",
 import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, CONTACT_INFO } from "@/data/microSaasServices",
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe } from "lucide-react",
 import { Link } from "react-router-dom",
-const categoryIcons ={,
-    'AI Business Solutions': Brain,;
-    'IT Infrastructure': Cloud,;
-    'Data Analytics': BarChart3,;
-    'AI Development': Code,;
-    'FinTech': DollarSign,;
-    'HealthTech': Heart,;
-    'E-commerce': ShoppingCart,;
-    'EdTech': GraduationCap,
-};
-const categoryColors ={,
-    'AI Business Solutions': 'from-purple-50o0 to-indigo-60o0',;
-    'IT Infrastructure': 'from-blue-50o0 to-cyan-60o0',;
-    'Data Analytics': 'from-green-50o0 to-emerald-60o0',;
-    'AI Development': 'from-orange-50o0 to-red-60o0',;
-    'FinTech': 'from-yellow-50o0 to-orange-60o0',;
-    'HealthTech': 'from-pink-50o0 to-rose-60o0',;
-    'E-commerce': 'from-indigo-50o0 to-purple-60o0',;
-    'EdTech': 'from-teal-50o0 to-green-60o0',
-};
-const features = [,
-    "AI-Powered Automation",;
-    "Real-time Analytics",;
-    "Multi-cloud Support",;
-    "API-First Architecture",;
-    "Scalable Infrastructure",;
-    "Custom Integrations",;
-    "White-label Solutions",;
-    "Comprehensive Documentation",;
-    "24/7 Technical Support",;
-    "99.9% Uptime Guarantee",;
-    "SOC 2 Type II Compliant",;
-    "30-Day Money Back Guarantee",
-],
-const benefits = [,
-    {,
-        icon: <Zap className="h-6 w-6" />,;
-        title: "Immediate Deployment",;
+const categoryIcons ={
+    'AI Business Solutions': Brain;
+    'IT Infrastructure': Cloud;
+    'Data Analytics': BarChart3;
+    'AI Development': Code;
+    'FinTech': DollarSign;
+    'HealthTech': Heart;
+    'E-commerce': ShoppingCart;
+    'EdTech': GraduationCap};
+const categoryColors ={
+    'AI Business Solutions': 'from-purple-50o0 to-indigo-60o0';
+    'IT Infrastructure': 'from-blue-50o0 to-cyan-60o0';
+    'Data Analytics': 'from-green-50o0 to-emerald-60o0';
+    'AI Development': 'from-orange-50o0 to-red-60o0';
+    'FinTech': 'from-yellow-50o0 to-orange-60o0';
+    'HealthTech': 'from-pink-50o0 to-rose-60o0';
+    'E-commerce': 'from-indigo-50o0 to-purple-60o0';
+    'EdTech': 'from-teal-50o0 to-green-60o0'};
+const features = [
+    "AI-Powered Automation";
+    "Real-time Analytics";
+    "Multi-cloud Support";
+    "API-First Architecture";
+    "Scalable Infrastructure";
+    "Custom Integrations";
+    "White-label Solutions";
+    "Comprehensive Documentation";
+    "24/7 Technical Support";
+    "99.9% Uptime Guarantee";
+    "SOC 2 Type II Compliant";
+    "30-Day Money Back Guarantee"],
+const benefits = [
+    {
+        icon: <Zap className="h-6 w-6" />;
+        title: "Immediate Deployment";
         description: "All services are ready for immediate deployment with no setup delays",
-    ,},;
-    {,
-        icon: <Shield className="h-6 w-6" />,;
-        title: "Enterprise Security",;
+    };
+    {
+        icon: <Shield className="h-6 w-6" />;
+        title: "Enterprise Security";
         description: "Bank-level security with SOC 2 compliance and 24/7 monitoring",
-    ,},;
-    {,
-        icon: <TrendingUp className="h-6 w-6" />,;
-        title: "Proven ROI",;
+    };
+    {
+        icon: <TrendingUp className="h-6 w-6" />;
+        title: "Proven ROI";
         description: "Average 30o0% ROI within 6 months of implementation",
-    ,},;
-    {,
-        icon: <CheckCircle className="h-6 w-6" />,;
-        title: "Quality Guaranteed",;
+    };
+    {
+        icon: <CheckCircle className="h-6 w-6" />;
+        title: "Quality Guaranteed";
         description: "30-day money-back guarantee with free migration support",
-    ,}
+    }
 ],
-export function ServicesShowcase() {,
+export function ServicesShowcase() {
     const featuredServices = MICRO_SAAS_SERVICES.filter(service => service.featured).slice(0, 6),
     return (<div className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">,
       <div className="container mx-auto px-4">,
@@ -88,14 +85,14 @@ export function ServicesShowcase() {,
             </Link>,
           </div>,
         </div>,
-        {/* Categories Overview */,}
+        {/* Categories Overview */}
         <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-20">,
-          {MICRO_SAAS_CATEGORIES.map((category) => {,
+          {MICRO_SAAS_CATEGORIES.map((category) => {
             const IconComponent = categoryIcons[category.label],
             const colorClass = categoryColors[category.label],
-            return (<Card key={category.value,} className="bg-zion-blue-dark border-zion-blue-light text-white hover: border-zion-purple/50 transition-all duration-30o0 hover:scale-10o5">,
+            return (<Card key={category.value} className="bg-zion-blue-dark border-zion-blue-light text-white hover: border-zion-purple/50 transition-all duration-30o0 hover:scale-10o5">,
                 <CardHeader className="text-center">,
-                  <div className={`mx-auto w-16 h-16 bg-gradient-to-br ${colorClass,} rounded-full flex items-center justify-center mb-4`}>,
+                  <div className={`mx-auto w-16 h-16 bg-gradient-to-br ${colorClass} rounded-full flex items-center justify-center mb-4`}>,
                     {IconComponent && <IconComponent className="h-8 w-8 text-white" />}
                   </div>,
                   <CardTitle className="text-lg">{category.label}</CardTitle>,
@@ -105,8 +102,7 @@ export function ServicesShowcase() {,
                     {MICRO_SAAS_SERVICES.filter(s => s.category === category.label).length} services available,
                   </p>,
                 </CardContent>,
-              </Card>),
-        })}
+              </Card>)})}
         </div>,
         {/* Featured Services */}
         <div className="mb-20">,
@@ -114,9 +110,9 @@ export function ServicesShowcase() {,
             Featured Services,
           </h3>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-            {featuredServices.map((service) => (<Card key={service.id,} className="bg-zion-blue-dark border-zion-blue-light text-white hover: border-zion-purple/50 transition-all duration-30o0 hover:scale-10o5">,
+            {featuredServices.map((service) => (<Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover: border-zion-purple/50 transition-all duration-30o0 hover:scale-10o5">,
                 <div className="relative">,
-                  <img src={service.images[0],} alt={service.title} className="w-full h-48 object-cover rounded-t-lg" />,
+                  <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg" />,
                   <Badge className="absolute top-4 right-4 bg-zion-purple">,
                     {service.category}
                   </Badge>,
@@ -135,7 +131,7 @@ export function ServicesShowcase() {,
                       <span className="text-zion-slate-light text-sm ml-1">({service.reviewCount})</span>,
                     </div>,
                     <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan">,
-                      AI Score: {service.aiScore,}
+                      AI Score: {service.aiScore}
                     </Badge>,
                   </div>,
                   <div className="flex items-center justify-between">,
@@ -148,7 +144,7 @@ export function ServicesShowcase() {,
                     </Button>,
                   </div>,
                 </CardContent>,
-              </Card>)),}
+              </Card>))}
           </div>,
         </div>,
         {/* Features Grid */}
@@ -202,7 +198,7 @@ export function ServicesShowcase() {,
                   <Phone className="h-5 w-5 text-zion-purple mr-3" />,
                   <div>,
                     <p className="font-medium">Phone</p>,
-                    <p className="text-gray-60o0">{CONTACT_INFO.mobile,}</p>,
+                    <p className="text-gray-60o0">{CONTACT_INFO.mobile}</p>,
                   </div>,
                 </div>,
                 <div className="flex items-center">,
@@ -224,7 +220,7 @@ export function ServicesShowcase() {,
                   <div>,
                     <p className="font-medium">Website</p>,
                     <a href={CONTACT_INFO.website} className="text-zion-cyan hover: underline">,
-                      {CONTACT_INFO.website,}
+                      {CONTACT_INFO.website}
                     </a>,
                   </div>,
                 </div>,
@@ -273,5 +269,5 @@ export function ServicesShowcase() {,
         </div>,
       </div>,
     </div>),
-,}
+}
 ,

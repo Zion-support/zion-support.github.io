@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function AiContentPersonalization20o43Page() {,
-  return (,
+export default function AiContentPersonalization20o43Page() {
+  return (
     <>,
       <Head>,
         <title>Ai Content Personalization 20o43 - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='ai content personalization 20o43 page',
         />,
@@ -21,7 +20,6 @@ export default function AiContentPersonalization20o43Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -1,37 +1,35 @@
-import React from 'react',
-import {,
-  LightBulbIcon,;
-  ShieldCheckIcon,;
-  UserGroupIcon,;
+import React from 'react';
+import {
+  LightBulbIcon;
+  ShieldCheckIcon;
+  UserGroupIcon;
 } from '@heroicons/react/24/outline',
-,
-interface ValueItem {,
+interface ValueItem {
   name: string,
   description: string,
   icon: React.ElementType,
-,}
+}
 ,
-const values: ValueItem[] = [,
-  {,
-    name: 'Innovation First',;
+const values: ValueItem[] = [
+  {
+    name: 'Innovation First';
     description:,
-      "We push the boundaries of what's possible in AI and technology.",;
-    icon: LightBulbIcon,;
-  },;
-  {,
-    name: 'Security By Design',;
-    description: 'We build with security, privacy, and compliance at the core.',;
-    icon: ShieldCheckIcon,;
-  },;
-  {,
-    name: 'Customer Obsession',;
-    description: 'We win when our customers win measurable outcomes.',;
-    icon: UserGroupIcon,;
-  },;
+      "We push the boundaries of what's possible in AI and technology.";
+    icon: LightBulbIcon;
+  };
+  {
+    name: 'Security By Design';
+    description: 'We build with security, privacy, and compliance at the core.';
+    icon: ShieldCheckIcon;
+  };
+  {
+    name: 'Customer Obsession';
+    description: 'We win when our customers win measurable outcomes.';
+    icon: UserGroupIcon;
+  };
 ],
-,
-export default function AboutPage() {,
-  return (,
+export default function AboutPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-7xl px-6 pt-24'>,
         <div className='mx-auto max-w-2xl lg: text-center'>,
@@ -45,10 +43,10 @@ export default function AboutPage() {,
         </div>,
         <div className='mx-auto mt-12 max-w-2xl sm: mt-16 lg:mt-20 lg:max-w-none'>,
           <dl className='grid grid-cols-1 gap-8 sm:grid-cols-3'>,
-            {values.map(v => {,
+            {values.map(v => {
               const Icon = v.icon,
-              return (,
-                <div key={v.name,} className='rounded-2xl bg-white/5 p-6'>,
+              return (
+                <div key={v.name} className='rounded-2xl bg-white/5 p-6'>,
                   <dt className='flex items-center gap-x-3 text-base font-semibold leading-7 text-white'>,
                     <Icon className='h-5 w-5 text-blue-40o0' />,
                     {v.name}
@@ -56,13 +54,9 @@ export default function AboutPage() {,
                   <dd className='mt-3 text-sm text-gray-30o0'>,
                     {v.description}
                   </dd>,
-                </div>,
-              ),
-            })}
+                </div>)})}
           </dl>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

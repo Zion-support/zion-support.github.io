@@ -1,8 +1,7 @@
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
-,
-export default function ApiLatencySloTrackerPage() {,
-  return (,
+export default function ApiLatencySloTrackerPage() {
+  return (
     <Layout>,
       <Head>,
         <title>API Latency SLO Tracker | Zion Tech Group</title>,
@@ -14,9 +13,8 @@ export default function ApiLatencySloTrackerPage() {,
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-rose-40o0 to-pink-50o0 bg-clip-text text-transparent">API Latency SLO Tracker</h1>,
           <p className="text-slate-30o0">SLO-first observability for APIs: budgetsalertsynthetic/RUMper-endpoint dashboardsand public pages.</p>,
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">,
-            {[ 'SLO budgets with alerts'Synthetic + RUM coverage'Per-endpoint latency dashboards'Public status page (optional)' ].map((f) => (,
-              <div key={f,} className="p-4 rounded-xl bg-black/40 border border-rose-50o0/30 text-slate-20o0">{f}</div>,
-            ))}
+            {[ 'SLO budgets with alerts'Synthetic + RUM coverage'Per-endpoint latency dashboards'Public status page (optional)' ].map((f) => (
+              <div key={f} className="p-4 rounded-xl bg-black/40 border border-rose-50o0/30 text-slate-20o0">{f}</div>))}
           </div>,
           <div className="flex gap-3">,
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-rose-60o0 to-pink-70o0 text-white">Start from $129/mo</a>,
@@ -24,7 +22,5 @@ export default function ApiLatencySloTrackerPage() {,
           </div>,
         </div>,
       </div>,
-    </Layout>,
-  ),
-}
+    </Layout>)}
 ,

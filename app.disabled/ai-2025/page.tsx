@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o25 - Revolutionary AI Solutions | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o25 - Revolutionary AI Solutions | Zion Tech Group';
   description:,
-    'Discover the latest AI innovations and solutions for 20o25. Advanced neural networks, automation, and cutting-edge technology.',;
-  keywords: [,
-    'AI 20o25',;
-    'artificial intelligence',;
-    'neural networks',;
-    'automation',;
-    'machine learning',;
-  ],;
+    'Discover the latest AI innovations and solutions for 20o25. Advanced neural networks, automation, and cutting-edge technology.';
+  keywords: [
+    'AI 20o25';
+    'artificial intelligence';
+    'neural networks';
+    'automation';
+    'machine learning';
+  ];
 };
-,
-export default function AI20o25Page() {,
-  return (,
+export default function AI20o25Page() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o25 - Revolutionary AI Solutions',
         description='Discover the latest AI innovations and solutions for 20o25. Advanced neural networks, automation, and cutting-edge technology.',
         keywords='AI 20o25, artificial intelligence, neural networks, automation, machine learning',
@@ -35,22 +33,20 @@ export default function AI20o25Page() {,
             designed for 20o25 and beyond.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o25/neural-networks',
-              className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Explore Neural Networks,
             </Link>,
-            <Link,
+            <Link
               href='/ai-20o25/automation',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
               View Automation Solutions,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Features Grid */,}
+      {/* Features Grid */}
       <section className='py-16'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
@@ -66,10 +62,9 @@ export default function AI20o25Page() {,
                 Next-generation neural network architectures with unprecedented,
                 accuracy and efficiency.,
               </p>,
-              <Link,
+              <Link
                 href='/ai-20o25/neural-networks',
-                className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-              >,
+                className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                 Learn More →,
               </Link>,
             </div>,
@@ -82,10 +77,9 @@ export default function AI20o25Page() {,
                 AI-powered automation solutions that learn, adapt, and optimize,
                 business processes.,
               </p>,
-              <Link,
+              <Link
                 href='/ai-20o25/automation',
-                className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-              >,
+                className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
                 Learn More →,
               </Link>,
             </div>,
@@ -98,17 +92,16 @@ export default function AI20o25Page() {,
                 Real-time analytics and predictive intelligence for data-driven,
                 decision making.,
               </p>,
-              <Link,
+              <Link
                 href='/ai-20o25/analytics',
-                className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-              >,
+                className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                 Learn More →,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className='bg-gray-50 py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-4'>,
@@ -118,15 +111,13 @@ export default function AI20o25Page() {,
             Join thousands of companies already using our AI solutions to drive,
             innovation and growth.,
           </p>,
-          <Link,
+          <Link
             href='/contact',
-            className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors',
-          >,
+            className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors'>,
             Get Started Today,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

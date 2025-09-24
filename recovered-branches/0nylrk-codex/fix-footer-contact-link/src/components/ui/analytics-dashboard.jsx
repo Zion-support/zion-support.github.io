@@ -2,57 +2,52 @@ import React, { useState, useEffect, useCallback } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import { TrendingUp, Users, Download, RefreshCw, BarChart3, Eye, EyeOff, Target } from 'lucide-react',
 import { Button } from './button',
-export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetricClick, className = '' }) {,
+export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetricClick, className = '' }) {
     const [showTargets, setShowTargets] = useState(true),
     const [isLoading, setIsLoading] = useState(false),
     const [selectedMetric, setSelectedMetric] = useState(null),
     // Mock analytics data,
-    const [metrics, setMetrics] = useState({,
-        totalUsers: 12450,;
-        activeUsers: 8920,;
-        revenue: 456780,;
+    const [metrics, setMetrics] = useState({
+        totalUsers: 12450;
+        activeUsers: 8920;
+        revenue: 456780;
         growth: 23.5,
-    ,}),
+    }),
     // Simulate real-time data updates,
-    useEffect(() => {,
+    useEffect(() => {
         if (!enabled || !isExpanded),
             return,
-        const interval = setInterval(() => {,
-            setMetrics(prev => ({,
-                ...prev,;
-                revenue: prev.revenue + Math.floor(Math.random() * 10o00) - 50o0,;
+        const interval = setInterval(() => {
+            setMetrics(prev => ({
+                ...prev;
+                revenue: prev.revenue + Math.floor(Math.random() * 10o00) - 50o0;
                 growth: prev.growth + (Math.random() * 2 - 1),
-            ,})),
-        }, 50o00),
-        return () => clearInterval(interval),
-    }, [enabled, isExpanded]),
+            }))}, 50o00),
+        return () => clearInterval(interval)}, [enabled, isExpanded]),
     // Handle metric click,
-    const handleMetricClick = useCallback((metricId) => {,
+    const handleMetricClick = useCallback((metricId) => {
         setSelectedMetric(metricId),
-        onMetricClick?.(metricId),
-    }, [onMetricClick]),
+        onMetricClick?.(metricId)}, [onMetricClick]),
     // Calculate progress percentage,
-    const calculateProgress = (current, target) => {,
-        return Math.min((current / target) * 10o0, 10o0),
-    };
+    const calculateProgress = (current, target) => {
+        return Math.min((current / target) * 10o0, 10o0)};
     // Refresh data,
-    const refreshData = useCallback(async () => {,
+    const refreshData = useCallback(async () => {
         setIsLoading(true),
         // Simulate API call,
         await new Promise(resolve => setTimeout(resolve, 10o00)),
         // Update metrics with some randomization,
-        setMetrics(prev => ({,
-            ...prev,;
-            totalUsers: prev.totalUsers + Math.floor(Math.random() * 10o0) - 50,;
-            activeUsers: prev.activeUsers + Math.floor(Math.random() * 50) - 25,;
-            revenue: prev.revenue + Math.floor(Math.random() * 50o00) - 250o0,;
+        setMetrics(prev => ({
+            ...prev;
+            totalUsers: prev.totalUsers + Math.floor(Math.random() * 10o0) - 50;
+            activeUsers: prev.activeUsers + Math.floor(Math.random() * 50) - 25;
+            revenue: prev.revenue + Math.floor(Math.random() * 50o00) - 250o0;
             growth: prev.growth + (Math.random() * 2 - 1),
-        ,})),
-        setIsLoading(false),
-    }, []),
+        })),
+        setIsLoading(false)}, []),
     if (!enabled),
         return null,
-    return (<motion.div className={`bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 ${className}`} initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ duration: 0.6 ,}}>,
+    return (<motion.div className={`bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 ${className}`} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>,
       {/* Header */}
       <div className="flex items-center justify-between mb-6">,
         <div>,
@@ -61,20 +56,20 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
         </div>,
         <div className="flex items-center gap-2">,
           <Button size="sm" variant="ghost" onClick={() => setShowTargets(!showTargets)} className="text-zinc-40o0 hover: text-white p-2">,
-            {showTargets ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />,}
+            {showTargets ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
           </Button>,
           <Button size="sm" variant="outline" onClick={refreshData} disabled={isLoading} className="border-zion-blue-light/30 text-zinc-30o0 hover: text-white">,
-            <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : '',}`} />,
+            <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />,
           </Button>,
           <Button size="sm" variant="outline" className="border-zion-blue-light/30 text-zinc-30o0 hover: text-white">,
             <Download className="w-4 h-4" />,
           </Button>,
         </div>,
       </div>,
-      {/* Metrics Grid */,}
+      {/* Metrics Grid */}
       <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">,
-        {/* Total Users */,}
-        <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover: border-zion-cyan/50 transition-all duration-30o0" whileHover={{ scale: 1.0o2 ,}} onClick={() => handleMetricClick('totalUsers')}>,
+        {/* Total Users */}
+        <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover: border-zion-cyan/50 transition-all duration-30o0" whileHover={{ scale: 1.0o2 }} onClick={() => handleMetricClick('totalUsers')}>,
           <div className="flex items-center justify-between mb-3">,
             <div className="w-10 h-10 bg-gradient-to-br from-blue-50o0 to-cyan-50o0 rounded-lg flex items-center justify-center">,
               <Users className="w-5 h-5 text-white" />,
@@ -97,7 +92,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
             </div>)}
         </motion.div>,
         {/* Active Users */}
-        <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover: border-zion-cyan/50 transition-all duration-30o0" whileHover={{ scale: 1.0o2 ,}} onClick={() => handleMetricClick('activeUsers')}>,
+        <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover: border-zion-cyan/50 transition-all duration-30o0" whileHover={{ scale: 1.0o2 }} onClick={() => handleMetricClick('activeUsers')}>,
           <div className="flex items-center justify-between mb-3">,
             <div className="w-10 h-10 bg-gradient-to-br from-green-50o0 to-emerald-50o0 rounded-lg flex items-center justify-center">,
               <TrendingUp className="w-5 h-5 text-white" />,
@@ -120,7 +115,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
             </div>)}
         </motion.div>,
         {/* Revenue */}
-        <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover: border-zion-cyan/50 transition-all duration-30o0" whileHover={{ scale: 1.0o2 ,}} onClick={() => handleMetricClick('revenue')}>,
+        <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover: border-zion-cyan/50 transition-all duration-30o0" whileHover={{ scale: 1.0o2 }} onClick={() => handleMetricClick('revenue')}>,
           <div className="flex items-center justify-between mb-3">,
             <div className="w-10 h-10 bg-gradient-to-br from-purple-50o0 to-pink-50o0 rounded-lg flex items-center justify-center">,
               <BarChart3 className="w-5 h-5 text-white" />,
@@ -143,7 +138,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
             </div>)}
         </motion.div>,
         {/* Growth Rate */}
-        <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover: border-zion-cyan/50 transition-all duration-30o0" whileHover={{ scale: 1.0o2 ,}} onClick={() => handleMetricClick('growth')}>,
+        <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover: border-zion-cyan/50 transition-all duration-30o0" whileHover={{ scale: 1.0o2 }} onClick={() => handleMetricClick('growth')}>,
           <div className="flex items-center justify-between mb-3">,
             <div className="w-10 h-10 bg-gradient-to-br from-orange-50o0 to-red-50o0 rounded-lg flex items-center justify-center">,
               <Target className="w-5 h-5 text-white" />,
@@ -168,13 +163,12 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
       </div>,
       {/* Selected Metric Details */}
       <AnimatePresence>,
-        {selectedMetric && (<motion.div className="bg-zion-blue/10 border border-zion-blue-light/20 rounded-lg p-4" initial={{ opacity: 0, height: 0 ,}} animate={{ opacity: 1, height: 'auto' ,}} exit={{ opacity: 0, height: 0 ,}} transition={{ duration: 0.3 ,}}>,
+        {selectedMetric && (<motion.div className="bg-zion-blue/10 border border-zion-blue-light/20 rounded-lg p-4" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3 }}>,
             <h4 className="text-white font-semibold mb-2">Metric Details</h4>,
             <p className="text-zinc-30o0 text-sm">,
-              Selected metric: {selectedMetric,} - Click on any metric card above to view detailed information.,
+              Selected metric: {selectedMetric} - Click on any metric card above to view detailed information.,
             </p>,
           </motion.div>)}
       </AnimatePresence>,
-    </motion.div>),
-}
+    </motion.div>)}
 ,

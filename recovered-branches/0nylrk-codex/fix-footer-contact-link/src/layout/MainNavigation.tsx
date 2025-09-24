@@ -3,112 +3,99 @@ import { LinkuseLocation } from "react-router-dom",
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
 import { MessageSquare } from "lucide-react",
-,
-interface MainNavigationProps {,
+interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
-  className?: string,
-}
+  className?: string}
 ,
-export function MainNavigation({ isAdmin = falseunreadCount = 0className }: MainNavigationProps) {,
+export function MainNavigation({ isAdmin = falseunreadCount = 0className }: MainNavigationProps) {
   const { user } = useAuth(),
   const isAuthenticated = !!user,
   const location = useLocation(),
-,
-  const links = [,
-    {,
-      name: "Home",;
-      href: "/",;
+  const links = [
+    {
+      name: "Home";
+      href: "/";
       matches: (path: string) => path === "/",
-    ,},;
-    {,
-      name: "Marketplace",;
-      href: "/marketplace",;
+    };
+    {
+      name: "Marketplace";
+      href: "/marketplace";
       matches: (path: string) => path.startsWith("/marketplace"),
-    ,},;
-    {,
-      name: "Categories",;
-      href: "/categories",;
+    };
+    {
+      name: "Categories";
+      href: "/categories";
       matches: (path: string) => path.startsWith("/categories"),
-    ,},;
-    {,
-      name: "Talent",;
-      href: "/talent",;
+    };
+    {
+      name: "Talent";
+      href: "/talent";
       matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard"),
-    ,},;
-    {,
-      name: "Equipment",;
-      href: "/equipment",;
+    };
+    {
+      name: "Equipment";
+      href: "/equipment";
       matches: (path: string) => path.startsWith("/equipment"),
-    ,},;
-    {,
-      name: "Community",;
-      href: "/community",;
+    };
+    {
+      name: "Community";
+      href: "/community";
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum"),
-    ,}
+    }
   ],
-,
   // Add authenticated-only links,
-  if (isAuthenticated) {,
-    links.push({,
-      name: "Dashboard",;
-      href: "/dashboard",;
+  if (isAuthenticated) {
+    links.push({
+      name: "Dashboard";
+      href: "/dashboard";
       matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard",
-    ,}),
-  }
+    })}
 ,
   // Add admin-only links,
-  if (isAdmin) {,
-    links.push({,
-      name: "Analytics",;
-      href: "/analytics",;
+  if (isAdmin) {
+    links.push({
+      name: "Analytics";
+      href: "/analytics";
       matches: (path: string) => path.startsWith("/analytics"),
-    ,}),
-  }
+    })}
 ,
-  return (,
-    <nav className={cn("ml-6 hidden md: flex"className),}>,
+  return (
+    <nav className={cn("ml-6 hidden md: flex"className)}>,
       <ul className="flex items-center gap-1">,
-        {links.map((link) => (,
+        {links.map((link) => (
           <li key={link.name}>,
-            <Link,
+            <Link
               to={link.href}
-              className={cn(,
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",;
+              className={cn(
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors";
                 link.matches(location.pathname),
                   ? "bg-zion-purple/20 text-zion-cyan",
-                  : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan",
-              ),}
+                  : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan")}
             >,
               {link.name}
             </Link>,
-          </li>,
-        ))}
+          </li>))}
 ,
         {/* Messages link with unread counter */}
-        {isAuthenticated && (,
+        {isAuthenticated && (
           <li>,
-            <Link,
+            <Link
               to="/messages",
-              className={cn(,
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",;
+              className={cn(
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative";
                 location.pathname === "/messages" || location.pathname === "/inbox",
                   ? "bg-zion-purple/20 text-zion-cyan",
-                  : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan",
-              ),}
+                  : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan")}
             >,
               <MessageSquare className="w-4 h-4 mr-1" />,
               Messages,
-              {unreadCount > 0 && (,
+              {unreadCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">,
                   {unreadCount}
-                </span>,
-              )}
+                </span>)}
             </Link>,
-          </li>,
-        )}
+          </li>)}
       </ul>,
-    </nav>,
-  ),
-}
+    </nav>)}
 ,

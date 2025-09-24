@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function QuantumCloudPlatformPage() {,
-  return (,
+export default function QuantumCloudPlatformPage() {
+  return (
     <>,
       <Head>,
         <title>Quantum Cloud Platform - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function QuantumCloudPlatformPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

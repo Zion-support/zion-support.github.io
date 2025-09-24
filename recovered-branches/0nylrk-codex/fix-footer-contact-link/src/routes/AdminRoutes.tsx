@@ -1,7 +1,6 @@
 import { Fragment } from 'react',
 import { Routes } from 'react-router-dom',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
-,
 // Admin Pages,
 import QuoteManager from '@/pages/admin/QuoteManager',
 import ReviewsModeration from '@/pages/admin/ReviewsModeration',
@@ -12,85 +11,71 @@ import SupportRequests from '@/pages/admin/SupportRequests',
 import FraudDetection from '@/pages/admin/FraudDetection',
 import TokenManager from '@/pages/admin/TokenManager',
 import IntegrationsPage from '@/pages/admin/IntegrationsPage',
-,
-const AdminRoutes = () => {,
-  return (,
+const AdminRoutes = () => {
+  return (
     <Routes>,
-      <Route,
+      <Route
         path='/admin/quotes',
-        element={,
+        element={
           <ProtectedRoute adminOnly={true}>,
             <QuoteManager />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/admin/reviews',
-        element={,
+        element={
           <ProtectedRoute adminOnly={true}>,
             <ReviewsModeration />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/admin/whitelabel',
-        element={,
+        element={
           <ProtectedRoute adminOnly={true}>,
             <WhitelabelManager />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/admin/partners',
-        element={,
+        element={
           <ProtectedRoute adminOnly={true}>,
             <PartnerManager />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/admin/app-metadata',
-        element={,
+        element={
           <ProtectedRoute adminOnly={true}>,
             <AppMetadataManager />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/admin/support-requests',
-        element={,
+        element={
           <ProtectedRoute adminOnly={true}>,
             <SupportRequests />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/admin/fraud-detection',
-        element={,
+        element={
           <ProtectedRoute adminOnly={true}>,
             <FraudDetection />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/admin/tokens',
-        element={,
+        element={
           <ProtectedRoute adminOnly={true}>,
             <TokenManager />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/admin/integrations',
-        element={,
+        element={
           <ProtectedRoute adminOnly={true}>,
             <IntegrationsPage />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-    </Routes>,
-  ),
-};
-,
-export default AdminRoutes,
-,
+    </Routes>)};
+export default AdminRoutes;

@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function BlogPostPage() {,
-  return (,
+import React from 'react';
+export default function BlogPostPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       <article className='max-w-3xl mx-auto px-6 py-24'>,
         <header>,
@@ -19,7 +18,7 @@ export default function BlogPostPage() {,
           <p>,
             Retrieval-augmented systems power agents and copilots with fresh,
             context. To ship reliably at scale, teams need visibility across the,
-            entire pipeline: query parsing, candidate generation, reranking,;
+            entire pipeline: query parsing, candidate generation, reranking;
             grounding, and answer rendering. This blueprint outlines practical,
             instrumentation, SLIs, and continuous evals for enterprise,
             readiness.,
@@ -49,7 +48,5 @@ export default function BlogPostPage() {,
           </p>,
         </section>,
       </article>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

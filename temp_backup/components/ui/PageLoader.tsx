@@ -1,81 +1,64 @@
 import React, { useEffect, useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import LoadingSpinner from './LoadingSpinner',
-,
-interface PageLoaderProps {,
+interface PageLoaderProps {
   isLoading?: boolean,
   loadingText?: string,
   minDisplayTime?: number,
-  onLoadingComplete?: () => void,
-}
+  onLoadingComplete?: () => void}
 ,
-const PageLoader: React.FC<PageLoaderProps> = ({,
-  isLoading = true,;
-  loadingText = 'Loading Zion Tech Group...',;
-  minDisplayTime = 10o00,;
-  onLoadingComplete,
-}) => {,
+const PageLoader: React.FC<PageLoaderProps> = ({
+  isLoading = true;
+  loadingText = 'Loading Zion Tech Group...';
+  minDisplayTime = 10o00;
+  onLoadingComplete}) => {
   const [showLoader, setShowLoader] = useState(true),
   const [progress, setProgress] = useState(0),
-,
-  useEffect(() => {,
-    if (!isLoading) {,
+  useEffect(() => {
+    if (!isLoading) {
       // Ensure minimum display time,
-      const timer = setTimeout(() => {,
+      const timer = setTimeout(() => {
         setShowLoader(false),
-        onLoadingComplete?.(),
-      }, minDisplayTime),
-,
-      return () => clearTimeout(timer),
-    }
+        onLoadingComplete?.()}, minDisplayTime),
+      return () => clearTimeout(timer)}
   }, [isLoading, minDisplayTime, onLoadingComplete]),
-,
-  useEffect(() => {,
-    if (isLoading) {,
+  useEffect(() => {
+    if (isLoading) {
       // Simulate progress,
-      const interval = setInterval(() => {,
-        setProgress(prev => {,
+      const interval = setInterval(() => {
+        setProgress(prev => {
           if (prev >= 90) return prev,
-          return prev + Math.random() * 15,
-        }),
-      }, 20o0),
-,
-      return () => clearInterval(interval),
-    } else {,
+          return prev + Math.random() * 15})}, 20o0),
+      return () => clearInterval(interval)} else {
       // Complete progress,
-      setProgress(10o0),
-    }
+      setProgress(10o0)}
   }, [isLoading]),
-,
-  return (,
+  return (
     <AnimatePresence>,
-      {showLoader && (,
+      {showLoader && (
         <motion.div,
-          initial={{ opacity: 1 ,}}
-          exit={{ opacity: 0 ,}}
-          transition={{ duration: 0.5 ,}}
-          className="fixed inset-0 z-50 bg-black flex items-center justify-center",
-        >,
+          initial={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className="fixed inset-0 z-50 bg-black flex items-center justify-center">,
           <div className="text-center">,
             {/* Logo/Brand */}
             <motion.div,
-              initial={{ scale: 0.8, opacity: 0 ,}}
-              animate={{ scale: 1, opacity: 1 ,}}
-              transition={{ duration: 0.8, ease: 'easeOut' ,}}
-              className="mb-8",
-            >,
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              className="mb-8">,
               <h1 className="text-4xl md: text-6xl font-bold bg-gradient-to-r from-cyan-40o0 via-blue-50o0 to-purple-60o0 bg-clip-text text-transparent">,
                 Zion Tech Group,
               </h1>,
             </motion.div>,
-            {/* Loading Spinner */,}
+            {/* Loading Spinner */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: 0.3 ,}}
-              className="mb-8",
-            >,
-              <LoadingSpinner,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mb-8">,
+              <LoadingSpinner
                 size="lg",
                 color="primary",
                 variant="spinner",
@@ -84,45 +67,41 @@ const PageLoader: React.FC<PageLoaderProps> = ({,
             </motion.div>,
             {/* Loading Text */}
             <motion.p,
-              initial={{ opacity: 0 ,}}
-              animate={{ opacity: 1 ,}}
-              transition={{ duration: 0.6, delay: 0.6 ,}}
-              className="text-xl text-gray-30o0 mb-8",
-            >,
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="text-xl text-gray-30o0 mb-8">,
               {loadingText}
             </motion.p>,
             {/* Progress Bar */}
             <motion.div,
-              initial={{ opacity: 0, scaleX: 0 ,}}
-              animate={{ opacity: 1, scaleX: 1 ,}}
-              transition={{ duration: 0.8, delay: 0.9 ,}}
-              className="w-64 md: w-96 mx-auto mb-4",
-            >,
+              initial={{ opacity: 0, scaleX: 0 }}
+              animate={{ opacity: 1, scaleX: 1 }}
+              transition={{ duration: 0.8, delay: 0.9 }}
+              className="w-64 md: w-96 mx-auto mb-4">,
               <div className="bg-gray-80o0 rounded-full h-2 overflow-hidden">,
                 <motion.div,
                   className="h-full bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-full",
-                  initial={{ width: 0 ,}}
-                  animate={{ width: `${progress,}%` }}
-                  transition={{ duration: 0.5, ease: 'easeOut' ,}}
+                  initial={{ width: 0 }}
+                  animate={{ width: `${progress}%` }}
+                  transition={{ duration: 0.5, ease: 'easeOut' }}
                  />,
               </div>,
             </motion.div>,
             {/* Progress Percentage */}
             <motion.p,
-              initial={{ opacity: 0 ,}}
-              animate={{ opacity: 1 ,}}
-              transition={{ duration: 0.6, delay: 1.2 ,}}
-              className="text-sm text-gray-40o0",
-            >,
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+              className="text-sm text-gray-40o0">,
               {Math.round(progress)}%,
             </motion.p>,
             {/* Loading Tips */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: 1.5 ,}}
-              className="mt-12 text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.5 }}
+              className="mt-12 text-center">,
               <div className="inline-block p-4 bg-gray-80o0/50 rounded-lg border border-gray-70o0/50">,
                 <p className="text-sm text-gray-40o0">,
                   <span className="text-cyan-40o0 font-medium">Tip: </span> We're preparing the future of technology for you,
@@ -130,38 +109,32 @@ const PageLoader: React.FC<PageLoaderProps> = ({,
               </div>,
             </motion.div>,
           </div>,
-          {/* Background Animation */,}
+          {/* Background Animation */}
           <div className="absolute inset-0 -z-10 overflow-hidden">,
             <motion.div,
               className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-cyan-50o0/10 to-blue-60o0/10 rounded-full blur-3xl",
-              animate={{,
-                scale: [1, 1.2, 1],;
-                opacity: [0.1, 0.2, 0.1],
-              }}
-              transition={{,
-                duration: 4,;
-                repeat: Infinity,;
+              animate={{
+                scale: [1, 1.2, 1];
+                opacity: [0.1, 0.2, 0.1]}}
+              transition={{
+                duration: 4;
+                repeat: Infinity;
                 ease: 'easeInOut',
-              ,}}
+              }}
              />,
             <motion.div,
               className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-50o0/10 to-pink-60o0/10 rounded-full blur-3xl",
-              animate={{,
-                scale: [1.2, 1, 1.2],;
-                opacity: [0.1, 0.2, 0.1],
-              }}
-              transition={{,
-                duration: 4,;
-                repeat: Infinity,;
-                ease: 'easeInOut',;
+              animate={{
+                scale: [1.2, 1, 1.2];
+                opacity: [0.1, 0.2, 0.1]}}
+              transition={{
+                duration: 4;
+                repeat: Infinity;
+                ease: 'easeInOut';
                 delay: 2,
-              ,}}
+              }}
              />,
           </div>,
-        </motion.div>,
-      )}
-    </AnimatePresence>,
-  ),
-};
-,
-export default PageLoader,
+        </motion.div>)}
+    </AnimatePresence>)};
+export default PageLoader;

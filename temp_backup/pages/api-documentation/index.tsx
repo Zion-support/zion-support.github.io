@@ -1,13 +1,12 @@
 import Head from 'next/head',
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
-,
-export default function ApiDocsIndex() {,
-  return (,
+export default function ApiDocsIndex() {
+  return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>,
       <Head>,
         <title>API Documentation | Zion Tech Group</title>,
         <meta name='description' content='API reference and endpoints.' />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/api-documentation',
         />,
@@ -20,7 +19,6 @@ export default function ApiDocsIndex() {,
           SDKs and REST endpoints. Contact us for enterprise access.,
         </p>,
       </div>,
-    </UltraFuturisticBackground>,
-  ),
-,}
+    </UltraFuturisticBackground>),
+}
 ,

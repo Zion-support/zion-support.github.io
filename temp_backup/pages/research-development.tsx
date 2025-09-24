@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function ResearchDevelopmentPage() {,
-  return (,
+export default function ResearchDevelopmentPage() {
+  return (
     <>,
       <Head>,
         <title>Research & Development | Zion Tech Group</title>,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/research-development',
         />,
@@ -27,7 +26,5 @@ export default function ResearchDevelopmentPage() {,
           .,
         </p>,
       </div>,
-    </>,
-  ),
-}
+    </>)}
 ,

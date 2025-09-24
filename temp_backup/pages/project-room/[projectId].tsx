@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function [projectId]Page() {,
-  return (,
+export default function [projectId]Page() {
+  return (
     <>,
       <Head>,
         <title>[ProjectId] - Zion Tech Group</title>,
@@ -16,6 +15,5 @@ export default function [projectId]Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}

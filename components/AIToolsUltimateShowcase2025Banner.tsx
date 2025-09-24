@@ -1,8 +1,7 @@
 import Link from 'next/link',
 ArrowRightBrainZapTargetCodeDatabaseTrendingUp,
-,
-export default function AIToolsUltimateShowcase20o25Banner() {,
-  return (,
+export default function AIToolsUltimateShowcase20o25Banner() {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white'>,
       {/* Animated background elements */}
       <div className='absolute inset-0'>,
@@ -13,7 +12,7 @@ export default function AIToolsUltimateShowcase20o25Banner() {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
         <div className='text-center'>,
-          {/* Main heading with gradient text */,}
+          {/* Main heading with gradient text */}
           <div className='flex items-center justify-center mb-6'>,
             <Brain className='h-8 w-8 text-blue-40o0 mr-3 animate-pulse' />,
             <h2 className='text-3xl md: text-5xl font-bold bg-gradient-to-r from-blue-40o0 via-purple-40o0 to-indigo-40o0 bg-clip-text text-transparent'>,
@@ -21,13 +20,13 @@ export default function AIToolsUltimateShowcase20o25Banner() {,
             </h2>,
             <Zap className='h-8 w-8 text-purple-40o0 ml-3 animate-pulse' />,
           </div>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-lg md: text-xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>,
             Discover the most advanced AI tools and technologies revolutionizing,
             industries worldwide. From neural processing to quantum,
             computingexplore cutting-edge solutions that deliver real results.,
           </p>,
-          {/* Feature highlights */,}
+          {/* Feature highlights */}
           <div className='grid grid-cols-2 md: grid-cols-4 gap-6 mb-10'>,
             <div className='flex flex-col items-center space-y-2'>,
               <Brain className='h-6 w-6 text-blue-40o0' />,
@@ -46,26 +45,24 @@ export default function AIToolsUltimateShowcase20o25Banner() {,
               <span className='text-sm font-semibold'>Data Analytics</span>,
             </div>,
           </div>,
-          {/* Call to action buttons */,}
+          {/* Call to action buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/ai-tools-ultimate-showcase-20o25',
-              className='group bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover:from-blue-70o0 hover:to-purple-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl flex items-center justify-center',
-            >,
+              className='group bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover:from-blue-70o0 hover:to-purple-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl flex items-center justify-center'>,
               <Brain className='h-5 w-5 mr-2 group-hover:animate-pulse' />,
               Explore AI Tools,
               <ArrowRight className='ml-2 group-hover:translate-x-1 transition-transform' />,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='group border-2 border-blue-40o0 text-blue-40o0 hover:bg-blue-40o0 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-30o0 flex items-center justify-center',
-            >,
+              className='group border-2 border-blue-40o0 text-blue-40o0 hover:bg-blue-40o0 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-30o0 flex items-center justify-center'>,
               <Target className='h-5 w-5 mr-2 group-hover:animate-pulse' />,
               View Implementations,
               <ArrowRight className='ml-2 group-hover:translate-x-1 transition-transform' />,
             </Link>,
           </div>,
-          {/* Additional info */,}
+          {/* Additional info */}
           <div className='mt-8 text-sm text-gray-40o0'>,
             <p>🚀 50+ AI Tools • 🎯 99.9% Accuracy • 💼 Enterprise Ready</p>,
           </div>,
@@ -73,7 +70,5 @@ export default function AIToolsUltimateShowcase20o25Banner() {,
       </div>,
       {/* Bottom gradient fade */}
       <div className='absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/20 to-transparent'></div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

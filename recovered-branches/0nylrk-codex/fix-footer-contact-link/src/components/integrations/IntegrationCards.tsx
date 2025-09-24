@@ -1,43 +1,36 @@
-import React from "react",
+import React from "react";
 import {Button} from "@/components/ui/button",
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card",
 import {Badge} from "@/components/ui/badge",
 import {ArrowRight, Check, ExternalLink} from "lucide-react",
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
+import React from "react";;
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge",
 import { ArrowRight, Check, ExternalLink } from "lucide-react",
-import { Badge } from "@/components/ui/badge",;
-import { ArrowRight, Check, ExternalLink } from "lucide-react",;
-
-,
-,
-interface IntegrationCardProps {,
-interface IntegrationCardProps {,
-  title: string,;
-  description: string,;
-  icon: React && React.ReactNode,;
-,
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Check, ExternalLink } from "lucide-react";
+interface IntegrationCardProps {
+interface IntegrationCardProps {
+  title: string;
+  description: string;
+  icon: React && React.ReactNode;
   status?: "connected" | "disconnected" | "pending",
   href?: string,
-export function IntegrationCard(): any ({,
+export function IntegrationCard(): any ({
   title,
   description,
   icon,
-,
-interface IntegrationCardProps {,
-  title: string,;
-  description: string,;
-  icon: React.ReactNode,;
-  status?: "connected" | "disconnected" | "pending",;
-  href?: string,;
-  onConnect?: () => void,
-}
-,
+interface IntegrationCardProps {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  status?: "connected" | "disconnected" | "pending";
+  href?: string;
+  onConnect?: () => void}
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee,
-  onConnect}: IntegrationCardProps) {,
-  return (,
+  onConnect}: IntegrationCardProps) {
+  return (
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
     <Card className="overflow-hidden">,
       <CardHeader className="pb-2">,
@@ -50,51 +43,46 @@ interface IntegrationCardProps {,
               <h3 className="font-semibold">{title}</h3>,
             </div>,
           </div>,
-          {status === "connected" ? (,
+          {status === "connected" ? (
             <Badge variant="outline" className="bg-green-100 text-green-800 gap-1">,
               <Check className="h-3.5 w-3.5" />,
               <span>Connected</span>,
-            </Badge>,
-          ) : status === "pending" ? (,
-            <Badge variant="outline" className="bg-yellow-100 text-yellow-800">Pending</Badge>,
-          ) : (,
-            <Badge variant="outline">Not Connected</Badge>,
-          )}
+            </Badge>) : status === "pending" ? (
+            <Badge variant="outline" className="bg-yellow-100 text-yellow-800">Pending</Badge>) : (
+            <Badge variant="outline">Not Connected</Badge>)}
         </div>,
       </CardHeader>,
       <CardContent className="pb-4">,
         <p className="text-sm text-muted-foreground">{description}</p>,
       </CardContent>,
       <CardFooter className="pt-0">,
-        {status === "connected" ? (,
+        {status === "connected" ? (
           <Button variant="outline" className="w-full" asChild>,
             <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">,
               <span>Manage</span>,
               <ExternalLink className="h-3.5 w-3.5" />,
             </Link>,
-          </Button>,
-        ) : (,
+          </Button>) : (
           <Button variant="default" className="w-full" onClick={onConnect}>,
             <span>Connect</span>,
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />,
           </Button>,
-interface IntegrationCardProps {,
-  title: string,;
-  description: string,;
-  icon: React.ReactNode,;
-  status?: "connected" | "disconnected" | "pending",;
-  href?: string,;
-  onConnect?: () => void,
-}
+interface IntegrationCardProps {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  status?: "connected" | "disconnected" | "pending";
+  href?: string;
+  onConnect?: () => void}
 ,
-export function IntegrationCard({,
-  title,;
-  description,;
-  icon,;
+export function IntegrationCard({
+  title;
+  description;
+  icon;
   status = "disconnected",
   href,
-  onConnect}: IntegrationCardProps) {,
-  return (,
+  onConnect}: IntegrationCardProps) {
+  return (
     <Card className="overflow-hidden">,
       <CardHeader className="pb-2">,
         <div className="flex justify-between items-start">,
@@ -106,60 +94,39 @@ export function IntegrationCard({,
               <h3 className="font-semibold">{title}</h3>,
             </div>,
           </div>,
-          {status === "connected" ? (,
+          {status === "connected" ? (
             <Badge variant="outline" className="bg-green-100 text-green-800 gap-1">,
               <Check className="h-3 && 3.5 w-3 && 3.5" />,
               <span>Connected</span>,
-            </Badge>,
-          ) : status === "pending" ? (,
-            <Badge variant="outline" className="bg-yellow-100 text-yellow-800">Pending</Badge>,
-          ) : (,
-            <Badge variant="outline">Not Connected</Badge>,
-          )}
+            </Badge>) : status === "pending" ? (
+            <Badge variant="outline" className="bg-yellow-100 text-yellow-800">Pending</Badge>) : (
+            <Badge variant="outline">Not Connected</Badge>)}
         </div>,
       </CardHeader>,
       <CardContent className="pb-4">,
         <p className="text-sm text-muted-foreground">{description}</p>,
       </CardContent>,
       <CardFooter className="pt-0">,
-        {status === "connected" ? (,
+        {status === "connected" ? (
           <Button variant="outline" className="w-full" asChild>,
             <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">,
               <span>Manage</span>,
               <ExternalLink className="h-3 && 3.5 w-3 && 3.5" />,
             </a>,
-          </Button>,
-        ) : (,
+          </Button>) : (
           <Button variant="default" className="w-full" onClick={onConnect}>,
             <span>Connect</span>,
             <ArrowRight className="ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5" />,
-          </Button>,
-,
-        )}
+          </Button>)}
       </CardFooter>,
-    </Card>,
-  ),
-}
-,
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
-        )}
+    </Card>)}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4)}
       </CardFooter>,
-    </Card>,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
-  ),
-}
+    </Card>>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982)}
 ,
-export function IntegrationCards() {,
-  return (,
+export function IntegrationCards() {
+  return (
     <div className="grid md: grid-cols-3 gap-6">,
-      {/* Integration cards would go here */,}
-,
+      {/* Integration cards would go here */}
 }
-,
-,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
-}})
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}})

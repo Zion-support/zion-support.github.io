@@ -3,503 +3,445 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { ModernHeader } from '../src/components/header/ModernHeader',
 import { SimpleFooter } from '../src/components/layout/SimpleFooter',
-import {,
-  ArrowRight,;
-  Brain,;
-  Cloud,;
-  Shield,;
-  Zap,;
-  Database,;
-  Server,;
-  Lock,;
-  BarChart3,;
-  Users,;
-  Globe,;
-  Code,;
-  CheckCircle,;
-  Star,;
-  TrendingUp,;
-  Clock,;
-  Award,;
-  Mail,;
-  Smartphone,;
-  Target,;
-  FileText,;
-  BarChart,;
-  Settings,;
-  Headphones,;
-  ShieldCheck,;
-  Cpu,;
-  Wifi,;
-  Monitor,;
-  MessageSquare,;
-  Eye,;
-  Palette,;
-  Bot,;
-  Link2,;
-  HardDrive,;
-  Activity,;
-  Terminal,;
-  CreditCard,;
-  Calendar,;
-  Phone,;
-  MapPin,;
-  Search,;
-  Filter,;
-  ChevronDown,;
-  ChevronUp,;
-  DollarSign,;
-  ShoppingCart,;
-  UserCheck,;
-  AlertTriangle,;
-  Link as LinkIcon,;
-  CheckSquare,;
-  Glasses,;
-  Layers,;
-  Network,;
-  Mic,;
-  Home,;
-  Heart,;
-  Car,;
-  TreePine,;
-  Satellite,
-} from 'lucide-react',
-,
-export default function ServicesEnhanced() {,
+import {
+  ArrowRight;
+  Brain;
+  Cloud;
+  Shield;
+  Zap;
+  Database;
+  Server;
+  Lock;
+  BarChart3;
+  Users;
+  Globe;
+  Code;
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Clock;
+  Award;
+  Mail;
+  Smartphone;
+  Target;
+  FileText;
+  BarChart;
+  Settings;
+  Headphones;
+  ShieldCheck;
+  Cpu;
+  Wifi;
+  Monitor;
+  MessageSquare;
+  Eye;
+  Palette;
+  Bot;
+  Link2;
+  HardDrive;
+  Activity;
+  Terminal;
+  CreditCard;
+  Calendar;
+  Phone;
+  MapPin;
+  Search;
+  Filter;
+  ChevronDown;
+  ChevronUp;
+  DollarSign;
+  ShoppingCart;
+  UserCheck;
+  AlertTriangle;
+  Link as LinkIcon;
+  CheckSquare;
+  Glasses;
+  Layers;
+  Network;
+  Mic;
+  Home;
+  Heart;
+  Car;
+  TreePine;
+  Satellite} from 'lucide-react',
+export default function ServicesEnhanced() {
   const title = 'Services — Zion Tech Group',
   const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.',
-,
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [searchTerm, setSearchTerm] = useState<string>(''),
   const [expandedService, setExpandedService] = useState<string | null>(null),
-,
-  const serviceCategories = [,
-    { id: 'all', name: 'All Services', count: 4 5 ,},;
-    { id: 'ai', name: 'AI & Machine Learning', count: 1 5 ,},;
-    { id: 'cloud', name: 'Cloud & Infrastructure', count: 1 2 ,},;
-    { id: 'saas', name: 'Micro SaaS', count: 1 8 ,}
+  const serviceCategories = [
+    { id: 'all', name: 'All Services', count: 4 5 };
+    { id: 'ai', name: 'AI & Machine Learning', count: 1 5 };
+    { id: 'cloud', name: 'Cloud & Infrastructure', count: 1 2 };
+    { id: 'saas', name: 'Micro SaaS', count: 1 8 }
   ],
-,
-  const services = [,
+  const services = [
     // AI & Machine Learning Services,
-    {,
-      id: 'ai-autonomous-systems',;
-      title: 'AI Autonomous Systems',;
-      description: 'Transform your operations with intelligent automation and AI-powered decision making.',;
-      icon: 'Brain',;
-      category: 'ai',;
-      color: 'blue',;
-      pricing: { starting: '$8,0o00', average: '$25,0o00' },;
-      deliveryTime: '2-4 weeks',;
-      features: [,
-        'Sales/CS multi-agent copilots',;
-        'RAG and workflow orchestration',;
-        'Observability and guardrails',;
-        'Intelligent process automation',;
-        'Custom AI model training',;
-        'Real-time decision making',
-      ],;
-      benefits: [,
-        '30o0% increase in operational efficiency',;
-        '24/7 automated decision making',;
-        'Reduced human error by 95%',;
-        'Scalable AI infrastructure',
-      ],;
-      technologies: ['OpenAI GPT-4', 'Anthropic Claude', 'LangChain', 'Vector Databases', 'Kubernetes'],
-    },;
-    {,
-      id: 'ai-content-creation',;
-      title: 'AI Content Creation Suite',;
-      description: 'Generate high-quality content at scale with AI-powered writing tools.',;
-      icon: 'FileText',;
-      category: 'ai',;
-      color: 'purple',;
-      pricing: { starting: '$199', average: '$499' ,},;
-      deliveryTime: '1-2 weeks',;
-      features: [,
-        'Blog posts, articles, and marketing copy',;
-        'SEO-optimized content with keyword research',;
-        'Multi-language support and brand voice consistency',;
-        'Content calendar and publishing automation',;
-        'Social media content generation',;
-        'Video script and podcast outline creation',
-      ],;
-      benefits: [,
-        '10x faster content production',;
-        'Consistent brand voice across all content',;
-        'SEO optimization built-in',;
-        'Multi-platform content distribution',
-      ],;
-      technologies: ['GPT-4', 'Claude', 'Midjourney', 'DALL-E', 'Content Management Systems'],
-    },;
-    {,
-      id: 'ai-social-media-manager',;
-      title: 'AI-Powered Social Media Manager',;
-      description: 'Automated social media content creation, scheduling, and engagement optimization.',;
-      icon: 'MessageSquare',;
-      category: 'ai',;
-      color: 'pink',;
-      pricing: { starting: '$149', average: '$299' ,},;
-      deliveryTime: '1-2 weeks',;
-      features: [,
-        'AI-generated posts with brand voice consistency',;
-        'Optimal posting time recommendations',;
-        'Hashtag research and trending topic analysis',;
-        'Engagement analytics and performance insights',;
-        'Multi-platform scheduling (Instagram, Twitter, LinkedIn)',;
-        'Automated response to comments and messages',
-      ],;
-      benefits: [,
-        '5x increase in social media engagement',;
-        'Automated content calendar management',;
-        'Real-time trend analysis and adaptation',;
-        'Cross-platform content optimization',
-      ],;
-      technologies: ['Social Media APIs', 'AI Content Generation', 'Analytics Platforms', 'Scheduling Tools'],
-    },;
-    {,
-      id: 'ai-legal-analyzer',;
-      title: 'AI Legal Document Analyzer',;
-      description: 'Automated legal document analysis with risk identification and compliance checking.',;
-      icon: 'FileText',;
-      category: 'ai',;
-      color: 'indigo',;
-      pricing: { starting: '$349', average: '$699' ,},;
-      deliveryTime: '2-3 weeks',;
-      features: [,
-        'Contract analysis and clause extraction',;
-        'Risk assessment and compliance verification',;
-        'Document comparison and version control',;
-        'Legal precedent research and citation',;
-        'Automated contract generation templates',;
-        'Compliance monitoring and alerts',
-      ],;
-      benefits: [,
-        '90% reduction in document review time',;
-        'Automated risk identification',;
-        'Compliance assurance and monitoring',;
-        'Cost-effective legal document processing',
-      ],;
-      technologies: ['Natural Language Processing', 'Document AI', 'Legal Databases', 'Compliance Frameworks'],
-    },;
-    {,
-      id: 'ai-financial-analytics',;
-      title: 'AI Financial Analytics Platform',;
-      description: 'Advanced financial data analysis with predictive insights and anomaly detection.',;
-      icon: 'BarChart3',;
-      category: 'ai',;
-      color: 'emerald',;
-      pricing: { starting: '$299', average: '$599' ,},;
-      deliveryTime: '2-3 weeks',;
-      features: [,
-        'Real-time financial monitoring and alerts',;
-        'Predictive modeling and risk assessment',;
-        'Automated reporting and compliance tracking',;
-        'Investment portfolio optimization',;
-        'Fraud detection and prevention',;
-        'Market trend analysis and forecasting',
-      ],;
-      benefits: [,
-        'Real-time financial insights',;
-        'Automated fraud detection',;
-        'Predictive financial modeling',;
-        'Compliance automation',
-      ],;
-      technologies: ['Machine Learning', 'Financial APIs', 'Risk Models', 'Compliance Tools'],
-    },;
-    {,
-      id: 'ai-hr-recruitment',;
-      title: 'AI-Powered HR Recruitment Platform',;
-      description: 'Intelligent candidate screening, interview scheduling, and talent acquisition automation.',;
-      icon: 'Users',;
-      category: 'ai',;
-      color: 'orange',;
-      pricing: { starting: '$199', average: '$399' ,},;
-      deliveryTime: '2-3 weeks',;
-      features: [,
-        'AI-powered resume screening and ranking',;
-        'Automated interview scheduling and coordination',;
-        'Candidate matching and skill assessment',;
-        'Diversity and inclusion analytics',;
-        'Integration with job boards and ATS systems',;
-        'Background check automation',
-      ],;
-      benefits: [,
-        '75% reduction in time-to-hire',;
-        'Improved candidate quality matching',;
-        'Automated interview coordination',;
-        'Diversity and inclusion insights',
-      ],;
-      technologies: ['AI Matching Algorithms', 'ATS Integration', 'Video Interviewing', 'Background Check APIs'],
-    },;
+    {
+      id: 'ai-autonomous-systems';
+      title: 'AI Autonomous Systems';
+      description: 'Transform your operations with intelligent automation and AI-powered decision making.';
+      icon: 'Brain';
+      category: 'ai';
+      color: 'blue';
+      pricing: { starting: '$8,0o00', average: '$25,0o00' };
+      deliveryTime: '2-4 weeks';
+      features: [
+        'Sales/CS multi-agent copilots';
+        'RAG and workflow orchestration';
+        'Observability and guardrails';
+        'Intelligent process automation';
+        'Custom AI model training';
+        'Real-time decision making'];
+      benefits: [
+        '30o0% increase in operational efficiency';
+        '24/7 automated decision making';
+        'Reduced human error by 95%';
+        'Scalable AI infrastructure'];
+      technologies: ['OpenAI GPT-4', 'Anthropic Claude', 'LangChain', 'Vector Databases', 'Kubernetes']};
+    {
+      id: 'ai-content-creation';
+      title: 'AI Content Creation Suite';
+      description: 'Generate high-quality content at scale with AI-powered writing tools.';
+      icon: 'FileText';
+      category: 'ai';
+      color: 'purple';
+      pricing: { starting: '$199', average: '$499' };
+      deliveryTime: '1-2 weeks';
+      features: [
+        'Blog posts, articles, and marketing copy';
+        'SEO-optimized content with keyword research';
+        'Multi-language support and brand voice consistency';
+        'Content calendar and publishing automation';
+        'Social media content generation';
+        'Video script and podcast outline creation'];
+      benefits: [
+        '10x faster content production';
+        'Consistent brand voice across all content';
+        'SEO optimization built-in';
+        'Multi-platform content distribution'];
+      technologies: ['GPT-4', 'Claude', 'Midjourney', 'DALL-E', 'Content Management Systems']};
+    {
+      id: 'ai-social-media-manager';
+      title: 'AI-Powered Social Media Manager';
+      description: 'Automated social media content creation, scheduling, and engagement optimization.';
+      icon: 'MessageSquare';
+      category: 'ai';
+      color: 'pink';
+      pricing: { starting: '$149', average: '$299' };
+      deliveryTime: '1-2 weeks';
+      features: [
+        'AI-generated posts with brand voice consistency';
+        'Optimal posting time recommendations';
+        'Hashtag research and trending topic analysis';
+        'Engagement analytics and performance insights';
+        'Multi-platform scheduling (Instagram, Twitter, LinkedIn)';
+        'Automated response to comments and messages'];
+      benefits: [
+        '5x increase in social media engagement';
+        'Automated content calendar management';
+        'Real-time trend analysis and adaptation';
+        'Cross-platform content optimization'];
+      technologies: ['Social Media APIs', 'AI Content Generation', 'Analytics Platforms', 'Scheduling Tools']};
+    {
+      id: 'ai-legal-analyzer';
+      title: 'AI Legal Document Analyzer';
+      description: 'Automated legal document analysis with risk identification and compliance checking.';
+      icon: 'FileText';
+      category: 'ai';
+      color: 'indigo';
+      pricing: { starting: '$349', average: '$699' };
+      deliveryTime: '2-3 weeks';
+      features: [
+        'Contract analysis and clause extraction';
+        'Risk assessment and compliance verification';
+        'Document comparison and version control';
+        'Legal precedent research and citation';
+        'Automated contract generation templates';
+        'Compliance monitoring and alerts'];
+      benefits: [
+        '90% reduction in document review time';
+        'Automated risk identification';
+        'Compliance assurance and monitoring';
+        'Cost-effective legal document processing'];
+      technologies: ['Natural Language Processing', 'Document AI', 'Legal Databases', 'Compliance Frameworks']};
+    {
+      id: 'ai-financial-analytics';
+      title: 'AI Financial Analytics Platform';
+      description: 'Advanced financial data analysis with predictive insights and anomaly detection.';
+      icon: 'BarChart3';
+      category: 'ai';
+      color: 'emerald';
+      pricing: { starting: '$299', average: '$599' };
+      deliveryTime: '2-3 weeks';
+      features: [
+        'Real-time financial monitoring and alerts';
+        'Predictive modeling and risk assessment';
+        'Automated reporting and compliance tracking';
+        'Investment portfolio optimization';
+        'Fraud detection and prevention';
+        'Market trend analysis and forecasting'];
+      benefits: [
+        'Real-time financial insights';
+        'Automated fraud detection';
+        'Predictive financial modeling';
+        'Compliance automation'];
+      technologies: ['Machine Learning', 'Financial APIs', 'Risk Models', 'Compliance Tools']};
+    {
+      id: 'ai-hr-recruitment';
+      title: 'AI-Powered HR Recruitment Platform';
+      description: 'Intelligent candidate screening, interview scheduling, and talent acquisition automation.';
+      icon: 'Users';
+      category: 'ai';
+      color: 'orange';
+      pricing: { starting: '$199', average: '$399' };
+      deliveryTime: '2-3 weeks';
+      features: [
+        'AI-powered resume screening and ranking';
+        'Automated interview scheduling and coordination';
+        'Candidate matching and skill assessment';
+        'Diversity and inclusion analytics';
+        'Integration with job boards and ATS systems';
+        'Background check automation'];
+      benefits: [
+        '75% reduction in time-to-hire';
+        'Improved candidate quality matching';
+        'Automated interview coordination';
+        'Diversity and inclusion insights'];
+      technologies: ['AI Matching Algorithms', 'ATS Integration', 'Video Interviewing', 'Background Check APIs']};
     // Cloud & Infrastructure Services,
-    {,
-      id: 'cloud-platforms',;
-      title: 'Cloud Platforms',;
-      description: 'Build scalable, resilient cloud infrastructure that grows with your business.',;
-      icon: 'Cloud',;
-      category: 'cloud',;
-      color: 'green',;
-      pricing: { starting: '$4,0o00', average: '$15,0o00' },;
-      deliveryTime: '4-8 weeks',;
-      features: [,
-        'Serverless and Kubernetes',;
-        'Data pipelines and ML ops',;
-        'FinOps and SRE practices',;
-        'Multi-cloud architecture',;
-        'Auto-scaling and load balancing',;
-        'Disaster recovery and backup',
-      ],;
-      benefits: [,
-        '99.9% uptime guarantee',;
-        'Auto-scaling infrastructure',;
-        'Cost optimization through FinOps',;
-        'Multi-cloud redundancy',
-      ],;
-      technologies: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Terraform', 'Docker'],
-    },;
-    {,
-      id: 'devops-automation',;
-      title: 'DevOps Automation Platform',;
-      description: 'Complete CI/CD pipelines with infrastructure as code and automated deployments.',;
-      icon: 'Server',;
-      category: 'cloud',;
-      color: 'lime',;
-      pricing: { starting: '$599', average: '$1,299' },;
-      deliveryTime: '3-4 weeks',;
-      features: [,
-        'GitOps workflows and automated deployments',;
-        'Infrastructure monitoring and alerting',;
-        'Multi-cloud orchestration',;
-        'Security scanning and compliance automation',;
-        'Performance optimization',;
-        'Rollback and recovery automation',
-      ],;
-      benefits: [,
-        '10x faster deployment cycles',;
-        'Automated infrastructure management',;
-        'Continuous security monitoring',;
-        'Zero-downtime deployments',
-      ],;
-      technologies: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Terraform', 'Ansible', 'Prometheus'],
-    },;
-    {,
-      id: 'api-management',;
-      title: 'API Management & Gateway',;
-      description: 'Enterprise-grade API management with security, monitoring, and monetization.',;
-      icon: 'Globe',;
-      category: 'cloud',;
-      color: 'purple',;
-      pricing: { starting: '$299', average: '$699' ,},;
-      deliveryTime: '2-3 weeks',;
-      features: [,
-        'API gateway with rate limiting and authentication',;
-        'Developer portal and documentation',;
-        'Usage analytics and billing management',;
-        'API versioning and lifecycle management',;
-        'OAuth 2.0 and JWT authentication',;
-        'API monetization and subscription management',
-      ],;
-      benefits: [,
-        'Centralized API management',;
-        'Enhanced security and monitoring',;
-        'Developer-friendly documentation',;
-        'Revenue generation through API monetization',
-      ],;
-      technologies: ['Kong', 'AWS API Gateway', 'Azure API Management', 'OAuth 2.0', 'JWT'],
-    },;
+    {
+      id: 'cloud-platforms';
+      title: 'Cloud Platforms';
+      description: 'Build scalable, resilient cloud infrastructure that grows with your business.';
+      icon: 'Cloud';
+      category: 'cloud';
+      color: 'green';
+      pricing: { starting: '$4,0o00', average: '$15,0o00' };
+      deliveryTime: '4-8 weeks';
+      features: [
+        'Serverless and Kubernetes';
+        'Data pipelines and ML ops';
+        'FinOps and SRE practices';
+        'Multi-cloud architecture';
+        'Auto-scaling and load balancing';
+        'Disaster recovery and backup'];
+      benefits: [
+        '99.9% uptime guarantee';
+        'Auto-scaling infrastructure';
+        'Cost optimization through FinOps';
+        'Multi-cloud redundancy'];
+      technologies: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Terraform', 'Docker']};
+    {
+      id: 'devops-automation';
+      title: 'DevOps Automation Platform';
+      description: 'Complete CI/CD pipelines with infrastructure as code and automated deployments.';
+      icon: 'Server';
+      category: 'cloud';
+      color: 'lime';
+      pricing: { starting: '$599', average: '$1,299' };
+      deliveryTime: '3-4 weeks';
+      features: [
+        'GitOps workflows and automated deployments';
+        'Infrastructure monitoring and alerting';
+        'Multi-cloud orchestration';
+        'Security scanning and compliance automation';
+        'Performance optimization';
+        'Rollback and recovery automation'];
+      benefits: [
+        '10x faster deployment cycles';
+        'Automated infrastructure management';
+        'Continuous security monitoring';
+        'Zero-downtime deployments'];
+      technologies: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Terraform', 'Ansible', 'Prometheus']};
+    {
+      id: 'api-management';
+      title: 'API Management & Gateway';
+      description: 'Enterprise-grade API management with security, monitoring, and monetization.';
+      icon: 'Globe';
+      category: 'cloud';
+      color: 'purple';
+      pricing: { starting: '$299', average: '$699' };
+      deliveryTime: '2-3 weeks';
+      features: [
+        'API gateway with rate limiting and authentication';
+        'Developer portal and documentation';
+        'Usage analytics and billing management';
+        'API versioning and lifecycle management';
+        'OAuth 2.0 and JWT authentication';
+        'API monetization and subscription management'];
+      benefits: [
+        'Centralized API management';
+        'Enhanced security and monitoring';
+        'Developer-friendly documentation';
+        'Revenue generation through API monetization'];
+      technologies: ['Kong', 'AWS API Gateway', 'Azure API Management', 'OAuth 2.0', 'JWT']};
     // Micro SaaS Services,
-    {,
-      id: 'ecommerce-personalization',;
-      title: 'AI E-commerce Personalization Engine',;
-      description: 'Personalized shopping experiences with AI-driven product recommendations and pricing optimization.',;
-      icon: 'ShoppingCart',;
-      category: 'saas',;
-      color: 'red',;
-      pricing: { starting: '$249', average: '$499' ,},;
-      deliveryTime: '2-3 weeks',;
-      features: [,
-        'Dynamic product recommendations based on behavior',;
-        'Real-time pricing optimization and A/B testing',;
-        'Personalized email marketing campaigns',;
-        'Inventory management and demand forecasting',;
-        'Customer lifetime value prediction',;
-        'Cross-selling and upselling automation',
-      ],;
-      benefits: [,
-        '35% increase in conversion rates',;
-        'Personalized customer experiences',;
-        'Optimized pricing strategies',;
-        'Automated inventory management',
-      ],;
-      technologies: ['Machine Learning', 'E-commerce Platforms', 'Email Marketing', 'Analytics Tools'],
-    },;
-    {,
-      id: 'iot-building-management',;
-      title: 'IoT Smart Building Management',;
-      description: 'Intelligent building automation with energy optimization and predictive maintenance.',;
-      icon: 'Cpu',;
-      category: 'saas',;
-      color: 'cyan',;
-      pricing: { starting: '$399', average: '$799' ,},;
-      deliveryTime: '3-4 weeks',;
-      features: [,
-        'Smart HVAC and lighting control systems',;
-        'Energy consumption monitoring and optimization',;
-        'Predictive maintenance for building equipment',;
-        'Occupancy tracking and space utilization',;
-        'Integration with security and access control',;
-        'Environmental monitoring and alerts',
-      ],;
-      benefits: [,
-        '30% reduction in energy costs',;
-        'Predictive maintenance scheduling',;
-        'Optimized space utilization',;
-        'Enhanced building security',
-      ],;
-      technologies: ['IoT Sensors', 'Building Automation Systems', 'Energy Management', 'Predictive Analytics'],
-    },;
-    {,
-      id: 'workflow-automation',;
-      title: 'Workflow Automation Engine',;
-      description: 'No-code workflow builder with AI-powered optimization suggestions.',;
-      icon: 'Zap',;
-      category: 'saas',;
-      color: 'yellow',;
-      pricing: { starting: '$79', average: '$199' ,},;
-      deliveryTime: '1-2 weeks',;
-      features: [,
-        'Visual workflow designer with drag-and-drop',;
-        '50o0+ pre-built integrations',;
-        'AI-powered efficiency recommendations',;
-        'Performance monitoring and optimization',;
-        'Custom trigger and action creation',;
-        'Team collaboration and approval workflows',
-      ],;
-      benefits: [,
-        '80% reduction in manual tasks',;
-        'No-code workflow creation',;
-        'AI-powered optimization',;
-        'Seamless third-party integrations',
-      ],;
-      technologies: ['Workflow Engines', 'API Integrations', 'AI Optimization', 'No-Code Platforms'],
-    },;
-    {,
-      id: 'customer-support-hub',;
-      title: 'AI Customer Support Hub',;
-      description: 'Comprehensive support platform with AI chatbots and ticket management.',;
-      icon: 'Headphones',;
-      category: 'saas',;
-      color: 'indigo',;
-      pricing: { starting: '$179', average: '$349' ,},;
-      deliveryTime: '2-3 weeks',;
-      features: [,
-        '24/7 AI chatbot with human handoff',;
-        'Multi-channel support (chat, email, phone)',;
-        'Knowledge base and FAQ automation',;
-        'Customer satisfaction tracking',;
-        'Ticket routing and escalation',;
-        'Performance analytics and reporting',
-      ],;
-      benefits: [,
-        '90% faster response times',;
-        '24/7 customer support availability',;
-        'Reduced support costs',;
-        'Improved customer satisfaction',
-      ],;
-      technologies: ['AI Chatbots', 'CRM Integration', 'Knowledge Management', 'Analytics Platforms'],
-    },;
-    {,
-      id: 'event-management',;
-      title: 'Smart Event Management',;
-      description: 'Complete event planning and management with AI-powered insights.',;
-      icon: 'Calendar',;
-      category: 'saas',;
-      color: 'red',;
-      pricing: { starting: '$179', average: '$349' ,},;
-      deliveryTime: '2-3 weeks',;
-      features: [,
-        'Event registration and ticketing',;
-        'Automated email campaigns and reminders',;
-        'Real-time analytics and attendee insights',;
-        'Integration with payment and marketing tools',;
-        'Mobile app for attendees',;
-        'Post-event feedback and analytics',
-      ],;
-      benefits: [,
-        'Streamlined event management',;
-        'Automated attendee communication',;
-        'Real-time event analytics',;
-        'Enhanced attendee experience',
-      ],;
-      technologies: ['Event Management', 'Payment Processing', 'Email Marketing', 'Mobile Apps'],
-    },;
-    {,
-      id: 'inventory-management',;
-      title: 'Smart Inventory Management',;
-      description: 'AI-powered inventory tracking with predictive analytics and automated reordering.',;
-      icon: 'BarChart3',;
-      category: 'saas',;
-      color: 'orange',;
-      pricing: { starting: '$179', average: '$349' ,},;
-      deliveryTime: '2-3 weeks',;
-      features: [,
-        'Real-time inventory tracking and alerts',;
-        'Predictive analytics for demand forecasting',;
-        'Automated reorder points and purchase orders',;
-        'Multi-location and warehouse management',;
-        'Supplier integration and management',;
-        'Cost optimization and reporting',
-      ],;
-      benefits: [,
-        '25% reduction in inventory costs',;
-        'Automated reordering processes',;
-        'Predictive demand forecasting',;
-        'Multi-location inventory visibility',
-      ],;
-      technologies: ['Inventory Management', 'Predictive Analytics', 'Supplier APIs', 'Reporting Tools'],
-    }
+    {
+      id: 'ecommerce-personalization';
+      title: 'AI E-commerce Personalization Engine';
+      description: 'Personalized shopping experiences with AI-driven product recommendations and pricing optimization.';
+      icon: 'ShoppingCart';
+      category: 'saas';
+      color: 'red';
+      pricing: { starting: '$249', average: '$499' };
+      deliveryTime: '2-3 weeks';
+      features: [
+        'Dynamic product recommendations based on behavior';
+        'Real-time pricing optimization and A/B testing';
+        'Personalized email marketing campaigns';
+        'Inventory management and demand forecasting';
+        'Customer lifetime value prediction';
+        'Cross-selling and upselling automation'];
+      benefits: [
+        '35% increase in conversion rates';
+        'Personalized customer experiences';
+        'Optimized pricing strategies';
+        'Automated inventory management'];
+      technologies: ['Machine Learning', 'E-commerce Platforms', 'Email Marketing', 'Analytics Tools']};
+    {
+      id: 'iot-building-management';
+      title: 'IoT Smart Building Management';
+      description: 'Intelligent building automation with energy optimization and predictive maintenance.';
+      icon: 'Cpu';
+      category: 'saas';
+      color: 'cyan';
+      pricing: { starting: '$399', average: '$799' };
+      deliveryTime: '3-4 weeks';
+      features: [
+        'Smart HVAC and lighting control systems';
+        'Energy consumption monitoring and optimization';
+        'Predictive maintenance for building equipment';
+        'Occupancy tracking and space utilization';
+        'Integration with security and access control';
+        'Environmental monitoring and alerts'];
+      benefits: [
+        '30% reduction in energy costs';
+        'Predictive maintenance scheduling';
+        'Optimized space utilization';
+        'Enhanced building security'];
+      technologies: ['IoT Sensors', 'Building Automation Systems', 'Energy Management', 'Predictive Analytics']};
+    {
+      id: 'workflow-automation';
+      title: 'Workflow Automation Engine';
+      description: 'No-code workflow builder with AI-powered optimization suggestions.';
+      icon: 'Zap';
+      category: 'saas';
+      color: 'yellow';
+      pricing: { starting: '$79', average: '$199' };
+      deliveryTime: '1-2 weeks';
+      features: [
+        'Visual workflow designer with drag-and-drop';
+        '50o0+ pre-built integrations';
+        'AI-powered efficiency recommendations';
+        'Performance monitoring and optimization';
+        'Custom trigger and action creation';
+        'Team collaboration and approval workflows'];
+      benefits: [
+        '80% reduction in manual tasks';
+        'No-code workflow creation';
+        'AI-powered optimization';
+        'Seamless third-party integrations'];
+      technologies: ['Workflow Engines', 'API Integrations', 'AI Optimization', 'No-Code Platforms']};
+    {
+      id: 'customer-support-hub';
+      title: 'AI Customer Support Hub';
+      description: 'Comprehensive support platform with AI chatbots and ticket management.';
+      icon: 'Headphones';
+      category: 'saas';
+      color: 'indigo';
+      pricing: { starting: '$179', average: '$349' };
+      deliveryTime: '2-3 weeks';
+      features: [
+        '24/7 AI chatbot with human handoff';
+        'Multi-channel support (chat, email, phone)';
+        'Knowledge base and FAQ automation';
+        'Customer satisfaction tracking';
+        'Ticket routing and escalation';
+        'Performance analytics and reporting'];
+      benefits: [
+        '90% faster response times';
+        '24/7 customer support availability';
+        'Reduced support costs';
+        'Improved customer satisfaction'];
+      technologies: ['AI Chatbots', 'CRM Integration', 'Knowledge Management', 'Analytics Platforms']};
+    {
+      id: 'event-management';
+      title: 'Smart Event Management';
+      description: 'Complete event planning and management with AI-powered insights.';
+      icon: 'Calendar';
+      category: 'saas';
+      color: 'red';
+      pricing: { starting: '$179', average: '$349' };
+      deliveryTime: '2-3 weeks';
+      features: [
+        'Event registration and ticketing';
+        'Automated email campaigns and reminders';
+        'Real-time analytics and attendee insights';
+        'Integration with payment and marketing tools';
+        'Mobile app for attendees';
+        'Post-event feedback and analytics'];
+      benefits: [
+        'Streamlined event management';
+        'Automated attendee communication';
+        'Real-time event analytics';
+        'Enhanced attendee experience'];
+      technologies: ['Event Management', 'Payment Processing', 'Email Marketing', 'Mobile Apps']};
+    {
+      id: 'inventory-management';
+      title: 'Smart Inventory Management';
+      description: 'AI-powered inventory tracking with predictive analytics and automated reordering.';
+      icon: 'BarChart3';
+      category: 'saas';
+      color: 'orange';
+      pricing: { starting: '$179', average: '$349' };
+      deliveryTime: '2-3 weeks';
+      features: [
+        'Real-time inventory tracking and alerts';
+        'Predictive analytics for demand forecasting';
+        'Automated reorder points and purchase orders';
+        'Multi-location and warehouse management';
+        'Supplier integration and management';
+        'Cost optimization and reporting'];
+      benefits: [
+        '25% reduction in inventory costs';
+        'Automated reordering processes';
+        'Predictive demand forecasting';
+        'Multi-location inventory visibility'];
+      technologies: ['Inventory Management', 'Predictive Analytics', 'Supplier APIs', 'Reporting Tools']}
   ],
-,
-  const filteredServices = services.filter(service => {,
+  const filteredServices = services.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()),
-    return matchesCategory && matchesSearch,
-  }),
-,
-  const getIconComponent = (iconName: string) => {,
-    const iconMap: { [key: string]: any ,} ={,
-      Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code,;
-      CheckCircle, Star, TrendingUp, Clock, Award, Mail, Smartphone, Target, FileText,;
-      BarChart, Settings, Headphones, ShieldCheck, Cpu, Wifi, Monitor, MessageSquare,;
-      Eye, Palette, Bot, Link2, HardDrive, Activity, Terminal, CreditCard, Calendar,;
-      Phone, MapPin, Search, Filter, ChevronDown, ChevronUp, DollarSign, ShoppingCart,;
-      UserCheck, AlertTriangle, LinkIcon, CheckSquare, Glasses, Layers, Network, Mic,;
-      Home, Heart, Car, TreePine, Satellite,
+    return matchesCategory && matchesSearch}),
+  const getIconComponent = (iconName: string) => {
+    const iconMap: { [key: string]: any } ={
+      Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code;
+      CheckCircle, Star, TrendingUp, Clock, Award, Mail, Smartphone, Target, FileText;
+      BarChart, Settings, Headphones, ShieldCheck, Cpu, Wifi, Monitor, MessageSquare;
+      Eye, Palette, Bot, Link2, HardDrive, Activity, Terminal, CreditCard, Calendar;
+      Phone, MapPin, Search, Filter, ChevronDown, ChevronUp, DollarSign, ShoppingCart;
+      UserCheck, AlertTriangle, LinkIcon, CheckSquare, Glasses, Layers, Network, Mic;
+      Home, Heart, Car, TreePine, Satellite};
+    return iconMap[iconName] || Code};
+  const getColorClasses = (color: string) => {
+    const colorMap: { [key: string]: { bg: string, text: string, border: string, hover: string } } ={
+      blue: { bg: 'bg-blue-60o0', text: 'text-blue-60o0', border: 'border-blue-30o0', hover: 'hover: b g-blue-70o0' };
+      purple: { bg: 'bg-purple-60o0', text: 'text-purple-60o0', border: 'border-purple-30o0', hover: 'hover: b g-purple-70o0' };
+      green: { bg: 'bg-green-60o0', text: 'text-green-60o0', border: 'border-green-30o0', hover: 'hover: b g-green-70o0' };
+      indigo: { bg: 'bg-indigo-60o0', text: 'text-indigo-60o0', border: 'border-indigo-30o0', hover: 'hover: b g-indigo-70o0' };
+      sky: { bg: 'bg-sky-60o0', text: 'text-sky-60o0', border: 'border-sky-30o0', hover: 'hover: b g-sky-70o0' };
+      emerald: { bg: 'bg-emerald-60o0', text: 'text-emerald-60o0', border: 'border-emerald-30o0', hover: 'hover: b g-emerald-70o0' };
+      orange: { bg: 'bg-orange-60o0', text: 'text-orange-60o0', border: 'border-orange-30o0', hover: 'hover: b g-orange-70o0' };
+      red: { bg: 'bg-red-60o0', text: 'text-red-60o0', border: 'border-red-30o0', hover: 'hover: b g-red-70o0' };
+      yellow: { bg: 'bg-yellow-60o0', text: 'text-yellow-60o0', border: 'border-yellow-30o0', hover: 'hover: b g-yellow-70o0' };
+      pink: { bg: 'bg-pink-60o0', text: 'text-pink-60o0', border: 'border-pink-30o0', hover: 'hover: b g-pink-70o0' };
+      cyan: { bg: 'bg-cyan-60o0', text: 'text-cyan-60o0', border: 'border-cyan-30o0', hover: 'hover: b g-cyan-70o0' };
+      lime: { bg: 'bg-lime-60o0', text: 'text-lime-60o0', border: 'border-lime-30o0', hover: 'hover: b g-lime-70o0' }
     };
-    return iconMap[iconName] || Code,
-  };
-,
-  const getColorClasses = (color: string) => {,
-    const colorMap: { [key: string]: { bg: string, text: string, border: string, hover: string ,} } ={,
-      blue: { bg: 'bg-blue-60o0', text: 'text-blue-60o0', border: 'border-blue-30o0', hover: 'hover: b g-blue-70o0' ,},;
-      purple: { bg: 'bg-purple-60o0', text: 'text-purple-60o0', border: 'border-purple-30o0', hover: 'hover: b g-purple-70o0' ,},;
-      green: { bg: 'bg-green-60o0', text: 'text-green-60o0', border: 'border-green-30o0', hover: 'hover: b g-green-70o0' ,},;
-      indigo: { bg: 'bg-indigo-60o0', text: 'text-indigo-60o0', border: 'border-indigo-30o0', hover: 'hover: b g-indigo-70o0' ,},;
-      sky: { bg: 'bg-sky-60o0', text: 'text-sky-60o0', border: 'border-sky-30o0', hover: 'hover: b g-sky-70o0' ,},;
-      emerald: { bg: 'bg-emerald-60o0', text: 'text-emerald-60o0', border: 'border-emerald-30o0', hover: 'hover: b g-emerald-70o0' ,},;
-      orange: { bg: 'bg-orange-60o0', text: 'text-orange-60o0', border: 'border-orange-30o0', hover: 'hover: b g-orange-70o0' ,},;
-      red: { bg: 'bg-red-60o0', text: 'text-red-60o0', border: 'border-red-30o0', hover: 'hover: b g-red-70o0' ,},;
-      yellow: { bg: 'bg-yellow-60o0', text: 'text-yellow-60o0', border: 'border-yellow-30o0', hover: 'hover: b g-yellow-70o0' ,},;
-      pink: { bg: 'bg-pink-60o0', text: 'text-pink-60o0', border: 'border-pink-30o0', hover: 'hover: b g-pink-70o0' ,},;
-      cyan: { bg: 'bg-cyan-60o0', text: 'text-cyan-60o0', border: 'border-cyan-30o0', hover: 'hover: b g-cyan-70o0' ,},;
-      lime: { bg: 'bg-lime-60o0', text: 'text-lime-60o0', border: 'border-lime-30o0', hover: 'hover: b g-lime-70o0' ,}
-    };
-    return colorMap[color] || colorMap.blue,
-  };
-,
-  return (,
+    return colorMap[color] || colorMap.blue};
+  return (
     <>,
       <Head>,
         <title>{title}</title>,
@@ -509,7 +451,7 @@ export default function ServicesEnhanced() {,
         <link rel="canonical" href="https: //ziontechgroup.com/services"   />,
       </Head>,
       <ModernHeader   />,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: p y-32">,
         <div className="mx-auto max-w-7xl px-6 lg: p x-8">,
           <div className="mx-auto max-w-4xl text-center">,
@@ -548,10 +490,10 @@ export default function ServicesEnhanced() {,
       <section className="py-12 bg-white border-b">,
         <div className="mx-auto max-w-7xl px-6 lg: p x-8">,
           <div className="flex flex-col lg: fle x-row gap-6 items-center justify-between">,
-            {/* Search */,}
+            {/* Search */}
             <div className="relative flex-1 max-w-md">,
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-40o0"   />,
-              <input,
+              <input
                 type="text",
                 placeholder="Search services...",
                 value={searchTerm}
@@ -559,31 +501,30 @@ export default function ServicesEnhanced() {,
                 className="w-full pl-10 pr-4 py-2 border border-gray-30o0 rounded-lg focus: rin g-2 focus: rin g-blue-50o0 focus: borde r-transparent",
               />,
             </div>,
-            {/* Category Filter */,}
+            {/* Category Filter */}
             <div className="flex flex-wrap gap-2">,
-              <button,
+              <button
                 onClick={() => setSelectedCategory('all')}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${,
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   selectedCategory === 'all',
                     ? 'bg-blue-60o0 text-white',
                     : 'bg-gray-10o0 text-gray-70o0 hover: b g-gray-20o0',
-                ,}`}
+                }`}
               >,
                 All Services ({services.length}),
               </button>,
-              {serviceCategories.map((category) => (,
-                <button,
+              {serviceCategories.map((category) => (
+                <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${,
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                     selectedCategory === category.id,
                       ? 'bg-blue-60o0 text-white',
                       : 'bg-gray-10o0 text-gray-70o0 hover: b g-gray-20o0',
-                  ,}`}
+                  }`}
                 >,
                   {category.name} ({category.count}),
-                </button>,
-              ))}
+                </button>))}
             </div>,
           </div>,
         </div>,
@@ -592,18 +533,16 @@ export default function ServicesEnhanced() {,
       <section className="py-24 sm: p y-32">,
         <div className="mx-auto max-w-7xl px-6 lg: p x-8">,
           <div className="grid gap-8 lg: gri d-cols-2 xl: gri d-cols-3">,
-            {filteredServices.map((service) => {,
+            {filteredServices.map((service) => {
               const IconComponent = getIconComponent(service.icon),
               const colors = getColorClasses(service.color),
               const isExpanded = expandedService === service.id,
-,
-              return (,
-                <div,
-                  key={service.id,}
-                  className="group relative rounded-2xl border border-gray-20o0 bg-white p-8 shadow-sm hover: shado w-lg transition-all duration-30o0 hover: borde r-gray-30o0",
-                >,
+              return (
+                <div
+                  key={service.id}
+                  className="group relative rounded-2xl border border-gray-20o0 bg-white p-8 shadow-sm hover: shado w-lg transition-all duration-30o0 hover: borde r-gray-30o0">,
                   <div className="flex items-center gap-x-3 mb-6">,
-                    <div className={`flex h-12 w-12 items-center justify-center rounded-lg ${colors.bg,} ${colors.hover} transition-colors`}>,
+                    <div className={`flex h-12 w-12 items-center justify-center rounded-lg ${colors.bg} ${colors.hover} transition-colors`}>,
                       <IconComponent className="h-7 w-7 text-white"   />,
                     </div>,
                     <div>,
@@ -625,68 +564,59 @@ export default function ServicesEnhanced() {,
                       <span className="text-sm font-medium text-gray-70o0">Pricing</span>,
                     </div>,
                     <div className="text-sm text-gray-60o0">,
-                      <div>Starting: <span className="font-semibold text-green-60o0">{service.pricing.starting,}</span></div>,
-                      <div>Average: <span className="font-semibold text-blue-60o0">{service.pricing.average,}</span></div>,
+                      <div>Starting: <span className="font-semibold text-green-60o0">{service.pricing.starting}</span></div>,
+                      <div>Average: <span className="font-semibold text-blue-60o0">{service.pricing.average}</span></div>,
                     </div>,
                   </div>,
                   {/* Features */}
                   <div className="mb-6">,
                     <h4 className="text-sm font-medium text-gray-70o0 mb-3">Key Features: </h4>,
                     <ul className="space-y-2">,
-                      {service.features.slice(0, isExpanded ? service.features.length : 3).map((feature, index) => (,
+                      {service.features.slice(0, isExpanded ? service.features.length : 3).map((feature, index) => (
                         <li key={index} className="flex items-center gap-x-3">,
                           <CheckCircle className={`h-4 w-4 ${colors.text}`}   />,
                           <span className="text-sm text-gray-70o0">{feature}</span>,
-                        </li>,
-                      ))}
-                      {service.features.length > 3 && (,
-                        <button,
+                        </li>))}
+                      {service.features.length > 3 && (
+                        <button
                           onClick={() => setExpandedService(isExpanded ? null : service.id)}
-                          className="flex items-center text-sm text-blue-60o0 hover: tex t-blue-50o0 transition-colors",
-                        >,
-                          {isExpanded ? (,
+                          className="flex items-center text-sm text-blue-60o0 hover: tex t-blue-50o0 transition-colors">,
+                          {isExpanded ? (
                             <>,
                               <ChevronUp className="h-4 w-4 mr-1"   />,
                               Show Less,
-                            </>,
-                          ) : (,
+                            </>) : (
                             <>,
                               <ChevronDown className="h-4 w-4 mr-1"   />,
-                              Show {service.features.length - 3,} More,
-                            </>,
-                          )}
-                        </button>,
-                      )}
+                              Show {service.features.length - 3} More,
+                            </>)}
+                        </button>)}
                     </ul>,
                   </div>,
                   {/* Benefits */}
-                  {isExpanded && (,
+                  {isExpanded && (
                     <div className="mb-6">,
                       <h4 className="text-sm font-medium text-gray-70o0 mb-3">Benefits: </h4>,
                       <ul className="space-y-2">,
-                        {service.benefits.map((benefit, index) => (,
+                        {service.benefits.map((benefit, index) => (
                           <li key={index} className="flex items-center gap-x-3">,
                             <Target className="h-4 w-4 text-green-60o0"   />,
                             <span className="text-sm text-gray-70o0">{benefit}</span>,
-                          </li>,
-                        ))}
+                          </li>))}
                       </ul>,
-                    </div>,
-                  )}
+                    </div>)}
 ,
                   {/* Technologies */}
-                  {isExpanded && (,
+                  {isExpanded && (
                     <div className="mb-6">,
                       <h4 className="text-sm font-medium text-gray-70o0 mb-3">Technologies: </h4>,
                       <div className="flex flex-wrap gap-2">,
-                        {service.technologies.map((tech, index) => (,
+                        {service.technologies.map((tech, index) => (
                           <span key={index} className="px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded">,
                             {tech}
-                          </span>,
-                        ))}
+                          </span>))}
                       </div>,
-                    </div>,
-                  )}
+                    </div>)}
 ,
                   {/* Delivery Time and CTA */}
                   <div className="flex items-center justify-between">,
@@ -694,26 +624,24 @@ export default function ServicesEnhanced() {,
                       <Clock className="h-4 w-4"   />,
                       <span>{service.deliveryTime}</span>,
                     </div>,
-                    <Link,
+                    <Link
                       href="/contact",
-                      className={`inline-flex items-center text-sm font-semibold ${colors.text} hover: opacit y-80 transition-colors group`,}
+                      className={`inline-flex items-center text-sm font-semibold ${colors.text} hover: opacit y-80 transition-colors group`}
                       aria-label={`Get started with ${service.title}`}
                     >,
                       Get Quote,
                       <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"   />,
                     </Link>,
                   </div>,
-                </div>,
-              ),
-            ,})}
+                </div>),
+            })}
           </div>,
-          {filteredServices.length === 0 && (,
+          {filteredServices.length === 0 && (
             <div className="text-center py-12">,
               <Search className="h-12 w-12 text-gray-40o0 mx-auto mb-4"   />,
               <h3 className="text-lg font-medium text-gray-90o0 mb-2">No services found</h3>,
               <p className="text-gray-60o0">Try adjusting your search or filter criteria.</p>,
-            </div>,
-          )}
+            </div>)}
         </div>,
       </section>,
       {/* Why Choose Us Section */}
@@ -775,7 +703,7 @@ export default function ServicesEnhanced() {,
           </div>,
         </div>,
       </section>,
-      {/* Process Section */,}
+      {/* Process Section */}
       <section className="py-24 sm: p y-32 bg-white">,
         <div className="mx-auto max-w-7xl px-6 lg: p x-8">,
           <div className="mx-auto max-w-2xl lg: tex t-center mb-16">,
@@ -828,7 +756,7 @@ export default function ServicesEnhanced() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 py-24 sm: p y-32">,
         <div className="mx-auto max-w-7xl px-6 lg: p x-8">,
           <div className="mx-auto max-w-2xl text-center">,
@@ -839,20 +767,18 @@ export default function ServicesEnhanced() {,
               Let&apos,s discuss your project requirements and how we can help you achieve your goals.,
             </p>,
             <div className="mt-10 flex items-center justify-center gap-x-6">,
-              <Link,
+              <Link
                 href="/contact",
                 className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-60o0 shadow-sm hover: b g-gray-50 transition-all duration-20o0 hover: scal e-10o5",
-                aria-label="Contact us to get started",
-              >,
+                aria-label="Contact us to get started">,
                 Contact Us,
                 <ArrowRight className="ml-2 h-4 w-4 inline group-hover: translat e-x-1 transition-transform"   />,
               </Link>,
-              <Link,
+              <Link
                 href="/",
                 className="text-sm font-semibold leading-6 text-white hover: tex t-blue-10o0 transition-colors group",
-                aria-label="Back to homepage",
-              >,
-                Back to Home{' ',}
+                aria-label="Back to homepage">,
+                Back to Home{' '}
                 <span aria-hidden="true" className="group-hover: translat e-x-1 transition-transform inline-block">,
                   →,
                 </span>,
@@ -861,7 +787,7 @@ export default function ServicesEnhanced() {,
           </div>,
         </div>,
       </section>,
-      {/* Contact Information */,}
+      {/* Contact Information */}
       <section className="py-12 bg-gray-50">,
         <div className="mx-auto max-w-7xl px-6 lg: p x-8">,
           <div className="text-center">,
@@ -892,6 +818,4 @@ export default function ServicesEnhanced() {,
         </div>,
       </section>,
       <SimpleFooter   />,
-    </>,
-  ),
-}
+    </>)}

@@ -1,46 +1,38 @@
 
-import React from "react",
+import React from "react";
 import { CardHeaderCardTitleCardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download } from "lucide-react",
 import { AppPlatformAppMetadataValues } from "./MetadataManager",
 import { toast } from "sonner",
-,
-interface ExportPanelProps {,
+interface ExportPanelProps {
   platform: AppPlatform,
   metadata: AppMetadataValues,
-,}
+}
 ,
-export const ExportPanel: React.FC<ExportPanelProps> = ({ platformetadata ,}) => {,
-  const handleExport = (format: 'json' | 'csv') => {,
-    try {,
+export const ExportPanel: React.FC<ExportPanelProps> = ({ platformetadata }) => {
+  const handleExport = (format: 'json' | 'csv') => {
+    try {
       let content: string,
       let fileName: string,
-,
-      if (format === 'json') {,
+      if (format === 'json') {
         content = JSON.stringify(metadatanull2),
-        fileName = `zion-app-metadata-${platform,}-${metadata.version}.json`,
-      } else {,
+        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`} else {
         // Convert object to CSV format,
         const headers = ['appTitle'shortDescription'longDescription'version'platform'],
-        const values = [,
-          metadata.appTitle,;
-          metadata.shortDescription,;
-          metadata.longDescription,;
-          metadata.version,;
-          metadata.platform,
-        ],
-,
+        const values = [
+          metadata.appTitle;
+          metadata.shortDescription;
+          metadata.longDescription;
+          metadata.version;
+          metadata.platform],
         content = headers.join(',') + '\n' + values.map(value => `"${String(value).replace(/"/g'""')}"`).join(','),
-,
         // Add keywords as additional rows,
         content += '\n\nKeywords:\n' + metadata.keywords.join(','),
-,
-        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`,
-      }
+        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`}
 ,
       // Create download link,
-      const blob = new Blob([content]{ type: format === 'json' ? 'application/json' : 'text/csv' ,}),
+      const blob = new Blob([content]{ type: format === 'json' ? 'application/json' : 'text/csv' }),
       const url = URL.createObjectURL(blob),
       const link = document.createElement('a'),
       link.href = url,
@@ -49,20 +41,14 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platformetadata ,}) =>
       link.click(),
       document.body.removeChild(link),
       URL.revokeObjectURL(url),
-,
-      toast.success(`Exported ${format.toUpperCase()} file successfully`),
-    } catch (error) {,
+      toast.success(`Exported ${format.toUpperCase()} file successfully`)} catch (error) {
       console.error("Export failed: "error),
-      toast.error(`Failed to export ${format.toUpperCase(),} file`),
-    }
+      toast.error(`Failed to export ${format.toUpperCase()} file`)}
   };
-,
-  const trackAnalytics = () => {,
-    console.log("Tracking app installation analytics..."),
-    toast.success("Analytics tracking enabled"),
-  };
-,
-  return (,
+  const trackAnalytics = () => {
+    // console.log("Tracking app installation analytics..."),
+    toast.success("Analytics tracking enabled")};
+  return (
     <Card className="bg-zion-blue border-zion-purple/30">,
       <CardHeader>,
         <CardTitle className="text-lg">Export & Analytics</CardTitle>,
@@ -75,7 +61,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platformetadata ,}) =>
               Export your app metadata for submission to app stores,
             </p>,
             <div className="flex flex-col sm: flex-row gap-2">,
-              <Button variant="outline" onClick={() => handleExport('json'),} className="flex-1">,
+              <Button variant="outline" onClick={() => handleExport('json')} className="flex-1">,
                 <Download className="mr-2 h-4 w-4" />,
                 JSON,
               </Button>,
@@ -96,7 +82,4 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platformetadata ,}) =>
           </div>,
         </div>,
       </CardContent>,
-    </Card>,
-  ),
-};
-,
+    </Card>)};

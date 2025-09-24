@@ -1,60 +1,53 @@
 'use client',
-,
 import React, { Component, ErrorInfo, ReactNode } from 'react',
-,
-interface Props {,
+interface Props {
   children: ReactNode,
   fallback?: ReactNode,
   onError?: (error: Error, errorInfo: ErrorInfo) => void,
-,}
+}
 ,
-interface State {,
+interface State {
   hasError: boolean,
   error?: Error,
-,}
+}
 ,
-export class ErrorBoundary extends Component<Props, State> {,
-  constructor(props: Props) {,
+export class ErrorBoundary extends Component<Props State> {
+  constructor(props: Props) {
     super(props),
-    this.state = { hasError: false ,};
+    this.state = { hasError: false };
   }
 ,
-  static getDerivedStateFromError(error: Error): State {,
+  static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 ,
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo),
-,
     // Call custom error handler if provided,
-    if (this.props.onError) {,
-      this.props.onError(error, errorInfo),
-    }
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo)}
 ,
     // In production, you might want to send this to an error reporting service,
-    if (process.env.NODE_ENV === 'production') {,
+    if (process.env.NODE_ENV === 'production') {
       // Example: Send to error reporting service,
-      // errorReportingService.captureException(error, { extra: errorInfo ,}),
-    }
+      // errorReportingService.captureException(error, { extra: errorInfo })}
   }
 ,
-  render() {,
-    if (this.state.hasError) {,
-      if (this.props.fallback) {,
-        return this.props.fallback,
-      }
+  render() {
+    if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback}
 ,
-      return (,
+      return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">,
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">,
             <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">,
-              <svg,
+              <svg
                 className="w-6 h-6 text-red-600",
                 fill="none",
                 stroke="currentColor",
-                viewBox="0 0 24 24",
-              >,
-                <path,
+                viewBox="0 0 24 24">,
+                <path
                   strokeLinecap="round",
                   strokeLinejoin="round",
                   strokeWidth={2}
@@ -70,50 +63,39 @@ export class ErrorBoundary extends Component<Props, State> {,
                 We're sorry, but something unexpected happened. Please try refreshing the page.,
               </p>,
               <div className="mt-4">,
-                <button,
+                <button
                   onClick={() => window.location.reload()}
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500",
-                >,
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">,
                   Refresh Page,
                 </button>,
               </div>,
-              {process.env.NODE_ENV === 'development' && this.state.error && (,
+              {process.env.NODE_ENV === 'development' && this.state.error && (
                 <details className="mt-4 text-left">,
                   <summary className="cursor-pointer text-sm text-gray-600">,
                     Error Details (Development),
                   </summary>,
                   <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">,
-                    {this.state.error.stack,}
+                    {this.state.error.stack}
                   </pre>,
-                </details>,
-              )}
+                </details>)}
             </div>,
           </div>,
-        </div>,
-      ),
-    }
+        </div>)}
 ,
-    return this.props.children,
-  }
+    return this.props.children}
 }
 ,
 // Hook for functional components to handle errors,
-export function useErrorHandler() {,
+export function useErrorHandler() {
   const [error, setError] = React.useState<Error | null>(null),
-,
-  const resetError = React.useCallback(() => {,
-    setError(null),
-  }, []),
-,
-  const captureError = React.useCallback((error: Error) => {,
+  const resetError = React.useCallback(() => {
+    setError(null)}, []),
+  const captureError = React.useCallback((error: Error) => {
     setError(error),
-  ,}, []),
-,
-  React.useEffect(() => {,
-    if (error) {,
-      throw error,
-    }
+  }, []),
+  React.useEffect(() => {
+    if (error) {
+      throw error}
   }, [error]),
-,
   return { captureError, resetError };
 }

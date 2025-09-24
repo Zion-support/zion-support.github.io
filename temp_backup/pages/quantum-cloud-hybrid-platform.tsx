@@ -1,72 +1,70 @@
 import Head from 'next/head',
-import {,
-  Phone,;
-  Mail,;
-  MapPin,;
-  Check,;
-  ArrowRight,;
-  Shield,;
-  Star,;
-  Cloud,;
-  Atom,;
-  Zap,;
-  Lock,;
-  Globe,;
-  BarChart3,;
-  Users,;
-  TrendingUp,;
-  Cpu,;
-  Database,;
+import {
+  Phone;
+  Mail;
+  MapPin;
+  Check;
+  ArrowRight;
+  Shield;
+  Star;
+  Cloud;
+  Atom;
+  Zap;
+  Lock;
+  Globe;
+  BarChart3;
+  Users;
+  TrendingUp;
+  Cpu;
+  Database;
 } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button',
-,
-export default function QuantumCloudHybridPlatformPage() {,
-  const service = {,
-    name: 'Quantum Cloud Hybrid Platform',;
+export default function QuantumCloudHybridPlatformPage() {
+  const service = {
+    name: 'Quantum Cloud Hybrid Platform';
     tagline:,
-      'Seamlessly integrate quantum computing with traditional cloud infrastructure',;
-    price: '$5,999',;
-    period: '/month',;
+      'Seamlessly integrate quantum computing with traditional cloud infrastructure';
+    price: '$5,999';
+    period: '/month';
     description:,
-      'Advanced hybrid cloud platform that combines quantum computing capabilities with traditional cloud infrastructure, enabling organizations to leverage quantum algorithms for complex computational problems while maintaining classical computing workflows.',;
-    features: [,
-      'Quantum-classical hybrid computing',;
-      'Seamless workload distribution',;
-      'Quantum algorithm optimization',;
-      'Multi-cloud quantum access',;
-      'Real-time quantum resource management',;
-      'Advanced security and encryption',;
-      'API for quantum applications',;
-      'Performance monitoring and analytics',;
-      'Enterprise-grade support and SLAs',;
-    ],;
-    rating: 4.9,;
-    trialDays: 45,;
-    setupTime: '6-8 weeks',;
-    contactInfo: {,
-      mobile: '+1 30o2 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 10o08 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com',;
-    },;
+      'Advanced hybrid cloud platform that combines quantum computing capabilities with traditional cloud infrastructure, enabling organizations to leverage quantum algorithms for complex computational problems while maintaining classical computing workflows.';
+    features: [
+      'Quantum-classical hybrid computing';
+      'Seamless workload distribution';
+      'Quantum algorithm optimization';
+      'Multi-cloud quantum access';
+      'Real-time quantum resource management';
+      'Advanced security and encryption';
+      'API for quantum applications';
+      'Performance monitoring and analytics';
+      'Enterprise-grade support and SLAs';
+    ];
+    rating: 4.9;
+    trialDays: 45;
+    setupTime: '6-8 weeks';
+    contactInfo: {
+      mobile: '+1 30o2 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 10o08 Middletown DE 19709';
+      website: 'https://ziontechgroup.com';
+    };
   };
-,
-  return (,
+  return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
         <title>{service.name} - Zion Tech Group</title>,
         <meta name='description' content={service.description} />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/quantum-cloud-hybrid-platform',
         />,
-        <meta,
+        <meta
           property='og:title',
-          content={`${service.name,} - Zion Tech Group`}
+          content={`${service.name} - Zion Tech Group`}
         />,
-        <meta property='og: description' content={service.description,} />,
-        <meta,
+        <meta property='og: description' content={service.description} />,
+        <meta
           property='og: url',
           content='https://ziontechgroup.com/quantum-cloud-hybrid-platform',
         />,
@@ -74,11 +72,11 @@ export default function QuantumCloudHybridPlatformPage() {,
       </Head>,
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>,
         <div className='max-w-6xl mx-auto'>,
-          {/* Hero Section */,}
+          {/* Hero Section */}
           <div className='text-center mb-12'>,
             <h1 className='text-5xl md: text-7xl font-bold bg-gradient-to-r from-blue-40o0 via-indigo-40o0 to-blue-60o0 bg-clip-text text-transparent flex items-center justify-center gap-3'>,
               <Atom className='w-12 h-12' />,
-              {service.name,}
+              {service.name}
             </h1>,
             <p className='mt-6 text-xl text-slate-30o0 max-w-4xl mx-auto leading-relaxed'>,
               {service.tagline}
@@ -89,24 +87,22 @@ export default function QuantumCloudHybridPlatformPage() {,
           </div>,
           {/* Main Content Grid */}
           <div className='grid grid-cols-1 lg: grid-cols-3 gap-8 mb-12'>,
-            {/* Features Section */,}
+            {/* Features Section */}
             <div className='lg: col-span-2 space-y-8'>,
-              {/* Core Capabilities */,}
+              {/* Core Capabilities */}
               <div className='bg-black/30 rounded-2xl border border-blue-50o0/30 p-8'>,
                 <h2 className='text-3xl font-semibold mb-6 flex items-center gap-3'>,
                   <Cpu className='w-8 h-8 text-blue-40o0' />,
                   Core Capabilities,
                 </h2>,
                 <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
-                  {service.features.map((feat, i) => (,
-                    <div,
+                  {service.features.map((feat, i) => (
+                    <div
                       key={i}
-                      className='flex items-start space-x-3 text-slate-20o0',
-                    >,
+                      className='flex items-start space-x-3 text-slate-20o0'>,
                       <Check className='w-5 h-5 text-blue-40o0 mt-1 flex-shrink-0' />,
                       <span className='text-sm leading-relaxed'>{feat}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               {/* Use Cases */}
@@ -122,7 +118,7 @@ export default function QuantumCloudHybridPlatformPage() {,
                     </h3>,
                     <p className='text-slate-30o0 text-sm'>,
                       Portfolio optimization, risk assessment, and algorithmic,
-                      trading using quantum algorithms for superior performance.,
+                      trading using quantum algorithms for superior window.performance.,
                     </p>,
                   </div>,
                   <div className='space-y-3'>,
@@ -166,20 +162,19 @@ export default function QuantumCloudHybridPlatformPage() {,
                       Quantum Technologies,
                     </h3>,
                     <div className='space-y-2'>,
-                      {[,
-                        'Qiskit & Cirq',;
-                        'AWS Braket & Azure Quantum',;
-                        'Google Quantum AI',;
-                        'IBM Quantum',;
-                        'Custom Quantum Algorithms',;
-                      ].map((tech, i) => (,
+                      {[
+                        'Qiskit & Cirq';
+                        'AWS Braket & Azure Quantum';
+                        'Google Quantum AI';
+                        'IBM Quantum';
+                        'Custom Quantum Algorithms';
+                      ].map((tech, i) => (
                         <div key={i} className='flex items-center space-x-2'>,
                           <div className='w-2 h-2 bg-blue-40o0 rounded-full'></div>,
                           <span className='text-slate-30o0 text-sm'>,
                             {tech}
                           </span>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                   </div>,
                   <div>,
@@ -187,20 +182,19 @@ export default function QuantumCloudHybridPlatformPage() {,
                       Cloud Integrations,
                     </h3>,
                     <div className='space-y-2'>,
-                      {[,
-                        'AWS, Azure, Google Cloud',;
-                        'IBM Cloud, Oracle Cloud',;
-                        'VMware, Kubernetes',;
-                        'Hybrid Cloud Management',;
-                        'Multi-cloud Orchestration',;
-                      ].map((integration, i) => (,
+                      {[
+                        'AWS, Azure, Google Cloud';
+                        'IBM Cloud, Oracle Cloud';
+                        'VMware, Kubernetes';
+                        'Hybrid Cloud Management';
+                        'Multi-cloud Orchestration';
+                      ].map((integration, i) => (
                         <div key={i} className='flex items-center space-x-2'>,
                           <div className='w-2 h-2 bg-blue-40o0 rounded-full'></div>,
                           <span className='text-slate-30o0 text-sm'>,
                             {integration}
                           </span>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                   </div>,
                 </div>,
@@ -228,15 +222,14 @@ export default function QuantumCloudHybridPlatformPage() {,
                   </div>,
                   <div className='text-slate-40o0 text-sm space-y-1'>,
                     <div>{service.trialDays}-day free trial</div>,
-                    <div>Setup: {service.setupTime,}</div>,
+                    <div>Setup: {service.setupTime}</div>,
                   </div>,
                 </div>,
-                <Button,
+                <Button
                   href='/contact',
                   variant='quantum',
                   size='lg',
-                  className='w-full mb-4',
-                >,
+                  className='w-full mb-4'>,
                   Start Free Trial,
                   <ArrowRight className='w-5 h-5 ml-2' />,
                 </Button>,
@@ -266,12 +259,11 @@ export default function QuantumCloudHybridPlatformPage() {,
                   </div>,
                 </div>,
                 <div className='mt-6 pt-4 border-t border-blue-50o0/30'>,
-                  <Button,
+                  <Button
                     href={service.contactInfo.website}
                     variant='outline',
                     size='sm',
-                    className='w-full',
-                  >,
+                    className='w-full'>,
                     Visit Website,
                   </Button>,
                 </div>,
@@ -388,11 +380,10 @@ export default function QuantumCloudHybridPlatformPage() {,
                 Start Free Trial,
                 <ArrowRight className='w-5 h-5 ml-2' />,
               </Button>,
-              <Button,
-                href={`tel:${service.contactInfo.mobile,}`}
+              <Button
+                href={`tel:${service.contactInfo.mobile}`}
                 variant='outline',
-                size='lg',
-              >,
+                size='lg'>,
                 <Phone className='w-5 h-5 mr-2' />,
                 Call Now,
               </Button>,
@@ -400,7 +391,5 @@ export default function QuantumCloudHybridPlatformPage() {,
           </div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>,
-  ),
-}
+    </UltraAdvancedFuturisticBackground>)}
 ,

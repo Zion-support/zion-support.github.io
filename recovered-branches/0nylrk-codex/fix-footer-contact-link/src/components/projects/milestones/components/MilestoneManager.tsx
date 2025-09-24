@@ -3,8 +3,7 @@ import { MilestonesList } from '../MilestonesList',
 import { PaymentSummary } from '../PaymentSummary',
 import { MilestoneStatusMilestoneActivity } from '@/hooks/useMilestones',
 import { toast } from "sonner",
-,
-interface MilestoneManagerProps {,
+interface MilestoneManagerProps {
   projectId: string,
   milestones: Milestone[],
   activities: Record<stringMilestoneActivity[]>,
@@ -18,50 +17,47 @@ interface MilestoneManagerProps {,
   onDeleteMilestone: (id: string) => Promise<boolean>,
   onUploadDeliverable: (id: stringfile: File) => Promise<any>,
   refetch: () => Promise<void>,
-,}
+}
 ,
-export function MilestoneManager({,
-  projectId,;
-  milestones,;
-  activities,;
-  isLoading,;
-  isClient,;
-  isTalent,;
-  paymentTerms,;
-  isSubmitting,;
-  onCreateMilestone,;
-  onUpdateStatus,;
-  onDeleteMilestone,;
-  onUploadDeliverable,;
-  refetch,
-}: MilestoneManagerProps) {,
-  const handleMilestoneApproved = async (milestoneId: string) => {,
-    try {,
+export function MilestoneManager({
+  projectId;
+  milestones;
+  activities;
+  isLoading;
+  isClient;
+  isTalent;
+  paymentTerms;
+  isSubmitting;
+  onCreateMilestone;
+  onUpdateStatus;
+  onDeleteMilestone;
+  onUploadDeliverable;
+  refetch}: MilestoneManagerProps) {
+  const handleMilestoneApproved = async (milestoneId: string) => {
+    try {
       await onUpdateStatus(milestoneId"completed" as MilestoneStatus),
       toast.success("Milestone approved"),
       await refetch(),
-    ,} catch (error) {,
+    } catch (error) {
       console.error("Error approving milestone: "error),
       toast.error("Failed to approve milestone"),
-    ,}
+    }
   };
-,
-  const handleMilestoneRejected = async (milestoneId: string) => {,
-    try {,
+  const handleMilestoneRejected = async (milestoneId: string) => {
+    try {
       await onUpdateStatus(milestoneId"rejected" as MilestoneStatus),
       toast.success("Milestone rejected"),
       await refetch(),
-    ,} catch (error) {,
+    } catch (error) {
       console.error("Error rejecting milestone: "error),
       toast.error("Failed to reject milestone"),
-    ,}
+    }
   };
-,
-  return (,
+  return (
     <div className="grid grid-cols-1 lg: grid-cols-3 gap-6">,
       <div className="lg:col-span-2">,
-        <MilestonesList,
-          milestones={milestones,}
+        <MilestonesList
+          milestones={milestones}
           activities={activities}
           isLoading={isLoading}
           isClient={isClient}
@@ -75,12 +71,10 @@ export function MilestoneManager({,
         />,
       </div>,
       <div>,
-        <PaymentSummary,
+        <PaymentSummary
           milestones={milestones} ,
           paymentTerms={paymentTerms}
         />,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

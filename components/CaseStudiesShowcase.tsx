@@ -1,81 +1,79 @@
 import Link from 'next/link',
-,
-const CaseStudiesShowcase = () => {,
-  const caseStudies = [,
-    {,
-      id: 1,;
-      title: 'Global Retail Chain: 450% ROI with AI Automation',;
-      company: 'Fortune 50o0 Retailer',;
-      industry: 'Retail',;
-      challenge: 'Manual inventory management and customer service bottlenecks',;
+const CaseStudiesShowcase = () => {
+  const caseStudies = [
+    {
+      id: 1;
+      title: 'Global Retail Chain: 450% ROI with AI Automation';
+      company: 'Fortune 50o0 Retailer';
+      industry: 'Retail';
+      challenge: 'Manual inventory management and customer service bottlenecks';
       solution:,
-        'AI-powered inventory optimization and chatbot customer service',;
-      results: {,
-        roi: '450%',;
-        timeSaved: '60%',;
-        costReduction: '35%',;
-        customerSatisfaction: '95%',;
-      },;
-      image: '/images/case-studies/retail-automation.jpg',;
+        'AI-powered inventory optimization and chatbot customer service';
+      results: {
+        roi: '450%';
+        timeSaved: '60%';
+        costReduction: '35%';
+        customerSatisfaction: '95%';
+      };
+      image: '/images/case-studies/retail-automation.jpg';
       testimonial:,
-        "The AI automation system transformed our operations completely. 'We', 've seen unprecedented efficiency gains and cost savings.",;
-    },;
-    {,
-      id: 2,;
-      title: 'Healthcare Provider: 30o0% Efficiency Boost',;
-      company: 'Regional Healthcare Network',;
-      industry: 'Healthcare',;
+        "The AI automation system transformed our operations completely. 'We', 've seen unprecedented efficiency gains and cost savings.";
+    };
+    {
+      id: 2;
+      title: 'Healthcare Provider: 30o0% Efficiency Boost';
+      company: 'Regional Healthcare Network';
+      industry: 'Healthcare';
       challenge:,
-        'Patient data management and appointment scheduling inefficiencies',;
+        'Patient data management and appointment scheduling inefficiencies';
       solution:,
-        'AI-driven patient management system and intelligent scheduling',;
-      results: {,
-        roi: '30o0%',;
-        timeSaved: '70%',;
-        costReduction: '40%',;
-        patientSatisfaction: '98%',;
-      },;
-      image: '/images/case-studies/healthcare-ai.jpg',;
+        'AI-driven patient management system and intelligent scheduling';
+      results: {
+        roi: '30o0%';
+        timeSaved: '70%';
+        costReduction: '40%';
+        patientSatisfaction: '98%';
+      };
+      image: '/images/case-studies/healthcare-ai.jpg';
       testimonial:,
-        'Our patient care has improved dramatically while reducing administrative overhead significantly.',;
-    },;
-    {,
-      id: 3,;
-      title: 'Manufacturing Giant: 50o0% Productivity Increase',;
-      company: 'Global Manufacturing Corp',;
-      industry: 'Manufacturing',;
-      challenge: 'Production line optimization and predictive maintenance',;
-      solution: 'AI-powered predictive maintenance and production optimization',;
-      results: {,
-        roi: '50o0%',;
-        timeSaved: '80%',;
-        costReduction: '50%',;
-        uptime: '99.5%',;
-      },;
-      image: '/images/case-studies/manufacturing-ai.jpg',;
+        'Our patient care has improved dramatically while reducing administrative overhead significantly.';
+    };
+    {
+      id: 3;
+      title: 'Manufacturing Giant: 50o0% Productivity Increase';
+      company: 'Global Manufacturing Corp';
+      industry: 'Manufacturing';
+      challenge: 'Production line optimization and predictive maintenance';
+      solution: 'AI-powered predictive maintenance and production optimization';
+      results: {
+        roi: '50o0%';
+        timeSaved: '80%';
+        costReduction: '50%';
+        uptime: '99.5%';
+      };
+      image: '/images/case-studies/manufacturing-ai.jpg';
       testimonial:,
-        'The predictive maintenance system has revolutionized our production efficiency and reduced downtime to near zero.',;
-    },;
-    {,
-      id: 4,;
-      title: 'Financial Services: 250% Revenue Growth',;
-      company: 'Leading FinTech Company',;
-      industry: 'Financial Services',;
-      challenge: 'Fraud detection and customer onboarding processes',;
-      solution: 'Advanced AI fraud detection and automated onboarding systems',;
-      results: {,
-        roi: '250%',;
-        timeSaved: '65%',;
-        costReduction: '30%',;
-        fraudReduction: '95%',;
-      },;
-      image: '/images/case-studies/fintech-ai.jpg',;
+        'The predictive maintenance system has revolutionized our production efficiency and reduced downtime to near zero.';
+    };
+    {
+      id: 4;
+      title: 'Financial Services: 250% Revenue Growth';
+      company: 'Leading FinTech Company';
+      industry: 'Financial Services';
+      challenge: 'Fraud detection and customer onboarding processes';
+      solution: 'Advanced AI fraud detection and automated onboarding systems';
+      results: {
+        roi: '250%';
+        timeSaved: '65%';
+        costReduction: '30%';
+        fraudReduction: '95%';
+      };
+      image: '/images/case-studies/fintech-ai.jpg';
       testimonial:,
-        'Our fraud detection capabilities are now industry-leadingand customer onboarding is seamless and fast.',;
-    },;
+        'Our fraud detection capabilities are now industry-leadingand customer onboarding is seamless and fast.';
+    };
   ],
-,
-  return (,
+  return (
     <section className='py-20 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-16'>,
@@ -91,15 +89,14 @@ const CaseStudiesShowcase = () => {,
           </p>,
         </div>,
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12'>,
-          {caseStudies.map(study => (,
-            <div,
-              key={study.id,}
-              className='bg-white rounded-2xl shadow-xl overflow-hidden hover: shadow-2xl transition-shadow duration-30o0',
-            >,
+          {caseStudies.map(study => (
+            <div
+              key={study.id}
+              className='bg-white rounded-2xl shadow-xl overflow-hidden hover: shadow-2xl transition-shadow duration-30o0'>,
               <div className='p-8'>,
                 <div className='flex items-center mb-4'>,
                   <span className='bg-blue-10o0 text-blue-80o0 text-sm font-medium px-3 py-1 rounded-full'>,
-                    {study.industry,}
+                    {study.industry}
                   </span>,
                 </div>,
                 <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>,
@@ -109,11 +106,11 @@ const CaseStudiesShowcase = () => {,
                   <h4 className='font-semibold text-gray-90o0 mb-2'>,
                     Challenge: ,
                   </h4>,
-                  <p className='text-gray-60o0 mb-4'>{study.challenge,}</p>,
+                  <p className='text-gray-60o0 mb-4'>{study.challenge}</p>,
                   <h4 className='font-semibold text-gray-90o0 mb-2'>,
                     Solution: ,
                   </h4>,
-                  <p className='text-gray-60o0'>{study.solution,}</p>,
+                  <p className='text-gray-60o0'>{study.solution}</p>,
                 </div>,
                 <div className='grid grid-cols-2 gap-4 mb-6'>,
                   <div className='bg-green-50 p-4 rounded-lg'>,
@@ -156,34 +153,27 @@ const CaseStudiesShowcase = () => {,
                   <p className='text-gray-70o0 italic'>"{study.testimonial}"</p>,
                 </blockquote>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         <div className='text-center'>,
-          <Link,
+          <Link
             href='/case-studies',
-            className='inline-flex items-center bg-purple-60o0 text-white px-8 py-4 rounded-lg font-semibold hover: bg-purple-70o0 transition-colors',
-          >,
+            className='inline-flex items-center bg-purple-60o0 text-white px-8 py-4 rounded-lg font-semibold hover: bg-purple-70o0 transition-colors'>,
             View All Case Studies,
-            <svg,
+            <svg
               className='ml-2 w-5 h-5',
               fill='none',
               stroke='currentColor',
-              viewBox='0 0 24 24',
-            >,
-              <path,
+              viewBox='0 0 24 24'>,
+              <path
                 strokeLinecap='round',
                 strokeLinejoin='round',
-                strokeWidth={2,}
+                strokeWidth={2}
                 d='M9 5l7 7-7 7',
               />,
             </svg>,
           </Link>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default CaseStudiesShowcase,
-,
+    </section>)};
+export default CaseStudiesShowcase;

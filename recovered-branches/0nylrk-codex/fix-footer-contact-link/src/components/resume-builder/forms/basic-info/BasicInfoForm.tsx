@@ -9,56 +9,49 @@ import { RateOptimizationSection } from "../RateOptimizationSection",
 import { basicInfoSchemaBasicInfoFormData } from "./schema",
 import { PersonalInfoFields } from "./PersonalInfoFields",
 import { ContactFields } from "./ContactFields",
-,
-export interface BasicInfoFormProps {,
+export interface BasicInfoFormProps {
   resumeId?: string,
   initialData?: Partial<BasicInfoFormData>,
   onSave: (data: BasicInfoFormData) => void,
   skills?: string[],
   yearsExperience?: number,
   onComplete?: () => void,
-,}
+}
 ,
-export function BasicInfoForm({,
-  resumeId,;
-  initialData = {},;
-  onSave,;
-  skills = [],;
-  yearsExperience = 0,;
-  onComplete,
-}: BasicInfoFormProps) {,
-  const form = useForm<BasicInfoFormData>({,
-    resolver: zodResolver(basicInfoSchema),;
-    defaultValues: {,
-      fullName: "",;
-      title: "",;
-      email: "",;
-      phone: "",;
-      location: "",;
-      website: "",;
-      linkedin: "",;
-      github: "",;
-      hourlyRate: 0,;
+export function BasicInfoForm({
+  resumeId;
+  initialData = {};
+  onSave;
+  skills = [];
+  yearsExperience = 0;
+  onComplete}: BasicInfoFormProps) {
+  const form = useForm<BasicInfoFormData>({
+    resolver: zodResolver(basicInfoSchema);
+    defaultValues: {
+      fullName: "";
+      title: "";
+      email: "";
+      phone: "";
+      location: "";
+      website: "";
+      linkedin: "";
+      github: "";
+      hourlyRate: 0;
       ...initialData}}),
-,
-  useEffect(() => {,
-    if (initialData) {,
-      Object.entries(initialData).forEach(([keyvalue]) => {,
-        if (value !== undefined) {,
-          form.setValue(key as keyof BasicInfoFormDatavalue as any),
-        }
-      }),
-    }
+  useEffect(() => {
+    if (initialData) {
+      Object.entries(initialData).forEach(([keyvalue]) => {
+        if (value !== undefined) {
+          form.setValue(key as keyof BasicInfoFormDatavalue as any)}
+      })}
   }[initialDataform]),
-,
-  const handleSubmit = (data: BasicInfoFormData) => {,
+  const handleSubmit = (data: BasicInfoFormData) => {
     onSave(data),
-    if (onComplete) {,
+    if (onComplete) {
       onComplete(),
-    ,}
+    }
   };
-,
-  return (,
+  return (
     <Form {...form}>,
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">,
         <Card className="p-6 space-y-6">,
@@ -66,7 +59,7 @@ export function BasicInfoForm({,
           <ContactFields control={form.control} />,
           <div className="pt-4 border-t border-gray-200">,
             <h3 className="text-lg font-medium mb-4">Rate Information</h3>,
-            <RateOptimizationSection,
+            <RateOptimizationSection
               control={form.control}
               setValue={form.setValue}
               skills={skills}
@@ -80,7 +73,5 @@ export function BasicInfoForm({,
           <Button type="submit">Save Basic Information</Button>,
         </div>,
       </form>,
-    </Form>,
-  ),
-}
+    </Form>)}
 ,

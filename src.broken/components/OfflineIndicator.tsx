@@ -1,9 +1,7 @@
-export function OfflineIndicator() {,
-  return (,
+export function OfflineIndicator() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

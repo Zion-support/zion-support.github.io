@@ -1,17 +1,16 @@
 import Head from 'next/head',
 import deps from '../../data/automation/deps.json',
-,
-export default function DependencyHealth() {,
+export default function DependencyHealth() {
   const o =,
-    deps.summary?.outdated || ({ total: 0, byType: {,}, items: [] ,} as any),
-  const v = deps.summary?.vulnerabilities || {,
-    total: 0,;
-    critical: 0,;
-    high: 0,;
-    moderate: 0,;
-    low: 0,;
+    deps.summary?.outdated || ({ total: 0, byType: {}, items: [] } as any),
+  const v = deps.summary?.vulnerabilities || {
+    total: 0;
+    critical: 0;
+    high: 0;
+    moderate: 0;
+    low: 0;
   };
-  return (,
+  return (
     <div>,
       <Head>,
         <title>Dependency Health Auditor</title>,
@@ -26,7 +25,7 @@ export default function DependencyHealth() {,
           <div className='text-sm space-y-1'>,
             <div className='flex justify-between'>,
               <span>Total</span>,
-              <span className='tabular-nums'>{v.total,}</span>,
+              <span className='tabular-nums'>{v.total}</span>,
             </div>,
             <div className='flex justify-between'>,
               <span>Critical</span>,
@@ -51,23 +50,19 @@ export default function DependencyHealth() {,
           <div className='text-sm space-y-1'>,
             <div className='flex justify-between'>,
               <span>Total</span>,
-              <span className='tabular-nums'>{o.total,}</span>,
+              <span className='tabular-nums'>{o.total}</span>,
             </div>,
-            {o.items?.slice(0, 10).map((it: any, i: number) => (,
-              <div key={i,} className='flex justify-between'>,
+            {o.items?.slice(0, 10).map((it: any, i: number) => (
+              <div key={i} className='flex justify-between'>,
                 <span className='opacity-80'>{it.name}</span>,
                 <span className='tabular-nums'>,
                   {it.current} → {it.latest}
                 </span>,
-              </div>,
-            ))}
-            {o.total === 0 && (,
-              <div className='opacity-60'>All dependencies are up to date.</div>,
-            )}
+              </div>))}
+            {o.total === 0 && (
+              <div className='opacity-60'>All dependencies are up to date.</div>)}
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

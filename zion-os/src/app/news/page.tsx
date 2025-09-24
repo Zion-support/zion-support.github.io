@@ -1,15 +1,13 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'News & Insights - Zion Tech Group | Latest Technology Updates',;
+export const metadata = {
+  title: 'News & Insights - Zion Tech Group | Latest Technology Updates';
   description:,
-    'Stay updated with the latest news, insights, and thought leadership from Zion Tech Group. Discover industry trends, company updates, and technology innovations.',;
+    'Stay updated with the latest news, insights, and thought leadership from Zion Tech Group. Discover industry trends, company updates, and technology innovations.';
   keywords:,
-    'news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group',;
+    'news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group';
 };
-,
-export default function NewsPage() {,
-  return (,
+export default function NewsPage() {
+  return (
     <div className='min-h-screen'>,
       {/* Hero Section */}
       <section className='relative py-20 px-4 sm: px-6 lg:px-8'>,
@@ -58,25 +56,23 @@ export default function NewsPage() {,
                     Platform Launch,
                   </span>,
                 </div>,
-                <Link,
+                <Link
                   href='/news/ai-business-intelligence-platform-launch',
-                  className='btn-primary',
-                >,
+                  className='btn-primary'>,
                   Read Full Article,
                 </Link>,
               </div>,
               <div className='relative'>,
                 <div className='w-full h-64 lg: h-80 bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20 rounded-xl flex items-center justify-center'>,
-                  <svg,
+                  <svg
                     className='w-24 h-24 text-blue-40o0',
                     fill='none',
                     stroke='currentColor',
-                    viewBox='0 0 24 24',
-                  >,
-                    <path,
+                    viewBox='0 0 24 24'>,
+                    <path
                       strokeLinecap='round',
                       strokeLinejoin='round',
-                      strokeWidth={2,}
+                      strokeWidth={2}
                       d='M9.663 17h4.673M12 3v1m6.364 1.636l-.70o7.70o7M21 12h-1M4 12H3m3.343-5.657l-.70o7-.70o7m2.828 9.9a5 5 0 117.0o72 0l-.548.547A3.374 3.374 0 0o014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
                     />,
                   </svg>,
@@ -98,21 +94,19 @@ export default function NewsPage() {,
             </p>,
           </div>,
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>,
-            <Link,
+            <Link
               href='/news/category/ai',
-              className='card text-center group hover:bg-blue-50o0/10 transition-colors',
-            >,
+              className='card text-center group hover:bg-blue-50o0/10 transition-colors'>,
               <div className='w-16 h-16 bg-blue-50o0/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-50o0/30'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-blue-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M9.663 17h4.673M12 3v1m6.364 1.636l-.70o7.70o7M21 12h-1M4 12H3m3.343-5.657l-.70o7-.70o7m2.828 9.9a5 5 0 117.0o72 0l-.548.547A3.374 3.374 0 0o014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
                   />,
                 </svg>,
@@ -122,21 +116,19 @@ export default function NewsPage() {,
                 Latest developments in artificial intelligence,
               </p>,
             </Link>,
-            <Link,
+            <Link
               href='/news/category/quantum',
-              className='card text-center group hover: bg-purple-50o0/10 transition-colors',
-            >,
+              className='card text-center group hover: bg-purple-50o0/10 transition-colors'>,
               <div className='w-16 h-16 bg-purple-50o0/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-50o0/30'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-purple-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M13 10V3L4 14h7v7l9-11h-7z',
                   />,
                 </svg>,
@@ -146,21 +138,19 @@ export default function NewsPage() {,
                 Breakthroughs in quantum technology,
               </p>,
             </Link>,
-            <Link,
+            <Link
               href='/news/category/cybersecurity',
-              className='card text-center group hover: bg-green-50o0/10 transition-colors',
-            >,
+              className='card text-center group hover: bg-green-50o0/10 transition-colors'>,
               <div className='w-16 h-16 bg-green-50o0/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-50o0/30'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-green-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M9 12l2 2 4-4m5.618-4.0o16A11.955 11.955 0 0o112 2.944a11.955 11.955 0 0o1-8.618 3.0o4A12.0o2 12.0o2 0 0o03 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.0o3 9-11.622 0-1.0o42-.133-2.0o52-.382-3.0o16z',
                   />,
                 </svg>,
@@ -170,21 +160,19 @@ export default function NewsPage() {,
                 Security trends and threat intelligence,
               </p>,
             </Link>,
-            <Link,
+            <Link
               href='/news/category/company',
-              className='card text-center group hover: bg-red-50o0/10 transition-colors',
-            >,
+              className='card text-center group hover: bg-red-50o0/10 transition-colors'>,
               <div className='w-16 h-16 bg-red-50o0/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-50o0/30'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-red-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M19 21V5a2 2 0 0o0-2-2H7a2 2 0 0o0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 0o11-1h2a1 1 0 0o11 1v5m-4 0h4',
                   />,
                 </svg>,
@@ -207,16 +195,15 @@ export default function NewsPage() {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-            {/* News Article 1 */,}
+            {/* News Article 1 */}
             <article className='card group'>,
               <div className='w-full h-48 bg-gradient-to-br from-purple-50o0/20 to-blue-50o0/20 rounded-xl mb-6 flex items-center justify-center'>,
-                <svg,
+                <svg
                   className='w-16 h-16 text-purple-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
                     strokeWidth={2}
@@ -241,23 +228,21 @@ export default function NewsPage() {,
                 correction algorithm that significantly improves the reliability,
                 of quantum computations.,
               </p>,
-              <Link,
+              <Link
                 href='/news/quantum-error-correction-breakthrough',
-                className='text-blue-40o0 hover:text-blue-30o0 text-sm font-medium',
-              >,
+                className='text-blue-40o0 hover:text-blue-30o0 text-sm font-medium'>,
                 Read More →,
               </Link>,
             </article>,
-            {/* News Article 2 */,}
+            {/* News Article 2 */}
             <article className='card group'>,
               <div className='w-full h-48 bg-gradient-to-br from-green-50o0/20 to-blue-50o0/20 rounded-xl mb-6 flex items-center justify-center'>,
-                <svg,
+                <svg
                   className='w-16 h-16 text-green-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
                     strokeWidth={2}
@@ -281,23 +266,21 @@ export default function NewsPage() {,
                 designed to protect organizations from increasingly,
                 sophisticated AI-generated cyber attacks.,
               </p>,
-              <Link,
+              <Link
                 href='/news/ai-cybersecurity-framework',
-                className='text-blue-40o0 hover:text-blue-30o0 text-sm font-medium',
-              >,
+                className='text-blue-40o0 hover:text-blue-30o0 text-sm font-medium'>,
                 Read More →,
               </Link>,
             </article>,
-            {/* News Article 3 */,}
+            {/* News Article 3 */}
             <article className='card group'>,
               <div className='w-full h-48 bg-gradient-to-br from-red-50o0/20 to-yellow-50o0/20 rounded-xl mb-6 flex items-center justify-center'>,
-                <svg,
+                <svg
                   className='w-16 h-16 text-red-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
                     strokeWidth={2}
@@ -321,23 +304,21 @@ export default function NewsPage() {,
                 with new offices in London, Berlin, and Paris to better serve,
                 our international clients.,
               </p>,
-              <Link,
+              <Link
                 href='/news/european-market-expansion',
-                className='text-blue-40o0 hover: text-blue-30o0 text-sm font-medium',
-              >,
+                className='text-blue-40o0 hover: text-blue-30o0 text-sm font-medium'>,
                 Read More →,
               </Link>,
             </article>,
-            {/* News Article 4 */,}
+            {/* News Article 4 */}
             <article className='card group'>,
               <div className='w-full h-48 bg-gradient-to-br from-blue-50o0/20 to-indigo-50o0/20 rounded-xl mb-6 flex items-center justify-center'>,
-                <svg,
+                <svg
                   className='w-16 h-16 text-blue-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
                     strokeWidth={2}
@@ -361,23 +342,21 @@ export default function NewsPage() {,
                 satellite communication systems with improved bandwidth and,
                 reliability.,
               </p>,
-              <Link,
+              <Link
                 href='/news/satellite-communication-advances',
-                className='text-blue-40o0 hover:text-blue-30o0 text-sm font-medium',
-              >,
+                className='text-blue-40o0 hover:text-blue-30o0 text-sm font-medium'>,
                 Read More →,
               </Link>,
             </article>,
-            {/* News Article 5 */,}
+            {/* News Article 5 */}
             <article className='card group'>,
               <div className='w-full h-48 bg-gradient-to-br from-indigo-50o0/20 to-purple-50o0/20 rounded-xl mb-6 flex items-center justify-center'>,
-                <svg,
+                <svg
                   className='w-16 h-16 text-indigo-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
                     strokeWidth={2}
@@ -401,23 +380,21 @@ export default function NewsPage() {,
                 AI-generated content, ensuring responsible development and,
                 deployment.,
               </p>,
-              <Link,
+              <Link
                 href='/news/ai-content-generation-ethics',
-                className='text-blue-40o0 hover: text-blue-30o0 text-sm font-medium',
-              >,
+                className='text-blue-40o0 hover: text-blue-30o0 text-sm font-medium'>,
                 Read More →,
               </Link>,
             </article>,
-            {/* News Article 6 */,}
+            {/* News Article 6 */}
             <article className='card group'>,
               <div className='w-full h-48 bg-gradient-to-br from-yellow-50o0/20 to-orange-50o0/20 rounded-xl mb-6 flex items-center justify-center'>,
-                <svg,
+                <svg
                   className='w-16 h-16 text-yellow-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
                     strokeWidth={2}
@@ -441,17 +418,16 @@ export default function NewsPage() {,
                 MIT, Stanford, and Cambridge to advance AI and quantum computing,
                 technologies.,
               </p>,
-              <Link,
+              <Link
                 href='/news/university-research-partnerships',
-                className='text-blue-40o0 hover: text-blue-30o0 text-sm font-medium',
-              >,
+                className='text-blue-40o0 hover: text-blue-30o0 text-sm font-medium'>,
                 Read More →,
               </Link>,
             </article>,
           </div>,
         </div>,
       </section>,
-      {/* Newsletter Signup */,}
+      {/* Newsletter Signup */}
       <section className='py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-60o0/10 to-purple-60o0/10'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <div className='card bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20 border-blue-50o0/30'>,
@@ -463,7 +439,7 @@ export default function NewsPage() {,
               technology updates,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 max-w-md mx-auto'>,
-              <input,
+              <input
                 type='email',
                 placeholder='Enter your email',
                 className='flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:border-blue-50o0',
@@ -476,7 +452,7 @@ export default function NewsPage() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <div className='card'>,
@@ -498,7 +474,6 @@ export default function NewsPage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

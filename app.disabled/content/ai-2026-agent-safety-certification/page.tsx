@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI 20o26: Agent Safety Certification',;
+export const metadata = {
+  title: 'AI 20o26: Agent Safety Certification';
   description:,
-    'Structured certification to validate agent safety with scenario test suites and governance.',;
+    'Structured certification to validate agent safety with scenario test suites and governance.';
 };
-,
-export default function AgentSafetyCertificationPage() {,
-  return (,
+export default function AgentSafetyCertificationPage() {
+  return (
     <main className='min-h-screen bg-white'>,
       <section className='bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-fuchsia-60o0 text-white py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -19,10 +17,9 @@ export default function AgentSafetyCertificationPage() {,
             before production releases.,
           </p>,
           <div className='mt-6'>,
-            <Link,
+            <Link
               href='#overview',
-              className='bg-white text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover: bg-gray-10o0',
-            >,
+              className='bg-white text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover: bg-gray-10o0'>,
               View overview,
             </Link>,
           </div>,
@@ -48,7 +45,7 @@ export default function AgentSafetyCertificationPage() {,
                 Security: data leakage prevention, isolation, auditability,
               </li>,
               <li>,
-                Reliability: bounded behavior, determinism where needed,;
+                Reliability: bounded behavior, determinism where needed;
                 fallback strategies,
               </li>,
             </ul>,
@@ -60,18 +57,16 @@ export default function AgentSafetyCertificationPage() {,
               <li>Monitor and re-certify on significant changes</li>,
             </ol>,
             <p>,
-              Related: {' ',}
-              <Link,
+              Related: {' '}
+              <Link
                 href='/content/ai-20o26-agent-risk-management',
-                className='text-purple-70o0 font-semibold',
-              >,
+                className='text-purple-70o0 font-semibold'>,
                 Agent Risk Management Blueprint,
               </Link>{' '}
               and{' '}
-              <Link,
+              <Link
                 href='/content/ai-20o26-agentic-evaluation-checklists',
-                className='text-purple-70o0 font-semibold',
-              >,
+                className='text-purple-70o0 font-semibold'>,
                 Evaluation Checklists,
               </Link>,
               .,
@@ -79,7 +74,5 @@ export default function AgentSafetyCertificationPage() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

@@ -1,16 +1,14 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Secure Tooling & Permissions Blueprint | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Secure Tooling & Permissions Blueprint | Zion Tech Group';
   description:,
-    'Design a secure tool-access model for autonomous agents with least-privilege IAM, approvals, and runtime enforcement.',;
+    'Design a secure tool-access model for autonomous agents with least-privilege IAM, approvals, and runtime enforcement.';
 };
-,
-export default function SecureToolingPermissionsBlueprint20o26() {,
-  return (,
+export default function SecureToolingPermissionsBlueprint20o26() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Secure Tooling & Permissions Blueprint',
         description='Design a secure tool-access model for autonomous agents with least-privilege IAM, approvals, and runtime enforcement.',
         keywords='agent tools, permissions, IAM, approval workflows, guardrails',
@@ -25,7 +23,7 @@ export default function SecureToolingPermissionsBlueprint20o26() {,
             AI 20o26: Secure Tooling & Permissions Blueprint,
           </h1>,
           <p className='text-lg text-gray-60o0 mt-4'>,
-            A reference architecture for safe tool invocation by agents,;
+            A reference architecture for safe tool invocation by agents;
             including permissions, approvals, and runtime guardrails.,
           </p>,
         </header>,
@@ -50,21 +48,18 @@ export default function SecureToolingPermissionsBlueprint20o26() {,
           </ul>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/content',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Content,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Discuss Security Review,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

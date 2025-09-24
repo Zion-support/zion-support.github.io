@@ -1,12 +1,11 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const SustainableAI20o25RevolutionBanner: React.FC = () => {,
-  return (,
+const SustainableAI20o25RevolutionBanner: React.FC = () => {
+  return (
     <section className='bg-gradient-to-r from-green-90o0 via-emerald-90o0 to-teal-90o0 text-white py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div className='space-y-8'>,
             <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>,
               <span className='text-sm font-medium'>,
@@ -36,21 +35,19 @@ const SustainableAI20o25RevolutionBanner: React.FC = () => {,
               </div>,
             </div>,
             <div className='flex flex-col sm:flex-row gap-4'>,
-              <Link,
+              <Link
                 href='/blog/ai-20o25-sustainable-technology-revolution-complete-guide',
-                className='bg-gradient-to-r from-green-60o0 to-emerald-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-70o0 hover:to-emerald-70o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+                className='bg-gradient-to-r from-green-60o0 to-emerald-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-70o0 hover:to-emerald-70o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 Explore Sustainable AI →,
               </Link>,
-              <Link,
+              <Link
                 href='/case-studies/fortune-50o0-sustainable-ai-transformation-20o25-ultimate-success',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-90o0 transition-all duration-30o0',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-90o0 transition-all duration-30o0'>,
                 View Success Story,
               </Link>,
             </div>,
           </div>,
-          {/* Right Content - Environmental Impact Visualization */,}
+          {/* Right Content - Environmental Impact Visualization */}
           <div className='relative'>,
             <div className='bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm'>,
               <div className='text-center space-y-6'>,
@@ -72,9 +69,9 @@ const SustainableAI20o25RevolutionBanner: React.FC = () => {,
                       </div>,
                     </div>,
                     <div className='w-full bg-gray-60o0 rounded-full h-2 mt-2'>,
-                      <div,
+                      <div
                         className='bg-green-50o0 h-2 rounded-full',
-                        style={{ width: '15%' ,}}
+                        style={{ width: '15%' }}
                       ></div>,
                     </div>,
                   </div>,
@@ -91,9 +88,9 @@ const SustainableAI20o25RevolutionBanner: React.FC = () => {,
                       </div>,
                     </div>,
                     <div className='w-full bg-gray-60o0 rounded-full h-2 mt-2'>,
-                      <div,
+                      <div
                         className='bg-blue-50o0 h-2 rounded-full',
-                        style={{ width: '30%' ,}}
+                        style={{ width: '30%' }}
                       ></div>,
                     </div>,
                   </div>,
@@ -110,9 +107,9 @@ const SustainableAI20o25RevolutionBanner: React.FC = () => {,
                       </div>,
                     </div>,
                     <div className='w-full bg-gray-60o0 rounded-full h-2 mt-2'>,
-                      <div,
+                      <div
                         className='bg-yellow-50o0 h-2 rounded-full',
-                        style={{ width: '25%' ,}}
+                        style={{ width: '25%' }}
                       ></div>,
                     </div>,
                   </div>,
@@ -134,9 +131,5 @@ const SustainableAI20o25RevolutionBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default SustainableAI20o25RevolutionBanner,
-,
+    </section>)};
+export default SustainableAI20o25RevolutionBanner;

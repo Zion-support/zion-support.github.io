@@ -1,8 +1,7 @@
 /** @type {import('jest').Config} */
 module.exports = {
   testEnvironment: 'jsdom',
-  // Limit roots to the curated jest directory to avoid malformed backup tests
-  roots: ['<rootDir>/__jest__'],
+  roots: ['<rootDir>/__safe_tests__'],
   testMatch: ['**/*.(test|spec).(ts|tsx|js|jsx)'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
@@ -21,6 +20,5 @@ module.exports = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1'
   },
-  // Ignore problematic directories
-  testPathIgnorePatterns: ['/node_modules/', '/__tests__/', '/tests/']
+  testPathIgnorePatterns: ['/node_modules/']
 };

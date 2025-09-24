@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function InnovationLabPage() {,
-  return (,
+export default function InnovationLabPage() {
+  return (
     <>,
       <Head>,
         <title>Innovation Lab - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function InnovationLabPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

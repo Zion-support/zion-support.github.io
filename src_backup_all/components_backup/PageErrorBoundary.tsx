@@ -1,37 +1,31 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary',
 import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react',
 import { logErrorToProduction } from '@/utils/productionLogger',
-import {,
-  logInfo,;
-  logErrorToProduction as prodLogError,;
+import {
+  logInfo;
+  logErrorToProduction as prodLogError;
 } from '@/utils/productionLogger',
+interface PageErrorFallbackProps extends FallbackProps {
+  pageName?: string}
 ,
-interface PageErrorFallbackProps extends FallbackProps {,
-  pageName?: string,
-}
-,
-function PageErrorFallback({,
-  error,;
-  resetErrorBoundary,;
-  pageName,;
-}: PageErrorFallbackProps) {,
+function PageErrorFallback({
+  error;
+  resetErrorBoundary;
+  pageName;
+}: PageErrorFallbackProps) {
   const isAuthConfigError =,
     error?.message?.includes('Auth0') ||,
     error?.message?.includes('AUTH0') ||,
     error?.message?.includes('authentication') ||,
     error?.message?.includes('environment'),
-,
-  const handleRefresh = () => {,
-    if (resetErrorBoundary) {,
-      resetErrorBoundary(),
-    } else {,
-      window.location.reload(),
-    }
+  const handleRefresh = () => {
+    if (resetErrorBoundary) {
+      resetErrorBoundary()} else {
+      window.location.reload()}
   };
-,
-  return (,
+  return (
     <div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>,
       <div className='max-w-2xl w-full'>,
         {/* Main Error Card */}
@@ -49,7 +43,7 @@ function PageErrorFallback({,
                 : 'An unexpected error occurred while loading this page'}
             </p>,
           </div>,
-          {isAuthConfigError && (,
+          {isAuthConfigError && (
             <div className='bg-yellow-50 border border-yellow-20o0 rounded-lg p-4 mb-6'>,
               <div className='flex'>,
                 <Settings className='h-5 w-5 text-yellow-60o0 mt-0.5 mr-3' />,
@@ -64,10 +58,9 @@ function PageErrorFallback({,
                   </p>,
                 </div>,
               </div>,
-            </div>,
-          )}
+            </div>)}
 ,
-          {error?.message && (,
+          {error?.message && (
             <details className='bg-gray-50 rounded-lg p-4 mb-6'>,
               <summary className='cursor-pointer text-gray-70o0 font-medium'>,
                 Technical Details,
@@ -75,36 +68,32 @@ function PageErrorFallback({,
               <pre className='mt-2 text-sm text-gray-60o0 whitespace-pre-wrap break-all overflow-auto'>,
                 {error.message}
               </pre>,
-            </details>,
-          )}
+            </details>)}
 ,
           {/* Action Buttons */}
           <div className='flex flex-col sm: flex-row gap-3 mb-6'>,
-            <button,
-              onClick={handleRefresh,}
-              className='flex-1 bg-blue-60o0 hover: bg-blue-70o0 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors',
-            >,
+            <button
+              onClick={handleRefresh}
+              className='flex-1 bg-blue-60o0 hover: bg-blue-70o0 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'>,
               <RefreshCw className='w-4 h-4 mr-2' />,
               Try Again,
             </button>,
-            <Link,
+            <Link
               href='/',
-              className='flex-1 bg-gray-10o0 hover:bg-gray-20o0 text-gray-70o0 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors',
-            >,
+              className='flex-1 bg-gray-10o0 hover:bg-gray-20o0 text-gray-70o0 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'>,
               <Home className='w-4 h-4 mr-2' />,
               Go Home,
             </Link>,
           </div>,
-          {/* Navigation Options */,}
+          {/* Navigation Options */}
           <div className='border-t pt-6'>,
             <h3 className='font-semibold text-gray-90o0 mb-3'>,
               You can also visit: ,
             </h3>,
             <div className='grid grid-cols-2 md:grid-cols-4 gap-3 text-sm'>,
-              <Link,
+              <Link
                 href='/marketplace',
-                className='text-blue-60o0 hover:underline',
-              >,
+                className='text-blue-60o0 hover:underline'>,
                 Marketplace,
               </Link>,
               <Link href='/talent' className='text-blue-60o0 hover:underline'>,
@@ -119,14 +108,13 @@ function PageErrorFallback({,
             </div>,
           </div>,
         </div>,
-        {/* Support Information */,}
+        {/* Support Information */}
         <div className='bg-gray-80o0 text-white rounded-lg p-6 text-center'>,
           <p className='mb-3'>Need help? Contact our support team</p>,
           <div className='flex flex-col sm: flex-row gap-3 justify-center'>,
-            <a,
+            <a
               href='mailto:support@zion.tech',
-              className='text-blue-40o0 hover:underline',
-            >,
+              className='text-blue-40o0 hover:underline'>,
               support@zion.tech,
             </a>,
             <Link href='/status' className='text-blue-40o0 hover:underline'>,
@@ -135,56 +123,46 @@ function PageErrorFallback({,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,
-interface PageErrorBoundaryProps {,
+interface PageErrorBoundaryProps {
   children: React.ReactNode,
   pageName?: string,
   fallback?: React.ComponentType<FallbackProps>,
-,}
+}
 ,
-export default function PageErrorBoundary({,
-  children,;
-  pageName,;
-  fallback,;
-}: PageErrorBoundaryProps) {,
-  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {,
-    prodLogError(,
-      `PageErrorBoundary caught error on ${pageName || 'unknown page',}:`,;
-      error,
-    ),
-,
-    logErrorToProduction(,
-      error instanceof Error ? error.message : String(error),;
-      error instanceof Error ? error : undefined,;
-      {,
-        page: pageName || 'unknown',;
-        componentStack: errorInfo.componentStack || undefined,;
-        errorBoundary: 'PageErrorBoundary',;
-        timestamp: new Date().toISOString(),;
+export default function PageErrorBoundary({
+  children;
+  pageName;
+  fallback;
+}: PageErrorBoundaryProps) {
+  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
+    prodLogError(
+      `PageErrorBoundary caught error on ${pageName || 'unknown page'}:`;
+      error),
+    logErrorToProduction(
+      error instanceof Error ? error.message : String(error);
+      error instanceof Error ? error : undefined;
+      {
+        page: pageName || 'unknown';
+        componentStack: errorInfo.componentStack || undefined;
+        errorBoundary: 'PageErrorBoundary';
+        timestamp: new Date().toISOString();
       }
-    ),
-  };
-,
+    )};
   const FallbackComponent =,
     fallback ||,
-    ((props: FallbackProps) => (,
-      <PageErrorFallback {...props,} pageName={pageName} />,
-    )),
-,
-  return (,
-    <ErrorBoundary,
+    ((props: FallbackProps) => (
+      <PageErrorFallback {...props} pageName={pageName} />)),
+  return (
+    <ErrorBoundary
       FallbackComponent={FallbackComponent}
       onError={handleError}
-      onReset={() => {,
+      onReset={() => {
         // Reset any application state if needed,
-        logInfo(`Resetting error boundary for ${pageName || 'page'}`),
-      }}
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`)}}
     >,
       {children}
-    </ErrorBoundary>,
-  ),
-}
+    </ErrorBoundary>)}
 ,

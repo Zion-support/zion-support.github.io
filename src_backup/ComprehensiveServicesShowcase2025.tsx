@@ -3,7 +3,7 @@ import { motion } from 'framer-motion',
 import { Sparkles, ArrowRight, CheckCircle, Phone, Mail, MapPin, TrendingUp, Play, Download, ExternalLink, Search } from 'lucide-react',
 import { CUTTING_EDGE_SERVICES_20o25 } from '../data/enhanced-20o25-cutting-edge-services',
 import { SPECIALIZED_INDUSTRY_SOLUTIONS_20o25 } from '../data/specialized-industry-solutions-20o25',
-const ComprehensiveServicesShowcase20o25 = () => {,
+const ComprehensiveServicesShowcase20o25 = () => {
     const [searchTerm, setSearchTerm] = useState(''),
     const [selectedCategory, setSelectedCategory] = useState('all'),
     const [selectedIndustry, setSelectedIndustry] = useState('all'),
@@ -12,32 +12,31 @@ const ComprehensiveServicesShowcase20o25 = () => {,
     const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))],
     const industries = ['all', ...Array.from(new Set(SPECIALIZED_INDUSTRY_SOLUTIONS_20o25.map(service => service.industry)))],
     // Filter services based on selection,
-    const filteredServices = allServices.filter(service => {,
+    const filteredServices = allServices.filter(service => {
         const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
         const matchesIndustry = selectedIndustry === 'all' ||,
             ('industry' in service ? service.industry === selectedIndustry : true),
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-        return matchesCategory && matchesIndustry && matchesSearch,
-    }),
-    const containerVariants ={,
-        hidden: { opacity: 0 ,},;
-        visible: {,
-            opacity: 1,;
-            transition: {,
+        return matchesCategory && matchesIndustry && matchesSearch}),
+    const containerVariants ={
+        hidden: { opacity: 0 };
+        visible: {
+            opacity: 1;
+            transition: {
                 staggerChildren: 0.1,
-            ,}
+            }
         }
     };
-    const itemVariants ={,
-        hidden: { y: 20, opacity: 0 ,},;
-        visible: {,
-            y: 0,;
-            opacity: 1,;
-            transition: {,
+    const itemVariants ={
+        hidden: { y: 20, opacity: 0 };
+        visible: {
+            y: 0;
+            opacity: 1;
+            transition: {
                 duration: 0.5,
-            ,}
+            }
         }
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0">,
@@ -45,7 +44,7 @@ const ComprehensiveServicesShowcase20o25 = () => {,
       <div className="relative overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20"></div>,
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24">,
-          <motion.div initial={{ opacity: 0, y: 30 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ duration: 0.8 ,}} className="text-center">,
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center">,
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">,
               <span className="bg-gradient-to-r from-blue-40o0 via-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent">,
                 Cutting-Edge,
@@ -58,11 +57,11 @@ const ComprehensiveServicesShowcase20o25 = () => {,
               artificial intelligence, quantum computing, and next-generation technology.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
-              <motion.button whileHover={{ scale: 1.0o5 ,}} whileTap={{ scale: 0.95 ,}} className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0">,
+              <motion.button whileHover={{ scale: 1.0o5 }} whileTap={{ scale: 0.95 }} className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0">,
                 <Play className="w-5 h-5" />,
                 Watch Demo,
               </motion.button>,
-              <motion.button whileHover={{ scale: 1.0o5 ,}} whileTap={{ scale: 0.95 ,}} className="border-2 border-blue-40o0 text-blue-40o0 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 hover: bg-blue-40o0 hover:text-white transition-all duration-30o0">,
+              <motion.button whileHover={{ scale: 1.0o5 }} whileTap={{ scale: 0.95 }} className="border-2 border-blue-40o0 text-blue-40o0 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 hover: bg-blue-40o0 hover:text-white transition-all duration-30o0">,
                 <Download className="w-5 h-5" />,
                 Download Brochure,
               </motion.button>,
@@ -70,7 +69,7 @@ const ComprehensiveServicesShowcase20o25 = () => {,
           </motion.div>,
         </div>,
       </div>,
-      {/* Contact Information Banner */,}
+      {/* Contact Information Banner */}
       <div className="bg-gradient-to-r from-blue-80o0 to-purple-80o0 py-6">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-col md:flex-row justify-between items-center text-white">,
@@ -95,17 +94,17 @@ const ComprehensiveServicesShowcase20o25 = () => {,
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">,
             <div className="md:col-span-2">,
               <div className="relative">,
-                <input type="text" placeholder="Search services..." value={searchTerm,} onChange={(e) => setSearchTerm(e.target.value)} className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/60 focus: outline-none focus:ring-2 focus:ring-blue-40o0"/>,
+                <input type="text" placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/60 focus: outline-none focus:ring-2 focus:ring-blue-40o0"/>,
                 <Search className="absolute right-3 top-3 w-5 h-5 text-white/60" />,
               </div>,
             </div>,
-            <select value={selectedCategory,} onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-40o0">,
-              {categories.map(category => (<option key={category,} value={category} className="bg-slate-80o0 text-white">,
+            <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-40o0">,
+              {categories.map(category => (<option key={category} value={category} className="bg-slate-80o0 text-white">,
                   {category === 'all' ? 'All Categories' : category}
                 </option>))}
             </select>,
             <select value={selectedIndustry} onChange={(e) => setSelectedIndustry(e.target.value)} className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-40o0">,
-              {industries.map(industry => (<option key={industry,} value={industry} className="bg-slate-80o0 text-white">,
+              {industries.map(industry => (<option key={industry} value={industry} className="bg-slate-80o0 text-white">,
                   {industry === 'all' ? 'All Industries' : industry}
                 </option>))}
             </select>,
@@ -114,7 +113,7 @@ const ComprehensiveServicesShowcase20o25 = () => {,
         {/* Services Grid */}
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8">,
           {filteredServices.map((service, index) => (<motion.div key={service.id} variants={itemVariants} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-blue-40o0/50 transition-all duration-30o0 hover:transform hover:scale-10o5">,
-              {/* Service Header */,}
+              {/* Service Header */}
               <div className="mb-6">,
                 <div className="flex items-start justify-between mb-4">,
                   <div className="flex-1">,
@@ -164,17 +163,17 @@ const ComprehensiveServicesShowcase20o25 = () => {,
                 <div className="flex items-center justify-between mb-2">,
                   <span className="text-white font-semibold">Starting Price: </span>,
                   <span className="text-2xl font-bold text-green-40o0">,
-                    {service.currency,}{service.price.toLocaleString()}
+                    {service.currency}{service.price.toLocaleString()}
                     <span className="text-sm text-blue-20o0">/month</span>,
                   </span>,
                 </div>,
                 <div className="flex items-center justify-between">,
                   <span className="text-blue-20o0 text-sm">Market Price: </span>,
-                  <span className="text-blue-10o0 text-sm">{service.marketPrice,}</span>,
+                  <span className="text-blue-10o0 text-sm">{service.marketPrice}</span>,
                 </div>,
                 <div className="flex items-center justify-between mt-2">,
                   <span className="text-blue-20o0 text-sm">ROI: </span>,
-                  <span className="text-yellow-40o0 text-sm font-semibold">{service.roi,}</span>,
+                  <span className="text-yellow-40o0 text-sm font-semibold">{service.roi}</span>,
                 </div>,
               </div>,
               {/* Technology & Compliance */}
@@ -198,46 +197,45 @@ const ComprehensiveServicesShowcase20o25 = () => {,
               </div>,
               {/* Action Buttons */}
               <div className="flex gap-3">,
-                <motion.button whileHover={{ scale: 1.0o2 ,}} whileTap={{ scale: 0.98 ,}} className="flex-1 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-4 py-3 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0">,
+                <motion.button whileHover={{ scale: 1.0o2 }} whileTap={{ scale: 0.98 }} className="flex-1 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-4 py-3 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0">,
                   <Play className="w-4 h-4" />,
                   Request Demo,
                 </motion.button>,
-                <motion.button whileHover={{ scale: 1.0o2 ,}} whileTap={{ scale: 0.98 ,}} className="px-4 py-3 border border-blue-40o0 text-blue-40o0 rounded-lg font-semibold text-sm flex items-center gap-2 hover: bg-blue-40o0 hover:text-white transition-all duration-30o0">,
+                <motion.button whileHover={{ scale: 1.0o2 }} whileTap={{ scale: 0.98 }} className="px-4 py-3 border border-blue-40o0 text-blue-40o0 rounded-lg font-semibold text-sm flex items-center gap-2 hover: bg-blue-40o0 hover:text-white transition-all duration-30o0">,
                   <ExternalLink className="w-4 h-4" />,
                   Learn More,
                 </motion.button>,
               </div>,
-              {/* Contact Info */,}
+              {/* Contact Info */}
               <div className="mt-4 pt-4 border-t border-white/20">,
                 <div className="flex items-center justify-between text-sm">,
                   <span className="text-blue-20o0">Contact: </span>,
                   <div className="flex items-center gap-2">,
                     <Phone className="w-3 h-3 text-blue-30o0" />,
-                    <span className="text-blue-10o0">{service.contactInfo.phone,}</span>,
+                    <span className="text-blue-10o0">{service.contactInfo.phone}</span>,
                   </div>,
                 </div>,
                 <div className="flex items-center justify-between text-sm mt-1">,
                   <span className="text-blue-20o0">Email: </span>,
                   <div className="flex items-center gap-2">,
                     <Mail className="w-3 h-3 text-blue-30o0" />,
-                    <span className="text-blue-10o0">{service.contactInfo.email,}</span>,
+                    <span className="text-blue-10o0">{service.contactInfo.email}</span>,
                   </div>,
                 </div>,
               </div>,
             </motion.div>))}
         </motion.div>,
         {/* Call to Action */}
-        {filteredServices.length === 0 && (<motion.div initial={{ opacity: 0 ,}} animate={{ opacity: 1 ,}} className="text-center py-16">,
+        {filteredServices.length === 0 && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-16">,
             <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>,
             <p className="text-blue-20o0 mb-6">Try adjusting your search criteria or browse all our services.</p>,
-            <button onClick={() => {,
+            <button onClick={() => {
                 setSearchTerm(''),
                 setSelectedCategory('all'),
-                setSelectedIndustry('all'),
-            }} className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0">,
+                setSelectedIndustry('all')}} className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0">,
               View All Services,
             </button>,
-          </motion.div>),}
+          </motion.div>)}
       </div>,
       {/* Bottom CTA Section */}
       <div className="bg-gradient-to-r from-blue-80o0 to-purple-80o0 py-16">,
@@ -250,16 +248,15 @@ const ComprehensiveServicesShowcase20o25 = () => {,
             to drive innovation and achieve remarkable results.,
           </p>,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-            <motion.button whileHover={{ scale: 1.0o5 ,}} whileTap={{ scale: 0.95 ,}} className="bg-white text-blue-90o0 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-gray-10o0 transition-all duration-30o0">,
+            <motion.button whileHover={{ scale: 1.0o5 }} whileTap={{ scale: 0.95 }} className="bg-white text-blue-90o0 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-gray-10o0 transition-all duration-30o0">,
               Schedule Consultation,
             </motion.button>,
-            <motion.button whileHover={{ scale: 1.0o5 ,}} whileTap={{ scale: 0.95 ,}} className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover: bg-white hover:text-blue-90o0 transition-all duration-30o0">,
+            <motion.button whileHover={{ scale: 1.0o5 }} whileTap={{ scale: 0.95 }} className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover: bg-white hover:text-blue-90o0 transition-all duration-30o0">,
               Download Case Studies,
             </motion.button>,
           </div>,
         </div>,
       </motion.section>,
     </div>),
-,};
-export default ComprehensiveServicesShowcase20o25,
-,
+};
+export default ComprehensiveServicesShowcase20o25;

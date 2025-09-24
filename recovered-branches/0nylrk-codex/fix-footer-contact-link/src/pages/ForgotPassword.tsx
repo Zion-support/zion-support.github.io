@@ -10,23 +10,23 @@ import {Input} from "@/components/ui/input",
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form",
 import {Header} from "@/components/Header",
 import {Footer} from "@/components/Footer",
-import { useState } from "react",;
-import { Link } from "react-router-dom",;
-import { useForm, type UseFormReturn } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
-import { Mail } from "lucide-react",;
-import { useAuth } from "@/hooks/useAuth",;
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useForm, type UseFormReturn } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Mail } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
-import {,
+import {
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { useState ,} from "react",;
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { useState } from "react";
 import { useState } from './react',
 import { Link } from './react-router-dom',
 import { use_form, type, UseFormReturn } from './react - hook - form',
@@ -39,48 +39,46 @@ import { Input } from '@/components / ui / input',
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form',
 import { Header } from '@/components / Header',
 import { Footer } from '@/components / Footer',
-
-,
 ,
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form",;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from "@/components/ui/form",;
+  FormMessage} from "@/components/ui/form";
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from "@/components/ui/form";
 // Form validation schema,
-const forgotPasswordSchema = z.object({,
-  email: z.string().email("Please enter a valid email"),}),
+const forgotPasswordSchema = z.object({
+  email: z.string().email("Please enter a valid email")}),
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
-export default function ForgotPassword() {,
+export default function ForgotPassword() {
   const { resetPassword, isLoading } = useAuth(),
   const [submitted, setSubmitted] = useState(false),
-  email: z.string().email("Please enter a valid email"),}),;
-type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,;
-export default function ForgotPassword() {,
+  email: z.string().email("Please enter a valid email")});
+type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
+export default function ForgotPassword() {
   const { resetPassword, isLoading } = useAuth(),
   const [submitted, setSubmitted] = useState(false),
-export default function ForgotPassword() {,
-  const { resetPassword, isLoading } = useAuth(),;
-  const [submitted, setSubmitted] = useState(false),;
+export default function ForgotPassword() {
+  const { resetPassword, isLoading } = useAuth();
+  const [submitted, setSubmitted] = useState(false);
   // Initialize react-hook-form,
-  const form = useForm({,
+  const form = useForm({
     resolver: zodResolver(forgotPasswordSchema),
-    defaultValues: {,
-      email: "",}}) as UseFormReturn<ForgotPasswordFormValues>,
+    defaultValues: {
+      email: ""}}) as UseFormReturn<ForgotPasswordFormValues>,
   // Form submission handler,
-  const onSubmit = async (data: ForgotPasswordFormValues) => {,
+  const onSubmit = async (data: ForgotPasswordFormValues) => {
     await resetPassword(data.email),
     setSubmitted(true),
-  ,}
-  },;
-  return (,
+  }
+  };
+  return (
     <>,
       <Header />,
       <div className="flex min-h-screen bg-zion-blue">,
@@ -95,7 +93,7 @@ export default function ForgotPassword() {,
               </p>,
             </div>,
             <div className="bg-zion-blue-dark rounded-lg p-6">,
-              {submitted ? (,
+              {submitted ? (
                 <div className="text-center py-8">,
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">,
                     <Mail className="h-6 w-6 text-zion-purple" />,
@@ -105,79 +103,74 @@ export default function ForgotPassword() {,
                     We've sent a password reset link to your email address.,
                   </p>,
                   <div className="mt-6">,
-                    <Link,
+                    <Link
                       to="/login",
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center",
-                    >,
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">,
                       Back to login,
                     </Link>,
                   </div>,
-                </div>,
-              ) : (,
-                <Form {...form,}>,
+                </div>) : (
+                <Form {...form}>,
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">,
-                    <FormField,
+                    <FormField
                       control={form.control}
                       name="email",
-                      render={({ field }) => (,
+                      render={({ field }) => (
                         <FormItem>,
                           <FormLabel className="text-zion-slate-light">Email address</FormLabel>,
                           <FormControl>,
                             <div className="relative">,
-                              <Input,
+                              <Input
                                 placeholder="you@example.com",
                                 className="bg-zion-blue pl-10 text-white placeholder: text-zion-slate border-zion-blue-light focus:border-zion-purple",
-                                {...field,}
+                                {...field}
                               />,
                               <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />,
                             </div>,
                           </FormControl>,
                           <FormMessage className="text-red-400" />,
-                        </FormItem>,
-                      )}
+                        </FormItem>)}
                     />,
-                    <Button,
+                    <Button
                       type="submit",
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white",
-                      disabled={isLoading,}
+                      disabled={isLoading}
                     >,
                       {isLoading ? "Sending..." : "Reset Password"}
                     </Button>,
                     <div className="text-center">,
-                      <Link,
+                      <Link
                         to="/login",
-                        className="text-sm font-medium text-zion-cyan hover: text-zion-cyan-light",
-                      >,
+                        className="text-sm font-medium text-zion-cyan hover: text-zion-cyan-light">,
                         Back to login,
                       </Link>,
                     </div>,
                   </form>,
                 </Form>,
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from "@/components/ui/form",;
-,
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from "@/components/ui/form";
 // Form validation schema,
-const forgotPasswordSchema = z.object({,
-  email: z.string().email("Please enter a valid email"),}),;
-type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,;
-export default function ForgotPassword() {,
-  const { resetPassword, isLoading } = useAuth(),;
-  const [submitted, setSubmitted] = useState(false),;
+const forgotPasswordSchema = z.object({
+  email: z.string().email("Please enter a valid email")});
+type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
+export default function ForgotPassword() {
+  const { resetPassword, isLoading } = useAuth();
+  const [submitted, setSubmitted] = useState(false);
   // Initialize react-hook-form,
-  const form = useForm({,
-    resolver: zodResolver(forgotPasswordSchema),;
-    defaultValues: {,
-      email: "",}}) as UseFormReturn<ForgotPasswordFormValues>,;
+  const form = useForm({
+    resolver: zodResolver(forgotPasswordSchema);
+    defaultValues: {
+      email: ""}}) as UseFormReturn<ForgotPasswordFormValues>;
   // Form submission handler,
-  const onSubmit = async (data: ForgotPasswordFormValues) => {,
+  const onSubmit = async (data: ForgotPasswordFormValues) => {
     await resetPassword(data.email),
     setSubmitted(true),
-  ,};
-  return (,
+  };
+  return (
     <>,
       <Header />,
       <div className="flex min-h-screen bg-zion-blue">,
@@ -192,7 +185,7 @@ export default function ForgotPassword() {,
               </p>,
             </div>,
             <div className="bg-zion-blue-dark rounded-lg p-6">,
-              {submitted ? (,
+              {submitted ? (
                 <div className="text-center py-8">,
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">,
                     <Mail className="h-6 w-6 text-zion-purple" />,
@@ -202,77 +195,66 @@ export default function ForgotPassword() {,
                     We've sent a password reset link to your email address.,
                   </p>,
                   <div className="mt-6">,
-,
-                    <Link,
+                    <Link
                       to="/login",
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center",
-                    >,
-,
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">,
                       Back to login,
                     </Link>,
                   </div>,
-                </div>,
-              ) : (,
-                <Form {...form,}>,
+                </div>) : (
+                <Form {...form}>,
                   <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">,
-                    <FormField,
+                    <FormField
                       control={form && form.control}
                       name="email",
-                      render={({ field }) => (,
+                      render={({ field }) => (
                         <FormItem>,
                           <FormLabel className="text-zion-slate-light">Email address</FormLabel>,
                           <FormControl>,
                             <div className="relative">,
-                              <Input,
+                              <Input
                                 placeholder="you@example && example.com",
                                 className="bg-zion-blue pl-10 text-white placeholder: text-zion-slate border-zion-blue-light focus:border-zion-purple",
-                                {...field,}
+                                {...field}
                               />,
                               <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />,
                             </div>,
                           </FormControl>,
                           <FormMessage className="text-red-400" />,
-                        </FormItem>,
-                      )}
+                        </FormItem>)}
 ,
                     />,
-,
-                    <Button,
+                    <Button
                       type="submit",
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white",
-                      disabled={isLoading,}>,
+                      disabled={isLoading}>,
                       {isLoading ? "Sending..." : "Reset Password"}
 ,
                     </Button>,
-,
                     <div className="text-center">,
-,
-                      <Link,
+                      <Link
                         to="/login",
 // Form validation schema,
-const forgotPasswordSchema = z.object ({,
-  email: z.string ().email ("Please enter a valid email"),}),;
+const forgotPasswordSchema = z.object ({
+  email: z.string ().email ("Please enter a valid email")});
 type ForgotPasswordFormValues = z.infer < typeof forgotPasswordSchema>,
-,
 export default /**,
  * ForgotPassword - Function description,
  */,
-function ForgotPassword() {,
+function ForgotPassword() {
   const { reset_password, is_loading } = use_auth (),
   const [submitted, set_submitted] = useState (false),
-,
   // Initialize react - hook - form,
-  const form = use_form ({,
-    resolver: zod_resolver (forgotPasswordSchema),;
-    default_values: {,
-      email: "",}}) as UseFormReturn < ForgotPasswordFormValues>,;
+  const form = use_form ({
+    resolver: zod_resolver (forgotPasswordSchema);
+    default_values: {
+      email: ""}}) as UseFormReturn < ForgotPasswordFormValues>;
   // Form submission handler,
-  const on_submit = async (data: ForgotPasswordFormValues) => {,
-    await reset_password (data.email),;
-    set_submitted (true),
-  }
+  const on_submit = async (data: ForgotPasswordFormValues) => {
+    await reset_password (data.email);
+    set_submitted (true)}
 ,
-  return (,
+  return (
     <>,
       <Header />,
       <div className="flex min - h-screen bg - zion - blue">,
@@ -287,7 +269,7 @@ function ForgotPassword() {,
               </p>,
             </div>,
             <div className="bg - zion - blue - dark rounded - lg p - 6">,
-              {submitted ? (,
+              {submitted ? (
                 <div className="text - center py - 8">,
                   <div className="mx - auto flex items - center justify - center h - 12 w - 12 rounded - full bg - zion - purple / 20 mb - 4">,
                     <Mail className="h - 6 w - 6 text - zion - purple" />,
@@ -297,29 +279,27 @@ function ForgotPassword() {,
                     We've sent a password reset link to your email address.,
                   </p>,
                   <div className="mt - 6">,
-                    <Link,
+                    <Link
                       to="/login",
-                      className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white px - 4 py - 2 rounded inline - flex items - center justify - center",
-                    >,
+                      className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white px - 4 py - 2 rounded inline - flex items - center justify - center">,
                       Back to login,
                     </Link>,
                   </div>,
-                </div>) : (,
-                <Form {...form,}>,
+                </div>) : (
+                <Form {...form}>,
                   <form on_submit={form.handle_submit (on_submit)} className="space - y-6">,
-                    <FormField,
-,
+                    <FormField
                       control={form.control}
                       name="email",
-                      render={({ field }) => (,
+                      render={({ field }) => (
                         <FormItem>,
                           <FormLabel className="text - zion - slate - light">Email address</FormLabel>,
                           <FormControl>,
                             <div className="relative">,
-                              <Input,
+                              <Input
                                 placeholder="you@example.com",
                                 className="bg - zion - blue pl - 10 text - white placeholder: text - zion - slate border - zion - blue - light focus:border - zion - purple",
-                                {...field,}
+                                {...field}
                               />,
                               <Mail className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />,
                             </div>,
@@ -327,25 +307,22 @@ function ForgotPassword() {,
                           <FormMessage className="text - red - 400" />,
                         </FormItem>)}
                     />,
-                    <Button,
+                    <Button
                       type="submit",
                       className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white",
-                      disabled={is_loading,}
+                      disabled={is_loading}
                     >,
                       {is_loading ? "Sending..." : "Reset Password"}
                     </Button>,
                     <div className="text - center">,
-                      <Link,
+                      <Link
                         to="/login",
-                        className="text - sm font - medium text - zion - cyan hover: text - zion - cyan - light",
-                      >,
+                        className="text - sm font - medium text - zion - cyan hover: text - zion - cyan - light">,
                         Back to login,
                       </Link>,
                     </div>,
                   </form>,
-,
-                </Form>,
-              ),}
+                </Form>)}
             </div>,
           </div>,
         </div>,
@@ -363,32 +340,26 @@ function ForgotPassword() {,
         </div>,
       </div>,
       <Footer />,
-    </>,
-  ),
-,}
-,
-                  We'll help you get back into your account so you can continue your journey in the Zion marketplace.,
-                </p>,
-              </div>,
-            </div>,
-          </div>,
-        </div>,
-      </div>,
-      <Footer />,
-    </>,
-  ),
-}
     </>),
 }
 ,
-                        className="text-sm font-medium text-zion-cyan hover: text-zion-cyan-light",
-                      >,
+                  We'll help you get back into your account so you can continue your journey in the Zion marketplace.,
+                </p>,
+              </div>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+      <Footer />,
+    </>)}
+    </>)}
+,
+                        className="text-sm font-medium text-zion-cyan hover: text-zion-cyan-light">,
                         Back to login,
                       </Link>,
                     </div>,
                   </form>,
-                </Form>,
-              ),}
+                </Form>)}
             </div>,
           </div>,
         </div>,
@@ -406,34 +377,33 @@ function ForgotPassword() {,
         </div>,
       </div>,
       <Footer />,
-    </>,
-  ),
-,}
+    </>),
+}
 ,
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from "@/components/ui/form",;
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from "@/components/ui/form";
 // Form validation schema,
-const forgotPasswordSchema = z.object({,
-  email: z.string().email("Please enter a valid email"),}),;
-type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,;
-export default function ForgotPassword() {,
-  const { resetPassword, isLoading } = useAuth(),;
-  const [submitted, setSubmitted] = useState(false),;
+const forgotPasswordSchema = z.object({
+  email: z.string().email("Please enter a valid email")});
+type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
+export default function ForgotPassword() {
+  const { resetPassword, isLoading } = useAuth();
+  const [submitted, setSubmitted] = useState(false);
   // Initialize react-hook-form,
-  const form = useForm({,
-    resolver: zodResolver(forgotPasswordSchema),;
-    defaultValues: {,
-      email: "",}}) as UseFormReturn<ForgotPasswordFormValues>,;
+  const form = useForm({
+    resolver: zodResolver(forgotPasswordSchema);
+    defaultValues: {
+      email: ""}}) as UseFormReturn<ForgotPasswordFormValues>;
   // Form submission handler,
-  const onSubmit = async (data: ForgotPasswordFormValues) => {,
+  const onSubmit = async (data: ForgotPasswordFormValues) => {
     await resetPassword(data.email),
     setSubmitted(true),
-  ,};
-  return (,
+  };
+  return (
     <>,
       <Header />,
       <div className="flex min-h-screen bg-zion-blue">,
@@ -448,7 +418,7 @@ export default function ForgotPassword() {,
               </p>,
             </div>,
             <div className="bg-zion-blue-dark rounded-lg p-6">,
-              {submitted ? (,
+              {submitted ? (
                 <div className="text-center py-8">,
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">,
                     <Mail className="h-6 w-6 text-zion-purple" />,
@@ -458,17 +428,14 @@ export default function ForgotPassword() {,
                     We've sent a password reset link to your email address.,
                   </p>,
                   <div className="mt-6">,
-                    <Link,
+                    <Link
                       to="/login",
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center",
-                    >,
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">,
                       Back to login,
                     </Link>,
                   </div>,
-                </div>,
-              ) : (,
-                <Form {...form,}>,
+                </div>) : (
+                <Form {...form}>,
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">,
-                    <FormField,
-,
+                    <FormField
 }})

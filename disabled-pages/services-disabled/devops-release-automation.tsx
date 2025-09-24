@@ -1,12 +1,11 @@
 import { Helmet } from 'react-helmet-async.ts',
 import { Link } from 'react-router-dom.ts',
-,
-export default function DevOpsReleaseAutomation(...args: any[]): any {,
-  return (,
+export default function DevOpsReleaseAutomation(...args: any[]): any {
+  return (
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>,
       <Head>,
         <title>DevOps Release Automation — Services — Zion</title>,
-        <meta,
+        <meta
           name='description',
           content='Intelligent CI/CD with policy-as-code, canary analysis, and rollback automation.',
         />,
@@ -33,7 +32,7 @@ export default function DevOpsReleaseAutomation(...args: any[]): any {,
           <li>Developer productivity insights</li>,
         </ul>,
         <div className='mt-6 text-sm text-white/70'>,
-          Average market pricing: $5,0o00–$25,0o00 implementation,;
+          Average market pricing: $5,0o00–$25,0o00 implementation;
           $1,50o0–$6,0o00/mo managed.,
         </div>,
         <div className='mt-8 flex gap-3'>,
@@ -49,7 +48,6 @@ export default function DevOpsReleaseAutomation(...args: any[]): any {,
           </Link>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

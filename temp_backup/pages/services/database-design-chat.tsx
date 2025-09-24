@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function DatabaseDesignChatPage() {,
-  return (,
+export default function DatabaseDesignChatPage() {
+  return (
     <>,
       <Head>,
         <title>Database Design Chat - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function DatabaseDesignChatPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

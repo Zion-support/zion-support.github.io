@@ -1,7 +1,7 @@
 import Head from 'next/head',
 import Link from 'next/link',
-export default function AIPoweredContentTools() {,
-  return (,
+export default function AIPoweredContentTools() {
+  return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">,
       <Head>,
         <title>AI‑Powered Content Tools — Services — Zion Tech Group</title>,
@@ -45,7 +45,6 @@ export default function AIPoweredContentTools() {,
           <Link href="/contact" className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-90o0 hover:bg-white">Request access</Link>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

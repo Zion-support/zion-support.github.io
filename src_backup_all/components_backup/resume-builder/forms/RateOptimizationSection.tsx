@@ -1,39 +1,35 @@
 import React, { useState } from 'react',
 import { Control, UseFormSetValue } from 'react-hook-form',
-import {,
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormControl,;
-  FormDescription,;
-  FormMessage,;
+import {
+  FormField;
+  FormItem;
+  FormLabel;
+  FormControl;
+  FormDescription;
+  FormMessage;
 } from '@/components/ui/form',
 import { Input } from '@/components/ui/input',
 import { TalentRateRecommender } from '@/components/pricing/TalentRateRecommender',
 import { Card, CardContent } from '@/components/ui/card',
-,
-interface RateOptimizationSectionProps {,
+interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: UseFormSetValue<any>,
   skills: string[],
   yearsExperience: number,
   location?: string,
   rateType: 'hourly' | 'fixed',
-,}
+}
 ,
 export const RateOptimizationSection: React.FC<,
-  RateOptimizationSectionProps,
-> = ({ control, setValue, skills, yearsExperience, location, rateType }) => {,
-  const handleSuggestionApplied = (rate: number) => {,
-    setValue('hourlyRate', rate),
-  };
-,
-  return (,
+  RateOptimizationSectionProps> = ({ control, setValue, skills, yearsExperience, location, rateType }) => {
+  const handleSuggestionApplied = (rate: number) => {
+    setValue('hourlyRate', rate)};
+  return (
     <div className='space-y-4'>,
-      <FormField,
+      <FormField
         control={control}
         name='hourlyRate',
-        render={({ field }: { field: any ,}) => (,
+        render={({ field }: { field: any }) => (
           <FormItem>,
             <FormLabel>,
               Your {rateType === 'hourly' ? 'Hourly Rate' : 'Fixed Rate'} ($USD),
@@ -45,12 +41,11 @@ export const RateOptimizationSection: React.FC<,
               Set a competitive rate based on your skills and experience,
             </FormDescription>,
             <FormMessage />,
-          </FormItem>,
-        )}
+          </FormItem>)}
       />,
       <Card>,
         <CardContent className='pt-4'>,
-          <TalentRateRecommender,
+          <TalentRateRecommender
             skills={skills}
             yearsExperience={yearsExperience}
             location={location}
@@ -59,7 +54,4 @@ export const RateOptimizationSection: React.FC<,
           />,
         </CardContent>,
       </Card>,
-    </div>,
-  ),
-};
-,
+    </div>)};

@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function InnovationPage() {,
-  return (,
+export default function InnovationPage() {
+  return (
     <div className="min-h-screen bg-slate-950 text-white">,
       <Head>,
         <title>Capability Map — Generative AI Systems</title>,
@@ -22,9 +21,8 @@ export default function InnovationPage() {,
         </ul>,
         <p className="mt-6">Learn more at <a className="text-cyan-30o0 underline" href="https: //ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a>.</p>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-12290o1" className="internal-link">Related Content</Link>,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-122931" className="internal-link">Related Content</Link>,

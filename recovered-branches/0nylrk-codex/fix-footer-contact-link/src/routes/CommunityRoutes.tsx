@@ -7,42 +7,35 @@ import ForumPostPage from '../pages/ForumPostPage',
 import CreatePostPage from '../pages/CreatePostPage',
 import EditPostPage from '../pages/EditPostPage',
 import CommunityProfilePage from '../pages/CommunityProfilePage',
-,
-const CommunityRoutes = () => {,
-  return (,
+const CommunityRoutes = () => {
+  return (
     <Routes>,
       {/* Public routes */}
       <Route path='/community' element={<CommunityPage />} />,
       <Route path='/forum' element={<CommunityPage />} />,
-      <Route,
+      <Route
         path='/community/category/:categoryId',
         element={<ForumCategoryPage />}
       />,
       <Route path='/community/post/:postId' element={<ForumPostPage />} />,
-      <Route,
+      <Route
         path='/community/profile/:userId',
         element={<CommunityProfilePage />}
       />,
       {/* Protected routes */}
-      <Route,
+      <Route
         path='/community/create',
-        element={,
+        element={
           <ProtectedRoute>,
             <CreatePostPage />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/community/edit/:postId',
-        element={,
+        element={
           <ProtectedRoute>,
             <EditPostPage />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-    </Routes>,
-  ),
-};
-,
-export default CommunityRoutes,
-,
+    </Routes>)};
+export default CommunityRoutes;

@@ -1,20 +1,18 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'API Testing Suite | Zion Tech Group',;
+export const metadata = {
+  title: 'API Testing Suite | Zion Tech Group';
   description:,
-    'Comprehensive API testing platform with automated testing, monitoring, and documentation. Ensure your APIs are reliable and performant.',;
+    'Comprehensive API testing platform with automated testing, monitoring, and documentation. Ensure your APIs are reliable and performant.';
 };
-,
-export default function APITestingSuitePage() {,
-  return (,
+export default function APITestingSuitePage() {
+  return (
     <div className='animate-fade-in'>,
       <div className='text-center mb-16'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
           API Testing Suite,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          Comprehensive API testing platform with automated testing, monitoring,;
+          Comprehensive API testing platform with automated testing, monitoring;
           and documentation. Ensure your APIs are reliable, performant, and,
           secure with enterprise-grade testing tools.,
         </p>,
@@ -25,32 +23,32 @@ export default function APITestingSuitePage() {,
             Key Features,
           </h2>,
           <div className='space-y-6'>,
-            <FeatureItem,
+            <FeatureItem
               icon='🧪',
               title='Automated Testing',
               description='Create and run comprehensive API test suites with automated regression testing',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='📊',
               title='Performance Testing',
               description='Load testing, stress testing, and performance monitoring with detailed metrics',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='🔒',
               title='Security Testing',
               description='Automated security scanning for OWASP vulnerabilities and authentication issues',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='📝',
               title='API Documentation',
               description='Auto-generate comprehensive API documentation with interactive examples',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='🔍',
               title='Contract Testing',
               description='Validate API contracts and ensure backward compatibility across versions',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='📈',
               title='Real-time Monitoring',
               description='24/7 API monitoring with alerts, uptime tracking, and performance metrics',
@@ -60,47 +58,47 @@ export default function APITestingSuitePage() {,
         <div>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-6'>Pricing</h2>,
           <div className='space-y-6'>,
-            <PricingCard,
+            <PricingCard
               title='Developer',
               price='$29',
               period='per month',
               description='Perfect for individual developers and small projects',
-              features={[,
-                'Up to 10 APIs',;
-                'Basic testing suite',;
-                'Standard monitoring',;
-                'Email support',;
-                'Basic documentation',;
+              features={[
+                'Up to 10 APIs';
+                'Basic testing suite';
+                'Standard monitoring';
+                'Email support';
+                'Basic documentation';
               ]}
               popular={false}
             />,
-            <PricingCard,
+            <PricingCard
               title='Team',
               price='$99',
               period='per month',
               description='Ideal for development teams and growing companies',
-              features={[,
-                'Up to 50 APIs',;
-                'Advanced testing',;
-                'Performance testing',;
-                'Priority support',;
-                'Team collaboration',;
-                'Custom integrations',;
+              features={[
+                'Up to 50 APIs';
+                'Advanced testing';
+                'Performance testing';
+                'Priority support';
+                'Team collaboration';
+                'Custom integrations';
               ]}
               popular={true}
             />,
-            <PricingCard,
+            <PricingCard
               title='Enterprise',
               price='$299',
               period='per month',
               description='For large organizations with complex API ecosystems',
-              features={[,
-                'Unlimited APIs',;
-                'Custom test frameworks',;
-                'Advanced security testing',;
-                '24/7 support',;
-                'Custom integrations',;
-                'On-premise deployment',;
+              features={[
+                'Unlimited APIs';
+                'Custom test frameworks';
+                'Advanced security testing';
+                '24/7 support';
+                'Custom integrations';
+                'On-premise deployment';
               ]}
               popular={false}
             />,
@@ -112,32 +110,32 @@ export default function APITestingSuitePage() {,
           Testing Capabilities,
         </h2>,
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-          <TestingCapability,
+          <TestingCapability
             icon='✅',
             title='Functional Testing',
             description='Validate API endpoints, request/response formats, and business logic',
           />,
-          <TestingCapability,
+          <TestingCapability
             icon='⚡',
             title='Performance Testing',
             description='Load testing, stress testing, and performance benchmarking',
           />,
-          <TestingCapability,
+          <TestingCapability
             icon='🔒',
             title='Security Testing',
             description='Authentication, authorization, and vulnerability scanning',
           />,
-          <TestingCapability,
+          <TestingCapability
             icon='🔄',
             title='Integration Testing',
             description='End-to-end testing across multiple APIs and services',
           />,
-          <TestingCapability,
+          <TestingCapability
             icon='📊',
             title='Contract Testing',
             description='API contract validation and schema compliance testing',
           />,
-          <TestingCapability,
+          <TestingCapability
             icon='🌐',
             title='Compatibility Testing',
             description='Cross-browser and cross-platform API compatibility',
@@ -215,22 +213,22 @@ export default function APITestingSuitePage() {,
           Use Cases,
         </h2>,
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
-          <UseCaseCard,
+          <UseCaseCard
             icon='🏢',
             title='Enterprise APIs',
             description='Large organizations managing complex API ecosystems with strict compliance requirements',
           />,
-          <UseCaseCard,
+          <UseCaseCard
             icon='🚀',
             title='Startup Development',
             description='Fast-growing startups needing reliable API testing for rapid iteration',
           />,
-          <UseCaseCard,
+          <UseCaseCard
             icon='🏦',
             title='Financial Services',
             description='Banks and fintech companies requiring high-security API testing and monitoring',
           />,
-          <UseCaseCard,
+          <UseCaseCard
             icon='🏥',
             title='Healthcare APIs',
             description='Healthcare organizations managing patient data APIs with HIPAA compliance',
@@ -238,54 +236,50 @@ export default function APITestingSuitePage() {,
         </div>,
       </div>,
       <CTA />,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,
-function FeatureItem({,
-  icon,;
-  title,;
-  description,;
-}: {,
+function FeatureItem({
+  icon;
+  title;
+  description;
+}: {
   icon: string,
   title: string,
   description: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className='flex items-start space-x-4'>,
       <div className='text-2xl'>{icon}</div>,
       <div>,
         <h3 className='text-lg font-semibold text-gray-90o0 mb-2'>{title}</h3>,
         <p className='text-gray-60o0'>{description}</p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingCard({,
-  title,;
-  price,;
-  period,;
-  description,;
-  features,;
-  popular,;
-}: {,
+function PricingCard({
+  title;
+  price;
+  period;
+  description;
+  features;
+  popular;
+}: {
   title: string,
   price: string,
   period: string,
   description: string,
   features: string[],
   popular: boolean,
-,}) {,
-  return (,
-    <div,
+}) {
+  return (
+    <div
       className={`border rounded-xl p-6 ${popular ? 'border-indigo-50o0 bg-indigo-50' : 'border-gray-20o0 bg-white'}`}
     >,
-      {popular && (,
+      {popular && (
         <div className='bg-indigo-50o0 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4'>,
           Most Popular,
-        </div>,
-      )}
+        </div>)}
       <h3 className='text-xl font-bold text-gray-90o0 mb-2'>{title}</h3>,
       <div className='mb-4'>,
         <span className='text-3xl font-bold text-gray-90o0'>{price}</span>,
@@ -293,82 +287,71 @@ function PricingCard({,
       </div>,
       <p className='text-gray-60o0 mb-6'>{description}</p>,
       <ul className='space-y-3'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='flex items-center'>,
             <span className='text-indigo-50o0 mr-3'>✓</span>,
             <span className='text-gray-70o0'>{feature}</span>,
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-      <button,
-        className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${,
+      <button
+        className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
           popular,
             ? 'bg-indigo-60o0 text-white hover: bg-indigo-70o0',
             : 'bg-gray-10o0 text-gray-70o0 hover:bg-gray-20o0',
-        ,}`}
+        }`}
       >,
         Start Free Trial,
       </button>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function TestingCapability({,
-  icon,;
-  title,;
-  description,;
-}: {,
+function TestingCapability({
+  icon;
+  title;
+  description;
+}: {
   icon: string,
   title: string,
   description: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className='text-center p-6 border border-gray-20o0 rounded-lg hover: border-indigo-30o0 transition-colors'>,
-      <div className='text-4xl mb-4'>{icon,}</div>,
+      <div className='text-4xl mb-4'>{icon}</div>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-3'>{title}</h3>,
       <p className='text-gray-60o0'>{description}</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function TechCard({ name, icon }: { name: string, icon: string ,}) {,
-  return (,
+function TechCard({ name, icon }: { name: string, icon: string }) {
+  return (
     <div className='text-center p-4 border border-gray-20o0 rounded-lg hover: border-indigo-30o0 transition-colors'>,
-      <div className='text-3xl mb-2'>{icon,}</div>,
+      <div className='text-3xl mb-2'>{icon}</div>,
       <div className='text-sm font-medium text-gray-70o0'>{name}</div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function IntegrationCard({ name, icon }: { name: string, icon: string ,}) {,
-  return (,
+function IntegrationCard({ name, icon }: { name: string, icon: string }) {
+  return (
     <div className='text-center p-4 border border-gray-20o0 rounded-lg hover: border-indigo-30o0 transition-colors'>,
-      <div className='text-3xl mb-2'>{icon,}</div>,
+      <div className='text-3xl mb-2'>{icon}</div>,
       <div className='text-sm font-medium text-gray-70o0'>{name}</div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function UseCaseCard({,
-  icon,;
-  title,;
-  description,;
-}: {,
+function UseCaseCard({
+  icon;
+  title;
+  description;
+}: {
   icon: string,
   title: string,
   description: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className='p-6 border border-gray-20o0 rounded-lg hover: border-indigo-30o0 transition-colors'>,
-      <div className='text-4xl mb-4'>{icon,}</div>,
+      <div className='text-4xl mb-4'>{icon}</div>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-3'>{title}</h3>,
       <p className='text-gray-60o0'>{description}</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function CTA() {,
-  return (,
+function CTA() {
+  return (
     <div className='bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-20o0 rounded-xl p-8 text-center'>,
       <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>,
         Ready to Ensure API Reliability?,
@@ -378,16 +361,14 @@ function CTA() {,
         monitoring. Test your first 5 APIs for free.,
       </p>,
       <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-        <a,
+        <a
           href='tel:+130o24640950',
-          className='bg-indigo-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-70o0 transition-colors',
-        >,
+          className='bg-indigo-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-70o0 transition-colors'>,
           Call +1 30o2 464 0950,
         </a>,
-        <a,
+        <a
           href='mailto:kleber@ziontechgroup.com',
-          className='border-2 border-indigo-60o0 text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-60o0 hover:text-white transition-colors',
-        >,
+          className='border-2 border-indigo-60o0 text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-60o0 hover:text-white transition-colors'>,
           Email Us,
         </a>,
       </div>,
@@ -395,7 +376,5 @@ function CTA() {,
         <p>📍 364 E Main St STE 10o08, Middletown DE 19709</p>,
         <p>📧 kleber@ziontechgroup.com | 📞 +1 30o2 464 0950</p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

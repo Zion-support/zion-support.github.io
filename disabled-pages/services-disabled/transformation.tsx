@@ -2,107 +2,103 @@ import Link from 'next/link',
 import Navigation from '../../src/components/Navigation',
 import Footer from '../../src/components/Footer',
 import SEOHead from '../../src/components/SEOHead',
-import {,
-  Rocket,;
-  Zap,;
-  Users,;
-  Globe,;
-  CheckCircle,;
-  Award,;
-  Brain,;
-  Cloud,;
-  Shield,;
-  Phone,;
-  Mail,;
+import {
+  Rocket;
+  Zap;
+  Users;
+  Globe;
+  CheckCircle;
+  Award;
+  Brain;
+  Cloud;
+  Shield;
+  Phone;
+  Mail;
 } from 'lucide-react',
-,
-const DigitalTransformation = () => {,
-  const structuredData = {,
-    '@context': 'https://schema.org',;
-    '@type': 'Service',;
-    name: 'Digital Transformation Services',;
+const DigitalTransformation = () => {
+  const structuredData = {
+    '@context': 'https://schema.org';
+    '@type': 'Service';
+    name: 'Digital Transformation Services';
     description:,
-      'Transform your business with comprehensive digital transformation solutions',;
-    provider: {,
-      '@type': 'Organization',;
-      name: 'Zion Tech Group',;
-      url: 'https://ziontechgroup.com',;
-    },;
+      'Transform your business with comprehensive digital transformation solutions';
+    provider: {
+      '@type': 'Organization';
+      name: 'Zion Tech Group';
+      url: 'https://ziontechgroup.com';
+    };
   };
-,
-  const services = [,
-    {,
-      title: 'Strategy & Planning',;
+  const services = [
+    {
+      title: 'Strategy & Planning';
       description:,
-        'Comprehensive digital transformation roadmap and strategy development',;
-      icon: Brain,;
-      features: [,
-        'Digital Assessment',;
-        'Technology Roadmap',;
-        'Change Management',;
-        'ROI Analysis',;
-      ],;
-    },;
-    {,
-      title: 'Process Automation',;
+        'Comprehensive digital transformation roadmap and strategy development';
+      icon: Brain;
+      features: [
+        'Digital Assessment';
+        'Technology Roadmap';
+        'Change Management';
+        'ROI Analysis';
+      ];
+    };
+    {
+      title: 'Process Automation';
       description:,
-        'Streamline operations with intelligent automation solutions',;
-      icon: Zap,;
-      features: [,
-        'Workflow Automation',;
-        'RPA Implementation',;
-        'AI Integration',;
-        'Process Optimization',;
-      ],;
-    },;
-    {,
-      title: 'Cloud Migration',;
-      description: 'Modernize infrastructure with cloud-first approach',;
-      icon: Cloud,;
-      features: [,
-        'Cloud Strategy',;
-        'Migration Planning',;
-        'Hybrid Solutions',;
-        'Cost Optimization',;
-      ],;
-    },;
-    {,
-      title: 'Data & Analytics',;
-      description: 'Unlock insights with advanced data analytics and AI',;
-      icon: Globe,;
-      features: [,
-        'Data Strategy',;
-        'Analytics Platform',;
-        'AI/ML Solutions',;
-        'Business Intelligence',;
-      ],;
-    },;
+        'Streamline operations with intelligent automation solutions';
+      icon: Zap;
+      features: [
+        'Workflow Automation';
+        'RPA Implementation';
+        'AI Integration';
+        'Process Optimization';
+      ];
+    };
+    {
+      title: 'Cloud Migration';
+      description: 'Modernize infrastructure with cloud-first approach';
+      icon: Cloud;
+      features: [
+        'Cloud Strategy';
+        'Migration Planning';
+        'Hybrid Solutions';
+        'Cost Optimization';
+      ];
+    };
+    {
+      title: 'Data & Analytics';
+      description: 'Unlock insights with advanced data analytics and AI';
+      icon: Globe;
+      features: [
+        'Data Strategy';
+        'Analytics Platform';
+        'AI/ML Solutions';
+        'Business Intelligence';
+      ];
+    };
   ],
-,
-  const industries = [,
-    {,
-      name: 'Manufacturing',;
-      description: 'Smart factory and Industry 4.0 solutions',;
-    },;
-    {,
-      name: 'Healthcare',;
-      description: 'Digital health and telemedicine platforms',;
-    },;
-    {,
-      name: 'Financial Services',;
-      description: 'FinTech and digital banking solutions',;
-    },;
-    { name: 'Retail', description: 'E-commerce and omnichannel experiences' ,},;
-    { name: 'Education', description: 'EdTech and digital learning platforms' ,},;
-    {,
-      name: 'Government',;
-      description: 'Digital government and citizen services',;
-    },;
+  const industries = [
+    {
+      name: 'Manufacturing';
+      description: 'Smart factory and Industry 4.0 solutions';
+    };
+    {
+      name: 'Healthcare';
+      description: 'Digital health and telemedicine platforms';
+    };
+    {
+      name: 'Financial Services';
+      description: 'FinTech and digital banking solutions';
+    };
+    { name: 'Retail', description: 'E-commerce and omnichannel experiences' };
+    { name: 'Education', description: 'EdTech and digital learning platforms' };
+    {
+      name: 'Government';
+      description: 'Digital government and citizen services';
+    };
   ],
-,
-  return (,
+  return (
     <>,
-      <SEOHead,
+      <SEOHead
         title='Digital Transformation Services - Zion Tech Group',
         description='Transform your business with comprehensive digital transformation solutions. Expert strategy, automation, and modernization services.',
         keywords='digital transformation, business transformation, automation, cloud migration, data analytics, process optimization',
@@ -128,23 +124,21 @@ const DigitalTransformation = () => {,
                 implementation, we guide your digital journey.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors',
-                >,
+                  className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors'>,
                   Start Transformation,
                 </Link>,
-                <Link,
+                <Link
                   href='/solutions',
-                  className='border-2 border-purple-60o0 text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-colors',
-                >,
+                  className='border-2 border-purple-60o0 text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-colors'>,
                   View Solutions,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Services Section */,}
+        {/* Services Section */}
         <section className='py-20 bg-white'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center mb-16'>,
@@ -157,33 +151,29 @@ const DigitalTransformation = () => {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
-              {services.map((service, index) => (,
-                <div,
+              {services.map((service, index) => (
+                <div
                   key={index}
-                  className='bg-gray-50 rounded-lg p-8 hover: shadow-lg transition-shadow',
-                >,
+                  className='bg-gray-50 rounded-lg p-8 hover: shadow-lg transition-shadow'>,
                   <div className='flex items-center mb-6'>,
                     <div className='p-3 rounded-lg bg-gradient-to-r from-purple-50o0 to-pink-60o0 mr-4'>,
                       <service.icon className='w-8 h-8 text-white' />,
                     </div>,
                     <h3 className='text-2xl font-bold text-gray-90o0'>,
-                      {service.title,}
+                      {service.title}
                     </h3>,
                   </div>,
                   <p className='text-gray-60o0 mb-6'>{service.description}</p>,
                   <ul className='space-y-2'>,
-                    {service.features.map((feature, featureIndex) => (,
-                      <li,
+                    {service.features.map((feature, featureIndex) => (
+                      <li
                         key={featureIndex}
-                        className='flex items-center text-gray-70o0',
-                      >,
+                        className='flex items-center text-gray-70o0'>,
                         <CheckCircle className='w-5 h-5 text-green-50o0 mr-3 flex-shrink-0' />,
                         {feature}
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -200,22 +190,20 @@ const DigitalTransformation = () => {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>,
-              {industries.map((industry, index) => (,
-                <div,
+              {industries.map((industry, index) => (
+                <div
                   key={index}
-                  className='bg-white rounded-lg p-6 text-center hover: shadow-md transition-shadow',
-                >,
+                  className='bg-white rounded-lg p-6 text-center hover: shadow-md transition-shadow'>,
                   <div className='p-3 rounded-full bg-gradient-to-r from-purple-50o0 to-pink-60o0 w-fit mx-auto mb-4'>,
                     <Award className='w-6 h-6 text-white' />,
                   </div>,
                   <h3 className='font-semibold text-gray-90o0 mb-2'>,
-                    {industry.name,}
+                    {industry.name}
                   </h3>,
                   <p className='text-sm text-gray-60o0'>,
                     {industry.description}
                   </p>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -268,7 +256,7 @@ const DigitalTransformation = () => {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-purple-60o0 to-pink-60o0'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
             <h2 className='text-3xl font-bold text-white mb-6'>,
@@ -279,16 +267,14 @@ const DigitalTransformation = () => {,
               proven solutions.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Start Transformation,
               </Link>,
-              <Link,
+              <Link
                 href='/about',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 Learn More About Us,
               </Link>,
             </div>,
@@ -296,9 +282,6 @@ const DigitalTransformation = () => {,
         </section>,
       </main>,
       <Footer />,
-    </>,
-  ),
-,};
-,
-export default DigitalTransformation,
-,
+    </>),
+};
+export default DigitalTransformation;

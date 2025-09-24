@@ -1,67 +1,64 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
-,
-const FeaturesSection: React.FC = () => {,
+const FeaturesSection: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null),
-,
-  const features = [,
-    {,
-      icon: '🤖',;
-      title: 'AI & Machine Learning',;
+  const features = [
+    {
+      icon: '🤖';
+      title: 'AI & Machine Learning';
       description:,
-        'Advanced artificial intelligence solutions that learn, adapt, and evolve with your business needs.',;
-      color: 'from-cyan-50o0 to-blue-60o0',;
-      glow: 'glow',;
-      link: '/services#ai',;
-    },;
-    {,
-      icon: '⚡',;
-      title: 'Cloud Infrastructure',;
+        'Advanced artificial intelligence solutions that learn, adapt, and evolve with your business needs.';
+      color: 'from-cyan-50o0 to-blue-60o0';
+      glow: 'glow';
+      link: '/services#ai';
+    };
+    {
+      icon: '⚡';
+      title: 'Cloud Infrastructure';
       description:,
-        'Scalable cloud solutions designed for performance, security, and seamless integration.',;
-      color: 'from-purple-50o0 to-pink-60o0',;
-      glow: 'glow-purple',;
-      link: '/services#cloud',;
-    },;
-    {,
-      icon: '🔒',;
-      title: 'Cybersecurity',;
+        'Scalable cloud solutions designed for performance, security, and seamless integration.';
+      color: 'from-purple-50o0 to-pink-60o0';
+      glow: 'glow-purple';
+      link: '/services#cloud';
+    };
+    {
+      icon: '🔒';
+      title: 'Cybersecurity';
       description:,
-        'Comprehensive security frameworks protecting your digital assets and ensuring compliance.',;
-      color: 'from-green-50o0 to-emerald-60o0',;
-      glow: 'glow-green',;
-      link: '/services#security',;
-    },;
-    {,
-      icon: '📱',;
-      title: 'Digital Transformation',;
+        'Comprehensive security frameworks protecting your digital assets and ensuring compliance.';
+      color: 'from-green-50o0 to-emerald-60o0';
+      glow: 'glow-green';
+      link: '/services#security';
+    };
+    {
+      icon: '📱';
+      title: 'Digital Transformation';
       description:,
-        'End-to-end digital solutions that modernize operations and enhance customer experiences.',;
-      color: 'from-orange-50o0 to-red-60o0',;
-      glow: 'glow-orange',;
-      link: '/services#digital',;
-    },;
-    {,
-      icon: '🌐',;
-      title: 'IoT Solutions',;
+        'End-to-end digital solutions that modernize operations and enhance customer experiences.';
+      color: 'from-orange-50o0 to-red-60o0';
+      glow: 'glow-orange';
+      link: '/services#digital';
+    };
+    {
+      icon: '🌐';
+      title: 'IoT Solutions';
       description:,
-        'Connected device ecosystems that gather data and enable smart decision-making.',;
-      color: 'from-indigo-50o0 to-purple-60o0',;
-      glow: 'glow-purple',;
-      link: '/services#iot',;
-    },;
-    {,
-      icon: '📊',;
-      title: 'Data Analytics',;
+        'Connected device ecosystems that gather data and enable smart decision-making.';
+      color: 'from-indigo-50o0 to-purple-60o0';
+      glow: 'glow-purple';
+      link: '/services#iot';
+    };
+    {
+      icon: '📊';
+      title: 'Data Analytics';
       description:,
-        'Powerful insights from your data to drive strategic decisions and optimize performance.',;
-      color: 'from-yellow-50o0 to-orange-60o0',;
-      glow: 'glow-yellow',;
-      link: '/services#analytics',;
-    },;
+        'Powerful insights from your data to drive strategic decisions and optimize window.performance.';
+      color: 'from-yellow-50o0 to-orange-60o0';
+      glow: 'glow-yellow';
+      link: '/services#analytics';
+    };
   ],
-,
-  return (,
+  return (
     <section className='relative py-24 px-6 overflow-hidden'>,
       {/* Background Elements */}
       <div className='absolute inset-0'>,
@@ -81,56 +78,54 @@ const FeaturesSection: React.FC = () => {,
             businesses and drive innovation across industries.,
           </p>,
         </div>,
-        {/* Features Grid */,}
+        {/* Features Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-          {features.map((feature, index) => (,
-            <div,
+          {features.map((feature, index) => (
+            <div
               key={index}
-              className={`group relative p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover: border-white/30 transition-all duration-50o0 hover:scale-10o5 hover:shadow-2xl ${,
+              className={`group relative p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover: border-white/30 transition-all duration-50o0 hover:scale-10o5 hover:shadow-2xl ${
                 hoveredCard === index ? 'bg-white/10' : '',
-              ,}`}
+              }`}
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
-              style={{ animationDelay: `${index * 0.1,}s` }}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >,
               {/* Hover Background */}
-              <div,
-                className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${feature.color} opacity-0 group-hover: opacity-10 transition-opacity duration-50o0`,}
+              <div
+                className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${feature.color} opacity-0 group-hover: opacity-10 transition-opacity duration-50o0`}
               ></div>,
               {/* Icon */}
-              <div,
-                className={`relative z-10 w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-30o0 ${feature.glow,}`}
+              <div
+                className={`relative z-10 w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-30o0 ${feature.glow}`}
               >,
                 <span className='text-3xl'>{feature.icon}</span>,
               </div>,
               {/* Content */}
               <div className='relative z-10'>,
                 <h3 className='text-xl font-bold text-white mb-4 group-hover: text-cyan-40o0 transition-colors duration-30o0'>,
-                  {feature.title,}
+                  {feature.title}
                 </h3>,
                 <p className='text-white/70 leading-relaxed mb-6'>,
                   {feature.description}
                 </p>,
                 {/* Learn More Link */}
-                <Link,
+                <Link
                   href={feature.link}
-                  className='inline-flex items-center text-cyan-40o0 hover: text-cyan-30o0 font-medium group/link transition-colors duration-30o0',
-                >,
+                  className='inline-flex items-center text-cyan-40o0 hover: text-cyan-30o0 font-medium group/link transition-colors duration-30o0'>,
                   Learn More,
                   <span className='ml-2 group-hover/link:translate-x-1 transition-transform duration-30o0'>,
                     →,
                   </span>,
                 </Link>,
               </div>,
-              {/* Decorative Elements */,}
+              {/* Decorative Elements */}
               <div className='absolute top-4 right-4 opacity-20 group-hover: opacity-40 transition-opacity duration-30o0'>,
                 <div className='w-8 h-8 border border-white/30 rounded-full'></div>,
               </div>,
               <div className='absolute bottom-4 left-4 opacity-20 group-hover:opacity-40 transition-opacity duration-30o0'>,
                 <div className='w-4 h-4 bg-white/30 rounded-full'></div>,
               </div>,
-            </div>,
-          )),}
+            </div>))}
         </div>,
         {/* CTA Section */}
         <div className='text-center mt-16'>,
@@ -143,25 +138,20 @@ const FeaturesSection: React.FC = () => {,
               digital transformation journey.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-bold rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-xl',
-              >,
+                className='px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-bold rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-xl'>,
                 Get Started Today,
               </Link>,
-              <Link,
+              <Link
                 href='/case-studies',
-                className='px-8 py-4 bg-white/10 text-white font-bold rounded-xl border border-white/20 hover:bg-white/20 hover:border-cyan-40o0/50 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+                className='px-8 py-4 bg-white/10 text-white font-bold rounded-xl border border-white/20 hover:bg-white/20 hover:border-cyan-40o0/50 transition-all duration-30o0 transform hover:scale-10o5'>,
                 View Our Work,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default FeaturesSection,
-,
+    </section>),
+};
+export default FeaturesSection;

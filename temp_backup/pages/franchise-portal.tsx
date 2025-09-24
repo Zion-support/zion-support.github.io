@@ -2,24 +2,21 @@ import { useState } from 'react',
 import DashboardLayout from '../components/layout/Layout',
 import EnhancedCard from '../components/ui/EnhancedCard',
 import type { GetServerSideProps } from 'next',
-,
-export const getServerSideProps: GetServerSideProps = async ({ req ,}) => {,
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const cookie = req.headers.cookie || '',
   const role = cookie,
     .split(','),
     .map(s => s.trim()),
     .find(s => s.startsWith('zion_role=')),
     ?.split('=')[1],
-  if (!role || (role !== 'franchisee' && role !== 'superadmin')) {,
-    return { redirect: { destination: '/unauthorized', permanent: false ,} };
+  if (!role || (role !== 'franchisee' && role !== 'superadmin')) {
+    return { redirect: { destination: '/unauthorized', permanent: false } };
   }
-  return { props: {,} };
+  return { props: {} };
 };
-,
-export default function FranchisePortalPage() {,
+export default function FranchisePortalPage() {
   const [submitted, setSubmitted] = useState(false),
-,
-  return (,
+  return (
     <DashboardLayout>,
       <div className='space-y-8'>,
         <section id='apply' className='space-y-3'>,
@@ -30,28 +27,27 @@ export default function FranchisePortalPage() {,
             Apply to launch a Zion franchise in your country or industry.,
           </p>,
           <EnhancedCard title='Franchise Application'>,
-            {submitted ? (,
+            {submitted ? (
               <div className='text-green-60o0'>,
                 Application received. We will get back to you shortly.,
-              </div>,
-            ) : (,
-              <form,
+              </div>) : (
+              <form
                 className='grid grid-cols-1 md:grid-cols-2 gap-4',
-                onSubmit={e => {,
+                onSubmit={e => {
                   e.preventDefault(),
                   setSubmitted(true),
-                ,}}
+                }}
               >,
                 <div>,
                   <label className='block text-sm mb-1'>Name</label>,
-                  <input,
+                  <input
                     className='w-full border rounded px-3 py-2 bg-white dark: bg-gray-90o0',
                     required,
                   />,
                 </div>,
                 <div>,
                   <label className='block text-sm mb-1'>Email</label>,
-                  <input,
+                  <input
                     type='email',
                     className='w-full border rounded px-3 py-2 bg-white dark:bg-gray-90o0',
                     required,
@@ -59,14 +55,14 @@ export default function FranchisePortalPage() {,
                 </div>,
                 <div>,
                   <label className='block text-sm mb-1'>Region / Country</label>,
-                  <input,
+                  <input
                     className='w-full border rounded px-3 py-2 bg-white dark:bg-gray-90o0',
                     required,
                   />,
                 </div>,
                 <div>,
                   <label className='block text-sm mb-1'>Industry Focus</label>,
-                  <input,
+                  <input
                     className='w-full border rounded px-3 py-2 bg-white dark:bg-gray-90o0',
                     placeholder='e.g., HealthTech, FinTech',
                   />,
@@ -75,21 +71,19 @@ export default function FranchisePortalPage() {,
                   <label className='block text-sm mb-1'>,
                     Background & Go-To-Market Plan,
                   </label>,
-                  <textarea,
+                  <textarea
                     className='w-full border rounded px-3 py-2 bg-white dark:bg-gray-90o0',
-                    rows={4,}
+                    rows={4}
                   />,
                 </div>,
                 <div className='md: col-span-2 flex justify-end'>,
-                  <button,
+                  <button
                     type='submit',
-                    className='px-4 py-2 rounded bg-gray-90o0 text-white',
-                  >,
+                    className='px-4 py-2 rounded bg-gray-90o0 text-white'>,
                     Submit Application,
                   </button>,
                 </div>,
-              </form>,
-            ),}
+              </form>)}
           </EnhancedCard>,
         </section>,
         <section id='toolkit' className='space-y-3'>,
@@ -164,7 +158,6 @@ export default function FranchisePortalPage() {,
           </div>,
         </section>,
       </div>,
-    </DashboardLayout>,
-  ),
-,}
+    </DashboardLayout>),
+}
 ,

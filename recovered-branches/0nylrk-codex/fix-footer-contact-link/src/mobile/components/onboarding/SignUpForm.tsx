@@ -7,71 +7,55 @@ import { useNavigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
 import { AlertCircle } from "lucide-react",
 import { AlertDescription } from "@/components/ui/alert",
-,
-export function SignUpForm() {,
+export function SignUpForm() {
   const navigate = useNavigate(),
   const { signuploginWithGoogle } = useAuth(),
-,
-  const [formDatasetFormData] = useState({,
-    email: "",;
-    password: "",;
-    name: "",}),
+  const [formDatasetFormData] = useState({
+    email: "";
+    password: "";
+    name: ""}),
   const [isLoadingsetIsLoading] = useState(false),
   const [signupModesetSignupMode] = useState(true),
   const [errorsetError] = useState(""),
-,
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {,
-    const { namevalue ,} = e.target,
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { namevalue } = e.target,
     setFormData(prev => ({ ...prev[name]: value })),
-    setError(""),
-  };
-,
-  const handleSubmit = async (e: React.FormEvent) => {,
+    setError("")};
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setError(""),
     setIsLoading(true),
+    try {
+      if (signupMode) {
+        const { error } = await signup(formData.emailformData.password{
+          name: formData.name}),
+        if (error) {
+          throw new Error(error)}
 ,
-    try {,
-      if (signupMode) {,
-        const { error ,} = await signup(formData.emailformData.password{,
-          name: formData.name,}),
-,
-        if (error) {,
-          throw new Error(error),
-        }
-,
-        navigate("/mobile"),
-      } else {,
+        navigate("/mobile")} else {
         const { error } = await login(formData.emailformData.password),
+        if (error) {
+          throw new Error(error)}
 ,
-        if (error) {,
-          throw new Error(error),
-        }
-,
-        navigate("/mobile"),
-      }
-    } catch (err: any) {,
+        navigate("/mobile")}
+    } catch (err: any) {
       setError(err.message),
-    ,} finally {,
-      setIsLoading(false),
+    } finally {
+      setIsLoading(false)}
+  };
+  const handleGoogleLogin = async () => {
+    try {
+      await loginWithGoogle()} catch (err: any) {
+      setError(err.message),
     }
   };
-,
-  const handleGoogleLogin = async () => {,
-    try {,
-      await loginWithGoogle(),
-    } catch (err: any) {,
-      setError(err.message),
-    ,}
-  };
-,
-  return (,
+  return (
     <div className="space-y-4 px-4">,
       <h2 className="text-xl font-medium text-center">,
         {signupMode ? "Create your account" : "Welcome back"}
       </h2>,
       <div className="space-y-2">,
-        <Button,
+        <Button
           variant="outline",
           className="w-full py-6 relative",
           onClick={handleGoogleLogin}
@@ -84,10 +68,9 @@ export function SignUpForm() {,
           </svg>,
           Continue with Google,
         </Button>,
-        <Button,
+        <Button
           variant="outline",
-          className="w-full py-6 relative",
-        >,
+          className="w-full py-6 relative">,
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">,
             <path d="M24 12.073c0-5.8-4.85-10.5-10.826-10.5-6.02 0-10.93 4.7-10.93 10.5 0 5.234 3.875 9.575 8.95 10.359v-7.318h-2.696v-3.041h2.696V9.898c0-2.586 1.581-4.016 4.003-4.016 1.159 0 2.37.204 2.37.204v2.543h-1.334c-1.316 0-1.727.8-1.727 1.622v1.95h2.938l-.47 3.04h-2.468v7.318C20.125 21.648 24 17.307 24 12.073z" fill="#1877F2" />,
           </svg>,
@@ -99,18 +82,17 @@ export function SignUpForm() {,
         <span className="mx-2 text-xs text-muted-foreground">OR</span>,
         <div className="flex-grow border-t border-border"></div>,
       </div>,
-      {error && (,
+      {error && (
         <Alert variant="destructive">,
           <AlertCircle className="h-4 w-4" />,
-          <AlertDescription>{error,}</AlertDescription>,
-        </Alert>,
-      )}
+          <AlertDescription>{error}</AlertDescription>,
+        </Alert>)}
 ,
       <form onSubmit={handleSubmit} className="space-y-4">,
-        {signupMode && (,
+        {signupMode && (
           <div className="space-y-2">,
             <Label htmlFor="name">Full name</Label>,
-            <Input,
+            <Input
               id="name",
               name="name",
               value={formData.name}
@@ -118,12 +100,11 @@ export function SignUpForm() {,
               required,
               placeholder="Enter your full name",
             />,
-          </div>,
-        )}
+          </div>)}
 ,
         <div className="space-y-2">,
           <Label htmlFor="email">Email address</Label>,
-          <Input,
+          <Input
             id="email",
             name="email",
             type="email",
@@ -135,7 +116,7 @@ export function SignUpForm() {,
         </div>,
         <div className="space-y-2">,
           <Label htmlFor="password">Password</Label>,
-          <Input,
+          <Input
             id="password",
             name="password",
             type="password",
@@ -145,7 +126,7 @@ export function SignUpForm() {,
             placeholder="Create a password",
           />,
         </div>,
-        <Button,
+        <Button
           type="submit",
           className="w-full py-6",
           disabled={isLoading}
@@ -154,16 +135,14 @@ export function SignUpForm() {,
             ? "Please wait...",
             : signupMode,
               ? "Create Account",
-              : "Sign In",
-          }
+              : "Sign In"}
         </Button>,
       </form>,
       <p className="text-center text-sm">,
         {signupMode,
           ? "Already have an account? ",
-          : "Don't have an account? ",
-        }
-        <Button,
+          : "Don't have an account? "}
+        <Button
           variant="link",
           className="p-0 h-auto",
           onClick={() => setSignupMode(!signupMode)}
@@ -171,7 +150,5 @@ export function SignUpForm() {,
           {signupMode ? "Sign In" : "Sign Up"}
         </Button>,
       </p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

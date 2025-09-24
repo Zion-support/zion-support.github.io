@@ -1,12 +1,11 @@
 import Link from 'next/link',
-,
-export default function AI20o26NeuralInterfacePromotionBanner() {,
-  return (,
+export default function AI20o26NeuralInterfacePromotionBanner() {
+  return (
     <div className='relative bg-gradient-to-r from-purple-60o0 via-indigo-60o0 to-blue-60o0 overflow-hidden'>,
       <div className='absolute inset-0 bg-black/20'></div>,
       <div className='relative max-w-7xl mx-auto px-4 py-16'>,
         <div className='grid grid-cols-1 lg: grid-cols-2 gap-12 items-center'>,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div className='text-white'>,
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-semibold mb-6'>,
               🧠 BREAKTHROUGH: NEURAL INTERFACE REVOLUTION 20o26,
@@ -23,21 +22,19 @@ export default function AI20o26NeuralInterfacePromotionBanner() {,
               human-AI symbiosis.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4'>,
-              <Link,
+              <Link
                 href='/ai-20o26-neural-interface-revolution',
-                className='px-8 py-4 bg-white text-purple-60o0 font-semibold rounded-lg hover:bg-purple-50 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg text-center',
-              >,
+                className='px-8 py-4 bg-white text-purple-60o0 font-semibold rounded-lg hover:bg-purple-50 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg text-center'>,
                 Explore Neural Tech,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 text-center',
-              >,
+                className='px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 text-center'>,
                 Get Neural Consultation,
               </Link>,
             </div>,
           </div>,
-          {/* Right Content - Revolutionary Stats */,}
+          {/* Right Content - Revolutionary Stats */}
           <div className='grid grid-cols-2 gap-6'>,
             <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'>,
               <div className='text-3xl font-bold text-white mb-2'>99.9%</div>,
@@ -66,7 +63,5 @@ export default function AI20o26NeuralInterfacePromotionBanner() {,
         </div>,
         <div className='absolute top-1/2 right-1/4 w-12 h-12 bg-white/10 rounded-full animate-ping'></div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

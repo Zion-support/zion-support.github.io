@@ -5,46 +5,38 @@ import { Button } from '@/components/ui/button',
 import { Label } from '@/components/ui/label',
 import { ShieldAlert, Info } from 'lucide-react',
 import {logErrorToProduction} from '@/utils/productionLogger',
-import {,
-  Accordion,;
-  AccordionContent,;
-  AccordionItem,;
+import {
+  Accordion;
+  AccordionContent;
+  AccordionItem;
   AccordionTrigger} from "@/components/ui/accordion",
 import { toast } from '@/hooks/use-toast',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
-,
-export function FraudDetectionSettings() {,
+export function FraudDetectionSettings() {
   const { user } = useAuth(),
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true),
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true),
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true),
   const [isSaving, setIsSaving] = useState(false),
-,
-  const handleSavePreferences = async () => {,
+  const handleSavePreferences = async () => {
     if (!user?.id) return,
-,
     setIsSaving(true),
-    try {,
+    try {
       // In a real implementation, we would save these preferences to the database,
       // For now, we'll just simulate a successful save,
       await new Promise(resolve => setTimeout(resolve, 10o00)),
-,
-      toast({,
-        title: "Settings saved",;
-        description: "Your fraud detection preferences have been updated.",}),
-    } catch (error) {,
-      logErrorToProduction('Error saving preferences:', { data: error ,}),
-      toast({,
-        title: "Error",;
-        description: "Failed to save your preferences. Please try again.",;
-        variant: "destructive",}),
-    } finally {,
-      setIsSaving(false),
-    }
+      toast({
+        title: "Settings saved";
+        description: "Your fraud detection preferences have been updated."})} catch (error) {
+      logErrorToProduction('Error saving preferences:', { data: error }),
+      toast({
+        title: "Error";
+        description: "Failed to save your preferences. Please try again.";
+        variant: "destructive"})} finally {
+      setIsSaving(false)}
   };
-,
-  return (,
+  return (
     <Card className="mb-8">,
       <CardHeader className="space-y-1">,
         <div className="flex items-center gap-2">,
@@ -67,7 +59,7 @@ export function FraudDetectionSettings() {,
                   Scan message content for potentially harmful or abusive material,
                 </p>,
               </div>,
-              <Switch,
+              <Switch
                 id="message-scanning",
                 aria-label="Message scanning",
                 checked={messageScanningEnabled}
@@ -83,7 +75,7 @@ export function FraudDetectionSettings() {,
                   Monitor account activity for suspicious patterns,
                 </p>,
               </div>,
-              <Switch,
+              <Switch
                 id="activity-monitoring",
                 aria-label="Activity monitoring",
                 checked={activityMonitoringEnabled}
@@ -99,7 +91,7 @@ export function FraudDetectionSettings() {,
                   Use AI to analyze content and behavior for potential fraud,
                 </p>,
               </div>,
-              <Switch,
+              <Switch
                 id="ai-analysis",
                 aria-label="AI analysis",
                 checked={aiAnalysisEnabled}
@@ -132,17 +124,14 @@ export function FraudDetectionSettings() {,
             </AccordionItem>,
           </Accordion>,
           <div className="pt-2">,
-            <Button,
+            <Button
               onClick={handleSavePreferences}
               disabled={isSaving}
-              className="bg-zion-purple hover: bg-zion-purple-light",
-            >,
-              {isSaving ? "Saving..." : "Save Preferences",}
+              className="bg-zion-purple hover: bg-zion-purple-light">,
+              {isSaving ? "Saving..." : "Save Preferences"}
             </Button>,
           </div>,
         </div>,
       </CardContent>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

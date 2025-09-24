@@ -1,20 +1,18 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI Documentation Generator | Zion Tech Group',;
+export const metadata = {
+  title: 'AI Documentation Generator | Zion Tech Group';
   description:,
-    'Automated documentation generation with AI-powered analysis, intelligent formatting, and multi-format output for comprehensive project documentation.',;
+    'Automated documentation generation with AI-powered analysis, intelligent formatting, and multi-format output for comprehensive project documentation.';
 };
-,
-export default function AIDocumentationGeneratorPage() {,
-  return (,
+export default function AIDocumentationGeneratorPage() {
+  return (
     <div className='animate-fade-in'>,
       <div className='text-center mb-16'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
           AI Documentation Generator,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          Automated documentation generation with AI-powered analysis,;
+          Automated documentation generation with AI-powered analysis;
           intelligent formatting, and multi-format output for comprehensive,
           project documentation.,
         </p>,
@@ -25,27 +23,27 @@ export default function AIDocumentationGeneratorPage() {,
             Features & Capabilities,
           </h2>,
           <div className='space-y-6'>,
-            <FeatureItem,
+            <FeatureItem
               title='Intelligent Code Analysis',
               description='AI-powered analysis of codebases to automatically generate comprehensive API documentation, user guides, and technical specifications.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Multi-Format Output',
               description='Generate documentation in multiple formats including Markdown, HTML, PDF, and interactive web documentation with custom styling.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Smart Content Generation',
               description='AI-driven content creation that understands context, generates examples, and creates user-friendly explanations for complex technical concepts.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Interactive Documentation',
               description='Create interactive documentation with live code examples, API explorers, and embedded tutorials for better user experience.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Version Control Integration',
               description='Seamless integration with Git repositories for automatic documentation updates and version tracking.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Custom Templates',
               description='Flexible template system with customizable layouts, branding, and styling options for consistent documentation across projects.',
             />,
@@ -56,43 +54,43 @@ export default function AIDocumentationGeneratorPage() {,
             Pricing & Plans,
           </h2>,
           <div className='space-y-4'>,
-            <PricingCard,
+            <PricingCard
               plan='Starter',
               price='$39/month',
               description='Perfect for small projects and individual developers',
-              features={[,
-                'Up to 5 projects',;
-                'Basic documentation generation',;
-                'Email support',;
-                'Standard templates',;
-                'PDF export',;
+              features={[
+                'Up to 5 projects';
+                'Basic documentation generation';
+                'Email support';
+                'Standard templates';
+                'PDF export';
               ]}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Professional',
               price='$99/month',
               description='Ideal for growing teams and larger projects',
-              features={[,
-                'Up to 25 projects',;
-                'Advanced AI generation',;
-                'Priority support',;
-                'Custom templates',;
-                'Interactive documentation',;
-                'API integration',;
+              features={[
+                'Up to 25 projects';
+                'Advanced AI generation';
+                'Priority support';
+                'Custom templates';
+                'Interactive documentation';
+                'API integration';
               ]}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Enterprise',
               price='$249/month',
               description='For large organizations with complex documentation needs',
-              features={[,
-                'Unlimited projects',;
-                'Custom AI models',;
-                '24/7 dedicated support',;
-                'On-premise deployment',;
-                'Custom integrations',;
-                'SLA guarantees',;
-                'White-label options',;
+              features={[
+                'Unlimited projects';
+                'Custom AI models';
+                '24/7 dedicated support';
+                'On-premise deployment';
+                'Custom integrations';
+                'SLA guarantees';
+                'White-label options';
               ]}
             />,
           </div>,
@@ -103,15 +101,15 @@ export default function AIDocumentationGeneratorPage() {,
           Why Choose Our AI Documentation Generator?,
         </h2>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-          <BenefitCard,
+          <BenefitCard
             title='90% Time Savings',
             description='Automated documentation generation reduces manual documentation time by 90%, allowing teams to focus on development.',
           />,
-          <BenefitCard,
+          <BenefitCard
             title='Consistent Quality',
             description='AI-powered generation ensures consistent, high-quality documentation across all projects and team members.',
           />,
-          <BenefitCard,
+          <BenefitCard
             title='Always Up-to-Date',
             description='Automatic updates keep documentation synchronized with code changes, ensuring accuracy and relevance.',
           />,
@@ -126,16 +124,14 @@ export default function AIDocumentationGeneratorPage() {,
           creates comprehensive, accurate, and always up-to-date documentation.,
         </p>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors',
-          >,
+            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors'>,
             Email Us,
           </a>,
         </div>,
@@ -144,26 +140,23 @@ export default function AIDocumentationGeneratorPage() {,
           <p>📧 kleber@ziontechgroup.com | 📞 +1 30o2 464 0950</p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function FeatureItem({,
-  title,;
-  description,;
-}: {,
+function FeatureItem({
+  title;
+  description;
+}: {
   title: string,
   description: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className='flex items-start space-x-4'>,
       <div className='flex-shrink-0 w-6 h-6 bg-teal-50o0 rounded-full flex items-center justify-center mt-1'>,
-        <svg,
+        <svg
           className='w-4 h-4 text-white',
           fill='currentColor',
-          viewBox='0 0 20 20',
-        >,
-          <path,
+          viewBox='0 0 20 20'>,
+          <path
             fillRule='evenodd',
             d='M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z',
             clipRule='evenodd',
@@ -174,49 +167,42 @@ function FeatureItem({,
         <h3 className='text-lg font-semibold text-gray-90o0 mb-2'>{title}</h3>,
         <p className='text-gray-60o0'>{description}</p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingCard({,
-  plan,;
-  price,;
-  description,;
-  features,;
-}: {,
+function PricingCard({
+  plan;
+  price;
+  description;
+  features;
+}: {
   plan: string,
   price: string,
   description: string,
   features: string[],
-,}) {,
-  return (,
+}) {
+  return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white'>,
       <h3 className='text-xl font-bold text-gray-90o0 mb-2'>{plan}</h3>,
       <div className='text-3xl font-bold text-teal-60o0 mb-2'>{price}</div>,
       <p className='text-gray-60o0 mb-4'>{description}</p>,
       <ul className='space-y-2'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='flex items-center text-sm text-gray-60o0'>,
             <span className='text-teal-50o0 mr-2'>•</span> {feature}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function BenefitCard({,
-  title,;
-  description,;
-}: {,
+function BenefitCard({
+  title;
+  description;
+}: {
   title: string,
   description: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className='text-center'>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-3'>{title}</h3>,
       <p className='text-gray-60o0'>{description}</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

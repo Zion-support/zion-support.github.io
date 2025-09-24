@@ -1,9 +1,8 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   Brain,
   Zap,
   Rocket,
@@ -11,294 +10,281 @@ import {,
   Users,
   TrendingUp,
   Shield,
-  Globe,;
-  ArrowRight,;
-  Play,;
-  Download,;
-  Share2,;
-  Heart,;
-  MessageCircle,;
-  BookOpen,;
-  Lightbulb,;
-  Cpu,;
-  Database,;
-  Cloud,;
-  Lock,;
-  RefreshCw,;
-  Star,;
-  Award,;
-  CheckCircle,;
-  Sparkles,;
-  Crown,;
-  Gem,;
-  Eye,;
-  Search,;
-  Filter,;
-  Grid,;
-  List,;
-  Calendar,;
-  Clock,;
-  BarChart3,;
-  PieChart,;
-  Activity,;
-  Layers,;
-  Network,;
-  Code,;
-  Terminal,;
-  Settings,;
-  Wrench,;
-  Tool,
-} from 'lucide-react',
-,
-const AIInnovationHub20o25 = () => {,
+  Globe;
+  ArrowRight;
+  Play;
+  Download;
+  Share2;
+  Heart;
+  MessageCircle;
+  BookOpen;
+  Lightbulb;
+  Cpu;
+  Database;
+  Cloud;
+  Lock;
+  RefreshCw;
+  Star;
+  Award;
+  CheckCircle;
+  Sparkles;
+  Crown;
+  Gem;
+  Eye;
+  Search;
+  Filter;
+  Grid;
+  List;
+  Calendar;
+  Clock;
+  BarChart3;
+  PieChart;
+  Activity;
+  Layers;
+  Network;
+  Code;
+  Terminal;
+  Settings;
+  Wrench;
+  Tool} from 'lucide-react',
+const AIInnovationHub20o25 = () => {
   const [activeCategorysetActiveCategory] = useState('ai-core'),
   const [viewModesetViewMode] = useState('grid'),
   const [searchQuerysetSearchQuery] = useState(''),
   const [isVisiblesetIsVisible] = useState(false),
   const [hoveredItemsetHoveredItem] = useState(null),
-,
-  useEffect(() => {,
-    setIsVisible(true),
-  }[]),
-,
-  const categories ={,
-    'ai-core': {,
-      title: 'AI Core Technologies',;
-      icon: Brain,;
-      color: 'from-purple-60o0 to-blue-60o0',;
+  useEffect(() => {
+    setIsVisible(true)}[]),
+  const categories ={
+    'ai-core': {
+      title: 'AI Core Technologies';
+      icon: Brain;
+      color: 'from-purple-60o0 to-blue-60o0';
       description: 'Fundamental AI technologies and algorithms',
-    ,},;
-    'business-ai': {,
-      title: 'Business AI Solutions',;
-      icon: Target,;
-      color: 'from-green-60o0 to-emerald-60o0',;
+    };
+    'business-ai': {
+      title: 'Business AI Solutions';
+      icon: Target;
+      color: 'from-green-60o0 to-emerald-60o0';
       description: 'AI solutions for enterprise and business applications',
-    ,},;
-    'future-tech': {,
-      title: 'Future Technologies',;
-      icon: Rocket,;
-      color: 'from-orange-60o0 to-red-60o0',;
+    };
+    'future-tech': {
+      title: 'Future Technologies';
+      icon: Rocket;
+      color: 'from-orange-60o0 to-red-60o0';
       description: 'Next-generation technologies and innovations',
-    ,},;
-    'tools-utilities': {,
-      title: 'AI Tools & Utilities',;
-      icon: Wrench,;
-      color: 'from-cyan-60o0 to-blue-60o0',;
+    };
+    'tools-utilities': {
+      title: 'AI Tools & Utilities';
+      icon: Wrench;
+      color: 'from-cyan-60o0 to-blue-60o0';
       description: 'Practical AI tools and utility applications',
-    ,}
+    }
   };
-,
-  const innovations ={,
-    'ai-core': [,
-      {,
-        id: 1,;
-        title: 'Neural Architecture Search (NAS)',;
-        description: 'Automated discovery of optimal neural network architectures',;
-        category: 'Machine Learning',;
-        difficulty: 'Advanced',;
-        rating: 4.9,;
-        downloads: '50K+',;
-        status: 'Featured',;
-        icon: Network,;
-        color: 'from-purple-50o0 to-pink-50o0',;
-        features: ['Auto-'architecture', 'Performance 'optimization', 'Multi-task learning'],;
-        price: 'Free',;
+  const innovations ={
+    'ai-core': [
+      {
+        id: 1;
+        title: 'Neural Architecture Search (NAS)';
+        description: 'Automated discovery of optimal neural network architectures';
+        category: 'Machine Learning';
+        difficulty: 'Advanced';
+        rating: 4.9;
+        downloads: '50K+';
+        status: 'Featured';
+        icon: Network;
+        color: 'from-purple-50o0 to-pink-50o0';
+        features: ['Auto-'architecture', 'Performance 'optimization', 'Multi-task learning'];
+        price: 'Free';
         lastUpdated: '2 days ago',
-      ,},;
-      {,
-        id: 2,;
-        title: 'Quantum Neural Networks',;
-        description: 'Hybrid quantum-classical neural networks for enhanced processing',;
-        category: 'Quantum AI',;
-        difficulty: 'Expert',;
-        rating: 4.8,;
-        downloads: '25K+',;
-        status: 'New',;
-        icon: Cpu,;
-        color: 'from-blue-50o0 to-cyan-50o0',;
-        features: ['Quantum 'processing', 'Exponential 'speedup', 'Quantum advantage'],;
-        price: 'Premium',;
+      };
+      {
+        id: 2;
+        title: 'Quantum Neural Networks';
+        description: 'Hybrid quantum-classical neural networks for enhanced processing';
+        category: 'Quantum AI';
+        difficulty: 'Expert';
+        rating: 4.8;
+        downloads: '25K+';
+        status: 'New';
+        icon: Cpu;
+        color: 'from-blue-50o0 to-cyan-50o0';
+        features: ['Quantum 'processing', 'Exponential 'speedup', 'Quantum advantage'];
+        price: 'Premium';
         lastUpdated: '1 week ago',
-      ,},;
-      {,
-        id: 3,;
-        title: 'Federated Learning Framework',;
-        description: 'Distributed machine learning with privacy preservation',;
-        category: 'Privacy AI',;
-        difficulty: 'Intermediate',;
-        rating: 4.7,;
-        downloads: '75K+',;
-        status: 'Popular',;
-        icon: Shield,;
-        color: 'from-green-50o0 to-emerald-50o0',;
-        features: ['Privacy-'first', 'Distributed 'training', 'Secure aggregation'],;
-        price: 'Free',;
+      };
+      {
+        id: 3;
+        title: 'Federated Learning Framework';
+        description: 'Distributed machine learning with privacy preservation';
+        category: 'Privacy AI';
+        difficulty: 'Intermediate';
+        rating: 4.7;
+        downloads: '75K+';
+        status: 'Popular';
+        icon: Shield;
+        color: 'from-green-50o0 to-emerald-50o0';
+        features: ['Privacy-'first', 'Distributed 'training', 'Secure aggregation'];
+        price: 'Free';
         lastUpdated: '3 days ago',
-      ,},;
-      {,
-        id: 4,;
-        title: 'Transformer Optimization Engine',;
-        description: 'Advanced optimization techniques for transformer models',;
-        category: 'NLP',;
-        difficulty: 'Advanced',;
-        rating: 4.9,;
-        downloads: '10o0K+',;
-        status: 'Featured',;
-        icon: Layers,;
-        color: 'from-orange-50o0 to-red-50o0',;
-        features: ['Memory 'efficient', 'Faster 'inference', 'Scalable training'],;
-        price: 'Free',;
+      };
+      {
+        id: 4;
+        title: 'Transformer Optimization Engine';
+        description: 'Advanced optimization techniques for transformer models';
+        category: 'NLP';
+        difficulty: 'Advanced';
+        rating: 4.9;
+        downloads: '10o0K+';
+        status: 'Featured';
+        icon: Layers;
+        color: 'from-orange-50o0 to-red-50o0';
+        features: ['Memory 'efficient', 'Faster 'inference', 'Scalable training'];
+        price: 'Free';
         lastUpdated: '1 day ago',
-      ,}
-    ],;
-    'business-ai': [,
-      {,
-        id: 5,;
-        title: 'Enterprise AI Platform',;
-        description: 'Complete AI platform for enterprise deployment and management',;
-        category: 'Enterprise',;
-        difficulty: 'Intermediate',;
-        rating: 4.8,;
-        downloads: '30K+',;
-        status: 'Featured',;
-        icon: Building,;
-        color: 'from-indigo-50o0 to-purple-50o0',;
-        features: ['Enterprise 'ready', 'Scalable 'deployment', 'Full management'],;
-        price: 'Enterprise',;
+      }
+    ];
+    'business-ai': [
+      {
+        id: 5;
+        title: 'Enterprise AI Platform';
+        description: 'Complete AI platform for enterprise deployment and management';
+        category: 'Enterprise';
+        difficulty: 'Intermediate';
+        rating: 4.8;
+        downloads: '30K+';
+        status: 'Featured';
+        icon: Building;
+        color: 'from-indigo-50o0 to-purple-50o0';
+        features: ['Enterprise 'ready', 'Scalable 'deployment', 'Full management'];
+        price: 'Enterprise';
         lastUpdated: '5 days ago',
-      ,},;
-      {,
-        id: 6,;
-        title: 'AI Customer Service Suite',;
-        description: 'Intelligent customer service automation with human-like interactions',;
-        category: 'Customer Service',;
-        difficulty: 'Beginner',;
-        rating: 4.6,;
-        downloads: '80K+',;
-        status: 'Popular',;
-        icon: MessageCircle,;
-        color: 'from-teal-50o0 to-cyan-50o0',;
-        features: ['Natural 'language', 'Multi-'channel', 'Sentiment analysis'],;
-        price: 'Standard',;
+      };
+      {
+        id: 6;
+        title: 'AI Customer Service Suite';
+        description: 'Intelligent customer service automation with human-like interactions';
+        category: 'Customer Service';
+        difficulty: 'Beginner';
+        rating: 4.6;
+        downloads: '80K+';
+        status: 'Popular';
+        icon: MessageCircle;
+        color: 'from-teal-50o0 to-cyan-50o0';
+        features: ['Natural 'language', 'Multi-'channel', 'Sentiment analysis'];
+        price: 'Standard';
         lastUpdated: '2 days ago',
-      ,},;
-      {,
-        id: 7,;
-        title: 'Predictive Analytics Engine',;
-        description: 'Advanced forecasting and predictive modeling for business insights',;
-        category: 'Analytics',;
-        difficulty: 'Advanced',;
-        rating: 4.9,;
-        downloads: '45K+',;
-        status: 'Featured',;
-        icon: BarChart3,;
-        color: 'from-pink-50o0 to-rose-50o0',;
-        features: ['Time 'series', 'Anomaly 'detection', 'Real-time predictions'],;
-        price: 'Premium',;
+      };
+      {
+        id: 7;
+        title: 'Predictive Analytics Engine';
+        description: 'Advanced forecasting and predictive modeling for business insights';
+        category: 'Analytics';
+        difficulty: 'Advanced';
+        rating: 4.9;
+        downloads: '45K+';
+        status: 'Featured';
+        icon: BarChart3;
+        color: 'from-pink-50o0 to-rose-50o0';
+        features: ['Time 'series', 'Anomaly 'detection', 'Real-time predictions'];
+        price: 'Premium';
         lastUpdated: '1 week ago',
-      ,}
-    ],;
-    'future-tech': [,
-      {,
-        id: 8,;
-        title: 'Edge AI Computing',;
-        description: 'Distributed AI processing at the edge for ultra-low latency',;
-        category: 'Edge Computing',;
-        difficulty: 'Advanced',;
-        rating: 4.7,;
-        downloads: '35K+',;
-        status: 'New',;
-        icon: Cloud,;
-        color: 'from-sky-50o0 to-blue-50o0',;
-        features: ['Low 'latency', 'Offline 'capable', 'Resource efficient'],;
-        price: 'Premium',;
+      }
+    ];
+    'future-tech': [
+      {
+        id: 8;
+        title: 'Edge AI Computing';
+        description: 'Distributed AI processing at the edge for ultra-low latency';
+        category: 'Edge Computing';
+        difficulty: 'Advanced';
+        rating: 4.7;
+        downloads: '35K+';
+        status: 'New';
+        icon: Cloud;
+        color: 'from-sky-50o0 to-blue-50o0';
+        features: ['Low 'latency', 'Offline 'capable', 'Resource efficient'];
+        price: 'Premium';
         lastUpdated: '3 days ago',
-      ,},;
-      {,
-        id: 9,;
-        title: 'Augmented Reality AI',;
-        description: 'AI-powered AR experiences with real-time object recognition',;
-        category: 'AR/VR',;
-        difficulty: 'Expert',;
-        rating: 4.8,;
-        downloads: '20K+',;
-        status: 'Beta',;
-        icon: Eye,;
-        color: 'from-violet-50o0 to-purple-50o0',;
-        features: ['Real-time 'AR', 'Object 'tracking', 'Spatial mapping'],;
-        price: 'Premium',;
+      };
+      {
+        id: 9;
+        title: 'Augmented Reality AI';
+        description: 'AI-powered AR experiences with real-time object recognition';
+        category: 'AR/VR';
+        difficulty: 'Expert';
+        rating: 4.8;
+        downloads: '20K+';
+        status: 'Beta';
+        icon: Eye;
+        color: 'from-violet-50o0 to-purple-50o0';
+        features: ['Real-time 'AR', 'Object 'tracking', 'Spatial mapping'];
+        price: 'Premium';
         lastUpdated: '1 week ago',
-      ,}
-    ],;
-    'tools-utilities': [,
-      {,
-        id: 10,;
-        title: 'AI Model Optimizer',;
-        description: 'Automated model compression and optimization tools',;
-        category: 'Optimization',;
-        difficulty: 'Intermediate',;
-        rating: 4.6,;
-        downloads: '60K+',;
-        status: 'Popular',;
-        icon: Settings,;
-        color: 'from-amber-50o0 to-orange-50o0',;
-        features: ['Model 'compression', 'Quantization'Pruning'],;
-        price: 'Free',;
+      }
+    ];
+    'tools-utilities': [
+      {
+        id: 10;
+        title: 'AI Model Optimizer';
+        description: 'Automated model compression and optimization tools';
+        category: 'Optimization';
+        difficulty: 'Intermediate';
+        rating: 4.6;
+        downloads: '60K+';
+        status: 'Popular';
+        icon: Settings;
+        color: 'from-amber-50o0 to-orange-50o0';
+        features: ['Model 'compression', 'Quantization'Pruning'];
+        price: 'Free';
         lastUpdated: '4 days ago',
-      ,},;
-      {,
-        id: 11,;
-        title: 'AI Code Generator',;
-        description: 'Generate production-ready code from natural language descriptions',;
-        category: 'Code Generation',;
-        difficulty: 'Beginner',;
-        rating: 4.5,;
-        downloads: '90K+',;
-        status: 'Popular',;
-        icon: Code,;
-        color: 'from-emerald-50o0 to-green-50o0',;
-        features: ['Natural 'language', 'Multi-'language', 'Code review'],;
-        price: 'Free',;
+      };
+      {
+        id: 11;
+        title: 'AI Code Generator';
+        description: 'Generate production-ready code from natural language descriptions';
+        category: 'Code Generation';
+        difficulty: 'Beginner';
+        rating: 4.5;
+        downloads: '90K+';
+        status: 'Popular';
+        icon: Code;
+        color: 'from-emerald-50o0 to-green-50o0';
+        features: ['Natural 'language', 'Multi-'language', 'Code review'];
+        price: 'Free';
         lastUpdated: '2 days ago',
-      ,}
-    ],
-  };
-,
+      }
+    ]};
   const filteredInnovations = innovations[activeCategory].filter(item =>,
     item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
     item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
-    item.category.toLowerCase().includes(searchQuery.toLowerCase()),
-  ),
-,
-  const getStatusColor = (status) => {,
-    switch (status) {,
+    item.category.toLowerCase().includes(searchQuery.toLowerCase())),
+  const getStatusColor = (status) => {
+    switch (status) {
       case 'Featured': return 'from-purple-50o0 to-pink-50o0',
       case 'New': return 'from-green-50o0 to-emerald-50o0',
       case 'Popular': return 'from-blue-50o0 to-cyan-50o0',
       case 'Beta': return 'from-orange-50o0 to-red-50o0',
       default: return 'from-gray-50o0 to-gray-60o0',
-    ,}
+    }
   };
-,
-  const getDifficultyColor = (difficulty) => {,
-    switch (difficulty) {,
+  const getDifficultyColor = (difficulty) => {
+    switch (difficulty) {
       case 'Beginner': return 'text-green-40o0',
       case 'Intermediate': return 'text-yellow-40o0',
       case 'Advanced': return 'text-orange-40o0',
       case 'Expert': return 'text-red-40o0',
       default: return 'text-gray-40o0',
-    ,}
+    }
   };
-,
-  return (,
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
       {/* Header */}
       <motion.div,
-        initial={{ opacity: 0, y: 50 ,}}
-        animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 ,}}
-        transition={{ duration: 0.8 ,}}
-        className="relative overflow-hidden",
-      >,
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
+        transition={{ duration: 0.8 }}
+        className="relative overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 via-blue-60o0/20 to-purple-60o0/20"  />,
         <div className="relative z-10 container mx-auto px-4 py-16">,
           <div className="text-center">,
@@ -315,18 +301,17 @@ const AIInnovationHub20o25 = () => {,
         </div>,
       </motion.div>,
       <div className="container mx-auto px-4 py-8">,
-        {/* Search and Filters */,}
+        {/* Search and Filters */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 ,}}
-          transition={{ duration: 0.8delay: 0.2 ,}}
-          className="mb-8",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.2 }}
+          className="mb-8">,
           <div className="flex flex-col lg: flex-row gap-4 items-center justify-between mb-6">,
-            {/* Search */,}
+            {/* Search */}
             <div className="relative flex-1 max-w-md">,
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />,
-              <input,
+              <input
                 type="text",
                 placeholder="Search innovations...",
                 value={searchQuery}
@@ -334,21 +319,21 @@ const AIInnovationHub20o25 = () => {,
                 className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-purple-50o0",
               />,
             </div>,
-            {/* View Mode Toggle */,}
+            {/* View Mode Toggle */}
             <div className="flex items-center gap-2">,
-              <button,
+              <button
                 onClick={() => setViewMode('grid')}
-                className={`p-2 rounded-lg transition-colors duration-30o0 ${,
+                className={`p-2 rounded-lg transition-colors duration-30o0 ${
                   viewMode === 'grid' ? 'bg-purple-60o0 text-white' : 'bg-white/10 text-gray-40o0 hover: bg-white/20',
-                ,}`}
+                }`}
               >,
                 <Grid className="w-5 h-5"  />,
               </button>,
-              <button,
+              <button
                 onClick={() => setViewMode('list')}
-                className={`p-2 rounded-lg transition-colors duration-30o0 ${,
+                className={`p-2 rounded-lg transition-colors duration-30o0 ${
                   viewMode === 'list' ? 'bg-purple-60o0 text-white' : 'bg-white/10 text-gray-40o0 hover: bg-white/20',
-                ,}`}
+                }`}
               >,
                 <List className="w-5 h-5"  />,
               </button>,
@@ -356,44 +341,42 @@ const AIInnovationHub20o25 = () => {,
           </div>,
           {/* Category Tabs */}
           <div className="flex flex-wrap gap-4 justify-center">,
-            {Object.entries(categories).map(([keycategory]) => (,
-              <button,
+            {Object.entries(categories).map(([keycategory]) => (
+              <button
                 key={key}
                 onClick={() => setActiveCategory(key)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 flex items-center ${,
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 flex items-center ${
                   activeCategory === key,
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
                     : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                ,}`}
+                }`}
               >,
                 <category.icon className="w-5 h-5 mr-2"  />,
                 {category.title}
-              </button>,
-            ))}
+              </button>))}
           </div>,
         </motion.div>,
         {/* Content Grid */}
         <motion.div,
-          initial={{ opacity: 0 ,}}
-          animate={{ opacity: 1 ,}}
-          transition={{ duration: 0.5delay: 0.4 ,}}
-          className={`grid gap-6 ${,
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5delay: 0.4 }}
+          className={`grid gap-6 ${
             viewMode === 'grid',
               ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3',
               : 'grid-cols-1',
-          ,}`}
+          }`}
         >,
-          {filteredInnovations.map((itemindex) => (,
+          {filteredInnovations.map((itemindex) => (
             <motion.div,
               key={item.id}
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.5delay: index * 0.1 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5delay: index * 0.1 }}
               onHoverStart={() => setHoveredItem(item.id)}
               onHoverEnd={() => setHoveredItem(null)}
-              className={`group cursor-pointer ${,
-                viewMode === 'list' ? 'flex items-center' : '',
-              }`}
+              className={`group cursor-pointer ${
+                viewMode === 'list' ? 'flex items-center' : ''}`}
             >,
               <div className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${item.color} ,
                 ${hoveredItem === item.id ? 'scale-10o5 shadow-2xl' : 'shadow-lg'} ,
@@ -415,16 +398,14 @@ const AIInnovationHub20o25 = () => {,
                     <p className="text-gray-20o0 mb-4 text-sm">{item.description}</p>,
                     {/* Features */}
                     <div className="flex flex-wrap gap-2 mb-4">,
-                      {item.features.slice(0o2).map((featureidx) => (,
+                      {item.features.slice(0o2).map((featureidx) => (
                         <span key={idx} className="px-2 py-1 bg-white/20 rounded-full text-xs text-white">,
                           {feature}
-                        </span>,
-                      ))}
-                      {item.features.length > 2 && (,
+                        </span>))}
+                      {item.features.length > 2 && (
                         <span className="px-2 py-1 bg-white/20 rounded-full text-xs text-white">,
                           +{item.features.length - 2} more,
-                        </span>,
-                      )}
+                        </span>)}
                     </div>,
                     {/* Meta Info */}
                     <div className="flex items-center justify-between text-sm text-gray-30o0 mb-4">,
@@ -445,12 +426,11 @@ const AIInnovationHub20o25 = () => {,
                   </div>,
                 </div>,
                 {/* Hover Overlay */}
-                {hoveredItem === item.id && (,
+                {hoveredItem === item.id && (
                   <motion.div,
-                    initial={{ opacity: 0 ,}}
-                    animate={{ opacity: 1 ,}}
-                    className="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center",
-                  >,
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center">,
                     <div className="flex gap-4">,
                       <button className="px-6 py-3 bg-white text-purple-60o0 rounded-full font-semibold hover: bg-gray-10o0 transition-colors duration-30o0 flex items-center">,
                         <Play className="w-4 h-4 mr-2"  />,
@@ -461,27 +441,22 @@ const AIInnovationHub20o25 = () => {,
                         Download,
                       </button>,
                     </div>,
-                  </motion.div>,
-                ),}
+                  </motion.div>)}
               </div>,
-            </motion.div>,
-          ))}
+            </motion.div>))}
         </motion.div>,
         {/* Load More */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 ,}}
-          transition={{ duration: 0.8delay: 0.6 ,}}
-          className="text-center mt-12",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.6 }}
+          className="text-center mt-12">,
           <button className="px-8 py-4 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-full font-semibold hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 flex items-center mx-auto">,
             <RefreshCw className="w-5 h-5 mr-2"  />,
             Load More Innovations,
           </button>,
         </motion.div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default AIInnovationHub20o25,
+    </div>),
+};
+export default AIInnovationHub20o25;

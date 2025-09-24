@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function QuantumAIFusionPromotionBanner() {,
-  return (,
+export default function QuantumAIFusionPromotionBanner() {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-cyan-90o0 via-teal-90o0 to-emerald-90o0'>,
       <div className='absolute inset-0 bg-black opacity-20'></div>,
       <div className='relative max-w-7xl mx-auto px-4 py-16'>,
@@ -29,33 +28,28 @@ export default function QuantumAIFusionPromotionBanner() {,
             </span>,
           </div>,
           <div className='flex flex-wrap justify-center gap-4'>,
-            <Link,
+            <Link
               href='/quantum-ai-fusion-20o30',
-              className='px-8 py-4 bg-gradient-to-r from-cyan-60o0 to-emerald-60o0 text-white font-bold rounded-lg hover:from-cyan-70o0 hover:to-emerald-70o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='px-8 py-4 bg-gradient-to-r from-cyan-60o0 to-emerald-60o0 text-white font-bold rounded-lg hover:from-cyan-70o0 hover:to-emerald-70o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               ⚡ Explore Quantum AI,
             </Link>,
-            <Link,
+            <Link
               href='/ai-20o35-singularity-breakthrough',
-              className='px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-cyan-90o0 transition-all duration-30o0',
-            >,
+              className='px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-cyan-90o0 transition-all duration-30o0'>,
               🚀 Singularity 20o35,
             </Link>,
-            <Link,
+            <Link
               href='/neural-interface-revolution-20o35',
-              className='px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-cyan-90o0 transition-all duration-30o0',
-            >,
+              className='px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-cyan-90o0 transition-all duration-30o0'>,
               🧠 Neural Revolution,
             </Link>,
           </div>,
         </div>,
-        {/* Quantum Effects */,}
+        {/* Quantum Effects */}
         <div className='absolute top-10 left-10 w-20 h-20 bg-cyan-50o0 rounded-full opacity-20 animate-ping'></div>,
         <div className='absolute top-20 right-20 w-16 h-16 bg-teal-50o0 rounded-full opacity-20 animate-ping delay-10o00'></div>,
         <div className='absolute bottom-10 left-20 w-12 h-12 bg-emerald-50o0 rounded-full opacity-20 animate-ping delay-20o00'></div>,
         <div className='absolute bottom-20 right-10 w-14 h-14 bg-cyan-40o0 rounded-full opacity-20 animate-ping delay-50o0'></div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

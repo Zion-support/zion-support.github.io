@@ -1,7 +1,7 @@
-import React from 'react',
+import React from 'react';
 import type { ReactNode } from 'react',
-export default function AdminLayout({ children }: { children: ReactNode ,}) {,
-  return (,
+export default function AdminLayout({ children }: { children: ReactNode }) {
+  return (
     <section className='space-y-6'>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-4'>,
         <div className='rounded border border-white/10 p-4'>,
@@ -22,8 +22,6 @@ export default function AdminLayout({ children }: { children: ReactNode ,}) {,
           </div>,
         </div>,
       </div>,
-      {children,}
-    </section>,
-  ),
-}
+      {children}
+    </section>)}
 ,

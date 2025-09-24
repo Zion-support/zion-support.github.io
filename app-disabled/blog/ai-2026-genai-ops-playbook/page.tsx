@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-const GenAIOpsPlaybook20o26 = () => {,
-  return (,
+const GenAIOpsPlaybook20o26 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: GenAI Operations Playbook',
         description='A practical playbook to operationalize Generative AI safely and at scale across the enterprise in 20o26.',
         keywords='GenAI operations, AI governance, AI platform engineering, MLOps, 20o26',
@@ -67,29 +66,24 @@ const GenAIOpsPlaybook20o26 = () => {,
           </ul>,
           <h2>KPIs That Matter</h2>,
           <p>,
-            Time-to-first-use-case, cycle-time reduction, deflection rate,;
+            Time-to-first-use-case, cycle-time reduction, deflection rate;
             accuracy at task, cost per task, and ROI. Instrument these metrics,
             per workflow.,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Discuss Your GenAI Roadmap,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default GenAIOpsPlaybook20o26,
-,
+    </div>),
+};
+export default GenAIOpsPlaybook20o26;

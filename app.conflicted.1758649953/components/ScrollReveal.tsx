@@ -1,11 +1,8 @@
-import React from 'react',
+import React from 'react';
 'use client',
-type ScrollRevealProps = React.PropsWithChildren<{,
+type ScrollRevealProps = React.PropsWithChildren<{
   origin?: 'bottom' | 'top' | 'left' | 'right',
-  delay?: number,
-}>,
-,
-export default function ScrollReveal({ children }: ScrollRevealProps) {,
-  return <>{children}</>,
-}
+  delay?: number}>,
+export default function ScrollReveal({ children }: ScrollRevealProps) {
+  return <>{children}</>}
 ,

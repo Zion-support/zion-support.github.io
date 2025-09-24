@@ -1,47 +1,45 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  ArrowLeft,;
-  Calendar,;
-  Clock,;
-  User,;
-  Bookmark,;
-  Share2,;
-  Award,;
-  TrendingUp,;
-  DollarSign,;
-  Users,;
-  CheckCircle,;
-  Star,;
+import {
+  ArrowLeft;
+  Calendar;
+  Clock;
+  User;
+  Bookmark;
+  Share2;
+  Award;
+  TrendingUp;
+  DollarSign;
+  Users;
+  CheckCircle;
+  Star;
 } from 'lucide-react',
 import SEO from '../../components/SEO',
-,
-export const metadata: Metadata = {,
-  title: 'Enterprise AI Transformation Success: 340% ROI in 6 Months',;
+export const metadata: Metadata = {
+  title: 'Enterprise AI Transformation Success: 340% ROI in 6 Months';
   description:,
-    'Discover how a Fortune 50o0 company achieved unprecedented success with AI transformation, generating $50M in value and revolutionizing their operations.',;
-  keywords: [,
-    'AI Transformation',;
-    'ROI',;
-    'Enterprise',;
-    'Success Story',;
-    'Fortune 50o0',;
-  ],;
-  openGraph: {,
-    title: 'Enterprise AI Transformation Success: 340% ROI in 6 Months',;
+    'Discover how a Fortune 50o0 company achieved unprecedented success with AI transformation, generating $50M in value and revolutionizing their operations.';
+  keywords: [
+    'AI Transformation';
+    'ROI';
+    'Enterprise';
+    'Success Story';
+    'Fortune 50o0';
+  ];
+  openGraph: {
+    title: 'Enterprise AI Transformation Success: 340% ROI in 6 Months';
     description:,
-      'Discover how a Fortune 50o0 company achieved unprecedented success with AI transformation, generating $50M in value.',;
-    type: 'article',;
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',;
-    authors: ['Zion Tech Group'],;
-    tags: ['AI Transformation', 'ROI', 'Enterprise', 'Success Story'],;
-  },;
+      'Discover how a Fortune 50o0 company achieved unprecedented success with AI transformation, generating $50M in value.';
+    type: 'article';
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
+    authors: ['Zion Tech Group'];
+    tags: ['AI Transformation', 'ROI', 'Enterprise', 'Success Story'];
+  };
 };
-,
-export default function EnterpriseAISuccessCaseStudy() {,
-  return (,
+export default function EnterpriseAISuccessCaseStudy() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='Enterprise AI Transformation Success: 340% ROI in 6 Months',
         description='Discover how a Fortune 50o0 company achieved unprecedented success with AI transformation, generating $50M in value and revolutionizing their operations.',
         keywords='AI Transformation, ROI, Enterprise, Success Story, Fortune 50o0',
@@ -51,10 +49,9 @@ export default function EnterpriseAISuccessCaseStudy() {,
       <section className='bg-gradient-to-br from-green-90o0 via-blue-90o0 to-purple-90o0 text-white py-20'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='mb-8'>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='inline-flex items-center text-blue-30o0 hover:text-white transition-colors mb-6',
-            >,
+              className='inline-flex items-center text-blue-30o0 hover:text-white transition-colors mb-6'>,
               <ArrowLeft className='w-4 h-4 mr-2' />,
               Back to Case Studies,
             </Link>,
@@ -220,14 +217,14 @@ export default function EnterpriseAISuccessCaseStudy() {,
           </div>,
         </div>,
       </section>,
-      {/* Implementation Approach */,}
+      {/* Implementation Approach */}
       <section className='py-16 bg-gray-50'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
             Implementation Approach,
           </h2>,
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
-            {/* Phase 1 */,}
+            {/* Phase 1 */}
             <div className='bg-white rounded-xl shadow-lg p-8'>,
               <div className='w-16 h-16 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-full flex items-center justify-center mx-auto mb-6'>,
                 <span className='text-2xl font-bold text-white'>1</span>,
@@ -306,7 +303,7 @@ export default function EnterpriseAISuccessCaseStudy() {,
             Key AI Solutions Implemented,
           </h2>,
           <div className='space-y-12'>,
-            {/* Predictive Maintenance */,}
+            {/* Predictive Maintenance */}
             <div className='bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8'>,
               <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>,
                 <div>,
@@ -372,7 +369,7 @@ export default function EnterpriseAISuccessCaseStudy() {,
                 </div>,
               </div>,
             </div>,
-            {/* Quality Control */,}
+            {/* Quality Control */}
             <div className='bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8'>,
               <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>,
                 <div>,
@@ -442,14 +439,14 @@ export default function EnterpriseAISuccessCaseStudy() {,
           </div>,
         </div>,
       </section>,
-      {/* Financial Impact */,}
+      {/* Financial Impact */}
       <section className='py-16 bg-gradient-to-r from-green-50 to-blue-50'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
             Financial Impact Analysis,
           </h2>,
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>,
-            {/* Investment Breakdown */,}
+            {/* Investment Breakdown */}
             <div className='bg-white rounded-2xl shadow-xl p-8'>,
               <h3 className='text-2xl font-bold text-gray-90o0 mb-6 text-center'>,
                 Investment Breakdown,
@@ -562,7 +559,7 @@ export default function EnterpriseAISuccessCaseStudy() {,
           </div>,
         </div>,
       </section>,
-      {/* Key Success Factors */,}
+      {/* Key Success Factors */}
       <section className='py-16'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
@@ -616,7 +613,7 @@ export default function EnterpriseAISuccessCaseStudy() {,
           </div>,
         </div>,
       </section>,
-      {/* Lessons Learned */,}
+      {/* Lessons Learned */}
       <section className='py-16 bg-gray-50'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
@@ -744,7 +741,7 @@ export default function EnterpriseAISuccessCaseStudy() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className='py-16 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
           <h2 className='text-3xl font-bold mb-6'>,
@@ -757,22 +754,20 @@ export default function EnterpriseAISuccessCaseStudy() {,
             of your journey.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-10o0 transition-colors'>,
               Start Your AI Transformation,
             </Link>,
-            <Link,
+            <Link
               href='/resources',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-60o0 transition-colors'>,
               Explore Our Resources,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Related Content */,}
+      {/* Related Content */}
       <section className='py-16 bg-gray-50'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
@@ -790,10 +785,9 @@ export default function EnterpriseAISuccessCaseStudy() {,
                 The complete guide to AI transformation in 20o25 with proven,
                 strategies and frameworks.,
               </p>,
-              <Link,
+              <Link
                 href='/blog/ai-transformation-20o25-complete-guide',
-                className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-              >,
+                className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                 Read Guide →,
               </Link>,
             </div>,
@@ -808,10 +802,9 @@ export default function EnterpriseAISuccessCaseStudy() {,
                 Your complete guide to AI implementation success with 150+,
                 checkpoints.,
               </p>,
-              <Link,
+              <Link
                 href='/resources/ai-implementation-checklist-20o25',
-                className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-              >,
+                className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                 Download Checklist →,
               </Link>,
             </div>,
@@ -826,17 +819,15 @@ export default function EnterpriseAISuccessCaseStudy() {,
                 Explore our comprehensive AI consulting and implementation,
                 services.,
               </p>,
-              <Link,
+              <Link
                 href='/services',
-                className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-              >,
+                className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                 View Services →,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

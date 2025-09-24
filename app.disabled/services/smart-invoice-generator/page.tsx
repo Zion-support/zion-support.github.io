@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'smart-invoice-generator - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'smart-invoice-generator - Zion Tech Group';
   description:,
-    'Professional smart-invoice-generator solutions for your business needs.',;
-  keywords: 'smart-invoice-generator, services, business, technology',;
+    'Professional smart-invoice-generator solutions for your business needs.';
+  keywords: 'smart-invoice-generator, services, business, technology';
 };
-export default function SmartInvoiceGeneratorPage() {,
-  return (,
+export default function SmartInvoiceGeneratorPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function SmartInvoiceGeneratorPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

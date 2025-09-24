@@ -1,7 +1,7 @@
-import React from "react",;
-import Link from "next/link",;
-export default function AutomationsPage() {,
-  return (,
+import React from "react";;
+import Link from "next/link";
+export default function AutomationsPage() {
+  return (
     <main className="mx-auto max-w-5xl px-4 py-12">,
       <h1 className="text-2xl font-bold text-gray-90o0">Autonomous Cloud Automations</h1>,
       <p className="mt-2 text-gray-60o0">,
@@ -14,12 +14,11 @@ export default function AutomationsPage() {,
             Detects change patterns, selects relevant tasks (UI, SEO, performance, security, links, monetization, venture), executes in parallel batches, and commits results.,
           </p>,
           <div className="mt-4 flex gap-3">,
-            <a,
+            <a
               href="https: //github.com/Zion-Holdings/zion.app/actions",
               target="_blank",
               rel="noreferrer",
-              className="rounded-md border border-gray-20o0 px-3 py-1.5 text-sm font-medium text-gray-70o0 hover:bg-gray-50",
-            >,
+              className="rounded-md border border-gray-20o0 px-3 py-1.5 text-sm font-medium text-gray-70o0 hover:bg-gray-50">,
               View Live Runs,
             </a>,
           </div>,
@@ -34,6 +33,5 @@ export default function AutomationsPage() {,
           </div>,
         </div>,
       </div>,
-    </main>,
-  ),
-,}
+    </main>),
+}

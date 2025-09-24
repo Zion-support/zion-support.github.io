@@ -1,16 +1,14 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Agent SLO & SLI Handbook | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Agent SLO & SLI Handbook | Zion Tech Group';
   description:,
-    'Define and operate agent Service Level Objectives with measurable SLIs, error budgets, and guardrails.',;
+    'Define and operate agent Service Level Objectives with measurable SLIs, error budgets, and guardrails.';
 };
-,
-const AgentSloHandbook20o26 = () => {,
-  return (,
+const AgentSloHandbook20o26 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Agent SLO & SLI Handbook',
         description='Define and operate agent Service Level Objectives with measurable SLIs, error budgets, and guardrails.',
         keywords='SLO, SLI, error budget, reliability, agent operations',
@@ -25,7 +23,7 @@ const AgentSloHandbook20o26 = () => {,
             AI 20o26: Agent SLO & SLI Handbook,
           </h1>,
           <p className='text-lg text-gray-60o0 mt-4'>,
-            Establish clear reliability targets for autonomous agents with SLIs,;
+            Establish clear reliability targets for autonomous agents with SLIs;
             SLOs, and error budgets wired to guardrails.,
           </p>,
         </header>,
@@ -44,23 +42,18 @@ const AgentSloHandbook20o26 = () => {,
           </ol>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/content',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Content,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Request Implementation,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default AgentSloHandbook20o26,
-,
+    </div>),
+};
+export default AgentSloHandbook20o26;

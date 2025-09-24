@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
 import Link from 'next/link',
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, BarChart3, Brain, Database, Users, Target } from 'lucide-react',
@@ -6,56 +6,46 @@ import Button from '../components/ui/Button',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import { Layout } from '../components/layout/Layout',
 import { motion } from 'framer-motion',
-,
-export default function AIBusinessIntelligencePage() {,
-  const contactInfo = {,
-    mobile: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
+export default function AIBusinessIntelligencePage() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 1008 Middletown DE 19709';
     website: 'https://ziontechgroup.com',
-  ,};
-,
-  const features = [,
-    'Real-time data analytics dashboard',;
-    'AI-powered predictive modeling',;
-    'Automated report generation',;
-    'Natural language query interface',;
-    'Advanced data visualization',;
-    'Custom KPI tracking',;
-    'Multi-source data integration',;
-    'Role-based access control',;
-    'Mobile-responsive design',;
-    'API for custom integrations',
-  ],
-,
-  const useCases = [,
-    'Sales performance analysis',;
-    'Customer behavior insights',;
-    'Financial forecasting',;
-    'Operational efficiency tracking',;
-    'Market trend analysis',
-  ],
-,
-  const integrations = [,
-    'Salesforce',;
-    'HubSpot',;
-    'Slack',;
-    'Microsoft Teams',;
-    'Zapier',;
-    'Google Analytics',
-  ],
-,
-  const technology = [,
-    'React',;
-    'Node.js',;
-    'Python',;
-    'TensorFlow',;
-    'PostgreSQL',;
-    'Redis',;
-    'AWS',
-  ],
-,
-  return (,
+  };
+  const features = [
+    'Real-time data analytics dashboard';
+    'AI-powered predictive modeling';
+    'Automated report generation';
+    'Natural language query interface';
+    'Advanced data visualization';
+    'Custom KPI tracking';
+    'Multi-source data integration';
+    'Role-based access control';
+    'Mobile-responsive design';
+    'API for custom integrations'],
+  const useCases = [
+    'Sales performance analysis';
+    'Customer behavior insights';
+    'Financial forecasting';
+    'Operational efficiency tracking';
+    'Market trend analysis'],
+  const integrations = [
+    'Salesforce';
+    'HubSpot';
+    'Slack';
+    'Microsoft Teams';
+    'Zapier';
+    'Google Analytics'],
+  const technology = [
+    'React';
+    'Node.js';
+    'Python';
+    'TensorFlow';
+    'PostgreSQL';
+    'Redis';
+    'AWS'],
+  return (
     <Layout>,
       <UltraAdvancedFuturisticBackground>,
         <div className="min-h-screen">,
@@ -71,15 +61,14 @@ export default function AIBusinessIntelligencePage() {,
           <meta property="og:type" content="website" />,
           <link rel="canonical" href="https://ziontechgroup.com/ai-business-intelligence" />,
         </Head>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="relative z-10",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative z-10">,
               <div className="text-6xl mb-6">📊</div>,
               <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
                 <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">,
@@ -91,21 +80,19 @@ export default function AIBusinessIntelligencePage() {,
                 Get real-time analytics, predictive insights, and automated reporting.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
-                <Button,
+                <Button
                   href="/contact",
                   variant="primary",
                   size="lg",
-                  className="group",
-                >,
+                  className="group">,
                   Start Free Trial,
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />,
                 </Button>,
-                <Button,
+                <Button
                   href="#pricing",
                   variant="secondary",
                   size="lg",
-                  className="group",
-                >,
+                  className="group">,
                   View Pricing,
                   <DollarSign className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />,
                 </Button>,
@@ -113,16 +100,15 @@ export default function AIBusinessIntelligencePage() {,
             </motion.div>,
           </div>,
         </section>,
-        {/* Features Section */,}
+        {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              viewport={{ once: true ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">,
                   Powerful Features,
@@ -133,22 +119,20 @@ export default function AIBusinessIntelligencePage() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-              {features.map((feature, index) => (,
+              {features.map((feature, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                  viewport={{ once: true ,}}
-                  whileHover={{ scale: 1.02, y: -5 ,}}
-                  className="group p-6 bg-gradient-to-br from-blue-900/40 to-indigo-900/40 border border-blue-700/50 rounded-2xl hover: border-blue-500/60 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300",
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  className="group p-6 bg-gradient-to-br from-blue-900/40 to-indigo-900/40 border border-blue-700/50 rounded-2xl hover: border-blue-500/60 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300">,
                   <div className="flex items-center mb-4">,
                     <CheckCircle className="w-6 h-6 text-blue-400 mr-3" />,
-                    <h3 className="text-lg font-semibold text-white">{feature,}</h3>,
+                    <h3 className="text-lg font-semibold text-white">{feature}</h3>,
                   </div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -156,12 +140,11 @@ export default function AIBusinessIntelligencePage() {,
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50">,
           <div className="max-w-7xl mx-auto">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              viewport={{ once: true ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">,
                   Use Cases,
@@ -172,23 +155,21 @@ export default function AIBusinessIntelligencePage() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-              {useCases.map((useCase, index) => (,
+              {useCases.map((useCase, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                  viewport={{ once: true ,}}
-                  whileHover={{ scale: 1.02, y: -5 ,}}
-                  className="group p-6 bg-gradient-to-br from-indigo-900/40 to-purple-900/40 border border-indigo-700/50 rounded-2xl hover: border-indigo-500/60 hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-300",
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  className="group p-6 bg-gradient-to-br from-indigo-900/40 to-purple-900/40 border border-indigo-700/50 rounded-2xl hover: border-indigo-500/60 hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-300">,
                   <div className="text-4xl mb-4">🎯</div>,
-                  <h3 className="text-xl font-bold text-white mb-3">{useCase,}</h3>,
+                  <h3 className="text-xl font-bold text-white mb-3">{useCase}</h3>,
                   <p className="text-gray-300 text-sm">,
                     Leverage AI-powered insights to optimize your {useCase.toLowerCase()} and drive better business outcomes.,
                   </p>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -196,12 +177,11 @@ export default function AIBusinessIntelligencePage() {,
         <section id="pricing" className="py-20 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              viewport={{ once: true ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">,
                   Simple Pricing,
@@ -213,12 +193,11 @@ export default function AIBusinessIntelligencePage() {,
             </motion.div>,
             <div className="max-w-4xl mx-auto">,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6 ,}}
-                viewport={{ once: true ,}}
-                className="bg-gradient-to-br from-blue-900/40 to-indigo-900/40 border border-blue-700/50 rounded-3xl p-8 relative overflow-hidden",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-blue-900/40 to-indigo-900/40 border border-blue-700/50 rounded-3xl p-8 relative overflow-hidden">,
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent opacity-0 hover: opacity-100 transition-opacity duration-300"></div>,
                 <div className="relative z-10 text-center">,
                   <div className="text-6xl mb-6">🚀</div>,
@@ -226,30 +205,28 @@ export default function AIBusinessIntelligencePage() {,
                   <div className="text-5xl font-bold text-blue-400 mb-2">$299</div>,
                   <div className="text-gray-400 text-xl mb-6">per month</div>,
                   <p className="text-gray-300 mb-8 max-w-2xl mx-auto">,
-                    Professional AI-powered business intelligence platform with real-time analytics,;
+                    Professional AI-powered business intelligence platform with real-time analytics;
                     predictive modeling, and comprehensive reporting capabilities.,
                   </p>,
                   <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-8 text-left">,
                     <div>,
                       <h4 className="text-lg font-semibold text-white mb-3">What's Included:</h4>,
                       <ul className="space-y-2">,
-                        {features.slice(0, 5).map((feature, index) => (,
+                        {features.slice(0, 5).map((feature, index) => (
                           <li key={index} className="flex items-center text-gray-300">,
                             <CheckCircle className="w-5 h-5 text-blue-400 mr-2" />,
                             {feature}
-                          </li>,
-                        ))}
+                          </li>))}
                       </ul>,
                     </div>,
                     <div>,
                       <h4 className="text-lg font-semibold text-white mb-3">Additional Benefits: </h4>,
                       <ul className="space-y-2">,
-                        {features.slice(5).map((feature, index) => (,
+                        {features.slice(5).map((feature, index) => (
                           <li key={index} className="flex items-center text-gray-300">,
                             <CheckCircle className="w-5 h-5 text-blue-400 mr-2" />,
                             {feature}
-                          </li>,
-                        ))}
+                          </li>))}
                       </ul>,
                     </div>,
                   </div>,
@@ -271,16 +248,15 @@ export default function AIBusinessIntelligencePage() {,
             </div>,
           </div>,
         </section>,
-        {/* Technology & Integrations */,}
+        {/* Technology & Integrations */}
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50">,
           <div className="max-w-7xl mx-auto">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              viewport={{ once: true ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">,
                   Technology & Integrations,
@@ -292,35 +268,33 @@ export default function AIBusinessIntelligencePage() {,
             </motion.div>,
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
               <motion.div,
-                initial={{ opacity: 0, x: -20 ,}}
-                whileInView={{ opacity: 1, x: 0 ,}}
-                transition={{ duration: 0.6 ,}}
-                viewport={{ once: true ,}}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
               >,
                 <h3 className="text-2xl font-bold text-white mb-6">Technology Stack</h3>,
                 <div className="grid grid-cols-2 gap-4">,
-                  {technology.map((tech, index) => (,
+                  {technology.map((tech, index) => (
                     <div key={index} className="flex items-center p-3 bg-gray-800/60 rounded-lg border border-gray-700/50">,
                       <div className="w-3 h-3 bg-blue-400 rounded-full mr-3"></div>,
                       <span className="text-gray-300">{tech}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </motion.div>,
               <motion.div,
-                initial={{ opacity: 0, x: 20 ,}}
-                whileInView={{ opacity: 1, x: 0 ,}}
-                transition={{ duration: 0.6 ,}}
-                viewport={{ once: true ,}}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
               >,
                 <h3 className="text-2xl font-bold text-white mb-6">Integrations</h3>,
                 <div className="grid grid-cols-2 gap-4">,
-                  {integrations.map((integration, index) => (,
+                  {integrations.map((integration, index) => (
                     <div key={index} className="flex items-center p-3 bg-gray-800/60 rounded-lg border border-gray-700/50">,
                       <div className="w-3 h-3 bg-purple-400 rounded-full mr-3"></div>,
                       <span className="text-gray-300">{integration}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </motion.div>,
             </div>,
@@ -330,12 +304,11 @@ export default function AIBusinessIntelligencePage() {,
         <section className="py-20 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              viewport={{ once: true ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">,
                   Market Position,
@@ -347,12 +320,11 @@ export default function AIBusinessIntelligencePage() {,
             </motion.div>,
             <div className="max-w-4xl mx-auto">,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6 ,}}
-                viewport={{ once: true ,}}
-                className="bg-gradient-to-br from-yellow-900/40 to-orange-900/40 border border-yellow-700/50 rounded-3xl p-8",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-yellow-900/40 to-orange-900/40 border border-yellow-700/50 rounded-3xl p-8">,
                 <div className="text-center mb-8">,
                   <div className="text-6xl mb-4">⚡</div>,
                   <h3 className="text-2xl font-bold text-white mb-4">Competitive Analysis</h3>,
@@ -398,16 +370,15 @@ export default function AIBusinessIntelligencePage() {,
             </div>,
           </div>,
         </section>,
-        {/* Contact Section */,}
+        {/* Contact Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50">,
           <div className="max-w-7xl mx-auto">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              viewport={{ once: true ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">,
                   Ready to Get Started?,
@@ -419,12 +390,11 @@ export default function AIBusinessIntelligencePage() {,
             </motion.div>,
             <div className="max-w-4xl mx-auto">,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6 ,}}
-                viewport={{ once: true ,}}
-                className="bg-gradient-to-br from-cyan-900/40 to-blue-900/40 border border-cyan-700/50 rounded-3xl p-8 text-center",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-cyan-900/40 to-blue-900/40 border border-cyan-700/50 rounded-3xl p-8 text-center">,
                 <div className="text-6xl mb-6">🚀</div>,
                 <h3 className="text-2xl font-bold text-white mb-4">Start Your Free Trial</h3>,
                 <p className="text-gray-300 mb-8">,
@@ -442,7 +412,7 @@ export default function AIBusinessIntelligencePage() {,
                 </div>,
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">,
                   <div>,
-                    <div className="text-2xl font-bold text-cyan-400">{contactInfo.mobile,}</div>,
+                    <div className="text-2xl font-bold text-cyan-400">{contactInfo.mobile}</div>,
                     <div className="text-gray-400 text-sm">Phone</div>,
                   </div>,
                   <div>,
@@ -460,7 +430,5 @@ export default function AIBusinessIntelligencePage() {,
         </section>,
               </div>,
       </UltraAdvancedFuturisticBackground>,
-    </Layout>,
-  ),
-}
+    </Layout>)}
 ,

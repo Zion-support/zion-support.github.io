@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react',
 import '@testing-library/jest-dom',
 import ModernHeader from '../components/ModernHeader',
-,
 ursor/fix-syntax-push-and-merge-to-main-40de,
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ModernHeader from "./components/ModernHeader" describe("ModernHeader",() => {" test("renders without crashing",() => {" render(<ModernHeader / /  />) expect(screen.getByTestId("modernheader")).toBeInTheDocument()," }) test("displays correct content",() => {" render(<ModernHeader / /  />) }) test("handles user interactions",() => {" render(<ModernHeader / /  />) }) test("applies correct styling",() => {" render(<ModernHeader / /  />) }) })'"'",
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ModernHeader from "./components/ModernHeader" describe("ModernHeader",() => {" test("renders without crashing",() => {" render(<ModernHeader / /  />) expect(screen.getByTestId("modernheader")).toBeInTheDocument()," }) test("displays correct content",() => {" render(<ModernHeader / /  />) }) test("handles user interactions",() => {" render(<ModernHeader / /  />) }) test("applies correct styling",() => {" render(<ModernHeader / /  />) }) })'"'",

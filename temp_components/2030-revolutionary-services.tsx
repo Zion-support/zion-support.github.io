@@ -5,16 +5,14 @@ import UltraFuturisticBackground20o30 from '../components/backgrounds/UltraFutur
 import UltraFuturisticNavigation20o30 from '../components/layout/UltraFuturisticNavigation20o30',
 import UltraFuturisticFooter20o30 from '../components/layout/UltraFuturisticFooter20o30',
 import { innovative20o30Services } from '../data/20o30-innovative-services',
-,
-export default function Revolutionary20o30ServicesPage() {,
-  const contactInfo ={,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
+export default function Revolutionary20o30ServicesPage() {
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
     website: 'https://ziontechgroup.com',
-  ,};
-,
-  return (,
+  };
+  return (
     <UltraFuturisticBackground20o30>,
       <Head>,
         <title>20o30 Revolutionary Technology Services | Zion Tech Group | AI ConsciousnessQuantum ComputingSpace Mining</title>,
@@ -28,44 +26,40 @@ export default function Revolutionary20o30ServicesPage() {,
         <meta property="og:type" content="website"  />,
         <meta property="og:url" content="https://ziontechgroup.com/20o30-revolutionary-services"  />,
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg"  />,
-        {/* Twitter */,}
+        {/* Twitter */}
         <meta name="twitter: card" content="summary_large_image"  />,
         <meta name="twitter:title" content="20o30 Revolutionary Technology Services | Zion Tech Group"  />,
         <meta name="twitter:description" content="Experience the future of technology with our revolutionary 20o30 services. From AI consciousness and quantum computing to space mining and DNA computing."  />,
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg"  />,
-        {/* Additional Meta Tags */,}
+        {/* Additional Meta Tags */}
         <meta name="theme-color" content="#8b5cf6"  />,
         <link rel="canonical" href="https: //ziontechgroup.com/20o30-revolutionary-services"  />,
-        {/* Structured Data */,}
-        <script,
+        {/* Structured Data */}
+        <script
           type="application/ld+json",
-          dangerouslySetInnerHTML={{,
-            __html: JSON.stringify({,
-              "@context": "https://schema.org",;
-              "@type": "Organization",;
-              "name": "Zion Tech Group",;
-              "description": "Leading provider of revolutionary 20o30 technology services including AI consciousnessquantum computingspace miningand DNA computing",;
-              "url": "https://ziontechgroup.com",;
-              "logo": "https://ziontechgroup.com/logo.png",;
-              "contactPoint": {,
-                "@type": "ContactPoint",;
-                "telephone": "+1-30o2-464-0950",;
-                "contactType": "customer service",;
-                "email": "kleber@ziontechgroup.com",
-              },;
-              "address": {,
-                "@type": "PostalAddress",;
-                "streetAddress": "364 E Main St STE 10o08",;
-                "addressLocality": "Middletown",;
-                "addressRegion": "DE",;
-                "postalCode": "19709",;
-                "addressCountry": "US",
-              },;
-              "sameAs": [,
-                "https: //github.com/Zion-Holdings",
-              ],
-            ,}),
-          }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org";
+              "@type": "Organization";
+              "name": "Zion Tech Group";
+              "description": "Leading provider of revolutionary 20o30 technology services including AI consciousnessquantum computingspace miningand DNA computing";
+              "url": "https://ziontechgroup.com";
+              "logo": "https://ziontechgroup.com/logo.png";
+              "contactPoint": {
+                "@type": "ContactPoint";
+                "telephone": "+1-30o2-464-0950";
+                "contactType": "customer service";
+                "email": "kleber@ziontechgroup.com"};
+              "address": {
+                "@type": "PostalAddress";
+                "streetAddress": "364 E Main St STE 10o08";
+                "addressLocality": "Middletown";
+                "addressRegion": "DE";
+                "postalCode": "19709";
+                "addressCountry": "US"};
+              "sameAs": [
+                "https: //github.com/Zion-Holdings"],
+            })}}
          />,
       </Head>,
       {/* Navigation */}
@@ -74,11 +68,10 @@ export default function Revolutionary20o30ServicesPage() {,
       <section className="py-32 px-4 sm: px-6 lg:px-8 relative overflow-hidden">,
         <div className="max-w-7xl mx-auto text-center">,
           <motion.div,
-            initial={{ opacity: 0y: 30 ,}}
-            animate={{ opacity: 1y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className="mb-8",
-          >,
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8">,
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-40o0/30 mb-6">,
               <Zap className="w-4 h-4 text-cyan-40o0 mr-2"  />,
               <span className="text-cyan-40o0 text-sm font-medium">,
@@ -87,11 +80,10 @@ export default function Revolutionary20o30ServicesPage() {,
             </div>,
           </motion.div>,
           <motion.h1,
-            initial={{ opacity: 0y: 30 ,}}
-            animate={{ opacity: 1y: 0 ,}}
-            transition={{ duration: 0.8delay: 0.2 ,}}
-            className="text-5xl md: text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight",
-          >,
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
+            className="text-5xl md: text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">,
             <span className="bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">,
               20o30 Revolutionary,
             </span>,
@@ -101,20 +93,18 @@ export default function Revolutionary20o30ServicesPage() {,
             </span>,
           </motion.h1>,
           <motion.p,
-            initial={{ opacity: 0y: 30 ,}}
-            animate={{ opacity: 1y: 0 ,}}
-            transition={{ duration: 0.8delay: 0.4 ,}}
-            className="text-xl md: text-2xl text-gray-30o0 max-w-4xl mx-auto mb-12 leading-relaxed",
-          >,
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.4 }}
+            className="text-xl md: text-2xl text-gray-30o0 max-w-4xl mx-auto mb-12 leading-relaxed">,
             Experience the next generation of revolutionary technology services. From AI consciousness,
             and quantum computing to space mining and DNA computingwe're building the future today.,
           </motion.p>,
           <motion.div,
-            initial={{ opacity: 0y: 30 ,}}
-            animate={{ opacity: 1y: 0 ,}}
-            transition={{ duration: 0.8delay: 0.6 ,}}
-            className="flex flex-col sm: flex-row gap-4 justify-center items-center",
-          >,
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.6 }}
+            className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white rounded-xl font-semibold text-lg hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0 group">,
               Schedule Consultation,
               <ArrowRight className="w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform"  />,
@@ -125,16 +115,15 @@ export default function Revolutionary20o30ServicesPage() {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Services Showcase */,}
+      {/* Services Showcase */}
       <section className="py-24 px-4 sm: px-6 lg:px-8 relative overflow-hidden">,
         <div className="max-w-7xl mx-auto">,
           <motion.div,
-            initial={{ opacity: 0y: 30 ,}}
-            whileInView={{ opacity: 1y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className="text-center mb-20",
-          >,
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-20">,
             <h2 className="text-4xl md: text-6xl font-bold text-white mb-6">,
               <span className="bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">,
                 Revolutionary,
@@ -149,23 +138,22 @@ export default function Revolutionary20o30ServicesPage() {,
               transform your business and propel you into the future.,
             </p>,
           </motion.div>,
-          {/* Services Grid */,}
+          {/* Services Grid */}
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-20">,
-            {innovative20o30Services.map((serviceindex) => (,
+            {innovative20o30Services.map((serviceindex) => (
               <motion.div,
-                key={service.id,}
-                initial={{ opacity: 0y: 30 ,}}
-                whileInView={{ opacity: 1y: 0 ,}}
-                transition={{ duration: 0.6delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                whileHover={{ y: -5 ,}}
-                className="group cursor-pointer",
-              >,
+                key={service.id}
+                initial={{ opacity: 0y: 30 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="group cursor-pointer">,
                 <div className="p-8 rounded-3xl bg-gradient-to-br from-gray-90o0/60 to-gray-80o0/60 border border-cyan-50o0/20 hover: border-cyan-40o0/40 transition-all duration-30o0 backdrop-blur-sm">,
-                  {/* Service Header */,}
+                  {/* Service Header */}
                   <div className="flex items-start justify-between mb-6">,
                     <div className="flex items-center space-x-4">,
-                      <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center group-hover: scale-110 transition-transform duration-30o0`,}>,
+                      <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center group-hover: scale-110 transition-transform duration-30o0`}>,
                         <span className="text-2xl">{service.icon}</span>,
                       </div>,
                       <div>,
@@ -173,22 +161,20 @@ export default function Revolutionary20o30ServicesPage() {,
                         <p className="text-gray-30o0">{service.tagline}</p>,
                       </div>,
                     </div>,
-                    {service.popular && (,
+                    {service.popular && (
                       <div className="px-3 py-1 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 rounded-full text-xs font-semibold text-black">,
                         Popular,
-                      </div>,
-                    )}
+                      </div>)}
                   </div>,
                   {/* Description */}
                   <p className="text-gray-30o0 leading-relaxed mb-6">{service.description}</p>,
                   {/* Features */}
                   <div className="grid grid-cols-2 gap-3 mb-6">,
-                    {service.features.slice(0o6).map((featureIndex) => (,
+                    {service.features.slice(0o6).map((featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-40o0">,
                         <div className="w-2 h-2 bg-cyan-40o0 rounded-full"  />,
                         <span>{feature}</span>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                   {/* Service Details */}
                   <div className="grid grid-cols-2 gap-4 mb-6 text-sm">,
@@ -221,17 +207,15 @@ export default function Revolutionary20o30ServicesPage() {,
                     </button>,
                   </div>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
           {/* Call to Action */}
           <motion.div,
-            initial={{ opacity: 0y: 30 ,}}
-            whileInView={{ opacity: 1y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className="text-center",
-          >,
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center">,
             <div className="p-12 rounded-3xl bg-gradient-to-br from-gray-90o0/60 to-gray-80o0/60 border border-cyan-50o0/20 backdrop-blur-sm">,
               <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">,
                 Ready to Experience the Future?,
@@ -252,19 +236,19 @@ export default function Revolutionary20o30ServicesPage() {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Contact Section */,}
+      {/* Contact Section */}
       <section className="py-24 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-4xl mx-auto text-center">,
           <motion.div,
-            initial={{ opacity: 0y: 30 ,}}
-            whileInView={{ opacity: 1y: 0 ,}}
-            viewport={{ once: true ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
           >,
             <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6">,
               Ready to Transform Your Business with,
               <span className="bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">,
-                {' ',}20o30 Technology?,
+                {' '}20o30 Technology?,
               </span>,
             </h2>,
             <p className="text-xl text-gray-30o0 mb-8">,
@@ -282,7 +266,7 @@ export default function Revolutionary20o30ServicesPage() {,
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-30o0">,
               <div className="flex items-center justify-center space-x-2">,
                 <Phone className="w-5 h-5 text-cyan-40o0"  />,
-                <span>{contactInfo.mobile,}</span>,
+                <span>{contactInfo.mobile}</span>,
               </div>,
               <div className="flex items-center justify-center space-x-2">,
                 <Mail className="w-5 h-5 text-purple-40o0"  />,
@@ -298,6 +282,4 @@ export default function Revolutionary20o30ServicesPage() {,
       </section>,
       {/* Footer */}
       <UltraFuturisticFooter20o30  />,
-    </UltraFuturisticBackground20o30>,
-  ),
-}
+    </UltraFuturisticBackground20o30>)}

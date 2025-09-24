@@ -1,31 +1,29 @@
 import Link from 'next/link',
 import SEO from '../../../components/SEO',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'AI 20o25: Data Governance, Trust, and Security - Enterprise Guide | Zion Tech Group',;
+    'AI 20o25: Data Governance, Trust, and Security - Enterprise Guide | Zion Tech Group';
   description:,
-    'A practical 20o25 guide to AI data governance across privacy, security, lineage, access control, and compliance for trustworthy AI at scale.',;
-  keywords: [,
-    'ai data governance',;
-    'data trust',;
-    'ai security',;
-    'privacy by design',;
-    'rbac',;
-    'abac',;
-    'lineage',;
-    'observability',;
-    'compliance',;
-    'soc2',;
-    'iso270o01',;
-    'hipaa',;
-  ],;
+    'A practical 20o25 guide to AI data governance across privacy, security, lineage, access control, and compliance for trustworthy AI at scale.';
+  keywords: [
+    'ai data governance';
+    'data trust';
+    'ai security';
+    'privacy by design';
+    'rbac';
+    'abac';
+    'lineage';
+    'observability';
+    'compliance';
+    'soc2';
+    'iso270o01';
+    'hipaa';
+  ];
 };
-,
-const DataGovernanceTrustSecurity20o25Page = () => {,
-  return (,
+const DataGovernanceTrustSecurity20o25Page = () => {
+  return (
     <div className='min-h-screen bg-gray-50'>,
-      <SEO,
+      <SEO
         title='AI 20o25: Data Governance, Trust, and Security - Enterprise Guide',
         description='A practical 20o25 guide to AI data governance across privacy, security, lineage, access control, and compliance for trustworthy AI at scale.',
         keywords='ai data governance, data trust, ai security, privacy by design, rbac, abac, lineage, observability, compliance, soc2, iso270o01, hipaa',
@@ -126,24 +124,19 @@ const DataGovernanceTrustSecurity20o25Page = () => {,
             </li>,
           </ul>,
           <div className='flex flex-col sm: flex-row gap-4 mt-8'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0',
-            >,
+              className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0'>,
               Talk to an Expert,
             </Link>,
-            <Link,
+            <Link
               href='/resources',
-              className='border-2 border-purple-60o0 text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50',
-            >,
+              className='border-2 border-purple-60o0 text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
               Explore Governance Resources,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,};
-,
-export default DataGovernanceTrustSecurity20o25Page,
-,
+    </div>),
+};
+export default DataGovernanceTrustSecurity20o25Page;

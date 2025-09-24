@@ -1,23 +1,20 @@
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
-,
 RocketNetworkBoxesCheckCircle,
-export default function EmergingTechPage() {,
-  const features = [,
-    'Blockchaintokenizationand smart contract audits',;
-    'IoT and edge orchestration with zero-trust patterns',;
-    '5G private networks and campus connectivity',;
-    'Metaverse and spatial computing experimentation',;
+export default function EmergingTechPage() {
+  const features = [
+    'Blockchaintokenizationand smart contract audits';
+    'IoT and edge orchestration with zero-trust patterns';
+    '5G private networks and campus connectivity';
+    'Metaverse and spatial computing experimentation';
   ],
-,
-  const solutions = [,
-    { name: 'Blockchain Infrastructure'href: '/blockchain-infrastructure-platform' ,},;
-    { name: 'Edge Computing Orchestration'href: '/edge-computing-orchestration' ,},;
-    { name: '5G Private Networks'href: '/5g-private-network-solutions' ,},;
-    { name: 'Metaverse AI Platform'href: '/metaverse-ai-development-platform' ,},;
+  const solutions = [
+    { name: 'Blockchain Infrastructure'href: '/blockchain-infrastructure-platform' };
+    { name: 'Edge Computing Orchestration'href: '/edge-computing-orchestration' };
+    { name: '5G Private Networks'href: '/5g-private-network-solutions' };
+    { name: 'Metaverse AI Platform'href: '/metaverse-ai-development-platform' };
   ],
-,
-  return (,
+  return (
     <Layout>,
       <Head>,
         <title>Emerging Tech | Zion Tech Group</title>,
@@ -40,27 +37,23 @@ export default function EmergingTechPage() {,
           <section>,
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Focus Areas</h2>,
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">,
-              {features.map((f) => (,
-                <div key={f,} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-70o0/60">,
+              {features.map((f) => (
+                <div key={f} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-70o0/60">,
                   <CheckCircle className="w-5 h-5 text-emerald-40o0 mt-0.5"  />,
                   <span className="text-gray-20o0">{f}</span>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </section>,
           <section>,
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 text-center">Highlighted Solutions</h2>,
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">,
-              {solutions.map((s) => (,
-                <a key={s.name,} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-70o0/60 hover: border-cyan-50o0/40 transition-colors">,
-                  <div className="text-gray-20o0 font-semibold mb-2">{s.name,}</div>,
+              {solutions.map((s) => (
+                <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-70o0/60 hover: border-cyan-50o0/40 transition-colors">,
+                  <div className="text-gray-20o0 font-semibold mb-2">{s.name}</div>,
                   <p className="text-gray-30o0 text-sm">Learn more</p>,
-                </a>,
-              ))}
+                </a>))}
             </div>,
           </section>,
         </div>,
       </div>,
-    </Layout>,
-  ),
-}
+    </Layout>)}

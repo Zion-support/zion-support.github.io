@@ -1,7 +1,6 @@
 import SEO from '../components/SEO',
-,
-export default function EventsPage() {,
-	return (,
+export default function EventsPage() {
+	return (
 		<>,
 			<SEO title="Events | Zion Tech Group" description="Upcoming events, conferences, and community sessions hosted by Zion Tech Group."  />,
 			<section className="container mx-auto px-4 py-16">,
@@ -11,5 +10,4 @@ export default function EventsPage() {,
 					<article className="p-6 rounded-xl border border-white/10 bg-white/5">,
 						<h2 className="text-2xl font-semibold mb-2">No upcoming events</h2>,
 						<p className="text-gray-40o0">We are planning our next schedule. Check back soon or follow us on LinkedIn for updates.</p>,
-					</article>,
-})
+					</article>})

@@ -1,24 +1,24 @@
-import {,
+import {
 import { Button } from '../ui/button',
 import { Badge } from '../ui/badge',
 import { Link } from 'react-router-dom',
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
+  Card;
+  CardContent;
+  CardDescription;
+  CardHeader;
+  CardTitle;
 } from '../ui/card',
-  Mail,;
-  Phone,;
-  MapPin,;
-  Globe,;
-  Clock,;
-  MessageSquare,;
-  ExternalLink,;
-  Star,;
+  Mail;
+  Phone;
+  MapPin;
+  Globe;
+  Clock;
+  MessageSquare;
+  ExternalLink;
+  Star;
 } from 'lucide-react',
-export function ContactInfo() {,
-  return (,
+export function ContactInfo() {
+  return (
     <section className='py-20 bg-zion-blue-dark'>,
       <div className='container mx-auto px-4'>,
         <div className='text-center mb-16'>,
@@ -31,7 +31,7 @@ export function ContactInfo() {,
           </p>,
         </div>,
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>,
-          {/* Contact Information */,}
+          {/* Contact Information */}
           <div className='space-y-6'>,
             <Card className='bg-zion-blue border-zion-blue-light'>,
               <CardHeader>,
@@ -81,12 +81,11 @@ export function ContactInfo() {,
                   </div>,
                   <div>,
                     <p className='text-white font-medium'>Website</p>,
-                    <a,
+                    <a
                       href='https: //ziontechgroup.com',
                       target='_blank',
                       rel='noopener noreferrer',
-                      className='text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center gap-1',
-                    >,
+                      className='text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center gap-1'>,
                       ziontechgroup.com,
                       <ExternalLink className='h-4 w-4' />,
                     </a>,
@@ -127,10 +126,9 @@ export function ContactInfo() {,
                       <span className='text-zion-cyan font-medium'>,
                         24/7 Support,
                       </span>,
-                      <Badge,
+                      <Badge
                         variant='secondary',
-                        className='bg-green-50o0/20 text-green-40o0 border-green-50o0/30',
-                      >,
+                        className='bg-green-50o0/20 text-green-40o0 border-green-50o0/30'>,
                         Available,
                       </Badge>,
                     </div>,
@@ -139,7 +137,7 @@ export function ContactInfo() {,
               </CardContent>,
             </Card>,
           </div>,
-          {/* Quick Actions & Services */,}
+          {/* Quick Actions & Services */}
           <div className='space-y-6'>,
             <Card className='bg-zion-blue border-zion-blue-light'>,
               <CardHeader>,
@@ -158,18 +156,16 @@ export function ContactInfo() {,
                   </Button>,
                 </Link>,
                 <Link to='/comprehensive-services'>,
-                  <Button,
+                  <Button
                     variant='outline',
-                    className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10',
-                  >,
+                    className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'>,
                     View All Services,
                   </Button>,
                 </Link>,
                 <Link to='/it-onsite-services'>,
-                  <Button,
+                  <Button
                     variant='outline',
-                    className='w-full border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light/10',
-                  >,
+                    className='w-full border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light/10'>,
                     IT Onsite Services,
                   </Button>,
                 </Link>,
@@ -223,7 +219,7 @@ export function ContactInfo() {,
             </Card>,
           </div>,
         </div>,
-        {/* Bottom CTA */,}
+        {/* Bottom CTA */}
         <div className='text-center mt-16'>,
           <div className='bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto'>,
             <h3 className='text-2xl font-bold text-white mb-4'>,
@@ -235,19 +231,17 @@ export function ContactInfo() {,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
               <Link to='/request-quote'>,
-                <Button,
+                <Button
                   size='lg',
-                  className='bg-white text-zion-purple hover:bg-zion-slate-light px-8 py-3',
-                >,
+                  className='bg-white text-zion-purple hover:bg-zion-slate-light px-8 py-3'>,
                   Get Free Consultation,
                 </Button>,
               </Link>,
               <a href='tel:+130o24640950'>,
-                <Button,
+                <Button
                   size='lg',
                   variant='outline',
-                  className='border-white text-white hover:bg-white hover:text-zion-purple px-8 py-3',
-                >,
+                  className='border-white text-white hover:bg-white hover:text-zion-purple px-8 py-3'>,
                   Call Now: +1 30o2 464 0950,
                 </Button>,
               </a>,
@@ -255,7 +249,6 @@ export function ContactInfo() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}
 ,

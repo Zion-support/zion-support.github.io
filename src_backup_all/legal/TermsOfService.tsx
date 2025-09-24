@@ -1,5 +1,5 @@
-const TermsOfService = () => {,
-  return (,
+const TermsOfService = () => {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0 py-16 px-4'>,
       <div className='max-w-4xl mx-auto space-y-8'>,
         <div className='text-center'>,
@@ -7,7 +7,7 @@ const TermsOfService = () => {,
             Terms of Service,
           </h1>,
           <p className='text-zion-slate-light text-lg'>,
-            Last updated: {new Date().toLocaleDateString(),}
+            Last updated: {new Date().toLocaleDateString()}
           </p>,
         </div>,
         <section>,
@@ -59,7 +59,7 @@ const TermsOfService = () => {,
           </h2>,
           <p className='text-gray-30o0 leading-relaxed'>,
             All content, features, and functionality of our services are owned,
-            by Zion Tech Group and are protected by international copyright,;
+            by Zion Tech Group and are protected by international copyright;
             trademark, and other intellectual property laws. You may not,
             reproduce, distribute, or create derivative works without our,
             express written consent.,
@@ -92,7 +92,7 @@ const TermsOfService = () => {,
             8. Privacy and Data,
           </h2>,
           <p className='text-gray-30o0 leading-relaxed'>,
-            Your privacy is important to us. Please review our Privacy Policy,;
+            Your privacy is important to us. Please review our Privacy Policy;
             which also governs your use of our services, to understand our,
             practices regarding the collection and use of your information.,
           </p>,
@@ -102,7 +102,7 @@ const TermsOfService = () => {,
             9. Limitation of Liability,
           </h2>,
           <p className='text-gray-30o0 leading-relaxed'>,
-            In no event shall Zion Tech Group be liable for any indirect,;
+            In no event shall Zion Tech Group be liable for any indirect;
             incidental, special, consequential, or punitive damages, including,
             without limitation, loss of profits, data, use, goodwill, or other,
             intangible losses.,
@@ -114,7 +114,7 @@ const TermsOfService = () => {,
           </h2>,
           <p className='text-gray-30o0 leading-relaxed'>,
             Our services are provided "as is" and "as available" without any,
-            warranties of any kind. Zion Tech Group disclaims all warranties,;
+            warranties of any kind. Zion Tech Group disclaims all warranties;
             express or implied, including but not limited to warranties of,
             merchantability and fitness for a particular purpose.,
           </p>,
@@ -134,7 +134,7 @@ const TermsOfService = () => {,
             12. Termination,
           </h2>,
           <p className='text-gray-30o0 leading-relaxed'>,
-            We may terminate or suspend your access to our services immediately,;
+            We may terminate or suspend your access to our services immediately;
             without prior notice, for any reason, including breach of these,
             terms. Upon termination, your right to use our services will cease,
             immediately.,
@@ -146,7 +146,7 @@ const TermsOfService = () => {,
           </h2>,
           <p className='text-gray-30o0 leading-relaxed'>,
             These terms shall be governed by and construed in accordance with,
-            the laws of the jurisdiction in which Zion Tech Group operates,;
+            the laws of the jurisdiction in which Zion Tech Group operates;
             without regard to its conflict of law provisions.,
           </p>,
         </section>,
@@ -172,17 +172,13 @@ const TermsOfService = () => {,
           </p>,
         </section>,
         <div className='mt-12 text-center'>,
-          <a,
+          <a
             href='/',
-            className='text-indigo-40o0 hover: text-indigo-30o0 font-medium',
-          >,
+            className='text-indigo-40o0 hover: text-indigo-30o0 font-medium'>,
             ← Back to Home,
           </a>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default TermsOfService,
-,
+    </div>),
+};
+export default TermsOfService;

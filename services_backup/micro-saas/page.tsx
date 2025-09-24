@@ -1,208 +1,192 @@
-import React from 'react',
-
-,
-export const metadata ={,
-  title: 'Micro SaaS Development | Zion Tech Group',;
-  description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',;
-  keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence',
-};
-,
-export default function MicroSaasPage() {,
-  return (,
+import React from 'react';
+export const metadata ={
+  title: 'Micro SaaS Development | Zion Tech Group';
+  description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.';
+  keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'};
+export default function MicroSaasPage() {
+  return (
     <div className="min-h-screen bg-gray-50 py-12">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="text-center mb-16">,
           <h1 className="text-4xl font-bold text-gray-90o0 mb-6">Micro SaaS Development</h1>,
           <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">,
-            Complete micro SaaS solutions including productivity tools, automation platforms,;
+            Complete micro SaaS solutions including productivity tools, automation platforms;
             analytics dashboards, and specialized business applications. From MVP to scale.,
           </p>,
         </div>,
         {/* Micro SaaS Categories */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,
-          <MicroSaaSCategory,
+          <MicroSaaSCategory
             title="Productivity Tools",
             icon="⚡",
             description="Tools that enhance team productivity and workflow efficiency",
-            services={[,
-              "Task management systems",;
-              "Time tracking applications",;
-              "Project collaboration tools",;
-              "Note-taking platforms",;
-              "Calendar scheduling apps",;
-              "Workflow automation tools",
-            ]}
+            services={[
+              "Task management systems";
+              "Time tracking applications";
+              "Project collaboration tools";
+              "Note-taking platforms";
+              "Calendar scheduling apps";
+              "Workflow automation tools"]}
            />,
-          <MicroSaaSCategory,
+          <MicroSaaSCategory
             title="Business Analytics",
             icon="📊",
             description="Data-driven insights and reporting solutions",
-            services={[,
-              "Custom dashboards",;
-              "KPI monitoring tools",;
-              "Financial reporting apps",;
-              "Customer analytics platforms",;
-              "Sales tracking systems",;
-              "Performance metrics tools",
-            ]}
+            services={[
+              "Custom dashboards";
+              "KPI monitoring tools";
+              "Financial reporting apps";
+              "Customer analytics platforms";
+              "Sales tracking systems";
+              "Performance metrics tools"]}
            />,
-          <MicroSaaSCategory,
+          <MicroSaaSCategory
             title="Marketing Automation",
             icon="🎯",
             description="Marketing tools and automation platforms",
-            services={[,
-              "Email marketing platforms",;
-              "Social media schedulers",;
-              "Lead generation tools",;
-              "Content management systems",;
-              "A/B testing platforms",;
-              "Campaign analytics tools",
-            ]}
+            services={[
+              "Email marketing platforms";
+              "Social media schedulers";
+              "Lead generation tools";
+              "Content management systems";
+              "A/B testing platforms";
+              "Campaign analytics tools"]}
            />,
         </div>,
         {/* Real Micro SaaS Solutions */}
         <div className="mb-16">,
           <h2 className="text-3xl font-bold text-gray-90o0 text-center mb-12">Micro SaaS Solutions We Build</h2>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-            <MicroSaaSSolution,
+            <MicroSaaSSolution
               title="Team Productivity Hub",
               description="All-in-one workspace for remote teams",
-              features={[,
-                "Task management & kanban boards",;
-                "Time tracking & reporting",;
-                "Team chat & video calls",;
-                "File sharing & collaboration",;
-                "Project templates",;
-                "Mobile app",
-              ]}
+              features={[
+                "Task management & kanban boards";
+                "Time tracking & reporting";
+                "Team chat & video calls";
+                "File sharing & collaboration";
+                "Project templates";
+                "Mobile app"]}
               price="$15k - $35k",
               timeline="8-12 weeks",
               useCase="Remote teams, agencies, startups",
               marketSize="$2.5B",
              />,
-            <MicroSaaSSolution,
+            <MicroSaaSSolution
               title="E-commerce Analytics Dashboard",
               description="Advanced analytics for online stores",
-              features={[,
-                "Real-time sales tracking",;
-                "Customer behavior analysis",;
-                "Inventory management",;
-                "Revenue forecasting",;
-                "Multi-store support",;
-                "Custom reports",
-              ]}
+              features={[
+                "Real-time sales tracking";
+                "Customer behavior analysis";
+                "Inventory management";
+                "Revenue forecasting";
+                "Multi-store support";
+                "Custom reports"]}
               price="$12k - $28k",
               timeline="6-10 weeks",
               useCase="E-commerce, retail, online stores",
               marketSize="$1.8B",
              />,
-            <MicroSaaSSolution,
+            <MicroSaaSSolution
               title="Social Media Scheduler",
               description="Multi-platform social media management",
-              features={[,
-                "Content calendar",;
-                "Auto-posting to all platforms",;
-                "Analytics & insights",;
-                "Team collaboration",;
-                "Content library",;
-                "Hashtag optimization",
-              ]}
+              features={[
+                "Content calendar";
+                "Auto-posting to all platforms";
+                "Analytics & insights";
+                "Team collaboration";
+                "Content library";
+                "Hashtag optimization"]}
               price="$10k - $25k",
               timeline="6-8 weeks",
               useCase="Marketing agencies, influencers, brands",
               marketSize="$3.2B",
              />,
-            <MicroSaaSSolution,
+            <MicroSaaSSolution
               title="Invoice & Payment Tracker",
               description="Streamlined invoicing and payment management",
-              features={[,
-                "Automated invoicing",;
-                "Payment tracking",;
-                "Client portal",;
-                "Recurring billing",;
-                "Tax calculations",;
-                "Financial reporting",
-              ]}
+              features={[
+                "Automated invoicing";
+                "Payment tracking";
+                "Client portal";
+                "Recurring billing";
+                "Tax calculations";
+                "Financial reporting"]}
               price="$8k - $20k",
               timeline="4-8 weeks",
               useCase="Freelancers, consultants, small businesses",
               marketSize="$1.2B",
              />,
-            <MicroSaaSSolution,
+            <MicroSaaSSolution
               title="Customer Support Ticketing",
               description="Help desk and customer service platform",
-              features={[,
-                "Ticket management system",;
-                "Knowledge base",;
-                "Live chat integration",;
-                "Automated responses",;
-                "Performance analytics",;
-                "Multi-channel support",
-              ]}
+              features={[
+                "Ticket management system";
+                "Knowledge base";
+                "Live chat integration";
+                "Automated responses";
+                "Performance analytics";
+                "Multi-channel support"]}
               price="$18k - $40k",
               timeline="8-14 weeks",
               useCase="SaaS companies, e-commerce, service businesses",
               marketSize="$4.1B",
              />,
-            <MicroSaaSSolution,
+            <MicroSaaSSolution
               title="Lead Generation Platform",
               description="Automated lead capture and nurturing",
-              features={[,
-                "Lead capture forms",;
-                "Email sequences",;
-                "Lead scoring",;
-                "CRM integration",;
-                "Analytics dashboard",;
-                "A/B testing",
-              ]}
+              features={[
+                "Lead capture forms";
+                "Email sequences";
+                "Lead scoring";
+                "CRM integration";
+                "Analytics dashboard";
+                "A/B testing"]}
               price="$14k - $32k",
               timeline="6-12 weeks",
               useCase="B2B companies, agencies, consultants",
               marketSize="$2.8B",
              />,
-            <MicroSaaSSolution,
+            <MicroSaaSSolution
               title="Employee Onboarding System",
               description="Streamlined new hire experience",
-              features={[,
-                "Digital forms & documents",;
-                "Task checklists",;
-                "Training modules",;
-                "Progress tracking",;
-                "Manager dashboard",;
-                "Compliance tracking",
-              ]}
+              features={[
+                "Digital forms & documents";
+                "Task checklists";
+                "Training modules";
+                "Progress tracking";
+                "Manager dashboard";
+                "Compliance tracking"]}
               price="$16k - $38k",
               timeline="8-12 weeks",
               useCase="HR departments, growing companies",
               marketSize="$1.5B",
              />,
-            <MicroSaaSSolution,
+            <MicroSaaSSolution
               title="Inventory Management System",
               description="Smart inventory tracking and optimization",
-              features={[,
-                "Real-time stock levels",;
-                "Automated reordering",;
-                "Barcode scanning",;
-                "Supplier management",;
-                "Cost tracking",;
-                "Analytics & forecasting",
-              ]}
+              features={[
+                "Real-time stock levels";
+                "Automated reordering";
+                "Barcode scanning";
+                "Supplier management";
+                "Cost tracking";
+                "Analytics & forecasting"]}
               price="$20k - $45k",
               timeline="10-16 weeks",
               useCase="Retail, manufacturing, warehouses",
               marketSize="$2.1B",
              />,
-            <MicroSaaSSolution,
+            <MicroSaaSSolution
               title="Event Management Platform",
               description="Complete event planning and management solution",
-              features={[,
-                "Event registration",;
-                "Payment processing",;
-                "Attendee management",;
-                "Event analytics",;
-                "Mobile check-in",;
-                "Post-event surveys",
-              ]}
+              features={[
+                "Event registration";
+                "Payment processing";
+                "Attendee management";
+                "Event analytics";
+                "Mobile check-in";
+                "Post-event surveys"]}
               price="$22k - $50k",
               timeline="10-18 weeks",
               useCase="Event planners, venues, organizations",
@@ -214,32 +198,32 @@ export default function MicroSaasPage() {,
         <div className="mb-16">,
           <h2 className="text-3xl font-bold text-gray-90o0 text-center mb-12">Core Features We Include</h2>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-            <CoreFeature,
+            <CoreFeature
               title="Multi-tenant Architecture",
               description="Secure, scalable architecture for multiple customers",
               features={["Data isolation", "Custom branding", "Scalable infrastructure", "Security compliance"]}
              />,
-            <CoreFeature,
+            <CoreFeature
               title="Authentication & Security",
               description="Enterprise-grade security and user management",
               features={["SSO integration", "2FA support", "Role-based access", "Audit logs"]}
              />,
-            <CoreFeature,
+            <CoreFeature
               title="Payment & Billing",
               description="Flexible billing and subscription management",
               features={["Stripe integration", "Multiple plans", "Proration", "Dunning management"]}
              />,
-            <CoreFeature,
+            <CoreFeature
               title="Analytics & Reporting",
               description="Comprehensive insights and business intelligence",
               features={["Usage analytics", "Revenue tracking", "User behavior", "Custom reports"]}
              />,
-            <CoreFeature,
+            <CoreFeature
               title="API & Integrations",
               description="Connect with existing tools and workflows",
               features={["RESTful APIs", "Webhook support", "Third-party integrations", "Custom connectors"]}
              />,
-            <CoreFeature,
+            <CoreFeature
               title="Mobile & Responsive",
               description="Native mobile apps and responsive web design",
               features={["iOS & Android apps", "Progressive Web App", "Offline support", "Push notifications"]}
@@ -250,19 +234,19 @@ export default function MicroSaasPage() {,
         <div className="mb-16">,
           <h2 className="text-3xl font-bold text-gray-90o0 text-center mb-12">Technology Stack</h2>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-            <TechStack,
+            <TechStack
               category="Frontend",
               technologies={["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]}
              />,
-            <TechStack,
+            <TechStack
               category="Backend",
               technologies={["Node.js", "Python", "PostgreSQL", "Redis", "GraphQL"]}
              />,
-            <TechStack,
+            <TechStack
               category="Cloud & DevOps",
               technologies={["AWS", "Docker", "Kubernetes", "Terraform", "CI/CD"]}
              />,
-            <TechStack,
+            <TechStack
               category="Integrations",
               technologies={["Stripe", "SendGrid", "Auth0", "Zapier", "Webhooks"]}
              />,
@@ -272,46 +256,43 @@ export default function MicroSaasPage() {,
         <div className="mb-16">,
           <h2 className="text-3xl font-bold text-gray-90o0 text-center mb-12">Development Packages</h2>,
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-            <MicroSaaSPricingPlan,
+            <MicroSaaSPricingPlan
               name="MVP Sprint",
               price="$8k - $20k",
               duration="4-8 weeks",
-              features={[,
-                "Core functionality",;
-                "Basic authentication",;
-                "Stripe billing",;
-                "Admin dashboard",;
-                "Mobile responsive",;
-                "Basic analytics",
-              ]}
+              features={[
+                "Core functionality";
+                "Basic authentication";
+                "Stripe billing";
+                "Admin dashboard";
+                "Mobile responsive";
+                "Basic analytics"]}
               popular={false}
              />,
-            <MicroSaaSPricingPlan,
+            <MicroSaaSPricingPlan
               name="Growth Platform",
               price="$25k - $60k",
               duration="8-16 weeks",
-              features={[,
-                "Full feature set",;
-                "Advanced analytics",;
-                "API integrations",;
-                "Mobile apps",;
-                "Advanced billing",;
-                "Customer support",
-              ]}
+              features={[
+                "Full feature set";
+                "Advanced analytics";
+                "API integrations";
+                "Mobile apps";
+                "Advanced billing";
+                "Customer support"]}
               popular={true}
              />,
-            <MicroSaaSPricingPlan,
+            <MicroSaaSPricingPlan
               name="Enterprise Scale",
               price="$60k+",
               duration="12+ weeks",
-              features={[,
-                "Custom architecture",;
-                "Advanced security",;
-                "Multi-tenant",;
-                "White-label options",;
-                "SLA guarantees",;
-                "Ongoing maintenance",
-              ]}
+              features={[
+                "Custom architecture";
+                "Advanced security";
+                "Multi-tenant";
+                "White-label options";
+                "SLA guarantees";
+                "Ongoing maintenance"]}
               popular={false}
              />,
           </div>,
@@ -320,19 +301,19 @@ export default function MicroSaasPage() {,
         <div className="mb-16">,
           <h2 className="text-3xl font-bold text-gray-90o0 text-center mb-12">Success Stories</h2>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-            <SuccessStory,
+            <SuccessStory
               title="TaskFlow Pro",
               description="Project management tool for remote teams",
               metrics={["$50k MRR", "2,50o0+ users", "95% retention"]}
               industry="SaaS",
              />,
-            <SuccessStory,
+            <SuccessStory
               title="AnalyticsHub",
               description="E-commerce analytics dashboard",
               metrics={["$35k MRR", "1,80o0+ stores", "40% growth"]}
               industry="E-commerce",
              />,
-            <SuccessStory,
+            <SuccessStory
               title="SocialScheduler",
               description="Multi-platform social media tool",
               metrics={["$28k MRR", "3,20o0+ users", "85% satisfaction"]}
@@ -347,16 +328,14 @@ export default function MicroSaasPage() {,
             Let's discuss your micro SaaS idea and create a profitable, scalable solution that generates recurring revenue.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <a,
+            <a
               href="tel:+130o24640950",
-              className="bg-white text-blue-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors",
-            >,
+              className="bg-white text-blue-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">,
               Call +1 30o2 464 0950,
             </a>,
-            <a,
+            <a
               href="mailto:kleber@ziontechgroup.com",
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors",
-            >,
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors">,
               Email Us,
             </a>,
           </div>,
@@ -365,55 +344,50 @@ export default function MicroSaasPage() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function MicroSaaSCategory({ title, icon, description, services }: {,
+function MicroSaaSCategory({ title, icon, description, services }: {
   title: string,
   icon: string,
   description: string,
   services: string[],
-,}) {,
-  return (,
+}) {
+  return (
     <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-20o0">,
       <div className="text-3xl mb-4">{icon}</div>,
       <h3 className="text-xl font-bold text-gray-90o0 mb-2">{title}</h3>,
       <p className="text-gray-60o0 mb-4">{description}</p>,
       <ul className="space-y-2">,
-        {services.map((service, index) => (,
+        {services.map((service, index) => (
           <li key={index} className="flex items-center text-gray-60o0">,
             <span className="text-blue-50o0 mr-2">•</span>,
             {service}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
     <section className="py-12">,
       <h2 className="text-3xl font-bold text-gray-90o0 text-center mb-12">Development Packages</h2>,
       <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-        <Plan,
+        <Plan
           name="MVP Sprint",
           price="$8k–$20k",
           features={["2–4 weeks", "MVP scope", "Stripe billing", "Basic analytics", "Hosting setup"]} ,
           popular={false}
          />,
-        <Plan,
+        <Plan
           name="Growth",
           price="$20k–$60k",
           features={["6–10 weeks", "SEO + content", "CRM + email", "Observability", "Advanced features"]} ,
           popular={true}
          />,
-        <Plan,
+        <Plan
           name="Scale",
           price="$60k+",
           features={["Custom roadmap", "SRE + security", "Multi-region", "SLAs", "Dedicated support"]} ,
           popular={false}
          />,
       </div>,
-    </section>,
-  ),
-,
-function MicroSaaSSolution({ title, description, features, price, timeline, useCase, marketSize }: {,
+    </section>),
+function MicroSaaSSolution({ title, description, features, price, timeline, useCase, marketSize }: {
   title: string,
   description: string,
   features: string[],
@@ -421,10 +395,10 @@ function MicroSaaSSolution({ title, description, features, price, timeline, useC
   timeline: string,
   useCase: string,
   marketSize: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-20o0 hover: shadow-xl transition-shadow">,
-      <h3 className="text-xl font-bold text-gray-90o0 mb-2">{title,}</h3>,
+      <h3 className="text-xl font-bold text-gray-90o0 mb-2">{title}</h3>,
       <p className="text-gray-60o0 mb-4">{description}</p>,
       <div className="mb-4 flex flex-wrap gap-2">,
         <span className="bg-blue-10o0 text-blue-80o0 px-3 py-1 rounded-full text-sm font-medium">,
@@ -435,111 +409,98 @@ function MicroSaaSSolution({ title, description, features, price, timeline, useC
         </span>,
       </div>,
       <ul className="space-y-1 mb-4">,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className="text-sm text-gray-60o0 flex items-center">,
             <span className="text-green-50o0 mr-2">✓</span>,
             {feature}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
       <div className="flex justify-between items-center pt-4 border-t border-gray-20o0">,
         <div>,
           <div className="font-bold text-blue-60o0">{price}</div>,
           <div className="text-sm text-gray-50o0">{timeline}</div>,
         </div>,
-        <a,
+        <a
           href="tel: +130o24640950",
-          className="bg-blue-60o0 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-70o0 transition-colors",
-        >,
+          className="bg-blue-60o0 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-70o0 transition-colors">,
           Get Quote,
         </a>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,
-function CoreFeature({ title, description, features }: {,
+function CoreFeature({ title, description, features }: {
   title: string,
   description: string,
   features: string[],
-,}) {,
-  return (,
+}) {
+  return (
     <div className="bg-white rounded-lg p-6 shadow-md border border-gray-20o0">,
       <h3 className="font-bold text-gray-90o0 mb-2">{title}</h3>,
       <p className="text-gray-60o0 mb-4">{description}</p>,
       <ul className="space-y-1">,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className="text-sm text-gray-60o0 flex items-center">,
             <span className="text-blue-50o0 mr-2">•</span>,
             {feature}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function TechStack({ category, technologies }: { category: string, technologies: string[] ,}) {,
-  return (,
+function TechStack({ category, technologies }: { category: string, technologies: string[] }) {
+  return (
     <div className="bg-white rounded-lg p-6 shadow-md border border-gray-20o0">,
       <h3 className="font-bold text-gray-90o0 mb-4">{category}</h3>,
       <div className="flex flex-wrap gap-2">,
-        {technologies.map((tech, index) => (,
+        {technologies.map((tech, index) => (
           <span key={index} className="bg-blue-10o0 text-blue-80o0 px-3 py-1 rounded-full text-sm">,
             {tech}
-          </span>,
-        ))}
+          </span>))}
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function MicroSaaSPricingPlan({ name, price, duration, features, popular }: {,
+function MicroSaaSPricingPlan({ name, price, duration, features, popular }: {
   name: string,
   price: string,
   duration: string,
   features: string[],
   popular: boolean,
-,}) {,
-  return (,
+}) {
+  return (
     <div className={`bg-white rounded-xl p-8 shadow-lg border-2 ${popular ? 'border-blue-50o0' : 'border-gray-20o0'} relative`}>,
-      {popular && (,
+      {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">,
           <span className="bg-blue-50o0 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>,
-        </div>,
-      )}
+        </div>)}
       <h3 className="text-2xl font-bold text-gray-90o0 mb-2">{name}</h3>,
       <div className="text-3xl font-bold text-blue-60o0 mb-1">{price}</div>,
       <div className="text-gray-50o0 mb-6">{duration}</div>,
       <ul className="space-y-3">,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className="flex items-center text-gray-60o0">,
             <span className="text-green-50o0 mr-3">✓</span>,
             {feature}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-      <a,
+      <a
         href="tel: +130o24640950",
-        className={`w-full mt-6 py-3 rounded-lg font-semibold text-center block transition-colors ${,
+        className={`w-full mt-6 py-3 rounded-lg font-semibold text-center block transition-colors ${
           popular,
             ? 'bg-blue-60o0 text-white hover:bg-blue-70o0',
             : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0',
-        ,}`}
+        }`}
       >,
         Get Started,
       </a>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function SuccessStory({ title, description, metrics, industry }: {,
+function SuccessStory({ title, description, metrics, industry }: {
   title: string,
   description: string,
   metrics: string[],
   industry: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className="bg-white rounded-lg p-6 shadow-md border border-gray-20o0">,
       <h3 className="font-bold text-gray-90o0 mb-2">{title}</h3>,
       <p className="text-gray-60o0 mb-4">{description}</p>,
@@ -549,15 +510,14 @@ function SuccessStory({ title, description, metrics, industry }: {,
         </span>,
       </div>,
       <div className="space-y-1">,
-        {metrics.map((metric, index) => (,
+        {metrics.map((metric, index) => (
           <div key={index} className="text-sm font-semibold text-green-60o0">,
             {metric}
-          </div>,
-        ))}
+          </div>))}
       </div>,
     </div>,
-function ContactSection() {,
-  return (,
+function ContactSection() {
+  return (
     <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">,
       <div className="text-center">,
         <h3 className="text-3xl font-bold text-gray-90o0 mb-4">,
@@ -568,16 +528,14 @@ function ContactSection() {,
           Our team has launched 50+ successful micro SaaS products.,
         </p>,
         <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-          <a,
+          <a
             href="tel:+130o24640950",
-            className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors",
-          >,
+            className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors">,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href="mailto:kleber@ziontechgroup.com",
-            className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors",
-          >,
+            className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors">,
             Email Us,
           </a>,
         </div>,
@@ -585,8 +543,5 @@ function ContactSection() {,
           <p>Address: 364 E Main St STE 10o08, Middletown DE 19709</p>,
         </div>,
       </div>,
-    </section>,
-  ),
-}
-,
+    </section>)}
 }})

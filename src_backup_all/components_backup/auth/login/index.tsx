@@ -1,7 +1,6 @@
 import { LoginForm } from './LoginForm',
-,
-export function LoginContent() {,
-  return (,
+export function LoginContent() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center p-4'>,
       <div className='w-full max-w-md'>,
         <div className='text-center mb-8'>,
@@ -16,16 +15,14 @@ export function LoginContent() {,
         <div className='text-center mt-6'>,
           <p className='text-zion-slate-light text-sm'>,
             Don't have an account?{' '}
-            <a,
+            <a
               href='/register',
-              className='text-zion-cyan hover: text-zion-cyan-light transition-colors',
-            >,
+              className='text-zion-cyan hover: text-zion-cyan-light transition-colors'>,
               Sign up,
             </a>,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

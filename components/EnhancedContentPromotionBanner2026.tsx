@@ -1,8 +1,7 @@
 import Link from 'next/link',
 ArrowRightStarZapTrendingUp,
-,
-const EnhancedContentPromotionBanner20o26 = () => {,
-  return (,
+const EnhancedContentPromotionBanner20o26 = () => {
+  return (
     <section className='bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-pink-60o0 text-white py-16'>,
       <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
@@ -13,24 +12,19 @@ const EnhancedContentPromotionBanner20o26 = () => {,
             Revolutionary content solutions for the future of business.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/services',
-              className='bg-white text-indigo-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-indigo-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Explore Services,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors'>,
               Get Started,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default EnhancedContentPromotionBanner20o26,
-,
+    </section>),
+};
+export default EnhancedContentPromotionBanner20o26;

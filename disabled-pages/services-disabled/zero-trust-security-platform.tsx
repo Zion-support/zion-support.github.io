@@ -2,100 +2,85 @@ import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
 import { ArrowRight, CheckCircle, Shield, Lock, Eye, Users, AlertTriangle, BarChart3, Globe, Database, Star, Zap } from 'lucide-react',
-,
-const ZeroTrustSecurityPlatformPage: NextPage = () => {,
-  const features = [,
-    'Identity and Access Management (IAM) with multi-factor authentication',;
-    'Network segmentation and micro-segmentation',;
-    'Continuous security monitoring and threat detection',;
-    'Zero-trust endpoint protection and device management',;
-    'Data encryption at rest and in transit',;
-    'Behavioral analytics and anomaly detection',;
-    'Automated incident response and remediation',;
-    'Compliance management (SOC 2, GDPR, HIPAA)',
+const ZeroTrustSecurityPlatformPage: NextPage = () => {
+  const features = [
+    'Identity and Access Management (IAM) with multi-factor authentication';
+    'Network segmentation and micro-segmentation';
+    'Continuous security monitoring and threat detection';
+    'Zero-trust endpoint protection and device management';
+    'Data encryption at rest and in transit';
+    'Behavioral analytics and anomaly detection';
+    'Automated incident response and remediation';
+    'Compliance management (SOC 2, GDPR, HIPAA)'],
+  const benefits = [
+    'Reduce security breaches by 85%';
+    'Achieve 99.9% compliance with industry standards';
+    'Lower security costs by 40% through automation';
+    'Improve incident response time by 70%';
+    'Enable secure remote work at scale'],
+  const useCases = [
+    'Enterprise security transformation';
+    'Remote workforce protection';
+    'Cloud migration security';
+    'Regulatory compliance management';
+    'Merger and acquisition security integration'],
+  const pricingPlans = [
+    {
+      name: 'Essential';
+      price: 20o00;
+      period: 'month';
+      description: 'For small to medium businesses';
+      features: [
+        'Up to 10o0 users';
+        'Basic IAM and MFA';
+        'Network segmentation';
+        '24/7 monitoring';
+        'Email support';
+        'Basic reporting']};
+    {
+      name: 'Professional';
+      price: 50o00;
+      period: 'month';
+      description: 'For growing enterprises';
+      features: [
+        'Up to 50o0 users';
+        'Advanced IAM and SSO';
+        'Micro-segmentation';
+        'Behavioral analytics';
+        'Priority support';
+        'Advanced reporting';
+        'Compliance tools']};
+    {
+      name: 'Enterprise';
+      price: 10o000;
+      period: 'month';
+      description: 'For large organizations';
+      features: [
+        'Unlimited users';
+        'Custom IAM solutions';
+        'Full zero-trust architecture';
+        'AI-powered threat detection';
+        'Dedicated security team';
+        'Custom integrations';
+        'White-label options']}
   ],
-,
-  const benefits = [,
-    'Reduce security breaches by 85%',;
-    'Achieve 99.9% compliance with industry standards',;
-    'Lower security costs by 40% through automation',;
-    'Improve incident response time by 70%',;
-    'Enable secure remote work at scale',
-  ],
-,
-  const useCases = [,
-    'Enterprise security transformation',;
-    'Remote workforce protection',;
-    'Cloud migration security',;
-    'Regulatory compliance management',;
-    'Merger and acquisition security integration',
-  ],
-,
-  const pricingPlans = [,
-    {,
-      name: 'Essential',;
-      price: 20o00,;
-      period: 'month',;
-      description: 'For small to medium businesses',;
-      features: [,
-        'Up to 10o0 users',;
-        'Basic IAM and MFA',;
-        'Network segmentation',;
-        '24/7 monitoring',;
-        'Email support',;
-        'Basic reporting',
-      ],
-    },;
-    {,
-      name: 'Professional',;
-      price: 50o00,;
-      period: 'month',;
-      description: 'For growing enterprises',;
-      features: [,
-        'Up to 50o0 users',;
-        'Advanced IAM and SSO',;
-        'Micro-segmentation',;
-        'Behavioral analytics',;
-        'Priority support',;
-        'Advanced reporting',;
-        'Compliance tools',
-      ],
-    },;
-    {,
-      name: 'Enterprise',;
-      price: 10o000,;
-      period: 'month',;
-      description: 'For large organizations',;
-      features: [,
-        'Unlimited users',;
-        'Custom IAM solutions',;
-        'Full zero-trust architecture',;
-        'AI-powered threat detection',;
-        'Dedicated security team',;
-        'Custom integrations',;
-        'White-label options',
-      ],
+  const testimonials = [
+    {
+      name: "David Rodriguez";
+      company: "Global Finance Corp";
+      role: "CISO";
+      content: "The zero-trust platform has transformed our security posture. We've seen a 90% reduction in security incidents since implementation.";
+      rating: 5,
+    };
+    {
+      name: "Jennifer Liu";
+      company: "HealthTech Solutions";
+      role: "Security Director";
+      content: "Compliance has never been easier. The automated reporting and monitoring features save us countless hours.";
+      rating: 5,
     }
   ],
-,
-  const testimonials = [,
-    {,
-      name: "David Rodriguez",;
-      company: "Global Finance Corp",;
-      role: "CISO",;
-      content: "The zero-trust platform has transformed our security posture. We've seen a 90% reduction in security incidents since implementation.",;
-      rating: 5,
-    ,},;
-    {,
-      name: "Jennifer Liu",;
-      company: "HealthTech Solutions",;
-      role: "Security Director",;
-      content: "Compliance has never been easier. The automated reporting and monitoring features save us countless hours.",;
-      rating: 5,
-    ,}
-  ],
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>Zero Trust Security Platform - Zion Tech Group</title>,
@@ -104,7 +89,7 @@ const ZeroTrustSecurityPlatformPage: NextPage = () => {,
         <link rel="canonical" href="https: //ziontechgroup.com/services/zero-trust-security-platform"  />,
       </Head>,
       <div className="min-h-screen bg-gray-50">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="bg-gradient-to-br from-red-90o0 via-purple-90o0 to-indigo-90o0 text-white py-20">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center">,
@@ -136,7 +121,7 @@ const ZeroTrustSecurityPlatformPage: NextPage = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Features Section */,}
+        {/* Features Section */}
         <section className="py-20 bg-white">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center mb-16">,
@@ -148,12 +133,11 @@ const ZeroTrustSecurityPlatformPage: NextPage = () => {,
               </p>,
             </div>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-              {features.map((feature, index) => (,
+              {features.map((feature, index) => (
                 <div key={index} className="bg-gray-50 p-6 rounded-lg">,
                   <CheckCircle className="w-8 h-8 text-green-50o0 mb-4"  />,
                   <h3 className="text-lg font-semibold text-gray-90o0 mb-2">{feature}</h3>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -169,14 +153,13 @@ const ZeroTrustSecurityPlatformPage: NextPage = () => {,
               </p>,
             </div>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-              {benefits.map((benefit, index) => (,
+              {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">,
                   <div className="bg-red-10o0 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">,
                     <Shield className="w-8 h-8 text-red-60o0"  />,
                   </div>,
                   <h3 className="text-lg font-semibold text-gray-90o0 mb-2">{benefit}</h3>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -192,12 +175,11 @@ const ZeroTrustSecurityPlatformPage: NextPage = () => {,
               </p>,
             </div>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-              {useCases.map((useCase, index) => (,
+              {useCases.map((useCase, index) => (
                 <div key={index} className="bg-gradient-to-br from-red-50 to-purple-50 p-6 rounded-lg border border-red-10o0">,
                   <Lock className="w-8 h-8 text-red-60o0 mb-4"  />,
                   <h3 className="text-lg font-semibold text-gray-90o0 mb-2">{useCase}</h3>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -213,13 +195,12 @@ const ZeroTrustSecurityPlatformPage: NextPage = () => {,
               </p>,
             </div>,
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
-              {pricingPlans.map((plan, index) => (,
+              {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-white p-8 rounded-lg shadow-lg ${index === 1 ? 'ring-2 ring-red-50o0 transform scale-10o5' : ''}`}>,
-                  {index === 1 && (,
+                  {index === 1 && (
                     <div className="bg-red-50o0 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-4">,
                       Most Popular,
-                    </div>,
-                  )}
+                    </div>)}
                   <h3 className="text-2xl font-bold text-gray-90o0 mb-2">{plan.name}</h3>,
                   <p className="text-gray-60o0 mb-6">{plan.description}</p>,
                   <div className="mb-6">,
@@ -227,24 +208,22 @@ const ZeroTrustSecurityPlatformPage: NextPage = () => {,
                     <span className="text-gray-60o0">/{plan.period}</span>,
                   </div>,
                   <ul className="space-y-3 mb-8">,
-                    {plan.features.map((feature, featureIndex) => (,
+                    {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">,
                         <CheckCircle className="w-5 h-5 text-green-50o0 mr-3"  />,
                         <span className="text-gray-70o0">{feature}</span>,
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
                   <Link href="/contact">,
-                    <span className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors cursor-pointer inline-block ${,
+                    <span className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors cursor-pointer inline-block ${
                       index === 1,
                         ? 'bg-red-60o0 hover: bg-red-70o0 text-white',
                         : 'bg-gray-20o0 hover:bg-gray-30o0 text-gray-90o0',
-                    ,}`}>,
+                    }`}>,
                       Get Started,
                     </span>,
                   </Link>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -257,20 +236,18 @@ const ZeroTrustSecurityPlatformPage: NextPage = () => {,
               </h2>,
             </div>,
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
-              {testimonials.map((testimonial, index) => (,
+              {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-gray-50 p-6 rounded-lg">,
                   <div className="flex items-center mb-4">,
-                    {[...Array(testimonial.rating)].map((_, i) => (,
-                      <Star key={i} className="w-5 h-5 text-yellow-40o0 fill-current"  />,
-                    ))}
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-40o0 fill-current"  />))}
                   </div>,
                   <p className="text-gray-70o0 mb-4">"{testimonial.content}"</p>,
                   <div>,
                     <p className="font-semibold text-gray-90o0">{testimonial.name}</p>,
                     <p className="text-gray-60o0">{testimonial.role}, {testimonial.company}</p>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -301,8 +278,5 @@ const ZeroTrustSecurityPlatformPage: NextPage = () => {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-};
-,
-export default ZeroTrustSecurityPlatformPage,
+    </>)};
+export default ZeroTrustSecurityPlatformPage;

@@ -1,16 +1,15 @@
 import Head from 'next/head',
-,
-export default function AutomationOverview20o25() {,
-  return (,
+export default function AutomationOverview20o25() {
+  return (
     <>,
       <Head>,
         <title>Automation Overview 20o25 | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content="Comprehensive overview of Zion Tech Group's autonomous automation systems, achievements, and future roadmap for 20o25.",
         />,
         <meta property='og: title' content='Automation Overview 20o25' />,
-        <meta,
+        <meta
           property='og:description',
           content="Comprehensive overview of Zion Tech Group's autonomous automation systems and achievements.",
         />,
@@ -27,13 +26,13 @@ export default function AutomationOverview20o25() {,
               ecosystem and achievements,
             </p>,
             <div className='mt-4 text-sm text-white/60'>,
-              Generated:{' ',}
-              {new Date().toLocaleDateString('en-US', {,
-                year: 'numeric',;
-                month: 'long',;
-                day: 'numeric',;
-                hour: '2-digit',;
-                minute: '2-digit',;
+              Generated:{' '}
+              {new Date().toLocaleDateString('en-US', {
+                year: 'numeric';
+                month: 'long';
+                day: 'numeric';
+                hour: '2-digit';
+                minute: '2-digit';
               })}
             </div>,
           </section>,
@@ -163,7 +162,7 @@ export default function AutomationOverview20o25() {,
               </div>,
             </div>,
           </section>,
-          {/* Recent Achievements */,}
+          {/* Recent Achievements */}
           <section className='mx-auto max-w-6xl mb-12'>,
             <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>,
               <h2 className='text-3xl font-bold mb-6 text-green-40o0'>,
@@ -212,7 +211,7 @@ export default function AutomationOverview20o25() {,
               </div>,
             </div>,
           </section>,
-          {/* Future Roadmap */,}
+          {/* Future Roadmap */}
           <section className='mx-auto max-w-6xl mb-12'>,
             <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>,
               <h2 className='text-3xl font-bold mb-6 text-purple-40o0'>,
@@ -266,32 +265,28 @@ export default function AutomationOverview20o25() {,
               </div>,
             </div>,
           </section>,
-          {/* Navigation */,}
+          {/* Navigation */}
           <section className='mx-auto max-w-4xl text-center'>,
             <div className='flex flex-wrap justify-center gap-4'>,
-              <a,
+              <a
                 href='/',
-                className='px-6 py-3 bg-white/10 hover: bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-cyan-40o0/50',
-              >,
+                className='px-6 py-3 bg-white/10 hover: bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-cyan-40o0/50'>,
                 ← Back to Home,
               </a>,
-              <a,
+              <a
                 href='/reports',
-                className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-fuchsia-40o0/50',
-              >,
+                className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-fuchsia-40o0/50'>,
                 All Reports,
               </a>,
-              <a,
+              <a
                 href='/about',
-                className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-green-40o0/50',
-              >,
+                className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-green-40o0/50'>,
                 About Zion Tech,
               </a>,
             </div>,
           </section>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

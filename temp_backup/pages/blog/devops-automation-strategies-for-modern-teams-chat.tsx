@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function DevopsAutomationStrategiesForModernTeamsChatPage() {,
-  return (,
+export default function DevopsAutomationStrategiesForModernTeamsChatPage() {
+  return (
     <>,
       <Head>,
         <title>Devops Automation Strategies For Modern Teams Chat - Zion Tech Group</title>,
@@ -12,6 +11,4 @@ export default function DevopsAutomationStrategiesForModernTeamsChatPage() {,
         <p>Blog content coming soon...</p>,
         <Link href="/blog">Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-}
+    </div>)}

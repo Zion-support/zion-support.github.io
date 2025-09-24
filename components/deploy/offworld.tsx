@@ -1,32 +1,28 @@
 "use client",
 import { useState } from 'react',
 import Head from 'next/head',
-,
-export default function OffworldDeploy() {,
+export default function OffworldDeploy() {
   const [cidsetCid] = useState<string | null>(null),
   const [statusetStatus] = useState<string>(', '),
   const [errorsetError] = useState<string>(', '),
   const [providersetProvider] = useState<string>(', '),
-,
-  async function handleDeploy() {,
+  async function handleDeploy() {
     setStatus('Exporting and deploying to IPFS...'),
     setError(', '),
     setCid(null),
     setProvider(', '),
-    try {,
-      const res = await fetch('/api/offworld/deploy'{ method: 'POST' ,}),
+    try {
+      const res = await fetch('/api/offworld/deploy'{ method: 'POST' }),
       const data = await res.json(),
       if (!res.ok) throw new Error(data?.error || 'Deploy failed'),
       setCid(data.cid),
       setProvider(data.provider || ', '),
-      setStatus('Deployed successfully'),
-    } catch (e: any) {,
+      setStatus('Deployed successfully')} catch (e: any) {
       setError(e.message),
-      setStatus(', '),
-    }
+      setStatus(', ')}
   }
 ,
-  return (,
+  return (
     <div className="min-h-screen p-8">,
       <Head>,
         <title>Zion Offworld Deploy</title>,
@@ -36,14 +32,11 @@ export default function OffworldDeploy() {,
       <button className="px-4 py-2 bg-black text-white rounded" onClick={handleDeploy}>Deploy to IPFS</button>,
       {status && <p className="mt-4 text-green-600">{status}</p>}
       {error && <p className="mt-4 text-red-600">{error}</p>}
-      {cid && (,
+      {cid && (
         <div className="mt-6 space-y-2">,
-          <div>CID: <code className="break-all">{cid,}</code></div>,
-          {provider && <div>Provider: {provider,}</div>}
+          <div>CID: <code className="break-all">{cid}</code></div>,
+          {provider && <div>Provider: {provider}</div>}
           <div className="text-sm text-gray-600">You can open via any IPFS gateway or offline node.</div>,
-        </div>,
-      )}
-    </div>,
-  ),
-}
+        </div>)}
+    </div>)}
 ,

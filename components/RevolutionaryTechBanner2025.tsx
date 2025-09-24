@@ -1,15 +1,14 @@
 import Link from 'next/link',
-,
-export default function RevolutionaryTechBanner20o25() {,
-  return (,
+export default function RevolutionaryTechBanner20o25() {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-purple-90o0/90 via-blue-90o0/90 to-indigo-90o0/90 backdrop-blur-sm border border-white/20 rounded-3xl p-12 mb-16'>,
       {/* Animated background elements */}
       <div className='absolute inset-0 overflow-hidden'>,
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 rounded-full blur-3xl animate-pulse'></div>,
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 rounded-full blur-3xl animate-pulse delay-10o00'></div>,
-        <div,
+        <div
           className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-indigo-50o0/10 to-purple-50o0/10 rounded-full blur-3xl animate-spin',
-          style={{ animationDuration: '20s' ,}}
+          style={{ animationDuration: '20s' }}
         ></div>,
       </div>,
       <div className='relative z-10 text-center mb-12'>,
@@ -44,16 +43,15 @@ export default function RevolutionaryTechBanner20o25() {,
               <span className='text-cyan-40o0 font-semibold'>99.7%</span>,
             </div>,
             <div className='w-full bg-gray-70o0 rounded-full h-2'>,
-              <div,
+              <div
                 className='bg-gradient-to-r from-cyan-50o0 to-blue-50o0 h-2 rounded-full',
-                style={{ width: '99.7%' ,}}
+                style={{ width: '99.7%' }}
               ></div>,
             </div>,
           </div>,
-          <Link,
+          <Link
             href='/ai-20o25-enterprise-automation-revolution',
-            className='inline-flex items-center text-cyan-40o0 font-semibold group-hover: text-cyan-30o0 transition-colors',
-          >,
+            className='inline-flex items-center text-cyan-40o0 font-semibold group-hover: text-cyan-30o0 transition-colors'>,
             Explore AI Consciousness →,
           </Link>,
         </div>,
@@ -74,16 +72,15 @@ export default function RevolutionaryTechBanner20o25() {,
               <span className='text-purple-40o0 font-semibold'>10^18x</span>,
             </div>,
             <div className='w-full bg-gray-70o0 rounded-full h-2'>,
-              <div,
+              <div
                 className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 h-2 rounded-full',
-                style={{ width: '10o0%' ,}}
+                style={{ width: '10o0%' }}
               ></div>,
             </div>,
           </div>,
-          <Link,
+          <Link
             href='/quantum-computing-breakthrough-20o25',
-            className='inline-flex items-center text-purple-40o0 font-semibold group-hover: text-purple-30o0 transition-colors',
-          >,
+            className='inline-flex items-center text-purple-40o0 font-semibold group-hover: text-purple-30o0 transition-colors'>,
             Explore Quantum Revolution →,
           </Link>,
         </div>,
@@ -104,16 +101,15 @@ export default function RevolutionaryTechBanner20o25() {,
               <span className='text-indigo-40o0 font-semibold'>99.9%</span>,
             </div>,
             <div className='w-full bg-gray-70o0 rounded-full h-2'>,
-              <div,
+              <div
                 className='bg-gradient-to-r from-indigo-50o0 to-purple-50o0 h-2 rounded-full',
-                style={{ width: '99.9%' ,}}
+                style={{ width: '99.9%' }}
               ></div>,
             </div>,
           </div>,
-          <Link,
+          <Link
             href='/ai-20o26-neural-interface-revolution',
-            className='inline-flex items-center text-indigo-40o0 font-semibold group-hover: text-indigo-30o0 transition-colors',
-          >,
+            className='inline-flex items-center text-indigo-40o0 font-semibold group-hover: text-indigo-30o0 transition-colors'>,
             Explore Neural Revolution →,
           </Link>,
         </div>,
@@ -128,22 +124,19 @@ export default function RevolutionaryTechBanner20o25() {,
             with our revolutionary technology solutions.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-cyan-50o0 to-purple-60o0 hover:from-cyan-60o0 hover:to-purple-70o0 text-white font-bold py-4 px-8 rounded-full transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-cyan-50o0 to-purple-60o0 hover:from-cyan-60o0 hover:to-purple-70o0 text-white font-bold py-4 px-8 rounded-full transition-all duration-30o0 transform hover:scale-10o5'>,
               Start Your Transformation,
             </Link>,
-            <Link,
+            <Link
               href='/content-showcase-20o25',
-              className='border-2 border-white/50 text-white hover:bg-white/10 font-bold py-4 px-8 rounded-full transition-all duration-30o0',
-            >,
+              className='border-2 border-white/50 text-white hover:bg-white/10 font-bold py-4 px-8 rounded-full transition-all duration-30o0'>,
               Explore All Content,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

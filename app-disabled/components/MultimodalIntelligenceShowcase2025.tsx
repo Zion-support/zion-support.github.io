@@ -1,130 +1,124 @@
 'use client',
-,
 import React, { useState } from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  Eye,;
-  Headphones,;
-  Camera,;
-  FileText,;
-  Activity,;
-  Zap,;
-  TrendingUp,;
-  Target,;
-  ChevronRight,;
-  Star,;
-  Award,;
-  Users,;
-  Clock,;
+import {
+  Eye;
+  Headphones;
+  Camera;
+  FileText;
+  Activity;
+  Zap;
+  TrendingUp;
+  Target;
+  ChevronRight;
+  Star;
+  Award;
+  Users;
+  Clock;
 } from 'lucide-react',
-,
-const MultimodalIntelligenceShowcase20o25: React.FC = () => {,
+const MultimodalIntelligenceShowcase20o25: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
-,
-  const contentItems = [,
-    {,
-      id: 1,;
-      type: 'blog',;
-      title: 'AI 20o25: The Multimodal Intelligence Revolution',;
-      subtitle: 'Ultimate Guide to 15,0o00% ROI',;
+  const contentItems = [
+    {
+      id: 1;
+      type: 'blog';
+      title: 'AI 20o25: The Multimodal Intelligence Revolution';
+      subtitle: 'Ultimate Guide to 15,0o00% ROI';
       description:,
-        'Transform your business with AI that processes text, images, audio, video, and sensor data simultaneously for unprecedented efficiency gains.',;
-      url: '/blog/ai-20o25-multimodal-intelligence-revolution-ultimate-guide',;
-      image: '/images/multimodal-ai-hero.jpg',;
-      metrics: {,
-        roi: '15,0o00%',;
-        efficiency: '2,40o0%',;
-        accuracy: '99.97%',;
-        timeline: '18 months',;
-      },;
-      tags: [,
-        'AI Revolution',;
-        'Multimodal AI',;
-        'ROI',;
-        'Business Transformation',;
-      ],;
-      readingTime: '25 min read',;
-      featured: true,;
-      categories: ['blog', 'featured'],;
-    },;
-    {,
-      id: 2,;
-      type: 'case-study',;
-      title: 'Fortune 50o0 Multimodal Intelligence Success',;
-      subtitle: '$45.2B Annual Savings - 15,0o00% ROI',;
+        'Transform your business with AI that processes text, images, audio, video, and sensor data simultaneously for unprecedented efficiency gains.';
+      url: '/blog/ai-20o25-multimodal-intelligence-revolution-ultimate-guide';
+      image: '/images/multimodal-ai-hero.jpg';
+      metrics: {
+        roi: '15,0o00%';
+        efficiency: '2,40o0%';
+        accuracy: '99.97%';
+        timeline: '18 months';
+      };
+      tags: [
+        'AI Revolution';
+        'Multimodal AI';
+        'ROI';
+        'Business Transformation';
+      ];
+      readingTime: '25 min read';
+      featured: true;
+      categories: ['blog', 'featured'];
+    };
+    {
+      id: 2;
+      type: 'case-study';
+      title: 'Fortune 50o0 Multimodal Intelligence Success';
+      subtitle: '$45.2B Annual Savings - 15,0o00% ROI';
       description:,
-        'Discover how TechGlobal Industries achieved unprecedented success through multimodal AI implementation, delivering massive operational savings and efficiency gains.',;
-      url: '/case-studies/fortune-50o0-multimodal-intelligence-150o00-roi-success-story',;
-      image: '/images/fortune-50o0-success.jpg',;
-      metrics: {,
-        savings: '$45.2B',;
-        roi: '15,0o00%',;
-        accuracy: '99.97%',;
-        efficiency: '2,40o0%',;
-      },;
-      tags: ['Case Study', 'Fortune 50o0', 'Success Story', 'ROI'],;
-      readingTime: '22 min read',;
-      featured: true,;
-      categories: ['case-study', 'featured'],;
-    },;
-    {,
-      id: 3,;
-      type: 'resource',;
-      title: 'Multimodal Intelligence Implementation Guide',;
-      subtitle: 'Complete Roadmap to 15,0o00% ROI',;
+        'Discover how TechGlobal Industries achieved unprecedented success through multimodal AI implementation, delivering massive operational savings and efficiency gains.';
+      url: '/case-studies/fortune-50o0-multimodal-intelligence-150o00-roi-success-story';
+      image: '/images/fortune-50o0-success.jpg';
+      metrics: {
+        savings: '$45.2B';
+        roi: '15,0o00%';
+        accuracy: '99.97%';
+        efficiency: '2,40o0%';
+      };
+      tags: ['Case Study', 'Fortune 50o0', 'Success Story', 'ROI'];
+      readingTime: '22 min read';
+      featured: true;
+      categories: ['case-study', 'featured'];
+    };
+    {
+      id: 3;
+      type: 'resource';
+      title: 'Multimodal Intelligence Implementation Guide';
+      subtitle: 'Complete Roadmap to 15,0o00% ROI';
       description:,
-        'Step-by-step implementation guide covering everything from initial assessment to full deployment, with proven frameworks for achieving maximum ROI.',;
-      url: '/resources/multimodal-intelligence-implementation-guide-20o25',;
-      image: '/images/implementation-guide.jpg',;
-      metrics: {,
-        success: '94%',;
-        timeline: '18 months',;
-        roi: '15,0o00%',;
-        guide: 'Complete',;
-      },;
-      tags: ['Implementation Guide', 'ROI', 'Strategy', 'Framework'],;
-      readingTime: '35 min read',;
-      featured: true,;
-      categories: ['resource', 'featured'],;
-    },;
+        'Step-by-step implementation guide covering everything from initial assessment to full deployment, with proven frameworks for achieving maximum ROI.';
+      url: '/resources/multimodal-intelligence-implementation-guide-20o25';
+      image: '/images/implementation-guide.jpg';
+      metrics: {
+        success: '94%';
+        timeline: '18 months';
+        roi: '15,0o00%';
+        guide: 'Complete';
+      };
+      tags: ['Implementation Guide', 'ROI', 'Strategy', 'Framework'];
+      readingTime: '35 min read';
+      featured: true;
+      categories: ['resource', 'featured'];
+    };
   ],
-,
-  const filters = [,
-    { id: 'all', label: 'All Content', count: contentItems.length ,},;
-    {,
-      id: 'blog',;
-      label: 'Blog Posts',;
+  const filters = [
+    { id: 'all', label: 'All Content', count: contentItems.length };
+    {
+      id: 'blog';
+      label: 'Blog Posts';
       count: contentItems.filter(item => item.categories.includes('blog')),
-        .length,;
-    },;
-    {,
-      id: 'case-study',;
-      label: 'Case Studies',;
+        .length;
+    };
+    {
+      id: 'case-study';
+      label: 'Case Studies';
       count: contentItems.filter(item => item.categories.includes('case-study')),
-        .length,;
-    },;
-    {,
-      id: 'resource',;
-      label: 'Resources',;
+        .length;
+    };
+    {
+      id: 'resource';
+      label: 'Resources';
       count: contentItems.filter(item => item.categories.includes('resource')),
-        .length,;
-    },;
-    {,
-      id: 'featured',;
-      label: 'Featured',;
+        .length;
+    };
+    {
+      id: 'featured';
+      label: 'Featured';
       count: contentItems.filter(item => item.categories.includes('featured')),
-        .length,;
-    },;
+        .length;
+    };
   ],
-,
   const filteredItems =,
     activeFilter === 'all',
       ? contentItems,
       : contentItems.filter(item => item.categories.includes(activeFilter)),
-,
-  const getTypeIcon = (type: string) => {,
-    switch (type) {,
+  const getTypeIcon = (type: string) => {
+    switch (type) {
       case 'blog':,
         return <FileText className='w-5 h-5' />,
       case 'case-study':,
@@ -133,11 +127,10 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {,
         return <Award className='w-5 h-5' />,
       default:,
         return <FileText className='w-5 h-5' />,
-    ,}
+    }
   };
-,
-  const getTypeColor = (type: string) => {,
-    switch (type) {,
+  const getTypeColor = (type: string) => {
+    switch (type) {
       case 'blog':,
         return 'bg-blue-50o0',
       case 'case-study':,
@@ -146,20 +139,18 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {,
         return 'bg-purple-50o0',
       default:,
         return 'bg-gray-50o0',
-    ,}
+    }
   };
-,
-  return (,
+  return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.6 ,}}
-          viewport={{ once: true ,}}
-          className='text-center mb-12',
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className='text-center mb-12'>,
           <div className='inline-flex items-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-6 py-2 rounded-full text-sm font-medium mb-4'>,
             <Zap className='w-4 h-4 mr-2' />,
             NEW: Multimodal Intelligence Revolution,
@@ -167,13 +158,13 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {,
           <h2 className='text-4xl md:text-5xl font-bold text-gray-90o0 mb-6'>,
             Transform Your Business with,
             <span className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 bg-clip-text text-transparent'>,
-              {' ',}
+              {' '}
               Multimodal AI,
             </span>,
           </h2>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto mb-8'>,
             Discover how leading enterprises are achieving 15,0o00% ROI through,
-            AI systems that simultaneously process text, images, audio, video,;
+            AI systems that simultaneously process text, images, audio, video;
             and sensor data for unprecedented business transformation.,
           </p>,
           {/* Key Stats */}
@@ -204,65 +195,59 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {,
         </motion.div>,
         {/* Filters */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.6, delay: 0.2 ,}}
-          viewport={{ once: true ,}}
-          className='flex flex-wrap justify-center gap-4 mb-12',
-        >,
-          {filters.map(filter => (,
-            <button,
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className='flex flex-wrap justify-center gap-4 mb-12'>,
+          {filters.map(filter => (
+            <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${,
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                 activeFilter === filter.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
                   : 'bg-white text-gray-60o0 hover: bg-gray-10o0 shadow-md',
-              ,}`}
+              }`}
             >,
               {filter.label}
-              <span,
-                className={`ml-2 px-2 py-1 rounded-full text-xs ${,
-                  activeFilter === filter.id ? 'bg-white/20' : 'bg-gray-20o0',
-                }`}
+              <span
+                className={`ml-2 px-2 py-1 rounded-full text-xs ${
+                  activeFilter === filter.id ? 'bg-white/20' : 'bg-gray-20o0'}`}
               >,
                 {filter.count}
               </span>,
-            </button>,
-          ))}
+            </button>))}
         </motion.div>,
         {/* Content Grid */}
         <motion.div,
-          initial={{ opacity: 0 ,}}
-          whileInView={{ opacity: 1 ,}}
-          transition={{ duration: 0.6, delay: 0.4 ,}}
-          viewport={{ once: true ,}}
-          className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8',
-        >,
-          {filteredItems.map((item, index) => (,
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
+          {filteredItems.map((item, index) => (
             <motion.div,
               key={item.id}
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: index * 0.1 ,}}
-              viewport={{ once: true ,}}
-              className='group bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-50o0 overflow-hidden border border-gray-10o0',
-            >,
-              {/* Image */,}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className='group bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-50o0 overflow-hidden border border-gray-10o0'>,
+              {/* Image */}
               <div className='relative h-48 bg-gradient-to-br from-purple-50o0 to-blue-60o0 overflow-hidden'>,
                 <div className='absolute inset-0 bg-black/20'></div>,
                 <div className='absolute top-4 left-4 flex items-center space-x-2'>,
-                  <div,
+                  <div
                     className={`p-2 rounded-lg bg-white/20 text-white ${getTypeColor(item.type)}`}
                   >,
                     {getTypeIcon(item.type)}
                   </div>,
-                  {item.featured && (,
+                  {item.featured && (
                     <div className='bg-yellow-50o0 text-white px-2 py-1 rounded-full text-xs font-medium flex items-center'>,
                       <Star className='w-3 h-3 mr-1 fill-current' />,
                       Featured,
-                    </div>,
-                  )}
+                    </div>)}
                 </div>,
                 {/* Multimodal Icons */}
                 <div className='absolute bottom-4 right-4 flex space-x-2'>,
@@ -286,7 +271,7 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {,
               {/* Content */}
               <div className='p-6'>,
                 <div className='flex items-center justify-between mb-3'>,
-                  <span,
+                  <span
                     className={`px-3 py-1 rounded-full text-xs font-medium text-white ${getTypeColor(item.type)}`}
                   >,
                     {item.type.replace('-', ' ').toUpperCase()}
@@ -297,7 +282,7 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {,
                   </div>,
                 </div>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-2 group-hover: text-purple-60o0 transition-colors duration-30o0'>,
-                  {item.title,}
+                  {item.title}
                 </h3>,
                 <p className='text-purple-60o0 font-semibold mb-3'>,
                   {item.subtitle}
@@ -309,7 +294,7 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {,
                 <div className='grid grid-cols-2 gap-3 mb-4'>,
                   {Object.entries(item.metrics),
                     .slice(0, 4),
-                    .map(([key, value]) => (,
+                    .map(([key, value]) => (
                       <div key={key} className='bg-gray-50 p-3 rounded-lg'>,
                         <div className='text-sm font-semibold text-gray-90o0'>,
                           {value}
@@ -317,40 +302,34 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {,
                         <div className='text-xs text-gray-50o0 capitalize'>,
                           {key.replace(/([A-Z])/g, ' $1').trim()}
                         </div>,
-                      </div>,
-                    ))}
+                      </div>))}
                 </div>,
                 {/* Tags */}
                 <div className='flex flex-wrap gap-2 mb-4'>,
-                  {item.tags.slice(0, 3).map(tag => (,
-                    <span,
+                  {item.tags.slice(0, 3).map(tag => (
+                    <span
                       key={tag}
-                      className='px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded-full',
-                    >,
+                      className='px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded-full'>,
                       {tag}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
                 {/* CTA */}
-                <Link,
+                <Link
                   href={item.url}
-                  className='inline-flex items-center justify-center w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover: from-purple-70o0 hover:to-blue-70o0 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 transform group-hover:scale-10o5 shadow-lg',
-                >,
+                  className='inline-flex items-center justify-center w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover: from-purple-70o0 hover:to-blue-70o0 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 transform group-hover:scale-10o5 shadow-lg'>,
                   Explore Content,
                   <ChevronRight className='w-4 h-4 ml-2' />,
                 </Link>,
               </div>,
-            </motion.div>,
-          )),}
+            </motion.div>))}
         </motion.div>,
         {/* Bottom CTA */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.6, delay: 0.6 ,}}
-          viewport={{ once: true ,}}
-          className='mt-16 text-center',
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}
+          className='mt-16 text-center'>,
           <div className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white'>,
             <h3 className='text-2xl font-bold mb-4'>,
               Ready to Transform Your Business with Multimodal AI?,
@@ -361,17 +340,15 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {,
               roadmap today.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors duration-30o0 flex items-center justify-center',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors duration-30o0 flex items-center justify-center'>,
                 <Award className='w-5 h-5 mr-2' />,
                 Get Free Assessment,
               </Link>,
-              <Link,
+              <Link
                 href='/services/ai-consulting',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors duration-30o0 flex items-center justify-center',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors duration-30o0 flex items-center justify-center'>,
                 <Users className='w-5 h-5 mr-2' />,
                 Speak with Experts,
               </Link>,
@@ -379,9 +356,6 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {,
           </div>,
         </motion.div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default MultimodalIntelligenceShowcase20o25,
-,
+    </section>),
+};
+export default MultimodalIntelligenceShowcase20o25;

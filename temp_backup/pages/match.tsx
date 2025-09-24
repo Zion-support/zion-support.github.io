@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function MatchPage() {,
-  return (,
+export default function MatchPage() {
+  return (
     <>,
       <Head>,
         <title>Match - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function MatchPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

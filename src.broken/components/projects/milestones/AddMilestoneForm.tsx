@@ -1,9 +1,7 @@
-export function AddMilestoneForm() {,
-  return (,
+export function AddMilestoneForm() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

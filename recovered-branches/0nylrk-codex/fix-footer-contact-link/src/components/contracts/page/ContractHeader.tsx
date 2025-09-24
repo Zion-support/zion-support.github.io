@@ -1,11 +1,10 @@
 import { Button } from '@/components/ui/button',
-,
-interface ContractHeaderProps {,
+interface ContractHeaderProps {
   onCreateClick: () => void,
-,}
+}
 ,
-export function ContractHeader({ onCreateClick }: ContractHeaderProps) {,
-  return (,
+export function ContractHeader({ onCreateClick }: ContractHeaderProps) {
+  return (
     <div className='flex justify-between items-center mb-8'>,
       <div>,
         <h1 className='text-3xl font-bold'>Smart Contract Builder</h1>,
@@ -16,7 +15,5 @@ export function ContractHeader({ onCreateClick }: ContractHeaderProps) {,
       <Button size='lg' onClick={onCreateClick}>,
         Create New Contract,
       </Button>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

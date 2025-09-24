@@ -1,7 +1,6 @@
 'use client',
-,
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <div className='max-w-3xl mx-auto py-16 px-4'>,
       <h1 className='text-3xl font-bold'>,
         AI 2025 Ultimate Implementation Master Guide,
@@ -10,7 +9,5 @@ export default function Page() {,
         This guide is temporarily simplified while we resolve content merge,
         issues.,
       </p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

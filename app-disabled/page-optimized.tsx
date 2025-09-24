@@ -6,66 +6,63 @@ import MobileResponsiveLayout from '../components/MobileResponsiveLayout',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import ContentManager from '../components/ContentManager',
 import InteractiveFeatures from '../components/InteractiveFeatures',
-,
 // Lazy load heavy components,
 const ROICalculator = React.lazy(() => import('../components/ROICalculator')),
 const StructuredData = React.lazy(() => import('../components/StructuredData')),
-,
-const HomePage: React.FC = () => {,
-  const seoData = {,
+const HomePage: React.FC = () => {
+  const seoData = {
     title:,
-      'AI Innovation Hub 20o25 - Revolutionary AI Solutions with 5,0o00% ROI',;
+      'AI Innovation Hub 20o25 - Revolutionary AI Solutions with 5,0o00% ROI';
     description:,
-      'Discover the most advanced AI solutions delivering 5,0o00% to 25,0o00% ROI. Fortune 50o0 success stories, implementation guides, and cutting-edge AI technology for enterprise transformation.',;
-    keywords: [,
-      'AI Innovation',;
-      'Artificial Intelligence',;
-      'ROI Calculator',;
-      'Business Intelligence',;
-      'AI Implementation',;
-      'Enterprise AI',;
-      'Quantum AI',;
-      'Autonomous Systems',;
-      'AI Transformation',;
-      'Machine Learning',;
-      'Deep Learning',;
-      'Neural Networks',;
-      'AI Solutions',;
-      'AI Consulting',;
-      'AI Technology',;
-      'AI Revolution',;
-      'AI Breakthrough',;
-      'AI Success Stories',;
-      'AI Case Studies',;
-      'AI Resources',;
-    ],;
-    canonicalUrl: 'https://zion.app',;
-    ogImage: '/images/ai-innovation-hub-og.jpg',;
-    ogType: 'website',;
-    structuredData: {,
-      '@context': 'https://schema.org',;
-      '@type': 'WebSite',;
-      name: 'AI Innovation Hub',;
-      url: 'https://zion.app',;
+      'Discover the most advanced AI solutions delivering 5,0o00% to 25,0o00% ROI. Fortune 50o0 success stories, implementation guides, and cutting-edge AI technology for enterprise transformation.';
+    keywords: [
+      'AI Innovation';
+      'Artificial Intelligence';
+      'ROI Calculator';
+      'Business Intelligence';
+      'AI Implementation';
+      'Enterprise AI';
+      'Quantum AI';
+      'Autonomous Systems';
+      'AI Transformation';
+      'Machine Learning';
+      'Deep Learning';
+      'Neural Networks';
+      'AI Solutions';
+      'AI Consulting';
+      'AI Technology';
+      'AI Revolution';
+      'AI Breakthrough';
+      'AI Success Stories';
+      'AI Case Studies';
+      'AI Resources';
+    ];
+    canonicalUrl: 'https://zion.app';
+    ogImage: '/images/ai-innovation-hub-og.jpg';
+    ogType: 'website';
+    structuredData: {
+      '@context': 'https://schema.org';
+      '@type': 'WebSite';
+      name: 'AI Innovation Hub';
+      url: 'https://zion.app';
       description:,
-        'Revolutionary AI solutions delivering unprecedented ROI and business transformation',;
-      potentialAction: {,
-        '@type': 'SearchAction',;
-        target: 'https://zion.app/search?q={search_term_string,}',;
-        'query-input': 'required name=search_term_string',;
-      },;
-    },;
+        'Revolutionary AI solutions delivering unprecedented ROI and business transformation';
+      potentialAction: {
+        '@type': 'SearchAction';
+        target: 'https://zion.app/search?q={search_term_string}';
+        'query-input': 'required name=search_term_string';
+      };
+    };
   };
-,
-  return (,
+  return (
     <>,
       <SEOOptimizer seoData={seoData}>,
-        <PerformanceOptimizer,
+        <PerformanceOptimizer
           enableMetrics={true}
           enableLazyLoading={true}
           enablePreloading={true}
         >,
-          <MobileResponsiveLayout,
+          <MobileResponsiveLayout
             enableMobileOptimization={true}
             enableTouchGestures={true}
             enableSwipeNavigation={true}
@@ -87,7 +84,7 @@ const HomePage: React.FC = () => {,
                     Join Fortune 50o0 companies achieving unprecedented success,
                     through our proven AI implementation framework.,
                   </p>,
-                  {/* Key Metrics */,}
+                  {/* Key Metrics */}
                   <div className='grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-6 mb-12'>,
                     <div className='bg-white p-6 rounded-xl shadow-lg'>,
                       <div className='text-3xl font-bold text-green-60o0'>,
@@ -116,40 +113,36 @@ const HomePage: React.FC = () => {,
                   </div>,
                   {/* CTA Buttons */}
                   <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                    <a,
+                    <a
                       href='/calculator',
-                      className='inline-flex items-center px-8 py-4 bg-blue-60o0 text-white font-semibold rounded-lg hover:bg-blue-70o0 transition-colors',
-                    >,
+                      className='inline-flex items-center px-8 py-4 bg-blue-60o0 text-white font-semibold rounded-lg hover:bg-blue-70o0 transition-colors'>,
                       Calculate Your ROI,
-                      <svg,
+                      <svg
                         className='ml-2 h-5 w-5',
                         fill='none',
                         stroke='currentColor',
-                        viewBox='0 0 24 24',
-                      >,
-                        <path,
+                        viewBox='0 0 24 24'>,
+                        <path
                           strokeLinecap='round',
                           strokeLinejoin='round',
-                          strokeWidth={2,}
+                          strokeWidth={2}
                           d='M9 5l7 7-7 7',
                         />,
                       </svg>,
                     </a>,
-                    <a,
+                    <a
                       href='/content',
-                      className='inline-flex items-center px-8 py-4 bg-white text-blue-60o0 font-semibold rounded-lg border-2 border-blue-60o0 hover: bg-blue-50 transition-colors',
-                    >,
+                      className='inline-flex items-center px-8 py-4 bg-white text-blue-60o0 font-semibold rounded-lg border-2 border-blue-60o0 hover: bg-blue-50 transition-colors'>,
                       Explore Content,
-                      <svg,
+                      <svg
                         className='ml-2 h-5 w-5',
                         fill='none',
                         stroke='currentColor',
-                        viewBox='0 0 24 24',
-                      >,
-                        <path,
+                        viewBox='0 0 24 24'>,
+                        <path
                           strokeLinecap='round',
                           strokeLinejoin='round',
-                          strokeWidth={2,}
+                          strokeWidth={2}
                           d='M13 7l5 5m0 0l-5 5m5-5H6',
                         />,
                       </svg>,
@@ -159,7 +152,7 @@ const HomePage: React.FC = () => {,
               </section>,
               {/* Content Hub */}
               <section className='py-20 bg-white'>,
-                <ContentManager,
+                <ContentManager
                   showFilters={true}
                   showMetrics={true}
                   maxItems={12}
@@ -304,22 +297,20 @@ const HomePage: React.FC = () => {,
                     with AI Innovation Hub.,
                   </p>,
                   <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-                    <a,
+                    <a
                       href='/contact',
-                      className='inline-flex items-center px-8 py-4 bg-white text-blue-60o0 font-semibold rounded-lg hover:bg-gray-10o0 transition-colors',
-                    >,
+                      className='inline-flex items-center px-8 py-4 bg-white text-blue-60o0 font-semibold rounded-lg hover:bg-gray-10o0 transition-colors'>,
                       Get Started Today,
                     </a>,
-                    <a,
+                    <a
                       href='/calculator',
-                      className='inline-flex items-center px-8 py-4 bg-transparent text-white font-semibold rounded-lg border-2 border-white hover:bg-white hover:text-blue-60o0 transition-colors',
-                    >,
+                      className='inline-flex items-center px-8 py-4 bg-transparent text-white font-semibold rounded-lg border-2 border-white hover:bg-white hover:text-blue-60o0 transition-colors'>,
                       Calculate Your ROI,
                     </a>,
                   </div>,
                 </div>,
               </section>,
-              {/* Footer */,}
+              {/* Footer */}
               <footer className='bg-gray-90o0 text-white py-12'>,
                 <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
                   <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>,
@@ -356,26 +347,23 @@ const HomePage: React.FC = () => {,
                       <h4 className='text-lg font-semibold mb-4'>Services</h4>,
                       <ul className='space-y-2 text-gray-40o0'>,
                         <li>,
-                          <a,
+                          <a
                             href='/services/business-intelligence',
-                            className='hover:text-white',
-                          >,
+                            className='hover:text-white'>,
                             Business Intelligence,
                           </a>,
                         </li>,
                         <li>,
-                          <a,
+                          <a
                             href='/services/automation',
-                            className='hover:text-white',
-                          >,
+                            className='hover:text-white'>,
                             Automation,
                           </a>,
                         </li>,
                         <li>,
-                          <a,
+                          <a
                             href='/services/quantum-ai',
-                            className='hover:text-white',
-                          >,
+                            className='hover:text-white'>,
                             Quantum AI,
                           </a>,
                         </li>,
@@ -408,8 +396,8 @@ const HomePage: React.FC = () => {,
                 </div>,
               </footer>,
             </div>,
-            {/* Interactive Features */,}
-            <InteractiveFeatures,
+            {/* Interactive Features */}
+            <InteractiveFeatures
               enableROICalculator={true}
               enableContentRecommendations={true}
               enableLiveChat={true}
@@ -423,9 +411,5 @@ const HomePage: React.FC = () => {,
           </MobileResponsiveLayout>,
         </PerformanceOptimizer>,
       </SEOOptimizer>,
-    </>,
-  ),
-};
-,
-export default HomePage,
-,
+    </>)};
+export default HomePage;

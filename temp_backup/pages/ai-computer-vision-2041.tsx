@@ -1,19 +1,18 @@
 import Layout from '../components/layout/Layout',
-import {,
-  Eye,;
-  Sparkles,;
-  Zap,;
-  Target,;
-  Camera,;
-  Clock,;
-  CheckCircle,;
-  Image,;
-  Video,;
-  Search,;
+import {
+  Eye;
+  Sparkles;
+  Zap;
+  Target;
+  Camera;
+  Clock;
+  CheckCircle;
+  Image;
+  Video;
+  Search;
 } from 'lucide-react',
-,
-export default function AIComputerVision20o41() {,
-  return (,
+export default function AIComputerVision20o41() {
+  return (
     <Layout>,
       <div className='min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-black'>,
         {/* Hero Section */}
@@ -48,7 +47,7 @@ export default function AIComputerVision20o41() {,
             </div>,
           </div>,
         </section>,
-        {/* Features Grid */,}
+        {/* Features Grid */}
         <section className='py-20 px-4'>,
           <div className='max-w-7xl mx-auto'>,
             <div className='text-center mb-16'>,
@@ -62,56 +61,55 @@ export default function AIComputerVision20o41() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {[,
-                {,
-                  icon: <Eye className='w-8 h-8' />,;
-                  title: 'Advanced Object Detection',;
+              {[
+                {
+                  icon: <Eye className='w-8 h-8' />;
+                  title: 'Advanced Object Detection';
                   description:,
-                    'AI systems that identify and locate objects in images and video with pixel-perfect accuracy.',;
-                  color: 'from-violet-50o0 to-purple-50o0',;
-                },;
-                {,
-                  icon: <Image className='w-8 h-8' />,;
-                  title: 'Image Recognition',;
+                    'AI systems that identify and locate objects in images and video with pixel-perfect accuracy.';
+                  color: 'from-violet-50o0 to-purple-50o0';
+                };
+                {
+                  icon: <Image className='w-8 h-8' />;
+                  title: 'Image Recognition';
                   description:,
-                    'Deep understanding of image content, context, and meaning with human-like comprehension.',;
-                  color: 'from-blue-50o0 to-cyan-50o0',;
-                },;
-                {,
-                  icon: <Video className='w-8 h-8' />,;
-                  title: 'Video Analysis',;
+                    'Deep understanding of image content, context, and meaning with human-like comprehension.';
+                  color: 'from-blue-50o0 to-cyan-50o0';
+                };
+                {
+                  icon: <Video className='w-8 h-8' />;
+                  title: 'Video Analysis';
                   description:,
-                    'Real-time video processing and analysis for motion detection and activity recognition.',;
-                  color: 'from-green-50o0 to-emerald-50o0',;
-                },;
-                {,
-                  icon: <Search className='w-8 h-8' />,;
-                  title: 'Visual Search',;
+                    'Real-time video processing and analysis for motion detection and activity recognition.';
+                  color: 'from-green-50o0 to-emerald-50o0';
+                };
+                {
+                  icon: <Search className='w-8 h-8' />;
+                  title: 'Visual Search';
                   description:,
-                    'Find similar images and objects across massive visual databases instantly.',;
-                  color: 'from-yellow-50o0 to-orange-50o0',;
-                },;
-                {,
-                  icon: <Zap className='w-8 h-8' />,;
-                  title: 'Real-time Processing',;
+                    'Find similar images and objects across massive visual databases instantly.';
+                  color: 'from-yellow-50o0 to-orange-50o0';
+                };
+                {
+                  icon: <Zap className='w-8 h-8' />;
+                  title: 'Real-time Processing';
                   description:,
-                    'Instant visual analysis and response with minimal latency for live applications.',;
-                  color: 'from-red-50o0 to-pink-50o0',;
-                },;
-                {,
-                  icon: <Target className='w-8 h-8' />,;
-                  title: 'Facial Recognition',;
+                    'Instant visual analysis and response with minimal latency for live applications.';
+                  color: 'from-red-50o0 to-pink-50o0';
+                };
+                {
+                  icon: <Target className='w-8 h-8' />;
+                  title: 'Facial Recognition';
                   description:,
-                    'Advanced facial analysis and recognition with emotion and expression understanding.',;
-                  color: 'from-indigo-50o0 to-purple-50o0',;
-                },;
-              ].map((feature, index) => (,
-                <div,
+                    'Advanced facial analysis and recognition with emotion and expression understanding.';
+                  color: 'from-indigo-50o0 to-purple-50o0';
+                };
+              ].map((feature, index) => (
+                <div
                   key={index}
-                  className='group p-8 bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 border border-gray-70o0/50 rounded-2xl hover: border-violet-50o0/50 transition-all duration-30o0 hover:transform hover:scale-10o5',
-                >,
-                  <div,
-                    className={`w-16 h-16 bg-gradient-to-r ${feature.color,} rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-30o0`,}
+                  className='group p-8 bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 border border-gray-70o0/50 rounded-2xl hover: border-violet-50o0/50 transition-all duration-30o0 hover:transform hover:scale-10o5'>,
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-30o0`}
                   >,
                     {feature.icon}
                   </div>,
@@ -121,8 +119,7 @@ export default function AIComputerVision20o41() {,
                   <p className='text-gray-40o0 leading-relaxed'>,
                     {feature.description}
                   </p>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -139,53 +136,51 @@ export default function AIComputerVision20o41() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>,
-              {[,
-                {,
-                  name: 'Object Detection',;
+              {[
+                {
+                  name: 'Object Detection';
                   description:,
-                    'Identify and locate objects in images and video',;
-                },;
-                {,
-                  name: 'Image Classification',;
-                  description: 'Categorize images into predefined classes',;
-                },;
-                {,
-                  name: 'Semantic Segmentation',;
-                  description: 'Pixel-level understanding of image content',;
-                },;
-                {,
-                  name: 'Instance Segmentation',;
-                  description: 'Individual object instance identification',;
-                },;
-                {,
-                  name: 'Facial Recognition',;
-                  description: 'Identify and analyze human faces',;
-                },;
-                {,
-                  name: 'Optical Character Recognition',;
-                  description: 'Extract text from images and documents',;
-                },;
-                {,
-                  name: 'Motion Detection',;
-                  description: 'Detect and track movement in video',;
-                },;
-                {,
-                  name: 'Image Generation',;
-                  description: 'Create and modify images with AI',;
-                },;
-              ].map((capability, index) => (,
-                <div,
+                    'Identify and locate objects in images and video';
+                };
+                {
+                  name: 'Image Classification';
+                  description: 'Categorize images into predefined classes';
+                };
+                {
+                  name: 'Semantic Segmentation';
+                  description: 'Pixel-level understanding of image content';
+                };
+                {
+                  name: 'Instance Segmentation';
+                  description: 'Individual object instance identification';
+                };
+                {
+                  name: 'Facial Recognition';
+                  description: 'Identify and analyze human faces';
+                };
+                {
+                  name: 'Optical Character Recognition';
+                  description: 'Extract text from images and documents';
+                };
+                {
+                  name: 'Motion Detection';
+                  description: 'Detect and track movement in video';
+                };
+                {
+                  name: 'Image Generation';
+                  description: 'Create and modify images with AI';
+                };
+              ].map((capability, index) => (
+                <div
                   key={index}
-                  className='p-6 bg-white/5 border border-white/10 rounded-xl hover: border-violet-50o0/30 transition-all duration-30o0',
-                >,
+                  className='p-6 bg-white/5 border border-white/10 rounded-xl hover: border-violet-50o0/30 transition-all duration-30o0'>,
                   <h3 className='text-lg font-semibold text-white mb-2'>,
-                    {capability.name,}
+                    {capability.name}
                   </h3>,
                   <p className='text-gray-40o0 text-sm'>,
                     {capability.description}
                   </p>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -202,65 +197,64 @@ export default function AIComputerVision20o41() {,
               </p>,
             </div>,
             <div className='space-y-8'>,
-              {[,
-                {,
-                  phase: 'Image Input',;
+              {[
+                {
+                  phase: 'Image Input';
                   description:,
-                    'AI receives and preprocesses images and video from various sources and formats',;
-                  features: [,
-                    'Image preprocessing',;
-                    'Format normalization',;
-                    'Quality enhancement',;
-                  ],;
-                },;
-                {,
-                  phase: 'Feature Extraction',;
+                    'AI receives and preprocesses images and video from various sources and formats';
+                  features: [
+                    'Image preprocessing';
+                    'Format normalization';
+                    'Quality enhancement';
+                  ];
+                };
+                {
+                  phase: 'Feature Extraction';
                   description:,
-                    'Advanced algorithms extract meaningful features and patterns from visual data',;
-                  features: [,
-                    'Feature detection',;
-                    'Pattern recognition',;
-                    'Edge detection',;
-                  ],;
-                },;
-                {,
-                  phase: 'Object Recognition',;
+                    'Advanced algorithms extract meaningful features and patterns from visual data';
+                  features: [
+                    'Feature detection';
+                    'Pattern recognition';
+                    'Edge detection';
+                  ];
+                };
+                {
+                  phase: 'Object Recognition';
                   description:,
-                    'AI identifies and classifies objects, people, and scenes in images',;
-                  features: [,
-                    'Object detection',;
-                    'Classification',;
-                    'Localization',;
-                  ],;
-                },;
-                {,
-                  phase: 'Context Understanding',;
+                    'AI identifies and classifies objects, people, and scenes in images';
+                  features: [
+                    'Object detection';
+                    'Classification';
+                    'Localization';
+                  ];
+                };
+                {
+                  phase: 'Context Understanding';
                   description:,
-                    'Deep understanding of visual context, relationships, and meaning',;
-                  features: [,
-                    'Scene analysis',;
-                    'Context interpretation',;
-                    'Relationship mapping',;
-                  ],;
-                },;
-                {,
-                  phase: 'Response Generation',;
+                    'Deep understanding of visual context, relationships, and meaning';
+                  features: [
+                    'Scene analysis';
+                    'Context interpretation';
+                    'Relationship mapping';
+                  ];
+                };
+                {
+                  phase: 'Response Generation';
                   description:,
-                    'Intelligent generation of insights, annotations, and actions based on visual analysis',;
-                  features: [,
-                    'Insight generation',;
-                    'Action recommendations',;
-                    'Visual feedback',;
-                  ],;
-                },;
-              ].map((phase, index) => (,
-                <div,
+                    'Intelligent generation of insights, annotations, and actions based on visual analysis';
+                  features: [
+                    'Insight generation';
+                    'Action recommendations';
+                    'Visual feedback';
+                  ];
+                };
+              ].map((phase, index) => (
+                <div
                   key={index}
-                  className='flex flex-col lg: flex-row items-center gap-8 p-8 bg-gradient-to-r from-gray-80o0/50 to-gray-90o0/50 border border-gray-70o0/50 rounded-2xl',
-                >,
+                  className='flex flex-col lg: flex-row items-center gap-8 p-8 bg-gradient-to-r from-gray-80o0/50 to-gray-90o0/50 border border-gray-70o0/50 rounded-2xl'>,
                   <div className='lg:w-1/3 text-center lg:text-left'>,
                     <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-violet-50o0 to-purple-50o0 rounded-full text-white text-2xl font-bold mb-4'>,
-                      {index + 1,}
+                      {index + 1}
                     </div>,
                     <h3 className='text-2xl font-semibold text-white mb-3'>,
                       {phase.phase}
@@ -269,21 +263,18 @@ export default function AIComputerVision20o41() {,
                   </div>,
                   <div className='lg: w-2/3'>,
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>,
-                      {phase.features.map((feature, featureIndex) => (,
-                        <div,
+                      {phase.features.map((feature, featureIndex) => (
+                        <div
                           key={featureIndex}
-                          className='flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-lg',
-                        >,
+                          className='flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-lg'>,
                           <CheckCircle className='w-5 h-5 text-violet-40o0 flex-shrink-0' />,
                           <span className='text-gray-30o0 text-sm'>,
                             {feature}
                           </span>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -300,88 +291,85 @@ export default function AIComputerVision20o41() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {[,
-                {,
-                  category: 'Object Detection',;
+              {[
+                {
+                  category: 'Object Detection';
                   description:,
-                    'Models for detecting and localizing objects in images and video with high accuracy.',;
-                  models: [,
-                    'YOLO',;
-                    'Faster R-CNN',;
-                    'SSD',;
-                    'RetinaNet',;
-                    'EfficientDet',;
-                  ],;
-                },;
-                {,
-                  category: 'Image Classification',;
+                    'Models for detecting and localizing objects in images and video with high accuracy.';
+                  models: [
+                    'YOLO';
+                    'Faster R-CNN';
+                    'SSD';
+                    'RetinaNet';
+                    'EfficientDet';
+                  ];
+                };
+                {
+                  category: 'Image Classification';
                   description:,
-                    'Models for categorizing images into predefined classes and categories.',;
-                  models: [,
-                    'ResNet',;
-                    'EfficientNet',;
-                    'Vision Transformer',;
-                    'ConvNeXt',;
-                    'Swin Transformer',;
-                  ],;
-                },;
-                {,
-                  category: 'Semantic Segmentation',;
+                    'Models for categorizing images into predefined classes and categories.';
+                  models: [
+                    'ResNet';
+                    'EfficientNet';
+                    'Vision Transformer';
+                    'ConvNeXt';
+                    'Swin Transformer';
+                  ];
+                };
+                {
+                  category: 'Semantic Segmentation';
                   description:,
-                    'Models for pixel-level understanding and segmentation of image content.',;
-                  models: ['U-Net', 'DeepLab', 'PSPNet', 'SegNet', 'FCN'],;
-                },;
-                {,
-                  category: 'Facial Recognition',;
+                    'Models for pixel-level understanding and segmentation of image content.';
+                  models: ['U-Net', 'DeepLab', 'PSPNet', 'SegNet', 'FCN'];
+                };
+                {
+                  category: 'Facial Recognition';
                   description:,
-                    'Specialized models for face detection, recognition, and analysis.',;
-                  models: [,
-                    'FaceNet',;
-                    'DeepFace',;
-                    'ArcFace',;
-                    'RetinaFace',;
-                    'BlazeFace',;
-                  ],;
-                },;
-                {,
-                  category: 'Video Analysis',;
+                    'Specialized models for face detection, recognition, and analysis.';
+                  models: [
+                    'FaceNet';
+                    'DeepFace';
+                    'ArcFace';
+                    'RetinaFace';
+                    'BlazeFace';
+                  ];
+                };
+                {
+                  category: 'Video Analysis';
                   description:,
-                    'Models designed for understanding temporal information in video sequences.',;
-                  models: ['3D ResNet', 'I3D', 'SlowFast', 'X3D', 'Video Swin'],;
-                },;
-                {,
-                  category: 'Image Generation',;
+                    'Models designed for understanding temporal information in video sequences.';
+                  models: ['3D ResNet', 'I3D', 'SlowFast', 'X3D', 'Video Swin'];
+                };
+                {
+                  category: 'Image Generation';
                   description:,
-                    'Models for creating, modifying, and manipulating images with AI.',;
-                  models: [,
-                    'GANs',;
-                    'VAEs',;
-                    'Diffusion Models',;
-                    'StyleGAN',;
-                    'DALL-E',;
-                  ],;
-                },;
-              ].map((category, index) => (,
-                <div,
+                    'Models for creating, modifying, and manipulating images with AI.';
+                  models: [
+                    'GANs';
+                    'VAEs';
+                    'Diffusion Models';
+                    'StyleGAN';
+                    'DALL-E';
+                  ];
+                };
+              ].map((category, index) => (
+                <div
                   key={index}
-                  className='p-8 bg-white/5 border border-white/10 rounded-2xl hover: border-violet-50o0/30 transition-all duration-30o0',
-                >,
+                  className='p-8 bg-white/5 border border-white/10 rounded-2xl hover: border-violet-50o0/30 transition-all duration-30o0'>,
                   <h3 className='text-xl font-semibold text-white mb-4'>,
-                    {category.category,}
+                    {category.category}
                   </h3>,
                   <p className='text-gray-40o0 mb-6 leading-relaxed'>,
                     {category.description}
                   </p>,
                   <div className='space-y-2'>,
-                    {category.models.map((model, modelIndex) => (,
+                    {category.models.map((model, modelIndex) => (
                       <div key={modelIndex} className='flex items-center gap-2'>,
                         <CheckCircle className='w-4 h-4 text-violet-40o0 flex-shrink-0' />,
                         <span className='text-gray-30o0 text-sm'>{model}</span>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -398,88 +386,85 @@ export default function AIComputerVision20o41() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {[,
-                {,
-                  industry: 'Manufacturing',;
+              {[
+                {
+                  industry: 'Manufacturing';
                   description:,
-                    'Quality control, defect detection, and production monitoring with AI-powered vision systems.',;
-                  applications: [,
-                    'Quality inspection',;
-                    'Defect detection',;
-                    'Production monitoring',;
-                  ],;
-                },;
-                {,
-                  industry: 'Healthcare',;
+                    'Quality control, defect detection, and production monitoring with AI-powered vision systems.';
+                  applications: [
+                    'Quality inspection';
+                    'Defect detection';
+                    'Production monitoring';
+                  ];
+                };
+                {
+                  industry: 'Healthcare';
                   description:,
-                    'Medical imaging analysis, diagnosis assistance, and patient monitoring with computer vision.',;
-                  applications: [,
-                    'Medical imaging',;
-                    'Diagnosis support',;
-                    'Patient monitoring',;
-                  ],;
-                },;
-                {,
-                  industry: 'Retail',;
+                    'Medical imaging analysis, diagnosis assistance, and patient monitoring with computer vision.';
+                  applications: [
+                    'Medical imaging';
+                    'Diagnosis support';
+                    'Patient monitoring';
+                  ];
+                };
+                {
+                  industry: 'Retail';
                   description:,
-                    'Inventory management, customer analytics, and security with intelligent vision systems.',;
-                  applications: [,
-                    'Inventory tracking',;
-                    'Customer analytics',;
-                    'Security monitoring',;
-                  ],;
-                },;
-                {,
-                  industry: 'Transportation',;
+                    'Inventory management, customer analytics, and security with intelligent vision systems.';
+                  applications: [
+                    'Inventory tracking';
+                    'Customer analytics';
+                    'Security monitoring';
+                  ];
+                };
+                {
+                  industry: 'Transportation';
                   description:,
-                    'Autonomous vehicles, traffic monitoring, and safety systems with computer vision.',;
-                  applications: [,
-                    'Autonomous driving',;
-                    'Traffic analysis',;
-                    'Safety systems',;
-                  ],;
-                },;
-                {,
-                  industry: 'Security',;
+                    'Autonomous vehicles, traffic monitoring, and safety systems with computer vision.';
+                  applications: [
+                    'Autonomous driving';
+                    'Traffic analysis';
+                    'Safety systems';
+                  ];
+                };
+                {
+                  industry: 'Security';
                   description:,
-                    'Surveillance, access control, and threat detection with AI-powered vision.',;
-                  applications: [,
-                    'Surveillance',;
-                    'Access control',;
-                    'Threat detection',;
-                  ],;
-                },;
-                {,
-                  industry: 'Agriculture',;
+                    'Surveillance, access control, and threat detection with AI-powered vision.';
+                  applications: [
+                    'Surveillance';
+                    'Access control';
+                    'Threat detection';
+                  ];
+                };
+                {
+                  industry: 'Agriculture';
                   description:,
-                    'Crop monitoring, disease detection, and yield optimization with computer vision.',;
-                  applications: [,
-                    'Crop monitoring',;
-                    'Disease detection',;
-                    'Yield optimization',;
-                  ],;
-                },;
-              ].map((industry, index) => (,
-                <div,
+                    'Crop monitoring, disease detection, and yield optimization with computer vision.';
+                  applications: [
+                    'Crop monitoring';
+                    'Disease detection';
+                    'Yield optimization';
+                  ];
+                };
+              ].map((industry, index) => (
+                <div
                   key={index}
-                  className='p-8 bg-white/5 border border-white/10 rounded-2xl hover: border-violet-50o0/30 transition-all duration-30o0',
-                >,
+                  className='p-8 bg-white/5 border border-white/10 rounded-2xl hover: border-violet-50o0/30 transition-all duration-30o0'>,
                   <h3 className='text-xl font-semibold text-white mb-4'>,
-                    {industry.industry,}
+                    {industry.industry}
                   </h3>,
                   <p className='text-gray-40o0 mb-6 leading-relaxed'>,
                     {industry.description}
                   </p>,
                   <div className='space-y-2'>,
-                    {industry.applications.map((app, appIndex) => (,
+                    {industry.applications.map((app, appIndex) => (
                       <div key={appIndex} className='flex items-center gap-2'>,
                         <CheckCircle className='w-4 h-4 text-violet-40o0 flex-shrink-0' />,
                         <span className='text-gray-30o0 text-sm'>{app}</span>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -496,42 +481,41 @@ export default function AIComputerVision20o41() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
-              {[,
-                {,
-                  title: 'Automated Inspection',;
+              {[
+                {
+                  title: 'Automated Inspection';
                   description:,
-                    'Automate quality control and inspection processes with AI-powered visual analysis.',;
-                  icon: <Eye className='w-8 h-8' />,;
-                  color: 'from-violet-50o0 to-purple-50o0',;
-                },;
-                {,
-                  title: 'Enhanced Security',;
+                    'Automate quality control and inspection processes with AI-powered visual analysis.';
+                  icon: <Eye className='w-8 h-8' />;
+                  color: 'from-violet-50o0 to-purple-50o0';
+                };
+                {
+                  title: 'Enhanced Security';
                   description:,
-                    'Improve security and surveillance with intelligent threat detection and monitoring.',;
-                  icon: <Camera className='w-8 h-8' />,;
-                  color: 'from-blue-50o0 to-cyan-50o0',;
-                },;
-                {,
-                  title: 'Cost Reduction',;
+                    'Improve security and surveillance with intelligent threat detection and monitoring.';
+                  icon: <Camera className='w-8 h-8' />;
+                  color: 'from-blue-50o0 to-cyan-50o0';
+                };
+                {
+                  title: 'Cost Reduction';
                   description:,
-                    'Reduce manual inspection costs while improving accuracy and consistency.',;
-                  icon: <Target className='w-8 h-8' />,;
-                  color: 'from-green-50o0 to-emerald-50o0',;
-                },;
-                {,
-                  title: '24/7 Monitoring',;
+                    'Reduce manual inspection costs while improving accuracy and consistency.';
+                  icon: <Target className='w-8 h-8' />;
+                  color: 'from-green-50o0 to-emerald-50o0';
+                };
+                {
+                  title: '24/7 Monitoring';
                   description:,
-                    'Enable round-the-clock visual monitoring and analysis without human intervention.',;
-                  icon: <Clock className='w-8 h-8' />,;
-                  color: 'from-yellow-50o0 to-orange-50o0',;
-                },;
-              ].map((benefit, index) => (,
-                <div,
+                    'Enable round-the-clock visual monitoring and analysis without human intervention.';
+                  icon: <Clock className='w-8 h-8' />;
+                  color: 'from-yellow-50o0 to-orange-50o0';
+                };
+              ].map((benefit, index) => (
+                <div
                   key={index}
-                  className='p-8 bg-white/5 border border-white/10 rounded-2xl hover: border-violet-50o0/30 transition-all duration-30o0',
-                >,
-                  <div,
-                    className={`w-16 h-16 bg-gradient-to-r ${benefit.color,} rounded-2xl flex items-center justify-center mb-6`}
+                  className='p-8 bg-white/5 border border-white/10 rounded-2xl hover: border-violet-50o0/30 transition-all duration-30o0'>,
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r ${benefit.color} rounded-2xl flex items-center justify-center mb-6`}
                   >,
                     {benefit.icon}
                   </div>,
@@ -541,8 +525,7 @@ export default function AIComputerVision20o41() {,
                   <p className='text-gray-40o0 leading-relaxed'>,
                     {benefit.description}
                   </p>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -568,7 +551,6 @@ export default function AIComputerVision20o41() {,
           </div>,
         </section>,
       </div>,
-    </Layout>,
-  ),
-,}
+    </Layout>),
+}
 ,

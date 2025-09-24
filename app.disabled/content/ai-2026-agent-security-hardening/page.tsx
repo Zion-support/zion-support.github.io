@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Agent Security Hardening Guide | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Agent Security Hardening Guide | Zion Tech Group';
   description:,
-    'Hands-on guide to harden AI agents across prompts, tools, data, and runtimes with layered controls and measurable security posture.',;
-  keywords: [,
-    'AI agent security',;
-    'prompt security',;
-    'tool permissions',;
-    'sandboxing',;
-    'security 20o26',;
-  ],;
+    'Hands-on guide to harden AI agents across prompts, tools, data, and runtimes with layered controls and measurable security posture.';
+  keywords: [
+    'AI agent security';
+    'prompt security';
+    'tool permissions';
+    'sandboxing';
+    'security 20o26';
+  ];
 };
-,
-export default function AgentSecurityHardening20o26() {,
-  return (,
+export default function AgentSecurityHardening20o26() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Agent Security Hardening Guide',
         description='Hands-on guide to harden AI agents across prompts, tools, data, and runtimes with layered controls and measurable security posture.',
         keywords='AI agent security, prompt security, tool permissions, sandboxing, security 20o26',
@@ -54,16 +52,13 @@ export default function AgentSecurityHardening20o26() {,
               Pair this with our LLM Evals Maturity Model to measure resilience,
               improvements.,
             </p>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-llm-evals-maturity-model',
-              className='text-emerald-70o0 font-semibold',
-            >,
+              className='text-emerald-70o0 font-semibold'>,
               Read the Model →,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

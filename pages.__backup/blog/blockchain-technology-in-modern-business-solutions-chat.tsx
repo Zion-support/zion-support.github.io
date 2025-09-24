@@ -1,16 +1,15 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-,
-const BlockchainTechnologyInModernBusinessSolutionsChat: NextPage = () => {,
-  return (,
+const BlockchainTechnologyInModernBusinessSolutionsChat: NextPage = () => {
+  return (
     <div>,
       <Head>,
         <title>,
           BlockchainTechnologyInModernBusinessSolutionsChat - Zion Tech,
           Solutions,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='BlockchainTechnologyInModernBusinessSolutionsChat blog post',
         />,
@@ -20,9 +19,6 @@ const BlockchainTechnologyInModernBusinessSolutionsChat: NextPage = () => {,
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-,};
-,
-export default BlockchainTechnologyInModernBusinessSolutionsChat,
-,
+    </div>),
+};
+export default BlockchainTechnologyInModernBusinessSolutionsChat;

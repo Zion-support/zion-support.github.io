@@ -1,6 +1,5 @@
 // Hook for useResumeEnhancer,
-export const useUseResumeEnhancer: unknown = () => {,
+export const useUseResumeEnhancer: unknown = () => {
   // TODO: Implement hook logic,
-  return {,};
+  return {};
 };
-,

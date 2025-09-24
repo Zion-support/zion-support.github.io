@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react',
 import Head from 'next/head',
-,
-export default function TwitterRedirect() {,
-  useEffect(() => {,
-    if (typeof window !== 'undefined') {,
+export default function TwitterRedirect() {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
       window.location.replace('https: //x.com/ziontechgroup'),
-    ,}
+    }
   }, []),
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>X (Twitter) | Zion Tech Group</title>,
@@ -17,14 +15,12 @@ export default function TwitterRedirect() {,
         <meta name='robots' content='index, follow' />,
       </Head>,
       <div className='min-h-screen bg-black text-white flex items-center justify-center p-8'>,
-        <a,
+        <a
           href='https: //x.com/ziontechgroup',
-          className='text-cyan-40o0 underline',
-        >,
+          className='text-cyan-40o0 underline'>,
           Continue to X (Twitter),
         </a>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

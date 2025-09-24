@@ -1,33 +1,31 @@
-import React from "react",
+import React from "react";
 import {Header} from "@/components/Header",
 import {Footer} from "@/components/Footer",
 import {TransactionHistory} from "@/components/transactions/TransactionHistory",
 import {GradientHeading} from "@/components/GradientHeading",
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs",
-import React from "react",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { TransactionHistory } from "@/components/transactions/TransactionHistory",;
+import React from "react";;
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { TransactionHistory } from "@/components/transactions/TransactionHistory";
 import { GradientHeading } from "@/components/GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { GradientHeading } from "@/components/GradientHeading",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { GradientHeading } from "@/components/GradientHeading";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {Button} from "@/components/ui/button",
 import {Switch} from "@/components/ui/switch",
 import {Label} from "@/components/ui/label",
 import {Checkbox} from "@/components/ui/checkbox",
-import { Button } from "@/components/ui/button",;
-import { Switch } from "@/components/ui/switch",;
-import { Label } from "@/components/ui/label",;
-import { Checkbox } from "@/components/ui/checkbox",;
+import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from '@/components / ui / button',
 import { Switch } from '@/components / ui / switch',
 import { Label } from '@/components / ui / label',
 import { Checkbox } from '@/components / ui / checkbox',
-
-,
-export default function Payments() {,
-  return (,
+export default function Payments() {
+  return (
     <>,
       <Header />,
       <div className="min-h-screen bg-zion-blue py-12 px-4">,
@@ -57,10 +55,9 @@ export default function Payments() {,
                     <p className="text-zion-slate-light mb-4">,
                       Manage your payment methods and set your default preference.,
                     </p>,
-                    <Button,
-                      onClick={() => window.open('https: //stripe.com_blank'),}
-                      className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white",
-                    >,
+                    <Button
+                      onClick={() => window.open('https: //stripe.com_blank')}
+                      className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">,
                       Manage Payment Methods,
                     </Button>,
                   </div>,
@@ -84,19 +81,17 @@ export default function Payments() {,
                     <div className="space-y-2">,
                       <div className="flex items-center space-x-2">,
                         <Checkbox id="notify-email" defaultChecked />,
-                        <label,
+                        <label
                           htmlFor="notify-email",
-                          className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white",
-                        >,
+                          className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white">,
                           Email notifications,
                         </label>,
                       </div>,
                       <div className="flex items-center space-x-2">,
                         <Checkbox id="notify-push" defaultChecked />,
-                        <label,
+                        <label
                           htmlFor="notify-push",
-                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white",
-                        >,
+                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white">,
                           Push notifications,
                         </label>,
                       </div>,
@@ -109,16 +104,13 @@ export default function Payments() {,
         </div>,
       </div>,
       <Footer />,
-    </>,
-  ),
-,}
+    </>),
+}
 ,
 // Import UI components for Payment Settings tab,
 ,
-,
-export default function Payments() {,
-  return (,
-,
+export default function Payments() {
+  return (
     <>,
       <Header />,
       <div className="min - h-screen bg - zion - blue py - 12 px - 4">,
@@ -148,10 +140,9 @@ export default function Payments() {,
                     <p className="text - zion - slate - light mb - 4">,
                       Manage your payment methods and set your default preference.,
                     </p>,
-                    <Button,
-                      on_click={() => window.open ('https: //stripe.com_blank'),}
-                      className="bg - gradient - to - r from - zion - purple to - zion - purple - dark text - white",
-                    >,
+                    <Button
+                      on_click={() => window.open ('https: //stripe.com_blank')}
+                      className="bg - gradient - to - r from - zion - purple to - zion - purple - dark text - white">,
                       Manage Payment Methods,
                     </Button>,
                   </div>,
@@ -175,19 +166,17 @@ export default function Payments() {,
                     <div className="space - y-2">,
                       <div className="flex items - center space - x-2">,
                         <Checkbox id="notify - email" default_checked />,
-                        <label,
+                        <label
                           html_for="notify - email",
-                          className="text - sm font - medium leading - none peer - disabled: cursor - not - allowed peer - disabled:opacity - 70 text - white",
-                        >,
+                          className="text - sm font - medium leading - none peer - disabled: cursor - not - allowed peer - disabled:opacity - 70 text - white">,
                           Email notifications,
                         </label>,
                       </div>,
                       <div className="flex items - center space - x-2">,
                         <Checkbox id="notify - push" default_checked />,
-                        <label,
+                        <label
                           html_for="notify - push",
-                          className="text - sm font - medium leading - none peer - disabled:cursor - not - allowed peer - disabled:opacity - 70 text - white",
-                        >,
+                          className="text - sm font - medium leading - none peer - disabled:cursor - not - allowed peer - disabled:opacity - 70 text - white">,
                           Push notifications,
                         </label>,
                       </div>,
@@ -201,12 +190,5 @@ export default function Payments() {,
       </div>,
       <Footer />,
     </>),
-,}
-// Import UI components for Payment Settings tab,
-,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba,
-,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
+}
+// Import UI components for Payment Settings tab>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

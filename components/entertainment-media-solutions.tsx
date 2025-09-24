@@ -1,15 +1,14 @@
 import Head from 'next/head',
-,
-export default function EntertainmentMediaSolutions() {,
-  return (,
+export default function EntertainmentMediaSolutions() {
+  return (
     <>,
       <Head>,
         <title>Entertainment & Media Solutions | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='AI solutions for entertainment and media: content automationpersonalizationanalyticsand monetization.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https://ziontechgroup.com/entertainment-media-solutions',
         />,
@@ -25,7 +24,6 @@ export default function EntertainmentMediaSolutions() {,
           </p>,
         </section>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

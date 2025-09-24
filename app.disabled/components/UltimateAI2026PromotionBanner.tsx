@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const UltimateAI20o26PromotionBanner = () => {,
-  return (,
+const UltimateAI20o26PromotionBanner = () => {
+  return (
     <section className='relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-20 overflow-hidden'>,
       {/* Background Pattern */}
       <div className='absolute inset-0 bg-black opacity-20'></div>,
@@ -13,7 +12,7 @@ const UltimateAI20o26PromotionBanner = () => {,
       <div className='absolute bottom-32 right-1/3 w-14 h-14 bg-purple-40o0/30 rounded-full animate-pulse delay-30o00'></div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-full px-6 py-2 mb-6 shadow-lg'>,
             <span className='text-sm font-bold'>,
               🚀 ULTIMATE AI 20o26 GUIDE,
@@ -23,10 +22,10 @@ const UltimateAI20o26PromotionBanner = () => {,
           <h2 className='text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-20o0 bg-clip-text text-transparent'>,
             The Complete AI Implementation Guide 20o26,
           </h2>,
-          {/* Subheadline */,}
+          {/* Subheadline */}
           <p className='text-xl md: text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-blue-10o0'>,
             Transform your enterprise with our comprehensive AI implementation,
-            guide. Learn how to achieve{' ',}
+            guide. Learn how to achieve{' '}
             <span className='text-yellow-30o0 font-bold'>50o0-20o00% ROI</span>{' '}
             and gain{' '}
             <span className='text-green-30o0 font-bold'>,
@@ -60,22 +59,20 @@ const UltimateAI20o26PromotionBanner = () => {,
               </p>,
             </div>,
           </div>,
-          {/* CTA Buttons */,}
+          {/* CTA Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'>,
-            <Link,
+            <Link
               href='/resources/ai-implementation-ultimate-guide-20o26',
-              className='bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-60o0 hover:to-blue-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-xl',
-            >,
+              className='bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-60o0 hover:to-blue-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-xl'>,
               Get the Ultimate Guide,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Schedule Consultation,
             </Link>,
           </div>,
-          {/* Trust Indicators */,}
+          {/* Trust Indicators */}
           <div className='flex flex-col sm: flex-row items-center justify-center gap-8 text-sm text-blue-20o0'>,
             <div className='flex items-center gap-2'>,
               <span className='text-green-40o0'>✓</span>,
@@ -92,14 +89,10 @@ const UltimateAI20o26PromotionBanner = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Floating Elements */,}
+      {/* Floating Elements */}
       <div className='absolute top-1/4 left-1/4 w-2 h-2 bg-white/40 rounded-full animate-bounce'></div>,
       <div className='absolute top-1/3 right-1/4 w-1 h-1 bg-blue-30o0/60 rounded-full animate-bounce delay-50o0'></div>,
       <div className='absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-purple-30o0/60 rounded-full animate-bounce delay-10o00'></div>,
       <div className='absolute bottom-1/3 right-1/3 w-2 h-2 bg-indigo-30o0/60 rounded-full animate-bounce delay-150o0'></div>,
-    </section>,
-  ),
-};
-,
-export default UltimateAI20o26PromotionBanner,
-,
+    </section>)};
+export default UltimateAI20o26PromotionBanner;

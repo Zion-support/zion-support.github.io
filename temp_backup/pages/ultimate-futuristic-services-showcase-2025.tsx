@@ -2,269 +2,257 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
-  Star,;
-  TrendingUp,;
-  Users,;
-  Award,;
-  Clock,;
-  Heart,;
-  Brain,;
-  Atom,;
-  Shield,;
-  Rocket,;
-  Zap,;
-  Globe,;
-  CheckCircle,;
-  ArrowRight,;
-  Search,;
-  Filter,;
-  ChevronDown,;
-  ChevronUp,;
-  Eye,;
-  Play,;
-  Sparkles,;
-  Target,;
-  Microscope,;
-  Lock,;
-  Cloud,;
-  BarChart3,;
-  Settings,;
-  Cpu,;
-  Database,;
-  Network,;
-  Server,;
-  ShieldCheck,;
-  GlobeIcon,;
-  StarIcon,;
-  TrendingUpIcon,;
-  UsersIcon,;
-  CheckCircleIcon,;
-  ArrowRightIcon,;
-  CpuIcon,;
-  DollarSign,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Dna,;
-  Target as TargetIcon,;
-  Shield as ShieldIcon,;
-  BookOpen,;
-  Sparkles as SparklesIcon,;
-  Zap as ZapIcon,;
-  Brain as BrainIcon,;
-  Play as PlayIcon,;
+import {
+  Star;
+  TrendingUp;
+  Users;
+  Award;
+  Clock;
+  Heart;
+  Brain;
+  Atom;
+  Shield;
+  Rocket;
+  Zap;
+  Globe;
+  CheckCircle;
+  ArrowRight;
+  Search;
+  Filter;
+  ChevronDown;
+  ChevronUp;
+  Eye;
+  Play;
+  Sparkles;
+  Target;
+  Microscope;
+  Lock;
+  Cloud;
+  BarChart3;
+  Settings;
+  Cpu;
+  Database;
+  Network;
+  Server;
+  ShieldCheck;
+  GlobeIcon;
+  StarIcon;
+  TrendingUpIcon;
+  UsersIcon;
+  CheckCircleIcon;
+  ArrowRightIcon;
+  CpuIcon;
+  DollarSign;
+  Phone;
+  Mail;
+  MapPin;
+  Dna;
+  Target as TargetIcon;
+  Shield as ShieldIcon;
+  BookOpen;
+  Sparkles as SparklesIcon;
+  Zap as ZapIcon;
+  Brain as BrainIcon;
+  Play as PlayIcon;
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { ultimateFuturisticServices20o25 } from '../data/20o25-ultimate-futuristic-services',
-,
-const contactInfo = {,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',;
+const contactInfo = {
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
 };
-,
-const serviceCategories = [,
-  {,
-    title: 'AI & Consciousness',;
+const serviceCategories = [
+  {
+    title: 'AI & Consciousness';
     description:,
-      'Revolutionary AI platforms with consciousness and emotional intelligence',;
-    icon: Brain,;
-    color: 'from-violet-50o0 to-purple-60o0',;
-    count: 3,;
-  },;
-  {,
-    title: 'Quantum & Emerging Tech',;
+      'Revolutionary AI platforms with consciousness and emotional intelligence';
+    icon: Brain;
+    color: 'from-violet-50o0 to-purple-60o0';
+    count: 3;
+  };
+  {
+    title: 'Quantum & Emerging Tech';
     description:,
-      'Breakthrough quantum computing and space technology solutions',;
-    icon: Atom,;
-    color: 'from-indigo-50o0 to-blue-60o0',;
-    count: 4,;
-  },;
-  {,
-    title: 'Space Technology',;
-    description: 'AI-powered space exploration and resource extraction',;
-    icon: Rocket,;
-    color: 'from-blue-50o0 to-cyan-60o0',;
-    count: 1,;
-  },;
-  {,
-    title: 'Financial Technology',;
-    description: 'Quantum AI-powered financial trading and analytics',;
-    icon: DollarSign,;
-    color: 'from-green-50o0 to-emerald-60o0',;
-    count: 1,;
-  },;
-  {,
-    title: 'Content Automation',;
-    description: 'Autonomous AI content creation and management',;
-    icon: BookOpen,;
-    color: 'from-purple-50o0 to-pink-60o0',;
-    count: 1,;
-  },;
-  {,
-    title: 'Cybersecurity',;
-    description: 'Quantum encryption and advanced threat detection',;
-    icon: Shield,;
-    color: 'from-red-50o0 to-orange-60o0',;
-    count: 1,;
-  },;
-  {,
-    title: 'Healthcare Technology',;
-    description: 'AI-powered medical diagnostics and treatment',;
-    icon: Heart,;
-    color: 'from-teal-50o0 to-cyan-60o0',;
-    count: 1,;
-  },;
-  {,
-    title: 'Energy Technology',;
-    description: 'Quantum computing for fusion power and energy optimization',;
-    icon: Zap,;
-    color: 'from-yellow-50o0 to-orange-60o0',;
-    count: 1,;
-  },;
-  {,
-    title: 'Education Technology',;
-    description: 'Personalized AI-powered learning platforms',;
-    icon: BookOpen,;
-    color: 'from-indigo-50o0 to-purple-60o0',;
-    count: 1,;
-  },;
-  {,
-    title: 'Materials Science',;
-    description: 'AI-powered quantum materials research and discovery',;
-    icon: Microscope,;
-    color: 'from-cyan-50o0 to-blue-60o0',;
-    count: 1,;
-  },;
+      'Breakthrough quantum computing and space technology solutions';
+    icon: Atom;
+    color: 'from-indigo-50o0 to-blue-60o0';
+    count: 4;
+  };
+  {
+    title: 'Space Technology';
+    description: 'AI-powered space exploration and resource extraction';
+    icon: Rocket;
+    color: 'from-blue-50o0 to-cyan-60o0';
+    count: 1;
+  };
+  {
+    title: 'Financial Technology';
+    description: 'Quantum AI-powered financial trading and analytics';
+    icon: DollarSign;
+    color: 'from-green-50o0 to-emerald-60o0';
+    count: 1;
+  };
+  {
+    title: 'Content Automation';
+    description: 'Autonomous AI content creation and management';
+    icon: BookOpen;
+    color: 'from-purple-50o0 to-pink-60o0';
+    count: 1;
+  };
+  {
+    title: 'Cybersecurity';
+    description: 'Quantum encryption and advanced threat detection';
+    icon: Shield;
+    color: 'from-red-50o0 to-orange-60o0';
+    count: 1;
+  };
+  {
+    title: 'Healthcare Technology';
+    description: 'AI-powered medical diagnostics and treatment';
+    icon: Heart;
+    color: 'from-teal-50o0 to-cyan-60o0';
+    count: 1;
+  };
+  {
+    title: 'Energy Technology';
+    description: 'Quantum computing for fusion power and energy optimization';
+    icon: Zap;
+    color: 'from-yellow-50o0 to-orange-60o0';
+    count: 1;
+  };
+  {
+    title: 'Education Technology';
+    description: 'Personalized AI-powered learning platforms';
+    icon: BookOpen;
+    color: 'from-indigo-50o0 to-purple-60o0';
+    count: 1;
+  };
+  {
+    title: 'Materials Science';
+    description: 'AI-powered quantum materials research and discovery';
+    icon: Microscope;
+    color: 'from-cyan-50o0 to-blue-60o0';
+    count: 1;
+  };
 ],
-,
-const stats = [,
-  {,
-    number: '15+',;
-    label: 'Revolutionary Services',;
-    icon: Star,;
-    color: 'text-cyan-40o0',;
-  },;
-  {,
-    number: '10o00%+',;
-    label: 'Average ROI',;
-    icon: TrendingUp,;
-    color: 'text-purple-40o0',;
-  },;
-  {,
-    number: '99.9%',;
-    label: 'Success Rate',;
-    icon: Award,;
-    color: 'text-green-40o0',;
-  },;
-  {,
-    number: '24/7',;
-    label: 'Expert Support',;
-    icon: Clock,;
-    color: 'text-pink-40o0',;
-  },;
+const stats = [
+  {
+    number: '15+';
+    label: 'Revolutionary Services';
+    icon: Star;
+    color: 'text-cyan-40o0';
+  };
+  {
+    number: '10o00%+';
+    label: 'Average ROI';
+    icon: TrendingUp;
+    color: 'text-purple-40o0';
+  };
+  {
+    number: '99.9%';
+    label: 'Success Rate';
+    icon: Award;
+    color: 'text-green-40o0';
+  };
+  {
+    number: '24/7';
+    label: 'Expert Support';
+    icon: Clock;
+    color: 'text-pink-40o0';
+  };
 ],
-,
-export default function UltimateFuturisticServicesShowcase20o25() {,
+export default function UltimateFuturisticServicesShowcase20o25() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [sortBy, setSortBy] = useState('popular'),
   const [viewMode, setViewMode] = useState('grid'),
-,
-  const filteredServices = ultimateFuturisticServices20o25.filter(service => {,
+  const filteredServices = ultimateFuturisticServices20o25.filter(service => {
     const matchesSearch =,
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
       service.category.toLowerCase().includes(searchTerm.toLowerCase()),
     const matchesCategory =,
       selectedCategory === 'all' || service.category === selectedCategory,
-    return matchesSearch && matchesCategory,
-  }),
-,
-  const sortedServices = [...filteredServices].sort((a, b) => {,
-    switch (sortBy) {,
+    return matchesSearch && matchesCategory}),
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
       case 'price-low':,
-        return (,
+        return (
           parseFloat(a.price.replace(/[^0-9.]/g, '')) -,
-          parseFloat(b.price.replace(/[^0-9.]/g, '')),
-        ),
+          parseFloat(b.price.replace(/[^0-9.]/g, ''))),
       case 'price-high':,
-        return (,
+        return (
           parseFloat(b.price.replace(/[^0-9.]/g, '')) -,
-          parseFloat(a.price.replace(/[^0-9.]/g, '')),
-        ),
+          parseFloat(a.price.replace(/[^0-9.]/g, ''))),
       case 'rating':,
         return b.rating - a.rating,
       case 'customers':,
         return b.customers - a.customers,
       default: ,
         return b.popular ? 1 : -1,
-    ,}
+    }
   }),
-,
-  const containerVariants = {,
-    hidden: { opacity: 0 ,},;
-    visible: {,
-      opacity: 1,;
-      transition: {,
-        staggerChildren: 0.1,;
-      },;
-    },;
+  const containerVariants = {
+    hidden: { opacity: 0 };
+    visible: {
+      opacity: 1;
+      transition: {
+        staggerChildren: 0.1;
+      };
+    };
   };
-,
-  const itemVariants = {,
-    hidden: { y: 20, opacity: 0 ,},;
-    visible: {,
-      y: 0,;
-      opacity: 1,;
-      transition: {,
-        duration: 0.5,;
-      },;
-    },;
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 };
+    visible: {
+      y: 0;
+      opacity: 1;
+      transition: {
+        duration: 0.5;
+      };
+    };
   };
-,
-  return (,
+  return (
     <Layout>,
       <Head>,
         <title>,
           Ultimate Futuristic Services Showcase 20o25 | Zion Tech Group,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations. Transform your business with cutting-edge technology.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='futuristic services, AI consciousness, quantum computing, space technology, breakthrough innovations, Zion Tech Group',
         />,
-        <meta,
+        <meta
           property='og: title',
           content='Ultimate Futuristic Services Showcase 20o25 | Zion Tech Group',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations.',
         />,
-        <meta,
+        <meta
           property='og: url',
           content='https://ziontechgroup.com/ultimate-futuristic-services-showcase-20o25',
         />,
         <meta property='og:type' content='website' />,
-        <link,
+        <link
           rel='canonical',
           href='https://ziontechgroup.com/ultimate-futuristic-services-showcase-20o25',
         />,
       </Head>,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className='relative py-20 lg: py-32 overflow-hidden'>,
         <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-90o0/20 to-black'></div>,
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <h1 className='text-4xl md: text-6xl lg:text-7xl font-bold text-white mb-6'>,
               <span className='bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent'>,
@@ -282,14 +270,13 @@ export default function UltimateFuturisticServicesShowcase20o25() {,
               business.,
             </p>,
             <div className='flex flex-wrap justify-center gap-4 mb-12'>,
-              {stats.map((stat, index) => (,
+              {stats.map((stat, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 ,}}
-                  animate={{ opacity: 1, scale: 1 ,}}
-                  transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                  className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20',
-                >,
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20'>,
                   <stat.icon className={`w-6 h-6 ${stat.color}`} />,
                   <div className='text-left'>,
                     <div className='text-2xl font-bold text-white'>,
@@ -297,8 +284,7 @@ export default function UltimateFuturisticServicesShowcase20o25() {,
                     </div>,
                     <div className='text-sm text-gray-30o0'>{stat.label}</div>,
                   </div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </motion.div>,
         </div>,
@@ -307,10 +293,10 @@ export default function UltimateFuturisticServicesShowcase20o25() {,
       <section className='py-12 bg-gradient-to-r from-black via-purple-90o0/10 to-black'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>,
-            {/* Search */,}
+            {/* Search */}
             <div className='relative flex-1 max-w-md'>,
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5' />,
-              <input,
+              <input
                 type='text',
                 placeholder='Search futuristic services...',
                 value={searchTerm}
@@ -318,35 +304,32 @@ export default function UltimateFuturisticServicesShowcase20o25() {,
                 className='w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent',
               />,
             </div>,
-            {/* Category Filter */,}
+            {/* Category Filter */}
             <div className='flex flex-wrap gap-3'>,
-              <select,
+              <select
                 value={selectedCategory}
                 onChange={e => setSelectedCategory(e.target.value)}
-                className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent',
-              >,
+                className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent'>,
                 <option value='all'>All Categories</option>,
-                {serviceCategories.map(category => (,
-                  <option key={category.title,} value={category.title}>,
+                {serviceCategories.map(category => (
+                  <option key={category.title} value={category.title}>,
                     {category.title} ({category.count}),
-                  </option>,
-                ))}
+                  </option>))}
               </select>,
               {/* Sort Options */}
-              <select,
+              <select
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value)}
-                className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent',
-              >,
+                className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent'>,
                 <option value='popular'>Most Popular</option>,
                 <option value='price-low'>Price: Low to High</option>,
                 <option value='price-high'>Price: High to Low</option>,
                 <option value='rating'>Highest Rated</option>,
                 <option value='customers'>Most Customers</option>,
               </select>,
-              {/* View Mode Toggle */,}
+              {/* View Mode Toggle */}
               <div className='flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1'>,
-                <button,
+                <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-50o0 text-white' : 'text-gray-40o0'}`}
                 >,
@@ -357,7 +340,7 @@ export default function UltimateFuturisticServicesShowcase20o25() {,
                     <div className='bg-current rounded-sm'></div>,
                   </div>,
                 </button>,
-                <button,
+                <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-50o0 text-white' : 'text-gray-40o0'}`}
                 >,
@@ -376,40 +359,39 @@ export default function UltimateFuturisticServicesShowcase20o25() {,
       <section className='py-16'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <motion.div,
-            variants={containerVariants,}
+            variants={containerVariants}
             initial='hidden',
             animate='visible',
-            className={,
+            className={
               viewMode === 'grid',
                 ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8',
                 : 'space-y-6',
-            ,}
+            }
           >,
-            {sortedServices.map((service, index) => (,
+            {sortedServices.map((service, index) => (
               <motion.div,
                 key={service.id}
                 variants={itemVariants}
-                className={`group relative ${,
+                className={`group relative ${
                   viewMode === 'grid',
                     ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover: border-purple-50o0/50 transition-all duration-30o0 hover:scale-10o5',
                     : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-purple-50o0/50 transition-all duration-30o0',
-                ,}`}
+                }`}
               >,
                 {/* Popular Badge */}
-                {service.popular && (,
+                {service.popular && (
                   <div className='absolute top-4 right-4 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white text-xs font-semibold px-3 py-1 rounded-full'>,
                     Popular,
-                  </div>,
-                )}
+                  </div>)}
 ,
                 {/* Service Header */}
-                <div,
+                <div
                   className={`${viewMode === 'list' ? 'flex items-start space-x-6' : 'text-center'}`}
                 >,
-                  <div,
+                  <div
                     className={`${viewMode === 'list' ? 'flex-shrink-0' : 'mx-auto mb-4'}`}
                   >,
-                    <div,
+                    <div
                       className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-3xl`}
                     >,
                       {service.icon}
@@ -417,7 +399,7 @@ export default function UltimateFuturisticServicesShowcase20o25() {,
                   </div>,
                   <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>,
                     <h3 className='text-xl font-bold text-white mb-2 group-hover: text-purple-40o0 transition-colors'>,
-                      {service.name,}
+                      {service.name}
                     </h3>,
                     <p className='text-gray-30o0 text-sm mb-3'>,
                       {service.tagline}
@@ -442,20 +424,17 @@ export default function UltimateFuturisticServicesShowcase20o25() {,
                     Key Features,
                   </h4>,
                   <div className='grid grid-cols-1 gap-2'>,
-                    {service.features.slice(0, 4).map((feature, idx) => (,
-                      <div,
+                    {service.features.slice(0, 4).map((feature, idx) => (
+                      <div
                         key={idx}
-                        className='flex items-center text-sm text-gray-30o0',
-                      >,
+                        className='flex items-center text-sm text-gray-30o0'>,
                         <CheckCircle className='w-4 h-4 text-green-40o0 mr-2 flex-shrink-0' />,
                         {feature}
-                      </div>,
-                    ))}
-                    {service.features.length > 4 && (,
+                      </div>))}
+                    {service.features.length > 4 && (
                       <div className='text-sm text-purple-40o0 mt-2'>,
                         +{service.features.length - 4} more features,
-                      </div>,
-                    )}
+                      </div>)}
                   </div>,
                 </div>,
                 {/* Service Details */}
@@ -492,56 +471,52 @@ export default function UltimateFuturisticServicesShowcase20o25() {,
                 <div className='mb-6 p-4 bg-gradient-to-r from-purple-50o0/10 to-pink-50o0/10 rounded-lg border border-purple-50o0/20'>,
                   <div className='text-sm'>,
                     <div className='text-gray-30o0 mb-2'>,
-                      <span className='font-semibold text-white'>ROI: </span>{' ',}
+                      <span className='font-semibold text-white'>ROI: </span>{' '}
                       {service.roi}
                     </div>,
                     <div className='text-gray-30o0'>,
                       <span className='font-semibold text-white'>,
                         Market Size:  ,
-                      </span>{' ',}
+                      </span>{' '}
                       {service.marketSize}
                     </div>,
                   </div>,
                 </div>,
                 {/* Action Buttons */}
                 <div className='flex flex-col sm: flex-row gap-3'>,
-                  <Link,
-                    href={service.link,}
-                    className='flex-1 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white font-semibold py-3 px-6 rounded-lg text-center hover: from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-                  >,
+                  <Link
+                    href={service.link}
+                    className='flex-1 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white font-semibold py-3 px-6 rounded-lg text-center hover: from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                     Get Started,
                   </Link>,
                   <button className='px-4 py-3 border border-white/20 text-white rounded-lg hover:border-purple-50o0/50 transition-colors'>,
                     <Eye className='w-5 h-5' />,
                   </button>,
                 </div>,
-                {/* Contact Info */,}
+                {/* Contact Info */}
                 <div className='mt-6 pt-6 border-t border-white/10'>,
                   <div className='text-center text-sm text-gray-40o0'>,
                     <p>Contact us for custom pricing and implementation</p>,
                     <div className='flex items-center justify-center space-x-4 mt-2'>,
-                      <a,
-                        href={`tel: ${contactInfo.mobile,}`}
-                        className='flex items-center text-purple-40o0 hover: text-purple-30o0',
-                      >,
+                      <a
+                        href={`tel: ${contactInfo.mobile}`}
+                        className='flex items-center text-purple-40o0 hover: text-purple-30o0'>,
                         <Phone className='w-4 h-4 mr-1' />,
-                        {contactInfo.mobile,}
+                        {contactInfo.mobile}
                       </a>,
-                      <a,
-                        href={`mailto: ${contactInfo.email,}`}
-                        className='flex items-center text-purple-40o0 hover: text-purple-30o0',
-                      >,
+                      <a
+                        href={`mailto: ${contactInfo.email}`}
+                        className='flex items-center text-purple-40o0 hover: text-purple-30o0'>,
                         <Mail className='w-4 h-4 mr-1' />,
-                        {contactInfo.email,}
+                        {contactInfo.email}
                       </a>,
                     </div>,
                   </div>,
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </motion.div>,
           {/* No Results */}
-          {sortedServices.length === 0 && (,
+          {sortedServices.length === 0 && (
             <div className='text-center py-16'>,
               <div className='text-6xl mb-4'>🔍</div>,
               <h3 className='text-2xl font-bold text-white mb-2'>,
@@ -550,27 +525,24 @@ export default function UltimateFuturisticServicesShowcase20o25() {,
               <p className='text-gray-40o0 mb-6'>,
                 Try adjusting your search criteria or category filter,
               </p>,
-              <button,
-                onClick={() => {,
+              <button
+                onClick={() => {
                   setSearchTerm(''),
-                  setSelectedCategory('all'),
-                }}
-                className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white font-semibold py-3 px-6 rounded-lg hover: from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0',
-              >,
+                  setSelectedCategory('all')}}
+                className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white font-semibold py-3 px-6 rounded-lg hover: from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0'>,
                 Clear Filters,
               </button>,
-            </div>,
-          ),}
+            </div>)}
         </div>,
       </section>,
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-90o0/20 via-black to-pink-90o0/20'>,
         <div className='max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >,
             <h2 className='text-3xl md: text-5xl font-bold text-white mb-6'>,
               Ready to Experience the Future?,
@@ -581,23 +553,20 @@ export default function UltimateFuturisticServicesShowcase20o25() {,
               needs and implementation strategy.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+                className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 Contact Our Experts,
               </Link>,
-              <Link,
+              <Link
                 href='/pricing',
-                className='border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-50o0/50 transition-colors',
-              >,
+                className='border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-50o0/50 transition-colors'>,
                 View Pricing,
               </Link>,
             </div>,
           </motion.div>,
         </div>,
       </section>,
-    </Layout>,
-  ),
-,}
+    </Layout>),
+}
 ,

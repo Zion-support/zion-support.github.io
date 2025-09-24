@@ -1,8 +1,7 @@
 'use client',
-,
 import React{ useStateuseEffect } from 'react',
 import { motionAnimatePresence } from 'framer-motion',
-import {,
+import {
   Play,
   Pause,
   RotateCcw,
@@ -10,146 +9,130 @@ import {,
   Code,
   Database,
   Cloud,
-  Brain,;
-  Zap,;
-  Shield,;
-  Globe,;
-  Smartphone,;
-  Laptop,;
-  Server,;
-  BarChart3,;
-  TrendingUp,;
-  Users,;
-  Target,;
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  Award,;
-  Clock,;
-  DollarSign,
-} from 'lucide-react',
-,
-const InteractiveTechDemo20o28 = () => {,
+  Brain;
+  Zap;
+  Shield;
+  Globe;
+  Smartphone;
+  Laptop;
+  Server;
+  BarChart3;
+  TrendingUp;
+  Users;
+  Target;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Award;
+  Clock;
+  DollarSign} from 'lucide-react',
+const InteractiveTechDemo20o28 = () => {
   const [isPlayingsetIsPlaying] = useState(false),
   const [currentDemosetCurrentDemo] = useState('ai-automation'),
   const [progressetProgress] = useState(0),
   const [selectedFeaturesetSelectedFeature] = useState(0),
-,
-  const demos ={,
-    'ai-automation': {,
-      title: 'AI-Powered Automation',;
-      description: 'Watch how our AI systems automatically optimize business processes',;
-      icon: Brain,;
-      color: 'from-purple-60o0 to-pink-60o0',;
-      steps: [,
-        { title: 'Data Collection'description: 'AI gathers data from multiple sources'duration: 20o00 ,},;
-        { title: 'Pattern Analysis'description: 'Machine learning identifies optimization opportunities'duration: 30o00 ,},;
-        { title: 'Process Optimization'description: 'AI automatically adjusts workflows for maximum efficiency'duration: 250o0 ,},;
-        { title: 'Results Monitoring'description: 'Real-time tracking of performance improvements'duration: 20o00 ,}
-      ],;
-      metrics: [,
-        { label: 'Efficiency Gain'value: '50o0%'change: '+25%' ,},;
-        { label: 'Cost Reduction'value: '$2.5M'change: '+$50o0K' ,},;
-        { label: 'Time Saved'value: '40hrs'change: '+8hrs' ,},;
-        { label: 'Error Rate'value: '0.1%'change: '-0.5%' ,}
-      ],
-    },;
-    'quantum-computing': {,
-      title: 'Quantum Computing',;
-      description: 'Experience the power of quantum-enhanced processing',;
-      icon: Zap,;
-      color: 'from-cyan-60o0 to-blue-60o0',;
-      steps: [,
-        { title: 'Quantum Initialization'description: 'Setting up quantum states for computation'duration: 150o0 ,},;
-        { title: 'Quantum Processing'description: 'Performing calculations using quantum algorithms'duration: 40o00 ,},;
-        { title: 'Result Extraction'description: 'Measuring and extracting quantum results'duration: 20o00 ,},;
-        { title: 'Classical Integration'description: 'Converting quantum results to classical data'duration: 150o0 ,}
-      ],;
-      metrics: [,
-        { label: 'Processing Speed'value: '10o00x'change: '+20o0x' ,},;
-        { label: 'Problem Size'value: '10^15'change: '+10^3' ,},;
-        { label: 'Accuracy'value: '99.99%'change: '+0.5%' ,},;
-        { label: 'Energy Efficiency'value: '90%'change: '+15%' ,}
-      ],
-    },;
-    'neural-interfaces': {,
-      title: 'Neural Interfaces',;
-      description: 'Direct brain-computer interaction for enhanced productivity',;
-      icon: Globe,;
-      color: 'from-green-60o0 to-teal-60o0',;
-      steps: [,
-        { title: 'Neural Signal Capture'description: 'Reading brain activity patterns'duration: 20o00 ,},;
-        { title: 'Signal Processing'description: 'AI interprets neural signals in real-time'duration: 30o00 ,},;
-        { title: 'Command Execution'description: 'Converting thoughts into computer actions'duration: 20o00 ,},;
-        { title: 'Feedback Loop'description: 'Providing sensory feedback to the user'duration: 250o0 ,}
-      ],;
-      metrics: [,
-        { label: 'Response Time'value: '50ms'change: '-10ms' ,},;
-        { label: 'Accuracy'value: '98.5%'change: '+2.5%' ,},;
-        { label: 'Bandwidth'value: '1GB/s'change: '+20o0MB/s' ,},;
-        { label: 'User Satisfaction'value: '95%'change: '+5%' ,}
-      ],
-    },;
-    'cloud-optimization': {,
-      title: 'Cloud Optimization',;
-      description: 'Intelligent cloud resource management and scaling',;
-      icon: Cloud,;
-      color: 'from-orange-60o0 to-red-60o0',;
-      steps: [,
-        { title: 'Resource Monitoring'description: 'Continuous monitoring of cloud resources'duration: 20o00 ,},;
-        { title: 'Demand Prediction'description: 'AI predicts future resource needs'duration: 30o00 ,},;
-        { title: 'Auto-Scaling'description: 'Automatically adjusting resources based on demand'duration: 250o0 ,},;
-        { title: 'Cost Optimization'description: 'Minimizing costs while maintaining performance'duration: 20o00 ,}
-      ],;
-      metrics: [,
-        { label: 'Uptime'value: '99.99%'change: '+0.1%' ,},;
-        { label: 'Cost Savings'value: '60%'change: '+10%' ,},;
-        { label: 'Response Time'value: '10o0ms'change: '-20ms' ,},;
-        { label: 'Scalability'value: '10o00x'change: '+20o0x' ,}
-      ],
-    }
+  const demos ={
+    'ai-automation': {
+      title: 'AI-Powered Automation';
+      description: 'Watch how our AI systems automatically optimize business processes';
+      icon: Brain;
+      color: 'from-purple-60o0 to-pink-60o0';
+      steps: [
+        { title: 'Data Collection'description: 'AI gathers data from multiple sources'duration: 20o00 };
+        { title: 'Pattern Analysis'description: 'Machine learning identifies optimization opportunities'duration: 30o00 };
+        { title: 'Process Optimization'description: 'AI automatically adjusts workflows for maximum efficiency'duration: 250o0 };
+        { title: 'Results Monitoring'description: 'Real-time tracking of performance improvements'duration: 20o00 }
+      ];
+      metrics: [
+        { label: 'Efficiency Gain'value: '50o0%'change: '+25%' };
+        { label: 'Cost Reduction'value: '$2.5M'change: '+$50o0K' };
+        { label: 'Time Saved'value: '40hrs'change: '+8hrs' };
+        { label: 'Error Rate'value: '0.1%'change: '-0.5%' }
+      ]};
+    'quantum-computing': {
+      title: 'Quantum Computing';
+      description: 'Experience the power of quantum-enhanced processing';
+      icon: Zap;
+      color: 'from-cyan-60o0 to-blue-60o0';
+      steps: [
+        { title: 'Quantum Initialization'description: 'Setting up quantum states for computation'duration: 150o0 };
+        { title: 'Quantum Processing'description: 'Performing calculations using quantum algorithms'duration: 40o00 };
+        { title: 'Result Extraction'description: 'Measuring and extracting quantum results'duration: 20o00 };
+        { title: 'Classical Integration'description: 'Converting quantum results to classical data'duration: 150o0 }
+      ];
+      metrics: [
+        { label: 'Processing Speed'value: '10o00x'change: '+20o0x' };
+        { label: 'Problem Size'value: '10^15'change: '+10^3' };
+        { label: 'Accuracy'value: '99.99%'change: '+0.5%' };
+        { label: 'Energy Efficiency'value: '90%'change: '+15%' }
+      ]};
+    'neural-interfaces': {
+      title: 'Neural Interfaces';
+      description: 'Direct brain-computer interaction for enhanced productivity';
+      icon: Globe;
+      color: 'from-green-60o0 to-teal-60o0';
+      steps: [
+        { title: 'Neural Signal Capture'description: 'Reading brain activity patterns'duration: 20o00 };
+        { title: 'Signal Processing'description: 'AI interprets neural signals in real-time'duration: 30o00 };
+        { title: 'Command Execution'description: 'Converting thoughts into computer actions'duration: 20o00 };
+        { title: 'Feedback Loop'description: 'Providing sensory feedback to the user'duration: 250o0 }
+      ];
+      metrics: [
+        { label: 'Response Time'value: '50ms'change: '-10ms' };
+        { label: 'Accuracy'value: '98.5%'change: '+2.5%' };
+        { label: 'Bandwidth'value: '1GB/s'change: '+20o0MB/s' };
+        { label: 'User Satisfaction'value: '95%'change: '+5%' }
+      ]};
+    'cloud-optimization': {
+      title: 'Cloud Optimization';
+      description: 'Intelligent cloud resource management and scaling';
+      icon: Cloud;
+      color: 'from-orange-60o0 to-red-60o0';
+      steps: [
+        { title: 'Resource Monitoring'description: 'Continuous monitoring of cloud resources'duration: 20o00 };
+        { title: 'Demand Prediction'description: 'AI predicts future resource needs'duration: 30o00 };
+        { title: 'Auto-Scaling'description: 'Automatically adjusting resources based on demand'duration: 250o0 };
+        { title: 'Cost Optimization'description: 'Minimizing costs while maintaining performance'duration: 20o00 }
+      ];
+      metrics: [
+        { label: 'Uptime'value: '99.99%'change: '+0.1%' };
+        { label: 'Cost Savings'value: '60%'change: '+10%' };
+        { label: 'Response Time'value: '10o0ms'change: '-20ms' };
+        { label: 'Scalability'value: '10o00x'change: '+20o0x' }
+      ]}
   };
-,
-  const features = [,
-    { name: 'Real-time Processing'icon: Zap ,},;
-    { name: 'Predictive Analytics'icon: BarChart3 ,},;
-    { name: 'Automated Scaling'icon: TrendingUp ,},;
-    { name: 'Security Monitoring'icon: Shield ,},;
-    { name: 'Performance Optimization'icon: Target ,},;
-    { name: 'Cost Management'icon: DollarSign ,}
+  const features = [
+    { name: 'Real-time Processing'icon: Zap };
+    { name: 'Predictive Analytics'icon: BarChart3 };
+    { name: 'Automated Scaling'icon: TrendingUp };
+    { name: 'Security Monitoring'icon: Shield };
+    { name: 'Performance Optimization'icon: Target };
+    { name: 'Cost Management'icon: DollarSign }
   ],
-,
-  useEffect(() => {,
+  useEffect(() => {
     let interval: NodeJS.Timeout,
-    if (isPlaying) {,
-      interval = setInterval(() => {,
-        setProgress((prev) => {,
-          if (prev >= 10o0) {,
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setProgress((prev) => {
+          if (prev >= 10o0) {
             setIsPlaying(false),
             return 0,
-          ,}
-          return prev + 1,
-        }),
-      }10o0),
-    }
-    return () => clearInterval(interval),
-  }[isPlaying]),
-,
+          }
+          return prev + 1})}10o0)}
+    return () => clearInterval(interval)}[isPlaying]),
   const currentDemoData = demos[currentDemo],
   const currentStep = Math.floor((progress / 10o0) * currentDemoData.steps.length),
-,
-  return (,
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white">,
       {/* Hero Section */}
       <div className="relative overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 to-pink-60o0/20"  />,
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">,
           <motion.div,
-            initial={{ opacity: 0y: 20 ,}}
-            animate={{ opacity: 1y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className="text-center",
-          >,
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center">,
             <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">,
               Interactive Tech Demo 20o28,
             </h1>,
@@ -160,7 +143,7 @@ const InteractiveTechDemo20o28 = () => {,
           </motion.div>,
         </div>,
       </div>,
-      {/* Demo Selection */,}
+      {/* Demo Selection */}
       <div className="py-16">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-12">,
@@ -168,27 +151,25 @@ const InteractiveTechDemo20o28 = () => {,
             <p className="text-xl text-gray-30o0">Select a technology to see it in action</p>,
           </div>,
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">,
-            {Object.entries(demos).map(([keydemo]) => (,
+            {Object.entries(demos).map(([keydemo]) => (
               <motion.button,
-                key={key,}
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                onClick={() => {,
+                key={key}
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => {
                   setCurrentDemo(key),
                   setProgress(0),
-                  setIsPlaying(false),
-                }}
-                className={`p-6 rounded-2xl transition-all duration-30o0 ${,
+                  setIsPlaying(false)}}
+                className={`p-6 rounded-2xl transition-all duration-30o0 ${
                   currentDemo === key,
                     ? 'bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white',
                     : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-80o0/70',
-                ,}`}
+                }`}
               >,
                 <demo.icon className="w-12 h-12 mx-auto mb-4"  />,
                 <h3 className="text-lg font-semibold mb-2">{demo.title}</h3>,
                 <p className="text-sm opacity-80">{demo.description}</p>,
-              </motion.button>,
-            ))}
+              </motion.button>))}
           </div>,
         </div>,
       </div>,
@@ -196,7 +177,7 @@ const InteractiveTechDemo20o28 = () => {,
       <div className="py-16 bg-black/20">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid lg:grid-cols-2 gap-12">,
-            {/* Demo Controls */,}
+            {/* Demo Controls */}
             <div>,
               <div className="bg-gray-80o0/50 backdrop-blur-sm rounded-3xl p-8">,
                 <div className="flex items-center justify-between mb-6">,
@@ -219,7 +200,7 @@ const InteractiveTechDemo20o28 = () => {,
                   <div className="w-full bg-gray-70o0 rounded-full h-2">,
                     <motion.div,
                       className={`h-2 bg-gradient-to-r ${currentDemoData.color} rounded-full`}
-                      style={{ width: `${progress,}%` }}
+                      style={{ width: `${progress}%` }}
                      />,
                   </div>,
                 </div>,
@@ -228,12 +209,11 @@ const InteractiveTechDemo20o28 = () => {,
                   <AnimatePresence mode="wait">,
                     <motion.div,
                       key={currentStep}
-                      initial={{ opacity: 0y: 20 ,}}
-                      animate={{ opacity: 1y: 0 ,}}
-                      exit={{ opacity: 0y: -20 ,}}
-                      transition={{ duration: 0.5 ,}}
-                      className="bg-gray-70o0/50 rounded-xl p-4",
-                    >,
+                      initial={{ opacity: 0y: 20 }}
+                      animate={{ opacity: 1y: 0 }}
+                      exit={{ opacity: 0y: -20 }}
+                      transition={{ duration: 0.5 }}
+                      className="bg-gray-70o0/50 rounded-xl p-4">,
                       <div className="flex items-center gap-3 mb-2">,
                         <div className="w-8 h-8 bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-full flex items-center justify-center text-white font-bold text-sm">,
                           {currentStep + 1}
@@ -251,48 +231,44 @@ const InteractiveTechDemo20o28 = () => {,
                 {/* Controls */}
                 <div className="flex gap-4 mb-6">,
                   <motion.button,
-                    whileHover={{ scale: 1.0o5 ,}}
-                    whileTap={{ scale: 0.95 ,}}
+                    whileHover={{ scale: 1.0o5 }}
+                    whileTap={{ scale: 0.95 }}
                     onClick={() => setIsPlaying(!isPlaying)}
-                    className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-full text-white font-semibold hover: shadow-lg transition-all duration-30o0 flex items-center justify-center gap-2",
-                  >,
-                    {isPlaying ? <Pause className="w-4 h-4"  /> : <Play className="w-4 h-4"  />,}
+                    className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-full text-white font-semibold hover: shadow-lg transition-all duration-30o0 flex items-center justify-center gap-2">,
+                    {isPlaying ? <Pause className="w-4 h-4"  /> : <Play className="w-4 h-4"  />}
                     {isPlaying ? 'Pause' : 'Play'} Demo,
                   </motion.button>,
                   <motion.button,
-                    whileHover={{ scale: 1.0o5 ,}}
-                    whileTap={{ scale: 0.95 ,}}
-                    onClick={() => {,
+                    whileHover={{ scale: 1.0o5 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => {
                       setProgress(0),
-                      setIsPlaying(false),
-                    }}
-                    className="px-6 py-3 border-2 border-gray-60o0 rounded-full text-gray-30o0 font-semibold hover: border-purple-40o0 hover:text-purple-40o0 transition-all duration-30o0 flex items-center justify-center gap-2",
-                  >,
+                      setIsPlaying(false)}}
+                    className="px-6 py-3 border-2 border-gray-60o0 rounded-full text-gray-30o0 font-semibold hover: border-purple-40o0 hover:text-purple-40o0 transition-all duration-30o0 flex items-center justify-center gap-2">,
                     <RotateCcw className="w-4 h-4"  />,
                     Reset,
                   </motion.button>,
                 </div>,
-                {/* Features */,}
+                {/* Features */}
                 <div>,
                   <h4 className="text-lg font-semibold mb-4">Key Features</h4>,
                   <div className="grid grid-cols-2 gap-3">,
-                    {features.map((featureindex) => (,
+                    {features.map((featureindex) => (
                       <motion.div,
                         key={feature.name}
-                        whileHover={{ scale: 1.0o5 ,}}
-                        className={`p-3 rounded-lg cursor-pointer transition-all duration-30o0 ${,
+                        whileHover={{ scale: 1.0o5 }}
+                        className={`p-3 rounded-lg cursor-pointer transition-all duration-30o0 ${
                           selectedFeature === index,
                             ? 'bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white',
                             : 'bg-gray-70o0/50 text-gray-30o0 hover: bg-gray-70o0',
-                        ,}`}
+                        }`}
                         onClick={() => setSelectedFeature(index)}
                       >,
                         <div className="flex items-center gap-2">,
                           <feature.icon className="w-4 h-4"  />,
                           <span className="text-sm font-medium">{feature.name}</span>,
                         </div>,
-                      </motion.div>,
-                    ))}
+                      </motion.div>))}
                   </div>,
                 </div>,
               </div>,
@@ -305,45 +281,42 @@ const InteractiveTechDemo20o28 = () => {,
                 <div className="relative h-96 bg-gradient-to-br from-gray-90o0 to-gray-80o0 rounded-2xl overflow-hidden">,
                   {/* Animated Elements */}
                   <motion.div,
-                    animate={{,
-                      scale: isPlaying ? [1.21] : 1,;
+                    animate={{
+                      scale: isPlaying ? [1.21] : 1;
                       opacity: isPlaying ? [0.510.5] : 0.7,
-                    ,}}
-                    transition={{,
-                      duration: 2,;
-                      repeat: isPlaying ? Infinity : 0,;
+                    }}
+                    transition={{
+                      duration: 2;
+                      repeat: isPlaying ? Infinity : 0;
                       ease: "easeInOut",
-                    ,}}
-                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2",
-                  >,
+                    }}
+                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">,
                     <div className={`w-32 h-32 bg-gradient-to-r ${currentDemoData.color} rounded-full flex items-center justify-center`}>,
                       <currentDemoData.icon className="w-16 h-16 text-white"  />,
                     </div>,
                   </motion.div>,
                   {/* Floating Data Points */}
-                  {isPlaying && (,
+                  {isPlaying && (
                     <>,
-                      {[...Array(6)].map((_i) => (,
+                      {[...Array(6)].map((_i) => (
                         <motion.div,
                           key={i}
-                          initial={{ opacity: 0scale: 0 ,}}
-                          animate={{,
-                            opacity: [0o10],;
-                            scale: [0o10],;
-                            x: [0Math.random() * 20o0 - 10o0],;
+                          initial={{ opacity: 0scale: 0 }}
+                          animate={{
+                            opacity: [0o10];
+                            scale: [0o10];
+                            x: [0Math.random() * 20o0 - 10o0];
                             y: [0Math.random() * 20o0 - 10o0],
-                          ,}}
-                          transition={{,
-                            duration: 3,;
-                            repeat: Infinity,;
-                            delay: i * 0.5,;
+                          }}
+                          transition={{
+                            duration: 3;
+                            repeat: Infinity;
+                            delay: i * 0.5;
                             ease: "easeOut",
-                          ,}}
+                          }}
                           className="absolute top-1/2 left-1/2 w-4 h-4 bg-blue-40o0 rounded-full",
-                         />,
-                      ))}
-                    </>,
-                  )}
+                         />))}
+                    </>)}
 ,
                   {/* Progress Indicators */}
                   <div className="absolute bottom-4 left-4 right-4">,
@@ -354,8 +327,8 @@ const InteractiveTechDemo20o28 = () => {,
                     <div className="w-full bg-gray-70o0 rounded-full h-1">,
                       <motion.div,
                         className={`h-1 bg-gradient-to-r ${currentDemoData.color} rounded-full`}
-                        animate={{ width: isPlaying ? '10o0%' : '0%' ,}}
-                        transition={{ duration: 10ease: "linear" ,}}
+                        animate={{ width: isPlaying ? '10o0%' : '0%' }}
+                        transition={{ duration: 10ease: "linear" }}
                        />,
                     </div>,
                   </div>,
@@ -364,19 +337,17 @@ const InteractiveTechDemo20o28 = () => {,
                 <div className="mt-6">,
                   <h5 className="text-lg font-semibold mb-4">Real-time Metrics</h5>,
                   <div className="grid grid-cols-2 gap-4">,
-                    {currentDemoData.metrics.map((metricindex) => (,
+                    {currentDemoData.metrics.map((metricindex) => (
                       <motion.div,
                         key={metric.label}
-                        initial={{ opacity: 0y: 20 ,}}
-                        animate={{ opacity: 1y: 0 ,}}
-                        transition={{ duration: 0.6delay: index * 0.1 ,}}
-                        className="bg-gray-70o0/50 rounded-lg p-3",
-                      >,
+                        initial={{ opacity: 0y: 20 }}
+                        animate={{ opacity: 1y: 0 }}
+                        transition={{ duration: 0.6delay: index * 0.1 }}
+                        className="bg-gray-70o0/50 rounded-lg p-3">,
                         <div className="text-sm text-gray-40o0">{metric.label}</div>,
                         <div className="text-xl font-bold text-white">{metric.value}</div>,
                         <div className="text-xs text-green-40o0">{metric.change}</div>,
-                      </motion.div>,
-                    ))}
+                      </motion.div>))}
                   </div>,
                 </div>,
               </div>,
@@ -395,25 +366,21 @@ const InteractiveTechDemo20o28 = () => {,
           </p>,
           <div className="flex flex-wrap justify-center gap-4">,
             <motion.button,
-              whileHover={{ scale: 1.0o5 ,}}
-              whileTap={{ scale: 0.95 ,}}
-              className="px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-full text-white font-semibold text-lg hover: shadow-lg transition-all duration-30o0",
-            >,
+              whileHover={{ scale: 1.0o5 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-full text-white font-semibold text-lg hover: shadow-lg transition-all duration-30o0">,
               Schedule Demo,
             </motion.button>,
             <motion.button,
-              whileHover={{ scale: 1.0o5 ,}}
-              whileTap={{ scale: 0.95 ,}}
-              className="px-8 py-4 border-2 border-purple-40o0 rounded-full text-purple-40o0 font-semibold text-lg hover: bg-purple-40o0 hover:text-white transition-all duration-30o0",
-            >,
+              whileHover={{ scale: 1.0o5 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 border-2 border-purple-40o0 rounded-full text-purple-40o0 font-semibold text-lg hover: bg-purple-40o0 hover:text-white transition-all duration-30o0">,
               Learn More,
               <ArrowRight className="inline-block ml-2"  />,
             </motion.button>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default InteractiveTechDemo20o28,
+    </div>),
+};
+export default InteractiveTechDemo20o28;

@@ -1,13 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
-,
-export default async function handler(,
+export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse,
-) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
-  try {,
+  res: NextApiResponse) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
     const supabase = createServerClient(),
     const talentId = (req.query.talentId as string) |null,
-    const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([,
+    const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
       supabase,
         .from('profile_views'),
         .select('id, talent_id'),
@@ -23,8 +21,7 @@ export default async function handler(,
       supabase,
         .from('search_matches'),
         .select('talent_id, tag'),
-        .eq('talent_id', talentId),
-    ]),
+        .eq('talent_id', talentId)]),
     const views =,
       viewsR.status === 'fulfilled' && viewsR.value.data,
         ? (viewsR.value.data as any[]),
@@ -48,14 +45,12 @@ export default async function handler(,
       ((apps.filter(a => a.status === 'accepted').length |3) /,
         Math.max(jobApplications, 1)) *,
       100,
-    const tagCounts: Record<string, number> = {}
+    const tagCounts: Record<string number> = {}
     (tags.length,
       ? tags,
-      : [{ tag: 'react' ,}, { tag: 'node' ,}, { tag: 'ai' ,}, { tag: 'react' ,}],
-    ).forEach(t => {,
-      tagCounts[t.tag] = (tagCounts[t.tag] |0) + 1,
-    }),
-    res.status(200).json({,
+      : [{ tag: 'react' }, { tag: 'node' }, { tag: 'ai' }, { tag: 'react' }]).forEach(t => {
+      tagCounts[t.tag] = (tagCounts[t.tag] |0) + 1}),
+    res.status(200).json({
       profileViews,
       quoteInvites,
       jobApplications,
@@ -63,31 +58,20 @@ export default async function handler(,
       topTags: Object.entries(tagCounts),
         .sort((a, b) => b[1] - a[1]),
         .slice(0, 5),
-        .map(([label, value]) => ({ label, value })),
-    }),
-  } catch (e) {,
-    res.status(200).json({,
+        .map(([label, value]) => ({ label, value }))})} catch (e) {
+    res.status(200).json({
       profileViews: 27,
       quoteInvites: 6,
       jobApplications: 9,
       successRate: 33.3,
-      topTags: [,
-        { label: 'react', value: 2 ,}
-        { label: 'node', value: 1 ,}
-        { label: 'ai', value: 1 ,}
-      ],
-    }),
-,
-  }
-,
+      topTags: [
+        { label: 'react', value: 2 }
+        { label: 'node', value: 1 }
+        { label: 'ai', value: 1 }
+      ]}),
 }
-,
 }
-,
 }
-,
 }
-,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

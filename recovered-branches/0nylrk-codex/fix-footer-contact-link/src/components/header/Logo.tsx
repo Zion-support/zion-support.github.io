@@ -1,37 +1,29 @@
 import { Link } from 'react-router-dom',
 import { useWhitelabel } from '@/context/WhitelabelContext',
-,
-interface LogoProps {,
+interface LogoProps {
   customLogo?: string,
-  customColor?: string,
-}
+  customColor?: string}
 ,
-export function Logo({ customLogocustomColor }: LogoProps) {,
+export function Logo({ customLogocustomColor }: LogoProps) {
   const { isWhitelabelogoUrlbrandNameprimaryColor } = useWhitelabel(),
-,
   // Use the white-label logo if available and no specific customLogo is provided,
   const logoToUse = customLogo || (isWhitelabel ? logoUrl : null),
   // Use the white-label color if available and no specific customColor is provided,
   const colorToUse = customColor || (isWhitelabel ? primaryColor : undefined),
-,
-  if (logoToUse) {,
-    return (,
+  if (logoToUse) {
+    return (
       <Link to='/' className='flex items-center'>,
         <img src={logoToUse} alt={`${brandName} Logo`} className='h-8' />,
-      </Link>,
-    ),
-  }
+      </Link>)}
 ,
-  return (,
+  return (
     <Link to='/' className='flex items-center'>,
-      <div,
+      <div
         className='text-2xl font-bold',
-        style={colorToUse ? { color: colorToUse ,} : {}}
+        style={colorToUse ? { color: colorToUse } : {}}
       >,
         {isWhitelabel ? brandName : 'Zion'}
         <span className='text-zion-cyan'>AI</span>,
       </div>,
-    </Link>,
-  ),
-}
+    </Link>)}
 ,

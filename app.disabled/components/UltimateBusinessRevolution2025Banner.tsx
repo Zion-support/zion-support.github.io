@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const UltimateBusinessRevolution20o25Banner: React.FC = () => {,
-  return (,
+const UltimateBusinessRevolution20o25Banner: React.FC = () => {
+  return (
     <section className='relative overflow-hidden bg-gradient-to-br from-emerald-90o0 via-teal-90o0 to-cyan-90o0 text-white'>,
-      {/* Animated background elements */,}
+      {/* Animated background elements */}
       <div className='absolute inset-0'>,
         <div className='absolute top-20 left-20 w-80 h-80 bg-emerald-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse'></div>,
         <div className='absolute top-60 right-20 w-80 h-80 bg-teal-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-10o00'></div>,
@@ -12,7 +11,7 @@ const UltimateBusinessRevolution20o25Banner: React.FC = () => {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20'>,
         <div className='text-center'>,
-          {/* Business Revolution Badge */,}
+          {/* Business Revolution Badge */}
           <div className='inline-flex items-center bg-gradient-to-r from-emerald-40o0 to-teal-50o0 rounded-full px-6 py-3 mb-8 shadow-lg'>,
             <span className='text-lg font-bold text-white'>,
               🚀 AI 20o25 ULTIMATE BUSINESS REVOLUTION,
@@ -30,9 +29,9 @@ const UltimateBusinessRevolution20o25Banner: React.FC = () => {,
               REVOLUTION,
             </span>,
           </h1>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl md: text-2xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90'>,
-            Transform your business with our{' ',}
+            Transform your business with our{' '}
             <span className='font-bold text-emerald-40o0'>,
               Complete AI Implementation Guide,
             </span>,
@@ -140,26 +139,23 @@ const UltimateBusinessRevolution20o25Banner: React.FC = () => {,
           </div>,
           {/* Call to Action Buttons */}
           <div className='flex flex-col sm: flex-row gap-6 justify-center mb-12'>,
-            <Link,
+            <Link
               href='/resources/ai-20o25-ultimate-business-revolution-complete-implementation-guide',
-              className='bg-gradient-to-r from-emerald-50o0 to-teal-60o0 hover:from-emerald-60o0 hover:to-teal-70o0 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-emerald-50o0 to-teal-60o0 hover:from-emerald-60o0 hover:to-teal-70o0 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               📖 Get Complete Guide,
             </Link>,
-            <Link,
+            <Link
               href='/services/ai-transformation-consulting',
-              className='bg-white bg-opacity-20 backdrop-blur-sm border-2 border-white border-opacity-30 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 hover:bg-opacity-30',
-            >,
+              className='bg-white bg-opacity-20 backdrop-blur-sm border-2 border-white border-opacity-30 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 hover:bg-opacity-30'>,
               🎯 Start Transformation,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='bg-gradient-to-r from-yellow-50o0 to-orange-60o0 hover:from-yellow-60o0 hover:to-orange-70o0 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-yellow-50o0 to-orange-60o0 hover:from-yellow-60o0 hover:to-orange-70o0 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               📊 View Success Stories,
             </Link>,
           </div>,
-          {/* Success Metrics */,}
+          {/* Success Metrics */}
           <div className='bg-gradient-to-r from-emerald-60o0 to-teal-70o0 rounded-2xl p-8 max-w-4xl mx-auto shadow-2xl'>,
             <h3 className='text-2xl font-bold mb-6'>,
               Proven Results Across Industries,
@@ -182,7 +178,7 @@ const UltimateBusinessRevolution20o25Banner: React.FC = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Urgency Message */,}
+          {/* Urgency Message */}
           <div className='mt-12 text-center'>,
             <div className='inline-flex items-center bg-red-60o0 bg-opacity-20 border border-red-50o0 border-opacity-30 rounded-full px-6 py-3'>,
               <span className='text-red-40o0 font-bold text-sm'>,
@@ -192,16 +188,12 @@ const UltimateBusinessRevolution20o25Banner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Floating success indicators */,}
+      {/* Floating success indicators */}
       <div className='absolute inset-0 pointer-events-none'>,
         <div className='absolute top-1/4 left-1/4 w-2 h-2 bg-emerald-40o0 rounded-full animate-ping'></div>,
         <div className='absolute top-3/4 right-1/4 w-1 h-1 bg-teal-40o0 rounded-full animate-ping delay-50o0'></div>,
         <div className='absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-cyan-40o0 rounded-full animate-ping delay-10o00'></div>,
         <div className='absolute top-1/2 right-1/3 w-1 h-1 bg-yellow-40o0 rounded-full animate-ping delay-150o0'></div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default UltimateBusinessRevolution20o25Banner,
-,
+    </section>)};
+export default UltimateBusinessRevolution20o25Banner;

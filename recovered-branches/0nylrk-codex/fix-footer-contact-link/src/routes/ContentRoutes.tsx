@@ -12,9 +12,8 @@ import HelpCenterPage from '@/pages/HelpCenterPage',
 import AccountSettings from '@/pages/AccountSettings',
 import ProjectRoom from '@/pages/ProjectRoom',
 import VideoCall from '@/pages/VideoCall',
-,
-const ContentRoutes = () => {,
-  return (,
+const ContentRoutes = () => {
+  return (
     <Routes>,
       {/* Content Routes */}
       <Route path='/' element={<Home />} />,
@@ -40,9 +39,5 @@ const ContentRoutes = () => {,
       <Route path='/search' element={<SearchPage />} />,
       {/* Sitemap Page */}
       <Route path='/sitemap-page' element={<SitemapPage />} />,
-    </Routes>,
-  ),
-};
-,
-export default ContentRoutes,
-,
+    </Routes>)};
+export default ContentRoutes;

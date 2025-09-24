@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function PressPage() {,
-  return (,
+export default function PressPage() {
+  return (
     <>,
       <Head>,
         <title>Press - Zion Tech Group</title>,
@@ -17,7 +16,6 @@ export default function PressPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

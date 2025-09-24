@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function SustainabilityPage() {,
-  return (,
+export default function SustainabilityPage() {
+  return (
     <>,
       <Head>,
         <title>Sustainability - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function SustainabilityPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function KidsPage() {,
-  return (,
+export default function KidsPage() {
+  return (
     <>,
       <Head>,
         <title>Kids - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function KidsPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

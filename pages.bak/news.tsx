@@ -1,10 +1,10 @@
-import React from 'react',
+import React from 'react';
 import _React from 'react',
-const NewsPage = () => {,
-  return (,
+const NewsPage = () => {
+  return (
     <>,
       {' '}
-      <SEOHead,
+      <SEOHead
         title='News - Zion Tech Group',
         description='Latest news and updates from Zion Tech Group.',
       />{' '}
@@ -16,8 +16,5 @@ const NewsPage = () => {,
           insights.,
         </p>{' '}
       </main>{' '}
-    </>,
-  ),
-};
-export default NewsPage,
-,
+    </>)};
+export default NewsPage;

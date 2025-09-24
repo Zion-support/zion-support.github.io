@@ -1,62 +1,59 @@
 import Head from 'next/head',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import { Button } from '../components/ui/Button',
-import {,
-  Bot,;
-  ListTree,;
-  Check,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Rocket,;
+import {
+  Bot;
+  ListTree;
+  Check;
+  Phone;
+  Mail;
+  MapPin;
+  Rocket;
 } from 'lucide-react',
-,
-export default function AIAgentsPage() {,
-  const contactInfo = {,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',;
+export default function AIAgentsPage() {
+  const contactInfo = {
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
+    website: 'https://ziontechgroup.com';
   };
-,
-  const plans = [,
-    {,
-      name: 'Builder',;
-      price: '$249/month',;
-      items: [,
-        '3 agents',;
-        'Tools: web, code, docs',;
-        'JSON events stream',;
-        'Retry and timeouts',;
-      ],;
-    },;
-    {,
-      name: 'Scale',;
-      price: '$799/month',;
-      items: [,
-        '10 agents',;
-        'Graph planner',;
-        'Long-term memory',;
-        'Slack/Jira integration',;
-      ],;
-    },;
-    {,
-      name: 'Enterprise',;
-      price: 'Custom',;
-      items: [,
-        'Unlimited agents',;
-        'Private infra',;
-        'SLA & audit logs',;
-        'SSO/SAML',;
-      ],;
-    },;
+  const plans = [
+    {
+      name: 'Builder';
+      price: '$249/month';
+      items: [
+        '3 agents';
+        'Tools: web, code, docs';
+        'JSON events stream';
+        'Retry and timeouts';
+      ];
+    };
+    {
+      name: 'Scale';
+      price: '$799/month';
+      items: [
+        '10 agents';
+        'Graph planner';
+        'Long-term memory';
+        'Slack/Jira integration';
+      ];
+    };
+    {
+      name: 'Enterprise';
+      price: 'Custom';
+      items: [
+        'Unlimited agents';
+        'Private infra';
+        'SLA & audit logs';
+        'SSO/SAML';
+      ];
+    };
   ],
-,
-  return (,
+  return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
         <title>AI Multi-Agent Orchestrator | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Coordinate specialist AI agents with a graph planner, tools, streaming events, and auditability.',
         />,
@@ -68,49 +65,44 @@ export default function AIAgentsPage() {,
             Multi-Agent Orchestrator,
           </h1>,
           <p className='text-xl text-gray-30o0'>,
-            Assign roles, define plans, and execute workflows with reliable,;
+            Assign roles, define plans, and execute workflows with reliable;
             observable multi-agent AI.,
           </p>,
           <div className='mt-6 flex justify-center gap-3'>,
-            <Button,
+            <Button
               variant='primary',
-              className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-xl',
-            >,
+              className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-xl'>,
               <Rocket className='w-4 h-4 mr-2' />,
               Book a Demo,
             </Button>,
-            <Button,
+            <Button
               variant='outline',
-              className='border-gray-60o0 text-gray-20o0',
-            >,
+              className='border-gray-60o0 text-gray-20o0'>,
               Read Docs,
             </Button>,
           </div>,
         </div>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-6 max-w-6xl mx-auto mb-16'>,
-          {plans.map(p => (,
-            <div,
-              key={p.name,}
-              className='bg-black/30 border border-gray-70o0/50 rounded-2xl p-6',
-            >,
+          {plans.map(p => (
+            <div
+              key={p.name}
+              className='bg-black/30 border border-gray-70o0/50 rounded-2xl p-6'>,
               <h3 className='text-2xl font-bold text-white mb-2'>{p.name}</h3>,
               <div className='text-cyan-40o0 font-semibold mb-4'>{p.price}</div>,
               <ul className='space-y-2 text-gray-30o0 text-sm'>,
-                {p.items.map(i => (,
+                {p.items.map(i => (
                   <li key={i} className='flex items-start gap-2'>,
                     <Check className='w-4 h-4 mt-0.5 text-emerald-40o0' />{' '}
                     <span>{i}</span>,
-                  </li>,
-                ))}
+                  </li>))}
               </ul>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         <div className='max-w-3xl mx-auto mt-4 bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-50o0/30'>,
           <div className='grid grid-cols-1 md: grid-cols-3 gap-4 text-sm mb-4'>,
             <div className='flex items-center justify-center gap-2 text-cyan-40o0'>,
               <Phone className='w-4 h-4' />,
-              <span>{contactInfo.mobile,}</span>,
+              <span>{contactInfo.mobile}</span>,
             </div>,
             <div className='flex items-center justify-center gap-2 text-purple-40o0'>,
               <Mail className='w-4 h-4' />,
@@ -122,16 +114,13 @@ export default function AIAgentsPage() {,
             </div>,
           </div>,
           <div className='text-center'>,
-            <Button,
+            <Button
               variant='primary',
-              className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-xl',
-            >,
+              className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-xl'>,
               Talk to Engineering,
             </Button>,
           </div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>,
-  ),
-}
+    </UltraAdvancedFuturisticBackground>)}
 ,

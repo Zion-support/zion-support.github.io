@@ -1,224 +1,224 @@
 import React, { useState, useMemo } from 'react',
 import { motion } from 'framer-motion',
-import {,
-  Lightbulb,;
-  Rocket,;
-  Brain,;
-  Zap,;
-  TrendingUp,;
-  Star,;
-  Users,;
-  Globe,;
-  CheckCircle,;
-  Cpu,;
-  Atom,;
-  Satellite,;
-  Dna,;
-  Shield,;
-  Leaf,;
+import {
+  Lightbulb;
+  Rocket;
+  Brain;
+  Zap;
+  TrendingUp;
+  Star;
+  Users;
+  Globe;
+  CheckCircle;
+  Cpu;
+  Atom;
+  Satellite;
+  Dna;
+  Shield;
+  Leaf;
 } from 'lucide-react',
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card',
 import { Button } from './ui/button',
 import { Badge } from './ui/badge',
 import { Input } from './ui/input',
-const AdvancedServiceInnovationHub = () => {,
+const AdvancedServiceInnovationHub = () => {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [selectedImpact, setSelectedImpact] = useState('all'),
   const [selectedStatus, setSelectedStatus] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
   const [viewMode, setViewMode] = useState('trends'),
   // Mock data - in real app this would come from API,
-  const innovationTrends = [,
-    {,
-      id: 'quantum-supremacy',;
-      title: 'Quantum Supremacy & Commercialization',;
+  const innovationTrends = [
+    {
+      id: 'quantum-supremacy';
+      title: 'Quantum Supremacy & Commercialization';
       description:,
-        'The transition from quantum research to practical commercial applications across industries.',;
-      category: 'quantum',;
-      impact: 'High',;
-      timeline: '20o25-20o30',;
-      adoption: 85,;
-      investment: '$50B+',;
-      keyPlayers: ['IBM', 'Google', 'Microsoft', 'Startups'],;
-      technologies: [,
-        'Quantum Computing',;
-        'Quantum Algorithms',;
-        'Quantum Software',;
-      ],;
-      status: 'Emerging',;
-    },;
-    {,
-      id: 'ai-consciousness',;
-      title: 'AI Consciousness & General Intelligence',;
+        'The transition from quantum research to practical commercial applications across industries.';
+      category: 'quantum';
+      impact: 'High';
+      timeline: '20o25-20o30';
+      adoption: 85;
+      investment: '$50B+';
+      keyPlayers: ['IBM', 'Google', 'Microsoft', 'Startups'];
+      technologies: [
+        'Quantum Computing';
+        'Quantum Algorithms';
+        'Quantum Software';
+      ];
+      status: 'Emerging';
+    };
+    {
+      id: 'ai-consciousness';
+      title: 'AI Consciousness & General Intelligence';
       description:,
-        'Development of self-aware AI systems with human-like reasoning and consciousness.',;
-      category: 'ai',;
-      impact: 'High',;
-      timeline: '20o30-20o40',;
-      adoption: 45,;
-      investment: '$10o0B+',;
-      keyPlayers: ['OpenAI', 'Anthropic', 'Research Labs', 'Universities'],;
-      technologies: ['AI Consciousness', 'General AI', 'Neural Networks'],;
-      status: 'Emerging',;
-    },;
-    {,
-      id: 'space-mining',;
-      title: 'Space Mining & Resource Extraction',;
+        'Development of self-aware AI systems with human-like reasoning and consciousness.';
+      category: 'ai';
+      impact: 'High';
+      timeline: '20o30-20o40';
+      adoption: 45;
+      investment: '$10o0B+';
+      keyPlayers: ['OpenAI', 'Anthropic', 'Research Labs', 'Universities'];
+      technologies: ['AI Consciousness', 'General AI', 'Neural Networks'];
+      status: 'Emerging';
+    };
+    {
+      id: 'space-mining';
+      title: 'Space Mining & Resource Extraction';
       description:,
-        'Commercial extraction of valuable resources from asteroids and celestial bodies.',;
-      category: 'space-tech',;
-      impact: 'High',;
-      timeline: '20o30-20o40',;
-      adoption: 30,;
-      investment: '$20o0B+',;
-      keyPlayers: ['SpaceX', 'Blue Origin', 'Asteroid Mining Companies'],;
-      technologies: [,
-        'Space Robotics',;
-        'Resource Processing',;
-        'Space Logistics',;
-      ],;
-      status: 'Emerging',;
-    },;
-    {,
-      id: 'fusion-energy',;
-      title: 'Fusion Energy Commercialization',;
+        'Commercial extraction of valuable resources from asteroids and celestial bodies.';
+      category: 'space-tech';
+      impact: 'High';
+      timeline: '20o30-20o40';
+      adoption: 30;
+      investment: '$20o0B+';
+      keyPlayers: ['SpaceX', 'Blue Origin', 'Asteroid Mining Companies'];
+      technologies: [
+        'Space Robotics';
+        'Resource Processing';
+        'Space Logistics';
+      ];
+      status: 'Emerging';
+    };
+    {
+      id: 'fusion-energy';
+      title: 'Fusion Energy Commercialization';
       description:,
-        'Breakthrough in controlled nuclear fusion for unlimited clean energy.',;
-      category: 'green-tech',;
-      impact: 'High',;
-      timeline: '20o30-20o40',;
-      adoption: 60,;
-      investment: '$50o0B+',;
-      keyPlayers: ['ITER', 'Private Fusion Companies', 'Government Labs'],;
-      technologies: [,
-        'Fusion Physics',;
-        'Plasma Confinement',;
-        'Energy Conversion',;
-      ],;
-      status: 'Growing',;
-    },;
-    {,
-      id: 'synthetic-biology',;
-      title: 'Synthetic Biology Revolution',;
+        'Breakthrough in controlled nuclear fusion for unlimited clean energy.';
+      category: 'green-tech';
+      impact: 'High';
+      timeline: '20o30-20o40';
+      adoption: 60;
+      investment: '$50o0B+';
+      keyPlayers: ['ITER', 'Private Fusion Companies', 'Government Labs'];
+      technologies: [
+        'Fusion Physics';
+        'Plasma Confinement';
+        'Energy Conversion';
+      ];
+      status: 'Growing';
+    };
+    {
+      id: 'synthetic-biology';
+      title: 'Synthetic Biology Revolution';
       description:,
-        'Engineering of custom organisms and biological systems for industrial applications.',;
-      category: 'biotech-ai',;
-      impact: 'High',;
-      timeline: '20o25-20o35',;
-      adoption: 70,;
-      investment: '$150B+',;
-      keyPlayers: [,
-        'Ginkgo Bioworks',;
-        'Twist Bioscience',;
-        'Research Institutions',;
-      ],;
-      technologies: [,
-        'DNA Programming',;
-        'Genetic Engineering',;
-        'Bio-Manufacturing',;
-      ],;
-      status: 'Growing',;
-    },;
-    {,
-      id: 'brain-computer-interfaces',;
-      title: 'Brain-Computer Interface Revolution',;
+        'Engineering of custom organisms and biological systems for industrial applications.';
+      category: 'biotech-ai';
+      impact: 'High';
+      timeline: '20o25-20o35';
+      adoption: 70;
+      investment: '$150B+';
+      keyPlayers: [
+        'Ginkgo Bioworks';
+        'Twist Bioscience';
+        'Research Institutions';
+      ];
+      technologies: [
+        'DNA Programming';
+        'Genetic Engineering';
+        'Bio-Manufacturing';
+      ];
+      status: 'Growing';
+    };
+    {
+      id: 'brain-computer-interfaces';
+      title: 'Brain-Computer Interface Revolution';
       description:,
-        'Direct neural control of computers and digital systems for enhanced human capabilities.',;
-      category: 'biotech-ai',;
-      impact: 'High',;
-      timeline: '20o30-20o40',;
-      adoption: 40,;
-      investment: '$80B+',;
-      keyPlayers: ['Neuralink', 'Kernel', 'Medical Device Companies'],;
-      technologies: ['Neural Interfaces', 'Signal Processing', 'AI/ML'],;
-      status: 'Emerging',;
-    },;
+        'Direct neural control of computers and digital systems for enhanced human capabilities.';
+      category: 'biotech-ai';
+      impact: 'High';
+      timeline: '20o30-20o40';
+      adoption: 40;
+      investment: '$80B+';
+      keyPlayers: ['Neuralink', 'Kernel', 'Medical Device Companies'];
+      technologies: ['Neural Interfaces', 'Signal Processing', 'AI/ML'];
+      status: 'Emerging';
+    };
   ],
-  const futureRoadmap = [,
-    {,
-      id: 'quantum-internet',;
-      title: 'Quantum Internet Infrastructure',;
+  const futureRoadmap = [
+    {
+      id: 'quantum-internet';
+      title: 'Quantum Internet Infrastructure';
       description:,
-        'Global quantum internet enabling ultra-secure, instant communication worldwide.',;
-      timeline: '20o30-20o40',;
-      milestones: [,
-        'Quantum network prototypes',;
-        'Inter-city quantum links',;
-        'Global quantum backbone',;
-        'Consumer quantum internet',;
-      ],;
-      challenges: [,
-        'Quantum entanglement over long distances',;
-        'Infrastructure costs',;
-        'Technical complexity',;
-        'Regulatory frameworks',;
-      ],;
-      opportunities: [,
-        'Unbreakable security',;
-        'Instant global communication',;
-        'Quantum computing access',;
-        'New business models',;
-      ],;
-      investment: '$20o0B+',;
-      category: 'quantum',;
-    },;
-    {,
-      id: 'space-colonization',;
-      title: 'Space Colonization & Settlement',;
+        'Global quantum internet enabling ultra-secure, instant communication worldwide.';
+      timeline: '20o30-20o40';
+      milestones: [
+        'Quantum network prototypes';
+        'Inter-city quantum links';
+        'Global quantum backbone';
+        'Consumer quantum internet';
+      ];
+      challenges: [
+        'Quantum entanglement over long distances';
+        'Infrastructure costs';
+        'Technical complexity';
+        'Regulatory frameworks';
+      ];
+      opportunities: [
+        'Unbreakable security';
+        'Instant global communication';
+        'Quantum computing access';
+        'New business models';
+      ];
+      investment: '$20o0B+';
+      category: 'quantum';
+    };
+    {
+      id: 'space-colonization';
+      title: 'Space Colonization & Settlement';
       description:,
-        'Establishment of permanent human settlements on Mars and other celestial bodies.',;
-      timeline: '20o40-20o60',;
-      milestones: [,
-        'Mars mission planning',;
-        'Habitat construction',;
-        'Sustainable life support',;
-        'Self-sufficient colonies',;
-      ],;
-      challenges: [,
-        'Life support systems',;
-        'Radiation protection',;
-        'Resource sustainability',;
-        'Human psychology',;
-      ],;
-      opportunities: [,
-        'New human civilization',;
-        'Resource expansion',;
-        'Scientific research',;
-        'Economic growth',;
-      ],;
-      investment: '$1T+',;
-      category: 'space-tech',;
-    },;
-    {,
-      id: 'ai-governance',;
-      title: 'AI Governance & Regulation',;
+        'Establishment of permanent human settlements on Mars and other celestial bodies.';
+      timeline: '20o40-20o60';
+      milestones: [
+        'Mars mission planning';
+        'Habitat construction';
+        'Sustainable life support';
+        'Self-sufficient colonies';
+      ];
+      challenges: [
+        'Life support systems';
+        'Radiation protection';
+        'Resource sustainability';
+        'Human psychology';
+      ];
+      opportunities: [
+        'New human civilization';
+        'Resource expansion';
+        'Scientific research';
+        'Economic growth';
+      ];
+      investment: '$1T+';
+      category: 'space-tech';
+    };
+    {
+      id: 'ai-governance';
+      title: 'AI Governance & Regulation';
       description:,
-        'Comprehensive frameworks for responsible AI development and deployment.',;
-      timeline: '20o25-20o35',;
-      milestones: [,
-        'Ethical AI frameworks',;
-        'Regulatory standards',;
-        'Global AI governance',;
-        'AI safety protocols',;
-      ],;
-      challenges: [,
-        'International coordination',;
-        'Technology evolution',;
-        'Balancing innovation and safety',;
-        'Stakeholder alignment',;
-      ],;
-      opportunities: [,
-        'Responsible AI development',;
-        'Public trust building',;
-        'Innovation guidance',;
-        'Global cooperation',;
-      ],;
-      investment: '$50B+',;
-      category: 'ai',;
-    },;
+        'Comprehensive frameworks for responsible AI development and deployment.';
+      timeline: '20o25-20o35';
+      milestones: [
+        'Ethical AI frameworks';
+        'Regulatory standards';
+        'Global AI governance';
+        'AI safety protocols';
+      ];
+      challenges: [
+        'International coordination';
+        'Technology evolution';
+        'Balancing innovation and safety';
+        'Stakeholder alignment';
+      ];
+      opportunities: [
+        'Responsible AI development';
+        'Public trust building';
+        'Innovation guidance';
+        'Global cooperation';
+      ];
+      investment: '$50B+';
+      category: 'ai';
+    };
   ],
-  const filteredTrends = useMemo(() => {,
-    return innovationTrends.filter(trend => {,
+  const filteredTrends = useMemo(() => {
+    return innovationTrends.filter(trend => {
       const matchesCategory =,
         selectedCategory === 'all' || trend.category === selectedCategory,
       const matchesImpact =,
@@ -228,11 +228,9 @@ const AdvancedServiceInnovationHub = () => {,
       const matchesSearch =,
         trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
         trend.description.toLowerCase().includes(searchTerm.toLowerCase()),
-      return matchesCategory && matchesImpact && matchesStatus && matchesSearch,
-    }),
-  }, [selectedCategory, selectedImpact, selectedStatus, searchTerm]),
-  const getImpactColor = impact => {,
-    switch (impact) {,
+      return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm]),
+  const getImpactColor = impact => {
+    switch (impact) {
       case 'High':,
         return 'bg-red-10o0 text-red-80o0',
       case 'Medium':,
@@ -241,10 +239,10 @@ const AdvancedServiceInnovationHub = () => {,
         return 'bg-green-10o0 text-green-80o0',
       default: ,
         return 'bg-gray-10o0 text-gray-80o0',
-    ,}
+    }
   };
-  const getStatusColor = status => {,
-    switch (status) {,
+  const getStatusColor = status => {
+    switch (status) {
       case 'Emerging':,
         return 'bg-blue-10o0 text-blue-80o0',
       case 'Growing':,
@@ -255,10 +253,10 @@ const AdvancedServiceInnovationHub = () => {,
         return 'bg-purple-10o0 text-purple-80o0',
       default: ,
         return 'bg-gray-10o0 text-gray-80o0',
-    ,}
+    }
   };
-  const getCategoryIcon = category => {,
-    switch (category) {,
+  const getCategoryIcon = category => {
+    switch (category) {
       case 'quantum':,
         return <Atom className='w-5 h-5' />,
       case 'ai':,
@@ -271,40 +269,39 @@ const AdvancedServiceInnovationHub = () => {,
         return <Dna className='w-5 h-5' />,
       default: ,
         return <Cpu className='w-5 h-5' />,
-    ,}
+    }
   };
-  const categories = [,
-    { id: 'all', name: 'All Categories', icon: <Globe className='w-4 h-4' /> ,},;
-    {,
-      id: 'quantum',;
-      name: 'Quantum Technology',;
-      icon: <Atom className='w-4 h-4' />,;
-    },;
-    {,
-      id: 'ai',;
-      name: 'Artificial Intelligence',;
-      icon: <Brain className='w-4 h-4' />,;
-    },;
-    {,
-      id: 'space-tech',;
-      name: 'Space Technology',;
-      icon: <Satellite className='w-4 h-4' />,;
-    },;
-    {,
-      id: 'green-tech',;
-      name: 'Green Technology',;
-      icon: <Leaf className='w-4 h-4' />,;
-    },;
-    { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className='w-4 h-4' /> ,},;
+  const categories = [
+    { id: 'all', name: 'All Categories', icon: <Globe className='w-4 h-4' /> };
+    {
+      id: 'quantum';
+      name: 'Quantum Technology';
+      icon: <Atom className='w-4 h-4' />;
+    };
+    {
+      id: 'ai';
+      name: 'Artificial Intelligence';
+      icon: <Brain className='w-4 h-4' />;
+    };
+    {
+      id: 'space-tech';
+      name: 'Space Technology';
+      icon: <Satellite className='w-4 h-4' />;
+    };
+    {
+      id: 'green-tech';
+      name: 'Green Technology';
+      icon: <Leaf className='w-4 h-4' />;
+    };
+    { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className='w-4 h-4' /> };
   ],
-  return (,
+  return (
     <div className='max-w-7xl mx-auto p-6'>,
       {/* Header */}
       <motion.div,
-        initial={{ opacity: 0, y: 20 ,}}
-        animate={{ opacity: 1, y: 0 ,}}
-        className='mb-8',
-      >,
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className='mb-8'>,
         <div className='flex flex-col lg: flex-row lg:items-center lg:justify-between gap-4'>,
           <div>,
             <h1 className='text-3xl font-bold text-zion-blue-dark mb-2'>,
@@ -317,8 +314,8 @@ const AdvancedServiceInnovationHub = () => {,
             </p>,
           </div>,
           <div className='flex gap-2'>,
-            {['trends', 'roadmap', 'insights'].map(mode => (,
-              <Button,
+            {['trends', 'roadmap', 'insights'].map(mode => (
+              <Button
                 key={mode}
                 variant={viewMode === mode ? 'default' : 'outline'}
                 size='sm',
@@ -328,47 +325,42 @@ const AdvancedServiceInnovationHub = () => {,
                 {mode === 'roadmap' && <Rocket className='w-4 h-4 mr-2' />}
                 {mode === 'insights' && <Lightbulb className='w-4 h-4 mr-2' />}
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
-              </Button>,
-            ))}
+              </Button>))}
           </div>,
         </div>,
       </motion.div>,
       {/* Innovation Trends View */}
-      {viewMode === 'trends' && (,
+      {viewMode === 'trends' && (
         <>,
           {/* Filters */}
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ delay: 0.1 ,}}
-            className='bg-white rounded-lg shadow-lg p-6 mb-8',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className='bg-white rounded-lg shadow-lg p-6 mb-8'>,
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4'>,
               <div>,
                 <label className='block text-sm font-medium text-zion-slate-dark mb-2'>,
                   Category,
                 </label>,
-                <select,
-                  value={selectedCategory,}
+                <select
+                  value={selectedCategory}
                   onChange={e => setSelectedCategory(e.target.value)}
-                  className='w-full p-2 border border-zion-slate-light rounded-md',
-                >,
-                  {categories.map(category => (,
+                  className='w-full p-2 border border-zion-slate-light rounded-md'>,
+                  {categories.map(category => (
                     <option key={category.id} value={category.id}>,
                       {category.name}
-                    </option>,
-                  ))}
+                    </option>))}
                 </select>,
               </div>,
               <div>,
                 <label className='block text-sm font-medium text-zion-slate-dark mb-2'>,
                   Impact,
                 </label>,
-                <select,
+                <select
                   value={selectedImpact}
                   onChange={e => setSelectedImpact(e.target.value)}
-                  className='w-full p-2 border border-zion-slate-light rounded-md',
-                >,
+                  className='w-full p-2 border border-zion-slate-light rounded-md'>,
                   <option value='all'>All Impact Levels</option>,
                   <option value='High'>High Impact</option>,
                   <option value='Medium'>Medium Impact</option>,
@@ -379,11 +371,10 @@ const AdvancedServiceInnovationHub = () => {,
                 <label className='block text-sm font-medium text-zion-slate-dark mb-2'>,
                   Status,
                 </label>,
-                <select,
+                <select
                   value={selectedStatus}
                   onChange={e => setSelectedStatus(e.target.value)}
-                  className='w-full p-2 border border-zion-slate-light rounded-md',
-                >,
+                  className='w-full p-2 border border-zion-slate-light rounded-md'>,
                   <option value='all'>All Statuses</option>,
                   <option value='Emerging'>Emerging</option>,
                   <option value='Growing'>Growing</option>,
@@ -395,7 +386,7 @@ const AdvancedServiceInnovationHub = () => {,
                 <label className='block text-sm font-medium text-zion-slate-dark mb-2'>,
                   Search,
                 </label>,
-                <Input,
+                <Input
                   placeholder='Search trends...',
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}
@@ -406,24 +397,23 @@ const AdvancedServiceInnovationHub = () => {,
           </motion.div>,
           {/* Trends Grid */}
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ delay: 0.2 ,}}
-            className='grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8',
-          >,
-            {filteredTrends.map((trend, index) => (,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className='grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8'>,
+            {filteredTrends.map((trend, index) => (
               <motion.div,
                 key={trend.id}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 ,}}
-                animate={{ opacity: 1, x: 0 ,}}
-                transition={{ delay: 0.1 * index ,}}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 * index }}
               >,
                 <Card className='h-full hover: shadow-lg transition-shadow'>,
                   <CardHeader>,
                     <div className='flex items-start justify-between mb-4'>,
                       <div className='flex items-center gap-3'>,
                         <div className='w-10 h-10 bg-zion-blue-light/10 rounded-lg flex items-center justify-center'>,
-                          {getCategoryIcon(trend.category),}
+                          {getCategoryIcon(trend.category)}
                         </div>,
                         <div>,
                           <CardTitle className='text-lg text-zion-blue-dark'>,
@@ -451,7 +441,7 @@ const AdvancedServiceInnovationHub = () => {,
                           Timeline: ,
                         </span>,
                         <span className='text-sm font-medium text-zion-slate-dark'>,
-                          {trend.timeline,}
+                          {trend.timeline}
                         </span>,
                       </div>,
                       <div className='flex justify-between items-center'>,
@@ -460,9 +450,9 @@ const AdvancedServiceInnovationHub = () => {,
                         </span>,
                         <div className='flex items-center gap-2'>,
                           <div className='w-20 bg-zion-slate-light/20 rounded-full h-2'>,
-                            <div,
+                            <div
                               className='bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full',
-                              style={{ width: `${trend.adoption,}%` }}
+                              style={{ width: `${trend.adoption}%` }}
                             ></div>,
                           </div>,
                           <span className='text-sm font-medium'>,
@@ -475,7 +465,7 @@ const AdvancedServiceInnovationHub = () => {,
                           Investment: ,
                         </span>,
                         <span className='text-sm font-medium text-zion-cyan'>,
-                          {trend.investment,}
+                          {trend.investment}
                         </span>,
                       </div>,
                       <div>,
@@ -483,15 +473,13 @@ const AdvancedServiceInnovationHub = () => {,
                           Key Technologies: ,
                         </span>,
                         <div className='flex flex-wrap gap-1 mt-1'>,
-                          {trend.technologies.slice(0, 3).map((tech, idx) => (,
-                            <Badge,
+                          {trend.technologies.slice(0, 3).map((tech, idx) => (
+                            <Badge
                               key={idx}
                               variant='outline',
-                              className='text-xs',
-                            >,
+                              className='text-xs'>,
                               {tech}
-                            </Badge>,
-                          ))}
+                            </Badge>))}
                         </div>,
                       </div>,
                       <div>,
@@ -499,40 +487,35 @@ const AdvancedServiceInnovationHub = () => {,
                           Key Players: ,
                         </span>,
                         <div className='flex flex-wrap gap-1 mt-1'>,
-                          {trend.keyPlayers.slice(0, 3).map((player, idx) => (,
-                            <Badge,
+                          {trend.keyPlayers.slice(0, 3).map((player, idx) => (
+                            <Badge
                               key={idx}
                               variant='outline',
-                              className='text-xs',
-                            >,
+                              className='text-xs'>,
                               {player}
-                            </Badge>,
-                          ))}
+                            </Badge>))}
                         </div>,
                       </div>,
                     </div>,
                   </CardContent>,
                 </Card>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </motion.div>,
-        </>,
-      )}
+        </>)}
 ,
       {/* Future Roadmap View */}
-      {viewMode === 'roadmap' && (,
+      {viewMode === 'roadmap' && (
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          transition={{ delay: 0.1 ,}}
-          className='space-y-6',
-        >,
-          {futureRoadmap.map((roadmap, index) => (,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className='space-y-6'>,
+          {futureRoadmap.map((roadmap, index) => (
             <motion.div,
               key={roadmap.id}
-              initial={{ opacity: 0, x: -20 ,}}
-              animate={{ opacity: 1, x: 0 ,}}
-              transition={{ delay: 0.1 * index ,}}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.1 * index }}
             >,
               <Card className='hover: shadow-lg transition-shadow'>,
                 <CardHeader>,
@@ -540,7 +523,7 @@ const AdvancedServiceInnovationHub = () => {,
                     <div className='flex-1'>,
                       <div className='flex items-center gap-3 mb-3'>,
                         <div className='w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center text-white'>,
-                          {getCategoryIcon(roadmap.category),}
+                          {getCategoryIcon(roadmap.category)}
                         </div>,
                         <div>,
                           <CardTitle className='text-xl text-zion-blue-dark'>,
@@ -553,10 +536,10 @@ const AdvancedServiceInnovationHub = () => {,
                       </div>,
                       <div className='flex flex-wrap gap-2'>,
                         <Badge className='bg-zion-blue-light/10 text-zion-blue-dark'>,
-                          Timeline: {roadmap.timeline,}
+                          Timeline: {roadmap.timeline}
                         </Badge>,
                         <Badge className='bg-zion-cyan/10 text-zion-cyan'>,
-                          Investment: {roadmap.investment,}
+                          Investment: {roadmap.investment}
                         </Badge>,
                         <Badge className='bg-zion-purple/10 text-zion-purple'>,
                           {roadmap.category.toUpperCase()}
@@ -573,15 +556,13 @@ const AdvancedServiceInnovationHub = () => {,
                         Key Milestones,
                       </h4>,
                       <ul className='space-y-2'>,
-                        {roadmap.milestones.map((milestone, idx) => (,
-                          <li,
+                        {roadmap.milestones.map((milestone, idx) => (
+                          <li
                             key={idx}
-                            className='text-sm text-zion-slate-light flex items-start gap-2',
-                          >,
+                            className='text-sm text-zion-slate-light flex items-start gap-2'>,
                             <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>,
                             {milestone}
-                          </li>,
-                        ))}
+                          </li>))}
                       </ul>,
                     </div>,
                     <div>,
@@ -590,15 +571,13 @@ const AdvancedServiceInnovationHub = () => {,
                         Challenges,
                       </h4>,
                       <ul className='space-y-2'>,
-                        {roadmap.challenges.map((challenge, idx) => (,
-                          <li,
+                        {roadmap.challenges.map((challenge, idx) => (
+                          <li
                             key={idx}
-                            className='text-sm text-zion-slate-light flex items-start gap-2',
-                          >,
+                            className='text-sm text-zion-slate-light flex items-start gap-2'>,
                             <div className='w-2 h-2 bg-orange-50o0 rounded-full mt-2 flex-shrink-0'></div>,
                             {challenge}
-                          </li>,
-                        ))}
+                          </li>))}
                       </ul>,
                     </div>,
                     <div>,
@@ -607,33 +586,28 @@ const AdvancedServiceInnovationHub = () => {,
                         Opportunities,
                       </h4>,
                       <ul className='space-y-2'>,
-                        {roadmap.opportunities.map((opportunity, idx) => (,
-                          <li,
+                        {roadmap.opportunities.map((opportunity, idx) => (
+                          <li
                             key={idx}
-                            className='text-sm text-zion-slate-light flex items-start gap-2',
-                          >,
+                            className='text-sm text-zion-slate-light flex items-start gap-2'>,
                             <div className='w-2 h-2 bg-yellow-50o0 rounded-full mt-2 flex-shrink-0'></div>,
                             {opportunity}
-                          </li>,
-                        ))}
+                          </li>))}
                       </ul>,
                     </div>,
                   </div>,
                 </CardContent>,
               </Card>,
-            </motion.div>,
-          ))}
-        </motion.div>,
-      )}
+            </motion.div>))}
+        </motion.div>)}
 ,
       {/* Strategic Insights View */}
-      {viewMode === 'insights' && (,
+      {viewMode === 'insights' && (
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          transition={{ delay: 0.1 ,}}
-          className='space-y-6',
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className='space-y-6'>,
           <div className='grid grid-cols-1 lg: grid-cols-2 gap-6'>,
             <Card>,
               <CardHeader>,
@@ -651,9 +625,9 @@ const AdvancedServiceInnovationHub = () => {,
                     <span className='font-semibold text-zion-cyan'>$150B+</span>,
                   </div>,
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>,
-                    <div,
+                    <div
                       className='bg-zion-cyan h-2 rounded-full',
-                      style={{ width: '85%' ,}}
+                      style={{ width: '85%' }}
                     ></div>,
                   </div>,
                   <div className='flex justify-between items-center'>,
@@ -665,9 +639,9 @@ const AdvancedServiceInnovationHub = () => {,
                     </span>,
                   </div>,
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>,
-                    <div,
+                    <div
                       className='bg-zion-purple h-2 rounded-full',
-                      style={{ width: '95%' ,}}
+                      style={{ width: '95%' }}
                     ></div>,
                   </div>,
                   <div className='flex justify-between items-center'>,
@@ -679,9 +653,9 @@ const AdvancedServiceInnovationHub = () => {,
                     </span>,
                   </div>,
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>,
-                    <div,
+                    <div
                       className='bg-zion-blue h-2 rounded-full',
-                      style={{ width: '70%' ,}}
+                      style={{ width: '70%' }}
                     ></div>,
                   </div>,
                   <div className='flex justify-between items-center'>,
@@ -691,9 +665,9 @@ const AdvancedServiceInnovationHub = () => {,
                     </span>,
                   </div>,
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>,
-                    <div,
+                    <div
                       className='bg-zion-green h-2 rounded-full',
-                      style={{ width: '60%' ,}}
+                      style={{ width: '60%' }}
                     ></div>,
                   </div>,
                 </div>,
@@ -715,9 +689,9 @@ const AdvancedServiceInnovationHub = () => {,
                     <span className='font-semibold text-zion-cyan'>15%</span>,
                   </div>,
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>,
-                    <div,
+                    <div
                       className='bg-zion-cyan h-2 rounded-full',
-                      style={{ width: '15%' ,}}
+                      style={{ width: '15%' }}
                     ></div>,
                   </div>,
                   <div className='flex justify-between items-center'>,
@@ -727,9 +701,9 @@ const AdvancedServiceInnovationHub = () => {,
                     <span className='font-semibold text-zion-purple'>35%</span>,
                   </div>,
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>,
-                    <div,
+                    <div
                       className='bg-zion-purple h-2 rounded-full',
-                      style={{ width: '35%' ,}}
+                      style={{ width: '35%' }}
                     ></div>,
                   </div>,
                   <div className='flex justify-between items-center'>,
@@ -737,9 +711,9 @@ const AdvancedServiceInnovationHub = () => {,
                     <span className='font-semibold text-zion-blue'>40%</span>,
                   </div>,
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>,
-                    <div,
+                    <div
                       className='bg-zion-blue h-2 rounded-full',
-                      style={{ width: '40%' ,}}
+                      style={{ width: '40%' }}
                     ></div>,
                   </div>,
                   <div className='flex justify-between items-center'>,
@@ -747,9 +721,9 @@ const AdvancedServiceInnovationHub = () => {,
                     <span className='font-semibold text-zion-green'>10%</span>,
                   </div>,
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>,
-                    <div,
+                    <div
                       className='bg-zion-green h-2 rounded-full',
-                      style={{ width: '10%' ,}}
+                      style={{ width: '10%' }}
                     ></div>,
                   </div>,
                 </div>,
@@ -806,16 +780,14 @@ const AdvancedServiceInnovationHub = () => {,
               </div>,
             </CardContent>,
           </Card>,
-        </motion.div>,
-      ),}
+        </motion.div>)}
 ,
       {/* CTA Section */}
       <motion.div,
-        initial={{ opacity: 0, y: 20 ,}}
-        animate={{ opacity: 1, y: 0 ,}}
-        transition={{ delay: 0.4 ,}}
-        className='mt-12 text-center',
-      >,
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+        className='mt-12 text-center'>,
         <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>,
           <h3 className='text-3xl font-bold mb-4'>,
             Ready to Shape the Future?,
@@ -826,19 +798,17 @@ const AdvancedServiceInnovationHub = () => {,
             opportunities.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Button,
+            <Button
               className='bg-white text-zion-purple hover:bg-zion-slate-light',
               onClick={() =>,
-                window.open(,
-                  'mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation',;
-                  '_blank',
-                ),
-              }
+                window.open(
+                  'mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation';
+                  '_blank')}
             >,
               <Users className='w-5 h-5 mr-2' />,
               Get Innovation Strategy,
             </Button>,
-            <Button,
+            <Button
               variant='outline',
               className='border-white text-white hover: bg-white hover:text-zion-purple',
               onClick={() => window.open('tel:+130o24640950', '_blank')}
@@ -849,8 +819,5 @@ const AdvancedServiceInnovationHub = () => {,
           </div>,
         </div>,
       </motion.div>,
-    </div>,
-  ),
-};
-export default AdvancedServiceInnovationHub,
-,
+    </div>)};
+export default AdvancedServiceInnovationHub;

@@ -1,5 +1,5 @@
-export default function ArticlePage() {,
-  return (,
+export default function ArticlePage() {
+  return (
     <div className='mx-auto max-w-3xl px-6 py-16 lg: px-8'>,
       <article className='prose prose-invert prose-blue'>,
         <h1>,
@@ -31,12 +31,10 @@ export default function ArticlePage() {,
           <li>Run tabletop drills and failure injection before GA</li>,
         </ol>,
         <p>,
-          For implementation details, see our production patterns across agents,;
+          For implementation details, see our production patterns across agents;
           retrieval, and governance. Reach out if you want a tailored blueprint,
           for your domain.,
         </p>,
       </article>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

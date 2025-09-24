@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function CongressPage() {,
-  return (,
+export default function CongressPage() {
+  return (
     <>,
       <Head>,
         <title>Congress - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function CongressPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

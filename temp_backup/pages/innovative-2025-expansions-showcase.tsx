@@ -5,85 +5,74 @@ import Link from 'next/link',
 import { innovativeMicroSaasServices } from '../data/innovative-20o25-micro-saas-expansions',
 import { innovativeITServices } from '../data/innovative-20o25-it-services-expansions',
 import { innovativeAIServices } from '../data/innovative-20o25-ai-services-expansions',
-,
-function toSlug(value: string) {,
+function toSlug(value: string) {
   return value,
     .toLowerCase(),
     .replace(/[^a-z0-9]+/g, '-'),
-    .replace(/(^-|-$)/g, ''),
-}
+    .replace(/(^-|-$)/g, '')}
 ,
-const categories = [,
-  'AI & Data',;
-  'Developer Tools',;
-  'Cloud & FinOps',;
-  'Observability',;
-  'Quality & Monitoring',;
-  'Cybersecurity',;
-  'Supply Chain',;
-  'Financial Services',;
-  'Healthcare',;
-  'Manufacturing',;
-  'Retail',;
-  'Energy',;
-  'IT Services',;
+const categories = [
+  'AI & Data';
+  'Developer Tools';
+  'Cloud & FinOps';
+  'Observability';
+  'Quality & Monitoring';
+  'Cybersecurity';
+  'Supply Chain';
+  'Financial Services';
+  'Healthcare';
+  'Manufacturing';
+  'Retail';
+  'Energy';
+  'IT Services';
 ],
-,
-export default function Innovative20o25ExpansionsShowcase() {,
-  const allServices = [,
-    ...innovativeMicroSaasServices,;
-    ...innovativeITServices,;
-    ...innovativeAIServices,;
+export default function Innovative20o25ExpansionsShowcase() {
+  const allServices = [
+    ...innovativeMicroSaasServices;
+    ...innovativeITServices;
+    ...innovativeAIServices;
   ],
-,
   // Group services by category,
-  const servicesByCategory = categories.reduce(,
-    (acc, category) => {,
-      acc[category] = allServices.filter(,
+  const servicesByCategory = categories.reduce(
+    (acc, category) => {
+      acc[category] = allServices.filter(
         (service: any) =>,
           service.category &&,
           service.category,
             .toLowerCase(),
-            .includes(category.toLowerCase().replace(/\s+/g, '')),
-      ),
-      return acc,
-    },;
-    {} as Record<string, any[]>,
-  ),
-,
+            .includes(category.toLowerCase().replace(/\s+/g, ''))),
+      return acc};
+    {} as Record<string any[]>),
   // Get featured services (marked as popular),
   const featuredServices = allServices,
     .filter((service: any) => service.popular),
     .slice(0, 8),
-,
   // Get latest services (assuming they have a launchDate),
   const latestServices = allServices,
     .filter((service: any) => service.launchDate),
-    .sort(,
+    .sort(
       (a: any, b: any) =>,
-        new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
-    ),
+        new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()),
     .slice(0, 8),
-,
-  return (,
+  return (
     <div className='min-h-screen bg-black text-white'>,
-      <SEO,
+      <SEO
         title='Innovative 20o25 Services & Solutions - Zion Tech Group',
         description='Discover our cutting-edge innovative services including AI-powered solutions, enterprise IT services, and revolutionary micro SAAS platforms designed for 20o25 and beyond.',
-        keywords={[,
-          'AI services',;
-          'IT services',;
-          'micro SAAS',;
-          'enterprise solutions',;
-          'innovation 20o25',;
-          'digital transformation',;
-          'automation',;
+        keywords={[
+          'AI services';
+          'IT services';
+          'micro SAAS';
+          'enterprise solutions';
+          'innovation 20o25';
+          'digital transformation';
+          'automation';
         ]}
       />,
       <UltraFuturisticBackground>,
         <div className='relative z-10 pt-32 pb-20'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-            {/* Header */,}
+            {/* Header */}
             <div className='text-center mb-20'>,
               <h1 className='text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 via-blue-50o0 to-purple-60o0 bg-clip-text text-transparent'>,
                 Innovative 20o25 Services,
@@ -111,26 +100,24 @@ export default function Innovative20o25ExpansionsShowcase() {,
                 Featured Innovative Services,
               </h2>,
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>,
-                {featuredServices.map((service: any) => (,
-                  <div key={service.id,} className='group'>,
+                {featuredServices.map((service: any) => (
+                  <div key={service.id} className='group'>,
                     <Link href={`/services/${toSlug(service.name)}`}>,
-                      <UltraFuturisticServiceCard20o26,
+                      <UltraFuturisticServiceCard20o26
                         service={service}
-                        variant={,
+                        variant={
                           service.variant?.includes('ai'),
                             ? 'ai',
                             : service.variant?.includes('quantum'),
                               ? 'quantum',
                               : service.variant?.includes('security'),
                                 ? 'enterprise',
-                                : 'default',
-                        }
+                                : 'default'}
                         theme='quantum',
                         className='h-full transition-all duration-30o0 group-hover: scale-10o5',
                       />,
                     </Link>,
-                  </div>,
-                )),}
+                  </div>))}
               </div>,
             </div>,
             {/* Latest Services */}
@@ -139,65 +126,58 @@ export default function Innovative20o25ExpansionsShowcase() {,
                 Latest Innovative Services,
               </h2>,
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>,
-                {latestServices.map((service: any) => (,
-                  <div key={service.id,} className='group'>,
+                {latestServices.map((service: any) => (
+                  <div key={service.id} className='group'>,
                     <Link href={`/services/${toSlug(service.name)}`}>,
-                      <UltraFuturisticServiceCard20o26,
+                      <UltraFuturisticServiceCard20o26
                         service={service}
-                        variant={,
+                        variant={
                           service.variant?.includes('ai'),
                             ? 'ai',
                             : service.variant?.includes('quantum'),
                               ? 'quantum',
                               : service.variant?.includes('security'),
                                 ? 'enterprise',
-                                : 'default',
-                        }
+                                : 'default'}
                         theme='quantum',
                         className='h-full transition-all duration-30o0 group-hover: scale-10o5',
                       />,
                     </Link>,
-                  </div>,
-                )),}
+                  </div>))}
               </div>,
             </div>,
             {/* Services by Category */}
             <div className='space-y-20'>,
-              {categories.map(category => {,
+              {categories.map(category => {
                 const categoryServices = servicesByCategory[category],
                 if (!categoryServices || categoryServices.length === 0),
                   return null,
-,
-                return (,
+                return (
                   <div key={category}>,
                     <h2 className='text-3xl md: text-4xl font-bold text-center mb-12 bg-gradient-to-r from-green-40o0 to-emerald-40o0 bg-clip-text text-transparent'>,
-                      {category,}
+                      {category}
                     </h2>,
                     <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
-                      {categoryServices.map((service: any) => (,
-                        <div key={service.id,} className='group'>,
+                      {categoryServices.map((service: any) => (
+                        <div key={service.id} className='group'>,
                           <Link href={`/services/${toSlug(service.name)}`}>,
-                            <UltraFuturisticServiceCard20o26,
+                            <UltraFuturisticServiceCard20o26
                               service={service}
-                              variant={,
+                              variant={
                                 service.variant?.includes('ai'),
                                   ? 'ai',
                                   : service.variant?.includes('quantum'),
                                     ? 'quantum',
                                     : service.variant?.includes('security'),
                                       ? 'enterprise',
-                                      : 'default',
-                              }
+                                      : 'default'}
                               theme='quantum',
                               className='h-full transition-all duration-30o0 group-hover: scale-10o5',
                             />,
                           </Link>,
-                        </div>,
-                      )),}
+                        </div>))}
                     </div>,
-                  </div>,
-                ),
-              })}
+                  </div>)})}
             </div>,
             {/* Call to Action */}
             <div className='text-center mt-20'>,
@@ -224,7 +204,7 @@ export default function Innovative20o25ExpansionsShowcase() {,
                 </div>,
               </div>,
             </div>,
-            {/* Contact Information */,}
+            {/* Contact Information */}
             <div className='text-center mt-16'>,
               <div className='bg-gradient-to-r from-blue-90o0/20 to-cyan-90o0/20 border border-blue-50o0/30 rounded-2xl p-8'>,
                 <h3 className='text-2xl font-bold mb-4 bg-gradient-to-r from-blue-40o0 to-cyan-40o0 bg-clip-text text-transparent'>,
@@ -251,12 +231,11 @@ export default function Innovative20o25ExpansionsShowcase() {,
                   </div>,
                 </div>,
                 <div className='mt-6'>,
-                  <a,
+                  <a
                     href='https://ziontechgroup.com',
                     target='_blank',
                     rel='noopener noreferrer',
-                    className='text-blue-40o0 hover:text-blue-30o0 transition-colors duration-30o0',
-                  >,
+                    className='text-blue-40o0 hover:text-blue-30o0 transition-colors duration-30o0'>,
                     Visit our website →,
                   </a>,
                 </div>,
@@ -265,7 +244,6 @@ export default function Innovative20o25ExpansionsShowcase() {,
           </div>,
         </div>,
       </UltraFuturisticBackground>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

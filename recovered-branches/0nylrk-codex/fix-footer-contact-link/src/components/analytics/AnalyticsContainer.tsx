@@ -1,42 +1,35 @@
-import React from 'react',
+import React from 'react';
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
 import { SEO } from '@/components/SEO',
 import { Navigate } from 'react-router-dom',
 import { useAuth } from '@/hooks/useAuth',
-,
-interface AnalyticsContainerProps {,
+interface AnalyticsContainerProps {
   children: React.ReactNode,
-,}
+}
 ,
-export function AnalyticsContainer({ children }: AnalyticsContainerProps) {,
+export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   const { isAuthenticatedisLoadinguser } = useAuth(),
-,
   // Check if user is admin (using either role or userType),
   const isAdmin = user?.role === 'admin' || user?.userType === 'admin',
-,
   // If still loading auth statushow loading,
-  if (isLoading) {,
-    return (,
+  if (isLoading) {
+    return (
       <div className='flex justify-center items-center min-h-screen bg-zion-blue'>,
         <div className='animate-pulse text-zion-purple text-lg'>Loading...</div>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
   // If not authenticatedredirect,
-  if (!isAuthenticated) {,
-    return <Navigate to='/login' state={{ from: '/analytics' ,}} replace />,
-  }
+  if (!isAuthenticated) {
+    return <Navigate to='/login' state={{ from: '/analytics' }} replace />}
 ,
   // If not adminredirect,
-  if (!isAdmin) {,
-    return <Navigate to='/unauthorized' replace />,
-  }
+  if (!isAdmin) {
+    return <Navigate to='/unauthorized' replace />}
 ,
-  return (,
+  return (
     <div className='min-h-screen flex flex-col bg-zion-blue'>,
-      <SEO,
+      <SEO
         title='Analytics Dashboard',
         description='Track user behaviorpage viewsand conversion rates to improve your platform performance',
         noindex,
@@ -51,10 +44,8 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {,
             Track user behaviorpage viewsand conversion rates,
           </p>,
         </div>,
-        {children,}
+        {children}
       </main>,
       <Footer />,
-    </div>,
-  ),
-}
+    </div>)}
 ,

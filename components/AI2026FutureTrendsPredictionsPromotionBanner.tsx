@@ -1,8 +1,7 @@
 import Link from 'next/link',
 ArrowRightCalendarTrendingUpBrainZapStarClock,
-,
-export default function AI20o26FutureTrendsPredictionsPromotionBanner() {,
-  return (,
+export default function AI20o26FutureTrendsPredictionsPromotionBanner() {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-indigo-90o0 to-slate-90o0 border border-indigo-50o0/30 rounded-2xl my-8'>,
       {/* Animated background elements */}
       <div className='absolute inset-0 bg-gradient-to-r from-blue-60o0/10 to-purple-60o0/10 animate-pulse'></div>,
@@ -14,16 +13,15 @@ export default function AI20o26FutureTrendsPredictionsPromotionBanner() {,
       </div>,
       <div className='relative z-10 p-8'>,
         <div className='flex flex-col lg: flex-row items-center justify-between gap-6'>,
-          {/* Left content */,}
+          {/* Left content */}
           <div className='flex-1'>,
             <div className='flex items-center gap-2 mb-4'>,
               <div className='flex items-center gap-1'>,
-                {[...Array(5)].map(_i => (,
-                  <Star,
+                {[...Array(5)].map(_i => (
+                  <Star
                     key={i}
                     className='h-4 w-4 text-yellow-40o0 fill-current',
-                  />,
-                ))}
+                  />))}
               </div>,
               <span className='text-sm font-semibold text-yellow-40o0 uppercase tracking-wide'>,
                 Future Predictions,
@@ -40,7 +38,7 @@ export default function AI20o26FutureTrendsPredictionsPromotionBanner() {,
               will define the future of artificial intelligence in 20o26 and,
               beyond.,
             </p>,
-            {/* Feature highlights */,}
+            {/* Feature highlights */}
             <div className='flex flex-wrap gap-4 mb-6'>,
               <div className='flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2'>,
                 <Brain className='h-4 w-4 text-blue-40o0' />,
@@ -62,22 +60,20 @@ export default function AI20o26FutureTrendsPredictionsPromotionBanner() {,
               </div>,
             </div>,
             <div className='flex flex-col sm: flex-row gap-4'>,
-              <Link,
+              <Link
                 href='/ai-20o26-future-trends-predictions',
-                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-lg hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-              >,
+                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-lg hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
                 View Predictions,
                 <ArrowRight className='ml-2 h-4 w-4' />,
               </Link>,
-              <Link,
+              <Link
                 href='/ai-20o26-breakthrough-predictions',
-                className='inline-flex items-center px-6 py-3 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-30o0',
-              >,
+                className='inline-flex items-center px-6 py-3 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-30o0'>,
                 Explore Trends,
               </Link>,
             </div>,
           </div>,
-          {/* Right content - Timeline visual */,}
+          {/* Right content - Timeline visual */}
           <div className='flex-shrink-0'>,
             <div className='relative'>,
               {/* Timeline circles */}
@@ -110,7 +106,5 @@ export default function AI20o26FutureTrendsPredictionsPromotionBanner() {,
       </div>,
       {/* Bottom gradient overlay */}
       <div className='absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-50o0 via-purple-50o0 to-pink-50o0'></div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

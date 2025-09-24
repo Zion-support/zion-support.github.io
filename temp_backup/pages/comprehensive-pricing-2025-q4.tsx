@@ -1,32 +1,25 @@
 import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
-import {,
-  Check, Star, TrendingUp, DollarSign,;
-  Crown, Award, Zap,
-} from 'lucide-react',
+import {
+  Check, Star, TrendingUp, DollarSign;
+  Crown, Award, Zap} from 'lucide-react',
 import Link from 'next/link',
-,
 // Import our new service data,
 import { innovative20o25Q4Services } from '../data/innovative-20o25-q4-new-services',
 import { emergingTech20o25Q4Services } from '../data/emerging-tech-20o25-q4-services',
-,
 // Combine all services,
 const allServices = [...innovative20o25Q4Services, ...emergingTech20o25Q4Services],
-,
-const ComprehensivePricing20o25Q4: React.FC = () => {,
+const ComprehensivePricing20o25Q4: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [sortBy, setSortBy] = useState<'price' | 'popularity' | 'rating' | 'newest'>('price'),
-,
   // Filter services by category,
-  const filteredServices = allServices.filter(service => {,
+  const filteredServices = allServices.filter(service => {
     if (selectedCategory === 'all') return true,
-    return service.category.toLowerCase().includes(selectedCategory.toLowerCase()),
-  }),
-,
+    return service.category.toLowerCase().includes(selectedCategory.toLowerCase())}),
   // Sort services,
-  const sortedServices = [...filteredServices].sort((a, b) => {,
-    switch (sortBy) {,
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
       case 'price':,
         return parseInt(a.price.replace('$', '').replace(',', '')) - parseInt(b.price.replace('$', '').replace(',', '')),
       case 'popularity':,
@@ -37,27 +30,24 @@ const ComprehensivePricing20o25Q4: React.FC = () => {,
         return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
       default: ,
         return 0,
-    ,}
+    }
   }),
-,
-  const categories = [,
-    { id: 'all', name: 'All Services', count: allServices.length ,},;
-    { id: 'ai', name: 'AI & Machine Learning', count: allServices.filter(s => s.category.toLowerCase().includes('ai')).length ,},;
-    { id: 'quantum', name: 'Quantum Computing', count: allServices.filter(s => s.category.toLowerCase().includes('quantum')).length ,},;
-    { id: 'emerging', name: 'Emerging Technology', count: allServices.filter(s => s.category.toLowerCase().includes('emerging')).length ,},;
-    { id: 'space', name: 'Space Technology', count: allServices.filter(s => s.category.toLowerCase().includes('space')).length ,},;
-    { id: 'security', name: 'Security & Privacy', count: allServices.filter(s => s.category.toLowerCase().includes('security')).length ,}
+  const categories = [
+    { id: 'all', name: 'All Services', count: allServices.length };
+    { id: 'ai', name: 'AI & Machine Learning', count: allServices.filter(s => s.category.toLowerCase().includes('ai')).length };
+    { id: 'quantum', name: 'Quantum Computing', count: allServices.filter(s => s.category.toLowerCase().includes('quantum')).length };
+    { id: 'emerging', name: 'Emerging Technology', count: allServices.filter(s => s.category.toLowerCase().includes('emerging')).length };
+    { id: 'space', name: 'Space Technology', count: allServices.filter(s => s.category.toLowerCase().includes('space')).length };
+    { id: 'security', name: 'Security & Privacy', count: allServices.filter(s => s.category.toLowerCase().includes('security')).length }
   ],
-,
-  const fadeInUp ={,
-    initial: { opacity: 0, y: 60 ,},;
-    animate: { opacity: 1, y: 0 ,},;
-    transition: { duration: 0.6, ease: "easeOut" ,}
+  const fadeInUp ={
+    initial: { opacity: 0, y: 60 };
+    animate: { opacity: 1, y: 0 };
+    transition: { duration: 0.6, ease: "easeOut" }
   };
-,
-  return (,
+  return (
     <div className="min-h-screen bg-gradient-to-br from-gray-90o0 via-gray-80o0 to-black text-white">,
-      <SEO,
+      <SEO
         title="Comprehensive Q4 20o25 Pricing | Zion Tech Group",
         description="Explore our revolutionary Q4 20o25 services with transparent pricing, comprehensive features, and market-leading innovation. Transform your business with cutting-edge technology solutions.",
         keywords={["pricing", "AI services", "quantum computing", "space technology", "emerging tech", "micro SAAS pricing", "Zion Tech Group", "20o25 services"]}
@@ -73,18 +63,17 @@ const ComprehensivePricing20o25Q4: React.FC = () => {,
         <div className="max-w-7xl mx-auto text-center">,
           <motion.h1,
             className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 via-blue-50o0 to-purple-60o0 bg-clip-text text-transparent",
-            variants={fadeInUp,}
+            variants={fadeInUp}
             initial="initial",
-            animate="animate",
-          >,
+            animate="animate">,
             Q4 20o25 Pricing Guide,
           </motion.h1>,
           <motion.p,
             className="text-xl md: text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto",
-            variants={fadeInUp,}
+            variants={fadeInUp}
             initial="initial",
             animate="animate",
-            transition={{ delay: 0.2 ,}}
+            transition={{ delay: 0.2 }}
           >,
             Transparent pricing for revolutionary technology services that will transform your business and give you a competitive edge,
           </motion.p>,
@@ -93,7 +82,7 @@ const ComprehensivePricing20o25Q4: React.FC = () => {,
             variants={fadeInUp}
             initial="initial",
             animate="animate",
-            transition={{ delay: 0.4 ,}}
+            transition={{ delay: 0.4 }}
           >,
             <div className="flex items-center gap-2 px-4 py-2 bg-gray-80o0/50 rounded-lg border border-gray-70o0/50">,
               <DollarSign className="w-5 h-5 text-green-40o0"  />,
@@ -115,62 +104,61 @@ const ComprehensivePricing20o25Q4: React.FC = () => {,
         <div className="max-w-7xl mx-auto">,
           <motion.h2,
             className="text-4xl md: text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-40o0 to-purple-50o0 bg-clip-text text-transparent",
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
-            transition={{ duration: 0.6 ,}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >,
             Service Categories & Pricing Tiers,
           </motion.h2>,
           {/* Pricing Tiers */}
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-16">,
-            {[,
-              {,
-                title: "Starter",;
-                price: "$499",;
-                period: "/month",;
-                description: "Perfect for small businesses and startups",;
-                features: ["Core functionality", "Standard support", "Basic integrations", "Community access"],;
-                color: "from-cyan-50o0 to-blue-60o0",;
+            {[
+              {
+                title: "Starter";
+                price: "$499";
+                period: "/month";
+                description: "Perfect for small businesses and startups";
+                features: ["Core functionality", "Standard support", "Basic integrations", "Community access"];
+                color: "from-cyan-50o0 to-blue-60o0";
                 icon: <Zap className="w-8 h-8"  />,
-              ,},;
-              {,
-                title: "Professional",;
-                price: "$1,299",;
-                period: "/month",;
-                description: "Ideal for growing companies and teams",;
-                features: ["Advanced features", "Priority support", "Full integrations", "Custom workflows", "Analytics dashboard"],;
-                color: "from-blue-50o0 to-purple-60o0",;
-                icon: <Award className="w-8 h-8"  />,;
+              };
+              {
+                title: "Professional";
+                price: "$1,299";
+                period: "/month";
+                description: "Ideal for growing companies and teams";
+                features: ["Advanced features", "Priority support", "Full integrations", "Custom workflows", "Analytics dashboard"];
+                color: "from-blue-50o0 to-purple-60o0";
+                icon: <Award className="w-8 h-8"  />;
                 popular: true,
-              ,},;
-              {,
-                title: "Enterprise",;
-                price: "$2,999",;
-                period: "/month",;
-                description: "For large organizations and enterprises",;
-                features: ["All features", "24/7 support", "Custom development", "Dedicated account manager", "SLA guarantees", "On-premise options"],;
-                color: "from-purple-50o0 to-pink-60o0",;
+              };
+              {
+                title: "Enterprise";
+                price: "$2,999";
+                period: "/month";
+                description: "For large organizations and enterprises";
+                features: ["All features", "24/7 support", "Custom development", "Dedicated account manager", "SLA guarantees", "On-premise options"];
+                color: "from-purple-50o0 to-pink-60o0";
                 icon: <Crown className="w-8 h-8"  />,
-              ,}
-            ].map((tier, index) => (,
+              }
+            ].map((tier, index) => (
               <motion.div,
                 key={tier.title}
-                className={`relative p-8 rounded-2xl border transition-all duration-30o0 hover: transform hover:scale-10o5 ${,
+                className={`relative p-8 rounded-2xl border transition-all duration-30o0 hover: transform hover:scale-10o5 ${
                   tier.popular,
                     ? 'bg-gradient-to-br from-gray-80o0 to-gray-70o0 border-cyan-40o0/50 shadow-2xl shadow-cyan-50o0/25',
                     : 'bg-gray-80o0/50 border-gray-70o0/50',
-                ,}`}
-                initial={{ opacity: 0, y: 50 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
-                transition={{ duration: 0.6, delay: index * 0.1 ,}}
+                }`}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
               >,
-                {tier.popular && (,
+                {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white text-sm font-semibold rounded-full">,
                     Most Popular,
-                  </div>,
-                )}
+                  </div>)}
 ,
                 <div className="text-center mb-6">,
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${tier.color} mb-4`}>,
@@ -182,22 +170,20 @@ const ComprehensivePricing20o25Q4: React.FC = () => {,
                   <div className="text-gray-40o0">{tier.period}</div>,
                 </div>,
                 <ul className="space-y-3 mb-8">,
-                  {tier.features.map((feature, featureIndex) => (,
+                  {tier.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-3 text-gray-30o0">,
                       <Check className="w-5 h-5 text-cyan-40o0 flex-shrink-0"  />,
                       <span>{feature}</span>,
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-30o0 transform hover: scale-10o5 ${,
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-30o0 transform hover: scale-10o5 ${
                   tier.popular,
                     ? 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white hover:from-cyan-60o0 hover:to-blue-70o0',
                     : 'bg-gray-70o0/50 text-white border border-gray-60o0 hover:bg-gray-60o0/50',
-                ,}`}>,
+                }`}>,
                   Get Started,
                 </button>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -205,31 +191,29 @@ const ComprehensivePricing20o25Q4: React.FC = () => {,
       <section className="py-8 px-4 bg-gray-80o0/30">,
         <div className="max-w-7xl mx-auto">,
           <div className="flex flex-col lg: flex-row gap-6 items-center justify-between">,
-            {/* Category Filter */,}
+            {/* Category Filter */}
             <div className="flex flex-wrap gap-2">,
-              {categories.map((category) => (,
-                <button,
+              {categories.map((category) => (
+                <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-30o0 ${,
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-30o0 ${
                     selectedCategory === category.id,
                       ? 'bg-cyan-50o0/20 border-cyan-50o0/50 text-cyan-40o0',
                       : 'bg-gray-70o0/50 border-gray-60o0/50 text-gray-30o0 hover: border-cyan-50o0/30',
-                  ,}`}
+                  }`}
                 >,
                   <span>{category.name}</span>,
                   <span className="text-xs bg-gray-60o0/50 px-2 py-1 rounded-full">{category.count}</span>,
-                </button>,
-              ))}
+                </button>))}
             </div>,
             {/* Sort Options */}
             <div className="flex items-center gap-4">,
               <span className="text-gray-40o0">Sort by: </span>,
-              <select,
-                value={sortBy,}
+              <select
+                value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as 'price' | 'popularity' | 'rating' | 'newest')}
-                className="px-4 py-2 bg-gray-70o0/50 border border-gray-60o0/50 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50",
-              >,
+                className="px-4 py-2 bg-gray-70o0/50 border border-gray-60o0/50 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50">,
                 <option value="price">Price: Low to High</option>,
                 <option value="popularity">Most Popular</option>,
                 <option value="rating">Highest Rated</option>,
@@ -239,15 +223,15 @@ const ComprehensivePricing20o25Q4: React.FC = () => {,
           </div>,
         </div>,
       </section>,
-      {/* Services Pricing Table */,}
+      {/* Services Pricing Table */}
       <section className="py-16 px-4">,
         <div className="max-w-7xl mx-auto">,
           <motion.h3,
             className="text-3xl font-bold text-center mb-12 text-white",
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
-            transition={{ duration: 0.6 ,}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >,
             Detailed Service Pricing,
           </motion.h3>,
@@ -264,14 +248,14 @@ const ComprehensivePricing20o25Q4: React.FC = () => {,
                 </tr>,
               </thead>,
               <tbody>,
-                {sortedServices.map((service, index) => (,
+                {sortedServices.map((service, index) => (
                   <motion.tr,
                     key={service.id}
                     className="border-b border-gray-70o0/30 hover: bg-gray-80o0/30 transition-all duration-30o0",
-                    initial={{ opacity: 0, x: -50 ,}}
-                    whileInView={{ opacity: 1, x: 0 ,}}
-                    viewport={{ once: true ,}}
-                    transition={{ duration: 0.6, delay: index * 0.0o5 ,}}
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.0o5 }}
                   >,
                     <td className="p-4">,
                       <div className="flex items-center gap-3">,
@@ -304,10 +288,9 @@ const ComprehensivePricing20o25Q4: React.FC = () => {,
                     </td>,
                     <td className="p-4 text-center">,
                       <div className="flex gap-2">,
-                        <Link,
+                        <Link
                           href={service.link}
-                          className="px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white text-sm font-semibold rounded-lg hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0",
-                        >,
+                          className="px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white text-sm font-semibold rounded-lg hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0">,
                           Get Started,
                         </Link>,
                         <button className="px-4 py-2 border border-cyan-40o0/50 text-cyan-40o0 text-sm rounded-lg hover:bg-cyan-40o0/10 transition-all duration-30o0">,
@@ -315,8 +298,7 @@ const ComprehensivePricing20o25Q4: React.FC = () => {,
                         </button>,
                       </div>,
                     </td>,
-                  </motion.tr>,
-                )),}
+                  </motion.tr>))}
               </tbody>,
             </table>,
           </div>,
@@ -327,66 +309,61 @@ const ComprehensivePricing20o25Q4: React.FC = () => {,
         <div className="max-w-4xl mx-auto text-center">,
           <motion.h2,
             className="text-4xl font-bold mb-8 text-white",
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
-            transition={{ duration: 0.6 ,}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >,
             Calculate Your ROI,
           </motion.h2>,
           <motion.p,
             className="text-xl text-gray-30o0 mb-8",
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
-            transition={{ duration: 0.6, delay: 0.2 ,}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >,
             Our services deliver measurable returns on investment. See how much you can save and earn.,
           </motion.p>,
           <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-8">,
-            {[,
-              { metric: "Average Cost Savings", value: "30-50%", description: "Reduced operational costs" ,},;
-              { metric: "Efficiency Improvement", value: "3-5x", description: "Faster processes and workflows" ,},;
-              { metric: "Revenue Growth", value: "25-40%", description: "Increased business opportunities" ,}
-            ].map((stat, index) => (,
+            {[
+              { metric: "Average Cost Savings", value: "30-50%", description: "Reduced operational costs" };
+              { metric: "Efficiency Improvement", value: "3-5x", description: "Faster processes and workflows" };
+              { metric: "Revenue Growth", value: "25-40%", description: "Increased business opportunities" }
+            ].map((stat, index) => (
               <motion.div,
                 key={stat.metric}
                 className="p-6 bg-gray-80o0/50 rounded-xl border border-gray-70o0/50",
-                initial={{ opacity: 0, y: 30 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
-                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 ,}}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
               >,
                 <div className="text-3xl font-bold text-cyan-40o0 mb-2">{stat.value}</div>,
                 <div className="text-white font-semibold mb-2">{stat.metric}</div>,
                 <div className="text-gray-40o0 text-sm">{stat.description}</div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
           <motion.div,
             className="flex flex-col sm: flex-row gap-6 justify-center",
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
-            transition={{ duration: 0.6, delay: 0.6 ,}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.6 }}
           >,
-            <Link,
+            <Link
               href="/contact",
-              className="px-10 py-5 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-xl hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl hover:shadow-cyan-50o0/25",
-            >,
+              className="px-10 py-5 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-xl hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl hover:shadow-cyan-50o0/25">,
               Get Custom Quote,
             </Link>,
-            <Link,
+            <Link
               href="/innovative-20o25-q4-showcase",
-              className="px-10 py-5 border-2 border-cyan-40o0 text-cyan-40o0 font-semibold rounded-xl hover:bg-cyan-40o0 hover:text-black transition-all duration-30o0 transform hover:scale-10o5",
-            >,
+              className="px-10 py-5 border-2 border-cyan-40o0 text-cyan-40o0 font-semibold rounded-xl hover:bg-cyan-40o0 hover:text-black transition-all duration-30o0 transform hover:scale-10o5">,
               View All Services,
             </Link>,
           </motion.div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,};
-,
-export default ComprehensivePricing20o25Q4,
+    </div>),
+};
+export default ComprehensivePricing20o25Q4;

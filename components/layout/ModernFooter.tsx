@@ -1,84 +1,71 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Zap, Shield, Database, Brain, Cloud, BarChart3, Rocket } from 'lucide-react',
-,
-const ModernFooter: React.FC = () => {,
+const ModernFooter: React.FC = () => {
   const currentYear = new Date().getFullYear(),
-,
-  const serviceCategories = [,
-    {,
-      name: 'AI & Machine Learning',;
-      icon: Brain,;
-      href: '/services#ai',;
-      services: ['AI Automation', 'Machine Learning', 'Natural Language Processing', 'Computer Vision'],
-    },;
-    {,
-      name: 'Cloud & DevOps',;
-      icon: Cloud,;
-      href: '/services#cloud',;
-      services: ['Cloud Migration', 'Kubernetes', 'DevOps Automation', 'Infrastructure as Code'],
-    },;
-    {,
-      name: 'Cybersecurity',;
-      icon: Shield,;
-      href: '/services#cybersecurity',;
-      services: ['Zero Trust', 'SOC 2 Compliance', 'Threat Detection', 'Security Hardening'],
-    },;
-    {,
-      name: 'Data & Analytics',;
-      icon: BarChart3,;
-      href: '/services#data',;
-      services: ['Data Warehousing', 'Business Intelligence', 'Data Quality', 'Real-time Analytics'],
-    },;
-    {,
-      name: 'Enterprise Solutions',;
-      icon: Database,;
-      href: '/services#enterprise',;
-      services: ['ERP Systems', 'CRM Platforms', 'Workflow Automation', 'Integration Services'],
-    },;
-    {,
-      name: 'Emerging Technologies',;
-      icon: Rocket,;
-      href: '/services#emerging',;
-      services: ['Quantum AI', 'Blockchain', 'IoT Platforms', 'Edge Computing'],
-    }
+  const serviceCategories = [
+    {
+      name: 'AI & Machine Learning';
+      icon: Brain;
+      href: '/services#ai';
+      services: ['AI Automation', 'Machine Learning', 'Natural Language Processing', 'Computer Vision']};
+    {
+      name: 'Cloud & DevOps';
+      icon: Cloud;
+      href: '/services#cloud';
+      services: ['Cloud Migration', 'Kubernetes', 'DevOps Automation', 'Infrastructure as Code']};
+    {
+      name: 'Cybersecurity';
+      icon: Shield;
+      href: '/services#cybersecurity';
+      services: ['Zero Trust', 'SOC 2 Compliance', 'Threat Detection', 'Security Hardening']};
+    {
+      name: 'Data & Analytics';
+      icon: BarChart3;
+      href: '/services#data';
+      services: ['Data Warehousing', 'Business Intelligence', 'Data Quality', 'Real-time Analytics']};
+    {
+      name: 'Enterprise Solutions';
+      icon: Database;
+      href: '/services#enterprise';
+      services: ['ERP Systems', 'CRM Platforms', 'Workflow Automation', 'Integration Services']};
+    {
+      name: 'Emerging Technologies';
+      icon: Rocket;
+      href: '/services#emerging';
+      services: ['Quantum AI', 'Blockchain', 'IoT Platforms', 'Edge Computing']}
   ],
-,
-  const quickLinks = [,
-    { name: 'About Us', href: '/about' ,},;
-    { name: 'Our Team', href: '/about#team' ,},;
-    { name: 'Case Studies', href: '/case-studies' ,},;
-    { name: 'Blog', href: '/blog' ,},;
-    { name: 'Careers', href: '/careers' ,},;
-    { name: 'Partners', href: '/partners' ,},;
-    { name: 'News', href: '/news' ,},;
-    { name: 'Events', href: '/events' ,}
+  const quickLinks = [
+    { name: 'About Us', href: '/about' };
+    { name: 'Our Team', href: '/about#team' };
+    { name: 'Case Studies', href: '/case-studies' };
+    { name: 'Blog', href: '/blog' };
+    { name: 'Careers', href: '/careers' };
+    { name: 'Partners', href: '/partners' };
+    { name: 'News', href: '/news' };
+    { name: 'Events', href: '/events' }
   ],
-,
-  const legalLinks = [,
-    { name: 'Privacy Policy', href: '/privacy' ,},;
-    { name: 'Terms of Service', href: '/terms' ,},;
-    { name: 'Cookie Policy', href: '/cookies' ,},;
-    { name: 'Data Processing Agreement', href: '/dpa' ,},;
-    { name: 'Security', href: '/security' ,},;
-    { name: 'Compliance', href: '/compliance' ,}
+  const legalLinks = [
+    { name: 'Privacy Policy', href: '/privacy' };
+    { name: 'Terms of Service', href: '/terms' };
+    { name: 'Cookie Policy', href: '/cookies' };
+    { name: 'Data Processing Agreement', href: '/dpa' };
+    { name: 'Security', href: '/security' };
+    { name: 'Compliance', href: '/compliance' }
   ],
-,
-  const socialLinks = [,
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin ,},;
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter ,},;
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github ,}
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin };
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter };
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ],
-,
-  const contactInfo ={,
-    phone: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
+  const contactInfo ={
+    phone: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
     website: 'https://ziontechgroup.com',
-  ,};
-,
-  return (,
+  };
+  return (
     <footer className="bg-gray-90o0 text-white relative overflow-hidden">,
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-90o0/10 via-purple-90o0/10 to-gray-90o0"  />,
@@ -86,7 +73,7 @@ const ModernFooter: React.FC = () => {,
       <div className="relative z-10">,
         <div className="container mx-auto px-4 py-16">,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-8 mb-12">,
-            {/* Company Info */,}
+            {/* Company Info */}
             <div className="lg: col-span-1">,
               <div className="flex items-center space-x-3 mb-6">,
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-60o0 to-purple-60o0 rounded-xl flex items-center justify-center shadow-lg">,
@@ -104,97 +91,87 @@ const ModernFooter: React.FC = () => {,
                 with cutting-edge AI, cloud architecture, and innovative development services.,
               </p>,
               <div className="flex space-x-4">,
-                {socialLinks.map((social) => (,
+                {socialLinks.map((social) => (
                   <motion.a,
                     key={social.name}
                     href={social.href}
                     target="_blank",
                     rel="noopener noreferrer",
                     className="w-10 h-10 bg-gray-80o0 hover: bg-blue-60o0 border border-gray-70o0 hover:border-blue-50o0 rounded-lg flex items-center justify-center text-gray-40o0 hover:text-white transition-all duration-30o0",
-                    whileHover={{ scale: 1.1, y: -2 ,}}
-                    whileTap={{ scale: 0.95 ,}}
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
                   >,
-                    {React.createElement(social.icon, { className: "w-5 h-5" ,})}
-                  </motion.a>,
-                ))}
+                    {React.createElement(social.icon, { className: "w-5 h-5" })}
+                  </motion.a>))}
               </div>,
             </div>,
             {/* Services */}
             <div>,
               <h4 className="text-lg font-semibold mb-6 text-white">Our Services</h4>,
               <ul className="space-y-3">,
-                {serviceCategories.slice(0, 4).map((category) => (,
+                {serviceCategories.slice(0, 4).map((category) => (
                   <li key={category.name}>,
-                    <Link,
+                    <Link
                       href={category.href}
-                      className="flex items-center space-x-2 text-gray-30o0 hover: text-blue-40o0 transition-colors group",
-                    >,
-                      {React.createElement(category.icon, {,
+                      className="flex items-center space-x-2 text-gray-30o0 hover: text-blue-40o0 transition-colors group">,
+                      {React.createElement(category.icon, {
                         className: "w-4 w-4 text-neon-blue group-hover:text-neon-purple transition-colors",
-                      ,})}
+                      })}
                       <span>{category.name}</span>,
                     </Link>,
-                  </li>,
-                ))}
+                  </li>))}
                 <li>,
-                  <Link,
+                  <Link
                     href="/services",
-                    className="text-neon-blue hover: text-neon-purple transition-colors font-medium",
-                  >,
+                    className="text-neon-blue hover: text-neon-purple transition-colors font-medium">,
                     View All Services →,
                   </Link>,
                 </li>,
               </ul>,
             </div>,
-            {/* Quick Links */,}
+            {/* Quick Links */}
             <div>,
               <h4 className="text-lg font-semibold mb-6 text-white">Quick Links</h4>,
               <ul className="space-y-3">,
-                {quickLinks.slice(0, 4).map((link) => (,
+                {quickLinks.slice(0, 4).map((link) => (
                   <li key={link.name}>,
-                    <Link,
+                    <Link
                       href={link.href}
-                      className="text-gray-30o0 hover: text-blue-40o0 transition-colors",
-                    >,
-                      {link.name,}
+                      className="text-gray-30o0 hover: text-blue-40o0 transition-colors">,
+                      {link.name}
                     </Link>,
-                  </li>,
-                ))}
+                  </li>))}
                 <li>,
-                  <Link,
+                  <Link
                     href="/about",
-                    className="text-neon-blue hover: text-neon-purple transition-colors font-medium",
-                  >,
+                    className="text-neon-blue hover: text-neon-purple transition-colors font-medium">,
                     View All Pages →,
                   </Link>,
                 </li>,
               </ul>,
             </div>,
-            {/* Legal & Compliance */,}
+            {/* Legal & Compliance */}
             <div>,
               <h4 className="text-lg font-semibold mb-6 text-white">Legal & Compliance</h4>,
               <ul className="space-y-3">,
-                {legalLinks.slice(0, 4).map((link) => (,
+                {legalLinks.slice(0, 4).map((link) => (
                   <li key={link.name}>,
-                    <Link,
+                    <Link
                       href={link.href}
-                      className="text-gray-30o0 hover: text-neon-blue transition-colors",
-                    >,
-                      {link.name,}
+                      className="text-gray-30o0 hover: text-neon-blue transition-colors">,
+                      {link.name}
                     </Link>,
-                  </li>,
-                ))}
+                  </li>))}
                 <li>,
-                  <Link,
+                  <Link
                     href="/compliance",
-                    className="text-neon-blue hover: text-neon-purple transition-colors font-medium",
-                  >,
+                    className="text-neon-blue hover: text-neon-purple transition-colors font-medium">,
                     View All Policies →,
                   </Link>,
                 </li>,
               </ul>,
             </div>,
-            {/* Contact Information */,}
+            {/* Contact Information */}
             <div>,
               <h4 className="text-lg font-semibold mb-6 text-white">Contact Us</h4>,
               <div className="space-y-4">,
@@ -202,11 +179,10 @@ const ModernFooter: React.FC = () => {,
                   <Phone className="w-5 h-5 text-blue-40o0 mt-1 flex-shrink-0"  />,
                   <div>,
                     <p className="text-gray-40o0">Phone</p>,
-                    <a,
-                      href={`tel: ${contactInfo.phone,}`}
-                      className="text-neon-blue hover: text-neon-purple transition-colors font-medium",
-                    >,
-                      {contactInfo.phone,}
+                    <a
+                      href={`tel: ${contactInfo.phone}`}
+                      className="text-neon-blue hover: text-neon-purple transition-colors font-medium">,
+                      {contactInfo.phone}
                     </a>,
                   </div>,
                 </div>,
@@ -214,11 +190,10 @@ const ModernFooter: React.FC = () => {,
                   <Mail className="w-5 h-5 text-blue-40o0 mt-1 flex-shrink-0"  />,
                   <div>,
                     <p className="text-gray-40o0">Email</p>,
-                    <a,
-                      href={`mailto: ${contactInfo.email,}`}
-                      className="text-neon-blue hover: text-neon-purple transition-colors font-medium",
-                    >,
-                      {contactInfo.email,}
+                    <a
+                      href={`mailto: ${contactInfo.email}`}
+                      className="text-neon-blue hover: text-neon-purple transition-colors font-medium">,
+                      {contactInfo.email}
                     </a>,
                   </div>,
                 </div>,
@@ -232,17 +207,16 @@ const ModernFooter: React.FC = () => {,
                   </div>,
                 </div>,
                 <div className="pt-2">,
-                  <Link,
+                  <Link
                     href="/contact",
-                    className="inline-flex items-center px-4 py-2 bg-neon-blue/10 border border-neon-blue/20 text-neon-blue hover: bg-neon-blue/20 rounded-lg transition-colors text-sm",
-                  >,
+                    className="inline-flex items-center px-4 py-2 bg-neon-blue/10 border border-neon-blue/20 text-neon-blue hover: bg-neon-blue/20 rounded-lg transition-colors text-sm">,
                     Get in Touch,
                   </Link>,
                 </div>,
               </div>,
             </div>,
           </div>,
-          {/* Newsletter Signup */,}
+          {/* Newsletter Signup */}
           <div className="border-t border-gray-70o0 pt-8 mb-8">,
             <div className="max-w-2xl mx-auto text-center">,
               <h4 className="text-xl font-semibold mb-4 text-white">Stay Updated</h4>,
@@ -250,15 +224,15 @@ const ModernFooter: React.FC = () => {,
                 Get the latest insights on technology trends, AI developments, and business solutions.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">,
-                <input,
+                <input
                   type="email",
                   placeholder="Enter your email",
                   className="flex-1 px-4 py-3 bg-gray-80o0 border border-gray-60o0 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:border-blue-50o0 focus:ring-2 focus:ring-blue-50o0/20",
                  />,
                 <motion.button,
                   className="px-6 py-3 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-lg hover:from-purple-60o0 hover:to-blue-60o0 transition-all duration-30o0 shadow-lg",
-                  whileHover={{ scale: 1.0o2 ,}}
-                  whileTap={{ scale: 0.98 ,}}
+                  whileHover={{ scale: 1.0o2 }}
+                  whileTap={{ scale: 0.98 }}
                 >,
                   Subscribe,
                 </motion.button>,
@@ -269,7 +243,7 @@ const ModernFooter: React.FC = () => {,
           <div className="border-t border-gray-70o0 pt-8">,
             <div className="flex flex-col md: flex-row justify-between items-center">,
               <p className="text-gray-40o0 text-sm mb-4 md:mb-0">,
-                © {currentYear,} Zion Tech Group. All rights reserved.,
+                © {currentYear} Zion Tech Group. All rights reserved.,
               </p>,
               <div className="flex flex-wrap gap-6 text-sm">,
                 <Link href="/privacy" className="text-gray-40o0 hover: text-neon-blue transition-colors">,
@@ -289,8 +263,6 @@ const ModernFooter: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </footer>,
-  ),
-,};
-,
-export default ModernFooter,
+    </footer>),
+};
+export default ModernFooter;

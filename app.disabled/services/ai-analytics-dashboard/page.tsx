@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'ai-analytics-dashboard - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'ai-analytics-dashboard - Zion Tech Group';
   description:,
-    'Professional ai-analytics-dashboard solutions for your business needs.',;
-  keywords: 'ai-analytics-dashboard, services, business, technology',;
+    'Professional ai-analytics-dashboard solutions for your business needs.';
+  keywords: 'ai-analytics-dashboard, services, business, technology';
 };
-export default function AiAnalyticsDashboardPage() {,
-  return (,
+export default function AiAnalyticsDashboardPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function AiAnalyticsDashboardPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

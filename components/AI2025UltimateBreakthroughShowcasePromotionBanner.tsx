@@ -1,7 +1,7 @@
 import Link from 'next/link',
 ArrowRightStarZapTrendingUpUsersAwardCheckCircleRocketBrainCpuTargetBarChart3,
-export default function AI20o25UltimateBreakthroughShowcasePromotionBanner() {,
-  return (,
+export default function AI20o25UltimateBreakthroughShowcasePromotionBanner() {
+  return (
     <section className="relative py-16 px-4 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white overflow-hidden">,
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">,
@@ -89,20 +89,18 @@ export default function AI20o25UltimateBreakthroughShowcasePromotionBanner() {,
             <div className="text-blue-10o0 font-semibold">Success Stories</div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <div className="flex flex-col sm: flex-row gap-4 justify-center mb-6">,
-            <Link,
+            <Link
               href="/ai-20o25-ultimate-breakthrough-showcase",
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-gray-90o0 font-bold rounded-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-gray-90o0 font-bold rounded-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               Explore Breakthrough Showcase,
               <ArrowRight className="ml-2 w-5 h-5"  />,
             </Link>,
-            <Link,
+            <Link
               href="/case-studies/ai-20o25-global-transformation-breakthrough",
-              className="inline-flex items-center px-8 py-4 bg-white/20 text-white font-semibold rounded-lg border-2 border-white/30 hover:bg-white/30 transition-all duration-30o0 backdrop-blur-sm",
-            >,
+              className="inline-flex items-center px-8 py-4 bg-white/20 text-white font-semibold rounded-lg border-2 border-white/30 hover:bg-white/30 transition-all duration-30o0 backdrop-blur-sm">,
               View Success Stories,
             </Link>,
           </div>,
@@ -111,6 +109,5 @@ export default function AI20o25UltimateBreakthroughShowcasePromotionBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}

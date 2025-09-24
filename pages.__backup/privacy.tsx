@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function Privacy() {,
-  return (,
+export default function Privacy() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
       <Head>,
         <title>Privacy Policy - Zion App</title>,
-        <meta,
+        <meta
           name='description',
           content='Privacy policy and data protection information',
         />,
@@ -131,7 +130,6 @@ export default function Privacy() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

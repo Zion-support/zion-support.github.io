@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 
 import { UseFormReturn } from "react-hook-form",
 import { AppMetadataValues } from "./MetadataManager",
@@ -8,39 +8,30 @@ import { CardHeaderCardTitleCardContent } from "@/components/ui/card",
 import { FormControlFormDescriptionFormFieldFormItemFormLabelFormMessage } from "@/components/ui/form",
 import { Badge } from "@/components/ui/badge",
 import { X } from "lucide-react",
-,
-interface MetadataFormProps {,
+interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>,
-,}
+}
 ,
-export const MetadataForm: React.FC<MetadataFormProps> = ({ form ,}) => {,
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const { controlregisterwatchsetValue } = form,
   const keywords = watch("keywords"),
   const platform = watch("platform"),
-,
-  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {,
-    if (e.key === "Enter" || e.key === ",") {,
+  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" || e.key === ",") {
       e.preventDefault(),
       const value = e.currentTarget.value.trim(),
-,
-      if (value && !keywords.includes(value)) {,
+      if (value && !keywords.includes(value)) {
         setValue("keywords"[...keywordsvalue]),
-        e.currentTarget.value = "",
-      }
+        e.currentTarget.value = ""}
     }
   };
-,
-  const removeKeyword = (keyword: string) => {,
-    setValue(,
-      "keywords",;
-      keywords.filter((k) => k !== keyword),
-    ),
-  };
-,
+  const removeKeyword = (keyword: string) => {
+    setValue(
+      "keywords";
+      keywords.filter((k) => k !== keyword))};
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000,
   const longDescription = watch("longDescription"),
-,
-  return (,
+  return (
     <Card className="bg-zion-blue border-zion-purple/30">,
       <CardHeader>,
         <CardTitle>App Metadata</CardTitle>,
@@ -48,14 +39,14 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form ,}) => {,
       <CardContent>,
         <Form {...form}>,
           <div className="space-y-4">,
-            <FormField,
+            <FormField
               control={control}
               name="appTitle",
-              render={({ field }) => (,
+              render={({ field }) => (
                 <FormItem>,
                   <FormLabel>App Title</FormLabel>,
                   <FormControl>,
-                    <Input,
+                    <Input
                       placeholder="Enter app title",
                       maxLength={platform === "ios" ? 30 : 50}
                       {...field}
@@ -64,17 +55,16 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form ,}) => {,
                   <FormDescription>,
                     Max {platform === "ios" ? "30" : "50"} characters,
                   </FormDescription>,
-                </FormItem>,
-              )}
+                </FormItem>)}
             />,
-            <FormField,
+            <FormField
               control={control}
               name="shortDescription",
-              render={({ field }) => (,
+              render={({ field }) => (
                 <FormItem>,
                   <FormLabel>Short Description</FormLabel>,
                   <FormControl>,
-                    <Input,
+                    <Input
                       placeholder="Brief description of your app",
                       maxLength={platform === "ios" ? 170 : 80}
                       {...field}
@@ -83,17 +73,16 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form ,}) => {,
                   <FormDescription>,
                     Max {platform === "ios" ? "170" : "80"} characters,
                   </FormDescription>,
-                </FormItem>,
-              )}
+                </FormItem>)}
             />,
-            <FormField,
+            <FormField
               control={control}
               name="longDescription",
-              render={({ field }) => (,
+              render={({ field }) => (
                 <FormItem>,
                   <FormLabel>Long Description</FormLabel>,
                   <FormControl>,
-                    <Textarea,
+                    <Textarea
                       placeholder="Detailed description of your app",
                       className="min-h-32",
                       maxLength={maxDescriptionLength}
@@ -103,54 +92,47 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form ,}) => {,
                   <FormDescription>,
                     {longDescription.length}/{maxDescriptionLength} characters,
                   </FormDescription>,
-                </FormItem>,
-              )}
+                </FormItem>)}
             />,
             <div>,
               <FormLabel htmlFor="keywords">Keywords</FormLabel>,
-              <Input,
+              <Input
                 id="keywords",
                 placeholder="Add keywords (press Enter or comma to add)",
                 onKeyDown={addKeyword}
                 className="mb-2",
               />,
               <div className="flex flex-wrap gap-2 mt-2">,
-                {keywords.map((keywordindex) => (,
+                {keywords.map((keywordindex) => (
                   <Badge key={index} className="bg-zion-purple/60 hover: bg-zion-purple">,
-                    {keyword,}
-                    <button,
+                    {keyword}
+                    <button
                       type="button",
                       onClick={() => removeKeyword(keyword)}
-                      className="ml-1 hover: text-red-300",
-                    >,
+                      className="ml-1 hover: text-red-300">,
                       <X className="h-3 w-3" />,
                     </button>,
-                  </Badge>,
-                )),}
+                  </Badge>))}
               </div>,
               <FormDescription className="mt-2">,
                 Add keywords to improve discoverability (max 100 characters total),
               </FormDescription>,
             </div>,
-            <FormField,
+            <FormField
               control={control}
               name="version",
-              render={({ field }) => (,
+              render={({ field }) => (
                 <FormItem>,
                   <FormLabel>App Version</FormLabel>,
                   <FormControl>,
-                    <Input,
+                    <Input
                       placeholder="e.g.1.0.0",
                       {...field}
                     />,
                   </FormControl>,
-                </FormItem>,
-              )}
+                </FormItem>)}
             />,
           </div>,
         </Form>,
       </CardContent>,
-    </Card>,
-  ),
-};
-,
+    </Card>)};

@@ -1,86 +1,71 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-const UltimateEnterpriseTransformation20o25Banner = () => {,
+const UltimateEnterpriseTransformation20o25Banner = () => {
   const [currentContentsetCurrentContent] = useState(0),
   const [isVisiblesetIsVisible] = useState(true),
-,
-  const featuredContent = [,
-    {,
-      id: 'ultimate-enterprise-transformation-revolution',;
-      title: 'AI 20o25: The Ultimate Enterprise Transformation Revolution',;
-      description: 'Achieve 15,0o00% ROI with next-generation AI systems delivering $50+ billion in annual savings',;
-      url: '/blog/ai-20o25-ultimate-enterprise-transformation-revolution',;
-      type: 'blog',;
-      metrics: {,
-        roi: '15,0o00%',;
-        savings: '$50B+',;
-        efficiency: '2,80o0%',;
+  const featuredContent = [
+    {
+      id: 'ultimate-enterprise-transformation-revolution';
+      title: 'AI 20o25: The Ultimate Enterprise Transformation Revolution';
+      description: 'Achieve 15,0o00% ROI with next-generation AI systems delivering $50+ billion in annual savings';
+      url: '/blog/ai-20o25-ultimate-enterprise-transformation-revolution';
+      type: 'blog';
+      metrics: {
+        roi: '15,0o00%';
+        savings: '$50B+';
+        efficiency: '2,80o0%';
         accuracy: '99.97%',
-      ,},;
-      readingTime: '25 min read',;
+      };
+      readingTime: '25 min read';
       isNew: true,
-    ,},;
-    {,
-      id: 'fortune-50o0-ultimate-transformation-success',;
-      title: 'Fortune 50o0 Ultimate Enterprise Transformation Success Story',;
-      description: 'How a $180B company achieved 15,0o00% ROI and $50B annual savings in 18 months',;
-      url: '/case-studies/fortune-50o0-ultimate-enterprise-transformation-150o00-roi-success-story',;
-      type: 'case-study',;
-      metrics: {,
-        roi: '15,0o00%',;
-        savings: '$50B',;
-        timeline: '18 months',;
+    };
+    {
+      id: 'fortune-50o0-ultimate-transformation-success';
+      title: 'Fortune 50o0 Ultimate Enterprise Transformation Success Story';
+      description: 'How a $180B company achieved 15,0o00% ROI and $50B annual savings in 18 months';
+      url: '/case-studies/fortune-50o0-ultimate-enterprise-transformation-150o00-roi-success-story';
+      type: 'case-study';
+      metrics: {
+        roi: '15,0o00%';
+        savings: '$50B';
+        timeline: '18 months';
         satisfaction: '99.8%',
-      ,},;
-      readingTime: '20 min read',;
+      };
+      readingTime: '20 min read';
       isNew: true,
-    ,},;
-    {,
-      id: 'ultimate-transformation-implementation-guide',;
-      title: 'Ultimate Enterprise Transformation Implementation Guide',;
-      description: 'Complete roadmap to 15,0o00% ROI with proven strategies and step-by-step instructions',;
-      url: '/resources/ai-20o25-ultimate-enterprise-transformation-implementation-guide',;
-      type: 'resource',;
-      metrics: {,
-        roi: '15,0o00%',;
-        success: '99.7%',;
-        timeline: '18 months',;
-        projects: '1,0o00+',
-      },;
-      readingTime: '40 min read',;
+    };
+    {
+      id: 'ultimate-transformation-implementation-guide';
+      title: 'Ultimate Enterprise Transformation Implementation Guide';
+      description: 'Complete roadmap to 15,0o00% ROI with proven strategies and step-by-step instructions';
+      url: '/resources/ai-20o25-ultimate-enterprise-transformation-implementation-guide';
+      type: 'resource';
+      metrics: {
+        roi: '15,0o00%';
+        success: '99.7%';
+        timeline: '18 months';
+        projects: '1,0o00+'};
+      readingTime: '40 min read';
       isNew: true,
-    ,}
-  ],
-,
-  useEffect(() => {,
-    const interval = setInterval(() => {,
-      setCurrentContent((prev) => (prev + 1) % featuredContent.length),
-    }50o00),
-,
-    return () => clearInterval(interval),
-  }[]),
-,
-  const handleDismiss = () => {,
-    setIsVisible(false),
-    localStorage.setItem('ultimate-enterprise-transformation-banner-'dismissed', 'true'),
-  };
-,
-  useEffect(() => {,
-    const dismissed = localStorage.getItem('ultimate-enterprise-transformation-banner-dismissed'),
-    if (dismissed === 'true') {,
-      setIsVisible(false),
     }
+  ],
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentContent((prev) => (prev + 1) % featuredContent.length)}50o00),
+    return () => clearInterval(interval)}[]),
+  const handleDismiss = () => {
+    setIsVisible(false),
+    localStorage.setItem('ultimate-enterprise-transformation-banner-'dismissed', 'true')};
+  useEffect(() => {
+    const dismissed = localStorage.getItem('ultimate-enterprise-transformation-banner-dismissed'),
+    if (dismissed === 'true') {
+      setIsVisible(false)}
   }[]),
-,
   if (!isVisible) return null,
-,
   const current = featuredContent[currentContent],
-,
-  return (,
+  return (
     <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden">,
       {/* Animated background elements */}
       <div className="absolute inset-0">,
@@ -106,22 +91,19 @@ const UltimateEnterpriseTransformation20o25Banner = () => {,
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">,
           <div className="flex items-center justify-between mb-6">,
             <div className="flex space-x-2">,
-              {featuredContent.map((_index) => (,
-                <button,
+              {featuredContent.map((_index) => (
+                <button
                   key={index}
                   onClick={() => setCurrentContent(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-30o0 ${,
-                    index === currentContent ? 'bg-yellow-40o0' : 'bg-white/30',
-                  }`}
-                />,
-              ))}
+                  className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
+                    index === currentContent ? 'bg-yellow-40o0' : 'bg-white/30'}`}
+                />))}
             </div>,
-            <button,
+            <button
               onClick={handleDismiss}
-              className="text-white/70 hover: text-white transition-colors",
-            >,
+              className="text-white/70 hover: text-white transition-colors">,
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M6 18L18 6M6 6l12 12"  />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />,
               </svg>,
             </button>,
           </div>,
@@ -129,7 +111,7 @@ const UltimateEnterpriseTransformation20o25Banner = () => {,
             <div>,
               <div className="flex items-center space-x-2 mb-4">,
                 <span className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-3 py-1 rounded-full text-xs font-bold">,
-                  {current.type.toUpperCase(),}
+                  {current.type.toUpperCase()}
                 </span>,
                 <span className="bg-green-50o0 text-white px-3 py-1 rounded-full text-xs font-bold">,
                   NEW,
@@ -139,7 +121,7 @@ const UltimateEnterpriseTransformation20o25Banner = () => {,
                 </span>,
               </div>,
               <h3 className="text-2xl md: text-3xl font-bold mb-4 text-white">,
-                {current.title,}
+                {current.title}
               </h3>,
               <p className="text-lg text-blue-10o0 mb-6 leading-relaxed">,
                 {current.description}
@@ -162,11 +144,10 @@ const UltimateEnterpriseTransformation20o25Banner = () => {,
                   <div className="text-sm text-blue-20o0">Timeline/Success</div>,
                 </div>,
               </div>,
-              <Link,
+              <Link
                 href={current.url}
-                className="inline-flex items-center bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-3 rounded-lg font-bold hover: from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5",
-              >,
-                Read Full {current.type === 'blog' ? 'Article' : current.type === 'case-study' ? 'Case Study' : 'Guide',}
+                className="inline-flex items-center bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-3 rounded-lg font-bold hover: from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5">,
+                Read Full {current.type === 'blog' ? 'Article' : current.type === 'case-study' ? 'Case Study' : 'Guide'}
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"  />,
                 </svg>,
@@ -212,16 +193,14 @@ const UltimateEnterpriseTransformation20o25Banner = () => {,
         {/* Call to action */}
         <div className="text-center">,
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
-            <Link,
+            <Link
               href="/contact",
-              className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5",
-            >,
+              className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5">,
               Get Your Free Transformation Assessment,
             </Link>,
-            <Link,
+            <Link
               href="/resources",
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0",
-            >,
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0">,
               View All Resources,
             </Link>,
           </div>,
@@ -230,8 +209,6 @@ const UltimateEnterpriseTransformation20o25Banner = () => {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default UltimateEnterpriseTransformation20o25Banner,
+    </div>),
+};
+export default UltimateEnterpriseTransformation20o25Banner;

@@ -25,7 +25,7 @@ export interface CompanyActivityEvent {
   timestampIso: string;
   actorEmail: string;
   action: string;
-  meta?: Record<string, unknown>;
+  meta?: Record<string unknown>;
 }
 
 export interface InvoiceRecord {

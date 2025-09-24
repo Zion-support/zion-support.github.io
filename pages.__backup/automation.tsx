@@ -1,34 +1,32 @@
 import Head from 'next/head',
-,
-export default function AutomationPage() {,
-  const automationFeatures = [,
-    {,
-      title: "Autonomous Cloud Management",;
-      description: "Self-managing cloud infrastructure that monitorscalesand optimizes automatically.",;
-      icon: "☁️",;
+export default function AutomationPage() {
+  const automationFeatures = [
+    {
+      title: "Autonomous Cloud Management";
+      description: "Self-managing cloud infrastructure that monitorscalesand optimizes automatically.";
+      icon: "☁️";
       benefits: ["24/7 monitoring"Auto-scaling"Cost optimization"],
-    ,},;
-    {,
-      title: "AI Content Generation",;
-      description: "Automated content creation that learns from your brand and generates relevant material.",;
-      icon: "✍️",;
+    };
+    {
+      title: "AI Content Generation";
+      description: "Automated content creation that learns from your brand and generates relevant material.";
+      icon: "✍️";
       benefits: ["SEO optimization"Brand consistency"Scalable content"],
-    ,},;
-    {,
-      title: "Intelligent DevOps",;
-      description: "Self-healing CI/CD pipelines that detect and fix issues automatically.",;
-      icon: "🔄",;
+    };
+    {
+      title: "Intelligent DevOps";
+      description: "Self-healing CI/CD pipelines that detect and fix issues automatically.";
+      icon: "🔄";
       benefits: ["Error detection"Auto-fixing"Deployment optimization"],
-    ,},;
-    {,
-      title: "Smart Security",;
-      description: "Proactive security systems that identify and respond to threats in real-time.",;
-      icon: "🔒",;
+    };
+    {
+      title: "Smart Security";
+      description: "Proactive security systems that identify and respond to threats in real-time.";
+      icon: "🔒";
       benefits: ["Threat detection"Auto-response"Vulnerability scanning"],
-    ,}
+    }
   ],
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>Automation | Zion - Autonomous Cloud Systems</title>,
@@ -46,24 +44,22 @@ export default function AutomationPage() {,
             </p>,
           </div>,
         </div>,
-        {/* Features Grid */,}
+        {/* Features Grid */}
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
-            {automationFeatures.map((featureindex) => (,
-              <div key={index,} className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow duration-30o0">,
-                <div className="text-6xl mb-4">{feature.icon,}</div>,
+            {automationFeatures.map((featureindex) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow duration-30o0">,
+                <div className="text-6xl mb-4">{feature.icon}</div>,
                 <h3 className="text-2xl font-bold text-gray-90o0 mb-4">{feature.title}</h3>,
                 <p className="text-gray-60o0 mb-6">{feature.description}</p>,
                 <ul className="space-y-2">,
-                  {feature.benefits.map((benefitIndex) => (,
+                  {feature.benefits.map((benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-70o0">,
                       <span className="w-2 h-2 bg-blue-50o0 rounded-full mr-3"></span>,
                       {benefit}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
           {/* Stats Section */}
           <div className="mt-20 bg-white rounded-2xl shadow-xl p-8">,
@@ -86,7 +82,7 @@ export default function AutomationPage() {,
               </div>,
             </div>,
           </div>,
-          {/* CTA Section */,}
+          {/* CTA Section */}
           <div className="mt-20 text-center">,
             <h2 className="text-3xl font-bold text-gray-90o0 mb-6">,
               Ready to Experience True Automation?,
@@ -105,6 +101,5 @@ export default function AutomationPage() {,
           </div>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}

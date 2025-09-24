@@ -1,115 +1,111 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {,
-  Brain,;
-  Cpu,;
-  Database,;
-  Zap,;
-  Shield,;
-  Rocket,;
-  ArrowRight,;
-  CheckCircle,;
-  Star,;
-  Users,;
-  Clock,;
-  TrendingUp,;
+import {
+  Brain;
+  Cpu;
+  Database;
+  Zap;
+  Shield;
+  Rocket;
+  ArrowRight;
+  CheckCircle;
+  Star;
+  Users;
+  Clock;
+  TrendingUp;
 } from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
-,
-export default function AIMLServicesPage() {,
-  const services = [,
-    {,
-      title: 'Custom AI Solutions',;
+export default function AIMLServicesPage() {
+  const services = [
+    {
+      title: 'Custom AI Solutions';
       description:,
-        'Tailored AI applications built for your specific business needs',;
-      features: [,
-        'Machine Learning Models',;
-        'Neural Networks',;
-        'Predictive Analytics',;
-        'Natural Language Processing',;
-      ],;
-      price: 'From $5,0o00',;
-      icon: Brain,;
-      color: 'from-purple-50o0 to-pink-50o0',;
-    },;
-    {,
-      title: 'AI-Powered Automation',;
-      description: 'Intelligent automation systems that learn and adapt',;
-      features: [,
-        'Process Automation',;
-        'Workflow Optimization',;
-        'Smart Decision Making',;
-        'Continuous Learning',;
-      ],;
-      price: 'From $3,50o0',;
-      icon: Zap,;
-      color: 'from-blue-50o0 to-cyan-50o0',;
-    },;
-    {,
-      title: 'Data Intelligence Platform',;
-      description: 'Advanced analytics and insights powered by AI',;
-      features: [,
-        'Big Data Processing',;
-        'Real-time Analytics',;
-        'Business Intelligence',;
-        'Predictive Insights',;
-      ],;
-      price: 'From $7,50o0',;
-      icon: Database,;
-      color: 'from-emerald-50o0 to-teal-50o0',;
-    },;
-    {,
-      title: 'AI Consulting & Strategy',;
+        'Tailored AI applications built for your specific business needs';
+      features: [
+        'Machine Learning Models';
+        'Neural Networks';
+        'Predictive Analytics';
+        'Natural Language Processing';
+      ];
+      price: 'From $5,0o00';
+      icon: Brain;
+      color: 'from-purple-50o0 to-pink-50o0';
+    };
+    {
+      title: 'AI-Powered Automation';
+      description: 'Intelligent automation systems that learn and adapt';
+      features: [
+        'Process Automation';
+        'Workflow Optimization';
+        'Smart Decision Making';
+        'Continuous Learning';
+      ];
+      price: 'From $3,50o0';
+      icon: Zap;
+      color: 'from-blue-50o0 to-cyan-50o0';
+    };
+    {
+      title: 'Data Intelligence Platform';
+      description: 'Advanced analytics and insights powered by AI';
+      features: [
+        'Big Data Processing';
+        'Real-time Analytics';
+        'Business Intelligence';
+        'Predictive Insights';
+      ];
+      price: 'From $7,50o0';
+      icon: Database;
+      color: 'from-emerald-50o0 to-teal-50o0';
+    };
+    {
+      title: 'AI Consulting & Strategy';
       description:,
-        'Strategic guidance for AI implementation and transformation',;
-      features: [,
-        'AI Roadmap Planning',;
-        'Technology Assessment',;
-        'Implementation Strategy',;
-        'ROI Optimization',;
-      ],;
-      price: 'From $2,50o0',;
-      icon: Rocket,;
-      color: 'from-orange-50o0 to-red-50o0',;
-    },;
+        'Strategic guidance for AI implementation and transformation';
+      features: [
+        'AI Roadmap Planning';
+        'Technology Assessment';
+        'Implementation Strategy';
+        'ROI Optimization';
+      ];
+      price: 'From $2,50o0';
+      icon: Rocket;
+      color: 'from-orange-50o0 to-red-50o0';
+    };
   ],
-,
-  const stats = [,
-    { number: '50o0+', label: 'AI Models Deployed', icon: Brain ,},;
-    { number: '99.9%', label: 'Accuracy Rate', icon: CheckCircle ,},;
-    { number: '24/7', label: 'AI Monitoring', icon: Clock ,},;
-    { number: '250o0%', label: 'Average ROI', icon: TrendingUp ,},;
+  const stats = [
+    { number: '50o0+', label: 'AI Models Deployed', icon: Brain };
+    { number: '99.9%', label: 'Accuracy Rate', icon: CheckCircle };
+    { number: '24/7', label: 'AI Monitoring', icon: Clock };
+    { number: '250o0%', label: 'Average ROI', icon: TrendingUp };
   ],
-,
-  return (,
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white'>,
       <Head>,
         <title>AI & Machine Learning Services - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Cutting-edge AI and machine learning solutions from Zion Tech Group. Custom AI applications, automation, and intelligent systems that drive business growth.',
         />,
-        <meta,
+        <meta
           property='og: title',
           content='AI & Machine Learning Services - Zion Tech Group',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Cutting-edge AI and machine learning solutions that drive business growth and innovation.',
         />,
         <link rel='canonical' href='https://ziontechgroup.com/services/ai-ml' />,
       </Head>,
       <EnhancedNavigation />,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>,
         <div className='max-w-7xl mx-auto text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className='mb-8',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='mb-8'>,
             <h1 className='text-5xl md: text-7xl font-bold bg-gradient-to-r from-purple-40o0 via-pink-40o0 to-purple-40o0 bg-clip-text text-transparent mb-6'>,
               AI & Machine Learning,
             </h1>,
@@ -119,11 +115,10 @@ export default function AIMLServicesPage() {,
             </p>,
           </motion.div>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.2 ,}}
-            className='mb-12',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='mb-12'>,
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>,
               From custom neural networks to intelligent automation systems, we,
               deliver AI solutions that provide measurable business outcomes and,
@@ -136,19 +131,18 @@ export default function AIMLServicesPage() {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Stats Section */,}
+      {/* Stats Section */}
       <section className='py-16 px-6'>,
         <div className='max-w-7xl mx-auto'>,
           <div className='grid grid-cols-2 md: grid-cols-4 gap-8'>,
-            {stats.map((stat, index) => (,
+            {stats.map((stat, index) => (
               <motion.div,
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='text-center',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='text-center'>,
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20 rounded-2xl flex items-center justify-center mx-auto mb-4'>,
                   <stat.icon className='w-8 h-8 text-purple-40o0' />,
                 </div>,
@@ -156,8 +150,7 @@ export default function AIMLServicesPage() {,
                   {stat.number}
                 </div>,
                 <div className='text-white/70'>{stat.label}</div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -165,12 +158,11 @@ export default function AIMLServicesPage() {,
       <section className='py-20 px-6'>,
         <div className='max-w-7xl mx-auto'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-4xl font-bold text-white mb-6'>,
               Our AI Services,
             </h2>,
@@ -180,17 +172,16 @@ export default function AIMLServicesPage() {,
             </p>,
           </motion.div>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>,
-            {services.map((service, index) => (,
+            {services.map((service, index) => (
               <motion.div,
                 key={service.title}
-                initial={{ opacity: 0, y: 30 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='bg-gradient-to-br from-slate-80o0/50 to-slate-90o0/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover: border-purple-50o0/30 transition-all duration-30o0',
-              >,
-                <div,
-                  className={`w-16 h-16 bg-gradient-to-br ${service.color,} rounded-2xl flex items-center justify-center mb-6`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='bg-gradient-to-br from-slate-80o0/50 to-slate-90o0/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover: border-purple-50o0/30 transition-all duration-30o0'>,
+                <div
+                  className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}
                 >,
                   <service.icon className='w-8 h-8 text-white' />,
                 </div>,
@@ -199,15 +190,13 @@ export default function AIMLServicesPage() {,
                 </h3>,
                 <p className='text-white/70 mb-6'>{service.description}</p>,
                 <ul className='space-y-3 mb-6'>,
-                  {service.features.map(feature => (,
-                    <li,
+                  {service.features.map(feature => (
+                    <li
                       key={feature}
-                      className='flex items-center text-white/80',
-                    >,
+                      className='flex items-center text-white/80'>,
                       <CheckCircle className='w-5 h-5 text-purple-40o0 mr-3 flex-shrink-0' />,
                       {feature}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
                 <div className='flex items-center justify-between'>,
                   <span className='text-2xl font-bold text-purple-40o0'>,
@@ -217,8 +206,7 @@ export default function AIMLServicesPage() {,
                     Get Started,
                   </button>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -226,16 +214,16 @@ export default function AIMLServicesPage() {,
       <section className='py-20 px-6'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >,
             <h2 className='text-4xl font-bold text-white mb-6'>,
               Ready to Transform Your Business with AI?,
             </h2>,
             <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>,
-              Let's discuss how our AI solutions can drive innovation,;
+              Let's discuss how our AI solutions can drive innovation;
               efficiency, and growth for your organization.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
@@ -250,7 +238,6 @@ export default function AIMLServicesPage() {,
         </div>,
       </section>,
       <EnhancedFooter />,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

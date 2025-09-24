@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-const EdgeAISecurityPlaybook20o25 = () => {,
-  return (,
+const EdgeAISecurityPlaybook20o25 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='Edge AI Security Playbook 20o25',
         description='Security patterns, controls, and architectures to safely deploy AI at the edge in 20o25.',
         keywords='edge ai security, zero trust, model security, data protection',
@@ -26,7 +25,7 @@ const EdgeAISecurityPlaybook20o25 = () => {,
         <div className='prose prose-lg max-w-none'>,
           <h2>Threat Model</h2>,
           <p>,
-            Consider model theft, prompt injection, data exfiltration,;
+            Consider model theft, prompt injection, data exfiltration;
             supply-chain compromise, firmware tampering, and adversarial,
             examples targeting constrained devices.,
           </p>,
@@ -51,23 +50,18 @@ const EdgeAISecurityPlaybook20o25 = () => {,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Assess Edge Security Readiness,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default EdgeAISecurityPlaybook20o25,
-,
+    </div>),
+};
+export default EdgeAISecurityPlaybook20o25;

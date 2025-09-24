@@ -1,9 +1,7 @@
-export function PageErrorBoundary() {,
-  return (,
+export function PageErrorBoundary() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

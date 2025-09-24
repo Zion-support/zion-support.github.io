@@ -1,20 +1,19 @@
 import Link from 'next/link',
-,
-export default function AI20o26NeuralInterfacesPromotionBanner() {,
-  return (,
+export default function AI20o26NeuralInterfacesPromotionBanner() {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-green-60o0 via-blue-60o0 to-teal-70o0 py-16'>,
       {/* Background Pattern */}
       <div className='absolute inset-0 opacity-10'>,
-        <div,
+        <div
           className='absolute inset-0',
-          style={{,
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.0o46-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.0o46 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,;
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.0o46-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.0o46 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
           }}
         ></div>,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-semibold mb-6 animate-pulse'>,
             🧠 NEURAL INTERFACE REVOLUTION,
           </div>,
@@ -25,13 +24,13 @@ export default function AI20o26NeuralInterfacesPromotionBanner() {,
               Interface Revolution,
             </span>,
           </h2>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl md: text-2xl text-green-10o0 mb-8 max-w-4xl mx-auto leading-relaxed'>,
             Experience the revolutionary neural interface technology that,
             enables direct brain-computer communicationtransforming how humans,
             interact with AI systems and digital environments.,
           </p>,
-          {/* Key Features Grid */,}
+          {/* Key Features Grid */}
           <div className='grid md: grid-cols-3 gap-6 mb-10 max-w-5xl mx-auto'>,
             <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>,
               <div className='text-3xl mb-3'>💭</div>,
@@ -61,35 +60,32 @@ export default function AI20o26NeuralInterfacesPromotionBanner() {,
               </p>,
             </div>,
           </div>,
-          {/* CTA Buttons */,}
+          {/* CTA Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o26-neural-interfaces',
-              className='inline-flex items-center px-8 py-4 bg-white text-green-60o0 font-bold rounded-full hover:bg-green-50 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='inline-flex items-center px-8 py-4 bg-white text-green-60o0 font-bold rounded-full hover:bg-green-50 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               Explore Neural Interfaces,
-              <svg,
+              <svg
                 className='ml-2 w-5 h-5',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M13 7l5 5m0 0l-5 5m5-5H6',
                 />,
               </svg>,
             </Link>,
-            <Link,
+            <Link
               href='/neural-interface-demo',
-              className='inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover: bg-white hover:text-green-60o0 transition-all duration-30o0',
-            >,
+              className='inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover: bg-white hover:text-green-60o0 transition-all duration-30o0'>,
               Try Neural Demo,
             </Link>,
           </div>,
-          {/* Stats */,}
+          {/* Stats */}
           <div className='mt-12 grid grid-cols-2 md: grid-cols-4 gap-6 max-w-3xl mx-auto'>,
             <div className='text-center'>,
               <div className='text-3xl font-bold text-white mb-1'>95%</div>,
@@ -114,7 +110,7 @@ export default function AI20o26NeuralInterfacesPromotionBanner() {,
           </div>,
         </div>,
       </div>,
-      {/* Floating Neural Elements */,}
+      {/* Floating Neural Elements */}
       <div className='absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse'>,
         <div className='absolute inset-2 border-2 border-white/30 rounded-full'>,
           <div className='absolute inset-2 bg-white/20 rounded-full'></div>,
@@ -138,7 +134,5 @@ export default function AI20o26NeuralInterfacesPromotionBanner() {,
       <div className='absolute bottom-1/4 left-20 w-6 h-6 bg-teal-30o0/20 rounded-full animate-pulse delay-70o0'>,
         <div className='absolute inset-1 border border-teal-30o0/40 rounded-full'></div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

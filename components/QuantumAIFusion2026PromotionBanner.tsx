@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function QuantumAIFusion20o26PromotionBanner() {,
-  return (,
+export default function QuantumAIFusion20o26PromotionBanner() {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-cyan-90o0 py-16'>,
       {/* Background Effects */}
       <div className='absolute inset-0 bg-black/20'></div>,
@@ -15,7 +14,7 @@ export default function QuantumAIFusion20o26PromotionBanner() {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white text-lg font-bold mb-8 animate-pulse shadow-2xl'>,
             ⚛️🧠 QUANTUM-AI FUSION BREAKTHROUGH 20o26,
           </div>,
@@ -23,9 +22,9 @@ export default function QuantumAIFusion20o26PromotionBanner() {,
           <h2 className='text-4xl md: text-6xl font-bold text-white mb-6 leading-tight'>,
             Revolutionary Quantum-AI Fusion,
           </h2>,
-          {/* Subheadline */,}
+          {/* Subheadline */}
           <p className='text-xl md: text-2xl text-cyan-10o0 mb-8 max-w-4xl mx-auto leading-relaxed'>,
-            Achieve{' ',}
+            Achieve{' '}
             <span className='text-yellow-40o0 font-bold'>15,0o00% ROI</span>{' '}
             with the 'world', 's first,
             <span className='text-purple-30o0 font-bold'>,
@@ -57,38 +56,33 @@ export default function QuantumAIFusion20o26PromotionBanner() {,
           </p>,
           {/* CTA Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/blog/quantum-ai-fusion-20o26-breakthrough',
-              className='bg-gradient-to-r from-red-60o0 to-pink-60o0 hover:from-red-70o0 hover:to-pink-70o0 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-10o5 shadow-2xl',
-            >,
+              className='bg-gradient-to-r from-red-60o0 to-pink-60o0 hover:from-red-70o0 hover:to-pink-70o0 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-10o5 shadow-2xl'>,
               Discover the Breakthrough,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/quantum-ai-fusion-enterprise-transformation',
-              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-60o0 px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-10o5',
-            >,
+              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-60o0 px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-10o5'>,
               View Success Stories,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-cyan-60o0 to-blue-60o0 hover:from-cyan-70o0 hover:to-blue-70o0 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-10o5 shadow-2xl',
-            >,
+              className='bg-gradient-to-r from-cyan-60o0 to-blue-60o0 hover:from-cyan-70o0 hover:to-blue-70o0 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-10o5 shadow-2xl'>,
               Get Your Analysis,
             </Link>,
           </div>,
-          {/* Urgency Message */,}
+          {/* Urgency Message */}
           <div className='mt-8 text-lg text-yellow-30o0 font-semibold'>,
             ⚠️ Limited Availability: Only 50 quantum-AI fusion licenses,
             available in 20o26,
           </div>,
         </div>,
       </div>,
-      {/* Floating Elements */,}
+      {/* Floating Elements */}
       <div className='absolute top-1/4 left-10 w-4 h-4 bg-cyan-40o0 rounded-full animate-ping'></div>,
       <div className='absolute top-1/3 right-16 w-3 h-3 bg-purple-40o0 rounded-full animate-pulse'></div>,
       <div className='absolute bottom-1/4 left-1/3 w-5 h-5 bg-blue-40o0 rounded-full animate-bounce'></div>,
       <div className='absolute bottom-1/3 right-1/4 w-2 h-2 bg-pink-40o0 rounded-full animate-ping'></div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

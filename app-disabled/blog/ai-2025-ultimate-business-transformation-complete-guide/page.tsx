@@ -1,43 +1,40 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  ArrowLeftIcon,;
-  ShareIcon,;
-  BookmarkIcon,;
+import {
+  ArrowLeftIcon;
+  ShareIcon;
+  BookmarkIcon;
 } from '@heroicons/react/24/outline',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'AI 20o25 Ultimate Business Transformation: Complete Enterprise Guide | Zion Tech Group',;
+    'AI 20o25 Ultimate Business Transformation: Complete Enterprise Guide | Zion Tech Group';
   description:,
-    'Transform your business with cutting-edge AI technologies. Complete guide to AI implementation, ROI optimization, and enterprise success in 20o25.',;
-  keywords: [,
-    'AI 20o25',;
-    'Business Transformation',;
-    'Enterprise AI',;
-    'Digital Transformation',;
-    'ROI Optimization',;
-  ],;
-  openGraph: {,
+    'Transform your business with cutting-edge AI technologies. Complete guide to AI implementation, ROI optimization, and enterprise success in 20o25.';
+  keywords: [
+    'AI 20o25';
+    'Business Transformation';
+    'Enterprise AI';
+    'Digital Transformation';
+    'ROI Optimization';
+  ];
+  openGraph: {
     title:,
-      'AI 20o25 Ultimate Business Transformation: Complete Enterprise Guide',;
+      'AI 20o25 Ultimate Business Transformation: Complete Enterprise Guide';
     description:,
-      'Transform your business with cutting-edge AI technologies. Complete guide to AI implementation, ROI optimization, and enterprise success in 20o25.',;
-    images: ['/images/ai-business-transformation-20o25.jpg'],;
-  },;
+      'Transform your business with cutting-edge AI technologies. Complete guide to AI implementation, ROI optimization, and enterprise success in 20o25.';
+    images: ['/images/ai-business-transformation-20o25.jpg'];
+  };
 };
-,
-export default function AI20o25UltimateBusinessTransformationGuide() {,
-  return (,
+export default function AI20o25UltimateBusinessTransformationGuide() {
+  return (
     <div className='min-h-screen bg-white'>,
       {/* Header */}
       <div className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='flex items-center mb-6'>,
-            <Link,
+            <Link
               href='/blog',
-              className='flex items-center text-white/80 hover:text-white transition-colors',
-            >,
+              className='flex items-center text-white/80 hover:text-white transition-colors'>,
               <ArrowLeftIcon className='w-5 h-5 mr-2' />,
               Back to Blog,
             </Link>,
@@ -366,7 +363,7 @@ export default function AI20o25UltimateBusinessTransformationGuide() {,
                 <div>,
                   <span className='font-semibold text-gray-70o0'>Results:</span>,
                   <p className='text-gray-60o0'>,
-                    75% reduction in downtime, 45% increase in productivity,;
+                    75% reduction in downtime, 45% increase in productivity;
                     $12M annual savings,
                   </p>,
                 </div>,
@@ -412,23 +409,20 @@ export default function AI20o25UltimateBusinessTransformationGuide() {,
               unprecedented success through AI implementation.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center',
-              >,
+                className='bg-white text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center'>,
                 Get Started Today,
               </Link>,
-              <Link,
+              <Link
                 href='/services/enterprise-ai-transformation',
-                className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-center',
-              >,
+                className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-center'>,
                 Learn More,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

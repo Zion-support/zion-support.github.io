@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'customer-feedback-analyzer - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'customer-feedback-analyzer - Zion Tech Group';
   description:,
-    'Professional customer-feedback-analyzer solutions for your business needs.',;
-  keywords: 'customer-feedback-analyzer, services, business, technology',;
+    'Professional customer-feedback-analyzer solutions for your business needs.';
+  keywords: 'customer-feedback-analyzer, services, business, technology';
 };
-export default function CustomerFeedbackAnalyzerPage() {,
-  return (,
+export default function CustomerFeedbackAnalyzerPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function CustomerFeedbackAnalyzerPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

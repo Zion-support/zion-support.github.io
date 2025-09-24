@@ -1,95 +1,85 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   Brain,
   Zap,
   Globe,
   Cpu,
   Database,
   Shield,
-  Rocket,;
-  Star,;
-  ArrowRight,;
-  CheckCircle,;
-  TrendingUp,
-} from 'lucide-react',
-,
-const FuturisticAIServices20o26Showcase = () => {,
+  Rocket;
+  Star;
+  ArrowRight;
+  CheckCircle;
+  TrendingUp} from 'lucide-react',
+const FuturisticAIServices20o26Showcase = () => {
   const [currentServicesetCurrentService] = useState(0),
   const [isVisiblesetIsVisible] = useState(false),
-,
-  const services = [,
-    {,
-      id: 1,;
-      title: "Quantum-Enhanced AI Processing",;
-      description: "Revolutionary quantum computing integration for unprecedented AI performance",;
-      icon: <Cpu className="w-8 h-8"  />,;
-      features: ["10,0o00x faster processing"Quantum error correction"Real-time optimization"],;
-      color: "from-purple-60o0 to-pink-60o0",;
+  const services = [
+    {
+      id: 1;
+      title: "Quantum-Enhanced AI Processing";
+      description: "Revolutionary quantum computing integration for unprecedented AI performance";
+      icon: <Cpu className="w-8 h-8"  />;
+      features: ["10,0o00x faster processing"Quantum error correction"Real-time optimization"];
+      color: "from-purple-60o0 to-pink-60o0";
       stats: "99.99% accuracy",
-    ,},;
-    {,
-      id: 2,;
-      title: "Neural Interface Technology",;
-      description: "Direct brain-computer interfaces for seamless human-AI collaboration",;
-      icon: <Brain className="w-8 h-8"  />,;
-      features: ["Thought-to-action processing"Cognitive enhancement"Memory augmentation"],;
-      color: "from-blue-60o0 to-cyan-60o0",;
+    };
+    {
+      id: 2;
+      title: "Neural Interface Technology";
+      description: "Direct brain-computer interfaces for seamless human-AI collaboration";
+      icon: <Brain className="w-8 h-8"  />;
+      features: ["Thought-to-action processing"Cognitive enhancement"Memory augmentation"];
+      color: "from-blue-60o0 to-cyan-60o0";
       stats: "1ms response time",
-    ,},;
-    {,
-      id: 3,;
-      title: "Autonomous Business Operations",;
-      description: "Fully automated business processes with self-learning capabilities",;
-      icon: <Rocket className="w-8 h-8"  />,;
-      features: ["Self-optimizing workflows"Predictive decision making"24/7 operations"],;
-      color: "from-green-60o0 to-emerald-60o0",;
+    };
+    {
+      id: 3;
+      title: "Autonomous Business Operations";
+      description: "Fully automated business processes with self-learning capabilities";
+      icon: <Rocket className="w-8 h-8"  />;
+      features: ["Self-optimizing workflows"Predictive decision making"24/7 operations"];
+      color: "from-green-60o0 to-emerald-60o0";
       stats: "50o0% ROI increase",
-    ,},;
-    {,
-      id: 4,;
-      title: "Global AI Network Mesh",;
-      description: "Interconnected AI systems spanning multiple continents",;
-      icon: <Globe className="w-8 h-8"  />,;
-      features: ["Edge computing nodes"Real-time synchronization"Global intelligence"],;
-      color: "from-orange-60o0 to-red-60o0",;
+    };
+    {
+      id: 4;
+      title: "Global AI Network Mesh";
+      description: "Interconnected AI systems spanning multiple continents";
+      icon: <Globe className="w-8 h-8"  />;
+      features: ["Edge computing nodes"Real-time synchronization"Global intelligence"];
+      color: "from-orange-60o0 to-red-60o0";
       stats: "1B+ data points",
-    ,}
+    }
   ],
-,
-  useEffect(() => {,
+  useEffect(() => {
     setIsVisible(true),
-    const interval = setInterval(() => {,
-      setCurrentService((prev) => (prev + 1) % services.length),
-    }40o00),
-    return () => clearInterval(interval),
-  }[services.length]),
-,
-  const containerVariants ={,
-    hidden: { opacity: 0, y: 50 ,},;
-    visible: {,
-      opacity: 1,;
-      y: 0,;
-      transition: {,
-        duration: 0.8,;
+    const interval = setInterval(() => {
+      setCurrentService((prev) => (prev + 1) % services.length)}40o00),
+    return () => clearInterval(interval)}[services.length]),
+  const containerVariants ={
+    hidden: { opacity: 0, y: 50 };
+    visible: {
+      opacity: 1;
+      y: 0;
+      transition: {
+        duration: 0.8;
         staggerChildren: 0.2,
-      ,}
+      }
     }
   };
-,
-  const itemVariants ={,
-    hidden: { opacity: 0, y: 20 ,},;
-    visible: {,
-      opacity: 1,;
-      y: 0,;
-      transition: { duration: 0.6 ,}
+  const itemVariants ={
+    hidden: { opacity: 0, y: 20 };
+    visible: {
+      opacity: 1;
+      y: 0;
+      transition: { duration: 0.6 }
     }
   };
-,
-  return (,
+  return (
     <section className="py-20 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 relative overflow-hidden">,
       {/* Animated Background */}
       <div className="absolute inset-0">,
@@ -102,15 +92,14 @@ const FuturisticAIServices20o26Showcase = () => {,
           variants={containerVariants}
           initial="hidden",
           animate={isVisible ? "visible" : "hidden"}
-          className="text-center mb-16",
-        >,
+          className="text-center mb-16">,
           <motion.div variants={itemVariants} className="flex items-center justify-center mb-6">,
             <Zap className="w-12 h-12 text-yellow-40o0 mr-4"  />,
             <h2 className="text-5xl md: text-6xl font-bold bg-gradient-to-r from-white via-blue-20o0 to-purple-20o0 bg-clip-text text-transparent">,
               Futuristic AI Services 20o26,
             </h2>,
           </motion.div>,
-          <motion.p variants={itemVariants,} className="text-xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed">,
+          <motion.p variants={itemVariants} className="text-xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed">,
             Experience the next generation of artificial intelligence with our revolutionary 20o26 service portfolio.,
             Powered by quantum computingneural interfacesand autonomous systems.,
           </motion.p>,
@@ -118,18 +107,17 @@ const FuturisticAIServices20o26Showcase = () => {,
         {/* Main Service Showcase */}
         <div className="grid lg: grid-cols-2 gap-12 items-center mb-16">,
           <motion.div,
-            variants={itemVariants,}
+            variants={itemVariants}
             initial="hidden",
             animate="visible",
-            className="space-y-8",
-          >,
+            className="space-y-8">,
             <AnimatePresence mode="wait">,
               <motion.div,
                 key={currentService}
-                initial={{ opacity: 0x: -50 ,}}
-                animate={{ opacity: 1x: 0 ,}}
-                exit={{ opacity: 0x: 50 ,}}
-                transition={{ duration: 0.5 ,}}
+                initial={{ opacity: 0x: -50 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: 50 }}
+                transition={{ duration: 0.5 }}
                 className={`p-8 rounded-2xl bg-gradient-to-br ${services[currentService].color} shadow-2xl`}
               >,
                 <div className="flex items-center mb-6">,
@@ -146,18 +134,16 @@ const FuturisticAIServices20o26Showcase = () => {,
                   </div>,
                 </div>,
                 <div className="space-y-4 mb-6">,
-                  {services[currentService].features.map((featureindex) => (,
+                  {services[currentService].features.map((featureindex) => (
                     <motion.div,
                       key={index}
-                      initial={{ opacity: 0x: -20 ,}}
-                      animate={{ opacity: 1x: 0 ,}}
-                      transition={{ delay: index * 0.1 ,}}
-                      className="flex items-center text-white",
-                    >,
+                      initial={{ opacity: 0x: -20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="flex items-center text-white">,
                       <CheckCircle className="w-5 h-5 mr-3 text-green-30o0"  />,
                       {feature}
-                    </motion.div>,
-                  ))}
+                    </motion.div>))}
                 </div>,
                 <div className="flex items-center justify-between">,
                   <div className="flex items-center text-white">,
@@ -165,30 +151,28 @@ const FuturisticAIServices20o26Showcase = () => {,
                     <span className="font-bold text-xl">{services[currentService].stats}</span>,
                   </div>,
                   <motion.button,
-                    whileHover={{ scale: 1.0o5 ,}}
-                    whileTap={{ scale: 0.95 ,}}
-                    className="px-6 py-3 bg-white/20 hover: bg-white/30 rounded-full text-white font-semibold transition-colors duration-30o0 flex items-center",
-                  >,
+                    whileHover={{ scale: 1.0o5 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-6 py-3 bg-white/20 hover: bg-white/30 rounded-full text-white font-semibold transition-colors duration-30o0 flex items-center">,
                     Learn More,
                     <ArrowRight className="w-4 h-4 ml-2"  />,
                   </motion.button>,
                 </div>,
               </motion.div>,
             </AnimatePresence>,
-            {/* Service Navigation */,}
+            {/* Service Navigation */}
             <div className="flex justify-center space-x-4">,
-              {services.map((_index) => (,
+              {services.map((_index) => (
                 <motion.button,
                   key={index}
                   onClick={() => setCurrentService(index)}
-                  className={`w-4 h-4 rounded-full transition-all duration-30o0 ${,
+                  className={`w-4 h-4 rounded-full transition-all duration-30o0 ${
                     currentService === index,
                       ? 'bg-white scale-125',
                       : 'bg-white/50 hover: bg-white/70',
-                  ,}`}
-                  whileHover={{ scale: 1.2 ,}}
-                />,
-              ))}
+                  }`}
+                  whileHover={{ scale: 1.2 }}
+                />))}
             </div>,
           </motion.div>,
           {/* Stats Grid */}
@@ -196,24 +180,21 @@ const FuturisticAIServices20o26Showcase = () => {,
             variants={containerVariants}
             initial="hidden",
             animate="visible",
-            className="grid grid-cols-2 gap-6",
-          >,
-            {[,
-              { icon: <Database className="w-8 h-8"  />value: "10PB+"label: "Data Processed Daily" ,},;
-              { icon: <Shield className="w-8 h-8"  />value: "99.99%"label: "Security Rating" ,},;
-              { icon: <Star className="w-8 h-8"  />value: "1M+"label: "Active Users" ,},;
-              { icon: <Zap className="w-8 h-8"  />value: "0.1ms"label: "Latency" ,}
-            ].map((statindex) => (,
+            className="grid grid-cols-2 gap-6">,
+            {[
+              { icon: <Database className="w-8 h-8"  />value: "10PB+"label: "Data Processed Daily" };
+              { icon: <Shield className="w-8 h-8"  />value: "99.99%"label: "Security Rating" };
+              { icon: <Star className="w-8 h-8"  />value: "1M+"label: "Active Users" };
+              { icon: <Zap className="w-8 h-8"  />value: "0.1ms"label: "Latency" }
+            ].map((statindex) => (
               <motion.div,
                 key={index}
                 variants={itemVariants}
-                className="p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover: bg-white/20 transition-colors duration-30o0",
-              >,
-                <div className="text-blue-40o0 mb-3">{stat.icon,}</div>,
+                className="p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover: bg-white/20 transition-colors duration-30o0">,
+                <div className="text-blue-40o0 mb-3">{stat.icon}</div>,
                 <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>,
                 <div className="text-gray-30o0 text-sm">{stat.label}</div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </motion.div>,
         </div>,
         {/* Call to Action */}
@@ -221,20 +202,16 @@ const FuturisticAIServices20o26Showcase = () => {,
           variants={itemVariants}
           initial="hidden",
           animate="visible",
-          className="text-center",
-        >,
+          className="text-center">,
           <motion.button,
-            whileHover={{ scale: 1.0o5y: -2 ,}}
-            whileTap={{ scale: 0.95 ,}}
-            className="px-12 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover: from-blue-70o0 hover:to-purple-70o0 text-white font-bold text-lg rounded-full shadow-2xl transition-all duration-30o0 transform hover:shadow-blue-50o0/25",
-          >,
+            whileHover={{ scale: 1.0o5y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-12 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover: from-blue-70o0 hover:to-purple-70o0 text-white font-bold text-lg rounded-full shadow-2xl transition-all duration-30o0 transform hover:shadow-blue-50o0/25">,
             Experience the Future Today,
             <ArrowRight className="w-5 h-5 ml-2 inline"  />,
           </motion.button>,
         </motion.div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default FuturisticAIServices20o26Showcase,
+    </section>),
+};
+export default FuturisticAIServices20o26Showcase;

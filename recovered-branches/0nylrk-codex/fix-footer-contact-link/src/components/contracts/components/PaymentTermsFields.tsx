@@ -1,5 +1,5 @@
 import { UseFormReturn } from "react-hook-form",
-import {,
+import {
 import { Input } from "@/components/ui/input",
 import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions",
 import { TalentProfile } from "@/types/talent",
@@ -11,33 +11,29 @@ import { ContractFormValues } from "./ContractForm",
   FormLabel,
   FormControl,
   FormDescription,
-  FormMessage,
-} from "@/components/ui/form",
+  FormMessage} from "@/components/ui/form",
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select",
-,
-interface PaymentTermsFieldsProps {,
+  SelectValue} from "@/components/ui/select",
+interface PaymentTermsFieldsProps {
   form: UseFormReturn<ContractFormValues>,
   talent: TalentProfile,
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void,
-,}
+}
 ,
-export function PaymentTermsFields({,
+export function PaymentTermsFields({
   form,
-  talent,;
-  handleMilestonesGenerated,
-}: PaymentTermsFieldsProps) {,
-  return (,
+  talent;
+  handleMilestonesGenerated}: PaymentTermsFieldsProps) {
+  return (
     <>,
       <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,
-        <FormField,
-          control={form.control,}
+        <FormField
+          control={form.control}
           name="paymentTerms",
-          render={({ field }) => (,
+          render={({ field }) => (
             <FormItem>,
               <FormLabel>Payment Terms</FormLabel>,
               <Select onValueChange={field.onChange} defaultValue={field.value}>,
@@ -53,17 +49,16 @@ export function PaymentTermsFields({,
                 </SelectContent>,
               </Select>,
               <FormMessage />,
-            </FormItem>,
-          )}
+            </FormItem>)}
         />,
-        <FormField,
+        <FormField
           control={form.control}
           name="paymentAmount",
-          render={({ field }) => (,
+          render={({ field }) => (
             <FormItem>,
               <FormLabel>Payment Amount</FormLabel>,
               <FormControl>,
-                <Input,
+                <Input
                   placeholder={form.getValues("paymentTerms") === "hourly" ? "$X per hour" : "Total $X"} ,
                   {...field} ,
                 />,
@@ -73,14 +68,13 @@ export function PaymentTermsFields({,
                   "You can define specific milestone amounts in the contract text or use AI to suggest milestones"}
               </FormDescription>,
               <FormMessage />,
-            </FormItem>,
-          )}
+            </FormItem>)}
         />,
       </div>,
       {/* Project Milestones */}
-      {form.watch("paymentTerms") === "milestone" && (,
+      {form.watch("paymentTerms") === "milestone" && (
         <div className="pt-2">,
-          <MilestoneSuggestions,
+          <MilestoneSuggestions
             projectName={form.getValues("projectName") || "Project"}
             scopeSummary={form.getValues("scopeSummary") || ""}
             startDate={form.getValues("startDate") || new Date()}
@@ -89,9 +83,6 @@ export function PaymentTermsFields({,
                         form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}
             onMilestonesGenerated={handleMilestonesGenerated}
           />,
-        </div>,
-      )}
-    </>,
-  ),
-}
+        </div>)}
+    </>)}
 ,

@@ -1,23 +1,22 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function AIEthicsResponsibleDevelopment() {,
-  return (,
+export default function AIEthicsResponsibleDevelopment() {
+  return (
     <>,
       <Head>,
         <title>,
           AI Ethics & Responsible Development: A Comprehensive Guide | Zion Tech,
           Group,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='Essential guide to AI ethics, responsible development practices, bias detection, transparency, and building trustworthy AI systems.',
         />,
-        <meta,
+        <meta
           property='og: title',
           content='AI Ethics & Responsible Development: A Comprehensive Guide',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Essential guide to AI ethics, responsible development practices, and building trustworthy AI systems.',
         />,
@@ -27,10 +26,9 @@ export default function AIEthicsResponsibleDevelopment() {,
         <main className='container mx-auto px-6 py-12'>,
           <div className='max-w-4xl mx-auto'>,
             <nav className='mb-8'>,
-              <Link,
+              <Link
                 href='/blog',
-                className='text-cyan-40o0 hover:text-cyan-30o0 transition-colors',
-              >,
+                className='text-cyan-40o0 hover:text-cyan-30o0 transition-colors'>,
                 ← Back to Blog,
               </Link>,
             </nav>,
@@ -106,7 +104,7 @@ export default function AIEthicsResponsibleDevelopment() {,
                       Long-term Success,
                     </h4>,
                     <p className='text-white/80 text-sm'>,
-                      Ethical AI systems are more likely to be adopted, trusted,;
+                      Ethical AI systems are more likely to be adopted, trusted;
                       and successful in the long run.,
                     </p>,
                   </div>,
@@ -231,25 +229,21 @@ export default function AIEthicsResponsibleDevelopment() {,
                       Bias Testing Framework Example:,
                     </h5>,
                     <pre className='text-sm text-cyan-30o0 overflow-x-auto'>,
-                      {`class BiasDetector {,
-  async testFairness(model: AIModel, testData: Dataset): Promise<FairnessReport> {,
+                      {`class BiasDetector {
+  async testFairness(model: AIModel, testData: Dataset): Promise<FairnessReport> {
     const results = await model.predict(testData),
-,
     // Test for demographic parity,
     const demographicParity = this.calculateDemographicParity(results, testData),
-,
     // Test for equalized odds,
     const equalizedOdds = this.calculateEqualizedOdds(results, testData),
-,
     // Test for individual fairness,
     const individualFairness = this.calculateIndividualFairness(results, testData),
-,
-    return {,
-      demographicParity,;
-      equalizedOdds,;
-      individualFairness,;
+    return {
+      demographicParity;
+      equalizedOdds;
+      individualFairness;
       recommendations: this.generateRecommendations(results),
-    ,};
+    };
   }
 }`}
                     </pre>,
@@ -641,22 +635,19 @@ export default function AIEthicsResponsibleDevelopment() {,
                 Share this article,
               </h3>,
               <div className='flex gap-4'>,
-                <a,
+                <a
                   href='#',
-                  className='px-4 py-2 bg-blue-60o0 hover: bg-blue-70o0 rounded-lg text-white transition-colors',
-                >,
+                  className='px-4 py-2 bg-blue-60o0 hover: bg-blue-70o0 rounded-lg text-white transition-colors'>,
                   Twitter,
                 </a>,
-                <a,
+                <a
                   href='#',
-                  className='px-4 py-2 bg-blue-80o0 hover:bg-blue-90o0 rounded-lg text-white transition-colors',
-                >,
+                  className='px-4 py-2 bg-blue-80o0 hover:bg-blue-90o0 rounded-lg text-white transition-colors'>,
                   LinkedIn,
                 </a>,
-                <a,
+                <a
                   href='#',
-                  className='px-4 py-2 bg-green-60o0 hover:bg-green-70o0 rounded-lg text-white transition-colors',
-                >,
+                  className='px-4 py-2 bg-green-60o0 hover:bg-green-70o0 rounded-lg text-white transition-colors'>,
                   Email,
                 </a>,
               </div>,
@@ -667,21 +658,19 @@ export default function AIEthicsResponsibleDevelopment() {,
               </h3>,
               <p className='text-white/80 mb-4'>,
                 Get expert guidance on implementing ethical AI principles in,
-                your organization. Our team of specialists can help you design,;
+                your organization. Our team of specialists can help you design;
                 build, and deploy AI systems that are fair, transparent, and,
                 trustworthy.,
               </p>,
               <div className='flex gap-4'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='px-6 py-3 bg-green-50o0 hover: bg-green-60o0 rounded-lg text-white font-semibold transition-colors',
-                >,
+                  className='px-6 py-3 bg-green-50o0 hover: bg-green-60o0 rounded-lg text-white font-semibold transition-colors'>,
                   Schedule Consultation,
                 </Link>,
-                <Link,
+                <Link
                   href='/services',
-                  className='px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg text-white font-semibold transition-colors border border-white/20',
-                >,
+                  className='px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg text-white font-semibold transition-colors border border-white/20'>,
                   View Services,
                 </Link>,
               </div>,
@@ -689,7 +678,6 @@ export default function AIEthicsResponsibleDevelopment() {,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

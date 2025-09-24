@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function TrustPage() {,
-  return (,
+export default function TrustPage() {
+  return (
     <>,
       <Head>,
         <title>Trust - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function TrustPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

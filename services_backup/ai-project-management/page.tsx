@@ -1,14 +1,11 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-export const metadata ={,
-  title: 'AI-Powered Project Management Platform | Zion Tech Group',;
-  description: 'Intelligent project management with AI task prioritization, resource optimization, risk prediction, and automated reporting. Increase team productivity by 50% with smart project insights.',;
-  keywords: 'AI project management, task automation, resource optimization, project analytics, team productivity, smart scheduling',
-};
-,
-export default function AIProjectManagementPage() {,
-  return (,
+export const metadata ={
+  title: 'AI-Powered Project Management Platform | Zion Tech Group';
+  description: 'Intelligent project management with AI task prioritization, resource optimization, risk prediction, and automated reporting. Increase team productivity by 50% with smart project insights.';
+  keywords: 'AI project management, task automation, resource optimization, project analytics, team productivity, smart scheduling'};
+export default function AIProjectManagementPage() {
+  return (
 <div className="space-y-16">,
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-green-50 to-blue-10o0 rounded-lg">,
@@ -20,21 +17,19 @@ export default function AIProjectManagementPage() {,
           Our platform increases team productivity by 50% and reduces project delays by 70%.,
         </p>,
         <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-          <a,
+          <a
             href="mailto:kleber@ziontechgroup.com?subject=AI Project Management Platform Inquiry",
-            className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors",
-          >,
+            className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors">,
             Start Free Trial,
           </a>,
-          <a,
+          <a
             href="tel:+130o24640950",
-            className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors",
-          >,
+            className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors">,
             Call +1 30o2 464 0950,
           </a>,
         </div>,
       </section>,
-      {/* Key Features */,}
+      {/* Key Features */}
       <section className="py-12">,
         <div className="text-center mb-12">,
           <h2 className="text-3xl font-bold text-gray-90o0 mb-4">Intelligent Project Management</h2>,
@@ -43,71 +38,65 @@ export default function AIProjectManagementPage() {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-          <FeatureCard,
+          <FeatureCard
             icon="🎯",
             title="AI Task Prioritization",
             description="Machine learning algorithms analyze project requirements, team capacity, and deadlines to automatically prioritize tasks for maximum efficiency.",
-            benefits={[,
-              "Automatic task ranking",;
-              "Deadline optimization",;
-              "Resource-aware scheduling",;
-              "Dynamic priority updates",
-            ]}
+            benefits={[
+              "Automatic task ranking";
+              "Deadline optimization";
+              "Resource-aware scheduling";
+              "Dynamic priority updates"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="👥",
             title="Smart Resource Allocation",
             description="AI analyzes team skills, workload, and availability to automatically assign tasks to the most suitable team members.",
-            benefits={[,
-              "Skill-based matching",;
-              "Workload balancing",;
-              "Availability optimization",;
-              "Conflict resolution",
-            ]}
+            benefits={[
+              "Skill-based matching";
+              "Workload balancing";
+              "Availability optimization";
+              "Conflict resolution"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="⚠️",
             title="Risk Prediction & Mitigation",
             description="Advanced analytics predict potential project risks and suggest mitigation strategies before they impact delivery.",
-            benefits={[,
-              "Early risk detection",;
-              "Mitigation recommendations",;
-              "Impact assessment",;
-              "Preventive actions",
-            ]}
+            benefits={[
+              "Early risk detection";
+              "Mitigation recommendations";
+              "Impact assessment";
+              "Preventive actions"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="📊",
             title="Automated Reporting",
             description="AI generates comprehensive project reports, status updates, and stakeholder communications automatically.",
-            benefits={[,
-              "Real-time dashboards",;
-              "Automated status updates",;
-              "Stakeholder notifications",;
-              "Custom report templates",
-            ]}
+            benefits={[
+              "Real-time dashboards";
+              "Automated status updates";
+              "Stakeholder notifications";
+              "Custom report templates"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="🔄",
             title="Workflow Optimization",
             description="AI analyzes team workflows and suggests improvements to eliminate bottlenecks and increase efficiency.",
-            benefits={[,
-              "Bottleneck identification",;
-              "Process optimization",;
-              "Efficiency recommendations",;
-              "Continuous improvement",
-            ]}
+            benefits={[
+              "Bottleneck identification";
+              "Process optimization";
+              "Efficiency recommendations";
+              "Continuous improvement"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="💬",
             title="Smart Communication",
             description="AI-powered communication tools ensure all team members stay informed and aligned on project goals.",
-            benefits={[,
-              "Context-aware notifications",;
-              "Meeting optimization",;
-              "Documentation automation",;
-              "Knowledge sharing",
-            ]}
+            benefits={[
+              "Context-aware notifications";
+              "Meeting optimization";
+              "Documentation automation";
+              "Knowledge sharing"]}
            />,
         </div>,
       </section>,
@@ -120,51 +109,48 @@ export default function AIProjectManagementPage() {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">,
-          <PricingCard,
+          <PricingCard
             name="Team",
             price="$29",
             period="per user/month",
             description="Perfect for small teams up to 10 members",
-            features={[,
-              "Up to 10 team members",;
-              "AI task prioritization",;
-              "Basic resource allocation",;
-              "Project templates",;
-              "Mobile app access",;
-              "Email support",
-            ]}
+            features={[
+              "Up to 10 team members";
+              "AI task prioritization";
+              "Basic resource allocation";
+              "Project templates";
+              "Mobile app access";
+              "Email support"]}
             popular={false}
            />,
-          <PricingCard,
+          <PricingCard
             name="Professional",
             price="$49",
             period="per user/month",
             description="Most popular for growing teams",
-            features={[,
-              "Up to 50 team members",;
-              "Advanced AI features",;
-              "Risk prediction",;
-              "Custom workflows",;
-              "API access",;
-              "Priority support",;
-              "Advanced analytics",
-            ]}
+            features={[
+              "Up to 50 team members";
+              "Advanced AI features";
+              "Risk prediction";
+              "Custom workflows";
+              "API access";
+              "Priority support";
+              "Advanced analytics"]}
             popular={true}
            />,
-          <PricingCard,
+          <PricingCard
             name="Enterprise",
             price="$99",
             period="per user/month",
             description="For large organizations",
-            features={[,
-              "Unlimited team members",;
-              "All AI features",;
-              "Custom AI models",;
-              "White-label options",;
-              "Dedicated support",;
-              "Custom integrations",;
-              "SLA guarantee",
-            ]}
+            features={[
+              "Unlimited team members";
+              "All AI features";
+              "Custom AI models";
+              "White-label options";
+              "Dedicated support";
+              "Custom integrations";
+              "SLA guarantee"]}
             popular={false}
            />,
         </div>,
@@ -178,21 +164,21 @@ export default function AIProjectManagementPage() {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-          <CaseStudy,
+          <CaseStudy
             company="TechCorp Solutions",
             industry="Software Development",
             result="50% increase in project delivery speed",
             description="Implemented AI task prioritization and resource allocation, resulting in 50% faster project delivery and 30% reduction in overtime.",
             metrics={["50% faster delivery", "30% less overtime", "40% better resource utilization"]}
            />,
-          <CaseStudy,
+          <CaseStudy
             company="Marketing Agency Pro",
             industry="Marketing",
             result="70% reduction in project delays",
             description="Used AI risk prediction and workflow optimization to eliminate bottlenecks and improve project predictability.",
             metrics={["70% fewer delays", "60% better deadline adherence", "45% improved client satisfaction"]}
            />,
-          <CaseStudy,
+          <CaseStudy
             company="Construction Plus",
             industry="Construction",
             result="35% improvement in resource efficiency",
@@ -210,26 +196,25 @@ export default function AIProjectManagementPage() {,
           </p>,
         </div>,
         <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">,
-          {[,
-            { name: "React", icon: "⚛️", description: "Frontend framework" ,},;
-            { name: "Next.js", icon: "▲", description: "Full-stack framework" ,},;
-            { name: "Node.js", icon: "🟢", description: "Backend runtime" ,},;
-            { name: "PostgreSQL", icon: "🐘", description: "Primary database" ,},;
-            { name: "Redis", icon: "🔴", description: "Caching layer" ,},;
-            { name: "OpenAI GPT-4", icon: "🧠", description: "AI engine" ,},;
-            { name: "AWS", icon: "☁️", description: "Cloud platform" ,},;
-            { name: "Docker", icon: "🐳", description: "Containerization" ,},;
-            { name: "Kubernetes", icon: "⚙️", description: "Orchestration" ,},;
-            { name: "MongoDB", icon: "🍃", description: "Document store" ,},;
-            { name: "Elasticsearch", icon: "🔍", description: "Search engine" ,},;
-            { name: "Grafana", icon: "📊", description: "Monitoring" ,}
-          ].map((tech, index) => (,
+          {[
+            { name: "React", icon: "⚛️", description: "Frontend framework" };
+            { name: "Next.js", icon: "▲", description: "Full-stack framework" };
+            { name: "Node.js", icon: "🟢", description: "Backend runtime" };
+            { name: "PostgreSQL", icon: "🐘", description: "Primary database" };
+            { name: "Redis", icon: "🔴", description: "Caching layer" };
+            { name: "OpenAI GPT-4", icon: "🧠", description: "AI engine" };
+            { name: "AWS", icon: "☁️", description: "Cloud platform" };
+            { name: "Docker", icon: "🐳", description: "Containerization" };
+            { name: "Kubernetes", icon: "⚙️", description: "Orchestration" };
+            { name: "MongoDB", icon: "🍃", description: "Document store" };
+            { name: "Elasticsearch", icon: "🔍", description: "Search engine" };
+            { name: "Grafana", icon: "📊", description: "Monitoring" }
+          ].map((tech, index) => (
             <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-20o0">,
               <div className="text-2xl mb-2">{tech.icon}</div>,
               <h3 className="font-semibold text-gray-90o0 mb-1">{tech.name}</h3>,
               <p className="text-xs text-gray-60o0">{tech.description}</p>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
       </section>,
       {/* Contact CTA */}
@@ -239,16 +224,14 @@ export default function AIProjectManagementPage() {,
           Join 30o0+ teams using our AI-powered platform to deliver projects faster and more efficiently.,
         </p>,
         <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-          <a,
+          <a
             href="mailto:kleber@ziontechgroup.com?subject=AI Project Management Platform Demo",
-            className="bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors",
-          >,
+            className="bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">,
             Start Free Trial,
           </a>,
-          <a,
+          <a
             href="tel:+130o24640950",
-            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors",
-          >,
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors">,
             Call +1 30o2 464 0950,
           </a>,
         </div>,
@@ -257,83 +240,75 @@ export default function AIProjectManagementPage() {,
           <p>Email: kleber@ziontechgroup.com</p>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,
-function FeatureCard({ icon, title, description, benefits }: {,
+function FeatureCard({ icon, title, description, benefits }: {
   icon: string,
   title: string,
   description: string,
   benefits: string[],
-,}) {,
-  return (,
+}) {
+  return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-20o0 hover: shadow-lg transition-shadow">,
-      <div className="text-4xl mb-4">{icon,}</div>,
-  title: 'AI Project Management Platform | Zion Tech Group',;
-  description: 'Intelligent project management with AI-driven task prioritization, resource optimization, and predictive analytics. Increase team productivity by 45% with smart automation.',;
-  keywords: 'AI project management, task automation, resource optimization, team productivity, project analytics, smart scheduling',
-};
-,
-interface FeatureCardProps {,
+      <div className="text-4xl mb-4">{icon}</div>,
+  title: 'AI Project Management Platform | Zion Tech Group';
+  description: 'Intelligent project management with AI-driven task prioritization, resource optimization, and predictive analytics. Increase team productivity by 45% with smart automation.';
+  keywords: 'AI project management, task automation, resource optimization, team productivity, project analytics, smart scheduling'};
+interface FeatureCardProps {
   icon: string,
   title: string,
   description: string,
   benefits: string[],
-,}
+}
 ,
-function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {,
-  return (,
+function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {
+  return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-20o0 hover: shadow-lg transition-shadow">,
-      <div className="text-3xl mb-4">{icon,}</div>,
+      <div className="text-3xl mb-4">{icon}</div>,
       <h3 className="text-xl font-semibold text-gray-90o0 mb-3">{title}</h3>,
       <p className="text-gray-60o0 mb-4">{description}</p>,
       <ul className="space-y-2">,
-        {benefits.map((benefit, index) => (,
+        {benefits.map((benefit, index) => (
           <li key={index} className="text-sm text-gray-60o0 flex items-center">,
             <span className="w-1.5 h-1.5 bg-blue-50o0 rounded-full mr-2"></span>,
             {benefit}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingCard({ name, price, period, description, features, popular }: {,
+function PricingCard({ name, price, period, description, features, popular }: {
   name: string,
   price: string,
   period: string,
   description: string,
   features: string[],
   popular: boolean,
-,}) {,
-  return (,
+}) {
+  return (
 <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-50o0 bg-blue-50' : 'border-gray-20o0 bg-white'} shadow-lg`}>,
-function PricingTier({,
-  name,;
-  price,;
-  period,;
-  description,;
-  features,;
-  popular = false,
-}: {,
-  name: string, ,
-  price: string, ,
-  period: string, ,
-  description: string, ,
-  features: string[], ,
-  popular?: boolean, ,
-,}) {,
-  return (,
+function PricingTier({
+  name;
+  price;
+  period;
+  description;
+  features;
+  popular = false}: {
+  name: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular?: boolean,
+}) {
+  return (
     <div className={`border rounded-xl p-8 relative ${popular ? 'border-blue-50o0 bg-blue-50' : 'border-gray-20o0 bg-white'}`}>,
-      {popular && (,
+      {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">,
           <span className="bg-blue-50o0 text-white px-4 py-1 rounded-full text-sm font-semibold">,
             Most Popular,
           </span>,
-        </div>,
-      )}
+        </div>)}
 <div className="text-center mb-6">,
         <h3 className="text-2xl font-bold text-gray-90o0 mb-2">{name}</h3>,
         <div className="text-4xl font-bold text-blue-60o0 mb-2">,
@@ -343,36 +318,33 @@ function PricingTier({,
         <p className="text-gray-60o0">{description}</p>,
       </div>,
       <ul className="space-y-3 mb-8">,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className="flex items-center">,
             <svg className="w-5 h-5 text-green-50o0 mr-3" fill="currentColor" viewBox="0 0 20 20">,
               <path fillRule="evenodd" d="M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z" clipRule="evenodd"  />,
             </svg>,
             <span className="text-gray-70o0">{feature}</span>,
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-      <a,
-href="mailto: kleber@ziontechgroup.com?subject=AI Project Management - {name,} Plan",
-        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${,
+      <a
+href="mailto: kleber@ziontechgroup.com?subject=AI Project Management - {name} Plan",
+        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular,
             ? 'bg-blue-60o0 text-white hover: bg-blue-70o0',
             : 'bg-gray-90o0 text-white hover:bg-gray-80o0',
-        ,}`}
+        }`}
       >,
         Get Started,
       </a>,
-    </div>,
-  ),
-}
-function CaseStudy({ company, industry, result, description, metrics }: {,
+    </div>)}
+function CaseStudy({ company, industry, result, description, metrics }: {
   company: string,
   industry: string,
   result: string,
   description: string,
   metrics: string[],
-,}) {,
-  return (,
+}) {
+  return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-20o0">,
       <div className="flex items-center justify-between mb-4">,
         <h3 className="text-xl font-semibold text-gray-90o0">{company}</h3>,
@@ -382,19 +354,18 @@ function CaseStudy({ company, industry, result, description, metrics }: {,
       <div className="space-y-2">,
         <div className="text-sm">,
           <span className="font-semibold text-green-60o0">Result: </span>,
-          <span className="text-gray-70o0">{result,}</span>,
+          <span className="text-gray-70o0">{result}</span>,
         </div>,
         <div className="space-y-1">,
-          {metrics.map((metric, index) => (,
+          {metrics.map((metric, index) => (
             <div key={index} className="text-sm text-gray-60o0 flex items-center">,
               <span className="w-1.5 h-1.5 bg-green-50o0 rounded-full mr-2"></span>,
               {metric}
-            </div>,
-          ))}
+            </div>))}
         </div>,
       </div>,
-export default function AIProjectManagementPage() {,
-  return (,
+export default function AIProjectManagementPage() {
+  return (
     <div className="space-y-16">,
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-green-50 to-blue-10o0 rounded-lg">,
@@ -402,25 +373,23 @@ export default function AIProjectManagementPage() {,
           AI Project Management Platform,
         </h1>,
         <p className="text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto">,
-          Transform your project management with AI that learns from your team's patterns, optimizes resource allocation,;
+          Transform your project management with AI that learns from your team's patterns, optimizes resource allocation;
           and predicts project risks. Increase team productivity by 45% with intelligent automation and insights.,
         </p>,
         <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-          <a,
+          <a
             href="mailto:kleber@ziontechgroup.com?subject=AI Project Management Demo",
-            className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors",
-          >,
+            className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors">,
             Request Demo,
           </a>,
-          <a,
+          <a
             href="tel:+130o24640950",
-            className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors",
-          >,
+            className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors">,
             Call +1 30o2 464 0950,
           </a>,
         </div>,
       </section>,
-      {/* Key Features */,}
+      {/* Key Features */}
       <section className="py-12">,
         <div className="text-center mb-12">,
           <h2 className="text-3xl font-bold text-gray-90o0 mb-4">Intelligent Project Management</h2>,
@@ -429,77 +398,71 @@ export default function AIProjectManagementPage() {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-          <FeatureCard,
+          <FeatureCard
             icon="🎯",
             title="AI Task Prioritization",
             description="Automatically prioritize tasks based on deadlines, dependencies, team capacity, and business impact using machine learning.",
-            benefits={[,
-              "Smart task ranking",;
-              "Dependency analysis",;
-              "Resource optimization",;
-              "Deadline management",;
-              "Impact assessment",
-            ]}
+            benefits={[
+              "Smart task ranking";
+              "Dependency analysis";
+              "Resource optimization";
+              "Deadline management";
+              "Impact assessment"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="📊",
             title="Predictive Analytics",
             description="Forecast project completion dates, identify potential bottlenecks, and predict resource needs with advanced AI models.",
-            benefits={[,
-              "Completion forecasting",;
-              "Bottleneck detection",;
-              "Resource prediction",;
-              "Risk assessment",;
-              "Timeline optimization",
-            ]}
+            benefits={[
+              "Completion forecasting";
+              "Bottleneck detection";
+              "Resource prediction";
+              "Risk assessment";
+              "Timeline optimization"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="🤖",
             title="Smart Automation",
             description="Automate routine project tasks, status updates, and notifications based on project progress and team behavior patterns.",
-            benefits={[,
-              "Automated status updates",;
-              "Smart notifications",;
-              "Task assignment",;
-              "Progress tracking",;
-              "Workflow automation",
-            ]}
+            benefits={[
+              "Automated status updates";
+              "Smart notifications";
+              "Task assignment";
+              "Progress tracking";
+              "Workflow automation"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="👥",
             title="Team Optimization",
             description="AI-driven team member matching, workload balancing, and skill-based task assignment for maximum efficiency.",
-            benefits={[,
-              "Skill-based matching",;
-              "Workload balancing",;
-              "Team performance insights",;
-              "Capacity planning",;
-              "Collaboration optimization",
-            ]}
+            benefits={[
+              "Skill-based matching";
+              "Workload balancing";
+              "Team performance insights";
+              "Capacity planning";
+              "Collaboration optimization"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="📈",
             title="Performance Analytics",
             description="Deep insights into team productivity, project velocity, and individual performance with actionable recommendations.",
-            benefits={[,
-              "Productivity metrics",;
-              "Velocity tracking",;
-              "Performance insights",;
-              "Improvement suggestions",;
-              "ROI analysis",
-            ]}
+            benefits={[
+              "Productivity metrics";
+              "Velocity tracking";
+              "Performance insights";
+              "Improvement suggestions";
+              "ROI analysis"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="🔮",
             title="Risk Prediction",
             description="Identify potential project risks, resource conflicts, and timeline issues before they become problems.",
-            benefits={[,
-              "Risk identification",;
-              "Early warning system",;
-              "Mitigation strategies",;
-              "Resource conflict detection",;
-              "Timeline risk analysis",
-            ]}
+            benefits={[
+              "Risk identification";
+              "Early warning system";
+              "Mitigation strategies";
+              "Resource conflict detection";
+              "Timeline risk analysis"]}
            />,
         </div>,
       </section>,
@@ -534,7 +497,7 @@ export default function AIProjectManagementPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Use Cases */,}
+      {/* Use Cases */}
       <section className="py-12">,
         <div className="text-center mb-12">,
           <h2 className="text-3xl font-bold text-gray-90o0 mb-4">Perfect For</h2>,
@@ -611,50 +574,47 @@ export default function AIProjectManagementPage() {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">,
-          <PricingTier,
+          <PricingTier
             name="Team",
             price="$29",
             period="user/month",
             description="Perfect for small teams and startups",
-            features={[,
-              "Up to 10 users",;
-              "AI task prioritization",;
-              "Basic automation",;
-              "Project templates",;
-              "Mobile app access",;
-              "Email support",
-            ]}
+            features={[
+              "Up to 10 users";
+              "AI task prioritization";
+              "Basic automation";
+              "Project templates";
+              "Mobile app access";
+              "Email support"]}
            />,
-          <PricingTier,
+          <PricingTier
             name="Professional",
             price="$59",
             period="user/month",
             description="Most popular for growing teams",
-            features={[,
-              "Up to 50 users",;
-              "Full AI suite",;
-              "Advanced analytics",;
-              "Custom workflows",;
-              "API access",;
-              "Priority support",;
-              "Advanced reporting",
-            ]}
+            features={[
+              "Up to 50 users";
+              "Full AI suite";
+              "Advanced analytics";
+              "Custom workflows";
+              "API access";
+              "Priority support";
+              "Advanced reporting"]}
             popular={true}
            />,
-          <PricingTier,
+          <PricingTier
             name="Enterprise",
             price="$99",
             period="user/month",
             description="For large organizations with complex needs",
-            features={[,
-              "Unlimited users",;
-              "Custom AI models",;
-              "White-label options",;
-              "Dedicated support",;
-              "Advanced security",;
-              "Custom integrations",;
-              "On-premise deployment",
-            ]}
+            features={[
+              "Unlimited users";
+              "Custom AI models";
+              "White-label options";
+              "Dedicated support";
+              "Advanced security";
+              "Custom integrations";
+              "On-premise deployment"]}
            />,
         </div>,
       </section>,
@@ -667,25 +627,24 @@ export default function AIProjectManagementPage() {,
           </p>,
         </div>,
         <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">,
-          {[,
-            { name: "Slack", icon: "💬" ,},;
-            { name: "Microsoft Teams", icon: "🔵" ,},;
-            { name: "Jira", icon: "🔧" ,},;
-            { name: "Asana", icon: "📋" ,},;
-            { name: "Trello", icon: "📌" ,},;
-            { name: "GitHub", icon: "🐙" ,},;
-            { name: "GitLab", icon: "🦊" ,},;
-            { name: "Bitbucket", icon: "🪣" ,},;
-            { name: "Google Workspace", icon: "🔍" ,},;
-            { name: "Microsoft 365", icon: "📊" ,},;
-            { name: "Zoom", icon: "📹" ,},;
-            { name: "Calendly", icon: "📅" ,}
-          ].map((integration, index) => (,
+          {[
+            { name: "Slack", icon: "💬" };
+            { name: "Microsoft Teams", icon: "🔵" };
+            { name: "Jira", icon: "🔧" };
+            { name: "Asana", icon: "📋" };
+            { name: "Trello", icon: "📌" };
+            { name: "GitHub", icon: "🐙" };
+            { name: "GitLab", icon: "🦊" };
+            { name: "Bitbucket", icon: "🪣" };
+            { name: "Google Workspace", icon: "🔍" };
+            { name: "Microsoft 365", icon: "📊" };
+            { name: "Zoom", icon: "📹" };
+            { name: "Calendly", icon: "📅" }
+          ].map((integration, index) => (
             <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-20o0">,
               <div className="text-2xl mb-2">{integration.icon}</div>,
               <h3 className="font-semibold text-gray-90o0 text-sm">{integration.name}</h3>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
       </section>,
       {/* Contact CTA */}
@@ -695,16 +654,14 @@ export default function AIProjectManagementPage() {,
           Join hundreds of teams already using our AI-powered project management platform to boost productivity and deliver projects on time.,
         </p>,
         <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-          <a,
+          <a
             href="mailto:kleber@ziontechgroup.com?subject=AI Project Management Inquiry",
-            className="bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors",
-          >,
+            className="bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">,
             Start Free Trial,
           </a>,
-          <a,
+          <a
             href="tel:+130o24640950",
-            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors",
-          >,
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors">,
             Call +1 30o2 464 0950,
           </a>,
         </div>,
@@ -713,8 +670,5 @@ export default function AIProjectManagementPage() {,
           <p>📧 kleber@ziontechgroup.com</p>,
         </div>,
       </section>,
-    </div>,
-  ),
-}
-,
+    </div>)}
 }})))

@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'natural-language-processing - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'natural-language-processing - Zion Tech Group';
   description:,
-    'Professional natural-language-processing solutions for your business needs.',;
-  keywords: 'natural-language-processing, services, business, technology',;
+    'Professional natural-language-processing solutions for your business needs.';
+  keywords: 'natural-language-processing, services, business, technology';
 };
-export default function NaturalLanguageProcessingPage() {,
-  return (,
+export default function NaturalLanguageProcessingPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function NaturalLanguageProcessingPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

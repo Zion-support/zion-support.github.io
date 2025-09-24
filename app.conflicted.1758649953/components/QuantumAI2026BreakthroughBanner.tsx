@@ -1,6 +1,4 @@
 'use client',
-,
-export default function QuantumAI20o26BreakthroughBanner() {,
-  return null,
-}
+export default function QuantumAI20o26BreakthroughBanner() {
+  return null}
 ,

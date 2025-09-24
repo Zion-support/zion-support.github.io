@@ -1,14 +1,12 @@
 'use client',
-import React from 'react',
-,
-export default function ProductionAgentRiskReviews() {,
-  return (,
+import React from 'react';
+export default function ProductionAgentRiskReviews() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-24 lg: px-8'>,
-        <a,
+        <a
           href='/updates',
-          className='text-blue-40o0 hover:text-blue-30o0 text-sm',
-        >,
+          className='text-blue-40o0 hover:text-blue-30o0 text-sm'>,
           ← All updates,
         </a>,
         <h1 className='mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl'>,
@@ -37,7 +35,5 @@ export default function ProductionAgentRiskReviews() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

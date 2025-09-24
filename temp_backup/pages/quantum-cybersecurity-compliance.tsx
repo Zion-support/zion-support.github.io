@@ -1,114 +1,108 @@
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
-import {,
-  Shield,;
-  Atom,;
-  Lock,;
-  CheckCircle,;
-  Zap,;
-  BarChart3,;
-  Target,;
-  Star,;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  Globe,;
-  AlertTriangle,;
-  FileText,;
-  Users,;
-  Settings,;
+import {
+  Shield;
+  Atom;
+  Lock;
+  CheckCircle;
+  Zap;
+  BarChart3;
+  Target;
+  Star;
+  ArrowRight;
+  Phone;
+  Mail;
+  Globe;
+  AlertTriangle;
+  FileText;
+  Users;
+  Settings;
 } from 'lucide-react',
-,
-export default function QuantumCybersecurityCompliance() {,
-  const features = [,
-    'Automated compliance monitoring',;
-    'Quantum-resistant encryption',;
-    'Real-time security assessments',;
-    'Compliance reporting automation',;
-    'Risk assessment tools',;
-    'Policy management system',;
-    'Audit trail and logging',;
-    'Integration with security tools',;
-    'Automated remediation workflows',;
-    'Compliance dashboard',;
-    'Team training modules',;
-    '24/7 security monitoring',;
+export default function QuantumCybersecurityCompliance() {
+  const features = [
+    'Automated compliance monitoring';
+    'Quantum-resistant encryption';
+    'Real-time security assessments';
+    'Compliance reporting automation';
+    'Risk assessment tools';
+    'Policy management system';
+    'Audit trail and logging';
+    'Integration with security tools';
+    'Automated remediation workflows';
+    'Compliance dashboard';
+    'Team training modules';
+    '24/7 security monitoring';
   ],
-,
-  const benefits = [,
-    'Reduce compliance costs by 60%',;
-    'Automate 80% of compliance tasks',;
-    'Future-proof against quantum threats',;
-    'Maintain continuous compliance',;
-    'Reduce audit preparation time',;
-    'Improve security posture',;
-    'Streamlined compliance workflows',;
-    'Competitive security advantage',;
+  const benefits = [
+    'Reduce compliance costs by 60%';
+    'Automate 80% of compliance tasks';
+    'Future-proof against quantum threats';
+    'Maintain continuous compliance';
+    'Reduce audit preparation time';
+    'Improve security posture';
+    'Streamlined compliance workflows';
+    'Competitive security advantage';
   ],
-,
-  const useCases = [,
-    'Financial institutions',;
-    'Healthcare organizations',;
-    'Technology companies',;
-    'Government contractors',;
-    'E-commerce businesses',;
-    'SaaS providers',;
-    'Compliance officers',;
-    'Security teams',;
+  const useCases = [
+    'Financial institutions';
+    'Healthcare organizations';
+    'Technology companies';
+    'Government contractors';
+    'E-commerce businesses';
+    'SaaS providers';
+    'Compliance officers';
+    'Security teams';
   ],
-,
-  const complianceFrameworks = [,
-    'SOC2 Type I & II',;
-    'ISO 270o01',;
-    'GDPR',;
-    'HIPAA',;
-    'PCI DSS',;
-    'NIST Cybersecurity Framework',;
-    'FedRAMP',;
-    'SOX',;
+  const complianceFrameworks = [
+    'SOC2 Type I & II';
+    'ISO 270o01';
+    'GDPR';
+    'HIPAA';
+    'PCI DSS';
+    'NIST Cybersecurity Framework';
+    'FedRAMP';
+    'SOX';
   ],
-,
-  const pricing = [,
-    {,
-      name: 'Starter',;
-      price: '$599/month',;
-      features: [,
-        'Up to 10o0 users',;
-        'Basic compliance monitoring',;
-        'Standard security assessments',;
-        'Email support',;
-        'Core compliance frameworks',;
-      ],;
-    },;
-    {,
-      name: 'Professional',;
-      price: '$1,499/month',;
-      features: [,
-        'Up to 1,0o00 users',;
-        'Advanced compliance monitoring',;
-        'Quantum-resistant encryption',;
-        'Priority support',;
-        'All compliance frameworks',;
-        'Automated remediation',;
-      ],;
-    },;
-    {,
-      name: 'Enterprise',;
-      price: '$4,999/month',;
-      features: [,
-        'Unlimited users',;
-        'Full quantum security suite',;
-        'Custom compliance policies',;
-        'Dedicated security manager',;
-        '24/7 support',;
-        'Custom integrations',;
-      ],;
-    },;
+  const pricing = [
+    {
+      name: 'Starter';
+      price: '$599/month';
+      features: [
+        'Up to 10o0 users';
+        'Basic compliance monitoring';
+        'Standard security assessments';
+        'Email support';
+        'Core compliance frameworks';
+      ];
+    };
+    {
+      name: 'Professional';
+      price: '$1,499/month';
+      features: [
+        'Up to 1,0o00 users';
+        'Advanced compliance monitoring';
+        'Quantum-resistant encryption';
+        'Priority support';
+        'All compliance frameworks';
+        'Automated remediation';
+      ];
+    };
+    {
+      name: 'Enterprise';
+      price: '$4,999/month';
+      features: [
+        'Unlimited users';
+        'Full quantum security suite';
+        'Custom compliance policies';
+        'Dedicated security manager';
+        '24/7 support';
+        'Custom integrations';
+      ];
+    };
   ],
-,
-  return (,
+  return (
     <div className='min-h-screen bg-gradient-to-br from-gray-90o0 via-gray-80o0 to-black text-white'>,
-      <SEO,
+      <SEO
         title='Quantum Cybersecurity Compliance Platform | Zion Tech Group',
         description='Future-proof your security posture with quantum-resistant compliance automation. Automate SOC2, ISO270o01, and GDPR compliance while preparing for quantum computing threats.',
         keywords='quantum cybersecurity, compliance automation, SOC2, ISO270o01, GDPR, quantum-resistant encryption, security compliance',
@@ -117,11 +111,10 @@ export default function QuantumCybersecurityCompliance() {,
       <section className='relative py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto'>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className='text-center',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='text-center'>,
             <div className='inline-flex items-center px-4 py-2 bg-purple-50o0/20 text-purple-40o0 rounded-full text-sm font-medium mb-6'>,
               <Shield className='w-4 h-4 mr-2' />,
               Quantum Cybersecurity & Compliance,
@@ -146,16 +139,15 @@ export default function QuantumCybersecurityCompliance() {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Key Benefits */,}
+      {/* Key Benefits */}
       <section className='py-20 px-4 sm: px-6 lg:px-8 bg-gray-80o0/50'>,
         <div className='max-w-7xl mx-auto'>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-3xl md: text-4xl font-bold mb-4'>,
               Secure Your Future with Quantum-Ready Security,
             </h2>,
@@ -166,47 +158,45 @@ export default function QuantumCybersecurityCompliance() {,
             </p>,
           </motion.div>,
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>,
-            {[,
-              {,
-                icon: <Shield className='w-8 h-8' />,;
-                title: 'Quantum-Resistant',;
+            {[
+              {
+                icon: <Shield className='w-8 h-8' />;
+                title: 'Quantum-Resistant';
                 description:,
-                  'Future-proof encryption that withstands quantum computing attacks',;
-              },;
-              {,
-                icon: <Zap className='w-8 h-8' />,;
-                title: '60% Cost Reduction',;
+                  'Future-proof encryption that withstands quantum computing attacks';
+              };
+              {
+                icon: <Zap className='w-8 h-8' />;
+                title: '60% Cost Reduction';
                 description:,
-                  'Automate compliance tasks and reduce operational costs significantly',;
-              },;
-              {,
-                icon: <CheckCircle className='w-8 h-8' />,;
-                title: 'Continuous Compliance',;
+                  'Automate compliance tasks and reduce operational costs significantly';
+              };
+              {
+                icon: <CheckCircle className='w-8 h-8' />;
+                title: 'Continuous Compliance';
                 description:,
-                  'Maintain compliance 24/7 with automated monitoring and reporting',;
-              },;
-              {,
-                icon: <BarChart3 className='w-8 h-8' />,;
-                title: 'Real-Time Security',;
+                  'Maintain compliance 24/7 with automated monitoring and reporting';
+              };
+              {
+                icon: <BarChart3 className='w-8 h-8' />;
+                title: 'Real-Time Security';
                 description:,
-                  'Monitor threats and vulnerabilities in real-time with AI-powered detection',;
-              },;
-            ].map((benefit, index) => (,
+                  'Monitor threats and vulnerabilities in real-time with AI-powered detection';
+              };
+            ].map((benefit, index) => (
               <motion.div,
                 key={index}
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='text-center p-6 bg-gray-80o0/50 rounded-xl border border-gray-70o0/30',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='text-center p-6 bg-gray-80o0/50 rounded-xl border border-gray-70o0/30'>,
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-50o0 to-pink-60o0 rounded-xl flex items-center justify-center mx-auto mb-4'>,
                   {benefit.icon}
                 </div>,
                 <h3 className='text-xl font-semibold mb-2'>{benefit.title}</h3>,
                 <p className='text-gray-40o0'>{benefit.description}</p>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -214,12 +204,11 @@ export default function QuantumCybersecurityCompliance() {,
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto'>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-3xl md: text-4xl font-bold mb-4'>,
               Comprehensive Compliance Coverage,
             </h2>,
@@ -229,19 +218,17 @@ export default function QuantumCybersecurityCompliance() {,
             </p>,
           </motion.div>,
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>,
-            {complianceFrameworks.map((framework, index) => (,
+            {complianceFrameworks.map((framework, index) => (
               <motion.div,
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 ,}}
-                whileInView={{ opacity: 1, scale: 1 ,}}
-                transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='text-center p-6 bg-gray-80o0/30 rounded-xl border border-gray-70o0/30 hover: border-purple-50o0/50 transition-all duration-30o0',
-              >,
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='text-center p-6 bg-gray-80o0/30 rounded-xl border border-gray-70o0/30 hover: border-purple-50o0/50 transition-all duration-30o0'>,
                 <FileText className='w-12 h-12 text-purple-40o0 mx-auto mb-4' />,
-                <h3 className='text-lg font-semibold mb-2'>{framework,}</h3>,
-              </motion.div>,
-            ))}
+                <h3 className='text-lg font-semibold mb-2'>{framework}</h3>,
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -249,12 +236,11 @@ export default function QuantumCybersecurityCompliance() {,
       <section className='py-20 px-4 sm: px-6 lg:px-8 bg-gray-80o0/50'>,
         <div className='max-w-7xl mx-auto'>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-3xl md: text-4xl font-bold mb-4'>,
               Advanced Security Features,
             </h2>,
@@ -264,19 +250,17 @@ export default function QuantumCybersecurityCompliance() {,
             </p>,
           </motion.div>,
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>,
-            {features.map((feature, index) => (,
+            {features.map((feature, index) => (
               <motion.div,
                 key={index}
-                initial={{ opacity: 0, x: -20 ,}}
-                whileInView={{ opacity: 1, x: 0 ,}}
-                transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='flex items-start space-x-3 p-4 bg-gray-80o0/30 rounded-lg border border-gray-70o0/30',
-              >,
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='flex items-start space-x-3 p-4 bg-gray-80o0/30 rounded-lg border border-gray-70o0/30'>,
                 <CheckCircle className='w-5 h-5 text-purple-40o0 mt-0.5 flex-shrink-0' />,
                 <span className='text-gray-30o0'>{feature}</span>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -284,12 +268,11 @@ export default function QuantumCybersecurityCompliance() {,
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto'>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-3xl md: text-4xl font-bold mb-4'>,
               Enterprise-Grade Security Pricing,
             </h2>,
@@ -299,18 +282,17 @@ export default function QuantumCybersecurityCompliance() {,
             </p>,
           </motion.div>,
           <div className='grid md:grid-cols-3 gap-8'>,
-            {pricing.map((plan, index) => (,
+            {pricing.map((plan, index) => (
               <motion.div,
                 key={index}
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className={`p-8 rounded-2xl border ${,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`p-8 rounded-2xl border ${
                   index === 1,
                     ? 'bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20 border-purple-50o0/50',
-                    : 'bg-gray-80o0/30 border-gray-70o0/30',
-                }`}
+                    : 'bg-gray-80o0/30 border-gray-70o0/30'}`}
               >,
                 <div className='text-center mb-6'>,
                   <h3 className='text-2xl font-bold mb-2'>{plan.name}</h3>,
@@ -320,27 +302,24 @@ export default function QuantumCybersecurityCompliance() {,
                   <p className='text-gray-40o0'>per month</p>,
                 </div>,
                 <ul className='space-y-3 mb-8'>,
-                  {plan.features.map((feature, featureIndex) => (,
-                    <li,
+                  {plan.features.map((feature, featureIndex) => (
+                    <li
                       key={featureIndex}
-                      className='flex items-center space-x-3',
-                    >,
+                      className='flex items-center space-x-3'>,
                       <CheckCircle className='w-5 h-5 text-purple-40o0 flex-shrink-0' />,
                       <span className='text-gray-30o0'>{feature}</span>,
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-                <button,
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-30o0 ${,
+                <button
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-30o0 ${
                     index === 1,
                       ? 'bg-gradient-to-r from-purple-50o0 to-pink-60o0 hover: from-purple-60o0 hover:to-pink-70o0',
                       : 'bg-gray-70o0 hover:bg-gray-60o0 border border-gray-60o0',
-                  ,}`}
+                  }`}
                 >,
                   {index === 1 ? 'Start Free Trial' : 'Get Started'}
                 </button>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -348,12 +327,11 @@ export default function QuantumCybersecurityCompliance() {,
       <section className='py-20 px-4 sm: px-6 lg:px-8 bg-gray-80o0/50'>,
         <div className='max-w-7xl mx-auto'>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-3xl md: text-4xl font-bold mb-4'>,
               Trusted by Industry Leaders,
             </h2>,
@@ -363,19 +341,17 @@ export default function QuantumCybersecurityCompliance() {,
             </p>,
           </motion.div>,
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>,
-            {useCases.map((useCase, index) => (,
+            {useCases.map((useCase, index) => (
               <motion.div,
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 ,}}
-                whileInView={{ opacity: 1, scale: 1 ,}}
-                transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='text-center p-6 bg-gray-80o0/30 rounded-xl border border-gray-70o0/30 hover: border-purple-50o0/50 transition-all duration-30o0',
-              >,
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='text-center p-6 bg-gray-80o0/30 rounded-xl border border-gray-70o0/30 hover: border-purple-50o0/50 transition-all duration-30o0'>,
                 <Users className='w-12 h-12 text-purple-40o0 mx-auto mb-4' />,
-                <h3 className='text-lg font-semibold mb-2'>{useCase,}</h3>,
-              </motion.div>,
-            ))}
+                <h3 className='text-lg font-semibold mb-2'>{useCase}</h3>,
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -383,12 +359,11 @@ export default function QuantumCybersecurityCompliance() {,
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto'>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-3xl md: text-4xl font-bold mb-4'>,
               Quantum-Ready Security Architecture,
             </h2>,
@@ -399,12 +374,11 @@ export default function QuantumCybersecurityCompliance() {,
           </motion.div>,
           <div className='grid md:grid-cols-2 gap-8'>,
             <motion.div,
-              initial={{ opacity: 0, x: -20 ,}}
-              whileInView={{ opacity: 1, x: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
-              className='p-8 bg-gray-80o0/30 rounded-xl border border-gray-70o0/30',
-            >,
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className='p-8 bg-gray-80o0/30 rounded-xl border border-gray-70o0/30'>,
               <div className='flex items-center mb-4'>,
                 <Atom className='w-8 h-8 text-purple-40o0 mr-3' />,
                 <h3 className='text-2xl font-bold'>,
@@ -433,12 +407,11 @@ export default function QuantumCybersecurityCompliance() {,
               </ul>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, x: 20 ,}}
-              whileInView={{ opacity: 1, x: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
-              className='p-8 bg-gray-80o0/30 rounded-xl border border-gray-70o0/30',
-            >,
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className='p-8 bg-gray-80o0/30 rounded-xl border border-gray-70o0/30'>,
               <div className='flex items-center mb-4'>,
                 <Settings className='w-8 h-8 text-purple-40o0 mr-3' />,
                 <h3 className='text-2xl font-bold'>Automated Compliance</h3>,
@@ -469,10 +442,10 @@ export default function QuantumCybersecurityCompliance() {,
       <section className='py-20 px-4 sm: px-6 lg:px-8 bg-gray-80o0/50'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >,
             <h2 className='text-3xl md: text-4xl font-bold mb-6'>,
               Ready to Secure Your Future?,
@@ -521,7 +494,6 @@ export default function QuantumCybersecurityCompliance() {,
           </motion.div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function RetrievalLatencyPatternsPage() {,
-  return (,
+import React from 'react';
+export default function RetrievalLatencyPatternsPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-4xl px-6 py-24 sm: py-32 lg:px-8'>,
         <p className='text-sm text-gray-30o0'>,
@@ -30,7 +29,5 @@ export default function RetrievalLatencyPatternsPage() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

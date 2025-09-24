@@ -1,24 +1,22 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI & Technology Services - Zion Tech Group',;
+export const metadata = {
+  title: 'AI & Technology Services - Zion Tech Group';
   description:,
-    'Comprehensive AI automation, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services for enterprise transformation.',;
-  keywords: [,
-    'AI automation',;
-    'cloud computing',;
-    'micro SaaS',;
-    'technology consulting',;
-    'enterprise solutions',;
-    'digital transformation',;
-  ],;
+    'Comprehensive AI automation, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services for enterprise transformation.';
+  keywords: [
+    'AI automation';
+    'cloud computing';
+    'micro SaaS';
+    'technology consulting';
+    'enterprise solutions';
+    'digital transformation';
+  ];
 };
-,
-export default function ServicesPage() {,
-  return (,
+export default function ServicesPage() {
+  return (
     <>,
-      <SEO,
+      <SEO
         title='AI & Technology Services - Zion Tech Group',
         description='Comprehensive AI automation, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services for enterprise transformation.',
         keywords='AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
@@ -43,23 +41,21 @@ export default function ServicesPage() {,
                 implementation services for enterprise success.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Get Started Today,
                 </Link>,
-                <Link,
+                <Link
                   href='/case-studies',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                   View Success Stories,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Services Overview */,}
+        {/* Services Overview */}
         <section className='py-20 bg-gray-50'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center mb-16'>,
@@ -73,7 +69,7 @@ export default function ServicesPage() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {/* AI Automation */,}
+              {/* AI Automation */}
               <div className='bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow'>,
                 <div className='text-4xl mb-6'>🤖</div>,
                 <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>,
@@ -89,14 +85,13 @@ export default function ServicesPage() {,
                   <li>• Intelligent Workflows</li>,
                   <li>• RPA Implementation</li>,
                 </ul>,
-                <Link,
+                <Link
                   href='/services/ai-automation',
-                  className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Cloud Infrastructure */,}
+              {/* Cloud Infrastructure */}
               <div className='bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow'>,
                 <div className='text-4xl mb-6'>☁️</div>,
                 <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>,
@@ -112,14 +107,13 @@ export default function ServicesPage() {,
                   <li>• Microservices Architecture</li>,
                   <li>• DevOps Implementation</li>,
                 </ul>,
-                <Link,
+                <Link
                   href='/services/cloud-infrastructure',
-                  className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Micro SaaS */,}
+              {/* Micro SaaS */}
               <div className='bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow'>,
                 <div className='text-4xl mb-6'>💼</div>,
                 <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>,
@@ -135,14 +129,13 @@ export default function ServicesPage() {,
                   <li>• Database Design & Optimization</li>,
                   <li>• User Experience Design</li>,
                 </ul>,
-                <Link,
+                <Link
                   href='/services/micro-saas',
-                  className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Quantum Computing */,}
+              {/* Quantum Computing */}
               <div className='bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow'>,
                 <div className='text-4xl mb-6'>⚡</div>,
                 <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>,
@@ -158,14 +151,13 @@ export default function ServicesPage() {,
                   <li>• Quantum Machine Learning</li>,
                   <li>• Optimization Solutions</li>,
                 </ul>,
-                <Link,
+                <Link
                   href='/services/quantum-computing',
-                  className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Data Analytics */,}
+              {/* Data Analytics */}
               <div className='bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow'>,
                 <div className='text-4xl mb-6'>📊</div>,
                 <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>,
@@ -181,14 +173,13 @@ export default function ServicesPage() {,
                   <li>• Data Visualization</li>,
                   <li>• Machine Learning Models</li>,
                 </ul>,
-                <Link,
+                <Link
                   href='/services/data-analytics',
-                  className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Cybersecurity */,}
+              {/* Cybersecurity */}
               <div className='bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow'>,
                 <div className='text-4xl mb-6'>🔒</div>,
                 <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>,
@@ -204,17 +195,16 @@ export default function ServicesPage() {,
                   <li>• Compliance Management</li>,
                   <li>• Security Training</li>,
                 </ul>,
-                <Link,
+                <Link
                   href='/services/cybersecurity',
-                  className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                   Learn More →,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Success Metrics */,}
+        {/* Success Metrics */}
         <section className='py-16 bg-white'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center mb-12'>,
@@ -253,7 +243,7 @@ export default function ServicesPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Process Section */,}
+        {/* Process Section */}
         <section className='py-20 bg-gray-50'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center mb-16'>,
@@ -311,7 +301,7 @@ export default function ServicesPage() {,
                 </h3>,
                 <p className='text-gray-60o0'>,
                   Ongoing support, monitoring, and continuous improvement to,
-                  ensure maximum value and performance.,
+                  ensure maximum value and window.performance.,
                 </p>,
               </div>,
             </div>,
@@ -328,23 +318,20 @@ export default function ServicesPage() {,
               remarkable results with our AI and technology solutions.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Start Your Project,
               </Link>,
-              <Link,
+              <Link
                 href='/case-studies',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 View Success Stories,
               </Link>,
             </div>,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -2,38 +2,32 @@
 import Login from '@/pages/Login',
 import Signup from '@/pages/Signup',
 import { ProtectedRoute } from '../ProtectedRoute',
-const AuthRoutes = () => {,
-  return (,
+const AuthRoutes = () => {
+  return (
     <Routes>,
       <Route path='/login' element={<Login />} />,
       <Route path='/signup' element={<Signup />} />,
       {/* Protected routes that require authentication */}
-      <Route,
+      <Route
         path='/profile',
-        element={,
+        element={
           <ProtectedRoute>,
             <div>Profile Page</div>,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/dashboard',
-        element={,
+        element={
           <ProtectedRoute>,
             <div>Dashboard</div>,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/settings',
-        element={,
+        element={
           <ProtectedRoute>,
             <div>Settings</div>,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-    </Routes>,
-  ),
-};
-export default AuthRoutes,
-,
+    </Routes>)};
+export default AuthRoutes;

@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'Quantum Computing Revolution 20o25 - Breakthrough Technology | Zion Tech Group',;
+    'Quantum Computing Revolution 20o25 - Breakthrough Technology | Zion Tech Group';
   description:,
-    'Experience the quantum computing revolution of 20o25. Revolutionary quantum algorithms, quantum AI, and quantum-powered business solutions that solve impossible problems.',;
-  keywords: [,
-    'quantum computing',;
-    'quantum AI',;
-    'quantum algorithms',;
-    'quantum revolution',;
-    'business solutions',;
-    'breakthrough technology',;
-  ],;
+    'Experience the quantum computing revolution of 20o25. Revolutionary quantum algorithms, quantum AI, and quantum-powered business solutions that solve impossible problems.';
+  keywords: [
+    'quantum computing';
+    'quantum AI';
+    'quantum algorithms';
+    'quantum revolution';
+    'business solutions';
+    'breakthrough technology';
+  ];
 };
-,
-export default function QuantumComputingRevolution20o25Page() {,
-  return (,
+export default function QuantumComputingRevolution20o25Page() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white'>,
       {/* Hero Section */}
       <section className='py-20 px-4'>,
@@ -36,22 +34,20 @@ export default function QuantumComputingRevolution20o25Page() {,
             breakthrough capabilities.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-cyan-40o0 to-purple-40o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-cyan-30o0 hover:to-purple-30o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-cyan-40o0 to-purple-40o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-cyan-30o0 hover:to-purple-30o0 transition-all transform hover:scale-10o5'>,
               Explore Quantum Solutions,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-90o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-90o0 transition-colors'>,
               View Services,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Quantum Capabilities */,}
+      {/* Quantum Capabilities */}
       <section className='py-16 px-4'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-center mb-12'>,
@@ -103,7 +99,7 @@ export default function QuantumComputingRevolution20o25Page() {,
               <div className='text-4xl mb-4'>🌐</div>,
               <h3 className='text-2xl font-bold mb-4'>Quantum Networks</h3>,
               <p className='text-gray-30o0 mb-6'>,
-                Ultra-secure quantum communication networks that enable instant,;
+                Ultra-secure quantum communication networks that enable instant;
                 unhackable data transmission across any distance.,
               </p>,
               <div className='text-cyan-40o0 font-semibold'>,
@@ -148,7 +144,7 @@ export default function QuantumComputingRevolution20o25Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Use Cases */,}
+      {/* Use Cases */}
       <section className='py-16 px-4'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-center mb-12'>,
@@ -161,7 +157,7 @@ export default function QuantumComputingRevolution20o25Page() {,
                   Financial Services,
                 </h3>,
                 <p className='text-gray-30o0'>,
-                  Quantum algorithms for portfolio optimization, risk analysis,;
+                  Quantum algorithms for portfolio optimization, risk analysis;
                   and fraud detection with unprecedented speed and accuracy.,
                 </p>,
               </div>,
@@ -227,22 +223,19 @@ export default function QuantumComputingRevolution20o25Page() {,
             business. Transform impossible problems into solvable opportunities.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-cyan-40o0 to-purple-40o0 text-black px-10 py-4 rounded-lg font-semibold text-lg hover:from-cyan-30o0 hover:to-purple-30o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-cyan-40o0 to-purple-40o0 text-black px-10 py-4 rounded-lg font-semibold text-lg hover:from-cyan-30o0 hover:to-purple-30o0 transition-all transform hover:scale-10o5'>,
               Start Quantum Journey,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-indigo-90o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-indigo-90o0 transition-colors'>,
               View Quantum Success Stories,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

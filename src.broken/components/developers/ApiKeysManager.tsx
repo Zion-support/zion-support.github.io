@@ -1,9 +1,7 @@
-export function ApiKeysManager() {,
-  return (,
+export function ApiKeysManager() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

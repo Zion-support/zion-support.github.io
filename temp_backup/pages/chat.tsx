@@ -1,21 +1,19 @@
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 import Card from '../components/ui/Card',
-,
-export default function ChatPage() {,
-  const contactInfo = {,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',;
+export default function ChatPage() {
+  const contactInfo = {
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
+    website: 'https://ziontechgroup.com';
   };
-,
-  return (,
+  return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>,
       <Head>,
         <title>Live Chat | Zion Tech Group</title>,
         <link rel='canonical' href='https: //ziontechgroup.com/chat' />,
-        <meta,
+        <meta
           name='description',
           content='Chat with Zion Tech Group about AI, cloud, and micro SaaS services. Fast responses and expert guidance.',
         />,
@@ -30,15 +28,13 @@ export default function ChatPage() {,
               Live chat integration will appear here. Meanwhile, contact us: ,
             </div>,
             <div className='mt-4 text-gray-20o0'>,
-              {contactInfo.mobile,} • {contactInfo.email}
+              {contactInfo.mobile} • {contactInfo.email}
             </div>,
             <div className='mt-2 text-gray-40o0 text-sm'>,
-              Address: {contactInfo.address,}
+              Address: {contactInfo.address}
             </div>,
           </Card>,
         </div>,
       </div>,
-    </UltraFuturisticBackground>,
-  ),
-}
+    </UltraFuturisticBackground>)}
 ,

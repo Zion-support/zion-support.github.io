@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o26QuantumNeuralRevolutionPromotionBanner() {,
-  return (,
+export default function AI20o26QuantumNeuralRevolutionPromotionBanner() {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 py-16'>,
       {/* Animated background elements */}
       <div className='absolute inset-0'>,
@@ -12,7 +11,7 @@ export default function AI20o26QuantumNeuralRevolutionPromotionBanner() {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white text-sm font-bold mb-6 animate-bounce'>,
             ⚛️ QUANTUM-NEURAL BREAKTHROUGH - JUST RELEASED,
           </div>,
@@ -20,10 +19,10 @@ export default function AI20o26QuantumNeuralRevolutionPromotionBanner() {,
           <h2 className='text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 via-purple-50o0 to-pink-50o0 bg-clip-text text-transparent'>,
             AI 20o26 Quantum-Neural Revolution,
           </h2>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl md: text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto leading-relaxed'>,
             Experience the revolutionary fusion of quantum computing and neural,
-            networks achieving{' ',}
+            networks achieving{' '}
             <span className='text-cyan-40o0 font-bold'>,
               infinite processing capabilities,
             </span>{' '}
@@ -98,26 +97,23 @@ export default function AI20o26QuantumNeuralRevolutionPromotionBanner() {,
           </div>,
           {/* CTA Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o26-quantum-neural-revolution',
-              className='bg-gradient-to-r from-cyan-50o0 to-purple-50o0 hover:from-cyan-60o0 hover:to-purple-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='bg-gradient-to-r from-cyan-50o0 to-purple-50o0 hover:from-cyan-60o0 hover:to-purple-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               ⚛️ Explore Quantum Breakthroughs,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o26-quantum-neural-fusion-success',
-              className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 hover:from-purple-60o0 hover:to-pink-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 hover:from-purple-60o0 hover:to-pink-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               📊 View Success Stories,
             </Link>,
-            <Link,
+            <Link
               href='/resources/ai-20o26-quantum-implementation-guide',
-              className='bg-gradient-to-r from-green-50o0 to-emerald-50o0 hover:from-green-60o0 hover:to-emerald-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='bg-gradient-to-r from-green-50o0 to-emerald-50o0 hover:from-green-60o0 hover:to-emerald-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               🛠️ Get Quantum Guide,
             </Link>,
           </div>,
-          {/* Urgency Message */,}
+          {/* Urgency Message */}
           <div className='mt-8 text-center'>,
             <p className='text-cyan-40o0 font-semibold text-lg animate-pulse'>,
               ⚡ Limited Time: Early Access to Quantum-Neural AI Technology,
@@ -129,7 +125,5 @@ export default function AI20o26QuantumNeuralRevolutionPromotionBanner() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

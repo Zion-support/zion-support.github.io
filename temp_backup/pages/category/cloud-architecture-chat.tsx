@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function CloudArchitectureChatPage() {,
-  return (,
+export default function CloudArchitectureChatPage() {
+  return (
     <>,
       <Head>,
         <title>Cloud Architecture Chat - Zion Tech Group</title>,
@@ -12,6 +11,4 @@ export default function CloudArchitectureChatPage() {,
         <p>Blog content coming soon...</p>,
         <Link href="/blog">Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-}
+    </div>)}

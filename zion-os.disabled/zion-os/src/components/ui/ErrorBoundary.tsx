@@ -1,39 +1,35 @@
-import React from 'react',
+import React from 'react';
 'use client',
-,
 import { Component, ReactNode } from 'react',
-,
-interface Props {,
+interface Props {
   children: ReactNode,
   fallback?: ReactNode,
-,}
+}
 ,
-interface State {,
+interface State {
   hasError: boolean,
   error?: Error,
-,}
+}
 ,
-export default class ErrorBoundary extends Component<Props, State> {,
-  constructor(props: Props) {,
+export default class ErrorBoundary extends Component<Props State> {
+  constructor(props: Props) {
     super(props),
-    this.state = { hasError: false ,};
+    this.state = { hasError: false };
   }
 ,
-  static getDerivedStateFromError(error: Error): State {,
+  static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 ,
-  componentDidCatch(error: Error, errorInfo: any) {,
-    console.error('ErrorBoundary caught an error:', error, errorInfo),
-  }
+  componentDidCatch(error: Error, errorInfo: any) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo)}
 ,
-  render() {,
-    if (this.state.hasError) {,
-      if (this.props.fallback) {,
-        return this.props.fallback,
-      }
+  render() {
+    if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback}
 ,
-      return (,
+      return (
         <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-90o0 via-gray-80o0 to-black'>,
           <div className='card max-w-md mx-auto text-center'>,
             <div className='text-6xl mb-4'>⚠️</div>,
@@ -44,18 +40,14 @@ export default class ErrorBoundary extends Component<Props, State> {,
               An unexpected error occurred. Please try refreshing the page or,
               contact support if the problem persists.,
             </p>,
-            <button,
+            <button
               onClick={() => window.location.reload()}
-              className='btn-primary',
-            >,
+              className='btn-primary'>,
               Refresh Page,
             </button>,
           </div>,
-        </div>,
-      ),
-    }
+        </div>)}
 ,
-    return this.props.children,
-  }
+    return this.props.children}
 }
 ,

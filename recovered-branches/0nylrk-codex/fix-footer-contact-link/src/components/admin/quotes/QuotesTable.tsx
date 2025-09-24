@@ -1,65 +1,55 @@
-import React from "react",
+import React from "react";
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
-import {,
+import {
 import { Button } from "@/components/ui/button",
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 import { formatDate } from "@/utils/dateUtils",
-import {formatDate,} from "@/utils/dateUtils",
-import React from "react",;
-import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",;
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
-import { formatDate } from "@/utils/dateUtils",;
-
-,
+import {formatDate} from "@/utils/dateUtils",
+import React from "react";;
+import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+import { formatDate } from "@/utils/dateUtils";
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
-} from "@/components/ui/table",;
+  TableRow} from "@/components/ui/table";
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu",;
-interface QuotesTableProps {,
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+interface QuotesTableProps {
   isArchived?: boolean,
   isLoading: boolean,
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
-,
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,
-} from "@/components/ui/table",;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu",;
-interface QuotesTableProps {,
-  quotes: QuoteRequest[],;
-  isArchived?: boolean,;
-  isLoading: boolean,;
-  updateStatus: (id: string, status: QuoteStatus) => void,;
-  toggleArchive: (id: string, isArchived: boolean) => void,;
-  deleteQuote: (id: string) => void,;
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table";
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+interface QuotesTableProps {
+  quotes: QuoteRequest[];
+  isArchived?: boolean;
+  isLoading: boolean;
+  updateStatus: (id: string, status: QuoteStatus) => void;
+  toggleArchive: (id: string, isArchived: boolean) => void;
+  deleteQuote: (id: string) => void;
   onViewDetails: (quote: QuoteRequest) => void,
-,}
-,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
-  onViewDetails,
-}) => {,
-  return (,
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
+  onViewDetails}) => {
+  return (
     <div className="overflow-x-auto">,
       <Table>,
         <TableHeader>,
@@ -74,28 +64,25 @@ interface QuotesTableProps {,
           </TableRow>,
         </TableHeader>,
         <TableBody>,
-          {isLoading ? (,
+          {isLoading ? (
             <TableRow>,
-              <TableCell colSpan={7,} className="text-center py-10 text-zion-slate-light">,
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">,
                 Loading quote requests...,
               </TableCell>,
-            </TableRow>,
-          ) : quotes.length === 0 ? (,
+            </TableRow>) : quotes.length === 0 ? (
             <TableRow>,
               <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">,
                 {isArchived,
                   ? "No archived quote requests found.",
                   : "No quote requests found."}
               </TableCell>,
-            </TableRow>,
-          ) : (,
-            quotes.map(quote => (,
-              <TableRow,
+            </TableRow>) : (
+            quotes.map(quote => (
+              <TableRow
                 key={quote.id}
-                className="border-zion-blue-light hover: bg-zion-blue",
-              >,
+                className="border-zion-blue-light hover: bg-zion-blue">,
                 <TableCell className="text-white">,
-                  {quote.talent_name |'Unknown Talent',}
+                  {quote.talent_name |'Unknown Talent'}
                 </TableCell>,
                 <TableCell className="text-white">,
                   {quote.requester_name}
@@ -105,10 +92,9 @@ interface QuotesTableProps {,
                   <div className="text - sm text - zion - slate - light truncate max - w-[200px]">,
                     {quote.project_summary}
 ,
-  deleteQuote,;
-  onViewDetails,
-}) => {,
-  return (,
+  deleteQuote;
+  onViewDetails}) => {
+  return (
     <div className="overflow-x-auto">,
       <Table>,
         <TableHeader>,
@@ -123,27 +109,25 @@ interface QuotesTableProps {,
           </TableRow>,
         </TableHeader>,
         <TableBody>,
-          {isLoading ? (,
+          {isLoading ? (
             <TableRow>,
-              <TableCell colSpan={7,} className="text-center py-10 text-zion-slate-light">,
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">,
                 Loading quote requests...,
               </TableCell>,
-            </TableRow>,
-          ) : quotes && quotes.length === 0 ? (,
+            </TableRow>) : quotes && quotes.length === 0 ? (
             <TableRow>,
               <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">,
                 {isArchived ,
                   ? "No archived quote requests found." ,
                   : "No quote requests found."}
               </TableCell>,
-            </TableRow>,
-          ) : (,
-            quotes && quotes.map(quote => (,
-              <TableRow,
+            </TableRow>) : (
+            quotes && quotes.map(quote => (
+              <TableRow
                 key={quote && quote.id}
                 className="border-zion-blue-light hover: bg-zion-blue">,
                 <TableCell className="text-white">,
-                  {quote && quote.talent_name || 'Unknown Talent',}
+                  {quote && quote.talent_name || 'Unknown Talent'}
                 </TableCell>,
                 <TableCell className="text-white">,
                   {quote && quote.requester_name}
@@ -170,7 +154,7 @@ interface QuotesTableProps {,
                 </TableCell>,
                 <TableCell>,
                   <div className="flex items-center gap-2">,
-                    <Button,
+                    <Button
                       variant="ghost",
                       size="icon",
                       onClick={() => onViewDetails(quote)}
@@ -178,10 +162,9 @@ interface QuotesTableProps {,
                       <Eye className="h-4 w-4" />,
                       <span className="sr-only">View Details</span>,
                     </Button>,
-,
-                    {isArchived ? (,
+                    {isArchived ? (
                       <>,
-                        <Button,
+                        <Button
                           variant="ghost",
                           size="icon",
                           onClick={() => toggleArchive(quote && quote.id, false)}
@@ -189,57 +172,51 @@ interface QuotesTableProps {,
                           <Archive className="h-4 w-4" />,
                           <span className="sr-only">Unarchive</span>,
                         </Button>,
-                        <Button,
+                        <Button
                           variant="ghost",
                           size="icon",
                           className="text-red-500",
-                          onClick={() => {,
-                            if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {,
-                              deleteQuote(quote && quote.id),
-                            }
+                          onClick={() => {
+                            if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
+                              deleteQuote(quote && quote.id)}
                           }}
-,
-                              }
+}
                             }}
-                            className="text-red-500",
-                          >,
+                            className="text-red-500">,
                             <Trash2 className="h-4 w-4 mr-2" />,
                             Delete,
                           </DropdownMenuItem>,
                         </DropdownMenuContent>,
                       </DropdownMenu>,
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,
-} from "@/components/ui/table",;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu",;
-interface QuotesTableProps {,
-  quotes: QuoteRequest[],;
-  isArchived?: boolean,;
-  isLoading: boolean,;
-  updateStatus: (id: string, status: QuoteStatus) => void,;
-  toggleArchive: (id: string, isArchived: boolean) => void,;
-  deleteQuote: (id: string) => void,;
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table";
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+interface QuotesTableProps {
+  quotes: QuoteRequest[];
+  isArchived?: boolean;
+  isLoading: boolean;
+  updateStatus: (id: string, status: QuoteStatus) => void;
+  toggleArchive: (id: string, isArchived: boolean) => void;
+  deleteQuote: (id: string) => void;
   onViewDetails: (quote: QuoteRequest) => void,
-,}
+}
 ,
-export const QuotesTable: React.FC<QuotesTableProps> = ({,
-  quotes,;
-  isArchived = false,;
-  isLoading,;
-  updateStatus,;
-  toggleArchive,;
+export const QuotesTable: React.FC<QuotesTableProps> = ({
+  quotes;
+  isArchived = false;
+  isLoading;
+  updateStatus;
+  toggleArchive;
   deleteQuote,
-  onViewDetails,
-}) => {,
-  return (,
+  onViewDetails}) => {
+  return (
     <div className="overflow-x-auto">,
       <Table>,
         <TableHeader>,
@@ -254,28 +231,25 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({,
           </TableRow>,
         </TableHeader>,
         <TableBody>,
-          {isLoading ? (,
+          {isLoading ? (
             <TableRow>,
-              <TableCell colSpan={7,} className="text-center py-10 text-zion-slate-light">,
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">,
                 Loading quote requests...,
               </TableCell>,
-            </TableRow>,
-          ) : quotes.length === 0 ? (,
+            </TableRow>) : quotes.length === 0 ? (
             <TableRow>,
               <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">,
                 {isArchived,
                   ? "No archived quote requests found.",
                   : "No quote requests found."}
               </TableCell>,
-            </TableRow>,
-          ) : (,
-            quotes.map(quote => (,
-              <TableRow,
+            </TableRow>) : (
+            quotes.map(quote => (
+              <TableRow
                 key={quote.id}
-                className="border-zion-blue-light hover: bg-zion-blue",
-              >,
+                className="border-zion-blue-light hover: bg-zion-blue">,
                 <TableCell className="text-white">,
-                  {quote.talent_name || 'Unknown Talent',}
+                  {quote.talent_name || 'Unknown Talent'}
                 </TableCell>,
                 <TableCell className="text-white">,
                   {quote.requester_name}
@@ -302,7 +276,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({,
                 </TableCell>,
                 <TableCell>,
                   <div className="flex items-center gap-2">,
-                    <Button,
+                    <Button
                       variant="ghost",
                       size="icon",
                       onClick={() => onViewDetails(quote)}
@@ -310,9 +284,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({,
                       <Eye className="h-4 w-4" />,
                       <span className="sr-only">View Details</span>,
                     </Button>,
-                    {isArchived ? (,
+                    {isArchived ? (
                       <>,
-                        <Button,
+                        <Button
                           variant="ghost",
                           size="icon",
                           onClick={() => toggleArchive(quote.id, false)}
@@ -320,22 +294,19 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({,
                           <Archive className="h-4 w-4" />,
                           <span className="sr-only">Unarchive</span>,
                         </Button>,
-                        <Button,
+                        <Button
                           variant="ghost",
                           size="icon",
                           className="text-red-500",
-                          onClick={() => {,
-                            if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {,
-                              deleteQuote(quote.id),
-                            }
+                          onClick={() => {
+                            if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
+                              deleteQuote(quote.id)}
                           }}
-,
-                        >,
+>,
                           <Trash2 className="h-4 w-4" />,
                           <span className="sr-only">Delete</span>,
                         </Button>,
-                      </>,
-                    ) : (,
+                      </>) : (
                       <DropdownMenu>,
                         <DropdownMenuTrigger asChild>,
                           <Button variant="ghost" size="icon">,
@@ -363,53 +334,31 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({,
                             <Archive className="h-4 w-4 mr-2" />,
                             Archive,
                           </DropdownMenuItem>,
-                          <DropdownMenuItem,
-                            onClick={() => {,
-                              if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {,
+                          <DropdownMenuItem
+                            onClick={() => {
+                              if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote && quote.id),
-,
-                              }
+}
                             }}
-                            className="text-red-500",
-                          >,
+                            className="text-red-500">,
                             <Trash2 className="h-4 w-4 mr-2" />,
                             Delete,
                           </DropdownMenuItem>,
                         </DropdownMenuContent>,
-                      </DropdownMenu>,
-,
-                    )}
+                      </DropdownMenu>)}
                   </div>,
                 </TableCell>,
-              </TableRow>,
-            )),
-          )}
+              </TableRow>)))}
 ,
         </TableBody>,
       </Table>,
-    </div>,
-  ),
-}
-,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
-                    )}
+    </div>)}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4)}
                   </div>,
                 </TableCell>,
-              </TableRow>,
-            )),
-          )}
+              </TableRow>)))}
 ,
         </TableBody>,
       </Table>,
-    </div>,
-  ),
-,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
-};
-,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),))
+    </div>)>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))))

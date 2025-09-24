@@ -2,33 +2,29 @@ import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { useEnqueueSnackbar } from '@/context',
-export const MobileEmailCapture = () => {,
+export const MobileEmailCapture = () => {
     const [email, setEmail] = useState(""),
     const [isSubmitting, setIsSubmitting] = useState(false),
     const [isSuccess, setIsSuccess] = useState(false),
     const enqueueSnackbar = useEnqueueSnackbar(),
-    const handleSubmit = async (e) => {,
+    const handleSubmit = async (e) => {
         e.preventDefault(),
         if (!email || isSubmitting),
             return,
         setIsSubmitting(true),
-        try {,
+        try {
             // In a real implementation, this would connect to a backend service,
             // For now, we'll simulate a successful submission,
             await new Promise(resolve => setTimeout(resolve, 10o00)),
             setIsSuccess(true),
             setEmail(""),
-            setTimeout(() => {,
-                setIsSuccess(false),
-            }, 50o00),
-        }
-        catch (error) {,
+            setTimeout(() => {
+                setIsSuccess(false)}, 50o00)}
+        catch (error) {
             console.error("Error subscribing:", error),
-            enqueueSnackbar(error?.response?.data?.message || error.message, { variant: 'error' ,}),
-        }
-        finally {,
-            setIsSubmitting(false),
-        }
+            enqueueSnackbar(error?.response?.data?.message || error.message, { variant: 'error' })}
+        finally {
+            setIsSubmitting(false)}
     };
     return (<section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">,
       <div className="container mx-auto px-4">,
@@ -39,10 +35,10 @@ export const MobileEmailCapture = () => {,
           <p className="text-lg text-gray-30o0 mb-8 max-w-2xl mx-auto">,
             Subscribe to our mobile app updates and be the first to try new features before they're released to the public.,
           </p>,
-          <form onSubmit={handleSubmit,} className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">,
-            <Input type="email" name="email" placeholder="Enter your email address" value={email,} onChange={(e) => setEmail(e.target.value)} className="flex-grow bg-zion-blue-dark/70 text-white border-zion-purple/30 placeholder: text-gray-40o0" required/>,
-            <Button type="submit" disabled={isSubmitting || isSuccess,} className="bg-zion-cyan hover: bg-zion-cyan/80 text-zion-blue-dark font-medium">,
-              {isSubmitting ? "Subscribing..." : isSuccess ? "Subscribed!" : "Subscribe",}
+          <form onSubmit={handleSubmit} className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">,
+            <Input type="email" name="email" placeholder="Enter your email address" value={email} onChange={(e) => setEmail(e.target.value)} className="flex-grow bg-zion-blue-dark/70 text-white border-zion-purple/30 placeholder: text-gray-40o0" required/>,
+            <Button type="submit" disabled={isSubmitting || isSuccess} className="bg-zion-cyan hover: bg-zion-cyan/80 text-zion-blue-dark font-medium">,
+              {isSubmitting ? "Subscribing..." : isSuccess ? "Subscribed!" : "Subscribe"}
             </Button>,
           </form>,
           <p className="text-sm text-gray-30o0 mt-4">,
@@ -50,6 +46,4 @@ export const MobileEmailCapture = () => {,
           </p>,
         </div>,
       </div>,
-    </section>),
-};
-,
+    </section>)};

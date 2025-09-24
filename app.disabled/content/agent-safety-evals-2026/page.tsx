@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'Agent Safety Evals 20o26 | Zion Tech Group',;
+export const metadata = {
+  title: 'Agent Safety Evals 20o26 | Zion Tech Group';
   description:,
-    'A pragmatic guide to designing and operating agent safety evaluations in 20o26: red-teaming, harnesses, metrics, and governance to ship reliable agents.',;
+    'A pragmatic guide to designing and operating agent safety evaluations in 20o26: red-teaming, harnesses, metrics, and governance to ship reliable agents.';
 };
-,
-export default function AgentSafetyEvals20o26Page() {,
-  return (,
+export default function AgentSafetyEvals20o26Page() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <div className='mb-8'>,
         <div className='text-sm font-semibold text-purple-70o0 mb-2'>,
@@ -37,7 +35,7 @@ export default function AgentSafetyEvals20o26Page() {,
             cases with synthetic and real logs.,
           </li>,
           <li>,
-            <strong>Tool-aware harnesses</strong>: simulate APIs, rate limits,;
+            <strong>Tool-aware harnesses</strong>: simulate APIs, rate limits;
             and failure modes for realistic behavior.,
           </li>,
           <li>,
@@ -45,7 +43,7 @@ export default function AgentSafetyEvals20o26Page() {,
             exfiltration checks, PII handling, and policy-as-code validation.,
           </li>,
           <li>,
-            <strong>Human oversight</strong>: calibrated reviewer rubrics,;
+            <strong>Human oversight</strong>: calibrated reviewer rubrics;
             inter-rater reliability, and sampling strategy.,
           </li>,
           <li>,
@@ -74,25 +72,22 @@ export default function AgentSafetyEvals20o26Page() {,
         </ol>,
         <h2>Get the starter kit</h2>,
         <p>,
-          Use our open eval templates to bootstrap your program: scenario spec,;
+          Use our open eval templates to bootstrap your program: scenario spec;
           harness interface, rubric examples, and CI snippets.,
         </p>,
       </section>,
       <div className='mt-10 flex gap-4'>,
-        <Link,
+        <Link
           href='/content/genai-governance-20o26',
-          className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0',
-        >,
+          className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0'>,
           GenAI Governance 20o26,
         </Link>,
-        <Link,
+        <Link
           href='/blog/ai-20o26-llm-evals-maturity-model',
-          className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50',
-        >,
+          className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
           LLM Evals Maturity Model,
         </Link>,
       </div>,
-    </main>,
-  ),
-,}
+    </main>),
+}
 ,

@@ -1,17 +1,13 @@
-import React from 'react',
-type TooltipProps = {,
+import React from 'react';
+type TooltipProps = {
   children: React.ReactNode,
   content: React.ReactNode,
   className?: string,
-,};
-,
-export function Tooltip({ children, content }: TooltipProps) {,
-  return (,
+};
+export function Tooltip({ children, content }: TooltipProps) {
+  return (
     <span title={typeof content === 'string' ? content : undefined}>,
       {children}
-    </span>,
-  ),
-}
+    </span>)}
 ,
-export default Tooltip,
-,
+export default Tooltip;

@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function AiPredictiveMaintenance20o41Page() {,
-  return (,
+export default function AiPredictiveMaintenance20o41Page() {
+  return (
     <>,
       <Head>,
         <title>Ai Predictive Maintenance 20o41 - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='ai predictive maintenance 20o41 page',
         />,
@@ -21,7 +20,6 @@ export default function AiPredictiveMaintenance20o41Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

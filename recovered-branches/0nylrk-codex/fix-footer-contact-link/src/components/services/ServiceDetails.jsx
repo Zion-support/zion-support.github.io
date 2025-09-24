@@ -1,77 +1,73 @@
-import {,
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
+import {
+  Card;
+  CardContent;
+  CardDescription;
+  CardFooter;
+  CardHeader;
+  CardTitle;
 } from '@/components/ui/card',
 import { Server, Clock, MapPin } from 'lucide-react',
 // Component to show service details for the selected country,
-export function ServiceDetails({ country }) {,
+export function ServiceDetails({ country }) {
   // Get datacenters for regions (simplified - in production this would come from a real database),
-  const getDatacenters = country => {,
-    const dataCenters = {,
-      'United States': [,
-        'New York',;
-        'Los Angeles',;
-        'Chicago',;
-        'Dallas',;
-        'Seattle',;
-      ],;
-      'United Kingdom': ['London', 'Manchester', 'Birmingham'],;
-      Germany: ['Frankfurt', 'Berlin', 'Munich'],;
-      Japan: ['Tokyo', 'Osaka'],;
-      Australia: ['Sydney', 'Melbourne', 'Perth'],;
-      Singapore: ['Singapore Central'],;
-      Canada: ['Toronto', 'Montreal', 'Vancouver'],;
+  const getDatacenters = country => {
+    const dataCenters = {
+      'United States': [
+        'New York';
+        'Los Angeles';
+        'Chicago';
+        'Dallas';
+        'Seattle';
+      ];
+      'United Kingdom': ['London', 'Manchester', 'Birmingham'];
+      Germany: ['Frankfurt', 'Berlin', 'Munich'];
+      Japan: ['Tokyo', 'Osaka'];
+      Australia: ['Sydney', 'Melbourne', 'Perth'];
+      Singapore: ['Singapore Central'];
+      Canada: ['Toronto', 'Montreal', 'Vancouver'];
       // Default for other countries,
-      default: ['Major metropolitan areas'],;
+      default: ['Major metropolitan areas'];
     };
-    return dataCenters[country] || dataCenters['default'],
-  };
+    return dataCenters[country] || dataCenters['default']};
   // Get region-specific image,
-  const getRegionalImage = country => {,
+  const getRegionalImage = country => {
     // In a real app, you'd have specific images for each region,
-    const regions = {,
+    const regions = {
       'United States':,
-        'https://source.unsplash.com/featured/90o0x70o0/?datacenter,usa',;
+        'https://source.unsplash.com/featured/90o0x70o0/?datacenter,usa';
       'United Kingdom':,
-        'https://source.unsplash.com/featured/90o0x70o0/?datacenter,uk',;
+        'https://source.unsplash.com/featured/90o0x70o0/?datacenter,uk';
       Germany:,
-        'https://source.unsplash.com/featured/90o0x70o0/?datacenter,germany',;
-      Japan: 'https://source.unsplash.com/featured/90o0x70o0/?datacenter,japan',;
+        'https://source.unsplash.com/featured/90o0x70o0/?datacenter,germany';
+      Japan: 'https://source.unsplash.com/featured/90o0x70o0/?datacenter,japan';
       Australia:,
-        'https://source.unsplash.com/featured/90o0x70o0/?datacenter,australia',;
+        'https://source.unsplash.com/featured/90o0x70o0/?datacenter,australia';
       Singapore:,
-        'https://source.unsplash.com/featured/90o0x70o0/?datacenter,singapore',;
+        'https://source.unsplash.com/featured/90o0x70o0/?datacenter,singapore';
       // Default placeholder,
-      default: 'https://source.unsplash.com/featured/90o0x70o0/?datacenter',;
+      default: 'https://source.unsplash.com/featured/90o0x70o0/?datacenter';
     };
-    return regions[country] || regions['default'],
-  };
+    return regions[country] || regions['default']};
   // Get region-specific instructions,
-  const getRegionalInstructions = country => {,
+  const getRegionalInstructions = country => {
     // In a real implementation, this would be much more detailed and specific,
-    const timeZones = {,
-      'United States': 'EST/CST/PST depending on location',;
-      'United Kingdom': 'GMT/BST',;
-      Germany: 'CET/CEST',;
-      Japan: 'JST',;
-      Australia: 'AEST/ACDT/AWST depending on location',;
-      Singapore: 'SGT',;
-      default: 'Local timezone',;
+    const timeZones = {
+      'United States': 'EST/CST/PST depending on location';
+      'United Kingdom': 'GMT/BST';
+      Germany: 'CET/CEST';
+      Japan: 'JST';
+      Australia: 'AEST/ACDT/AWST depending on location';
+      Singapore: 'SGT';
+      default: 'Local timezone';
     };
     const timezone = timeZones[country] || timeZones['default'],
-    return (,
+    return (
       `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +,
       `Response times are typically within 4 hours for metropolitan areas. ` +,
       `Please have site access permissions and contact details ready for our technicians. ` +,
-      `For remote locations, additional travel fees may apply.`,
-    ),
-  };
+      `For remote locations, additional travel fees may apply.`)};
   const datacenters = getDatacenters(country),
-  return (,
+  return (
     <Card className='bg-zion-blue-dark border-zion-blue-light'>,
       <CardHeader>,
         <CardTitle className='text-white flex items-center'>,
@@ -84,7 +80,7 @@ export function ServiceDetails({ country }) {,
       </CardHeader>,
       <CardContent className='space-y-4'>,
         <div className='overflow-hidden rounded-lg mb-4'>,
-          <img,
+          <img
             loading='lazy',
             src={getRegionalImage(country)}
             alt={`Datacenter in ${country}`}
@@ -98,14 +94,12 @@ export function ServiceDetails({ country }) {,
               Service Locations,
             </h4>,
             <div className='grid grid-cols-2 md:grid-cols-3 gap-2'>,
-              {datacenters.map((dc, idx) => (,
-                <div,
+              {datacenters.map((dc, idx) => (
+                <div
                   key={idx}
-                  className='bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light',
-                >,
+                  className='bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light'>,
                   {dc}
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
           <div>,
@@ -133,11 +127,9 @@ export function ServiceDetails({ country }) {,
       </CardContent>,
       <CardFooter className='border-t border-zion-blue-light pt-4'>,
         <p className='text-sm text-zion-slate-light'>,
-          For custom enterprise needs or multi-site services in {country},;
+          For custom enterprise needs or multi-site services in {country};
           please contact our enterprise team for tailored pricing.,
         </p>,
       </CardFooter>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

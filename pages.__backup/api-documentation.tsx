@@ -1,20 +1,19 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function ApiDocumentationPage() {,
-  return (,
+export default function ApiDocumentationPage() {
+  return (
     <>,
       <Head>,
         <title>API Documentation — Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Comprehensive API documentation for Zion Tech Group services and integrations.',
         />,
-        <meta,
+        <meta
           property='og: title',
           content='API Documentation — Zion Tech Group',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Comprehensive API documentation for Zion Tech Group services and integrations.',
         />,
@@ -22,16 +21,15 @@ export default function ApiDocumentationPage() {,
       </Head>,
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>,
         <main className='container mx-auto px-6 py-12'>,
-          {/* Navigation */,}
+          {/* Navigation */}
           <nav className='mb-8'>,
-            <Link,
+            <Link
               href='/',
-              className='text-cyan-40o0 hover: text-cyan-30o0 transition-colors',
-            >,
+              className='text-cyan-40o0 hover: text-cyan-30o0 transition-colors'>,
               ← Back to Home,
             </Link>,
           </nav>,
-          {/* Header */,}
+          {/* Header */}
           <header className='text-center mb-16'>,
             <h1 className='text-4xl font-extrabold mb-6 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 bg-clip-text text-transparent'>,
               API Documentation,
@@ -69,7 +67,7 @@ export default function ApiDocumentationPage() {,
                 </div>,
               </div>,
             </section>,
-            {/* Authentication */,}
+            {/* Authentication */}
             <section className='bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10'>,
               <h2 className='text-2xl font-bold mb-4 text-fuchsia-30o0'>,
                 Authentication,
@@ -105,7 +103,7 @@ export default function ApiDocumentationPage() {,
                 </div>,
               </div>,
             </section>,
-            {/* Core APIs */,}
+            {/* Core APIs */}
             <section className='bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10'>,
               <h2 className='text-2xl font-bold mb-4 text-green-30o0'>,
                 Core APIs,
@@ -224,33 +222,27 @@ export default function ApiDocumentationPage() {,
                   </h3>,
                   <div className='bg-slate-90o0 rounded-lg p-4'>,
                     <pre className='text-white text-sm overflow-x-auto'>{`const axios = require('axios'),
-,
-const apiClient = axios.create({,
-  baseURL: 'https://api.zion.tech/v1',;
-  headers: {,
-    'Authorization': 'Bearer YOUR_API_KEY',;
-    'Content-Type': 'application/json',
-  }
+const apiClient = axios.create({
+  baseURL: 'https://api.zion.tech/v1';
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY';
+    'Content-Type': 'application/json'}
 }),
-,
 // List automations,
-const getAutomations = async () => {,
-  try {,
+const getAutomations = async () => {
+  try {
     const response = await apiClient.get('/automations'),
-    return response.data,
-  } catch (error) {,
+    return response.data} catch (error) {
     console.error('Error fetching automations: 'error),
-  ,}
+  }
 };
-,
 // Create automation,
-const createAutomation = async (automationData) => {,
-  try {,
+const createAutomation = async (automationData) => {
+  try {
     const response = await apiClient.post('/automations'automationData),
-    return response.data,
-  } catch (error) {,
+    return response.data} catch (error) {
     console.error('Error creating automation: 'error),
-  ,}
+  }
 };`}</pre>,
                   </div>,
                 </div>,
@@ -264,20 +256,18 @@ const createAutomation = async (automationData) => {,
 class ZionAPI: ,
     def __init__(selfapi_key):,
         self.base_url = 'https://api.zion.tech/v1',
-        self.headers ={,
-            'Authorization': f'Bearer {api_key,}',;
-            'Content-Type': 'application/json',
-        }
+        self.headers ={
+            'Authorization': f'Bearer {api_key}';
+            'Content-Type': 'application/json'}
 ,
     def get_automations(self):,
         response = requests.get(f'{self.base_url}/automations'headers=self.headers),
         return response.json(),
     def create_automation(selfautomation_data):,
-        response = requests.post(,
+        response = requests.post(
             f'{self.base_url}/automations',
             json=automation_data,
-            headers=self.headers,
-        ),
+            headers=self.headers),
         return response.json(),
 # Usage,
 api = ZionAPI('YOUR_API_KEY'),
@@ -297,11 +287,11 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \,
 curl -X POST \,
      -H "Authorization: Bearer YOUR_API_KEY" \,
      -H "Content-Type: application/json" \,
-     -d '{"name": "My Automation"type": "scheduled",}' \,
+     -d '{"name": "My Automation"type": "scheduled"}' \,
      https: //api.zion.tech/v1/automations,
 # Get automation by ID,
 curl -H "Authorization: Bearer YOUR_API_KEY" \,
-     https://api.zion.tech/v1/automations/123`,}</pre>,
+     https://api.zion.tech/v1/automations/123`}</pre>,
                   </div>,
                 </div>,
               </div>,
@@ -337,12 +327,11 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \,
                       Error Response Format,
                     </h3>,
                     <div className='bg-slate-90o0 rounded-lg p-4'>,
-                      <pre className='text-white text-sm'>{`{,
-  "error": {,
-    "code": "VALIDATION_ERROR",;
-    "message": "Invalid input data",;
-    "details": ["name is required"],
-  }
+                      <pre className='text-white text-sm'>{`{
+  "error": {
+    "code": "VALIDATION_ERROR";
+    "message": "Invalid input data";
+    "details": ["name is required"]}
 }`}</pre>,
                     </div>,
                   </div>,
@@ -396,7 +385,7 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \,
                 </div>,
               </div>,
             </section>,
-            {/* Support & Resources */,}
+            {/* Support & Resources */}
             <section className='bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10'>,
               <h2 className='text-2xl font-bold mb-4 text-indigo-30o0'>,
                 Support & Resources,
@@ -407,24 +396,21 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \,
                   support and resources.,
                 </p>,
                 <div className='flex flex-wrap gap-4'>,
-                  <Link,
+                  <Link
                     href='/contact',
-                    className='px-6 py-3 bg-cyan-50o0 hover: bg-cyan-60o0 rounded-lg text-white transition-colors',
-                  >,
+                    className='px-6 py-3 bg-cyan-50o0 hover: bg-cyan-60o0 rounded-lg text-white transition-colors'>,
                     Get Support,
                   </Link>,
-                  <Link,
+                  <Link
                     href='/automation',
-                    className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors',
-                  >,
+                    className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors'>,
                     View Automation Systems,
                   </Link>,
-                  <a,
+                  <a
                     href='https://github.com/zion-tech/api-examples',
                     target='_blank',
                     rel='noopener noreferrer',
-                    className='px-6 py-3 bg-white/10 hover:bg_white/20 border border-white/20 rounded-lg text_white transition-colors',
-                  >,
+                    className='px-6 py-3 bg-white/10 hover:bg_white/20 border border-white/20 rounded-lg text_white transition-colors'>,
                     GitHub Examples,
                   </a>,
                 </div>,
@@ -433,7 +419,6 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

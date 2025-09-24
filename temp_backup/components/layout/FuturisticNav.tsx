@@ -2,73 +2,66 @@ import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import { Menu, X, ChevronDown, Globe, Phone, Mail } from 'lucide-react',
-,
-export default function FuturisticNav() {,
+export default function FuturisticNav() {
   const [isOpen, setIsOpen] = useState(false),
   const [isScrolled, setIsScrolled] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
-,
-  useEffect(() => {,
-    const handleScroll = () => {,
-      setIsScrolled(window.scrollY > 20),
-    };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)};
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
-  }, []),
-,
-  const navItems = [,
-    { name: 'Home', href: '/' ,},;
-    {,
-      name: 'Services',;
-      href: '/services',;
-      dropdown: [,
-        { name: 'AI & Automation', href: '/services#ai' ,},;
-        { name: 'Cloud Infrastructure', href: '/services#cloud' ,},;
-        { name: 'Security & Compliance', href: '/services#security' ,},;
-        { name: 'Data Analytics', href: '/services#analytics' ,},;
-        { name: 'DevOps & CI/CD', href: '/services#devops' ,},;
-        { name: 'Digital Transformation', href: '/services#digital' ,},;
-      ],;
-    },;
-    {,
-      name: 'Micro SaaS',;
-      href: '/micro-saas',;
-      dropdown: [,
-        {,
-          name: 'Content & Marketing',;
-          href: '/micro-saas?category=Content+%26+Marketing',;
-        },;
-        {,
-          name: 'Development & DevOps',;
-          href: '/micro-saas?category=Development+%26+DevOps',;
-        },;
-        { name: 'Sales & CRM', href: '/micro-saas?category=Sales+%26+CRM' ,},;
-        {,
-          name: 'Analytics & Data',;
-          href: '/micro-saas?category=Analytics+%26+Data',;
-        },;
-        {,
-          name: 'AI & Machine Learning',;
-          href: '/micro-saas?category=AI+%26+Machine+Learning',;
-        },;
-        {,
-          name: 'Emerging Technologies',;
-          href: '/micro-saas?category=Emerging+Technologies',;
-        },;
-      ],;
-    },;
-    { name: 'Pricing', href: '/pricing' ,},;
-    { name: 'About', href: '/about' ,},;
-    { name: 'Contact', href: '/contact' ,},;
+    return () => window.removeEventListener('scroll', handleScroll)}, []),
+  const navItems = [
+    { name: 'Home', href: '/' };
+    {
+      name: 'Services';
+      href: '/services';
+      dropdown: [
+        { name: 'AI & Automation', href: '/services#ai' };
+        { name: 'Cloud Infrastructure', href: '/services#cloud' };
+        { name: 'Security & Compliance', href: '/services#security' };
+        { name: 'Data Analytics', href: '/services#analytics' };
+        { name: 'DevOps & CI/CD', href: '/services#devops' };
+        { name: 'Digital Transformation', href: '/services#digital' };
+      ];
+    };
+    {
+      name: 'Micro SaaS';
+      href: '/micro-saas';
+      dropdown: [
+        {
+          name: 'Content & Marketing';
+          href: '/micro-saas?category=Content+%26+Marketing';
+        };
+        {
+          name: 'Development & DevOps';
+          href: '/micro-saas?category=Development+%26+DevOps';
+        };
+        { name: 'Sales & CRM', href: '/micro-saas?category=Sales+%26+CRM' };
+        {
+          name: 'Analytics & Data';
+          href: '/micro-saas?category=Analytics+%26+Data';
+        };
+        {
+          name: 'AI & Machine Learning';
+          href: '/micro-saas?category=AI+%26+Machine+Learning';
+        };
+        {
+          name: 'Emerging Technologies';
+          href: '/micro-saas?category=Emerging+Technologies';
+        };
+      ];
+    };
+    { name: 'Pricing', href: '/pricing' };
+    { name: 'About', href: '/about' };
+    { name: 'Contact', href: '/contact' };
   ],
-,
-  const contactInfo = {,
-    phone: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08, Middletown, DE 19709',;
+  const contactInfo = {
+    phone: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08, Middletown, DE 19709';
   };
-,
-  return (,
+  return (
     <>,
       {/* Top contact bar */}
       <div className='bg-gradient-to-r from-gray-90o0 to-gray-80o0 text-white text-sm py-2'>,
@@ -77,7 +70,7 @@ export default function FuturisticNav() {,
             <div className='flex items-center space-x-6'>,
               <div className='flex items-center space-x-2'>,
                 <Phone className='w-4 h-4 text-cyan-40o0' />,
-                <span>{contactInfo.phone,}</span>,
+                <span>{contactInfo.phone}</span>,
               </div>,
               <div className='flex items-center space-x-2'>,
                 <Mail className='w-4 h-4 text-cyan-40o0' />,
@@ -92,16 +85,15 @@ export default function FuturisticNav() {,
         </div>,
       </div>,
       {/* Main navigation */}
-      <nav,
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${,
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
           isScrolled,
             ? 'bg-gray-90o0/95 backdrop-blur-xl border-b border-gray-70o0/50 shadow-2xl',
-            : 'bg-transparent',
-        }`}
+            : 'bg-transparent'}`}
       >,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='flex justify-between items-center h-20'>,
-            {/* Logo */,}
+            {/* Logo */}
             <Link href='/' className='flex items-center space-x-3 group'>,
               <div className='w-10 h-10 bg-gradient-to-br from-cyan-40o0 to-blue-50o0 rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover: scale-110 transition-transform duration-30o0'>,
                 Z,
@@ -113,146 +105,124 @@ export default function FuturisticNav() {,
                 <div className='text-xs text-cyan-40o0'>Innovation Hub</div>,
               </div>,
             </Link>,
-            {/* Desktop Navigation */,}
+            {/* Desktop Navigation */}
             <div className='hidden lg: flex items-center space-x-8'>,
-              {navItems.map(item => (,
-                <div key={item.name,} className='relative group'>,
-                  {item.dropdown ? (,
-                    <button,
+              {navItems.map(item => (
+                <div key={item.name} className='relative group'>,
+                  {item.dropdown ? (
+                    <button
                       className='flex items-center space-x-1 text-gray-30o0 hover: text-white transition-colors duration-20o0 py-2',
-                      onMouseEnter={() => setActiveDropdown(item.name),}
+                      onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >,
                       <span>{item.name}</span>,
                       <ChevronDown className='w-4 h-4 transition-transform duration-20o0 group-hover: rotate-180' />,
-                    </button>,
-                  ) : (,
-                    <Link,
-                      href={item.href,}
-                      className='text-gray-30o0 hover: text-white transition-colors duration-20o0 py-2',
-                    >,
-                      {item.name,}
-                    </Link>,
-                  )}
+                    </button>) : (
+                    <Link
+                      href={item.href}
+                      className='text-gray-30o0 hover: text-white transition-colors duration-20o0 py-2'>,
+                      {item.name}
+                    </Link>)}
 ,
                   {/* Dropdown */}
-                  {item.dropdown && activeDropdown === item.name && (,
+                  {item.dropdown && activeDropdown === item.name && (
                     <motion.div,
-                      initial={{ opacity: 0, y: 10 ,}}
-                      animate={{ opacity: 1, y: 0 ,}}
-                      exit={{ opacity: 0, y: 10 ,}}
-                      className='absolute top-full left-0 mt-2 w-64 bg-gray-90o0/95 backdrop-blur-xl border border-gray-70o0/50 rounded-xl shadow-2xl overflow-hidden',
-                    >,
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      className='absolute top-full left-0 mt-2 w-64 bg-gray-90o0/95 backdrop-blur-xl border border-gray-70o0/50 rounded-xl shadow-2xl overflow-hidden'>,
                       <div className='py-2'>,
-                        {item.dropdown.map(dropdownItem => (,
-                          <Link,
+                        {item.dropdown.map(dropdownItem => (
+                          <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className='block px-4 py-3 text-gray-30o0 hover: text-white hover:bg-gray-80o0/50 transition-all duration-20o0',
-                          >,
-                            {dropdownItem.name,}
-                          </Link>,
-                        ))}
+                            className='block px-4 py-3 text-gray-30o0 hover: text-white hover:bg-gray-80o0/50 transition-all duration-20o0'>,
+                            {dropdownItem.name}
+                          </Link>))}
                       </div>,
-                    </motion.div>,
-                  )}
-                </div>,
-              ))}
+                    </motion.div>)}
+                </div>))}
             </div>,
             {/* CTA Button */}
             <div className='hidden lg: flex items-center space-x-4'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg',
-              >,
+                className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg'>,
                 Get Started,
               </Link>,
             </div>,
-            {/* Mobile menu button */,}
-            <button,
+            {/* Mobile menu button */}
+            <button
               className='lg: hidden text-gray-30o0 hover:text-white transition-colors duration-20o0',
-              onClick={() => setIsOpen(!isOpen),}
+              onClick={() => setIsOpen(!isOpen)}
             >,
-              {isOpen ? (,
-                <X className='w-6 h-6' />,
-              ) : (,
-                <Menu className='w-6 h-6' />,
-              )}
+              {isOpen ? (
+                <X className='w-6 h-6' />) : (
+                <Menu className='w-6 h-6' />)}
             </button>,
           </div>,
         </div>,
         {/* Mobile Navigation */}
         <AnimatePresence>,
-          {isOpen && (,
+          {isOpen && (
             <motion.div,
-              initial={{ opacity: 0, height: 0 ,}}
-              animate={{ opacity: 1, height: 'auto' ,}}
-              exit={{ opacity: 0, height: 0 ,}}
-              className='lg: hidden bg-gray-90o0/95 backdrop-blur-xl border-t border-gray-70o0/50',
-            >,
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className='lg: hidden bg-gray-90o0/95 backdrop-blur-xl border-t border-gray-70o0/50'>,
               <div className='px-4 py-6 space-y-4'>,
-                {navItems.map(item => (,
-                  <div key={item.name,}>,
-                    {item.dropdown ? (,
+                {navItems.map(item => (
+                  <div key={item.name}>,
+                    {item.dropdown ? (
                       <div>,
-                        <button,
+                        <button
                           className='flex items-center justify-between w-full text-left text-gray-30o0 hover: text-white transition-colors duration-20o0 py-2',
                           onClick={() =>,
-                            setActiveDropdown(,
-                              activeDropdown === item.name ? null : item.name,
-                            ),
-                          ,}
+                            setActiveDropdown(
+                              activeDropdown === item.name ? null : item.name),
+                          }
                         >,
                           <span>{item.name}</span>,
-                          <ChevronDown,
-                            className={`w-4 h-4 transition-transform duration-20o0 ${,
-                              activeDropdown === item.name ? 'rotate-180' : '',
-                            }`}
+                          <ChevronDown
+                            className={`w-4 h-4 transition-transform duration-20o0 ${
+                              activeDropdown === item.name ? 'rotate-180' : ''}`}
                           />,
                         </button>,
-                        {activeDropdown === item.name && (,
+                        {activeDropdown === item.name && (
                           <div className='ml-4 mt-2 space-y-2'>,
-                            {item.dropdown.map(dropdownItem => (,
-                              <Link,
+                            {item.dropdown.map(dropdownItem => (
+                              <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
                                 className='block text-gray-40o0 hover: text-white transition-colors duration-20o0 py-1',
-                                onClick={() => setIsOpen(false),}
+                                onClick={() => setIsOpen(false)}
                               >,
                                 {dropdownItem.name}
-                              </Link>,
-                            ))}
-                          </div>,
-                        )}
-                      </div>,
-                    ) : (,
-                      <Link,
+                              </Link>))}
+                          </div>)}
+                      </div>) : (
+                      <Link
                         href={item.href}
                         className='block text-gray-30o0 hover: text-white transition-colors duration-20o0 py-2',
-                        onClick={() => setIsOpen(false),}
+                        onClick={() => setIsOpen(false)}
                       >,
                         {item.name}
-                      </Link>,
-                    )}
-                  </div>,
-                ))}
+                      </Link>)}
+                  </div>))}
                 <div className='pt-4 border-t border-gray-70o0/50'>,
-                  <Link,
+                  <Link
                     href='/contact',
                     className='block w-full text-center bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover: from-cyan-60o0 hover:to-blue-70o0 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-30o0',
-                    onClick={() => setIsOpen(false),}
+                    onClick={() => setIsOpen(false)}
                   >,
                     Get Started,
                   </Link>,
                 </div>,
               </div>,
-            </motion.div>,
-          )}
+            </motion.div>)}
         </AnimatePresence>,
       </nav>,
       {/* Spacer for fixed nav */}
       <div className='h-20' />,
-    </>,
-  ),
-}
+    </>)}
 ,

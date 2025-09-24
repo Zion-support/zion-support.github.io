@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'website-analyzer - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'website-analyzer - Zion Tech Group';
   description:,
-    'Professional website-analyzer solutions for your business needs.',;
-  keywords: 'website-analyzer, services, business, technology',;
+    'Professional website-analyzer solutions for your business needs.';
+  keywords: 'website-analyzer, services, business, technology';
 };
-export default function WebsiteAnalyzerPage() {,
-  return (,
+export default function WebsiteAnalyzerPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -32,7 +32,5 @@ export default function WebsiteAnalyzerPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,8 +1,7 @@
 import Head from 'next/head',
 import ResumeWizard from '../../components/talent/ResumeWizard',
-,
-export default function ResumeBuilderPage() {,
-  return (,
+export default function ResumeBuilderPage() {
+  return (
     <>,
       <Head>,
         <title>Zion Talent — Resume & Portfolio Builder</title>,
@@ -15,7 +14,5 @@ export default function ResumeBuilderPage() {,
         </p>,
         <ResumeWizard />,
       </div>,
-    </>,
-  ),
-}
+    </>)}
 ,

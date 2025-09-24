@@ -18,9 +18,8 @@ import ITOnsiteServicesPage from '@/pages/ITOnsiteServicesPage',
 import SearchPage from '@/pages/SearchPage',
 import ProjectRoom from '@/pages/ProjectRoom',
 import VideoCall from '@/pages/VideoCall',
-,
-const MarketplaceRoutes = () => {,
-  return (,
+const MarketplaceRoutes = () => {
+  return (
     <Routes>,
       {/* Marketplace Routes */}
       <Route path='/marketplace' element={<Marketplace />} />,
@@ -33,58 +32,50 @@ const MarketplaceRoutes = () => {,
       <Route path='/equipment' element={<EquipmentPage />} />,
       <Route path='/equipment/:id' element={<EquipmentDetail />} />,
       {/* Job Routes */}
-      <Route,
+      <Route
         path='/post-job',
-        element={,
+        element={
           <ProtectedRoute>,
             <PostJob />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
       <Route path='/jobs/:id' element={<JobDetails />} />,
       {/* AI Matcher Routes */}
       <Route path='/ai-matcher' element={<AIMatcher />} />,
       <Route path='/match' element={<AIMatcher />} />,
       {/* Creator Routes */}
-      <Route,
+      <Route
         path='/publish',
-        element={,
+        element={
           <ProtectedRoute>,
             <PublishProduct />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
       {/* Service Routes */}
       <Route path='/services' element={<ServicesPage />} />,
       <Route path='/it-onsite-services' element={<ITOnsiteServicesPage />} />,
       <Route path='/request-quote' element={<RequestQuote />} />,
-      <Route,
+      <Route
         path='/service-description-generator',
         element={<ServiceDescriptionGenerator />}
       />,
       {/* Search Route */}
       <Route path='/search' element={<SearchPage />} />,
       {/* Project Room Routes */}
-      <Route,
+      <Route
         path='/project/:projectId',
-        element={,
+        element={
           <ProtectedRoute>,
             <ProjectRoom />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
       {/* Video Call Routes */}
-      <Route,
+      <Route
         path='/call/:roomId',
-        element={,
+        element={
           <ProtectedRoute>,
             <VideoCall />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-    </Routes>,
-  ),
-};
-,
-export default MarketplaceRoutes,
-,
+    </Routes>)};
+export default MarketplaceRoutes;

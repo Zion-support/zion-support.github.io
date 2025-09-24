@@ -2,80 +2,75 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  TrendingUp,;
-  Phone,;
-  Zap,;
-  DollarSign,;
-  Shield,;
-  Mail,;
-  MapPin,;
-  Rocket,;
-  Brain,;
-  Sparkles,;
-  Atom,;
-  Dna,;
-  Users,;
-  Globe,;
-  Cpu,;
-  Target,;
-  Microscope,;
-  Lock,;
-  Cloud,;
-  BarChart3,;
-  Settings,;
-  Eye,;
-  Award,;
-  Clock,;
-  Heart,;
-  Lightbulb,;
-  Search,;
-  Filter,;
-  Grid,;
-  List,;
-  ChevronDown,;
-  ChevronUp,;
+import {
+  CheckCircle;
+  ArrowRight;
+  Star;
+  TrendingUp;
+  Phone;
+  Zap;
+  DollarSign;
+  Shield;
+  Mail;
+  MapPin;
+  Rocket;
+  Brain;
+  Sparkles;
+  Atom;
+  Dna;
+  Users;
+  Globe;
+  Cpu;
+  Target;
+  Microscope;
+  Lock;
+  Cloud;
+  BarChart3;
+  Settings;
+  Eye;
+  Award;
+  Clock;
+  Heart;
+  Lightbulb;
+  Search;
+  Filter;
+  Grid;
+  List;
+  ChevronDown;
+  ChevronUp;
 } from 'lucide-react',
 import { Layout } from '../components/layout/Layout',
 import { ultimateRealMicroSaasServices20o25 } from '../data/20o25-ultimate-real-micro-saas-services',
-,
-const contactInfo = {,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',;
+const contactInfo = {
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
 };
-,
-const categories = [,
-  'All Services',;
-  'Customer Success & Retention',;
-  'Supply Chain & Logistics',;
-  'Financial Planning & Analysis',;
-  'Human Resources & Analytics',;
-  'Sales Intelligence & Automation',;
-  'Business Intelligence & Decision Support',;
-  'Content Marketing & Automation',;
-  'Customer Relationship Management',;
+const categories = [
+  'All Services';
+  'Customer Success & Retention';
+  'Supply Chain & Logistics';
+  'Financial Planning & Analysis';
+  'Human Resources & Analytics';
+  'Sales Intelligence & Automation';
+  'Business Intelligence & Decision Support';
+  'Content Marketing & Automation';
+  'Customer Relationship Management';
 ],
-,
-const pricingTiers = [,
-  { name: 'Starter', range: '$199 - $299' ,},;
-  { name: 'Professional', range: '$399 - $599' ,},;
-  { name: 'Enterprise', range: '$799 - $899' ,},;
+const pricingTiers = [
+  { name: 'Starter', range: '$199 - $299' };
+  { name: 'Professional', range: '$399 - $599' };
+  { name: 'Enterprise', range: '$799 - $899' };
 ],
-,
-export default function Ultimate20o25MicroSaasShowcase() {,
+export default function Ultimate20o25MicroSaasShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('All Services'),
   const [selectedPricing, setSelectedPricing] = useState('All Pricing'),
   const [searchTerm, setSearchTerm] = useState(''),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [sortBy, setSortBy] = useState('popularity'),
-,
-  const filteredServices = ultimateRealMicroSaasServices20o25.filter(,
-    service => {,
+  const filteredServices = ultimateRealMicroSaasServices20o25.filter(
+    service => {
       const matchesCategory =,
         selectedCategory === 'All Services' ||,
         service.category === selectedCategory,
@@ -92,98 +87,90 @@ export default function Ultimate20o25MicroSaasShowcase() {,
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-,
-      return matchesCategory && matchesPricing && matchesSearch,
-    }
+      return matchesCategory && matchesPricing && matchesSearch}
   ),
-,
-  const sortedServices = [...filteredServices].sort((a, b) => {,
-    switch (sortBy) {,
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
       case 'popularity':,
         return b.popular ? 1 : -1,
       case 'price-low':,
-        return (,
+        return (
           parseInt(a.price.replace('$', '')) -,
-          parseInt(b.price.replace('$', '')),
-        ),
+          parseInt(b.price.replace('$', ''))),
       case 'price-high':,
-        return (,
+        return (
           parseInt(b.price.replace('$', '')) -,
-          parseInt(a.price.replace('$', '')),
-        ),
+          parseInt(a.price.replace('$', ''))),
       case 'rating':,
         return b.rating - a.rating,
       case 'customers':,
         return b.customers - a.customers,
       default: ,
         return 0,
-    ,}
+    }
   }),
-,
-  const containerVariants = {,
-    hidden: { opacity: 0 ,},;
-    visible: {,
-      opacity: 1,;
-      transition: {,
-        staggerChildren: 0.1,;
-      },;
-    },;
+  const containerVariants = {
+    hidden: { opacity: 0 };
+    visible: {
+      opacity: 1;
+      transition: {
+        staggerChildren: 0.1;
+      };
+    };
   };
-,
-  const itemVariants = {,
-    hidden: { y: 20, opacity: 0 ,},;
-    visible: {,
-      y: 0,;
-      opacity: 1,;
-      transition: {,
-        duration: 0.5,;
-      },;
-    },;
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 };
+    visible: {
+      y: 0;
+      opacity: 1;
+      transition: {
+        duration: 0.5;
+      };
+    };
   };
-,
-  return (,
+  return (
     <Layout>,
       <Head>,
         <title>,
           Ultimate 20o25 Micro SAAS Services Showcase | Zion Tech Group,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='Discover our comprehensive collection of real, innovative micro SAAS services for 20o25. AI-powered solutions for modern businesses with proven ROI and market validation.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='micro SAAS, AI services, business automation, customer success, supply chain optimization, financial planning, HR analytics, sales intelligence',
         />,
-        <meta,
+        <meta
           property='og: title',
           content='Ultimate 20o25 Micro SAAS Services Showcase | Zion Tech Group',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Discover our comprehensive collection of real, innovative micro SAAS services for 20o25.',
         />,
-        <meta,
+        <meta
           property='og: url',
           content='https://ziontechgroup.com/ultimate-20o25-micro-saas-showcase',
         />,
         <meta property='og:type' content='website' />,
-        <link,
+        <link
           rel='canonical',
           href='https://ziontechgroup.com/ultimate-20o25-micro-saas-showcase',
         />,
       </Head>,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className='relative py-20 lg: py-32 overflow-hidden'>,
-        {/* Futuristic Background */,}
+        {/* Futuristic Background */}
         <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-90o0/20 to-blue-90o0/20'>,
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]' />,
         </div>,
         <div className='relative z-10 container mx-auto px-4 text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <h1 className='text-4xl lg: text-7xl font-bold bg-gradient-to-r from-cyan-40o0 via-blue-50o0 to-purple-60o0 bg-clip-text text-transparent mb-6'>,
               Ultimate 20o25,
@@ -199,7 +186,7 @@ export default function Ultimate20o25MicroSaasShowcase() {,
             <div className='grid grid-cols-2 lg: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'>,
               <div className='text-center'>,
                 <div className='text-3xl lg:text-4xl font-bold text-cyan-40o0 mb-2'>,
-                  {ultimateRealMicroSaasServices20o25.length,}+,
+                  {ultimateRealMicroSaasServices20o25.length}+,
                 </div>,
                 <div className='text-gray-40o0'>Services</div>,
               </div>,
@@ -214,10 +201,9 @@ export default function Ultimate20o25MicroSaasShowcase() {,
               </div>,
               <div className='text-center'>,
                 <div className='text-3xl lg: text-4xl font-bold text-purple-40o0 mb-2'>,
-                  {ultimateRealMicroSaasServices20o25.reduce(,
-                    (sum, service) => sum + service.rating,;
-                    0,
-                  ) / ultimateRealMicroSaasServices20o25.length}
+                  {ultimateRealMicroSaasServices20o25.reduce(
+                    (sum, service) => sum + service.rating;
+                    0) / ultimateRealMicroSaasServices20o25.length}
                   ⭐,
                 </div>,
                 <div className='text-gray-40o0'>Average Rating</div>,
@@ -229,19 +215,17 @@ export default function Ultimate20o25MicroSaasShowcase() {,
                 <div className='text-gray-40o0'>Average ROI</div>,
               </div>,
             </div>,
-            {/* CTA Buttons */,}
+            {/* CTA Buttons */}
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='#services',
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 <Rocket className='w-5 h-5 mr-2' />,
                 Explore Services,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-flex items-center px-8 py-4 border-2 border-cyan-50o0 text-cyan-40o0 font-semibold rounded-lg hover:bg-cyan-50o0 hover:text-white transition-all duration-30o0',
-              >,
+                className='inline-flex items-center px-8 py-4 border-2 border-cyan-50o0 text-cyan-40o0 font-semibold rounded-lg hover:bg-cyan-50o0 hover:text-white transition-all duration-30o0'>,
                 <Phone className='w-5 h-5 mr-2' />,
                 Get Started,
               </Link>,
@@ -249,14 +233,14 @@ export default function Ultimate20o25MicroSaasShowcase() {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Filters and Search Section */,}
+      {/* Filters and Search Section */}
       <section className='py-12 bg-gray-90o0/50 border-t border-gray-80o0'>,
         <div className='container mx-auto px-4'>,
           <div className='flex flex-col lg: flex-row gap-6 items-center justify-between'>,
-            {/* Search */,}
+            {/* Search */}
             <div className='relative flex-1 max-w-md'>,
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5' />,
-              <input,
+              <input
                 type='text',
                 placeholder='Search services...',
                 value={searchTerm}
@@ -264,44 +248,39 @@ export default function Ultimate20o25MicroSaasShowcase() {,
                 className='w-full pl-10 pr-4 py-3 bg-gray-80o0 border border-gray-70o0 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent',
               />,
             </div>,
-            {/* Category Filter */,}
+            {/* Category Filter */}
             <div className='relative'>,
-              <select,
+              <select
                 value={selectedCategory}
                 onChange={e => setSelectedCategory(e.target.value)}
-                className='appearance-none bg-gray-80o0 border border-gray-70o0 rounded-lg px-4 py-3 text-white pr-10 focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent',
-              >,
-                {categories.map(category => (,
-                  <option key={category,} value={category}>,
+                className='appearance-none bg-gray-80o0 border border-gray-70o0 rounded-lg px-4 py-3 text-white pr-10 focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent'>,
+                {categories.map(category => (
+                  <option key={category} value={category}>,
                     {category}
-                  </option>,
-                ))}
+                  </option>))}
               </select>,
               <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5 pointer-events-none' />,
             </div>,
             {/* Pricing Filter */}
             <div className='relative'>,
-              <select,
+              <select
                 value={selectedPricing}
                 onChange={e => setSelectedPricing(e.target.value)}
-                className='appearance-none bg-gray-80o0 border border-gray-70o0 rounded-lg px-4 py-3 text-white pr-10 focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent',
-              >,
+                className='appearance-none bg-gray-80o0 border border-gray-70o0 rounded-lg px-4 py-3 text-white pr-10 focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent'>,
                 <option value='All Pricing'>All Pricing</option>,
-                {pricingTiers.map(tier => (,
-                  <option key={tier.name,} value={tier.name}>,
+                {pricingTiers.map(tier => (
+                  <option key={tier.name} value={tier.name}>,
                     {tier.name} ({tier.range}),
-                  </option>,
-                ))}
+                  </option>))}
               </select>,
               <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5 pointer-events-none' />,
             </div>,
             {/* Sort */}
             <div className='relative'>,
-              <select,
+              <select
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value)}
-                className='appearance-none bg-gray-80o0 border border-gray-70o0 rounded-lg px-4 py-3 text-white pr-10 focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent',
-              >,
+                className='appearance-none bg-gray-80o0 border border-gray-70o0 rounded-lg px-4 py-3 text-white pr-10 focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent'>,
                 <option value='popularity'>Most Popular</option>,
                 <option value='rating'>Highest Rated</option>,
                 <option value='customers'>Most Customers</option>,
@@ -310,17 +289,17 @@ export default function Ultimate20o25MicroSaasShowcase() {,
               </select>,
               <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5 pointer-events-none' />,
             </div>,
-            {/* View Mode Toggle */,}
+            {/* View Mode Toggle */}
             <div className='flex bg-gray-80o0 rounded-lg p-1'>,
-              <button,
+              <button
                 onClick={() => setViewMode('grid')}
-                className={`p-2 rounded ${viewMode === 'grid' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white',}`}
+                className={`p-2 rounded ${viewMode === 'grid' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
               >,
                 <Grid className='w-5 h-5' />,
               </button>,
-              <button,
+              <button
                 onClick={() => setViewMode('list')}
-                className={`p-2 rounded ${viewMode === 'list' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white',}`}
+                className={`p-2 rounded ${viewMode === 'list' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
               >,
                 <List className='w-5 h-5' />,
               </button>,
@@ -335,31 +314,30 @@ export default function Ultimate20o25MicroSaasShowcase() {,
             variants={containerVariants}
             initial='hidden',
             animate='visible',
-            className={,
+            className={
               viewMode === 'grid',
                 ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8',
                 : 'space-y-6',
-            ,}
+            }
           >,
-            {sortedServices.map((service, index) => (,
+            {sortedServices.map((service, index) => (
               <motion.div,
                 key={service.id}
                 variants={itemVariants}
-                className={`bg-gray-90o0/50 border border-gray-80o0 rounded-2xl overflow-hidden hover: border-cyan-50o0/50 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl hover:shadow-cyan-50o0/20 ${,
+                className={`bg-gray-90o0/50 border border-gray-80o0 rounded-2xl overflow-hidden hover: border-cyan-50o0/50 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl hover:shadow-cyan-50o0/20 ${
                   viewMode === 'list' ? 'flex' : '',
-                ,}`}
+                }`}
               >,
-                {viewMode === 'grid' ? (,
+                {viewMode === 'grid' ? (
                   // Grid View,
                   <div className='p-6'>,
                     {/* Header */}
                     <div className='flex items-start justify-between mb-4'>,
                       <div className='text-4xl'>{service.icon}</div>,
-                      {service.popular && (,
+                      {service.popular && (
                         <span className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white text-xs font-semibold px-3 py-1 rounded-full'>,
                           Popular,
-                        </span>,
-                      )}
+                        </span>)}
                     </div>,
                     {/* Title and Tagline */}
                     <h3 className='text-xl font-bold text-white mb-2'>,
@@ -379,15 +357,13 @@ export default function Ultimate20o25MicroSaasShowcase() {,
                     </div>,
                     {/* Features */}
                     <div className='space-y-2 mb-6'>,
-                      {service.features.slice(0, 3).map((feature, idx) => (,
-                        <div,
+                      {service.features.slice(0, 3).map((feature, idx) => (
+                        <div
                           key={idx}
-                          className='flex items-center text-sm text-gray-30o0',
-                        >,
+                          className='flex items-center text-sm text-gray-30o0'>,
                           <CheckCircle className='w-4 h-4 text-green-40o0 mr-2 flex-shrink-0' />,
                           {feature}
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>,
@@ -411,20 +387,18 @@ export default function Ultimate20o25MicroSaasShowcase() {,
                       </div>,
                     </div>,
                     {/* CTA */}
-                    <Link,
+                    <Link
                       href={service.link}
-                      className='w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0',
-                    >,
+                      className='w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0'>,
                       Learn More,
                       <ArrowRight className='w-4 h-4 ml-2' />,
                     </Link>,
-                  </div>,
-                ) : (,
+                  </div>) : (
                   // List View,
                   <div className='flex-1 p-6'>,
                     <div className='flex items-start space-x-4'>,
                       <div className='text-4xl flex-shrink-0'>,
-                        {service.icon,}
+                        {service.icon}
                       </div>,
                       <div className='flex-1'>,
                         <div className='flex items-start justify-between mb-2'>,
@@ -452,27 +426,23 @@ export default function Ultimate20o25MicroSaasShowcase() {,
                           <span>⭐ {service.rating} Rating</span>,
                           <span>👥 {service.customers} Customers</span>,
                           <span>🆓 {service.trialDays} Day Trial</span>,
-                          {service.popular && (,
+                          {service.popular && (
                             <span className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-2 py-1 rounded text-xs'>,
                               Popular,
-                            </span>,
-                          )}
+                            </span>)}
                         </div>,
-                        <Link,
+                        <Link
                           href={service.link}
-                          className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0',
-                        >,
+                          className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0'>,
                           Learn More,
                           <ArrowRight className='w-4 h-4 ml-2' />,
                         </Link>,
                       </div>,
                     </div>,
-                  </div>,
-                ),}
-              </motion.div>,
-            ))}
+                  </div>)}
+              </motion.div>))}
           </motion.div>,
-          {sortedServices.length === 0 && (,
+          {sortedServices.length === 0 && (
             <div className='text-center py-20'>,
               <div className='text-6xl mb-4'>🔍</div>,
               <h3 className='text-2xl font-bold text-white mb-2'>,
@@ -481,28 +451,25 @@ export default function Ultimate20o25MicroSaasShowcase() {,
               <p className='text-gray-40o0 mb-6'>,
                 Try adjusting your filters or search terms,
               </p>,
-              <button,
-                onClick={() => {,
+              <button
+                onClick={() => {
                   setSelectedCategory('All Services'),
                   setSelectedPricing('All Pricing'),
-                  setSearchTerm(''),
-                }}
-                className='px-6 py-3 bg-cyan-50o0 text-white rounded-lg hover: bg-cyan-60o0 transition-colors',
-              >,
+                  setSearchTerm('')}}
+                className='px-6 py-3 bg-cyan-50o0 text-white rounded-lg hover: bg-cyan-60o0 transition-colors'>,
                 Clear Filters,
               </button>,
-            </div>,
-          ),}
+            </div>)}
         </div>,
       </section>,
       {/* Contact Section */}
       <section className='py-20 bg-gradient-to-r from-gray-90o0 to-gray-80o0'>,
         <div className='container mx-auto px-4 text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >,
             <h2 className='text-3xl lg: text-5xl font-bold text-white mb-6'>,
               Ready to Transform Your Business?,
@@ -513,41 +480,37 @@ export default function Ultimate20o25MicroSaasShowcase() {,
               discover how we can help you achieve your goals.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 <Phone className='w-5 h-5 mr-2' />,
                 Schedule Consultation,
               </Link>,
-              <a,
-                href={`tel:${contactInfo.mobile,}`}
-                className='inline-flex items-center px-8 py-4 border-2 border-cyan-50o0 text-cyan-40o0 font-semibold rounded-lg hover: bg-cyan-50o0 hover:text-white transition-all duration-30o0',
-              >,
+              <a
+                href={`tel:${contactInfo.mobile}`}
+                className='inline-flex items-center px-8 py-4 border-2 border-cyan-50o0 text-cyan-40o0 font-semibold rounded-lg hover: bg-cyan-50o0 hover:text-white transition-all duration-30o0'>,
                 <Phone className='w-5 h-5 mr-2' />,
                 Call Now,
               </a>,
             </div>,
-            {/* Contact Info */,}
+            {/* Contact Info */}
             <div className='grid grid-cols-1 md: grid-cols-3 gap-6 max-w-2xl mx-auto'>,
               <div className='text-center'>,
                 <Phone className='w-6 h-6 text-cyan-40o0 mx-auto mb-2' />,
                 <div className='text-white font-semibold'>Phone</div>,
-                <a,
-                  href={`tel:${contactInfo.mobile,}`}
-                  className='text-cyan-40o0 hover: text-cyan-30o0',
-                >,
-                  {contactInfo.mobile,}
+                <a
+                  href={`tel:${contactInfo.mobile}`}
+                  className='text-cyan-40o0 hover: text-cyan-30o0'>,
+                  {contactInfo.mobile}
                 </a>,
               </div>,
               <div className='text-center'>,
                 <Mail className='w-6 h-6 text-cyan-40o0 mx-auto mb-2' />,
                 <div className='text-white font-semibold'>Email</div>,
-                <a,
-                  href={`mailto: ${contactInfo.email,}`}
-                  className='text-cyan-40o0 hover: text-cyan-30o0',
-                >,
-                  {contactInfo.email,}
+                <a
+                  href={`mailto: ${contactInfo.email}`}
+                  className='text-cyan-40o0 hover: text-cyan-30o0'>,
+                  {contactInfo.email}
                 </a>,
               </div>,
               <div className='text-center'>,
@@ -559,7 +522,5 @@ export default function Ultimate20o25MicroSaasShowcase() {,
           </motion.div>,
         </div>,
       </section>,
-    </Layout>,
-  ),
-}
+    </Layout>)}
 ,

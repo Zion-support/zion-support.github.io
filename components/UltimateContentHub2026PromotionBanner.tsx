@@ -1,128 +1,108 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   Search,
   Grid,
   List,
   Bookmark,
   Share2,
   Download,
-  Eye,;
-  Clock,;
-  User,;
-  Tag,;
-  ArrowRight,;
-  Star,;
-  TrendingUp,;
-  Zap,;
-  Brain,;
-  Cpu,;
-  Database,;
-  Globe,;
-  Lock,;
-  CheckCircle,;
-  Play,;
-  FileText,;
-  Video,;
-  Image,;
-  Code,;
-  BarChart3,;
-  Lightbulb,;
-  Rocket,;
-  Shield,;
-  Award,;
-  Users,;
-  Calendar,;
-  MessageCircle,;
-  Heart,;
-  ThumbsUp,;
-  BookOpen,;
-  GraduationCap,;
-  Briefcase,;
-  X,
-} from 'lucide-react',
-,
-const UltimateContentHub20o26PromotionBanner = () => {,
+  Eye;
+  Clock;
+  User;
+  Tag;
+  ArrowRight;
+  Star;
+  TrendingUp;
+  Zap;
+  Brain;
+  Cpu;
+  Database;
+  Globe;
+  Lock;
+  CheckCircle;
+  Play;
+  FileText;
+  Video;
+  Image;
+  Code;
+  BarChart3;
+  Lightbulb;
+  Rocket;
+  Shield;
+  Award;
+  Users;
+  Calendar;
+  MessageCircle;
+  Heart;
+  ThumbsUp;
+  BookOpen;
+  GraduationCap;
+  Briefcase;
+  X} from 'lucide-react',
+const UltimateContentHub20o26PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [isDismissedsetIsDismissed] = useState(false),
   const [activePreviewsetActivePreview] = useState(0),
-,
-  useEffect(() => {,
+  useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true)20o00),
-    return () => clearTimeout(timer),
-  }[]),
-,
-  useEffect(() => {,
-    const interval = setInterval(() => {,
-      setActivePreview((prev) => (prev + 1) % 3),
-    }30o00),
-    return () => clearInterval(interval),
-  }[]),
-,
-  const handleDismiss = () => {,
-    setIsDismissed(true),
-  };
-,
+    return () => clearTimeout(timer)}[]),
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActivePreview((prev) => (prev + 1) % 3)}30o00),
+    return () => clearInterval(interval)}[]),
+  const handleDismiss = () => {
+    setIsDismissed(true)};
   if (isDismissed) return null,
-,
-  const contentPreviews = [,
-    {,
-      title: 'Revolutionary AI Breakthroughs 20o26',;
-      type: 'article',;
-      author: 'Dr. Sarah Chen',;
-      views: '15.4K',;
-      likes: 892,;
-      tags: [', 'AI', 'Machine 'Learning', 'Innovation'],
-    },;
-    {,
-      title: 'Quantum Computing: The Future is Now',;
-      type: 'video',;
-      author: 'Prof. Michael Rodriguez',;
-      views: '8.9K',;
-      likes: 567,;
-      tags: ['Quantum 'Computing', 'Physics'Technology'],
-    },;
-    {,
-      title: 'Smart Automation Implementation Guide',;
-      type: 'tutorial',;
-      author: 'Alex Thompson',;
-      views: '6.8K',;
-      likes: 423,;
-      tags: [', 'Automation', 'Implementation'Guide'],
-    }
+  const contentPreviews = [
+    {
+      title: 'Revolutionary AI Breakthroughs 20o26';
+      type: 'article';
+      author: 'Dr. Sarah Chen';
+      views: '15.4K';
+      likes: 892;
+      tags: [', 'AI', 'Machine 'Learning', 'Innovation']};
+    {
+      title: 'Quantum Computing: The Future is Now';
+      type: 'video';
+      author: 'Prof. Michael Rodriguez';
+      views: '8.9K';
+      likes: 567;
+      tags: ['Quantum 'Computing', 'Physics'Technology']};
+    {
+      title: 'Smart Automation Implementation Guide';
+      type: 'tutorial';
+      author: 'Alex Thompson';
+      views: '6.8K';
+      likes: 423;
+      tags: [', 'Automation', 'Implementation'Guide']}
   ],
-,
-  const contentTypes = [,
-    { icon: FileTextlabel: ''Articles', 'count: '456'color: 'text-blue-40o0' ,},;
-    { icon: Videolabel: ''Videos', 'count: '234'color: 'text-red-40o0' ,},;
-    { icon: GraduationCaplabel: ''Tutorials', 'count: '189'color: 'text-green-40o0' ,},;
-    { icon: Briefcaselabel: 'Case 'Studies', 'count: '156'color: 'text-purple-40o0' ,},;
-    { icon: BookOpenlabel: ''Whitepapers', 'count: '98'color: 'text-orange-40o0' ,},;
-    { icon: Calendarlabel: ''Webinars', 'count: '67'color: 'text-pink-40o0' ,}
+  const contentTypes = [
+    { icon: FileTextlabel: ''Articles', 'count: '456'color: 'text-blue-40o0' };
+    { icon: Videolabel: ''Videos', 'count: '234'color: 'text-red-40o0' };
+    { icon: GraduationCaplabel: ''Tutorials', 'count: '189'color: 'text-green-40o0' };
+    { icon: Briefcaselabel: 'Case 'Studies', 'count: '156'color: 'text-purple-40o0' };
+    { icon: BookOpenlabel: ''Whitepapers', 'count: '98'color: 'text-orange-40o0' };
+    { icon: Calendarlabel: ''Webinars', 'count: '67'color: 'text-pink-40o0' }
   ],
-,
-  const getTypeIcon = (type) => {,
-    const typeMap ={,
-      article: FileText,;
-      video: Video,;
+  const getTypeIcon = (type) => {
+    const typeMap ={
+      article: FileText;
+      video: Video;
       tutorial: GraduationCap,
-    ,};
-    return typeMap[type] || FileText,
-  };
-,
-  return (,
+    };
+    return typeMap[type] || FileText};
+  return (
     <AnimatePresence>,
-      {isVisible && (,
+      {isVisible && (
         <motion.div,
-          initial={{ opacity: 0, y: -10o0 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          exit={{ opacity: 0, y: -10o0 ,}}
-          transition={{ duration: 0.6ease: "easeOut" ,}}
-          className="relative bg-gradient-to-r from-slate-80o0 via-blue-90o0 to-purple-90o0 text-white overflow-hidden",
-        >,
+          initial={{ opacity: 0, y: -10o0 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10o0 }}
+          transition={{ duration: 0.6ease: "easeOut" }}
+          className="relative bg-gradient-to-r from-slate-80o0 via-blue-90o0 to-purple-90o0 text-white overflow-hidden">,
           {/* Background Pattern */}
           <div className="absolute inset-0 bg-grid-white/5 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"  />,
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -z-10"  />,
@@ -133,56 +113,50 @@ const UltimateContentHub20o26PromotionBanner = () => {,
           <div className="absolute bottom-4 right-4 w-4 h-4 bg-green-40o0 rounded-full animate-ping"  />,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">,
             <div className="grid lg:grid-cols-2 gap-12 items-center">,
-              {/* Content */,}
+              {/* Content */}
               <div>,
                 <motion.div,
-                  initial={{ opacity: 0scale: 0.8 ,}}
-                  animate={{ opacity: 1scale: 1 ,}}
-                  transition={{ duration: 0.5delay: 0.2 ,}}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium mb-4",
-                >,
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  transition={{ duration: 0.5delay: 0.2 }}
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium mb-4">,
                   <Grid className="w-4 h-4"  />,
                   <span>Ultimate Content Hub</span>,
                   <div className="w-2 h-2 bg-green-40o0 rounded-full animate-pulse"  />,
                 </motion.div>,
                 <motion.h2,
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.6delay: 0.3 ,}}
-                  className="text-3xl md: text-4xl font-bold mb-4",
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6delay: 0.3 }}
+                  className="text-3xl md: text-4xl font-bold mb-4">,
                   DiscoverLearnand Master,
                 </motion.h2>,
                 <motion.p,
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.6delay: 0.4 ,}}
-                  className="text-lg md: text-xl opacity-90 mb-6",
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6delay: 0.4 }}
+                  className="text-lg md: text-xl opacity-90 mb-6">,
                   Access 1,247+ pieces of cutting-edge content including articlesvideostutorialsand case studies from industry experts.,
                 </motion.p>,
                 {/* Content Types */}
                 <motion.div,
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.6delay: 0.5 ,}}
-                  className="grid grid-cols-2 md: grid-cols-3 gap-4 mb-6",
-                >,
-                  {contentTypes.map((typeindex) => (,
-                    <div key={index,} className="flex items-center gap-2">,
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6delay: 0.5 }}
+                  className="grid grid-cols-2 md: grid-cols-3 gap-4 mb-6">,
+                  {contentTypes.map((typeindex) => (
+                    <div key={index} className="flex items-center gap-2">,
                       <type.icon className={`w-5 h-5 ${type.color}`}  />,
                       <span className="text-sm font-medium">{type.label}</span>,
                       <span className="text-xs opacity-70">({type.count})</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </motion.div>,
                 {/* Stats */}
                 <motion.div,
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.6delay: 0.6 ,}}
-                  className="flex flex-wrap items-center gap-6 text-sm mb-6",
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6delay: 0.6 }}
+                  className="flex flex-wrap items-center gap-6 text-sm mb-6">,
                   <div className="flex items-center gap-2">,
                     <Users className="w-4 h-4"  />,
                     <span>12.5K Active Users</span>,
@@ -198,11 +172,10 @@ const UltimateContentHub20o26PromotionBanner = () => {,
                 </motion.div>,
                 {/* CTA Buttons */}
                 <motion.div,
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.6delay: 0.7 ,}}
-                  className="flex flex-col sm: flex-row gap-4",
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6delay: 0.7 }}
+                  className="flex flex-col sm: flex-row gap-4">,
                   <button className="bg-white text-slate-80o0 px-8 py-4 rounded-full font-semibold hover:bg-gray-10o0 transition-all duration-30o0 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-10o5">,
                     Explore Content Hub,
                     <ArrowRight className="w-5 h-5"  />,
@@ -212,13 +185,12 @@ const UltimateContentHub20o26PromotionBanner = () => {,
                   </button>,
                 </motion.div>,
               </div>,
-              {/* Preview Section */,}
+              {/* Preview Section */}
               <motion.div,
-                initial={{ opacity: 0x: 20 ,}}
-                animate={{ opacity: 1x: 0 ,}}
-                transition={{ duration: 0.6delay: 0.8 ,}}
-                className="relative",
-              >,
+                initial={{ opacity: 0x: 20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.8 }}
+                className="relative">,
                 {/* Content Preview Card */}
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">,
                   <div className="flex items-center justify-between mb-4">,
@@ -232,16 +204,15 @@ const UltimateContentHub20o26PromotionBanner = () => {,
                   <AnimatePresence mode="wait">,
                     <motion.div,
                       key={activePreview}
-                      initial={{ opacity: 0, y: 10 ,}}
-                      animate={{ opacity: 1, y: 0 ,}}
-                      exit={{ opacity: 0, y: -10 ,}}
-                      transition={{ duration: 0.5 ,}}
-                      className="space-y-4",
-                    >,
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.5 }}
+                      className="space-y-4">,
                       <div className="flex items-center gap-2">,
-                        {React.createElement(getTypeIcon(contentPreviews[activePreview].type){,
+                        {React.createElement(getTypeIcon(contentPreviews[activePreview].type){
                           className: "w-4 h-4 text-blue-40o0",
-                        ,})}
+                        })}
                         <span className="text-sm text-blue-30o0 capitalize">,
                           {contentPreviews[activePreview].type}
                         </span>,
@@ -250,14 +221,12 @@ const UltimateContentHub20o26PromotionBanner = () => {,
                         {contentPreviews[activePreview].title}
                       </h4>,
                       <div className="flex flex-wrap gap-2">,
-                        {contentPreviews[activePreview].tags.map((tagindex) => (,
-                          <span,
+                        {contentPreviews[activePreview].tags.map((tagindex) => (
+                          <span
                             key={index}
-                            className="px-2 py-1 bg-white/10 text-white text-xs rounded-full",
-                          >,
+                            className="px-2 py-1 bg-white/10 text-white text-xs rounded-full">,
                             {tag}
-                          </span>,
-                        ))}
+                          </span>))}
                       </div>,
                       <div className="flex items-center justify-between text-sm opacity-70">,
                         <div className="flex items-center gap-4">,
@@ -281,17 +250,15 @@ const UltimateContentHub20o26PromotionBanner = () => {,
                       </div>,
                     </motion.div>,
                   </AnimatePresence>,
-                  {/* Preview Indicators */,}
+                  {/* Preview Indicators */}
                   <div className="flex justify-center gap-2 mt-4">,
-                    {contentPreviews.map((_index) => (,
-                      <button,
+                    {contentPreviews.map((_index) => (
+                      <button
                         key={index}
                         onClick={() => setActivePreview(index)}
-                        className={`w-2 h-2 rounded-full transition-all duration-30o0 ${,
-                          index === activePreview ? 'bg-white' : 'bg-white/30',
-                        }`}
-                      />,
-                    ))}
+                        className={`w-2 h-2 rounded-full transition-all duration-30o0 ${
+                          index === activePreview ? 'bg-white' : 'bg-white/30'}`}
+                      />))}
                   </div>,
                 </div>,
                 {/* Floating Elements */}
@@ -301,11 +268,10 @@ const UltimateContentHub20o26PromotionBanner = () => {,
             </div>,
             {/* Bottom Features */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6delay: 0.9 ,}}
-              className="mt-12 pt-6 border-t border-white/20",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6delay: 0.9 }}
+              className="mt-12 pt-6 border-t border-white/20">,
               <div className="grid grid-cols-1 md: grid-cols-4 gap-6 text-center">,
                 <div className="flex items-center justify-center gap-3">,
                   <CheckCircle className="w-5 h-5 text-green-40o0"  />,
@@ -326,18 +292,13 @@ const UltimateContentHub20o26PromotionBanner = () => {,
               </div>,
             </motion.div>,
           </div>,
-          {/* Dismiss Button */,}
-          <button,
+          {/* Dismiss Button */}
+          <button
             onClick={handleDismiss}
             className="absolute top-4 right-4 p-2 hover: bg-white/20 rounded-full transition-colors duration-20o0",
-            aria-label="Dismiss banner",
-          >,
+            aria-label="Dismiss banner">,
             <X className="w-5 h-5"  />,
           </button>,
-        </motion.div>,
-      ),}
-    </AnimatePresence>,
-  ),
-};
-,
-export default UltimateContentHub20o26PromotionBanner,
+        </motion.div>)}
+    </AnimatePresence>)};
+export default UltimateContentHub20o26PromotionBanner;

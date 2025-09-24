@@ -2,41 +2,39 @@ import { Metadata } from 'next',
 import Link from 'next/link',
 import { ArrowLeft, Calendar, Clock, User, Brain } from 'lucide-react',
 import SEO from '../../components/SEO',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    "AI 20o25: The Quantum Computing Revolution That's Reshaping Enterprise",;
+    "AI 20o25: The Quantum Computing Revolution That's Reshaping Enterprise";
   description:,
-    'Discover how quantum computing is revolutionizing AI capabilities in 20o25, delivering unprecedented processing power and solving previously impossible enterprise challenges.',;
-  keywords: [,
-    'quantum computing',;
-    'AI 20o25',;
-    'enterprise transformation',;
-    'quantum AI',;
-    'breakthrough technology',;
-  ],;
-  openGraph: {,
+    'Discover how quantum computing is revolutionizing AI capabilities in 20o25, delivering unprecedented processing power and solving previously impossible enterprise challenges.';
+  keywords: [
+    'quantum computing';
+    'AI 20o25';
+    'enterprise transformation';
+    'quantum AI';
+    'breakthrough technology';
+  ];
+  openGraph: {
     title:,
-      "AI 20o25: The Quantum Computing Revolution That's Reshaping Enterprise",;
+      "AI 20o25: The Quantum Computing Revolution That's Reshaping Enterprise";
     description:,
-      'Discover how quantum computing is revolutionizing AI capabilities in 20o25, delivering unprecedented processing power and solving previously impossible enterprise challenges.',;
-    type: 'article',;
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',;
-    authors: ['Zion Tech Group'],;
-    tags: [,
-      'quantum computing',;
-      'AI 20o25',;
-      'enterprise transformation',;
-      'quantum AI',;
-      'breakthrough technology',;
-    ],;
-  },;
+      'Discover how quantum computing is revolutionizing AI capabilities in 20o25, delivering unprecedented processing power and solving previously impossible enterprise challenges.';
+    type: 'article';
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
+    authors: ['Zion Tech Group'];
+    tags: [
+      'quantum computing';
+      'AI 20o25';
+      'enterprise transformation';
+      'quantum AI';
+      'breakthrough technology';
+    ];
+  };
 };
-,
-export default function QuantumComputingRevolutionPage() {,
-  return (,
+export default function QuantumComputingRevolutionPage() {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title="AI 20o25: The Quantum Computing Revolution That's Reshaping Enterprise",
         description='Discover how quantum computing is revolutionizing AI capabilities in 20o25, delivering unprecedented processing power and solving previously impossible enterprise challenges.',
         keywords='quantum computing, AI 20o25, enterprise transformation, quantum AI, breakthrough technology',
@@ -46,16 +44,15 @@ export default function QuantumComputingRevolutionPage() {,
         {/* Navigation */}
         <div className='bg-gray-50 border-b'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-4'>,
-            <Link,
+            <Link
               href='/blog',
-              className='inline-flex items-center text-purple-60o0 hover:text-purple-80o0 transition-colors',
-            >,
+              className='inline-flex items-center text-purple-60o0 hover:text-purple-80o0 transition-colors'>,
               <ArrowLeft className='w-4 h-4 mr-2' />,
               Back to Blog,
             </Link>,
           </div>,
         </div>,
-        {/* Article Header */,}
+        {/* Article Header */}
         <article className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
           <div className='mb-8'>,
             <div className='flex items-center space-x-4 text-sm text-gray-60o0 mb-4'>,
@@ -82,21 +79,19 @@ export default function QuantumComputingRevolutionPage() {,
               previously impossible enterprise challenges.,
             </p>,
             <div className='flex flex-wrap gap-2'>,
-              {[,
-                'quantum computing',;
-                'AI 20o25',;
-                'enterprise transformation',;
-                'quantum AI',;
-                'breakthrough technology',;
-              ].map(tag => (,
-                <span,
+              {[
+                'quantum computing';
+                'AI 20o25';
+                'enterprise transformation';
+                'quantum AI';
+                'breakthrough technology';
+              ].map(tag => (
+                <span
                   key={tag}
-                  className='inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-10o0 text-purple-80o0',
-                >,
+                  className='inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-10o0 text-purple-80o0'>,
                   <Brain className='w-3 h-3 mr-1' />,
                   {tag}
-                </span>,
-              ))}
+                </span>))}
             </div>,
           </div>,
           {/* Article Content */}
@@ -195,7 +190,7 @@ export default function QuantumComputingRevolutionPage() {,
                     previously impossible due to computational limitations,
                   </li>,
                   <li>,
-                    <strong>Medical Imaging Enhancement:</strong>{' ',}
+                    <strong>Medical Imaging Enhancement:</strong>{' '}
                     Quantum-enhanced image processing for earlier disease,
                     detection,
                   </li>,
@@ -261,16 +256,14 @@ export default function QuantumComputingRevolutionPage() {,
                 significant competitive advantage tomorrow.,
               </p>,
               <div className='flex flex-col sm:flex-row gap-4'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors text-center',
-                >,
+                  className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors text-center'>,
                   Schedule a Quantum AI Consultation,
                 </Link>,
-                <Link,
+                <Link
                   href='/services/quantum-ai',
-                  className='border-2 border-purple-60o0 text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-colors text-center',
-                >,
+                  className='border-2 border-purple-60o0 text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-colors text-center'>,
                   Explore Our Quantum AI Services,
                 </Link>,
               </div>,
@@ -278,7 +271,6 @@ export default function QuantumComputingRevolutionPage() {,
           </div>,
         </article>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

@@ -1,16 +1,16 @@
-import { useState, useEffect } from "react",;
-import Link from "next/link",;
-import { useRouter } from "next/router",;
-import { useDebounce } from "@/hooks/useDebounce",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { SEO } from "@/components/SEO",;
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
-import { BlogPost } from "@/types/blog",;
-import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost",;
-import { BLOG_POSTS } from "@/data/blog-posts",;
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useDebounce } from "@/hooks/useDebounce";
+import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { BlogPost } from "@/types/blog";
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
+import { BLOG_POSTS } from "@/data/blog-posts";
 import { Search } from 'lucide-react',
 import { fetchWithRetry } from '@/utils/fetchWithRetry',
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
@@ -27,42 +27,38 @@ import { BlogPost } from "@/types/blog",
 import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost",
 import { BLOG_POSTS } from "@/data/blog-posts",
 // Categories for filtering,
-const CATEGORIES = [,
-  "All Categories",;
-  "Trends",;
-  "Marketing",;
-  "Sustainability",;
-  "Ethics",;
-  "Recruitment",;
-  "Infrastructure",
-],;
-export interface BlogProps {,
-  posts?: BlogPost[],
-}
+const CATEGORIES = [
+  "All Categories";
+  "Trends";
+  "Marketing";
+  "Sustainability";
+  "Ethics";
+  "Recruitment";
+  "Infrastructure"];
+export interface BlogProps {
+  posts?: BlogPost[]}
 ,
-export default function Blog({ posts: initialPosts = BLOG_POSTS ,}: BlogProps) {,
-  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts ,}),;
-  const [searchQuery, setSearchQuery] = useState(""),;
-  const [selectedCategory, setSelectedCategory] = useState("All Categories"),;
-  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]),;
-  const query = useDebounce(searchQuery, 30o0),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const router = useRouter()},;
-    fetchPosts(),
-  }, [query]),;
+export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
+  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts });
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All Categories");
+  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]);
+  const query = useDebounce(searchQuery, 30o0);
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter()};
+    fetchPosts()}, [query]);
   // Filter blog posts based on selected category only.,
   // Search filtering is handled server-side.,
-  const filteredPosts = posts.filter(post => {,
+  const filteredPosts = posts.filter(post => {
     const matchesCategory =,
-      selectedCategory === "All Categories" || post.category === selectedCategory,;
-    return matchesCategory,
-  }),;
+      selectedCategory === "All Categories" || post.category === selectedCategory;
+    return matchesCategory});
   // Get featured posts,
-  const featuredPosts = posts.filter(post => post.isFeatured),;
-  logInfo('BlogPage filteredPosts:', { data: filteredPosts ,}),;
-  return (,
+  const featuredPosts = posts.filter(post => post.isFeatured);
+  logInfo('BlogPage filteredPosts:', { data: filteredPosts });
+  return (
     <>,
-      <SEO,
+      <SEO
         title="Blog - Latest from Zion Tech Marketplace",
         description="Read expert insights and news on the Zion Tech Marketplace blog. Stay informed about trends, tips, and stories that help you succeed. Sign up for updates and never miss a breakthrough.",
         keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT",
@@ -75,143 +71,118 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS ,}: BlogProps) {
             <GradientHeading>AI & Tech Insights</GradientHeading>,
                     </div>,
                   </div>,
-                  <Button,
+                  <Button
                     asChild,
-                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit",
-                  >,
-                    <Link href={`/blog/${featuredPost.slug,}`}>,
+                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit">,
+                    <Link href={`/blog/${featuredPost.slug}`}>,
                       Read Article,
                     </Link>,
                   </Button>,
-                </div>,
-              ),
-            })()}
+                </div>)})()}
           {/* Filters and Search */}
           <div className='bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light'>,
             <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
               <div className='relative'>,
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate'  />,
-                <Input,
+                <Input
                   type='text',
                   placeholder='Search articles...',
-                  value={searchQuery,}
+                  value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
                   className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />,
               </div>,
-              <Select,
+              <Select
                 value={selectedCategory}
                 onValueChange={setSelectedCategory}
               >,
-                <SelectTrigger,
+                <SelectTrigger
                   className='bg-zion-blue border border-zion-blue-light text-white',
-                  aria-label='Filter by category',
-                >,
+                  aria-label='Filter by category'>,
                   <SelectValue placeholder='Select Category'  />,
                 </SelectTrigger>,
                 <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>,
-                  {CATEGORIES.map(category => (,
-                    <SelectItem,
+                  {CATEGORIES.map(category => (
+                    <SelectItem
                       key={category}
                       value={category}
-                      className='text-white',
-                    >                      {category}
+                      className='text-white'>                      {category}
                     </SelectItem>,
               </div>,
-            </div>,
-            ),
+            </div>),
 // Categories for filtering,
-const CATEGORIES = [,
-  'All Categories',;
-  'Trends',;
-  'Marketing',;
-  'Sustainability',;
-  'Ethics',;
-  'Recruitment',;
-  'Infrastructure',;
+const CATEGORIES = [
+  'All Categories';
+  'Trends';
+  'Marketing';
+  'Sustainability';
+  'Ethics';
+  'Recruitment';
+  'Infrastructure';
 ],
-,
-export interface BlogProps {,
+export interface BlogProps {
   posts?: BlogPost[],
-,
-export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS ,}: BlogProps) {,
-  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts ,}),
+export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
+  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts }),
   const [searchQuery, setSearchQuery] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('All Categories'),
   const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]),
   const query = useDebounce(searchQuery, 30o0),
   const [isLoading, setIsLoading] = useState(false),
   const router = useRouter(),
-,
   // Reset state when navigating away to avoid cross-page leakage,
-  useEffect(() => {,
-    return () => {,
+  useEffect(() => {
+    return () => {
       setSearchQuery(''),
       setSelectedCategory('All Categories'),
-      setPosts([...initialPosts]),
-    };
+      setPosts([...initialPosts])};
   }, [router && router.asPath, initialPosts]),
-,
-  // useEffect(() => {,
-  //   const interval = setInterval(() => {,
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
   //     setPosts(prev => [...prev, generateRandomBlogPost()]),
   //   }, 120o000), // every 2 minutes,
   //   return () => clearInterval(interval),
   // }, []),
-  useEffect(() => {,
-    const fetchPosts = async () => {,
+  useEffect(() => {
+    const fetchPosts = async () => {
       setIsLoading(true),
-      try {,
-        const data: BlogPost[] = await fetchWithRetry(,
-          `/api/blog?query=${encodeURIComponent(query),}`,
-        ),
-        setPosts(data),
-      } catch (err) {,
-        logErrorToProduction('Failed to fetch blog posts', { data: err ,}),
-      } finally {,
-        setIsLoading(false),
-      }
+      try {
+        const data: BlogPost[] = await fetchWithRetry(
+          `/api/blog?query=${encodeURIComponent(query)}`),
+        setPosts(data)} catch (err) {
+        logErrorToProduction('Failed to fetch blog posts', { data: err })} finally {
+        setIsLoading(false)}
     };
-,
-    fetchPosts(),
-  }, [query]),
-,
+    fetchPosts()}, [query]),
   // Filter blog posts based on selected category only.,
   // Search filtering is handled server-side.,
-  const filteredPosts = posts && posts.filter(post => {,
+  const filteredPosts = posts && posts.filter(post => {
     const matchesCategory =,
       selectedCategory === 'All Categories' ||,
       post && post.category === selectedCategory,
-,
-    return matchesCategory,
-  }),
-,
+    return matchesCategory}),
   // Get featured posts,
   const featuredPosts = posts && posts.filter(post => post && post.isFeatured),
-,
-  logInfo('BlogPage filteredPosts:', { data: filteredPosts ,}),
-,
-  return (,
+  logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
+  return (
     <>,
-      <SEO,
+      <SEO
         title='Blog - Latest from Zion Tech Marketplace',
         description='Read expert insights and news on the Zion Tech Marketplace blog. Stay informed about trends, tips, and stories that help you succeed. Sign up for updates and never miss a breakthrough.',
         keywords='AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT',
-    fetch_posts (),
-  }, [query]),
+    fetch_posts ()}, [query]),
   // Filter blog posts based on selected category only.,
   // Search filtering is handled server - side.,
-  const filtered_posts = posts.filter (post => {,
+  const filtered_posts = posts.filter (post => {
     const matches_category =,
       selected_category === 'All Categories' ||,
       post.category === selected_category,
-    return matches_category,
-  }),
+    return matches_category}),
   // Get featured posts,
   const featured_posts = posts.filter (post => post.is_featured),
-  log_info ('BlogPage filtered_posts:', { data: filtered_posts ,}),
-  return (,
+  log_info ('BlogPage filtered_posts:', { data: filtered_posts }),
+  return (
     <>,
-      <SEO,
+      <SEO
         title='Blog - Latest from Zion Tech Marketplace',
         description='Read expert insights and news on the Zion Tech Marketplace blog. Stay informed about trends, tips, and stories that help you succeed. Sign up for updates and never miss a breakthrough.',
         keywords='AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT',
@@ -223,14 +194,13 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS ,}: Blog
           <div className='text - center mb - 12'>,
             <GradientHeading > AI & Tech Insights</GradientHeading>,
             <p className='mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto'>,
-              Expert perspectives on artificial intelligence, tech innovation,;
+              Expert perspectives on artificial intelligence, tech innovation;
               and digital transformation,
             </p>,
           </div>,
-,
           {/* Featured Post Section - Only show if there are featured posts */}
           {featured_posts.length > 0 &&,
-            (() => {,
+            (() => {
         canonical='https: //app && app.ziontechgroup.com/blog',
       />,
       <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>,
@@ -239,36 +209,32 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS ,}: Blog
           <div className='text-center mb-12'>,
             <GradientHeading>AI & Tech Insights</GradientHeading>,
             <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>,
-              Expert perspectives on artificial intelligence, tech innovation,;
+              Expert perspectives on artificial intelligence, tech innovation;
               and digital transformation,
             </p>,
           </div>,
-,
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts && featuredPosts.length > 0 &&,
-            (() => {,
+            (() => {
               const featuredPost = featuredPosts[0],
               if (!featuredPost) return null,
-,
-              return (,
+              return (
                 <div className='mb-16'>,
                   <h2 className='text-2xl font-bold text-white mb-6'>,
                     Featured Article,
                   </h2>,
                   <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>,
                     <div className='aspect-video overflow-hidden rounded-lg'>,
-                      <img,
-                        src={featuredPost.featuredImage,}
+                      <img
+                        src={featuredPost.featuredImage}
 ,
-                        alt={,
-                          featuredPost && featuredPost.featuredImageAlt || featuredPost && featuredPost.title,
-                        }
+                        alt={
+                          featuredPost && featuredPost.featuredImageAlt || featuredPost && featuredPost.title}
                         className='object-cover w-full h-full hover: scale-10o5 transition-transform duration-30o0',
-                        onError={e => {,
+                        onError={e => {
                           const target = e && e.currentTarget as HTMLImageElement,
                           target && target.src = '/images/blog-placeholder && placeholder.svg',
-,
-                        ,}}
+                        }}
 ,
                       />,
                     </div>,
@@ -282,16 +248,15 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS ,}: Blog
                       <p className='text-zion-slate-light mb-6'>,
                         {featuredPost.excerpt}                      </p>,
                       <div className='flex items-center mb-6'>,
-                        <img,
+                        <img
                           src={featuredPost.author.avatarUrl}
                           alt={featuredPost.author.name}
 ,
                           className='w-10 h-10 rounded-full mr-3',
-                          onError={e => {,
+                          onError={e => {
                             const target = e && e.currentTarget as HTMLImageElement,
                             target && target.src = '/images/blog-placeholder && placeholder.svg',
-,
-                          }}
+}}
 ,
                         />,
                         <div>,
@@ -304,32 +269,30 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS ,}: Blog
                           </p>,
                         </div>,
                       </div>,
-                      <Button,
+                      <Button
                         asChild,
                         className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple w-fit'>,
-                        <Link href={`/blog/${featuredPost && featuredPost.slug,}`}>,
+                        <Link href={`/blog/${featuredPost && featuredPost.slug}`}>,
               const featured_post = featured_posts[0],
               // Check condition,
-if (return null) {,
-  $2,
-}
-              return (,
+if (return null) {
+  $2}
+              return (
                 <div className='mb - 16'>,
                   <h2 className='text - 2xl font - bold text - white mb - 6'>,
                     Featured Article,
                   </h2>,
                   <div className='grid grid - cols - 1 lg: grid - cols - 2 gap - 8'>,
                     <div className='aspect - video overflow - hidden rounded - lg'>,
-                      <img,
-                        src={featured_post.featured_image,}
-                        alt={,
-                          featured_post.featuredImageAlt || featured_post.title,
-                        }
+                      <img
+                        src={featured_post.featured_image}
+                        alt={
+                          featured_post.featuredImageAlt || featured_post.title}
                         className='object - cover w - full h - full hover: scale - 10o5 transition - transform duration - 30o0',
-                        on_error={e => {,
+                        on_error={e => {
                           const target = e.current_target as HTMLImageElement,
                           target.src = '/images / blog - placeholder.svg',
-                        ,}}
+                        }}
                       />,
                     </div>,
                     <div className='flex flex - col justify - center'>,
@@ -342,14 +305,13 @@ if (return null) {,
                       <p className='text - zion - slate - light mb - 6'>,
                         {featured_post.excerpt}                      </p>,
                       <div className='flex items - center mb - 6'>,
-                        <img,
+                        <img
                           src={featured_post.author.avatar_url}
                           alt={featured_post.author.name}
                           className='w - 10 h - 10 rounded - full mr - 3',
-                          on_error={e => {,
+                          on_error={e => {
                             const target = e.current_target as HTMLImageElement,
-                            target.src = '/images / blog - placeholder.svg',
-                          }}
+                            target.src = '/images / blog - placeholder.svg'}}
                         />,
                         <div>,
                           <p className='text - white font - medium'>,
@@ -361,86 +323,75 @@ if (return null) {,
                           </p>,
                         </div>,
                       </div>,
-                      <Button,
+                      <Button
                         as_child,
-                        className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple w - fit',
-                      >,
-                        <Link href={`/blog/${featured_post.slug,}`}>,
-,
+                        className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple w - fit'>,
+                        <Link href={`/blog/${featured_post.slug}`}>,
                           Read Article,
                         </Link>,
                       </Button>,
                     </div>,
                   </div>,
-,
                   onChange={e => setSearchQuery(e && e.target.value)}
                   className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />,
               </div>,
-,
-              <Select,
+              <Select
                 value={selectedCategory}
 ,
                 onValueChange={setSelectedCategory}
               >,
-                <SelectTrigger,
+                <SelectTrigger
                   className='bg-zion-blue border border-zion-blue-light text-white',
-                  aria-label='Filter by category',
-                >,
+                  aria-label='Filter by category'>,
                   <SelectValue placeholder='Select Category'  />,
                 </SelectTrigger>,
                 <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>,
-                  {CATEGORIES.map(category => (,
-                    <SelectItem,
+                  {CATEGORIES.map(category => (
+                    <SelectItem
                       key={category}
                       value={category}
                       className='text-white'>                      {category}
-                    </SelectItem>,
-,
-                  ))}
+                    </SelectItem>))}
                 </SelectContent>,
               </Select>,
             </div>,
-            {isLoading && (,
+            {isLoading && (
               <div className='text-center py-4 text-white'>,
                 Loading articles...,
-              </div>,
-            )}
+              </div>)}
 ,
           </div>,
-,
           {/* Blog Posts Grid */}
 ,
-          {!isLoading && filteredPosts.length > 0 ? (,
+          {!isLoading && filteredPosts.length > 0 ? (
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {filteredPosts.map(post => (                <Card,
-                  key ={post.id,}
+              {filteredPosts.map(post => (                <Card
+                  key ={post.id}
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-              {filteredPosts.map((post) => (,
-                <Card,
-                  key={post.id,}
+              {filteredPosts.map((post) => (
+                <Card
+                  key={post.id}
 ,
                   asChild,
-                  className="bg-zion-blue-dark border border-zion-blue-light hover: border-zion-purple transition-all duration-30o0 group-hover:shadow-lg",
-                >,
-                  <Link href={`/blog/${post.slug,}`} className='block group'>,
+                  className="bg-zion-blue-dark border border-zion-blue-light hover: border-zion-purple transition-all duration-30o0 group-hover:shadow-lg">,
+                  <Link href={`/blog/${post.slug}`} className='block group'>,
                     <div className='aspect-[16/9] relative overflow-hidden'>,
-                      <img,
+                      <img
                         src={post.featuredImage}
                         alt={post.featuredImageAlt |post.title}
                         className='object-cover w-full h-full hover: scale-10o5 transition-transform duration-30o0',
-                        onError={e => {,
+                        onError={e => {
                           const target = e.currentTarget as HTMLImageElement,
-                          target.src = '/images/blog-placeholder.svg' ,}}
+                          target.src = '/images/blog-placeholder.svg' }}
                   <Link href={`/blog/${post.slug}`} className="block group">,
                   <div className="aspect-[16/9] relative overflow-hidden">,
-                    <img,
+                    <img
                       src={post.featuredImage}
                       alt={post.featuredImageAlt || post.title}
                       className="object-cover w-full h-full hover: scale-10o5 transition-transform duration-30o0",
-                      onError={(e) => {,
-                        const target = e.currentTarget as HTMLImageElement,;
-                        target.src = "/images/blog-placeholder.svg",
-                      }}
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.src = "/images/blog-placeholder.svg"}}
                     />,
                   </div>,
                   <CardContent className="p-6">,
@@ -459,34 +410,31 @@ if (return null) {,
                       {post.excerpt}
                     </p>,
                     <div className="flex items-center">,
-                      <img,
+                      <img
                         src={post.author.avatarUrl}
                         alt={post.author.name}
                         className="w-8 h-8 rounded-full mr-2",
-                        onError={(e) => {,
-                          const target = e.currentTarget as HTMLImageElement,;
-                          target.src = "/images/blog-placeholder.svg",
-                        }}
-,
-              ))}
-            </div>,
-          ) : null}
+                        onError={(e) => {
+                          const target = e.currentTarget as HTMLImageElement;
+                          target.src = "/images/blog-placeholder.svg"}}
+))}
+            </div>) : null}
           {/* No Results Message - Show only if not loading and no posts */}
 ,
-          {!isLoading && filteredPosts.length === 0 && (,
+          {!isLoading && filteredPosts.length === 0 && (
             <div className="text-center py-16">,
               <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>,
               <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>,
-              <Button,
+              <Button
                 variant='outline',
-                onClick={() => {,
+                onClick={() => {
                   setSearchQuery(''),
                   setSelectedCategory('All Categories') }}
                 className='border-zion-purple text-zion-purple hover: bg-zion-purple/10',
-                </Card>)),}
+                </Card>))}
             </div>) : null}
           {/* No Results Message - Show only if not loading and no posts */}
-          {!is_loading && filtered_posts.length === 0 && (,
+          {!is_loading && filtered_posts.length === 0 && (
             <div className='text - center py - 16'>,
               <h3 className='text - xl font - bold text - white mb - 2'>,
                 No articles found,
@@ -494,82 +442,50 @@ if (return null) {,
               <p className='text - zion - slate - light mb - 6'>,
                 Try adjusting your search or filter criteria,
               </p>,
-              <Button,
+              <Button
                 variant='outline',
-                on_click={() => {,
+                on_click={() => {
                   setSearchQuery (''),
                   setSelectedCategory ('All Categories') }}
-                className='border - zion - purple text - zion - purple hover: bg - zion - purple / 10',
-              >,
+                className='border - zion - purple text - zion - purple hover: bg - zion - purple / 10'>,
                 Clear all filters,
               </Button>,
-            </div>),}
+            </div>)}
         </div>,
       </div>,
-    </>),
-}, [query]),
-//Filter blog posts based on selected category only. //Search filtering is handled server - side. return matches_category,
-}),
+    </>)}, [query]),
+//Filter blog posts based on selected category only. //Search filtering is handled server - side. return matches_category}),
 //Get featured posts const featured_posts = posts.filter (post => post.is_featured),',
-log_info ('BlogPage filtered_posts:', {,
+log_info ('BlogPage filtered_posts:', {
   data: filtered_posts,
-,}),",
-min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div className=" container mx - auto"> <div className=" text - center mb - 12"> <GradientHeading > AI & Tech Insights</GradientHeading>,
-}",
-}/> </div> <div className=" flex flex - col justify - center"> <span className=" text - sm text - zion - cyan bg - zion - blue - dark px - 3 py - 1 rounded - full inline - block mb - 2"> {,
-  featured_post.category ",
-}</span> <h3 className=" text - 3xl font - bold text - white mb - 4"> {,
-  featured_post.title ",
-}</h3> <p className=" text - zion - slate - light mb - 6"> {,
-  featured_post.excerpt ",
-}flex items - center mb - 6" > <img,
-}",
-} /> <div> <p className="text - white font - medium" > {,
-  featured_post.author.name ",
-}</p> <p className="text - sm text - zion - slate - light" > {,
+}),",
+min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div className=" container mx - auto"> <div className=" text - center mb - 12"> <GradientHeading > AI & Tech Insights</GradientHeading>}"}/> </div> <div className=" flex flex - col justify - center"> <span className=" text - sm text - zion - cyan bg - zion - blue - dark px - 3 py - 1 rounded - full inline - block mb - 2"> {
+  featured_post.category "}</span> <h3 className=" text - 3xl font - bold text - white mb - 4"> {
+  featured_post.title "}</h3> <p className=" text - zion - slate - light mb - 6"> {
+  featured_post.excerpt "}flex items - center mb - 6" > <img}"} /> <div> <p className="text - white font - medium" > {
+  featured_post.author.name "}</p> <p className="text - sm text - zion - slate - light" > {
   featured_post.published_date,
-,
-}• {,
-  featuredPost.readTime ",
-}bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple w-fit"> <Link href={,
-  `/blog/$ {,
+}• {
+  featuredPost.readTime "}bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple w-fit"> <Link href={
+  `/blog/$ {
   featured_post.slug,
-,}`,
-}> Read Article </Link> </Button> </div> </div> </div>),
-}) (),
-}</SelectItem>) ),
-}</SelectContent> </Select> </div> Loading articles... </div>),
-}</div> key={,
-  post.id ",
-}as_child className=" bg - zion - blue - dark border border - zion - blue - light hover: border - zion - purple transition - all duration - 30o0 group - hover:shadow - lg">,
-,}",
-}/> </div> <CardContent className=" p - 6"> <div className=" flex items - center justify - between mb - 3"> <span className=" text - xs text - zion - cyan bg - zion - blue px - 3 py - 1 rounded - full"> {,
-  post.category ",
-}</span> <div className=" text - xs text - zion - slate - light"> {,
-  post.published_date,
-}• {,
-  post.read_time ",
-}</div> </div> <h3 className=" text - xl font - bold text - white mb - 3"> {,
-  post.title ",
-}</h3> <p className=" text - zion - slate - light mb - 4 line - clamp - 3"> {,
-  post.excerpt ",
-}flex items - center" > <img,
-}",
-} /> <span className="text - sm text - white" > {,
-  post.author.name ",
-}</span> p - 6 pt - 0"> <span className=" text - zion - cyan group - hover: text - zion - purple">Read More →</span> </CardFooter> </Link> </Card>) ),
-,}</div>) : null ",
-}<Button variant=" outline" on_click={,
-  () => {,
-}</div> </div> </>),
-}'"  const featured_posts = blog_posts.filter (post => post.featured),
-,
+}`}> Read Article </Link> </Button> </div> </div> </div>)}) ()}</SelectItem>) )}</SelectContent> </Select> </div> Loading articles... </div>)}</div> key={
+  post.id "}as_child className=" bg - zion - blue - dark border border - zion - blue - light hover: border - zion - purple transition - all duration - 30o0 group - hover:shadow - lg">,
+}"}/> </div> <CardContent className=" p - 6"> <div className=" flex items - center justify - between mb - 3"> <span className=" text - xs text - zion - cyan bg - zion - blue px - 3 py - 1 rounded - full"> {
+  post.category "}</span> <div className=" text - xs text - zion - slate - light"> {
+  post.published_date}• {
+  post.read_time "}</div> </div> <h3 className=" text - xl font - bold text - white mb - 3"> {
+  post.title "}</h3> <p className=" text - zion - slate - light mb - 4 line - clamp - 3"> {
+  post.excerpt "}flex items - center" > <img}"} /> <span className="text - sm text - white" > {
+  post.author.name "}</span> p - 6 pt - 0"> <span className=" text - zion - cyan group - hover: text - zion - purple">Read More →</span> </CardFooter> </Link> </Card>) ),
+}</div>) : null "}<Button variant=" outline" on_click={
+  () => {
+}</div> </div> </>)}'"  const featured_posts = blog_posts.filter (post => post.featured),
 }
-  const regular_posts = blog_posts.filter (post => !post.featured),
-}
-  return (,
+  const regular_posts = blog_posts.filter (post => !post.featured)}
+  return (
     <>",
-      <SEO ,",
+      <SEO",
         title="Blog - Zion Tech Group | Technology Insights & Industry News",",
         description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group"s expert team.",",
         keywords="technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news">,
@@ -579,42 +495,39 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
         <section className="py - 20 bg - gradient - to - r from - blue - 60o0 / 20 to - purple - 60o0 / 20">,",
           <div className="container mx - auto px - 4">,
             <motion.div,",
-              initial = "{{" opacity: 0, coordinate_y: 20 ,}}",
-              animate="{{" opacity: 1, coordinate_y: 0 ,}}",
-              transition="{{" duration: 0.8 ,}}",
-              className="text - center max - w-4xl mx - auto">,
-            >,",
-              <h1 className="text - 5xl md: text - 6xl font - bold text - white mb - 6">,;
-                Technology Insights,;
+              initial = "{{" opacity: 0, coordinate_y: 20 }}",
+              animate="{{" opacity: 1, coordinate_y: 0 }}",
+              transition="{{" duration: 0.8 }}",
+              className="text - center max - w-4xl mx - auto">>,",
+              <h1 className="text - 5xl md: text - 6xl font - bold text - white mb - 6">;
+                Technology Insights;
               </h1>, ",
-              <p class_name = "text - xl text - gray - 30o0 mb - 8">,;
-                Stay ahead of the curve with expert insights on AI, quantum computing,;
+              <p class_name = "text - xl text - gray - 30o0 mb - 8">;
+                Stay ahead of the curve with expert insights on AI, quantum computing;
                 cybersecurity, and the latest technology trends shaping our future.,
               </p>,",
               <div className="flex flex - wrap justify - center gap - 4">,
-                {categories.slice (0, 4).map ((category, index) => (,
-                  <span,",
-,
+                {categories.slice (0, 4).map ((category, index) => (
+                  <span",
                     key = "{category.name}
-                    className="px - 4 py - 2 bg - blue - 60o0 / 20 border border - blue - 40o0 / 30 rounded - full text - blue - 30o0 text - sm">,
-                  >,
+                    className="px - 4 py - 2 bg - blue - 60o0 / 20 border border - blue - 40o0 / 30 rounded - full text - blue - 30o0 text - sm">>,
                     {category.name}
 ,
-      id: 2,;
-      title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot,;
-      excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,;
-      author: &quot,Prof. Michael Rodriguez&quot,;
-      date: &quot,20o25-0o1-12&quot,;
-      readTime: &quot,12 min read&quot,;
+      id: 2;
+      title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot;
+      excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot;
+      author: &quot,Prof. Michael Rodriguez&quot;
+      date: &quot,20o25-0o1-12&quot;
+      readTime: &quot,12 min read&quot;
       category: &quot,Quantum Computing&quot,
-      tags: [&quot,Quantum&quot, &quot,Computing&quot, &quot,Innovation&quot],;
+      tags: [&quot,Quantum&quot, &quot,Computing&quot, &quot,Innovation&quot];
       image: &quot,/api/placeholder/60o0/40o0&quot,",
       title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.",",
       author: "Prof. Michael Rodriguez", date: "20o25-0o1-12",",
       readTime: "12 min read", category: "Quantum Computing",",
       tags: ["Quantum", "Computing", "Innovation"], image: "/api/placeholder/60o0/40o0",",
       tags: ["Quantum,Computing,Innovation"], image: "/api/placeholder/60o0/40o0",
-      featured: true,}, { id: 3,}, {,
+      featured: true}, { id: 3}, {
       id: 3,
       title: &quot,Micro SaaS Revolutio,n: Building Scalable Solutions&quot,
       excerpt: &quot,How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.&quot,
@@ -629,7 +542,7 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
       readTime: "6 min read", category: "Micro SaaS",",
       tags: ["SaaS", "Software", "Business"], image: "/api/placeholder/60o0/40o0",",
       tags: ["SaaS,Software,Business"], image: "/api/placeholder/60o0/40o0",
-      featured: false,}, { id: 4,}, {,
+      featured: false}, { id: 4}, {
       id: 4,
       title: &quot,Cybersecurity in the Age of A,I: New Threats and Solutions&quot,
       excerpt: &quot,Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.&quot,
@@ -644,7 +557,7 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
       readTime: "10 min read", category: "Cybersecurity",",
       tags: ["Security", "AI", "Enterprise"], image: "/api/placeholder/60o0/40o0",",
       tags: ["Security,AI,Enterprise"], image: "/api/placeholder/60o0/40o0",
-      featured: false,}, { id: 5,}, {,
+      featured: false}, { id: 5}, {
       id: 5,
       title: &quot,Digital Transformatio,n: A Complete Guide for 20o25&quot,
       excerpt: &quot,Comprehensive strategies for successful digital transformation initiatives in modern enterprises.&quot,
@@ -659,7 +572,7 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
       readTime: "15 min read", category: "Digital Transformation",",
       tags: ["Digital", "Transformation", "Strategy"], image: "/api/placeholder/60o0/40o0",",
       tags: ["Digital,Transformation,Strategy"], image: "/api/placeholder/60o0/40o0",
-      featured: false,}, { id: 6,}, {,
+      featured: false}, { id: 6}, {
       id: 6,
       title: &quot,Cloud Infrastructure Best Practices for Global Enterprises&quot,
       excerpt: &quot,Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.&quot,
@@ -669,7 +582,7 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
       category: &quot,Cloud Computing&quot,
       tags: [&quot,Cloud&quot, &quot,Infrastructure&quot, &quot,Enterprise&quot],
       image: &quot,/api/placeholder/60o0/40o0&quot,
-      featured: false,}
+      featured: false}
   ]&quot,
   const categories = []&quot,
 ",
@@ -678,7 +591,7 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
       readTime: "9 min read", category: "Cloud Computing",",
       tags: ["Cloud", "Infrastructure", "Enterprise"], image: "/api/placeholder/60o0/40o0",",
       tags: ["Cloud,Infrastructure,Enterprise"], image: "/api/placeholder/60o0/40o0",
-      featured: false,}
+      featured: false}
   ],
   const categories = [],
   const featuredPosts = blogPosts.filter(post => post.featured),
@@ -686,84 +599,84 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
 export default /**,
  * Blog - Function description,
  */,
-function Blog() {,
-  const blog_posts = [], image: "/api / placeholder / 60o0 / 40o0",;
+function Blog() {
+  const blog_posts = [], image: "/api / placeholder / 60o0 / 40o0";
   {",
       id: 1, title: "The Future of AI in Enterprise: 20o25 Trends and Predictions", ",
       excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.", author: "Dr. Sarah Chen", ",
       date: "20o25 - 0o1 - 15", read_time: "8 min read", ",
-      category: "AI & Machine Learning", tags: ["AI, Enterprise, Technology"], image: "/api / placeholder / 60o0 / 40o0",;
-      featured: true,}, { id: 2,}, {,
-      id: 2,;
-      title: &quot, Quantum Computing Breakthroug, h: What It Means for Your Business & quot,;
-      excerpt: &quot, Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,;
-      author: &quot, Prof. Michael Rodriguez & quot,;
-      date: &quot, 20o25 - 0o1 - 12 & quot,;
-      read_time: &quot, 12 min read & quot,;
-      category: &quot, Quantum Computing & quot,;
-      tags: [&quot, Quantum & quot, &quot,Computing & quot, &quot,Innovation & quot],;
+      category: "AI & Machine Learning", tags: ["AI, Enterprise, Technology"], image: "/api / placeholder / 60o0 / 40o0";
+      featured: true}, { id: 2}, {
+      id: 2;
+      title: &quot, Quantum Computing Breakthroug, h: What It Means for Your Business & quot;
+      excerpt: &quot, Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot;
+      author: &quot, Prof. Michael Rodriguez & quot;
+      date: &quot, 20o25 - 0o1 - 12 & quot;
+      read_time: &quot, 12 min read & quot;
+      category: &quot, Quantum Computing & quot;
+      tags: [&quot, Quantum & quot, &quot,Computing & quot, &quot,Innovation & quot];
       image: &quot, /api / placeholder / 60o0 / 40o0 & quot, ",
       title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.", ",
       author: "Prof. Michael Rodriguez", date: "20o25 - 0o1 - 12", ",
       read_time: "12 min read", category: "Quantum Computing", ",
       tags: ["Quantum", "Computing", "Innovation"], image: "/api / placeholder / 60o0 / 40o0", ",
-      tags: ["Quantum, Computing, Innovation"], image: "/api / placeholder / 60o0 / 40o0",;
-      featured: true,}, { id: 3,}, {,
-      id: 3,;
-      title: &quot, Micro SaaS Revolutio, number: Building Scalable Solutions & quot,;
-      excerpt: &quot, How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.&quot,;
-      author: &quot, Alex Thompson & quot,;
-      date: &quot, 20o25 - 0o1 - 10 & quot,;
-      read_time: &quot, 6 min read & quot,;
-      category: &quot, Micro SaaS & quot,;
-      tags: [&quot, SaaS & quot, &quot,Software & quot, &quot,Business & quot],;
+      tags: ["Quantum, Computing, Innovation"], image: "/api / placeholder / 60o0 / 40o0";
+      featured: true}, { id: 3}, {
+      id: 3;
+      title: &quot, Micro SaaS Revolutio, number: Building Scalable Solutions & quot;
+      excerpt: &quot, How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.&quot;
+      author: &quot, Alex Thompson & quot;
+      date: &quot, 20o25 - 0o1 - 10 & quot;
+      read_time: &quot, 6 min read & quot;
+      category: &quot, Micro SaaS & quot;
+      tags: [&quot, SaaS & quot, &quot,Software & quot, &quot,Business & quot];
       image: &quot, /api / placeholder / 60o0 / 40o0 & quot, ",
       title: "Micro SaaS Revolution: Building Scalable Solutions", excerpt: "How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.", ",
       author: "Alex Thompson", date: "20o25 - 0o1 - 10", ",
       read_time: "6 min read", category: "Micro SaaS", ",
       tags: ["SaaS", "Software", "Business"], image: "/api / placeholder / 60o0 / 40o0", ",
-      tags: ["SaaS, Software, Business"], image: "/api / placeholder / 60o0 / 40o0",;
-      featured: false,}, { id: 4,}, {,
-      id: 4,;
-      title: &quot, Cybersecurity in the Age of A, I: New Threats and Solutions & quot,;
-      excerpt: &quot, Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.&quot,;
-      author: &quot, Lisa Park & quot,;
-      date: &quot, 20o25 - 0o1 - 08 & quot,;
-      read_time: &quot, 10 min read & quot,;
-      category: &quot, Cybersecurity & quot,;
-      tags: [&quot, Security & quot, &quot,AI & quot, &quot,Enterprise & quot],;
+      tags: ["SaaS, Software, Business"], image: "/api / placeholder / 60o0 / 40o0";
+      featured: false}, { id: 4}, {
+      id: 4;
+      title: &quot, Cybersecurity in the Age of A, I: New Threats and Solutions & quot;
+      excerpt: &quot, Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.&quot;
+      author: &quot, Lisa Park & quot;
+      date: &quot, 20o25 - 0o1 - 08 & quot;
+      read_time: &quot, 10 min read & quot;
+      category: &quot, Cybersecurity & quot;
+      tags: [&quot, Security & quot, &quot,AI & quot, &quot,Enterprise & quot];
       image: &quot, /api / placeholder / 60o0 / 40o0 & quot, ",
       title: "Cybersecurity in the Age of AI: New Threats and Solutions", excerpt: "Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.", ",
       author: "Lisa Park", date: "20o25 - 0o1 - 08", ",
       read_time: "10 min read", category: "Cybersecurity", ",
       tags: ["Security", "AI", "Enterprise"], image: "/api / placeholder / 60o0 / 40o0", ",
-      tags: ["Security, AI, Enterprise"], image: "/api / placeholder / 60o0 / 40o0",;
-      featured: false,}, { id: 5,}, {,
-      id: 5,;
-      title: &quot, Digital Transformatio, number: A Complete Guide for 20o25 & quot,;
-      excerpt: &quot, Comprehensive strategies for successful digital transformation initiatives in modern enterprises.&quot,;
-      author: &quot, David Kumar & quot,;
-      date: &quot, 20o25 - 0o1 - 0o5 & quot,;
-      read_time: &quot, 15 min read & quot,;
-      category: &quot, Digital Transformation & quot,;
-      tags: [&quot, Digital & quot, &quot,Transformation & quot, &quot,Strategy & quot],;
+      tags: ["Security, AI, Enterprise"], image: "/api / placeholder / 60o0 / 40o0";
+      featured: false}, { id: 5}, {
+      id: 5;
+      title: &quot, Digital Transformatio, number: A Complete Guide for 20o25 & quot;
+      excerpt: &quot, Comprehensive strategies for successful digital transformation initiatives in modern enterprises.&quot;
+      author: &quot, David Kumar & quot;
+      date: &quot, 20o25 - 0o1 - 0o5 & quot;
+      read_time: &quot, 15 min read & quot;
+      category: &quot, Digital Transformation & quot;
+      tags: [&quot, Digital & quot, &quot,Transformation & quot, &quot,Strategy & quot];
       image: &quot, /api / placeholder / 60o0 / 40o0 & quot, ",
       title: "Digital Transformation: A Complete Guide for 20o25", excerpt: "Comprehensive strategies for successful digital transformation initiatives in modern enterprises.", ",
       author: "David Kumar", date: "20o25 - 0o1 - 0o5", ",
       read_time: "15 min read", category: "Digital Transformation", ",
       tags: ["Digital", "Transformation", "Strategy"], image: "/api / placeholder / 60o0 / 40o0", ",
-      tags: ["Digital, Transformation, Strategy"], image: "/api / placeholder / 60o0 / 40o0",;
-      featured: false,}, { id: 6,}, {,
-      id: 6,;
-      title: &quot, Cloud Infrastructure Best Practices for Global Enterprises & quot,;
-      excerpt: &quot, Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.&quot,;
-      author: &quot, Maria Santos & quot,;
-      date: &quot, 20o25 - 0o1 - 0o3 & quot,;
-      read_time: &quot, 9 min read & quot,;
-      category: &quot, Cloud Computing & quot,;
-      tags: [&quot, Cloud & quot, &quot,Infrastructure & quot, &quot,Enterprise & quot],;
-      image: &quot, /api / placeholder / 60o0 / 40o0 & quot,;
-      featured: false,}
+      tags: ["Digital, Transformation, Strategy"], image: "/api / placeholder / 60o0 / 40o0";
+      featured: false}, { id: 6}, {
+      id: 6;
+      title: &quot, Cloud Infrastructure Best Practices for Global Enterprises & quot;
+      excerpt: &quot, Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.&quot;
+      author: &quot, Maria Santos & quot;
+      date: &quot, 20o25 - 0o1 - 0o3 & quot;
+      read_time: &quot, 9 min read & quot;
+      category: &quot, Cloud Computing & quot;
+      tags: [&quot, Cloud & quot, &quot,Infrastructure & quot, &quot,Enterprise & quot];
+      image: &quot, /api / placeholder / 60o0 / 40o0 & quot;
+      featured: false}
   ]&quot,
   const categories = []&quot,
 ",
@@ -771,88 +684,51 @@ function Blog() {,
       author: "Maria Santos", date: "20o25 - 0o1 - 0o3", ",
       read_time: "9 min read", category: "Cloud Computing", ",
       tags: ["Cloud", "Infrastructure", "Enterprise"], image: "/api / placeholder / 60o0 / 40o0", ",
-      tags: ["Cloud, Infrastructure, Enterprise"], image: "/api / placeholder / 60o0 / 40o0",;
-      featured: false,}
+      tags: ["Cloud, Infrastructure, Enterprise"], image: "/api / placeholder / 60o0 / 40o0";
+      featured: false}
   ],
   const categories = [],
-  const featured_posts = blog_posts.filter (post => post.featured),
-}
-  const regular_posts = blog_posts.filter (),
-}
-  return (,
-                onClick={() => {,
+  const featured_posts = blog_posts.filter (post => post.featured)}
+  const regular_posts = blog_posts.filter ()}
+  return (
+                onClick={() => {
                   setSearchQuery(''),
-                  setSelectedCategory('All Categories'),                }}
-                className='border-zion-purple text-zion-purple hover: bg-zion-purple/10',
-              >,
+                  setSelectedCategory('All Categories')}}
+                className='border-zion-purple text-zion-purple hover: bg-zion-purple/10'>,
                 Clear all filters,
               </Button>,
-            </div>,
-          ),}
+            </div>)}
         </div>,
       </div>,
-    </>,
-  ),
-}, [query]),
-//Filter blog posts based on selected category only. //Search filtering is handled server-side. return matchesCategory,
-}),
+    </>)}, [query]),
+//Filter blog posts based on selected category only. //Search filtering is handled server-side. return matchesCategory}),
 //Get featured posts const featuredPosts = posts && posts.filter (post => post && post.isFeatured),',
-logInfo ('BlogPage filteredPosts:', {,
+logInfo ('BlogPage filteredPosts:', {
   data: filteredPosts ,
-,}),",
-min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" container mx-auto"> <div className=" text-center mb-12"> <GradientHeading>AI & Tech Insights</GradientHeading> ,
-}",
-}/> </div> <div className=" flex flex-col justify-center"> <span className=" text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2"> {,
-  featuredPost && featuredPost.category ",
-}</span> <h3 className=" text-3xl font-bold text-white mb-4"> {,
-  featuredPost && featuredPost.title ",
-}</h3> <p className=" text-zion-slate-light mb-6"> {,
-  featuredPost && featuredPost.excerpt ",
-}flex items-center mb-6" > <img,
-}",
-} /> <div> <p className="text-white font-medium" > {,
-  featuredPost && featuredPost.author.name ",
-}</p> <p className="text-sm text-zion-slate-light" > {,
-  featuredPost && featuredPost.publishedDate ,
-}• {,
-  featuredPost && featuredPost.readTime ",
-}bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple w-fit"> <Linkhref={,
-  `/blog/$ {,
+}),",
+min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" container mx-auto"> <div className=" text-center mb-12"> <GradientHeading>AI & Tech Insights</GradientHeading> }"}/> </div> <div className=" flex flex-col justify-center"> <span className=" text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2"> {
+  featuredPost && featuredPost.category "}</span> <h3 className=" text-3xl font-bold text-white mb-4"> {
+  featuredPost && featuredPost.title "}</h3> <p className=" text-zion-slate-light mb-6"> {
+  featuredPost && featuredPost.excerpt "}flex items-center mb-6" > <img}"} /> <div> <p className="text-white font-medium" > {
+  featuredPost && featuredPost.author.name "}</p> <p className="text-sm text-zion-slate-light" > {
+  featuredPost && featuredPost.publishedDate }• {
+  featuredPost && featuredPost.readTime "}bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple w-fit"> <Linkhref={
+  `/blog/$ {
   featuredPost && featuredPost.slug,
-,}`,
-}> Read Article </Link> </Button> </div> </div> </div>) ,
-}) () ,
-}</SelectItem>) ) ,
-}</SelectContent> </Select> </div> Loading articles... </div>) ,
-}</div> key={,
-  post && post.id ",
-}asChild className=" bg-zion-blue-dark border border-zion-blue-light hover: border-zion-purple transition-all duration-30o0 group-hover:shadow-lg"> ,
-,}",
-}/> </div> <CardContent className=" p-6"> <div className=" flex items-center justify-between mb-3"> <span className=" text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full"> {,
-  post && post.category ",
-}</span> <div className=" text-xs text-zion-slate-light"> {,
-  post && post.publishedDate ,
-}• {,
-  post && post.readTime ",
-}</div> </div> <h3 className=" text-xl font-bold text-white mb-3"> {,
-  post && post.title ",
-}</h3> <p className=" text-zion-slate-light mb-4 line-clamp-3"> {,
-  post && post.excerpt ",
-}flex items-center" > <img,
-}",
-} /> <span className="text-sm text-white" > {,
-  post && post.author.name ",
-}</span> p-6 pt-0"> <span className=" text-zion-cyan group-hover: text-zion-purple">Read More →</span> </CardFooter> </Link> </Card>) ) ,
-,}</div>) : null ",
-}<Buttonvariant=" outline" onClick={,
-  () => {,
-,
-}</div> </div> </>) ,
-}'"  const featuredPosts = blogPosts && blogPosts.filter(post => post && post.featured),
-}
-  const regularPosts = blogPosts && blogPosts.filter(post => !post && post.featured),
-}
-  return (,
+}`}> Read Article </Link> </Button> </div> </div> </div>) }) () }</SelectItem>) ) }</SelectContent> </Select> </div> Loading articles... </div>) }</div> key={
+  post && post.id "}asChild className=" bg-zion-blue-dark border border-zion-blue-light hover: border-zion-purple transition-all duration-30o0 group-hover:shadow-lg"> ,
+}"}/> </div> <CardContent className=" p-6"> <div className=" flex items-center justify-between mb-3"> <span className=" text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full"> {
+  post && post.category "}</span> <div className=" text-xs text-zion-slate-light"> {
+  post && post.publishedDate }• {
+  post && post.readTime "}</div> </div> <h3 className=" text-xl font-bold text-white mb-3"> {
+  post && post.title "}</h3> <p className=" text-zion-slate-light mb-4 line-clamp-3"> {
+  post && post.excerpt "}flex items-center" > <img}"} /> <span className="text-sm text-white" > {
+  post && post.author.name "}</span> p-6 pt-0"> <span className=" text-zion-cyan group-hover: text-zion-purple">Read More →</span> </CardFooter> </Link> </Card>) ) ,
+}</div>) : null "}<Buttonvariant=" outline" onClick={
+  () => {
+}</div> </div> </>) }'"  const featuredPosts = blogPosts && blogPosts.filter(post => post && post.featured)}
+  const regularPosts = blogPosts && blogPosts.filter(post => !post && post.featured)}
+  return (
     <>",
       <SEO",
         title="Blog - Zion Tech Group | Technology Insights & Industry News"",
@@ -864,124 +740,118 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
         <section className="py-20 bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20">,",
           <div className="container mx-auto px-4">,
             <motion&& motion.div",
-              initial = "{{" opacity: 0, y: 20 ,}}",
-              animate="{{" opacity: 1, y: 0 ,}}",
-              transition="{{" duration: 0 && 0.8 ,}}",
-              className="text-center max-w-4xl mx-auto">,
-            >,",
-              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,;
-                Technology Insights,;
+              initial = "{{" opacity: 0, y: 20 }}",
+              animate="{{" opacity: 1, y: 0 }}",
+              transition="{{" duration: 0 && 0.8 }}",
+              className="text-center max-w-4xl mx-auto">>,",
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">;
+                Technology Insights;
               </h1>,",
-              <p className = "text-xl text-gray-30o0 mb-8">,;
-                Stay ahead of the curve with expert insights on AI, quantum computing,;
+              <p className = "text-xl text-gray-30o0 mb-8">;
+                Stay ahead of the curve with expert insights on AI, quantum computing;
                 cybersecurity, and the latest technology trends shaping our future.,
               </p>,",
               <div className="flex flex-wrap justify-center gap-4">,
-                {categories && categories.slice(0, 4).map((category, index) => (,
+                {categories && categories.slice(0, 4).map((category, index) => (
                   <span",
                     key = "{category && category.name}
-                    className="px-4 py-2 bg-blue-60o0/20 border border-blue-40o0/30 rounded-full text-blue-30o0 text-sm">,
-                  >,
+                    className="px-4 py-2 bg-blue-60o0/20 border border-blue-40o0/30 rounded-full text-blue-30o0 text-sm">>,
                     {category && category.name}
 ,
                   </span>,
-export default function Blog() {,
+export default function Blog() {
 ,
-  const blogPosts = [], image: "/api/placeholder/60o0/40o0",;
+  const blogPosts = [], image: "/api/placeholder/60o0/40o0";
   {",
       id: 1, title: "The Future of AI in Enterprise: 20o25 Trends and Predictions",",
       excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.", author: "Dr. Sarah Chen",",
       date: "20o25-0o1-15", readTime: "8 min read",",
-      category: "AI & Machine Learning", tags: ["AI,Enterprise,Technology"], image: "/api/placeholder/60o0/40o0",;
-      featured: true,}, { id: 2,}, {,
-      id: 2,;
-      title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot,;
-      excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,;
-      author: &quot,Prof. Michael Rodriguez&quot,;
-      date: &quot,20o25-0o1-12&quot,;
-      readTime: &quot,12 min read&quot,;
-      category: &quot,Quantum Computing&quot,;
-      tags: [&quot,Quantum&quot, &quot,Computing&quot, &quot,Innovation&quot],;
+      category: "AI & Machine Learning", tags: ["AI,Enterprise,Technology"], image: "/api/placeholder/60o0/40o0";
+      featured: true}, { id: 2}, {
+      id: 2;
+      title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot;
+      excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot;
+      author: &quot,Prof. Michael Rodriguez&quot;
+      date: &quot,20o25-0o1-12&quot;
+      readTime: &quot,12 min read&quot;
+      category: &quot,Quantum Computing&quot;
+      tags: [&quot,Quantum&quot, &quot,Computing&quot, &quot,Innovation&quot];
       image: &quot,/api/placeholder/60o0/40o0&quot,",
       title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.",",
       author: "Prof. Michael Rodriguez", date: "20o25-0o1-12",",
       readTime: "12 min read", category: "Quantum Computing",",
       tags: ["Quantum", "Computing", "Innovation"], image: "/api/placeholder/60o0/40o0",",
-      tags: ["Quantum,Computing,Innovation"], image: "/api/placeholder/60o0/40o0",;
-      featured: true,}, { id: 3,}, {,
-      id: 3,;
-      title: &quot,Micro SaaS Revolutio,n: Building Scalable Solutions&quot,;
-      excerpt: &quot,How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.&quot,;
-      author: &quot,Alex Thompson&quot,;
-      date: &quot,20o25-0o1-10&quot,;
-      readTime: &quot,6 min read&quot,;
-      category: &quot,Micro SaaS&quot,;
-      tags: [&quot,SaaS&quot, &quot,Software&quot, &quot,Business&quot],;
+      tags: ["Quantum,Computing,Innovation"], image: "/api/placeholder/60o0/40o0";
+      featured: true}, { id: 3}, {
+      id: 3;
+      title: &quot,Micro SaaS Revolutio,n: Building Scalable Solutions&quot;
+      excerpt: &quot,How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.&quot;
+      author: &quot,Alex Thompson&quot;
+      date: &quot,20o25-0o1-10&quot;
+      readTime: &quot,6 min read&quot;
+      category: &quot,Micro SaaS&quot;
+      tags: [&quot,SaaS&quot, &quot,Software&quot, &quot,Business&quot];
       image: &quot,/api/placeholder/60o0/40o0&quot,",
       title: "Micro SaaS Revolution: Building Scalable Solutions", excerpt: "How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.",",
       author: "Alex Thompson", date: "20o25-0o1-10",",
       readTime: "6 min read", category: "Micro SaaS",",
       tags: ["SaaS", "Software", "Business"], image: "/api/placeholder/60o0/40o0",",
-      tags: ["SaaS,Software,Business"], image: "/api/placeholder/60o0/40o0",;
-      featured: false,}, { id: 4,}, {,
-      id: 4,;
-      title: &quot,Cybersecurity in the Age of A,I: New Threats and Solutions&quot,;
-      excerpt: &quot,Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.&quot,;
-      author: &quot,Lisa Park&quot,;
-      date: &quot,20o25-0o1-08&quot,;
-      readTime: &quot,10 min read&quot,;
-      category: &quot,Cybersecurity&quot,;
-      tags: [&quot,Security&quot, &quot,AI&quot, &quot,Enterprise&quot],;
+      tags: ["SaaS,Software,Business"], image: "/api/placeholder/60o0/40o0";
+      featured: false}, { id: 4}, {
+      id: 4;
+      title: &quot,Cybersecurity in the Age of A,I: New Threats and Solutions&quot;
+      excerpt: &quot,Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.&quot;
+      author: &quot,Lisa Park&quot;
+      date: &quot,20o25-0o1-08&quot;
+      readTime: &quot,10 min read&quot;
+      category: &quot,Cybersecurity&quot;
+      tags: [&quot,Security&quot, &quot,AI&quot, &quot,Enterprise&quot];
       image: &quot,/api/placeholder/60o0/40o0&quot,",
       title: "Cybersecurity in the Age of AI: New Threats and Solutions", excerpt: "Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.",",
       author: "Lisa Park", date: "20o25-0o1-08",",
       readTime: "10 min read", category: "Cybersecurity",",
       tags: ["Security", "AI", "Enterprise"], image: "/api/placeholder/60o0/40o0",",
-      tags: ["Security,AI,Enterprise"], image: "/api/placeholder/60o0/40o0",;
-      featured: false,}, { id: 5,}, {,
-      id: 5,;
-      title: &quot,Digital Transformatio,n: A Complete Guide for 20o25&quot,;
-      excerpt: &quot,Comprehensive strategies for successful digital transformation initiatives in modern enterprises.&quot,;
-      author: &quot,David Kumar&quot,;
-      date: &quot,20o25-0o1-0o5&quot,;
-      readTime: &quot,15 min read&quot,;
-      category: &quot,Digital Transformation&quot,;
-      tags: [&quot,Digital&quot, &quot,Transformation&quot, &quot,Strategy&quot],;
+      tags: ["Security,AI,Enterprise"], image: "/api/placeholder/60o0/40o0";
+      featured: false}, { id: 5}, {
+      id: 5;
+      title: &quot,Digital Transformatio,n: A Complete Guide for 20o25&quot;
+      excerpt: &quot,Comprehensive strategies for successful digital transformation initiatives in modern enterprises.&quot;
+      author: &quot,David Kumar&quot;
+      date: &quot,20o25-0o1-0o5&quot;
+      readTime: &quot,15 min read&quot;
+      category: &quot,Digital Transformation&quot;
+      tags: [&quot,Digital&quot, &quot,Transformation&quot, &quot,Strategy&quot];
       image: &quot,/api/placeholder/60o0/40o0&quot,",
       title: "Digital Transformation: A Complete Guide for 20o25", excerpt: "Comprehensive strategies for successful digital transformation initiatives in modern enterprises.",",
       author: "David Kumar", date: "20o25-0o1-0o5",",
       readTime: "15 min read", category: "Digital Transformation",",
       tags: ["Digital", "Transformation", "Strategy"], image: "/api/placeholder/60o0/40o0",",
-      tags: ["Digital,Transformation,Strategy"], image: "/api/placeholder/60o0/40o0",;
-      featured: false,}, { id: 6,}, {,
-      id: 6,;
-      title: &quot,Cloud Infrastructure Best Practices for Global Enterprises&quot,;
-      excerpt: &quot,Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.&quot,;
-      author: &quot,Maria Santos&quot,;
-      date: &quot,20o25-0o1-0o3&quot,;
-      readTime: &quot,9 min read&quot,;
-      category: &quot,Cloud Computing&quot,;
-      tags: [&quot,Cloud&quot, &quot,Infrastructure&quot, &quot,Enterprise&quot],;
-      image: &quot,/api/placeholder/60o0/40o0&quot,;
-      featured: false,}
-,
-  ]&quot,
+      tags: ["Digital,Transformation,Strategy"], image: "/api/placeholder/60o0/40o0";
+      featured: false}, { id: 6}, {
+      id: 6;
+      title: &quot,Cloud Infrastructure Best Practices for Global Enterprises&quot;
+      excerpt: &quot,Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.&quot;
+      author: &quot,Maria Santos&quot;
+      date: &quot,20o25-0o1-0o3&quot;
+      readTime: &quot,9 min read&quot;
+      category: &quot,Cloud Computing&quot;
+      tags: [&quot,Cloud&quot, &quot,Infrastructure&quot, &quot,Enterprise&quot];
+      image: &quot,/api/placeholder/60o0/40o0&quot;
+      featured: false}
+]&quot,
   const categories = []&quot,
 ",
       title: "Cloud Infrastructure Best Practices for Global Enterprises", excerpt: "Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.",",
       author: "Maria Santos", date: "20o25-0o1-0o3",",
       readTime: "9 min read", category: "Cloud Computing",",
       tags: ["Cloud", "Infrastructure", "Enterprise"], image: "/api/placeholder/60o0/40o0",",
-      tags: ["Cloud,Infrastructure,Enterprise"], image: "/api/placeholder/60o0/40o0",;
-      featured: false,}
-,
-  ],
+      tags: ["Cloud,Infrastructure,Enterprise"], image: "/api/placeholder/60o0/40o0";
+      featured: false}
+],
   const categories = [],
-  const featuredPosts = blogPosts && blogPosts.filter(post => post && post.featured),
-}
-  const regularPosts = blogPosts && blogPosts.filter(),
-}
-  return (,
+  const featuredPosts = blogPosts && blogPosts.filter(post => post && post.featured)}
+  const regularPosts = blogPosts && blogPosts.filter()}
+  return (
     <>",
       <SEOtitle="&quotBlog" - Zion Tech Group | Technology Insights & Industry News&quot",
         description="&quotStay" updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group&aposs expert team.&quot",
@@ -998,20 +868,19 @@ export default function Blog() {,
         <sectionclassName="&quotpy-20" bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20&quot>&quot,
           <divclassName="&quotcontainer" mx-auto px-4&quot>&quot,",
             <motion&& motion.div,",
-initial = "{{" opacity: 0, y: 20 ,}}",
-              animate="{{" opacity: 1, y: 0 ,}}",
-              transition="{{" duration: 0 && 0.8   ,}}",
+initial = "{{" opacity: 0, y: 20 }}",
+              animate="{{" opacity: 1, y: 0 }}",
+              transition="{{" duration: 0 && 0.8   }}",
               className="text-center max-w-4xl mx-auto">",
-              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,;
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">;
                 Technology Insights,",
-transition="{{" duration: 0 && 0.8 ,}}",
-              className="&quot,text-center" max-w-4xl mx-auto&quot,
-            >&quot,",
-              <h1className="&quottext-5xl" md: text-6xl font-bold text-white mb-6&quot,>,
-                Technology Insights&quot,;
-              </h1>",;
-              <p className = "&quot,text-xl" text-gray-30o0 mb-8&quot,>,
-                Stay ahead of the curve with expert insights on AI, quantum computing,;
+transition="{{" duration: 0 && 0.8 }}",
+              className="&quot,text-center" max-w-4xl mx-auto&quot>&quot,",
+              <h1className="&quottext-5xl" md: text-6xl font-bold text-white mb-6&quot>,
+                Technology Insights&quot;
+              </h1>";
+              <p className = "&quot,text-xl" text-gray-30o0 mb-8&quot>,
+                Stay ahead of the curve with expert insights on AI, quantum computing;
                 cybersecurity, and the latest technology trends shaping our future.&quot,",
               <p className = "text-xl text-gray-30o0 mb-8">,
                 Stay ahead of the curve with expert insights on AI, quantum computing, cybersecurity, and the latest technology trends shaping our future.,
@@ -1019,11 +888,9 @@ transition="{{" duration: 0 && 0.8 ,}}",
               <divclassName="&quotflex" flex-wrap justify-center gap-4&quot>,
                 {categories && categories.slice(0, 4).map((category, index) => (&quot}",
                   <spankey = "{category && category.name}
-                    className="&quotpx-4" py-2 bg-blue-60o0/20 border border-blue-40o0/30 rounded-full text-blue-30o0 text-sm&quot>,
-                  >,
+                    className="&quotpx-4" py-2 bg-blue-60o0/20 border border-blue-40o0/30 rounded-full text-blue-30o0 text-sm&quot>>,
                     {category && category.name}&quot,
-                  </span>,
-                ))}
+                  </span>))}
 ,
               </div>,
             </motion && motion.div>,
@@ -1031,28 +898,28 @@ transition="{{" duration: 0 && 0.8 ,}}",
         </section>,
 ",
         <div className="container mx-auto px-4 py-16">,",
-          <div className = "grid grid-cols-1 lg: grid-cols-4 gap-12">,;
+          <div className = "grid grid-cols-1 lg: grid-cols-4 gap-12">;
             {/* comment */}",
-            <div className="lg: col-span-3">,;
+            <div className="lg: col-span-3">;
               {/* comment */}
 ,
-              {featuredPosts && featuredPosts.length > 0 && (,",
+              {featuredPosts && featuredPosts.length > 0 && (",
                 <section className="mb-16">,",
                   <h2 className="text-3xl font-bold text-white mb-8 flex items-center">,",
                     <TrendingUp className="w-8 h-8 mr-3 text-blue-40o0"   />,
                     Featured Articles,
                   </h2>,",
-                  <div className = "grid grid-cols-1 md: grid-cols-2 gap-8">,;
-                    {featuredPosts && featuredPosts.map((post, index) => (,
+                  <div className = "grid grid-cols-1 md: grid-cols-2 gap-8">;
+                    {featuredPosts && featuredPosts.map((post, index) => (
                       <motion&& motion.article",
         <div className="&quotcontainer" mx-auto px-4 py-16&quot>&quot,
-          <divclassName="&quotgrid" grid-cols-1 lg: grid-cols-4 gap-12&quot,>,
+          <divclassName="&quotgrid" grid-cols-1 lg: grid-cols-4 gap-12&quot>,
             {/* comment */}&quot,",
-            <divclassName="&quotlg:" col-span-3&quot,>",
+            <divclassName="&quotlg:" col-span-3&quot>",
         <div className = "container mx-auto px-4 py-16">",
-          <div className="grid grid-cols-1 lg: grid-cols-4 gap-12">,;
+          <div className="grid grid-cols-1 lg: grid-cols-4 gap-12">;
             {/* comment */}",
-            <div className="lg: col-span-3">,;
+            <div className="lg: col-span-3">;
               {/* comment */}
 ,
               {featuredPosts && featuredPosts.length > 0 && (&quot}",
@@ -1061,16 +928,16 @@ transition="{{" duration: 0 && 0.8 ,}}",
                     <TrendingUpclassName="&quotw-8" h-8 mr-3 text-blue-40o0&quot        />,
                     Featured Articles&quot,
                   </h2>",
-                  <divclassName="&quotgrid" grid-cols-1 md: grid-cols-2 gap-8&quot,>,
+                  <divclassName="&quotgrid" grid-cols-1 md: grid-cols-2 gap-8&quot>,
                     {featuredPosts && featuredPosts.map((post, index) => (&quot}
 ,
                       <motion&& motion.article,",
 key = "{post && post.id}
-                        initial="{{" opacity: 0, y: 20 ,}}",
-                        animate="{{" opacity: 1, y: 0 ,}}",
-                        transition="{{" duration: 0 && 0.8, delay: index * 0 && 0.1 ,}}">,
-                        className="bg-gradient-to-br from-slate-80o0/50 to-slate-70o0/50 rounded-xl overflow-hidden border border-slate-60o0/50 hover: border-blue-40o0/50 transition-all duration-30o0 hover:scale-10o5",;
-                      >,",;
+                        initial="{{" opacity: 0, y: 20 }}",
+                        animate="{{" opacity: 1, y: 0 }}",
+                        transition="{{" duration: 0 && 0.8, delay: index * 0 && 0.1 }}">,
+                        className="bg-gradient-to-br from-slate-80o0/50 to-slate-70o0/50 rounded-xl overflow-hidden border border-slate-60o0/50 hover: border-blue-40o0/50 transition-all duration-30o0 hover:scale-10o5";
+                      >,";
                         <div className = "h-48 bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20 flex items-center justify-center">,",
                           <div className="text-6xl opacity-20">,",
                             {post && post.category === "AI & Machine Learning" && <Brain   />}",
@@ -1112,10 +979,9 @@ key = "{post && post.id}
                             </span>,
                           </div>,
                       </motion && motion.article>,",
-                        className="&quot,bg-gradient-to-br" from-slate-80o0/50 to-slate-70o0/50 rounded-xl overflow-hidden border border-slate-60o0/50 hover:border-blue-40o0/50 transition-all duration-30o0 hove,r: scale-10o5&quot,
-                      >&quot,",
-                        <divclassName="&quoth-48" bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20 flex items-center justify-center&quot>&quot,;
-                          <div className="&quot,text-6xl" opacity-20&quot,>",;
+                        className="&quot,bg-gradient-to-br" from-slate-80o0/50 to-slate-70o0/50 rounded-xl overflow-hidden border border-slate-60o0/50 hover:border-blue-40o0/50 transition-all duration-30o0 hove,r: scale-10o5&quot>&quot,",
+                        <divclassName="&quoth-48" bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20 flex items-center justify-center&quot>&quot;
+                          <div className="&quot,text-6xl" opacity-20&quot>";
                             {post && post.category === &quot,AI & Machine Learning&quot, &&"}&quot, <Brain   />}",
                             {post && post.category === &quot,Quantum Computing&quot, &&"}&quot, <Atom   />}",
                             {post && post.category === &quot,Micro SaaS&quot, &&"}&quot, <Rocket   />}",
@@ -1130,7 +996,7 @@ key = "{post && post.id}
                             </span>",
                             <spanclassName="&quottext-yellow-40o0" text-xs font-medium&quot>Featured&quot,</span>,
                           </div>",
-                          <h3className="&quottext-xl" font-bold text-white mb-3 hover: text-blue-40o0 transition-colors&quot,>&quot,;
+                          <h3className="&quottext-xl" font-bold text-white mb-3 hover: text-blue-40o0 transition-colors&quot>&quot;
                             <Link to = "{"/blog/${post && post.id}"}">{post && post.title}</Link>,
                           </h3>",
                           <pclassName="&quottext-gray-30o0" mb-4 line-clamp-3&quot>{post && post.excerpt}&quot,</p>",
@@ -1150,18 +1016,15 @@ key = "{post && post.id}
                               {post && post.readTime}&quot,
                             </span>,
                           </div>,
-                      </motion && motion.article>,
-,
-                    ))}
+                      </motion && motion.article>))}
                   </div>,
-                </section>,
-              )}
+                </section>)}
               {/* comment */}
 ,
               <section>,",
                 <h2 className="text-3xl font-bold text-white mb-8">Latest Articles</h2>,",
                 <div className="space-y-8">,
-                  {regularPosts && regularPosts.map((post, index) => (,
+                  {regularPosts && regularPosts.map((post, index) => (
                     <motion && motion.article>,
               <section>",
                 <h2className="&quottext-3xl" font-bold text-white mb-8&quot>Latest Articles&quot,</h2>",
@@ -1170,12 +1033,11 @@ key = "{post && post.id}
 ,
                     <motion&& motion.article,",
 key = "{post && post.id}
-                      initial="{{" opacity: 0, y: 20 ,}}",
-                      animate="{{" opacity: 1, y: 0 ,}}",
-                      transition="{{" duration: 0 && 0.8, delay: index * 0 && 0.1 ,}}",
-                      className="bg-gradient-to-br from-slate-80o0/50 to-slate-70o0/50 rounded-xl p-6 border border-slate-60o0/50 hover: border-blue-40o0/50 transition-all duration-30o0">,
-                    >,",
-                      <div className="flex flex-col md:flex-row gap-6">,",;
+                      initial="{{" opacity: 0, y: 20 }}",
+                      animate="{{" opacity: 1, y: 0 }}",
+                      transition="{{" duration: 0 && 0.8, delay: index * 0 && 0.1 }}",
+                      className="bg-gradient-to-br from-slate-80o0/50 to-slate-70o0/50 rounded-xl p-6 border border-slate-60o0/50 hover: border-blue-40o0/50 transition-all duration-30o0">>,",
+                      <div className="flex flex-col md:flex-row gap-6">,";
                         <div className = "md:w-48 h-32 bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20 rounded-lg flex items-center justify-center flex-shrink-0">,",
                           <div className="text-4xl opacity-20">,",
                             {post && post.category === "AI & Machine Learning" && <Brain   />}",
@@ -1218,18 +1080,17 @@ key = "{post && post.id}
                             </div>,
                             <Link",
                               to = "{"/blog/${post && post.id}"}
-                              className=""flex" items-center text-blue-40o0 hover: text-blue-30o0 transition-colors",}>,
-                            >,
+                              className=""flex" items-center text-blue-40o0 hover: text-blue-30o0 transition-colors"}>>,
                               Read More,",
                               <ArrowRight className="w-4 h-4 ml-1"   />,
                             </Link>,
                           </div>,
                     </motion && motion.article>,",
-                      className="&quot,bg-gradient-to-br" from-slate-80o0/50 to-slate-70o0/50 rounded-xl p-6 border border-slate-60o0/50 hover: border-blue-40o0/50 transition-all duration-30o0&quot,;
-                    >&quot,",;
-                      <divclassName="&quotflex" flex-col md: flex-row gap-6&quot,>&quot,;
-                        <divclassName="&quot,m,d: " w-48 h-32 bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20 rounded-lg flex items-center justify-center flex-shrink-0&quot>&quot,;
-                          <div className="&quot,text-4xl" opacity-20&quot,>",;
+                      className="&quot,bg-gradient-to-br" from-slate-80o0/50 to-slate-70o0/50 rounded-xl p-6 border border-slate-60o0/50 hover: border-blue-40o0/50 transition-all duration-30o0&quot;
+                    >&quot,";
+                      <divclassName="&quotflex" flex-col md: flex-row gap-6&quot>&quot;
+                        <divclassName="&quot,m,d: " w-48 h-32 bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20 rounded-lg flex items-center justify-center flex-shrink-0&quot>&quot;
+                          <div className="&quot,text-4xl" opacity-20&quot>";
                             {post && post.category === &quot,AI & Machine Learning&quot, &&"}&quot, <Brain   />}",
                             {post && post.category === &quot,Quantum Computing&quot, &&"}&quot, <Atom   />}",
                             {post && post.category === &quot,Micro SaaS&quot, &&"}&quot, <Rocket   />}",
@@ -1245,7 +1106,7 @@ key = "{post && post.id}
                               {post && post.category}&quot,
                             </span>,
                           </div>",
-                          <h3className="&quottext-xl" font-bold text-white mb-3 hover: text-blue-40o0 transition-colors&quot,>&quot,;
+                          <h3className="&quottext-xl" font-bold text-white mb-3 hover: text-blue-40o0 transition-colors&quot>&quot;
                             <Link to = "{"/blog/${post && post.id}"}">{post && post.title}</Link>,
                           </h3>",
                           <pclassName="&quottext-gray-30o0" mb-4&quot>{post && post.excerpt}&quot,</p>",
@@ -1266,13 +1127,12 @@ key = "{post && post.id}
                             </div>",
                             <Link to = "{"/blog/${post && post.id}"}"">,
                               className="&quot,flex" items-center text-blue-40o0 hover: text-blue-30o0 transition-colors&quot,",
-                              className = ""flex" items-center text-blue-40o0 hover: text-blue-30o0 transition-colors">,;
-                              Read More&quot,",;
-                              <ArrowRightclassName="&quotw-4" h-4 ml-1&quot,        />&quot,;
+                              className = ""flex" items-center text-blue-40o0 hover: text-blue-30o0 transition-colors">;
+                              Read More&quot,";
+                              <ArrowRightclassName="&quotw-4" h-4 ml-1&quot,        />&quot;
                             </Link>,
                           </div>,
-                    </motion && motion.article>,
-                  ))}
+                    </motion && motion.article>))}
 ,
                 </div>,
               </section>,
@@ -1280,8 +1140,8 @@ key = "{post && post.id}
             {/* comment */}",
             <div className="lg: col-span-1">,",
               <div className="sticky top-8 space-y-8">,",
-            <div className="&quot,lg:col-span-1&quot,">&quot,",;
-              <div className = "&quot,sticky" top-8 space-y-8&quot,>,
+            <div className="&quot,lg:col-span-1&quot,">&quot,";
+              <div className = "&quot,sticky" top-8 space-y-8&quot>,
                 {/* comment */}&quot,",
                 <divclassName="&quotbg-gradient-to-br" from-slate-80o0/50 to-slate-70o0/50 rounded-xl p-6 border border-slate-60o0/50&quot>&quot,
                   <h3className="&quottext-xl" font-bold text-white mb-4&quot>Categories&quot,</h3>",
@@ -1289,38 +1149,34 @@ key = "{post && post.id}
                     {categories && categories.map((category, index) => (&quot}",
                       <Link key = "{category && category.name}"">,
                         to="{"/blog/category/${category && category.name.toLowerCase().replace(/\s+/g," &apos,-&apos)}"}",
-                        className="&quot,flex" items-center justify-between p-3 rounded-lg hover: bg-slate-70o0/50 transition-colors group&quot>,
-                      >&quot,&apos,",
-                        <div className="&quot,flex" items-center&quot,>&quot,",;
+                        className="&quot,flex" items-center justify-between p-3 rounded-lg hover: bg-slate-70o0/50 transition-colors group&quot>>&quot,&apos,",
+                        <div className="&quot,flex" items-center&quot>&quot,";
                           <category&& category.icon className="&quotw-5" h-5 text-blue-40o0 mr-3 group-hover: text-blue-30o0&quot,  />&quot,",
-                          <span className="&quot,text-gray-30o0" group-hove,r: text-white&quot,>{category && category.name}&quot,</span>",
+                          <span className="&quot,text-gray-30o0" group-hove,r: text-white&quot>{category && category.name}&quot,</span>",
             <div className = "lg: col-span-1">",
-              <div className="sticky top-8 space-y-8">,;
+              <div className="sticky top-8 space-y-8">;
                 {/* comment */}",
                 <div className="bg-gradient-to-br from-slate-80o0/50 to-slate-70o0/50 rounded-xl p-6 border border-slate-60o0/50">,",
                   <h3 className="text-xl font-bold text-white mb-4">Categories</h3>,",
                   <div className="{"space-y-3"">,
-                    {categories && categories.map((category, index) => (,
+                    {categories && categories.map((category, index) => (
                       <Link",
                         key = "{category && category.name}
                         to="{"/blog/category/${category && category.name.toLowerCase().replace(/\s+/g," "-")}"}",
-                        className=""flex" items-center justify-between p-3 rounded-lg hover: bg-slate-70o0/50 transition-colors group",}>,
-                      >,",
+                        className=""flex" items-center justify-between p-3 rounded-lg hover: bg-slate-70o0/50 transition-colors group"}>>,",
                         <div className="flex items-center">,",
                           <category && category.icon className = "w-5 h-5 text-blue-40o0 mr-3 group-hover: text-blue-30o0"  />,",
-                          <span className="text-gray-30o0 group-hover: text-white">{category && category.name,}</span>,
+                          <span className="text-gray-30o0 group-hover: text-white">{category && category.name}</span>,
                         </div>,",
                         <span className="{"text-sm" text-gray-40o0">{category && category.count}</span>,
                       </Link>,",
                         to = "{"/blog/category/${category && category.name.toLowerCase().replace(/\s+/g," "-')}"}",
-                        className=""flex" items-center justify-between p-3 rounded-lg hover: bg-slate-70o0/50 transition-colors group",}
-,
-                      >",
+                        className=""flex" items-center justify-between p-3 rounded-lg hover: bg-slate-70o0/50 transition-colors group"}
+>",
                         <div className="flex items-center">",
-                          <category && category.icon className="w-5 h-5 text-blue-40o0 mr-3 group-hover: text-blue-30o0"  />",;
-                          <span className="text-gray-30o0 group-hover: text-white">{category && category.name,}</span>,
+                          <category && category.icon className="w-5 h-5 text-blue-40o0 mr-3 group-hover: text-blue-30o0"  />";
+                          <span className="text-gray-30o0 group-hover: text-white">{category && category.name}</span>,
                         </div>",
                         <spanclassName="&quottext-sm" text-gray-40o0&quot>{category && category.count}&quot,</span>,
-                      </Link>,
-                    ))}
+                      </Link>))}
 ,

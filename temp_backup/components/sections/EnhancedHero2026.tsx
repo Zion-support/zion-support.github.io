@@ -1,64 +1,56 @@
-import React from 'react',
+import React from 'react';
 import { motion } from 'framer-motion',
 import { ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Rocket, Brain, Zap, Shield, Globe, Cpu } from 'lucide-react',
 import { cuttingEdgeInnovationServices } from '../../data/20o26-cutting-edge-innovations',
 import { enterpriseSolutions20o26 } from '../../data/20o26-enterprise-solutions',
 import { specializedSolutions20o26 } from '../../data/20o26-specialized-solutions',
-,
-const EnhancedHero20o26: React.FC = () => {,
+const EnhancedHero20o26: React.FC = () => {
   // Get the most popular services for hero showcase,
-  const heroServices = [,
-    ...cuttingEdgeInnovationServices,;
-    ...enterpriseSolutions20o26,;
-    ...specializedSolutions20o26,
-  ].filter(service => service.popular).slice(0, 4),
-,
-  const containerVariants ={,
-    hidden: { opacity: 0 ,},;
-    visible: {,
-      opacity: 1,;
-      transition: {,
+  const heroServices = [
+    ...cuttingEdgeInnovationServices;
+    ...enterpriseSolutions20o26;
+    ...specializedSolutions20o26].filter(service => service.popular).slice(0, 4),
+  const containerVariants ={
+    hidden: { opacity: 0 };
+    visible: {
+      opacity: 1;
+      transition: {
         staggerChildren: 0.2,
-      ,}
+      }
     }
   };
-,
-  const itemVariants ={,
-    hidden: { opacity: 0, y: 30, scale: 0.9 ,},;
-    visible: {,
-      opacity: 1,;
-      y: 0,;
-      scale: 1,;
-      transition: {,
-        duration: 0.6,;
+  const itemVariants ={
+    hidden: { opacity: 0, y: 30, scale: 0.9 };
+    visible: {
+      opacity: 1;
+      y: 0;
+      scale: 1;
+      transition: {
+        duration: 0.6;
         ease: "easeOut" as const,
-      ,}
+      }
     }
   };
-,
-  const getIconComponent = (icon: string) => {,
-    const iconMap: { [key: string]: React.ComponentType<any> ,} ={,
-      '🧠⚛️': Brain,;
-      '🧠☁️': Cpu,;
-      '🧬💻': Cpu,;
-      '🛰️⚛️': Globe,;
-      '🛰️🚨': Shield,;
-      '🔒⚛️': Shield,;
-      '🤖🧠': Zap,;
-      '🌐🥽': Globe,;
-      '🌐⚡': Cpu,;
-      '😊🧠': Brain,;
-      '🎨✍️🎵': Star,;
-      '🔒🛡️': Shield,;
-      '🧬🔬': Cpu,;
-      '🛰️📡': Globe,;
-      '🚨🔍': Shield,;
-      '🧠💙': Brain,
-    };
-    return iconMap[icon] || Star,
-  };
-,
-  return (,
+  const getIconComponent = (icon: string) => {
+    const iconMap: { [key: string]: React.ComponentType<any> } ={
+      '🧠⚛️': Brain;
+      '🧠☁️': Cpu;
+      '🧬💻': Cpu;
+      '🛰️⚛️': Globe;
+      '🛰️🚨': Shield;
+      '🔒⚛️': Shield;
+      '🤖🧠': Zap;
+      '🌐🥽': Globe;
+      '🌐⚡': Cpu;
+      '😊🧠': Brain;
+      '🎨✍️🎵': Star;
+      '🔒🛡️': Shield;
+      '🧬🔬': Cpu;
+      '🛰️📡': Globe;
+      '🚨🔍': Shield;
+      '🧠💙': Brain};
+    return iconMap[icon] || Star};
+  return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">,
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-90o0 via-purple-90o0/30 to-cyan-90o0/30"></div>,
@@ -66,38 +58,37 @@ const EnhancedHero20o26: React.FC = () => {,
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(56,189,248,0.1),transparent_50%)]"></div>,
       {/* Floating Particles */}
       <div className="absolute inset-0 pointer-events-none">,
-        {[...Array(20)].map((_, i) => (,
+        {[...Array(20)].map((_, i) => (
           <motion.div,
             key={i}
             className="absolute w-2 h-2 bg-cyan-40o0 rounded-full opacity-30",
-            style={{,
-              left: `${Math.random() * 10o0,}%`,;
-              top: `${Math.random() * 10o0,}%`}}
-            animate={{,
-              y: [0, -20, 0],;
+            style={{
+              left: `${Math.random() * 10o0}%`;
+              top: `${Math.random() * 10o0}%`}}
+            animate={{
+              y: [0, -20, 0];
               opacity: [0.3, 0.6, 0.3]}}
-            transition={{,
-              duration: 3 + Math.random() * 2,;
-              repeat: Infinity,;
-              delay: Math.random() * 2,}}
-           />,
-        ))}
+            transition={{
+              duration: 3 + Math.random() * 2;
+              repeat: Infinity;
+              delay: Math.random() * 2}}
+           />))}
       </div>,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative z-10">,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">,
-          {/* Left Column - Hero Content */,}
+          {/* Left Column - Hero Content */}
           <motion.div,
             className="text-center lg: text-left",
-            initial={{ opacity: 0, x: -50 ,}}
-            animate={{ opacity: 1, x: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             {/* Badge */}
             <motion.div,
               className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-50o0/30 rounded-full text-cyan-40o0 text-sm font-medium mb-6",
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: 0.2 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
             >,
               <Star className="w-4 h-4"  />,
               Revolutionary 20o26 Technology,
@@ -105,9 +96,9 @@ const EnhancedHero20o26: React.FC = () => {,
             {/* Main Heading */}
             <motion.h1,
               className="text-5xl md: text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight",
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.3 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
             >,
               <span className="bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">,
                 Future of,
@@ -122,9 +113,9 @@ const EnhancedHero20o26: React.FC = () => {,
             {/* Subtitle */}
             <motion.p,
               className="text-xl md: text-2xl text-gray-30o0 mb-8 leading-relaxed max-w-2xl lg:max-w-none",
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.4 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >,
               Experience the next generation of AI, quantum computing, and emerging technologies.,
               Transform your business with our cutting-edge solutions that deliver unprecedented ROI and innovation.,
@@ -132,32 +123,30 @@ const EnhancedHero20o26: React.FC = () => {,
             {/* CTA Buttons */}
             <motion.div,
               className="flex flex-col sm: flex-row items-center justify-center lg:justify-start gap-4 mb-12",
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.5 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
             >,
-              <a,
+              <a
                 href="/services/",
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-semibold rounded-xl shadow-lg shadow-cyan-50o0/25 hover: shadow-xl hover:shadow-cyan-50o0/40 transition-all duration-20o0 text-lg group",
-              >,
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-semibold rounded-xl shadow-lg shadow-cyan-50o0/25 hover: shadow-xl hover:shadow-cyan-50o0/40 transition-all duration-20o0 text-lg group">,
                 <Rocket className="w-6 h-6 mr-3 group-hover:animate-bounce"  />,
                 Explore Services,
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-20o0"  />,
               </a>,
-              <a,
+              <a
                 href="/contact/",
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-50o0/50 text-cyan-40o0 font-semibold rounded-xl hover:bg-cyan-50o0/10 transition-all duration-20o0 text-lg",
-              >,
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-50o0/50 text-cyan-40o0 font-semibold rounded-xl hover:bg-cyan-50o0/10 transition-all duration-20o0 text-lg">,
                 <Shield className="w-6 h-6 mr-3"  />,
                 Get Started,
               </a>,
             </motion.div>,
-            {/* Contact Info */,}
+            {/* Contact Info */}
             <motion.div,
               className="space-y-3 text-left",
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.6 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
             >,
               <div className="flex items-center space-x-3 text-gray-30o0">,
                 <Phone className="w-5 h-5 text-cyan-40o0"  />,
@@ -176,39 +165,38 @@ const EnhancedHero20o26: React.FC = () => {,
           {/* Right Column - Featured Services */}
           <motion.div,
             className="relative",
-            initial={{ opacity: 0, x: 50 ,}}
-            animate={{ opacity: 1, x: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.3 ,}}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
           >,
             <motion.div,
               className="grid grid-cols-1 sm: grid-cols-2 gap-6",
-              variants={containerVariants,}
+              variants={containerVariants}
               initial="hidden",
-              animate="visible",
-            >,
-              {heroServices.map((service, index) => {,
+              animate="visible">,
+              {heroServices.map((service, index) => {
                 const IconComponent = getIconComponent(service.icon),
-                return (,
+                return (
                   <motion.div,
                     key={service.id}
                     className="group relative",
                     variants={itemVariants}
-                    whileHover={{,
-                      y: -10,;
-                      transition: { duration: 0.3 ,}
+                    whileHover={{
+                      y: -10;
+                      transition: { duration: 0.3 }
                     }}
                   >,
                     {/* Enhanced Glow Effect */}
-                    <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-20 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-50o0`,}></div>,
+                    <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-20 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-50o0`}></div>,
                     <div className="relative bg-black/40 backdrop-blur-xl border border-gray-70o0/50 rounded-2xl p-6 hover: border-cyan-50o0/40 transition-all duration-30o0 h-full">,
-                      {/* Service Icon */,}
-                      <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-30o0`,}>,
+                      {/* Service Icon */}
+                      <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-30o0`}>,
                         <IconComponent className="w-8 h-8 text-white"  />,
                       </div>,
                       {/* Service Content */}
                       <div className="text-center">,
                         <h3 className="text-lg font-bold text-white mb-2 group-hover: text-cyan-40o0 transition-colors duration-30o0">,
-                          {service.name,}
+                          {service.name}
                         </h3>,
                         <p className="text-gray-40o0 text-sm mb-4 leading-relaxed">,
                           {service.tagline}
@@ -219,24 +207,21 @@ const EnhancedHero20o26: React.FC = () => {,
                           <span className="text-gray-40o0 text-sm">{service.period}</span>,
                         </div>,
                         {/* Popular Badge */}
-                        {service.popular && (,
+                        {service.popular && (
                           <div className="inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black text-xs font-semibold rounded-full">,
                             <Star className="w-3 h-3"  />,
                             Popular,
-                          </div>,
-                        )}
+                          </div>)}
                       </div>,
                     </div>,
-                  </motion.div>,
-                ),
-              })}
+                  </motion.div>)})}
             </motion.div>,
             {/* Floating Stats */}
             <motion.div,
               className="absolute -top-8 -right-8 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 backdrop-blur-sm border border-purple-50o0/30 rounded-2xl p-6",
-              initial={{ opacity: 0, scale: 0.8, rotate: -5 ,}}
-              animate={{ opacity: 1, scale: 1, rotate: 0 ,}}
-              transition={{ duration: 0.8, delay: 1 ,}}
+              initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ duration: 0.8, delay: 1 }}
             >,
               <div className="text-center">,
                 <div className="text-3xl font-bold text-purple-40o0 mb-2">10o00+</div>,
@@ -245,9 +230,9 @@ const EnhancedHero20o26: React.FC = () => {,
             </motion.div>,
             <motion.div,
               className="absolute -bottom-8 -left-8 bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 backdrop-blur-sm border border-cyan-50o0/30 rounded-2xl p-6",
-              initial={{ opacity: 0, scale: 0.8, rotate: 5 ,}}
-              animate={{ opacity: 1, scale: 1, rotate: 0 ,}}
-              transition={{ duration: 0.8, delay: 1.2 ,}}
+              initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
             >,
               <div className="text-center">,
                 <div className="text-3xl font-bold text-cyan-40o0 mb-2">10o00%</div>,
@@ -257,8 +242,5 @@ const EnhancedHero20o26: React.FC = () => {,
           </motion.div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default EnhancedHero20o26,
+    </section>)};
+export default EnhancedHero20o26;

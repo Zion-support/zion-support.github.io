@@ -1,40 +1,36 @@
 import { useMemo } from 'react',
-import {,
-  LinkedinShareButton,;
-  LinkedinIcon,;
-  FacebookShareButton,;
-  FacebookIcon,;
-  TwitterShareButton,;
-  TwitterIcon,;
+import {
+  LinkedinShareButton;
+  LinkedinIcon;
+  FacebookShareButton;
+  FacebookIcon;
+  TwitterShareButton;
+  TwitterIcon;
 } from 'react-share',
-,
-export default function PageShareButtons({,
-  title,;
-  url,;
-  description,;
-  onShare,;
-  utm = 'utm_source=social&utm_medium=share&utm_campaign=blog',;
-}: {,
+export default function PageShareButtons({
+  title;
+  url;
+  description;
+  onShare;
+  utm = 'utm_source=social&utm_medium=share&utm_campaign=blog';
+}: {
   title: string,
   url: string,
   description?: string,
   onShare?: (network: string) => void,
   utm?: string,
-,}) {,
-  const withUtm = useMemo(() => {,
+}) {
+  const withUtm = useMemo(() => {
     if (!utm) return url,
-    return url.includes('?') ? `${url}&${utm}` : `${url}?${utm}`,
-  }, [url, utm]),
-,
-  const handle = (network: string) => () => {,
-    try {,
+    return url.includes('?') ? `${url}&${utm}` : `${url}?${utm}`}, [url, utm]),
+  const handle = (network: string) => () => {
+    try {
       onShare && onShare(network),
-    ,} catch {}
+    } catch {}
   };
-,
-  return (,
+  return (
     <div className='flex items-center gap-3'>,
-      <LinkedinShareButton,
+      <LinkedinShareButton
         url={withUtm}
         title={title}
         summary={description}
@@ -45,7 +41,7 @@ export default function PageShareButtons({,
       <TwitterShareButton url={withUtm} title={title} onClick={handle('x')}>,
         <TwitterIcon size={36} round />,
       </TwitterShareButton>,
-      <FacebookShareButton,
+      <FacebookShareButton
         url={withUtm}
         quote={title}
         hashtag='#ZionAI',
@@ -53,7 +49,5 @@ export default function PageShareButtons({,
       >,
         <FacebookIcon size={36} round />,
       </FacebookShareButton>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

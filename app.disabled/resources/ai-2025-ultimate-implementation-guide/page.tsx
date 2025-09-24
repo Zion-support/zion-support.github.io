@@ -1,21 +1,19 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
-,
-export const metadata: Metadata = {,
-  title: 'AI 20o25 Ultimate Implementation Guide - Complete Roadmap',;
+export const metadata: Metadata = {
+  title: 'AI 20o25 Ultimate Implementation Guide - Complete Roadmap';
   description:,
-    'The most comprehensive AI implementation guide for 20o25. Learn how to transform your business with cutting-edge AI technologies and achieve unprecedented ROI.',;
-  keywords: [,
-    'AI implementation',;
-    'AI roadmap',;
-    'AI transformation',;
-    'AI strategy',;
-    'AI guide 20o25',;
-  ],;
+    'The most comprehensive AI implementation guide for 20o25. Learn how to transform your business with cutting-edge AI technologies and achieve unprecedented ROI.';
+  keywords: [
+    'AI implementation';
+    'AI roadmap';
+    'AI transformation';
+    'AI strategy';
+    'AI guide 20o25';
+  ];
 };
-,
-export default function AI20o25UltimateImplementationGuide() {,
-  return (,
+export default function AI20o25UltimateImplementationGuide() {
+  return (
     <div className='min-h-screen bg-white'>,
       {/* Hero Section */}
       <section className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-20'>,
@@ -35,30 +33,28 @@ export default function AI20o25UltimateImplementationGuide() {,
               proven methodology.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get Implementation Support,
               </Link>,
-              <Link,
+              <Link
                 href='/case-studies',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 View Success Stories,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Implementation Phases */,}
+      {/* Implementation Phases */}
       <section className='py-16'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
             Implementation Phases,
           </h2>,
           <div className='space-y-12'>,
-            {/* Phase 1 */,}
+            {/* Phase 1 */}
             <div className='flex flex-col md: flex-row items-center gap-8'>,
               <div className='flex-shrink-0'>,
                 <div className='bg-purple-60o0 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold'>,
@@ -132,7 +128,7 @@ export default function AI20o25UltimateImplementationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* Key Technologies */,}
+      {/* Key Technologies */}
       <section className='py-16 bg-gray-50'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
@@ -220,7 +216,7 @@ export default function AI20o25UltimateImplementationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* Implementation Timeline */,}
+      {/* Implementation Timeline */}
       <section className='py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
@@ -282,7 +278,7 @@ export default function AI20o25UltimateImplementationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* Success Metrics */,}
+      {/* Success Metrics */}
       <section className='py-16 bg-gray-50'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
@@ -318,7 +314,7 @@ export default function AI20o25UltimateImplementationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className='py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-6'>,
@@ -329,22 +325,19 @@ export default function AI20o25UltimateImplementationGuide() {,
             expert support.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors',
-            >,
+              className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors'>,
               Start Implementation,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='border-2 border-purple-60o0 text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-colors',
-            >,
+              className='border-2 border-purple-60o0 text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-colors'>,
               Explore Services,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

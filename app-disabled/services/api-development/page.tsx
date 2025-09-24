@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'api-development - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'api-development - Zion Tech Group';
   description:,
-    'Professional api-development solutions for your business needs.',;
-  keywords: 'api-development, services, business, technology',;
+    'Professional api-development solutions for your business needs.';
+  keywords: 'api-development, services, business, technology';
 };
-export default function ApiDevelopmentPage() {,
-  return (,
+export default function ApiDevelopmentPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -32,7 +32,5 @@ export default function ApiDevelopmentPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

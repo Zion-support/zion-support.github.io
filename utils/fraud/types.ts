@@ -8,70 +8,52 @@ export type AdminActionType =,
   | 'investigate',
   | 'dismiss',
   | 'escalate',
-,
   id: string,
   case_id: string,
   type: AdminActionType,
 ,
-,
-,
-export interface AdminAction {,
+export interface AdminAction {
   id: string,
   case_id: string,
   type: AdminActionType,
-,
   admin_id: string,
-  reason: string,;
+  reason: string;
   details: Record < string, any>,
   created_at: string,
   executed_at?: string,
-  status: 'pending' | 'executed' | 'failed',;
+  status: 'pending' | 'executed' | 'failed';
 }
-,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba,
-export interface FraudDetectionResult {,
+export interface FraudDetectionResult {
   is_fraud: boolean,
-,
-  isFraud: boolean,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662,
+  isFraud: boolean>>>>>>> cursor/fix-website-loading-errors-and-merge-6662,
   confidence: number,
   reasons: string[],
-,
-export interface FraudDetectionConfig {,
+export interface FraudDetectionConfig {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
   enabled: boolean,
-  rules: {,
-    suspiciousActivity: {,
+  rules: {
+    suspiciousActivity: {
       enabled: boolean,
-,
-      threshold: number,;
+      threshold: number;
     }
-    fake_profile: {,
+    fake_profile: {
       enabled: boolean,
-      threshold: number,;
+      threshold: number;
     }
-    payment_fraud: {,
+    payment_fraud: {
       enabled: boolean,
-      threshold: number,;
+      threshold: number;
     }
-    spam: {,
+    spam: {
       enabled: boolean,
-      threshold: number,;
+      threshold: number;
     }
   }
-  auto_actions: {,
+  auto_actions: {
     enabled: boolean,
     actions: AdminActionType[],
-,
-  ,}
-,
+  }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662,
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4,
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
->>>>>>> origin/feature/merge-conflicts-and-improvements,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

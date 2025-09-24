@@ -1,36 +1,30 @@
 "use client",
-,
 import React, { useState } from 'react',
-,
-export type ModerationModalProps = {,
+export type ModerationModalProps = {
   flag: any | null,
+  onAction: (
+    action: 'approve' | 'remove' | 'warn' | 'ban';
+    adminNotes?: string) => Promise<void>,
+export default function ModerationModal(): any ({
+  flag;
+  onClose;
+  onAction;
+}: ModerationModalProps) {
 ,
-  onAction: (,
-    action: 'approve' | 'remove' | 'warn' | 'ban',;
-    adminNotes?: string,
-  ) => Promise<void>,
-,
-export default function ModerationModal(): any ({,
-  flag,;
-  onClose,;
-  onAction,;
-}: ModerationModalProps) {,
-,
-export default function ModerationModal({,
-  flag,;
-  onClose,;
-  onAction,;
-}: ModerationModalProps) {,
+export default function ModerationModal({
+  flag;
+  onClose;
+  onAction;
+}: ModerationModalProps) {
 ,
   const [adminNotes, setAdminNotes] = useState(''),
   if (!flag) return null,
-,
-  return (,
+  return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>,
       <div className='bg-white dark: bg-black w-full max-w-2xl rounded shadow-lg'>,
         <div className='p-4 border-b flex items-center justify-between'>,
-          <div className='font-semibold'>Review Flag  {flag && flag.id,}</div>,
-          <button,
+          <div className='font-semibold'>Review Flag  {flag && flag.id}</div>,
+          <button
             onClick={onClose}
 ,
             className='text-gray-500 hover: text-gray-700'>,
@@ -41,7 +35,7 @@ export default function ModerationModal({,
           <div className='grid grid-cols-2 gap-4'>,
             <div>,
               <div className='text-gray-500'>Content Type</div>,
-              <div className='font-medium'>{flag && flag.contentType,}</div>,
+              <div className='font-medium'>{flag && flag.contentType}</div>,
             </div>,
             <div>,
               <div className='text-gray-500'>User</div>,
@@ -59,7 +53,7 @@ export default function ModerationModal({,
           <div>,
             <div className='text-gray-500 mb-1'>Preview</div>,
             <div className='border rounded p-3 bg-gray-50 dark: bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto'>,
-              {flag && flag.snippet,}
+              {flag && flag.snippet}
             </div>,
           </div>,
           <div className='grid grid-cols-3 gap-4'>,
@@ -86,8 +80,7 @@ export default function ModerationModal({,
             <label className='block text-sm font-medium mb-1'>,
               Admin Notes,
             </label>,
-,
-            <textarea,
+            <textarea
               value={adminNotes}
               onChange={e => setAdminNotes(e && e.target.value)}
               rows={3}
@@ -96,75 +89,61 @@ export default function ModerationModal({,
           </div>,
         </div>,
         <div className='p-4 border-t flex items-center justify-end gap-2'>,
-          <button,
+          <button
             onClick={() => onAction('approve', adminNotes)}
-            className='px-3 py-2 rounded bg-green-600 text-white',
-          >,
+            className='px-3 py-2 rounded bg-green-600 text-white'>,
             Approve,
           </button>,
-          <button,
+          <button
             onClick={() => onAction('remove', adminNotes)}
-            className='px-3 py-2 rounded bg-red-600 text-white',
-          >,
+            className='px-3 py-2 rounded bg-red-600 text-white'>,
             Remove,
           </button>,
-          <button,
+          <button
             onClick={() => onAction('warn', adminNotes)}
-            className='px-3 py-2 rounded bg-yellow-600 text-white',
-          >,
+            className='px-3 py-2 rounded bg-yellow-600 text-white'>,
             Warn,
           </button>,
-          <button,
+          <button
             onClick={() => onAction('ban', adminNotes)}
-            className='px-3 py-2 rounded bg-gray-800 text-white',
-          >,
+            className='px-3 py-2 rounded bg-gray-800 text-white'>,
             Ban User,
           </button>        </div>,
       </div>,
-    </div>,
-  ),
-,
-  ),
-}        <div className="p-4 border-t flex items-center justify-end gap-2">,
+    </div>))}        <div className="p-4 border-t flex items-center justify-end gap-2">,
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>,
           <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>,
           <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>,
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>,
       </div>,
-    </div>,
-),
-}
+    </div>)}
   on_close: () => void,
-  on_action: (,
-    action: 'approve' | 'remove' | 'warn' | 'ban',;
+  on_action: (
+    action: 'approve' | 'remove' | 'warn' | 'ban';
     admin_notes?: string) => Promise < void>,
-,
 export default /**,
  * ModerationModal - Function description,
  */,
-function ModerationModal() {,
+function ModerationModal() {
   const [admin_notes, setAdminNotes] = useState (''),
   // Check condition,
-if (return null) {,
-  $2,
-}
-  return (,
+if (return null) {
+  $2}
+  return (
     <div className='fixed inset - 0 z - 50 flex items - center justify - center bg - black / 50'>,
       <div className='bg - white dark: bg - black w - full max - w-2xl rounded shadow - lg'>,
         <div className='p - 4 border - b flex items - center justify - between'>,
-          <div className='font - semibold'>Review Flag  {flag.id,}</div>,
-          <button,
+          <div className='font - semibold'>Review Flag  {flag.id}</div>,
+          <button
             on_click={on_close}
-            className='text - gray - 500 hover: text - gray - 700',
-          >,
-            ,
+            className='text - gray - 500 hover: text - gray - 700'>,
           </button>,
         </div>,
         <div className='p - 4 space - y-4 text - sm'>,
           <div className='grid grid - cols - 2 gap - 4'>,
             <div>,
               <div className='text - gray - 500'>Content Type</div>,
-              <div className='font - medium'>{flag.content_type,}</div>,
+              <div className='font - medium'>{flag.content_type}</div>,
             </div>,
             <div>,
               <div className='text - gray - 500'>User</div>,
@@ -182,7 +161,7 @@ if (return null) {,
           <div>,
             <div className='text - gray - 500 mb - 1'>Preview</div>,
             <div className='border rounded p - 3 bg - gray - 50 dark: bg - gray - 900 whitespace - pre - wrap max - h-48 overflow - auto'>,
-              {flag.snippet,}
+              {flag.snippet}
             </div>,
           </div>,
           <div className='grid grid - cols - 3 gap - 4'>,
@@ -209,7 +188,7 @@ if (return null) {,
             <label className='block text - sm font - medium mb - 1'>,
               Admin Notes,
             </label>,
-            <textarea,
+            <textarea
               value={admin_notes}
               on_change={e => setAdminNotes (e.target.value)}
               rows={3}
@@ -218,40 +197,32 @@ if (return null) {,
           </div>,
         </div>,
         <div className='p - 4 border - t flex items - center justify - end gap - 2'>,
-          <button,
+          <button
             on_click={() => on_action ('approve', admin_notes)}
-            className='px - 3 py - 2 rounded bg - green - 600 text - white',
-          >,
+            className='px - 3 py - 2 rounded bg - green - 600 text - white'>,
             Approve,
           </button>,
-          <button,
+          <button
             on_click={() => on_action ('remove', admin_notes)}
-            className='px - 3 py - 2 rounded bg - red - 600 text - white',
-          >,
+            className='px - 3 py - 2 rounded bg - red - 600 text - white'>,
             Remove,
           </button>,
-          <button,
+          <button
             on_click={() => on_action ('warn', admin_notes)}
-            className='px - 3 py - 2 rounded bg - yellow - 600 text - white',
-          >,
+            className='px - 3 py - 2 rounded bg - yellow - 600 text - white'>,
             Warn,
           </button>,
-          <button,
+          <button
             on_click={() => on_action ('ban', admin_notes)}
-            className='px - 3 py - 2 rounded bg - gray - 800 text - white',
-          >,
+            className='px - 3 py - 2 rounded bg - gray - 800 text - white'>,
             Ban User,
           </button>        </div>,
       </div>,
-    </div>),
-}        <div className="p - 4 border - t flex items - center justify - end gap - 2">,
+    </div>)}        <div className="p - 4 border - t flex items - center justify - end gap - 2">,
           <button on_click={() => on_action ('approve', admin_notes)} className="px - 3 py - 2 rounded bg - green - 600 text - white">Approve</button>,
           <button on_click={() => on_action ('remove', admin_notes)} className="px - 3 py - 2 rounded bg - red - 600 text - white">Remove</button>,
           <button on_click={() => on_action ('warn', admin_notes)} className="px - 3 py - 2 rounded bg - yellow - 600 text - white">Warn</button>,
           <button on_click={() => on_action ('ban', admin_notes)} className="px - 3 py - 2 rounded bg - gray - 800 text - white">Ban User</button>,
       </div>,
-    </div>),
-}
-,
-  ),
-,
+    </div>)}
+),

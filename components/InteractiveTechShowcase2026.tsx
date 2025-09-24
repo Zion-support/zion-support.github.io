@@ -1,156 +1,142 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   Play,
   Code,
   Brain,
   Zap,
   Shield,
   Globe,
-  ArrowRight,;
-  Download,;
-  ExternalLink,;
-  CheckCircle,;
-  Star,;
-  Lightbulb,;
-  Target,;
-  BarChart3,;
-  Settings,;
-  Monitor,;
-  Smartphone,;
-  Laptop,
-} from 'lucide-react',
-,
-const InteractiveTechShowcase20o26 = () => {,
+  ArrowRight;
+  Download;
+  ExternalLink;
+  CheckCircle;
+  Star;
+  Lightbulb;
+  Target;
+  BarChart3;
+  Settings;
+  Monitor;
+  Smartphone;
+  Laptop} from 'lucide-react',
+const InteractiveTechShowcase20o26 = () => {
   const [activeDemosetActiveDemo] = useState(0),
   const [isVisiblesetIsVisible] = useState(false),
   const [isPlayingsetIsPlaying] = useState(false),
-,
-  useEffect(() => {,
-    setIsVisible(true),
-  }[]),
-,
-  const demos = [,
-    {,
-      id: 'ai-assistant',;
-      title: 'AI Assistant Demo',;
-      description: 'Experience our advanced AI assistant in action',;
-      icon: Brain,;
-      color: 'from-purple-50o0 to-pink-50o0',;
-      features: [,
-        'Natural language processing',;
-        'Real-time responses',;
-        'Context awareness',;
-        'Multi-language support',
-      ],;
-      demoUrl: '/demos/ai-assistant',;
-      duration: '2 min',;
+  useEffect(() => {
+    setIsVisible(true)}[]),
+  const demos = [
+    {
+      id: 'ai-assistant';
+      title: 'AI Assistant Demo';
+      description: 'Experience our advanced AI assistant in action';
+      icon: Brain;
+      color: 'from-purple-50o0 to-pink-50o0';
+      features: [
+        'Natural language processing';
+        'Real-time responses';
+        'Context awareness';
+        'Multi-language support'];
+      demoUrl: '/demos/ai-assistant';
+      duration: '2 min';
       difficulty: 'Beginner',
-    ,},;
-    {,
-      id: 'automation-workflow',;
-      title: 'Automation Workflow',;
-      description: 'See how complex processes are automated',;
-      icon: Zap,;
-      color: 'from-blue-50o0 to-cyan-50o0',;
-      features: [,
-        'Visual workflow builder',;
-        'Drag-and-drop interface',;
-        'Real-time monitoring',;
-        'Error handling',
-      ],;
-      demoUrl: '/demos/automation',;
-      duration: '3 min',;
+    };
+    {
+      id: 'automation-workflow';
+      title: 'Automation Workflow';
+      description: 'See how complex processes are automated';
+      icon: Zap;
+      color: 'from-blue-50o0 to-cyan-50o0';
+      features: [
+        'Visual workflow builder';
+        'Drag-and-drop interface';
+        'Real-time monitoring';
+        'Error handling'];
+      demoUrl: '/demos/automation';
+      duration: '3 min';
       difficulty: 'Intermediate',
-    ,},;
-    {,
-      id: 'security-dashboard',;
-      title: 'Security Dashboard',;
-      description: 'Monitor threats and security in real-time',;
-      icon: Shield,;
-      color: 'from-red-50o0 to-orange-50o0',;
-      features: [,
-        'Threat detection',;
-        'Real-time alerts',;
-        'Security analytics',;
-        'Compliance monitoring',
-      ],;
-      demoUrl: '/demos/security',;
-      duration: '4 min',;
+    };
+    {
+      id: 'security-dashboard';
+      title: 'Security Dashboard';
+      description: 'Monitor threats and security in real-time';
+      icon: Shield;
+      color: 'from-red-50o0 to-orange-50o0';
+      features: [
+        'Threat detection';
+        'Real-time alerts';
+        'Security analytics';
+        'Compliance monitoring'];
+      demoUrl: '/demos/security';
+      duration: '4 min';
       difficulty: 'Advanced',
-    ,},;
-    {,
-      id: 'global-analytics',;
-      title: 'Global Analytics',;
-      description: 'Comprehensive business intelligence platform',;
-      icon: Globe,;
-      color: 'from-green-50o0 to-emerald-50o0',;
-      features: [,
-        'Real-time data visualization',;
-        'Predictive analytics',;
-        'Custom dashboards',;
-        'Export capabilities',
-      ],;
-      demoUrl: '/demos/analytics',;
-      duration: '5 min',;
+    };
+    {
+      id: 'global-analytics';
+      title: 'Global Analytics';
+      description: 'Comprehensive business intelligence platform';
+      icon: Globe;
+      color: 'from-green-50o0 to-emerald-50o0';
+      features: [
+        'Real-time data visualization';
+        'Predictive analytics';
+        'Custom dashboards';
+        'Export capabilities'];
+      demoUrl: '/demos/analytics';
+      duration: '5 min';
       difficulty: 'Intermediate',
-    ,}
+    }
   ],
-,
-  const tools = [,
-    {,
-      name: 'ROI Calculator',;
-      description: 'Calculate your potential return on investment',;
-      icon: BarChart3,;
-      category: 'Business Tools',;
+  const tools = [
+    {
+      name: 'ROI Calculator';
+      description: 'Calculate your potential return on investment';
+      icon: BarChart3;
+      category: 'Business Tools';
       popularity: 95,
-    ,},;
-    {,
-      name: 'AI Code Generator',;
-      description: 'Generate code with AI assistance',;
-      icon: Code,;
-      category: 'Development',;
+    };
+    {
+      name: 'AI Code Generator';
+      description: 'Generate code with AI assistance';
+      icon: Code;
+      category: 'Development';
       popularity: 88,
-    ,},;
-    {,
-      name: 'Security Scanner',;
-      description: 'Scan your systems for vulnerabilities',;
-      icon: Shield,;
-      category: 'Security',;
+    };
+    {
+      name: 'Security Scanner';
+      description: 'Scan your systems for vulnerabilities';
+      icon: Shield;
+      category: 'Security';
       popularity: 92,
-    ,},;
-    {,
-      name: 'Performance Monitor',;
-      description: 'Monitor system performance in real-time',;
-      icon: Monitor,;
-      category: 'Monitoring',;
+    };
+    {
+      name: 'Performance Monitor';
+      description: 'Monitor system performance in real-time';
+      icon: Monitor;
+      category: 'Monitoring';
       popularity: 87,
-    ,}
+    }
   ],
-,
-  const platforms = [,
-    { name: ''Web', 'icon: Laptopstatus: 'Available' ,},;
-    { name: ''Mobile', 'icon: Smartphonestatus: 'Available' ,},;
-    { name: ''Desktop', 'icon: Monitorstatus: 'Coming Soon' ,}
+  const platforms = [
+    { name: ''Web', 'icon: Laptopstatus: 'Available' };
+    { name: ''Mobile', 'icon: Smartphonestatus: 'Available' };
+    { name: ''Desktop', 'icon: Monitorstatus: 'Coming Soon' }
   ],
-,
-  return (,
+  return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0">,
       {/* Background Pattern */}
       <div className="absolute inset-0">,
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%236366F1" fill-opacity="0.0o5"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>,
       </div>,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">,
-        {/* Header */,}
+        {/* Header */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 ,}}
-          transition={{ duration: 0.8 ,}}
-          className="text-center mb-16",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16">,
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-50o0/20 to-purple-50o0/20 border border-indigo-50o0/30 mb-6">,
             <Play className="w-5 h-5 text-indigo-40o0 mr-2"  />,
             <span className="text-indigo-20o0 font-medium">Interactive Tech Showcase 20o26</span>,
@@ -169,43 +155,40 @@ const InteractiveTechShowcase20o26 = () => {,
             See the power of our technology in action before making any commitments.,
           </p>,
         </motion.div>,
-        {/* Demo Navigation */,}
+        {/* Demo Navigation */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 ,}}
-          transition={{ duration: 0.8, delay: 0.2 ,}}
-          className="mb-12",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-12">,
           <div className="flex flex-wrap justify-center gap-4 mb-8">,
-            {demos.map((demo, index) => (,
-              <button,
+            {demos.map((demo, index) => (
+              <button
                 key={demo.id}
                 onClick={() => setActiveDemo(index)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${,
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                   activeDemo === index,
                     ? 'bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-white shadow-lg shadow-indigo-50o0/25',
                     : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white',
-                ,}`}
+                }`}
               >,
                 <div className="flex items-center space-x-2">,
                   <demo.icon className="w-5 h-5"  />,
                   <span>{demo.title}</span>,
                 </div>,
-              </button>,
-            ))}
+              </button>))}
           </div>,
           {/* Demo Content */}
           <AnimatePresence mode="wait">,
             <motion.div,
               key={activeDemo}
-              initial={{ opacity: 0x: 20 ,}}
-              animate={{ opacity: 1x: 0 ,}}
-              exit={{ opacity: 0x: -20 ,}}
-              transition={{ duration: 0.3 ,}}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10",
-            >,
+              initial={{ opacity: 0x: 20 }}
+              animate={{ opacity: 1x: 0 }}
+              exit={{ opacity: 0x: -20 }}
+              transition={{ duration: 0.3 }}
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">,
               <div className="grid lg: grid-cols-2 gap-8">,
-                {/* Left Column - Demo Info */,}
+                {/* Left Column - Demo Info */}
                 <div>,
                   <div className="flex items-center space-x-4 mb-6">,
                     <div className={`w-16 h-16 bg-gradient-to-r ${demos[activeDemo].color} rounded-full flex items-center justify-center`}>,
@@ -223,12 +206,11 @@ const InteractiveTechShowcase20o26 = () => {,
                         Key Features,
                       </h4>,
                       <div className="grid grid-cols-1 gap-2">,
-                        {demos[activeDemo].features.map((feature, index) => (,
+                        {demos[activeDemo].features.map((feature, index) => (
                           <div key={index} className="flex items-center space-x-2">,
                             <CheckCircle className="w-4 h-4 text-green-40o0"  />,
                             <span className="text-gray-30o0">{feature}</span>,
-                          </div>,
-                        ))}
+                          </div>))}
                       </div>,
                     </div>,
                     <div className="grid grid-cols-2 gap-4">,
@@ -247,24 +229,21 @@ const InteractiveTechShowcase20o26 = () => {,
                 <div>,
                   <div className="bg-gradient-to-br from-slate-80o0 to-slate-90o0 rounded-xl p-6 border border-white/10">,
                     <div className="aspect-video bg-gradient-to-br from-indigo-90o0 to-purple-90o0 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">,
-                      {isPlaying ? (,
+                      {isPlaying ? (
                         <div className="text-center">,
                           <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto">,
                             <Play className="w-8 h-8 text-white"  />,
                           </div>,
                           <p className="text-white">Demo Playing...</p>,
-                        </div>,
-                      ) : (,
+                        </div>) : (
                         <div className="text-center">,
-                          <button,
+                          <button
                             onClick={() => setIsPlaying(true)}
-                            className="w-20 h-20 bg-gradient-to-r from-indigo-50o0 to-purple-50o0 rounded-full flex items-center justify-center hover: from-indigo-60o0 hover:to-purple-60o0 transition-all duration-30o0 shadow-lg shadow-indigo-50o0/25 hover:shadow-indigo-50o0/40",
-                          >,
+                            className="w-20 h-20 bg-gradient-to-r from-indigo-50o0 to-purple-50o0 rounded-full flex items-center justify-center hover: from-indigo-60o0 hover:to-purple-60o0 transition-all duration-30o0 shadow-lg shadow-indigo-50o0/25 hover:shadow-indigo-50o0/40">,
                             <Play className="w-8 h-8 text-white ml-1"  />,
                           </button>,
                           <p className="text-white mt-4">Click to start demo</p>,
-                        </div>,
-                      ),}
+                        </div>)}
                     </div>,
                     <div className="flex space-x-3">,
                       <button className="flex-1 bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-white font-semibold py-3 px-4 rounded-lg hover: from-indigo-60o0 hover:to-purple-60o0 transition-all duration-30o0">,
@@ -283,27 +262,25 @@ const InteractiveTechShowcase20o26 = () => {,
             </motion.div>,
           </AnimatePresence>,
         </motion.div>,
-        {/* Tools Section */,}
+        {/* Tools Section */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 ,}}
-          transition={{ duration: 0.8delay: 0.4 ,}}
-          className="mb-16",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.4 }}
+          className="mb-16">,
           <h2 className="text-3xl font-bold text-center text-white mb-8">,
             Interactive Tools & Utilities,
           </h2>,
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">,
-            {tools.map((tool, index) => (,
+            {tools.map((tool, index) => (
               <motion.div,
                 key={tool.name}
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 ,}}
-                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 ,}}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-indigo-50o0/50 transition-all duration-30o0 group",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-indigo-50o0/50 transition-all duration-30o0 group">,
                 <div className="flex items-center justify-between mb-4">,
-                  <div className={`w-12 h-12 bg-gradient-to-r ${tool.color,} rounded-lg flex items-center justify-center`}>,
+                  <div className={`w-12 h-12 bg-gradient-to-r ${tool.color} rounded-lg flex items-center justify-center`}>,
                     <tool.icon className="w-6 h-6 text-white"  />,
                   </div>,
                   <div className="text-right">,
@@ -315,7 +292,7 @@ const InteractiveTechShowcase20o26 = () => {,
                   </div>,
                 </div>,
                 <h3 className="text-lg font-semibold text-white mb-2 group-hover: text-indigo-30o0 transition-colors">,
-                  {tool.name,}
+                  {tool.name}
                 </h3>,
                 <p className="text-gray-30o0 text-sm mb-4 leading-relaxed">,
                   {tool.description}
@@ -323,47 +300,41 @@ const InteractiveTechShowcase20o26 = () => {,
                 <button className="w-full bg-gradient-to-r from-indigo-50o0/20 to-purple-50o0/20 text-indigo-30o0 font-medium py-2 px-4 rounded-lg hover: from-indigo-50o0/30 hover:to-purple-50o0/30 transition-all duration-30o0 border border-indigo-50o0/30">,
                   Try Now,
                 </button>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
         </motion.div>,
         {/* Platform Support */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 ,}}
-          transition={{ duration: 0.8delay: 0.6 ,}}
-          className="mb-16",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.6 }}
+          className="mb-16">,
           <h2 className="text-3xl font-bold text-center text-white mb-8">,
             Available on All Platforms,
           </h2>,
           <div className="flex justify-center space-x-8">,
-            {platforms.map((platform, index) => (,
+            {platforms.map((platform, index) => (
               <div key={platform.name} className="text-center">,
-                <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${,
+                <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${
                   platform.status === 'Available',
                     ? 'bg-gradient-to-r from-green-50o0 to-emerald-50o0',
-                    : 'bg-gradient-to-r from-gray-50o0 to-gray-60o0',
-                }`}>,
+                    : 'bg-gradient-to-r from-gray-50o0 to-gray-60o0'}`}>,
                   <platform.icon className="w-8 h-8 text-white"  />,
                 </div>,
                 <div className="text-white font-semibold">{platform.name}</div>,
-                <div className={`text-sm ${,
-                  platform.status === 'Available' ? 'text-green-40o0' : 'text-gray-40o0',
-                }`}>,
+                <div className={`text-sm ${
+                  platform.status === 'Available' ? 'text-green-40o0' : 'text-gray-40o0'}`}>,
                   {platform.status}
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </motion.div>,
         {/* Call to Action */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 ,}}
-          transition={{ duration: 0.8delay: 0.8 ,}}
-          className="text-center",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.8 }}
+          className="text-center">,
           <div className="bg-gradient-to-r from-indigo-50o0/20 to-purple-50o0/20 rounded-2xl p-8 border border-indigo-50o0/30">,
             <h2 className="text-3xl font-bold text-white mb-4">,
               Ready to Experience the Future?,
@@ -390,8 +361,6 @@ const InteractiveTechShowcase20o26 = () => {,
           </div>,
         </motion.div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default InteractiveTechShowcase20o26,
+    </div>),
+};
+export default InteractiveTechShowcase20o26;

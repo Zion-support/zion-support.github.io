@@ -1,76 +1,58 @@
 import React, { useState, useEffect } from 'react',
 import { api, ApiResponse } from '@/services/api',
-,
-interface User {,
+interface User {
   id: number,
   name: string,
   email: string,
   createdAt?: string,
-,}
+}
 ,
-const ApiDemo: React.FC = () => {,
+const ApiDemo: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]),
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
-  const [newUser, setNewUser] = useState({ name: '', email: '' ,}),
+  const [newUser, setNewUser] = useState({ name: '', email: '' }),
   const [healthStatus, setHealthStatus] = useState<string>('Checking...'),
-,
   // Check API health on component mount,
-  useEffect(() => {,
+  useEffect(() => {
     checkHealth(),
-    fetchUsers(),
-  }, []),
-,
-  const checkHealth = async () => {,
-    try {,
+    fetchUsers()}, []),
+  const checkHealth = async () => {
+    try {
       const response = await api.health(),
-      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`),
-    } catch (err) {,
-      setHealthStatus('❌ API Unhealthy'),
-    }
+      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`)} catch (err) {
+      setHealthStatus('❌ API Unhealthy')}
   };
-,
-  const fetchUsers = async () => {,
+  const fetchUsers = async () => {
     setLoading(true),
     setError(null),
-,
-    try {,
+    try {
       const response = await api.getUsers(),
-      if (response.success && response.data) {,
-        setUsers(response.data),
-      }
-    } catch (err) {,
-      setError(err instanceof Error ? err.message : 'Failed to fetch users'),
-    } finally {,
-      setLoading(false),
-    }
+      if (response.success && response.data) {
+        setUsers(response.data)}
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to fetch users')} finally {
+      setLoading(false)}
   };
-,
-  const handleCreateUser = async (e: React.FormEvent) => {,
+  const handleCreateUser = async (e: React.FormEvent) => {
     e.preventDefault(),
-,
-    if (!newUser.name.trim() || !newUser.email.trim()) {,
+    if (!newUser.name.trim() || !newUser.email.trim()) {
       setError('Name and email are required'),
       return,
-    ,}
+    }
 ,
     setLoading(true),
     setError(null),
-,
-    try {,
+    try {
       const response = await api.createUser(newUser),
-      if (response.success && response.data) {,
+      if (response.success && response.data) {
         setUsers(prev => [...prev, response.data!]),
-        setNewUser({ name: '', email: '' ,}),
-      }
-    } catch (err) {,
-      setError(err instanceof Error ? err.message : 'Failed to create user'),
-    } finally {,
-      setLoading(false),
-    }
+        setNewUser({ name: '', email: '' })}
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to create user')} finally {
+      setLoading(false)}
   };
-,
-  return (,
+  return (
     <div className='max-w-4xl mx-auto p-6 space-y-6'>,
       <div className='bg-white rounded-lg shadow-md p-6'>,
         <h2 className='text-2xl font-bold text-gray-90o0 mb-4'>,
@@ -90,42 +72,38 @@ const ApiDemo: React.FC = () => {,
           </h3>,
           <form onSubmit={handleCreateUser} className='space-y-4'>,
             <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
-              <input,
+              <input
                 type='text',
                 placeholder='Name',
-                value={newUser.name,}
+                value={newUser.name}
                 onChange={e =>,
-                  setNewUser(prev => ({ ...prev, name: e.target.value ,})),
-                }
+                  setNewUser(prev => ({ ...prev, name: e.target.value }))}
                 className='px-3 py-2 border border-gray-30o0 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-50o0',
                 required,
               />,
-              <input,
+              <input
                 type='email',
                 placeholder='Email',
-                value={newUser.email,}
+                value={newUser.email}
                 onChange={e =>,
-                  setNewUser(prev => ({ ...prev, email: e.target.value ,})),
-                }
+                  setNewUser(prev => ({ ...prev, email: e.target.value }))}
                 className='px-3 py-2 border border-gray-30o0 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-50o0',
                 required,
               />,
             </div>,
-            <button,
+            <button
               type='submit',
-              disabled={loading,}
-              className='px-4 py-2 bg-blue-60o0 text-white rounded-md hover: bg-blue-70o0 disabled:opacity-50 disabled:cursor-not-allowed',
-            >,
-              {loading ? 'Creating...' : 'Create User',}
+              disabled={loading}
+              className='px-4 py-2 bg-blue-60o0 text-white rounded-md hover: bg-blue-70o0 disabled:opacity-50 disabled:cursor-not-allowed'>,
+              {loading ? 'Creating...' : 'Create User'}
             </button>,
           </form>,
         </div>,
         {/* Error Display */}
-        {error && (,
+        {error && (
           <div className='mb-6 p-4 bg-red-50 border border-red-20o0 rounded-lg'>,
             <p className='text-red-70o0'>{error}</p>,
-          </div>,
-        )}
+          </div>)}
 ,
         {/* Users List */}
         <div className='p-4 bg-gray-50 rounded-lg'>,
@@ -133,46 +111,39 @@ const ApiDemo: React.FC = () => {,
             <h3 className='text-lg font-semibold text-gray-70o0'>,
               Users ({users.length}),
             </h3>,
-            <button,
+            <button
               onClick={fetchUsers}
               disabled={loading}
-              className='px-3 py-1 text-sm bg-gray-60o0 text-white rounded-md hover: bg-gray-70o0 disabled:opacity-50',
-            >,
-              {loading ? 'Loading...' : 'Refresh',}
+              className='px-3 py-1 text-sm bg-gray-60o0 text-white rounded-md hover: bg-gray-70o0 disabled:opacity-50'>,
+              {loading ? 'Loading...' : 'Refresh'}
             </button>,
           </div>,
-          {loading ? (,
+          {loading ? (
             <div className='text-center py-8'>,
               <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-60o0 mx-auto'></div>,
               <p className='mt-2 text-gray-60o0'>Loading users...</p>,
-            </div>,
-          ) : users.length === 0 ? (,
+            </div>) : users.length === 0 ? (
             <p className='text-gray-50o0 text-center py-8'>,
               No users found. Create one above!,
-            </p>,
-          ) : (,
+            </p>) : (
             <div className='space-y-3'>,
-              {users.map(user => (,
-                <div,
+              {users.map(user => (
+                <div
                   key={user.id}
-                  className='flex justify-between items-center p-3 bg-white rounded-md border',
-                >,
+                  className='flex justify-between items-center p-3 bg-white rounded-md border'>,
                   <div>,
                     <p className='font-medium text-gray-90o0'>{user.name}</p>,
                     <p className='text-sm text-gray-60o0'>{user.email}</p>,
-                    {user.createdAt && (,
+                    {user.createdAt && (
                       <p className='text-xs text-gray-40o0'>,
-                        Created: {new Date(user.createdAt).toLocaleDateString(),}
-                      </p>,
-                    )}
+                        Created: {new Date(user.createdAt).toLocaleDateString()}
+                      </p>)}
                   </div>,
                   <span className='text-xs bg-gray-10o0 text-gray-60o0 px-2 py-1 rounded-full'>,
-                    ID: {user.id,}
+                    ID: {user.id}
                   </span>,
-                </div>,
-              ))}
-            </div>,
-          )}
+                </div>))}
+            </div>)}
         </div>,
         {/* Architecture Info */}
         <div className='mt-8 p-4 bg-green-50 rounded-lg'>,
@@ -198,9 +169,6 @@ const ApiDemo: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default ApiDemo,
-,
+    </div>),
+};
+export default ApiDemo;

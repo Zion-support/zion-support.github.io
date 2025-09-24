@@ -1,14 +1,14 @@
 import Link from 'next/link',
 ArrowRightSparklesZapStarCheckCircle,
-export default function NewFeaturesShowcase20o25PromotionBanner() {,
-  return (,
+export default function NewFeaturesShowcase20o25PromotionBanner() {
+  return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 rounded-2xl">,
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.0o3"%3E%3Cpath d="M20 20c0-11.0o46-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>,
       <div className="relative z-10 p-8 md:p-12">,
         <div className="max-w-7xl mx-auto">,
           <div className="grid lg:grid-cols-2 gap-8 items-center">,
-            {/* Left Content */,}
+            {/* Left Content */}
             <div>,
               <div className="flex items-center mb-6">,
                 <div className="w-12 h-12 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 rounded-lg flex items-center justify-center mr-4">,
@@ -28,7 +28,7 @@ export default function NewFeaturesShowcase20o25PromotionBanner() {,
               <p className="text-xl text-gray-30o0 mb-8 leading-relaxed">,
                 Discover 50o0+ new features that are transforming how businesses operatecreate contentand engage with their audiences in 20o25.,
               </p>,
-              {/* Feature Highlights */,}
+              {/* Feature Highlights */}
               <div className="grid grid-cols-2 gap-4 mb-8">,
                 <div className="flex items-center">,
                   <CheckCircle className="w-5 h-5 text-green-40o0 mr-3"  />,
@@ -49,24 +49,22 @@ export default function NewFeaturesShowcase20o25PromotionBanner() {,
               </div>,
               {/* CTA Buttons */}
               <div className="flex flex-col sm: flex-row gap-4">,
-                <Link,
+                <Link
                   href="/features",
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black font-semibold rounded-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5",
-                >,
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black font-semibold rounded-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5">,
                   <Sparkles className="w-5 h-5 mr-2"  />,
                   Explore Features,
                   <ArrowRight className="w-5 h-5 ml-2"  />,
                 </Link>,
-                <Link,
+                <Link
                   href="/demo",
-                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-indigo-90o0 transition-all duration-30o0",
-                >,
+                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-indigo-90o0 transition-all duration-30o0">,
                   <Zap className="w-5 h-5 mr-2"  />,
                   Try Demo,
                 </Link>,
               </div>,
             </div>,
-            {/* Right Content - Feature Cards */,}
+            {/* Right Content - Feature Cards */}
             <div className="space-y-6">,
               {/* AI Content Generation */}
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">,
@@ -131,6 +129,4 @@ export default function NewFeaturesShowcase20o25PromotionBanner() {,
       {/* Floating Elements */}
       <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-r from-yellow-40o0/20 to-orange-50o0/20 rounded-full blur-xl"></div>,
       <div className="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-r from-purple-40o0/20 to-pink-50o0/20 rounded-full blur-xl"></div>,
-    </div>,
-  ),
-}
+    </div>)}

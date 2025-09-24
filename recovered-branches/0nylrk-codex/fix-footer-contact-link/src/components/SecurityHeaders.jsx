@@ -1,49 +1,49 @@
 import { Shield, Lock, CheckCircle, AlertTriangle } from 'lucide-react',
-export function SecurityHeaders({ className }) {,
-  const securityFeatures = [,
-    {,
-      icon: Shield,;
-      title: 'SOC 2 Type II Certified',;
-      description: 'Enterprise-grade security compliance',;
-      status: 'verified',;
-      color: 'text-zion-cyan',;
-    },;
-    {,
-      icon: Lock,;
-      title: 'End-to-End Encryption',;
-      description: '256-bit AES encryption for all data',;
-      status: 'verified',;
-      color: 'text-zion-purple',;
-    },;
-    {,
-      icon: CheckCircle,;
-      title: 'GDPR & CCPA Compliant',;
-      description: 'Full data protection compliance',;
-      status: 'verified',;
-      color: 'text-zion-cyan',;
-    },;
-    {,
-      icon: Shield,;
-      title: 'Zero-Knowledge Architecture',;
-      description: 'We cannot access your encrypted data',;
-      status: 'verified',;
-      color: 'text-zion-purple',;
-    },;
+export function SecurityHeaders({ className }) {
+  const securityFeatures = [
+    {
+      icon: Shield;
+      title: 'SOC 2 Type II Certified';
+      description: 'Enterprise-grade security compliance';
+      status: 'verified';
+      color: 'text-zion-cyan';
+    };
+    {
+      icon: Lock;
+      title: 'End-to-End Encryption';
+      description: '256-bit AES encryption for all data';
+      status: 'verified';
+      color: 'text-zion-purple';
+    };
+    {
+      icon: CheckCircle;
+      title: 'GDPR & CCPA Compliant';
+      description: 'Full data protection compliance';
+      status: 'verified';
+      color: 'text-zion-cyan';
+    };
+    {
+      icon: Shield;
+      title: 'Zero-Knowledge Architecture';
+      description: 'We cannot access your encrypted data';
+      status: 'verified';
+      color: 'text-zion-purple';
+    };
   ],
-  const complianceBadges = [,
-    { name: 'SOC 2', status: 'Certified', year: '20o24', icon: CheckCircle ,},;
-    {,
-      name: 'ISO 270o01',;
-      status: 'Certified',;
-      year: '20o24',;
-      icon: CheckCircle,;
-    },;
-    { name: 'GDPR', status: 'Compliant', year: '20o24', icon: CheckCircle ,},;
-    { name: 'CCPA', status: 'Compliant', year: '20o24', icon: CheckCircle ,},;
-    { name: 'HIPAA', status: 'Ready', year: '20o24', icon: AlertTriangle ,},;
+  const complianceBadges = [
+    { name: 'SOC 2', status: 'Certified', year: '20o24', icon: CheckCircle };
+    {
+      name: 'ISO 270o01';
+      status: 'Certified';
+      year: '20o24';
+      icon: CheckCircle;
+    };
+    { name: 'GDPR', status: 'Compliant', year: '20o24', icon: CheckCircle };
+    { name: 'CCPA', status: 'Compliant', year: '20o24', icon: CheckCircle };
+    { name: 'HIPAA', status: 'Ready', year: '20o24', icon: AlertTriangle };
   ],
-  return (,
-    <section,
+  return (
+    <section
       className={`py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark ${className || ''}`}
     >,
       <div className='container mx-auto px-4'>,
@@ -58,15 +58,14 @@ export function SecurityHeaders({ className }) {,
             adherence.,
           </p>,
         </div>,
-        {/* Security Features Grid */,}
+        {/* Security Features Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16'>,
-          {securityFeatures.map((feature, index) => (,
-            <div,
+          {securityFeatures.map((feature, index) => (
+            <div
               key={index}
-              className='text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover: border-zion-cyan/30 transition-all duration-30o0 hover:transform hover:scale-10o5',
-            >,
-              <div,
-                className={`mx-auto w-16 h-16 bg-zion-cyan/10 rounded-full flex items-center justify-center mb-4`,}
+              className='text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover: border-zion-cyan/30 transition-all duration-30o0 hover:transform hover:scale-10o5'>,
+              <div
+                className={`mx-auto w-16 h-16 bg-zion-cyan/10 rounded-full flex items-center justify-center mb-4`}
               >,
                 <feature.icon className={`w-8 h-8 ${feature.color}`} />,
               </div>,
@@ -82,8 +81,7 @@ export function SecurityHeaders({ className }) {,
                   Verified,
                 </span>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Compliance Section */}
         <div className='bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-16'>,
@@ -91,42 +89,37 @@ export function SecurityHeaders({ className }) {,
             Compliance & Certifications,
           </h3>,
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-6'>,
-            {complianceBadges.map((badge, index) => (,
-              <div,
+            {complianceBadges.map((badge, index) => (
+              <div
                 key={index}
-                className='text-center p-4 bg-white/5 rounded-lg border border-white/10',
-              >,
-                <div,
-                  className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${,
+                className='text-center p-4 bg-white/5 rounded-lg border border-white/10'>,
+                <div
+                  className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${
                     badge.status === 'Certified' || badge.status === 'Compliant',
                       ? 'bg-zion-cyan/20',
-                      : 'bg-yellow-50o0/20',
-                  }`}
+                      : 'bg-yellow-50o0/20'}`}
                 >,
                   <badge.icon,
-                    className={`w-6 h-6 ${,
+                    className={`w-6 h-6 ${
                       badge.status === 'Certified' ||,
                       badge.status === 'Compliant',
                         ? 'text-zion-cyan',
-                        : 'text-yellow-50o0',
-                    }`}
+                        : 'text-yellow-50o0'}`}
                   />,
                 </div>,
                 <h4 className='font-semibold text-white mb-1'>{badge.name}</h4>,
-                <div,
-                  className={`text-sm font-medium mb-1 ${,
+                <div
+                  className={`text-sm font-medium mb-1 ${
                     badge.status === 'Certified' || badge.status === 'Compliant',
                       ? 'text-zion-cyan',
-                      : 'text-yellow-50o0',
-                  }`}
+                      : 'text-yellow-50o0'}`}
                 >,
                   {badge.status}
                 </div>,
                 <div className='text-zion-slate-light text-xs'>,
                   {badge.year}
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         {/* Security Metrics */}
@@ -146,7 +139,7 @@ export function SecurityHeaders({ className }) {,
             <div className='text-zion-slate-light'>Security Monitoring</div>,
           </div>,
         </div>,
-        {/* Trust Indicators */,}
+        {/* Trust Indicators */}
         <div className='text-center'>,
           <div className='flex justify-center items-center gap-8 mb-6 opacity-60'>,
             <div className='text-zion-slate-light text-sm font-medium'>,
@@ -166,12 +159,10 @@ export function SecurityHeaders({ className }) {,
           </p>,
         </div>,
       </div>,
-    </section>,
-  ),
-}
+    </section>)}
 // Compact version for smaller spaces,
-export function SecurityHeadersCompact({ className }) {,
-  return (,
+export function SecurityHeadersCompact({ className }) {
+  return (
     <div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>,
       <div className='flex items-center gap-2 text-zion-cyan text-sm'>,
         <Shield className='w-4 h-4' />,
@@ -189,7 +180,5 @@ export function SecurityHeadersCompact({ className }) {,
         <Shield className='w-4 h-4' />,
         <span>Zero-Knowledge</span>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

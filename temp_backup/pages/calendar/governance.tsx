@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function GovernancePage() {,
-  return (,
+export default function GovernancePage() {
+  return (
     <>,
       <Head>,
         <title>Governance - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function GovernancePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

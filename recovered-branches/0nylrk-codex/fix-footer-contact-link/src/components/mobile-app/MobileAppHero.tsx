@@ -1,14 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Link } from 'react-router-dom',
 import { ArrowRightPhone } from 'lucide-react',
 import { Button } from '@/components/ui/button',
 import { AppStoreButtons } from './AppStoreButtons',
-,
-export const MobileAppHero: React.FC = () => {,
+export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config,
   const appStoreUrl = '#', // Replace with actual App Store URL when available,
   const googlePlayUrl = '#', // Replace with actual Google Play URL when available,
-  return (,
+  return (
     <section className='relative bg-gradient-to-r from-zion-blue-dark to-zion-purple py-16 md:py-24'>,
       <div className='container mx-auto px-4 lg:px-8'>,
         <div className='flex flex-col md:flex-row items-center gap-8 md:gap-16'>,
@@ -21,19 +20,18 @@ export const MobileAppHero: React.FC = () => {,
               Zion's AI matchingnow available on your mobile device.,
             </p>,
             <div className='mb-8'>,
-              <AppStoreButtons,
-                appStoreUrl={appStoreUrl,}
+              <AppStoreButtons
+                appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />,
             </div>,
             <Link to='/open-app'>,
-              <Button,
+              <Button
                 variant='outline',
                 size='lg',
-                className='flex gap-2 border-white text-white hover: bg-white/10',
-              >,
+                className='flex gap-2 border-white text-white hover: bg-white/10'>,
                 Open App,
-                <ArrowRight size={20,} />,
+                <ArrowRight size={20} />,
               </Button>,
             </Link>,
           </div>,
@@ -46,7 +44,4 @@ export const MobileAppHero: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
+    </section>)};

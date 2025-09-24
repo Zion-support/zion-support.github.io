@@ -1,18 +1,17 @@
 import Link from 'next/link',
-import {,
-  ArrowRight,;
-  Calendar,;
-  Users,;
-  TrendingUp,;
-  Award,;
-  Zap,;
-  Brain,;
-  ArrowRight,;
-  Brain,;
+import {
+  ArrowRight;
+  Calendar;
+  Users;
+  TrendingUp;
+  Award;
+  Zap;
+  Brain;
+  ArrowRight;
+  Brain;
 } from 'lucide-react',
-,
-const NewContent20o26ShowcaseBanner = () => {,
-  return (,
+const NewContent20o26ShowcaseBanner = () => {
+  return (
     <section className='bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white py-24 relative overflow-hidden'>,
       {/* Background Elements */}
       <div className='absolute inset-0 bg-black/40'></div>,
@@ -22,7 +21,7 @@ const NewContent20o26ShowcaseBanner = () => {,
       <div className='absolute top-40 right-20 w-24 h-24 bg-blue-50o0/10 rounded-full animate-pulse delay-10o00'></div>,
       <div className='absolute bottom-32 left-1/3 w-20 h-20 bg-indigo-50o0/10 rounded-full animate-pulse delay-20o00'></div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-16'>,
           <div className='inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6 border border-white/20'>,
             <Calendar className='w-5 h-5 text-yellow-40o0 mr-2' />,
@@ -44,7 +43,7 @@ const NewContent20o26ShowcaseBanner = () => {,
         </div>,
         {/* Content Showcase Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>,
-          {/* Enterprise Automation Article */,}
+          {/* Enterprise Automation Article */}
           <div className='group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: bg-white/10 transition-all duration-30o0 hover:scale-10o5'>,
             <div className='flex items-center mb-4'>,
               <div className='w-12 h-12 bg-gradient-to-r from-purple-50o0 to-purple-60o0 rounded-lg flex items-center justify-center mr-4'>,
@@ -68,14 +67,13 @@ const NewContent20o26ShowcaseBanner = () => {,
               </span>,
               <span className='text-xs text-gray-40o0'>15 min read</span>,
             </div>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-enterprise-automation-revolution',
-              className='inline-flex items-center text-purple-30o0 hover: text-purple-20o0 transition-colors group-hover:translate-x-1 transform duration-20o0',
-            >,
+              className='inline-flex items-center text-purple-30o0 hover: text-purple-20o0 transition-colors group-hover:translate-x-1 transform duration-20o0'>,
               Read Article <ArrowRight className='w-4 h-4 ml-2' />,
             </Link>,
           </div>,
-          {/* Quantum Computing Article */,}
+          {/* Quantum Computing Article */}
           <div className='group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: bg-white/10 transition-all duration-30o0 hover:scale-10o5'>,
             <div className='flex items-center mb-4'>,
               <div className='w-12 h-12 bg-gradient-to-r from-blue-50o0 to-blue-60o0 rounded-lg flex items-center justify-center mr-4'>,
@@ -98,14 +96,13 @@ const NewContent20o26ShowcaseBanner = () => {,
               </span>,
               <span className='text-xs text-gray-40o0'>18 min read</span>,
             </div>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-quantum-computing-breakthrough',
-              className='inline-flex items-center text-blue-30o0 hover: text-blue-20o0 transition-colors group-hover:translate-x-1 transform duration-20o0',
-            >,
+              className='inline-flex items-center text-blue-30o0 hover: text-blue-20o0 transition-colors group-hover:translate-x-1 transform duration-20o0'>,
               Read Article <ArrowRight className='w-4 h-4 ml-2' />,
             </Link>,
           </div>,
-          {/* Global Success Case Study */,}
+          {/* Global Success Case Study */}
           <div className='group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: bg-white/10 transition-all duration-30o0 hover:scale-10o5'>,
             <div className='flex items-center mb-4'>,
               <div className='w-12 h-12 bg-gradient-to-r from-green-50o0 to-green-60o0 rounded-lg flex items-center justify-center mr-4'>,
@@ -128,15 +125,14 @@ const NewContent20o26ShowcaseBanner = () => {,
               </span>,
               <span className='text-xs text-gray-40o0'>12 min read</span>,
             </div>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o26-global-transformation-success',
-              className='inline-flex items-center text-green-30o0 hover:text-green-20o0 transition-colors group-hover:translate-x-1 transform duration-20o0',
-            >,
+              className='inline-flex items-center text-green-30o0 hover:text-green-20o0 transition-colors group-hover:translate-x-1 transform duration-20o0'>,
               Read Case Study <ArrowRight className='w-4 h-4 ml-2' />,
             </Link>,
           </div>,
         </div>,
-        {/* Key Highlights */,}
+        {/* Key Highlights */}
         <div className='bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-12'>,
           <h3 className='text-2xl font-bold text-center mb-8'>,
             <span className='bg-gradient-to-r from-yellow-40o0 to-orange-40o0 bg-clip-text text-transparent'>,
@@ -185,16 +181,14 @@ const NewContent20o26ShowcaseBanner = () => {,
         {/* Call to Action */}
         <div className='text-center'>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center items-center mb-6'>,
-            <Link,
+            <Link
               href='/blog',
-              className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               Explore All Content,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Get Expert Consultation,
             </Link>,
           </div>,
@@ -204,9 +198,6 @@ const NewContent20o26ShowcaseBanner = () => {,
           </p>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default NewContent20o26ShowcaseBanner,
-,
+    </section>),
+};
+export default NewContent20o26ShowcaseBanner;

@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 import { SEO } from '../components/SEO',
-,
-const Contact: React.FC = () => {,
-  return (,
+const Contact: React.FC = () => {
+  return (
     <>,
-      <SEO,
+      <SEO
         title='Contact Us | Zion Tech Group',
         description='Contact Zion Tech Group for expert consultation on AI-powered solutions and technology services.',
         keywords='contact, consultation, Zion Tech Group, AI services',
@@ -25,9 +24,5 @@ const Contact: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </>,
-  ),
-};
-,
-export default Contact,
-,
+    </>)};
+export default Contact;

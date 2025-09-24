@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function IndexSimplePage() {,
-  return (,
+export default function IndexSimplePage() {
+  return (
     <>,
       <Head>,
         <title>Index Simple - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function IndexSimplePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

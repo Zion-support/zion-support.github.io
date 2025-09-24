@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function CybersecurityPage() {,
-  return (,
+export default function CybersecurityPage() {
+  return (
     <>,
       <Head>,
         <title>Cybersecurity - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function CybersecurityPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

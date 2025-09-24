@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function SwaggerPage() {,
-  return (,
+export default function SwaggerPage() {
+  return (
     <>,
       <Head>,
         <title>Swagger - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function SwaggerPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

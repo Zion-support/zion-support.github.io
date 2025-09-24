@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function AiAutonomousSalesPlatformPage() {,
-  return (,
+export default function AiAutonomousSalesPlatformPage() {
+  return (
     <>,
       <Head>,
         <title>Ai Autonomous Sales Platform - Zion Tech Group</title>,
@@ -18,7 +17,6 @@ export default function AiAutonomousSalesPlatformPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

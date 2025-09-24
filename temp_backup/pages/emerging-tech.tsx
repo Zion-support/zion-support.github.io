@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function EmergingTechPage() {,
-  return (,
+export default function EmergingTechPage() {
+  return (
     <>,
       <Head>,
         <title>Emerging Tech - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function EmergingTechPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

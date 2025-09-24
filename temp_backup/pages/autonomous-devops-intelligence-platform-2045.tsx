@@ -1,13 +1,12 @@
 import Head from 'next/head',
-,
-export default function AutonomousDevopsIntelligencePlatform20o45Page() {,
-  return (,
+export default function AutonomousDevopsIntelligencePlatform20o45Page() {
+  return (
     <>,
       <Head>,
         <title>,
           Autonomous Devops Intelligence Platform 20o45 - Zion Tech Group,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='autonomous devops intelligence platform 20o45 page',
         />,
@@ -23,7 +22,6 @@ export default function AutonomousDevopsIntelligencePlatform20o45Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

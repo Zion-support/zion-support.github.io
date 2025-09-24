@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'business-automation - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'business-automation - Zion Tech Group';
   description:,
-    'Professional business-automation solutions for your business needs.',;
-  keywords: 'business-automation, services, business, technology',;
+    'Professional business-automation solutions for your business needs.';
+  keywords: 'business-automation, services, business, technology';
 };
-export default function BusinessAutomationPage() {,
-  return (,
+export default function BusinessAutomationPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function BusinessAutomationPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

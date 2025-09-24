@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function AccessibilityScannerPage() {,
-  return (,
+export default function AccessibilityScannerPage() {
+  return (
     <>,
       <Head>,
         <title>Accessibility Scanner - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function AccessibilityScannerPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AutonomousSystems20o25RevolutionBanner() {,
-  return (,
+export default function AutonomousSystems20o25RevolutionBanner() {
+  return (
     <section className='py-16 bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white relative overflow-hidden'>,
       {/* Background Pattern */}
       <div className='absolute inset-0 opacity-20'>,
@@ -28,7 +27,7 @@ export default function AutonomousSystems20o25RevolutionBanner() {,
             self-managingself-optimizingand self-healing capabilities.,
           </p>,
         </div>,
-        {/* Autonomous Features Grid */,}
+        {/* Autonomous Features Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-12'>,
           <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20'>,
             <div className='text-3xl mb-4'>🧠</div>,
@@ -63,7 +62,7 @@ export default function AutonomousSystems20o25RevolutionBanner() {,
             </p>,
           </div>,
         </div>,
-        {/* Implementation Timeline */,}
+        {/* Implementation Timeline */}
         <div className='bg-white bg-opacity-5 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20 mb-12'>,
           <h3 className='text-2xl font-bold mb-6 text-center'>,
             Autonomous Systems Implementation Roadmap,
@@ -107,7 +106,7 @@ export default function AutonomousSystems20o25RevolutionBanner() {,
             </div>,
           </div>,
         </div>,
-        {/* ROI Statistics */,}
+        {/* ROI Statistics */}
         <div className='grid grid-cols-2 md: grid-cols-4 gap-6 mb-12'>,
           <div className='text-center'>,
             <div className='text-3xl font-bold text-indigo-40o0 mb-2'>90%</div>,
@@ -126,7 +125,7 @@ export default function AutonomousSystems20o25RevolutionBanner() {,
             <div className='text-gray-30o0 text-sm'>Uptime Reliability</div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center'>,
           <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20'>,
             <h3 className='text-2xl font-bold mb-4'>,
@@ -138,23 +137,20 @@ export default function AutonomousSystems20o25RevolutionBanner() {,
               expert guidance and cutting-edge solutions.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-60o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+                className='bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-60o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 Start Autonomous Journey,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-90o0 transition-all duration-30o0',
-              >,
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-90o0 transition-all duration-30o0'>,
                 Explore Autonomous Solutions,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}
 ,

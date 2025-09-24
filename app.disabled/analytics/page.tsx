@@ -1,24 +1,22 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'Analytics Revolution 20o25 - Advanced Data Analytics | Zion Tech Group',;
+    'Analytics Revolution 20o25 - Advanced Data Analytics | Zion Tech Group';
   description:,
-    'Transform your data into actionable insights with our advanced analytics solutions. Real-time processing, predictive intelligence, and AI-powered analytics.',;
-  keywords: [,
-    'analytics',;
-    'data analytics',;
-    'business intelligence',;
-    'predictive analytics',;
-    'real-time analytics',;
-  ],;
+    'Transform your data into actionable insights with our advanced analytics solutions. Real-time processing, predictive intelligence, and AI-powered analytics.';
+  keywords: [
+    'analytics';
+    'data analytics';
+    'business intelligence';
+    'predictive analytics';
+    'real-time analytics';
+  ];
 };
-,
-export default function AnalyticsPage() {,
-  return (,
+export default function AnalyticsPage() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='Analytics Revolution 20o25 - Advanced Data Analytics',
         description='Transform your data into actionable insights with our advanced analytics solutions. Real-time processing, predictive intelligence, and AI-powered analytics.',
         keywords='analytics, data analytics, business intelligence, predictive analytics, real-time analytics',
@@ -36,22 +34,20 @@ export default function AnalyticsPage() {,
             drives business success.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/analytics/demo',
-              className='bg-white text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Try Analytics Demo,
             </Link>,
-            <Link,
+            <Link
               href='/analytics/consultation',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors'>,
               Get Free Consultation,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Features Grid */,}
+      {/* Features Grid */}
       <section className='py-16'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
@@ -67,10 +63,9 @@ export default function AnalyticsPage() {,
                 Process and analyze data streams in real-time with,
                 sub-millisecond latency for instant insights.,
               </p>,
-              <Link,
+              <Link
                 href='/analytics/real-time',
-                className='text-indigo-60o0 font-semibold hover:text-indigo-80o0',
-              >,
+                className='text-indigo-60o0 font-semibold hover:text-indigo-80o0'>,
                 Learn More →,
               </Link>,
             </div>,
@@ -83,10 +78,9 @@ export default function AnalyticsPage() {,
                 Advanced machine learning models that predict trends and,
                 outcomes with 95%+ accuracy.,
               </p>,
-              <Link,
+              <Link
                 href='/analytics/predictive',
-                className='text-indigo-60o0 font-semibold hover:text-indigo-80o0',
-              >,
+                className='text-indigo-60o0 font-semibold hover:text-indigo-80o0'>,
                 Learn More →,
               </Link>,
             </div>,
@@ -99,17 +93,16 @@ export default function AnalyticsPage() {,
                 AI automatically generates actionable insights and,
                 recommendations from your data.,
               </p>,
-              <Link,
+              <Link
                 href='/analytics/automated',
-                className='text-indigo-60o0 font-semibold hover:text-indigo-80o0',
-              >,
+                className='text-indigo-60o0 font-semibold hover:text-indigo-80o0'>,
                 Learn More →,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className='bg-gray-50 py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-4'>,
@@ -119,15 +112,13 @@ export default function AnalyticsPage() {,
             Join 50o0+ companies that have transformed their data strategy with,
             our analytics solutions.,
           </p>,
-          <Link,
+          <Link
             href='/contact',
-            className='bg-indigo-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-70o0 transition-colors',
-          >,
+            className='bg-indigo-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-70o0 transition-colors'>,
             Start Your Analytics Journey,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

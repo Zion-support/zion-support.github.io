@@ -1,8 +1,7 @@
 import { prisma } from '@/lib/prisma',
 import Link from 'next/link',
 import { Globe, Rocket } from 'lucide-react',
-,
-interface InstanceWithCounts {,
+interface InstanceWithCounts {
   id: string,
   name: string,
   slug: string,
@@ -18,19 +17,19 @@ interface InstanceWithCounts {,
   createdAt: Date,
   updatedAt: Date,
   daoConfig: any | null,
-  _count: {,
+  _count: {
     deployments: number,
     features: number,
-  ,};
+  };
 }
 ,
-export default function InstancesPage() {,
+export default function InstancesPage() {
   const instances: InstanceWithCounts[] = [],
   const error: string | null = null,
-  return (,
+  return (
     <div className='min-h-screen py-8 px-4 sm:px-6 lg:px-8'>,
       <div className='max-w-7xl mx-auto'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-12'>,
           <h1 className='text-4xl font-bold mb-4'>📊 Manage Your Instances</h1>,
           <p className='text-xl text-white/70 max-w-2xl mx-auto'>,
@@ -39,7 +38,7 @@ export default function InstancesPage() {,
           </p>,
         </div>,
         {/* Error State */}
-        {error && (,
+        {error && (
           <div className='mb-8 p-6 bg-red-90o0/20 border border-red-50o0/20 rounded-xl text-center'>,
             <div className='text-red-40o0 mb-2'>,
               ⚠️ Database Connection Error,
@@ -49,14 +48,13 @@ export default function InstancesPage() {,
               Please ensure your database is properly configured and the,
               DATABASE_URL environment variable is set.,
             </p>,
-          </div>,
-        )}
+          </div>)}
 ,
         {/* Stats Overview */}
         <div className='grid grid-cols-1 md: grid-cols-4 gap-6 mb-8'>,
           <div className='glass-effect rounded-xl p-6 text-center'>,
             <div className='text-3xl font-bold text-blue-40o0 mb-2'>,
-              {instances.length,}
+              {instances.length}
             </div>,
             <div className='text-white/70'>Total Instances</div>,
           </div>,
@@ -80,19 +78,18 @@ export default function InstancesPage() {,
           </div>,
         </div>,
         {/* Instances Grid */}
-        {instances.length > 0 && (,
+        {instances.length > 0 && (
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
-            {instances.map(inst => (,
-              <div key={inst.id,} className='feature-card group hover-lift'>,
+            {instances.map(inst => (
+              <div key={inst.id} className='feature-card group hover-lift'>,
                 <div className='flex items-start justify-between mb-4'>,
                   <div className='flex items-center gap-3'>,
-                    <div,
-                      className={`w-3 h-3 rounded-full ${,
-                        inst.isPublic ? 'bg-green-50o0' : 'bg-yellow-50o0',
-                      }`}
+                    <div
+                      className={`w-3 h-3 rounded-full ${
+                        inst.isPublic ? 'bg-green-50o0' : 'bg-yellow-50o0'}`}
                     ></div>,
                     <div className='font-semibold text-lg text-white group-hover: text-blue-40o0 transition-colors'>,
-                      {inst.name,}
+                      {inst.name}
                     </div>,
                   </div>,
                   <span className='text-xs px-2 py-1 rounded-full bg-white/10 text-white/70'>,
@@ -109,22 +106,21 @@ export default function InstancesPage() {,
                   <div className='flex items-center gap-2 text-sm text-white/70'>,
                     <span className='w-4 h-4'>🗳️</span>,
                     <span>,
-                      Governance: {getGovernanceLabel(inst.governanceType),}
+                      Governance: {getGovernanceLabel(inst.governanceType)}
                     </span>,
                   </div>,
-                  {inst.region && (,
+                  {inst.region && (
                     <div className='flex items-center gap-2 text-sm text-white/70'>,
                       <span className='w-4 h-4'>📍</span>,
                       <span>,
                         {inst.region}
                         {inst.country ? `, ${inst.country}` : ''}
                       </span>,
-                    </div>,
-                  )}
+                    </div>)}
 ,
                   <div className='flex items-center gap-2 text-sm text-white/70'>,
                     <span className='w-4 h-4'>🔧</span>,
-                    <span>Token: {getTokenSystemLabel(inst.tokenSystem),}</span>,
+                    <span>Token: {getTokenSystemLabel(inst.tokenSystem)}</span>,
                   </div>,
                 </div>,
                 <div className='flex items-center justify-between text-xs text-white/60'>,
@@ -138,27 +134,23 @@ export default function InstancesPage() {,
                 </div>,
                 <div className='mt-4 pt-4 border-t border-white/10'>,
                   <div className='flex gap-2'>,
-                    <a,
+                    <a
                       href={`/admin/instances/${inst.id}`}
-                      className='flex-1 text-center py-2 px-3 text-sm bg-blue-60o0 hover: bg-blue-70o0 text-white rounded-lg transition-colors',
-                    >,
+                      className='flex-1 text-center py-2 px-3 text-sm bg-blue-60o0 hover: bg-blue-70o0 text-white rounded-lg transition-colors'>,
                       Manage,
                     </a>,
-                    <a,
-                      href={`/admin/instances/${inst.id,}/deployments`}
-                      className='flex-1 text-center py-2 px-3 text-sm border border-white/20 hover: border-white/40 text-white rounded-lg transition-colors',
-                    >,
+                    <a
+                      href={`/admin/instances/${inst.id}/deployments`}
+                      className='flex-1 text-center py-2 px-3 text-sm border border-white/20 hover: border-white/40 text-white rounded-lg transition-colors'>,
                       Deployments,
                     </a>,
                   </div>,
                 </div>,
-              </div>,
-            )),}
-          </div>,
-        )}
+              </div>))}
+          </div>)}
 ,
         {/* Empty State */}
-        {instances.length === 0 && !error && (,
+        {instances.length === 0 && !error && (
           <div className='text-center py-16'>,
             <div className='w-24 h-24 mx-auto mb-6 bg-white/5 rounded-full flex items-center justify-center'>,
               <span className='text-4xl'>🚀</span>,
@@ -171,14 +163,13 @@ export default function InstancesPage() {,
             <a href='/multiverse/launch' className='btn-primary'>,
               🚀 Launch Your First Economy,
             </a>,
-          </div>,
-        )}
+          </div>)}
       </div>,
       {/* Stats Overview */}
       <div className='grid grid-cols-1 md: grid-cols-4 gap-6'>,
         <div className='card text-center'>,
           <div className='text-3xl font-bold text-blue-40o0 mb-2'>,
-            {instances.length,}
+            {instances.length}
           </div>,
           <div className='text-white/60 text-sm'>Total Instances</div>,
         </div>,
@@ -202,7 +193,7 @@ export default function InstancesPage() {,
         </div>,
       </div>,
       {/* Instances Grid */}
-      {instances.length === 0 ? (,
+      {instances.length === 0 ? (
         <div className='card text-center py-12'>,
           <div className='text-6xl mb-4'>🚀</div>,
           <h2 className='text-2xl font-semibold mb-2'>No Instances Yet</h2>,
@@ -212,11 +203,10 @@ export default function InstancesPage() {,
           <a href='/multiverse/launch' className='btn-primary'>,
             Launch First Instance,
           </a>,
-        </div>,
-      ) : (,
+        </div>) : (
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
-          {instances.map(inst => (,
-            <div key={inst.id,} className='card card-hover'>,
+          {instances.map(inst => (
+            <div key={inst.id} className='card card-hover'>,
               {/* Instance Header */}
               <div className='flex items-start justify-between mb-4'>,
                 <div className='flex-1'>,
@@ -224,8 +214,8 @@ export default function InstancesPage() {,
                     {inst.name}
                   </h3>,
                   <div className='flex items-center space-x-2 mb-2'>,
-                    <span,
-                      className={`px-2 py-1 rounded-full text-xs font-medium ${,
+                    <span
+                      className={`px-2 py-1 rounded-full text-xs font-medium ${
                         inst.vertical === 'GENERAL',
                           ? 'bg-blue-50o0/20 text-blue-40o0',
                           : inst.vertical === 'HEALTH',
@@ -234,16 +224,14 @@ export default function InstancesPage() {,
                               ? 'bg-purple-50o0/20 text-purple-40o0',
                               : inst.vertical === 'LAW',
                                 ? 'bg-yellow-50o0/20 text-yellow-40o0',
-                                : 'bg-gray-50o0/20 text-gray-40o0',
-                      }`}
+                                : 'bg-gray-50o0/20 text-gray-40o0'}`}
                     >,
                       {inst.vertical}
                     </span>,
-                    {inst.isPublic && (,
+                    {inst.isPublic && (
                       <span className='px-2 py-1 rounded-full text-xs font-medium bg-green-50o0/20 text-green-40o0'>,
                         Public,
-                      </span>,
-                    )}
+                      </span>)}
                   </div>,
                 </div>,
                 <div className='w-8 h-8 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-lg flex items-center justify-center'>,
@@ -258,21 +246,20 @@ export default function InstancesPage() {,
                 </div>,
                 <div className='flex items-center space-x-2 text-sm text-white/70'>,
                   <span>🏛️</span>,
-                  <span>Governance: {inst.governanceType,}</span>,
+                  <span>Governance: {inst.governanceType}</span>,
                 </div>,
-                {inst.region && (,
+                {inst.region && (
                   <div className='flex items-center space-x-2 text-sm text-white/70'>,
                     <span>📍</span>,
                     <span>,
                       {inst.region}
                       {inst.country ? `, ${inst.country}` : ''}
                     </span>,
-                  </div>,
-                )}
+                  </div>)}
 ,
                 <div className='flex items-center space-x-2 text-sm text-white/70'>,
                   <span>💎</span>,
-                  <span>Token: {inst.tokenSystem,}</span>,
+                  <span>Token: {inst.tokenSystem}</span>,
                 </div>,
               </div>,
               {/* Stats */}
@@ -292,27 +279,23 @@ export default function InstancesPage() {,
               </div>,
               {/* Actions */}
               <div className='flex space-x-2'>,
-                <a,
+                <a
                   href={`/admin/instances/${inst.id}`}
-                  className='flex-1 btn-secondary text-center text-sm py-2',
-                >,
+                  className='flex-1 btn-secondary text-center text-sm py-2'>,
                   Manage,
                 </a>,
-                <a,
+                <a
                   href={`/admin/instances/${inst.id}/deployments`}
-                  className='flex-1 btn-secondary text-center text-sm py-2',
-                >,
+                  className='flex-1 btn-secondary text-center text-sm py-2'>,
                   Deployments,
                 </a>,
               </div>,
               {/* Created Date */}
               <div className='text-xs text-white/40 mt-3 pt-3 border-t border-white/10'>,
-                Created: {new Date(inst.createdAt).toLocaleDateString(),}
+                Created: {new Date(inst.createdAt).toLocaleDateString()}
               </div>,
-            </div>,
-          ))}
-        </div>,
-      )}
+            </div>))}
+        </div>)}
 ,
       {/* Quick Actions */}
       <div className='card text-center py-8'>,
@@ -326,21 +309,20 @@ export default function InstancesPage() {,
           </a>,
         </div>,
       </div>,
-      {/* Admin Navigation */,}
+      {/* Admin Navigation */}
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 mb-20'>,
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
           <div className='bg-gradient-to-br from-blue-90o0/20 to-purple-90o0/20 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-30o0 hover:transform hover:scale-10o5'>,
             <div className='w-16 h-16 bg-gradient-to-r from-blue-50o0 to-purple-60o0 rounded-full flex items-center justify-center mx-auto mb-4'>,
-              <svg,
+              <svg
                 className='w-8 h-8 text-white',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 0o02-2V5a2 2 0 0o0-2-2H5a2 2 0 0o0-2 2v10a2 2 0 0o02 2z',
                 />,
               </svg>,
@@ -350,27 +332,25 @@ export default function InstancesPage() {,
             </h3>,
             <p className='text-gray-30o0 mb-4'>,
               Monitor and manage your deployed AI autonomous systems and their,
-              performance.,
+              window.performance.,
             </p>,
-            <Link,
+            <Link
               href='/admin/ai-systems',
-              className='text-blue-40o0 hover: text-blue-30o0 font-medium',
-            >,
+              className='text-blue-40o0 hover: text-blue-30o0 font-medium'>,
               Manage Systems →,
             </Link>,
           </div>,
           <div className='bg-gradient-to-br from-green-90o0/20 to-blue-90o0/20 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-30o0 hover:transform hover:scale-10o5'>,
             <div className='w-16 h-16 bg-gradient-to-r from-green-50o0 to-blue-60o0 rounded-full flex items-center justify-center mx-auto mb-4'>,
-              <svg,
+              <svg
                 className='w-8 h-8 text-white',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M13 10V3L4 14h7v7l9-11h-7z',
                 />,
               </svg>,
@@ -381,25 +361,23 @@ export default function InstancesPage() {,
             <p className='text-gray-30o0 mb-4'>,
               Access and manage your quantum computing resources and algorithms.,
             </p>,
-            <Link,
+            <Link
               href='/admin/quantum',
-              className='text-green-40o0 hover: text-green-30o0 font-medium',
-            >,
+              className='text-green-40o0 hover: text-green-30o0 font-medium'>,
               Quantum Dashboard →,
             </Link>,
           </div>,
           <div className='bg-gradient-to-br from-purple-90o0/20 to-pink-90o0/20 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-30o0 hover:transform hover:scale-10o5'>,
             <div className='w-16 h-16 bg-gradient-to-r from-purple-50o0 to-pink-60o0 rounded-full flex items-center justify-center mx-auto mb-4'>,
-              <svg,
+              <svg
                 className='w-8 h-8 text-white',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M19.428 15.428a2 2 0 0o0-1.0o22-.547l-2.387-.477a6 6 0 0o0-3.86.517l-.318.158a6 6 0 0o1-3.86.517L6.0o5 15.21a2 2 0 0o0-1.80o6.547M8 4h8l-1 1v5.172a2 2 0 0o0.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 0o09 10.172V5L8 4z',
                 />,
               </svg>,
@@ -411,25 +389,23 @@ export default function InstancesPage() {,
               Access research tools and development environments for AI,
               consciousness evolution.,
             </p>,
-            <Link,
+            <Link
               href='/admin/research',
-              className='text-purple-40o0 hover: text-purple-30o0 font-medium',
-            >,
+              className='text-purple-40o0 hover: text-purple-30o0 font-medium'>,
               Research Tools →,
             </Link>,
           </div>,
           <div className='bg-gradient-to-br from-orange-90o0/20 to-red-90o0/20 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-30o0 hover:transform hover:scale-10o5'>,
             <div className='w-16 h-16 bg-gradient-to-r from-orange-50o0 to-red-60o0 rounded-full flex items-center justify-center mx-auto mb-4'>,
-              <svg,
+              <svg
                 className='w-8 h-8 text-white',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M9 12l2 2 4-4m5.618-4.0o16A11.955 11.955 0 0o112 2.944a11.955 11.955 0 0o1-8.618 3.0o4A12.0o2 12.0o2 0 0o03 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.0o3 9-11.622 0-1.0o42-.133-2.0o52-.382-3.0o16z',
                 />,
               </svg>,
@@ -441,25 +417,23 @@ export default function InstancesPage() {,
               Monitor security protocols and ensure compliance with AI,
               governance frameworks.,
             </p>,
-            <Link,
+            <Link
               href='/admin/security',
-              className='text-orange-40o0 hover: text-orange-30o0 font-medium',
-            >,
+              className='text-orange-40o0 hover: text-orange-30o0 font-medium'>,
               Security Dashboard →,
             </Link>,
           </div>,
           <div className='bg-gradient-to-br from-cyan-90o0/20 to-blue-90o0/20 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-30o0 hover:transform hover:scale-10o5'>,
             <div className='w-16 h-16 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-full flex items-center justify-center mx-auto mb-4'>,
-              <svg,
+              <svg
                 className='w-8 h-8 text-white',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.40o2 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.40o2-2.599-1',
                 />,
               </svg>,
@@ -470,28 +444,26 @@ export default function InstancesPage() {,
             <p className='text-gray-30o0 mb-4'>,
               Access comprehensive business analytics and performance metrics.,
             </p>,
-            <Link,
+            <Link
               href='/admin/analytics',
-              className='text-cyan-40o0 hover: text-cyan-30o0 font-medium',
-            >,
+              className='text-cyan-40o0 hover: text-cyan-30o0 font-medium'>,
               Analytics Dashboard →,
             </Link>,
           </div>,
           <div className='bg-gradient-to-br from-indigo-90o0/20 to-purple-90o0/20 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-30o0 hover:transform hover:scale-10o5'>,
             <div className='w-16 h-16 bg-gradient-to-r from-indigo-50o0 to-purple-60o0 rounded-full flex items-center justify-center mx-auto mb-4'>,
-              <svg,
+              <svg
                 className='w-8 h-8 text-white',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0o02.573 1.0o66c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0o01.0o65 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0o0-1.0o66 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0o0-2.572 1.0o65c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0o0-2.573-1.0o66c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0o0-1.0o65-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0o01.0o66-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.0o7 2.572-1.0o65z',
                 />,
-                <path,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
                   strokeWidth={2}
@@ -506,16 +478,15 @@ export default function InstancesPage() {,
               Configure system parameters and customize your AI platform,
               settings.,
             </p>,
-            <Link,
+            <Link
               href='/admin/settings',
-              className='text-indigo-40o0 hover: text-indigo-30o0 font-medium',
-            >,
+              className='text-indigo-40o0 hover: text-indigo-30o0 font-medium'>,
               System Settings →,
             </Link>,
           </div>,
         </div>,
       </div>,
-      {/* Quick Stats */,}
+      {/* Quick Stats */}
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 mb-20'>,
         <h2 className='text-3xl font-bold text-white mb-8 text-center'>,
           System Overview,
@@ -549,7 +520,7 @@ export default function InstancesPage() {,
           </div>,
         </div>,
       </div>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
         <div className='bg-gradient-to-r from-blue-90o0/20 to-purple-90o0/20 border border-white/10 rounded-xl p-12'>,
           <h2 className='text-3xl font-bold text-white mb-6'>,
@@ -560,23 +531,21 @@ export default function InstancesPage() {,
             your AI systems.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover:from-blue-70o0 hover:to-purple-70o0 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-20o0 transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover:from-blue-70o0 hover:to-purple-70o0 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-20o0 transform hover:scale-10o5'>,
               Contact Support,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-20o0 hover:bg-white/10',
-            >,
+              className='border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-20o0 hover:bg-white/10'>,
               View Services,
             </Link>,
           </div>,
         </div>,
       </div>,
-      {/* Empty State */,}
-      {instances.length === 0 && (,
+      {/* Empty State */}
+      {instances.length === 0 && (
         <div className='text-center py-16'>,
           <div className='w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full'>,
             <Globe className='w-8 h-8 text-white/40' />,
@@ -587,21 +556,17 @@ export default function InstancesPage() {,
           <p className='text-white/40 mb-6'>,
             Create your first Zion ecosystem to get started,
           </p>,
-          <a,
+          <a
             href='/admin/os-deploy',
-            className='inline-flex items-center gap-2 px-6 py-3 bg-blue-60o0 hover: bg-blue-70o0 text-white font-medium rounded-lg transition-colors duration-20o0',
-          >,
+            className='inline-flex items-center gap-2 px-6 py-3 bg-blue-60o0 hover: bg-blue-70o0 text-white font-medium rounded-lg transition-colors duration-20o0'>,
             <Rocket className='w-4 h-4' />,
             Deploy First Instance,
           </a>,
-        </div>,
-      ),}
-    </div>,
-  ),
-}
+        </div>)}
+    </div>)}
 ,
-function getGovernanceLabel(type: string) {,
-  switch (type) {,
+function getGovernanceLabel(type: string) {
+  switch (type) {
     case 'ADMIN':,
       return 'Admin Control',
     case 'DAO_LITE':,
@@ -610,17 +575,17 @@ function getGovernanceLabel(type: string) {,
       return 'Full DAO',
     default:,
       return type,
-  ,}
+  }
 }
 ,
-function getTokenSystemLabel(type: string) {,
-  switch (type) {,
+function getTokenSystemLabel(type: string) {
+  switch (type) {
     case 'SHARED':,
       return 'ZION$ Shared',
     case 'LOCAL':,
       return 'Local Token',
     default:,
       return type,
-  ,}
+  }
 }
 ,

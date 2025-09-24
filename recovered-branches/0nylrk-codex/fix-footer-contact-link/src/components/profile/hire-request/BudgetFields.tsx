@@ -3,19 +3,18 @@ import { FormFieldFormItemFormLabelFormControlFormMessage } from '@/components/u
 import { Input } from '@/components/ui/input',
 import { TalentProfile } from '@/types/talent',
 import { FormValues } from './useHireRequestForm',
-,
-interface BudgetFieldsProps {,
+interface BudgetFieldsProps {
   form: UseFormReturn<FormValues>,
   talent?: TalentProfile,
-,}
+}
 ,
-export function BudgetFields({ formtalent }: BudgetFieldsProps) {,
-  return (,
+export function BudgetFields({ formtalent }: BudgetFieldsProps) {
+  return (
     <>,
-      <FormField,
+      <FormField
         control={form.control}
         name='budgetMin',
-        render={({ field }) => (,
+        render={({ field }) => (
           <FormItem>,
             <FormLabel className='text-white'>Budget (Min)</FormLabel>,
             <FormControl>,
@@ -23,7 +22,7 @@ export function BudgetFields({ formtalent }: BudgetFieldsProps) {,
                 <span className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate'>,
                   $,
                 </span>,
-                <Input,
+                <Input
                   type='number',
                   className='pl-7 bg-zion-blue border-zion-blue-light text-white',
                   {...field}
@@ -31,13 +30,12 @@ export function BudgetFields({ formtalent }: BudgetFieldsProps) {,
               </div>,
             </FormControl>,
             <FormMessage className='text-red-400' />,
-          </FormItem>,
-        )}
+          </FormItem>)}
       />,
-      <FormField,
+      <FormField
         control={form.control}
         name='budgetMax',
-        render={({ field }) => (,
+        render={({ field }) => (
           <FormItem>,
             <FormLabel className='text-white'>Budget (Max)</FormLabel>,
             <FormControl>,
@@ -45,7 +43,7 @@ export function BudgetFields({ formtalent }: BudgetFieldsProps) {,
                 <span className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate'>,
                   $,
                 </span>,
-                <Input,
+                <Input
                   type='number',
                   className='pl-7 bg-zion-blue border-zion-blue-light text-white',
                   {...field}
@@ -53,10 +51,7 @@ export function BudgetFields({ formtalent }: BudgetFieldsProps) {,
               </div>,
             </FormControl>,
             <FormMessage className='text-red-400' />,
-          </FormItem>,
-        )}
+          </FormItem>)}
       />,
-    </>,
-  ),
-}
+    </>)}
 ,

@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function SuccessPage() {,
-  return (,
+export default function SuccessPage() {
+  return (
     <>,
       <Head>,
         <title>Success - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function SuccessPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

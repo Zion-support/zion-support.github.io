@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function MessagingPage() {,
-  return (,
+export default function MessagingPage() {
+  return (
     <>,
       <Head>,
         <title>Messaging - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function MessagingPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

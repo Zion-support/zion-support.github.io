@@ -1,5 +1,4 @@
 // Type definitions for integrations,
-interface integrations {,
+interface integrations {
   // TODO: Add proper type definitions,
-,};
-,
+};

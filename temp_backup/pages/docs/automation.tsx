@@ -1,5 +1,5 @@
-export default function AutomationDocs() {,
-  return (,
+export default function AutomationDocs() {
+  return (
     <div className='max-w-4xl mx-auto p-8 space-y-8'>,
       <h1 className='text-3xl font-bold'>Autonomous Cloud Automations</h1>,
       <p className='text-gray-60o0'>,
@@ -57,7 +57,5 @@ export default function AutomationDocs() {,
           On-chain DAO proposal creation and voting at /dao.,
         </p>,
       </section>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

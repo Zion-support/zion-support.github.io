@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function DeveloperResourcesPage() {,
-  return (,
+export default function DeveloperResourcesPage() {
+  return (
     <>,
       <Head>,
         <title>Developer Resources | Zion Tech Group</title>,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/developer-resources',
         />,
@@ -33,7 +32,5 @@ export default function DeveloperResourcesPage() {,
           </li>,
         </ul>,
       </div>,
-    </>,
-  ),
-}
+    </>)}
 ,

@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const NewContent20o26UltimatePromotionBanner: React.FC = () => {,
-  return (,
+const NewContent20o26UltimatePromotionBanner: React.FC = () => {
+  return (
     <section className='py-16 bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white'>,
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -15,13 +14,13 @@ const NewContent20o26UltimatePromotionBanner: React.FC = () => {,
             Revolutionary AI Content Now Live,
           </h2>,
           <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto'>,
-            Discover the ultimate breakthrough guides to AI transformation,;
+            Discover the ultimate breakthrough guides to AI transformation;
             quantum computing, and business revolution. The future of technology,
             is here.,
           </p>,
         </div>,
         <div className='grid grid-cols-1 lg: grid-cols-3 gap-8 mb-12'>,
-          {/* AI 20o26 Ultimate Business Transformation */,}
+          {/* AI 20o26 Ultimate Business Transformation */}
           <div className='bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover: bg-white/15 transition-all duration-30o0 group'>,
             <div className='flex items-center mb-4'>,
               <div className='text-4xl mr-4'>🧠</div>,
@@ -36,7 +35,7 @@ const NewContent20o26UltimatePromotionBanner: React.FC = () => {,
             </div>,
             <p className='opacity-80 mb-6'>,
               Discover the ultimate AI business transformation strategies for,
-              20o26. Revolutionary breakthrough technologies, quantum computing,;
+              20o26. Revolutionary breakthrough technologies, quantum computing;
               neural interfaces, and autonomous systems that will reshape,
               enterprise operations.,
             </p>,
@@ -54,14 +53,13 @@ const NewContent20o26UltimatePromotionBanner: React.FC = () => {,
                 15,0o00% ROI,
               </span>,
             </div>,
-            <Link,
+            <Link
               href='/ai-20o26-ultimate-business-transformation',
-              className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 px-6 py-3 rounded-lg font-semibold hover: from-purple-60o0 hover:to-pink-60o0 transition-all transform hover:scale-10o5 inline-block',
-            >,
+              className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 px-6 py-3 rounded-lg font-semibold hover: from-purple-60o0 hover:to-pink-60o0 transition-all transform hover:scale-10o5 inline-block'>,
               Explore Content →,
             </Link>,
           </div>,
-          {/* Quantum AI Revolution 20o26 */,}
+          {/* Quantum AI Revolution 20o26 */}
           <div className='bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover: bg-white/15 transition-all duration-30o0 group'>,
             <div className='flex items-center mb-4'>,
               <div className='text-4xl mr-4'>⚛️</div>,
@@ -93,14 +91,13 @@ const NewContent20o26UltimatePromotionBanner: React.FC = () => {,
                 25,0o00% ROI,
               </span>,
             </div>,
-            <Link,
+            <Link
               href='/quantum-ai-revolution-20o26',
-              className='bg-gradient-to-r from-cyan-50o0 to-blue-50o0 px-6 py-3 rounded-lg font-semibold hover: from-cyan-60o0 hover:to-blue-60o0 transition-all transform hover:scale-10o5 inline-block',
-            >,
+              className='bg-gradient-to-r from-cyan-50o0 to-blue-50o0 px-6 py-3 rounded-lg font-semibold hover: from-cyan-60o0 hover:to-blue-60o0 transition-all transform hover:scale-10o5 inline-block'>,
               Discover Revolution →,
             </Link>,
           </div>,
-          {/* Autonomous Systems 20o26 */,}
+          {/* Autonomous Systems 20o26 */}
           <div className='bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover: bg-white/15 transition-all duration-30o0 group'>,
             <div className='flex items-center mb-4'>,
               <div className='text-4xl mr-4'>🤖</div>,
@@ -130,15 +127,14 @@ const NewContent20o26UltimatePromotionBanner: React.FC = () => {,
                 80% Cost Reduction,
               </span>,
             </div>,
-            <Link,
+            <Link
               href='/autonomous-systems-20o26',
-              className='bg-gradient-to-r from-green-50o0 to-blue-50o0 px-6 py-3 rounded-lg font-semibold hover: from-green-60o0 hover:to-blue-60o0 transition-all transform hover:scale-10o5 inline-block',
-            >,
+              className='bg-gradient-to-r from-green-50o0 to-blue-50o0 px-6 py-3 rounded-lg font-semibold hover: from-green-60o0 hover:to-blue-60o0 transition-all transform hover:scale-10o5 inline-block'>,
               Explore Autonomy →,
             </Link>,
           </div>,
         </div>,
-        {/* Key Benefits */,}
+        {/* Key Benefits */}
         <div className='grid grid-cols-1 md: grid-cols-4 gap-6 mb-12'>,
           <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center'>,
             <div className='text-3xl mb-3'>🚀</div>,
@@ -171,20 +167,18 @@ const NewContent20o26UltimatePromotionBanner: React.FC = () => {,
             </h3>,
             <p className='opacity-80 mb-6'>,
               Join thousands of forward-thinking businesses already implementing,
-              these revolutionary technologies. The future of business is here,;
+              these revolutionary technologies. The future of business is here;
               and it starts with your decision to lead.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 px-8 py-4 rounded-lg font-semibold hover:from-purple-60o0 hover:to-pink-60o0 transition-all transform hover:scale-10o5',
-              >,
+                className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 px-8 py-4 rounded-lg font-semibold hover:from-purple-60o0 hover:to-pink-60o0 transition-all transform hover:scale-10o5'>,
                 Start Your Transformation,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors'>,
                 Explore Our Services,
               </Link>,
             </div>,
@@ -195,9 +189,6 @@ const NewContent20o26UltimatePromotionBanner: React.FC = () => {,
           </p>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default NewContent20o26UltimatePromotionBanner,
-,
+    </section>),
+};
+export default NewContent20o26UltimatePromotionBanner;

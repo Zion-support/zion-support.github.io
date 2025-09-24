@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function DownloadPage() {,
-  return (,
+export default function DownloadPage() {
+  return (
     <>,
       <Head>,
         <title>Download - Zion Tech Group</title>,
@@ -17,7 +16,6 @@ export default function DownloadPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

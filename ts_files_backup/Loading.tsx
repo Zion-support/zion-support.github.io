@@ -1,7 +1,6 @@
 'use client',
-,
-export default function Loading() {,
-  return (,
+export default function Loading() {
+  return (
     <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50'>,
       <div className='text-center'>,
         <div className='relative'>,
@@ -15,7 +14,5 @@ export default function Loading() {,
         </h2>,
         <p className='text-gray-60o0 mt-2'>Preparing your experience</p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

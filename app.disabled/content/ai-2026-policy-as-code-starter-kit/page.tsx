@@ -1,18 +1,16 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Policy-as-Code Starter Kit | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Policy-as-Code Starter Kit | Zion Tech Group';
   description:,
-    'A practical starter kit to implement policy-as-code for AI agents: controls, exceptions, and evaluation gates.',;
-  keywords: ['policy-as-code', 'governance', 'ai agents', 'controls', 'evals'],;
+    'A practical starter kit to implement policy-as-code for AI agents: controls, exceptions, and evaluation gates.';
+  keywords: ['policy-as-code', 'governance', 'ai agents', 'controls', 'evals'];
 };
-,
-const PolicyAsCodeStarterKit20o26: React.FC = () => {,
-  return (,
+const PolicyAsCodeStarterKit20o26: React.FC = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Policy-as-Code Starter Kit',
         description='Implement policy-as-code for AI agents: versioned controls, exceptions, and evaluation gates.',
         keywords='policy-as-code, governance, ai agents, controls, evals',
@@ -66,23 +64,18 @@ const PolicyAsCodeStarterKit20o26: React.FC = () => {,
           </ol>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/content',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Content,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Request Advisory,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default PolicyAsCodeStarterKit20o26,
-,
+    </div>),
+};
+export default PolicyAsCodeStarterKit20o26;

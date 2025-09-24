@@ -2,14 +2,12 @@ import type { NextPage } from 'next',
 import Head from 'next/head',
 import { useState } from 'react',
 import EnhancedButton from '../../components/ui/EnhancedButton',
-,
-const PostJob: NextPage = () => {,
+const PostJob: NextPage = () => {
   const [title, setTitle] = useState(''),
   const [description, setDescription] = useState(''),
   const [budget, setBudget] = useState(''),
   const [preview, setPreview] = useState(false),
-,
-  return (,
+  return (
     <div className='space-y-6 pb-20'>,
       <Head>,
         <title>Post a Job - Zion</title>,
@@ -19,8 +17,8 @@ const PostJob: NextPage = () => {,
         <form className='space-y-4'>,
           <div>,
             <label className='block text-sm font-medium mb-1'>Title</label>,
-            <input,
-              value={title,}
+            <input
+              value={title}
               onChange={e => setTitle(e.target.value)}
               placeholder='e.g., Build a Next.js website',
               className='w-full',
@@ -30,7 +28,7 @@ const PostJob: NextPage = () => {,
             <label className='block text-sm font-medium mb-1'>,
               Description,
             </label>,
-            <textarea,
+            <textarea
               value={description}
               onChange={e => setDescription(e.target.value)}
               placeholder='Describe your project...',
@@ -42,7 +40,7 @@ const PostJob: NextPage = () => {,
             <label className='block text-sm font-medium mb-1'>,
               Budget (USD),
             </label>,
-            <input,
+            <input
               type='number',
               value={budget}
               onChange={e => setBudget(e.target.value)}
@@ -51,7 +49,7 @@ const PostJob: NextPage = () => {,
             />,
           </div>,
           <div className='flex gap-2'>,
-            <EnhancedButton,
+            <EnhancedButton
               type='button',
               variant='secondary',
               onClick={() => setPreview(p => !p)}
@@ -63,7 +61,7 @@ const PostJob: NextPage = () => {,
         </form>,
         <aside className='border rounded-md p-4'>,
           <h2 className='font-semibold mb-2'>Preview</h2>,
-          {preview ? (,
+          {preview ? (
             <div className='space-y-2'>,
               <div>,
                 <div className='text-sm opacity-70'>Title</div>,
@@ -81,17 +79,11 @@ const PostJob: NextPage = () => {,
                   {description || 'No description provided.'}
                 </p>,
               </div>,
-            </div>,
-          ) : (,
+            </div>) : (
             <p className='text-sm opacity-80'>,
               Click Preview to see how your job will appear to talent.,
-            </p>,
-          )}
+            </p>)}
         </aside>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default PostJob,
-,
+    </div>)};
+export default PostJob;

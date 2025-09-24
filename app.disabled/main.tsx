@@ -1,10 +1,8 @@
 import { createRoot } from 'react-dom/client',
 import './globals.css',
 import HomePage from './page',
-,
 const container = document.getElementById('root'),
-if (container) {,
+if (container) {
   const root = createRoot(container),
-  root.render(<HomePage />),
-}
+  root.render(<HomePage />)}
 ,

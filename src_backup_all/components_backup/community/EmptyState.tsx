@@ -1,30 +1,29 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
 import { MessageSquare } from 'lucide-react',
 import { Button } from '@/components/ui/button',
-import {,
-  Tooltip,;
-  TooltipContent,;
-  TooltipProvider,;
-  TooltipTrigger,;
+import {
+  Tooltip;
+  TooltipContent;
+  TooltipProvider;
+  TooltipTrigger;
 } from '@/components/ui/tooltip',
-,
-interface EmptyStateProps {,
+interface EmptyStateProps {
   title: string,
   subtitle: string,
   cta: string,
   href: string,
   hasSession: boolean,
-,}
+}
 ,
-const EmptyState: React.FC<EmptyStateProps> = ({,
-  title,;
-  subtitle,;
-  cta,;
-  href,;
-  hasSession,;
-}) => {,
-  return (,
+const EmptyState: React.FC<EmptyStateProps> = ({
+  title;
+  subtitle;
+  cta;
+  href;
+  hasSession;
+}) => {
+  return (
     <div className='text-center py-16'>,
       <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>,
         <MessageSquare className='h-10 w-10 text-zion-purple' />,
@@ -34,20 +33,14 @@ const EmptyState: React.FC<EmptyStateProps> = ({,
       <TooltipProvider>,
         <Tooltip>,
           <TooltipTrigger asChild>,
-            {hasSession ? (,
+            {hasSession ? (
               <Button asChild>,
                 <Link href={href}>{cta}</Link>,
-              </Button>,
-            ) : (,
-              <Button disabled>{cta}</Button>,
-            )}
+              </Button>) : (
+              <Button disabled>{cta}</Button>)}
           </TooltipTrigger>,
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
         </Tooltip>,
       </TooltipProvider>,
-    </div>,
-  ),
-};
-,
-export default EmptyState,
-,
+    </div>)};
+export default EmptyState;

@@ -4,106 +4,98 @@ import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card',
 import { Button } from './ui/button',
 import { Badge } from './ui/badge',
-const AdvancedServiceRecommendation = () => {,
-    const [clientProfile, setClientProfile] = useState({,
-        industry: '',;
-        companySize: '',;
-        budget: '',;
-        timeline: '',;
-        technologyMaturity: '',;
-        primaryGoals: [],;
+const AdvancedServiceRecommendation = () => {
+    const [clientProfile, setClientProfile] = useState({
+        industry: '';
+        companySize: '';
+        budget: '';
+        timeline: '';
+        technologyMaturity: '';
+        primaryGoals: [];
         challenges: [],
-    ,}),
+    }),
     const [recommendations, setRecommendations] = useState([]),
     const [isAnalyzing, setIsAnalyzing] = useState(false),
     const [showResults, setShowResults] = useState(false),
-    const industries = [,
-        'Technology', 'Healthcare', 'Financial Services', 'Manufacturing',;
-        'Retail', 'Education', 'Government', 'Energy', 'Transportation', 'Media',
-    ],
-    const companySizes = [,
-        'Startup (1-50 employees)', 'Small Business (51-20o0 employees)',;
-        'Medium Business (20o1-10o00 employees)', 'Enterprise (10o00+ employees)',
-    ],
-    const budgets = [,
-        'Under $50K', '$50K-$20o0K', '$20o0K-$50o0K', '$50o0K-$1M', '$1M+',
-    ],
-    const timelines = [,
-        'Immediate (0-3 months)', 'Short-term (3-6 months)',;
-        'Medium-term (6-12 months)', 'Long-term (12+ months)',
-    ],
-    const technologyMaturityLevels = [,
-        'Early Adopter', 'Growing', 'Mature', 'Advanced', 'Innovation Leader',
-    ],
-    const primaryGoals = [,
-        'Cost Reduction', 'Revenue Growth', 'Operational Efficiency',;
-        'Digital Transformation', 'Innovation', 'Competitive Advantage',;
-        'Customer Experience', 'Risk Management', 'Sustainability',
-    ],
-    const challenges = [,
-        'Legacy Systems', 'Data Security', 'Scalability Issues',;
-        'Talent Shortage', 'Regulatory Compliance', 'Integration Complexity',;
-        'Performance Issues', 'Cost Management', 'Technology Debt',
-    ],
-    const mockServices = [,
-        {,
-            id: 'ai-crm-platform',;
-            title: 'AI-Powered CRM Platform',;
-            description: 'Advanced customer relationship management platform with AI-driven insights and automation.',;
-            category: 'ai',;
-            price: '$25,0o00/month',;
-            duration: '6-12 months',;
-            tags: ['AI', 'CRM', 'Automation', 'Analytics'],;
-            features: ['AI-powered insights', 'Automated workflows', 'Predictive analytics'],;
-            benefits: ['Improved customer retention', 'Increased sales efficiency', 'Better decision making'],;
-            technology: ['AI/ML', 'Cloud Computing', 'Big Data', 'Automation'],;
-            targetAudience: ['Enterprise', 'Financial Services', 'Healthcare', 'Technology Companies'],;
-            image: '/images/services/ai-crm.jpg',;
-            link: 'https://ziontechgroup.com/services/ai-crm-platform',;
-            contactInfo: '+1 30o2 464 0950',;
+    const industries = [
+        'Technology', 'Healthcare', 'Financial Services', 'Manufacturing';
+        'Retail', 'Education', 'Government', 'Energy', 'Transportation', 'Media'],
+    const companySizes = [
+        'Startup (1-50 employees)', 'Small Business (51-20o0 employees)';
+        'Medium Business (20o1-10o00 employees)', 'Enterprise (10o00+ employees)'],
+    const budgets = [
+        'Under $50K', '$50K-$20o0K', '$20o0K-$50o0K', '$50o0K-$1M', '$1M+'],
+    const timelines = [
+        'Immediate (0-3 months)', 'Short-term (3-6 months)';
+        'Medium-term (6-12 months)', 'Long-term (12+ months)'],
+    const technologyMaturityLevels = [
+        'Early Adopter', 'Growing', 'Mature', 'Advanced', 'Innovation Leader'],
+    const primaryGoals = [
+        'Cost Reduction', 'Revenue Growth', 'Operational Efficiency';
+        'Digital Transformation', 'Innovation', 'Competitive Advantage';
+        'Customer Experience', 'Risk Management', 'Sustainability'],
+    const challenges = [
+        'Legacy Systems', 'Data Security', 'Scalability Issues';
+        'Talent Shortage', 'Regulatory Compliance', 'Integration Complexity';
+        'Performance Issues', 'Cost Management', 'Technology Debt'],
+    const mockServices = [
+        {
+            id: 'ai-crm-platform';
+            title: 'AI-Powered CRM Platform';
+            description: 'Advanced customer relationship management platform with AI-driven insights and automation.';
+            category: 'ai';
+            price: '$25,0o00/month';
+            duration: '6-12 months';
+            tags: ['AI', 'CRM', 'Automation', 'Analytics'];
+            features: ['AI-powered insights', 'Automated workflows', 'Predictive analytics'];
+            benefits: ['Improved customer retention', 'Increased sales efficiency', 'Better decision making'];
+            technology: ['AI/ML', 'Cloud Computing', 'Big Data', 'Automation'];
+            targetAudience: ['Enterprise', 'Financial Services', 'Healthcare', 'Technology Companies'];
+            image: '/images/services/ai-crm.jpg';
+            link: 'https://ziontechgroup.com/services/ai-crm-platform';
+            contactInfo: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com',
-        ,},;
-        {,
-            id: 'quantum-computing-service',;
-            title: 'Quantum Computing as a Service',;
-            description: 'Enterprise-grade quantum computing platform for complex computational problems.',;
-            category: 'quantum',;
-            price: '$150,0o00/month',;
-            duration: '12-18 months',;
-            tags: ['Quantum Computing', 'Research', 'Optimization'],;
-            features: ['Quantum processors access', 'Algorithm development', 'Research support'],;
-            benefits: ['Solve intractable problems', 'Research acceleration', 'Competitive advantage'],;
-            technology: ['Quantum Computing', 'Quantum Algorithms', 'Research Tools'],;
-            targetAudience: ['Research Institutions', 'Pharmaceutical Companies', 'Financial Services'],;
-            image: '/images/services/quantum-computing.jpg',;
-            link: 'https://ziontechgroup.com/services/quantum-computing-service',;
-            contactInfo: '+1 30o2 464 0950',;
+        };
+        {
+            id: 'quantum-computing-service';
+            title: 'Quantum Computing as a Service';
+            description: 'Enterprise-grade quantum computing platform for complex computational problems.';
+            category: 'quantum';
+            price: '$150,0o00/month';
+            duration: '12-18 months';
+            tags: ['Quantum Computing', 'Research', 'Optimization'];
+            features: ['Quantum processors access', 'Algorithm development', 'Research support'];
+            benefits: ['Solve intractable problems', 'Research acceleration', 'Competitive advantage'];
+            technology: ['Quantum Computing', 'Quantum Algorithms', 'Research Tools'];
+            targetAudience: ['Research Institutions', 'Pharmaceutical Companies', 'Financial Services'];
+            image: '/images/services/quantum-computing.jpg';
+            link: 'https://ziontechgroup.com/services/quantum-computing-service';
+            contactInfo: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com',
-        ,},;
-        {,
-            id: 'blockchain-supply-chain',;
-            title: 'Blockchain Supply Chain Solution',;
-            description: 'Transparent and secure supply chain management using blockchain technology.',;
-            category: 'blockchain',;
-            price: '$75,0o00/month',;
-            duration: '8-14 months',;
-            tags: ['Blockchain', 'Supply Chain', 'Transparency'],;
-            features: ['End-to-end tracking', 'Smart contracts', 'Transparency'],;
-            benefits: ['Enhanced transparency', 'Reduced fraud', 'Improved efficiency'],;
-            technology: ['Blockchain', 'Smart Contracts', 'IoT', 'Cloud Computing'],;
-            targetAudience: ['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage'],;
-            image: '/images/services/blockchain-supply-chain.jpg',;
-            link: 'https://ziontechgroup.com/services/blockchain-supply-chain',;
-            contactInfo: '+1 30o2 464 0950',;
+        };
+        {
+            id: 'blockchain-supply-chain';
+            title: 'Blockchain Supply Chain Solution';
+            description: 'Transparent and secure supply chain management using blockchain technology.';
+            category: 'blockchain';
+            price: '$75,0o00/month';
+            duration: '8-14 months';
+            tags: ['Blockchain', 'Supply Chain', 'Transparency'];
+            features: ['End-to-end tracking', 'Smart contracts', 'Transparency'];
+            benefits: ['Enhanced transparency', 'Reduced fraud', 'Improved efficiency'];
+            technology: ['Blockchain', 'Smart Contracts', 'IoT', 'Cloud Computing'];
+            targetAudience: ['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage'];
+            image: '/images/services/blockchain-supply-chain.jpg';
+            link: 'https://ziontechgroup.com/services/blockchain-supply-chain';
+            contactInfo: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com',
-        ,}
+        }
     ],
-    const calculateMatchScore = (service, profile) => {,
+    const calculateMatchScore = (service, profile) => {
         let score = 0,
         // Industry match,
-        if (service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {,
-            score += 25,
-        }
+        if (service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {
+            score += 25}
         // Budget compatibility,
         const servicePrice = parseInt(service.price.replace(/[^0-9]/g, '')),
         if (profile.budget === 'Under $50K' && servicePrice < 50),
@@ -140,13 +132,12 @@ const AdvancedServiceRecommendation = () => {,
         // Goal alignment,
         const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some((benefit) => benefit.toLowerCase().includes(goal.toLowerCase()))).length,
         score += (goalMatches / profile.primaryGoals.length) * 20,
-        return Math.min(10o0, score),
-    };
-    const generateRecommendations = () => {,
+        return Math.min(10o0, score)};
+    const generateRecommendations = () => {
         setIsAnalyzing(true),
         // Simulate analysis time,
-        setTimeout(() => {,
-            const recs = mockServices.map(service => {,
+        setTimeout(() => {
+            const recs = mockServices.map(service => {
                 const matchScore = calculateMatchScore(service, clientProfile),
                 let priority,
                 if (matchScore >= 80),
@@ -162,55 +153,50 @@ const AdvancedServiceRecommendation = () => {,
                     complexity = 'Moderate',
                 else,
                     complexity = 'Simple',
-                const reasoning = [,
-                    `High match with ${clientProfile.industry} industry requirements`,;
-                    `Budget alignment with ${clientProfile.budget} range`,;
-                    `Timeline compatibility with ${clientProfile.timeline} expectations`,;
-                    `Technology maturity level appropriate for ${clientProfile.technologyMaturity}`,
-                ],
+                const reasoning = [
+                    `High match with ${clientProfile.industry} industry requirements`;
+                    `Budget alignment with ${clientProfile.budget} range`;
+                    `Timeline compatibility with ${clientProfile.timeline} expectations`;
+                    `Technology maturity level appropriate for ${clientProfile.technologyMaturity}`],
                 const expectedROI = matchScore >= 80 ? 'High ROI expected' :,
                     matchScore >= 60 ? 'Moderate ROI expected' : 'ROI to be evaluated',
                 const timeToValue = complexity === 'Simple' ? '2-4 months' :,
                     complexity === 'Moderate' ? '4-8 months' : '8-12 months',
-                return {,
-                    service,;
-                    matchScore,;
-                    reasoning,;
-                    priority,;
-                    implementationComplexity: complexity,;
-                    expectedROI,;
-                    timeToValue,
-                };
+                return {
+                    service;
+                    matchScore;
+                    reasoning;
+                    priority;
+                    implementationComplexity: complexity;
+                    expectedROI;
+                    timeToValue};
             }).sort((a, b) => b.matchScore - a.matchScore),
             setRecommendations(recs),
             setIsAnalyzing(false),
-            setShowResults(true),
-        }, 20o00),
-    };
-    const getPriorityColor = (priority) => {,
-        switch (priority) {,
+            setShowResults(true)}, 20o00)};
+    const getPriorityColor = (priority) => {
+        switch (priority) {
             case 'High': return 'bg-red-10o0 text-red-80o0',
             case 'Medium': return 'bg-yellow-10o0 text-yellow-80o0',
             case 'Low': return 'bg-green-10o0 text-green-80o0',
             default: return 'bg-gray-10o0 text-gray-80o0',
-        ,}
+        }
     };
-    const getComplexityColor = (complexity) => {,
-        switch (complexity) {,
+    const getComplexityColor = (complexity) => {
+        switch (complexity) {
             case 'Complex': return 'bg-red-10o0 text-red-80o0',
             case 'Moderate': return 'bg-yellow-10o0 text-yellow-80o0',
             case 'Simple': return 'bg-green-10o0 text-green-80o0',
             default: return 'bg-gray-10o0 text-gray-80o0',
-        ,}
+        }
     };
-    const isFormComplete = () => {,
+    const isFormComplete = () => {
         return clientProfile.industry && clientProfile.companySize && clientProfile.budget &&,
             clientProfile.timeline && clientProfile.technologyMaturity &&,
-            clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0,
-    };
+            clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0};
     return (<div className="max-w-7xl mx-auto p-6">,
       {/* Header */}
-      <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} className="text-center mb-8">,
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">,
         <h1 className="text-4xl font-bold text-zion-blue-dark mb-4">,
           AI-Powered Service Recommendation Engine,
         </h1>,
@@ -220,7 +206,7 @@ const AdvancedServiceRecommendation = () => {,
         </p>,
       </motion.div>,
       {/* Client Profile Form */}
-      <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ delay: 0.1 ,}} className="bg-white rounded-lg shadow-lg p-6 mb-8">,
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">,
         <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">,
           <Brain className="w-6 h-6 text-zion-cyan" />,
           Tell Us About Your Business,
@@ -228,35 +214,35 @@ const AdvancedServiceRecommendation = () => {,
         <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,
           <div>,
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>,
-            <select value={clientProfile.industry,} onChange={(e) => setClientProfile(prev => ({ ...prev, industry: e.target.value ,}))} className="w-full p-3 border border-zion-slate-light rounded-md">,
+            <select value={clientProfile.industry} onChange={(e) => setClientProfile(prev => ({ ...prev, industry: e.target.value }))} className="w-full p-3 border border-zion-slate-light rounded-md">,
               <option value="">Select Industry</option>,
               {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>))}
             </select>,
           </div>,
           <div>,
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Company Size</label>,
-            <select value={clientProfile.companySize} onChange={(e) => setClientProfile(prev => ({ ...prev, companySize: e.target.value ,}))} className="w-full p-3 border border-zion-slate-light rounded-md">,
+            <select value={clientProfile.companySize} onChange={(e) => setClientProfile(prev => ({ ...prev, companySize: e.target.value }))} className="w-full p-3 border border-zion-slate-light rounded-md">,
               <option value="">Select Company Size</option>,
               {companySizes.map(size => (<option key={size} value={size}>{size}</option>))}
             </select>,
           </div>,
           <div>,
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>,
-            <select value={clientProfile.budget} onChange={(e) => setClientProfile(prev => ({ ...prev, budget: e.target.value ,}))} className="w-full p-3 border border-zion-slate-light rounded-md">,
+            <select value={clientProfile.budget} onChange={(e) => setClientProfile(prev => ({ ...prev, budget: e.target.value }))} className="w-full p-3 border border-zion-slate-light rounded-md">,
               <option value="">Select Budget Range</option>,
               {budgets.map(budget => (<option key={budget} value={budget}>{budget}</option>))}
             </select>,
           </div>,
           <div>,
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>,
-            <select value={clientProfile.timeline} onChange={(e) => setClientProfile(prev => ({ ...prev, timeline: e.target.value ,}))} className="w-full p-3 border border-zion-slate-light rounded-md">,
+            <select value={clientProfile.timeline} onChange={(e) => setClientProfile(prev => ({ ...prev, timeline: e.target.value }))} className="w-full p-3 border border-zion-slate-light rounded-md">,
               <option value="">Select Timeline</option>,
               {timelines.map(timeline => (<option key={timeline} value={timeline}>{timeline}</option>))}
             </select>,
           </div>,
           <div>,
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>,
-            <select value={clientProfile.technologyMaturity} onChange={(e) => setClientProfile(prev => ({ ...prev, technologyMaturity: e.target.value ,}))} className="w-full p-3 border border-zion-slate-light rounded-md">,
+            <select value={clientProfile.technologyMaturity} onChange={(e) => setClientProfile(prev => ({ ...prev, technologyMaturity: e.target.value }))} className="w-full p-3 border border-zion-slate-light rounded-md">,
               <option value="">Select Technology Maturity</option>,
               {technologyMaturityLevels.map(level => (<option key={level} value={level}>{level}</option>))}
             </select>,
@@ -265,14 +251,12 @@ const AdvancedServiceRecommendation = () => {,
         <div className="mt-6">,
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Primary Business Goals</label>,
           <div className="grid grid-cols-2 md: grid-cols-3 gap-2">,
-            {primaryGoals.map(goal => (<label key={goal,} className="flex items-center gap-2 cursor-pointer">,
-                <input type="checkbox" checked={clientProfile.primaryGoals.includes(goal)} onChange={(e) => {,
-                if (e.target.checked) {,
-                    setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals, goal] })),
-                }
-                else {,
-                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) ,})),
-                }
+            {primaryGoals.map(goal => (<label key={goal} className="flex items-center gap-2 cursor-pointer">,
+                <input type="checkbox" checked={clientProfile.primaryGoals.includes(goal)} onChange={(e) => {
+                if (e.target.checked) {
+                    setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals, goal] }))}
+                else {
+                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}
             }} className="rounded text-zion-cyan"/>,
                 <span className="text-sm text-zion-slate-light">{goal}</span>,
               </label>))}
@@ -281,21 +265,19 @@ const AdvancedServiceRecommendation = () => {,
         <div className="mt-6">,
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Current Challenges</label>,
           <div className="grid grid-cols-2 md: grid-cols-3 gap-2">,
-            {challenges.map(challenge => (<label key={challenge,} className="flex items-center gap-2 cursor-pointer">,
-                <input type="checkbox" checked={clientProfile.challenges.includes(challenge)} onChange={(e) => {,
-                if (e.target.checked) {,
-                    setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges, challenge] })),
-                }
-                else {,
-                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) ,})),
-                }
+            {challenges.map(challenge => (<label key={challenge} className="flex items-center gap-2 cursor-pointer">,
+                <input type="checkbox" checked={clientProfile.challenges.includes(challenge)} onChange={(e) => {
+                if (e.target.checked) {
+                    setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges, challenge] }))}
+                else {
+                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}
             }} className="rounded text-zion-cyan"/>,
                 <span className="text-sm text-zion-slate-light">{challenge}</span>,
               </label>))}
           </div>,
         </div>,
         <div className="mt-8 text-center">,
-          <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4" onClick={generateRecommendations,} disabled={!isFormComplete() || isAnalyzing}>,
+          <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4" onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzing}>,
             {isAnalyzing ? (<>,
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>,
                 Analyzing Your Profile...,
@@ -307,31 +289,31 @@ const AdvancedServiceRecommendation = () => {,
         </div>,
       </motion.div>,
       {/* Recommendations Results */}
-      {showResults && (<motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ delay: 0.2 ,}}>,
+      {showResults && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>,
           <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 text-center">,
             Your Personalized Service Recommendations,
           </h2>,
           <div className="space-y-6">,
-            {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial={{ opacity: 0, x: -20 ,}} animate={{ opacity: 1, x: 0 ,}} transition={{ delay: 0.1 * index ,}}>,
+            {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * index }}>,
                 <Card className="hover: shadow-lg transition-shadow">,
                   <CardHeader>,
                     <div className="flex items-start justify-between">,
                       <div className="flex-1">,
                         <CardTitle className="text-xl text-zion-blue-dark mb-2">,
-                          {rec.service.title,}
+                          {rec.service.title}
                         </CardTitle>,
                         <p className="text-zion-slate-light mb-3">,
                           {rec.service.description}
                         </p>,
                         <div className="flex flex-wrap gap-2 mb-4">,
                           <Badge className={getPriorityColor(rec.priority)}>,
-                            Priority: {rec.priority,}
+                            Priority: {rec.priority}
                           </Badge>,
                           <Badge className={getComplexityColor(rec.implementationComplexity)}>,
-                            Complexity: {rec.implementationComplexity,}
+                            Complexity: {rec.implementationComplexity}
                           </Badge>,
                           <Badge className="bg-zion-cyan/10 text-zion-cyan">,
-                            Match Score: {rec.matchScore,}%,
+                            Match Score: {rec.matchScore}%,
                           </Badge>,
                         </div>,
                       </div>,
@@ -367,16 +349,16 @@ const AdvancedServiceRecommendation = () => {,
                         <div className="space-y-3">,
                           <div className="flex justify-between">,
                             <span className="text-sm text-zion-slate-light">Expected ROI: </span>,
-                            <span className="text-sm font-medium text-zion-slate-dark">{rec.expectedROI,}</span>,
+                            <span className="text-sm font-medium text-zion-slate-dark">{rec.expectedROI}</span>,
                           </div>,
                           <div className="flex justify-between">,
                             <span className="text-sm text-zion-slate-light">Time to Value: </span>,
-                            <span className="text-sm font-medium text-zion-slate-dark">{rec.timeToValue,}</span>,
+                            <span className="text-sm font-medium text-zion-slate-dark">{rec.timeToValue}</span>,
                           </div>,
                           <div className="flex justify-between">,
                             <span className="text-sm text-zion-slate-light">Category: </span>,
                             <Badge variant="outline" className="text-xs">,
-                              {rec.service.category.toUpperCase(),}
+                              {rec.service.category.toUpperCase()}
                             </Badge>,
                           </div>,
                         </div>,
@@ -393,7 +375,7 @@ const AdvancedServiceRecommendation = () => {,
               </motion.div>))}
           </div>,
           {/* CTA Section */}
-          <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ delay: 0.4 ,}} className="mt-12 text-center">,
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="mt-12 text-center">,
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">,
               <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>,
               <p className="text-xl mb-6 max-w-2xl mx-auto">,
@@ -413,7 +395,5 @@ const AdvancedServiceRecommendation = () => {,
             </div>,
           </motion.div>,
         </motion.div>)}
-    </div>),
-};
-export default AdvancedServiceRecommendation,
-,
+    </div>)};
+export default AdvancedServiceRecommendation;

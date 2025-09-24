@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function MobileDevelopmentChatPage() {,
-  return (,
+export default function MobileDevelopmentChatPage() {
+  return (
     <>,
       <Head>,
         <title>Mobile Development Chat - Zion Tech Group</title>,
@@ -12,6 +11,4 @@ export default function MobileDevelopmentChatPage() {,
         <p>Blog content coming soon...</p>,
         <Link href="/blog">Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-}
+    </div>)}

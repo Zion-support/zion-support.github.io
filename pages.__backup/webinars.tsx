@@ -1,7 +1,6 @@
 import SEO from '../components/SEO',
-,
-export default function WebinarsPage() {,
-	return (,
+export default function WebinarsPage() {
+	return (
 		<>,
 			<SEO title="Webinars | Zion Tech Group" description="Live and on-demand webinars from Zion Tech Group."  />,
 			<section className="container mx-auto px-4 py-16">,
@@ -11,5 +10,4 @@ export default function WebinarsPage() {,
 					<article className="p-6 rounded-xl border border-white/10 bg-white/5">,
 						<h2 className="text-2xl font-semibold mb-2">No scheduled webinars</h2>,
 						<p className="text-gray-40o0">New sessions will be announced soon. Follow us on LinkedIn for updates.</p>,
-					</article>,
-})
+					</article>})

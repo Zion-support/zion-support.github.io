@@ -1,38 +1,36 @@
 import Head from 'next/head',
-,
-const services = [,
-  {,
-    title: 'AI Revenue Optimization Platform',;
-    href: '/services/ai-revenue-operations-platform',;
-    price: 'From $2,999/month',;
-    bullets: ['Dynamic pricing', 'Forecasting', 'CLV analytics'],;
-  },;
-  {,
-    title: 'AI Autonomous DevOps',;
-    href: '/services/ai-autonomous-devops-platform',;
-    price: 'From $1,999/month',;
-    bullets: ['Self-healing infra', 'Intelligent deploys', 'Observability'],;
-  },;
-  {,
-    title: 'Micro CRM (Multi-tenant)',;
-    href: '/services/micro-crm',;
-    price: 'From $99/month',;
-    bullets: ['Leads & deals', 'Email sync', 'Pipeline automation'],;
-  },;
-  {,
-    title: 'Cloud FinOps Optimizer',;
-    href: '/services/cloud-finops-optimizer',;
-    price: 'From $1,499/month',;
-    bullets: ['Cost insights', 'Savings plans', 'Kubernetes rightsizing'],;
-  },;
+const services = [
+  {
+    title: 'AI Revenue Optimization Platform';
+    href: '/services/ai-revenue-operations-platform';
+    price: 'From $2,999/month';
+    bullets: ['Dynamic pricing', 'Forecasting', 'CLV analytics'];
+  };
+  {
+    title: 'AI Autonomous DevOps';
+    href: '/services/ai-autonomous-devops-platform';
+    price: 'From $1,999/month';
+    bullets: ['Self-healing infra', 'Intelligent deploys', 'Observability'];
+  };
+  {
+    title: 'Micro CRM (Multi-tenant)';
+    href: '/services/micro-crm';
+    price: 'From $99/month';
+    bullets: ['Leads & deals', 'Email sync', 'Pipeline automation'];
+  };
+  {
+    title: 'Cloud FinOps Optimizer';
+    href: '/services/cloud-finops-optimizer';
+    price: 'From $1,499/month';
+    bullets: ['Cost insights', 'Savings plans', 'Kubernetes rightsizing'];
+  };
 ],
-,
-export default function ServicesPage() {,
-  return (,
+export default function ServicesPage() {
+  return (
     <>,
       <Head>,
         <title>Services — Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='AI, Micro SaaS, and IT services with transparent pricing.',
         />,
@@ -47,27 +45,22 @@ export default function ServicesPage() {,
             Real, production-grade solutions. No mockups.,
           </p>,
           <div className='grid gap-6 md: gri d-cols-2'>,
-            {services.map(s => (,
-              <a,
-                key={s.title,}
+            {services.map(s => (
+              <a
+                key={s.title}
                 href={s.href}
-                className='block border rounded-lg p-6 hover: shado w-lg',
-              >,
+                className='block border rounded-lg p-6 hover: shado w-lg'>,
                 <div className='flex items-center justify-between mb-2'>,
-                  <h2 className='text-xl font-semibold'>{s.title,}</h2>,
+                  <h2 className='text-xl font-semibold'>{s.title}</h2>,
                   <span className='text-sm text-gray-50o0'>{s.price}</span>,
                 </div>,
                 <ul className='text-gray-60o0 list-disc pl-5 space-y-1'>,
-                  {s.bullets.map(b => (,
-                    <li key={b}>{b}</li>,
-                  ))}
+                  {s.bullets.map(b => (
+                    <li key={b}>{b}</li>))}
                 </ul>,
-              </a>,
-            ))}
+              </a>))}
           </div>,
         </section>,
       </main>,
-    </>,
-  ),
-}
+    </>)}
 ,

@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI Customer Insights | Zion Tech Group',;
+export const metadata = {
+  title: 'AI Customer Insights | Zion Tech Group';
   description:,
-    'Transform customer data into actionable insights with AI-powered analytics. Understand customer behavior, preferences, and trends.',;
+    'Transform customer data into actionable insights with AI-powered analytics. Understand customer behavior, preferences, and trends.';
 };
-,
-export default function AICustomerInsightsPage() {,
-  return (,
+export default function AICustomerInsightsPage() {
+  return (
     <div className='animate-fade-in'>,
       <div className='text-center mb-16'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
@@ -25,32 +23,32 @@ export default function AICustomerInsightsPage() {,
             Key Features,
           </h2>,
           <div className='space-y-4'>,
-            <FeatureItem,
+            <FeatureItem
               icon='🧠',
               title='Behavioral Analysis',
               description='AI-powered analysis of customer interactions, purchase patterns, and engagement metrics across all touchpoints.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='📊',
               title='Predictive Analytics',
               description='Machine learning models to predict customer lifetime value, churn risk, and future purchase behavior.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='🎯',
               title='Segmentation Intelligence',
               description='Automated customer segmentation based on behavior, demographics, and preferences for targeted marketing.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='💬',
               title='Sentiment Analysis',
               description='Real-time analysis of customer feedback, reviews, and social media mentions to understand satisfaction levels.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='📈',
               title='Trend Detection',
               description='Identify emerging trends, seasonal patterns, and market shifts that impact customer behavior.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='🔮',
               title='Recommendation Engine',
               description='Personalized product and content recommendations based on individual customer preferences and behavior.',
@@ -60,47 +58,47 @@ export default function AICustomerInsightsPage() {,
         <div>,
           <h2 className='text-2xl font-bold text-gray-90o0 mb-6'>Pricing</h2>,
           <div className='space-y-6'>,
-            <PricingCard,
+            <PricingCard
               plan='Starter',
               price='$199',
               period='per month',
               description='Perfect for small businesses getting started with customer analytics',
-              features={[,
-                'Up to 10,0o00 customer records',;
-                'Basic behavioral analysis',;
-                'Standard segmentation',;
-                'Email support',;
-                'Monthly reports',;
+              features={[
+                'Up to 10,0o00 customer records';
+                'Basic behavioral analysis';
+                'Standard segmentation';
+                'Email support';
+                'Monthly reports';
               ]}
               popular={false}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Professional',
               price='$599',
               period='per month',
               description='Ideal for growing businesses with complex customer data',
-              features={[,
-                'Up to 10o0,0o00 customer records',;
-                'Advanced AI analytics',;
-                'Predictive modeling',;
-                'Real-time insights',;
-                'Priority support',;
-                'Custom dashboards',;
+              features={[
+                'Up to 10o0,0o00 customer records';
+                'Advanced AI analytics';
+                'Predictive modeling';
+                'Real-time insights';
+                'Priority support';
+                'Custom dashboards';
               ]}
               popular={true}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Enterprise',
               price='$1,999',
               period='per month',
               description='For large organizations with extensive customer data needs',
-              features={[,
-                'Unlimited customer records',;
-                'Custom AI models',;
-                'Advanced predictive analytics',;
-                'Dedicated support',;
-                'Custom integrations',;
-                'On-premise deployment',;
+              features={[
+                'Unlimited customer records';
+                'Custom AI models';
+                'Advanced predictive analytics';
+                'Dedicated support';
+                'Custom integrations';
+                'On-premise deployment';
               ]}
               popular={false}
             />,
@@ -112,17 +110,17 @@ export default function AICustomerInsightsPage() {,
           How It Works,
         </h2>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-          <StepCard,
+          <StepCard
             step='1',
             title='Data Integration',
             description='Connect your CRM, website, social media, and other data sources for comprehensive customer view.',
           />,
-          <StepCard,
+          <StepCard
             step='2',
             title='AI Processing',
             description='Advanced AI algorithms analyze customer data to identify patterns, trends, and insights.',
           />,
-          <StepCard,
+          <StepCard
             step='3',
             title='Actionable Insights',
             description='Receive detailed reports, recommendations, and real-time dashboards to drive business decisions.',
@@ -239,16 +237,14 @@ export default function AICustomerInsightsPage() {,
           AI-powered insights and analytics.,
         </p>,
         <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors',
-          >,
+            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors'>,
             Email Us,
           </a>,
         </div>,
@@ -256,54 +252,49 @@ export default function AICustomerInsightsPage() {,
           <p>📍 364 E Main St STE 10o08, Middletown DE 19709</p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function FeatureItem({,
-  icon,;
-  title,;
-  description,;
-}: {,
+function FeatureItem({
+  icon;
+  title;
+  description;
+}: {
   icon: string,
   title: string,
   description: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className='flex items-start space-x-4'>,
       <div className='text-2xl'>{icon}</div>,
       <div>,
         <h3 className='font-semibold text-gray-90o0 mb-2'>{title}</h3>,
         <p className='text-gray-60o0'>{description}</p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingCard({,
-  plan,;
-  price,;
-  period,;
-  description,;
-  features,;
-  popular,;
-}: {,
+function PricingCard({
+  plan;
+  price;
+  period;
+  description;
+  features;
+  popular;
+}: {
   plan: string,
   price: string,
   period: string,
   description: string,
   features: string[],
   popular: boolean,
-,}) {,
-  return (,
-    <div,
+}) {
+  return (
+    <div
       className={`border rounded-xl p-6 ${popular ? 'border-blue-50o0 bg-blue-50' : 'border-gray-20o0'}`}
     >,
-      {popular && (,
+      {popular && (
         <div className='bg-blue-50o0 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4'>,
           Most Popular,
-        </div>,
-      )}
+        </div>)}
       <h3 className='text-xl font-bold text-gray-90o0 mb-2'>{plan}</h3>,
       <div className='mb-4'>,
         <span className='text-3xl font-bold text-gray-90o0'>{price}</span>,
@@ -311,34 +302,29 @@ function PricingCard({,
       </div>,
       <p className='text-gray-60o0 mb-6'>{description}</p>,
       <ul className='space-y-2'>,
-        {features.map(feature => (,
+        {features.map(feature => (
           <li key={feature} className='flex items-center'>,
             <span className='text-green-50o0 mr-2'>✓</span>,
             <span className='text-gray-60o0'>{feature}</span>,
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function StepCard({,
-  step,;
-  title,;
-  description,;
-}: {,
+function StepCard({
+  step;
+  title;
+  description;
+}: {
   step: string,
   title: string,
   description: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className='text-center'>,
       <div className='w-12 h-12 bg-blue-60o0 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4'>,
         {step}
       </div>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-2'>{title}</h3>,
       <p className='text-gray-60o0'>{description}</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

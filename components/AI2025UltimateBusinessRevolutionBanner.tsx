@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const AI20o25UltimateBusinessRevolutionBanner = () => {,
-  return (,
+const AI20o25UltimateBusinessRevolutionBanner = () => {
+  return (
     <section className="relative bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20 overflow-hidden">,
       {/* Animated Background */}
       <div className="absolute inset-0">,
@@ -10,12 +9,12 @@ const AI20o25UltimateBusinessRevolutionBanner = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
         <div className="text-center">,
-          {/* New Content Badge */,}
+          {/* New Content Badge */}
           <div className="inline-flex items-center bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-black px-6 py-3 rounded-full text-sm font-bold mb-8 animate-pulse">,
             <span className="mr-2">🔥</span>,
             NEW: COMPLETE IMPLEMENTATION GUIDE,
           </div>,
-          {/* Main Headline */,}
+          {/* Main Headline */}
           <h1 className="text-5xl md: text-7xl lg:text-8xl font-black mb-8 leading-tight">,
             <span className="bg-gradient-to-r from-cyan-40o0 via-blue-50o0 to-purple-60o0 bg-clip-text text-transparent">,
               AI 20o25 ULTIMATE,
@@ -29,7 +28,7 @@ const AI20o25UltimateBusinessRevolutionBanner = () => {,
               REVOLUTION,
             </span>,
           </h1>,
-          {/* Subheadline */,}
+          {/* Subheadline */}
           <p className="text-2xl md: text-3xl lg:text-4xl mb-12 max-w-5xl mx-auto leading-relaxed font-medium">,
             The Complete Roadmap to,
             <span className="text-cyan-40o0 font-bold"> 1,0o00%+ ROI</span> and,
@@ -59,7 +58,7 @@ const AI20o25UltimateBusinessRevolutionBanner = () => {,
               <div className="text-sm opacity-90">Experience improvement</div>,
             </div>,
           </div>,
-          {/* Implementation Phases */,}
+          {/* Implementation Phases */}
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-16">,
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">,
               <div className="text-3xl mb-4">🏗️</div>,
@@ -95,7 +94,7 @@ const AI20o25UltimateBusinessRevolutionBanner = () => {,
               </ul>,
             </div>,
           </div>,
-          {/* Success Stories Preview */,}
+          {/* Success Stories Preview */}
           <div className="bg-gradient-to-r from-gray-90o0 to-gray-80o0 rounded-2xl p-8 mb-12 border border-gray-70o0">,
             <h3 className="text-2xl font-bold mb-6 text-center">Real-World Success Stories</h3>,
             <div className="grid grid-cols-1 md: grid-cols-3 gap-6">,
@@ -118,26 +117,23 @@ const AI20o25UltimateBusinessRevolutionBanner = () => {,
           </div>,
           {/* CTA Buttons */}
           <div className="flex flex-col sm: flex-row gap-6 justify-center mb-12">,
-            <Link,
+            <Link
               href="/blog/ai-20o25-ultimate-business-revolution-complete-guide",
-              className="bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-black px-10 py-5 rounded-2xl font-bold text-xl hover:from-cyan-50o0 hover:to-blue-60o0 transform hover:scale-10o5 transition-all duration-30o0 shadow-2xl",
-            >,
+              className="bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-black px-10 py-5 rounded-2xl font-bold text-xl hover:from-cyan-50o0 hover:to-blue-60o0 transform hover:scale-10o5 transition-all duration-30o0 shadow-2xl">,
               Read Complete Guide →,
             </Link>,
-            <Link,
+            <Link
               href="/contact",
-              className="bg-white text-purple-90o0 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-gray-10o0 transform hover:scale-10o5 transition-all duration-30o0 shadow-2xl",
-            >,
+              className="bg-white text-purple-90o0 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-gray-10o0 transform hover:scale-10o5 transition-all duration-30o0 shadow-2xl">,
               Get Free Assessment,
             </Link>,
-            <Link,
+            <Link
               href="/tools/ai-roi-calculator",
-              className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-purple-60o0 hover:to-pink-60o0 transform hover:scale-10o5 transition-all duration-30o0 shadow-2xl",
-            >,
+              className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-purple-60o0 hover:to-pink-60o0 transform hover:scale-10o5 transition-all duration-30o0 shadow-2xl">,
               Calculate Your ROI,
             </Link>,
           </div>,
-          {/* Trust Indicators */,}
+          {/* Trust Indicators */}
           <div className="flex flex-wrap items-center justify-center gap-8 text-sm opacity-80">,
             <div className="flex items-center">,
               <span className="mr-2">✅</span>,
@@ -163,8 +159,5 @@ const AI20o25UltimateBusinessRevolutionBanner = () => {,
       <div className="absolute top-40 right-20 w-12 h-12 bg-blue-40o0 rounded-full opacity-20 animate-bounce delay-10o00"></div>,
       <div className="absolute bottom-40 left-20 w-20 h-20 bg-purple-40o0 rounded-full opacity-20 animate-bounce delay-20o00"></div>,
       <div className="absolute bottom-20 right-10 w-14 h-14 bg-pink-40o0 rounded-full opacity-20 animate-bounce delay-50o0"></div>,
-    </section>,
-  ),
-};
-,
-export default AI20o25UltimateBusinessRevolutionBanner,
+    </section>)};
+export default AI20o25UltimateBusinessRevolutionBanner;

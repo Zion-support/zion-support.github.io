@@ -5,66 +5,61 @@ import { HomeSearchBriefcaseIconMessageSquareUserXMessageCircle } from "lucide-r
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
-,
-export interface MobileMenuProps {,
+export interface MobileMenuProps {
   unreadCount?: number,
   onClose: () => void,
-,}
+}
 ,
-export function MobileMenu({ unreadCount = 0onClose }: MobileMenuProps) {,
+export function MobileMenu({ unreadCount = 0onClose }: MobileMenuProps) {
   const location = useLocation(),
   const { user } = useAuth(),
   const isAuthenticated = !!user,
-,
-  const navItems = [,
-    {,
-      name: "Home",;
-      href: "/",;
-      icon: Home,;
+  const navItems = [
+    {
+      name: "Home";
+      href: "/";
+      icon: Home;
       matches: (path: string) => path === "/",
-    ,},;
-    {,
-      name: "Browse",;
-      href: "/talent",;
-      icon: Search,;
+    };
+    {
+      name: "Browse";
+      href: "/talent";
+      icon: Search;
       matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace"),
-    ,},;
-    {,
-      name: "Community",;
-      href: "/community",;
-      icon: MessageCircle,;
+    };
+    {
+      name: "Community";
+      href: "/community";
+      icon: MessageCircle;
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum"),
-    ,},;
-    {,
-      name: "Post Job",;
-      href: "/post-job",;
-      icon: BriefcaseIcon,;
-      matches: (path: string) => path.startsWith("/post-job"),;
+    };
+    {
+      name: "Post Job";
+      href: "/post-job";
+      icon: BriefcaseIcon;
+      matches: (path: string) => path.startsWith("/post-job");
       authRequired: true,
-    ,},;
-    {,
-      name: "Messages",;
-      href: "/messages",;
-      icon: MessageSquare,;
-      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),;
-      badge: unreadCount,;
+    };
+    {
+      name: "Messages";
+      href: "/messages";
+      icon: MessageSquare;
+      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox");
+      badge: unreadCount;
       authRequired: true,
-    ,},;
-    {,
-      name: "Dashboard",;
-      href: "/dashboard",;
-      icon: User,;
-      matches: (path: string) => path.startsWith("/dashboard"),;
+    };
+    {
+      name: "Dashboard";
+      href: "/dashboard";
+      icon: User;
+      matches: (path: string) => path.startsWith("/dashboard");
       authRequired: true,
-    ,}
+    }
   ],
-,
   // Filter items based on auth status,
   const visibleItems = navItems.filter(item =>,
-    !item.authRequired || (item.authRequired && isAuthenticated),
-  ),
-,
-  return (,
+    !item.authRequired || (item.authRequired && isAuthenticated)),
+  return (
     <div className="py-6">,
       <div className="flex justify-between items-center px-6 mb-6">,
         <h2 className="text-xl font-bold">Menu</h2>,
@@ -73,31 +68,26 @@ export function MobileMenu({ unreadCount = 0onClose }: MobileMenuProps) {,
         </Button>,
       </div>,
       <nav className="space-y-1">,
-        {visibleItems.map(item => (,
-          <Link,
+        {visibleItems.map(item => (
+          <Link
             key={item.name}
             to={item.href}
-            className={cn(,
-              "flex items-center px-6 py-3 text-base font-medium",;
+            className={cn(
+              "flex items-center px-6 py-3 text-base font-medium";
               item.matches(location.pathname),
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan",
-                : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan",
-            ),}
+                : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan")}
             onClick={onClose}
           >,
             <div className="relative mr-4">,
               <item.icon className="h-5 w-5" />,
-              {item.badge && item.badge > 0 && (,
+              {item.badge && item.badge > 0 && (
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">,
                   {item.badge > 9 ? '9+' : item.badge}
-                </span>,
-              )}
+                </span>)}
             </div>,
             {item.name}
-          </Link>,
-        ))}
+          </Link>))}
       </nav>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,12 +1,11 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function TestingGuide() {,
-  return (,
+export default function TestingGuide() {
+  return (
     <>,
       <Head>,
         <title>Testing & Quality — Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Our automated testing and quality assurance practices.',
         />,
@@ -32,7 +31,6 @@ export default function TestingGuide() {,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

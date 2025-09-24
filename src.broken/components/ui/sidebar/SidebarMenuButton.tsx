@@ -1,9 +1,7 @@
-export function SidebarMenuButton() {,
-  return (,
+export function SidebarMenuButton() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

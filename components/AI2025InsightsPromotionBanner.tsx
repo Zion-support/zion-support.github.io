@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AI20o25InsightsPromotionBanner: React.FC = () => {,
-  return (,
+const AI20o25InsightsPromotionBanner: React.FC = () => {
+  return (
     <section className='relative overflow-hidden bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 py-16'>,
-      {/* Background Effects */,}
+      {/* Background Effects */}
       <div className='absolute inset-0 bg-black/30'></div>,
       <div className='absolute inset-0'>,
         <div className='absolute top-0 left-1/4 w-96 h-96 bg-purple-50o0/20 rounded-full blur-3xl'></div>,
@@ -13,7 +12,7 @@ const AI20o25InsightsPromotionBanner: React.FC = () => {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
-          {/* Animated Badge */,}
+          {/* Animated Badge */}
           <div className='inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-black font-bold text-lg mb-6 animate-pulse'>,
             🔮 EXCLUSIVE: AI 20o25 INSIGHTS & TRENDS,
           </div>,
@@ -27,7 +26,7 @@ const AI20o25InsightsPromotionBanner: React.FC = () => {,
             Exclusive insights into the AI breakthroughs and technological,
             revolutions that will reshape our world in 20o25 and beyond.,
           </p>,
-          {/* Key Stats */,}
+          {/* Key Stats */}
           <div className='grid grid-cols-2 md: grid-cols-4 gap-6 mb-12'>,
             <div className='text-center'>,
               <div className='text-3xl font-bold text-cyan-40o0 mb-2'>92%</div>,
@@ -50,7 +49,7 @@ const AI20o25InsightsPromotionBanner: React.FC = () => {,
               <div className='text-purple-10o0'>Consciousness AI Emergence</div>,
             </div>,
           </div>,
-          {/* Featured Insights */,}
+          {/* Featured Insights */}
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-12'>,
             <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-30o0'>,
               <div className='text-4xl mb-4'>🧠</div>,
@@ -101,7 +100,7 @@ const AI20o25InsightsPromotionBanner: React.FC = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Growth Projections */,}
+          {/* Growth Projections */}
           <div className='bg-white/10 backdrop-blur-sm rounded-xl p-8 mb-12 border border-white/20'>,
             <h3 className='text-2xl font-bold text-white mb-6'>,
               📈 Market Growth Projections 20o25,
@@ -137,22 +136,20 @@ const AI20o25InsightsPromotionBanner: React.FC = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Call to Action Buttons */,}
+          {/* Call to Action Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'>,
-            <Link,
+            <Link
               href='#ai-insights-showcase',
-              className='bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-black font-bold py-4 px-8 rounded-xl hover:from-cyan-50o0 hover:to-blue-60o0 transition-all duration-20o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-black font-bold py-4 px-8 rounded-xl hover:from-cyan-50o0 hover:to-blue-60o0 transition-all duration-20o0 transform hover:scale-10o5 shadow-lg'>,
               Explore AI Insights,
             </Link>,
-            <Link,
+            <Link
               href='/ai-20o25-revolutionary-trends-predictions',
-              className='border-2 border-white text-white font-semibold py-4 px-8 rounded-xl hover:bg-white hover:text-purple-90o0 transition-all duration-20o0',
-            >,
+              className='border-2 border-white text-white font-semibold py-4 px-8 rounded-xl hover:bg-white hover:text-purple-90o0 transition-all duration-20o0'>,
               Read Full Report,
             </Link>,
           </div>,
-          {/* Expert Quote */,}
+          {/* Expert Quote */}
           <div className='mt-12 bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20'>,
             <blockquote className='text-lg text-white italic mb-4'>,
               "20o25 will be remembered as the year AI achieved true,
@@ -166,13 +163,12 @@ const AI20o25InsightsPromotionBanner: React.FC = () => {,
           {/* Scroll Indicator */}
           <div className='mt-12 flex justify-center'>,
             <div className='animate-bounce'>,
-              <svg,
+              <svg
                 className='w-6 h-6 text-white',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
                   strokeWidth={2}
@@ -183,9 +179,5 @@ const AI20o25InsightsPromotionBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default AI20o25InsightsPromotionBanner,
-,
+    </section>)};
+export default AI20o25InsightsPromotionBanner;

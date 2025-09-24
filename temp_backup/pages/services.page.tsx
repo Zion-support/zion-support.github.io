@@ -1,7 +1,7 @@
-import EnhancedLayout from '../components/layout/EnhancedLayout',;
-import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react',;
-export default function ServicesPage() {,
-  return (,
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react';
+export default function ServicesPage() {
+  return (
     <EnhancedLayout>,
       <h1 className="text-2xl font-semibold">Services</h1>,
       <div className="mt-6 grid md: grid-cols-3 gap-6">,
@@ -21,5 +21,4 @@ export default function ServicesPage() {,
           <p className="mt-1 text-sm opacity-80">Copilots, agents, vector search, and automation tailored to your product.</p>,
         </section>,
       </div>,
-    </EnhancedLayout>,
-  )}
+    </EnhancedLayout>)}

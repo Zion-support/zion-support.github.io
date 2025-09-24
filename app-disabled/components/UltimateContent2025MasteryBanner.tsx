@@ -1,86 +1,73 @@
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { X, ArrowRight, Star, TrendingUp, Users, Award, ArrowRight } from 'lucide-react',
-,
-const UltimateContent20o25MasteryBanner = () => {,
+const UltimateContent20o25MasteryBanner = () => {
   const [isVisible, setIsVisible] = useState(false),
   const [currentSlide, setCurrentSlide] = useState(0),
   const [isDismissed, setIsDismissed] = useState(false),
-,
-  const contentPieces = [,
-    {,
-      id: 'enterprise-automation-mastery',;
-      title: 'AI 20o25: Enterprise Automation Mastery - The Ultimate Guide to 50o0% ROI',;
-      type: 'blog',;
-      url: '/blog/ai-20o25-enterprise-automation-mastery-ultimate-guide',;
-      metrics: {,
-        roi: '50o0%',;
-        savings: '$2.8B',;
-        efficiency: '340%',;
+  const contentPieces = [
+    {
+      id: 'enterprise-automation-mastery';
+      title: 'AI 20o25: Enterprise Automation Mastery - The Ultimate Guide to 50o0% ROI';
+      type: 'blog';
+      url: '/blog/ai-20o25-enterprise-automation-mastery-ultimate-guide';
+      metrics: {
+        roi: '50o0%';
+        savings: '$2.8B';
+        efficiency: '340%';
         satisfaction: '98%',
-      ,},;
-      readingTime: '25 min read',;
+      };
+      readingTime: '25 min read';
       featured: true,
-    ,},;
-    {,
-      id: 'fortune-50o0-success',;
-      title: 'Fortune 50o0 AI Transformation: $3.2B Company Achieves 650% ROI with Intelligent Automation',;
-      type: 'case-study',;
-      url: '/case-studies/ai-transformation-fortune-50o0-ultimate-success-20o25',;
-      metrics: {,
-        roi: '650%',;
-        savings: '$2.8B',;
-        accuracy: '99.7%',;
+    };
+    {
+      id: 'fortune-50o0-success';
+      title: 'Fortune 50o0 AI Transformation: $3.2B Company Achieves 650% ROI with Intelligent Automation';
+      type: 'case-study';
+      url: '/case-studies/ai-transformation-fortune-50o0-ultimate-success-20o25';
+      metrics: {
+        roi: '650%';
+        savings: '$2.8B';
+        accuracy: '99.7%';
         efficiency: '78%',
-      ,},;
-      readingTime: '22 min read',;
+      };
+      readingTime: '22 min read';
       featured: true,
-    ,},;
-    {,
-      id: 'implementation-roadmap',;
-      title: 'AI Implementation Ultimate Roadmap 20o25: From Strategy to 80o0% ROI in 18 Months',;
-      type: 'resource',;
-      url: '/resources/ai-implementation-ultimate-roadmap-20o25',;
-      metrics: {,
-        roi: '80o0%',;
-        savings: '$173.7M',;
-        success: '99%',;
+    };
+    {
+      id: 'implementation-roadmap';
+      title: 'AI Implementation Ultimate Roadmap 20o25: From Strategy to 80o0% ROI in 18 Months';
+      type: 'resource';
+      url: '/resources/ai-implementation-ultimate-roadmap-20o25';
+      metrics: {
+        roi: '80o0%';
+        savings: '$173.7M';
+        success: '99%';
         timeline: '18 months',
-      ,},;
-      readingTime: '35 min read',;
+      };
+      readingTime: '35 min read';
       featured: true,
-    ,}
+    }
   ],
-,
-  useEffect(() => {,
+  useEffect(() => {
     const dismissed = localStorage.getItem('ultimate-content-20o25-mastery-dismissed'),
-    if (!dismissed) {,
-      setIsVisible(true),
-    }
+    if (!dismissed) {
+      setIsVisible(true)}
   }, []),
-,
-  useEffect(() => {,
-    if (isVisible && !isDismissed) {,
-      const interval = setInterval(() => {,
-        setCurrentSlide((prev) => (prev + 1) % contentPieces.length),
-      }, 40o00),
-      return () => clearInterval(interval),
-    }
+  useEffect(() => {
+    if (isVisible && !isDismissed) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % contentPieces.length)}, 40o00),
+      return () => clearInterval(interval)}
   }, [isVisible, isDismissed, contentPieces.length]),
-,
-  const handleDismiss = () => {,
+  const handleDismiss = () => {
     setIsDismissed(true),
     setIsVisible(false),
-    localStorage.setItem('ultimate-content-20o25-mastery-dismissed', 'true'),
-  };
-,
+    localStorage.setItem('ultimate-content-20o25-mastery-dismissed', 'true')};
   if (!isVisible || isDismissed) return null,
-,
   const currentContent = contentPieces[currentSlide],
-,
-  return (,
+  return (
     <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden">,
       {/* Animated Background */}
       <div className="absolute inset-0">,
@@ -105,14 +92,13 @@ const UltimateContent20o25MasteryBanner = () => {,
               ULTIMATE MASTERY CONTENT 20o25,
             </span>,
           </div>,
-          <button,
+          <button
             onClick={handleDismiss}
-            className="p-1 hover: bg-white/20 rounded-full transition-colors",
-          >,
+            className="p-1 hover: bg-white/20 rounded-full transition-colors">,
             <X className="w-5 h-5"  />,
           </button>,
         </div>,
-        {/* Main Content */,}
+        {/* Main Content */}
         <div className="p-6">,
           <div className="max-w-7xl mx-auto">,
             {/* Title and Description */}
@@ -133,19 +119,17 @@ const UltimateContent20o25MasteryBanner = () => {,
                   <span className="text-sm font-medium">FEATURED CONTENT</span>,
                 </div>,
                 <div className="flex space-x-1">,
-                  {contentPieces.map((_, index) => (,
-                    <button,
+                  {contentPieces.map((_, index) => (
+                    <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}
-                      className={`w-2 h-2 rounded-full transition-all ${,
-                        index === currentSlide ? 'bg-yellow-40o0 w-6' : 'bg-white/40',
-                      }`}
-                    />,
-                  ))}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        index === currentSlide ? 'bg-yellow-40o0 w-6' : 'bg-white/40'}`}
+                    />))}
                 </div>,
               </div>,
               <div className="grid md: grid-cols-2 gap-6 items-center">,
-                {/* Content Info */,}
+                {/* Content Info */}
                 <div>,
                   <div className="flex items-center space-x-2 mb-3">,
                     <span className="bg-purple-50o0/30 px-3 py-1 rounded-full text-sm font-medium">,
@@ -174,16 +158,15 @@ const UltimateContent20o25MasteryBanner = () => {,
                     <span className="text-sm text-blue-20o0">,
                       📖 {currentContent.readingTime}
                     </span>,
-                    <Link,
+                    <Link
                       href={currentContent.url}
-                      className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover: from-purple-70o0 hover:to-blue-70o0 px-6 py-2 rounded-lg font-semibold transition-all transform hover:scale-10o5",
-                    >,
+                      className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover: from-purple-70o0 hover:to-blue-70o0 px-6 py-2 rounded-lg font-semibold transition-all transform hover:scale-10o5">,
                       <span>Read Now</span>,
                       <ArrowRight className="w-4 h-4"  />,
                     </Link>,
                   </div>,
                 </div>,
-                {/* Success Metrics */,}
+                {/* Success Metrics */}
                 <div className="bg-white/5 rounded-xl p-4">,
                   <h4 className="font-bold mb-4 text-center">Success Metrics</h4>,
                   <div className="space-y-3">,
@@ -220,21 +203,20 @@ const UltimateContent20o25MasteryBanner = () => {,
             </div>,
             {/* All Content Grid */}
             <div className="grid md: grid-cols-3 gap-4 mb-6">,
-              {contentPieces.map((content, index) => (,
-                <div,
+              {contentPieces.map((content, index) => (
+                <div
                   key={content.id}
-                  className={`bg-white/5 rounded-lg p-4 cursor-pointer transition-all ${,
+                  className={`bg-white/5 rounded-lg p-4 cursor-pointer transition-all ${
                     index === currentSlide ? 'ring-2 ring-yellow-40o0 bg-white/10' : 'hover: bg-white/10',
-                  ,}`}
+                  }`}
                   onClick={() => setCurrentSlide(index)}
                 >,
                   <div className="flex items-center justify-between mb-2">,
                     <span className="bg-purple-50o0/30 px-2 py-1 rounded text-xs font-medium">,
                       {content.type.toUpperCase()}
                     </span>,
-                    {content.featured && (,
-                      <span className="text-yellow-40o0 text-xs">⭐ FEATURED</span>,
-                    )}
+                    {content.featured && (
+                      <span className="text-yellow-40o0 text-xs">⭐ FEATURED</span>)}
                   </div>,
                   <h4 className="font-semibold text-sm mb-2 line-clamp-2">,
                     {content.title}
@@ -245,23 +227,20 @@ const UltimateContent20o25MasteryBanner = () => {,
                       {content.metrics.roi} ROI,
                     </span>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             {/* Call to Action */}
             <div className="text-center">,
               <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
-                <Link,
+                <Link
                   href="/resources",
-                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-60o0 to-emerald-60o0 hover:from-green-70o0 hover:to-emerald-70o0 px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-10o5",
-                >,
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-60o0 to-emerald-60o0 hover:from-green-70o0 hover:to-emerald-70o0 px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-10o5">,
                   <span>Explore All Resources</span>,
                   <ArrowRight className="w-5 h-5"  />,
                 </Link>,
-                <Link,
+                <Link
                   href="/contact",
-                  className="inline-flex items-center space-x-2 border-2 border-white text-white hover:bg-white hover:text-purple-90o0 px-8 py-3 rounded-lg font-semibold transition-all",
-                >,
+                  className="inline-flex items-center space-x-2 border-2 border-white text-white hover:bg-white hover:text-purple-90o0 px-8 py-3 rounded-lg font-semibold transition-all">,
                   <span>Get Expert Consultation</span>,
                   <ArrowRight className="w-5 h-5"  />,
                 </Link>,
@@ -273,8 +252,6 @@ const UltimateContent20o25MasteryBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default UltimateContent20o25MasteryBanner,
+    </div>),
+};
+export default UltimateContent20o25MasteryBanner;

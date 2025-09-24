@@ -1,12 +1,11 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AIImplementationGuideBanner: React.FC = () => {,
-  return (,
+const AIImplementationGuideBanner: React.FC = () => {
+  return (
     <div className='bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-pink-60o0 text-white py-16'>,
       <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm'>,
             <span className='text-sm font-medium'>📚 NEW GUIDE</span>,
           </div>,
@@ -17,7 +16,7 @@ const AIImplementationGuideBanner: React.FC = () => {,
               Guide 20o25,
             </span>,
           </h2>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl opacity-90 mb-8 max-w-4xl mx-auto'>,
             Your step-by-step roadmap from AI assessment to full implementation.,
             Based on real-world success stories and proven methodologies.,
@@ -25,7 +24,7 @@ const AIImplementationGuideBanner: React.FC = () => {,
         </div>,
         {/* Implementation Phases */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-12'>,
-          {/* Phase 1 */,}
+          {/* Phase 1 */}
           <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center'>,
             <div className='w-12 h-12 bg-yellow-40o0 rounded-full flex items-center justify-center mx-auto mb-4'>,
               <span className='text-black font-bold text-lg'>1</span>,
@@ -157,48 +156,40 @@ const AIImplementationGuideBanner: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center'>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center items-center mb-6'>,
-            <Link,
+            <Link
               href='/blog/ai-transformation-20o25-roadmap',
-              className='bg-white text-indigo-60o0 px-8 py-3 rounded-lg font-bold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-indigo-60o0 px-8 py-3 rounded-lg font-bold hover:bg-gray-10o0 transition-colors'>,
               Download Complete Guide,
             </Link>,
-            <Link,
+            <Link
               href='/tools/ai-readiness-assessment',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors'>,
               Start Assessment Now,
             </Link>,
           </div>,
-          {/* Additional Resources */,}
+          {/* Additional Resources */}
           <div className='flex flex-wrap justify-center items-center gap-6 text-sm opacity-80'>,
-            <Link,
+            <Link
               href='/webinar',
-              className='hover: opacity-10o0 transition-opacity',
-            >,
+              className='hover: opacity-10o0 transition-opacity'>,
               📺 Watch Implementation Webinar,
             </Link>,
-            <Link,
+            <Link
               href='/consultation',
-              className='hover:opacity-10o0 transition-opacity',
-            >,
+              className='hover:opacity-10o0 transition-opacity'>,
               💬 Schedule Free Consultation,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='hover:opacity-10o0 transition-opacity',
-            >,
+              className='hover:opacity-10o0 transition-opacity'>,
               📊 View Success Stories,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default AIImplementationGuideBanner,
-,
+    </div>),
+};
+export default AIImplementationGuideBanner;

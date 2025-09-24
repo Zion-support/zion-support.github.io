@@ -1,6 +1,6 @@
-import React from 'react',
-const About: React.FC = () => {,
-  return (,
+import React from 'react';
+const About: React.FC = () => {
+  return (
     <div className='min-h-screen py-20'>,
       <div className='container mx-auto px-4'>,
         <h1 className='text-4xl font-bold text-center mb-12'>,
@@ -20,9 +20,5 @@ const About: React.FC = () => {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default About,
-,
+    </div>)};
+export default About;

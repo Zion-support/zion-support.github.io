@@ -2,70 +2,53 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain,;
-  Atom, Rocket, Target, Microscope, DollarSign, Phone,;
-  Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase,
-} from 'lucide-react',
+import {
+  CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain;
+  Atom, Rocket, Target, Microscope, DollarSign, Phone;
+  Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase} from 'lucide-react',
 import UltraFuturisticNavigation20o29 from '../components/layout/UltraFuturisticNavigation20o29',
 import UltraFuturisticFooter20o29 from '../components/layout/UltraFuturisticFooter20o29',
 import FuturisticAnimatedBackground20o29 from '../components/ui/FuturisticAnimatedBackground20o29',
 import { aiAutonomousEcosystemServices20o29 } from '../data/20o29-ai-autonomous-ecosystem',
 import { emergingTechBreakthroughServices20o29 } from '../data/20o29-emerging-tech-breakthroughs',
 import { practicalBusinessSolutionServices20o29 } from '../data/20o29-practical-business-solutions',
-,
-const contactInfo ={,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
+const contactInfo ={
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
   website: 'https://ziontechgroup.com',
-,};
-,
-export default function ComprehensivePricing20o29() {,
+};
+export default function ComprehensivePricing20o29() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [billingCycle, setBillingCycle] = useState('monthly'),
-,
-  const allServices = [,
-    ...aiAutonomousEcosystemServices20o29,;
-    ...emergingTechBreakthroughServices20o29,;
-    ...practicalBusinessSolutionServices20o29,
+  const allServices = [
+    ...aiAutonomousEcosystemServices20o29;
+    ...emergingTechBreakthroughServices20o29;
+    ...practicalBusinessSolutionServices20o29],
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Briefcase, count: allServices.length };
+    { id: 'ai-autonomous', name: 'AI Autonomous', icon: Brain, count: aiAutonomousEcosystemServices20o29.length };
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: Atom, count: emergingTechBreakthroughServices20o29.length };
+    { id: 'business-solutions', name: 'Business Solutions', icon: Target, count: practicalBusinessSolutionServices20o29.length }
   ],
-,
-  const categories = [,
-    { id: 'all', name: 'All Services', icon: Briefcase, count: allServices.length ,},;
-    { id: 'ai-autonomous', name: 'AI Autonomous', icon: Brain, count: aiAutonomousEcosystemServices20o29.length ,},;
-    { id: 'emerging-tech', name: 'Emerging Tech', icon: Atom, count: emergingTechBreakthroughServices20o29.length ,},;
-    { id: 'business-solutions', name: 'Business Solutions', icon: Target, count: practicalBusinessSolutionServices20o29.length ,}
-  ],
-,
   const filteredServices = selectedCategory === 'all',
     ? allServices,
-    : allServices.filter(service => {,
-        if (selectedCategory === 'ai-autonomous') {,
-          return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous')),
-        } else if (selectedCategory === 'emerging-tech') {,
-          return service.category.some(cat => cat.includes('Quantum') || cat.includes('Biotech') || cat.includes('Space')),
-        } else if (selectedCategory === 'business-solutions') {,
-          return service.category.some(cat => cat.includes('Business') || cat.includes('Marketing') || cat.includes('Education')),
-        }
-        return true,
-      }),
-,
-  const getPrice = (price: string) => {,
+    : allServices.filter(service => {
+        if (selectedCategory === 'ai-autonomous') {
+          return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous'))} else if (selectedCategory === 'emerging-tech') {
+          return service.category.some(cat => cat.includes('Quantum') || cat.includes('Biotech') || cat.includes('Space'))} else if (selectedCategory === 'business-solutions') {
+          return service.category.some(cat => cat.includes('Business') || cat.includes('Marketing') || cat.includes('Education'))}
+        return true}),
+  const getPrice = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, '')),
-    return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8),
-  };
-,
-  const getBillingText = (price: string) => {,
+    return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)};
+  const getBillingText = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, '')),
-    if (billingCycle === 'monthly') {,
-      return `$${numericPrice.toLocaleString()}/month`,
-    } else {,
-      return `$${Math.round(numericPrice * 0.8).toLocaleString()}/month (billed annually)`,
-    }
+    if (billingCycle === 'monthly') {
+      return `$${numericPrice.toLocaleString()}/month`} else {
+      return `$${Math.round(numericPrice * 0.8).toLocaleString()}/month (billed annually)`}
   };
-,
-  return (,
+  return (
     <div className="min-h-screen bg-black text-white relative">,
       <FuturisticAnimatedBackground20o29  />,
       <Head>,
@@ -75,13 +58,13 @@ export default function ComprehensivePricing20o29() {,
         <link rel="canonical" href="https: //ziontechgroup.com/20o29-comprehensive-pricing"  />,
       </Head>,
       <UltraFuturisticNavigation20o29  />,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="relative overflow-hidden py-32">,
         <div className="relative z-10 container mx-auto px-4 text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <h1 className="text-6xl md: text-8xl font-bold bg-gradient-to-r from-purple-40o0 via-pink-40o0 to-blue-40o0 bg-clip-text text-transparent mb-8">,
               20o29 Comprehensive Pricing,
@@ -90,19 +73,17 @@ export default function ComprehensivePricing20o29() {,
               Transparent pricing for our revolutionary 20o29 services. Choose the perfect plan,
               for your business transformation journey.,
             </p>,
-            {/* Billing Toggle */,}
+            {/* Billing Toggle */}
             <div className="flex items-center justify-center gap-4 mb-12">,
               <span className="text-gray-40o0">Monthly</span>,
-              <button,
+              <button
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
-                className={`relative w-16 h-8 bg-gray-70o0 rounded-full transition-colors duration-30o0 ${,
-                  billingCycle === 'annual' ? 'bg-purple-60o0' : '',
-                }`}
+                className={`relative w-16 h-8 bg-gray-70o0 rounded-full transition-colors duration-30o0 ${
+                  billingCycle === 'annual' ? 'bg-purple-60o0' : ''}`}
               >,
-                <div,
-                  className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-30o0 ${,
-                    billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1',
-                  }`}
+                <div
+                  className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-30o0 ${
+                    billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1'}`}
                  />,
               </button>,
               <span className="text-gray-40o0">Annual (20% off)</span>,
@@ -114,25 +95,24 @@ export default function ComprehensivePricing20o29() {,
       <section className="py-12 bg-gradient-to-b from-black to-gray-90o0">,
         <div className="container mx-auto px-4">,
           <div className="flex flex-wrap justify-center gap-4">,
-            {categories.map((category) => (,
+            {categories.map((category) => (
               <motion.button,
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`flex items-center gap-3 px-6 py-3 rounded-full border-2 transition-all duration-30o0 ${,
+                className={`flex items-center gap-3 px-6 py-3 rounded-full border-2 transition-all duration-30o0 ${
                   selectedCategory === category.id,
                     ? 'border-purple-50o0 bg-purple-50o0/20 text-purple-30o0',
                     : 'border-gray-60o0 text-gray-40o0 hover: border-gray-50o0 hover:text-gray-30o0',
-                ,}`}
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
+                }`}
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
               >,
                 <category.icon className="w-5 h-5"  />,
                 <span>{category.name}</span>,
                 <span className="px-2 py-1 bg-gray-70o0 rounded-full text-xs">,
                   {category.count}
                 </span>,
-              </motion.button>,
-            ))}
+              </motion.button>))}
           </div>,
         </div>,
       </section>,
@@ -140,33 +120,31 @@ export default function ComprehensivePricing20o29() {,
       <section className="py-20 bg-black">,
         <div className="container mx-auto px-4">,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className="text-center mb-16",
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16">,
             <h2 className="text-5xl md: text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">,
               Service Pricing,
             </h2>,
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">,
-              {filteredServices.length,} cutting-edge services available to transform your business.,
+              {filteredServices.length} cutting-edge services available to transform your business.,
               Each service includes comprehensive features, support, and implementation.,
             </p>,
           </motion.div>,
           <div className="grid lg: grid-cols-2 xl:grid-cols-3 gap-8">,
-            {filteredServices.map((service, index) => (,
+            {filteredServices.map((service, index) => (
               <motion.div,
                 key={service.id}
-                initial={{ opacity: 0, y: 30 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className="relative group",
-              >,
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="relative group">,
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover: opacity-100 transition-opacity duration-500"></div>,
                 <div className="relative bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500 h-full">,
-                  {/* Service Header */,}
+                  {/* Service Header */}
                   <div className="text-center mb-6">,
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mb-4">,
                       <Brain className="w-8 h-8 text-white" />,
@@ -180,44 +158,39 @@ export default function ComprehensivePricing20o29() {,
                       {getBillingText(service.price)}
                     </div>,
                     <div className="text-sm text-gray-400">,
-                      {billingCycle === 'annual' && (,
-                        <span className="text-green-400">Save 20% with annual billing</span>,
-                      )}
+                      {billingCycle === 'annual' && (
+                        <span className="text-green-400">Save 20% with annual billing</span>)}
                     </div>,
                   </div>,
                   {/* Categories */}
                   <div className="flex flex-wrap gap-2 mb-6 justify-center">,
-                    {service.category.slice(0, 3).map((cat, catIndex) => (,
-                      <span,
+                    {service.category.slice(0, 3).map((cat, catIndex) => (
+                      <span
                         key={catIndex}
-                        className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600",
-                      >,
+                        className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600">,
                         {cat}
-                      </span>,
-                    ))}
+                      </span>))}
                   </div>,
                   {/* Key Features */}
                   <div className="mb-6">,
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>,
                     <ul className="space-y-2">,
-                      {service.features.slice(0, 4).map((feature, featureIndex) => (,
+                      {service.features.slice(0, 4).map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center gap-2 text-gray-300 text-sm">,
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />,
                           <span>{feature}</span>,
-                        </li>,
-                      ))}
+                        </li>))}
                     </ul>,
                   </div>,
                   {/* Key Benefits */}
                   <div className="mb-6">,
                     <h4 className="text-lg font-semibold text-white mb-3">Key Benefits</h4>,
                     <ul className="space-y-2">,
-                      {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (,
+                      {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center gap-2 text-gray-300 text-sm">,
                           <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />,
                           <span>{benefit}</span>,
-                        </li>,
-                      ))}
+                        </li>))}
                     </ul>,
                   </div>,
                   {/* Market Info */}
@@ -233,22 +206,19 @@ export default function ComprehensivePricing20o29() {,
                   </div>,
                   {/* CTA Buttons */}
                   <div className="flex gap-3">,
-                    <Link,
+                    <Link
                       href={`/services/${service.id}`}
-                      className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover: from-purple-700 hover:to-blue-700 transition-all duration-300 text-sm",
-                    >,
+                      className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover: from-purple-700 hover:to-blue-700 transition-all duration-300 text-sm">,
                       Learn More,
                     </Link>,
-                    <Link,
+                    <Link
                       href="/contact",
-                      className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300 text-sm",
-                    >,
+                      className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300 text-sm">,
                       Get Started,
                     </Link>,
                   </div>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -256,10 +226,10 @@ export default function ComprehensivePricing20o29() {,
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">,
         <div className="container mx-auto px-4 text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >,
             <h2 className="text-5xl md: text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">,
               Enterprise Solutions,
@@ -278,10 +248,9 @@ export default function ComprehensivePricing20o29() {,
                   Tailored solutions built specifically for your business needs and requirements.,
                 </p>,
                 <div className="text-2xl font-bold text-purple-400 mb-4">Custom Pricing</div>,
-                <Link,
+                <Link
                   href="/contact",
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300",
-                >,
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">,
                   Contact Sales,
                 </Link>,
               </div>,
@@ -294,10 +263,9 @@ export default function ComprehensivePricing20o29() {,
                   Advanced security features and compliance for enterprise environments.,
                 </p>,
                 <div className="text-2xl font-bold text-purple-400 mb-4">Custom Pricing</div>,
-                <Link,
+                <Link
                   href="/contact",
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300",
-                >,
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">,
                   Contact Sales,
                 </Link>,
               </div>,
@@ -310,10 +278,9 @@ export default function ComprehensivePricing20o29() {,
                   Multi-region deployment and global support for international organizations.,
                 </p>,
                 <div className="text-2xl font-bold text-purple-400 mb-4">Custom Pricing</div>,
-                <Link,
+                <Link
                   href="/contact",
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300",
-                >,
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">,
                   Contact Sales,
                 </Link>,
               </div>,
@@ -321,14 +288,14 @@ export default function ComprehensivePricing20o29() {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Contact CTA */,}
+      {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">,
         <div className="container mx-auto px-4 text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >,
             <h2 className="text-5xl md: text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">,
               Ready to Get Started?,
@@ -340,7 +307,7 @@ export default function ComprehensivePricing20o29() {,
             <div className="grid md:grid-cols-3 gap-8 mb-12">,
               <div className="flex items-center justify-center gap-4 text-gray-300">,
                 <Phone className="w-6 h-6 text-purple-400" />,
-                <span>{contactInfo.mobile,}</span>,
+                <span>{contactInfo.mobile}</span>,
               </div>,
               <div className="flex items-center justify-center gap-4 text-gray-300">,
                 <Mail className="w-6 h-6 text-blue-400" />,
@@ -353,25 +320,23 @@ export default function ComprehensivePricing20o29() {,
             </div>,
             <div className="flex flex-wrap justify-center gap-4">,
               <motion.div,
-                whileHover={{ scale: 1.05 ,}}
-                whileTap={{ scale: 0.95 ,}}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >,
-                <Link,
+                <Link
                   href="/contact",
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover: from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg",
-                >,
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover: from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">,
                   Contact Us Now,
                   <ArrowRight className="ml-2 h-5 w-5" />,
                 </Link>,
               </motion.div>,
               <motion.div,
-                whileHover={{ scale: 1.05 ,}}
-                whileTap={{ scale: 0.95 ,}}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >,
-                <Link,
+                <Link
                   href="/2029-innovative-services-showcase",
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover: bg-purple-500 hover:text-white transition-all duration-300 text-lg",
-                >,
+                  className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover: bg-purple-500 hover:text-white transition-all duration-300 text-lg">,
                   View All Services,
                 </Link>,
               </motion.div>,
@@ -380,7 +345,6 @@ export default function ComprehensivePricing20o29() {,
         </div>,
       </section>,
       <UltraFuturisticFooter2029 />,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

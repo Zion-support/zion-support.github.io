@@ -1,14 +1,12 @@
 'use client',
-import React from 'react',
-,
-export default function UpdateZionGPT2() {,
-  return (,
+import React from 'react';
+export default function UpdateZionGPT2() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-24 lg: px-8'>,
-        <a,
+        <a
           href='/updates',
-          className='text-blue-40o0 hover:text-blue-30o0 text-sm',
-        >,
+          className='text-blue-40o0 hover:text-blue-30o0 text-sm'>,
           ← All updates,
         </a>,
         <h1 className='mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl'>,
@@ -35,15 +33,13 @@ export default function UpdateZionGPT2() {,
           <p>Get a demo or talk to us about pilot deployments.</p>,
         </div>,
         <div className='mt-10'>,
-          <a,
+          <a
             href='/contact',
-            className='rounded-md bg-blue-60o0 px-4 py-2 text-sm font-semibold text-white hover: bg-blue-50o0',
-          >,
+            className='rounded-md bg-blue-60o0 px-4 py-2 text-sm font-semibold text-white hover: bg-blue-50o0'>,
             Request a demo,
           </a>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

@@ -1,162 +1,155 @@
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  Rocket,;
-  Brain,;
-  Atom,;
-  Zap,;
-  Sparkles,;
-  Shield,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Globe,;
-  ArrowRight,;
-  Linkedin,;
-  Twitter,;
-  Facebook,;
-  Instagram,;
-  Youtube,;
-  Github,;
-  CheckCircle,;
-  Award,;
-  Star,;
+import {
+  Rocket;
+  Brain;
+  Atom;
+  Zap;
+  Sparkles;
+  Shield;
+  Phone;
+  Mail;
+  MapPin;
+  Globe;
+  ArrowRight;
+  Linkedin;
+  Twitter;
+  Facebook;
+  Instagram;
+  Youtube;
+  Github;
+  CheckCircle;
+  Award;
+  Star;
 } from 'lucide-react',
-,
-const contactInfo = {,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',;
+const contactInfo = {
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
 };
-,
-const serviceCategories = [,
-  {,
-    title: '🧠 Revolutionary AI',;
-    services: [,
-      {,
-        name: 'AI Consciousness Evolution',;
-        href: '/ai-consciousness-evolution-platform',;
-      },;
-      {,
-        name: 'AI Emotional Intelligence',;
-        href: '/ai-emotional-intelligence-platform',;
-      },;
-      {,
-        name: 'AI Creativity Orchestrator',;
-        href: '/ai-creativity-orchestrator',;
-      },;
-      {,
-        name: 'AI Autonomous Business Manager',;
-        href: '/ai-autonomous-business-manager',;
-      },;
-    ],;
-  },;
-  {,
-    title: '⚛️ Quantum & Emerging Tech',;
-    services: [,
-      {,
-        name: 'Quantum Internet Security',;
-        href: '/quantum-internet-security-gateway',;
-      },;
-      {,
-        name: 'DNA Computing Platform',;
-        href: '/biotech-dna-computing-platform',;
-      },;
-      {,
-        name: 'Quantum Financial Trading',;
-        href: '/quantum-financial-trading-platform',;
-      },;
-      { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' ,},;
-    ],;
-  },;
-  {,
-    title: '🏙️ Enterprise IT Solutions',;
-    services: [,
-      {,
-        name: 'Autonomous DevOps Platform',;
-        href: '/autonomous-devops-platform',;
-      },;
-      {,
-        name: 'Zero Trust Architecture',;
-        href: '/zero-trust-network-architecture',;
-      },;
-      {,
-        name: 'Edge Computing Orchestration',;
-        href: '/edge-computing-orchestration',;
-      },;
-      {,
-        name: 'AI IT Operations Center',;
-        href: '/ai-powered-it-operations-center',;
-      },;
-    ],;
-  },;
-  {,
-    title: '🌌 Space & Metaverse',;
-    services: [,
-      {,
-        name: 'Space Mining Automation',;
-        href: '/space-mining-automation-platform',;
-      },;
-      {,
-        name: 'Metaverse Development',;
-        href: '/metaverse-development-platform',;
-      },;
-      { name: 'AI Health Analytics', href: '/ai-predictive-health-analytics' ,},;
-    ],;
-  },;
+const serviceCategories = [
+  {
+    title: '🧠 Revolutionary AI';
+    services: [
+      {
+        name: 'AI Consciousness Evolution';
+        href: '/ai-consciousness-evolution-platform';
+      };
+      {
+        name: 'AI Emotional Intelligence';
+        href: '/ai-emotional-intelligence-platform';
+      };
+      {
+        name: 'AI Creativity Orchestrator';
+        href: '/ai-creativity-orchestrator';
+      };
+      {
+        name: 'AI Autonomous Business Manager';
+        href: '/ai-autonomous-business-manager';
+      };
+    ];
+  };
+  {
+    title: '⚛️ Quantum & Emerging Tech';
+    services: [
+      {
+        name: 'Quantum Internet Security';
+        href: '/quantum-internet-security-gateway';
+      };
+      {
+        name: 'DNA Computing Platform';
+        href: '/biotech-dna-computing-platform';
+      };
+      {
+        name: 'Quantum Financial Trading';
+        href: '/quantum-financial-trading-platform';
+      };
+      { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' };
+    ];
+  };
+  {
+    title: '🏙️ Enterprise IT Solutions';
+    services: [
+      {
+        name: 'Autonomous DevOps Platform';
+        href: '/autonomous-devops-platform';
+      };
+      {
+        name: 'Zero Trust Architecture';
+        href: '/zero-trust-network-architecture';
+      };
+      {
+        name: 'Edge Computing Orchestration';
+        href: '/edge-computing-orchestration';
+      };
+      {
+        name: 'AI IT Operations Center';
+        href: '/ai-powered-it-operations-center';
+      };
+    ];
+  };
+  {
+    title: '🌌 Space & Metaverse';
+    services: [
+      {
+        name: 'Space Mining Automation';
+        href: '/space-mining-automation-platform';
+      };
+      {
+        name: 'Metaverse Development';
+        href: '/metaverse-development-platform';
+      };
+      { name: 'AI Health Analytics', href: '/ai-predictive-health-analytics' };
+    ];
+  };
 ],
-,
-const quickLinks = [,
-  { name: 'Home', href: '/' ,},;
-  { name: 'Services', href: '/services' ,},;
-  { name: 'Solutions', href: '/solutions' ,},;
-  { name: 'Pricing', href: '/pricing' ,},;
-  { name: 'Resources', href: '/resources' ,},;
-  { name: 'Case Studies', href: '/case-studies' ,},;
-  { name: 'Blog', href: '/blog' ,},;
-  { name: 'Contact', href: '/contact' ,},;
+const quickLinks = [
+  { name: 'Home', href: '/' };
+  { name: 'Services', href: '/services' };
+  { name: 'Solutions', href: '/solutions' };
+  { name: 'Pricing', href: '/pricing' };
+  { name: 'Resources', href: '/resources' };
+  { name: 'Case Studies', href: '/case-studies' };
+  { name: 'Blog', href: '/blog' };
+  { name: 'Contact', href: '/contact' };
 ],
-,
-const companyLinks = [,
-  { name: 'About Us', href: '/about' ,},;
-  { name: 'Careers', href: '/careers' ,},;
-  { name: 'News', href: '/news' ,},;
-  { name: 'Partners', href: '/partners' ,},;
-  { name: 'Support', href: '/support' ,},;
-  { name: 'Status', href: '/status' ,},;
+const companyLinks = [
+  { name: 'About Us', href: '/about' };
+  { name: 'Careers', href: '/careers' };
+  { name: 'News', href: '/news' };
+  { name: 'Partners', href: '/partners' };
+  { name: 'Support', href: '/support' };
+  { name: 'Status', href: '/status' };
 ],
-,
-const socialLinks = [,
-  {,
-    name: 'LinkedIn',;
-    href: 'https://linkedin.com/company/ziontechgroup',;
-    icon: Linkedin,;
-  },;
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github ,},;
-  {,
-    name: 'Instagram',;
-    href: 'https://instagram.com/ziontechgroup',;
-    icon: Instagram,;
-  },;
-  {,
-    name: 'YouTube',;
-    href: 'https://youtube.com/@ziontechgroup',;
-    icon: Youtube,;
-  },;
+const socialLinks = [
+  {
+    name: 'LinkedIn';
+    href: 'https://linkedin.com/company/ziontechgroup';
+    icon: Linkedin;
+  };
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github };
+  {
+    name: 'Instagram';
+    href: 'https://instagram.com/ziontechgroup';
+    icon: Instagram;
+  };
+  {
+    name: 'YouTube';
+    href: 'https://youtube.com/@ziontechgroup';
+    icon: Youtube;
+  };
 ],
-,
-const certifications = [,
-  'ISO 270o01 Certified',;
-  'SOC 2 Type II Compliant',;
-  'GDPR Compliant',;
-  'HIPAA Compliant',;
-  'PCI DSS Level 1',;
-  'FedRAMP Authorized',;
+const certifications = [
+  'ISO 270o01 Certified';
+  'SOC 2 Type II Compliant';
+  'GDPR Compliant';
+  'HIPAA Compliant';
+  'PCI DSS Level 1';
+  'FedRAMP Authorized';
 ],
-,
-export default function UltraFuturisticFooter20o32() {,
-  return (,
+export default function UltraFuturisticFooter20o32() {
+  return (
     <footer className='bg-gradient-to-br from-black via-purple-90o0/20 to-black text-white relative overflow-hidden'>,
       {/* Background Elements */}
       <div className='absolute inset-0'>,
@@ -168,17 +161,16 @@ export default function UltraFuturisticFooter20o32() {,
       </div>,
       <div className='relative z-10'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
-          {/* Main Footer Content */,}
+          {/* Main Footer Content */}
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>,
-            {/* Company Info */,}
+            {/* Company Info */}
             <div className='space-y-6'>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6 ,}}
-                viewport={{ once: true ,}}
-                className='flex items-center space-x-3',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className='flex items-center space-x-3'>,
                 <div className='w-12 h-12 bg-gradient-to-r from-purple-50o0 to-cyan-50o0 rounded-xl flex items-center justify-center'>,
                   <Rocket className='w-7 h-7 text-white' />,
                 </div>,
@@ -192,40 +184,36 @@ export default function UltraFuturisticFooter20o32() {,
                 </div>,
               </motion.div>,
               <motion.p,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='text-gray-30o0 text-sm leading-relaxed',
-              >,
-                Leading provider of 10o00+ revolutionary AI, quantum computing,;
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className='text-gray-30o0 text-sm leading-relaxed'>,
+                Leading provider of 10o00+ revolutionary AI, quantum computing;
                 and IT services. Delivering 10o00% ROI through cutting-edge,
                 solutions that transform businesses.,
               </motion.p>,
               {/* Contact Information */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: 0.2 ,}}
-                viewport={{ once: true ,}}
-                className='space-y-3',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className='space-y-3'>,
                 <div className='flex items-center space-x-3 text-gray-30o0'>,
                   <Phone className='w-4 h-4 text-cyan-40o0' />,
-                  <a,
-                    href={`tel: ${contactInfo.mobile,}`}
-                    className='text-sm hover: text-cyan-40o0 transition-colors',
-                  >,
-                    {contactInfo.mobile,}
+                  <a
+                    href={`tel: ${contactInfo.mobile}`}
+                    className='text-sm hover: text-cyan-40o0 transition-colors'>,
+                    {contactInfo.mobile}
                   </a>,
                 </div>,
                 <div className='flex items-center space-x-3 text-gray-30o0'>,
                   <Mail className='w-4 h-4 text-purple-40o0' />,
-                  <a,
-                    href={`mailto: ${contactInfo.email,}`}
-                    className='text-sm hover: text-purple-40o0 transition-colors',
-                  >,
-                    {contactInfo.email,}
+                  <a
+                    href={`mailto: ${contactInfo.email}`}
+                    className='text-sm hover: text-purple-40o0 transition-colors'>,
+                    {contactInfo.email}
                   </a>,
                 </div>,
                 <div className='flex items-center space-x-3 text-gray-30o0'>,
@@ -234,102 +222,90 @@ export default function UltraFuturisticFooter20o32() {,
                 </div>,
                 <div className='flex items-center space-x-3 text-gray-30o0'>,
                   <Globe className='w-4 h-4 text-pink-40o0' />,
-                  <a,
+                  <a
                     href={contactInfo.website}
-                    className='text-sm hover: text-pink-40o0 transition-colors',
-                  >,
-                    {contactInfo.website,}
+                    className='text-sm hover: text-pink-40o0 transition-colors'>,
+                    {contactInfo.website}
                   </a>,
                 </div>,
               </motion.div>,
             </div>,
             {/* Service Categories */}
-            {serviceCategories.map((category, index) => (,
+            {serviceCategories.map((category, index) => (
               <motion.div,
                 key={index}
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: 0.1 + index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='space-y-6',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
+                viewport={{ once: true }}
+                className='space-y-6'>,
                 <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>,
                   <span>{category.title}</span>,
                 </h4>,
                 <div className='space-y-2'>,
-                  {category.services.map((service, serviceIndex) => (,
-                    <Link,
+                  {category.services.map((service, serviceIndex) => (
+                    <Link
                       key={serviceIndex}
                       href={service.href}
-                      className='block text-sm text-gray-40o0 hover: text-cyan-40o0 transition-colors duration-20o0 flex items-center group',
-                    >,
+                      className='block text-sm text-gray-40o0 hover: text-cyan-40o0 transition-colors duration-20o0 flex items-center group'>,
                       <ArrowRight className='w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-20o0' />,
-                      {service.name,}
-                    </Link>,
-                  ))}
+                      {service.name}
+                    </Link>))}
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
           {/* Additional Links Grid */}
           <div className='grid grid-cols-1 md: grid-cols-2 gap-8 mt-12 pt-12 border-t border-purple-50o0/20'>,
             <div className='grid grid-cols-2 gap-8'>,
-              {/* Quick Links */,}
+              {/* Quick Links */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6 ,}}
-                viewport={{ once: true ,}}
-                className='space-y-4',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className='space-y-4'>,
                 <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>,
                   <span>Quick Links</span>,
                 </h4>,
                 <div className='space-y-2'>,
-                  {quickLinks.map((link, index) => (,
-                    <Link,
+                  {quickLinks.map((link, index) => (
+                    <Link
                       key={index}
                       href={link.href}
-                      className='block text-sm text-gray-40o0 hover: text-cyan-40o0 transition-colors duration-20o0',
-                    >,
-                      {link.name,}
-                    </Link>,
-                  ))}
+                      className='block text-sm text-gray-40o0 hover: text-cyan-40o0 transition-colors duration-20o0'>,
+                      {link.name}
+                    </Link>))}
                 </div>,
               </motion.div>,
               {/* Company */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='space-y-4',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className='space-y-4'>,
                 <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>,
                   <span>Company</span>,
                 </h4>,
                 <div className='space-y-2'>,
-                  {companyLinks.map((link, index) => (,
-                    <Link,
+                  {companyLinks.map((link, index) => (
+                    <Link
                       key={index}
                       href={link.href}
-                      className='block text-sm text-gray-40o0 hover: text-cyan-40o0 transition-colors duration-20o0',
-                    >,
-                      {link.name,}
-                    </Link>,
-                  ))}
+                      className='block text-sm text-gray-40o0 hover: text-cyan-40o0 transition-colors duration-20o0'>,
+                      {link.name}
+                    </Link>))}
                 </div>,
               </motion.div>,
             </div>,
             <div className='grid grid-cols-1 gap-8'>,
               {/* Impact Metrics */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6 ,}}
-                viewport={{ once: true ,}}
-                className='space-y-4',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className='space-y-4'>,
                 <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>,
                   <span>Our Impact</span>,
                 </h4>,
@@ -362,27 +338,24 @@ export default function UltraFuturisticFooter20o32() {,
               </motion.div>,
               {/* Social Links */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='space-y-4',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className='space-y-4'>,
                 <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>,
                   <span>Follow Us</span>,
                 </h4>,
                 <div className='flex space-x-4'>,
-                  {socialLinks.map((social, index) => (,
-                    <a,
+                  {socialLinks.map((social, index) => (
+                    <a
                       key={index}
                       href={social.href}
                       target='_blank',
                       rel='noopener noreferrer',
-                      className='w-10 h-10 bg-gray-80o0/50 border border-gray-70o0/50 rounded-lg flex items-center justify-center text-gray-40o0 hover: text-cyan-40o0 hover:border-cyan-50o0/50 transition-all duration-20o0',
-                    >,
+                      className='w-10 h-10 bg-gray-80o0/50 border border-gray-70o0/50 rounded-lg flex items-center justify-center text-gray-40o0 hover: text-cyan-40o0 hover:border-cyan-50o0/50 transition-all duration-20o0'>,
                       <social.icon className='w-5 h-5' />,
-                    </a>,
-                  )),}
+                    </a>))}
                 </div>,
               </motion.div>,
             </div>,
@@ -390,12 +363,11 @@ export default function UltraFuturisticFooter20o32() {,
         </div>,
         {/* Newsletter Section */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.6 ,}}
-          viewport={{ once: true ,}}
-          className='mt-12 pt-12 border-t border-purple-50o0/20',
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className='mt-12 pt-12 border-t border-purple-50o0/20'>,
           <div className='text-center'>,
             <h3 className='text-2xl font-bold text-white mb-4'>,
               Stay Updated with Latest Innovations,
@@ -406,7 +378,7 @@ export default function UltraFuturisticFooter20o32() {,
               breakthrough technologies.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 max-w-md mx-auto'>,
-              <input,
+              <input
                 type='email',
                 placeholder='Enter your email',
                 className='flex-1 px-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent',
@@ -417,29 +389,26 @@ export default function UltraFuturisticFooter20o32() {,
             </div>,
           </div>,
         </motion.div>,
-        {/* Certifications */,}
+        {/* Certifications */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.6 ,}}
-          viewport={{ once: true ,}}
-          className='mt-12 pt-12 border-t border-purple-50o0/20',
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className='mt-12 pt-12 border-t border-purple-50o0/20'>,
           <div className='text-center'>,
             <h4 className='text-lg font-semibold text-white mb-4 flex items-center justify-center space-x-2'>,
               <Award className='w-5 h-5 text-yellow-40o0' />,
               <span>Certifications & Compliance</span>,
             </h4>,
             <div className='flex flex-wrap justify-center items-center gap-6 opacity-60'>,
-              {certifications.map((cert, index) => (,
-                <div,
+              {certifications.map((cert, index) => (
+                <div
                   key={index}
-                  className='flex items-center space-x-2 text-gray-40o0',
-                >,
+                  className='flex items-center space-x-2 text-gray-40o0'>,
                   <CheckCircle className='w-4 h-4 text-green-40o0' />,
                   <span className='text-sm'>{cert}</span>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </motion.div>,
@@ -451,22 +420,19 @@ export default function UltraFuturisticFooter20o32() {,
                 © 20o25 Zion Tech Group. All rights reserved.,
               </div>,
               <div className='flex items-center space-x-6 text-sm text-gray-40o0'>,
-                <Link,
+                <Link
                   href='/terms',
-                  className='hover:text-cyan-40o0 transition-colors duration-20o0',
-                >,
+                  className='hover:text-cyan-40o0 transition-colors duration-20o0'>,
                   Terms of Service,
                 </Link>,
-                <Link,
+                <Link
                   href='/privacy',
-                  className='hover:text-cyan-40o0 transition-colors duration-20o0',
-                >,
+                  className='hover:text-cyan-40o0 transition-colors duration-20o0'>,
                   Privacy Policy,
                 </Link>,
-                <Link,
+                <Link
                   href='/cookies',
-                  className='hover:text-cyan-40o0 transition-colors duration-20o0',
-                >,
+                  className='hover:text-cyan-40o0 transition-colors duration-20o0'>,
                   Cookie Policy,
                 </Link>,
               </div>,
@@ -474,7 +440,6 @@ export default function UltraFuturisticFooter20o32() {,
           </div>,
         </div>,
       </div>,
-    </footer>,
-  ),
-,}
+    </footer>),
+}
 ,

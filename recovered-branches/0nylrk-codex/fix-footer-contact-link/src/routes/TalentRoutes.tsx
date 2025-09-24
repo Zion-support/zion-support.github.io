@@ -6,34 +6,27 @@ import TalentProfilePage from '../pages/TalentProfilePage',
 import SavedTalentsPage from '../pages/SavedTalentsPage',
 import CreateTalentProfile from '../pages/CreateTalentProfile',
 import ProfilePage from '../pages/ProfilePage',
-,
-const TalentRoutes = () => {,
-  return (,
+const TalentRoutes = () => {
+  return (
     <Routes>,
       {/* Talent Routes */}
       <Route path='/talent' element={<TalentDirectory />} />,
       <Route path='/talents' element={<TalentsPage />} />,
       <Route path='/talent/:id' element={<TalentProfilePage />} />,
-      <Route,
+      <Route
         path='/saved-talents',
-        element={,
+        element={
           <ProtectedRoute>,
             <SavedTalentsPage />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/create-talent-profile',
-        element={,
+        element={
           <ProtectedRoute>,
             <CreateTalentProfile />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
       <Route path='/profile/:id' element={<ProfilePage />} />,
-    </Routes>,
-  ),
-};
-,
-export default TalentRoutes,
-,
+    </Routes>)};
+export default TalentRoutes;

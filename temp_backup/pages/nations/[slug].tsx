@@ -1,40 +1,35 @@
 import { GetServerSideProps } from 'next',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import { getNationBySlug } from '../../utils/nationStore',
-,
-export default function NationPublicPage({ nation }: { nation: any ,}) {,
+export default function NationPublicPage({ nation }: { nation: any }) {
   if (!nation),
-    return (,
+    return (
       <EnhancedLayout>,
         <div>Not found</div>,
-      </EnhancedLayout>,
-    ),
+      </EnhancedLayout>),
+  async function joinNation() {
+    await fetch(`/api/nations/${nation.slug}/join`, { method: 'POST' }),
+    window.location.reload()}
 ,
-  async function joinNation() {,
-    await fetch(`/api/nations/${nation.slug}/join`, { method: 'POST' ,}),
-    window.location.reload(),
-  }
-,
-  return (,
+  return (
     <EnhancedLayout>,
       <div className='max-w-3xl mx-auto space-y-4'>,
         <div className='flex items-center gap-4'>,
-          {nation.flagDataUrl && (,
-            <img,
+          {nation.flagDataUrl && (
+            <img
               src={nation.flagDataUrl}
               alt='Flag',
               className='h-14 w-14 object-contain rounded',
-            />,
-          )}
+            />)}
           <div>,
             <h1 className='text-2xl font-semibold'>{nation.name}</h1>,
             <p className='text-sm text-gray-60o0'>,
-              Governance: {nation.governanceStyle,} • Funding: {' ',}
+              Governance: {nation.governanceStyle} • Funding: {' '}
               {nation.fundingModel}
             </p>,
           </div>,
         </div>,
-        <button,
+        <button
           className='px-3 py-2 rounded bg-emerald-60o0 text-white',
           onClick={joinNation}
         >,
@@ -58,41 +53,32 @@ export default function NationPublicPage({ nation }: { nation: any ,}) {,
         </div>,
         <div>,
           <h2 className='text-lg font-semibold mb-2'>Milestones & goals</h2>,
-          {nation.milestones?.length ? (,
+          {nation.milestones?.length ? (
             <ul className='list-disc pl-6 text-sm'>,
-              {nation.milestones.map((m: any) => (,
-                <li key={m.id,}>,
+              {nation.milestones.map((m: any) => (
+                <li key={m.id}>,
                   <span className='font-medium'>{m.title}</span> — {m.status}
-                </li>,
-              ))}
-            </ul>,
-          ) : (,
-            <p className='text-sm text-gray-60o0'>No milestones yet.</p>,
-          )}
+                </li>))}
+            </ul>) : (
+            <p className='text-sm text-gray-60o0'>No milestones yet.</p>)}
         </div>,
         <div>,
           <h2 className='text-lg font-semibold mb-2'>DAO Proposals</h2>,
-          {nation.proposals?.length ? (,
+          {nation.proposals?.length ? (
             <ul className='space-y-2'>,
-              {nation.proposals.map((p: any) => (,
-                <li key={p.id,} className='p-3 rounded border'>,
+              {nation.proposals.map((p: any) => (
+                <li key={p.id} className='p-3 rounded border'>,
                   <div className='font-medium'>{p.title}</div>,
                   <div className='text-sm text-gray-60o0'>{p.status}</div>,
-                </li>,
-              ))}
-            </ul>,
-          ) : (,
-            <p className='text-sm text-gray-60o0'>No proposals yet.</p>,
-          )}
+                </li>))}
+            </ul>) : (
+            <p className='text-sm text-gray-60o0'>No proposals yet.</p>)}
         </div>,
       </div>,
-    </EnhancedLayout>,
-  ),
-}
+    </EnhancedLayout>)}
 ,
-export const getServerSideProps: GetServerSideProps = async ctx => {,
+export const getServerSideProps: GetServerSideProps = async ctx => {
   const slug = ctx.params?.slug as string,
   const nation = getNationBySlug(slug) || null,
-  return { props: { nation ,} };
+  return { props: { nation } };
 };
-,

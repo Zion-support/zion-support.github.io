@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ApiAccessPage() {,
-  return (,
+export default function ApiAccessPage() {
+  return (
     <>,
       <Head>,
         <title>Api Access - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function ApiAccessPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

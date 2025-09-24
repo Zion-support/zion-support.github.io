@@ -1,9 +1,7 @@
-export function InteractiveFeatures() {,
-  return (,
+export function InteractiveFeatures() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

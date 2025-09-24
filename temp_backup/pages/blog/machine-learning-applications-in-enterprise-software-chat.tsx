@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function MachineLearningApplicationsInEnterpriseSoftwareChatPage() {,
-  return (,
+export default function MachineLearningApplicationsInEnterpriseSoftwareChatPage() {
+  return (
     <>,
       <Head>,
         <title>Machine Learning Applications In Enterprise Software Chat - Zion Tech Group</title>,
@@ -12,6 +11,4 @@ export default function MachineLearningApplicationsInEnterpriseSoftwareChatPage(
         <p>Blog content coming soon...</p>,
         <Link href="/blog">Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-}
+    </div>)}

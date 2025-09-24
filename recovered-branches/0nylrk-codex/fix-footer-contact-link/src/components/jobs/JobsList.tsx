@@ -9,72 +9,56 @@ import { Badge } from "@/components/ui/badge",
 import { Loader2EditXEye } from "lucide-react",
 import { format } from "date-fns",
 import { Link } from "react-router-dom",
-,
-interface JobsListProps {,
+interface JobsListProps {
   filter?: JobStatus,
   onSelectJob?: (jobId: stringjobTitle: string) => void,
-,}
+}
 ,
-export function JobsList({ filteronSelectJob }: JobsListProps) {,
+export function JobsList({ filteronSelectJob }: JobsListProps) {
   const { user } = useAuth(),
   const [jobsetJobs] = useState<Job[]>([]),
   const [isLoadingsetIsLoading] = useState(true),
-,
-  useEffect(() => {,
-    const fetchJobs = async () => {,
+  useEffect(() => {
+    const fetchJobs = async () => {
       if (!user) return,
-,
-      try {,
+      try {
         let query = supabase,
           .from("jobs"),
           .select("*"),
           .eq("client_id"user.id),
-          .order("created_at"{ ascending: false ,}),
-,
-        if (filter) {,
-          query = query.eq("status"filter),
-        }
+          .order("created_at"{ ascending: false }),
+        if (filter) {
+          query = query.eq("status"filter)}
 ,
         const { dataerror } = await query,
-,
         if (error) throw error,
-        setJobs(data as Job[]),
-      } catch (error) {,
+        setJobs(data as Job[])} catch (error) {
         console.error("Error fetching jobs: "error),
-      ,} finally {,
-        setIsLoading(false),
-      }
+      } finally {
+        setIsLoading(false)}
     };
-,
-    fetchJobs(),
-  }[userfilter]),
-,
-  if (isLoading) {,
-    return (,
+    fetchJobs()}[userfilter]),
+  if (isLoading) {
+    return (
       <div className="flex justify-center items-center p-8">,
         <Loader2 className="h-8 w-8 animate-spin text-primary" />,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  if (jobs.length === 0) {,
-    return (,
+  if (jobs.length === 0) {
+    return (
       <div className="text-center p-8 border rounded-md bg-muted/20">,
         <p className="text-lg text-muted-foreground">,
           {filter,
             ? `No jobs with status "${filter}" found.`,
-            : "You haven't posted any jobs yet.",
-          }
+            : "You haven't posted any jobs yet."}
         </p>,
         <Button asChild className="mt-4">,
           <Link to="/post-job">Post Your First Job</Link>,
         </Button>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  const getStatusColor = (status: JobStatus) => {,
-    switch (status) {,
+  const getStatusColor = (status: JobStatus) => {
+    switch (status) {
       case "new":,
         return "bg-blue-100 text-blue-800",
       case "in_progress":,
@@ -85,17 +69,16 @@ export function JobsList({ filteronSelectJob }: JobsListProps) {,
         return "bg-gray-100 text-gray-800",
       default:,
         return "bg-gray-100 text-gray-800",
-    ,}
+    }
   };
-,
-  return (,
+  return (
     <div className="grid gap-6 md: grid-cols-2">,
-      {jobs.map((job) => (,
-        <Card,
-          key={job.id,} ,
-          className={`overflow-hidden cursor-pointer transition-shadow hover: shadow-md ${,
+      {jobs.map((job) => (
+        <Card
+          key={job.id} ,
+          className={`overflow-hidden cursor-pointer transition-shadow hover: shadow-md ${
             onSelectJob ? "cursor-pointer" : "",
-          ,}`}
+          }`}
           onClick={() => onSelectJob?.(job.idjob.title)}
         >,
           <CardHeader className="p-4">,
@@ -116,22 +99,20 @@ export function JobsList({ filteronSelectJob }: JobsListProps) {,
               {job.description}
             </p>,
             <div className="flex flex-wrap gap-1 mt-2">,
-              {job.skills.slice(03).map((skillindex) => (,
+              {job.skills.slice(03).map((skillindex) => (
                 <Badge key={index} variant="outline" className="text-xs">,
                   {skill}
-                </Badge>,
-              ))}
-              {job.skills.length > 3 && (,
+                </Badge>))}
+              {job.skills.length > 3 && (
                 <Badge variant="outline" className="text-xs">,
                   +{job.skills.length - 3} more,
-                </Badge>,
-              )}
+                </Badge>)}
             </div>,
             <div className="mt-3 text-sm">,
-              <span className="font-medium">Budget: </span> ${job.budget.min,} - ${job.budget.max}
+              <span className="font-medium">Budget: </span> ${job.budget.min} - ${job.budget.max}
             </div>,
             <div className="mt-1 text-sm">,
-              <span className="font-medium">Deadline: </span> {format(new Date(job.deadline)"PPP"),}
+              <span className="font-medium">Deadline: </span> {format(new Date(job.deadline)"PPP")}
             </div>,
           </CardContent>,
           <CardFooter className="flex justify-between p-4 pt-0 gap-2">,
@@ -151,9 +132,6 @@ export function JobsList({ filteronSelectJob }: JobsListProps) {,
               </Button>,
             </div>,
           </CardFooter>,
-        </Card>,
-      ))}
-    </div>,
-  ),
-}
+        </Card>))}
+    </div>)}
 ,

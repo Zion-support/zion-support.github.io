@@ -1,226 +1,220 @@
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  TrendingUp,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Shield,;
-  Lock,;
-  Zap,;
-  Target,;
-  Globe,;
-  Users,;
-  Award,;
-  Check,;
-  Clock,;
-  DollarSign,;
-  ArrowUpRight,;
-  Play,;
-  BookOpen,;
-  Code,;
-  Network,;
-  Cpu,;
-  Server,;
+import {
+  CheckCircle;
+  ArrowRight;
+  Star;
+  TrendingUp;
+  Phone;
+  Mail;
+  MapPin;
+  Shield;
+  Lock;
+  Zap;
+  Target;
+  Globe;
+  Users;
+  Award;
+  Check;
+  Clock;
+  DollarSign;
+  ArrowUpRight;
+  Play;
+  BookOpen;
+  Code;
+  Network;
+  Cpu;
+  Server;
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
-,
-const contactInfo = {,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',;
+const contactInfo = {
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
 };
-,
-const features = [,
-  {,
-    title: 'Quantum Key Distribution (QKD)',;
+const features = [
+  {
+    title: 'Quantum Key Distribution (QKD)';
     description:,
-      'Unbreakable encryption using quantum mechanics principles for secure key exchange',;
-    icon: Lock,;
-    color: 'from-blue-50o0 to-cyan-50o0',;
-  },;
-  {,
-    title: 'Real-time Quantum Monitoring',;
+      'Unbreakable encryption using quantum mechanics principles for secure key exchange';
+    icon: Lock;
+    color: 'from-blue-50o0 to-cyan-50o0';
+  };
+  {
+    title: 'Real-time Quantum Monitoring';
     description:,
-      'Continuous monitoring of quantum states and network security in real-time',;
-    icon: Shield,;
-    color: 'from-green-50o0 to-emerald-50o0',;
-  },;
-  {,
-    title: 'Multi-node Quantum Network',;
+      'Continuous monitoring of quantum states and network security in real-time';
+    icon: Shield;
+    color: 'from-green-50o0 to-emerald-50o0';
+  };
+  {
+    title: 'Multi-node Quantum Network';
     description:,
-      'Distributed quantum network architecture for scalable secure communications',;
-    icon: Network,;
-    color: 'from-purple-50o0 to-pink-50o0',;
-  },;
-  {,
-    title: 'Post-Quantum Cryptography',;
+      'Distributed quantum network architecture for scalable secure communications';
+    icon: Network;
+    color: 'from-purple-50o0 to-pink-50o0';
+  };
+  {
+    title: 'Post-Quantum Cryptography';
     description:,
-      'Future-proof encryption algorithms resistant to quantum computing attacks',;
-    icon: Cpu,;
-    color: 'from-orange-50o0 to-red-50o0',;
-  },;
-  {,
-    title: 'Quantum Memory Systems',;
+      'Future-proof encryption algorithms resistant to quantum computing attacks';
+    icon: Cpu;
+    color: 'from-orange-50o0 to-red-50o0';
+  };
+  {
+    title: 'Quantum Memory Systems';
     description:,
-      'Advanced quantum memory for storing and retrieving quantum information',;
-    icon: Server,;
-    color: 'from-indigo-50o0 to-blue-50o0',;
-  },;
-  {,
-    title: 'Compliance & Audit Trails',;
+      'Advanced quantum memory for storing and retrieving quantum information';
+    icon: Server;
+    color: 'from-indigo-50o0 to-blue-50o0';
+  };
+  {
+    title: 'Compliance & Audit Trails';
     description:,
-      'Comprehensive compliance frameworks and detailed audit logging',;
-    icon: CheckCircle,;
-    color: 'from-yellow-50o0 to-orange-50o0',;
-  },;
+      'Comprehensive compliance frameworks and detailed audit logging';
+    icon: CheckCircle;
+    color: 'from-yellow-50o0 to-orange-50o0';
+  };
 ],
-,
-const pricingPlans = [,
-  {,
-    name: 'Government',;
-    price: '$15,0o00',;
-    period: '/month',;
-    description: 'For government agencies and critical infrastructure',;
-    features: [,
-      'Quantum key distribution (QKD)',;
-      'Real-time quantum monitoring',;
-      'Multi-node quantum network',;
-      'Post-quantum cryptography',;
-      '24/7 dedicated support',;
-      'Compliance frameworks',;
-      'Custom integrations',;
-      'Security audits',;
-    ],;
-    popular: false,;
-    color: 'from-gray-50o0 to-gray-60o0',;
-  },;
-  {,
-    name: 'Enterprise',;
-    price: '$25,0o00',;
-    period: '/month',;
-    description: 'For large enterprises and financial institutions',;
-    features: [,
-      'Everything in Government',;
-      'Advanced quantum memory',;
-      'Quantum entanglement distribution',;
-      'Multi-party quantum protocols',;
-      'Dedicated account manager',;
-      'Custom security protocols',;
-      'White-label solutions',;
-      'API access',;
-    ],;
-    popular: true,;
-    color: 'from-blue-50o0 to-purple-60o0',;
-  },;
-  {,
-    name: 'Defense',;
-    price: '$50,0o00',;
-    period: '/month',;
-    description: 'For defense contractors and military applications',;
-    features: [,
-      'Everything in Enterprise',;
-      'Military-grade security',;
-      'Classified information handling',;
-      'Custom quantum protocols',;
-      'On-site deployment',;
-      '24/7 phone support',;
-      'Security clearances',;
-      'Defense compliance',;
-    ],;
-    popular: false,;
-    color: 'from-purple-50o0 to-pink-60o0',;
-  },;
+const pricingPlans = [
+  {
+    name: 'Government';
+    price: '$15,0o00';
+    period: '/month';
+    description: 'For government agencies and critical infrastructure';
+    features: [
+      'Quantum key distribution (QKD)';
+      'Real-time quantum monitoring';
+      'Multi-node quantum network';
+      'Post-quantum cryptography';
+      '24/7 dedicated support';
+      'Compliance frameworks';
+      'Custom integrations';
+      'Security audits';
+    ];
+    popular: false;
+    color: 'from-gray-50o0 to-gray-60o0';
+  };
+  {
+    name: 'Enterprise';
+    price: '$25,0o00';
+    period: '/month';
+    description: 'For large enterprises and financial institutions';
+    features: [
+      'Everything in Government';
+      'Advanced quantum memory';
+      'Quantum entanglement distribution';
+      'Multi-party quantum protocols';
+      'Dedicated account manager';
+      'Custom security protocols';
+      'White-label solutions';
+      'API access';
+    ];
+    popular: true;
+    color: 'from-blue-50o0 to-purple-60o0';
+  };
+  {
+    name: 'Defense';
+    price: '$50,0o00';
+    period: '/month';
+    description: 'For defense contractors and military applications';
+    features: [
+      'Everything in Enterprise';
+      'Military-grade security';
+      'Classified information handling';
+      'Custom quantum protocols';
+      'On-site deployment';
+      '24/7 phone support';
+      'Security clearances';
+      'Defense compliance';
+    ];
+    popular: false;
+    color: 'from-purple-50o0 to-pink-60o0';
+  };
 ],
-,
-const useCases = [,
-  {,
-    title: 'Government Communications',;
+const useCases = [
+  {
+    title: 'Government Communications';
     description:,
-      'Secure communication between government agencies and departments',;
-    icon: Shield,;
-    color: 'from-blue-50o0 to-cyan-50o0',;
-  },;
-  {,
-    title: 'Financial Transactions',;
-    description: 'Unbreakable encryption for high-value financial operations',;
-    icon: DollarSign,;
-    color: 'from-green-50o0 to-emerald-50o0',;
-  },;
-  {,
-    title: 'Healthcare Data',;
-    description: 'Secure transmission of sensitive medical information',;
-    icon: Users,;
-    color: 'from-purple-50o0 to-pink-50o0',;
-  },;
-  {,
-    title: 'Military Communications',;
-    description: 'Classified information exchange with quantum-level security',;
-    icon: Target,;
-    color: 'from-orange-50o0 to-red-50o0',;
-  },;
+      'Secure communication between government agencies and departments';
+    icon: Shield;
+    color: 'from-blue-50o0 to-cyan-50o0';
+  };
+  {
+    title: 'Financial Transactions';
+    description: 'Unbreakable encryption for high-value financial operations';
+    icon: DollarSign;
+    color: 'from-green-50o0 to-emerald-50o0';
+  };
+  {
+    title: 'Healthcare Data';
+    description: 'Secure transmission of sensitive medical information';
+    icon: Users;
+    color: 'from-purple-50o0 to-pink-50o0';
+  };
+  {
+    title: 'Military Communications';
+    description: 'Classified information exchange with quantum-level security';
+    icon: Target;
+    color: 'from-orange-50o0 to-red-50o0';
+  };
 ],
-,
-const integrations = [,
-  'Government Systems',;
-  'Financial Platforms',;
-  'Healthcare Networks',;
-  'Military Infrastructure',;
-  'Cloud Providers',;
-  'VPN Solutions',;
-  'Firewall Systems',;
-  'Identity Management',;
-  'Compliance Tools',;
-  'Monitoring Systems',;
-  'API Gateways',;
-  'Custom Applications',;
+const integrations = [
+  'Government Systems';
+  'Financial Platforms';
+  'Healthcare Networks';
+  'Military Infrastructure';
+  'Cloud Providers';
+  'VPN Solutions';
+  'Firewall Systems';
+  'Identity Management';
+  'Compliance Tools';
+  'Monitoring Systems';
+  'API Gateways';
+  'Custom Applications';
 ],
-,
-export default function QuantumSecureCommunicationNetwork() {,
-  return (,
+export default function QuantumSecureCommunicationNetwork() {
+  return (
     <Layout>,
       <Head>,
         <title>Quantum-Secure Communication Network | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Unbreakable communication infrastructure powered by quantum cryptography. Get quantum-secure communications with QKD and post-quantum cryptography.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='quantum secure communication, quantum cryptography, QKD, post-quantum cryptography, unbreakable encryption, quantum networks',
         />,
-        <meta,
+        <meta
           property='og: title',
           content='Quantum-Secure Communication Network | Zion Tech Group',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Unbreakable communication infrastructure powered by quantum cryptography.',
         />,
-        <meta,
+        <meta
           property='og:url',
           content='https://ziontechgroup.com/quantum-secure-communication-network',
         />,
         <meta property='og:type' content='website' />,
-        <link,
+        <link
           rel='canonical',
           href='https://ziontechgroup.com/quantum-secure-communication-network',
         />,
       </Head>,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className='relative py-20 lg: py-32 overflow-hidden'>,
         <div className='absolute inset-0 bg-gradient-to-br from-indigo-90o0/20 via-blue-90o0/20 to-cyan-90o0/20'></div>,
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>,
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>,
             <motion.div,
-              initial={{ opacity: 0, x: -30 ,}}
-              animate={{ opacity: 1, x: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <div className='flex items-center space-x-2 mb-6'>,
                 <span className='bg-gradient-to-r from-indigo-50o0 to-blue-60o0 text-white text-sm font-semibold px-3 py-1 rounded-full'>,
@@ -239,10 +233,9 @@ export default function QuantumSecureCommunicationNetwork() {,
                 post-quantum cryptography.,
               </p>,
               <div className='flex flex-col sm:flex-row gap-4'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-indigo-60o0 hover:to-blue-70o0 transition-all duration-20o0 transform hover:scale-10o5',
-                >,
+                  className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-indigo-60o0 hover:to-blue-70o0 transition-all duration-20o0 transform hover:scale-10o5'>,
                   Get Started Today,
                   <ArrowRight className='w-5 h-5 ml-2' />,
                 </Link>,
@@ -253,11 +246,10 @@ export default function QuantumSecureCommunicationNetwork() {,
               </div>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, x: 30 ,}}
-              animate={{ opacity: 1, x: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.2 ,}}
-              className='relative',
-            >,
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className='relative'>,
               <div className='bg-gradient-to-br from-indigo-50o0/20 to-blue-50o0/20 backdrop-blur-sm border border-indigo-50o0/30 rounded-2xl p-8'>,
                 <div className='text-6xl mb-4'>🔐</div>,
                 <h3 className='text-2xl font-bold text-white mb-4'>,
@@ -286,12 +278,11 @@ export default function QuantumSecureCommunicationNetwork() {,
       <section className='py-20'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-3xl lg: text-4xl font-bold text-white mb-6'>,
               Quantum Security Features,
             </h2>,
@@ -301,18 +292,17 @@ export default function QuantumSecureCommunicationNetwork() {,
             </p>,
           </motion.div>,
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-            {features.map((feature, index) => (,
+            {features.map((feature, index) => (
               <motion.div,
                 key={index}
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='group relative',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group relative'>,
                 <div className='bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 backdrop-blur-sm border border-gray-70o0 rounded-2xl p-6 hover: border-indigo-50o0/50 transition-all duration-30o0'>,
-                  <div,
-                    className={`w-12 h-12 bg-gradient-to-r ${feature.color,} rounded-lg flex items-center justify-center mb-4 group-hover: scale-110 transition-transform duration-30o0`,}
+                  <div
+                    className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover: scale-110 transition-transform duration-30o0`}
                   >,
                     <feature.icon className='w-6 h-6 text-white' />,
                   </div>,
@@ -321,8 +311,7 @@ export default function QuantumSecureCommunicationNetwork() {,
                   </h3>,
                   <p className='text-gray-40o0'>{feature.description}</p>,
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -330,12 +319,11 @@ export default function QuantumSecureCommunicationNetwork() {,
       <section className='py-20 bg-gradient-to-r from-gray-90o0/50 to-gray-80o0/50'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-3xl lg: text-4xl font-bold text-white mb-6'>,
               Perfect For Critical Applications,
             </h2>,
@@ -345,18 +333,17 @@ export default function QuantumSecureCommunicationNetwork() {,
             </p>,
           </motion.div>,
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
-            {useCases.map((useCase, index) => (,
+            {useCases.map((useCase, index) => (
               <motion.div,
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 ,}}
-                whileInView={{ opacity: 1, x: 0 ,}}
-                transition={{ duration: 0.8, delay: index * 0.2 ,}}
-                viewport={{ once: true ,}}
-                className='group',
-              >,
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className='group'>,
                 <div className='bg-gradient-to-r from-gray-80o0/50 to-gray-90o0/50 backdrop-blur-sm border border-gray-70o0 rounded-2xl p-8 hover: border-indigo-50o0/50 transition-all duration-30o0'>,
-                  <div,
-                    className={`w-16 h-16 bg-gradient-to-r ${useCase.color,} rounded-xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-30o0`,}
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r ${useCase.color} rounded-xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-30o0`}
                   >,
                     <useCase.icon className='w-8 h-8 text-white' />,
                   </div>,
@@ -367,8 +354,7 @@ export default function QuantumSecureCommunicationNetwork() {,
                     {useCase.description}
                   </p>,
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -376,12 +362,11 @@ export default function QuantumSecureCommunicationNetwork() {,
       <section className='py-20'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-3xl lg: text-4xl font-bold text-white mb-6'>,
               Secure Pricing Plans,
             </h2>,
@@ -391,23 +376,22 @@ export default function QuantumSecureCommunicationNetwork() {,
             </p>,
           </motion.div>,
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
-            {pricingPlans.map((plan, index) => (,
+            {pricingPlans.map((plan, index) => (
               <motion.div,
                 key={index}
-                initial={{ opacity: 0, y: 30 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: index * 0.2 ,}}
-                viewport={{ once: true ,}}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
                 className={`relative ${plan.popular ? 'scale-10o5' : ''}`}
               >,
-                {plan.popular && (,
+                {plan.popular && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>,
                     <span className='bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black text-sm font-bold px-4 py-2 rounded-full'>,
                       MOST POPULAR,
                     </span>,
-                  </div>,
-                )}
-                <div,
+                  </div>)}
+                <div
                   className={`bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 backdrop-blur-sm border ${plan.popular ? 'border-indigo-50o0' : 'border-gray-70o0'} rounded-2xl p-8 h-full`}
                 >,
                   <div className='text-center mb-8'>,
@@ -421,26 +405,23 @@ export default function QuantumSecureCommunicationNetwork() {,
                     <p className='text-gray-30o0'>{plan.description}</p>,
                   </div>,
                   <ul className='space-y-4 mb-8'>,
-                    {plan.features.map((feature, featureIndex) => (,
-                      <li,
+                    {plan.features.map((feature, featureIndex) => (
+                      <li
                         key={featureIndex}
-                        className='flex items-center text-gray-30o0',
-                      >,
+                        className='flex items-center text-gray-30o0'>,
                         <Check className='w-5 h-5 text-green-40o0 mr-3 flex-shrink-0' />,
                         {feature}
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
-                  <Link,
+                  <Link
                     href='/contact',
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-lg hover: scale-10o5 transition-all duration-20o0`,}
+                    className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-lg hover: scale-10o5 transition-all duration-20o0`}
                   >,
                     Get Started,
                     <ArrowRight className='w-4 h-4 ml-2' />,
                   </Link>,
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -448,12 +429,11 @@ export default function QuantumSecureCommunicationNetwork() {,
       <section className='py-20 bg-gradient-to-r from-gray-90o0/50 to-gray-80o0/50'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-3xl lg: text-4xl font-bold text-white mb-6'>,
               Seamless Integrations,
             </h2>,
@@ -463,18 +443,16 @@ export default function QuantumSecureCommunicationNetwork() {,
             </p>,
           </motion.div>,
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>,
-            {integrations.map((integration, index) => (,
+            {integrations.map((integration, index) => (
               <motion.div,
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 ,}}
-                whileInView={{ opacity: 1, scale: 1 ,}}
-                transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='bg-white/10 backdrop-blur-sm border border-gray-60o0 rounded-lg p-4 text-center hover: bg-white/20 transition-colors duration-30o0',
-              >,
-                <span className='text-white font-medium'>{integration,}</span>,
-              </motion.div>,
-            ))}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='bg-white/10 backdrop-blur-sm border border-gray-60o0 rounded-lg p-4 text-center hover: bg-white/20 transition-colors duration-30o0'>,
+                <span className='text-white font-medium'>{integration}</span>,
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -482,10 +460,10 @@ export default function QuantumSecureCommunicationNetwork() {,
       <section className='py-20'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >,
             <h2 className='text-3xl lg: text-4xl font-bold text-white mb-6'>,
               Ready for Quantum-Secure Communications?,
@@ -501,7 +479,7 @@ export default function QuantumSecureCommunicationNetwork() {,
                 </div>,
                 <div>,
                   <h3 className='text-white font-semibold'>Call Us</h3>,
-                  <p className='text-gray-40o0'>{contactInfo.mobile,}</p>,
+                  <p className='text-gray-40o0'>{contactInfo.mobile}</p>,
                 </div>,
               </div>,
               <div className='flex flex-col items-center space-y-3'>,
@@ -524,24 +502,21 @@ export default function QuantumSecureCommunicationNetwork() {,
               </div>,
             </div>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-indigo-60o0 hover:to-blue-70o0 transition-all duration-20o0 transform hover:scale-10o5',
-              >,
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-indigo-60o0 hover:to-blue-70o0 transition-all duration-20o0 transform hover:scale-10o5'>,
                 Start Your Free Trial,
                 <ArrowRight className='w-5 h-5 ml-2' />,
               </Link>,
-              <Link,
+              <Link
                 href='/20o25-innovative-new-services-showcase',
-                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-60o0 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-20o0',
-              >,
+                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-60o0 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-20o0'>,
                 View All Services,
               </Link>,
             </div>,
           </motion.div>,
         </div>,
       </section>,
-    </Layout>,
-  ),
-,}
+    </Layout>),
+}
 ,

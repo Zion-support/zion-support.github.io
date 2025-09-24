@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'social-media-scheduler - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'social-media-scheduler - Zion Tech Group';
   description:,
-    'Professional social-media-scheduler solutions for your business needs.',;
-  keywords: 'social-media-scheduler, services, business, technology',;
+    'Professional social-media-scheduler solutions for your business needs.';
+  keywords: 'social-media-scheduler, services, business, technology';
 };
-export default function SocialMediaSchedulerPage() {,
-  return (,
+export default function SocialMediaSchedulerPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function SocialMediaSchedulerPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

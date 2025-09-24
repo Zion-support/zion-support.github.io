@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function AiModelDevelopmentChatPage() {,
-  return (,
+export default function AiModelDevelopmentChatPage() {
+  return (
     <>,
       <Head>,
         <title>Ai Model Development Chat - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function AiModelDevelopmentChatPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function AutoUpdate20o250808t170938113zPage() {,
-  return (,
+export default function AutoUpdate20o250808t170938113zPage() {
+  return (
     <>,
       <Head>,
         <title>Auto Update 20o25 08 08t17 09 38 113z - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='auto update 20o25 08 08t17 09 38 113z page',
         />,
@@ -21,7 +20,6 @@ export default function AutoUpdate20o250808t170938113zPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

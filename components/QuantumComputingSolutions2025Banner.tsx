@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function QuantumComputingSolutions20o25Banner() {,
-  return (,
+export default function QuantumComputingSolutions20o25Banner() {
+  return (
     <div className='bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-blue-90o0 py-16 px-4'>,
       <div className='max-w-7xl mx-auto'>,
         <div className='text-center mb-12'>,
@@ -18,7 +17,7 @@ export default function QuantumComputingSolutions20o25Banner() {,
             Experience the power of quantum computing with our revolutionary,
             solutions delivering,
             <span className='text-cyan-40o0 font-bold'>,
-              {' ',}
+              {' '}
               10,0o00x faster processing,
             </span>,
             <span className='text-purple-40o0 font-bold'> 99.9% accuracy</span>,
@@ -27,20 +26,18 @@ export default function QuantumComputingSolutions20o25Banner() {,
             .,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-12'>,
-            <Link,
+            <Link
               href='/quantum-computing-solutions-20o25',
-              className='bg-gradient-to-r from-cyan-40o0 to-purple-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:scale-10o5 transition-transform',
-            >,
+              className='bg-gradient-to-r from-cyan-40o0 to-purple-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:scale-10o5 transition-transform'>,
               Explore Quantum Technologies,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/quantum-computing-success-stories',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-colors'>,
               View Success Stories,
             </Link>,
           </div>,
-          {/* Quantum Metrics */,}
+          {/* Quantum Metrics */}
           <div className='grid grid-cols-1 md: grid-cols-4 gap-6 max-w-4xl mx-auto'>,
             <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>,
               <div className='text-3xl font-bold text-cyan-40o0 mb-2'>,
@@ -133,7 +130,5 @@ export default function QuantumComputingSolutions20o25Banner() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

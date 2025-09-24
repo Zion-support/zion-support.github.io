@@ -7,35 +7,33 @@ import { EducationForm } from '../forms/EducationForm',
 import { SkillsForm } from '../forms/SkillsForm',
 import { CertificationsForm } from '../forms/CertificationsForm',
 import { PreviewResume } from '../PreviewResume',
-,
-interface ResumeStepContentProps {,
+interface ResumeStepContentProps {
   activeTab: string,
   resume: Resume,
   onNextStep: () => void,
   onPrevStep: () => void,
-,}
+}
 ,
-export const ResumeStepContent = ({,
+export const ResumeStepContent = ({
   activeTab,
   resume,
   onNextStep,
-  onPrevStep,
-}: ResumeStepContentProps) => {,
-  return (,
+  onPrevStep}: ResumeStepContentProps) => {
+  return (
     <>,
       <TabsContent value="basic-info">,
-        <BasicInfoForm,
+        <BasicInfoForm
           resumeId={resume?.id!} ,
           initialData={resume?.basic_info}
-          onSave={(data) => {,
+          onSave={(data) => {
             // Here you would typically save the data to your backend,
-            console.log("Saving basic info: "data),
-          ,}}
+            // console.log("Saving basic info: "data),
+          }}
           onComplete={onNextStep} ,
         />,
       </TabsContent>,
       <TabsContent value="work-experience">,
-        <WorkExperienceForm,
+        <WorkExperienceForm
           resumeId={resume?.id!}
           workExperiences={resume?.work_experience || []}
           onComplete={onNextStep}
@@ -43,7 +41,7 @@ export const ResumeStepContent = ({,
         />,
       </TabsContent>,
       <TabsContent value="education">,
-        <EducationForm,
+        <EducationForm
           resumeId={resume?.id!}
           educationEntries={resume?.education || []}
           onComplete={onNextStep}
@@ -51,7 +49,7 @@ export const ResumeStepContent = ({,
         />,
       </TabsContent>,
       <TabsContent value="skills">,
-        <SkillsForm,
+        <SkillsForm
           resumeId={resume?.id!}
           skills={resume?.skills || []}
           onComplete={onNextStep}
@@ -59,7 +57,7 @@ export const ResumeStepContent = ({,
         />,
       </TabsContent>,
       <TabsContent value="certifications">,
-        <CertificationsForm,
+        <CertificationsForm
           resumeId={resume?.id!}
           certifications={resume?.certifications || []}
           onComplete={onNextStep}
@@ -67,12 +65,9 @@ export const ResumeStepContent = ({,
         />,
       </TabsContent>,
       <TabsContent value="preview">,
-        <PreviewResume,
+        <PreviewResume
           resume={resume as Resume} ,
           onBack={onPrevStep}
         />,
       </TabsContent>,
-    </>,
-  ),
-};
-,
+    </>)};

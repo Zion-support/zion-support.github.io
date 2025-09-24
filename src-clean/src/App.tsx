@@ -1,22 +1,18 @@
 import React, { Suspense } from 'react',
 import { Routes, Route } from 'react-router-dom',
 import './App.css',
-,
 // Lazy load components,
 const Home = React.lazy(() => import('./pages/Home')),
 const Services = React.lazy(() => import('./pages/Services')),
 const Contact = React.lazy(() => import('./pages/Contact')),
 const NotFound = React.lazy(() => import('./pages/NotFound')),
-,
 // Loading Component,
-const LoadingSpinner = () => (,
+const LoadingSpinner = () => (
   <div className='flex items-center justify-center min-h-screen'>,
     <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-60o0'></div>,
-  </div>,
-),
-,
-function App() {,
-  return (,
+  </div>),
+function App() {
+  return (
     <div className='App'>,
       <Suspense fallback={<LoadingSpinner />}>,
         <Routes>,
@@ -26,9 +22,6 @@ function App() {,
           <Route path='*' element={<NotFound />} />,
         </Routes>,
       </Suspense>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-export default App,
-,
+export default App;

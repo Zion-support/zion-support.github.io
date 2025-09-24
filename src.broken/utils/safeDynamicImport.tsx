@@ -1,9 +1,7 @@
-export function safeDynamicImport() {,
-  return (,
+export function safeDynamicImport() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,64 +1,56 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {,
-  Scale, Search, TrendingUp, Shield, Zap, Target,;
-  CheckCircle, Star, Globe, Lock, Smartphone, Monitor,;
-  Award, MessageCircle, Cpu,
-} from 'lucide-react',
-,
-export default function AILegalResearchPlatform() {,
-  const features = [,
-    {,
-      icon: <Scale className="w-6 h-6"  />,;
-      title: 'Legal Research Automation',;
-      description: 'AI-powered legal research that analyzes case law, statutes, and legal precedents with unprecedented speed and accuracy.',
-    },;
-    {,
-      icon: <Search className="w-6 h-6"  />,;
-      title: 'Case Analysis',;
+import {
+  Scale, Search, TrendingUp, Shield, Zap, Target;
+  CheckCircle, Star, Globe, Lock, Smartphone, Monitor;
+  Award, MessageCircle, Cpu} from 'lucide-react',
+export default function AILegalResearchPlatform() {
+  const features = [
+    {
+      icon: <Scale className="w-6 h-6"  />;
+      title: 'Legal Research Automation';
+      description: 'AI-powered legal research that analyzes case law, statutes, and legal precedents with unprecedented speed and accuracy.'};
+    {
+      icon: <Search className="w-6 h-6"  />;
+      title: 'Case Analysis';
       description: 'Intelligent case analysis with AI-powered insights and legal reasoning identification.',
-    ,},;
-    {,
-      icon: <Target className="w-6 h-6"  />,;
-      title: 'Document Review',;
+    };
+    {
+      icon: <Target className="w-6 h-6"  />;
+      title: 'Document Review';
       description: 'Advanced document review with automated contract analysis and legal document classification.',
-    ,},;
-    {,
-      icon: <Zap className="w-6 h-6"  />,;
-      title: 'Legal Document Generation',;
+    };
+    {
+      icon: <Zap className="w-6 h-6"  />;
+      title: 'Legal Document Generation';
       description: 'AI-powered legal document generation with customizable templates and compliance checking.',
-    ,},;
-    {,
-      icon: <Shield className="w-6 h-6"  />,;
-      title: 'Compliance Monitoring',;
+    };
+    {
+      icon: <Shield className="w-6 h-6"  />;
+      title: 'Compliance Monitoring';
       description: 'Automated compliance monitoring and risk assessment for legal and regulatory requirements.',
-    ,},;
-    {,
-      icon: <TrendingUp className="w-6 h-6"  />,;
-      title: 'Legal Analytics',;
+    };
+    {
+      icon: <TrendingUp className="w-6 h-6"  />;
+      title: 'Legal Analytics';
       description: 'Comprehensive legal analytics with trend analysis and outcome prediction for legal strategies.',
-    ,}
+    }
   ],
-,
-  const benefits = [,
-    'Reduce research time by 80%',;
-    'Improve case outcomes by 60%',;
-    'Increase research accuracy by 70%',;
-    'Reduce legal costs by 50%',;
-    'Accelerate document review by 20o0%',;
-    'Enhance legal strategy by 150%',;
-    'Scale legal operations',;
-    'Future-proof legal practice',
-  ],
-,
-  const useCases = [,
-    'Legal Research', 'Case Analysis', 'Document Review',;
-    'Contract Analysis', 'Compliance Monitoring', 'Legal Analytics',;
-    'Risk Assessment', 'Document Generation', 'Precedent Analysis',;
-    'Regulatory Research', 'Litigation Support', 'Legal Intelligence',
-  ],
-,
-  return (,
+  const benefits = [
+    'Reduce research time by 80%';
+    'Improve case outcomes by 60%';
+    'Increase research accuracy by 70%';
+    'Reduce legal costs by 50%';
+    'Accelerate document review by 20o0%';
+    'Enhance legal strategy by 150%';
+    'Scale legal operations';
+    'Future-proof legal practice'],
+  const useCases = [
+    'Legal Research', 'Case Analysis', 'Document Review';
+    'Contract Analysis', 'Compliance Monitoring', 'Legal Analytics';
+    'Risk Assessment', 'Document Generation', 'Precedent Analysis';
+    'Regulatory Research', 'Litigation Support', 'Legal Intelligence'],
+  return (
     <>,
       <Head>,
         <title>AI Legal Research Platform | Zion Tech Group</title>,
@@ -71,16 +63,15 @@ export default function AILegalResearchPlatform() {,
         <link rel="canonical" href="https://ziontechgroup.com/ai-legal-research-platform"  />,
       </Head>,
       <div className="min-h-screen bg-black text-white">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">,
           <div className="absolute inset-0 bg-gradient-to-br from-amber-90o0/20 via-orange-90o0/20 to-red-90o0/20"></div>,
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center">,
               <div className="flex items-center justify-center mb-6">,
                 <div className="w-16 h-16 bg-gradient-to-br from-amber-50o0 to-orange-60o0 rounded-2xl flex items-center justify-center mb-4">,
                   <Scale className="w-8 h-8 text-white"  />,
@@ -90,37 +81,34 @@ export default function AILegalResearchPlatform() {,
                 AI Legal Research Platform,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-                Transform legal research with AI-powered automation, case analysis,;
+                Transform legal research with AI-powered automation, case analysis;
                 and document review that drives legal excellence and efficiency.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 bg-gradient-to-r from-amber-50o0 to-orange-60o0 text-white rounded-xl font-semibold text-lg hover: from-amber-60o0 hover:to-orange-70o0 transition-all duration-20o0 shadow-lg shadow-amber-50o0/25",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-amber-50o0 to-orange-60o0 text-white rounded-xl font-semibold text-lg hover: from-amber-60o0 hover:to-orange-70o0 transition-all duration-20o0 shadow-lg shadow-amber-50o0/25">,
                   Start Free Trial,
                 </motion.button>,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 border-2 border-amber-50o0/30 text-amber-40o0 rounded-xl font-semibold text-lg hover: bg-amber-50o0/10 transition-all duration-20o0",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-amber-50o0/30 text-amber-40o0 rounded-xl font-semibold text-lg hover: bg-amber-50o0/10 transition-all duration-20o0">,
                   Watch Demo,
                 </motion.button>,
               </div>,
             </motion.div>,
           </div>,
         </section>,
-        {/* Features Section */,}
+        {/* Features Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-90o0">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Revolutionary Legal Research Features,
               </h2>,
@@ -130,23 +118,21 @@ export default function AILegalResearchPlatform() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-              {features.map((feature, index) => (,
+              {features.map((feature, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-2xl p-8 hover: border-amber-50o0/30 transition-all duration-30o0 group",
-                >,
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-2xl p-8 hover: border-amber-50o0/30 transition-all duration-30o0 group">,
                   <div className="w-14 h-14 bg-gradient-to-br from-amber-50o0/20 to-orange-60o0/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-30o0">,
                     <div className="text-amber-40o0">,
-                      {feature.icon,}
+                      {feature.icon}
                     </div>,
                   </div>,
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>,
                   <p className="text-gray-40o0 leading-relaxed">{feature.description}</p>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -154,11 +140,10 @@ export default function AILegalResearchPlatform() {,
         <section className="py-20 bg-black">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Transform Legal Research,
               </h2>,
@@ -168,20 +153,18 @@ export default function AILegalResearchPlatform() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-              {benefits.map((benefit, index) => (,
+              {benefits.map((benefit, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-amber-50o0/30 transition-all duration-30o0 group",
-                >,
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-amber-50o0/30 transition-all duration-30o0 group">,
                   <div className="flex items-center space-x-3">,
                     <CheckCircle className="w-5 h-5 text-amber-40o0"  />,
-                    <span className="text-white font-medium text-sm">{benefit,}</span>,
+                    <span className="text-white font-medium text-sm">{benefit}</span>,
                   </div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -189,11 +172,10 @@ export default function AILegalResearchPlatform() {,
         <section className="py-20 bg-gradient-to-b from-black to-gray-90o0">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Legal Research Solutions for Every Need,
               </h2>,
@@ -203,20 +185,18 @@ export default function AILegalResearchPlatform() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">,
-              {useCases.map((useCase, index) => (,
+              {useCases.map((useCase, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 ,}}
-                  whileInView={{ opacity: 1, scale: 1 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-amber-50o0/30 transition-all duration-30o0 group text-center",
-                >,
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-amber-50o0/30 transition-all duration-30o0 group text-center">,
                   <div className="w-12 h-12 bg-gradient-to-br from-amber-50o0/20 to-orange-60o0/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-30o0">,
                     <Cpu className="w-6 h-6 text-amber-40o0"  />,
                   </div>,
-                  <span className="text-white font-medium text-sm">{useCase,}</span>,
-                </motion.div>,
-              ))}
+                  <span className="text-white font-medium text-sm">{useCase}</span>,
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -224,9 +204,9 @@ export default function AILegalResearchPlatform() {,
         <section className="py-20 bg-gradient-to-r from-amber-90o0/20 via-orange-90o0/20 to-red-90o0/20">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Ready to Transform Legal Research?,
@@ -237,17 +217,15 @@ export default function AILegalResearchPlatform() {,
               </p>,
               <div className="flex flex-col sm:flex-row gap-4 justify-center">,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 bg-gradient-to-r from-amber-50o0 to-orange-60o0 text-white rounded-xl font-semibold text-lg hover: from-amber-60o0 hover:to-orange-70o0 transition-all duration-20o0 shadow-lg shadow-amber-50o0/25",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-amber-50o0 to-orange-60o0 text-white rounded-xl font-semibold text-lg hover: from-amber-60o0 hover:to-orange-70o0 transition-all duration-20o0 shadow-lg shadow-amber-50o0/25">,
                   Get Started Now,
                 </motion.button>,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 border-2 border-amber-50o0/30 text-amber-40o0 rounded-xl font-semibold text-lg hover: bg-amber-50o0/10 transition-all duration-20o0",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-amber-50o0/30 text-amber-40o0 rounded-xl font-semibold text-lg hover: bg-amber-50o0/10 transition-all duration-20o0">,
                   Contact Sales,
                 </motion.button>,
               </div>,
@@ -255,6 +233,5 @@ export default function AILegalResearchPlatform() {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}

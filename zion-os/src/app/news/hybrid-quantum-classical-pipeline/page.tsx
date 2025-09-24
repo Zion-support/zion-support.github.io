@@ -1,15 +1,14 @@
 import Link from 'next/link',
-export const metadata = {,
+export const metadata = {
   title:,
-    'Hybrid quantum-classical pipeline boosts optimization accuracy by 38%',;
+    'Hybrid quantum-classical pipeline boosts optimization accuracy by 38%';
   description:,
-    'A new hybrid quantum-classical workflow delivers a 38% accuracy improvement on combinatorial optimization benchmarks.',;
+    'A new hybrid quantum-classical workflow delivers a 38% accuracy improvement on combinatorial optimization benchmarks.';
   keywords:,
-    'quantum computing, hybrid pipeline, optimization, QAOA, variational methods',;
+    'quantum computing, hybrid pipeline, optimization, QAOA, variational methods';
 };
-,
-export default function ArticlePage() {,
-  return (,
+export default function ArticlePage() {
+  return (
     <div className='min-h-screen'>,
       <section className='relative py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-3xl mx-auto'>,
@@ -24,14 +23,14 @@ export default function ArticlePage() {,
             38%,
           </h1>,
           <p className='text-gray-30o0 text-lg mb-10'>,
-            By combining classical heuristics with variational quantum circuits,;
+            By combining classical heuristics with variational quantum circuits;
             the pipeline demonstrates consistent improvements on routing and,
             scheduling problems across multiple datasets.,
           </p>,
           <div className='prose prose-invert max-w-none'>,
             <h2>Approach</h2>,
             <p>,
-              The system leverages problem decomposition, warm-start strategies,;
+              The system leverages problem decomposition, warm-start strategies;
               and adaptive parameter updates to stabilize training across noisy,
               intermediate-scale quantum devices.,
             </p>,
@@ -51,7 +50,5 @@ export default function ArticlePage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

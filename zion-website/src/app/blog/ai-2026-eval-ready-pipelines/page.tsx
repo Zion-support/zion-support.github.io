@@ -1,8 +1,7 @@
 'use client',
-import React from 'react',
-,
-export default function BlogEvalReadyPipelines() {,
-  return (,
+import React from 'react';
+export default function BlogEvalReadyPipelines() {
+  return (
     <div className='min-h-screen bg-white'>,
       <article className='max-w-3xl mx-auto px-6 pt-24 pb-24'>,
         <p className='text-sm text-gray-50o0'>Blueprint • 20o25-09-15</p>,
@@ -26,7 +25,5 @@ export default function BlogEvalReadyPipelines() {,
           </p>,
         </div>,
       </article>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

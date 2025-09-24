@@ -1,12 +1,11 @@
 import { Helmet } from 'react-helmet-async.ts',
 import { Link } from 'react-router-dom.ts',
-,
-export default function AIKnowledgebaseAgent(...args: any[]): any {,
-  return (,
+export default function AIKnowledgebaseAgent(...args: any[]): any {
+  return (
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>,
       <Head>,
         <title>AI Knowledgebase Agent — Services — Zion</title>,
-        <meta,
+        <meta
           name='description',
           content='RAG-powered assistant that answers questions from your docs, tickets, and product data with sources.',
         />,
@@ -33,7 +32,7 @@ export default function AIKnowledgebaseAgent(...args: any[]): any {,
           <li>SDK and embeddable chat widget</li>,
         </ul>,
         <div className='mt-6 text-sm text-white/70'>,
-          Average market pricing: $499–$2,50o0/mo depending on seats, data size,;
+          Average market pricing: $499–$2,50o0/mo depending on seats, data size;
           and SLAs.,
         </div>,
         <div className='mt-8 flex gap-3'>,
@@ -49,7 +48,6 @@ export default function AIKnowledgebaseAgent(...args: any[]): any {,
           </Link>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

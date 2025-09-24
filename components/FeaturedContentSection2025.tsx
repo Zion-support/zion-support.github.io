@@ -1,54 +1,52 @@
 import Link from 'next/link',
 ArrowRightCalendarClockUserTrendingUpStarEyeThumbsUp,
-,
-export default function FeaturedContentSection20o25() {,
-  const featuredContent = [,
-    {,
-      type: 'blog',;
-      title: 'Revolutionary AI Breakthroughs Reshaping 20o25',;
+export default function FeaturedContentSection20o25() {
+  const featuredContent = [
+    {
+      type: 'blog';
+      title: 'Revolutionary AI Breakthroughs Reshaping 20o25';
       excerpt:,
-        'Discover the most groundbreaking AI innovations that are transforming industries and creating unprecedented opportunities for businesses worldwide.',;
-      author: 'AI Research Team',;
-      readTime: '12 min read',;
-      publishDate: 'January 20o25',;
-      views: '15.2k',;
-      likes: '892',;
-      href: '/blog/ai-20o25-latest-breakthroughs',;
-      category: 'AI Innovation',;
-      featured: true,;
-    },;
-    {,
-      type: 'case-study',;
-      title: 'Global Tech Giant Achieves 25,0o00% ROI with AI Transformation',;
+        'Discover the most groundbreaking AI innovations that are transforming industries and creating unprecedented opportunities for businesses worldwide.';
+      author: 'AI Research Team';
+      readTime: '12 min read';
+      publishDate: 'January 20o25';
+      views: '15.2k';
+      likes: '892';
+      href: '/blog/ai-20o25-latest-breakthroughs';
+      category: 'AI Innovation';
+      featured: true;
+    };
+    {
+      type: 'case-study';
+      title: 'Global Tech Giant Achieves 25,0o00% ROI with AI Transformation';
       excerpt:,
-        'How a Fortune 10o0 technology company revolutionized their operations using our advanced AI automation solutions.',;
-      author: 'Success Stories Team',;
-      readTime: '8 min read',;
-      publishDate: 'January 20o25',;
-      views: '22.8k',;
-      likes: '1.2k',;
-      href: '/case-studies/ai-20o25-global-tech-transformation-mega-success',;
-      category: 'Success Story',;
-      featured: true,;
-    },;
-    {,
-      type: 'tutorial',;
-      title: 'Complete AI Implementation Guide: From Zero to Success',;
+        'How a Fortune 10o0 technology company revolutionized their operations using our advanced AI automation solutions.';
+      author: 'Success Stories Team';
+      readTime: '8 min read';
+      publishDate: 'January 20o25';
+      views: '22.8k';
+      likes: '1.2k';
+      href: '/case-studies/ai-20o25-global-tech-transformation-mega-success';
+      category: 'Success Story';
+      featured: true;
+    };
+    {
+      type: 'tutorial';
+      title: 'Complete AI Implementation Guide: From Zero to Success';
       excerpt:,
-        'A comprehensivestep-by-step tutorial that will guide you through implementing AI solutions in your organization.',;
-      author: 'Implementation Team',;
-      readTime: '45 min read',;
-      publishDate: 'January 20o25',;
-      views: '18.5k',;
-      likes: '756',;
-      href: '/tutorials/ai-implementation-step-by-step-guide',;
-      category: 'Tutorial',;
-      featured: true,;
-    },;
+        'A comprehensivestep-by-step tutorial that will guide you through implementing AI solutions in your organization.';
+      author: 'Implementation Team';
+      readTime: '45 min read';
+      publishDate: 'January 20o25';
+      views: '18.5k';
+      likes: '756';
+      href: '/tutorials/ai-implementation-step-by-step-guide';
+      category: 'Tutorial';
+      featured: true;
+    };
   ],
-,
-  const getTypeIcon = (type: string) => {,
-    switch (type) {,
+  const getTypeIcon = (type: string) => {
+    switch (type) {
       case 'blog':,
         return <TrendingUp className='w-5 h-5' />,
       case 'case-study':,
@@ -57,11 +55,10 @@ export default function FeaturedContentSection20o25() {,
         return <ArrowRight className='w-5 h-5' />,
       default:,
         return <TrendingUp className='w-5 h-5' />,
-    ,}
+    }
   };
-,
-  const getTypeColor = (type: string) => {,
-    switch (type) {,
+  const getTypeColor = (type: string) => {
+    switch (type) {
       case 'blog':,
         return 'from-blue-50o0 to-purple-50o0',
       case 'case-study':,
@@ -70,10 +67,9 @@ export default function FeaturedContentSection20o25() {,
         return 'from-purple-50o0 to-pink-50o0',
       default:,
         return 'from-gray-50o0 to-gray-60o0',
-    ,}
+    }
   };
-,
-  return (,
+  return (
     <div className='py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50'>,
       <div className='container mx-auto px-4'>,
         {/* Section Header */}
@@ -91,23 +87,22 @@ export default function FeaturedContentSection20o25() {,
             technology.,
           </p>,
         </div>,
-        {/* Featured Content Grid */,}
+        {/* Featured Content Grid */}
         <div className='grid lg: grid-cols-3 gap-8 mb-16'>,
-          {featuredContent.map(contentindex => (,
-            <Link key={index,} href={content.href} className='group'>,
+          {featuredContent.map(contentindex => (
+            <Link key={index} href={content.href} className='group'>,
               <div className='bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 overflow-hidden'>,
-                {/* Featured Badge */,}
-                {content.featured && (,
+                {/* Featured Badge */}
+                {content.featured && (
                   <div className='absolute top-4 left-4 z-10'>,
                     <div className='bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-white px-3 py-1 rounded-full text-xs font-semibold'>,
                       Featured,
                     </div>,
-                  </div>,
-                )}
+                  </div>)}
 ,
                 {/* Content Type Badge */}
                 <div className='absolute top-4 right-4 z-10'>,
-                  <div,
+                  <div
                     className={`bg-gradient-to-r ${getTypeColor(content.type)} text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1`}
                   >,
                     {getTypeIcon(content.type)}
@@ -115,7 +110,7 @@ export default function FeaturedContentSection20o25() {,
                   </div>,
                 </div>,
                 {/* Image Placeholder */}
-                <div,
+                <div
                   className={`h-48 bg-gradient-to-br ${getTypeColor(content.type)} flex items-center justify-center relative overflow-hidden`}
                 >,
                   <div className='absolute inset-0 bg-black/20'></div>,
@@ -131,7 +126,7 @@ export default function FeaturedContentSection20o25() {,
                 {/* Content */}
                 <div className='p-6'>,
                   <h3 className='text-xl font-bold text-gray-90o0 mb-3 group-hover: text-blue-60o0 transition-colors line-clamp-2'>,
-                    {content.title,}
+                    {content.title}
                   </h3>,
                   <p className='text-gray-60o0 mb-4 line-clamp-3'>,
                     {content.excerpt}
@@ -170,8 +165,7 @@ export default function FeaturedContentSection20o25() {,
                   </div>,
                 </div>,
               </div>,
-            </Link>,
-          )),}
+            </Link>))}
         </div>,
         {/* Content Categories */}
         <div className='grid md: grid-cols-3 gap-8 mb-16'>,
@@ -186,10 +180,9 @@ export default function FeaturedContentSection20o25() {,
               Stay updated with the latest AI trendsbreakthroughsand industry,
               insights.,
             </p>,
-            <Link,
+            <Link
               href='/blog',
-              className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-70o0 hover:to-purple-70o0 transition-all',
-            >,
+              className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-70o0 hover:to-purple-70o0 transition-all'>,
               Browse Articles <ArrowRight className='w-4 h-4' />,
             </Link>,
           </div>,
@@ -204,10 +197,9 @@ export default function FeaturedContentSection20o25() {,
               Real-world case studies showcasing remarkable AI transformation,
               results.,
             </p>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='inline-flex items-center gap-2 bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-70o0 hover:to-blue-70o0 transition-all',
-            >,
+              className='inline-flex items-center gap-2 bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-70o0 hover:to-blue-70o0 transition-all'>,
               View Stories <ArrowRight className='w-4 h-4' />,
             </Link>,
           </div>,
@@ -222,15 +214,14 @@ export default function FeaturedContentSection20o25() {,
               Step-by-step guides to help you implement AI solutions,
               successfully.,
             </p>,
-            <Link,
+            <Link
               href='/tutorials',
-              className='inline-flex items-center gap-2 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-70o0 hover:to-pink-70o0 transition-all',
-            >,
+              className='inline-flex items-center gap-2 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-70o0 hover:to-pink-70o0 transition-all'>,
               Start Learning <ArrowRight className='w-4 h-4' />,
             </Link>,
           </div>,
         </div>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <div className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-8 text-white text-center'>,
           <h3 className='text-3xl font-bold mb-4'>,
             'Don', 't Miss Out on the Latest Content,
@@ -240,22 +231,19 @@ export default function FeaturedContentSection20o25() {,
             studiesand tutorials as soon as 'they', 're published.,
           </p>,
           <div className='flex flex-wrap justify-center gap-4'>,
-            <Link,
+            <Link
               href='/newsletter',
-              className='bg-white text-blue-60o0 px-8 py-4 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors inline-flex items-center gap-2',
-            >,
+              className='bg-white text-blue-60o0 px-8 py-4 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors inline-flex items-center gap-2'>,
               Subscribe Now <ArrowRight className='w-5 h-5' />,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors'>,
               Get Custom Content,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

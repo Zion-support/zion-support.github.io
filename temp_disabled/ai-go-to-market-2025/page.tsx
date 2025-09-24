@@ -1,22 +1,20 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-,
-export const metadata: Metadata ={,
-  title: 'AI Go-To-Market 20o25: From Zero to Traction',;
+export const metadata: Metadata ={
+  title: 'AI Go-To-Market 20o25: From Zero to Traction';
   description:,
-    'Practical 20o25 GTM playbook for AI products: positioningpricingdistributionand growth loops.',;
+    'Practical 20o25 GTM playbook for AI products: positioningpricingdistributionand growth loops.';
   keywords:,
-    'AI GTMgo-to-marketAI startupdistributionpricingpositioningrowth loops20o25',;
-  openGraph: {,
-    title: 'AI Go-To-Market 20o25: From Zero to Traction',;
+    'AI GTMgo-to-marketAI startupdistributionpricingpositioningrowth loops20o25';
+  openGraph: {
+    title: 'AI Go-To-Market 20o25: From Zero to Traction';
     description:,
-      'Practical 20o25 GTM playbook for AI products: positioningpricingdistributionand growth loops.',;
-    type: 'article',;
-    publishedTime: '20o25-09-11T0o0:0o0:0o0.0o00Z',;
-    authors: ['Zion Tech Group'],}};
-,
-export default function AIGoToMarket20o25() {,
-  return (,
+      'Practical 20o25 GTM playbook for AI products: positioningpricingdistributionand growth loops.';
+    type: 'article';
+    publishedTime: '20o25-09-11T0o0:0o0:0o0.0o00Z';
+    authors: ['Zion Tech Group']}};
+export default function AIGoToMarket20o25() {
+  return (
     <div className="min-h-screen bg-white">,
       <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
         <div className="mb-12">,
@@ -31,7 +29,7 @@ export default function AIGoToMarket20o25() {,
             AI Go-To-Market 20o25: From Zero to Traction,
           </h1>,
           <p className="text-xl text-gray-60o0 leading-relaxed">,
-            A pragmatic GTM playbook for AI products. Learn how to position clearlyprice for value,;
+            A pragmatic GTM playbook for AI products. Learn how to position clearlyprice for value;
             and pick distribution channels that actually convert in 20o25.,
           </p>,
         </div>,
@@ -53,7 +51,7 @@ export default function AIGoToMarket20o25() {,
         </div>,
       </div>,
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">,
-        {/* Header */,}
+        {/* Header */}
         <header className="mb-12">,
           <div className="flex items-center gap-3 mb-6">,
             <Link href="/blog" className="text-blue-60o0 hover: text-blue-70o0 font-medium">,
@@ -84,7 +82,7 @@ export default function AIGoToMarket20o25() {,
             </div>,
           </div>,
         </header>,
-        {/* Featured Image */,}
+        {/* Featured Image */}
         <div className="aspect-video bg-gradient-to-br from-purple-10o0 to-pink-10o0 rounded-2xl mb-12 flex items-center justify-center">,
           <div className="text-8xl">🚀</div>,
         </div>,
@@ -153,7 +151,7 @@ export default function AIGoToMarket20o25() {,
         </div>,
       </div>,
           <p className="text-xl text-gray-60o0 mb-8 leading-relaxed">,
-            Getting AI products to market in 20o25 requires crisp positioninga distribution engine,;
+            Getting AI products to market in 20o25 requires crisp positioninga distribution engine;
             and pricing that matches value. This practical playbook distills what we see working now.,
           </p>,
           <h2 className="text-3xl font-bold text-gray-90o0 mt-12 mb-6">Positioning That Resonates</h2>,
@@ -206,16 +204,14 @@ export default function AIGoToMarket20o25() {,
               the first 10o0 qualified users. Talk to our team.,
             </p>,
             <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-              <Link,
+              <Link
                 href="/contact",
-                className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors",
-              >,
+                className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">,
                 Get Free Consultation,
               </Link>,
-              <Link,
+              <Link
                 href="/services/micro-saas",
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors",
-              >,
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors">,
                 View Growth Services,
               </Link>,
             </div>,
@@ -247,7 +243,6 @@ export default function AIGoToMarket20o25() {,
           </div>,
         </div>,
       </article>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

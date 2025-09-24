@@ -1,17 +1,15 @@
-import React from 'react',
+import React from 'react';
 import Layout from './layout/Layout',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
+import {
   ArrowRightStar,
-  BrainAtomShieldZapTrendingUpGlobeMapPin,;
-  UsersBuildingRocketCheckCirclePhoneMail,
-} from 'lucide-react',
-,
-const Homepage2026: React.FC = () => {,
-  return (,
+  BrainAtomShieldZapTrendingUpGlobeMapPin;
+  UsersBuildingRocketCheckCirclePhoneMail} from 'lucide-react',
+const Homepage2026: React.FC = () => {
+  return (
     <Layout>,
-      {/* Main Content */,}
+      {/* Main Content */}
       <main className="relative z-10">,
         {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">,
@@ -23,18 +21,16 @@ const Homepage2026: React.FC = () => {,
           </div>,
           <div className="text-center max-w-4xl mx-auto relative z-10">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="space-y-6",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6">,
               {/* Company Badge */}
               <motion.div,
-                initial={{ opacity: 0scale: 0.8 ,}}
-                animate={{ opacity: 1scale: 1 ,}}
-                transition={{ duration: 0.6delay: 0.2 ,}}
-                className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium",
-              >,
+                initial={{ opacity: 0scale: 0.8 }}
+                animate={{ opacity: 1scale: 1 }}
+                transition={{ duration: 0.6delay: 0.2 }}
+                className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium">,
                 <Star className="w-4 h-4" />,
                 <span>Innovation Leader 2026</span>,
               </motion.div>,
@@ -44,7 +40,7 @@ const Homepage2026: React.FC = () => {,
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">,
                 Pioneering the future of technology with innovative micro SAAS servicescutting-edge IT infrastructureand advanced AI solutions,
               </p>,
-              {/* Enhanced CTA Section */,}
+              {/* Enhanced CTA Section */}
               <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">,
                 <Link href="/comprehensive-2025-services-showcase">,
                   <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">,
@@ -65,13 +61,12 @@ const Homepage2026: React.FC = () => {,
                   </button>,
                 </a>,
               </div>,
-              {/* Trust Indicators */,}
+              {/* Trust Indicators */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8delay: 0.4 ,}}
-                className="flex items-center justify-center space-x-6 text-sm text-gray-400",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8delay: 0.4 }}
+                className="flex items-center justify-center space-x-6 text-sm text-gray-400">,
                 <div className="flex items-center space-x-2">,
                   <Shield className="w-4 h-4 text-green-400" />,
                   <span>Enterprise Security</span>,
@@ -93,11 +88,10 @@ const Homepage2026: React.FC = () => {,
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>,
           <div className="max-w-6xl mx-auto relative z-10">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'>,
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>,
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">,
                 We deliver innovative solutions that drive real business transformation,
@@ -105,11 +99,10 @@ const Homepage2026: React.FC = () => {,
             </motion.div>,
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6delay: 0.1 ,}}
-                className="text-center",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6delay: 0.1 }}
+                className="text-center">,
                 <div className="text-4xl mb-4">🚀</div>,
                 <h3 className="text-xl font-semibold text-white mb-2">Micro SAAS Solutions</h3>,
                 <p className="text-gray-300 text-sm">,
@@ -117,11 +110,10 @@ const Homepage2026: React.FC = () => {,
                 </p>,
               </motion.div>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6delay: 0.2 ,}}
-                className="text-center",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6delay: 0.2 }}
+                className="text-center">,
                 <div className="text-4xl mb-4">🏗️</div>,
                 <h3 className="text-xl font-semibold text-white mb-2">IT Infrastructure</h3>,
                 <p className="text-gray-300 text-sm">,
@@ -129,11 +121,10 @@ const Homepage2026: React.FC = () => {,
                 </p>,
               </motion.div>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6delay: 0.3 ,}}
-                className="text-center",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6delay: 0.3 }}
+                className="text-center">,
                 <div className="text-4xl mb-4">🤖</div>,
                 <h3 className="text-xl font-semibold text-white mb-2">AI Automation</h3>,
                 <p className="text-gray-300 text-sm">,
@@ -141,11 +132,10 @@ const Homepage2026: React.FC = () => {,
                 </p>,
               </motion.div>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6delay: 0.4 ,}}
-                className="text-center",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6delay: 0.4 }}
+                className="text-center">,
                 <div className="text-4xl mb-4">🧠</div>,
                 <h3 className="text-xl font-semibold text-white mb-2">Cutting-Edge AI</h3>,
                 <p className="text-gray-300 text-sm">,
@@ -159,24 +149,22 @@ const Homepage2026: React.FC = () => {,
         <section className="py-20 px-4">,
           <div className="max-w-6xl mx-auto">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl font-bold text-white mb-6">Our Service Portfolio</h2>,
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">,
                 Comprehensive solutions covering every aspect of modern business technology needs,
               </p>,
             </motion.div>,
             <div className="grid md: grid-cols-2 lg:grid-cols-2 gap-8">,
-              {/* AI Automation Services */,}
+              {/* AI Automation Services */}
               <motion.div,
-                initial={{ opacity: 0x: -20 ,}}
-                whileInView={{ opacity: 1x: 0 ,}}
-                transition={{ duration: 0.6delay: 0.1 ,}}
-                className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover: border-blue-400/50 transition-all duration-300",
-              >,
+                initial={{ opacity: 0x: -20 }}
+                whileInView={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.1 }}
+                className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover: border-blue-400/50 transition-all duration-300">,
                 <div className="text-5xl mb-6">🤖</div>,
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Automation Services</h3>,
                 <p className="text-gray-300 mb-6">,
@@ -203,18 +191,17 @@ const Homepage2026: React.FC = () => {,
                   </button>,
                 </Link>,
               </motion.div>,
-              {/* IT Infrastructure Services */,}
+              {/* IT Infrastructure Services */}
               <motion.div,
-                initial={{ opacity: 0x: 20 ,}}
-                whileInView={{ opacity: 1x: 0 ,}}
-                transition={{ duration: 0.6delay: 0.2 ,}}
-                className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover: border-green-400/50 transition-all duration-300",
-              >,
+                initial={{ opacity: 0x: 20 }}
+                whileInView={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.2 }}
+                className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover: border-green-400/50 transition-all duration-300">,
                 <div className="text-5xl mb-6">🏗️</div>,
                 <h3 className="text-2xl font-semibold text-white mb-4">IT Infrastructure Services</h3>,
                 <p className="text-gray-300 mb-6">,
                   Robust infrastructure solutions for modern digital businesses.,
-                  Edge computingzero trust securityand hybrid cloud management for enterprise-grade performance.,
+                  Edge computingzero trust securityand hybrid cloud management for enterprise-grade window.performance.,
                 </p>,
                 <div className="space-y-3 mb-6">,
                   <div className="flex items-center space-x-2 text-sm text-gray-300">,
@@ -236,13 +223,12 @@ const Homepage2026: React.FC = () => {,
                   </button>,
                 </Link>,
               </motion.div>,
-              {/* Micro SAAS Solutions */,}
+              {/* Micro SAAS Solutions */}
               <motion.div,
-                initial={{ opacity: 0x: -20 ,}}
-                whileInView={{ opacity: 1x: 0 ,}}
-                transition={{ duration: 0.6delay: 0.3 ,}}
-                className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover: border-purple-400/50 transition-all duration-300",
-              >,
+                initial={{ opacity: 0x: -20 }}
+                whileInView={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.3 }}
+                className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover: border-purple-400/50 transition-all duration-300">,
                 <div className="text-5xl mb-6">🚀</div>,
                 <h3 className="text-2xl font-semibold text-white mb-4">Micro SAAS Solutions</h3>,
                 <p className="text-gray-300 mb-6">,
@@ -269,13 +255,12 @@ const Homepage2026: React.FC = () => {,
                   </button>,
                 </Link>,
               </motion.div>,
-              {/* Cutting-Edge AI Services */,}
+              {/* Cutting-Edge AI Services */}
               <motion.div,
-                initial={{ opacity: 0x: 20 ,}}
-                whileInView={{ opacity: 1x: 0 ,}}
-                transition={{ duration: 0.6delay: 0.4 ,}}
-                className="bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover: border-orange-400/50 transition-all duration-300",
-              >,
+                initial={{ opacity: 0x: 20 }}
+                whileInView={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.4 }}
+                className="bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover: border-orange-400/50 transition-all duration-300">,
                 <div className="text-5xl mb-6">🧠</div>,
                 <h3 className="text-2xl font-semibold text-white mb-4">Cutting-Edge AI Services</h3>,
                 <p className="text-gray-300 mb-6">,
@@ -305,15 +290,14 @@ const Homepage2026: React.FC = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Contact Section */,}
+        {/* Contact Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">,
           <div className="max-w-4xl mx-auto text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="space-y-6",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6">,
               <h2 className="text-4xl font-bold text-white mb-6">,
                 Ready to Transform Your Business?,
               </h2>,
@@ -337,10 +321,9 @@ const Homepage2026: React.FC = () => {,
                     <Phone className='w-5 h-5 text-green-400' />,
                     <div>,
                       <div className='text-sm text-gray-400'>Phone</div>,
-                      <a,
+                      <a
                         href='tel:+13024640950',
-                        className='text-cyan-400 hover:underline font-medium',
-                      >                        +1 302 464 0950,
+                        className='text-cyan-400 hover:underline font-medium'>                        +1 302 464 0950,
                       </a>,
                     </div>,
                   </div>                  <div className="flex items-center space-x-3">,
@@ -373,17 +356,15 @@ const Homepage2026: React.FC = () => {,
                 </div>,
               </div>,
               <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-                <a,
+                <a
                   href="mailto:kleber@ziontechgroup.com",
-                  className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105",
-                >,
+                  className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">,
                   <span>Get Started Today</span>,
                   <ArrowRight className="w-5 h-5" />,
                 </a>,
-                <a,
+                <a
                   href="tel:+13024640950",
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300",
-                >,
+                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300">,
                   Call Now,
                 </a>,
               </div>,
@@ -391,8 +372,6 @@ const Homepage2026: React.FC = () => {,
           </div>,
         </section>,
       </main>,
-    </Layout>,
-  ),
-,};
-,
-export default Homepage2026,
+    </Layout>),
+};
+export default Homepage2026;

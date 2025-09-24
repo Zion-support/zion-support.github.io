@@ -1,11 +1,8 @@
-import React from 'react',
-interface NextSeoProps {,
+import React from 'react';
+interface NextSeoProps {
   title?: string,
   description?: string,
-  openGraph?: Record<string, unknown>,
-}
+  openGraph?: Record<string unknown>}
 ,
 const NextSeo: React.FC<NextSeoProps> = () => null,
-,
-export default NextSeo,
-,
+export default NextSeo;

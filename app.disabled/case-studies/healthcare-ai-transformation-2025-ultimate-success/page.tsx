@@ -1,42 +1,40 @@
 import Link from 'next/link',
-import {,
-  ArrowLeft,;
-  Calendar,;
-  Clock,;
-  User,;
-  Share2,;
-  Building,;
-  DollarSign,;
-  TrendingUp,;
-  Users,;
-  CheckCircle,;
-  Award,;
+import {
+  ArrowLeft;
+  Calendar;
+  Clock;
+  User;
+  Share2;
+  Building;
+  DollarSign;
+  TrendingUp;
+  Users;
+  CheckCircle;
+  Award;
 } from 'lucide-react',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'Healthcare AI Transformation 20o25: $50M Annual Savings & 95% Patient Satisfaction',;
+    'Healthcare AI Transformation 20o25: $50M Annual Savings & 95% Patient Satisfaction';
   description:,
-    'How a major healthcare system achieved unprecedented results through AI transformation. Real metrics, implementation details, and lessons learned.',;
-  keywords: [,
-    'Healthcare AI',;
-    'medical automation',;
-    'patient satisfaction',;
-    'cost savings',;
-    'ROI',;
-    'digital transformation',;
-    'clinical documentation',;
-    'healthcare technology',;
-    'medical AI',;
-    'healthcare efficiency',;
-  ],;
+    'How a major healthcare system achieved unprecedented results through AI transformation. Real metrics, implementation details, and lessons learned.';
+  keywords: [
+    'Healthcare AI';
+    'medical automation';
+    'patient satisfaction';
+    'cost savings';
+    'ROI';
+    'digital transformation';
+    'clinical documentation';
+    'healthcare technology';
+    'medical AI';
+    'healthcare efficiency';
+  ];
 };
-,
-export default function HealthcareAITransformationPage() {,
-  return (,
+export default function HealthcareAITransformationPage() {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='Healthcare AI Transformation 20o25: $50M Annual Savings & 95% Patient Satisfaction',
         description='How a major healthcare system achieved unprecedented results through AI transformation. Real metrics, implementation details, and lessons learned.',
         keywords='Healthcare AI, medical automation, patient satisfaction, cost savings, ROI, digital transformation, clinical documentation, healthcare technology, medical AI, healthcare efficiency',
@@ -46,18 +44,17 @@ export default function HealthcareAITransformationPage() {,
         {/* Navigation */}
         <div className='border-b border-gray-20o0'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-4'>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='inline-flex items-center text-purple-60o0 hover:text-purple-80o0 transition-colors',
-            >,
+              className='inline-flex items-center text-purple-60o0 hover:text-purple-80o0 transition-colors'>,
               <ArrowLeft className='w-4 h-4 mr-2' />,
               Back to Case Studies,
             </Link>,
           </div>,
         </div>,
-        {/* Case Study Header */,}
+        {/* Case Study Header */}
         <article className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
-          {/* Meta Information */,}
+          {/* Meta Information */}
           <div className='flex flex-wrap items-center gap-4 text-sm text-gray-60o0 mb-6'>,
             <div className='flex items-center'>,
               <Calendar className='w-4 h-4 mr-2' />,
@@ -81,7 +78,7 @@ export default function HealthcareAITransformationPage() {,
             Healthcare AI Transformation 20o25: $50M Annual Savings & 95%,
             Patient Satisfaction,
           </h1>,
-          {/* Subtitle */,}
+          {/* Subtitle */}
           <p className='text-xl text-gray-60o0 mb-8 leading-relaxed'>,
             A major regional healthcare system serving over 2 million patients,
             achieved unprecedented results through comprehensive AI,
@@ -114,7 +111,7 @@ export default function HealthcareAITransformationPage() {,
               </div>,
             </div>,
           </div>,
-          {/* Article Content */,}
+          {/* Article Content */}
           <div className='prose prose-lg max-w-none'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-6'>,
               The Challenge: Healthcare at a Crossroads,
@@ -468,7 +465,7 @@ export default function HealthcareAITransformationPage() {,
                       Clinical Engagement,
                     </h3>,
                     <p className='text-gray-70o0'>,
-                      Early involvement of clinical staff, physician champions,;
+                      Early involvement of clinical staff, physician champions;
                       continuous feedback, and recognition of clinical,
                       expertise.,
                     </p>,
@@ -483,7 +480,7 @@ export default function HealthcareAITransformationPage() {,
                       Technology Excellence,
                     </h3>,
                     <p className='text-gray-70o0'>,
-                      Proven AI platforms, robust integration capabilities,;
+                      Proven AI platforms, robust integration capabilities;
                       scalable architecture, and continuous monitoring.,
                     </p>,
                   </div>,
@@ -508,7 +505,7 @@ export default function HealthcareAITransformationPage() {,
             <p className='text-gray-70o0 mb-8 leading-relaxed'>,
               This healthcare AI transformation represents a paradigm shift in,
               how healthcare systems can leverage technology to improve patient,
-              care while reducing costs. The $50 million in annual savings,;
+              care while reducing costs. The $50 million in annual savings;
               combined with 95% patient satisfaction and 340% operational,
               efficiency improvement, demonstrates the transformative power of,
               AI in healthcare.,
@@ -535,22 +532,20 @@ export default function HealthcareAITransformationPage() {,
                 </div>,
               </div>,
               <div className='flex flex-col sm:flex-row gap-4 mt-6'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center',
-                >,
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center'>,
                   Get Free Assessment,
                 </Link>,
-                <Link,
+                <Link
                   href='/services',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-center',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-center'>,
                   Explore Healthcare AI Services,
                 </Link>,
               </div>,
             </div>,
           </div>,
-          {/* Share Section */,}
+          {/* Share Section */}
           <div className='border-t border-gray-20o0 pt-8 mt-12'>,
             <div className='flex items-center justify-between'>,
               <div>,
@@ -576,7 +571,6 @@ export default function HealthcareAITransformationPage() {,
           </div>,
         </article>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

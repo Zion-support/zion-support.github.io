@@ -1,12 +1,11 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AITrends20o25_20o30FuturePredictionsBanner: React.FC = () => {,
-  return (,
+const AITrends20o25_20o30FuturePredictionsBanner: React.FC = () => {
+  return (
     <div className='bg-gradient-to-r from-cyan-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16'>,
       <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm'>,
             <span className='text-sm font-medium'>🔮 FUTURE PREDICTIONS</span>,
           </div>,
@@ -17,7 +16,7 @@ const AITrends20o25_20o30FuturePredictionsBanner: React.FC = () => {,
               Future Predictions,
             </span>,
           </h2>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl opacity-90 mb-8 max-w-4xl mx-auto'>,
             Discover the groundbreaking AI trends that will reshape industries,
             over the next 5 years. Stay ahead of the curve with our expert,
@@ -26,7 +25,7 @@ const AITrends20o25_20o30FuturePredictionsBanner: React.FC = () => {,
         </div>,
         {/* Trend Categories */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>,
-          {/* AI Automation */,}
+          {/* AI Automation */}
           <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20'>,
             <div className='flex items-center mb-4'>,
               <div className='w-12 h-12 bg-green-40o0 rounded-lg flex items-center justify-center mr-4'>,
@@ -44,9 +43,9 @@ const AITrends20o25_20o30FuturePredictionsBanner: React.FC = () => {,
                 <span>25%</span>,
               </div>,
               <div className='w-full bg-gray-70o0 rounded-full h-2'>,
-                <div,
+                <div
                   className='bg-green-40o0 h-2 rounded-full',
-                  style={{ width: '25%' ,}}
+                  style={{ width: '25%' }}
                 ></div>,
               </div>,
               <div className='flex justify-between text-xs'>,
@@ -54,9 +53,9 @@ const AITrends20o25_20o30FuturePredictionsBanner: React.FC = () => {,
                 <span>85%</span>,
               </div>,
               <div className='w-full bg-gray-70o0 rounded-full h-2'>,
-                <div,
+                <div
                   className='bg-green-40o0 h-2 rounded-full',
-                  style={{ width: '85%' ,}}
+                  style={{ width: '85%' }}
                 ></div>,
               </div>,
             </div>,
@@ -79,9 +78,9 @@ const AITrends20o25_20o30FuturePredictionsBanner: React.FC = () => {,
                 <span>Research</span>,
               </div>,
               <div className='w-full bg-gray-70o0 rounded-full h-2'>,
-                <div,
+                <div
                   className='bg-purple-40o0 h-2 rounded-full',
-                  style={{ width: '15%' ,}}
+                  style={{ width: '15%' }}
                 ></div>,
               </div>,
               <div className='flex justify-between text-xs'>,
@@ -89,9 +88,9 @@ const AITrends20o25_20o30FuturePredictionsBanner: React.FC = () => {,
                 <span>Commercial</span>,
               </div>,
               <div className='w-full bg-gray-70o0 rounded-full h-2'>,
-                <div,
+                <div
                   className='bg-purple-40o0 h-2 rounded-full',
-                  style={{ width: '70%' ,}}
+                  style={{ width: '70%' }}
                 ></div>,
               </div>,
             </div>,
@@ -114,9 +113,9 @@ const AITrends20o25_20o30FuturePredictionsBanner: React.FC = () => {,
                 <span>Assisted</span>,
               </div>,
               <div className='w-full bg-gray-70o0 rounded-full h-2'>,
-                <div,
+                <div
                   className='bg-orange-40o0 h-2 rounded-full',
-                  style={{ width: '30%' ,}}
+                  style={{ width: '30%' }}
                 ></div>,
               </div>,
               <div className='flex justify-between text-xs'>,
@@ -124,9 +123,9 @@ const AITrends20o25_20o30FuturePredictionsBanner: React.FC = () => {,
                 <span>Full Autonomy</span>,
               </div>,
               <div className='w-full bg-gray-70o0 rounded-full h-2'>,
-                <div,
+                <div
                   className='bg-orange-40o0 h-2 rounded-full',
-                  style={{ width: '90%' ,}}
+                  style={{ width: '90%' }}
                 ></div>,
               </div>,
             </div>,
@@ -179,7 +178,7 @@ const AITrends20o25_20o30FuturePredictionsBanner: React.FC = () => {,
                 <li className='flex items-start'>,
                   <span className='text-blue-40o0 mr-2'>•</span>,
                   <span>,
-                    <strong>AGI (Artificial General Intelligence)</strong>{' ',}
+                    <strong>AGI (Artificial General Intelligence)</strong>{' '}
                     becomes commercially viable,
                   </span>,
                 </li>,
@@ -235,48 +234,40 @@ const AITrends20o25_20o30FuturePredictionsBanner: React.FC = () => {,
             <div className='text-sm opacity-80'>New AI Jobs</div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center'>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center items-center mb-6'>,
-            <Link,
+            <Link
               href='/ai-trends-20o25-20o30',
-              className='bg-white text-cyan-60o0 px-8 py-3 rounded-lg font-bold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-cyan-60o0 px-8 py-3 rounded-lg font-bold hover:bg-gray-10o0 transition-colors'>,
               Read Full Predictions,
             </Link>,
-            <Link,
+            <Link
               href='/consultation',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-60o0 transition-colors'>,
               Plan Your AI Future,
             </Link>,
           </div>,
-          {/* Additional Resources */,}
+          {/* Additional Resources */}
           <div className='flex flex-wrap justify-center items-center gap-6 text-sm opacity-80'>,
-            <Link,
+            <Link
               href='/research',
-              className='hover: opacity-10o0 transition-opacity',
-            >,
+              className='hover: opacity-10o0 transition-opacity'>,
               📊 Download Research Report,
             </Link>,
-            <Link,
+            <Link
               href='/webinar',
-              className='hover:opacity-10o0 transition-opacity',
-            >,
+              className='hover:opacity-10o0 transition-opacity'>,
               🎥 Watch Trend Analysis,
             </Link>,
-            <Link,
+            <Link
               href='/newsletter',
-              className='hover:opacity-10o0 transition-opacity',
-            >,
+              className='hover:opacity-10o0 transition-opacity'>,
               📧 Subscribe to Updates,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default AITrends20o25_20o30FuturePredictionsBanner,
-,
+    </div>),
+};
+export default AITrends20o25_20o30FuturePredictionsBanner;

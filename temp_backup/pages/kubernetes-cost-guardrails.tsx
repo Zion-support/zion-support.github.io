@@ -3,45 +3,41 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button',
 import SEO from '../components/SEO',
 import { real20o29Q3Additions } from '../data/real-20o29-q3-additions',
-,
-export default function KubernetesCostGuardrailsPage() {,
-  const service = real20o29Q3Additions.find(,
-    s => s.id === 'kubernetes-cost-guardrails',
-  ),
+export default function KubernetesCostGuardrailsPage() {
+  const service = real20o29Q3Additions.find(
+    s => s.id === 'kubernetes-cost-guardrails'),
   if (!service) return null,
-,
-  const jsonLd = {,
-    '@context': 'https://schema.org',;
-    '@type': 'Service',;
-    name: service.name,;
-    description: service.description,;
-    provider: {,
-      '@type': 'Organization',;
-      name: 'Zion Tech Group',;
-      url: 'https://ziontechgroup.com',;
-    },;
-    offers: {,
-      '@type': 'Offer',;
-      price: service.price.monthly,;
-      priceCurrency: service.price.currency,;
-    },;
-    url: 'https://ziontechgroup.com/kubernetes-cost-guardrails',;
+  const jsonLd = {
+    '@context': 'https://schema.org';
+    '@type': 'Service';
+    name: service.name;
+    description: service.description;
+    provider: {
+      '@type': 'Organization';
+      name: 'Zion Tech Group';
+      url: 'https://ziontechgroup.com';
+    };
+    offers: {
+      '@type': 'Offer';
+      price: service.price.monthly;
+      priceCurrency: service.price.currency;
+    };
+    url: 'https://ziontechgroup.com/kubernetes-cost-guardrails';
   };
-,
-  return (,
+  return (
     <UltraAdvancedFuturisticBackground>,
-      <SEO,
+      <SEO
         title={`${service.name} - Zion Tech Group`}
         description={service.description}
         canonical='https: //ziontechgroup.com/kubernetes-cost-guardrails',
-        jsonLd={jsonLd,}
+        jsonLd={jsonLd}
       />,
       <div className='min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-6xl mx-auto'>,
           <div className='text-center mb-10'>,
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-40o0 via-teal-40o0 to-cyan-40o0 bg-clip-text text-transparent flex items-center justify-center gap-3'>,
               <Cpu className='w-10 h-10' />,
-              {service.name,}
+              {service.name}
             </h1>,
             <p className='mt-4 text-xl text-slate-30o0 max-w-3xl mx-auto'>,
               {service.tagline}
@@ -50,17 +46,15 @@ export default function KubernetesCostGuardrailsPage() {,
           <div className='grid grid-cols-1 lg: grid-cols-3 gap-6 mb-12'>,
             <div className='lg:col-span-2 bg-black/30 rounded-2xl border border-emerald-50o0/30 p-6'>,
               <h2 className='text-2xl font-semibold mb-4'>Capabilities</h2>,
-              <p className='text-slate-30o0 mb-6'>{service.description,}</p>,
+              <p className='text-slate-30o0 mb-6'>{service.description}</p>,
               <ul className='grid grid-cols-1 md: grid-cols-2 gap-3'>,
-                {service.features.map((feat, i) => (,
-                  <li,
+                {service.features.map((feat, i) => (
+                  <li
                     key={i}
-                    className='flex items-start space-x-3 text-slate-20o0',
-                  >,
+                    className='flex items-start space-x-3 text-slate-20o0'>,
                     <Check className='w-5 h-5 text-emerald-40o0 mt-0.5' />,
                     <span>{feat}</span>,
-                  </li>,
-                ))}
+                  </li>))}
               </ul>,
             </div>,
             <div className='bg-black/30 rounded-2xl border border-emerald-50o0/30 p-6 h-fit'>,
@@ -74,16 +68,15 @@ export default function KubernetesCostGuardrailsPage() {,
                     {service.price.trialDays,
                       ? `${service.price.trialDays}-day trial`,
                       : 'Free consult'}{' '}
-                    • Setup: {service.price.setupTime,}
+                    • Setup: {service.price.setupTime}
                   </div>,
                 </div>,
               </div>,
-              <Button,
+              <Button
                 href='/contact',
                 variant='quantum',
                 size='lg',
-                className='w-full',
-              >,
+                className='w-full'>,
                 Request Demo,
                 <ArrowRight className='w-5 h-5 ml-2' />,
               </Button>,
@@ -107,7 +100,5 @@ export default function KubernetesCostGuardrailsPage() {,
           </div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>,
-  ),
-}
+    </UltraAdvancedFuturisticBackground>)}
 ,

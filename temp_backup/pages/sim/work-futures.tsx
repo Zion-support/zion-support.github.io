@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function WorkFuturesPage() {,
-  return (,
+export default function WorkFuturesPage() {
+  return (
     <>,
       <Head>,
         <title>Work Futures - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function WorkFuturesPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

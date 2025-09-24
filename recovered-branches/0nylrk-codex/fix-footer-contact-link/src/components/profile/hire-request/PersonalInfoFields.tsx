@@ -2,39 +2,37 @@ import { FormFieldFormItemFormLabelFormControlFormMessage } from '@/components/u
 import { Input } from '@/components/ui/input',
 import { UseFormReturn } from 'react-hook-form',
 import { FormValues } from './useHireRequestForm',
-,
-interface PersonalInfoFieldsProps {,
+interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>,
-,}
+}
 ,
-export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {,
-  return (,
+export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
+  return (
     <>,
-      <FormField,
+      <FormField
         control={form.control}
         name='requesterName',
-        render={({ field }) => (,
+        render={({ field }) => (
           <FormItem>,
             <FormLabel className='text-white'>Your Name</FormLabel>,
             <FormControl>,
-              <Input,
+              <Input
                 placeholder='Enter your full name',
                 {...field}
                 className='bg-zion-blue-light/20 border-zion-blue-light text-white',
               />,
             </FormControl>,
             <FormMessage />,
-          </FormItem>,
-        )}
+          </FormItem>)}
       />,
-      <FormField,
+      <FormField
         control={form.control}
         name='requesterEmail',
-        render={({ field }) => (,
+        render={({ field }) => (
           <FormItem>,
             <FormLabel className='text-white'>Your Email</FormLabel>,
             <FormControl>,
-              <Input,
+              <Input
                 placeholder='Enter your email address',
                 type='email',
                 {...field}
@@ -42,10 +40,7 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {,
               />,
             </FormControl>,
             <FormMessage />,
-          </FormItem>,
-        )}
+          </FormItem>)}
       />,
-    </>,
-  ),
-}
+    </>)}
 ,

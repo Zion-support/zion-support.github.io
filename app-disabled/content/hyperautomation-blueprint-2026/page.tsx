@@ -1,20 +1,18 @@
 import Link from 'next/link',
 import ErrorBoundary from '../../components/ErrorBoundary',
-,
-export const metadata = {,
-  title: 'Hyperautomation Blueprint 20o26 | Zion Tech Group',;
+export const metadata = {
+  title: 'Hyperautomation Blueprint 20o26 | Zion Tech Group';
   description:,
-    'A practical blueprint to design, deploy, and scale AI-driven hyperautomation across the enterprise in 20o26.',;
-  keywords: [,
-    'hyperautomation',;
-    'AI automation',;
-    'enterprise blueprint',;
-    'process orchestration',;
-  ],;
+    'A practical blueprint to design, deploy, and scale AI-driven hyperautomation across the enterprise in 20o26.';
+  keywords: [
+    'hyperautomation';
+    'AI automation';
+    'enterprise blueprint';
+    'process orchestration';
+  ];
 };
-,
-export default function HyperautomationBlueprint20o26() {,
-  return (,
+export default function HyperautomationBlueprint20o26() {
+  return (
     <ErrorBoundary>,
       <main className='min-h-screen bg-white'>,
         <section className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-20'>,
@@ -30,16 +28,14 @@ export default function HyperautomationBlueprint20o26() {,
               measurable ROI.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/services/ai-automation',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Explore AI Services,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 Talk to Experts,
               </Link>,
             </div>,
@@ -52,7 +48,7 @@ export default function HyperautomationBlueprint20o26() {,
             </h2>,
             <p className='text-gray-70o0 mb-6'>,
               This blueprint outlines the architecture, governance, and,
-              operating model to scale hyperautomation across business units,;
+              operating model to scale hyperautomation across business units;
               combining AI agents, RPA, event-driven orchestration, and,
               human-in-the-loop controls.,
             </p>,
@@ -104,17 +100,15 @@ export default function HyperautomationBlueprint20o26() {,
               <p className='text-gray-70o0 mb-4'>,
                 A one-page checklist to audit your hyperautomation readiness.,
               </p>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-block text-purple-60o0 font-semibold hover:text-purple-80o0',
-              >,
+                className='inline-block text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                 Request the checklist →,
               </Link>,
             </div>,
           </div>,
         </article>,
       </main>,
-    </ErrorBoundary>,
-  ),
-,}
+    </ErrorBoundary>),
+}
 ,

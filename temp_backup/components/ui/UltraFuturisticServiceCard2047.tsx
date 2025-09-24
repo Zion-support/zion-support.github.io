@@ -1,9 +1,8 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import { ArrowRight, Star, Zap, Shield, Brain, Atom, Rocket, Cloud, Target, Users, TrendingUp, CheckCircle } from 'lucide-react',
-,
-interface UltraFuturisticServiceCard20o47Props {,
-  service: {,
+interface UltraFuturisticServiceCard20o47Props {
+  service: {
     id: string,
     name: string,
     tagline: string,
@@ -30,32 +29,29 @@ interface UltraFuturisticServiceCard20o47Props {,
     marketSize: string,
     growthRate: string,
     variant: string,
-    contactInfo: {,
+    contactInfo: {
       mobile: string,
       email: string,
       address: string,
       website: string,
-    ,};
+    };
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,
     customers: number,
     rating: number,
     reviews: number,
-  ,};
+  };
   onClick?: () => void,
-  className?: string,
-}
+  className?: string}
 ,
-const UltraFuturisticServiceCard20o47: React.FC<UltraFuturisticServiceCard20o47Props> = ({,
-  service,;
-  onClick,;
-  className = '',
-}) => {,
+const UltraFuturisticServiceCard20o47: React.FC<UltraFuturisticServiceCard20o47Props> = ({
+  service;
+  onClick;
+  className = ''}) => {
   const [isHovered, setIsHovered] = useState(false),
   const [isExpanded, setIsExpanded] = useState(false),
-,
-  const getCategoryIcon = (category: string) => {,
+  const getCategoryIcon = (category: string) => {
     if (category.includes('AI') || category.includes('Consciousness')) return <Brain className="w-5 h-5"  />,
     if (category.includes('Quantum')) return <Atom className="w-5 h-5"  />,
     if (category.includes('Security') || category.includes('Cybersecurity')) return <Shield className="w-5 h-5"  />,
@@ -63,9 +59,8 @@ const UltraFuturisticServiceCard20o47: React.FC<UltraFuturisticServiceCard20o47P
     if (category.includes('Business') || category.includes('CRM')) return <Target className="w-5 h-5"  />,
     if (category.includes('Content') || category.includes('Marketing')) return <Rocket className="w-5 h-5"  />,
     return <Zap className="w-5 h-5"  />,
-  ,};
-,
-  const getCategoryColor = (category: string) => {,
+  };
+  const getCategoryColor = (category: string) => {
     if (category.includes('AI') || category.includes('Consciousness')) return 'from-purple-50o0 to-pink-50o0',
     if (category.includes('Quantum')) return 'from-blue-50o0 to-cyan-50o0',
     if (category.includes('Security') || category.includes('Cybersecurity')) return 'from-red-50o0 to-orange-50o0',
@@ -73,28 +68,26 @@ const UltraFuturisticServiceCard20o47: React.FC<UltraFuturisticServiceCard20o47P
     if (category.includes('Business') || category.includes('CRM')) return 'from-emerald-50o0 to-teal-50o0',
     if (category.includes('Content') || category.includes('Marketing')) return 'from-yellow-50o0 to-orange-50o0',
     return 'from-gray-50o0 to-blue-50o0',
-  ,};
-,
-  return (,
+  };
+  return (
     <motion.div,
       className={`relative group cursor-pointer ${className}`}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       onClick={onClick}
-      whileHover={{ scale: 1.0o2 ,}}
-      whileTap={{ scale: 0.98 ,}}
+      whileHover={{ scale: 1.0o2 }}
+      whileTap={{ scale: 0.98 }}
     >,
       {/* Background Glow Effect */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${getCategoryColor(service.category)} opacity-0 group-hover: opacity-20 blur-xl transition-opacity duration-50o0`,}  />,
+      <div className={`absolute inset-0 bg-gradient-to-br ${getCategoryColor(service.category)} opacity-0 group-hover: opacity-20 blur-xl transition-opacity duration-50o0`}  />,
       {/* Main Card */}
       <motion.div,
         className="relative bg-black/80 backdrop-blur-xl border border-gray-80o0/50 rounded-2xl p-6 overflow-hidden",
-        animate={{,
+        animate={{
           boxShadow: isHovered,
             ? `0 0 40px ${service.color.includes('purple') ? 'rgba(147, 51, 234, 0.3)' : 'rgba(6, 182, 212, 0.3)'}`,
-            : '0 0 20px rgba(0, 0, 0, 0.1)',
-        }}
-        transition={{ duration: 0.3 ,}}
+            : '0 0 20px rgba(0, 0, 0, 0.1)'}}
+        transition={{ duration: 0.3 }}
       >,
         {/* Header Section */}
         <div className="flex items-start justify-between mb-4">,
@@ -104,22 +97,21 @@ const UltraFuturisticServiceCard20o47: React.FC<UltraFuturisticServiceCard20o47P
             </div>,
             <div>,
               <h3 className="text-xl font-bold text-white group-hover: text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-40o0 to-purple-40o0 transition-all duration-30o0">,
-                {service.name,}
+                {service.name}
               </h3>,
               <p className="text-sm text-gray-40o0 mt-1">{service.tagline}</p>,
             </div>,
           </div>,
           {/* Popular Badge */}
-          {service.popular && (,
+          {service.popular && (
             <motion.div,
               className="px-3 py-1 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black text-xs font-semibold rounded-full",
-              initial={{ scale: 0 ,}}
-              animate={{ scale: 1 ,}}
-              transition={{ delay: 0.2 ,}}
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.2 }}
             >,
               Popular,
-            </motion.div>,
-          )}
+            </motion.div>)}
         </div>,
         {/* Price Section */}
         <div className="mb-4">,
@@ -146,18 +138,17 @@ const UltraFuturisticServiceCard20o47: React.FC<UltraFuturisticServiceCard20o47P
         <div className="mb-4">,
           <h4 className="text-sm font-semibold text-gray-30o0 mb-2">Key Features: </h4>,
           <div className="grid grid-cols-1 gap-2">,
-            {service.features.slice(0, 3).map((feature, index) => (,
+            {service.features.slice(0, 3).map((feature, index) => (
               <motion.div,
                 key={index}
                 className="flex items-center space-x-2 text-sm text-gray-40o0",
-                initial={{ opacity: 0, x: -20 ,}}
-                animate={{ opacity: 1, x: 0 ,}}
-                transition={{ delay: index * 0.1 ,}}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
               >,
                 <CheckCircle className="w-4 h-4 text-green-40o0"  />,
                 <span>{feature}</span>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
         {/* Stats Row */}
@@ -185,49 +176,45 @@ const UltraFuturisticServiceCard20o47: React.FC<UltraFuturisticServiceCard20o47P
         </div>,
         {/* Expandable Details */}
         <AnimatePresence>,
-          {isExpanded && (,
+          {isExpanded && (
             <motion.div,
-              initial={{ opacity: 0, height: 0 ,}}
-              animate={{ opacity: 1, height: 'auto' ,}}
-              exit={{ opacity: 0, height: 0 ,}}
-              transition={{ duration: 0.3 ,}}
-              className="overflow-hidden",
-            >,
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden">,
               <div className="border-t border-gray-70o0 pt-4 mt-4">,
                 <h4 className="text-sm font-semibold text-gray-30o0 mb-2">Technology Stack: </h4>,
                 <div className="flex flex-wrap gap-2 mb-3">,
-                  {service.technology.slice(0, 4).map((tech, index) => (,
-                    <span,
+                  {service.technology.slice(0, 4).map((tech, index) => (
+                    <span
                       key={index}
-                      className="px-2 py-1 bg-gray-80o0 text-gray-30o0 text-xs rounded",
-                    >,
+                      className="px-2 py-1 bg-gray-80o0 text-gray-30o0 text-xs rounded">,
                       {tech}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
                 <h4 className="text-sm font-semibold text-gray-30o0 mb-2">Market Position: </h4>,
-                <p className="text-xs text-gray-40o0 mb-3">{service.marketPosition,}</p>,
+                <p className="text-xs text-gray-40o0 mb-3">{service.marketPosition}</p>,
                 <h4 className="text-sm font-semibold text-gray-30o0 mb-2">Target Audience: </h4>,
-                <p className="text-xs text-gray-40o0 mb-3">{service.targetAudience,}</p>,
+                <p className="text-xs text-gray-40o0 mb-3">{service.targetAudience}</p>,
               </div>,
-            </motion.div>,
-          )}
+            </motion.div>)}
         </AnimatePresence>,
         {/* Action Buttons */}
         <div className="flex space-x-3 mt-4">,
           <motion.button,
             className="flex-1 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white py-2 px-4 rounded-lg font-semibold hover: from-cyan-60o0 hover:to-purple-60o0 transition-all duration-30o0 flex items-center justify-center space-x-2",
-            whileHover={{ scale: 1.0o5 ,}}
-            whileTap={{ scale: 0.95 ,}}
+            whileHover={{ scale: 1.0o5 }}
+            whileTap={{ scale: 0.95 }}
           >,
             <span>Get Started</span>,
             <ArrowRight className="w-4 h-4"  />,
           </motion.button>,
           <motion.button,
             className="px-4 py-2 border border-gray-60o0 text-gray-30o0 rounded-lg hover: border-gray-50o0 hover:text-white transition-all duration-30o0",
-            onClick={() => setIsExpanded(!isExpanded),}
-            whileHover={{ scale: 1.0o5 ,}}
-            whileTap={{ scale: 0.95 ,}}
+            onClick={() => setIsExpanded(!isExpanded)}
+            whileHover={{ scale: 1.0o5 }}
+            whileTap={{ scale: 0.95 }}
           >,
             {isExpanded ? 'Less' : 'More'}
           </motion.button>,
@@ -235,13 +222,10 @@ const UltraFuturisticServiceCard20o47: React.FC<UltraFuturisticServiceCard20o47P
         {/* Contact Info */}
         <div className="mt-4 pt-4 border-t border-gray-70o0">,
           <div className="flex items-center justify-between text-xs text-gray-50o0">,
-            <span>Contact: {service.contactInfo.email,}</span>,
-            <span>Phone: {service.contactInfo.mobile,}</span>,
+            <span>Contact: {service.contactInfo.email}</span>,
+            <span>Phone: {service.contactInfo.mobile}</span>,
           </div>,
         </div>,
       </motion.div>,
-    </motion.div>,
-  ),
-};
-,
-export default UltraFuturisticServiceCard20o47,
+    </motion.div>)};
+export default UltraFuturisticServiceCard20o47;

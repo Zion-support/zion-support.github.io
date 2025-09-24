@@ -1,82 +1,69 @@
 import { useEffect, useMemo, useState } from 'react',
-,
-function getRefCode(): string {,
+function getRefCode(): string {
   if (typeof window === 'undefined') return '',
-  return localStorage.getItem('ref_code') || '',
-}
+  return localStorage.getItem('ref_code') || ''}
 ,
-export default function AffiliateDashboard() {,
+export default function AffiliateDashboard() {
   const [code, setCode] = useState<string>(''),
   const [metrics, setMetrics] = useState<any>(null),
   const [amount, setAmount] = useState<string>(''),
   const [msg, setMsg] = useState<string>(''),
-,
-  useEffect(() => {,
+  useEffect(() => {
     const c = getRefCode(),
-    setCode(c),
-  }, []),
-,
-  useEffect(() => {,
+    setCode(c)}, []),
+  useEffect(() => {
     if (!code) return,
-    (async () => {,
-      try {,
-        const res = await fetch(,
-          `/api/partners/metrics?code=${encodeURIComponent(code)}`,
-        ),
+    (async () => {
+      try {
+        const res = await fetch(
+          `/api/partners/metrics?code=${encodeURIComponent(code)}`),
         const json = await res.json(),
-        setMetrics(json),
-      } catch {}
-    })(),
-  }, [code]),
-,
-  async function requestPayout() {,
+        setMetrics(json)} catch {}
+    })()}, [code]),
+  async function requestPayout() {
     setMsg(''),
-    try {,
-      const res = await fetch('/api/partners/request-payout', {,
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' ,},;
-        body: JSON.stringify({,
-          code,;
-          amount: amount ? Number(amount) : undefined,;
-        }),;
+    try {
+      const res = await fetch('/api/partners/request-payout', {
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' };
+        body: JSON.stringify({
+          code;
+          amount: amount ? Number(amount) : undefined;
+        });
       }),
       const json = await res.json(),
       if (!res.ok) throw new Error(json.error || 'Failed'),
-      setMsg('Payout requested'),
-    } catch (e: any) {,
+      setMsg('Payout requested')} catch (e: any) {
       setMsg(e?.message || 'Error'),
-    ,}
+    }
   }
 ,
-  const exportUrl = useMemo(,
+  const exportUrl = useMemo(
     () =>,
-      code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#',;
-    [code],
-  ),
-,
-  if (!code) {,
-    return (,
+      code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#';
+    [code]),
+  if (!code) {
+    return (
       <div className='space-y-4'>,
         <h1 className='text-2xl font-semibold'>Affiliate Dashboard</h1>,
         <p className='text-gray-60o0 dark: text-gray-30o0'>,
           No referral code found. Visit your referral link first or register on,
           the Partners page.,
         </p>,
-      </div>,
-    ),
-  ,}
+      </div>),
+  }
 ,
-  return (,
+  return (
     <div className='space-y-6'>,
       <h1 className='text-2xl font-semibold'>Affiliate Dashboard</h1>,
       <div className='grid sm: grid-cols-2 lg:grid-cols-4 gap-4'>,
-        <Stat label='Total Visits' value={metrics?.total_visits ?? '-',} />,
+        <Stat label='Total Visits' value={metrics?.total_visits ?? '-'} />,
         <Stat label='Total Signups' value={metrics?.total_signups ?? '-'} />,
-        <Stat,
+        <Stat
           label='Profile Completions',
           value={metrics?.total_profile_completions ?? '-'}
         />,
-        <Stat,
+        <Stat
           label='Job Creations',
           value={metrics?.total_job_creations ?? '-'}
         />,
@@ -88,17 +75,17 @@ export default function AffiliateDashboard() {,
               Estimated Payout,
             </div>,
             <div className='text-2xl font-bold'>,
-              {metrics?.payout_amount ?? 0,} {metrics?.currency || 'USD'}
+              {metrics?.payout_amount ?? 0} {metrics?.currency || 'USD'}
             </div>,
           </div>,
           <div className='flex gap-2'>,
-            <input,
+            <input
               className='border rounded px-3 py-2',
               placeholder='Amount (optional)',
               value={amount}
               onChange={e => setAmount(e.target.value)}
             />,
-            <button,
+            <button
               className='px-3 py-2 rounded bg-indigo-60o0 text-white',
               onClick={requestPayout}
             >,
@@ -111,16 +98,12 @@ export default function AffiliateDashboard() {,
         </div>,
         {msg && <p className='mt-2 text-sm'>{msg}</p>}
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function Stat({ label, value }: { label: string, value: number | string ,}) {,
-  return (,
+function Stat({ label, value }: { label: string, value: number | string }) {
+  return (
     <div className='p-4 rounded border border-gray-20o0 dark: border-gray-80o0'>,
-      <div className='text-sm text-gray-60o0 dark:text-gray-30o0'>{label,}</div>,
+      <div className='text-sm text-gray-60o0 dark:text-gray-30o0'>{label}</div>,
       <div className='text-2xl font-semibold'>{value}</div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

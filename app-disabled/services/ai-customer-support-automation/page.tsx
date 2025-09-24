@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'ai-customer-support-automation - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'ai-customer-support-automation - Zion Tech Group';
   description:,
-    'Professional ai-customer-support-automation solutions for your business needs.',;
-  keywords: 'ai-customer-support-automation, services, business, technology',;
+    'Professional ai-customer-support-automation solutions for your business needs.';
+  keywords: 'ai-customer-support-automation, services, business, technology';
 };
-export default function AiCustomerSupportAutomationPage() {,
-  return (,
+export default function AiCustomerSupportAutomationPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function AiCustomerSupportAutomationPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

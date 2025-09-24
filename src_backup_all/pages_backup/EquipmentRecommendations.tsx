@@ -3,7 +3,7 @@ import {ProductListingCard} from '@/components/ProductListingCard',
 import {useAuth} from '@/hooks/useAuth',
 import {fetchRecommendations} from '@/api/recommendations',
 import type { ProductListing } from '@/types/listings',
-import {,
+import {
 import { Button } from '@/components/ui/button',
 import { Loader2 } from 'lucide-react',
 import Link from 'next/link',
@@ -23,69 +23,61 @@ import { ErrorState } from '@/components / jobs / applications',
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,
+  DialogTitle} from '@/components/ui/dialog',
+export default function EquipmentRecommendations() {
+  const { isAuthenticated, user } = useAuth(),
+  const [listings, setListings] = useState<ProductListing[]>([]),
+  const [loading, setLoading] = useState<boolean>(false),
+  const [error, setError] = useState<boolean>(false),
+  useEffect(() => {
+export default function EquipmentRecommendations() {
+  const { isAuthenticated, user } = useAuth(),
+  const [listings, setListings] = useState<ProductListing[]>([]),
+  const [loading, setLoading] = useState<boolean>(false),
+  const [error, setError] = useState<boolean>(false),
+  Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle;
 } from '@/components/ui/dialog',
-export default function EquipmentRecommendations() {,
+export default function EquipmentRecommendations() {
   const { isAuthenticated, user } = useAuth(),
   const [listings, setListings] = useState<ProductListing[]>([]),
   const [loading, setLoading] = useState<boolean>(false),
   const [error, setError] = useState<boolean>(false),
-  useEffect(() => {,
-export default function EquipmentRecommendations() {,
-  const { isAuthenticated, user } = useAuth(),
-  const [listings, setListings] = useState<ProductListing[]>([]),
-  const [loading, setLoading] = useState<boolean>(false),
-  const [error, setError] = useState<boolean>(false),
-  Dialog,;
-  DialogContent,;
-  DialogHeader,;
-  DialogTitle,;
-} from '@/components/ui/dialog',
+  useEffect(() => {
+export default function EquipmentRecommendations() {
+  const { isAuthenticated, user } = useAuth();
+  const [listings, setListings] = useState<ProductListing[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
+  useEffect(() => {
+    if (isAuthenticated && user?.id) {
 ,
-export default function EquipmentRecommendations() {,
-  const { isAuthenticated, user } = useAuth(),
-  const [listings, setListings] = useState<ProductListing[]>([]),
-  const [loading, setLoading] = useState<boolean>(false),
-  const [error, setError] = useState<boolean>(false),
-  useEffect(() => {,
-export default function EquipmentRecommendations() {,
-  const { isAuthenticated, user } = useAuth(),;
-  const [listings, setListings] = useState<ProductListing[]>([]),;
-  const [loading, setLoading] = useState<boolean>(false),;
-  const [error, setError] = useState<boolean>(false),;
-,
-  useEffect(() => {,
-    if (isAuthenticated && user?.id) {,
-,
-,
-export default function EquipmentRecommendations() { const { isAuthenticated, user  } = useAuth(),;
-  const [ listings, setListings ] = useState<ProductListing[]>([]),;
-  const [ loading, setLoading ] = useState<boolean>(false),;
-  const [ error, setError ] = useState<boolean>(false),;
-  useEffect(() => {,
-    if (isAuthenticated && user?.id) {,
+export default function EquipmentRecommendations() { const { isAuthenticated, user  } = useAuth();
+  const [ listings, setListings ] = useState<ProductListing[]>([]);
+  const [ loading, setLoading ] = useState<boolean>(false);
+  const [ error, setError ] = useState<boolean>(false);
+  useEffect(() => {
+    if (isAuthenticated && user?.id) {
       setLoading(true),
-,
       fetchRecommendations(user && user.id),
         .then(setListings),
         .catch(() => setError(true)),
         .finally(() => setLoading(false)),
-,
-        .finally(() => setLoading(false)),
-    }
-  }, [isAuthenticated, user]),;
-  if (!isAuthenticated) {,
-    return (,
+        .finally(() => setLoading(false))}
+  }, [isAuthenticated, user]);
+  if (!isAuthenticated) {
+    return (
       <Dialog open>,
         <DialogContent className="bg-zion-blue border-zion-blue-light text-white">,
           <DialogHeader>,
             <DialogTitle>Authentication required</DialogTitle>,
           </DialogHeader>,
           <p>Please sign in to get personalized AI picks.</p>,
-          <Button,
+          <Button
             asChild,
-            className='mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white',
-          >,
+            className='mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'>,
             <Link href='/auth/login?returnTo=/equipment/recommendations'>,
               Sign In,
             </Link>          </Button>          <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">,
@@ -93,8 +85,7 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>,
           </Button>,
         </DialogContent>,
-      </Dialog>,
-    ),
+      </Dialog>),
             className='mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'>,
             <Link href='/auth/login?returnTo=/equipment/recommendations'>,
               Sign In,
@@ -102,56 +93,49 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>,
           </Button>,
         </DialogContent>,
-      </Dialog>,
-    ),
-  }
-  return (,
+      </Dialog>)}
+  return (
         ))}
 ,
       </div>,
-    </div>,
-  ),
-,
-  Dialog,;
-  DialogContent,;
-  DialogHeader,;
+    </div>),
+  Dialog;
+  DialogContent;
+  DialogHeader;
   DialogTitle} from '@/components / ui / dialog',
 export default /**,
  * EquipmentRecommendations - Function description,
  */,
-function EquipmentRecommendations() {,
+function EquipmentRecommendations() {
   const { is_authenticated, user } = use_auth (),
   const [listings, set_listings] = useState < ProductListing[]>([]),
   const [loading, set_loading] = useState < boolean>(false),
   const [error, set_error] = useState < boolean>(false),
-  useEffect (() => {,
+  useEffect (() => {
 export default /**,
  * EquipmentRecommendations - Function description,
  */,
-function EquipmentRecommendations() {,
-  const { is_authenticated, user } = use_auth (),;
-  const [listings, set_listings] = useState < ProductListing[]>([]),;
-  const [loading, set_loading] = useState < boolean>(false),;
-  const [error, set_error] = useState < boolean>(false),;
-  useEffect (() => {,
+function EquipmentRecommendations() {
+  const { is_authenticated, user } = use_auth ();
+  const [listings, set_listings] = useState < ProductListing[]>([]);
+  const [loading, set_loading] = useState < boolean>(false);
+  const [error, set_error] = useState < boolean>(false);
+  useEffect (() => {
     // Check condition,
-if ( {) {,
-  $2,
-}
+if ( {) {
+  $2}
       set_loading (true),
       fetch_recommendations (user.id),
         .then (set_listings),
         .catch (() => set_error (true)),
         .finally (() => set_loading (false)) }        .catch (() => set_error (true)),
         .finally (() => set_loading (false)),
-        .finally (() => set_loading (false)),
-    }
+        .finally (() => set_loading (false))}
   }, [is_authenticated, user]),
   // Check condition,
-if ( {) {,
-  $2,
-}
-    return (,
+if ( {) {
+  $2}
+    return (
       <Dialog open>,
         <DialogContent className='bg - zion - blue border - zion - blue - light text - white'>          <DialogHeader>,
             <DialogTitle > Authentication required</DialogTitle>,
@@ -161,19 +145,17 @@ if ( {) {,
             <DialogTitle > Authentication required</DialogTitle>,
           </DialogHeader>,
           <p > Please sign in to get personalized AI picks.</p>,
-          <Button,
+          <Button
             as_child,
-            className='mt - 4 bg - gradient - to - r from - zion - purple to - zion - purple - dark text - white',
-          >,
+            className='mt - 4 bg - gradient - to - r from - zion - purple to - zion - purple - dark text - white'>,
             <Link href='/auth / login?return_to=/equipment / recommendations'>,
               Sign In,
             </Link>          </Button>          <Button as_child className="mt - 4 bg - gradient - to - r from - zion - purple to - zion - purple - dark text - white">,
             <Link href="/auth / login?return_to=/equipment / recommendations">Sign In</Link>,
           </Button>,
         </DialogContent>,
-      </Dialog>),
-  }
-  return (,
+      </Dialog>)}
+  return (
     <div className='min - h-screen bg - zion - blue py - 8 px - 4'>,
       <h1 className='text - 2xl font - bold text - white mb - 6'>,
         AI Equipment Recommendations,
@@ -183,17 +165,14 @@ if ( {) {,
         </div>)}
       {error && <ErrorState error='Failed to load recommendations.'  />}
       <div className='columns - 1 sm: columns - 2 md:columns - 3 lg:columns - 4 gap - 4 space - y-4'>,
-        {listings.map (listing => (,
-          <div key={listing.id,} className='break - inside - avoid mb - 4'>            <ProductListingCard listing={listing}  />      {error && <ErrorState error="Failed to load recommendations."  />}
+        {listings.map (listing => (
+          <div key={listing.id} className='break - inside - avoid mb - 4'>            <ProductListingCard listing={listing}  />      {error && <ErrorState error="Failed to load recommendations."  />}
       <div className="columns - 1 sm: columns - 2 md:columns - 3 lg:columns - 4 gap - 4 space - y-4">,
-        {listings.map ((listing) => (,
-          <div key={listing.id,} className="break - inside - avoid mb - 4">,
+        {listings.map ((listing) => (
+          <div key={listing.id} className="break - inside - avoid mb - 4">,
           </div>))}
       </div>,
-    </div>),
+    </div>)}
 }
-,
-}
-,
 ,
 }}}}}}}}))

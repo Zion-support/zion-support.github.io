@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function SummitPage() {,
-  return (,
+export default function SummitPage() {
+  return (
     <>,
       <Head>,
         <title>Summit - Zion Tech Group</title>,
@@ -17,7 +16,6 @@ export default function SummitPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

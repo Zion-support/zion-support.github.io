@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o25GlobalTransformationBreakthroughBanner() {,
-  return (,
+export default function AI20o25GlobalTransformationBreakthroughBanner() {
+  return (
     <div className='bg-gradient-to-r from-green-90o0 via-blue-90o0 to-purple-90o0 text-white py-12 relative overflow-hidden'>,
       {/* Animated background elements */}
       <div className='absolute inset-0'>,
@@ -33,16 +32,14 @@ export default function AI20o25GlobalTransformationBreakthroughBanner() {,
             that can transform your business!,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o25-global-transformation-breakthrough',
-              className='bg-gradient-to-r from-green-50o0 to-blue-50o0 hover:from-green-60o0 hover:to-blue-60o0 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-green-50o0 to-blue-50o0 hover:from-green-60o0 hover:to-blue-60o0 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               🏆 Read Success Story,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-90o0 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-30o0',
-            >,
+              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-90o0 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-30o0'>,
               💼 Start Your Transformation,
             </Link>,
           </div>,
@@ -74,7 +71,5 @@ export default function AI20o25GlobalTransformationBreakthroughBanner() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

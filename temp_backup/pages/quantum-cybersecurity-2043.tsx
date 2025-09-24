@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function QuantumCybersecurity20o43Page() {,
-  return (,
+export default function QuantumCybersecurity20o43Page() {
+  return (
     <>,
       <Head>,
         <title>Quantum Cybersecurity 20o43 - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function QuantumCybersecurity20o43Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,
