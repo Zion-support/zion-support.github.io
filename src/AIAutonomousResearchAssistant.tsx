@@ -6,5 +6,5 @@ export default function AIAutonomousResearchAssistant() {
         <p className='text-gray-600'>Page under maintenance. Check back soon.</p>
       </div>
     </div>
-  ),
+  );
 }
