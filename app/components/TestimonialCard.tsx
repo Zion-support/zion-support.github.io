@@ -13,8 +13,8 @@ interface Testimonial {
 }
 
 interface TestimonialCardProps {
-  testimonial: Testimonial
-  isActive: boolean
+  testimonial?: Testimonial
+  isActive?: boolean
 }
 
 const testimonials: Testimonial[] = [
@@ -47,10 +47,7 @@ const testimonials: Testimonial[] = [
   },
 ]
 
-export default function TestimonialCard({
-  testimonial,
-  isActive
-}: TestimonialCardProps) {
+export default function TestimonialCard({ testimonial, isActive = false }: TestimonialCardProps) {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -88,23 +85,23 @@ export default function TestimonialCard({
     >
       <div className='bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 max-w-2xl mx-auto'>
         <div className='flex items-center mb-4'>
-          <div className='flex mr-4'>{renderStars(testimonial.rating)}</div>
+          <div className='flex mr-4'>{renderStars(testimonial?.rating ?? 5)}</div>
         </div>
 
         <blockquote className='text-lg text-gray-700 dark:text-gray-300 mb-6 italic'>
-          "{testimonial.content}"
+          "{testimonial?.content ?? ''}"
         </blockquote>
 
         <div className='flex items-center'>
           <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4'>
-            {testimonial.name.charAt(0)}
+            {(testimonial?.name ?? 'Z').charAt(0)}
           </div>
           <div>
             <div className='font-semibold text-gray-900 dark:text-white'>
-              {testimonial.name}
+              {testimonial?.name ?? 'Anonymous'}
             </div>
             <div className='text-sm text-gray-600 dark:text-gray-400'>
-              {testimonial.role}, {testimonial.company}
+              {(testimonial?.role ?? '') + (testimonial?.company ? `, ${testimonial.company}` : '')}
             </div>
           </div>
         </div>

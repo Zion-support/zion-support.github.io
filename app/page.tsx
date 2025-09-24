@@ -3,9 +3,12 @@ import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 import ErrorBoundary from '../components/ErrorBoundary';
-import LoadingSpinner from '../components/LoadingSpinner';
+import TestimonialCard, { testimonials } from './components/TestimonialCard';
+import LoadingSpinner from './components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import { Card } from '../components/ui/Card';
+import FeatureCard from '../src/components/FeatureCard';
 
 // Import new advanced AI components
 import AdvancedContentRecommendationEngine from '../src/components/AdvancedContentRecommendationEngine';
@@ -20,10 +23,10 @@ import EnterpriseDataManagement from '../src/components/EnterpriseDataManagement
 import APIManagementSystem from '../src/components/APIManagementSystem';
 
 // Lazy load heavy components
-const ROICalculator = lazy(() => import('../src/components/ROICalculator'));
-const StructuredData = lazy(() => import('../components/StructuredData'));
-const PerformanceMetrics = lazy(() => import('../src/components/PerformanceMetrics'));
-const TechnologyStack = lazy(() => import('../src/components/TechnologyStack'));
+const ROICalculator = lazy(() => import('./components/ROICalculator'));
+const StructuredData = lazy(() => import('../src/components/StructuredData'));
+const PerformanceMetrics = lazy(() => import('./components/PerformanceMetrics'));
+const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
 // Import key promotional components
 import NewContentPromotionBanner from '../src/components/NewContentPromotionBanner';
