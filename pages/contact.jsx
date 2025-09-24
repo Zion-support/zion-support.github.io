@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React, { useState } from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -8,73 +8,81 @@ function Contact() {
     email: '',
     company: '',
     message: '',
-    service: ''});
-  const [formErrors, setFormErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
+    service: ''
+  })
+  const [formErrors, setFormErrors] = useState({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitSuccess, setSubmitSuccess] = useState(false)
 
   const validateForm = () => {
-    const errors = {};
-
+    const errors = {}
+    
     if (!formData.name.trim()) {
-      errors.name = 'Name is required';
+      errors.name = 'Name is required'
     }
-
+    
     if (!formData.email.trim()) {
-      errors.email = 'Email is required';
+      errors.email = 'Email is required'
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = 'Please enter a valid email address';
+      errors.email = 'Please enter a valid email address'
     }
-
+    
     if (!formData.message.trim()) {
-      errors.message = 'Message is required';
+      errors.message = 'Message is required'
     }
-
-    setFormErrors(errors);
-    return Object.keys(errors).length === 0;
-  };
+    
+    setFormErrors(errors)
+    return Object.keys(errors).length === 0
+  }
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData({
       ...formData,
-      [name]: value});
+      [name]: value
+    })
+    
+    // Clear error when user starts typing
     if (formErrors[name]) {
       setFormErrors({
         ...formErrors,
-        [name]: ''});
+        [name]: ''
+      })
     }
-  };
+  }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
+    
     if (!validateForm()) {
-      return;
+      return
     }
-
-    setIsSubmitting(true);
+    
+    setIsSubmitting(true)
+    
     try {
       // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setSubmitSuccess(true);
-      setFormData({ name: '', email: '', company: '', message: '', service: '' });
-      setFormErrors({});
-      setTimeout(() => setSubmitSuccess(false), 5000);
-    } catch {
-      // ignore
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      
+      // Form submitted successfully
+      setSubmitSuccess(true)
+      setFormData({ name: '', email: '', company: '', message: '', service: '' })
+      setFormErrors({})
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => setSubmitSuccess(false), 5000)
+    } catch (error) {
+      // Swallow error in demo form
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Head>
         <title>Contact Us — Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Get in touch with Zion Tech Group for your IT and AI service needs. We're here to help transform your business."
-        />
+        <meta name="description" content="Get in touch with Zion Tech Group for your IT and AI service needs. We're here to help transform your business." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
@@ -82,22 +90,12 @@ function Contact() {
       <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <Link href="/" className="text-2xl font-bold text-white">
-              Zion Tech Group
-            </Link>
+            <Link href="/" className="text-2xl font-bold text-white">Zion Tech Group</Link>
             <div className="hidden md:flex space-x-8">
-              <Link href="/about" className="text-white hover:text-purple-300 transition-colors">
-                About
-              </Link>
-              <Link href="/services" className="text-white hover:text-purple-300 transition-colors">
-                Services
-              </Link>
-              <Link href="/blog" className="text-white hover:text-purple-300 transition-colors">
-                Blog
-              </Link>
-              <Link href="/contact" className="text-purple-300 font-semibold">
-                Contact
-              </Link>
+              <Link href="/about" className="text-white hover:text-purple-300 transition-colors">About</Link>
+              <Link href="/services" className="text-white hover:text-purple-300 transition-colors">Services</Link>
+              <Link href="/blog" className="text-white hover:text-purple-300 transition-colors">Blog</Link>
+              <Link href="/contact" className="text-purple-300 font-semibold">Contact</Link>
             </div>
           </div>
         </div>
@@ -108,13 +106,14 @@ function Contact() {
           {/* Hero Section */}
           <div className="text-center mb-20">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Contact{' '}
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Us
-              </span>
+              Contact <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Us</span>
             </h1>
+<<<<<<< HEAD
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ready to transform your business with cutting-edge technology? Let's discuss your project and how we can help you achieve your goals.
+=======
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+>>>>>>> 8db9e4c4e068 (chore: fix page lint issues, scope ESLint and TS to pages, and validate Next.js production build)
+              Ready to transform your business with cutting-edge technology? Let&apos;s discuss your project and how we can help you achieve your goals.
             </p>
           </div>
 
@@ -125,9 +124,7 @@ function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-white font-semibold mb-2">
-                      Name *
-                    </label>
+                    <label htmlFor="name" className="block text-white font-semibold mb-2">Name *</label>
                     <input
                       type="text"
                       id="name"
@@ -140,14 +137,10 @@ function Contact() {
                       }`}
                       placeholder="Your full name"
                     />
-                    {formErrors.name && (
-                      <p className="text-red-400 text-sm mt-1">{formErrors.name}</p>
-                    )}
+                    {formErrors.name && <p className="text-red-400 text-sm mt-1">{formErrors.name}</p>}
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-white font-semibold mb-2">
-                      Email *
-                    </label>
+                    <label htmlFor="email" className="block text-white font-semibold mb-2">Email *</label>
                     <input
                       type="email"
                       id="email"
@@ -160,16 +153,12 @@ function Contact() {
                       }`}
                       placeholder="your.email@company.com"
                     />
-                    {formErrors.email && (
-                      <p className="text-red-400 text-sm mt-1">{formErrors.email}</p>
-                    )}
+                    {formErrors.email && <p className="text-red-400 text-sm mt-1">{formErrors.email}</p>}
                   </div>
                 </div>
-
+                
                 <div>
-                  <label htmlFor="company" className="block text-white font-semibold mb-2">
-                    Company
-                  </label>
+                  <label htmlFor="company" className="block text-white font-semibold mb-2">Company</label>
                   <input
                     type="text"
                     id="company"
@@ -182,9 +171,7 @@ function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-white font-semibold mb-2">
-                    Service Interest
-                  </label>
+                  <label htmlFor="service" className="block text-white font-semibold mb-2">Service Interest</label>
                   <select
                     id="service"
                     name="service"
@@ -203,9 +190,7 @@ function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-white font-semibold mb-2">
-                    Message *
-                  </label>
+                  <label htmlFor="message" className="block text-white font-semibold mb-2">Message *</label>
                   <textarea
                     id="message"
                     name="message"
@@ -218,17 +203,15 @@ function Contact() {
                     }`}
                     placeholder="Tell us about your project and how we can help..."
                   />
-                  {formErrors.message && (
-                    <p className="text-red-400 text-sm mt-1">{formErrors.message}</p>
-                  )}
+                  {formErrors.message && <p className="text-red-400 text-sm mt-1">{formErrors.message}</p>}
                 </div>
 
                 {submitSuccess && (
                   <div className="bg-green-600/20 border border-green-500/50 text-green-400 px-4 py-3 rounded-lg">
-                    Thank you for your message! We'll get back to you soon.
+                    Thank you for your message! We&apos;ll get back to you soon.
                   </div>
                 )}
-
+                
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -311,24 +294,16 @@ function Contact() {
           <div className="text-center text-gray-400">
             <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
             <div className="mt-4 flex justify-center space-x-6">
-              <Link href="/about" className="hover:text-white transition-colors">
-                About
-              </Link>
-              <Link href="/services" className="hover:text-white transition-colors">
-                Services
-              </Link>
-              <Link href="/blog" className="hover:text-white transition-colors">
-                Blog
-              </Link>
-              <Link href="/contact" className="hover:text-white transition-colors">
-                Contact
-              </Link>
+              <Link href="/about" className="hover:text-white transition-colors">About</Link>
+              <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+              <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
             </div>
           </div>
         </div>
       </footer>
     </div>
-  );
+  )
 }
 
-export default Contact;
+export default Contact
