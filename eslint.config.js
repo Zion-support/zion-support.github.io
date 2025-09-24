@@ -61,8 +61,23 @@ export default [
 			parser: typescriptParser,
 			ecmaVersion: 2021,
 			sourceType: 'module',
-			globals: { ...globals.browser, ...globals.node }
-		},
+			globals: {
+				window: 'readonly',
+				document: 'readonly',
+				localStorage: 'readonly',
+				setTimeout: 'readonly',
+				clearTimeout: 'readonly',
+				setInterval: 'readonly',
+				clearInterval: 'readonly',
+				requestAnimationFrame: 'readonly',
+				cancelAnimationFrame: 'readonly',
+				IntersectionObserver: 'readonly',
+				HTMLImageElement: 'readonly',
+				HTMLSpanElement: 'readonly',
+				URL: 'readonly',
+				process: 'readonly',
+				console: 'readonly'
+			}},
 		plugins: {
 			react: reactPlugin,
 			'react-hooks': reactHooksPlugin,
@@ -70,6 +85,7 @@ export default [
 			import: importPlugin},
 		settings: { react: { version: 'detect' } },
 		rules: {
+			'no-unused-vars': 'off',
 			'react/react-in-jsx-scope': 'off',
 			'no-console': 'warn',
 			'import/order': 'off',
