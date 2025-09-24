@@ -1,5 +1,7 @@
 import './globals.css'
 import type { ReactNode } from 'react'
+import ErrorBoundary from './components/ErrorBoundary'
+import PerformanceOptimizer from './components/PerformanceOptimizer'
 
 export const metadata = {
   title: {
@@ -60,7 +62,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="theme-color" content="#6366f1" />
       </head>
       <body className="antialiased">
-        {children}
+        <ErrorBoundary>
+          <PerformanceOptimizer />
+          {children}
+        </ErrorBoundary>
       </body>
     </html>
   )
