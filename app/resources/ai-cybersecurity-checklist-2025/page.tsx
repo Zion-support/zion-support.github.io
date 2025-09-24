@@ -423,9 +423,9 @@ export default function AICybersecurityChecklist2025() {
                 <h4 className="text-lg font-semibold text-gray-900 mb-4">Security Metrics</h4>
                 <ul className="space-y-2 text-gray-700">
                   <li>• <strong>Incident Reduction:</strong> Target 90% reduction in security incidents</li>
-                  <li>• <strong>Response Time:</strong> Achieve <15 minute incident response time</li>
+                  <li>• <strong>Response Time:</strong> Achieve &lt;15 minute incident response time</li>
                   <li>• <strong>Detection Rate:</strong> 95% threat detection accuracy</li>
-                  <li>• <strong>False Positives:</strong> <5% false positive rate</li>
+                  <li>• <strong>False Positives:</strong> &lt;5% false positive rate</li>
                 </ul>
               </div>
               <div>
