@@ -50,8 +50,6 @@ files.forEach(file => {
 console.log(`Fixed ${fixedCount} out of ${files.length} test files`);
 
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -59,7 +57,6 @@ console.log(`Fixed ${fixedCount} out of ${files.length} test files`);
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 // Function to fix malformed test files;
 function fixTestFile(filePath) {}
   try {}
@@ -94,37 +91,8 @@ describe('${componentName}', () => {}
   test('applies correct styling', () => {}
     render(<${componentName} />);
     // Add styling tests here;
-<<<<<<< HEAD
-`;`
-      fs.writeFileSync(filePath, fixedContent);
-    };
-  } catch (error) {}`;
-    console.error(`Error fixing file ${filePath}:`, error.message);
-// Function to remove unused fireEvent imports;
-function removeUnusedFireEvent(filePath) {}
-
-      // Remove fireEvent from import statement;
-      content = content.replace(/, fireEvent/g, );
-      content = content.replace(/fireEvent, /g, );
-      content = content.replace(/fireEvent/g, );
-
-const files = fs.readdirSync(testDir);
-let fireEventCount = 0;
-files.forEach(file => {})
-  if (file.endsWith('.test.js')) {}
-
-    // Fix malformed files;
-    if (fixTestFile(filePath)) {}
-    // Remove unused fireEvent;
-    if (removeUnusedFireEvent(filePath)) {}
-      fireEventCount++;
-console.log(`Fixed ${fixedCount} malformed test files`);`;
-console.log(`Removed unused fireEvent from ${fireEventCount} files`);
-console.log(`Removed unused fireEvent from ${fireEventCount} files`);
-=======
   }
 });
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 }
 });
 `;`
@@ -178,14 +146,11 @@ files.forEach(file => {})
 });
 console.log(`Fixed ${fixedCount} malformed test files`);
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
-<<<<<<< HEAD
-=======
 
 
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const { execSync } = require('child_process');
 
 class TestFileFixer {
@@ -284,11 +249,6 @@ if (require.main === module) {
   });
 }
 
-<<<<<<< HEAD
-module.exports = TestFileFixer;
-`;
-=======
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

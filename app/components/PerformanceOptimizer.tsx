@@ -62,7 +62,7 @@ export default function PerformanceOptimizer() {
         }
 
         // Convert to WebP if supported
-        if (img.src && img.src.includes('.jpg') || img.src.includes('.png')) {
+        if (img.src && (img.src.includes('.jpg') || img.src.includes('.png'))) {
           const webpSrc = img.src.replace(/\.(jpg|png)$/, '.webp')
           const webpImg = new Image()
           webpImg.onload = () => {
@@ -71,6 +71,27 @@ export default function PerformanceOptimizer() {
           webpImg.src = webpSrc
         }
       })
+    }
+
+    // Setup lazy loading for images with data-src
+    const setupLazyLoading = () => {
+      if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target as HTMLImageElement
+              if (img.dataset.src) {
+                img.src = img.dataset.src
+                img.removeAttribute('data-src')
+                imageObserver.unobserve(img)
+              }
+            }
+          })
+        })
+
+        const lazyImages = document.querySelectorAll('img[data-src]')
+        lazyImages.forEach(img => imageObserver.observe(img))
+      }
     }
 
     // Monitor performance metrics
@@ -159,11 +180,6 @@ export default function PerformanceOptimizer() {
       }
     }
 
-    // Initialize optimizations
-    preloadCriticalResources()
-    optimizeImages()
-    const cleanup = monitorPerformance()
-
     // Optimize scroll performance
     const optimizeScroll = () => {
       let ticking = false
@@ -180,6 +196,11 @@ export default function PerformanceOptimizer() {
       return () => window.removeEventListener('scroll', handleScroll)
     }
 
+    // Initialize optimizations
+    preloadCriticalResources()
+    optimizeImages()
+    setupLazyLoading()
+    const cleanup = monitorPerformance()
     const scrollCleanup = optimizeScroll()
 
     return () => {

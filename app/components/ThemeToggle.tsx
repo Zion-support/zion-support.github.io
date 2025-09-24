@@ -1,46 +1,40 @@
 'use client'
-
-import { Sun, Moon, Monitor } from 'lucide-react'
-import { useTheme } from './ThemeProvider'
-import Button from './Button'
+import React, { useState, useEffect } from 'react'
+import { SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 
 export default function ThemeToggle() {
-  const { theme, setTheme, resolvedTheme } = useTheme()
+  const [isDark, setIsDark] = useState(false)
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme')
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      setIsDark(true)
+      document.documentElement.classList.add('dark')
+    }
+  }, [])
 
   const toggleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark')
-    } else if (theme === 'dark') {
-      setTheme('system')
+    const newTheme = !isDark
+    setIsDark(newTheme)
+
+    if (newTheme) {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
     } else {
-      setTheme('light')
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
     }
-  }
-
-  const getIcon = () => {
-    if (theme === 'system') {
-      return <Monitor className="w-4 h-4" />
-    }
-    return resolvedTheme === 'dark' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />
-  }
-
-  const getLabel = () => {
-    if (theme === 'system') {
-      return 'System'
-    }
-    return resolvedTheme === 'dark' ? 'Dark' : 'Light'
   }
 
   return (
-    <Button
-      variant="ghost"
-      size="sm"
+    <button
       onClick={toggleTheme}
-      className="flex items-center gap-2"
-      aria-label={`Switch to ${getLabel()} theme`}
+      className='p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200'
+      aria-label='Toggle theme'
     >
-      {getIcon()}
-      <span className="hidden sm:inline">{getLabel()}</span>
-    </Button>
+      {isDark ? <SunIcon className='h-5 w-5 text-yellow-500' /> : <MoonIcon className='h-5 w-5 text-gray-600' />}
+    </button>
   )
 }

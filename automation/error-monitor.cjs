@@ -1,22 +1,4 @@
-<<<<<<< HEAD
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-main
-
-
-
-
-=======
-<<<<<<< HEAD
 const { execSync, spawn } = require('child_process');
-=======
-
-
->>>>>>> origin/merge-pr-12271
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require('fs');
 const path = require('path');
 
@@ -37,22 +19,7 @@ class ErrorMonitor {
 
   log(message) {
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-main
-
-=======
-<<<<<<< HEAD
     const logMessage = `[${timestamp}] ${message}\n`;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-
-    const logMessage = `[${timestamp}] ${message}\n`;`
->>>>>>> origin/merge-pr-12271
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
   }
@@ -179,28 +146,7 @@ main
     
     this.lastCheck = new Date();
   }
-<<<<<<< HEAD
-=======
-});
-};
-<<<<<<< HEAD
 
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-module.exports = ErrorMonitor;
->>>>>>> origin/merge-pr-12271
-
-<<<<<<< HEAD
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-module.exports = ErrorMonitor;
-
-
-
-
-module.exports = ErrorMonitor;
-
-=======
   async start() {
     this.log('Error Monitor started');
     
@@ -214,12 +160,8 @@ module.exports = ErrorMonitor;
   }
 }
 
-<<<<<<< HEAD
 // Start the error monitor
 const monitor = new ErrorMonitor();
 monitor.start().catch(console.error);
 
 module.exports = ErrorMonitor;
-=======
->>>>>>> origin/merge-pr-12271
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

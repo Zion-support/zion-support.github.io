@@ -1,4 +1,5 @@
-# Keep the hook lightweight to avoid CI/local friction
+#!/usr/bin/env sh
+# Lightweight pre-commit; run lint-staged if available, never block commit
 if command -v npx >/dev/null 2>&1; then
   npx --yes lint-staged || true
 fi

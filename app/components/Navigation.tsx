@@ -8,6 +8,7 @@ import ThemeToggle from './ThemeToggle'
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +26,16 @@ export default function Navigation() {
     { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Resources', href: '/content' },
+    { 
+      name: 'Resources', 
+      href: '/resources',
+      dropdown: [
+        { name: 'AI Customer Experience Guide', href: '/resources/ai-customer-experience-implementation-guide-2025' },
+        { name: 'AI Implementation Master Guide', href: '/resources/ai-implementation-master-guide-2025' },
+        { name: 'Quantum AI Implementation', href: '/resources/quantum-ai-implementation-guide-2026' },
+        { name: 'All Resources', href: '/resources' }
+      ]
+    },
     { name: 'Contact', href: '/contact' },
   ]
 
@@ -46,14 +56,39 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
             {navigationItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-300 hover:text-white transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-2 py-1"
-                aria-label={`Navigate to ${item.name} page`}
-              >
-                {item.name}
-              </Link>
+              <div key={item.name} className="relative">
+                {item.dropdown ? (
+                  <div
+                    className="text-gray-300 hover:text-white transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-2 py-1 cursor-pointer"
+                    onMouseEnter={() => setIsResourcesOpen(true)}
+                    onMouseLeave={() => setIsResourcesOpen(false)}
+                    aria-label={`Navigate to ${item.name} page`}
+                  >
+                    {item.name}
+                    {isResourcesOpen && (
+                      <div className="absolute top-full left-0 mt-1 w-64 bg-black/90 backdrop-blur-lg rounded-md shadow-lg z-50 border border-white/20">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className="block px-4 py-3 text-sm text-gray-300 hover:bg-white/10 hover:text-white transition-colors"
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-2 py-1"
+                    aria-label={`Navigate to ${item.name} page`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
             ))}
             <div className="flex items-center space-x-4">
               <ThemeToggle />
@@ -65,7 +100,7 @@ export default function Navigation() {
                 Get Started
               </Link>
             </div>
-          </div>
+          </nav>
 
           {/* Mobile Menu Button */}
           <button
@@ -83,15 +118,33 @@ export default function Navigation() {
           <div className="md:hidden mt-4 pb-4 border-t border-white/10 pt-4" role="navigation" aria-label="Mobile navigation">
             <div className="flex flex-col space-y-4">
               {navigationItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-300 hover:text-white transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-2 py-1"
-                  onClick={() => setIsMenuOpen(false)}
-                  aria-label={`Navigate to ${item.name} page`}
-                >
-                  {item.name}
-                </Link>
+                <div key={item.name}>
+                  {item.dropdown ? (
+                    <div className="space-y-2">
+                      <div className="text-gray-300 font-medium px-2 py-1">{item.name}</div>
+                      {item.dropdown.map((dropdownItem) => (
+                        <Link
+                          key={dropdownItem.name}
+                          href={dropdownItem.href}
+                          className="text-gray-400 hover:text-white transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-4 py-1 block"
+                          onClick={() => setIsMenuOpen(false)}
+                          aria-label={`Navigate to ${dropdownItem.name} page`}
+                        >
+                          {dropdownItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="text-gray-300 hover:text-white transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-2 py-1 block"
+                      onClick={() => setIsMenuOpen(false)}
+                      aria-label={`Navigate to ${item.name} page`}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
               ))}
               <div className="flex flex-col gap-3">
                 <ThemeToggle />

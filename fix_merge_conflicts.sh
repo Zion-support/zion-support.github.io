@@ -1,44 +1,29 @@
 #!/bin/bash
 
-# Find all files with merge conflicts and fix them by keeping HEAD version
+# Script to fix merge conflicts by choosing HEAD version
+echo "Fixing merge conflicts by choosing HEAD version..."
+
 # Find all files with merge conflicts
-find ./app -name "*.tsx" -o -name "*.ts" | while read file; do
-  if grep -q ")
-    awk '
-  if grep -q "" "$file"; then
-    echo "Fixing merge conflicts in: $file"
+files_with_conflicts=$(find . -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" | grep -v node_modules | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
+
+echo "Found $(echo "$files_with_conflicts" | wc -l) files with merge conflicts"
+
+for file in $files_with_conflicts; do
+    echo "Fixing: $file"
     
-    # Create a temporary file
-    temp_file=$(mktemp)
+    # Create a backup
+    cp "$file" "$file.backup"
     
-    # Process the file to remove merge conflict markers and keep HEAD version
-    awk '
-    in_head || (!in_head && !in_other) { print }
-    # Process the file to resolve conflicts by choosing the newer version (after )
-    awk '
-    /^/ { in_old=1; next }
-    /^/ { in_old=0; in_new=1; next }
-  if grep -q ")
-    awk '
-  if grep -q "" "$file"; then
-    echo "Fixing merge conflicts in: $file"
+    # Use sed to fix merge conflicts by choosing HEAD version
+    # This removes everything from ======= to >>>>>>> and keeps only HEAD content
+    sed -i '/=======/,/>>>>>>>/d' "$file"
     
-    # Create a temporary file
-    temp_file=$(mktemp)
+    # Remove the <<<<<<< HEAD line
+    sed -i '/^<<<<<<< HEAD$/d' "$file"
     
-    # Process the file to resolve conflicts by choosing the newer version (after )
-    awk '
-    /^/ { in_old=1; next }
-    in_old { next }
-    { print }
-    ' "$file" > "$temp_file"
-    
-    # Replace the original file
-    mv "$temp_file" "$file"
+    # Remove any remaining merge conflict markers
+    sed -i '/^>>>>>>>/d' "$file"
+    sed -i '/^=======$/d' "$file"
 done
 
 echo "Merge conflicts fixed!"
-  fi
-done
-
-echo "Merge conflicts resolved!"

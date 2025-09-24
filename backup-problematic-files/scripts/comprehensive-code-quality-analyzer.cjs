@@ -1,11 +1,8 @@
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     log('info', `Total "files": ${qualityReport.summary.totalFiles}`);
     log('info', `Total "lines": ${qualityReport.summary.totalLines}`);
     log('info', `Total "issues": ${qualityReport.summary.totalIssues}`);
@@ -46,20 +43,6 @@
     process.exit(1)}
 }
 
-<<<<<<< HEAD
-main();#!/usr/bin/env node;
-#!/usr/bin/env node;
-main();
-#!/usr/bin/env node;
-
-main();#!/usr/bin/env node;
-
-    process.exit(1)}
-main();
-#!/usr/bin/env node
-
-#!/usr/bin/env node;
-=======
 main();
 
 #!/usr/bin/env node;
@@ -68,7 +51,6 @@ main();
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -161,11 +143,8 @@ console.log('')
     "message"
     "action"
       log('warn', 'Issues "found")
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

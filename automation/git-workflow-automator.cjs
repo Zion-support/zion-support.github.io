@@ -1,19 +1,5 @@
 #!/usr/bin/env node
 
-<<<<<<< HEAD
-
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-class GitWorkflowAutomator {
-  // TODO: Implement
-}
-  constructor() {
-    this.logFile = './automation/logs/git-workflow.log';    this.ensureLogDirectory();
-this.logFile = './automation/logs/git-workflow.log';
-    this.ensureLogDirectory();
-
-=======
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -23,7 +9,6 @@ class GitWorkflowAutomator {
     this.projectRoot = process.cwd();
     this.logFile = path.join(__dirname, 'logs', 'git-workflow.log');
     this.ensureLogDirectory();
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   }
 
   ensureLogDirectory() {
@@ -88,65 +73,18 @@ class GitWorkflowAutomator {
       
       this.log('Git workflow automation completed');
     } catch (error) {
-<<<<<<< HEAD
-      this.log('ERROR', `Failed to add changes: ${error.message}`);
-      return false;
-    }
-  }
-
-  async commitChanges(message) {
-    try {
-      execSync(`git commit -m "${message}"`, { stdio: 'pipe' });
-      this.log('SUCCESS', `Changes committed: ${message}`);
-      return true;
-    } catch (error) {
-      this.log('ERROR', `Failed to commit changes: ${error.message}`);
-      return false;
-    }
-  }
-
-  async pushChanges(branch = 'main') {
-    try {
-      execSync(`git push origin ${branch}`, { stdio: 'pipe' });
-      this.log('SUCCESS', `Changes pushed to ${branch}`);
-      return true;
-    } catch (error) {
-      this.log('ERROR', `Failed to push changes: ${error.message}`);
-      return false;
-    }
-  }
-
-  async pullChanges(branch = 'main') {
-    try {
-      execSync(`git pull origin ${branch}`, { stdio: 'pipe' });
-      this.log('SUCCESS', `Changes pulled from ${branch}`);
-      return true;
-    } catch (error) {
-      this.log('ERROR', `Failed to pull changes: ${error.message}`);
-      return false;    }
-      return false;
-
-      return false;
-
-=======
       this.log(`Git workflow automation failed: ${error.message}`, 'ERROR');
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     }
   }
 
   async getCurrentBranch() {
     try {
-<<<<<<< HEAD
-      const branch = execSync('git branch --show-current', { encoding: 'utf8' });
-      return branch.trim();
-=======
       const result = execSync('git branch --show-current', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         encoding: 'utf8'
       });
       return result.trim();
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     } catch (error) {
       return 'unknown';
     }
@@ -200,65 +138,4 @@ if (require.main === module) {
   }
 }
 
-<<<<<<< HEAD
-// CLI interfaceif (require.main === module) {
-// CLI interface
-if (require.main === module) {
-  const automator = new GitWorkflowAutomator();
-  const command = process.argv[2];
-  const automator = new GitWorkflowAutomator();
-  const command = process.argv[2];
-
-  switch (command) {
-    case 'status':
-      automator.checkGitStatus().then(changes => {
-        console.log('Git Status:', changes);
-      });
-      break;
-    case 'commit':
-      const message = process.argv[3] || 'Auto-commit: Error fixes and improvements';
-      automator.autoCommitAndPush();
-      break;
-    case 'merge':
-      automator.mergeToMain();
-      break;
-    case 'workflow':
-      automator.runWorkflow();
-      break;
-    case 'report':
-      automator.generateReport();
-      break;
-    default:
-      console.log(`
-Git Workflow Automator
-
-Usage: node git-workflow-automator.cjs <command> [options]
-
-Commands:
-  status    - Check git status
-  commit    - Auto-commit and push changes
-  merge     - Merge current branch to main
-  workflow  - Run full automated workflow
-  report    - Generate workflow report
-
-Examples:
-  node git-workflow-automator.cjs status
-  node git-workflow-automator.cjs commit "Fix syntax errors"
-  node git-workflow-automator.cjs workflow
-      `);
-  }
-}
-
 module.exports = GitWorkflowAutomator;
-
-// CLI interface
-
-if (require.main === module) {
-
-
-  const automator = new GitWorkflowAutomator();
-  const command = process.argv[2];
-
-=======
-module.exports = GitWorkflowAutomator;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

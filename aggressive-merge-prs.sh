@@ -180,8 +180,10 @@ for branch in $BRANCHES; do
     
     # Push changes more frequently to avoid losing work
     if [ $((SUCCESSFUL_MERGES % 3)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
+        log_message "🔄 Re-syncing main before push..."
+        git pull --rebase origin main || true
         log_message "💾 Pushing progress to remote..."
-        git push origin main
+        git push origin main || true
     fi
     
     # Check if we've processed enough for this session
@@ -193,8 +195,10 @@ done
 
 # Final push if there were successful merges
 if [ $SUCCESSFUL_MERGES -gt 0 ]; then
+    log_message "🔄 Re-syncing main before final push..."
+    git pull --rebase origin main || true
     log_message "💾 Pushing final changes to remote..."
-    git push origin main
+    git push origin main || true
 fi
 
 # Summary

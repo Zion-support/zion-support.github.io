@@ -1,0 +1,51 @@
+{
+  "name": "zion-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Zion Tech Group - Leading AI and Technology Solutions",
+  "keywords": [
+    "AI",
+    "technology",
+    "innovation",
+    "zion",
+    "tech"
+  ],
+  "author": "Zion Tech Group",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "type-check": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.1",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "24.2.1",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.0.2",
+    "autoprefixer": "^10.4.21",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.5",
+    "jest": "^30.1.3",
+    "jest-environment-jsdom": "^30.1.2",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.8",
+    "@heroicons/react": "^2.2.0",
+    "next": "^15.5.3",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "web-vitals": "^5.1.0",
+    "zod": "^4.1.11"
+  }
+}

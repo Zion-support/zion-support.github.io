@@ -1,144 +1,396 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-
+"use client",
+import React, { useState, useEffect, useRef } from './react',
+import { Search, X, ArrowRight, Clock  } from './lucide-react',
+import Link from './next / link',
 interface SearchResult {
-  title: string;
-  description: string;
-  url: string;
-  category: string;
-}
-
+interface SearchResult {
+  title: string,
+  description: string,
+  url: string,
+  category: string}
+,
 interface SearchModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-
-  const searchData: SearchResult[] = [
-    {
-      title: 'AI Services',
-      description: 'Comprehensive AI solutions for your business',
-      url: '/services/ai',
-      category: 'Services'
-    },
-    {
-      title: 'Cloud Migration',
-      description: 'Seamless cloud infrastructure migration',
-      url: '/services/cloud',
-      category: 'Services'
-    },
-    {
-      title: 'About Us',
-      description: 'Learn more about Zion Tech Group',
-      url: '/about',
-      category: 'Pages'
-    },
-    {
-      title: 'Contact',
-      description: 'Get in touch with our team',
-      url: '/contact',
-      category: 'Pages'
-    }
-  ];
-
-  const handleSearch = (searchQuery: string) => {
-    if (!searchQuery.trim()) {
-      setResults([]);
-      return;
-    }
-
-    const filtered = searchData.filter(item =>
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.category.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-
-    setResults(filtered);
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setQuery(value);
-    handleSearch(value);
-  };
-
-  const handleClose = () => {
-    setQuery('');
-    setResults([]);
-    onClose();
-  };
-
-  if (!isOpen) return null;
-
+  is_open: boolean,
+  on_close: () => void}
+,
+const search_data: SearchResult[] = [
+  // Services,
+  {
+    title: "AI Services",
+    description: "Machine learning, computer vision, NLP, and AI solutions",
+    url: "/ai-services",
+    category: "Services"}
+  {
+    title: "IT Services",
+    description: "Cloud infrastructure, cybersecurity, and IT solutions",
+    url: "/it-services",
+    category: "Services"}
+  {
+    title: "Micro SaaS",
+    description: "Custom micro SaaS platforms and automation tools",
+    url: "/micro-saas",
+    category: "Services"}
+  {
+    title: "Cloud Solutions",
+    description: "AWS, Azure, GCP migration and cloud infrastructure",
+    url: "/cloud - solutions",
+    category: "Services"},
+  {
+    title: "Cybersecurity",
+    description: "Security audits, penetration testing, and compliance",
+    url: "/cybersecurity",
+    category: "Services"}
+  {
+    title: "Blockchain Solutions",
+    description: "Smart contracts, DeFi, and blockchain development",
+    url: "/blockchain - services",
+    category: "Services"},
+  // Solutions,
+  {
+    title: "Digital Transformation",
+    description: "Complete digital transformation solutions",
+    url: "/digital-transformation",
+    category: "Solutions"}
+  {
+    title: "Enterprise Solutions",
+    description: "Large-scale enterprise technology solutions",
+    url: "/enterprise-solutions",
+    category: "Solutions"}
+  {
+    title: "Startup Solutions",
+    description: "Technology solutions for startups and SMBs",
+    url: "/startup-solutions",
+    category: "Solutions"}
+  // Industries,
+  {
+    title: "Healthcare",
+    description: "Technology solutions for healthcare industry",
+    url: "/industries/healthcare",
+    category: "Industries"}
+  {
+    title: "Finance",
+    description: "Financial technology and fintech solutions",
+    url: "/industries/finance",
+    category: "Industries"}
+  {
+    title: "Education",
+    description: "Educational technology and e-learning solutions",
+    url: "/industries/education",
+    category: "Industries"}
+  {
+    title: "Manufacturing",
+    description: "Industrial IoT and manufacturing automation",
+    url: "/industries / manufacturing",
+    category: "Industries"},
+  // Company,
+  {
+    title: "About Us",
+    description: "Learn about Zion Tech Group and our mission",
+    url: "/about",
+    category: "Company"}
+  {
+    title: "Contact",
+    description: "Get in touch with our team",
+    url: "/contact",
+    category: "Company"}
+  {
+    title: "Careers",
+    description: "Join our team and build the future",
+    url: "/careers",
+    category: "Company"}
+  {
+    title: "Blog",
+    description: "Latest insights and technology trends",
+    url: "/blog",
+    category: "Company"}
+  {
+    title: "Pricing",
+    description: "Transparent pricing for all our services",
+    url: "/pricing",
+    category: "Company"}
+],
+  const [query, setQuery] = useState(""),
+  const [results, setResults] = useState<SearchResult[]>([]),
+  const [recentSearches, setRecentSearches] = useState<string[]>([]),
+  const [selectedIndex, setSelectedIndex] = useState(0),
+  const inputRef = useRef<HTMLInputElement>(null),
+  useEffect(() => {
+    if (isOpen && inputRef && inputRef.current) {
+      inputRef && inputRef.current.focus()}
+  }, [isOpen]),
+  useEffect(() => {
+    // Load recent searches from localStorage,
+    const saved = localStorage && localStorage.getItem("recent-searches"),
+    if (saved) {
+      setRecentSearches(JSON && JSON.parse(saved))}
+  }, []),
+  useEffect(() => {
+    if (query && query.trim()) {
+      const filtered = searchData && searchData.filter(
+        (item) =>,
+          item && item.title.toLowerCase().includes(query && query.toLowerCase()) ||,
+          item && item.description.toLowerCase().includes(query && query.toLowerCase()) ||,
+          item && item.category.toLowerCase().includes(query && query.toLowerCase()),
+),
+      setResults(filtered)} else {
+      setResults([]),
+export default /**,
+ * SearchModal - Function description,
+ */,
+function SearchModal() {
+  const [query, set_query] = useState (""),
+  const [results, set_results] = useState < SearchResult[]>([]),
+  const [recent_searches, setRecentSearches] = useState < string[]>([]),
+  const [selected_index, setSelectedIndex] = useState (0),
+  const input_ref = useRef < HTMLInputElement>(null),
+  useEffect (() => {
+    // Check condition,
+if ( {) {
+  $2}
+      input_ref.current.focus ()}
+  }, [is_open]),
+  useEffect (() => {
+    // Load recent searches from local_storage,
+    const saved = local_storage.get_item ("recent - searches"),
+    // Check condition,
+if ( {) {
+  $2}
+      setRecentSearches (JSON.parse (saved))}
+  }, []),
+  useEffect (() => {
+    if () {) {
+  $2}
+      const filtered = search_data.filter (
+        (item) =>,
+          item.title.toLowerCase ().includes (query.toLowerCase ()) ||,
+          item.description.toLowerCase ().includes (query.toLowerCase ()) ||,
+          item.category.toLowerCase ().includes (query.toLowerCase ())),
+      set_results (filtered)} else {
+      set_results ([])}
+    setSelectedIndex (0)}, [query]),
+  const handleKeyDown = (e: React && React.KeyboardEvent) => {
+    if (e && e.key === "Escape") {
+      onClose()} else if (e && e.key === "ArrowDown") {
+      e && e.preventDefault(),
+      setSelectedIndex((prev) => Math && Math.min(prev + 1, results && results.length - 1))} else if (e && e.key === "ArrowUp") {
+      e && e.preventDefault(),
+      setSelectedIndex((prev) => Math && Math.max(prev - 1, 0))} else if (e && e.key === "Enter" && results[selectedIndex]) {
+      handleResultClick(results[selectedIndex])}
+},
+  const handleResultClick = (result: SearchResult) => {
+    // Add to recent searches,
+    const newRecent = [
+      result && result.title,
+      ...recentSearches && recentSearches.filter((s) => s !== result && result.title),
+    ].slice(0, 5),
+    setRecentSearches(newRecent),
+    localStorage && localStorage.setItem("recent-searches", JSON && JSON.stringify(newRecent)),
+    // Navigate to result,
+    window && window.location.href = result && result.url},
+  const handleRecentClick = (search: string) => {
+    setQuery(search)}
+  if (!isOpen) return null,
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto">
-      <div className="flex items-start justify-center min-h-screen pt-16 px-4 pb-20 text-center sm:block sm:p-0">
-        <div className="fixed inset-0 transition-opacity" onClick={handleClose}>
-          <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
-        </div>
-
-        <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-
-        <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
-          <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-medium text-gray-900">Search</h3>
-              <button
-                onClick={handleClose}
-                className="text-gray-400 hover:text-gray-600"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search services, pages..."
-                value={query}
-                onChange={handleInputChange}
-                className="w-full px-4 py-2 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                autoFocus
-              />
-              <div className="absolute inset-y-0 left-0 flex items-center pl-3">
-                <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
-            </div>
-
-            {results.length > 0 && (
-              <div className="mt-4 max-h-60 overflow-y-auto">
-                {results.map((result, index) => (
-                  <Link
-                    key={index}
-                    href={result.url}
-                    className="block px-3 py-2 hover:bg-gray-50 border-b border-gray-100 last:border-b-0"
-                    onClick={handleClose}
-                  >
-                    <div className="font-medium text-gray-900">{result.title}</div>
-                    <div className="text-sm text-gray-600">{result.description}</div>
-                    <div className="text-xs text-blue-600 mt-1">{result.category}</div>
-                  </Link>
-                ))}
-              </div>
-            )}
-
-            {query.length > 0 && results.length === 0 && (
-              <div className="mt-4 text-center text-gray-500">
-                No results found for "{query}"
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default SearchModal;
+    <div className="fixed inset-0 z-50 overflow-y-auto">,
+      <div className="flex min-h-screen items-start justify-center p-4 pt-16">,
+        {/* Backdrop */}
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 transition-opacity",
+          onClick={onClose}
+,
+         />,
+        {/* Modal */}
+        <div className="relative w-full max-w-2xl bg-white rounded-lg shadow-xl">,
+          {/* Search Input */}
+          <div className="flex items-center p-4 border-b">,
+            <Search className="w-5 h-5 text-gray-40o0 mr-3"  />,
+            <input
+              ref={inputRef}
+              type="text",
+              value={query}
+              onChange={(e) => setQuery(e && e.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder="Search services, solutions, industries...",
+              className="flex-1 text-lg outline-none",
+            />,
+            <button
+              onClick={onClose}
+,
+              className="ml-3 p-1 hover: bg-gray-10o0 rounded">,
+              <X className="w-5 h-5"  />,
+            </button>,
+          </div>,
+          {/* Results */}
+          <div className="max-h-96 overflow-y-auto">,
+            {query && query.trim() ? (
+              results && results.length > 0 ? (
+                <div className="p-2">,
+                  {results && results.map((result, index) => (
+                    <div
+  const handleKeyDown = (e: React.KeyboardEvent) =>: any {
+    // Check condition,
+if ( {) {
+  $2}
+      on_close ()} else // Check condition,
+if ( {) {
+  $2}
+      e.prevent_default (),
+      setSelectedIndex ((prev) => Math.min (prev + 1, results.length - 1))} else // Check condition,
+if ( {) {
+  $2}
+      e.prevent_default (),
+      setSelectedIndex ((prev) => Math.max (prev - 1, 0))} else // Check condition,
+if ( {) {
+  $2}
+      handleResultClick (results[selected_index])}
+  }
+,
+  const handleResultClick = (result: SearchResult) =>: any {
+    // Add to recent searches,
+    const new_recent = [
+      result.title,
+      ...recent_searches.filter ((s) => s !== result.title),
+    ].slice (0, 5),
+    setRecentSearches (new_recent),
+    local_storage.set_item ("recent - searches", JSON.stringify (new_recent)),
+    // Navigate to result,
+    window.location.href = result.url}
+,
+  const handleRecentClick = (search: string) =>: any {
+    set_query (search)}
+,
+  // Check condition,
+if (return null) {
+  $2}
+  return (
+    <div className="fixed inset - 0 z - 50 overflow - y-auto">,
+      <div className="flex min - h-screen items - start justify - center p - 4 pt - 16">,
+        {/* Backdrop */}
+        <div
+          className="fixed inset - 0 bg - black bg - opacity - 50 transition - opacity",
+          on_click={on_close}
+         />,
+        {/* Modal */}
+        <div className="relative w - full max - w-2xl bg - white rounded - lg shadow - xl">,
+          {/* Search Input */}
+          <div className="flex items - center p - 4 border - b">,
+            <Search className="w - 5 h - 5 text - gray - 40o0 mr - 3"  />,
+            <input
+              ref={input_ref}
+              type="text",
+              value={query}
+              on_change={(e) => set_query (e.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder="Search services, solutions, industries...",
+              className="flex - 1 text - lg outline - none",
+            />,
+            <button
+              on_click={on_close}
+              className="ml - 3 p - 1 hover: bg - gray - 10o0 rounded">,
+              <X className="w - 5 h - 5"  />,
+            </button>,
+          </div>,
+          {/* Results */}
+          <div className="max - h-96 overflow - y-auto">,
+            {query.trim () ? (
+              results.length > 0 ? (
+                <div className="p - 2">,
+                  {results.map ((result, index) => (
+                    <div
+                      key={index}
+                      className={`p - 3 rounded - lg cursor - pointer transition - colors ${
+                        index === selected_index,
+                          ? "bg - blue - 50 border border - blue - 20o0",
+                          : "hover: bg - gray - 50"}`}
+,
+                <div>,
+                  <div className="text-sm text-gray-50o0 mb-3">,
+                    Popular Searches,
+                  </div>,
+                  <div className="grid grid-cols-2 gap-2">,
+                    {[
+                      "AI Services",
+                      "Cloud Solutions",
+                      "Cybersecurity",
+                      "Digital Transformation",
+                    ].map((term) => (
+                      <button
+                        key={term}
+                        onClick={() => setQuery(term)}
+                        className="text-left p-2 hover: bg-gray-50 rounded text-sm text-gray-70o0">,
+                        {term}
+                      </button>))}
+                  </div>,
+                </div>,
+              </div>)}
+          </div>,
+        </div>,
+      </div>,
+    </div>),
+                      on_click={() => handleResultClick (result)}
+                    >,
+                      <div className="flex items - start justify - between">,
+                        <div className="flex - 1">,
+                          <h3 className="font - medium text - gray - 90o0">,
+                            {result.title}
+                          </h3>,
+                          <p className="text - sm text - gray - 60o0 mt - 1">,
+                            {result.description}
+                          </p>,
+                          <span className="inline - block mt - 2 text - xs text - blue - 60o0 bg - blue - 10o0 px - 2 py - 1 rounded">,
+                            {result.category}
+                          </span>,
+                        </div>,
+                        <ArrowRight className="w - 4 h - 4 text - gray - 40o0 mt - 1"  />,
+                      </div>,
+                    </div>))}
+                </div>) : (
+                <div className="p - 8 text - center text - gray - 50o0">,
+                  <Search className="w - 12 h - 12 mx - auto mb - 4 text - gray - 30o0"  />,
+                  <p > No results found for "{query}"</p>,
+                  <p className="text - sm mt - 2">,
+                    Try different keywords or check our services page,
+                  </p>,
+                </div>)) : (
+              <div className="p - 4">,
+                {recent_searches.length > 0 && (
+                  <div className="mb - 6">,
+                    <div className="flex items - center text - sm text - gray - 50o0 mb - 3">,
+                      <Clock className="w - 4 h - 4 mr - 2"  />,
+                      Recent Searches,
+                    </div>,
+                    <div className="space - y-2">,
+                      {recent_searches.map ((search, index) => (
+                        <button
+                          key={index}
+                          on_click={() => handleRecentClick (search)}
+                          className="w - full text - left p - 2 hover: bg - gray - 50 rounded text - sm text - gray - 70o0">,
+                          {search}
+                        </button>))}
+                    </div>,
+                  </div>)}
+                <div>,
+                  <div className="text - sm text - gray - 50o0 mb - 3">,
+                    Popular Searches,
+                  </div>,
+                  <div className="grid grid - cols - 2 gap - 2">,
+                    {[
+                      "AI Services",
+                      "Cloud Solutions",
+                      "Cybersecurity",
+                      "Digital Transformation",
+                    ].map ((term) => (
+                      <button
+                        key={term}
+                        on_click={() => set_query (term)}
+                        className="text - left p - 2 hover: bg - gray - 50 rounded text - sm text - gray - 70o0">,
+                        {term}
+                      </button>))}
+                  </div>,
+                </div>,
+              </div>)}
+          </div>,
+        </div>,
+      </div>,
+    </div>)}
+}}}})))

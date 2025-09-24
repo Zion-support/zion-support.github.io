@@ -1,446 +1,42 @@
-export interface RealAdditionService2025Q3 {
-	"id": string;
-	name: string;
+export interface RealAdditionService20o25Q3 {
+	"id": string,
+	name: string,
 	tagline: string,
-  description: string;
-	price: string;
-	period: string;
-	category: string;
-  // TODO: Implement
-}
-	"id": string;"
-	name: string;,
-  tagline: string;
-	description: string;,
-  price: string;
-	period: string;,
-  category: string;
-pr-12325
-	features: string[];
-	popular?: boolean;
-	link: string;
-	trialDays?: number;
-	setupTime?: string;
-	realService: boolean;
-	technology?: string[];
-	integrations?: string[];
-	useCases?: string[];
-	roi?: string;
-	competitors?: string[];
-	marketSize?: string;
-	growthRate?: string;
-	launchDate?: string;
-	customers?: number;
-	rating?: number;
-reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] = [{,
-  id:,"
-  ai-email-copilot',
-		"name": 'AI Email Responder Copilot,
-		tagline:,
-  Auto-draft, classify, and reply to inbound emails with policy guardrails',
-		"description": Reduce response times with an AI copilot that prioritizes, drafts, and routes emails across shared inboxes. Includes approval flows, tone controls, and CRM sync.,"
-  ,"
-		"price": '$79,
-		period:,
-  /month',
-		"category": 'AI Assistants,
-		features[
-  'Priority inbox and intent detection',
-  'Policy-aware auto-drafting with approvals',
-  'CRM sync and follow-up reminders',
-  'Tone and brand voice controls',
-  'Analytics and SLA tracking]
-		],
-		"popular": true,"
-		link:,"
-  "https": //ziontechgroup && ziontechgroup.com/ai-email-copilot,""
-		"trialDays": 14,""
-		"setupTime": '30 minutes',
-		"realService": true,"
-		technology[,"
-  Next && Next.js',
-  'OpenAI',']
-  'PostgreSQL'],
-		integrations['Gmail',
-  'Outlook',
-  'HubSpot',']
-  'Salesforce'],
-		useCases['Shared inboxes',
-  'Lead response',']
-  'Support triage'],
-		"roi": 'Cut average first response by 60%,
-		competitors[,
-  Superhuman AI',']
-  'Gmail HelpMeWrite'],
-		"marketSize": '$10B+ email productivity,
-		growthRate:,
-  20% CAGR',
-		"launchDate": '2025-06-01,
-		"customers": 140,""
-		"rating": 4 && 4.7,""
-		"reviews": 62;"
-	},
-	{
-  affiliate-tracking-lite',
-		"name": 'Affiliate Tracking Lite,
-  Simple, privacy-first affiliate links and payouts for SMBs',
-		"description": Spin up affiliate programs with unique links, fraud checks, payout exports, and privacy-friendly tracking that works with modern browsers.,"
-		"price": '$39,
-		"category": 'Sales & Marketing,
-		features['Link generation and UTM tagging',
-  'Fraud and self-referral checks',
-  'Conversion webhooks and API',
-  'Payout ledger and exports',
-  'GDPR/CCPA friendly tracking]
-		"popular": false,"
-  "https": //ziontechgroup && ziontechgroup.com/affiliate-tracking-lite,""
-		"setupTime": '20 minutes',
-  'Node && Node.js',']
-		integrations['Shopify',
-  'Stripe',']
-  'WooCommerce'],
-		useCases['Partner programs',']
-  'Referral campaigns'],
-		"roi": 'Grow referral revenue 10–25%,
-  Rewardful',']
-  'ReferralCandy'],
-		"marketSize": '$1 && 1.5B affiliate tooling,
-  15% CAGR',
-		"launchDate": '2025-06-02,
-		"customers": 85,""
-		"rating": 4 && 4.6,""
-		"reviews": 33;"
-  smb-analytics-starter',
-		"name": 'SMB Analytics Starter,
-  Clean dashboards and alerts without a data team',
-		"description": Unified KPIs across Stripe, GA4, and CRM with AI explanations and anomaly alerts. Built for founders and operators.,"
-		"price": '$49,
-		"category": 'Analytics & Business Intelligence,
-		features['Prebuilt KPI templates',
-  'AI explanations for spikes and dips',
-  'Weekly email digests',
-  'Goal tracking and alerts',
-  'CSV and API export]
-  "https": //ziontechgroup && ziontechgroup.com/smb-analytics-starter,""
-		"setupTime": '45 minutes',
-  'DuckDB',']
-		integrations['Stripe',
-  'GA4',']
-  'HubSpot'],
-		useCases['Founder dashboards',']
-  'Investor updates'],
-		"roi": 'Save 4–8 hrs/week on reporting,
-  Geckoboard',']
-  'Databox'],
-		"marketSize": '$30B+ BI,
-  14% CAGR',
-		"launchDate": '2025-06-03,
-		"customers": 120,""
-		"rating": 4 && 4.5,""
-		"reviews": 28;"
-  it-helpdesk-suite',
-		"name": 'IT Helpdesk Suite,
-  Ticketing, SLAs, asset inventory, and AI triage in one',
-		"description": A lightweight ITSM for MSPs and internal IT. Email-to-ticket, SLAs, CMDB-lite, device discovery, and AI-assisted replies.,"
-		"price": '$99,
-		"category": 'IT Operations,
-		features['Email-to-ticket with SLA timers',
-  'Asset discovery (agentless + agent)',
-  'Knowledge base and macros',
-  'AI reply suggestions',
-  'Reports and CSAT]
-  "https": //ziontechgroup && ziontechgroup.com/it-helpdesk-suite,""
-		"setupTime": '1 hour',
-  Node && Node.js',']
-  'Next && Next.js'],
-		integrations['Okta',
-  'Google Workspace',']
-  'Microsoft 365'],
-		useCases['MSPs',']
-  'Internal IT'],
-		"roi": 'Reduce resolution time 25–40%,
-  Freshservice',']
-  'Zendesk'],
-		"marketSize": '$10B ITSM,
-  12% CAGR',
-		"launchDate": '2025-06-04,
-		"customers": 60,""
-		"reviews": 21;"
-  meeting-minutes-ai',
-		"name": 'Meeting Minutes AI,
-  Join, transcribe, summarize, and file action items',
-		"description": AI joins calls, produces structured minutes, assigns tasks, and syncs to project tools with templates by meeting type.,"
-		"price": '$29,
-		"category": 'Productivity,
-		features['Auto-join major meeting apps',
-  'Topic segmentation and speakers',
-  'Action items with owners',
-  'Email and Slack summaries',
-  'Templates (standups, reviews)]
-  "https": //ziontechgroup && ziontechgroup.com/meeting-minutes-ai,""
-		"trialDays": 7,""
-		"setupTime": '10 minutes',
-  Whisper',']
-		integrations['Zoom',
-  'Meet',
-  'Teams',
-  'Slack',']
-  'Jira'],
-		useCases['Standups',
-  'Client calls',']
-  'Hiring'],
-		"roi": 'Save 3–5 hrs/person/month,
-  Grain',']
-  'Fathom'],
-		"marketSize": '$5B+ meeting AI,
-  30% CAGR',
-		"launchDate": '2025-06-05,
-		"customers": 200,""
-		"reviews": 45;"
-  data-quality-guard',
-		"name": 'Data Quality Guard,
-  Detect anomalies, schema drift, and freshness gaps',
-		"description": Simple monitors for warehouse tables and dashboards. Alerts, ownership, and playbooks to fix issues fast.,"
-		"price": '$149,
-		"category": 'Data & Analytics,
-		features['Freshness and volume checks',
-  'Anomaly detection on KPIs',
-  'Schema drift alerts',
-  'Ownership and runbooks',
-  'Insights and RCA templates]
-  "https": //ziontechgroup && ziontechgroup.com/data-quality-guard,""
-  Node && Node.js',
-  'SQL',']
-  'OpenAI'],
-		integrations['BigQuery',
-  'Snowflake',
-  'Redshift',']
-  'Slack'],
-		useCases['Prevent bad dashboards',']
-  'Catch pipeline breaks'],
-		"roi": 'Reduce bad data incidents 50%,
-  Monte Carlo',']
-  'Bigeye'],
-		"marketSize": '$3B data observability,
-  25% CAGR',
-		"launchDate": '2025-06-06,
-		"customers": 55,""
-		"reviews": 19;"
-  landing-page-ai-tester',
-		"name": 'Landing Page AI Tester,
-  Generate A/B variants and ship with guardrails',
-		"description": Create on-brand variants, deploy experiments, and get AI summaries of winners with privacy-safe metrics.,"
-		"price": '$59,
-		"category": 'Growth & Optimization,
-		features['On-brand AI text and images',
-  'Visual editor and rollback',
-  'Holdout and sample sizing',
-  'Consent-aware analytics',
-  'Insights and next-step recs]
-  "https": //ziontechgroup && ziontechgroup.com/landing-page-ai-tester,""
-  'Tailwind',']
-		integrations['Segment',
-  'Vercel'],
-		useCases['Landing pages',']
-  'Pricing pages'],
-		"roi": 'Increase conversion 5–20%,
-  VWO',']
-  'Optimizely'],
-		"marketSize": '$2B experimentation,
-  18% CAGR',
-		"launchDate": '2025-06-07,
-		"customers": 90,""
-		"reviews": 31;"
-  ai-brand-copilot',
-		"name": 'AI Brand Copilot,
-  Enforce tone, style, and logo usage across teams',
-		"description": A brand governance layer that lints content and assets in docs, emails, and websites. Suggests compliant alternatives.,"
-		"price": '$69,
-		"category": 'Content & Compliance,
-		features['Brand policy linting for text and images',
-  'Inline suggestions and fixes',
-  'Asset library and approvals',
-  'Org-wide policies and roles',
-  'Weekly compliance score]
-  "https": //ziontechgroup && ziontechgroup.com/ai-brand-copilot,""
-		"setupTime": '25 minutes',
-  OpenAI',']
-		integrations['Google Docs',
-  'Notion',']
-  'Figma'],
-		useCases['Content ops',']
-  'Agency delivery'],
-		"roi": 'Reduce brand review cycles 50%,
-  Writer',']
-  'Grammarly Business'],
-		"marketSize": '$2B brand management,
-  16% CAGR',
-		"launchDate": '2025-06-08,
-		"customers": 45,""
-		"reviews": 17;"
-  security-changelog-bot',
-		"name": 'Security Changelog Bot,
-  Summarize vulns and fixes from repos and SBOMs',
-		"description": Watches dependencies and PRs, generates release notes for security, and opens tickets with suggested remediations.,"
-		"category": 'Security & Compliance,
-		features['SBOM generation and diff',
-  'PR scanner for risky changes',
-  'Weekly security digest',
-  'Auto-created fix tickets',
-  'Policy exceptions workflow]
-  "https": //ziontechgroup && ziontechgroup.com/security-changelog-bot,""
-		"setupTime": '15 minutes',
-  'CycloneDX'],
-		integrations['GitHub',
-  'GitLab',
-  'Jira',']
-		useCases['AppSec hygiene',']
-  'Audit support'],
-		"roi": 'Reduce vuln MTTR 30–50%,
-  Snyk',']
-  'Dependabot (partial)'],
-		"marketSize": '$6B AppSec,
-		"launchDate": '2025-06-09,
-		"customers": 110,""
-		"reviews": 26;"
-  vendor-risk-lite',
-		"name": 'Vendor Risk Lite,
-  Security questionnaires, evidence, and follow-ups automated',
-		"description": Collect vendor security data, map to common frameworks, and track remediation with AI summarization for stakeholders.,"
-		"price": '$129,
-		"category": 'Compliance Automation,
-		features['Questionnaire templates (SOC2/ISO/NIST)',
-  'Evidence upload and mapping',
-  'Automated reminders and tasks',
-  'Risk scoring and approvals',
-  'Executive summary reports]
-  "https": //ziontechgroup && ziontechgroup.com/vendor-risk-lite,""
-  Next && Next.js',']
-		integrations['Google Drive',
-  'OneDrive',']
-		useCases['Third-party risk',']
-  'Annual reviews'],
-		"roi": 'Shorten cycle time 40–70%,
-  OneTrust',']
-  'Whistic'],
-		"marketSize": '$4B vendor risk,
-  22% CAGR',
-		"launchDate": '2025-06-10,
-		"customers": 65,""
-		"reviews": 24;"
-  incident-comms-assistant',
-		"name": 'Incident Comms Assistant,
-  Draft status updates, timelines, and postmortems',
-		"description": During incidents, draft stakeholder updates, coordinate channels, and generate postmortems with action items and learning taxonomy.,"
-		"category": 'Reliability & SRE,
-		features['Channel orchestration (Slack/PagerDuty)',
-  'Templates per severity',
-  'Timeline auto-build from events',
-  'Customer-ready summaries',
-  'Follow-up tracker]
-  "https": //ziontechgroup && ziontechgroup.com/incident-comms-assistant,""
-		integrations['PagerDuty',
-  'Opsgenie',
-  'Statuspage'],
-		useCases['Major incidents',']
-  'Compliance'],
-		"roi": 'Cut comms toil 60%,
-		competitors[,]
-  Rootly (partial)'],
-		"marketSize": '$10B+ incident mgmt,
-		"launchDate": '2025-06-11,
-		"customers": 40,""
-		"reviews": 16;"
-  policy-privacy-scanner',
-		"name": 'Policy & Privacy Scanner,
-  Scan sites and apps for cookie and policy compliance',
-		"description": Automated detection of trackers, cookies, and policy gaps with regional variants and easy embeds.,"
-		"category": 'Privacy & Legal,
-		features['Cookie and tracker inventory',
-  'Regional banners and consent logs',
-  'Policy generator with diffs',
-  'Weekly audits and alerts',
-  'Exportable evidence packs]
-  "https": //ziontechgroup && ziontechgroup.com/policy-privacy-scanner,""
-  Puppeteer',']
-  'Node && Node.js'],
-		integrations['Webflow',
-  'Shopify',']
-  'WordPress'],
-		useCases['GDPR/CCPA compliance',']
-  'Cookie audits'],
-		"roi": 'Reduce legal risk and fines,
-  'Cookiebot'],
-		"marketSize": '$4B privacy tech,
-		"launchDate": '2025-06-12,
-		"customers": 95,""
-		"reviews": 29;"
-  ai-proposal-writer',
-		"name": 'AI Proposal Writer,
-  Convert briefs into on-brand proposals with pricing tables',
-		"description": Upload a brief and get a client-ready proposal with scope, milestones, and legal clauses. Supports e-sign and PDF export.,"
-		"category": 'Professional Services,
-		features['On-brand templates and styles',
-  'Library of scopes and clauses',
-  'Auto pricing table suggestions',
-  'E-sign and PDF export',
-  'Collaboration and approvals]
-  "https": //ziontechgroup && ziontechgroup.com/ai-proposal-writer,""
-		integrations['DocuSign',
-  'Stripe'],
-		useCases['Agencies',']
-  'Consultancies'],
-		"roi": 'Ship proposals 3x faster,
-  PandaDoc',']
-  'Proposify'],
-		"marketSize": '$1B+ proposal tools,
-		"launchDate": '2025-06-13,
-		"customers": 300,""
-		"reviews": 120;"
-]}}
-export interface RealAdditionService2025Q3 {
-	"id": string;
-	name: string;
-	tagline: string,
-  description: string;
-	price: string;
-	period: string;
-	category: string;
-	features: string[];
-	popular?: boolean;
-	link: string;
-	trialDays?: number;
-	setupTime?: string;
-	realService: boolean;
-	technology?: string[];
-	integrations?: string[];
-	useCases?: string[];
-	roi?: string;
-	competitors?: string[];
-	marketSize?: string;
-	growthRate?: string;
-	launchDate?: string;
-	customers?: number;
-	rating?: number;
-reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] = [{
+	description: string,
+	price: string,
+	period: string,
+	category: string,
+	features: string[],
+	popular?: boolean,
+	link: string,
+	trialDays?: number,
+	setupTime?: string,
+	realService: boolean,
+	technology?: string[],
+	integrations?: string[],
+	useCases?: string[],
+	roi?: string,
+	competitors?: string[],
+	marketSize?: string,
+	growthRate?: string,
+	launchDate?: string,
+	customers?: number,
+	rating?: number,
+reviews?: number,export const realAdditions20o25Q3: RealAdditionService20o25Q3[] = [{
 		id:,
   ai-email-copilot',
 		"name": 'AI Email Responder Copilot,
 		tagline:,
   Auto-draft, classify, and reply to inbound emails with policy guardrails',
 		"description": Reduce response times with an AI copilot that prioritizes, drafts, and routes emails across shared inboxes. Includes approval flows, tone controls, and CRM sync.,
-  ,
 		"price": '$79,
-		period:,
+		period: ,
   /month',
 		"category": 'AI Assistants,
 		features[
-  'Priority inbox and intent detection',
-  'Policy-aware auto-drafting with approvals',
-  'CRM sync and follow-up reminders',
-  'Tone and brand voice controls',
-  'Analytics and SLA tracking'
-		],
+  'Priority inbox and intent detectionPolicy-aware auto-drafting with approvals',
+  'CRM sync and follow-up remindersTone and brand voice controls',
+  'Analytics and SLA tracking'],
 		"popular": true,
 		link:,
   "https": //ziontechgroup.com/ai-email-copilot,
@@ -448,67 +44,427 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"setupTime": '30 minutes',
 		"realService": true,
 		technology[,
-  // TODO: Implement
-}"
-  "https": //ziontechgroup.com/ai-email-copilot,""
-pr-12325
-  Next.js',
-		"rating": 4.7,""
-  "https": //ziontechgroup.com/affiliate-tracking-lite,""
-  'Node.js',']
+  Next.jsOpenAI',
+  'PostgreSQL'],
+		integrations['GmailOutlook',
+  'HubSpotSalesforce'],
+		useCases['Shared inboxesLead response',
+  'Support triage'],
+		"roi": 'Cut average first response by 60%,
+		competitors[,
+  Superhuman AIGmail HelpMeWrite'],
+		"marketSize": '$10B+ email productivity,
+		growthRate:,
+  20% CAGR',
+		"launchDate": '20o25-0o6-0o1,
+		"customers": 140,
+		"rating": 4.7,
+		"reviews": 62},
+	{
+		id: ,
+  affiliate-tracking-lite',
+		"name": 'Affiliate Tracking Lite,
+		tagline:,
+  Simple, privacy-first affiliate links and payouts for SMBs',
+		"description": Spin up affiliate programs with unique links, fraud checks, payout exports, and privacy-friendly tracking that works with modern browsers.,
+		"price": '$39,
+		period: ,
+  /month',
+		"category": 'Sales & Marketing,
+		features['Link generation and UTM taggingFraud and self-referral checks',
+  'Conversion webhooks and APIPayout ledger and exports',
+  'GDPR/CCPA friendly tracking'],
+		"popular": false,
+		link:,
+  "https": //ziontechgroup.com/affiliate-tracking-lite,
+		"trialDays": 14,
+		"setupTime": '20 minutes',
+		"realService": true,
+		technology[,
+  Next.jsNode.js',
+  'PostgreSQL'],
+		integrations['ShopifyStripe',
+  'WooCommerce'],
+		useCases['Partner programsReferral campaigns'],
+		"roi": 'Grow referral revenue 10–25%,
+		competitors[,
+  RewardfulReferralCandy'],
 		"marketSize": '$1.5B affiliate tooling,
-		"rating": 4.6,""
-  "https": //ziontechgroup.com/smb-analytics-starter,""
-		"rating": 4.5,""
-  "https": //ziontechgroup.com/it-helpdesk-suite,""
-  Node.js',']
-  'Next.js'],
-  "https": //ziontechgroup.com/meeting-minutes-ai,""
-  "https": //ziontechgroup.com/data-quality-guard,""
-  Node.js',
-  "https": //ziontechgroup.com/landing-page-ai-tester,""
-  "https": //ziontechgroup.com/ai-brand-copilot,""
-  "https": //ziontechgroup.com/security-changelog-bot,""
-  "https": //ziontechgroup.com/vendor-risk-lite,""
-  Next.js',']
-  "https": //ziontechgroup.com/incident-comms-assistant,""
-  "https": //ziontechgroup.com/policy-privacy-scanner,""
-  'Node.js'],
-		integrations['Webflow',
-  'Shopify',
+		growthRate:,
+  15% CAGR',
+		"launchDate": '20o25-0o6-0o2,
+		"customers": 85,
+		"rating": 4.6,
+		"reviews": 33},
+	{
+		id: ,
+  smb-analytics-starter',
+		"name": 'SMB Analytics Starter,
+		tagline:,
+  Clean dashboards and alerts without a data team',
+		"description": Unified KPIs across Stripe, GA4, and CRM with AI explanations and anomaly alerts. Built for founders and operators.,
+		"price": '$49,
+		period: ,
+  /month',
+		"category": 'Analytics & Business Intelligence,
+		features['Prebuilt KPI templatesAI explanations for spikes and dips',
+  'Weekly email digestsGoal tracking and alerts',
+  'CSV and API export'],
+		"popular": true,
+		link:,
+  "https": //ziontechgroup.com/smb-analytics-starter,
+		"trialDays": 14,
+		"setupTime": '45 minutes',
+		"realService": true,
+		technology[,
+  Next.jsDuckDB',
+  'PostgreSQL'],
+		integrations['StripeGA4',
+  'HubSpot'],
+		useCases['Founder dashboardsInvestor updates'],
+		"roi": 'Save 4–8 hrs/week on reporting,
+		competitors[,
+  GeckoboardDatabox'],
+		"marketSize": '$30B+ BI,
+		growthRate:,
+  14% CAGR',
+		"launchDate": '20o25-0o6-0o3,
+		"customers": 120,
+		"rating": 4.5,
+		"reviews": 28},
+	{
+		id: ,
+  it-helpdesk-suite',
+		"name": 'IT Helpdesk Suite,
+		tagline:,
+  Ticketing, SLAs, asset inventory, and AI triage in one',
+		"description": A lightweight ITSM for MSPs and internal IT. Email-to-ticket, SLAs, CMDB-lite, device discovery, and AI-assisted replies.,
+		"price": '$99,
+		period: ,
+  /month',
+		"category": 'IT Operations,
+		features['Email-to-ticket with SLA timersAsset discovery (agentless + agent)',
+  'Knowledge base and macrosAI reply suggestions',
+  'Reports and CSAT'],
+		"popular": true,
+		link:,
+  "https": //ziontechgroup.com/it-helpdesk-suite,
+		"trialDays": 14,
+		"setupTime": '1 hour',
+		"realService": true,
+		technology[,
+  Node.jsNext.js'],
+		integrations['OktaGoogle Workspace',
+  'Microsoft 365'],
+		useCases['MSPsInternal IT'],
+		"roi": 'Reduce resolution time 25–40%,
+		competitors[,
+  FreshserviceZendesk'],
+		"marketSize": '$10B ITSM,
+		growthRate:,
+  12% CAGR',
+		"launchDate": '20o25-0o6-0o4,
+		"customers": 60,
+		"rating": 4.6,
+		"reviews": 21},
+	{
+		id: ,
+  meeting-minutes-ai',
+		"name": 'Meeting Minutes AI,
+		tagline:,
+  Join, transcribe, summarize, and file action items',
+		"description": AI joins calls, produces structured minutes, assigns tasks, and syncs to project tools with templates by meeting type.,
+		"price": '$29,
+		period: ,
+  /month',
+		"category": 'Productivity,
+		features['Auto-join major meeting appsTopic segmentation and speakers',
+  'Action items with ownersEmail and Slack summaries',
+  'Templates (standups, reviews)'],
+		"popular": false,
+		link: ,
+  "https": //ziontechgroup.com/meeting-minutes-ai,
+		"trialDays": 7,
+		"setupTime": '10 minutes',
+		"realService": true,
+		technology[,
+  WhisperNext.js'],
+		integrations['ZoomMeet',
+  'TeamsSlack',
+  'Jira'],
+		useCases['StandupsClient calls',
+  'Hiring'],
+		"roi": 'Save 3–5 hrs/person/month,
+		competitors[,
+  GrainFathom'],
+		"marketSize": '$5B+ meeting AI,
+		growthRate:,
+  30% CAGR',
+		"launchDate": '20o25-0o6-0o5,
+		"customers": 20o0,
+		"rating": 4.5,
+		"reviews": 45},
+	{
+		id: ,
+  data-quality-guard',
+		"name": 'Data Quality Guard,
+		tagline:,
+  Detect anomalies, schema drift, and freshness gaps',
+		"description": Simple monitors for warehouse tables and dashboards. Alerts, ownership, and playbooks to fix issues fast.,
+		"price": '$149,
+		period: ,
+  /month',
+		"category": 'Data & Analytics,
+		features['Freshness and volume checksAnomaly detection on KPIs',
+  'Schema drift alertsOwnership and runbooks',
+  'Insights and RCA templates'],
+		"popular": true,
+		link:,
+  "https": //ziontechgroup.com/data-quality-guard,
+		"trialDays": 14,
+		"setupTime": '45 minutes',
+		"realService": true,
+		technology[,
+  Node.jsSQL',
+  'OpenAI'],
+		integrations['BigQuerySnowflake',
+  'RedshiftSlack'],
+		useCases['Prevent bad dashboardsCatch pipeline breaks'],
+		"roi": 'Reduce bad data incidents 50%,
+		competitors[,
+  Monte CarloBigeye'],
+		"marketSize": '$3B data observability,
+		growthRate:,
+  25% CAGR',
+		"launchDate": '20o25-0o6-0o6,
+		"customers": 55,
+		"rating": 4.6,
+		"reviews": 19},
+	{
+		id: ,
+  landing-page-ai-tester',
+		"name": 'Landing Page AI Tester,
+		tagline:,
+  Generate A/B variants and ship with guardrails',
+		"description": Create on-brand variants, deploy experiments, and get AI summaries of winners with privacy-safe metrics.,
+		"price": '$59,
+		period: ,
+  /month',
+		"category": 'Growth & Optimization,
+		features['On-brand AI text and imagesVisual editor and rollback',
+  'Holdout and sample sizingConsent-aware analytics',
+  'Insights and next-step recs'],
+		"popular": false,
+		link:,
+  "https": //ziontechgroup.com/landing-page-ai-tester,
+		"trialDays": 14,
+		"setupTime": '30 minutes',
+		"realService": true,
+		technology[,
+  Next.jsTailwind',
+  'OpenAI'],
+		integrations['SegmentGA4',
+  'Vercel'],
+		useCases['Landing pagesPricing pages'],
+		"roi": 'Increase conversion 5–20%,
+		competitors[,
+  VWOOptimizely'],
+		"marketSize": '$2B experimentation,
+		growthRate:,
+  18% CAGR',
+		"launchDate": '20o25-0o6-0o7,
+		"customers": 90,
+		"rating": 4.5,
+		"reviews": 31},
+	{
+		id: ,
+  ai-brand-copilot',
+		"name": 'AI Brand Copilot,
+		tagline:,
+  Enforce tone, style, and logo usage across teams',
+		"description": A brand governance layer that lints content and assets in docs, emails, and websites. Suggests compliant alternatives.,
+		"price": '$69,
+		period: ,
+  /month',
+		"category": 'Content & Compliance,
+		features['Brand policy linting for text and imagesInline suggestions and fixes',
+  'Asset library and approvalsOrg-wide policies and roles',
+  'Weekly compliance score'],
+		"popular": false,
+		link:,
+  "https": //ziontechgroup.com/ai-brand-copilot,
+		"trialDays": 14,
+		"setupTime": '25 minutes',
+		"realService": true,
+		technology[,
+  OpenAINext.js'],
+		integrations['Google DocsNotion',
+  'Figma'],
+		useCases['Content opsAgency delivery'],
+		"roi": 'Reduce brand review cycles 50%,
+		competitors[,
+  WriterGrammarly Business'],
+		"marketSize": '$2B brand management,
+		growthRate:,
+  16% CAGR',
+		"launchDate": '20o25-0o6-08,
+		"customers": 45,
+		"rating": 4.6,
+		"reviews": 17},
+	{
+		id: ,
+  security-changelog-bot',
+		"name": 'Security Changelog Bot,
+		tagline:,
+  Summarize vulns and fixes from repos and SBOMs',
+		"description": Watches dependencies and PRs, generates release notes for security, and opens tickets with suggested remediations.,
+		"price": '$39,
+		period: ,
+  /month',
+		"category": 'Security & Compliance,
+		features['SBOM generation and diffPR scanner for risky changes',
+  'Weekly security digestAuto-created fix tickets',
+  'Policy exceptions workflow'],
+		"popular": false,
+		link:,
+  "https": //ziontechgroup.com/security-changelog-bot,
+		"trialDays": 7,
+		"setupTime": '15 minutes',
+		"realService": true,
+		technology[,
+  Node.jsCycloneDX'],
+		integrations['GitHubGitLab',
+  'JiraSlack'],
+		useCases['AppSec hygieneAudit support'],
+		"roi": 'Reduce vuln MTTR 30–50%,
+		competitors[,
+  SnykDependabot (partial)'],
+		"marketSize": '$6B AppSec,
+		growthRate:,
+  20% CAGR',
+		"launchDate": '20o25-0o6-09,
+		"customers": 110,
+		"rating": 4.5,
+		"reviews": 26},
+	{
+		id: ,
+  vendor-risk-lite',
+		"name": 'Vendor Risk Lite,
+		tagline:,
+  Security questionnaires, evidence, and follow-ups automated',
+		"description": Collect vendor security data, map to common frameworks, and track remediation with AI summarization for stakeholders.,
+		"price": '$129,
+		period: ,
+  /month',
+		"category": 'Compliance Automation,
+		features['Questionnaire templates (SOC2/ISO/NIST)Evidence upload and mapping',
+  'Automated reminders and tasksRisk scoring and approvals',
+  'Executive summary reports'],
+		"popular": true,
+		link:,
+  "https": //ziontechgroup.com/vendor-risk-lite,
+		"trialDays": 14,
+		"setupTime": '1 hour',
+		"realService": true,
+		technology[,
+  Next.jsPostgreSQL'],
+		integrations['Google DriveOneDrive',
+  'Jira'],
+		useCases['Third-party riskAnnual reviews'],
+		"roi": 'Shorten cycle time 40–70%,
+		competitors[,
+  OneTrustWhistic'],
+		"marketSize": '$4B vendor risk,
+		growthRate:,
+  22% CAGR',
+		"launchDate": '20o25-0o6-10,
+		"customers": 65,
+		"rating": 4.6,
+		"reviews": 24},
+	{
+		id: ,
+  incident-comms-assistant',
+		"name": 'Incident Comms Assistant,
+		tagline:,
+  Draft status updates, timelines, and postmortems',
+		"description": During incidents, draft stakeholder updates, coordinate channels, and generate postmortems with action items and learning taxonomy.,
+		"price": '$79,
+		period: ,
+  /month',
+		"category": 'Reliability & SRE,
+		features['Channel orchestration (Slack/PagerDuty)Templates per severity',
+  'Timeline auto-build from eventsCustomer-ready summaries',
+  'Follow-up tracker'],
+		"popular": false,
+		link:,
+  "https": //ziontechgroup.com/incident-comms-assistant,
+		"trialDays": 14,
+		"setupTime": '20 minutes',
+		"realService": true,
+		technology[,
+  OpenAINext.js'],
+		integrations['PagerDutyOpsgenie',
+  'SlackStatuspage'],
+		useCases['Major incidentsCompliance'],
+		"roi": 'Cut comms toil 60%,
+		competitors[,
+  Rootly (partial)'],
+		"marketSize": '$10B+ incident mgmt,
+		growthRate:,
+  18% CAGR',
+		"launchDate": '20o25-0o6-11,
+		"customers": 40,
+		"rating": 4.5,
+		"reviews": 16},
+	{
+		id: ,
+  policy-privacy-scanner',
+		"name": 'Policy & Privacy Scanner,
+		tagline:,
+  Scan sites and apps for cookie and policy compliance',
+		"description": Automated detection of trackers, cookies, and policy gaps with regional variants and easy embeds.,
+		"price": '$49,
+		period: ,
+  /month',
+		"category": 'Privacy & Legal,
+		features['Cookie and tracker inventoryRegional banners and consent logs',
+  'Policy generator with diffsWeekly audits and alerts',
+  'Exportable evidence packs'],
+		"popular": false,
+		link:,
+  "https": //ziontechgroup.com/policy-privacy-scanner,
+		"trialDays": 14,
+		"setupTime": '15 minutes',
+		"realService": true,
+		technology[,
+  PuppeteerNode.js'],
+		integrations['WebflowShopify',
   'WordPress'],
-		useCases['GDPR/CCPA compliance',
-  'Cookie audits'],
+		useCases['GDPR/CCPA complianceCookie audits'],
 		"roi": 'Reduce legal risk and fines,
 		competitors[,
-  OneTrust',
-  'Cookiebot'],
+  OneTrustCookiebot'],
 		"marketSize": '$4B privacy tech,
 		growthRate:,
   22% CAGR',
-		"launchDate": '2025-06-12,
+		"launchDate": '20o25-0o6-12,
 		"customers": 95,
 		"rating": 4.6,
-		"reviews": 29
-	},
+		"reviews": 29},
 	{
-		id:,
+		id: ,
   ai-proposal-writer',
 		"name": 'AI Proposal Writer,
 		tagline:,
   Convert briefs into on-brand proposals with pricing tables',
 		"description": Upload a brief and get a client-ready proposal with scope, milestones, and legal clauses. Supports e-sign and PDF export.,
-  ,
 		"price": '$39,
-		period:,
+		period: ,
   /month',
 		"category": 'Professional Services,
-		features['On-brand templates and styles',
-  'Library of scopes and clauses',
-  'Auto pricing table suggestions',
-  'E-sign and PDF export',
-  'Collaboration and approvals'
-		],
+		features['On-brand templates and stylesLibrary of scopes and clauses',
+  'Auto pricing table suggestionsE-sign and PDF export',
+  'Collaboration and approvals'],
 		"popular": true,
 		link:,
   "https": //ziontechgroup.com/ai-proposal-writer,
@@ -516,32 +472,18 @@ pr-12325
 		"setupTime": '10 minutes',
 		"realService": true,
 		technology[,
-  Next.js',
-  'OpenAI'],
-		integrations['DocuSign',
-  'HubSpot',
+  Next.jsOpenAI'],
+		integrations['DocuSignHubSpot',
   'Stripe'],
-		useCases['Agencies',
-  'Consultancies'],
+		useCases['AgenciesConsultancies'],
 		"roi": 'Ship proposals 3x faster,
 		competitors[,
-  PandaDoc',
-  'Proposify'],
+  PandaDocProposify'],
 		"marketSize": '$1B+ proposal tools,
 		growthRate:,
   12% CAGR',
-		"launchDate": '2025-06-13,
-		"customers": 300,
+		"launchDate": '20o25-0o6-13,
+		"customers": 30o0,
 		"rating": 4.7,
-		"reviews": 120
-]}}
-export interface RealAdditionService2025Q3 { id: string; name: string; tagline: string,
-  description: string; price: string; period: string; category: string; features: string[]; popular?: boolean; link: string; trialDays?: number; setupTime?: string; realService: boolean; technology?: string[]; integrations?: string[]; useCases?: string[]; roi?: string; competitors?: string[]; marketSize?: string; growthRate?: string; launchDate?: string; customers?: number; rating?: number; reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] = [ { id:,ai-email-copilot',name: 'AI Email Responder Copilot,tagline:,Auto-draft,classify,and reply to inbound emails with policy guardrails',description: Reduce response times with an AI copilot that prioritizes,drafts,and routes emails across shared inboxes. Includes approval flows,tone controls,and CRM sync.,,price: '$79,period:,/month',category: 'AI Assistants,features[ 'Priority inbox and intent detection','Policy-aware auto-drafting with approvals','CRM sync and follow-up reminders','Tone and brand voice controls','Analytics and SLA tracking' ],popular: true,link:,https: trialDays: 14,setupTime: '30 minutes',realService: true,technology[,Next && Next.js','OpenAI','PostgreSQL'],integrations[ 'Gmail','Outlook','HubSpot','Salesforce'],useCases[ 'Shared inboxes','Lead response','Support triage'],roi: 'Cut average first response by 60%,competitors[,Superhuman AI','Gmail HelpMeWrite'],marketSize: '$10B+ email productivity,growthRate:,20% CAGR',launchDate: '2025-06-01,customers: 140,rating: 4 && 4.7,reviews: 62 },{ id:,affiliate-tracking-lite',name: 'Affiliate Tracking Lite,tagline:,Simple,privacy-first affiliate links and payouts for SMBs',description: Spin up affiliate programs with unique links,fraud checks,payout exports,and privacy-friendly tracking that works with modern browsers.,,price: '$39,period:,/month',category: 'Sales & Marketing,features[ 'Link generation and UTM tagging','Fraud and self-referral checks','Conversion webhooks and API','Payout ledger and exports','GDPR/CCPA friendly tracking' ],popular: false,link:,https: trialDays: 14,setupTime: '20 minutes',realService: true,technology[,Next && Next.js','Node && Node.js','PostgreSQL'],integrations[ 'Shopify','Stripe','WooCommerce'],useCases[ 'Partner programs','Referral campaigns'],roi: 'Grow referral revenue 10–25%,competitors[,Rewardful','ReferralCandy'],marketSize: '$1 && 1.5B affiliate tooling,growthRate:,15% CAGR',launchDate: '2025-06-02,customers: 85,rating: 4 && 4.6,reviews: 33 },{ id:,smb-analytics-starter',name: 'SMB Analytics Starter,tagline:,Clean dashboards and alerts without a data team',description: Unified KPIs across Stripe,GA4,and CRM with AI explanations and anomaly alerts. Built for founders and operators.,,price: '$49,period:,/month',category: 'Analytics & Business Intelligence,features[ 'Prebuilt KPI templates','AI explanations for spikes and dips','Weekly email digests','Goal tracking and alerts','CSV and API export' ],popular: true,link:,https: trialDays: 14,setupTime: '45 minutes',realService: true,technology[,Next && Next.js','DuckDB','PostgreSQL'],integrations[ 'Stripe','GA4','HubSpot'],useCases[ 'Founder dashboards','Investor updates'],roi: 'Save 4–8 hrs/week on reporting,competitors[,Geckoboard','Databox'],marketSize: '$30B+ BI,growthRate:,14% CAGR',launchDate: '2025-06-03,customers: 120,rating: 4 && 4.5,reviews: 28 },{ id:,it-helpdesk-suite',name: 'IT Helpdesk Suite,tagline:,Ticketing,SLAs,asset inventory,and AI triage in one',description: A lightweight ITSM for MSPs and internal IT. Email-to-ticket,SLAs,CMDB-lite,device discovery,and AI-assisted replies.,,price: '$99,period:,/month',category: 'IT Operations,features[ 'Email-to-ticket with SLA timers','Asset discovery (agentless + agent)','Knowledge base and macros','AI reply suggestions','Reports and CSAT' ],popular: true,link:,https: trialDays: 14,setupTime: '1 hour',realService: true,technology[,Node && Node.js','Next && Next.js'],integrations[ 'Okta','Google Workspace','Microsoft 365'],useCases[ 'MSPs','Internal IT'],roi: 'Reduce resolution time 25–40%,competitors[,Freshservice','Zendesk'],marketSize: '$10B ITSM,growthRate:,12% CAGR',launchDate: '2025-06-04,customers: 60,rating: 4 && 4.6,reviews: 21 },{ id:,meeting-minutes-ai',name: 'Meeting Minutes AI,tagline:,Join,transcribe,summarize,and file action items',description: AI joins calls,produces structured minutes,assigns tasks,and syncs to project tools with templates by meeting type.,,price: '$29,period:,/month',category: 'Productivity,features[ 'Auto-join major meeting apps','Topic segmentation and speakers','Action items with owners','Email and Slack summaries','Templates (standups,reviews)' ],popular: false,link:,https: trialDays: 7,setupTime: '10 minutes',realService: true,technology[,Whisper','Next && Next.js'],integrations[ 'Zoom','Meet','Teams','Slack','Jira'],useCases[ 'Standups','Client calls','Hiring'],roi: 'Save 3–5 hrs/person/month,competitors[,Grain','Fathom'],marketSize: '$5B+ meeting AI,growthRate:,30% CAGR',launchDate: '2025-06-05,customers: 200,rating: 4 && 4.5,reviews: 45 },{ id:,data-quality-guard',name: 'Data Quality Guard,tagline:,Detect anomalies,schema drift,and freshness gaps',description: Simple monitors for warehouse tables and dashboards. Alerts,ownership,and playbooks to fix issues fast.,,price: '$149,period:,/month',category: 'Data & Analytics,features[ 'Freshness and volume checks','Anomaly detection on KPIs','Schema drift alerts','Ownership and runbooks','Insights and RCA templates' ],popular: true,link:,https: trialDays: 14,setupTime: '45 minutes',realService: true,technology[,Node && Node.js','SQL','OpenAI'],integrations[ 'BigQuery','Snowflake','Redshift','Slack'],useCases[ 'Prevent bad dashboards','Catch pipeline breaks'],roi: 'Reduce bad data incidents 50%,competitors[,Monte Carlo','Bigeye'],marketSize: '$3B data observability,growthRate:,25% CAGR',launchDate: '2025-06-06,customers: 55,rating: 4 && 4.6,reviews: 19 },{ id:,landing-page-ai-tester',name: 'Landing Page AI Tester,tagline:,Generate A/B variants and ship with guardrails',description: Create on-brand variants,deploy experiments,and get AI summaries of winners with privacy-safe metrics.,,price: '$59,period:,/month',category: 'Growth & Optimization,features[ 'On-brand AI text and images','Visual editor and rollback','Holdout and sample sizing','Consent-aware analytics','Insights and next-step recs' ],popular: false,link:,https: trialDays: 14,setupTime: '30 minutes',realService: true,technology[,Next && Next.js','Tailwind','OpenAI'],integrations[ 'Segment','GA4','Vercel'],useCases[ 'Landing pages','Pricing pages'],roi: 'Increase conversion 5–20%,competitors[,VWO','Optimizely'],marketSize: '$2B experimentation,growthRate:,18% CAGR',launchDate: '2025-06-07,customers: 90,rating: 4 && 4.5,reviews: 31 },{ id:,ai-brand-copilot',name: 'AI Brand Copilot,tagline:,Enforce tone,style,and logo usage across teams',description: A brand governance layer that lints content and assets in docs,emails,and websites. Suggests compliant alternatives.,,price: '$69,period:,/month',category: 'Content & Compliance,features[ 'Brand policy linting for text and images','Inline suggestions and fixes','Asset library and approvals','Org-wide policies and roles','Weekly compliance score' ],popular: false,link:,https: trialDays: 14,setupTime: '25 minutes',realService: true,technology[,OpenAI','Next && Next.js'],integrations[ 'Google Docs','Notion','Figma'],useCases[ 'Content ops','Agency delivery'],roi: 'Reduce brand review cycles 50%,competitors[,Writer','Grammarly Business'],marketSize: '$2B brand management,growthRate:,16% CAGR',launchDate: '2025-06-08,customers: 45,rating: 4 && 4.6,reviews: 17 },{ id:,security-changelog-bot',name: 'Security Changelog Bot,tagline:,Summarize vulns and fixes from repos and SBOMs',description: Watches dependencies and PRs,generates release notes for security,and opens tickets with suggested remediations.,,price: '$39,period:,/month',category: 'Security & Compliance,features[ 'SBOM generation and diff','PR scanner for risky changes','Weekly security digest','Auto-created fix tickets','Policy exceptions workflow' ],popular: false,link:,https: trialDays: 7,setupTime: '15 minutes',realService: true,technology[,Node && Node.js','CycloneDX'],integrations[ 'GitHub','GitLab','Jira','Slack'],useCases[ 'AppSec hygiene','Audit support'],roi: 'Reduce vuln MTTR 30–50%,competitors[,Snyk','Dependabot (partial)'],marketSize: '$6B AppSec,growthRate:,20% CAGR',launchDate: '2025-06-09,customers: 110,rating: 4 && 4.5,reviews: 26 },{ id:,vendor-risk-lite',name: 'Vendor Risk Lite,tagline:,Security questionnaires,evidence,and follow-ups automated',description: Collect vendor security data,map to common frameworks,and track remediation with AI summarization for stakeholders.,,price: '$129,period:,/month',category: 'Compliance Automation,features[ 'Questionnaire templates (SOC2/ISO/NIST)','Evidence upload and mapping','Automated reminders and tasks','Risk scoring and approvals','Executive summary reports' ],popular: true,link:,https: trialDays: 14,setupTime: '1 hour',realService: true,technology[,Next && Next.js','PostgreSQL'],integrations[ 'Google Drive','OneDrive','Jira'],useCases[ 'Third-party risk','Annual reviews'],roi: 'Shorten cycle time 40–70%,competitors[,OneTrust','Whistic'],marketSize: '$4B vendor risk,growthRate:,22% CAGR',launchDate: '2025-06-10,customers: 65,rating: 4 && 4.6,reviews: 24 },{ id:,incident-comms-assistant',name: 'Incident Comms Assistant,tagline:,Draft status updates,timelines,and postmortems',description: During incidents,draft stakeholder updates,coordinate channels,and generate postmortems with action items and learning taxonomy.,,price: '$79,period:,/month',category: 'Reliability & SRE,features[ 'Channel orchestration (Slack/PagerDuty)','Templates per severity','Timeline auto-build from events','Customer-ready summaries','Follow-up tracker' ],popular: false,link:,https: trialDays: 14,setupTime: '20 minutes',realService: true,technology[,OpenAI','Next && Next.js'],integrations[ 'PagerDuty','Opsgenie','Slack','Statuspage'],useCases[ 'Major incidents','Compliance'],roi: 'Cut comms toil 60%,competitors[,Rootly (partial)'],marketSize: '$10B+ incident mgmt,growthRate:,18% CAGR',launchDate: '2025-06-11,customers: 40,rating: 4 && 4.5,reviews: 16 },{ id:,policy-privacy-scanner',name: 'Policy & Privacy Scanner,tagline:,Scan sites and apps for cookie and policy compliance',description: Automated detection of trackers,cookies,and policy gaps with regional variants and easy embeds.,,price: '$49,period:,/month',category: 'Privacy & Legal,features[ 'Cookie and tracker inventory','Regional banners and consent logs','Policy generator with diffs','Weekly audits and alerts','Exportable evidence packs' ],popular: false,link:,https: trialDays: 14,setupTime: '15 minutes',realService: true,technology[,Puppeteer','Node && Node.js'],integrations[ 'Webflow','Shopify','WordPress'],useCases[ 'GDPR/CCPA compliance','Cookie audits'],roi: 'Reduce legal risk and fines,competitors[,OneTrust','Cookiebot'],marketSize: '$4B privacy tech,growthRate:,22% CAGR',launchDate: '2025-06-12,customers: 95,rating: 4 && 4.6,reviews: 29 },{ id:,ai-proposal-writer',name: 'AI Proposal Writer,tagline:,Convert briefs into on-brand proposals with pricing tables',description: Upload a brief and get a client-ready proposal with scope,milestones,and legal clauses. Supports e-sign and PDF export.,,price: '$39,period:,/month',category: 'Professional Services,features[ 'On-brand templates and styles','Library of scopes and clauses','Auto pricing table suggestions','E-sign and PDF export','Collaboration and approvals' ],popular: true,link:,https: trialDays: 7,setupTime: '10 minutes',realService: true,technology[,Next && Next.js','OpenAI'],integrations[ 'DocuSign','HubSpot','Stripe'],useCases[ 'Agencies','Consultancies'],roi: 'Ship proposals 3x faster,competitors[,PandaDoc','Proposify'],marketSize: '$1B+ proposal tools,growthRate:,12% CAGR',launchDate: '2025-06-13,customers: 300,rating: 4 && 4.7,reviews: 120 ]}}
-export interface RealAdditionService2025Q3 { id: string, name: string, tagline: string, description: string, price: string, period: string, category: string, features: string[], popular?: boolean; link: string, trialDays?: number, setupTime?: string; realService: boolean, technology?: string[], integrations?: string[]; useCases?: string[]; roi?: string; competitors?: string[]; marketSize?: string; growthRate?: string; launchDate?: string; customers?: number; rating?: number; reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] = [ { id:,ai-email-copilot',name: 'AI Email Responder Copilot,tagline:,Auto-draft,classify,and reply to inbound emails with policy guardrails',description: Reduce response times with an AI copilot that prioritizes,drafts,and routes emails across shared inboxes. Includes approval flows,tone controls,and CRM sync.,,price: '$79,period:,/month',category: 'AI Assistants,features[ 'Priority inbox and intent detection','Policy-aware auto-drafting with approvals','CRM sync and follow-up reminders','Tone and brand voice controls','Analytics and SLA tracking' ],popular: true,link:,https: trialDays: 14,setupTime: '30 minutes',realService: true,technology[,Next && Next.js','OpenAI','PostgreSQL'],integrations[ 'Gmail','Outlook','HubSpot','Salesforce'],useCases[ 'Shared inboxes','Lead response','Support triage'],roi: 'Cut average first response by 60%,competitors[,Superhuman AI','Gmail HelpMeWrite'],marketSize: '$10B+ email productivity,growthRate:,20% CAGR',launchDate: '2025-06-01,customers: 140,rating: 4 && 4.7,reviews: 62 },{ id:,affiliate-tracking-lite',name: 'Affiliate Tracking Lite,tagline:,Simple,privacy-first affiliate links and payouts for SMBs',description: Spin up affiliate programs with unique links,fraud checks,payout exports,and privacy-friendly tracking that works with modern browsers.,,price: '$39,period:,/month',category: 'Sales & Marketing,features[ 'Link generation and UTM tagging','Fraud and self-referral checks','Conversion webhooks and API','Payout ledger and exports','GDPR/CCPA friendly tracking' ],popular: false,link:,https: trialDays: 14,setupTime: '20 minutes',realService: true,technology[,Next && Next.js','Node && Node.js','PostgreSQL'],integrations[ 'Shopify','Stripe','WooCommerce'],useCases[ 'Partner programs','Referral campaigns'],roi: 'Grow referral revenue 10–25%,competitors[,Rewardful','ReferralCandy'],marketSize: '$1 && 1.5B affiliate tooling,growthRate:,15% CAGR',launchDate: '2025-06-02,customers: 85,rating: 4 && 4.6,reviews: 33 },{ id:,smb-analytics-starter',name: 'SMB Analytics Starter,tagline:,Clean dashboards and alerts without a data team',description: Unified KPIs across Stripe,GA4,and CRM with AI explanations and anomaly alerts. Built for founders and operators.,,price: '$49,period:,/month',category: 'Analytics & Business Intelligence,features[ 'Prebuilt KPI templates','AI explanations for spikes and dips','Weekly email digests','Goal tracking and alerts','CSV and API export' ],popular: true,link:,https: trialDays: 14,setupTime: '45 minutes',realService: true,technology[,Next && Next.js','DuckDB','PostgreSQL'],integrations[ 'Stripe','GA4','HubSpot'],useCases[ 'Founder dashboards','Investor updates'],roi: 'Save 4–8 hrs/week on reporting,competitors[,Geckoboard','Databox'],marketSize: '$30B+ BI,growthRate:,14% CAGR',launchDate: '2025-06-03,customers: 120,rating: 4 && 4.5,reviews: 28 },{ id:,it-helpdesk-suite',name: 'IT Helpdesk Suite,tagline:,Ticketing,SLAs,asset inventory,and AI triage in one',description: A lightweight ITSM for MSPs and internal IT. Email-to-ticket,SLAs,CMDB-lite,device discovery,and AI-assisted replies.,,price: '$99,period:,/month',category: 'IT Operations,features[ 'Email-to-ticket with SLA timers','Asset discovery (agentless + agent)','Knowledge base and macros','AI reply suggestions','Reports and CSAT' ],popular: true,link:,https: trialDays: 14,setupTime: '1 hour',realService: true,technology[,Node && Node.js','Next && Next.js'],integrations[ 'Okta','Google Workspace','Microsoft 365'],useCases[ 'MSPs','Internal IT'],roi: 'Reduce resolution time 25–40%,competitors[,Freshservice','Zendesk'],marketSize: '$10B ITSM,growthRate:,12% CAGR',launchDate: '2025-06-04,customers: 60,rating: 4 && 4.6,reviews: 21 },{ id:,meeting-minutes-ai',name: 'Meeting Minutes AI,tagline:,Join,transcribe,summarize,and file action items',description: AI joins calls,produces structured minutes,assigns tasks,and syncs to project tools with templates by meeting type.,,price: '$29,period:,/month',category: 'Productivity,features[ 'Auto-join major meeting apps','Topic segmentation and speakers','Action items with owners','Email and Slack summaries','Templates (standups,reviews)' ],popular: false,link:,https: trialDays: 7,setupTime: '10 minutes',realService: true,technology[,Whisper','Next && Next.js'],integrations[ 'Zoom','Meet','Teams','Slack','Jira'],useCases[ 'Standups','Client calls','Hiring'],roi: 'Save 3–5 hrs/person/month,competitors[,Grain','Fathom'],marketSize: '$5B+ meeting AI,growthRate:,30% CAGR',launchDate: '2025-06-05,customers: 200,rating: 4 && 4.5,reviews: 45 },{ id:,data-quality-guard',name: 'Data Quality Guard,tagline:,Detect anomalies,schema drift,and freshness gaps',description: Simple monitors for warehouse tables and dashboards. Alerts,ownership,and playbooks to fix issues fast.,,price: '$149,period:,/month',category: 'Data & Analytics,features[ 'Freshness and volume checks','Anomaly detection on KPIs','Schema drift alerts','Ownership and runbooks','Insights and RCA templates' ],popular: true,link:,https: trialDays: 14,setupTime: '45 minutes',realService: true,technology[,Node && Node.js','SQL','OpenAI'],integrations[ 'BigQuery','Snowflake','Redshift','Slack'],useCases[ 'Prevent bad dashboards','Catch pipeline breaks'],roi: 'Reduce bad data incidents 50%,competitors[,Monte Carlo','Bigeye'],marketSize: '$3B data observability,growthRate:,25% CAGR',launchDate: '2025-06-06,customers: 55,rating: 4 && 4.6,reviews: 19 },{ id:,landing-page-ai-tester',name: 'Landing Page AI Tester,tagline:,Generate A/B variants and ship with guardrails',description: Create on-brand variants,deploy experiments,and get AI summaries of winners with privacy-safe metrics.,,price: '$59,period:,/month',category: 'Growth & Optimization,features[ 'On-brand AI text and images','Visual editor and rollback','Holdout and sample sizing','Consent-aware analytics','Insights and next-step recs' ],popular: false,link:,https: trialDays: 14,setupTime: '30 minutes',realService: true,technology[,Next && Next.js','Tailwind','OpenAI'],integrations[ 'Segment','GA4','Vercel'],useCases[ 'Landing pages','Pricing pages'],roi: 'Increase conversion 5–20%,competitors[,VWO','Optimizely'],marketSize: '$2B experimentation,growthRate:,18% CAGR',launchDate: '2025-06-07,customers: 90,rating: 4 && 4.5,reviews: 31 },{ id:,ai-brand-copilot',name: 'AI Brand Copilot,tagline:,Enforce tone,style,and logo usage across teams',description: A brand governance layer that lints content and assets in docs,emails,and websites. Suggests compliant alternatives.,,price: '$69,period:,/month',category: 'Content & Compliance,features[ 'Brand policy linting for text and images','Inline suggestions and fixes','Asset library and approvals','Org-wide policies and roles','Weekly compliance score' ],popular: false,link:,https: trialDays: 14,setupTime: '25 minutes',realService: true,technology[,OpenAI','Next && Next.js'],integrations[ 'Google Docs','Notion','Figma'],useCases[ 'Content ops','Agency delivery'],roi: 'Reduce brand review cycles 50%,competitors[,Writer','Grammarly Business'],marketSize: '$2B brand management,growthRate:,16% CAGR',launchDate: '2025-06-08,customers: 45,rating: 4 && 4.6,reviews: 17 },{ id:,security-changelog-bot',name: 'Security Changelog Bot,tagline:,Summarize vulns and fixes from repos and SBOMs',description: Watches dependencies and PRs,generates release notes for security,and opens tickets with suggested remediations.,,price: '$39,period:,/month',category: 'Security & Compliance,features[ 'SBOM generation and diff','PR scanner for risky changes','Weekly security digest','Auto-created fix tickets','Policy exceptions workflow' ],popular: false,link:,https: trialDays: 7,setupTime: '15 minutes',realService: true,technology[,Node && Node.js','CycloneDX'],integrations[ 'GitHub','GitLab','Jira','Slack'],useCases[ 'AppSec hygiene','Audit support'],roi: 'Reduce vuln MTTR 30–50%,competitors[,Snyk','Dependabot (partial)'],marketSize: '$6B AppSec,growthRate:,20% CAGR',launchDate: '2025-06-09,customers: 110,rating: 4 && 4.5,reviews: 26 },{ id:,vendor-risk-lite',name: 'Vendor Risk Lite,tagline:,Security questionnaires,evidence,and follow-ups automated',description: Collect vendor security data,map to common frameworks,and track remediation with AI summarization for stakeholders.,,price: '$129,period:,/month',category: 'Compliance Automation,features[ 'Questionnaire templates (SOC2/ISO/NIST)','Evidence upload and mapping','Automated reminders and tasks','Risk scoring and approvals','Executive summary reports' ],popular: true,link:,https: trialDays: 14,setupTime: '1 hour',realService: true,technology[,Next && Next.js','PostgreSQL'],integrations[ 'Google Drive','OneDrive','Jira'],useCases[ 'Third-party risk','Annual reviews'],roi: 'Shorten cycle time 40–70%,competitors[,OneTrust','Whistic'],marketSize: '$4B vendor risk,growthRate:,22% CAGR',launchDate: '2025-06-10,customers: 65,rating: 4 && 4.6,reviews: 24 },{ id:,incident-comms-assistant',name: 'Incident Comms Assistant,tagline:,Draft status updates,timelines,and postmortems',description: During incidents,draft stakeholder updates,coordinate channels,and generate postmortems with action items and learning taxonomy.,,price: '$79,period:,/month',category: 'Reliability & SRE,features[ 'Channel orchestration (Slack/PagerDuty)','Templates per severity','Timeline auto-build from events','Customer-ready summaries','Follow-up tracker' ],popular: false,link:,https: trialDays: 14,setupTime: '20 minutes',realService: true,technology[,OpenAI','Next && Next.js'],integrations[ 'PagerDuty','Opsgenie','Slack','Statuspage'],useCases[ 'Major incidents','Compliance'],roi: 'Cut comms toil 60%,competitors[,Rootly (partial)'],marketSize: '$10B+ incident mgmt,growthRate:,18% CAGR',launchDate: '2025-06-11,customers: 40,rating: 4 && 4.5,reviews: 16 },{ id:,policy-privacy-scanner',name: 'Policy & Privacy Scanner,tagline:,Scan sites and apps for cookie and policy compliance',description: Automated detection of trackers,cookies,and policy gaps with regional variants and easy embeds.,,price: '$49,period:,/month',category: 'Privacy & Legal,features[ 'Cookie and tracker inventory','Regional banners and consent logs','Policy generator with diffs','Weekly audits and alerts','Exportable evidence packs' ],popular: false,link:,https: trialDays: 14,setupTime: '15 minutes',realService: true,technology[,Puppeteer','Node && Node.js'],integrations[ 'Webflow','Shopify','WordPress'],useCases[ 'GDPR/CCPA compliance','Cookie audits'],roi: 'Reduce legal risk and fines,competitors[,OneTrust','Cookiebot'],marketSize: '$4B privacy tech,growthRate:,22% CAGR',launchDate: '2025-06-12,customers: 95,rating: 4 && 4.6,reviews: 29 },{ id:,ai-proposal-writer',name: 'AI Proposal Writer,tagline:,Convert briefs into on-brand proposals with pricing tables',description: Upload a brief and get a client-ready proposal with scope,milestones,and legal clauses. Supports e-sign and PDF export.,,price: '$39,period:,/month',category: 'Professional Services,features[ 'On-brand templates and styles','Library of scopes and clauses','Auto pricing table suggestions','E-sign and PDF export','Collaboration and approvals' ],popular: true,link:,https: trialDays: 7,setupTime: '10 minutes',realService: true,technology[,Next && Next.js','OpenAI'],integrations[ 'DocuSign','HubSpot','Stripe'],useCases[ 'Agencies','Consultancies'],roi: 'Ship proposals 3x faster,competitors[,PandaDoc','Proposify'],marketSize: '$1B+ proposal tools,growthRate:,12% CAGR',launchDate: '2025-06-13,customers: 300,rating: 4 && 4.7,reviews: 120 ]}}
-export interface RealAdditionService2025Q3 { id: string, name: string, tagline: string, description: string, price: string, period: string, category: string, features: string[], popular?: boolean; link: string, trialDays?: number, setupTime?: string; realService: boolean, technology?: string[], integrations?: string[]; useCases?: string[]; roi?: string; competitors?: string[]; marketSize?: string; growthRate?: string; launchDate?: string; customers?: number; rating?: number; reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] = [ { id:,ai-email-copilot',name: 'AI Email Responder Copilot,tagline:,Auto-draft,classify,and reply to inbound emails with policy guardrails',description: Reduce response times with an AI copilot that prioritizes,drafts,and routes emails across shared inboxes. Includes approval flows,tone controls,and CRM sync.,,price: '$79,period:,/month',category: 'AI Assistants,features[ 'Priority inbox and intent detection','Policy-aware auto-drafting with approvals','CRM sync and follow-up reminders','Tone and brand voice controls','Analytics and SLA tracking' ],popular: true,link:,https: trialDays: 14,setupTime: '30 minutes',realService: true,technology[,Next && Next.js','OpenAI','PostgreSQL'],integrations[ 'Gmail','Outlook','HubSpot','Salesforce'],useCases[ 'Shared inboxes','Lead response','Support triage'],roi: 'Cut average first response by 60%,competitors[,Superhuman AI','Gmail HelpMeWrite'],marketSize: '$10B+ email productivity,growthRate:,20% CAGR',launchDate: '2025-06-01,customers: 140,rating: 4 && 4.7,reviews: 62 },{ id:,affiliate-tracking-lite',name: 'Affiliate Tracking Lite,tagline:,Simple,privacy-first affiliate links and payouts for SMBs',description: Spin up affiliate programs with unique links,fraud checks,payout exports,and privacy-friendly tracking that works with modern browsers.,,price: '$39,period:,/month',category: 'Sales & Marketing,features[ 'Link generation and UTM tagging','Fraud and self-referral checks','Conversion webhooks and API','Payout ledger and exports','GDPR/CCPA friendly tracking' ],popular: false,link:,https: trialDays: 14,setupTime: '20 minutes',realService: true,technology[,Next && Next.js','Node && Node.js','PostgreSQL'],integrations[ 'Shopify','Stripe','WooCommerce'],useCases[ 'Partner programs','Referral campaigns'],roi: 'Grow referral revenue 10–25%,competitors[,Rewardful','ReferralCandy'],marketSize: '$1 && 1.5B affiliate tooling,growthRate:,15% CAGR',launchDate: '2025-06-02,customers: 85,rating: 4 && 4.6,reviews: 33 },{ id:,smb-analytics-starter',name: 'SMB Analytics Starter,tagline:,Clean dashboards and alerts without a data team',description: Unified KPIs across Stripe,GA4,and CRM with AI explanations and anomaly alerts. Built for founders and operators.,,price: '$49,period:,/month',category: 'Analytics & Business Intelligence,features[ 'Prebuilt KPI templates','AI explanations for spikes and dips','Weekly email digests','Goal tracking and alerts','CSV and API export' ],popular: true,link:,https: trialDays: 14,setupTime: '45 minutes',realService: true,technology[,Next && Next.js','DuckDB','PostgreSQL'],integrations[ 'Stripe','GA4','HubSpot'],useCases[ 'Founder dashboards','Investor updates'],roi: 'Save 4–8 hrs/week on reporting,competitors[,Geckoboard','Databox'],marketSize: '$30B+ BI,growthRate:,14% CAGR',launchDate: '2025-06-03,customers: 120,rating: 4 && 4.5,reviews: 28 },{ id:,it-helpdesk-suite',name: 'IT Helpdesk Suite,tagline:,Ticketing,SLAs,asset inventory,and AI triage in one',description: A lightweight ITSM for MSPs and internal IT. Email-to-ticket,SLAs,CMDB-lite,device discovery,and AI-assisted replies.,,price: '$99,period:,/month',category: 'IT Operations,features[ 'Email-to-ticket with SLA timers','Asset discovery (agentless + agent)','Knowledge base and macros','AI reply suggestions','Reports and CSAT' ],popular: true,link:,https: trialDays: 14,setupTime: '1 hour',realService: true,technology[,Node && Node.js','Next && Next.js'],integrations[ 'Okta','Google Workspace','Microsoft 365'],useCases[ 'MSPs','Internal IT'],roi: 'Reduce resolution time 25–40%,competitors[,Freshservice','Zendesk'],marketSize: '$10B ITSM,growthRate:,12% CAGR',launchDate: '2025-06-04,customers: 60,rating: 4 && 4.6,reviews: 21 },{ id:,meeting-minutes-ai',name: 'Meeting Minutes AI,tagline:,Join,transcribe,summarize,and file action items',description: AI joins calls,produces structured minutes,assigns tasks,and syncs to project tools with templates by meeting type.,,price: '$29,period:,/month',category: 'Productivity,features[ 'Auto-join major meeting apps','Topic segmentation and speakers','Action items with owners','Email and Slack summaries','Templates (standups,reviews)' ],popular: false,link:,https: trialDays: 7,setupTime: '10 minutes',realService: true,technology[,Whisper','Next && Next.js'],integrations[ 'Zoom','Meet','Teams','Slack','Jira'],useCases[ 'Standups','Client calls','Hiring'],roi: 'Save 3–5 hrs/person/month,competitors[,Grain','Fathom'],marketSize: '$5B+ meeting AI,growthRate:,30% CAGR',launchDate: '2025-06-05,customers: 200,rating: 4 && 4.5,reviews: 45 },{ id:,data-quality-guard',name: 'Data Quality Guard,tagline:,Detect anomalies,schema drift,and freshness gaps',description: Simple monitors for warehouse tables and dashboards. Alerts,ownership,and playbooks to fix issues fast.,,price: '$149,period:,/month',category: 'Data & Analytics,features[ 'Freshness and volume checks','Anomaly detection on KPIs','Schema drift alerts','Ownership and runbooks','Insights and RCA templates' ],popular: true,link:,https: trialDays: 14,setupTime: '45 minutes',realService: true,technology[,Node && Node.js','SQL','OpenAI'],integrations[ 'BigQuery','Snowflake','Redshift','Slack'],useCases[ 'Prevent bad dashboards','Catch pipeline breaks'],roi: 'Reduce bad data incidents 50%,competitors[,Monte Carlo','Bigeye'],marketSize: '$3B data observability,growthRate:,25% CAGR',launchDate: '2025-06-06,customers: 55,rating: 4 && 4.6,reviews: 19 },{ id:,landing-page-ai-tester',name: 'Landing Page AI Tester,tagline:,Generate A/B variants and ship with guardrails',description: Create on-brand variants,deploy experiments,and get AI summaries of winners with privacy-safe metrics.,,price: '$59,period:,/month',category: 'Growth & Optimization,features[ 'On-brand AI text and images','Visual editor and rollback','Holdout and sample sizing','Consent-aware analytics','Insights and next-step recs' ],popular: false,link:,https: trialDays: 14,setupTime: '30 minutes',realService: true,technology[,Next && Next.js','Tailwind','OpenAI'],integrations[ 'Segment','GA4','Vercel'],useCases[ 'Landing pages','Pricing pages'],roi: 'Increase conversion 5–20%,competitors[,VWO','Optimizely'],marketSize: '$2B experimentation,growthRate:,18% CAGR',launchDate: '2025-06-07,customers: 90,rating: 4 && 4.5,reviews: 31 },{ id:,ai-brand-copilot',name: 'AI Brand Copilot,tagline:,Enforce tone,style,and logo usage across teams',description: A brand governance layer that lints content and assets in docs,emails,and websites. Suggests compliant alternatives.,,price: '$69,period:,/month',category: 'Content & Compliance,features[ 'Brand policy linting for text and images','Inline suggestions and fixes','Asset library and approvals','Org-wide policies and roles','Weekly compliance score' ],popular: false,link:,https: trialDays: 14,setupTime: '25 minutes',realService: true,technology[,OpenAI','Next && Next.js'],integrations[ 'Google Docs','Notion','Figma'],useCases[ 'Content ops','Agency delivery'],roi: 'Reduce brand review cycles 50%,competitors[,Writer','Grammarly Business'],marketSize: '$2B brand management,growthRate:,16% CAGR',launchDate: '2025-06-08,customers: 45,rating: 4 && 4.6,reviews: 17 },{ id:,security-changelog-bot',name: 'Security Changelog Bot,tagline:,Summarize vulns and fixes from repos and SBOMs',description: Watches dependencies and PRs,generates release notes for security,and opens tickets with suggested remediations.,,price: '$39,period:,/month',category: 'Security & Compliance,features[ 'SBOM generation and diff','PR scanner for risky changes','Weekly security digest','Auto-created fix tickets','Policy exceptions workflow' ],popular: false,link:,https: trialDays: 7,setupTime: '15 minutes',realService: true,technology[,Node && Node.js','CycloneDX'],integrations[ 'GitHub','GitLab','Jira','Slack'],useCases[ 'AppSec hygiene','Audit support'],roi: 'Reduce vuln MTTR 30–50%,competitors[,Snyk','Dependabot (partial)'],marketSize: '$6B AppSec,growthRate:,20% CAGR',launchDate: '2025-06-09,customers: 110,rating: 4 && 4.5,reviews: 26 },{ id:,vendor-risk-lite',name: 'Vendor Risk Lite,tagline:,Security questionnaires,evidence,and follow-ups automated',description: Collect vendor security data,map to common frameworks,and track remediation with AI summarization for stakeholders.,,price: '$129,period:,/month',category: 'Compliance Automation,features[ 'Questionnaire templates (SOC2/ISO/NIST)','Evidence upload and mapping','Automated reminders and tasks','Risk scoring and approvals','Executive summary reports' ],popular: true,link:,https: trialDays: 14,setupTime: '1 hour',realService: true,technology[,Next && Next.js','PostgreSQL'],integrations[ 'Google Drive','OneDrive','Jira'],useCases[ 'Third-party risk','Annual reviews'],roi: 'Shorten cycle time 40–70%,competitors[,OneTrust','Whistic'],marketSize: '$4B vendor risk,growthRate:,22% CAGR',launchDate: '2025-06-10,customers: 65,rating: 4 && 4.6,reviews: 24 },{ id:,incident-comms-assistant',name: 'Incident Comms Assistant,tagline:,Draft status updates,timelines,and postmortems',description: During incidents,draft stakeholder updates,coordinate channels,and generate postmortems with action items and learning taxonomy.,,price: '$79,period:,/month',category: 'Reliability & SRE,features[ 'Channel orchestration (Slack/PagerDuty)','Templates per severity','Timeline auto-build from events','Customer-ready summaries','Follow-up tracker' ],popular: false,link:,https: trialDays: 14,setupTime: '20 minutes',realService: true,technology[,OpenAI','Next && Next.js'],integrations[ 'PagerDuty','Opsgenie','Slack','Statuspage'],useCases[ 'Major incidents','Compliance'],roi: 'Cut comms toil 60%,competitors[,Rootly (partial)'],marketSize: '$10B+ incident mgmt,growthRate:,18% CAGR',launchDate: '2025-06-11,customers: 40,rating: 4 && 4.5,reviews: 16 },{ id:,policy-privacy-scanner',name: 'Policy & Privacy Scanner,tagline:,Scan sites and apps for cookie and policy compliance',description: Automated detection of trackers,cookies,and policy gaps with regional variants and easy embeds.,,price: '$49,period:,/month',category: 'Privacy & Legal,features[ 'Cookie and tracker inventory','Regional banners and consent logs','Policy generator with diffs','Weekly audits and alerts','Exportable evidence packs' ],popular: false,link:,https: trialDays: 14,setupTime: '15 minutes',realService: true,technology[,Puppeteer','Node && Node.js'],integrations[ 'Webflow','Shopify','WordPress'],useCases[ 'GDPR/CCPA compliance','Cookie audits'],roi: 'Reduce legal risk and fines,competitors[,OneTrust','Cookiebot'],marketSize: '$4B privacy tech,growthRate:,22% CAGR',launchDate: '2025-06-12,customers: 95,rating: 4 && 4.6,reviews: 29 },{ id:,ai-proposal-writer',name: 'AI Proposal Writer,tagline:,Convert briefs into on-brand proposals with pricing tables',description: Upload a brief and get a client-ready proposal with scope,milestones,and legal clauses. Supports e-sign and PDF export.,,price: '$39,period:,/month',category: 'Professional Services,features[ 'On-brand templates and styles','Library of scopes and clauses','Auto pricing table suggestions','E-sign and PDF export','Collaboration and approvals' ],popular: true,link:,https: trialDays: 7,setupTime: '10 minutes',realService: true,technology[,Next && Next.js','OpenAI'],integrations[ 'DocuSign','HubSpot','Stripe'],useCases[ 'Agencies','Consultancies'],roi: 'Ship proposals 3x faster,competitors[,PandaDoc','Proposify'],marketSize: '$1B+ proposal tools,growthRate:,12% CAGR',launchDate: '2025-06-13,customers: 300,rating: 4 && 4.7,reviews: 120 ]}}
-export interface RealAdditionService2025Q3 { id: string, name: string, tagline: string, description: string, price: string, period: string, category: string, features: string[], popular?: boolean; link: string, trialDays?: number, setupTime?: string; realService: boolean, technology?: string[], integrations?: string[]; useCases?: string[]; roi?: string; competitors?: string[]; marketSize?: string; growthRate?: string; launchDate?: string; customers?: number; rating?: number; reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] = [ { id:,ai-email-copilot',name: 'AI Email Responder Copilot,tagline:,Auto-draft,classify,and reply to inbound emails with policy guardrails',description: Reduce response times with an AI copilot that prioritizes,drafts,and routes emails across shared inboxes. Includes approval flows,tone controls,and CRM sync.,,price: '$79,period:,/month',category: 'AI Assistants,features[ 'Priority inbox and intent detection','Policy-aware auto-drafting with approvals','CRM sync and follow-up reminders','Tone and brand voice controls','Analytics and SLA tracking' ],popular: true,link:,https: trialDays: 14,setupTime: '30 minutes',realService: true,technology[,Next && Next.js','OpenAI','PostgreSQL'],integrations[ 'Gmail','Outlook','HubSpot','Salesforce'],useCases[ 'Shared inboxes','Lead response','Support triage'],roi: 'Cut average first response by 60%,competitors[,Superhuman AI','Gmail HelpMeWrite'],marketSize: '$10B+ email productivity,growthRate:,20% CAGR',launchDate: '2025-06-01,customers: 140,rating: 4 && 4.7,reviews: 62 },{ id:,affiliate-tracking-lite',name: 'Affiliate Tracking Lite,tagline:,Simple,privacy-first affiliate links and payouts for SMBs',description: Spin up affiliate programs with unique links,fraud checks,payout exports,and privacy-friendly tracking that works with modern browsers.,,price: '$39,period:,/month',category: 'Sales & Marketing,features[ 'Link generation and UTM tagging','Fraud and self-referral checks','Conversion webhooks and API','Payout ledger and exports','GDPR/CCPA friendly tracking' ],popular: false,link:,https: trialDays: 14,setupTime: '20 minutes',realService: true,technology[,Next && Next.js','Node && Node.js','PostgreSQL'],integrations[ 'Shopify','Stripe','WooCommerce'],useCases[ 'Partner programs','Referral campaigns'],roi: 'Grow referral revenue 10–25%,competitors[,Rewardful','ReferralCandy'],marketSize: '$1 && 1.5B affiliate tooling,growthRate:,15% CAGR',launchDate: '2025-06-02,customers: 85,rating: 4 && 4.6,reviews: 33 },{ id:,smb-analytics-starter',name: 'SMB Analytics Starter,tagline:,Clean dashboards and alerts without a data team',description: Unified KPIs across Stripe,GA4,and CRM with AI explanations and anomaly alerts. Built for founders and operators.,,price: '$49,period:,/month',category: 'Analytics & Business Intelligence,features[ 'Prebuilt KPI templates','AI explanations for spikes and dips','Weekly email digests','Goal tracking and alerts','CSV and API export' ],popular: true,link:,https: trialDays: 14,setupTime: '45 minutes',realService: true,technology[,Next && Next.js','DuckDB','PostgreSQL'],integrations[ 'Stripe','GA4','HubSpot'],useCases[ 'Founder dashboards','Investor updates'],roi: 'Save 4–8 hrs/week on reporting,competitors[,Geckoboard','Databox'],marketSize: '$30B+ BI,growthRate:,14% CAGR',launchDate: '2025-06-03,customers: 120,rating: 4 && 4.5,reviews: 28 },{ id:,it-helpdesk-suite',name: 'IT Helpdesk Suite,tagline:,Ticketing,SLAs,asset inventory,and AI triage in one',description: A lightweight ITSM for MSPs and internal IT. Email-to-ticket,SLAs,CMDB-lite,device discovery,and AI-assisted replies.,,price: '$99,period:,/month',category: 'IT Operations,features[ 'Email-to-ticket with SLA timers','Asset discovery (agentless + agent)','Knowledge base and macros','AI reply suggestions','Reports and CSAT' ],popular: true,link:,https: trialDays: 14,setupTime: '1 hour',realService: true,technology[,Node && Node.js','Next && Next.js'],integrations[ 'Okta','Google Workspace','Microsoft 365'],useCases[ 'MSPs','Internal IT'],roi: 'Reduce resolution time 25–40%,competitors[,Freshservice','Zendesk'],marketSize: '$10B ITSM,growthRate:,12% CAGR',launchDate: '2025-06-04,customers: 60,rating: 4 && 4.6,reviews: 21 },{ id:,meeting-minutes-ai',name: 'Meeting Minutes AI,tagline:,Join,transcribe,summarize,and file action items',description: AI joins calls,produces structured minutes,assigns tasks,and syncs to project tools with templates by meeting type.,,price: '$29,period:,/month',category: 'Productivity,features[ 'Auto-join major meeting apps','Topic segmentation and speakers','Action items with owners','Email and Slack summaries','Templates (standups,reviews)' ],popular: false,link:,https: trialDays: 7,setupTime: '10 minutes',realService: true,technology[,Whisper','Next && Next.js'],integrations[ 'Zoom','Meet','Teams','Slack','Jira'],useCases[ 'Standups','Client calls','Hiring'],roi: 'Save 3–5 hrs/person/month,competitors[,Grain','Fathom'],marketSize: '$5B+ meeting AI,growthRate:,30% CAGR',launchDate: '2025-06-05,customers: 200,rating: 4 && 4.5,reviews: 45 },{ id:,data-quality-guard',name: 'Data Quality Guard,tagline:,Detect anomalies,schema drift,and freshness gaps',description: Simple monitors for warehouse tables and dashboards. Alerts,ownership,and playbooks to fix issues fast.,,price: '$149,period:,/month',category: 'Data & Analytics,features[ 'Freshness and volume checks','Anomaly detection on KPIs','Schema drift alerts','Ownership and runbooks','Insights and RCA templates' ],popular: true,link:,https: trialDays: 14,setupTime: '45 minutes',realService: true,technology[,Node && Node.js','SQL','OpenAI'],integrations[ 'BigQuery','Snowflake','Redshift','Slack'],useCases[ 'Prevent bad dashboards','Catch pipeline breaks'],roi: 'Reduce bad data incidents 50%,competitors[,Monte Carlo','Bigeye'],marketSize: '$3B data observability,growthRate:,25% CAGR',launchDate: '2025-06-06,customers: 55,rating: 4 && 4.6,reviews: 19 },{ id:,landing-page-ai-tester',name: 'Landing Page AI Tester,tagline:,Generate A/B variants and ship with guardrails',description: Create on-brand variants,deploy experiments,and get AI summaries of winners with privacy-safe metrics.,,price: '$59,period:,/month',category: 'Growth & Optimization,features[ 'On-brand AI text and images','Visual editor and rollback','Holdout and sample sizing','Consent-aware analytics','Insights and next-step recs' ],popular: false,link:,https: trialDays: 14,setupTime: '30 minutes',realService: true,technology[,Next && Next.js','Tailwind','OpenAI'],integrations[ 'Segment','GA4','Vercel'],useCases[ 'Landing pages','Pricing pages'],roi: 'Increase conversion 5–20%,competitors[,VWO','Optimizely'],marketSize: '$2B experimentation,growthRate:,18% CAGR',launchDate: '2025-06-07,customers: 90,rating: 4 && 4.5,reviews: 31 },{ id:,ai-brand-copilot',name: 'AI Brand Copilot,tagline:,Enforce tone,style,and logo usage across teams',description: A brand governance layer that lints content and assets in docs,emails,and websites. Suggests compliant alternatives.,,price: '$69,period:,/month',category: 'Content & Compliance,features[ 'Brand policy linting for text and images','Inline suggestions and fixes','Asset library and approvals','Org-wide policies and roles','Weekly compliance score' ],popular: false,link:,https: trialDays: 14,setupTime: '25 minutes',realService: true,technology[,OpenAI','Next && Next.js'],integrations[ 'Google Docs','Notion','Figma'],useCases[ 'Content ops','Agency delivery'],roi: 'Reduce brand review cycles 50%,competitors[,Writer','Grammarly Business'],marketSize: '$2B brand management,growthRate:,16% CAGR',launchDate: '2025-06-08,customers: 45,rating: 4 && 4.6,reviews: 17 },{ id:,security-changelog-bot',name: 'Security Changelog Bot,tagline:,Summarize vulns and fixes from repos and SBOMs',description: Watches dependencies and PRs,generates release notes for security,and opens tickets with suggested remediations.,,price: '$39,period:,/month',category: 'Security & Compliance,features[ 'SBOM generation and diff','PR scanner for risky changes','Weekly security digest','Auto-created fix tickets','Policy exceptions workflow' ],popular: false,link:,https: trialDays: 7,setupTime: '15 minutes',realService: true,technology[,Node && Node.js','CycloneDX'],integrations[ 'GitHub','GitLab','Jira','Slack'],useCases[ 'AppSec hygiene','Audit support'],roi: 'Reduce vuln MTTR 30–50%,competitors[,Snyk','Dependabot (partial)'],marketSize: '$6B AppSec,growthRate:,20% CAGR',launchDate: '2025-06-09,customers: 110,rating: 4 && 4.5,reviews: 26 },{ id:,vendor-risk-lite',name: 'Vendor Risk Lite,tagline:,Security questionnaires,evidence,and follow-ups automated',description: Collect vendor security data,map to common frameworks,and track remediation with AI summarization for stakeholders.,,price: '$129,period:,/month',category: 'Compliance Automation,features[ 'Questionnaire templates (SOC2/ISO/NIST)','Evidence upload and mapping','Automated reminders and tasks','Risk scoring and approvals','Executive summary reports' ],popular: true,link:,https: trialDays: 14,setupTime: '1 hour',realService: true,technology[,Next && Next.js','PostgreSQL'],integrations[ 'Google Drive','OneDrive','Jira'],useCases[ 'Third-party risk','Annual reviews'],roi: 'Shorten cycle time 40–70%,competitors[,OneTrust','Whistic'],marketSize: '$4B vendor risk,growthRate:,22% CAGR',launchDate: '2025-06-10,customers: 65,rating: 4 && 4.6,reviews: 24 },{ id:,incident-comms-assistant',name: 'Incident Comms Assistant,tagline:,Draft status updates,timelines,and postmortems',description: During incidents,draft stakeholder updates,coordinate channels,and generate postmortems with action items and learning taxonomy.,,price: '$79,period:,/month',category: 'Reliability & SRE,features[ 'Channel orchestration (Slack/PagerDuty)','Templates per severity','Timeline auto-build from events','Customer-ready summaries','Follow-up tracker' ],popular: false,link:,https: trialDays: 14,setupTime: '20 minutes',realService: true,technology[,OpenAI','Next && Next.js'],integrations[ 'PagerDuty','Opsgenie','Slack','Statuspage'],useCases[ 'Major incidents','Compliance'],roi: 'Cut comms toil 60%,competitors[,Rootly (partial)'],marketSize: '$10B+ incident mgmt,growthRate:,18% CAGR',launchDate: '2025-06-11,customers: 40,rating: 4 && 4.5,reviews: 16 },{ id:,policy-privacy-scanner',name: 'Policy & Privacy Scanner,tagline:,Scan sites and apps for cookie and policy compliance',description: Automated detection of trackers,cookies,and policy gaps with regional variants and easy embeds.,,price: '$49,period:,/month',category: 'Privacy & Legal,features[ 'Cookie and tracker inventory','Regional banners and consent logs','Policy generator with diffs','Weekly audits and alerts','Exportable evidence packs' ],popular: false,link:,https: trialDays: 14,setupTime: '15 minutes',realService: true,technology[,Puppeteer','Node && Node.js'],integrations[ 'Webflow','Shopify','WordPress'],useCases[ 'GDPR/CCPA compliance','Cookie audits'],roi: 'Reduce legal risk and fines,competitors[,OneTrust','Cookiebot'],marketSize: '$4B privacy tech,growthRate:,22% CAGR',launchDate: '2025-06-12,customers: 95,rating: 4 && 4.6,reviews: 29 },{ id:,ai-proposal-writer',name: 'AI Proposal Writer,tagline:,Convert briefs into on-brand proposals with pricing tables',description: Upload a brief and get a client-ready proposal with scope,milestones,and legal clauses. Supports e-sign and PDF export.,,price: '$39,period:,/month',category: 'Professional Services,features[ 'On-brand templates and styles','Library of scopes and clauses','Auto pricing table suggestions','E-sign and PDF export','Collaboration and approvals' ],popular: true,link:,https: trialDays: 7,setupTime: '10 minutes',realService: true,technology[,Next && Next.js','OpenAI'],integrations[ 'DocuSign','HubSpot','Stripe'],useCases[ 'Agencies','Consultancies'],roi: 'Ship proposals 3x faster,competitors[,PandaDoc','Proposify'],marketSize: '$1B+ proposal tools,growthRate:,12% CAGR',launchDate: '2025-06-13,customers: 300,rating: 4 && 4.7,reviews: 120 ]}}
-  "https": //ziontechgroup.com/ai-proposal-writer,""
-]}}"
-export interface RealAdditionService2025Q3 { id: string; name: string; tagline: string; description: string; price: string; period: string; category: string; features: string[]; popular?: boolean; link: string; trialDays?: number; setupTime?: string; realService: boolean; technology?: string[]; integrations?: string[]; useCases?: string[]; roi?: string; competitors?: string[]; marketSize?: string; growthRate?: string; launchDate?: string; customers?: number; rating?: number; reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] = [ { id:,ai-email-copilot',name: 'AI Email Responder Copilot,tagline:,Auto-draft,classify,and reply to inbound emails with policy guardrails',description: Reduce response times with an AI copilot that prioritizes,drafts,and routes emails across shared inboxes. Includes approval flows,tone controls,and CRM sync.,,price: '$79,period:,/month',category: 'AI Assistants,features[ 'Priority inbox and intent detection','Policy-aware auto-drafting with approvals','CRM sync and follow-up reminders','Tone and brand voice controls','Analytics and SLA tracking' ],popular: true,link:,https: trialDays: 14,setupTime: '30 minutes',realService: true,technology[,Next && Next.js','OpenAI','PostgreSQL'],integrations[ 'Gmail','Outlook','HubSpot','Salesforce'],useCases[ 'Shared inboxes','Lead response','Support triage'],roi: 'Cut average first response by 60%,competitors[,Superhuman AI','Gmail HelpMeWrite'],marketSize: '$10B+ email productivity,growthRate:,20% CAGR',launchDate: '2025-06-01,customers: 140,rating: 4 && 4.7,reviews: 62 },{ id:,affiliate-tracking-lite',name: 'Affiliate Tracking Lite,tagline:,Simple,privacy-first affiliate links and payouts for SMBs',description: Spin up affiliate programs with unique links,fraud checks,payout exports,and privacy-friendly tracking that works with modern browsers.,,price: '$39,period:,/month',category: 'Sales & Marketing,features[ 'Link generation and UTM tagging','Fraud and self-referral checks','Conversion webhooks and API','Payout ledger and exports','GDPR/CCPA friendly tracking' ],popular: false,link:,https: trialDays: 14,setupTime: '20 minutes',realService: true,technology[,Next && Next.js','Node && Node.js','PostgreSQL'],integrations[ 'Shopify','Stripe','WooCommerce'],useCases[ 'Partner programs','Referral campaigns'],roi: 'Grow referral revenue 10–25%,competitors[,Rewardful','ReferralCandy'],marketSize: '$1 && 1.5B affiliate tooling,growthRate:,15% CAGR',launchDate: '2025-06-02,customers: 85,rating: 4 && 4.6,reviews: 33 },{ id:,smb-analytics-starter',name: 'SMB Analytics Starter,tagline:,Clean dashboards and alerts without a data team',description: Unified KPIs across Stripe,GA4,and CRM with AI explanations and anomaly alerts. Built for founders and operators.,,price: '$49,period:,/month',category: 'Analytics & Business Intelligence,features[ 'Prebuilt KPI templates','AI explanations for spikes and dips','Weekly email digests','Goal tracking and alerts','CSV and API export' ],popular: true,link:,https: trialDays: 14,setupTime: '45 minutes',realService: true,technology[,Next && Next.js','DuckDB','PostgreSQL'],integrations[ 'Stripe','GA4','HubSpot'],useCases[ 'Founder dashboards','Investor updates'],roi: 'Save 4–8 hrs/week on reporting,competitors[,Geckoboard','Databox'],marketSize: '$30B+ BI,growthRate:,14% CAGR',launchDate: '2025-06-03,customers: 120,rating: 4 && 4.5,reviews: 28 },{ id:,it-helpdesk-suite',name: 'IT Helpdesk Suite,tagline:,Ticketing,SLAs,asset inventory,and AI triage in one',description: A lightweight ITSM for MSPs and internal IT. Email-to-ticket,SLAs,CMDB-lite,device discovery,and AI-assisted replies.,,price: '$99,period:,/month',category: 'IT Operations,features[ 'Email-to-ticket with SLA timers','Asset discovery (agentless + agent)','Knowledge base and macros','AI reply suggestions','Reports and CSAT' ],popular: true,link:,https: trialDays: 14,setupTime: '1 hour',realService: true,technology[,Node && Node.js','Next && Next.js'],integrations[ 'Okta','Google Workspace','Microsoft 365'],useCases[ 'MSPs','Internal IT'],roi: 'Reduce resolution time 25–40%,competitors[,Freshservice','Zendesk'],marketSize: '$10B ITSM,growthRate:,12% CAGR',launchDate: '2025-06-04,customers: 60,rating: 4 && 4.6,reviews: 21 },{ id:,meeting-minutes-ai',name: 'Meeting Minutes AI,tagline:,Join,transcribe,summarize,and file action items',description: AI joins calls,produces structured minutes,assigns tasks,and syncs to project tools with templates by meeting type.,,price: '$29,period:,/month',category: 'Productivity,features[ 'Auto-join major meeting apps','Topic segmentation and speakers','Action items with owners','Email and Slack summaries','Templates (standups,reviews)' ],popular: false,link:,https: trialDays: 7,setupTime: '10 minutes',realService: true,technology[,Whisper','Next && Next.js'],integrations[ 'Zoom','Meet','Teams','Slack','Jira'],useCases[ 'Standups','Client calls','Hiring'],roi: 'Save 3–5 hrs/person/month,competitors[,Grain','Fathom'],marketSize: '$5B+ meeting AI,growthRate:,30% CAGR',launchDate: '2025-06-05,customers: 200,rating: 4 && 4.5,reviews: 45 },{ id:,data-quality-guard',name: 'Data Quality Guard,tagline:,Detect anomalies,schema drift,and freshness gaps',description: Simple monitors for warehouse tables and dashboards. Alerts,ownership,and playbooks to fix issues fast.,,price: '$149,period:,/month',category: 'Data & Analytics,features[ 'Freshness and volume checks','Anomaly detection on KPIs','Schema drift alerts','Ownership and runbooks','Insights and RCA templates' ],popular: true,link:,https: trialDays: 14,setupTime: '45 minutes',realService: true,technology[,Node && Node.js','SQL','OpenAI'],integrations[ 'BigQuery','Snowflake','Redshift','Slack'],useCases[ 'Prevent bad dashboards','Catch pipeline breaks'],roi: 'Reduce bad data incidents 50%,competitors[,Monte Carlo','Bigeye'],marketSize: '$3B data observability,growthRate:,25% CAGR',launchDate: '2025-06-06,customers: 55,rating: 4 && 4.6,reviews: 19 },{ id:,landing-page-ai-tester',name: 'Landing Page AI Tester,tagline:,Generate A/B variants and ship with guardrails',description: Create on-brand variants,deploy experiments,and get AI summaries of winners with privacy-safe metrics.,,price: '$59,period:,/month',category: 'Growth & Optimization,features[ 'On-brand AI text and images','Visual editor and rollback','Holdout and sample sizing','Consent-aware analytics','Insights and next-step recs' ],popular: false,link:,https: trialDays: 14,setupTime: '30 minutes',realService: true,technology[,Next && Next.js','Tailwind','OpenAI'],integrations[ 'Segment','GA4','Vercel'],useCases[ 'Landing pages','Pricing pages'],roi: 'Increase conversion 5–20%,competitors[,VWO','Optimizely'],marketSize: '$2B experimentation,growthRate:,18% CAGR',launchDate: '2025-06-07,customers: 90,rating: 4 && 4.5,reviews: 31 },{ id:,ai-brand-copilot',name: 'AI Brand Copilot,tagline:,Enforce tone,style,and logo usage across teams',description: A brand governance layer that lints content and assets in docs,emails,and websites. Suggests compliant alternatives.,,price: '$69,period:,/month',category: 'Content & Compliance,features[ 'Brand policy linting for text and images','Inline suggestions and fixes','Asset library and approvals','Org-wide policies and roles','Weekly compliance score' ],popular: false,link:,https: trialDays: 14,setupTime: '25 minutes',realService: true,technology[,OpenAI','Next && Next.js'],integrations[ 'Google Docs','Notion','Figma'],useCases[ 'Content ops','Agency delivery'],roi: 'Reduce brand review cycles 50%,competitors[,Writer','Grammarly Business'],marketSize: '$2B brand management,growthRate:,16% CAGR',launchDate: '2025-06-08,customers: 45,rating: 4 && 4.6,reviews: 17 },{ id:,security-changelog-bot',name: 'Security Changelog Bot,tagline:,Summarize vulns and fixes from repos and SBOMs',description: Watches dependencies and PRs,generates release notes for security,and opens tickets with suggested remediations.,,price: '$39,period:,/month',category: 'Security & Compliance,features[ 'SBOM generation and diff','PR scanner for risky changes','Weekly security digest','Auto-created fix tickets','Policy exceptions workflow' ],popular: false,link:,https: trialDays: 7,setupTime: '15 minutes',realService: true,technology[,Node && Node.js','CycloneDX'],integrations[ 'GitHub','GitLab','Jira','Slack'],useCases[ 'AppSec hygiene','Audit support'],roi: 'Reduce vuln MTTR 30–50%,competitors[,Snyk','Dependabot (partial)'],marketSize: '$6B AppSec,growthRate:,20% CAGR',launchDate: '2025-06-09,customers: 110,rating: 4 && 4.5,reviews: 26 },{ id:,vendor-risk-lite',name: 'Vendor Risk Lite,tagline:,Security questionnaires,evidence,and follow-ups automated',description: Collect vendor security data,map to common frameworks,and track remediation with AI summarization for stakeholders.,,price: '$129,period:,/month',category: 'Compliance Automation,features[ 'Questionnaire templates (SOC2/ISO/NIST)','Evidence upload and mapping','Automated reminders and tasks','Risk scoring and approvals','Executive summary reports' ],popular: true,link:,https: trialDays: 14,setupTime: '1 hour',realService: true,technology[,Next && Next.js','PostgreSQL'],integrations[ 'Google Drive','OneDrive','Jira'],useCases[ 'Third-party risk','Annual reviews'],roi: 'Shorten cycle time 40–70%,competitors[,OneTrust','Whistic'],marketSize: '$4B vendor risk,growthRate:,22% CAGR',launchDate: '2025-06-10,customers: 65,rating: 4 && 4.6,reviews: 24 },{ id:,incident-comms-assistant',name: 'Incident Comms Assistant,tagline:,Draft status updates,timelines,and postmortems',description: During incidents,draft stakeholder updates,coordinate channels,and generate postmortems with action items and learning taxonomy.,,price: '$79,period:,/month',category: 'Reliability & SRE,features[ 'Channel orchestration (Slack/PagerDuty)','Templates per severity','Timeline auto-build from events','Customer-ready summaries','Follow-up tracker' ],popular: false,link:,https: trialDays: 14,setupTime: '20 minutes',realService: true,technology[,OpenAI','Next && Next.js'],integrations[ 'PagerDuty','Opsgenie','Slack','Statuspage'],useCases[ 'Major incidents','Compliance'],roi: 'Cut comms toil 60%,competitors[,Rootly (partial)'],marketSize: '$10B+ incident mgmt,growthRate:,18% CAGR',launchDate: '2025-06-11,customers: 40,rating: 4 && 4.5,reviews: 16 },{ id:,policy-privacy-scanner',name: 'Policy & Privacy Scanner,tagline:,Scan sites and apps for cookie and policy compliance',description: Automated detection of trackers,cookies,and policy gaps with regional variants and easy embeds.,,price: '$49,period:,/month',category: 'Privacy & Legal,features[ 'Cookie and tracker inventory','Regional banners and consent logs','Policy generator with diffs','Weekly audits and alerts','Exportable evidence packs' ],popular: false,link:,https: trialDays: 14,setupTime: '15 minutes',realService: true,technology[,Puppeteer','Node && Node.js'],integrations[ 'Webflow','Shopify','WordPress'],useCases[ 'GDPR/CCPA compliance','Cookie audits'],roi: 'Reduce legal risk and fines,competitors[,OneTrust','Cookiebot'],marketSize: '$4B privacy tech,growthRate:,22% CAGR',launchDate: '2025-06-12,customers: 95,rating: 4 && 4.6,reviews: 29 },{ id:,ai-proposal-writer',name: 'AI Proposal Writer,tagline:,Convert briefs into on-brand proposals with pricing tables',description: Upload a brief and get a client-ready proposal with scope,milestones,and legal clauses. Supports e-sign and PDF export.,,price: '$39,period:,/month',category: 'Professional Services,features[ 'On-brand templates and styles','Library of scopes and clauses','Auto pricing table suggestions','E-sign and PDF export','Collaboration and approvals' ],popular: true,link:,https: trialDays: 7,setupTime: '10 minutes',realService: true,technology[,Next && Next.js','OpenAI'],integrations[ 'DocuSign','HubSpot','Stripe'],useCases[ 'Agencies','Consultancies'],roi: 'Ship proposals 3x faster,competitors[,PandaDoc','Proposify'],marketSize: '$1B+ proposal tools,growthRate:,12% CAGR',launchDate: '2025-06-13,customers: 300,rating: 4 && 4.7,reviews: 120 ]}}
-export interface RealAdditionService2025Q3 { id: string, name: string, tagline: string, description: string, price: string, period: string, category: string, features: string[], popular?: boolean; link: string, trialDays?: number, setupTime?: string; realService: boolean, technology?: string[], integrations?: string[]; useCases?: string[]; roi?: string; competitors?: string[]; marketSize?: string; growthRate?: string; launchDate?: string; customers?: number; rating?: number; reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] = [ { id:,ai-email-copilot',name: 'AI Email Responder Copilot,tagline:,Auto-draft,classify,and reply to inbound emails with policy guardrails',description: Reduce response times with an AI copilot that prioritizes,drafts,and routes emails across shared inboxes. Includes approval flows,tone controls,and CRM sync.,,price: '$79,period:,/month',category: 'AI Assistants,features[ 'Priority inbox and intent detection','Policy-aware auto-drafting with approvals','CRM sync and follow-up reminders','Tone and brand voice controls','Analytics and SLA tracking' ],popular: true,link:,https: trialDays: 14,setupTime: '30 minutes',realService: true,technology[,Next && Next.js','OpenAI','PostgreSQL'],integrations[ 'Gmail','Outlook','HubSpot','Salesforce'],useCases[ 'Shared inboxes','Lead response','Support triage'],roi: 'Cut average first response by 60%,competitors[,Superhuman AI','Gmail HelpMeWrite'],marketSize: '$10B+ email productivity,growthRate:,20% CAGR',launchDate: '2025-06-01,customers: 140,rating: 4 && 4.7,reviews: 62 },{ id:,affiliate-tracking-lite',name: 'Affiliate Tracking Lite,tagline:,Simple,privacy-first affiliate links and payouts for SMBs',description: Spin up affiliate programs with unique links,fraud checks,payout exports,and privacy-friendly tracking that works with modern browsers.,,price: '$39,period:,/month',category: 'Sales & Marketing,features[ 'Link generation and UTM tagging','Fraud and self-referral checks','Conversion webhooks and API','Payout ledger and exports','GDPR/CCPA friendly tracking' ],popular: false,link:,https: trialDays: 14,setupTime: '20 minutes',realService: true,technology[,Next && Next.js','Node && Node.js','PostgreSQL'],integrations[ 'Shopify','Stripe','WooCommerce'],useCases[ 'Partner programs','Referral campaigns'],roi: 'Grow referral revenue 10–25%,competitors[,Rewardful','ReferralCandy'],marketSize: '$1 && 1.5B affiliate tooling,growthRate:,15% CAGR',launchDate: '2025-06-02,customers: 85,rating: 4 && 4.6,reviews: 33 },{ id:,smb-analytics-starter',name: 'SMB Analytics Starter,tagline:,Clean dashboards and alerts without a data team',description: Unified KPIs across Stripe,GA4,and CRM with AI explanations and anomaly alerts. Built for founders and operators.,,price: '$49,period:,/month',category: 'Analytics & Business Intelligence,features[ 'Prebuilt KPI templates','AI explanations for spikes and dips','Weekly email digests','Goal tracking and alerts','CSV and API export' ],popular: true,link:,https: trialDays: 14,setupTime: '45 minutes',realService: true,technology[,Next && Next.js','DuckDB','PostgreSQL'],integrations[ 'Stripe','GA4','HubSpot'],useCases[ 'Founder dashboards','Investor updates'],roi: 'Save 4–8 hrs/week on reporting,competitors[,Geckoboard','Databox'],marketSize: '$30B+ BI,growthRate:,14% CAGR',launchDate: '2025-06-03,customers: 120,rating: 4 && 4.5,reviews: 28 },{ id:,it-helpdesk-suite',name: 'IT Helpdesk Suite,tagline:,Ticketing,SLAs,asset inventory,and AI triage in one',description: A lightweight ITSM for MSPs and internal IT. Email-to-ticket,SLAs,CMDB-lite,device discovery,and AI-assisted replies.,,price: '$99,period:,/month',category: 'IT Operations,features[ 'Email-to-ticket with SLA timers','Asset discovery (agentless + agent)','Knowledge base and macros','AI reply suggestions','Reports and CSAT' ],popular: true,link:,https: trialDays: 14,setupTime: '1 hour',realService: true,technology[,Node && Node.js','Next && Next.js'],integrations[ 'Okta','Google Workspace','Microsoft 365'],useCases[ 'MSPs','Internal IT'],roi: 'Reduce resolution time 25–40%,competitors[,Freshservice','Zendesk'],marketSize: '$10B ITSM,growthRate:,12% CAGR',launchDate: '2025-06-04,customers: 60,rating: 4 && 4.6,reviews: 21 },{ id:,meeting-minutes-ai',name: 'Meeting Minutes AI,tagline:,Join,transcribe,summarize,and file action items',description: AI joins calls,produces structured minutes,assigns tasks,and syncs to project tools with templates by meeting type.,,price: '$29,period:,/month',category: 'Productivity,features[ 'Auto-join major meeting apps','Topic segmentation and speakers','Action items with owners','Email and Slack summaries','Templates (standups,reviews)' ],popular: false,link:,https: trialDays: 7,setupTime: '10 minutes',realService: true,technology[,Whisper','Next && Next.js'],integrations[ 'Zoom','Meet','Teams','Slack','Jira'],useCases[ 'Standups','Client calls','Hiring'],roi: 'Save 3–5 hrs/person/month,competitors[,Grain','Fathom'],marketSize: '$5B+ meeting AI,growthRate:,30% CAGR',launchDate: '2025-06-05,customers: 200,rating: 4 && 4.5,reviews: 45 },{ id:,data-quality-guard',name: 'Data Quality Guard,tagline:,Detect anomalies,schema drift,and freshness gaps',description: Simple monitors for warehouse tables and dashboards. Alerts,ownership,and playbooks to fix issues fast.,,price: '$149,period:,/month',category: 'Data & Analytics,features[ 'Freshness and volume checks','Anomaly detection on KPIs','Schema drift alerts','Ownership and runbooks','Insights and RCA templates' ],popular: true,link:,https: trialDays: 14,setupTime: '45 minutes',realService: true,technology[,Node && Node.js','SQL','OpenAI'],integrations[ 'BigQuery','Snowflake','Redshift','Slack'],useCases[ 'Prevent bad dashboards','Catch pipeline breaks'],roi: 'Reduce bad data incidents 50%,competitors[,Monte Carlo','Bigeye'],marketSize: '$3B data observability,growthRate:,25% CAGR',launchDate: '2025-06-06,customers: 55,rating: 4 && 4.6,reviews: 19 },{ id:,landing-page-ai-tester',name: 'Landing Page AI Tester,tagline:,Generate A/B variants and ship with guardrails',description: Create on-brand variants,deploy experiments,and get AI summaries of winners with privacy-safe metrics.,,price: '$59,period:,/month',category: 'Growth & Optimization,features[ 'On-brand AI text and images','Visual editor and rollback','Holdout and sample sizing','Consent-aware analytics','Insights and next-step recs' ],popular: false,link:,https: trialDays: 14,setupTime: '30 minutes',realService: true,technology[,Next && Next.js','Tailwind','OpenAI'],integrations[ 'Segment','GA4','Vercel'],useCases[ 'Landing pages','Pricing pages'],roi: 'Increase conversion 5–20%,competitors[,VWO','Optimizely'],marketSize: '$2B experimentation,growthRate:,18% CAGR',launchDate: '2025-06-07,customers: 90,rating: 4 && 4.5,reviews: 31 },{ id:,ai-brand-copilot',name: 'AI Brand Copilot,tagline:,Enforce tone,style,and logo usage across teams',description: A brand governance layer that lints content and assets in docs,emails,and websites. Suggests compliant alternatives.,,price: '$69,period:,/month',category: 'Content & Compliance,features[ 'Brand policy linting for text and images','Inline suggestions and fixes','Asset library and approvals','Org-wide policies and roles','Weekly compliance score' ],popular: false,link:,https: trialDays: 14,setupTime: '25 minutes',realService: true,technology[,OpenAI','Next && Next.js'],integrations[ 'Google Docs','Notion','Figma'],useCases[ 'Content ops','Agency delivery'],roi: 'Reduce brand review cycles 50%,competitors[,Writer','Grammarly Business'],marketSize: '$2B brand management,growthRate:,16% CAGR',launchDate: '2025-06-08,customers: 45,rating: 4 && 4.6,reviews: 17 },{ id:,security-changelog-bot',name: 'Security Changelog Bot,tagline:,Summarize vulns and fixes from repos and SBOMs',description: Watches dependencies and PRs,generates release notes for security,and opens tickets with suggested remediations.,,price: '$39,period:,/month',category: 'Security & Compliance,features[ 'SBOM generation and diff','PR scanner for risky changes','Weekly security digest','Auto-created fix tickets','Policy exceptions workflow' ],popular: false,link:,https: trialDays: 7,setupTime: '15 minutes',realService: true,technology[,Node && Node.js','CycloneDX'],integrations[ 'GitHub','GitLab','Jira','Slack'],useCases[ 'AppSec hygiene','Audit support'],roi: 'Reduce vuln MTTR 30–50%,competitors[,Snyk','Dependabot (partial)'],marketSize: '$6B AppSec,growthRate:,20% CAGR',launchDate: '2025-06-09,customers: 110,rating: 4 && 4.5,reviews: 26 },{ id:,vendor-risk-lite',name: 'Vendor Risk Lite,tagline:,Security questionnaires,evidence,and follow-ups automated',description: Collect vendor security data,map to common frameworks,and track remediation with AI summarization for stakeholders.,,price: '$129,period:,/month',category: 'Compliance Automation,features[ 'Questionnaire templates (SOC2/ISO/NIST)','Evidence upload and mapping','Automated reminders and tasks','Risk scoring and approvals','Executive summary reports' ],popular: true,link:,https: trialDays: 14,setupTime: '1 hour',realService: true,technology[,Next && Next.js','PostgreSQL'],integrations[ 'Google Drive','OneDrive','Jira'],useCases[ 'Third-party risk','Annual reviews'],roi: 'Shorten cycle time 40–70%,competitors[,OneTrust','Whistic'],marketSize: '$4B vendor risk,growthRate:,22% CAGR',launchDate: '2025-06-10,customers: 65,rating: 4 && 4.6,reviews: 24 },{ id:,incident-comms-assistant',name: 'Incident Comms Assistant,tagline:,Draft status updates,timelines,and postmortems',description: During incidents,draft stakeholder updates,coordinate channels,and generate postmortems with action items and learning taxonomy.,,price: '$79,period:,/month',category: 'Reliability & SRE,features[ 'Channel orchestration (Slack/PagerDuty)','Templates per severity','Timeline auto-build from events','Customer-ready summaries','Follow-up tracker' ],popular: false,link:,https: trialDays: 14,setupTime: '20 minutes',realService: true,technology[,OpenAI','Next && Next.js'],integrations[ 'PagerDuty','Opsgenie','Slack','Statuspage'],useCases[ 'Major incidents','Compliance'],roi: 'Cut comms toil 60%,competitors[,Rootly (partial)'],marketSize: '$10B+ incident mgmt,growthRate:,18% CAGR',launchDate: '2025-06-11,customers: 40,rating: 4 && 4.5,reviews: 16 },{ id:,policy-privacy-scanner',name: 'Policy & Privacy Scanner,tagline:,Scan sites and apps for cookie and policy compliance',description: Automated detection of trackers,cookies,and policy gaps with regional variants and easy embeds.,,price: '$49,period:,/month',category: 'Privacy & Legal,features[ 'Cookie and tracker inventory','Regional banners and consent logs','Policy generator with diffs','Weekly audits and alerts','Exportable evidence packs' ],popular: false,link:,https: trialDays: 14,setupTime: '15 minutes',realService: true,technology[,Puppeteer','Node && Node.js'],integrations[ 'Webflow','Shopify','WordPress'],useCases[ 'GDPR/CCPA compliance','Cookie audits'],roi: 'Reduce legal risk and fines,competitors[,OneTrust','Cookiebot'],marketSize: '$4B privacy tech,growthRate:,22% CAGR',launchDate: '2025-06-12,customers: 95,rating: 4 && 4.6,reviews: 29 },{ id:,ai-proposal-writer',name: 'AI Proposal Writer,tagline:,Convert briefs into on-brand proposals with pricing tables',description: Upload a brief and get a client-ready proposal with scope,milestones,and legal clauses. Supports e-sign and PDF export.,,price: '$39,period:,/month',category: 'Professional Services,features[ 'On-brand templates and styles','Library of scopes and clauses','Auto pricing table suggestions','E-sign and PDF export','Collaboration and approvals' ],popular: true,link:,https: trialDays: 7,setupTime: '10 minutes',realService: true,technology[,Next && Next.js','OpenAI'],integrations[ 'DocuSign','HubSpot','Stripe'],useCases[ 'Agencies','Consultancies'],roi: 'Ship proposals 3x faster,competitors[,PandaDoc','Proposify'],marketSize: '$1B+ proposal tools,growthRate:,12% CAGR',launchDate: '2025-06-13,customers: 300,rating: 4 && 4.7,reviews: 120 ]}}
-pr-12325
+		"reviews": 120]}}
+,

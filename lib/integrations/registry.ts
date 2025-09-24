@@ -1,5 +1,4 @@
-// Integration registry
-import { IntegrationProviderMeta } from './types';
+import { IntegrationProviderMeta } from './types',
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
   {
@@ -15,6 +14,12 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     description: 'Marketing & Sales CRM'
   },
   {
+    id: 'zoho',
+    name: 'Zoho CRM',
+    category: 'crm',
+    description: 'All-in-one CRM'
+  },
+  {
     id: 'pipedrive',
     name: 'PipeDrive',
     category: 'crm',
@@ -26,12 +31,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     category: 'ats',
     description: 'ATS & recruiting'
   },
-  {
-    id: 'lever',
-    name: 'Lever',
-    category: 'ats',
-    description: 'ATS & CRM'
-  },
+  { id: 'lever', name: 'Lever', category: 'ats', description: 'ATS & CRM' },
   {
     id: 'workable',
     name: 'Workable',
@@ -44,8 +44,10 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     category: 'ats',
     description: 'HRIS & ATS'
   }
-];
+],
 
-export function getProviderById(id: string): IntegrationProviderMeta | undefined {
-  return PROVIDERS.find(p => p.id === id);
+export function getProviderById(
+  id: string
+): IntegrationProviderMeta | undefined {
+  return PROVIDERS.find((p) => p.id === id)
 }

@@ -1,28 +1,18 @@
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
-<<<<<<< HEAD
-console.log('🧪 Enhanced Test Runner v2.0');
-console.log('');
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 console.log('🧪 Enhanced Test Runner v2.0');
 console.log('');
 
-<<<<<<< HEAD
-=======
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
@@ -35,18 +25,12 @@ console.log('');
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const testReport = {}
   "timestamp": new Date().toISOString(),
   "sessionId": Date.now().toString(),
   "tests": [],
   "summary": {}
     total: 0,
-<<<<<<< HEAD
-  "summary": {}"
-    total: 0,"
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     "passed": 0,
     "failed": 0,
     "skipped": 0,
@@ -313,14 +297,9 @@ async function main() {}
   } catch (error) {}
     log('error', 'Fatal error in enhanced test runner', error.message);
     process.exit(1)};
-<<<<<<< HEAD
-main();
-`;
-=======
 };
 
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
