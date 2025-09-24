@@ -2,10 +2,8 @@ import Link from 'next/link'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import Testimonials from './components/Testimonials'
-import AnimatedCounter from './components/AnimatedCounter'
-import ScrollReveal from './components/ScrollReveal'
 import SEOOptimizer from './components/SEOOptimizer'
+import { LazyTestimonials, LazyAnimatedCounter, LazyScrollReveal, LazyPerformanceMetrics, LazyTechnologyStack } from './components/LazyComponent'
 
 export default function Home() {
   const pageSEO = {

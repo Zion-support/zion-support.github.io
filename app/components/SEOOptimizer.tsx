@@ -1,7 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
-import Head from 'next/head'
+import { useEffect, useMemo } from 'react'
 
 interface SEOOptimizerProps {
   title?: string
@@ -12,6 +11,8 @@ interface SEOOptimizerProps {
   ogType?: string
   twitterCard?: string
   structuredData?: any
+  noindex?: boolean
+  nofollow?: boolean
 }
 
 export default function SEOOptimizer({
@@ -22,130 +23,165 @@ export default function SEOOptimizer({
   ogImage = '/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData
+  structuredData,
+  noindex = false,
+  nofollow = false
 }: SEOOptimizerProps) {
+  // Memoize SEO data to prevent unnecessary re-renders
+  const seoData = useMemo(() => ({
+    title: title.trim(),
+    description: description.trim(),
+    keywords: Array.isArray(keywords) ? keywords.join(', ') : keywords,
+    canonicalUrl: canonicalUrl?.trim(),
+    ogImage: ogImage?.trim(),
+    ogType: ogType?.trim(),
+    twitterCard: twitterCard?.trim(),
+  }), [title, description, keywords, canonicalUrl, ogImage, ogType, twitterCard])
+
   useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    // Batch DOM updates for better performance
+    const updates: (() => void)[] = []
+
     // Update document title
-    if (title) {
-      document.title = title
+    if (seoData.title) {
+      updates.push(() => {
+        document.title = seoData.title
+      })
     }
 
     // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]')
-    if (metaDescription) {
-      metaDescription.setAttribute('content', description)
-    } else {
-      const meta = document.createElement('meta')
-      meta.name = 'description'
-      meta.content = description
-      document.head.appendChild(meta)
-    }
+    updates.push(() => {
+      let metaDescription = document.querySelector('meta[name="description"]') as HTMLMetaElement
+      if (metaDescription) {
+        metaDescription.content = seoData.description
+      } else {
+        metaDescription = document.createElement('meta')
+        metaDescription.name = 'description'
+        metaDescription.content = seoData.description
+        document.head.appendChild(metaDescription)
+      }
+    })
 
     // Update meta keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]')
-    if (metaKeywords) {
-      metaKeywords.setAttribute('content', keywords.join(', '))
-    } else {
-      const meta = document.createElement('meta')
-      meta.name = 'keywords'
-      meta.content = keywords.join(', ')
-      document.head.appendChild(meta)
-    }
+    updates.push(() => {
+      let metaKeywords = document.querySelector('meta[name="keywords"]') as HTMLMetaElement
+      if (metaKeywords) {
+        metaKeywords.content = seoData.keywords
+      } else {
+        metaKeywords = document.createElement('meta')
+        metaKeywords.name = 'keywords'
+        metaKeywords.content = seoData.keywords
+        document.head.appendChild(metaKeywords)
+      }
+    })
 
     // Update canonical URL
-    if (canonicalUrl) {
-      let canonical = document.querySelector('link[rel="canonical"]')
-      if (canonical) {
-        canonical.setAttribute('href', canonicalUrl)
-      } else {
-        canonical = document.createElement('link')
-        canonical.rel = 'canonical'
-        canonical.href = canonicalUrl
-        document.head.appendChild(canonical)
-      }
+    if (seoData.canonicalUrl) {
+      updates.push(() => {
+        let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement
+        if (canonical) {
+          canonical.href = seoData.canonicalUrl
+        } else {
+          canonical = document.createElement('link')
+          canonical.rel = 'canonical'
+          canonical.href = seoData.canonicalUrl
+          document.head.appendChild(canonical)
+        }
+      })
     }
+
+    // Update robots meta
+    updates.push(() => {
+      let robots = document.querySelector('meta[name="robots"]') as HTMLMetaElement
+      const robotsContent = [
+        noindex ? 'noindex' : 'index',
+        nofollow ? 'nofollow' : 'follow',
+        'max-snippet:-1',
+        'max-image-preview:large',
+        'max-video-preview:-1'
+      ].join(', ')
+
+      if (robots) {
+        robots.content = robotsContent
+      } else {
+        robots = document.createElement('meta')
+        robots.name = 'robots'
+        robots.content = robotsContent
+        document.head.appendChild(robots)
+      }
+    })
 
     // Update Open Graph tags
     const ogTags = [
-      { property: 'og:title', content: title },
-      { property: 'og:description', content: description },
-      { property: 'og:type', content: ogType },
-      { property: 'og:image', content: ogImage }
+      { property: 'og:title', content: seoData.title },
+      { property: 'og:description', content: seoData.description },
+      { property: 'og:image', content: seoData.ogImage },
+      { property: 'og:type', content: seoData.ogType },
+      { property: 'og:url', content: seoData.canonicalUrl || window.location.href },
+      { property: 'og:site_name', content: 'Zion Tech Group' },
     ]
 
     ogTags.forEach(({ property, content }) => {
-      let meta = document.querySelector(`meta[property="${property}"]`)
-      if (meta) {
-        meta.setAttribute('content', content)
-      } else {
-        meta = document.createElement('meta')
-        meta.setAttribute('property', property)
-        meta.setAttribute('content', content)
-        document.head.appendChild(meta)
+      if (content) {
+        updates.push(() => {
+          let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement
+          if (meta) {
+            meta.content = content
+          } else {
+            meta = document.createElement('meta')
+            meta.setAttribute('property', property)
+            meta.content = content
+            document.head.appendChild(meta)
+          }
+        })
       }
     })
 
     // Update Twitter Card tags
     const twitterTags = [
-      { name: 'twitter:card', content: twitterCard },
-      { name: 'twitter:title', content: title },
-      { name: 'twitter:description', content: description },
-      { name: 'twitter:image', content: ogImage }
+      { name: 'twitter:card', content: seoData.twitterCard },
+      { name: 'twitter:title', content: seoData.title },
+      { name: 'twitter:description', content: seoData.description },
+      { name: 'twitter:image', content: seoData.ogImage },
     ]
 
     twitterTags.forEach(({ name, content }) => {
-      let meta = document.querySelector(`meta[name="${name}"]`)
-      if (meta) {
-        meta.setAttribute('content', content)
-      } else {
-        meta = document.createElement('meta')
-        meta.setAttribute('name', name)
-        meta.setAttribute('content', content)
-        document.head.appendChild(meta)
+      if (content) {
+        updates.push(() => {
+          let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement
+          if (meta) {
+            meta.content = content
+          } else {
+            meta = document.createElement('meta')
+            meta.name = name
+            meta.content = content
+            document.head.appendChild(meta)
+          }
+        })
       }
     })
 
     // Add structured data
     if (structuredData) {
-      let script = document.querySelector('script[type="application/ld+json"]')
-      if (script) {
-        script.textContent = JSON.stringify(structuredData)
-      } else {
-        script = document.createElement('script')
+      updates.push(() => {
+        // Remove existing structured data
+        const existingScripts = document.querySelectorAll('script[type="application/ld+json"]')
+        existingScripts.forEach(script => script.remove())
+
+        // Add new structured data
+        const script = document.createElement('script')
         script.type = 'application/ld+json'
         script.textContent = JSON.stringify(structuredData)
         document.head.appendChild(script)
-      }
+      })
     }
 
-    // Add viewport meta tag if not present
-    let viewport = document.querySelector('meta[name="viewport"]')
-    if (!viewport) {
-      viewport = document.createElement('meta')
-      viewport.name = 'viewport'
-      viewport.content = 'width=device-width, initial-scale=1'
-      document.head.appendChild(viewport)
-    }
+    // Execute all updates
+    updates.forEach(update => update())
 
-    // Add theme color meta tag
-    let themeColor = document.querySelector('meta[name="theme-color"]')
-    if (!themeColor) {
-      themeColor = document.createElement('meta')
-      themeColor.name = 'theme-color'
-      themeColor.content = '#3b82f6'
-      document.head.appendChild(themeColor)
-    }
-
-    // Add robots meta tag
-    let robots = document.querySelector('meta[name="robots"]')
-    if (!robots) {
-      robots = document.createElement('meta')
-      robots.name = 'robots'
-      robots.content = 'index, follow'
-      document.head.appendChild(robots)
-    }
-
-  }, [title, description, keywords, canonicalUrl, ogImage, ogType, twitterCard, structuredData])
+  }, [seoData, structuredData, noindex, nofollow])
 
   return null
 }

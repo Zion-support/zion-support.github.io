@@ -10,7 +10,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
@@ -22,16 +22,25 @@
     "paths": {
       "@/*": [
         "src/*"
+      ],
+      "@/app/*": [
+        "app/*"
+      ],
+      "@/components/*": [
+        "app/components/*"
+      ],
+      "@/lib/*": [
+        "app/lib/*"
       ]
     },
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": false,
-    "noImplicitReturns": false,
-    "noImplicitAny": false,
-    "noImplicitThis": false,
-    "noImplicitOverride": false,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitOverride": true,
     "types": [
       "vite/client",
       "node",
