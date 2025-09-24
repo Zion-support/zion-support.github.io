@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../src/components/SEO';
-import ErrorBoundary from '../../src/components/ErrorBoundary';
+import SEO from '@/components/SEO';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
 export const metadata = {
   title: 'AI Innovations 2025 - Revolutionary Breakthrough Technologies',

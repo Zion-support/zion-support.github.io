@@ -1,49 +1,58 @@
 {
   "compilerOptions": {
-    "target": "es2017",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es6",
-      "es2017",
-      "es2018",
-      "es2019",
-      "es2020",
-      "es2021"
-    ],
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
-    "noEmit": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "noEmit": true,
+    "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["src-clean/src/*"]
     },
-    "strictNullChecks": true
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": false,
+    "noImplicitReturns": false,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "noImplicitOverride": false,
+    "types": ["vite/client", "node", "react", "react-dom"]
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
+    "src-clean/src/**/*",
+    "src-clean/src/types/offline-shims.d.ts",
+    "*.d.ts",
+    "tailwind.config.js",
+    "postcss.config.js"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist",
+    "build",
+    "coverage",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "coverage",
+    "zion-website",
+    "zion-os",
+    "zion-ai-assistant",
+    "utils",
+    "pages",
+    "pages.*",
+    "services",
+    "tests",
+    "__tests__"
   ]
 }

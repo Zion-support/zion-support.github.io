@@ -1,41 +1,41 @@
-'use client',
-import { useState, useEffect } from 'react',
+'use client';
+import { useState, useEffect } from 'react';
 
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline',
-import TestimonialCard, { testimonials } from './TestimonialCard',
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
+import TestimonialCard, { testimonials } from './TestimonialCard';
 
 export default function TestimonialsSection() {
-  const [currentIndex, setCurrentIndex] = useState(0),
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true),
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   useEffect(() => {
-    if (!isAutoPlaying) return,
+    if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex(prevIndex => (prevIndex + 1) % testimonials.length),
-    }, 5000),
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 5000);
 
-    return () => clearInterval(interval),
-  }, [isAutoPlaying]),
+    return () => clearInterval(interval);
+  }, [isAutoPlaying]);
 
   const goToPrevious = () => {
-    setIsAutoPlaying(false),
-    setCurrentIndex(prevIndex =>
+    setIsAutoPlaying(false);
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    ),
-  },
+    );
+  };
 
   const goToNext = () => {
-    setIsAutoPlaying(false),
-    setCurrentIndex(prevIndex => (prevIndex + 1) % testimonials.length),
-  },
+    setIsAutoPlaying(false);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  };
 
   const goToSlide = (index: number) => {
-    setIsAutoPlaying(false),
-    setCurrentIndex(index)
-  },
+    setIsAutoPlaying(false);
+    setCurrentIndex(index);
+  };
 
-  const activeTestimonial = (testimonials[currentIndex] ?? testimonials[0])!,
+  const activeTestimonial = (testimonials[currentIndex] ?? testimonials[0])!;
 
   return (
     <div className='bg-gray-50 dark:bg-gray-900 py-16'>
@@ -101,5 +101,5 @@ export default function TestimonialsSection() {
         </div>
       </div>
     </div>
-  ),
+  );
 }

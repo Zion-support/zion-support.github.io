@@ -21,10 +21,10 @@ export default function ThemeToggle() {
 
     if (newTheme) {
       document.documentElement.classList.add('dark')
-      localStorage.setItem('themedark')
+      localStorage.setItem('theme', 'dark')
     } else {
       document.documentElement.classList.remove('dark')
-      localStorage.setItem('themelight')
+      localStorage.setItem('theme', 'light')
     }
   }
 

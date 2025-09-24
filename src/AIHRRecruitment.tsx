@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react'
 export default function AIHRRecruitment() {
   return (
     <div className='min-h-screen flex items-center justify-center bg-gray-50'>
@@ -7,5 +7,5 @@ export default function AIHRRecruitment() {
         <p className='text-gray-600'>Page under maintenance. Check back soon.</p>
       </div>
     </div>
-  ),
+  );
 }
