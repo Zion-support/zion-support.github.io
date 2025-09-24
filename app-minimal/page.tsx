@@ -319,6 +319,5 @@ export default function AI20o25TrendsPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

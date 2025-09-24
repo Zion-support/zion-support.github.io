@@ -4,8 +4,7 @@ interface AnimatedCounterProps {
   end: number,
   duration?: number,
   suffix?: string,
-  prefix?: string,
-}
+  prefix?: string}
 ,
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end;

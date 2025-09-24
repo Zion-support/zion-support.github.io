@@ -15,8 +15,7 @@ export function useResumeActions() {
     basicInfo: ResumeBasicInfo): Promise<string | null> => {
     if (!user) {
       setError('You must be logged in to create a resume'),
-      return null,
-    }
+      return null}
 ,
     setIsLoading(true),
     setError(null),
@@ -44,8 +43,7 @@ export function useResumeActions() {
     basicInfo: ResumeBasicInfo): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to update a resume'),
-      return false,
-    }
+      return false}
 ,
     setIsLoading(true),
     setError(null),
@@ -69,8 +67,7 @@ export function useResumeActions() {
   const setActiveResume = async (resumeId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to set active resume'),
-      return false,
-    }
+      return false}
 ,
     setIsLoading(true),
     setError(null),

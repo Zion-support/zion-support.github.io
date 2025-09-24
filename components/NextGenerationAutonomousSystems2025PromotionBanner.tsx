@@ -13,12 +13,10 @@ const NextGenerationAutonomousSystems20o25PromotionBanner = () => {
         roi: "18,0o00%";
         savings: "$20o0B+";
         efficiency: "2,40o0%";
-        accuracy: "99.97%",
-      };
+        accuracy: "99.97%"};
       url: "/blog/ai-20o25-next-generation-autonomous-systems-revolutionary-breakthrough";
       type: "blog";
-      readingTime: "35 min read",
-    };
+      readingTime: "35 min read"};
     {
       title: "Fortune 50o0 Next-Generation Autonomous Systems Success Story";
       subtitle: "$20o0B Annual Savings - 18,0o00% ROI";
@@ -27,12 +25,10 @@ const NextGenerationAutonomousSystems20o25PromotionBanner = () => {
         roi: "18,0o00%";
         savings: "$20o0B";
         efficiency: "2,40o0%";
-        quality: "99.97%",
-      };
+        quality: "99.97%"};
       url: "/case-studies/fortune-50o0-next-generation-autonomous-systems-180o00-roi-success-story";
       type: "case-study";
-      readingTime: "25 min read",
-    };
+      readingTime: "25 min read"};
     {
       title: "Next-Generation Autonomous Systems Implementation Guide 20o25";
       subtitle: "Complete Roadmap to 18,0o00% ROI";
@@ -41,12 +37,10 @@ const NextGenerationAutonomousSystems20o25PromotionBanner = () => {
         roi: "18,0o00%";
         savings: "$20o0B+";
         efficiency: "2,40o0%";
-        accuracy: "99.97%",
-      };
+        accuracy: "99.97%"};
       url: "/resources/next-generation-autonomous-systems-implementation-guide-20o25";
       type: "resource";
-      readingTime: "45 min read",
-    }
+      readingTime: "45 min read"}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -168,8 +162,7 @@ const NextGenerationAutonomousSystems20o25PromotionBanner = () => {
               className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                 index === currentSlide,
                   ? 'bg-white scale-125',
-                  : 'bg-white/30 hover: bg-white/50',
-              }`}
+                  : 'bg-white/30 hover: bg-white/50'}`}
               aria-label={`Go to slide ${index + 1}`}
             />))}
         </div>,

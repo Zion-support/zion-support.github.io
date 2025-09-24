@@ -44,6 +44,5 @@ export default function DeveloperProductivityCopilot(...args: any[]): any {
           </Link>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

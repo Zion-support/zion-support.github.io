@@ -11,8 +11,7 @@ export interface VerifiedRealService20o25Batch2 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
   {

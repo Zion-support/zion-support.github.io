@@ -74,6 +74,5 @@ const LatestNewsSection: React.FC = () => {
           View All Articles,
         </a>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default LatestNewsSection;

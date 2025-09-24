@@ -24,8 +24,7 @@ const InteractiveContentDiscovery20o26 = () => {
       readTime: '8 min read';
       difficulty: 'Advanced';
       rating: 4.9;
-      image: '🧠',
-    };
+      image: '🧠'};
     {
       id: 2;
       title: 'Quantum-Neural Fusion Technology';
@@ -35,8 +34,7 @@ const InteractiveContentDiscovery20o26 = () => {
       readTime: '12 min read';
       difficulty: 'Expert';
       rating: 4.8;
-      image: '⚛️',
-    };
+      image: '⚛️'};
     {
       id: 3;
       title: 'Autonomous Business Operations';
@@ -46,8 +44,7 @@ const InteractiveContentDiscovery20o26 = () => {
       readTime: '6 min read';
       difficulty: 'Intermediate';
       rating: 4.7;
-      image: '🤖',
-    };
+      image: '🤖'};
     {
       id: 4;
       title: 'Neural Interface Development';
@@ -57,8 +54,7 @@ const InteractiveContentDiscovery20o26 = () => {
       readTime: '10 min read';
       difficulty: 'Advanced';
       rating: 4.9;
-      image: '🎯',
-    };
+      image: '🎯'};
     {
       id: 5;
       title: 'Advanced Analytics Dashboard';
@@ -68,8 +64,7 @@ const InteractiveContentDiscovery20o26 = () => {
       readTime: '5 min read';
       difficulty: 'Beginner';
       rating: 4.6;
-      image: '📊',
-    };
+      image: '📊'};
     {
       id: 6;
       title: 'Quantum Security Protocols';
@@ -79,8 +74,7 @@ const InteractiveContentDiscovery20o26 = () => {
       readTime: '7 min read';
       difficulty: 'Advanced';
       rating: 4.8;
-      image: '🔐',
-    }
+      image: '🔐'}
   ],
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 30o0),
@@ -222,6 +216,5 @@ const InteractiveContentDiscovery20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default InteractiveContentDiscovery20o26;

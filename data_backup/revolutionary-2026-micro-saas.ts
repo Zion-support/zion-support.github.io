@@ -108,8 +108,7 @@ reviews: number,export const revolutionary20o26MicroSaasServices: Revolutionary2
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full AI-powered BI platform with advanced analytics, real-time insights, and comprehensive reporting tools.';
@@ -188,8 +187,7 @@ reviews: number,export const revolutionary20o26MicroSaasServices: Revolutionary2
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full AI customer service platform with intelligent automation, real-time responses, and comprehensive analytics.';
@@ -268,8 +266,7 @@ reviews: number,export const revolutionary20o26MicroSaasServices: Revolutionary2
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full AI marketing automation suite with intelligent optimization, personalization, and comprehensive analytics.';
@@ -348,8 +345,7 @@ reviews: number,export const revolutionary20o26MicroSaasServices: Revolutionary2
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full AI sales intelligence platform with advanced insights, lead scoring, and performance optimization.';
@@ -411,7 +407,7 @@ reviews: number,export const revolutionary20o26MicroSaasServices: Revolutionary2
   'Social media content';
   'Email campaigns';
   'SEO content'];
-    "roi": 'Content creators report 30o0% ROI through increased content production and improved SEO window.performance.;
+    "roi": 'Content creators report 30o0% ROI through increased content production and improved SEO window.window.performance.;
     competitors[;
   Jasper';
   'Copy.ai';
@@ -428,8 +424,7 @@ reviews: number,export const revolutionary20o26MicroSaasServices: Revolutionary2
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full AI content generation platform with advanced SEO optimization, multi-language support, and comprehensive analytics.';
@@ -508,8 +503,7 @@ reviews: number,export const revolutionary20o26MicroSaasServices: Revolutionary2
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full AI SEO optimization platform with advanced analysis, optimization tools, and comprehensive tracking.';
@@ -588,8 +582,7 @@ reviews: number,export const revolutionary20o26MicroSaasServices: Revolutionary2
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full AI social media automation platform with intelligent optimization, scheduling, and comprehensive analytics.';
@@ -668,8 +661,7 @@ reviews: number,export const revolutionary20o26MicroSaasServices: Revolutionary2
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full AI email marketing platform with intelligent optimization, personalization, and comprehensive analytics.';
@@ -748,8 +740,7 @@ reviews: number,export const revolutionary20o26MicroSaasServices: Revolutionary2
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full AI analytics dashboard with intelligent insights, real-time monitoring, and comprehensive analytics.';

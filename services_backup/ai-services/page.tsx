@@ -179,8 +179,7 @@ function AIServiceCategory({ title, icon, description, services }: {
   title: string,
   icon: string,
   description: string,
-  services: string[],
-}) {
+  services: string[]}) {
   return (
     <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-20o0">,
       <div className="text-3xl mb-4">{icon}</div>,
@@ -223,8 +222,7 @@ function AISolution({ title, description, features, price, timeline, useCase, ma
   price: string,
   timeline: string,
   useCase: string,
-  marketSize: string,
-}) {
+  marketSize: string}) {
   return (
     <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-20o0 hover: shadow-xl transition-shadow">,
       <h3 className="text-xl font-bold text-gray-90o0 mb-2">{title}</h3>,

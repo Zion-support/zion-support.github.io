@@ -31,8 +31,7 @@ import { ServiceVariant } from '../types/service-variants';
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  }
+    website: string}
 ,
   real_implementation: boolean,
   implementation_details: string,
@@ -228,16 +227,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
         'Advanced AI decision engine platform with automated decision-making, predictive modeling, and comprehensive business intelligence.',
       launchDate: '2025-01-20',
       customers: 120,
       rating: 4.9,
-      reviews: 78,
-    }
+      reviews: 78}
     // E-commerce Optimization Platform,
     {
       id: 'ecommerce - optimization - platform';
@@ -463,16 +460,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
         'Advanced AI financial analytics platform with intelligent analysis, predictive modeling, and comprehensive financial insights.',
       launchDate: '2025-02-10',
       customers: 85,
       rating: 4.9,
-      reviews: 52,
-    }
+      reviews: 52}
     // Supply Chain Intelligence Platform,
     {
       id: 'supply-chain-intelligence',
@@ -540,16 +535,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
         'Advanced AI supply chain platform with intelligent optimization, demand forecasting, and comprehensive supply chain analytics.',
       launchDate: '2025-03-01',
       customers: 65,
       rating: 4.8,
-      reviews: 38,
-    }
+      reviews: 38}
     // Marketing Automation Platform,
     {
       id: 'marketing - automation - platform';
@@ -689,13 +682,11 @@ export interface InnovativeMicroSaasService2025 {
   contactInfo: {
     mobile: string, email: string;
     address: string;
-    website: string,
-    };
+    website: string};
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number,
-}
+  reviews: number}
 export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [
   // AI Content Factory,
   {
@@ -771,8 +762,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
       color: 'from - blue - 500 to - cyan - 600';
@@ -820,16 +810,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
         'Advanced AI content platform with strategy optimization, multi-channel management, and comprehensive performance analytics.',
       launchDate: '2025-01-01',
       customers: 150,
       rating: 4.9,
-      reviews: 89,
-    }
+      reviews: 89}
         mobile: '+1 302 464 0950';
         email: 'kleber@ziontechgroup && ziontechgroup.com';
         address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -929,16 +917,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
         'Advanced AI-powered CRM platform with intelligent automation, predictive analytics, and comprehensive customer insights.',
       launchDate: '2025-01-15',
       customers: 200,
       rating: 4.9,
-      reviews: 125,
-    }
+      reviews: 125}
         mobile: '+1 302 464 0950';
         email: 'kleber@ziontechgroup && ziontechgroup.com';
         address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1030,16 +1016,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
         'Advanced AI decision engine platform with automated decision-making, predictive modeling, and comprehensive business intelligence.',
       launchDate: '2025-01-20',
       customers: 120,
       rating: 4.9,
-      reviews: 78,
-    }
+      reviews: 78}
         mobile: '+1 302 464 0950';
         email: 'kleber@ziontechgroup && ziontechgroup.com';
         address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1142,16 +1126,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
         'Advanced AI e-commerce optimization platform with intelligent recommendations, dynamic pricing, and comprehensive performance analytics.',
       launchDate: '2025-02-01',
       customers: 180,
       rating: 4.8,
-      reviews: 95,
-    }
+      reviews: 95}
         mobile: '+1 302 464 0950';
         email: 'kleber@ziontechgroup && ziontechgroup.com';
         address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1252,16 +1234,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
         'Advanced AI-powered HR platform with recruitment automation, performance tracking, and comprehensive HR analytics.',
       launchDate: '2025-02-15',
       customers: 95,
       rating: 4.8,
-      reviews: 58,
-    }
+      reviews: 58}
         mobile: '+1 302 464 0950';
         email: 'kleber@ziontechgroup && ziontechgroup.com';
         address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1355,16 +1335,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
         'Advanced AI financial analytics platform with intelligent analysis, predictive modeling, and comprehensive financial insights.',
       launchDate: '2025-02-10',
       customers: 85,
       rating: 4.9,
-      reviews: 52,
-    }
+      reviews: 52}
         mobile: '+1 302 464 0950';
         email: 'kleber@ziontechgroup && ziontechgroup.com';
         address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1461,16 +1439,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
         'Advanced AI supply chain platform with intelligent optimization, demand forecasting, and comprehensive supply chain analytics.',
       launchDate: '2025-03-01',
       customers: 65,
       rating: 4.8,
-      reviews: 38,
-    }
+      reviews: 38}
         mobile: '+1 302 464 0950';
         email: 'kleber@ziontechgroup && ziontechgroup.com';
         address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1573,16 +1549,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
         'Advanced AI marketing automation platform with intelligent optimization, automated workflows, and comprehensive performance analytics.',
       launchDate: '2025-02-20',
       customers: 140,
       rating: 4.9,
-      reviews: 82,
-    }
+      reviews: 82}
         mobile: '+1 302 464 0950';
         email: 'kleber@ziontechgroup && ziontechgroup.com';
         address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1685,16 +1659,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
         'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.',
       launchDate: '2025-03-05',
       customers: 75,
       rating: 4.8,
-      reviews: 45,
-    }
+      reviews: 45}
         mobile: '+1 302 464 0950';
         email: 'kleber@ziontechgroup && ziontechgroup.com';
         address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1738,8 +1710,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     contact_info: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     popular: false, icon: '📋';
     color: 'from-indigo-500 to-purple-600', textColor: 'text-indigo-400';
     link: 'https://ziontechgroup && ziontechgroup.com/project-management-intelligence', marketPosition: 'Leading AI project management platform. Competes with basic project tools but offers intelligent optimization.';
@@ -1753,14 +1724,12 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.';
     launchDate: '2025-03-05', customers: 75;
     rating: 4 && 4.8;
-    reviews: 45,
-  }
+    reviews: 45}
 ],
 export interface InnovativeMicroSaasService2025 {
   id: string;
@@ -1793,15 +1762,13 @@ export interface InnovativeMicroSaasService2025 {
     mobile: string;
     email: string;
     address: string;
-    website: string,
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number,
-}
+  reviews: number}
 ,
 export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [
   // AI Content Factory,
@@ -1838,15 +1805,13 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI content platform with strategy optimization, multi-channel management, and comprehensive performance analytics.';
     launchDate: '2025-01-01';
     customers: 150;
     rating: 4.9;
-    reviews: 89,
-  };
+    reviews: 89};
   // CRM Intelligence Platform,
   {
     id: 'crm-intelligence-platform';
@@ -1881,15 +1846,13 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI-powered CRM platform with intelligent automation, predictive analytics, and comprehensive customer insights.';
     launchDate: '2025-01-15';
     customers: 200;
     rating: 4.9;
-    reviews: 125,
-  };
+    reviews: 125};
   // Decision Engine Platform,
   {
     id: 'decision-engine-platform';
@@ -1924,15 +1887,13 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI decision engine platform with automated decision-making, predictive modeling, and comprehensive business intelligence.';
     launchDate: '2025-01-20';
     customers: 120;
     rating: 4.9;
-    reviews: 78,
-  };
+    reviews: 78};
   // E-commerce Optimization Platform,
   {
     id: 'ecommerce-optimization-platform';
@@ -1967,15 +1928,13 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI e-commerce optimization platform with intelligent recommendations, dynamic pricing, and comprehensive performance analytics.';
     launchDate: '2025-02-01';
     customers: 180;
     rating: 4.8;
-    reviews: 95,
-  };
+    reviews: 95};
   // HR Automation Platform,
   {
     id: 'hr-automation-platform';
@@ -2010,15 +1969,13 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI-powered HR platform with recruitment automation, performance tracking, and comprehensive HR analytics.';
     launchDate: '2025-02-15';
     customers: 95;
     rating: 4.8;
-    reviews: 58,
-  };
+    reviews: 58};
   // Financial Analytics Platform,
   {
     id: 'financial-analytics-platform';
@@ -2053,15 +2010,13 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI financial analytics platform with intelligent analysis, predictive modeling, and comprehensive financial insights.';
     launchDate: '2025-02-10';
     customers: 85;
     rating: 4.9;
-    reviews: 52,
-  };
+    reviews: 52};
   // Supply Chain Intelligence Platform,
   {
     id: 'supply-chain-intelligence';
@@ -2096,15 +2051,13 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI supply chain platform with intelligent optimization, demand forecasting, and comprehensive supply chain analytics.';
     launchDate: '2025-03-01';
     customers: 65;
     rating: 4.8;
-    reviews: 38,
-  };
+    reviews: 38};
   // Marketing Automation Platform,
   {
     id: 'marketing-automation-platform';
@@ -2139,15 +2092,13 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI marketing automation platform with intelligent optimization, automated workflows, and comprehensive performance analytics.';
     launchDate: '2025-02-20';
     customers: 140;
     rating: 4.9;
-    reviews: 82,
-  };
+    reviews: 82};
   // Project Management Intelligence Platform,
   {
     id: 'project-management-intelligence';
@@ -2182,15 +2133,13 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.';
     launchDate: '2025-03-05';
     customers: 75;
     rating: 4.8,
-    reviews: 45,
-  }
+    reviews: 45}
 ],
 export interface InnovativeMicroSaasService2025 {
   id: string;
@@ -2223,15 +2172,13 @@ export interface InnovativeMicroSaasService2025 {
     mobile: string;
     email: string;
     address: string;
-    website: string,
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number,
-}
+  reviews: number}
 ,
 export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [
   // AI Content Factory,
@@ -2268,15 +2215,13 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI content platform with strategy optimization, multi-channel management, and comprehensive performance analytics.';
     launchDate: '2025-01-01';
     customers: 150;
     rating: 4.9;
-    reviews: 89,
-  };
+    reviews: 89};
   // CRM Intelligence Platform,
   {
     id: 'crm-intelligence-platform';
@@ -2311,15 +2256,13 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI-powered CRM platform with intelligent automation, predictive analytics, and comprehensive customer insights.';
     launchDate: '2025-01-15';
     customers: 200;
     rating: 4.9;
-    reviews: 125,
-  };
+    reviews: 125};
   // Decision Engine Platform,
   {
     id: 'decision-engine-platform';
@@ -2354,15 +2297,13 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI decision engine platform with automated decision-making, predictive modeling, and comprehensive business intelligence.';
     launchDate: '2025-01-20';
     customers: 120;
     rating: 4.9;
-    reviews: 78,
-  };
+    reviews: 78};
   // E-commerce Optimization Platform,
   {
     id: 'ecommerce-optimization-platform';
@@ -2397,15 +2338,13 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI e-commerce optimization platform with intelligent recommendations, dynamic pricing, and comprehensive performance analytics.';
     launchDate: '2025-02-01';
     customers: 180;
     rating: 4.8;
-    reviews: 95,
-  };
+    reviews: 95};
   // HR Automation Platform,
   {
     id: 'hr-automation-platform';
@@ -2440,15 +2379,13 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI-powered HR platform with recruitment automation, performance tracking, and comprehensive HR analytics.';
     launchDate: '2025-02-15';
     customers: 95;
     rating: 4.8;
-    reviews: 58,
-  };
+    reviews: 58};
   // Financial Analytics Platform,
   {
     id: 'financial-analytics-platform';
@@ -2483,15 +2420,13 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI financial analytics platform with intelligent analysis, predictive modeling, and comprehensive financial insights.';
     launchDate: '2025-02-10';
     customers: 85;
     rating: 4.9;
-    reviews: 52,
-  };
+    reviews: 52};
   // Supply Chain Intelligence Platform,
   {
     id: 'supply-chain-intelligence';
@@ -2526,15 +2461,13 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI supply chain platform with intelligent optimization, demand forecasting, and comprehensive supply chain analytics.';
     launchDate: '2025-03-01';
     customers: 65;
     rating: 4.8;
-    reviews: 38,
-  };
+    reviews: 38};
   // Marketing Automation Platform,
   {
     id: 'marketing-automation-platform';
@@ -2569,15 +2502,13 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI marketing automation platform with intelligent optimization, automated workflows, and comprehensive performance analytics.';
     launchDate: '2025-02-20';
     customers: 140;
     rating: 4.9;
-    reviews: 82,
-  };
+    reviews: 82};
   // Project Management Intelligence Platform,
   {
     id: 'project-management-intelligence';
@@ -2612,13 +2543,11 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.';
     launchDate: '2025-03-05';
     customers: 75;
     rating: 4.8,
-    reviews: 45,
-  }
+    reviews: 45}
 ],

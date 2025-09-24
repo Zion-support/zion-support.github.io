@@ -69,6 +69,5 @@ const AgentSafetyEngineeringBlueprint20o25 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default AgentSafetyEngineeringBlueprint20o25;

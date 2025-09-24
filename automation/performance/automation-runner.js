@@ -5,7 +5,7 @@ class Script {
 ,
   async start() {
     this.isRunning = true,
-    // console.log('Starting Script...'),
+    // // console.log('Starting Script...'),
     try {
       const winston = require('winston'),
 const logger = winston.createLogger({
@@ -20,8 +20,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const { exec } = require('child_process'),
 const path = require('path'),
@@ -67,7 +66,7 @@ logger.info(
 ,
   stop() {
     this.isRunning = false,
-    // console.log('Stopping Script...')}
+    // // console.log('Stopping Script...')}
 }
 ,
 // Start the script,
@@ -80,10 +79,10 @@ if (require.main === module) {
 module.exports = Script,
 // Graceful shutdown handling,
 process.on('SIGINT', () => {
-  // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
+  // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
   // Add cleanup logic here,
   process.exit(0)}),
 process.on('SIGTERM', () => {
-  // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
+  // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here,
   process.exit(0)}),

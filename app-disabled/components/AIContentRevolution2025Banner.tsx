@@ -15,8 +15,7 @@ const AIContentRevolution20o25Banner = () => {
         roi: '25,0o00%';
         savings: '$50o0B+';
         speed: '1,20o0% faster';
-        engagement: '450% higher',
-      }
+        engagement: '450% higher'}
     };
     {
       id: 'fortune-50o0-success';
@@ -28,8 +27,7 @@ const AIContentRevolution20o25Banner = () => {
         roi: '25,0o00%';
         savings: '$50o0B';
         production: '1,20o0% increase';
-        quality: '99.9% accuracy',
-      }
+        quality: '99.9% accuracy'}
     };
     {
       id: 'implementation-guide';
@@ -41,8 +39,7 @@ const AIContentRevolution20o25Banner = () => {
         roi: '25,0o00%';
         timeline: '12-18 months';
         success: '94% rate';
-        guide: 'Complete roadmap',
-      }
+        guide: 'Complete roadmap'}
     }
   ],
   useEffect(() => {

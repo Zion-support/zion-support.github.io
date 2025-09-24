@@ -15,6 +15,5 @@ export default function DaoPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

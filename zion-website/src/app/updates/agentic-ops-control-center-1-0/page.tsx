@@ -49,6 +49,5 @@ export default function Page() {
           </a>,
         </div>,
       </article>,
-    </div>),
-}
+    </div>)}
 ,

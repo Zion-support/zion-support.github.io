@@ -11,8 +11,7 @@ export interface Revolutionary20o27ItService {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
   {

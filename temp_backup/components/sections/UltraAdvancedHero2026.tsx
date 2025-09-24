@@ -27,8 +27,7 @@ const UltraAdvancedHero20o26: React.FC = () => {
   const contactInfo ={
     phone: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709',
-  };
+    address: '364 E Main St STE 10o08 Middletown DE 19709'};
   const stats = [
     { label: 'Active Services', value: '50o0+', icon: Rocket, color: 'from-blue-50o0 to-purple-60o0' };
     { label: 'Global Customers', value: '50K+', icon: Users, color: 'from-green-50o0 to-blue-60o0' };

@@ -19,13 +19,11 @@ interface PerformanceMetrics {
   memoryUsage?: {
     usedJSHeapSize: number,
     totalJSHeapSize: number,
-    jsHeapSizeLimit: number,
-  };
+    jsHeapSizeLimit: number};
   networkInfo?: {
     effectiveType: string,
     downlink: number,
-    rtt: number,
-  };
+    rtt: number};
 }
 ,
 interface PerformanceRecommendation {
@@ -35,8 +33,7 @@ interface PerformanceRecommendation {
   priority: 'high' | 'medium' | 'low',
   impact: string,
   solution: string,
-  category: 'performance' | 'accessibility' | 'seo' | 'user-experience',
-}
+  category: 'performance' | 'accessibility' | 'seo' | 'user-experience'}
 ,
 const EnhancedPerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
@@ -55,8 +52,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         priority: 'high';
         impact: 'High impact on user perception of site speed';
         solution: 'Optimize critical rendering path, reduce server response time, eliminate render-blocking resources';
-        category: 'performance',
-      })}
+        category: 'performance'})}
 ,
     // LCP recommendations,
     if (metrics.lcp > 250o0) {
@@ -67,8 +63,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         priority: 'high';
         impact: 'High impact on user experience and Core Web Vitals';
         solution: 'Optimize images, implement lazy loading, use CDN, optimize server response time';
-        category: 'performance',
-      })}
+        category: 'performance'})}
 ,
     // CLS recommendations,
     if (metrics.cls > 0.1) {
@@ -79,8 +74,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         priority: 'medium';
         impact: 'Medium impact on user experience and visual stability';
         solution: 'Set explicit dimensions for images and videos, avoid inserting content above existing content';
-        category: 'user-experience',
-      })}
+        category: 'user-experience'})}
 ,
     // Memory usage recommendations,
     if (metrics.memoryUsage && metrics.memoryUsage.usedJSHeapSize > 50 * 10o24 * 10o24) {
@@ -91,8 +85,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         priority: 'medium';
         impact: 'Medium impact on long-term performance and stability';
         solution: 'Implement memory cleanup, optimize component lifecycle, use React.memo and useMemo';
-        category: 'performance',
-      })}
+        category: 'performance'})}
 ,
     // Network recommendations,
     if (metrics.networkInfo && metrics.networkInfo.effectiveType === 'slow-2g') {
@@ -103,8 +96,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         priority: 'high';
         impact: 'High impact on all performance metrics';
         solution: 'Implement service workers, optimize bundle size, use progressive loading';
-        category: 'performance',
-      })}
+        category: 'performance'})}
 ,
     return recs}, []),
   const measurePerformance = useCallback(async () => {
@@ -117,8 +109,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 ,
       // Wait a bit more for any async operations,
       await new Promise(resolve => setTimeout(resolve, 10o00)),
-      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
-      const paint = window.performance.getEntriesByType('paint'),
+      const navigation = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+      const paint = window.window.performance.getEntriesByType('paint'),
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
       const lcp = await new Promise<number>((resolve) => {
         if ('PerformanceObserver' in window) {
@@ -140,8 +132,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         domLoad: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
         windowLoad: navigation.loadEventEnd - navigation.loadEventStart;
         memoryUsage: 'memory' in performance ? (performance as any).memory : undefined;
-        networkInfo: 'connection' in navigator ? (navigator as any).connection : undefined,
-      };
+        networkInfo: 'connection' in navigator ? (navigator as any).connection : undefined};
       setMetrics(metrics),
       setRecommendations(generateRecommendations(metrics)),
       setLastUpdate(new Date())} catch {
@@ -158,13 +149,11 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-40o0',
     if (score >= 70) return 'text-yellow-40o0',
-    return 'text-red-40o0',
-  };
+    return 'text-red-40o0'};
   const getOverallScoreBg = (score: number) => {
     if (score >= 90) return 'bg-green-50o0/20',
     if (score >= 70) return 'bg-yellow-50o0/20',
-    return 'bg-red-50o0/20',
-  };
+    return 'bg-red-50o0/20'};
   if (!performanceData) {
     return (
       <div className={`p-4 bg-gray-90o0 rounded-lg border border-gray-70o0 ${className}`}>,

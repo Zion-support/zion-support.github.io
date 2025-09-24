@@ -13,28 +13,23 @@ export default function AILegalResearchPlatform() {
     {
       icon: <Search className="w-6 h-6"  />;
       title: 'Case Analysis';
-      description: 'Intelligent case analysis with AI-powered insights and legal reasoning identification.',
-    };
+      description: 'Intelligent case analysis with AI-powered insights and legal reasoning identification.'};
     {
       icon: <Target className="w-6 h-6"  />;
       title: 'Document Review';
-      description: 'Advanced document review with automated contract analysis and legal document classification.',
-    };
+      description: 'Advanced document review with automated contract analysis and legal document classification.'};
     {
       icon: <Zap className="w-6 h-6"  />;
       title: 'Legal Document Generation';
-      description: 'AI-powered legal document generation with customizable templates and compliance checking.',
-    };
+      description: 'AI-powered legal document generation with customizable templates and compliance checking.'};
     {
       icon: <Shield className="w-6 h-6"  />;
       title: 'Compliance Monitoring';
-      description: 'Automated compliance monitoring and risk assessment for legal and regulatory requirements.',
-    };
+      description: 'Automated compliance monitoring and risk assessment for legal and regulatory requirements.'};
     {
       icon: <TrendingUp className="w-6 h-6"  />;
       title: 'Legal Analytics';
-      description: 'Comprehensive legal analytics with trend analysis and outcome prediction for legal strategies.',
-    }
+      description: 'Comprehensive legal analytics with trend analysis and outcome prediction for legal strategies.'}
   ],
   const benefits = [
     'Reduce research time by 80%';
@@ -233,5 +228,4 @@ export default function AILegalResearchPlatform() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}

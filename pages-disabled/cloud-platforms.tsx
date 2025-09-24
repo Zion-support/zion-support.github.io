@@ -244,6 +244,5 @@ export default function CloudPlatforms() {
         </section>,
       </main>,
       <SimpleFooter />,
-    </>),
-}
+    </>)}
 ,

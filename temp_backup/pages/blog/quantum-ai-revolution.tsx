@@ -243,6 +243,5 @@ export default function QuantumAIRevolution() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -115,8 +115,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
             </div>,
           </div>),
       default: ,
-        return <Skeleton />,
-    }
+        return <Skeleton />}
   };
   return <div className={`animate-pulse ${className}`}>{renderSkeleton()}</div>};
 // Specialized skeleton components,

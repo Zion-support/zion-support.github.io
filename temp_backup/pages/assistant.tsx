@@ -1,8 +1,7 @@
 import { useEffect, useMemo, useState } from 'react',
 interface Message {
   role: 'user' | 'assistant',
-  content: string,
-}
+  content: string}
 ,
 export default function Assistant() {
   const params =,

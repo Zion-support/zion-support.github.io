@@ -14,8 +14,7 @@ const NeuralConsciousnessBreakthroughBanner: React.FC = () => {
       roi: '2,40o0% ROI';
       url: '/blog/ai-20o25-neural-consciousness-breakthrough-revolutionary-autonomous-intelligence';
       badge: '🧠 NEW BREAKTHROUGH';
-      category: 'Conscious AI Innovation',
-    };
+      category: 'Conscious AI Innovation'};
     {
       id: 'enterprise-transformation';
       title: 'Global Enterprise Transformation';
@@ -25,8 +24,7 @@ const NeuralConsciousnessBreakthroughBanner: React.FC = () => {
       roi: '1,50o0% Innovation Increase';
       url: '/case-studies/global-enterprise-conscious-ai-transformation-20o25-15-billion-roi';
       badge: '💰 $15B SUCCESS';
-      category: 'Case Study',
-    };
+      category: 'Case Study'};
     {
       id: 'autonomous-business-guide';
       title: 'Autonomous Business Revolution Guide';
@@ -36,8 +34,7 @@ const NeuralConsciousnessBreakthroughBanner: React.FC = () => {
       roi: 'Zero Error Operations';
       url: '/resources/ai-20o25-autonomous-business-revolution-complete-guide';
       badge: '📚 COMPLETE GUIDE';
-      category: 'Implementation Guide',
-    }
+      category: 'Implementation Guide'}
   ],
   useEffect(() => {
     const interval = setInterval(() => {

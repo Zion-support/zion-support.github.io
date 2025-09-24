@@ -125,8 +125,7 @@ export function PrimaryNav() {
                     data-testid='login-link',
                     onClick={e => {
                       e.preventDefault(),
-                      setLoginOpen(true),
-                    }}
+                      setLoginOpen(true)}}
                   >,
                     {t('auth.login')}
                   </Link>,
@@ -150,8 +149,7 @@ export function PrimaryNav() {
                 data-testid='login-link',
                 onClick={e => {
                   e.preventDefault(),
-                  setLoginOpen(true),
-                }}
+                  setLoginOpen(true)}}
               >,
                 {t('auth.login')}
               </Link>)}

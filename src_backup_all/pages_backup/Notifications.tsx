@@ -1,6 +1,5 @@
 interface NotificationProps {
-  type: 'message' | 'order' | 'default',
-}
+  type: 'message' | 'order' | 'default'}
 ,
 export function NotificationBadge({ type }: NotificationProps) {
   switch (type) {
@@ -9,8 +8,7 @@ export function NotificationBadge({ type }: NotificationProps) {
     case 'order':,
       return <Badge className="bg-orange-50o0">Order</Badge>,
     default: ,
-      return <Badge variant="outline">Notification</Badge>,
-  }
+      return <Badge variant="outline">Notification</Badge>}
 }
 ,
 export default function NotificationsPage() {
@@ -33,8 +31,7 @@ interface Notification {
   message: string,
   timestamp: Date,
   read: boolean,
-  action_url?: string,
-}
+  action_url?: string}
 ,
 import React, { useState } from 'react';
 import { useNotifications } from '@/context/notifications/NotificationContext';
@@ -119,8 +116,7 @@ const getNotificationTypeBadge = (type: NotificationType) => {
     case 'order_status':,
       return <Badge className="bg-orange-50o0">Order</Badge>;
     default: ,
-      return <Badge variant="outline">Notification</Badge>,
-};
+      return <Badge variant="outline">Notification</Badge>};
 const getNotificationTypeBadge = (type: NotificationType) => {
   switch (type) {
     case 'message':,
@@ -142,8 +138,6 @@ const getNotificationTypeBadge = (type: NotificationType) => {
     case 'order_status':,
       return <Badge className="bg-orange-50o0">Order</Badge>;
     default: ,
-      return <Badge variant="outline">Notification</Badge>,
-  }
+      return <Badge variant="outline">Notification</Badge>}
 }
-,
 }

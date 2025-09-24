@@ -109,8 +109,7 @@ const RevolutionaryAI20o25BreakthroughBanner = () => {
                 <div
                   key={index}
                   className={`text-center p-4 rounded-xl transition-all duration-30o0 ${
-                    index === currentMetric ? 'bg-white/20 scale-10o5' : 'bg-white/5 hover: bg-white/10',
-                  }`}
+                    index === currentMetric ? 'bg-white/20 scale-10o5' : 'bg-white/5 hover: bg-white/10'}`}
                 >,
                   <MetricIcon className={`w-8 h-8 ${metric.color} mx-auto mb-2`}  />,
                   <div className={`text-2xl font-bold ${metric.color} mb-1`}>{metric.value}</div>,

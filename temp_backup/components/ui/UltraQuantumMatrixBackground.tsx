@@ -4,8 +4,7 @@ interface UltraQuantumMatrixBackgroundProps {
   colorScheme?: 'quantum' | 'neon' | 'cosmic' | 'cyber',
   particleCount?: number,
   animationSpeed?: number,
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 export default function UltraQuantumMatrixBackground({
   intensity = 'medium';
@@ -23,29 +22,25 @@ export default function UltraQuantumMatrixBackground({
           primary: '#0o0ffff';
           secondary: '#ff0o0ff';
           accent: '#ffff0o0';
-          background: '#0a0a0a',
-        };
+          background: '#0a0a0a'};
       case 'cosmic':,
         return {
           primary: '#4f46e5';
           secondary: '#7c3aed';
           accent: '#ec4899';
-          background: '#0f0f23',
-        };
+          background: '#0f0f23'};
       case 'cyber':,
         return {
           primary: '#10b981';
           secondary: '#f59e0b';
           accent: '#ef4444';
-          background: '#111827',
-        };
+          background: '#111827'};
       default: // quantum,
         return {
           primary: '#0o6b6d4';
           secondary: '#8b5cf6';
           accent: '#ec4899';
-          background: '#0f172a',
-        };
+          background: '#0f172a'};
     }
   };
   const colors = getColorScheme(),
@@ -140,8 +135,7 @@ export default function UltraQuantumMatrixBackground({
     const particles: Particle[] = [],
     const actualParticleCount = Math.floor(particleCount * (intensity === 'low' ? 0.5 : intensity === 'high' ? 1.5 : 1)),
     for (let i = 0, i < actualParticleCount, i++) {
-      particles.push(new Particle()),
-    }
+      particles.push(new Particle())}
 ,
     // Connection lines,
     const drawConnections = () => {
@@ -233,8 +227,7 @@ export default function UltraQuantumMatrixBackground({
         className="fixed inset-0 pointer-events-none",
         style={{
           background: `radial-gradient(circle at 20% 80%, ${colors.primary}10 0%, transparent 50%), radial-gradient(circle at 80% 20%, ${colors.secondary}10 0%, transparent 50%), radial-gradient(circle at 40% 40%, ${colors.accent}10 0%, transparent 50%)`;
-          zIndex: -1,
-        }}
+          zIndex: -1}}
        />,
       {/* Content */}
       <div className="relative z-10">,

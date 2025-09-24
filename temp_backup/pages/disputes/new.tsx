@@ -67,8 +67,7 @@ export default function NewDisputePage() {
         })}
 ,
       router.push(`/disputes/${encodeURIComponent(dispute.id)}`)} catch (e: any) {
-      alert(e.message || 'Error'),
-    } finally {
+      alert(e.message || 'Error')} finally {
       setSubmitting(false)}
   }
 ,

@@ -227,6 +227,5 @@ export default function UpdatesIndex() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

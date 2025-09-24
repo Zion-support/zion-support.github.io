@@ -15,6 +15,5 @@ export default function ZeroTrustSecurityPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

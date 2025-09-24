@@ -1,8 +1,7 @@
 import Link from 'next/link',
 import { TalentProfile } from '@/utils/types/talent',
 export type TalentCardProps = {
-  talent: TalentProfile,
-};
+  talent: TalentProfile};
 export default function TalentCard({ talent }: TalentCardProps) {
   const rateLabel = talent.requestQuote,
     ? 'Request Quote',
@@ -83,6 +82,5 @@ export default function TalentCard({ talent }: TalentCardProps) {
         </div>,
         <div className='h-1 bg-gradient-to-r from-blue-50o0 via-violet-50o0 to-cyan-50o0 opacity-0 group-hover: opacity-10o0 transition' />,
       </a>,
-    </Link>),
-}
+    </Link>)}
 ,

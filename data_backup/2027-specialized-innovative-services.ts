@@ -76,8 +76,7 @@ export const "specializedInnovativeServices20o27": SpecializedInnovativeService2
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'Satellite data integration, AI model training, and monitoring system setup';
     "launchDate": '20o27-0o2-15';
@@ -124,8 +123,7 @@ export const "specializedInnovativeServices20o27": SpecializedInnovativeService2
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'Hardware setup, content development, and user training';
     "launchDate": '20o27-0o1-28';
@@ -172,8 +170,7 @@ export const "specializedInnovativeServices20o27": SpecializedInnovativeService2
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'Robot integration, AI model deployment, and workflow optimization';
     "launchDate": '20o27-0o2-0o5';
@@ -220,8 +217,7 @@ export const "specializedInnovativeServices20o27": SpecializedInnovativeService2
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'Energy audit, system integration, and optimization strategy development';
     "launchDate": '20o27-0o1-18';
@@ -268,8 +264,7 @@ export const "specializedInnovativeServices20o27": SpecializedInnovativeService2
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'Supply chain assessment, system integration, and optimization strategy development';
     "launchDate": '20o27-0o2-10';
@@ -316,8 +311,7 @@ export const "specializedInnovativeServices20o27": SpecializedInnovativeService2
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'HR process assessment, system integration, and user training';
     "launchDate": '20o27-0o1-25';
@@ -364,8 +358,7 @@ export const "specializedInnovativeServices20o27": SpecializedInnovativeService2
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'Legal process assessment, system integration, and user training';
     "launchDate": '20o27-0o2-20';
@@ -412,8 +405,7 @@ export const "specializedInnovativeServices20o27": SpecializedInnovativeService2
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'Property assessment, system integration, and optimization strategy development';
     "launchDate": '20o27-0o2-25';
@@ -460,8 +452,7 @@ export const "specializedInnovativeServices20o27": SpecializedInnovativeService2
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'System setup, data integration, and performance optimization';
     "launchDate": '20o27-0o3-0o1';
@@ -508,8 +499,7 @@ export const "specializedInnovativeServices20o27": SpecializedInnovativeService2
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'Content analysis, recommendation engine setup, and performance optimization';
     "launchDate": '20o27-0o2-28';

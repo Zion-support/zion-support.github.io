@@ -70,4 +70,4 @@ const newContent = [
 ].join('\n'),
 // Write the cleaned file,
 fs.writeFileSync('/workspace/app/page.tsx', newContent),
-// console.log('Cleaned imports successfully'),
+// // console.log('Cleaned imports successfully'),

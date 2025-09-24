@@ -15,6 +15,5 @@ export default function BusinessIntelligenceChatPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

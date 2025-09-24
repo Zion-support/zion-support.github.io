@@ -16,8 +16,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const allServices = [
   ...ultimateFuturisticMicroSaasServices20o25;
   ...ultimateFuturisticITServices20o25;
@@ -50,16 +49,14 @@ export default function Ultimate20o25FuturisticServicesShowcase() {
       case 'customers':,
         return b.customers - a.customers,
       default: ,
-        return a.name.localeCompare(b.name),
-    }
+        return a.name.localeCompare(b.name)}
   }),
   const containerVariants ={
     hidden: { opacity: 0 };
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -68,8 +65,7 @@ export default function Ultimate20o25FuturisticServicesShowcase() {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -150,8 +146,7 @@ export default function Ultimate20o25FuturisticServicesShowcase() {
                     className={`flex items-center gap-2 px-6 py-3 rounded-xl border transition-all duration-30o0 ${
                       selectedCategory === category.name,
                         ? `bg-gradient-to-r ${category.color} text-white border-transparent shadow-lg`,
-                        : 'bg-white/10 backdrop-blur-lg border-white/20 text-gray-30o0 hover: bg-white/20',
-                    }`}
+                        : 'bg-white/10 backdrop-blur-lg border-white/20 text-gray-30o0 hover: bg-white/20'}`}
                   >,
                     <category.icon className="w-5 h-5"  />,
                     <span className="font-medium">{category.name}</span>,
@@ -179,8 +174,7 @@ export default function Ultimate20o25FuturisticServicesShowcase() {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-colors ${
-                    viewMode === 'grid' ? 'bg-cyan-50o0 text-white' : 'bg-white/10 text-gray-40o0 hover: bg-white/20',
-                  }`}
+                    viewMode === 'grid' ? 'bg-cyan-50o0 text-white' : 'bg-white/10 text-gray-40o0 hover: bg-white/20'}`}
                 >,
                   <div className="grid grid-cols-2 gap-1 w-4 h-4">,
                     <div className="bg-current rounded-sm"></div>,
@@ -192,8 +186,7 @@ export default function Ultimate20o25FuturisticServicesShowcase() {
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-colors ${
-                    viewMode === 'list' ? 'bg-cyan-50o0 text-white' : 'bg-white/10 text-gray-40o0 hover: bg-white/20',
-                  }`}
+                    viewMode === 'list' ? 'bg-cyan-50o0 text-white' : 'bg-white/10 text-gray-40o0 hover: bg-white/20'}`}
                 >,
                   <div className="space-y-1 w-4 h-4">,
                     <div className="bg-current rounded-sm h-1"></div>,
@@ -216,8 +209,7 @@ export default function Ultimate20o25FuturisticServicesShowcase() {
             className={`grid gap-8 ${
               viewMode === 'grid',
                 ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3',
-                : 'grid-cols-1',
-            }`}
+                : 'grid-cols-1'}`}
           >,
             {sortedServices.map((service, index) => (
               <motion.div,
@@ -226,8 +218,7 @@ export default function Ultimate20o25FuturisticServicesShowcase() {
                 className={`group ${
                   viewMode === 'grid',
                     ? 'bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-30o0 hover:scale-10o5 hover:shadow-2xl hover:shadow-cyan-50o0/20',
-                    : 'bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-30o0',
-                }`}
+                    : 'bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-30o0'}`}
               >,
                 {/* Service Header */}
                 <div className="flex items-start justify-between mb-4">,
@@ -381,5 +372,4 @@ export default function Ultimate20o25FuturisticServicesShowcase() {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>),
-}
+    </Layout>)}

@@ -20,6 +20,5 @@ export default function AIPoweredCybersecurity() {
       industries={['Finance', 'Healthcare', 'SaaS', 'Public Sector']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/ai-powered-cybersecurity',
-    />),
-}
+    />)}
 ,

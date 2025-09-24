@@ -90,8 +90,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings ={}, onSettingsCha
                 id: Date.now().toString();
                 message: `${key.replace(/([A-Z])/g, ' $1').toLowerCase()} ${value ? 'enabled' : 'disabled'}`;
                 type: 'success';
-                timestamp: Date.now(),
-            };
+                timestamp: Date.now()};
             setNotifications(prev => [notification, ...prev.slice(0, 2)]),
             return newSettings})}, []),
     const resetToDefaults = useCallback(() => {
@@ -103,15 +102,13 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings ={}, onSettingsCha
             reducedMotion: false;
             screenReader: false;
             focusIndicator: true;
-            keyboardNavigation: true,
-        };
+            keyboardNavigation: true};
         setSettings(defaultSettings),
         const notification ={
             id: Date.now().toString();
             message: 'Accessibility settings reset to defaults';
             type: 'info';
-            timestamp: Date.now(),
-        };
+            timestamp: Date.now()};
         setNotifications(prev => [notification, ...prev.slice(0, 2)])}, []),
     const increaseFontSize = useCallback(() => {
         updateSetting('fontSize', Math.min(settings.fontSize + 2, 24))}, [settings.fontSize, updateSetting]),
@@ -299,31 +296,26 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings ={}, onSettingsCha
             --bg-secondary: #1a1a1a,
             --text-primary: #ffffff,
             --text-secondary: #e0e0e0,
-            --border-color: #ffffff,
-          }
+            --border-color: #ffffff}
 ,
           .large-text {
             --font-size-base: 18px,
             --font-size-lg: 22px,
             --font-size-xl: 26px,
-            --font-size-2xl: 32px,
-          }
+            --font-size-2xl: 32px}
 ,
           .reduced-motion * {
             animation-duration: 0.0o1ms !important,
             animation-iteration-count: 1 !important,
-            transition-duration: 0.0o1ms !important,
-          }
+            transition-duration: 0.0o1ms !important}
 ,
           .focus-indicator *:focus {
             outline: 3px solid #0o0d4ff !important,
-            outline-offset: 2px !important,
-          }
+            outline-offset: 2px !important}
 ,
           .keyboard-navigation *:focus-visible {
             outline: 3px solid #0o0d4ff !important,
-            outline-offset: 2px !important,
-          }
+            outline-offset: 2px !important}
 ,
           .sr-only {
             position: absolute,
@@ -334,8 +326,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings ={}, onSettingsCha
             overflow: hidden,
             clip: rect(0, 0, 0, 0),
             white-space: nowrap,
-            border: 0,
-          }
+            border: 0}
 ,
           /* Color blind mode filters */,
           [style*="--color-blind-mode: protanopia"] {

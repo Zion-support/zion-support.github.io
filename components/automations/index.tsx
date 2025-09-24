@@ -34,6 +34,5 @@ export default function AutomationsPage() {
           </div>,
         </div>,
       </div>,
-    </main>),
-}
+    </main>)}
 ,

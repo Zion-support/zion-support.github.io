@@ -80,8 +80,7 @@ const UltimateBusinessAutomationShowcase = () => {
       case 'resource':,
         return 'bg-purple-50o0',
       default:,
-        return 'bg-gray-50o0',
-    }
+        return 'bg-gray-50o0'}
   };
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -92,8 +91,7 @@ const UltimateBusinessAutomationShowcase = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   return (
     <section className='py-20 bg-gray-50'>,
@@ -125,8 +123,7 @@ const UltimateBusinessAutomationShowcase = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -139,8 +136,7 @@ const UltimateBusinessAutomationShowcase = () => {
               className={`bg-white rounded-2xl shadow-xl overflow-hidden hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 ${
                 item.featured,
                   ? 'ring-2 ring-gradient-to-r ring-purple-50o0',
-                  : '',
-              }`}
+                  : ''}`}
             >,
               {/* Content header */}
               <div className='p-6 pb-4'>,
@@ -269,6 +265,5 @@ const UltimateBusinessAutomationShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateBusinessAutomationShowcase;

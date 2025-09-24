@@ -33,8 +33,7 @@ interface AddMilestoneFormProps {
   projectScope?: string,
   projectStartDate?: string,
   projectEndDate?: string,
-  projectType?: string,
-}
+  projectType?: string}
 ,
 export function AddMilestoneForm({
   onSubmit;
@@ -52,8 +51,7 @@ export function AddMilestoneForm({
       amount: 0}}),
   const handleSubmit = (values: MilestoneFormValues) => {
     onSubmit(values),
-    form.reset(),
-  };
+    form.reset()};
   const handleAddMilestones = (milestones: GeneratedMilestone[]) => {
     // If there's only one milestonesubmit it directly,
     if (milestones.length === 1) {
@@ -62,8 +60,7 @@ export function AddMilestoneForm({
         title: milestone.title;
         description: milestone.description;
         due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined;
-        amount: milestone.estimatedHours * 10// Convert hours to a default payment amount,
-      }),
+        amount: milestone.estimatedHours * 10// Convert hours to a default payment amount}),
       return}
 ,
     // If there are multiple milestonesubmit them one by one,
@@ -72,15 +69,13 @@ export function AddMilestoneForm({
         title: milestone.title;
         description: milestone.description;
         due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined;
-        amount: milestone.estimatedHours * 10// Convert hours to a default payment amount,
-      })})};
+        amount: milestone.estimatedHours * 10// Convert hours to a default payment amount})})};
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
       title: milestone.title;
       description: milestone.description;
       due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined;
-      amount: milestone.estimatedHours * 10// Convert hours to a default payment amount,
-    })};
+      amount: milestone.estimatedHours * 10// Convert hours to a default payment amount})};
   return (
     <div className="space-y-6">,
       {/* AI Milestone Generator */}

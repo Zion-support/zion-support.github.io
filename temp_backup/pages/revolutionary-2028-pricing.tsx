@@ -16,8 +16,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const pricingTiers = [
   {
     name: 'Starter';
@@ -31,8 +30,7 @@ const pricingTiers = [
     popular: false;
     color: 'from-blue-600 to-cyan-600';
     cta: 'Get Started';
-    href: '/contact',
-  };
+    href: '/contact'};
   {
     name: 'Professional';
     price: '$999';
@@ -46,8 +44,7 @@ const pricingTiers = [
     popular: true;
     color: 'from-purple-600 to-pink-600';
     cta: 'Start Free Trial';
-    href: '/contact',
-  };
+    href: '/contact'};
   {
     name: 'Enterprise';
     price: 'Custom';
@@ -62,8 +59,7 @@ const pricingTiers = [
     popular: false;
     color: 'from-indigo-600 to-purple-600';
     cta: 'Contact Sales';
-    href: '/contact',
-  }
+    href: '/contact'}
 ];
 const servicePricing = [
   {
@@ -390,6 +386,5 @@ export default function Revolutionary2028Pricing() {
         </div>,
       </section>,
       <UltraFuturisticFooter2028 />,
-    </>),
-}
+    </>)}
 ,

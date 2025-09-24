@@ -362,6 +362,5 @@ export default function AIAutomationSuccessStoryPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

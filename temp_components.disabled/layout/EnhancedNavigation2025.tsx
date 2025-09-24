@@ -17,8 +17,7 @@ interface NavigationItem {
   description?: string,
   children?: NavigationItem[],
   badge?: string,
-  title?: string,
-}
+  title?: string}
 ,
 const navigationItems: NavigationItem[] = [
   {
@@ -287,8 +286,7 @@ export default function EnhancedNavigation20o25() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   // Removed unused isScrolled state and duplicate scroll handler,
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name),
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
   const closeDropdown = () => {
     setActiveDropdown(null)};
   return (

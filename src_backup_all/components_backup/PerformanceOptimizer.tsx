@@ -3,14 +3,12 @@ interface PerformanceMetrics {
   fps: number,
   memoryUsage: number,
   loadTime: number,
-  renderTime: number,
-}
+  renderTime: number}
 ,
 interface LazyLoadConfig {
   threshold: number,
   rootMargin: string,
-  triggerOnce: boolean,
-}
+  triggerOnce: boolean}
 ,
 export function PerformanceOptimizer() {
   const measurePerformance = useCallback(() => {
@@ -20,7 +18,7 @@ export function PerformanceOptimizer() {
         const entries = list.getEntries(),
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
-            // console.log('FCP:', entry.startTime)}
+            // // console.log('FCP:', entry.startTime)}
         })}),
       fcpObserver.observe({ entryTypes: ['paint'] }),
       // Largest Contentful Paint,
@@ -28,7 +26,7 @@ export function PerformanceOptimizer() {
         const entries = list.getEntries(),
         entries.forEach((entry) => {
           if (entry.name === 'largest-contentful-paint') {
-            // console.log('LCP:', entry.startTime)}
+            // // console.log('LCP:', entry.startTime)}
         })}),
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }),
       // First Input Delay,
@@ -36,7 +34,7 @@ export function PerformanceOptimizer() {
         const entries = list.getEntries(),
         entries.forEach((entry) => {
           if (entry.name === 'first-input') {
-            // console.log('FID:', entry.processingStart - entry.startTime)}
+            // // console.log('FID:', entry.processingStart - entry.startTime)}
         })}),
       fidObserver.observe({ entryTypes: ['first-input'] }),
       // Cumulative Layout Shift,
@@ -45,10 +43,9 @@ export function PerformanceOptimizer() {
         const entries = list.getEntries(),
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
-            clsValue += entry.value,
-          }
+            clsValue += entry.value}
         }),
-        // console.log('CLS:', clsValue)}),
+        // // console.log('CLS:', clsValue)}),
       clsObserver.observe({ entryTypes: ['layout-shift'] })}
   }, []),
   const optimizeImages = useCallback(() => {
@@ -78,8 +75,7 @@ export function PerformanceOptimizer() {
   const optimizeAnimations = useCallback(() => {
     // Check if user prefers reduced motion,
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.documentElement.classList.add('reduced-motion'),
-    }
+      document.documentElement.classList.add('reduced-motion')}
   }, []),
   useEffect(() => {
     // Wait for page to load before measuring performance,
@@ -107,8 +103,7 @@ export function useLazyLoad<T>(config: LazyLoadConfig ={ threshold: 0.1, rootMar
   return {
     ref;
     inView;
-    shouldLoad: inView,
-  };
+    shouldLoad: inView};
 }
 ,
 // Virtual Scrolling Hook,
@@ -139,17 +134,15 @@ export function usePerformanceMonitor() {
     fps: 0;
     memoryUsage: 0;
     loadTime: 0;
-    renderTime: 0,
-  }),
+    renderTime: 0}),
   useEffect(() => {
     const measure = () => {
       if ('performance' in window) {
-        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+        const navigation = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
         setMetrics(prev => ({
           ...prev;
           loadTime: navigation.loadEventEnd - navigation.loadEventStart;
-          renderTime: window.performance.now(),
-        }))}
+          renderTime: window.window.performance.now()}))}
     };
     const interval = setInterval(measure, 10o00),
     return () => clearInterval(interval)}, []),

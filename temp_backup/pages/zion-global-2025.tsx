@@ -16,6 +16,5 @@ export default function ZionGlobal2025Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

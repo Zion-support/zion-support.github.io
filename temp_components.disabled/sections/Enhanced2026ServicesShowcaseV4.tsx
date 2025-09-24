@@ -33,22 +33,19 @@ interface Service {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 interface Enhanced20o26ServicesShowcaseV4Props {
   services: Service[],
   title?: string,
   subtitle?: string,
-  showFilters?: boolean,
-}
+  showFilters?: boolean}
 ,
 const Enhanced20o26ServicesShowcaseV4: React.FC<Enhanced20o26ServicesShowcaseV4Props> = ({
   services;
@@ -92,16 +89,14 @@ const Enhanced20o26ServicesShowcaseV4: React.FC<Enhanced20o26ServicesShowcaseV4P
         return b.customers - a.customers,
       case 'name':,
       default: ,
-        return a.name.localeCompare(b.name),
-    }
+        return a.name.localeCompare(b.name)}
   }),
   const containerVariants ={
     hidden: { opacity: 0 };
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -110,8 +105,7 @@ const Enhanced20o26ServicesShowcaseV4: React.FC<Enhanced20o26ServicesShowcaseV4P
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -166,8 +160,7 @@ const Enhanced20o26ServicesShowcaseV4: React.FC<Enhanced20o26ServicesShowcaseV4P
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-20o0 ${
                       selectedCategory === category,
                         ? 'bg-cyan-50o0 text-white shadow-lg shadow-cyan-50o0/25',
-                        : 'bg-white/10 text-gray-30o0 hover: bg-white/20 border border-white/20',
-                    }`}
+                        : 'bg-white/10 text-gray-30o0 hover: bg-white/20 border border-white/20'}`}
                   >,
                     {category === 'all' ? 'All Categories' : category}
                   </button>))}

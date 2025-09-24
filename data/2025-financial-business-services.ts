@@ -7,15 +7,13 @@ export interface FinancialBusinessService {
   pricing: {
     basic: string,
     professional: string,
-    enterprise: string,
-  };
+    enterprise: string};
   category: string,
   tags: string[],
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
 }
 ,
 export const financialBusinessServices20o25: FinancialBusinessService[] = [

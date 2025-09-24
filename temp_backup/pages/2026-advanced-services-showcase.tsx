@@ -15,5 +15,4 @@ export default function 20o26AdvancedServicesShowcasePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

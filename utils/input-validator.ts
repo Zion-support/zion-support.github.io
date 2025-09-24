@@ -10,14 +10,12 @@ export class InputValidator {
 ,
   static validateEmail(email: string): boolean {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-    return emailRegex.test(email),
-  }
+    return emailRegex.test(email)}
 ,
   static validateURL(url: string): boolean {
     try {
       const parsedUrl = new URL(url),
-      return ['http:', 'https: '].includes(parsedUrl.protocol),
-    } catch {
+      return ['http:', 'https: '].includes(parsedUrl.protocol)} catch {
       return false}
   }
 ,

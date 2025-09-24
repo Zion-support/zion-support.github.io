@@ -75,7 +75,7 @@ class CursorSyncAutomation {
     if (level === 'error') {
       console.error(`❌ ${message}`)} else if (level === 'warn') {
       console.warn(`⚠️ ${message}`)} else {
-      // console.log(`ℹ️ ${message}`)}
+      // // console.log(`ℹ️ ${message}`)}
   }
 ,
   getLastSyncTime() {
@@ -97,8 +97,7 @@ class CursorSyncAutomation {
     try {
       const status = execSync('git status --porcelain', {
         encoding: 'utf8';
-        cwd: this.projectRoot,
-      }),
+        cwd: this.projectRoot}),
       return status.trim().split('\n').filter(line => line.length > 0)} catch (error) {
       this.log(`Error checking git status: ${error.message}`, 'error'),
       return []}
@@ -109,13 +108,11 @@ class CursorSyncAutomation {
       // Fetch latest changes,
       execSync('git fetch origin', {
         stdio: 'pipe';
-        cwd: this.projectRoot,
-      }),
+        cwd: this.projectRoot}),
       // Check if we're behind remote,
       const behind = execSync('git rev-list HEAD..origin/main --count', {
         encoding: 'utf8';
-        cwd: this.projectRoot,
-      }).trim(),
+        cwd: this.projectRoot}).trim(),
       return parseInt(behind) > 0} catch (error) {
       this.log(`Error checking remote changes: ${error.message}`, 'warn'),
       return false}
@@ -127,8 +124,7 @@ class CursorSyncAutomation {
       this.log('Pulling latest changes from remote...'),
       execSync('git pull origin main', {
         stdio: 'pipe';
-        cwd: this.projectRoot,
-      }),
+        cwd: this.projectRoot}),
       this.log('✅ Successfully pulled changes'),
       return true} catch (error) {
       this.log(`Error pulling changes: ${error.message}`, 'error'),
@@ -141,8 +137,7 @@ class CursorSyncAutomation {
       // Stage all changes,
       execSync('git add .', {
         stdio: 'pipe';
-        cwd: this.projectRoot,
-      }),
+        cwd: this.projectRoot}),
       this.log(`Staged ${files.length} changed files`),
       return true} catch (error) {
       this.log(`Error staging files: ${error.message}`, 'error'),
@@ -190,8 +185,7 @@ class CursorSyncAutomation {
     try {
       execSync(`git commit -m "${message}"`, {
         stdio: 'pipe';
-        cwd: this.projectRoot,
-      }),
+        cwd: this.projectRoot}),
       this.log(`✅ Committed: ${message}`),
       return true} catch (error) {
       this.log(`Error committing: ${error.message}`, 'error'),
@@ -204,8 +198,7 @@ class CursorSyncAutomation {
       this.log('Pushing changes to remote...'),
       execSync('git push origin main', {
         stdio: 'pipe';
-        cwd: this.projectRoot,
-      }),
+        cwd: this.projectRoot}),
       this.log('✅ Successfully pushed changes'),
       return true} catch (error) {
       this.log(`Error pushing changes: ${error.message}`, 'error'),
@@ -217,20 +210,17 @@ class CursorSyncAutomation {
       // Check for merge conflicts,
       const status = execSync('git status --porcelain', {
         encoding: 'utf8';
-        cwd: this.projectRoot,
-      }),
+        cwd: this.projectRoot}),
       if (status.includes('UU') || status.includes('AA')) {
         this.log('⚠️ Merge conflicts detected, attempting to resolve...'),
         // Abort current merge,
         execSync('git merge --abort', {
           stdio: 'pipe';
-          cwd: this.projectRoot,
-        }),
+          cwd: this.projectRoot}),
         // Reset to clean state,
         execSync('git reset --hard HEAD', {
           stdio: 'pipe';
-          cwd: this.projectRoot,
-        }),
+          cwd: this.projectRoot}),
         this.log('✅ Conflicts resolved by resetting to clean state'),
         return true}
 ,
@@ -280,8 +270,7 @@ class CursorSyncAutomation {
 ,
       this.updateLastSyncTime(),
       this.log('✅ Cursor sync completed successfully!'),
-      return true,
-} catch (error) {
+      return true} catch (error) {
       this.log(`Sync failed: ${error.message}`, 'error'),
       return false}
   }
@@ -328,6 +317,5 @@ if (command === 'once') {
   cursorSync.runOnce().then(success => {
     process.exit(success ? 0 : 1)})} else if (command === 'continuous') {
   cursorSync.startContinuousSync()} else {
-  // console.log('Usage: node cursor-sync-automation.js [once|continuous]'),
-  process.exit(1),
-} ,
+  // // console.log('Usage: node cursor-sync-automation.js [once|continuous]'),
+  process.exit(1)} ,

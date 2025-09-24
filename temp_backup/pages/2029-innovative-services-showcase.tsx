@@ -294,6 +294,5 @@ export default function InnovativeServicesShowcase20o29() {
         </section>,
         <UltraFuturisticFooter2029 />,
       </div>,
-    </>),
-}
+    </>)}
 ,

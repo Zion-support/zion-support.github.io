@@ -12,8 +12,7 @@ interface Workflow {
   successRate: number,
   lastRun: Date,
   category: 'marketing' | 'sales' | 'support' | 'operations' | 'security',
-  priority: 'low' | 'medium' | 'high' | 'critical',
-}
+  priority: 'low' | 'medium' | 'high' | 'critical'}
 ,
 interface AutomationRule {
   id: string,
@@ -23,8 +22,7 @@ interface AutomationRule {
   frequency: string,
   enabled: boolean,
   executions: number,
-  category: string,
-}
+  category: string}
 ,
 interface WorkflowExecution {
   id: string,
@@ -35,8 +33,7 @@ interface WorkflowExecution {
   duration?: number,
   recordsProcessed: number,
   errors?: string[],
-  logs: string[],
-}
+  logs: string[]}
 ,
 const AutomationWorkflowEngine: React.FC = () => {
   const [workflowsetWorkflows] = useState<Workflow[]>([]),
@@ -49,8 +46,7 @@ const AutomationWorkflowEngine: React.FC = () => {
     generateMockData(),
     // Simulate real-time execution updates,
     const interval = setInterval(() => {
-      updateExecutions(),
-    }5000),
+      updateExecutions()}5000),
     return () => clearInterval(interval)}[]),
   const generateMockData = async () => {
     setIsLoading(true),
@@ -67,8 +63,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         successRate: 98.5;
         lastRun: new Date(Date.now() - 2 * 60 * 60 * 1000);
         category: 'sales';
-        priority: 'high',
-      };
+        priority: 'high'};
       {
         id: '2';
         name: 'Abandoned Cart Recovery';
@@ -80,8 +75,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         successRate: 23.4;
         lastRun: new Date(Date.now() - 30 * 60 * 1000);
         category: 'marketing';
-        priority: 'medium',
-      };
+        priority: 'medium'};
       {
         id: '3';
         name: 'Support Ticket Escalation';
@@ -93,8 +87,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         successRate: 94.2;
         lastRun: new Date(Date.now() - 15 * 60 * 1000);
         category: 'support';
-        priority: 'critical',
-      };
+        priority: 'critical'};
       {
         id: '4';
         name: 'Invoice Generation';
@@ -106,8 +99,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         successRate: 99.1;
         lastRun: new Date(Date.now() - 45 * 60 * 1000);
         category: 'operations';
-        priority: 'high',
-      };
+        priority: 'high'};
       {
         id: '5';
         name: 'Security Alert Processing';
@@ -119,8 +111,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         successRate: 87.3;
         lastRun: new Date(Date.now() - 4 * 60 * 60 * 1000);
         category: 'security';
-        priority: 'critical',
-      };
+        priority: 'critical'};
       {
         id: '6';
         name: 'Customer Feedback Collection';
@@ -132,8 +123,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         successRate: 0;
         lastRun: new Date(0);
         category: 'support';
-        priority: 'low',
-      }
+        priority: 'low'}
     ],
     const mockRules: AutomationRule[] = [
       {
@@ -144,8 +134,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         frequency: 'Immediate';
         enabled: true;
         executions: 2341;
-        category: 'validation',
-      };
+        category: 'validation'};
       {
         id: '2';
         name: 'Duplicate Prevention';
@@ -154,8 +143,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         frequency: 'Immediate';
         enabled: true;
         executions: 456;
-        category: 'data-quality',
-      };
+        category: 'data-quality'};
       {
         id: '3';
         name: 'Performance Monitoring';
@@ -164,8 +152,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         frequency: 'Every 5 minutes';
         enabled: true;
         executions: 89;
-        category: 'monitoring',
-      }
+        category: 'monitoring'}
     ],
     const mockExecutions: WorkflowExecution[] = [
       {
@@ -193,8 +180,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         duration: 2;
         recordsProcessed: 8;
         errors: ['Failed to notify manager: Email service unavailable'];
-        logs: ['Starting support ticket 'escalation', 'Processing 8 high-priority 'tickets', 'Error: Email service unavailable'],
-      }
+        logs: ['Starting support ticket 'escalation', 'Processing 8 high-priority 'tickets', 'Error: Email service unavailable']}
     ],
     setWorkflows(mockWorkflows),
     setAutomationRules(mockRules),
@@ -213,8 +199,7 @@ const AutomationWorkflowEngine: React.FC = () => {
       case 'paused': return 'text-yellow-600 bg-yellow-100',
       case 'draft': return 'text-blue-600 bg-blue-100',
       case 'error': return 'text-red-600 bg-red-100',
-      default: return 'text-gray-600 bg-gray-100',
-    }
+      default: return 'text-gray-600 bg-gray-100'}
   };
   const getPriorityColor = (priority: string) => {
     switch (priority) {
@@ -222,8 +207,7 @@ const AutomationWorkflowEngine: React.FC = () => {
       case 'high': return 'text-orange-600 bg-orange-100',
       case 'medium': return 'text-yellow-600 bg-yellow-100',
       case 'low': return 'text-green-600 bg-green-100',
-      default: return 'text-gray-600 bg-gray-100',
-    }
+      default: return 'text-gray-600 bg-gray-100'}
   };
   const getExecutionStatusColor = (status: string) => {
     switch (status) {
@@ -231,8 +215,7 @@ const AutomationWorkflowEngine: React.FC = () => {
       case 'running': return 'text-blue-600 bg-blue-100',
       case 'failed': return 'text-red-600 bg-red-100',
       case 'pending': return 'text-yellow-600 bg-yellow-100',
-      default: return 'text-gray-600 bg-gray-100',
-    }
+      default: return 'text-gray-600 bg-gray-100'}
   };
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -241,8 +224,7 @@ const AutomationWorkflowEngine: React.FC = () => {
       case 'support': return '🎧',
       case 'operations': return '⚙️',
       case 'security': return '🔒',
-      default: return '🔧',
-    }
+      default: return '🔧'}
   };
   const formatTimeAgo = (timestamp: Date) => {
     const now = new Date(),

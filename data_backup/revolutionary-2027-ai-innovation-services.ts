@@ -110,8 +110,7 @@ reviews: number,export const revolutionary20o27AIInnovationServices: Revolutiona
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered drug discovery platform with molecular analysis, target identification, and comprehensive drug discovery pipeline.';
@@ -192,8 +191,7 @@ reviews: number,export const revolutionary20o27AIInnovationServices: Revolutiona
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered climate intelligence platform with satellite data analysis, climate modeling, and comprehensive risk assessment.';
@@ -273,8 +271,7 @@ reviews: number,export const revolutionary20o27AIInnovationServices: Revolutiona
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered autonomous vehicle platform with computer vision, sensor fusion, and comprehensive development tools.';
@@ -354,8 +351,7 @@ reviews: number,export const revolutionary20o27AIInnovationServices: Revolutiona
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered quantum computing platform with quantum algorithm development, AI optimization, and hybrid computing capabilities.';
@@ -435,8 +431,7 @@ reviews: number,export const revolutionary20o27AIInnovationServices: Revolutiona
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered space technology platform with satellite optimization, space debris tracking, and comprehensive mission planning.';

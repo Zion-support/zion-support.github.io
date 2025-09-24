@@ -104,8 +104,7 @@ reviews: number,export const revolutionaryAI20o25ServicesV2: RevolutionaryAI20o2
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced AI consciousness simulation platform with real-time monitoring, ethical frameworks, and research collaboration tools. Includes API access and custom consciousness model development.';
@@ -179,8 +178,7 @@ reviews: number,export const revolutionaryAI20o25ServicesV2: RevolutionaryAI20o2
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full-stack hybrid AI-Quantum computing platform with cloud deployment, real-time processing, and comprehensive API access. Includes quantum algorithm library and AI optimization tools.';
@@ -291,7 +289,7 @@ reviews: number,export const revolutionaryAI20o25ServicesV2: RevolutionaryAI20o2
     textColor:;
   text-green-40o0';
     "link": 'https://ziontechgroup.com/ai-autonomous-decision-engine;
-    "marketPosition": 'Leading autonomous AI decision platform. Traditional decision support: $15,0o00+/month. Our autonomous "engine": $5,999/month with 10x window.performance.;
+    "marketPosition": 'Leading autonomous AI decision platform. Traditional decision support: $15,0o00+/month. Our autonomous "engine": $5,999/month with 10x window.window.performance.;
     "targetAudience": Financial institutions, Trading companies, Manufacturing companies, Logistics companies, Healthcare organizations, Government agencies';
     "trialDays": 14;
     setupTime:;
@@ -332,8 +330,7 @@ reviews: number,export const revolutionaryAI20o25ServicesV2: RevolutionaryAI20o2
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise-grade autonomous AI decision engine with real-time processing, comprehensive audit trails, and regulatory compliance. Includes custom decision framework development and integration services.';
@@ -409,8 +406,7 @@ reviews: number,export const revolutionaryAI20o25ServicesV2: RevolutionaryAI20o2
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Comprehensive AI research automation platform with hypothesis generation, data analysis, and publication assistance. Includes custom research workflow development and integration services.';
@@ -486,8 +482,7 @@ reviews: number,export const revolutionaryAI20o25ServicesV2: RevolutionaryAI20o2
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise-grade AI ethics and governance platform with comprehensive monitoring, compliance tools, and audit capabilities. Includes custom policy development and integration services.';

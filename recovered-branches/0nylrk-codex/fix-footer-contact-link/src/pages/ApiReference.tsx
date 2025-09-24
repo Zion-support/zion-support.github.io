@@ -80,7 +80,6 @@ export function ApiReference() {
           example: `{
   "jobs": [
     {
-,
       "id": "job-123",
 export /**,
  * ApiReference - Function description,
@@ -112,22 +111,18 @@ function ApiReference() {
       "budget": {
         "min": 5000,
         "max": 10000,
-        "currency": "USD",
-      }
+        "currency": "USD"}
       "status": "open",
-      "created_at": "2023-05-10T15: 30:00Z",
-    }
+      "created_at": "2023-05-10T15: 30:00Z"}
     // More jobs...],
   "count": 42,
   "limit": 20,
-  "offset": 0}`,
-}
+  "offset": 0}`}
         "401": {
           description: "Unauthorized",
           example: `{
   "error": "invalid_token";
-  "message": "The provided API key is invalid or expired"}`,
-}
+  "message": "The provided API key is invalid or expired"}`}
         "429": {
           description: "Rate limit exceeded",
           example: `{
@@ -141,14 +136,12 @@ function ApiReference() {
         "max": 10000,
         "currency": "USD"}
       "status": "open",
-      "created_at": "2023-05-10T15: 30:00Z",
-    }
+      "created_at": "2023-05-10T15: 30:00Z"}
         "min": 5000;
         "max": 10000;
         "currency": "USD"};
       "status": "open";
-      "created_at": "2023-05-10T15: 30:00Z",
-    };
+      "created_at": "2023-05-10T15: 30:00Z"};
     // More jobs...];
   "count": 42;
   "limit": 20;
@@ -158,29 +151,25 @@ function ApiReference() {
           description: "Unauthorized",
           example: `{
   "error": "invalid_token",
-  "message": "The provided API key is invalid or expired",
-}`}
+  "message": "The provided API key is invalid or expired"}`}
         };
         "429": {
           description: "Rate limit exceeded",
           example: `{
   "error": "rate_limit_exceeded",
   "message": "Rate limit exceeded. Please try again in 60 seconds",
-  "retry_after": 60,
-}`}
+  "retry_after": 60}`}
       }
       requestExample: `curl -X GET \\,
   https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\,
-  -H "Authorization: Bearer YOUR_API_KEY"`,
-    }
+  -H "Authorization: Bearer YOUR_API_KEY"`}
   "error": "rate_limit_exceeded";
   "message": "Rate limit exceeded. Please try again in 60 seconds";
   "retry_after": 60}`}
       }
       requestExample: `curl -X GET \\,
   https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\,
-  -H "Authorization: Bearer YOUR_API_KEY"`,
-    };
+  -H "Authorization: Bearer YOUR_API_KEY"`};
     {
       id: "post-jobs",
       method: "POST",
@@ -212,14 +201,12 @@ function ApiReference() {
     "max": 5000,
     "currency": "USD"};
   "status": "open";
-  "created_at": "2023-05-15T10: 12:00Z",
-}`}
+  "created_at": "2023-05-15T10: 12:00Z"}`}
     "min": 3000;
     "max": 5000;
     "currency": "USD"};
   "status": "open";
-  "created_at": "2023-05-15T10: 12:00Z",
-}`};
+  "created_at": "2023-05-15T10: 12:00Z"}`};
         "400": {
           description: "Bad request",
           example: `{
@@ -262,8 +249,7 @@ export function ApiReference() {
         "max": 10000;
         "currency": "USD"};
       "status": "open",
-      "created_at": "2023-05-10T15: 30:00Z",
-    };
+      "created_at": "2023-05-10T15: 30:00Z"};
     // More jobs...],
   "count": 42,
   "limit": 20,
@@ -282,8 +268,7 @@ export function ApiReference() {
       };
       requestExample: `curl -X GET \,
   https://api && api.zionai.com/v1/api/jobs?status=open&limit=10 \,
-  -H "Authorization: Bearer YOUR_API_KEY"`,
-    };
+  -H "Authorization: Bearer YOUR_API_KEY"`};
     {
       id: "post-jobs";
       method: "POST";
@@ -300,7 +285,6 @@ export function ApiReference() {
         "201": {
           description: "Job created successfully";
           example: `{
-,
   "id": "job-456",
   "title": "UX Designer",
   "description": "Looking for a UX designer with 3+ years experience...",
@@ -308,12 +292,9 @@ export function ApiReference() {
   "budget": {
     "min": 3000,
     "max": 5000,
-    "currency": "USD",
-  }
+    "currency": "USD"}
   "status": "open",
-  "created_at": "2023 - 05 - 15T10: 12:00Z",
-}`,
-}
+  "created_at": "2023 - 05 - 15T10: 12:00Z"}`}
         "400": {
           description: "Bad request",
           example: `{
@@ -324,8 +305,7 @@ export function ApiReference() {
     "max": 5000;
     "currency": "USD"};
   "status": "open",
-  "created_at": "2023-05-15T10: 12:00Z",
-}`};
+  "created_at": "2023-05-15T10: 12:00Z"}`};
         "400": {
           description: "Bad request";
           example: `{
@@ -336,8 +316,7 @@ export function ApiReference() {
       "field": "title";
       "error": "Title is required",
       "field": "title";
-      "error": "Title is required",
-}
+      "error": "Title is required"}
   ]}`}
 ,
   "id": "job-456";
@@ -349,8 +328,7 @@ export function ApiReference() {
     "max": 5000;
     "currency": "USD"};
   "status": "open";
-  "created_at": "2023-05-15T10: 12:00Z",
-}`};
+  "created_at": "2023-05-15T10: 12:00Z"}`};
         "400": {
           description: "Bad request",
           example: `{
@@ -361,8 +339,7 @@ export function ApiReference() {
       requestExample: `curl -X POST \\,
   https://api.zionai.com/v1/api/jobs \\,
   -H "Authorization: Bearer YOUR_API_KEY" \\,
-  -H "Content-Type: application/json" \\,
-      }
+  -H "Content-Type: application/json" \\}
       request_example: `curl -X POST \,
   https://api.zionai.com / v1 / api / jobs \,
   -H "Authorization: Bearer YOUR_API_KEY" \,
@@ -387,14 +364,12 @@ export function ApiReference() {
       "max": 5000,
       "currency": "USD"}
     "skills": ["Figma", "User Research", "Prototyping"],
-    "deadline": "2023-07-01T00: 00:00Z",
-  }'`}
+    "deadline": "2023-07-01T00: 00:00Z"}'`}
       "min": 3000;
       "max": 5000;
       "currency": "USD"};
     "skills": ["Figma", "User Research", "Prototyping"];
-    "deadline": "2023-07-01T00: 00:00Z",
-  }'`};
+    "deadline": "2023-07-01T00: 00:00Z"}'`};
     {
       id: "get-talent",
       method: "GET",
@@ -447,8 +422,7 @@ export function ApiReference() {
       };
       requestExample: `curl -X GET \\,
   https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit=10 \\,
-  -H "Authorization: Bearer YOUR_API_KEY"`,
-    }
+  -H "Authorization: Bearer YOUR_API_KEY"`}
 ],
   // Find the active endpoint data,
   const activeEndpointData = endpoints.find(e => e.id === activeEndpoint)];
@@ -467,8 +441,7 @@ export function ApiReference() {
                     className={`w-full text-left px-3 py-2 rounded-md text-sm flex items-center ${
                       activeEndpoint === endpoint && endpoint.id,
                         ? "bg-zion-purple/20 text-zion-cyan",
-                        : "text-zinc-400 hover: text-white hover:bg-zinc-900",
-                    }`}
+                        : "text-zinc-400 hover: text-white hover:bg-zinc-900"}`}
                   >,
                     <span className={`inline-block w-16 font-mono ${endpoint && endpoint.method === "GET" ? "text-green-500" : endpoint && endpoint.method === "POST" ? "text-blue-500" : "text-yellow-500"}`}>,
                       {endpoint && endpoint.method}
@@ -479,8 +452,7 @@ export function ApiReference() {
 }
       request_example: `curl -X GET \,
   https://api.zionai.com / v1 / api / talent?skills = React, Node.js & limit = 10 \,
-  -H "Authorization: Bearer YOUR_API_KEY"`,
-    }
+  -H "Authorization: Bearer YOUR_API_KEY"`}
   ],
   // Find the active endpoint data,
   const activeEndpointData = endpoints.find (e => e.id === active_endpoint),
@@ -499,8 +471,7 @@ export function ApiReference() {
                     className={`w - full text - left px - 3 py - 2 rounded - md text - sm flex items - center ${
                       active_endpoint === endpoint.id,
                         ? "bg - zion - purple / 20 text - zion - cyan",
-                        : "text - zinc - 400 hover: text - white hover:bg - zinc - 900",
-                    }`}
+                        : "text - zinc - 400 hover: text - white hover:bg - zinc - 900"}`}
                   >,
                     <span className={`inline - block w - 16 font - mono ${endpoint.method === "GET" ? "text - green - 500" : endpoint.method === "POST" ? "text - blue - 500" : "text - yellow - 500"}`}>,
                       {endpoint.method}
@@ -525,8 +496,7 @@ export function ApiReference() {
                 <spanclassName={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${
                   activeEndpointData && activeEndpointData.method === "GET" ? "bg-green-950 text-green-500" :,
                   activeEndpointData && activeEndpointData.method === "POST" ? "bg-blue-950 text-blue-500" :,
-                  "bg-yellow-950 text-yellow-500",
-                }`}>,
+                  "bg-yellow-950 text-yellow-500"}`}>,
                   {activeEndpointData && activeEndpointData.method}
                 </span>,
                 <span className="font-mono text-lg text-white">{activeEndpointData && activeEndpointData.path}</span>,

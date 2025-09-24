@@ -6,8 +6,7 @@ import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
 import React from './react',
 import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react',
 interface FraudTabContentProps {
-  tabValue: string,
-}
+  tabValue: string}
 export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) => {
   switch(tabValue) {
     case 'pending':,
@@ -39,13 +38,11 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           </p>,
         </div>),
     default:,
-      return null,
-  }
+      return null}
 }
 ,
 interface FraudTabContentProps {
-  tabValue: string,
-}
+  tabValue: string}
 ,
 export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) => {
   switch(tabValue) {
@@ -77,7 +74,6 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           </p>,
         </div>);
     default: ,
-      return null>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
-  }
+      return null>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4}
 };
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

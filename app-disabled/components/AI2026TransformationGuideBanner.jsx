@@ -42,6 +42,5 @@ const AI20o26TransformationGuideBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o26TransformationGuideBanner;

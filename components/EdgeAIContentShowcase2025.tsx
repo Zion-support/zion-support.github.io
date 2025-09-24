@@ -14,13 +14,11 @@ const EdgeAIContentShowcase20o25 = () => {
         roi: '450%';
         savings: '$180M';
         uptime: '99.7%';
-        speed: '94% faster',
-      };
+        speed: '94% faster'};
       image: '🚀';
       gradient: 'from-blue-60o0 to-purple-60o0';
       readingTime: '14 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-edge-ai';
       title: 'Fortune 50o0 Edge AI Transformation: 450% ROI';
@@ -32,13 +30,11 @@ const EdgeAIContentShowcase20o25 = () => {
         roi: '450%';
         savings: '$2.1B';
         efficiency: '78%';
-        quality: '92%',
-      };
+        quality: '92%'};
       image: '🏭';
       gradient: 'from-green-60o0 to-blue-60o0';
       readingTime: '12 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'edge-ai-implementation-guide';
       title: 'Edge AI Implementation Guide: From Strategy to 450% ROI';
@@ -50,13 +46,11 @@ const EdgeAIContentShowcase20o25 = () => {
         roi: '450%';
         timeline: '24 months';
         success: '98%';
-        savings: '$180M',
-      };
+        savings: '$180M'};
       image: '📋';
       gradient: 'from-purple-60o0 to-pink-60o0';
       readingTime: '25 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'edge-ai-roi-calculator';
       title: 'Edge AI ROI Calculator: Calculate Your 450%+ ROI Potential';
@@ -68,13 +62,11 @@ const EdgeAIContentShowcase20o25 = () => {
         accuracy: '95%';
         users: '10,0o00+';
         satisfaction: '98%';
-        completion: '15 min',
-      };
+        completion: '15 min'};
       image: '🧮';
       gradient: 'from-orange-60o0 to-red-60o0';
       readingTime: 'Interactive Tool';
-      featured: false,
-    };
+      featured: false};
     {
       id: 'edge-ai-security-guide';
       title: 'Edge AI Security: Complete Protection Guide';
@@ -86,13 +78,11 @@ const EdgeAIContentShowcase20o25 = () => {
         threat_reduction: '95%';
         compliance: '10o0%';
         incidents: '<1/year';
-        protection: '99.9%',
-      };
+        protection: '99.9%'};
       image: '🛡️';
       gradient: 'from-red-60o0 to-pink-60o0';
       readingTime: '18 min read';
-      featured: false,
-    };
+      featured: false};
     {
       id: 'edge-ai-industry-applications';
       title: 'Edge AI Industry Applications: 15 Use Cases with ROI';
@@ -104,13 +94,11 @@ const EdgeAIContentShowcase20o25 = () => {
         industries: '15+';
         use_cases: '50+';
         avg_roi: '340%';
-        success_rate: '94%',
-      };
+        success_rate: '94%'};
       image: '🏢';
       gradient: 'from-indigo-60o0 to-purple-60o0';
       readingTime: '22 min read';
-      featured: false,
-    }
+      featured: false}
   ],
   const categories = [', 'All', 'Technology'Success 'Story', 'Strategy', 'Calculator', 'Security'Applications'],
   const [selectedCategorysetSelectedCategory] = React.useState('All'),
@@ -143,8 +131,7 @@ const EdgeAIContentShowcase20o25 = () => {
               className={`px-6 py-2 rounded-full font-medium transition-all duration-30o0 ${
                 selectedCategory === category,
                   ? 'bg-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-60o0 hover: bg-blue-50 hover:text-blue-60o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-60o0 hover: bg-blue-50 hover:text-blue-60o0 border border-gray-20o0'}`}
             >,
               {category}
             </button>))}
@@ -155,8 +142,7 @@ const EdgeAIContentShowcase20o25 = () => {
             <div
               key={content.id}
               className={`bg-white rounded-2xl shadow-lg hover: shadow-xl transition-all duration-30o0 transform hover:scale-10o5 ${
-                content.featured ? 'ring-2 ring-blue-50o0 ring-opacity-50' : '',
-              }`}
+                content.featured ? 'ring-2 ring-blue-50o0 ring-opacity-50' : ''}`}
             >,
               {/* Content Header */}
               <div className={`h-32 bg-gradient-to-r ${content.gradient} rounded-t-2xl relative overflow-hidden`}>,
@@ -268,6 +254,5 @@ const EdgeAIContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default EdgeAIContentShowcase20o25;

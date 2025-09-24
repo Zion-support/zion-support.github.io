@@ -83,6 +83,5 @@ const FeatureCTAs = () => {
           </a>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default FeatureCTAs;

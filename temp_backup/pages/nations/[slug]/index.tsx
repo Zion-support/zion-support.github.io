@@ -27,8 +27,7 @@ const NationPublicPage: NextPage = () => {
       const data = await res.json(),
       if (!res.ok) throw new Error(data?.error || 'Join failed'),
       setNation(data.nation)} catch (e: any) {
-      setError(e?.message || 'Join failed'),
-    } finally {
+      setError(e?.message || 'Join failed')} finally {
       setJoining(false)}
   }
 ,

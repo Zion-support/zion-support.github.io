@@ -7,8 +7,7 @@ import { CardContent } from "@/components/ui/card",
 interface Language {
   code: string,
   name: string,
-  flag: string,
-}
+  flag: string}
 ,
 const languages: Language[] = [
   { code: "en"name: "English"flag: "🇺🇸" };
@@ -31,8 +30,7 @@ export function LanguageThemeSelector() {
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code,
                   ? "border-primary bg-primary/5",
-                  : "border-border hover: border-primary/40",
-              }`}
+                  : "border-border hover: border-primary/40"}`}
               onClick={() => setSelectedLanguage(language.code)}
             >,
               <CardContent className="p-3 flex items-center justify-between">,
@@ -54,8 +52,7 @@ export function LanguageThemeSelector() {
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'light',
                 ? "border-primary bg-primary/5",
-                : "border-border hover: border-primary/40",
-            }`}
+                : "border-border hover: border-primary/40"}`}
             onClick={() => setTheme('light')}
           >,
             <CardContent className="p-3 flex flex-col items-center justify-center">,
@@ -69,8 +66,7 @@ export function LanguageThemeSelector() {
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark',
                 ? "border-primary bg-primary/5",
-                : "border-border hover: border-primary/40",
-            }`}
+                : "border-border hover: border-primary/40"}`}
             onClick={() => setTheme('dark')}
           >,
             <CardContent className="p-3 flex flex-col items-center justify-center">,

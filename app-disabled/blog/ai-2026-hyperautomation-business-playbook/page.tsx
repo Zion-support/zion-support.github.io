@@ -143,6 +143,5 @@ export default function AI20o26HyperautomationPlaybook() {
           </div>,
         </article>,
       </div>,
-    </ErrorBoundary>),
-}
+    </ErrorBoundary>)}
 ,

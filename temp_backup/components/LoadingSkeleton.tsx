@@ -89,8 +89,7 @@ const LoadingSkeleton: React.FC = () => {
         transition={{
           duration: 10;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
       <motion.div,
         className="absolute bottom-1/4 right-1/4 w-12 h-12 border border-purple-40o0/30 rounded-full",
@@ -100,8 +99,7 @@ const LoadingSkeleton: React.FC = () => {
         transition={{
           duration: 8;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
        />,
     </div>)};
 export default LoadingSkeleton;

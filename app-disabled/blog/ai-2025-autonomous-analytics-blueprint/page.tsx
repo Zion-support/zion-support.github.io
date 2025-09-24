@@ -69,6 +69,5 @@ const AutonomousAnalyticsBlueprint20o25 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default AutonomousAnalyticsBlueprint20o25;

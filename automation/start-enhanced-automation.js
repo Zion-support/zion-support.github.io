@@ -17,8 +17,8 @@ class EnhancedAutomationSystem {
     this.startTime = null,
     // Load environment-specific configuration,
     this.loadEnvironmentConfig(),
-    // // // // // // // console.log('🚀 Starting Enhanced PM2 Automation System...'),
-    // // // // // // // console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`)}
+    // // // // // // // // console.log('🚀 Starting Enhanced PM2 Automation System...'),
+    // // // // // // // // console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`)}
 ,
   /**,
    * Load environment-specific configuration,
@@ -28,7 +28,7 @@ class EnhancedAutomationSystem {
     const envConfig = config.environments[env] || {};
     // Merge environment config with base config,
     this.config = this.mergeConfig(config, envConfig),
-    // // // // // // // console.log(`⚙️ Loaded configuration for environment: ${env}`)}
+    // // // // // // // // console.log(`⚙️ Loaded configuration for environment: ${env}`)}
 ,
   /**,
    * Merge configuration objects,
@@ -47,7 +47,7 @@ class EnhancedAutomationSystem {
    */,
   async start() {
     try {
-      // // // // // // // console.log('🔄 Initializing automation systems...'),
+      // // // // // // // // console.log('🔄 Initializing automation systems...'),
       // Start alerting system,
       if (this.config.alerting.enabled) {
         await this.startAlertingSystem()}
@@ -70,13 +70,12 @@ class EnhancedAutomationSystem {
 ,
       this.isRunning = true,
       this.startTime = Date.now(),
-      // // // // // // // console.log('✅ Enhanced Automation System started successfully!'),
-      // // // // // // // console.log(`📊 Dashboard available at: http://localhost:${this.config.dashboard.port}`),
+      // // // // // // // // console.log('✅ Enhanced Automation System started successfully!'),
+      // // // // // // // // console.log(`📊 Dashboard available at: http://localhost:${this.config.dashboard.port}`),
       // Setup graceful shutdown,
       this.setupGracefulShutdown(),
       // Start health monitoring,
-      this.startHealthMonitoring(),
-} catch (error) {
+      this.startHealthMonitoring()} catch (error) {
       console.error('❌ Failed to start Enhanced Automation System:', error),
       process.exit(1)}
   }
@@ -86,17 +85,15 @@ class EnhancedAutomationSystem {
    */,
   async startAlertingSystem() {
     try {
-      // // // // // // // console.log('🔔 Starting Alerting System...'),
+      // // // // // // // // console.log('🔔 Starting Alerting System...'),
       this.alerting = new AlertingSystem({
         email: this.config.alerting.email;
         slack: this.config.alerting.slack;
         webhook: this.config.alerting.webhook;
         thresholds: this.config.alerting.thresholds;
         cooldown: this.config.alerting.cooldown;
-        maxAlerts: this.config.alerting.maxAlerts,
-      }),
-      // // // // // // // console.log('✅ Alerting System started'),
-} catch (error) {
+        maxAlerts: this.config.alerting.maxAlerts}),
+      // // // // // // // // console.log('✅ Alerting System started')} catch (error) {
       console.error('❌ Failed to start Alerting System:', error),
       throw error}
   }
@@ -106,7 +103,7 @@ class EnhancedAutomationSystem {
    */,
   async startRecoverySystem() {
     try {
-      // // // // // // // console.log('🔄 Starting Process Recovery System...'),
+      // // // // // // // // console.log('🔄 Starting Process Recovery System...'),
       this.recovery = new ProcessRecoverySystem({
         maxRetries: this.config.recovery.maxRetries;
         retryDelay: this.config.recovery.retryDelay;
@@ -117,10 +114,8 @@ class EnhancedAutomationSystem {
         recoveryStrategies: this.config.recovery.strategies;
         processDependencies: this.config.recovery.processDependencies;
         criticalProcesses: this.config.recovery.criticalProcesses;
-        logRecovery: true,
-      }),
-      // // // // // // // console.log('✅ Process Recovery System started'),
-} catch (error) {
+        logRecovery: true}),
+      // // // // // // // // console.log('✅ Process Recovery System started')} catch (error) {
       console.error('❌ Failed to start Process Recovery System:', error),
       throw error}
   }
@@ -130,18 +125,16 @@ class EnhancedAutomationSystem {
    */,
   async startDashboard() {
     try {
-      // // // // // // // console.log('📊 Starting Monitoring Dashboard...'),
+      // // // // // // // // console.log('📊 Starting Monitoring Dashboard...'),
       // Override dashboard config with environment settings,
       const dashboardConfig ={
         ...this.config.dashboard;
-        port: this.config.dashboard.port,
-      };
+        port: this.config.dashboard.port};
       this.dashboard = new AutomationDashboard(),
       // Wait for dashboard to be ready,
       await new Promise(resolve => {
         setTimeout(resolve, 20o00)}),
-      // // // // // // // console.log('✅ Monitoring Dashboard started'),
-} catch (error) {
+      // // // // // // // // console.log('✅ Monitoring Dashboard started')} catch (error) {
       console.error('❌ Failed to start Monitoring Dashboard:', error),
       throw error}
   }
@@ -151,7 +144,7 @@ class EnhancedAutomationSystem {
    */,
   startMaintenanceScheduler() {
     try {
-      // // // // // // // console.log('🛠️ Starting Maintenance Scheduler...'),
+      // // // // // // // // console.log('🛠️ Starting Maintenance Scheduler...'),
       const cron = require('node-cron'),
       // Daily maintenance,
       if (this.config.maintenance.schedule.daily) {
@@ -168,8 +161,7 @@ class EnhancedAutomationSystem {
         cron.schedule(this.config.maintenance.schedule.monthly, () => {
           this.performMaintenance('monthly')})}
 ,
-      // // // // // // // console.log('✅ Maintenance Scheduler started'),
-} catch (error) {
+      // // // // // // // // console.log('✅ Maintenance Scheduler started')} catch (error) {
       console.error('❌ Failed to start Maintenance Scheduler:', error)}
   }
 ,
@@ -178,11 +170,10 @@ class EnhancedAutomationSystem {
    */,
   startMetricsCollection() {
     try {
-      // // // // // // // console.log('📈 Starting Metrics Collection...'),
+      // // // // // // // // console.log('📈 Starting Metrics Collection...'),
       setInterval(() => {
         this.collectMetrics()}, this.config.monitoring.metrics.collectionInterval),
-      // // // // // // // console.log('✅ Metrics Collection started'),
-} catch (error) {
+      // // // // // // // // console.log('✅ Metrics Collection started')} catch (error) {
       console.error('❌ Failed to start Metrics Collection:', error)}
   }
 ,
@@ -196,13 +187,11 @@ class EnhancedAutomationSystem {
         system: {
           uptime: process.uptime();
           memory: process.memoryUsage();
-          cpu: process.cpuUsage(),
-        };
+          cpu: process.cpuUsage()};
         automation: {
           dashboard: this.dashboard ? 'running' : 'stopped';
           alerting: this.alerting ? 'running' : 'stopped';
-          recovery: this.recovery ? 'running' : 'stopped',
-        }
+          recovery: this.recovery ? 'running' : 'stopped'}
       };
       // Store metrics (could be sent to external systems),
       if (this.config.integrations.prometheus.enabled) {
@@ -235,7 +224,7 @@ class EnhancedAutomationSystem {
    */,
   async performMaintenance(type) {
     try {
-      // // // // // // // console.log(`🛠️ Starting ${type} maintenance...`),
+      // // // // // // // // console.log(`🛠️ Starting ${type} maintenance...`),
       const tasks = this.config.maintenance.tasks,
       if (tasks.logRotation) {
         await this.rotateLogs()}
@@ -246,8 +235,7 @@ class EnhancedAutomationSystem {
       if (tasks.alertCleanup) {
         await this.cleanupAlerts()}
 ,
-      // // // // // // // console.log(`✅ ${type} maintenance completed`),
-} catch (error) {
+      // // // // // // // // console.log(`✅ ${type} maintenance completed`)} catch (error) {
       console.error(`❌ ${type} maintenance failed:`, error)}
   }
 ,
@@ -256,14 +244,14 @@ class EnhancedAutomationSystem {
    */,
   async rotateLogs() {
     // Implementation for log rotation,
-    // // // // // // // console.log('📝 Rotating log files...')}
+    // // // // // // // // console.log('📝 Rotating log files...')}
 ,
   /**,
    * Clean up old metrics,
    */,
   async cleanupMetrics() {
     // Implementation for metrics cleanup,
-    // // // // // // // console.log('🧹 Cleaning up old metrics...')}
+    // // // // // // // // console.log('🧹 Cleaning up old metrics...')}
 ,
   /**,
    * Clean up old alerts,
@@ -271,7 +259,7 @@ class EnhancedAutomationSystem {
   async cleanupAlerts() {
     if (this.alerting) {
       // Clean up old alerts,
-      // // // // // // // console.log('🧹 Cleaning up old alerts...')}
+      // // // // // // // // console.log('🧹 Cleaning up old alerts...')}
   }
 ,
   /**,
@@ -319,7 +307,7 @@ class EnhancedAutomationSystem {
    */,
   setupGracefulShutdown() {
     const shutdown = async (signal) => {
-      // // // // // // // console.log(`\n🛑 Received ${signal}, shutting down gracefully...`),
+      // // // // // // // // console.log(`\n🛑 Received ${signal}, shutting down gracefully...`),
       try {
         // Stop all systems,
         if (this.dashboard) {
@@ -329,9 +317,8 @@ class EnhancedAutomationSystem {
           this.recovery.stop()}
 ,
         this.isRunning = false,
-        // // // // // // // console.log('✅ Graceful shutdown completed'),
-        process.exit(0),
-} catch (error) {
+        // // // // // // // // console.log('✅ Graceful shutdown completed'),
+        process.exit(0)} catch (error) {
         console.error('❌ Error during shutdown:', error),
         process.exit(1)}
     };
@@ -350,14 +337,12 @@ class EnhancedAutomationSystem {
       components: {
         dashboard: !!this.dashboard;
         alerting: !!this.alerting;
-        recovery: !!this.recovery,
-      };
+        recovery: !!this.recovery};
       config: {
         environment: process.env.NODE_ENV || 'development';
         dashboard: this.config.dashboard;
         alerting: this.config.alerting.enabled;
-        recovery: this.config.recovery.enabled,
-      }
+        recovery: this.config.recovery.enabled}
     };
   }
 ,
@@ -365,7 +350,7 @@ class EnhancedAutomationSystem {
    * Stop the system,
    */,
   async stop() {
-    // // // // // // // console.log('🛑 Stopping Enhanced Automation System...'),
+    // // // // // // // // console.log('🛑 Stopping Enhanced Automation System...'),
     if (this.dashboard) {
       this.dashboard.stop()}
 ,
@@ -373,7 +358,7 @@ class EnhancedAutomationSystem {
       this.recovery.stop()}
 ,
     this.isRunning = false,
-    // // // // // // // console.log('✅ Enhanced Automation System stopped')}
+    // // // // // // // // console.log('✅ Enhanced Automation System stopped')}
 }
 ,
 // Start the system if this file is run directly,

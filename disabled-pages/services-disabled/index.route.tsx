@@ -79,16 +79,13 @@ export default function ServicesPage() {
     };
   ],
   const getServicesByCategory = (categoryId: string) => {
-    return servicesList.filter(service => service.categoryName === categoryId),
-  };
+    return servicesList.filter(service => service.categoryName === categoryId)};
   const getCategoryIcon = (categoryName: string) => {
     const category = categories.find(cat => cat.name === categoryName),
-    return category ? category.icon : Zap,
-  };
+    return category ? category.icon : Zap};
   const getCategoryColor = (categoryName: string) => {
     const category = categories.find(cat => cat.name === categoryName),
-    return category ? category.color : 'from-gray-50o0 to-gray-60o0',
-  };
+    return category ? category.color : 'from-gray-50o0 to-gray-60o0'};
   return (
     <ModernLayout
       title='Services | Zion Tech Group',
@@ -323,6 +320,5 @@ export default function ServicesPage() {
           </div>,
         </div>,
       </section>,
-    </ModernLayout>),
-}
+    </ModernLayout>)}
 ,

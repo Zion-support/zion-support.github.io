@@ -433,6 +433,5 @@ export default function AIEthicsAutomation() {
           </section>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

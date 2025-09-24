@@ -9,8 +9,7 @@ export default function AIGuardrailsPage() {
 		mobile: '+1 30o2 464 0950';
 		email: 'kleber@ziontechgroup.com';
 		address: '364 E Main St STE 10o08 Middletown DE 19709';
-		website: 'https://ziontechgroup.com',
-	};
+		website: 'https://ziontechgroup.com'};
 	const features = [
 		'Prompt/output policy engine with allow/deny listsJailbreak and prompt injection detection';
 		'PII/PHI detection and redactionToxicity, bias and safety classifiers';

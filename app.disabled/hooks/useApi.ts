@@ -3,14 +3,12 @@ import { useState, useEffect, useCallback } from 'react',
 interface ApiState<T> {
   data: T | null,
   loading: boolean,
-  error: string | null,
-}
+  error: string | null}
 ,
 interface UseApiOptions<T = unknown> {
   immediate?: boolean,
   onSuccess?: (data: T) => void,
-  onError?: (error: string) => void,
-}
+  onError?: (error: string) => void}
 ,
 export function useApi<T = unknown>(
   apiFunction: () => Promise<T>;

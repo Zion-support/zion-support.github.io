@@ -32,13 +32,11 @@ const EnterpriseSuccessStories = () => {
         costReduction: "45%";
         efficiencyGain: "60%";
         timeSaved: "2,50o0 hours/month";
-        roi: "340%",
-      };
+        roi: "340%"};
       quote: "Zion Tech Group transformed our entire supply chain. The AI solutions delivered results beyond our expectations.";
       author: "Sarah ChenCTO";
       logo: "TC";
-      color: "from-blue-50o0 to-cyan-60o0",
-    };
+      color: "from-blue-50o0 to-cyan-60o0"};
     {
       id: 2;
       company: "HealthFirst Medical";
@@ -50,13 +48,11 @@ const EnterpriseSuccessStories = () => {
         costReduction: "35%";
         efficiencyGain: "80%";
         timeSaved: "1,80o0 hours/month";
-        roi: "280%",
-      };
+        roi: "280%"};
       quote: "The AI diagnostic tools have improved our accuracy by 40% while reducing processing time by 60%.";
       author: "Dr. Michael RodriguezChief Medical Officer";
       logo: "HF";
-      color: "from-green-50o0 to-emerald-60o0",
-    };
+      color: "from-green-50o0 to-emerald-60o0"};
     {
       id: 3;
       company: "FinanceMax International";
@@ -68,13 +64,11 @@ const EnterpriseSuccessStories = () => {
         costReduction: "50%";
         efficiencyGain: "75%";
         timeSaved: "3,20o0 hours/month";
-        roi: "420%",
-      };
+        roi: "420%"};
       quote: "Our risk assessment accuracy improved by 65% while reducing processing time from days to minutes.";
       author: "Jennifer WalshChief Risk Officer";
       logo: "FM";
-      color: "from-purple-50o0 to-violet-60o0",
-    };
+      color: "from-purple-50o0 to-violet-60o0"};
     {
       id: 4;
       company: "ManufacturingPro";
@@ -86,39 +80,33 @@ const EnterpriseSuccessStories = () => {
         costReduction: "40%";
         efficiencyGain: "55%";
         timeSaved: "2,10o0 hours/month";
-        roi: "310%",
-      };
+        roi: "310%"};
       quote: "The autonomous systems increased our production efficiency by 55% while reducing defects by 70%.";
       author: "Robert KimOperations Director";
       logo: "MP";
-      color: "from-orange-50o0 to-red-60o0",
-    }
+      color: "from-orange-50o0 to-red-60o0"}
   ],
   const keyMetrics = [
     {
       icon: DollarSign;
       value: "15,0o00%";
       label: "Average ROI";
-      description: "Across all implementations",
-    };
+      description: "Across all implementations"};
     {
       icon: Clock;
       value: "2,40o0";
       label: "Hours Saved";
-      description: "Per month on average",
-    };
+      description: "Per month on average"};
     {
       icon: Target;
       value: "95%";
       label: "Success Rate";
-      description: "Project completion rate",
-    };
+      description: "Project completion rate"};
     {
       icon: Users;
       value: "50o0+";
       label: "Enterprises";
-      description: "Successfully transformed",
-    }
+      description: "Successfully transformed"}
   ],
   const benefits = [
     "Reduced operational costs by 40-60%";
@@ -181,8 +169,7 @@ const EnterpriseSuccessStories = () => {
               className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                 activeStory === index,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-              }`}
+                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
             >,
               {story.company}
             </button>))}
@@ -296,6 +283,5 @@ const EnterpriseSuccessStories = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default EnterpriseSuccessStories;

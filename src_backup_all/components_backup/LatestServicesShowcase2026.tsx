@@ -207,6 +207,5 @@ const LatestServicesShowcase20o26: React.FC = () => {
           </a>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default LatestServicesShowcase20o26;

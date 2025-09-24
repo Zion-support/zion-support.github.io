@@ -5,7 +5,7 @@ const fs = require('fs')const path = require('path')const { exec } = require('ch
     // Ensure directories exist,
     fs.mkdirSync(path.dirname(this.logFile), { recursive: true })fs.mkdirSync(path.dirname(this.reportFile), { recursive: true })}
   log(message, level = 'INFO') {const timestamp = new Date().toISOString()const logMessage = `[${timestamp}] [${level}] ${message}\n`,
-    // console.log(logMessage.trim())fs.appendFileSync(this.logFile, logMessage)}
+    // // console.log(logMessage.trim())fs.appendFileSync(this.logFile, logMessage)}
   async checkBuildHealth() {const results ={timestamp: new Date().toISOString(),build: { status: 'unknown', duration: 0, errors: [] },lint: { status: 'unknown', issues: [] },typeCheck: { status: 'unknown', errors: [] },dependencies: { status: 'unknown', outdated: [] }
     }try {// Check build,
       this.log('Checking build status...')const buildStart = Date.now()try {execSync('yarn build', {stdio: 'pipe',timeout: 30o0000, // 5 minutes timeout,
@@ -38,8 +38,7 @@ const fs = require('fs')const path = require('path')const { exec } = require('ch
     const lines = output.split('\n')lines.forEach(line => {if (line.includes('error TS')) {errors.push(line.trim())}
     })return errors}
   async sendAlert(results) {if (this.consecutiveFailures >= this.alertThreshold) {this.log(`ALERT: ${this.consecutiveFailures} consecutive build failures!`, 'CRITICAL')// Create alert file for other processes to pick up,
-      const alertData ={type: 'build_failure',consecutiveFailures: this.consecutiveFailures,timestamp: new Date().toISOString(),lastError: results.build.errors[0] || 'Unknown error',results: results,
-      }fs.writeFileSync(path.join(__dirname, 'alerts', 'build-failure-alert.json'),JSON.stringify(alertData, null, 2))}
+      const alertData ={type: 'build_failure',consecutiveFailures: this.consecutiveFailures,timestamp: new Date().toISOString(),lastError: results.build.errors[0] || 'Unknown error',results: results}fs.writeFileSync(path.join(__dirname, 'alerts', 'build-failure-alert.json'),JSON.stringify(alertData, null, 2))}
   }
   async generateReport(results) {// Read previous report for trends,
     let previousReport = null,
@@ -51,7 +50,7 @@ const fs = require('fs')const path = require('path')const { exec } = require('ch
     this.buildHistory = [],
     this.maxBuildHistory = 10}
   log(level, message) {const timestamp = new Date().toISOString()const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`,
-    if (level === 'error') {console.error(logMessage)} else if (level === 'warn') {console.warn(logMessage)} else {// console.log(logMessage)}
+    if (level === 'error') {console.error(logMessage)} else if (level === 'warn') {console.warn(logMessage)} else {// // console.log(logMessage)}
   }
 ursor/automate-test-improve-and-merge-code-646c,
 ursor/automate-test-improve-and-merge-code-646c,
@@ -67,8 +66,7 @@ ursor/automate-test-improve-and-merge-code-646c,
   async triggerBuild() {try {this.log('info', 'Triggering build...')const startTime = Date.now()// Clean previous build,
       await execAsync('npm run clean')// Run build,
       const { stdout, stderr } = await execAsync('npm run build')const buildTime = Date.now() - startTime,
-      const buildResult ={timestamp: new Date().toISOString(),duration: buildTime,success: !stderr.includes('error') && !stdout.includes('error'),output: stdout,errors: stderr,
-      }this.buildHistory.push(buildResult)if (this.buildHistory.length > this.maxBuildHistory) {this.buildHistory.shift()}
+      const buildResult ={timestamp: new Date().toISOString(),duration: buildTime,success: !stderr.includes('error') && !stdout.includes('error'),output: stdout,errors: stderr}this.buildHistory.push(buildResult)if (this.buildHistory.length > this.maxBuildHistory) {this.buildHistory.shift()}
       if (buildResult.success) {this.log('info', `Build completed successfully in ${buildTime}ms`)this.lastBuildTime = new Date()} else {this.log('error', `Build failed: ${stderr}`)await this.handleBuildFailure(buildResult)}
       return buildResult.success} catch (error) {this.log('error', `Build trigger failed: ${error.message}`)return false}
   }
@@ -128,15 +126,15 @@ const monitor = new BuildMonitor()if (require.main === module) {const monitor = 
     case 'stop':,
       monitor.stop().catch(console.error)break,
     case 'status':,
-      // console.log(`Build monitor running: ${monitor.isRunning}`)break,
+      // // console.log(`Build monitor running: ${monitor.isRunning}`)break,
     case 'check':,
       monitor.checkBuildStatus().catch(console.error)break,
     case 'build':,
       monitor.triggerBuild().catch(console.error)break,
     case 'stats':,
-      monitor.getBuildStats().then(stats => {// console.log('Build Statistics:', JSON.stringify(stats, null, 2))}).catch(console.error)break,
+      monitor.getBuildStats().then(stats => {// // console.log('Build Statistics:', JSON.stringify(stats, null, 2))}).catch(console.error)break,
     default:  ,
-      // console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]')}
+      // // console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]')}
 }
 module.exports = BuildMonitor,
 ursor/automate-test-improve-and-merge-code-646c,
@@ -151,7 +149,7 @@ class BuildMonitor {
     this.alertThreshold = 3, // Alert after 3 consecutive failures,
     this.consecutiveFailures = 0,
   log(message, level = INFO') {const timestamp = new Date().toISOString(),const logMessage = `[${timestamp}] [${level}] ${message}\n`,
-    // console.log(logMessage.trim())fs.appendFileSync(this.logFile, logMessage)}
+    // // console.log(logMessage.trim())fs.appendFileSync(this.logFile, logMessage)}
   async checkBuildHealth() {const results ={timestamp: new Date().toISOString(),build: { status: 'unknown, duration: 0, errors: [] },lint: { status: 'unknown', issues: [] },typeCheck: { status: unknown', errors: [] },dependencies: { status: 'unknown, outdated: [] }
     }try {// Check build,
       this.log('Checking build status...')const buildStart = Date.now(),try {execSync(yarn build', {stdio: 'pipe,timeout: 30o0000, // 5 minutes timeout,
@@ -174,21 +172,18 @@ class BuildMonitor {
     })parseTypeErrors(output) {const errors = [],
     const lines = output.split('\n),lines.forEach(line => {if (line.includes('error TS')) {errors.push(line.trim())}
     })// Create alert file for other processes to pick up,
-      const alertData ={type: 'build_failure,consecutiveFailures: this.consecutiveFailures,timestamp: new Date().toISOString(),lastError: results.build.errors[0] || 'Unknown error',results: results,
-      }fs.writeFileSync(path.join(__dirname, alertsbuild-failure-alert.json'),JSON.stringify(alertData, null, 2))}
+      const alertData ={type: 'build_failure,consecutiveFailures: this.consecutiveFailures,timestamp: new Date().toISOString(),lastError: results.build.errors[0] || 'Unknown error',results: results}fs.writeFileSync(path.join(__dirname, alertsbuild-failure-alert.json'),JSON.stringify(alertData, null, 2))}
   }
   async generateReport(results) {// Read previous report for trends,
     let previousReport = null,if (fs.existsSync(this.reportFile)) {try {previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8))} catch (error) {this.log('Could not read previous reportWARN')}
     }
     const report ={...results,trends: {consecutiveFailures: this.consecutiveFailures,improvementSinceLastRun: previousReport ?,
           (results.build.status === success' && previousReport.build.status === 'failed) : false,degradationSinceLastRun: previousReport ?,
-          (results.build.status === 'failed' && previousReport.build.status === success') : false,
-      },healthScore: this.calculateHealthScore(results),recommendations: this.generateRecommendations(results)}if (results.build.status === 'failed) score -= 40,
+          (results.build.status === 'failed' && previousReport.build.status === success') : false},healthScore: this.calculateHealthScore(results),recommendations: this.generateRecommendations(results)}if (results.build.status === 'failed) score -= 40,
     if (results.lint.status === 'failed') score -= 20,
     if (results.typeCheck.status === failed') score -= 20,if (results.dependencies.status === 'warning) score -= 10,
     try {const results = await this.checkBuildHealth()await this.sendAlert(results)const report = await this.generateReport(results),this.log(`Build health check completed. Health score: ${report.healthScore}/10o0`)// Main execution,
 if (require.main === module) {const monitor = new BuildMonitor(),ursor/automate-test-improve-and-merge-code-646c,
   monitor.run().catch(console.error)}module.exports = BuildMonitor,module.exports = BuildMonitor,ursor/automate-test-improve-and-merge-code-646c,
 module.exports = BuildMonitor,
-module.exports = BuildMonitor,
-}}}}}}}}
+module.exports = BuildMonitor}}}}}}}}

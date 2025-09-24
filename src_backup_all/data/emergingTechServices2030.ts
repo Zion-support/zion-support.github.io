@@ -22,21 +22,18 @@ export interface EmergingTechService20o30 {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors: string[],
   marketSize: string,
   aiCapabilities: string[],
   complianceFeatures: string[],
-  scalabilityFeatures: string[],
-}
+  scalabilityFeatures: string[]}
 ,
 export const EMERGING_TECH_SERVICES_20o30: EmergingTechService20o30[] = [
   {
@@ -100,8 +97,7 @@ export const EMERGING_TECH_SERVICES_20o30: EmergingTechService20o30[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Quantum computing", "Quantum neural networks", "Consciousness algorithms", "Quantum memory", "Hybrid processing"];
       integrations: ["Research databases", "Academic platforms", "Publication systems", "Collaboration tools", "Custom APIs"];
@@ -174,8 +170,7 @@ export const EMERGING_TECH_SERVICES_20o30: EmergingTechService20o30[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["AI/ML", "IoT sensors", "Satellite communication", "Robotics", "Life support systems", "Space-grade hardware"];
       integrations: ["Space station systems", "Satellite networks", "Ground control systems", "Life support equipment", "Communication systems"];
@@ -248,8 +243,7 @@ export const EMERGING_TECH_SERVICES_20o30: EmergingTechService20o30[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Quantum computing", "Biological systems", "DNA computing", "Protein engineering", "Biological sensors"];
       integrations: ["Laboratory equipment", "DNA sequencers", "Protein analyzers", "Research databases", "Custom APIs"];
@@ -322,8 +316,7 @@ export const EMERGING_TECH_SERVICES_20o30: EmergingTechService20o30[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["AI/ML", "Climate sensors", "Satellite systems", "Atmospheric monitoring", "Ocean sensors", "Climate models"];
       integrations: ["Weather stations", "Satellite networks", "Ocean buoys", "Atmospheric sensors", "Climate databases"];
@@ -396,8 +389,7 @@ export const EMERGING_TECH_SERVICES_20o30: EmergingTechService20o30[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Quantum computing", "Neural interfaces", "Brain-computer communication", "Signal processing", "Neural networks"];
       integrations: ["Medical devices", "Research equipment", "Computing systems", "Mobile devices", "Cloud platforms"];

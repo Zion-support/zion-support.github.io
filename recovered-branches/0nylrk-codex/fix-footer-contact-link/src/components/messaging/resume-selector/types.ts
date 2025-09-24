@@ -3,8 +3,7 @@ import { Resume } from "@/types/resume";
   title: string,
   type: 'ai_resume' | 'custom_upload',
   resume?: Resume,
-  file?: File,
-}
+  file?: File}
 ,
 export interface ResumeSelectorProps {
 export interface ResumeOption {
@@ -18,12 +17,9 @@ export interface ResumeOption {
   title: string;
   type: 'ai_resume' | 'custom_upload',
   resume?: Resume,
-  file?: File,
-}
+  file?: File}
 ,
 export interface ResumeSelectorProps {
-,
   onResumeSelected: (resumeOption: ResumeOption) => void>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
-  onResumeSelected: (resumeOption: ResumeOption) => void>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
-}
+  onResumeSelected: (resumeOption: ResumeOption) => void>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

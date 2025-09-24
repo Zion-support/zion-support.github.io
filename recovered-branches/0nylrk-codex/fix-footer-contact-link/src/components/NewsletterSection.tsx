@@ -15,6 +15,5 @@ export function NewsletterSection() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

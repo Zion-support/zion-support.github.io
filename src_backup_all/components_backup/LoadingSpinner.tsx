@@ -37,6 +37,5 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           strokeDashoffset='0',
         />,
       </svg>,
-    </motion.div>),
-};
+    </motion.div>)};
 export default LoadingSpinner;

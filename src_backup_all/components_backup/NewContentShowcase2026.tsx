@@ -132,6 +132,5 @@ const NewContentShowcase20o26: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NewContentShowcase20o26;

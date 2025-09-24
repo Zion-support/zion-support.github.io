@@ -53,8 +53,7 @@ export default function APIRateLimiterPage() {
     setTestResults(results);
     setIsTesting(false)};
   const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text),
-  };
+    navigator.clipboard.writeText(text)};
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'success':,
@@ -62,8 +61,7 @@ export default function APIRateLimiterPage() {
       case 'rate_limited':,
         return <AlertTriangle className="w-5 h-5 text-red-40o0"  />;
       default: ,
-        return <AlertTriangle className="w-5 h-5 text-yellow-40o0"  />,
-    }
+        return <AlertTriangle className="w-5 h-5 text-yellow-40o0"  />}
   };
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -72,8 +70,7 @@ export default function APIRateLimiterPage() {
       case 'rate_limited':,
         return 'text-red-40o0';
       default: ,
-        return 'text-yellow-40o0',
-    }
+        return 'text-yellow-40o0'}
   };
   return (
     <>,
@@ -146,8 +143,7 @@ export default function APIRateLimiterPage() {
                         className={`p-3 rounded-lg border text-left transition-all ${
                           rateLimit === limit.value,
                             ? 'border-green-50o0 bg-green-50o0/10 text-green-30o0',
-                            : 'border-gray-60o0 hover: border-gray-50o0 text-gray-30o0 hover:text-white',
-                        }`}
+                            : 'border-gray-60o0 hover: border-gray-50o0 text-gray-30o0 hover:text-white'}`}
                       >,
                         <div className="font-medium">{limit.label}</div>,
                         <div className="text-xs text-gray-40o0 mt-1">{limit.description}</div>,
@@ -167,8 +163,7 @@ export default function APIRateLimiterPage() {
                         className={`p-3 rounded-lg border text-left transition-all ${
                           timeWindow === window.value,
                             ? 'border-green-50o0 bg-green-50o0/10 text-green-30o0',
-                            : 'border-gray-60o0 hover: border-gray-50o0 text-gray-30o0 hover:text-white',
-                        }`}
+                            : 'border-gray-60o0 hover: border-gray-50o0 text-gray-30o0 hover:text-white'}`}
                       >,
                         <div className="font-medium">{window.label}</div>,
                         <div className="text-xs text-gray-40o0 mt-1">{window.description}</div>,
@@ -357,12 +352,11 @@ const response = await axios.get(\`https: //api.zion.tech\${endpoint}\`, {
     'Authorization': \`Bearer \${apiKey}\`;
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'}
 });
-// // // // console.log('Response:', response.data);
-// // // // console.log('Rate Limit Info:', {
+// // // // // console.log('Response:', response.data);
+// // // // // console.log('Rate Limit Info:', {
   limit: response.headers['x-ratelimit-limit'];
   remaining: response.headers['x-ratelimit-remaining'];
-  reset: response.headers['x-ratelimit-reset'],
-}),`}
+  reset: response.headers['x-ratelimit-reset']}),`}
                 </pre>,
               </div>,
               <Button
@@ -375,12 +369,11 @@ const response = await axios.get(\`https: //api.zion.tech\${endpoint}\`, {
     'Authorization': \`Bearer \${apiKey}\`;
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'}
 });
-// // // // console.log('Response:', response.data);
-// // // // console.log('Rate Limit Info:', {
+// // // // // console.log('Response:', response.data);
+// // // // // console.log('Rate Limit Info:', {
   limit: response.headers['x-ratelimit-limit'];
   remaining: response.headers['x-ratelimit-remaining'];
-  reset: response.headers['x-ratelimit-reset'],
-}),`)}
+  reset: response.headers['x-ratelimit-reset']}),`)}
                 variant="outline",
                 size="sm",
                 className="mt-4 border-gray-60o0 text-gray-30o0 hover: bg-gray-70o0">,
@@ -465,5 +458,4 @@ print('Rate Limit Info:', {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}

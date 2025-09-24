@@ -10,15 +10,13 @@ export default function AIROICalculator() {
     expectedEfficiency: '';
     implementationCost: '';
     maintenanceCost: '';
-    trainingCost: '',
-  }),
+    trainingCost: ''}),
   const [results, setResults] = useState({
     annualSavings: 0;
     totalCosts: 0;
     netBenefit: 0;
     roi: 0;
-    paybackPeriod: 0,
-  }),
+    paybackPeriod: 0}),
   const handleInputChange = (field: string, value: string) => {
     setInputs(prev => ({
       ...prev;
@@ -54,8 +52,7 @@ export default function AIROICalculator() {
       style: 'currency';
       currency: 'USD';
       minimumFractionDigits: 0;
-      maximumFractionDigits: 0,
-    }).format(amount)};
+      maximumFractionDigits: 0}).format(amount)};
   const formatPercentage = (value: number) => {
     return `${value.toFixed(1)}%`};
   return (
@@ -262,5 +259,4 @@ export default function AIROICalculator() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

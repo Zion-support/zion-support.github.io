@@ -665,6 +665,5 @@ export default function AIAutomationServices() {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>),
-}
+    </Layout>)}
 ,

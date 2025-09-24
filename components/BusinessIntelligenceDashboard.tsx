@@ -9,8 +9,7 @@ interface Metric {
   change: number,
   trend: 'up' | 'down' | 'stable',
   target?: number,
-  status: 'excellent' | 'good' | 'warning' | 'critical',
-}
+  status: 'excellent' | 'good' | 'warning' | 'critical'}
 ,
 interface ChartData {
   labels: string[],
@@ -18,8 +17,7 @@ interface ChartData {
     label: string,
     data: number[],
     borderColor: string,
-    backgroundColor: string,
-  }[]}
+    backgroundColor: string}[]}
 ,
 interface BusinessInsight {
   id: string,
@@ -28,8 +26,7 @@ interface BusinessInsight {
   impact: 'high' | 'medium' | 'low',
   category: 'revenue' | 'efficiency' | 'growth' | 'risk',
   recommendation: string,
-  priority: number,
-}
+  priority: number}
 ,
 const BusinessIntelligenceDashboard: React.FC = () => {
   const [metricsetMetrics] = useState<Metric[]>([]),
@@ -37,8 +34,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
   const [selectedPeriodsetSelectedPeriod] = useState('30d'),
   const [isLoadingsetIsLoading] = useState(true),
   useEffect(() => {
-    generateMockData(),
-  }[selectedPeriod]),
+    generateMockData()}[selectedPeriod]),
   const generateMockData = async () => {
     setIsLoading(true),
     // Simulate data loading,
@@ -52,8 +48,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
         change: 12.5;
         trend: 'up';
         target: 1000000;
-        status: 'excellent',
-      };
+        status: 'excellent'};
       {
         id: 'customers';
         name: 'Active Customers';
@@ -62,8 +57,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
         change: 8.3;
         trend: 'up';
         target: 15000;
-        status: 'good',
-      };
+        status: 'good'};
       {
         id: 'conversion';
         name: 'Conversion Rate';
@@ -72,8 +66,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
         change: -0.5;
         trend: 'down';
         target: 4.0;
-        status: 'warning',
-      };
+        status: 'warning'};
       {
         id: 'satisfaction';
         name: 'Customer Satisfaction';
@@ -82,8 +75,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
         change: 0.2;
         trend: 'up';
         target: 4.5;
-        status: 'excellent',
-      };
+        status: 'excellent'};
       {
         id: 'retention';
         name: 'Customer Retention';
@@ -92,8 +84,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
         change: 2.1;
         trend: 'up';
         target: 85.0;
-        status: 'good',
-      };
+        status: 'good'};
       {
         id: 'churn';
         name: 'Churn Rate';
@@ -102,8 +93,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
         change: -0.8;
         trend: 'down';
         target: 3.0;
-        status: 'warning',
-      }
+        status: 'warning'}
     ],
     const mockInsights: BusinessInsight[] = [
       {
@@ -113,8 +103,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
         impact: 'high';
         category: 'revenue';
         recommendation: 'Increase investment in premium customer acquisition and retention programs.';
-        priority: 1,
-      };
+        priority: 1};
       {
         id: '2';
         title: 'Conversion Rate Decline';
@@ -122,8 +111,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
         impact: 'medium';
         category: 'efficiency';
         recommendation: 'Implement A/B testing for landing pages and optimize checkout process.';
-        priority: 2,
-      };
+        priority: 2};
       {
         id: '3';
         title: 'Customer Satisfaction Improvement';
@@ -131,8 +119,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
         impact: 'high';
         category: 'growth';
         recommendation: 'Leverage positive feedback for marketing campaigns and case studies.';
-        priority: 3,
-      };
+        priority: 3};
       {
         id: '4';
         title: 'Seasonal Demand Pattern';
@@ -140,8 +127,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
         impact: 'medium';
         category: 'revenue';
         recommendation: 'Scale infrastructure and customer support for anticipated demand increase.';
-        priority: 4,
-      };
+        priority: 4};
       {
         id: '5';
         title: 'Churn Risk in Enterprise Segment';
@@ -149,8 +135,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
         impact: 'high';
         category: 'risk';
         recommendation: 'Proactive outreach to enterprise clients with renewal incentives.';
-        priority: 5,
-      }
+        priority: 5}
     ],
     setMetrics(mockMetrics),
     setInsights(mockInsights),
@@ -161,24 +146,21 @@ const BusinessIntelligenceDashboard: React.FC = () => {
       case 'good': return 'text-blue-600 bg-blue-100',
       case 'warning': return 'text-yellow-600 bg-yellow-100',
       case 'critical': return 'text-red-600 bg-red-100',
-      default: return 'text-gray-600 bg-gray-100',
-    }
+      default: return 'text-gray-600 bg-gray-100'}
   };
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return '📈',
       case 'down': return '📉',
       case 'stable': return '➡️',
-      default: return '➡️',
-    }
+      default: return '➡️'}
   };
   const getImpactColor = (impact: string) => {
     switch (impact) {
       case 'high': return 'text-red-600 bg-red-100',
       case 'medium': return 'text-yellow-600 bg-yellow-100',
       case 'low': return 'text-green-600 bg-green-100',
-      default: return 'text-gray-600 bg-gray-100',
-    }
+      default: return 'text-gray-600 bg-gray-100'}
   };
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -186,8 +168,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
       case 'efficiency': return '⚡',
       case 'growth': return '📈',
       case 'risk': return '⚠️',
-      default: return '📊',
-    }
+      default: return '📊'}
   };
   const formatValue = (value: numberunit: string) => {
     if (unit === '$') {
@@ -370,6 +351,5 @@ const BusinessIntelligenceDashboard: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default BusinessIntelligenceDashboard;

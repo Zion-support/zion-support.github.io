@@ -22,9 +22,9 @@ export const DownloadSection: React.FC = () => {
                 className='mb-8',
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
-                onAppStoreClick={() => // console.log('App Store button clicked')}
+                onAppStoreClick={() => // // console.log('App Store button clicked')}
                 onGooglePlayClick={() =>,
-                  // console.log('Google Play button clicked')}
+                  // // console.log('Google Play button clicked')}
               />,
               <div className='text-sm text-gray-40o0'>,
                 <p>Compatible with iOS 14+ and Android 8.0+</p>,

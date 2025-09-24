@@ -18,8 +18,7 @@ export default async function handler(
   const cookie = req && req.headers.cookie || '',
   const match = cookie && cookie.split().map((c) => c && c.trim()).find((c) => c && c.startsWith('user_id=')),
   if (match) return decodeURIComponent(match && match.split('=')[1]),
-  return 'demo-user-1',
-}
+  return 'demo-user-1'}
 ,
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -52,8 +51,7 @@ function handler() {
   const cookie = req.headers.cookie || '',
   const match = cookie.split ().map ((c) => c.trim ()).find ((c) => c.starts_with ('user_id=')),
   if (return decodeURIComponent (match.split ('=')[1])) {
-  $2,
-}
+  $2}
   return 'demo - user - 1'}
 export default async /**,
  * handler - Function description,

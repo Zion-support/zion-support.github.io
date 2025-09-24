@@ -3,8 +3,7 @@ import { ReferralStats as ReferralStatsType } from '@/types/referrals',
 import { Award, Share, Star, TrendingUp } from 'lucide-react',
 interface ReferralStatsProps {
   stats: ReferralStatsType,
-  isLoading: boolean,
-}
+  isLoading: boolean}
 ,
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   const statCards = [

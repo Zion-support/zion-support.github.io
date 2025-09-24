@@ -12,8 +12,7 @@ const ModelViewer = React.lazy(async () => {
 interface ProductGalleryProps {
   images: string[],
   videoUrl?: string,
-  modelUrl?: string,
-}
+  modelUrl?: string}
 ,
 export function ProductGallery({
   images;

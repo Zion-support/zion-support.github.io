@@ -13,8 +13,7 @@ const corsHeaders = {
 interface Service {
   id: string,
   title: string,
-  category: string,
-}
+  category: string}
 ,
 interface QuoteDetails {
   description: string,
@@ -22,13 +21,11 @@ interface QuoteDetails {
   budget: string,
   timeframe: string,
   startDate?: string,
-  endDate?: string,
-}
+  endDate?: string}
 ,
 interface RequestBody {
   service: Service | null,
-  quoteDetails: QuoteDetails,
-}
+  quoteDetails: QuoteDetails}
 ,
 serve(async req => {
   // Handle CORS preflight requests,
@@ -53,7 +50,7 @@ serve(async req => {
           userId = user.id}
       }
     } catch (authError) {
-      // console.log('Auth error:', authError),
+      // // console.log('Auth error:', authError),
       // Continue without user identity}
 ,
     // Generate a summary and tags using OpenAI,

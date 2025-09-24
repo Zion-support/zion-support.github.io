@@ -14,29 +14,25 @@ interface HealthData {
     errorRate: number,
     criticalErrors: number,
     responseTime: number,
-    memoryUsage: number,
-  };
+    memoryUsage: number};
   health: {
     status: string,
     score: number,
     issues: string[],
-    recommendations: string[],
-  };
+    recommendations: string[]};
   errors: {
     summary: {
       total: number,
       critical: number,
       high: number,
       medium: number,
-      low: number,
-    };
+      low: number};
     topErrors: Array<{
       patternId: string,
       description: string,
       occurrences: number,
       severity: string,
-      solution?: string,
-    }>,
+      solution?: string}>,
     byCategory: { [category: string]: number };
   };
 }
@@ -73,8 +69,7 @@ const HealthDashboard: React.FC = () => {
       case 'critical':,
         return <XCircle className="w-5 h-5 text-red-50o0"  />,
       default:,
-        return <Activity className="w-5 h-5 text-gray-50o0"  />,
-    }
+        return <Activity className="w-5 h-5 text-gray-50o0"  />}
   };
   const getStatusBadge = (status: string) => {
     const variant = status === 'healthy' ? 'default' :,

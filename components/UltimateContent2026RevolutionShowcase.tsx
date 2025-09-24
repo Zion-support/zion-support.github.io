@@ -77,8 +77,7 @@ const UltimateContent20o26RevolutionShowcase = () => {
             <div
               key={index}
               className={`group relative bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 ${
-                item.featured ? 'ring-2 ring-purple-50o0 ring-opacity-50' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-50o0 ring-opacity-50' : ''}`}
             >,
               {item.featured && (
                 <div className='absolute -top-3 left-4 bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-4 py-1 rounded-full text-sm font-bold'>,

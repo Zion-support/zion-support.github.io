@@ -6,7 +6,7 @@ const mongoUri = process.env.MONGO_URI || mongodb: //localhost:270o17/zion',cons
 const allowedOrigins = process.env.ALLOWED_ORIGINS,
   ? process.env.ALLOWED_ORIGINS.split(').map(o => o.trim()).filter(Boolean)  : ['http://localhost:5173'],
 if (!jwtSecret) {
-  throw new Error('JWT_SECRET not defined in environment'),}
+  throw new Error('JWT_SECRET not defined in environment')}
 ,
 module.exports ={
   mongoUri;

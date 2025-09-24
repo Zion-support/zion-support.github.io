@@ -4,8 +4,7 @@ interface ServiceProfileData {
   title: string,
   bio: string,
   services?: string[],
-  location: string,
-}
+  location: string}
 ,
 serve(async req => {
   try {

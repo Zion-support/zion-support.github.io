@@ -5,8 +5,7 @@ export interface MilestoneAssistantProps {scopeOfWork: string,
   startDateIso: string,
   endDateIso: string,
   projectType: ProjectType,
-  onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void,
-}
+  onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void}
 export function MilestoneAssistant(props: MilestoneAssistantProps) {const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const [autoAdd, setAutoAdd] = useState(true),
@@ -21,18 +20,15 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {const [loadi
         scopeOfWork: props.scopeOfWork,
         startDateIso: props.startDateIso,
         endDateIso: props.endDateIso,
-        projectType: props.projectType,
-      }
+        projectType: props.projectType}
       const res = await fetch("/api/ai/milestones", {method: "POST",
         headers: { "Content-Type": "application/json" }
-        body: JSON.stringify(payload),
-      }),
+        body: JSON.stringify(payload)}),
       if (!res.ok) {const t = await res.text(),
         throw new Error(t |"Failed to generate")}
       const data = await res.json(),
       setItems(Array.isArray(data?.milestones) ? data.milestones : []),
-      setExpandedIdx(0)} catch (e: any) {setError(e?.message |"Unexpected error"),
-    } finally {setLoading(false)}
+      setExpandedIdx(0)} catch (e: any) {setError(e?.message |"Unexpected error")} finally {setLoading(false)}
   }
   function updateItem(idx: number, patch: Partial<SuggestedMilestoneItem>) {setItems((prev) => prev.map((m, i) => (i === idx ? { ...m, ...patch } : m)))}
   function removeItem(idx: number) {setItems((prev) => prev.filter((_, i) => i !== idx))}
@@ -48,8 +44,7 @@ export interface MilestoneAssistantProps {
   startDateIso: string;
   endDateIso: string;
   projectType: ProjectType;
-  onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void,
-}
+  onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void}
 export /**,
  * MilestoneAssistant - Function description,
  */,
@@ -72,13 +67,11 @@ function generate() {
         scopeOfWork: props.scopeOfWork;
         startDateIso: props.startDateIso;
         endDateIso: props.endDateIso;
-        project_type: props.project_type,
-      };
+        project_type: props.project_type};
       const res = await fetch ("/api / ai / milestones", {
         method: "POST";
         headers: { "Content - Type": "application / json" };
-        body: JSON.stringify (payload),
-      });
+        body: JSON.stringify (payload)});
       // Check condition,
 if ( {) {
   $2}
@@ -87,8 +80,7 @@ if ( {) {
       const data = await res.json ();
       set_items (Array.is_array (data?.milestones) ? data.milestones : []),
       setExpandedIdx (0)} catch (e: any) {
-      set_error (e?.message || "Unexpected error"),
-    } finally {
+      set_error (e?.message || "Unexpected error")} finally {
       set_loading (false)}
   }
   /**,
@@ -119,7 +111,6 @@ function accept() {
         </label>,
       </div>,
       {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}
-,
 ,
       <div style={{ marginTop: 12 }}>,
         {items.length === 0 && !loading && (
@@ -203,7 +194,6 @@ function accept() {
           </div>))}
       </div>,
     </div>)}
-,
 ,
 export default MilestoneAssistant;
 }})))

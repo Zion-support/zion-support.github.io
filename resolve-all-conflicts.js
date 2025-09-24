@@ -2,29 +2,29 @@
 const { execSync } = require('child_process'),
 const fs = require('fs'),
 const path = require('path'),
-// console.log('🚀 Starting comprehensive merge conflict resolution...'),
+// // console.log('🚀 Starting comprehensive merge conflict resolution...'),
 // Function to run git commands safely,
 function runGitCommand(command, description) {
   try {
-    // console.log(`📝 ${description}...`),
+    // // console.log(`📝 ${description}...`),
     const result = execSync(command, { cwd: '/workspace', encoding: 'utf8' }),
-    // console.log(`✅ ${description} completed`),
+    // // console.log(`✅ ${description} completed`),
     return result} catch (error) {
-    // console.log(`⚠️  ${description} failed: ${error.message}`),
+    // // console.log(`⚠️  ${description} failed: ${error.message}`),
     return null}
 }
 ,
 // Function to resolve conflicts by accepting our version,
 function resolveConflicts() {
-  // console.log('🔧 Resolving merge conflicts...'),
+  // // console.log('🔧 Resolving merge conflicts...'),
   // Get list of conflicted files,
   const conflictedFiles = runGitCommand('git diff --name-only --diff-filter=U', 'Getting conflicted files'),
   if (conflictedFiles) {
     const files = conflictedFiles.trim().split('\n').filter(f => f),
-    // console.log(`Found ${files.length} conflicted files`),
+    // // console.log(`Found ${files.length} conflicted files`),
     files.forEach(file => {
       if (file) {
-        // console.log(`📄 Resolving conflict in: ${file}`),
+        // // console.log(`📄 Resolving conflict in: ${file}`),
         // For modify/delete conflicts, we want to keep our version (the modified one),
         if (file.includes('__tests__') || file.includes('automation/') || file.includes('ecosystem.config.cjs') || file.includes('start-pm2-automation.sh')) {
           runGitCommand(`git add "${file}"`, `Adding ${file} (keeping our version)`)} else {
@@ -35,7 +35,7 @@ function resolveConflicts() {
     })}
 ,
   // Handle package.json and package-lock.json conflicts,
-  // console.log('📦 Resolving package conflicts...'),
+  // // console.log('📦 Resolving package conflicts...'),
   // For package.json, we'll merge both versions,
   if (fs.existsSync('/workspace/package.json')) {
     try {
@@ -48,11 +48,10 @@ function resolveConflicts() {
         ...mainPackage;
         ...ourPackage;
         dependencies: mergedDeps;
-        devDependencies: mergedDevDeps,
-      };
+        devDependencies: mergedDevDeps};
       fs.writeFileSync('/workspace/package.json', JSON.stringify(mergedPackage, null, 2)),
       runGitCommand('git add package.json', 'Adding merged package.json')} catch (error) {
-      // console.log('⚠️  Could not merge package.json automatically, using ours'),
+      // // console.log('⚠️  Could not merge package.json automatically, using ours'),
       runGitCommand('git checkout --ours package.json', 'Using our package.json'),
       runGitCommand('git add package.json', 'Adding our package.json')}
   }
@@ -66,11 +65,11 @@ function resolveConflicts() {
 ,
 // Function to clean up and commit,
 function finalizeMerge() {
-  // console.log('🎯 Finalizing merge...'),
+  // // console.log('🎯 Finalizing merge...'),
   // Check if there are any remaining conflicts,
   const status = runGitCommand('git status --porcelain', 'Checking git status'),
   if (status && status.includes('UU')) {
-    // console.log('⚠️  Some conflicts still remain, attempting to resolve...'),
+    // // console.log('⚠️  Some conflicts still remain, attempting to resolve...'),
     runGitCommand('git add .', 'Adding all remaining files')}
 ,
   // Commit the merge,
@@ -81,18 +80,17 @@ function finalizeMerge() {
 - Added comprehensive error monitoring,
 - Implemented automated git workflow,
 - Enhanced build and deployment processes"', 'Committing merge'),
-  // console.log('✅ Merge completed successfully!')}
+  // // console.log('✅ Merge completed successfully!')}
 ,
 // Main execution,
 try {
   resolveConflicts(),
   finalizeMerge(),
-  // console.log('🎉 All merge conflicts resolved and changes committed!'),
-  // console.log('📊 Summary: '),
-  // console.log('  - PM2 automation system integrated'),
-  // console.log('  - All test files fixed and preserved'),
-  // console.log('  - Package dependencies merged'),
-  // console.log('  - Error monitoring systems active'),
-} catch (error) {
+  // // console.log('🎉 All merge conflicts resolved and changes committed!'),
+  // // console.log('📊 Summary: '),
+  // // console.log('  - PM2 automation system integrated'),
+  // // console.log('  - All test files fixed and preserved'),
+  // // console.log('  - Package dependencies merged'),
+  // // console.log('  - Error monitoring systems active')} catch (error) {
   console.error('❌ Error during merge resolution:', error.message),
   process.exit(1)}

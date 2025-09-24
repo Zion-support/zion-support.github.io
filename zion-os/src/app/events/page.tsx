@@ -323,6 +323,5 @@ export default function EventsPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

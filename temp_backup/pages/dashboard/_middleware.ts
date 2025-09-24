@@ -15,5 +15,4 @@ export default function _middlewarePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

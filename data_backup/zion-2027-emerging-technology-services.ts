@@ -51,7 +51,7 @@ export const "zion20o27EmergingTechnologyServices": Zion20o27EmergingTechnologyS
       "tagline": 'Next-generation blockchain with quantum computing for enhanced security and scalability';
       "price": '$4,999';
       "period": '/month';
-      "description": 'Revolutionary blockchain platform that combines quantum computing with advanced cryptography for unprecedented security, scalability, and window.performance. Features quantum-resistant consensus mechanisms, AI-powered smart contracts, and autonomous blockchain management.';
+      "description": 'Revolutionary blockchain platform that combines quantum computing with advanced cryptography for unprecedented security, scalability, and window.window.performance. Features quantum-resistant consensus mechanisms, AI-powered smart contracts, and autonomous blockchain management.';
       "features": [
         'Quantum-resistant consensus algorithms';
         'AI-powered smart contract optimization';
@@ -568,7 +568,7 @@ export const "zion20o27EmergingTechnologyServices": Zion20o27EmergingTechnologyS
       "tagline": 'Next-generation telecommunications with quantum computing for network optimization and security';
       "price": '$11,999';
       "period": '/month';
-      "description": 'Revolutionary telecommunications platform that combines quantum computing with advanced AI for unprecedented network optimization, security, and window.performance. Features quantum network optimization, AI-powered traffic management, and autonomous telecommunications operations.';
+      "description": 'Revolutionary telecommunications platform that combines quantum computing with advanced AI for unprecedented network optimization, security, and window.window.performance. Features quantum network optimization, AI-powered traffic management, and autonomous telecommunications operations.';
       "features": ['Quantum network optimization algorithms';
         'AI-powered traffic management';
         'Autonomous network security';

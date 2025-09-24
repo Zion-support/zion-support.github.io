@@ -4,8 +4,7 @@ import { AnalyticsChart } from '@/components/analytics/AnalyticsChart',
 interface ConversionAnalysisProps {
   data: Array<Record<stringany>>,
   timeRange: string,
-  onTimeRangeChange: (range: string) => void,
-}
+  onTimeRangeChange: (range: string) => void}
 ,
 export function ConversionAnalysisChart({
   datatimeRangeonTimeRangeChange;

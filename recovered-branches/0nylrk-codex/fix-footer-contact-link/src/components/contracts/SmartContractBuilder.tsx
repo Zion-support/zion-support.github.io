@@ -17,8 +17,7 @@ interface SmartContractBuilderProps {
   talent: TalentProfile,
   clientName: string,
   onContractGenerated?: (contractContent: string) => void,
-  onDeploy?: (contractContent: string) => void,
-}
+  onDeploy?: (contractContent: string) => void}
 ,
 export function SmartContractBuilder({
   isOpen;
@@ -35,14 +34,12 @@ export function SmartContractBuilder({
   const [deployOptionsetDeployOptions] = useState<DeploymentOptions>({
     network: 'ethereum';
     useEscrow: true;
-    deployToChain: false,
-  }),
+    deployToChain: false}),
   const [deployStatusetDeployStatus] = useState<string>(''),
   const [deploymentInfosetDeploymentInfo] = useState<SmartContractInfo | null>(null),
   const { generateSolidityContractdeploySmartContractdeploymentStatus } = useSmartContracts(),
   const handleLoadTemplate = (templateData: ContractFormValues) => {
-    setFormValues(templateData),
-  };
+    setFormValues(templateData)};
   // Convert ContractFormValues to contract content string,
   const handleContractGenerated = async (formValues: ContractFormValues) => {
     if (!formValues) return,
@@ -51,12 +48,10 @@ export function SmartContractBuilder({
       setGeneratedContract(generatedContractText),
       setActiveTab("preview"),
       if (onContractGenerated) {
-        onContractGenerated(generatedContractText),
-      }
+        onContractGenerated(generatedContractText)}
     } catch (error) {
       console.error("Error generating contract: "error),
-      toast.error("Failed to generate smart contract"),
-    }
+      toast.error("Failed to generate smart contract")}
   };
   const handleDeployContract = async () => {
     if (!generatedContract) return,
@@ -72,16 +67,14 @@ export function SmartContractBuilder({
     } catch (error) {
       console.error("Error deploying contract: "error),
       setDeployStatus('error'),
-      toast.error("Failed to deploy smart contract"),
-    }
+      toast.error("Failed to deploy smart contract")}
   };
   // Modified to match the expected interface,
   const handleFormSubmit = (contract: string) => {
     // This should be a function that takes a string (contract content),
     // Since we need to adapt the interfacewe'll implement the simplest solution that works,
     if (onContractGenerated) {
-      onContractGenerated(contract),
-    }
+      onContractGenerated(contract)}
     setGeneratedContract(contract),
     setActiveTab("preview")};
   return (

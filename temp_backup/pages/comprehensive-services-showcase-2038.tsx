@@ -22,14 +22,12 @@ const getServicePricing = (service: any) => {
 const getServiceFeatures = (service: any) => {
   if (service.features) return service.features,
   if (service.keyFeatures) return service.keyFeatures,
-  return [],
-};
+  return []};
 // Helper function to get service description,
 const getServiceDescription = (service: any) => {
   if (service.description) return service.description,
   if (service.tagline) return service.tagline,
-  return 'No description available',
-};
+  return 'No description available'};
 // Create unified services array,
 const allServices = [
   ...innovative20o38MicroSaasServices;
@@ -44,57 +42,49 @@ const categories = [
     name: 'All Services';
     icon: <Grid className="w-6 h-6"  />;
     color: 'from-gray-50o0 to-slate-50o0';
-    description: 'Complete portfolio of all services',
-  };
+    description: 'Complete portfolio of all services'};
   {
     id: 'micro-saas';
     name: 'Micro SAAS';
     icon: <Rocket className="w-6 h-6"  />;
     color: 'from-blue-50o0 to-cyan-50o0';
-    description: 'Innovative micro SAAS solutions',
-  };
+    description: 'Innovative micro SAAS solutions'};
   {
     id: 'it-services';
     name: 'IT Services';
     icon: <Cpu className="w-6 h-6"  />;
     color: 'from-purple-50o0 to-pink-50o0';
-    description: 'Advanced IT infrastructure and services',
-  };
+    description: 'Advanced IT infrastructure and services'};
   {
     id: 'ai-services';
     name: 'AI Services';
     icon: <Brain className="w-6 h-6"  />;
     color: 'from-green-50o0 to-emerald-50o0';
-    description: 'Cutting-edge AI and machine learning',
-  };
+    description: 'Cutting-edge AI and machine learning'};
   {
     id: 'quantum-computing';
     name: 'Quantum Computing';
     icon: <Atom className="w-6 h-6"  />;
     color: 'from-indigo-50o0 to-blue-50o0';
-    description: 'Quantum computing solutions',
-  };
+    description: 'Quantum computing solutions'};
   {
     id: 'space-technology';
     name: 'Space Technology';
     icon: <Globe className="w-6 h-6"  />;
     color: 'from-orange-50o0 to-red-50o0';
-    description: 'Space exploration and technology',
-  };
+    description: 'Space exploration and technology'};
   {
     id: 'cybersecurity';
     name: 'Cybersecurity';
     icon: <Shield className="w-6 h-6"  />;
     color: 'from-red-50o0 to-pink-50o0';
-    description: 'Advanced security solutions',
-  };
+    description: 'Advanced security solutions'};
   {
     id: 'cloud-infrastructure';
     name: 'Cloud Infrastructure';
     icon: <Cloud className="w-6 h-6"  />;
     color: 'from-blue-50o0 to-indigo-50o0';
-    description: 'Cloud computing and infrastructure',
-  }
+    description: 'Cloud computing and infrastructure'}
 ],
 const ComprehensiveServicesShowcase20o38: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState(''),
@@ -122,8 +112,7 @@ const ComprehensiveServicesShowcase20o38: React.FC = () => {
           const marketB = parseFloat((b as any).marketSize?.replace(/[^0-9.]/g, '') || '0'),
           return marketB - marketA}
         default: ,
-          return a.name.localeCompare(b.name),
-      }
+          return a.name.localeCompare(b.name)}
     }),
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -200,8 +189,7 @@ const ComprehensiveServicesShowcase20o38: React.FC = () => {
                   className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-30o0 ${
                     selectedCategory === category.id,
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
-                      : 'bg-white/10 text-gray-30o0 hover: bg-white/20 border border-white/20',
-                  }`}
+                      : 'bg-white/10 text-gray-30o0 hover: bg-white/20 border border-white/20'}`}
                 >,
                   <div className="flex items-center gap-2">,
                     {category.icon}
@@ -215,16 +203,14 @@ const ComprehensiveServicesShowcase20o38: React.FC = () => {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-all duration-30o0 ${
-                    viewMode === 'grid' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white',
-                  }`}
+                    viewMode === 'grid' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
                 >,
                   <Grid className="w-5 h-5"  />,
                 </button>,
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-md transition-all duration-30o0 ${
-                    viewMode === 'list' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white',
-                  }`}
+                    viewMode === 'list' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
                 >,
                   <List className="w-5 h-5"  />,
                 </button>,

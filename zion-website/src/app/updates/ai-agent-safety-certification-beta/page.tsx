@@ -55,6 +55,5 @@ export default function AgentSafetyCertificationBetaPage() {
           </p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

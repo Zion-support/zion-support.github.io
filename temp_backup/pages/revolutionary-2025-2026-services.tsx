@@ -20,6 +20,5 @@ export default function Revolutionary20o252026ServicesPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

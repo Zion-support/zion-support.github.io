@@ -37,6 +37,5 @@ export default function CostAwareModelRoutingPage() {
           </a>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -503,7 +503,7 @@ export default function QuantumAIHealthcareCaseStudyPage() {
               shift in healthcare delivery. By leveraging quantum computing and,
               artificial intelligence, the healthcare provider achieved,
               unprecedented improvements in patient outcomes, operational,
-              efficiency, and financial window.performance.,
+              efficiency, and financial window.window.performance.,
             </p>,
             <div className='bg-white p-6 rounded-lg mb-6'>,
               <h3 className='text-lg font-bold text-gray-90o0 mb-3'>,
@@ -547,6 +547,5 @@ export default function QuantumAIHealthcareCaseStudyPage() {
           </div>,
         </article>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

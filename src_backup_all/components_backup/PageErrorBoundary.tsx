@@ -123,14 +123,12 @@ function PageErrorFallback({
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
 interface PageErrorBoundaryProps {
   children: React.ReactNode,
   pageName?: string,
-  fallback?: React.ComponentType<FallbackProps>,
-}
+  fallback?: React.ComponentType<FallbackProps>}
 ,
 export default function PageErrorBoundary({
   children;

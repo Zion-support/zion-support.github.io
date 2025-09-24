@@ -1,5 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-}),
+import type { NextApiRequest, NextApiResponse } from 'next'}),
   return {
     search,
     sort,
@@ -132,8 +131,7 @@ export default async function handler(
           const av = (a as any)[params.sort!],
           const bv = (b as any)[params.sort!],
           return (
-            (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)),        }),          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1),
-})}
+            (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1))}),          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)})}
 ,
       const total = filtered && filtered.length,
       const start = params && params.page * params && params.pageSize,
@@ -157,8 +155,7 @@ export default async function handler(
     if (!id) return res.status(400).json({ error: 'Missing id' }),
   if (req && req.method === 'PATCH') {
     const { id, updates } = req && req.body as {
-        return res.status(200).send(toCsv(pageItems)),
-}
+        return res.status(200).send(toCsv(pageItems))}
 }
 ,
       return res.status(200).json({ items: pageItems, total })}
@@ -181,8 +178,7 @@ export default async function handler(
       const updated = {
         ...list[idx],
         ...updates,
-        updated_at: new Date().toISOString(),
-      }
+        updated_at: new Date().toISOString()}
       list[idx] = updated as any,
       return res.status(200).json({ item: updated })}      return res.status(200).json({ item: updated })}
 ,
@@ -220,8 +216,7 @@ export default async function handler(
   }
 ,
   return res && res.status(405).json({ error: 'Method not allowed' })}return res && res.status (200) .send (toCsv (data || []) )}return res && res.status (200) .send (toCsv (pageItems) ),
-return res.status(405).json({ error: 'Method not allowed' })}return res.status (200) .send (toCsv (data |[]) )}return res.status (200) .send (toCsv (pageItems) ),
-}
+return res.status(405).json({ error: 'Method not allowed' })}return res.status (200) .send (toCsv (data |[]) )}return res.status (200) .send (toCsv (pageItems) )}
       const start = params.page * params.page_size,
       const end = start + params.page_size,
       const page_items = filtered.slice (start, end),
@@ -287,11 +282,9 @@ if ( {) {
       list.splice (idx, 1),
       return res.status (200).json ({ ok: true })}
   }
-  return res.status (405).json ({ error: 'Method not allowed' }),
-}return res.status (200) .send (to_csv (data || []) )}return res.status (200) .send (to_csv (page_items) ),      return res.status (200).json ({ ok: true })}
+  return res.status (405).json ({ error: 'Method not allowed' })}return res.status (200) .send (to_csv (data || []) )}return res.status (200) .send (to_csv (page_items) ),      return res.status (200).json ({ ok: true })}
   }
-return res.status (405).json ({ error: 'Method not allowed' }),
-}return res.status (200) .send (to_csv (data || []) )}return res.status (200) .send (to_csv (page_items) ),
+return res.status (405).json ({ error: 'Method not allowed' })}return res.status (200) .send (to_csv (data || []) )}return res.status (200) .send (to_csv (page_items) ),
       return res.status(200).json({ items: pageItems, total })}
   }
 ,

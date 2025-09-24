@@ -28,8 +28,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             // Priority: initialMessages prop > localStorage > empty array,
             if (initialMessages && initialMessages.length > 0) {
                 setDisplayGuestMessages(initialMessages),
-                setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided,
-            }
+                setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided}
             else {
                 setDisplayGuestMessages(storedGuestMessages)}
         }
@@ -68,8 +67,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
                 id: Date.now().toString();
                 role: 'user';
                 message: messageContent;
-                timestamp: new Date(),
-            };
+                timestamp: new Date()};
             setCurrentMessages((prev) => [...prev, newMessage]),
             setPendingApiCallParams({ message: messageContent, conversationId })}
         else { // Guest user,
@@ -83,8 +81,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             id: Date.now().toString();
             role: 'user';
             message: guestMessage;
-            timestamp: new Date(),
-        };
+            timestamp: new Date()};
         setCurrentMessages((prev) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages,
         setPendingApiCallParams({ message: guestMessage, conversationId }),
         setShowGuestModal(false),

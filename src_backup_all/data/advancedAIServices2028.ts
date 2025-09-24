@@ -21,18 +21,15 @@ export interface AdvancedAIService20o28 {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors: string[],
-  marketSize: string,
-}
+  marketSize: string}
 ,
 export const ADVANCED_AI_SERVICES_20o28: AdvancedAIService20o28[] = [
   // AI-Powered Quantum Computing Solutions,
@@ -83,8 +80,7 @@ export const ADVANCED_AI_SERVICES_20o28: AdvancedAIService20o28[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Qiskit", "TensorFlow Quantum", "Cirq", "Python", "CUDA"];
       integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum"];
@@ -92,8 +88,7 @@ export const ADVANCED_AI_SERVICES_20o28: AdvancedAIService20o28[] = [
       uptime: "99.95%";
       security: ["Post-quantum cryptography", "Quantum key distribution", "Zero-trust architecture"]};
     competitors: ["IBM Quantum", "Google Quantum AI", "Rigetti", "D-Wave"];
-    marketSize: "$65.4 billion by 20o30",
-  };
+    marketSize: "$65.4 billion by 20o30"};
   // AI-Powered Autonomous Business Operations,
   {
     id: "ai-autonomous-business-platform";
@@ -142,8 +137,7 @@ export const ADVANCED_AI_SERVICES_20o28: AdvancedAIService20o28[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "Kubernetes", "React", "Node.js"];
       integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics", "Workday"];
@@ -151,8 +145,7 @@ export const ADVANCED_AI_SERVICES_20o28: AdvancedAIService20o28[] = [
       uptime: "99.9%";
       security: ["SOC 2", "ISO 270o01", "GDPR", "End-to-end encryption"]};
     competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate"];
-    marketSize: "$19.6 billion by 20o25",
-  };
+    marketSize: "$19.6 billion by 20o25"};
   // AI-Powered Cybersecurity Threat Intelligence,
   {
     id: "ai-cybersecurity-threat-intelligence";
@@ -201,8 +194,7 @@ export const ADVANCED_AI_SERVICES_20o28: AdvancedAIService20o28[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "Docker"];
       integrations: ["Splunk", "QRadar", "FireEye", "CrowdStrike", "SentinelOne"];
@@ -210,8 +202,7 @@ export const ADVANCED_AI_SERVICES_20o28: AdvancedAIService20o28[] = [
       uptime: "99.99%";
       security: ["SOC 2", "FedRAMP", "ISO 270o01", "Zero-trust architecture"]};
     competitors: ["CrowdStrike", "SentinelOne", "FireEye", "Palo Alto Networks"];
-    marketSize: "$15.6 billion by 20o25",
-  };
+    marketSize: "$15.6 billion by 20o25"};
   // AI-Powered Healthcare Diagnostics,
   {
     id: "ai-healthcare-diagnostics-platform";
@@ -260,8 +251,7 @@ export const ADVANCED_AI_SERVICES_20o28: AdvancedAIService20o28[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "PyTorch", "DICOM", "HL7 FHIR"];
       integrations: ["Epic", "Cerner", "PACS systems", "EHR platforms", "Telemedicine tools"];
@@ -269,8 +259,7 @@ export const ADVANCED_AI_SERVICES_20o28: AdvancedAIService20o28[] = [
       uptime: "99.9%";
       security: ["HIPAA", "SOC 2", "HITECH", "End-to-end encryption"]};
     competitors: ["Butterfly Network", "Zebra Medical", "Aidoc", "Enlitic"];
-    marketSize: "$45.2 billion by 20o26",
-  };
+    marketSize: "$45.2 billion by 20o26"};
   // AI-Powered Financial Trading Platform,
   {
     id: "ai-financial-trading-platform";
@@ -319,8 +308,7 @@ export const ADVANCED_AI_SERVICES_20o28: AdvancedAIService20o28[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "Kafka", "Redis", "PostgreSQL"];
       integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"];
@@ -328,6 +316,5 @@ export const ADVANCED_AI_SERVICES_20o28: AdvancedAIService20o28[] = [
       uptime: "99.99%";
       security: ["SOC 2", "PCI DSS", "FINRA compliance", "End-to-end encryption"]};
     competitors: ["Alpaca", "QuantConnect", "MetaTrader", "NinjaTrader"];
-    marketSize: "$28.9 billion by 20o27",
-  }
+    marketSize: "$28.9 billion by 20o27"}
 ],

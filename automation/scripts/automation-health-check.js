@@ -26,8 +26,7 @@ const logger = winston.createLogger({
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 class AutomationHealthChecker {
   constructor() {
@@ -42,8 +41,7 @@ class AutomationHealthChecker {
       systems: {};
       errors: [];
       fixes: [];
-      alerts: [],
-    };
+      alerts: []};
     this.loadStatus()}
 ,
   async run() {
@@ -81,8 +79,7 @@ class AutomationHealthChecker {
         this.status.systems[system.name] ={
           status: 'error';
           error: error.message;
-          timestamp: new Date().toISOString(),
-        };
+          timestamp: new Date().toISOString()};
       }
     }
   }
@@ -93,8 +90,7 @@ class AutomationHealthChecker {
       timestamp: new Date().toISOString();
       fileExists: false;
       syntaxValid: false;
-      runtimeErrors: 0,
-    };
+      runtimeErrors: 0};
     try {
       // Check if file exists,
       health.fileExists = fs.existsSync(system.file),
@@ -179,8 +175,7 @@ class AutomationHealthChecker {
       timestamp: logEntry.timestamp;
       message: logEntry.message;
       service: logEntry.service;
-      type: this.categorizeError(logEntry.message),
-    };
+      type: this.categorizeError(logEntry.message)};
     this.status.errors.push(error),
     // Keep only last 50 errors,
     if (this.status.errors.length > 50) {
@@ -191,8 +186,7 @@ class AutomationHealthChecker {
       this.status.alerts.push({
         type: 'critical';
         error: error;
-        timestamp: new Date().toISOString(),
-      })}
+        timestamp: new Date().toISOString()})}
   }
 ,
   categorizeError(message) {
@@ -242,8 +236,7 @@ class AutomationHealthChecker {
           this.status.fixes.push({
             timestamp: new Date().toISOString();
             type: 'automated_fix';
-            description: 'Triggered by health check',
-          }),
+            description: 'Triggered by health check'}),
           logger.info('✅ Fixes applied successfully')} else {
           logger.error('❌ Fix script not found')}
       } catch (error) {
@@ -283,8 +276,7 @@ class AutomationHealthChecker {
       recentErrors: this.status.errors.slice(-10);
       recentFixes: this.status.fixes.slice(-5);
       alerts: this.status.alerts;
-      recommendations: this.generateRecommendations(),
-    };
+      recommendations: this.generateRecommendations()};
     try {
       const reportPath = path.join(this.config.logsDir, 'health-report.json'),
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),

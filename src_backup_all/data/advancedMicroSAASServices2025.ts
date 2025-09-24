@@ -23,8 +23,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-content-studio";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$250-50o0/month";
     competitors: ["Jasper", "Copy.ai", "Writesonic"];
     roi: "40o0% within 3 months";
@@ -53,8 +52,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-customer-support";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$150-40o0/month";
     competitors: ["Intercom", "Zendesk", "Freshdesk"];
     roi: "350% within 4 months";
@@ -83,8 +81,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-hr-recruitment";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$30o0-80o0/month";
     competitors: ["BambooHR", "Workday", "Greenhouse"];
     roi: "30o0% within 6 months";
@@ -113,8 +110,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-legal-document";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$50o0-1,20o0/month";
     competitors: ["DocuSign", "ContractPodAi", "Evisort"];
     roi: "50o0% within 8 months";
@@ -143,8 +139,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-financial-trading";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$60o0-1,50o0/month";
     competitors: ["Alpaca", "Interactive Brokers", "TD Ameritrade"];
     roi: "60o0% within 12 months";
@@ -173,8 +168,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-healthcare-analytics";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$70o0-2,0o00/month";
     competitors: ["Epic", "Cerner", "Allscripts"];
     roi: "40o0% within 18 months";
@@ -203,8 +197,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-supply-chain";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$50o0-1,20o0/month";
     competitors: ["SAP", "Oracle", "Manhattan Associates"];
     roi: "350% within 10 months";
@@ -233,8 +226,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-project-management";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$20o0-50o0/month";
     competitors: ["Asana", "Monday.com", "ClickUp"];
     roi: "30o0% within 4 months";
@@ -263,8 +255,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-workflow-automation";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$30o0-70o0/month";
     competitors: ["Zapier", "Make", "n8n"];
     roi: "40o0% within 5 months";
@@ -293,8 +284,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-seo-marketing";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$150-40o0/month";
     competitors: ["SEMrush", "Ahrefs", "Moz"];
     roi: "350% within 6 months";

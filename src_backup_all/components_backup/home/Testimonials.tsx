@@ -9,8 +9,7 @@ interface Testimonial {
   content: string,
   rating: number,
   avatar: string,
-  industry: string,
-}
+  industry: string}
 ,
 const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0),
@@ -23,8 +22,7 @@ const Testimonials: React.FC = () => {
       content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency. The team's expertise in cybersecurity gave us peace of mind.";
       rating: 5;
       avatar: "/images/testimonials/sarah-chen.jpg";
-      industry: "Technology",
-    };
+      industry: "Technology"};
     {
       id: 2;
       name: "Marcus Rodriguez";
@@ -33,8 +31,7 @@ const Testimonials: React.FC = () => {
       content: "Implementing Zion's cloud solutions was seamless. Our development cycles went from months to weeks, and the scalability has been incredible. Their support team is always available when we need them.";
       rating: 5;
       avatar: "/images/testimonials/marcus-rodriguez.jpg";
-      industry: "Manufacturing",
-    };
+      industry: "Manufacturing"};
     {
       id: 3;
       name: "Dr. Emily Watson";
@@ -43,8 +40,7 @@ const Testimonials: React.FC = () => {
       content: "Working with Zion on our quantum computing initiatives has been groundbreaking. Their expertise in cutting-edge technologies is unmatched. They've helped us achieve breakthroughs we never thought possible.";
       rating: 5;
       avatar: "/images/testimonials/emily-watson.jpg";
-      industry: "Research",
-    };
+      industry: "Research"};
     {
       id: 4;
       name: "David Kim";
@@ -53,16 +49,14 @@ const Testimonials: React.FC = () => {
       content: "Zion's cybersecurity solutions are enterprise-grade. They helped us achieve SOC 2 compliance in record time and their threat detection systems have prevented multiple potential breaches.";
       rating: 5;
       avatar: "/images/testimonials/david-kim.jpg";
-      industry: "Financial Services",
-    }
+      industry: "Financial Services"}
   ],
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length)};
   const prevTestimonial = () => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)};
   const goToTestimonial = (index: number) => {
-    setCurrentIndex(index),
-  };
+    setCurrentIndex(index)};
   return (
     <section className="py-20 bg-gradient-to-b from-zion-slate to-zion-slate-dark" role="region" aria-labelledby="testimonials-heading">,
       <div className="container mx-auto px-4 sm: px-6 lg:px-8">,
@@ -149,8 +143,7 @@ const Testimonials: React.FC = () => {
               className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                 index === currentIndex,
                   ? 'bg-zion-cyan scale-125',
-                  : 'bg-zion-slate-light hover: bg-zion-cyan/50',
-              }`}
+                  : 'bg-zion-slate-light hover: bg-zion-cyan/50'}`}
               aria-label={`Go to testimonial ${index + 1}`}
             />))}
         </div>,
@@ -183,6 +176,5 @@ const Testimonials: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default Testimonials;

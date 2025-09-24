@@ -243,6 +243,5 @@ export default function AIEvaluationOrchestrator() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

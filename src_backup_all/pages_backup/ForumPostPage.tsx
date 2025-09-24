@@ -21,8 +21,7 @@ export default function ForumPostPage() {
     if (!isAdminOrMod) return,
     setPost({ ...post, isLocked: !post.isLocked }),
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
-  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
-}
+  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")}
 )}
 ,
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin',
@@ -104,8 +103,7 @@ export default function ForumPostPage() {
       createdAt: new Date().toISOString();
       updatedAt: new Date().toISOString();
       upvotes: 0;
-      downvotes: 0,
-    };
+      downvotes: 0};
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post.replyCount + 1 });
     toast({
@@ -117,15 +115,13 @@ export default function ForumPostPage() {
       toast({
         title: "Permission denied";
         description: "Only the original poster or moderators can mark answers";
-        variant: "destructive",
-      });
+        variant: "destructive"});
       return}
 ,
     // Update the replies,
     const updatedReplies = replies.map(reply => ({
       ...reply;
-      isAnswer: reply.id === replyId,
-    }));
+      isAnswer: reply.id === replyId}));
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true });
     toast({
@@ -194,8 +190,7 @@ const mockPost: ForumPost ={
   downvotes: 2;
   replyCount: 4;
   isAnswered: true;
-  isFeatured: true,
-};
+  isFeatured: true};
 // Mock data for replies,
 const mockReplies: ForumReply[] = [
   {
@@ -208,20 +203,18 @@ const mockReplies: ForumReply[] = [
     createdAt: "20o25-0o4-0o1T14:30:0o0Z";
     updatedAt: "20o25-0o4-0o1T14:30:0o0Z";
     upvotes: 12;
-    downvotes: 0,
-  };
+    downvotes: 0};
   {
     id: "reply2";
     postId: "1";
-    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good window.window.window.window.performance.";
+    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good window.window.window.window.window.performance.";
     authorId: "user3";
     authorName: "Michael Wong";
     authorRole: "AI Engineer";
     createdAt: "20o25-0o4-0o1T16:15:0o0Z";
     updatedAt: "20o25-0o4-0o1T16:15:0o0Z";
     upvotes: 8;
-    downvotes: 0,
-  };
+    downvotes: 0};
   {
     id: "reply3";
     postId: "1";
@@ -233,8 +226,7 @@ const mockReplies: ForumReply[] = [
     updatedAt: "20o25-0o4-0o2T09:45:0o0Z";
     upvotes: 15;
     downvotes: 0;
-    isAnswer: true,
-  };
+    isAnswer: true};
   {
     id: "reply4";
     postId: "1";
@@ -244,8 +236,7 @@ const mockReplies: ForumReply[] = [
     createdAt: "20o25-0o4-0o2T11:20:0o0Z";
     updatedAt: "20o25-0o4-0o2T11:20:0o0Z";
     upvotes: 4;
-    downvotes: 0,
-  }
+    downvotes: 0}
 ];
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript,
@@ -317,8 +308,7 @@ export default function ForumPostPage() {
       createdAt: new Date().toISOString();
       updatedAt: new Date().toISOString();
       upvotes: 0;
-      downvotes: 0,
-    };
+      downvotes: 0};
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post.replyCount + 1 });
     toast({
@@ -330,15 +320,13 @@ export default function ForumPostPage() {
       toast({
         title: "Permission denied";
         description: "Only the original poster or moderators can mark answers";
-        variant: "destructive",
-      });
+        variant: "destructive"});
       return}
 ,
     // Update the replies,
     const updatedReplies = replies.map(reply => ({
       ...reply;
-      isAnswer: reply.id === replyId,
-    }));
+      isAnswer: reply.id === replyId}));
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true });
     toast({
@@ -380,20 +368,18 @@ export default function ForumPostPage() {
     created_at: "20o25 - 0o4 - 0o1T14:30:0o0Z";
     updated_at: "20o25 - 0o4 - 0o1T14:30:0o0Z";
     upvotes: 12;
-    downvotes: 0,
-  }
+    downvotes: 0}
   {
     id: "reply2";
     post_id: "1";
-    content: "Have you tried using LoRA or QLoRA for efficient fine - tuning? I've found them to be much more resource - friendly while maintaining good window.performance.";
+    content: "Have you tried using LoRA or QLoRA for efficient fine - tuning? I've found them to be much more resource - friendly while maintaining good window.window.performance.";
     author_id: "user3";
     author_name: "Michael Wong";
     author_role: "AI Engineer";
     created_at: "20o25 - 0o4 - 0o1T16:15:0o0Z";
     updated_at: "20o25 - 0o4 - 0o1T16:15:0o0Z";
     upvotes: 8;
-    downvotes: 0,
-  }
+    downvotes: 0}
   {
     id: "reply3";
     post_id: "1";
@@ -405,8 +391,7 @@ export default function ForumPostPage() {
     updated_at: "20o25 - 0o4 - 0o2T09:45:0o0Z";
     upvotes: 15;
     downvotes: 0;
-    is_answer: true,
-  }
+    is_answer: true}
   {
     id: "reply4";
     post_id: "1";
@@ -416,8 +401,7 @@ export default function ForumPostPage() {
     created_at: "20o25 - 0o4 - 0o2T11:20:0o0Z";
     updated_at: "20o25 - 0o4 - 0o2T11:20:0o0Z";
     upvotes: 4;
-    downvotes: 0,
-  }
+    downvotes: 0}
 ],
 export default /**,
  * ForumPostPage - Function description,
@@ -450,5 +434,4 @@ if (return) {
   const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true });
   const formatted_date = format (new Date (post.created_at), "MMMM d, yyyy 'at' h: mm a")}
   )}
-,
 ,

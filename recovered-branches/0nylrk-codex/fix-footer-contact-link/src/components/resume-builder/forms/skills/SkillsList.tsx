@@ -4,8 +4,7 @@ import { Skill } from '@/types/resume',
 import { SkillCategory } from './SkillCategory',
 interface SkillsListProps {
   skills: Skill[],
-  onDeleteSkill: (id: stringcategory: string) => Promise<void>,
-}
+  onDeleteSkill: (id: stringcategory: string) => Promise<void>}
 ,
 export const SkillsList = ({ skillsonDeleteSkill }: SkillsListProps) => {
   const [skillsByCategorysetSkillsByCategory] = useState<Record<stringSkill[]>>({}),

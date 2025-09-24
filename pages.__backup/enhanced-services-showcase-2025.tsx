@@ -52,8 +52,7 @@ export default function EnhancedServicesShowcase20o25() {
       if (typeof price === 'string') {
         const match = price.replace(/[^0-9.]/g''),
         const parsed = parseFloat(match || '0'),
-        return isNaN(parsed) ? 0 : parsed,
-      }
+        return isNaN(parsed) ? 0 : parsed}
       return 0};
     let filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
@@ -87,8 +86,7 @@ export default function EnhancedServicesShowcase20o25() {
         filtered.sort((ab) => b.customers - a.customers),
         break,
       default: ,
-        filtered.sort((ab) => a.name.localeCompare(b.name)),
-    }
+        filtered.sort((ab) => a.name.localeCompare(b.name))}
 ,
     return filtered}[searchTermselectedCategoryselectedPriceRangesortByallServices]),
   const containerVariants ={
@@ -96,8 +94,7 @@ export default function EnhancedServicesShowcase20o25() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -106,8 +103,7 @@ export default function EnhancedServicesShowcase20o25() {
       opacity: 1;
       y: 0;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -375,5 +371,4 @@ export default function EnhancedServicesShowcase20o25() {
           </div>,
         </section>,
       </div>,
-    </EnhancedFuturisticBackground>),
-}
+    </EnhancedFuturisticBackground>)}

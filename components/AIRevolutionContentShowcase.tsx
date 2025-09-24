@@ -16,8 +16,7 @@ const AIRevolutionContentShowcase = () => {
         roi: '10,0o00%';
         savings: '$50B+';
         efficiency: '3,0o00%';
-        accuracy: '99.99%',
-      };
+        accuracy: '99.99%'};
       readingTime: '45 min read';
       featured: true;
       tags: ['AI Revolution', '20o25-20o26', 'ROI', 'Fortune 50o0', 'Breakthrough']};
@@ -62,8 +61,7 @@ const AIRevolutionContentShowcase = () => {
         roi: '40o0-60o0%';
         speed: '1,0o00x';
         accuracy: '99.97%';
-        market: '$10o0B',
-      };
+        market: '$10o0B'};
       readingTime: '22 min read';
       featured: false;
       tags: ['Quantum AI', 'Business Revolution', 'ROI', 'Fortune 50o0']};
@@ -78,8 +76,7 @@ const AIRevolutionContentShowcase = () => {
         roi: '3,0o00%';
         autonomy: '99.7%';
         efficiency: '80o0%';
-        savings: '$25.6M',
-      };
+        savings: '$25.6M'};
       readingTime: '28 min read';
       featured: false;
       tags: ['Autonomous Systems', 'Enterprise AI', 'ROI', 'Revolution']};
@@ -94,8 +91,7 @@ const AIRevolutionContentShowcase = () => {
         roi: '750%';
         accuracy: '99.7%';
         savings: '$3.2B';
-        efficiency: '450%',
-      };
+        efficiency: '450%'};
       readingTime: '25 min read';
       featured: false;
       tags: ['Multimodal 'AI', 'Enterprise 'AI', 'ROI'Cross-Modal Intelligence']}
@@ -114,16 +110,14 @@ const AIRevolutionContentShowcase = () => {
       case 'blog': return '📝',
       case 'case-study': return '📊',
       case 'resource': return '📚',
-      default: return '📄',
-    }
+      default: return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'from-blue-50o0 to-cyan-50o0',
       case 'case-study': return 'from-green-50o0 to-emerald-50o0',
       case 'resource': return 'from-purple-50o0 to-pink-50o0',
-      default: return 'from-gray-50o0 to-gray-60o0',
-    }
+      default: return 'from-gray-50o0 to-gray-60o0'}
   };
   return (
     <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">,
@@ -150,8 +144,7 @@ const AIRevolutionContentShowcase = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -162,8 +155,7 @@ const AIRevolutionContentShowcase = () => {
             <div
               key={item.id}
               className={`bg-white rounded-xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:scale-10o5 ${
-                item.featured ? 'ring-2 ring-purple-50o0 ring-opacity-50' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-50o0 ring-opacity-50' : ''}`}
             >,
               {/* Featured Badge */}
               {item.featured && (
@@ -243,6 +235,5 @@ const AIRevolutionContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AIRevolutionContentShowcase;

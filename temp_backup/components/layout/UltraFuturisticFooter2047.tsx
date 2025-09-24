@@ -68,7 +68,7 @@ const UltraFuturisticFooter20o47: React.FC = () => {
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     // Handle newsletter subscription,
-    // console.log('Newsletter subscription:', email),
+    // // console.log('Newsletter subscription:', email),
     setEmail('')};
   const fadeInUp ={
     initial: { opacity: 0, y: 60 };
@@ -79,8 +79,7 @@ const UltraFuturisticFooter20o47: React.FC = () => {
   const staggerContainer ={
     animate: {
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   return (
@@ -288,8 +287,7 @@ const UltraFuturisticFooter20o47: React.FC = () => {
           transition={{
             duration: 3;
             repeat: Infinity as any;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-40 left-32 w-1 h-1 bg-blue-40o0 rounded-full",
@@ -300,8 +298,7 @@ const UltraFuturisticFooter20o47: React.FC = () => {
             duration: 4;
             repeat: Infinity as any;
             ease: "easeInOut";
-            delay: 1,
-          }}
+            delay: 1}}
          />,
         <motion.div,
           className="absolute top-1/2 left-1/4 w-1 h-1 bg-purple-40o0 rounded-full",
@@ -312,8 +309,7 @@ const UltraFuturisticFooter20o47: React.FC = () => {
             duration: 5;
             repeat: Infinity as any;
             ease: "easeInOut";
-            delay: 2,
-          }}
+            delay: 2}}
          />,
       </div>,
     </footer>)};

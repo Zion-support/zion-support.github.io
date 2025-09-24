@@ -50,14 +50,12 @@ export default function Services20o26ShowcaseEnhancedPage() {
     if (serviceVariant.includes('api')) return 'quantum-advanced',
     if (serviceVariant.includes('integration')) return 'quantum-advanced',
     if (serviceVariant.includes('analytics')) return 'neural',
-    return 'default',
-  };
+    return 'default'};
   const contactInfo ={
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   // Combine all 20o26 services including new ones,
   const all20o26Services = [
     ...innovative20o26MicroSaasServicesV2;
@@ -138,8 +136,7 @@ export default function Services20o26ShowcaseEnhancedPage() {
         case 'rating':,
           return b.rating - a.rating,
         default: ,
-          return a.name.localeCompare(b.name),
-      }
+          return a.name.localeCompare(b.name)}
     }),
     return filtered}, [all20o26Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
   // Service statistics,
@@ -151,8 +148,7 @@ export default function Services20o26ShowcaseEnhancedPage() {
     microSaasServices: all20o26Services.filter(s => s.category.includes('SaaS')).length;
     healthcareServices: all20o26Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length;
     financialServices: all20o26Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length;
-    manufacturingServices: all20o26Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length,
-  };
+    manufacturingServices: all20o26Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length};
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">,
       <div className="min-h-screen">,
@@ -289,16 +285,14 @@ export default function Services20o26ShowcaseEnhancedPage() {
                     <button
                       onClick={() => setViewMode('grid')}
                       className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
-                        viewMode === 'grid' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover: text-white',
-                      }`}
+                        viewMode === 'grid' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover: text-white'}`}
                     >,
                       <Grid className="w-4 h-4 mx-auto" />,
                     </button>,
                     <button
                       onClick={() => setViewMode('list')}
                       className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
-                        viewMode === 'list' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover: text-white',
-                      }`}
+                        viewMode === 'list' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover: text-white'}`}
                     >,
                       <List className="w-4 h-4 mx-auto" />,
                     </button>,

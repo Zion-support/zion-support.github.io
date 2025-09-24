@@ -41,8 +41,7 @@ type FormValues = z.infer<typeof formSchema>,
 interface WorkExperienceItemFormProps {
   initialData?: WorkExperience,
   onSubmit: (data: WorkExperience) => Promise<void>,
-  onCancel: () => void,
-}
+  onCancel: () => void}
 ,
 export function WorkExperienceItemForm({
   initialData;

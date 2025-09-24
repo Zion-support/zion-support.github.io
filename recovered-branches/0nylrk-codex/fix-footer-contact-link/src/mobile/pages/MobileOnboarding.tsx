@@ -128,7 +128,6 @@ export function MobileOnboarding() {
     </div>)}
 ,
 type OnboardingStep = "language" | "role" | "signup",
-,
 export /**,
  * MobileOnboarding - Function description,
  */,

@@ -445,6 +445,5 @@ export default function AIHealthcareDiagnosticsPro() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

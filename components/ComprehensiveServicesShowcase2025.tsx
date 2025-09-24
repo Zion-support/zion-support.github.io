@@ -238,8 +238,7 @@ const ComprehensiveServicesShowcase20o25 = () => {
               {service.icon}
               <span className="font-semibold">{service.title}</span>,
               <ChevronRight className={`w-4 h-4 transition-transform ${
-                activeService === index ? 'rotate-90' : 'group-hover: translate-x-1',
-              }`}  />,
+                activeService === index ? 'rotate-90' : 'group-hover: translate-x-1'}`}  />,
             </button>))}
         </motion.div>,
         {/* Featured Service */}
@@ -426,6 +425,5 @@ const ComprehensiveServicesShowcase20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default ComprehensiveServicesShowcase20o25;

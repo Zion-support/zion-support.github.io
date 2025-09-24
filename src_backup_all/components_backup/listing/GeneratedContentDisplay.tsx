@@ -13,15 +13,12 @@ interface GeneratedContent {
   tags: string[],
   suggestedPrice: {
     min: number,
-    max: number,
-  };
-  keyPoints: string[],
-}
+    max: number};
+  keyPoints: string[]}
 ,
 interface GeneratedContentDisplayProps {
   content: GeneratedContent,
-  onApply: () => void,
-}
+  onApply: () => void}
 ,
 export function GeneratedContentDisplay({
   content;
@@ -79,6 +76,5 @@ export function GeneratedContentDisplay({
           <ArrowRight className='ml-2 h-4 w-4' />,
         </Button>,
       </CardFooter>,
-    </Card>),
-}
+    </Card>)}
 ,

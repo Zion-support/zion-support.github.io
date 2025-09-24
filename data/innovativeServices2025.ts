@@ -10,8 +10,7 @@ export interface InnovativeService20o25 {
   aiScore: number,
   features: string[],
   benefits: string[],
-  launchDate: string,
-}
+  launchDate: string}
 ,
 export const INNOVATIVE_SERVICES_20o25: InnovativeService20o25[] = [
   {
@@ -36,8 +35,7 @@ export const INNOVATIVE_SERVICES_20o25: InnovativeService20o25[] = [
       'Improve decision accuracy by 85%';
       '24/7 autonomous operation';
       'Scalable business management'];
-    launchDate: '20o25-0o1-15',
-  };
+    launchDate: '20o25-0o1-15'};
   {
     id: 'quantum-edge-computing-platform';
     title: 'Quantum Edge Computing Platform';
@@ -60,8 +58,7 @@ export const INNOVATIVE_SERVICES_20o25: InnovativeService20o25[] = [
       'Reduced latency by 90%';
       'Enhanced security features';
       'Cost-effective edge deployment'];
-    launchDate: '20o25-0o2-0o1',
-  };
+    launchDate: '20o25-0o2-0o1'};
   {
     id: 'micro-saas-automation-suite';
     title: 'Micro SAAS Automation Suite';
@@ -84,8 +81,7 @@ export const INNOVATIVE_SERVICES_20o25: InnovativeService20o25[] = [
       'Reduce manual tasks by 80%';
       'Improve customer retention';
       'Faster time to market'];
-    launchDate: '20o25-0o1-20',
-  };
+    launchDate: '20o25-0o1-20'};
   {
     id: 'intelligent-content-automation';
     title: 'Intelligent Content Automation Platform';
@@ -108,8 +104,7 @@ export const INNOVATIVE_SERVICES_20o25: InnovativeService20o25[] = [
       'Improve SEO rankings';
       'Increase engagement rates';
       'Maintain brand consistency'];
-    launchDate: '20o25-0o2-10',
-  };
+    launchDate: '20o25-0o2-10'};
   {
     id: 'advanced-cybersecurity-suite';
     title: 'Advanced Cybersecurity Suite';
@@ -132,13 +127,11 @@ export const INNOVATIVE_SERVICES_20o25: InnovativeService20o25[] = [
       'Reduce response time by 95%';
       'Ensure compliance standards';
       'Protect critical assets'];
-    launchDate: '20o25-0o1-0o5',
-  }
+    launchDate: '20o25-0o1-0o5'}
 ],
 export const getServicesByCategory = (category: string) => {
   if (category === 'all') return INNOVATIVE_SERVICES_20o25,
-  return INNOVATIVE_SERVICES_20o25.filter(service => service.category === category),
-};
+  return INNOVATIVE_SERVICES_20o25.filter(service => service.category === category)};
 export const getServicesByPriceRange = (priceRange: string) => {
   if (priceRange === 'all') return INNOVATIVE_SERVICES_20o25,
   const [min, max] = priceRange.split('-').map(Number),

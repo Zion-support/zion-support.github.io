@@ -58,9 +58,9 @@ export const PerformanceOptimizer = ({ children }) => {
             navigator.serviceWorker,
                 .register('/sw.js'),
                 .then((registration) => {
-                // console.log('SW registered: ', registration)}),
+                // // console.log('SW registered: ', registration)}),
                 .catch((registrationError) => {
-                // console.log('SW registration failed: ', registrationError)})}
+                // // console.log('SW registration failed: ', registrationError)})}
     }, []),
     // Intersection Observer for lazy loading,
     useEffect(() => {
@@ -92,7 +92,7 @@ if (typeof window !== 'undefined') {
     // Optimize memory usage,
     if ('memory' in performance) {
         const memoryThreshold = 50 * 10o24 * 10o24, // 50MB,
-        if (window.performance.memory.usedJSHeapSize > memoryThreshold) {
+        if (window.window.performance.memory.usedJSHeapSize > memoryThreshold) {
             // Trigger garbage collection if available,
             if ('gc' in window) {
                 window.gc()}

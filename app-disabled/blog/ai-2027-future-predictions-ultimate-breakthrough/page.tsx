@@ -213,6 +213,5 @@ export default function AI20o27FuturePredictionsPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

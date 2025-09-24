@@ -33,8 +33,7 @@ export interface RealMicroSaasService20o24 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation?: boolean,
   implementationDetails?: string,
   launchDate?: string,
@@ -82,15 +81,13 @@ export const realMicroSaasServices20o24: RealMicroSaasService20o24[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Fully functional SaaS platform with real-time data processing, AI models for predictive analytics, and comprehensive reporting capabilities.';
     launchDate: '20o24-0o3-15';
     customers: 180o0;
     rating: 4.9;
-    reviews: 890,
-  };
+    reviews: 890};
   // AI Customer Success Automation,
   {
     id: 'ai-customer-success-automation';
@@ -133,13 +130,11 @@ export const realMicroSaasServices20o24: RealMicroSaasService20o24[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production-ready SaaS platform with AI models for churn prediction, automated workflow engine, and comprehensive analytics dashboard.';
     launchDate: '20o24-0o2-20';
     customers: 120o0;
     rating: 4.8;
-    reviews: 650,
-  }
+    reviews: 650}
 ],

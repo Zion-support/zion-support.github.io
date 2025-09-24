@@ -327,8 +327,7 @@ const systems = Array.from(this.automationSystems.values()),
                 "scales": {
                     y: {
                         beginAtZero: tru,e,
-                        max: 10o0,
-}),
+                        max: 10o0}),
         function: runAllSystems() {
                         "max": 10o0}),
         "function": runAllSystems() {
@@ -541,7 +540,7 @@ switch: (command) {
     break,
   case ""status": ,
     // // // // // // // //, null, 2)),
-    // // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2)),
+    // // // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2)),
     break,
   "case": 'run-all',',:',
     dashboard.runAllSystems().then(results: => {

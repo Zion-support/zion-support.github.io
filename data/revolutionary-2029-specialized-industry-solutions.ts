@@ -29,8 +29,7 @@ export interface RevolutionarySpecializedIndustryService20o29 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -38,8 +37,7 @@ export interface RevolutionarySpecializedIndustryService20o29 {
   rating: number,
   reviews: number,
   isPopular?: boolean,
-  isNew?: boolean,
-}
+  isNew?: boolean}
 ,
 export const revolutionarySpecializedIndustryServices20o29: RevolutionarySpecializedIndustryService20o29[] =,
   [
@@ -659,8 +657,7 @@ export const revolutionarySpecializedIndustryServices20o29: RevolutionarySpecial
   ],
 export const getSpecializedIndustryServicesByCategory = (category: string) => {
   return revolutionarySpecializedIndustryServices20o29.filter(
-    service => service.category === category),
-};
+    service => service.category === category)};
 export const getPopularSpecializedIndustryServices = () => {
   return revolutionarySpecializedIndustryServices20o29.filter(
     service => service.isPopular)};

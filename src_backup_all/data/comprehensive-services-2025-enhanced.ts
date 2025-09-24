@@ -16,8 +16,7 @@ export interface EnhancedService {
     monthly: string,
     yearly: string,
     enterprise: string,
-    setup: string,
-  };
+    setup: string};
   features: string[],
   benefits: string[],
   roi: string,
@@ -36,8 +35,7 @@ export interface EnhancedService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
 }
 ,
 const CONTACT = {
@@ -273,7 +271,7 @@ export const comprehensiveServices20o25Enhanced: EnhancedService[] = [
     name: 'AI Personalized Learning Platform';
     tagline: 'Adaptive learning paths for every student';
     description:,
-      'Intelligent learning platform that creates personalized educational experiences, tracks progress, and adapts content based on individual learning styles and window.performance.';
+      'Intelligent learning platform that creates personalized educational experiences, tracks progress, and adapts content based on individual learning styles and window.window.performance.';
     category: 'edutech';
     pricing: {
       monthly: '$149/month';

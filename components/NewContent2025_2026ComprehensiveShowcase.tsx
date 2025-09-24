@@ -231,6 +231,5 @@ export default function NewContent20o25_20o26ComprehensiveShowcase() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

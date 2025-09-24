@@ -11,15 +11,13 @@ const InteractiveROICalculator: React.FC<ROICalculatorProps> = ({ className = ',
     employees: 50;
     industry: 'manufacturing';
     aiInvestment: 10o0000;
-    timeframe: 12,
-  }),
+    timeframe: 12}),
   const [results, setResults] = useState({
     costSavings: 0;
     revenueIncrease: 0;
     totalROI: 0;
     paybackPeriod: 0;
-    netBenefit: 0,
-  }),
+    netBenefit: 0}),
   const industryMultipliers ={
     manufacturing: { costSavings: 0.4, revenueIncrease: 0.25 };
     healthcare: { costSavings: 0.35, revenueIncrease: 0.20 };
@@ -43,8 +41,7 @@ const InteractiveROICalculator: React.FC<ROICalculatorProps> = ({ className = ',
       revenueIncrease: annualRevenueIncrease;
       totalROI: roi;
       paybackPeriod: paybackPeriod;
-      netBenefit: netBenefit,
-    })};
+      netBenefit: netBenefit})};
   const handleInputChange = (field: string, value: number | string) => {
     setInputs(prev => ({
       ...prev;
@@ -209,6 +206,5 @@ const InteractiveROICalculator: React.FC<ROICalculatorProps> = ({ className = ',
           </p>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default InteractiveROICalculator;

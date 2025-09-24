@@ -2,8 +2,7 @@ import { EmissionSchedule, ScenarioKey, SimulatorInputs } from '../../utils/data
 export type SimulatorFormProps ={
   values: SimulatorInputs,
   onChange: (next: SimulatorInputs) => void,
-  onScenario: (scenario: ScenarioKey) => void,
-};
+  onScenario: (scenario: ScenarioKey) => void};
 const numberInput = (
   label: string;
   value: number;

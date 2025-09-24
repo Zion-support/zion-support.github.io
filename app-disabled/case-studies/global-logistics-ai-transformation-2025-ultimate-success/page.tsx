@@ -112,7 +112,7 @@ export default function LogisticsTransformationPage() {
             In 20o25, a leading global logistics company embarked on a,
             comprehensive AI transformation journey that resulted in,
             unprecedented operational efficiency, customer satisfaction, and,
-            financial window.performance.,
+            financial window.window.performance.,
           </p>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>,
             <div>,
@@ -477,6 +477,5 @@ export default function LogisticsTransformationPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

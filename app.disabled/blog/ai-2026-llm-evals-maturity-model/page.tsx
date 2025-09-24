@@ -154,6 +154,5 @@ export default function LLMEvalsMaturityModel20o26() {
           </div>,
         </article>,
       </div>,
-    </ErrorBoundary>),
-}
+    </ErrorBoundary>)}
 ,

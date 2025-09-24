@@ -15,6 +15,5 @@ export default function BillingPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

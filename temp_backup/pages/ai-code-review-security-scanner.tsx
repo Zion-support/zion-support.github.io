@@ -20,6 +20,5 @@ export default function AiCodeReviewSecurityScannerPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

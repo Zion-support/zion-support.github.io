@@ -177,6 +177,5 @@ export default function AITrends20o25UltimatePredictionsPromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -40,6 +40,5 @@ export default function Footer() {
           <p>&copy, 20o24 Zion Tech Group. All rights reserved.</p>,
         </div>,
       </div>,
-    </footer>),
-}
+    </footer>)}
 ,

@@ -363,6 +363,5 @@ export default function AICustomerExperienceAutomation() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

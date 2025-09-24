@@ -151,6 +151,5 @@ export default function AutonomousSystems20o25RevolutionBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

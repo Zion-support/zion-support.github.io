@@ -15,5 +15,4 @@ export default function 20o25InnovativeServicesShowcaseV2Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

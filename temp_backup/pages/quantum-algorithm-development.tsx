@@ -17,6 +17,5 @@ export default function QuantumAlgorithmDevelopmentPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

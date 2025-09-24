@@ -15,6 +15,5 @@ export default function Pricing20o36Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -34,8 +34,7 @@ export default function CompanyWorkspace() {
   const effectiveTheme = isWhitelabel ? {
     primaryColor: tenant?.primary_color |company.theme?.primaryColor,
     backgroundColor: company.theme?.backgroundColor |'var(--background)',
-    textColor: company.theme?.textColor |'var(--foreground)',
-  } : company.theme,
+    textColor: company.theme?.textColor |'var(--foreground)'} : company.theme,
   // Check if user has access to this company workspace,
   const hasAccess = true, // For demo purposes, always grant access,
   if (!hasAccess) {
@@ -63,8 +62,7 @@ export default function CompanyWorkspace() {
   const effectiveTheme = isWhitelabel ? {
     primaryColor: tenant?.primary_color || company && company.theme?.primaryColor;
     backgroundColor: company && company.theme?.backgroundColor || 'var(--background)';
-    textColor: company && company.theme?.textColor || 'var(--foreground)',
-  } : company && company.theme,
+    textColor: company && company.theme?.textColor || 'var(--foreground)'} : company && company.theme,
   // Check if user has access to this company workspace,
   const hasAccess = true, // For demo purposes, always grant access,
   if (!hasAccess) {
@@ -87,5 +85,4 @@ export default function CompanyWorkspace() {
       <Footer />,
     </ProtectedRoute>)}
 }
-,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)))

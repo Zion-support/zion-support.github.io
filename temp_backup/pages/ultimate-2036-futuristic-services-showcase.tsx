@@ -23,8 +23,7 @@ export default function Ultimate20o36FuturisticServicesShowcase() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   // Combine all services,
   const allServices = [
     ...real20o36InnovativeServices;
@@ -98,8 +97,7 @@ export default function Ultimate20o36FuturisticServicesShowcase() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -108,8 +106,7 @@ export default function Ultimate20o36FuturisticServicesShowcase() {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -233,8 +230,7 @@ export default function Ultimate20o36FuturisticServicesShowcase() {
                         className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                           viewMode === 'grid',
                             ? 'bg-blue-60o0 text-white',
-                            : 'text-gray-40o0 hover: text-white',
-                        }`}
+                            : 'text-gray-40o0 hover: text-white'}`}
                       >,
                         <Grid className="w-4 h-4 mx-auto"  />,
                       </button>,
@@ -243,8 +239,7 @@ export default function Ultimate20o36FuturisticServicesShowcase() {
                         className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                           viewMode === 'list',
                             ? 'bg-blue-60o0 text-white',
-                            : 'text-gray-40o0 hover: text-white',
-                        }`}
+                            : 'text-gray-40o0 hover: text-white'}`}
                       >,
                         <List className="w-4 h-4 mx-auto"  />,
                       </button>,
@@ -275,8 +270,7 @@ export default function Ultimate20o36FuturisticServicesShowcase() {
                     className={`group cursor-pointer ${
                       viewMode === 'grid',
                         ? 'bg-gradient-to-br from-gray-90o0/80 to-gray-80o0/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-70o0/50 hover: border-blue-50o0/50 transition-all duration-30o0 hover:transform hover:scale-10o5',
-                        : 'bg-gradient-to-r from-gray-90o0/80 to-gray-80o0/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-70o0/50 hover:border-blue-50o0/50 transition-all duration-30o0',
-                    }`}
+                        : 'bg-gradient-to-r from-gray-90o0/80 to-gray-80o0/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-70o0/50 hover:border-blue-50o0/50 transition-all duration-30o0'}`}
                     onClick={() => setSelectedService(service)}
                   >,
                     {/* Service Header */}

@@ -4,8 +4,7 @@ import * as AppKitReact from @reown/appkit/react',
 const TestComponent = () => {
   const wallet = useWallet(),
   if (!wallet) {
-    return <div>Error: Wallet context not found</div>,
-  }
+    return <div>Error: Wallet context not found</div>}
   return (
     <div>,
       <p>Connected: {wallet.isConnected.toString()}</p>,
@@ -75,11 +74,10 @@ describe('WalletProvider', () => {'  let _mockAppKit: unknown,
     // Check for the console error related to appKit being null during subscription attempt,
     cy.get('@consoleError').should(''be.calledWithMatch',        /WalletContext: Unable to subscribe to provider changes\. Neither subscribeProvider nor on\/off methods are available or appKit is invalid\. appKit keys: appKit is null/),
     // Check connectWallet behavior when appKit (from useAppKit) is null,
-    // The connectWallet in WalletProvider has a guard: if (!appKit) { captureException(...), return, }
+    // The connectWallet in WalletProvider has a guard: if (!appKit) { captureException(...), return}
     // So, appKit.open should not be called.,
     cy.contains('button', Connect').click(),    cy.wrap(mockAppKit.open).should('not.be.called'), // mockAppKit.open should not be called,
     // We should also expect a console error from connectWallet due to appKit being null,
     // if captureException also logs or if we add a log there.,
     // Currently, it calls captureException, which might not log to console.error by default.,
-    // For now, this confirms no crash and the specific subscription error.}),
-}),
+    // For now, this confirms no crash and the specific subscription error.})}),

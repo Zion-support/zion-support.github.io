@@ -23,8 +23,7 @@ const InnovativeServicesShowcase = () => {
       case 'ai':,
         return innovativeAIServices20o25,
       default: ,
-        return [],
-    }
+        return []}
   };
   const handleServiceClick = service => {
     setSelectedService(service)};
@@ -77,8 +76,7 @@ const InnovativeServicesShowcase = () => {
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                   activeTab === tab.id,
                     ? 'bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white',
-                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                }`}
+                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
               >,
                 {tab.name} ({tab.count}),
               </button>))}
@@ -394,6 +392,5 @@ const InnovativeServicesShowcase = () => {
           </div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default InnovativeServicesShowcase;

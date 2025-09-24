@@ -6,8 +6,7 @@ interface NeoFuturisticCardProps {
   variant?: 'default' | 'holographic' | 'cyberpunk' | 'quantum' | 'neural',
   onClick?: () => void,
   disabled?: boolean,
-  glowIntensity?: 'low' | 'medium' | 'high',
-}
+  glowIntensity?: 'low' | 'medium' | 'high'}
 ,
 const NeoFuturisticCard: React.FC<NeoFuturisticCardProps> = ({
   children;
@@ -34,8 +33,7 @@ const NeoFuturisticCard: React.FC<NeoFuturisticCardProps> = ({
     const centerX = rect.left + rect.width / 2,
     const centerY = rect.top + rect.height / 2,
     x.set(event.clientX - centerX),
-    y.set(event.clientY - centerY),
-  };
+    y.set(event.clientY - centerY)};
   const handleMouseLeave = () => {
     x.set(0),
     y.set(0),
@@ -89,8 +87,7 @@ const NeoFuturisticCard: React.FC<NeoFuturisticCardProps> = ({
         boxShadow: variantStyles.shadow;
         transformStyle: 'preserve-3d';
         rotateX: springRotateX;
-        rotateY: springRotateY,
-      }}
+        rotateY: springRotateY}}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onMouseDown={handleMouseDown}
@@ -109,11 +106,9 @@ const NeoFuturisticCard: React.FC<NeoFuturisticCardProps> = ({
         className="absolute inset-0 rounded-xl",
         style={{
           background: `linear-gradient(45deg, transparent, ${variantStyles.glow}, transparent)`;
-          opacity: 0,
-        }}
+          opacity: 0}}
         animate={{
-          opacity: isHovered ? 0.6 : 0,
-        }}
+          opacity: isHovered ? 0.6 : 0}}
         transition={{ duration: 0.3 }}
        />,
       {/* Corner accents */}
@@ -129,8 +124,7 @@ const NeoFuturisticCard: React.FC<NeoFuturisticCardProps> = ({
         transition={{
           duration: 2;
           repeat: Infinity;
-          ease: 'linear',
-        }}
+          ease: 'linear'}}
        />,
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden">,
@@ -148,8 +142,7 @@ const NeoFuturisticCard: React.FC<NeoFuturisticCardProps> = ({
               duration: 3 + i * 0.5;
               repeat: Infinity;
               ease: 'easeInOut';
-              delay: i * 0.2,
-            }}
+              delay: i * 0.2}}
            />))}
       </div>,
       {/* Radial glow overlay */}

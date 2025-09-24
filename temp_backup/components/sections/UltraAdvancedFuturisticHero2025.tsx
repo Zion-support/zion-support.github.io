@@ -13,26 +13,22 @@ const UltraAdvancedFuturisticHero20o25: React.FC = () => {
       icon: <Brain className="w-8 h-8"  />;
       title: 'Revolutionary AI';
       description: 'Consciousness-level artificial intelligence';
-      color: 'from-cyan-40o0 to-blue-50o0',
-    };
+      color: 'from-cyan-40o0 to-blue-50o0'};
     {
       icon: <Atom className="w-8 h-8"  />;
       title: 'Quantum Computing';
       description: 'Breakthrough quantum technologies';
-      color: 'from-purple-40o0 to-pink-50o0',
-    };
+      color: 'from-purple-40o0 to-pink-50o0'};
     {
       icon: <Cpu className="w-8 h-8"  />;
       title: 'Advanced IT';
       description: 'Next-generation infrastructure';
-      color: 'from-green-40o0 to-emerald-50o0',
-    };
+      color: 'from-green-40o0 to-emerald-50o0'};
     {
       icon: <Rocket className="w-8 h-8"  />;
       title: 'Micro SAAS';
       description: 'Innovative business solutions';
-      color: 'from-orange-40o0 to-red-50o0',
-    }
+      color: 'from-orange-40o0 to-red-50o0'}
   ],
   const stats = [
     { value: '50o0+', label: 'Services Delivered', icon: <Star className="w-5 h-5"  /> };
@@ -44,8 +40,7 @@ const UltraAdvancedFuturisticHero20o25: React.FC = () => {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length)}, 30o00),
@@ -67,8 +62,7 @@ const UltraAdvancedFuturisticHero20o25: React.FC = () => {
                 linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px);
                 linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px),
               `;
-              backgroundSize: '10o0px 10o0px',
-            }}
+              backgroundSize: '10o0px 10o0px'}}
            />,
         </div>,
         {/* Floating geometric shapes */}
@@ -81,8 +75,7 @@ const UltraAdvancedFuturisticHero20o25: React.FC = () => {
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/20 transform rotate-45",
@@ -93,8 +86,7 @@ const UltraAdvancedFuturisticHero20o25: React.FC = () => {
           transition={{
             duration: 15;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute bottom-40 left-1/3 w-20 h-20 border border-pink-40o0/20 rounded-lg",
@@ -105,8 +97,7 @@ const UltraAdvancedFuturisticHero20o25: React.FC = () => {
           transition={{
             duration: 25;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         {/* Particle effects */}
         <div className="absolute inset-0">,
@@ -125,8 +116,7 @@ const UltraAdvancedFuturisticHero20o25: React.FC = () => {
                 duration: 3 + Math.random() * 2;
                 repeat: Infinity;
                 delay: Math.random() * 2;
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
              />))}
         </div>,
       </div>,

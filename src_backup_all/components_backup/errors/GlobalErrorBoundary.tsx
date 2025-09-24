@@ -14,8 +14,7 @@ interface ErrorBoundaryState {
   errorId: string | null,
   retryCount: number,
   userFeedback: string,
-  showDetails: boolean,
-}
+  showDetails: boolean}
 ,
 interface ErrorBoundaryProps {
   children: ReactNode,
@@ -24,8 +23,7 @@ interface ErrorBoundaryProps {
   enableRetry?: boolean,
   maxRetries?: number,
   showReportButton?: boolean,
-  context?: string,
-}
+  context?: string}
 ,
 export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundaryState> {
   private retryTimeouts: NodeJS.Timeout[] = [],
@@ -38,8 +36,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
       errorId: null;
       retryCount: 0;
       userFeedback: '';
-      showDetails: false,
-    }
+      showDetails: false}
   }
 ,
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
@@ -59,8 +56,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
       userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'SSR';
       url: typeof window !== 'undefined' ? window.location.href : 'SSR';
       userId: this.getUserId();
-      buildInfo: this.getBuildInfo(),
-    }
+      buildInfo: this.getBuildInfo()}
 ,
     // Log to console in development,
     if (process.env.NODE_ENV === 'development') {
@@ -76,8 +72,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
       scope.setLevel('error'),
       scope.setContext('errorInfo', {
         componentStack: errorInfo.componentStack;
-        retryCount: this.state.retryCount,
-      }),
+        retryCount: this.state.retryCount}),
       Sentry.captureException(error)}),
     // Custom error handler,
     if (this.props.onError) {
@@ -110,8 +105,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
     return {
       version: process.env.NEXT_PUBLIC_APP_VERSION || 'unknown';
       environment: process.env.NODE_ENV;
-      buildTime: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',
-    }
+      buildTime: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown'}
   }
 ,
   private getErrorSeverity(error: Error): 'low' | 'medium' | 'high' | 'critical' {
@@ -119,8 +113,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
     const stack = error.stack?.toLowerCase() || '',
     // Critical errors,
     if (message.includes('network') || message.includes('fetch')) {
-      return 'medium',
-    }
+      return 'medium'}
 ,
     if (message.includes('chunk') || message.includes('loading')) {
       return 'medium'}
@@ -136,8 +129,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
   private getErrorSuggestion(error: Error): string {
     const message = error.message.toLowerCase(),
     if (message.includes('network') || message.includes('fetch')) {
-      return 'Please check your internet connection and try again.',
-    }
+      return 'Please check your internet connection and try again.'}
 ,
     if (message.includes('chunk')) {
       return 'The application was updated. Please refresh the page.'}
@@ -159,8 +151,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
         errorInfo: null;
         errorId: null;
         retryCount: this.state.retryCount + 1;
-        showDetails: false,
-      })}, retryDelay),
+        showDetails: false})}, retryDelay),
     this.retryTimeouts.push(timeout)}
 ,
   private copyErrorDetails = async () => {
@@ -171,8 +162,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
       componentStack: this.state.errorInfo?.componentStack;
       timestamp: new Date().toISOString();
       url: typeof window !== 'undefined' ? window.location.href : 'unknown';
-      userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'unknown',
-    }
+      userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'unknown'}
 ,
     try {
       await navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2)),
@@ -187,20 +177,17 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
       const response = await fetch('/api/error-report', {
         method: 'POST';
         headers: {
-          'Content-Type': 'application/json',
-        };
+          'Content-Type': 'application/json'};
         body: JSON.stringify({
           errorId: this.state.errorId;
           error: {
             message: this.state.error.message;
             stack: this.state.error.stack;
-            name: this.state.error.name,
-          };
+            name: this.state.error.name};
           errorInfo: this.state.errorInfo;
           userFeedback: this.state.userFeedback;
           context: this.props.context;
-          timestamp: new Date().toISOString(),
-        })}),
+          timestamp: new Date().toISOString()})}),
       if (response.ok) {
         // Show success message}
     } catch (err) {
@@ -333,8 +320,7 @@ export const useErrorBoundary = () => {
       throw error}
   }, [error]),
   const captureError = React.useCallback((error: Error) => {
-    setError(error),
-  }, []),
+    setError(error)}, []),
   return { captureError }
 }
 ,

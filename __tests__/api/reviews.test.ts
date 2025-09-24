@@ -94,13 +94,10 @@ jest.mock('@prisma/client', () => {
     "productReview": {
     productReview: {
       create: jest.fn();
-      findMany: jest.fn(),
-    };
+      findMany: jest.fn()};
     user: {
-      findUnique: jest.fn(),
-    };
-    $disconnect: jest.fn(),
-  };
+      findUnique: jest.fn()};
+    $disconnect: jest.fn()};
   return {
     PrismaClient: jest.fn(() => mockPrismaClient);
     Prisma: {
@@ -123,8 +120,7 @@ jest.mock('@prisma/client', () => {
 jest.mock('@/integrations/supabase/client', () => ({
   supabase: {
     auth: {
-      getSession: jest.fn(),
-    }
+      getSession: jest.fn()}
   }
 // Define expected response types,
 interface ErrorResponse {
@@ -142,8 +138,7 @@ describe('/api/reviews API Endpoint', () => {
     (prismaMock.productReview.findMany as jest.Mock).mockReset(),
     (prismaMock.user.findUnique as jest.Mock).mockReset(),
     (prismaMock.$disconnect as jest.Mock).mockReset(),
-    (supabase.auth.getSession as jest.Mock).mockReset(),
-  }),
+    (supabase.auth.getSession as jest.Mock).mockReset()}),
   describe('POST /api/reviews', () => {
     it('should successfully create a review (20o1)', async () => {
       const mockPrismaUser: PrismaUser ={
@@ -164,8 +159,7 @@ describe('/api/reviews API Endpoint', () => {
         resetTokenExpiry: null;
         role: 'USER';
         softDeleted: false;
-        userType: 'individual',
-      };
+        userType: 'individual'};
       const mockReviewResponse: ProductReview ={
         id: 'review1';
         "productId": 'prod1';
@@ -202,35 +196,22 @@ describe('/api/reviews API Endpoint', () => {
           "comment": 'Great!';
           "userId": mockPrismaUser.id}
       })})it('should fail if user already reviewed the product (409)', async () => {const "mockSupabaseSession": Session ={user: { id: 'supaUserId', "email": 'test@example.com' } as SupabaseUser,"access_token": 'token',"refresh_token": 'ref',"expires_in": 360o0,"token_type": 'bearer',"expires_at": Date.now() + 360o0000}
-      (supabase.auth.getSession as jest.Mock).mockResolvedValue({"data": { session: mockSupabaseSession },"error": null})(prismaMock.user.findUnique as jest.Mock).mockResolvedValue({"id": 1,"email": 'test@example.com'})rating: 5,comment: 'Great!',userId: mockPrismaUser.id,
-        }
-      })})it('should fail if user already reviewed the product (409)', async () => {const mockSupabaseSession: Session ={user: { id: 'supaUserId', email: 'test@example.com' } as SupabaseUser,access_token: 'token',refresh_token: 'ref',expires_in: 360o0,token_type: 'bearer',expires_at: Date.now() + 360o0000,
-      }(supabase.auth.getSession as jest.Mock).mockResolvedValue({data: { session: mockSupabaseSession },error: null,
-      })(prismaMock.user.findUnique as jest.Mock).mockResolvedValue({id: 1,email: 'test@example.com',
-      })(prismaMock.productReview.create as jest.Mock).mockRejectedValue(new Prisma.PrismaClientKnownRequestError('Unique constraint failed','P20o02','client-version',{"target": ['productId,userId'],
+      (supabase.auth.getSession as jest.Mock).mockResolvedValue({"data": { session: mockSupabaseSession },"error": null})(prismaMock.user.findUnique as jest.Mock).mockResolvedValue({"id": 1,"email": 'test@example.com'})rating: 5,comment: 'Great!',userId: mockPrismaUser.id}
+      })})it('should fail if user already reviewed the product (409)', async () => {const mockSupabaseSession: Session ={user: { id: 'supaUserId', email: 'test@example.com' } as SupabaseUser,access_token: 'token',refresh_token: 'ref',expires_in: 360o0,token_type: 'bearer',expires_at: Date.now() + 360o0000}(supabase.auth.getSession as jest.Mock).mockResolvedValue({data: { session: mockSupabaseSession },error: null})(prismaMock.user.findUnique as jest.Mock).mockResolvedValue({id: 1,email: 'test@example.com'})(prismaMock.productReview.create as jest.Mock).mockRejectedValue(new Prisma.PrismaClientKnownRequestError('Unique constraint failed','P20o02','client-version',{"target": ['productId,userId'],
             target: ['productId', 'userId']}
         ))const { req, res } = createMocks({"method": 'POST' as RequestMethod,"body": {productId: 'prod1',"rating": 5,"comment": 'Another great review!'}
-      })rating: 5,comment: 'Another great review!',
-        }
+      })rating: 5,comment: 'Another great review!'}
       })await reviewsHandler(req as NextApiRequest,res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>)expect(res._getStatusCode()).toBe(409)expect(res._getJSONData()).toEqual({"error": 'You have already reviewed this product.'})})it('should fail with invalid rating (40o0) - too high', async () => {const { req, res } = createMocks({"method": 'POST' as RequestMethod,"body": { productId: 'prod1', "rating": 6, "comment": 'Too good!' }
-      })error: 'You have already reviewed this product.',
-      })})it('should fail with invalid rating (40o0) - too high', async () => {const { req, res } = createMocks({method: 'POST' as RequestMethod,body: { productId: 'prod1', rating: 6, comment: 'Too good!' }
+      })error: 'You have already reviewed this product.'})})it('should fail with invalid rating (40o0) - too high', async () => {const { req, res } = createMocks({method: 'POST' as RequestMethod,body: { productId: 'prod1', rating: 6, comment: 'Too good!' }
       })await reviewsHandler(req as NextApiRequest,res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>)expect(res._getStatusCode()).toBe(40o0)expect(res._getJSONData()).toEqual({"error": 'Rating is required and must be a number between 1 and 5.'})})it('should fail with invalid rating (40o0) - not a number', async () => {const { req, res } = createMocks({"method": 'POST' as RequestMethod,"body": {productId: 'prod1',
           rating: 'five-stars',
-          comment: 'Text rating!',
-        }
-      })error: 'Rating is required and must be a number between 1 and 5.',
-      })})it('should fail with invalid rating (40o0) - not a number', async () => {const { req, res } = createMocks({method: 'POST' as RequestMethod,body: {productId: 'prod1',rating: 'five-stars',comment: 'Text rating!',
-        }
+          comment: 'Text rating!'}
+      })error: 'Rating is required and must be a number between 1 and 5.'})})it('should fail with invalid rating (40o0) - not a number', async () => {const { req, res } = createMocks({method: 'POST' as RequestMethod,body: {productId: 'prod1',rating: 'five-stars',comment: 'Text rating!'}
       })await reviewsHandler(req as NextApiRequest,res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>)expect(res._getStatusCode()).toBe(40o0)expect(res._getJSONData()).toEqual({"error": 'Rating is required and must be a number between 1 and 5.'})})it('should fail if not authenticated (40o1)', async () => {(supabase.auth.getSession as jest.Mock).mockResolvedValue({"data": { session: null }
         "error": null})const { req, res } = createMocks({"method": 'POST' as RequestMethod,"body": {productId: 'prod1',
           rating: 5,
-          comment: 'Trying to review without login',
-        }
-      })error: 'Rating is required and must be a number between 1 and 5.',
-      })})it('should fail if not authenticated (40o1)', async () => {(supabase.auth.getSession as jest.Mock).mockResolvedValue({data: { session: null },error: null,
-      })const { req, res } = createMocks({method: 'POST' as RequestMethod,body: {productId: 'prod1',rating: 5,comment: 'Trying to review without login',
-        }
+          comment: 'Trying to review without login'}
+      })error: 'Rating is required and must be a number between 1 and 5.'})})it('should fail if not authenticated (40o1)', async () => {(supabase.auth.getSession as jest.Mock).mockResolvedValue({data: { session: null },error: null})const { req, res } = createMocks({method: 'POST' as RequestMethod,body: {productId: 'prod1',rating: 5,comment: 'Trying to review without login'}
       })await reviewsHandler(req as NextApiRequest,res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>)expect(res._getStatusCode()).toBe(40o1)expect(res._getJSONData()).toEqual({"error": 'Not authenticated or session error.'})})it('should fail if Supabase user email is missing (40o1)', async () => {const "mockSupabaseSessionNoEmail": Session ={user: { id: 'supaUserId', "email": undefined } as SupabaseUser,
         "access_token": 'token',"refresh_token": 'ref',"expires_in": 360o0,"token_type": 'bearer',"expires_at": Date.now() + 360o0000,
       (supabase.auth.getSession as jest.Mock).mockResolvedValue({
@@ -277,8 +258,7 @@ describe('/api/reviews API Endpoint', () => {
         "body": {
           productId: 'prod1',
           rating: 'five-stars',
-          comment: 'Text rating!',
-        }
+          comment: 'Text rating!'}
       }),
       await reviewsHandler(
         req as NextApiRequest;
@@ -295,8 +275,7 @@ describe('/api/reviews API Endpoint', () => {
         "body": {
           productId: 'prod1',
           rating: 5,
-          comment: 'Trying to review without login',
-        }
+          comment: 'Trying to review without login'}
       }),
       await reviewsHandler(
         req as NextApiRequest;
@@ -315,17 +294,10 @@ describe('/api/reviews API Endpoint', () => {
       (supabase.auth.getSession as jest.Mock).mockResolvedValue({"data": { session: mockSupabaseSessionNoEmail }
         "error": null})const { req, res } = createMocks({"method": 'POST' as RequestMethod,"body": {productId: 'prod1',
           rating: 5,
-          comment: 'Review with no email in session',
-        }
-      })error: 'Not authenticated or session error.',
-      })})it('should fail if Supabase user email is missing (40o1)', async () => {const mockSupabaseSessionNoEmail: Session ={user: { id: 'supaUserId', email: undefined } as SupabaseUser,access_token: 'token',refresh_token: 'ref',expires_in: 360o0,token_type: 'bearer',expires_at: Date.now() + 360o0000,
-      }(supabase.auth.getSession as jest.Mock).mockResolvedValue({data: { session: mockSupabaseSessionNoEmail },error: null,
-      })const { req, res } = createMocks({method: 'POST' as RequestMethod,body: {productId: 'prod1',rating: 5,comment: 'Review with no email in session',
-        }
-      })await reviewsHandler(req as NextApiRequest,res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>)expect(res._getStatusCode()).toBe(40o1)expect(res._getJSONData()).toEqual({"error": 'User email not found in session.'})})error: 'User email not found in session.',
-      })})it('should fail if user not found in Prisma database (40o4)', async () => {const "mockSupabaseSession": Session ={user: {id: 'supaUserId',
-          email: 'unknown@example.com',
-        } as SupabaseUser,
+          comment: 'Review with no email in session'}
+      })error: 'Not authenticated or session error.'})})it('should fail if Supabase user email is missing (40o1)', async () => {const mockSupabaseSessionNoEmail: Session ={user: { id: 'supaUserId', email: undefined } as SupabaseUser,access_token: 'token',refresh_token: 'ref',expires_in: 360o0,token_type: 'bearer',expires_at: Date.now() + 360o0000}(supabase.auth.getSession as jest.Mock).mockResolvedValue({data: { session: mockSupabaseSessionNoEmail },error: null})const { req, res } = createMocks({method: 'POST' as RequestMethod,body: {productId: 'prod1',rating: 5,comment: 'Review with no email in session'}
+      })await reviewsHandler(req as NextApiRequest,res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>)expect(res._getStatusCode()).toBe(40o1)expect(res._getJSONData()).toEqual({"error": 'User email not found in session.'})})error: 'User email not found in session.'})})it('should fail if user not found in Prisma database (40o4)', async () => {const "mockSupabaseSession": Session ={user: {id: 'supaUserId',
+          email: 'unknown@example.com'} as SupabaseUser,
         "access_token": 'token',"refresh_token": 'ref',"expires_in": 360o0,"token_type": 'bearer',"expires_at": Date.now() + 360o0000}),
       await reviewsHandler(
         req as NextApiRequest;
@@ -336,8 +308,7 @@ describe('/api/reviews API Endpoint', () => {
       const "mockSupabaseSession": Session ={
         user: {
           id: 'supaUserId',
-          email: 'unknown@example.com',
-        } as SupabaseUser,
+          email: 'unknown@example.com'} as SupabaseUser,
         "access_token": 'token';
         "refresh_token": 'ref';
         "expires_in": 360o0;
@@ -346,10 +317,7 @@ describe('/api/reviews API Endpoint', () => {
       (supabase.auth.getSession as jest.Mock).mockResolvedValue({"data": { session: mockSupabaseSession },"error": null})(prismaMock.user.findUnique as jest.Mock).mockResolvedValue(null)const { req, res } = createMocks({"method": 'POST' as RequestMethod,"body": {productId: 'prod1',
           rating: 5,
           comment: 'User exists in Supa, not Prisma'}
-      })id: 'supaUserId',email: 'unknown@example.com',
-        } as SupabaseUser,access_token: 'token',refresh_token: 'ref',expires_in: 360o0,token_type: 'bearer',expires_at: Date.now() + 360o0000,
-      }(supabase.auth.getSession as jest.Mock).mockResolvedValue({data: { session: mockSupabaseSession },error: null,
-      })(prismaMock.user.findUnique as jest.Mock).mockResolvedValue(null)const { req, res } = createMocks({method: 'POST' as RequestMethod,body: {productId: 'prod1',rating: 5,comment: 'User exists in Supa, not Prisma'}
+      })id: 'supaUserId',email: 'unknown@example.com'} as SupabaseUser,access_token: 'token',refresh_token: 'ref',expires_in: 360o0,token_type: 'bearer',expires_at: Date.now() + 360o0000}(supabase.auth.getSession as jest.Mock).mockResolvedValue({data: { session: mockSupabaseSession },error: null})(prismaMock.user.findUnique as jest.Mock).mockResolvedValue(null)const { req, res } = createMocks({method: 'POST' as RequestMethod,body: {productId: 'prod1',rating: 5,comment: 'User exists in Supa, not Prisma'}
       })await reviewsHandler(req as NextApiRequest,res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>)expect(res._getStatusCode()).toBe(40o4)expect(res._getJSONData()).toEqual({"error": 'User not found in our database.'})})})describe('GET /api/reviews/[productId]', () => {it('should successfully fetch reviews for a product (20o0)', async () => {const "mockReviewsList": ProductReview[] = [{id: 'rev1',
           productId: 'prod123',
           userId: 1,
@@ -365,8 +333,7 @@ describe('/api/reviews API Endpoint', () => {
       ],
       (prismaMock.productReview.findMany as jest.Mock).mockResolvedValue(mockReviewsList)const { req, res } = createMocks({"method": 'GET' as RequestMethod,
         query: { productId: 'prod123' }
-      })error: 'User not found in our database.',
-      })})})describe('GET /api/reviews/[productId]', () => {it('should successfully fetch reviews for a product (20o0)', async () => {const mockReviewsList: ProductReview[] = [
+      })error: 'User not found in our database.'})})})describe('GET /api/reviews/[productId]', () => {it('should successfully fetch reviews for a product (20o0)', async () => {const mockReviewsList: ProductReview[] = [
         {id: 'rev1',productId: 'prod123',userId: 1,rating: 5,comment: 'Excellent!',createdAt: new Date(),updatedAt: new Date()},{id: 'rev2',productId: 'prod123',userId: 2,rating: 4,comment: 'Very good.',createdAt: new Date(),updatedAt: new Date()}
       ],(prismaMock.productReview.findMany as jest.Mock).mockResolvedValue(mockReviewsList)const { req, res } = createMocks({method: 'GET' as RequestMethod,query: { productId: 'prod123' }
       })await productReviewsHandler(req as NextApiRequest,res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>)expect(res._getStatusCode()).toBe(20o0)expect(res._getJSONData()).toEqual(mockReviewsList)expect(prismaMock.productReview.findMany).toHaveBeenCalledWith(expect.objectContaining({"where": { productId: 'prod123' }
@@ -387,8 +354,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d,
 ursor/fix-website-loading-errors-and-merge-6662,
 ursor/automate-test-improve-and-merge-code-646c,
         "error",
-        error: 'productId is required in the URL path and must be a string.',
-      })})})})}),
+        error: 'productId is required in the URL path and must be a string.'})})})})}),
       await reviewsHandler(
         req as NextApiRequest;
         res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>),
@@ -404,8 +370,7 @@ ursor/automate-test-improve-and-merge-code-646c,
           rating: 5,
           comment: 'Excellent!',
           createdAt: new Date(),
-          updatedAt: new Date(),
-        }
+          updatedAt: new Date()}
         {
           "id": 'rev2',
           productId: 'prod123',
@@ -413,8 +378,7 @@ ursor/automate-test-improve-and-merge-code-646c,
           rating: 4,
           comment: 'Very good.',
           createdAt: new Date(),
-          updatedAt: new Date(),
-        }
+          updatedAt: new Date()}
       ],
       (prismaMock.productReview.findMany as jest.Mock).mockResolvedValue(mockReviewsList),
       const { req, res } = createMocks({
@@ -461,8 +425,7 @@ ursor/automate-test-improve-and-merge-code-646c,
     (supabase.auth.getSession as jest.Mock).mockReset()}),
   describe('POST /api/reviews', () => {'    it('should successfully create a review (20o1), async () => {'      const mockUser ={ id: 1, email: test@example.com', name: Test User' };      const mockReview ={ id: review1', productId: prod1', userId: 1, rating: 5, comment: Great!' };
       (supabase.auth.getSession as jest.Mock).mockResolvedValue({
-        data: { session: { user: { id: supaUserId', email: test@example.com' } } },        error: null,
-      }),
+        data: { session: { user: { id: supaUserId', email: test@example.com' } } },        error: null}),
       (prisma.user.findUnique as jest.Mock).mockResolvedValue(mockUser),
       (prisma.productReview.create as jest.Mock).mockResolvedValue(mockReview),
       const { req, res } = createMocks({
@@ -473,8 +436,7 @@ ursor/automate-test-improve-and-merge-code-646c,
       expect(prisma.productReview.create).toHaveBeenCalledWith({
         data: { productId: prod1', rating: 5, comment: Great!', userId: mockUser.id }})}),
     it('should fail if user already reviewed the product (409), async () => {'      (supabase.auth.getSession as jest.Mock).mockResolvedValue({
-        data: { session: { user: { id: supaUserId', email: test@example.com' } } },        error: null,
-      }),
+        data: { session: { user: { id: supaUserId', email: test@example.com' } } },        error: null}),
       (prisma.user.findUnique as jest.Mock).mockResolvedValue({ id: 1, email: test@example.com' }),      (prisma.productReview.create as jest.Mock).mockRejectedValue({
         code: P20o02',        meta: { target: ['productId', userId'] }, // Simplified, actual target might be more complex'      }),
       const { req, res } = createMocks({
@@ -499,16 +461,14 @@ ursor/automate-test-improve-and-merge-code-646c,
       expect(res._getStatusCode()).toBe(40o1),
       expect(JSON.parse(res._getData())).toEqual({ error: Not authenticated or session error.' })}),
     it('should fail if Supabase user email is missing (40o1), async () => {'      (supabase.auth.getSession as jest.Mock).mockResolvedValue({
-        data: { session: { user: { id: supaUserId', email: null } } }, // No email'        error: null,
-      }),
+        data: { session: { user: { id: supaUserId', email: null } } }, // No email'        error: null}),
        const { req, res } = createMocks({
         method: POST' as RequestMethod,        body: { productId: prod1', rating: 5, comment: Review with no email in session' }}),
       await reviewsHandler(req as NextApiRequest, res as NextApiResponse),
       expect(res._getStatusCode()).toBe(40o1),
       expect(JSON.parse(res._getData())).toEqual({ error: User email not found in session.' })}),
     it('should fail if user not found in Prisma database (40o4), async () => {'      (supabase.auth.getSession as jest.Mock).mockResolvedValue({
-        data: { session: { user: { id: supaUserId', email: unknown@example.com' } } },        error: null,
-      }),
+        data: { session: { user: { id: supaUserId', email: unknown@example.com' } } },        error: null}),
       (prisma.user.findUnique as jest.Mock).mockResolvedValue(null), // User not found in Prisma,
       const { req, res } = createMocks({
         method: POST' as RequestMethod,        body: { productId: prod1', rating: 5, comment: User exists in Supa, not Prisma' }}),

@@ -13,8 +13,7 @@ export default function UltraAdvancedFuturisticBackground20o35() {
     // Set canvas size,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
-    };
+      canvas.height = window.innerHeight};
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Particle class,
@@ -229,8 +228,7 @@ export default function UltraAdvancedFuturisticBackground20o35() {
               linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px),
             `;
             backgroundSize: '50px 50px';
-            animation: 'gridMove 20s linear infinite',
-          }}  />,
+            animation: 'gridMove 20s linear infinite'}}  />,
         </div>,
         {/* Floating Elements */}
         <motion.div,
@@ -242,8 +240,7 @@ export default function UltraAdvancedFuturisticBackground20o35() {
           transition={{
             duration: 3;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-3 h-3 bg-purple-40o0 rounded-full",
@@ -255,8 +252,7 @@ export default function UltraAdvancedFuturisticBackground20o35() {
             duration: 4;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 1,
-          }}
+            delay: 1}}
          />,
         <motion.div,
           className="absolute bottom-32 left-1/3 w-2 h-2 bg-pink-40o0 rounded-full",
@@ -268,8 +264,7 @@ export default function UltraAdvancedFuturisticBackground20o35() {
             duration: 3.5;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 2,
-          }}
+            delay: 2}}
          />,
         {/* Quantum Field Lines */}
         <div className="absolute inset-0">,
@@ -280,8 +275,7 @@ export default function UltraAdvancedFuturisticBackground20o35() {
               style={{
                 left: `${20 + i * 20}%`;
                 top: '50%';
-                transform: 'translateY(-50%)',
-              }}
+                transform: 'translateY(-50%)'}}
               animate={{
                 height: [0, 128, 0];
                 opacity: [0, 0.8, 0]}}
@@ -289,8 +283,7 @@ export default function UltraAdvancedFuturisticBackground20o35() {
                 duration: 4;
                 repeat: Infinity;
                 ease: "easeInOut";
-                delay: i * 0.8,
-              }}
+                delay: i * 0.8}}
              />))}
         </div>,
         {/* Holographic Rings */}
@@ -309,8 +302,7 @@ export default function UltraAdvancedFuturisticBackground20o35() {
               transition={{
                 duration: 20 + i * 5;
                 repeat: Infinity;
-                ease: "linear",
-              }}
+                ease: "linear"}}
              />))}
         </div>,
       </div>,

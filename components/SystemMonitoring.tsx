@@ -8,15 +8,13 @@ interface Alert {
   title: string,
   message: string,
   timestamp: number,
-  resolved: boolean,
-}
+  resolved: boolean}
 ,
 interface SystemMetrics {
   memoryUsage: number,
   responseTime: number,
   uptime: number,
-  errorCount: number,
-}
+  errorCount: number}
 ,
 const SystemMonitoring: React.FC = () => {
   const [alertsetAlerts] = useState<Alert[]>([]),
@@ -55,10 +53,10 @@ const SystemMonitoring: React.FC = () => {
       memoryUsage = Math.round((memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 10o0)}
 ,
     // Response time,
-    const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+    const navigation = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
     const responseTime = navigation ? navigation.responseEnd - navigation.requestStart : 0,
     // Uptime,
-    const uptime = window.performance.now(),
+    const uptime = window.window.performance.now(),
     setMetrics({
       memoryUsage;
       responseTime;

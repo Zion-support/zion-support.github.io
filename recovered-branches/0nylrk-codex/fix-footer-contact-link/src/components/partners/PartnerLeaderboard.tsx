@@ -10,8 +10,7 @@ interface LeaderboardEntry {
   avatar?: string,
   referrals: number,
   earnings: number,
-  badges: string[],
-}
+  badges: string[]}
 ,
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation,
@@ -23,8 +22,7 @@ export function PartnerLeaderboard() {
       avatar: ""// URL would be here,
       referrals: 178;
       earnings: 4500;
-      badges: ["gold"trending"],
-    };
+      badges: ["gold"trending"]};
     {
       id: "2";
       rank: 2;
@@ -32,8 +30,7 @@ export function PartnerLeaderboard() {
       avatar: "";
       referrals: 145;
       earnings: 3625;
-      badges: ["silver"],
-    };
+      badges: ["silver"]};
     {
       id: "3";
       rank: 3;
@@ -41,8 +38,7 @@ export function PartnerLeaderboard() {
       avatar: "";
       referrals: 124;
       earnings: 3100;
-      badges: ["bronze"],
-    };
+      badges: ["bronze"]};
     {
       id: "4";
       rank: 4;
@@ -50,8 +46,7 @@ export function PartnerLeaderboard() {
       avatar: "";
       referrals: 98;
       earnings: 2450;
-      badges: [],
-    };
+      badges: []};
     {
       id: "5";
       rank: 5;
@@ -59,8 +54,7 @@ export function PartnerLeaderboard() {
       avatar: "";
       referrals: 87;
       earnings: 2175;
-      badges: ["newcomer"],
-    }
+      badges: ["newcomer"]}
   ],
   // Function to render rank badge,
   const renderRankBadge = (rank: number) => {

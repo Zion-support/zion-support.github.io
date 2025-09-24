@@ -4,8 +4,7 @@ export default function LikeButton({
   initialLikes = 0;
 }: {
   postId: string,
-  initialLikes?: number,
-}) {
+  initialLikes?: number}) {
   const [likes, setLikes] = useState(initialLikes),
   const [busy, setBusy] = useState(false),
   const like = async () => {

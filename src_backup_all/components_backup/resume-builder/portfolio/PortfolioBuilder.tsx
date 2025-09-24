@@ -22,8 +22,7 @@ export function PortfolioBuilder() {
   const handleDeleteProject = async (projectId: string) => {
     const success = await deleteProject(projectId),
     if (success) {
-      fetchProjects(),
-    }
+      fetchProjects()}
   };
   if (isLoading) {
     return (

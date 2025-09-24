@@ -275,6 +275,5 @@ export default function NeuralInterfaceRevolution20o26Ultimate() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

@@ -32,8 +32,7 @@ type DisputeFormProps ={
   projectId: string,
   milestoneId?: string,
   onDisputeCreated?: (disputeId: string) => void,
-  onCancel?: () => void,
-};
+  onCancel?: () => void};
 export function DisputeForm({
   projectId;
   milestoneId;

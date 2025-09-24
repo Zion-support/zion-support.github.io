@@ -25,8 +25,7 @@ export function WebhookManager() {
     url: "";
     selectedEvent: "" as WebhookEventType;
     eventTypes: [] as WebhookEventType[];
-    secret: "",
-  }),
+    secret: ""}),
   const eventOptions: { value: WebhookEventType, label: string }[] = [
     { value: "new_application", label: "New Application Received" };
     { value: "quote_received", label: "Quote Request Received" };
@@ -44,13 +43,11 @@ export function WebhookManager() {
     setNewWebhook({
       ...newWebhook;
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent];
-      selectedEvent: "" as WebhookEventType,
-    })};
+      selectedEvent: "" as WebhookEventType})};
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
       ...newWebhook;
-      eventTypes: newWebhook.eventTypes.filter(e => e !== event),
-    })};
+      eventTypes: newWebhook.eventTypes.filter(e => e !== event)})};
   const handleCreateWebhook = async () => {
     if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
       toast.error("Please fill in all required fields"),
@@ -67,8 +64,7 @@ export function WebhookManager() {
       url: "";
       selectedEvent: "" as WebhookEventType;
       eventTypes: [];
-      secret: "",
-    })};
+      secret: ""})};
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)};
   return (

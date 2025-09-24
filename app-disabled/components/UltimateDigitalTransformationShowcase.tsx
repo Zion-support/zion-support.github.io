@@ -108,8 +108,7 @@ const UltimateDigitalTransformationShowcase = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -120,8 +119,7 @@ const UltimateDigitalTransformationShowcase = () => {
       case 'resource':,
         return 'from-purple-50o0 to-purple-60o0',
       default:,
-        return 'from-gray-50o0 to-gray-60o0',
-    }
+        return 'from-gray-50o0 to-gray-60o0'}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -174,8 +172,7 @@ const UltimateDigitalTransformationShowcase = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                 activeFilter === filter.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md'}`}
             >,
               {filter.label} ({filter.count}),
             </button>))}
@@ -186,8 +183,7 @@ const UltimateDigitalTransformationShowcase = () => {
             <div
               key={item.id}
               className={`bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-30o0 hover: shadow-2xl hover:transform hover:scale-10o5 ${
-                item.featured ? 'ring-2 ring-purple-50o0' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-50o0' : ''}`}
             >,
               {/* Header */}
               <div
@@ -286,6 +282,5 @@ const UltimateDigitalTransformationShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateDigitalTransformationShowcase;

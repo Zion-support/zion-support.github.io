@@ -18,6 +18,5 @@ export default function AutomationPromoBanner() {
           </Link>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -18,8 +18,7 @@ export default function UltraInnovativeServiceShowcase({
       opacity: 1;
       transition: {
         staggerChildren: 0.2;
-        delayChildren: 0.1,
-      }
+        delayChildren: 0.1}
     }
   };
   const cardVariants ={
@@ -27,8 +26,7 @@ export default function UltraInnovativeServiceShowcase({
       opacity: 0;
       y: 50;
       scale: 0.9;
-      rotateX: -15,
-    };
+      rotateX: -15};
     visible: {
       opacity: 1;
       y: 0;
@@ -36,8 +34,7 @@ export default function UltraInnovativeServiceShowcase({
       rotateX: 0;
       transition: {
         duration: 0.6;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     };
     hover: {
       y: -10;
@@ -45,8 +42,7 @@ export default function UltraInnovativeServiceShowcase({
       rotateX: 5;
       transition: {
         duration: 0.3;
-        ease: "easeInOut" as const,
-      }
+        ease: "easeInOut" as const}
     }
   };
   const getServiceIcon = (icon: string) => {
@@ -270,8 +266,7 @@ export default function UltraInnovativeServiceShowcase({
           </p>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,
 // Missing icon components,
 const Heart = ({ className }: { className?: string }) => (

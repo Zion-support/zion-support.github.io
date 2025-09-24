@@ -39,8 +39,7 @@ export default function AIToolsUtilities20o25Banner() {
                   purple: "text-purple-40o0 bg-purple-50o0/20";
                   red: "text-red-40o0 bg-red-50o0/20";
                   yellow: "text-yellow-40o0 bg-yellow-50o0/20";
-                  pink: "text-pink-40o0 bg-pink-50o0/20",
-                };
+                  pink: "text-pink-40o0 bg-pink-50o0/20"};
                 return (
                   <div key={index} className={`flex items-center p-3 rounded-lg ${colorClasses[tool.color as keyof typeof colorClasses]}`}>,
                     <IconComponent className="h-5 w-5 mr-2"  />,
@@ -109,5 +108,4 @@ export default function AIToolsUtilities20o25Banner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

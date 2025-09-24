@@ -18,5 +18,4 @@ export default function AiManufacturingOptimization() {
 			]}
 			industries={["Manufacturing", "Industrial", "Automotive", "Electronics"]}
 			url="https: //ziontechgroup.com/ai-manufacturing-optimization",
-		 />),
-}
+		 />)}

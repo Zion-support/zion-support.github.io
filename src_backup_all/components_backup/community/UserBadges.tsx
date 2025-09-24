@@ -7,8 +7,7 @@ import {
   TooltipTrigger;
 } from '@/components/ui/tooltip',
 interface UserBadgesProps {
-  badges: Badge[],
-}
+  badges: Badge[]}
 ,
 const iconMap = {
   Trophy;

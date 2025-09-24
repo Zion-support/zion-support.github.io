@@ -4,8 +4,7 @@ export default function LinkedInRedirect() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.location.replace(
-        'https: //www.linkedin.com/company/zion-tech-group'),
-    }
+        'https: //www.linkedin.com/company/zion-tech-group')}
   }, []),
   return (
     <>,

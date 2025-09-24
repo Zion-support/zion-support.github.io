@@ -20,15 +20,13 @@ export interface ExpandedInnovativeService {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
 }
 ,
 export const EXPANDED_INNOVATIVE_SERVICES_20o25: ExpandedInnovativeService[] = [

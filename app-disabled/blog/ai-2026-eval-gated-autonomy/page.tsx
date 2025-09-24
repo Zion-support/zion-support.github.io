@@ -67,6 +67,5 @@ const EvalGatedAutonomy20o26: React.FC = () => {
           </Link>,
         </div>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default EvalGatedAutonomy20o26;

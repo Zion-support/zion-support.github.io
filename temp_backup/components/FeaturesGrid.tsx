@@ -6,12 +6,10 @@ interface Feature {
   title: string,
   description: string,
   href: string,
-  color: string,
-}
+  color: string}
 ,
 interface FeaturesGridProps {
-  features: Feature[],
-}
+  features: Feature[]}
 ,
 const FeaturesGrid: React.FC<FeaturesGridProps> = ({ features }) => {
   return (

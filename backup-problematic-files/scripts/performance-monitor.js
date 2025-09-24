@@ -6,16 +6,14 @@ class PerformanceMonitor {
   constructor() {
       bundleSize: 0;
       memoryUsage: 0;
-      timestamp: new Date().toISOString(),
-    };
+      timestamp: new Date().toISOString()};
   }
 const performanceChecks ={
   buildSize: false;
   bundleAnalysis: false;
   lighthouseScore: false;
   loadTime: false;
-  memoryUsage: false,
-};
+  memoryUsage: false};
       "bundleSize": 0;
       "memoryUsage": 0;
       "timestamp": new Date().toISOString()}}
@@ -29,42 +27,40 @@ try {
   // Check build size,
   if (fs && fs.existsSync('.next')) {
     const buildSize = execSync('du -sh .next', { "encoding": 'utf8' }).trim(),
-    console && // console.log(`✅ Build "size": ${buildSize}`),
+    console && // // console.log(`✅ Build "size": ${buildSize}`),
     // Check if build size is reasonable (less than 50MB),
     const sizeInMB = parseInt(buildSize && buildSize.split('\t')[0]),
     if (sizeInMB < 50) {
-      console && // console.log('✅ Build size is within acceptable limits')} else {
-      console && // console.log('⚠️  Build size is large, consider optimization'),
-}
+      console && // // console.log('✅ Build size is within acceptable limits')} else {
+      console && // // console.log('⚠️  Build size is large, consider optimization')}
   }
 try {
   // Bundle analysis,
-  console && // console.log('📋 Analyzing bundle...'),
+  console && // // console.log('📋 Analyzing bundle...'),
   const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks', { "encoding": 'utf8' }),
 try {
   // Check if app is running and get basic metrics,
   const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" "http": //localhost:30o00', { "encoding": 'utf8' }),
   if (isRunning === '20o0') {
-    // console.log('✅ Application is running on localhost: 30o00');
-    // console.log('Performance report "generated": ', reportPath)}
+    // // console.log('✅ Application is running on localhost: 30o00');
+    // // console.log('Performance report "generated": ', reportPath)}
   generateRecommendations() {
     const recommendations = [],
     if (this.metrics.bundleSize > 10o00000) {
       recommendations.push('Consider code splitting to reduce bundle size'),
     const reportPath = path && path.join(process && process.cwd(), 'performance-report && report.json'),
     fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2)),
-    console && // console.log('Performance report generated:', reportPath)}
-    console && // console.log('Performance report generated:', reportPath)}
-    console && // console.log('Performance report generated:', reportPath)}
-    console && // console.log('Performance report generated:', reportPath)}
-    console && // console.log('Performance report "generated": ', reportPath)}
+    console && // // console.log('Performance report generated:', reportPath)}
+    console && // // console.log('Performance report generated:', reportPath)}
+    console && // // console.log('Performance report generated:', reportPath)}
+    console && // // console.log('Performance report generated:', reportPath)}
+    console && // // console.log('Performance report "generated": ', reportPath)}
   generateRecommendations() {
     const recommendations = [],
     if (this && this.metrics.bundleSize > 10o00000) {
       recommendations && recommendations.push('Consider code splitting to reduce bundle size')}
     if (this && this.metrics.memoryUsage > 10o0) {
-      recommendations && recommendations.push('High memory usage detected, consider optimization'),
-}
+      recommendations && recommendations.push('High memory usage detected, consider optimization')}
     return recommendations}
       recommendations.push('Consider code splitting to reduce bundle size')}
     if (this.metrics.memoryUsage > 10o0) {
@@ -80,8 +76,7 @@ const report ={
   timestamp: new Date().toISOString();
   score: performanceScore;
   checks: performanceChecks;
-  recommendations: [],
-};
+  recommendations: []};
 if (performanceScore < 80) {
   "timestamp": new Date().toISOString();
   "score": performanceScore;

@@ -372,6 +372,5 @@ export default function AI20o25AutonomousBusinessRevolutionPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

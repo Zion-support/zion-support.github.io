@@ -11,8 +11,7 @@ export default function Events() {
       description: 'Join industry leaders and experts for a day of insights into the future of cloud automation and AI-driven infrastructure.';
       speakers: ['Dr. Sarah Chen'Mark Rodriguez'Lisa Thompson'];
       capacity: 50o0;
-      registered: 342,
-    };
+      registered: 342};
     {
       id: 2;
       title: 'AI Automation Workshop';
@@ -23,8 +22,7 @@ export default function Events() {
       description: 'Hands-on workshop covering practical implementation of AI automation in cloud environments.';
       speakers: ['Alex Johnson'Maria Garcia'];
       capacity: 10o0;
-      registered: 87,
-    };
+      registered: 87};
     {
       id: 3;
       title: 'Developer Meetup: Automation Tools';
@@ -35,8 +33,7 @@ export default function Events() {
       description: 'Network with fellow developers and learn about the latest automation tools and techniques.';
       speakers: ['David Kim'Rachel Green'];
       capacity: 150;
-      registered: 98,
-    }
+      registered: 98}
   ],
   const pastEvents = [
     {
@@ -46,8 +43,7 @@ export default function Events() {
       location: 'Virtual Event';
       type: 'Product Launch';
       description: 'Celebrated the official launch of Zion App with demonstrations and Q&A sessions.';
-      attendees: 120o0,
-    };
+      attendees: 120o0};
     {
       id: 5;
       title: 'Automation Best Practices Webinar';
@@ -55,8 +51,7 @@ export default function Events() {
       location: 'Virtual Event';
       type: 'Webinar';
       description: 'Shared insights and best practices for implementing automation in production environments.';
-      attendees: 850,
-    }
+      attendees: 850}
   ],
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
@@ -86,8 +81,7 @@ export default function Events() {
                         <span className={`px-3 py-1 text-xs font-medium rounded-full ${
                           event.type === 'Conference' ? 'bg-purple-50o0/20 text-purple-40o0' :,
                           event.type === 'Workshop' ? 'bg-green-50o0/20 text-green-40o0' :,
-                          'bg-blue-50o0/20 text-blue-40o0',
-                        }`}>,
+                          'bg-blue-50o0/20 text-blue-40o0'}`}>,
                           {event.type}
                         </span>,
                         <span className="text-gray-40o0 text-sm">{event.date}</span>,
@@ -169,5 +163,4 @@ export default function Events() {
           </section>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

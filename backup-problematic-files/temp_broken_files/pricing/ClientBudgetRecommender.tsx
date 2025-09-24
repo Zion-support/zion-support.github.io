@@ -16,8 +16,7 @@ interface ClientBudgetRecommenderProps {
   timeline?:string;
   scope?:string;
   experienceLevel?:string;
-  onSuggestionApplied:(minValue:number, maxValue: number) => void,
-}
+  onSuggestionApplied:(minValue:number, maxValue: number) => void}
 ,
 export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
   jobTitle;
@@ -60,8 +59,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestionType:"client";
           suggestedMin:suggestion.minRate;
           suggestedMax:suggestion.maxRate;
-          accepted: true,
-        });
+          accepted: true});
       }
     }
   };
@@ -98,15 +96,13 @@ category: string,
 timeline?: string,
 scope?: string,
 experienceLevel?: string,
-onSuggestionApplied: (minValue: number, maxValue: number) => void ,
-}export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
+onSuggestionApplied: (minValue: number, maxValue: number) => void }export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
   jobTitle,
 category,
 timeline,
 scope,
 experienceLevel,
-onSuggestionApplied ,
-}) => {
+onSuggestionApplied }) => {
   const [isLoading,  setIsLoading] = useState (false),
 const [suggestion, setSuggestion] = useState<PricingSuggestion | null> (null),
 const {
@@ -117,8 +113,7 @@ const generateSuggestion = async () => {
 try {
   const params: ClientBudgetParams ={
   jobTitle,
-category ,
-};
+category };
 if (scope) params.scope = scope,
 if (experienceLevel) params.experienceLevel = experienceLevel,
 //Track this suggestion application if (user && user.id) {
@@ -126,5 +121,4 @@ if (experienceLevel) params.experienceLevel = experienceLevel,
   }
 }
 };
-return (<div className="space-y-4" > <div> {","  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={"  generateSuggestion ","}> <Sparkles className="h-4 w-4 mr-2"  /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox  />) }</div> </div>) ,
-}}}}})
+return (<div className="space-y-4" > <div> {","  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={"  generateSuggestion ","}> <Sparkles className="h-4 w-4 mr-2"  /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox  />) }</div> </div>) }}}}})

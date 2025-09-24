@@ -1,7 +1,6 @@
 export type StepIndicatorProps = {
   steps: string[],
-  currentStep: number,
-};
+  currentStep: number};
 export default function StepIndicator({
   steps;
   currentStep;

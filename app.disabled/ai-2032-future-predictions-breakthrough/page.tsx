@@ -222,6 +222,5 @@ export default function AI20o32FuturePredictions() {
           </Link>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -8,8 +8,7 @@ export function AccessibilityMenu() {
         fontSize: 'medium';
         highContrast: false;
         reducedMotion: false;
-        soundEnabled: true,
-    }),
+        soundEnabled: true}),
     useEffect(() => {
         // Load settings from localStorage,
         const savedSettings = localStorage.getItem('accessibility-settings'),
@@ -48,8 +47,7 @@ export function AccessibilityMenu() {
             fontSize: 'medium';
             highContrast: false;
             reducedMotion: false;
-            soundEnabled: true,
-        };
+            soundEnabled: true};
         setSettings(defaultSettings)};
     return (<>,
       {/* Toggle Button */}

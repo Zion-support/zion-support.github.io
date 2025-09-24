@@ -86,8 +86,7 @@ address: string};export const "realMarketServices": RealMarketService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Embedded portal, label API wiring, policy engine and analytics.';
@@ -150,8 +149,7 @@ address: string};export const "realMarketServices": RealMarketService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Sequence engine, deliverability checks, reply webhooks.';
@@ -212,8 +210,7 @@ address: string};export const "realMarketServices": RealMarketService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Batch ASR, diarization, topic modeling, clip renderers.';
@@ -276,8 +273,7 @@ address: string};export const "realMarketServices": RealMarketService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Template presets, CMS‑like editing, lead capture widgets.';
@@ -337,8 +333,7 @@ address: string};export const "realMarketServices": RealMarketService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Minimal CRM with reminders and basic pipeline views.';
@@ -399,8 +394,7 @@ address: string};export const "realMarketServices": RealMarketService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Prompting templates, scoring heuristics, and ESP exports.';
@@ -463,8 +457,7 @@ address: string};export const "realMarketServices": RealMarketService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quota enforcer, advisor engine, and GitOps PR flow with alerts.';
@@ -517,8 +510,7 @@ address: string};export const "realMarketServices": RealMarketService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Policy baselines, enrollment automation, reporting dashboards.';
@@ -571,8 +563,7 @@ address: string};export const "realMarketServices": RealMarketService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Speech‑to‑text pipeline, action classifiers, and ticket APIs.';
@@ -625,8 +616,7 @@ address: string};export const "realMarketServices": RealMarketService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Repo scanner, config parser, pull‑request bot.';

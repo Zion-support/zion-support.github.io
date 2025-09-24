@@ -14,8 +14,7 @@ export default function AI20o25InteractiveContentDiscoveryWidget() {
       description: "Discover the revolutionary AI breakthrough transforming businesses worldwide";
       url: "/blog/ai-20o25-revolutionary-breakthrough-announcement";
       featured: true;
-      tags: ["BREAKTHROUGH"NEW"],
-    };
+      tags: ["BREAKTHROUGH"NEW"]};
     {
       id: 2;
       title: "Global Transformation Case Study - 10,0o00% ROI";
@@ -25,8 +24,7 @@ export default function AI20o25InteractiveContentDiscoveryWidget() {
       description: "How a Fortune 50o0 company achieved unprecedented ROI";
       url: "/case-studies/ai-20o25-global-transformation-breakthrough";
       featured: true;
-      tags: ["SUCCESS STORY"ROI"],
-    };
+      tags: ["SUCCESS STORY"ROI"]};
     {
       id: 3;
       title: "AI 20o25 Revolutionary Implementation Guide";
@@ -36,8 +34,7 @@ export default function AI20o25InteractiveContentDiscoveryWidget() {
       description: "Complete blueprint for achieving breakthrough results";
       url: "/resources/ai-20o25-revolutionary-implementation-guide";
       featured: true;
-      tags: ["GUIDE"ESSENTIAL"],
-    };
+      tags: ["GUIDE"ESSENTIAL"]};
     {
       id: 4;
       title: "Fortune 50o0 Transformation Success";
@@ -47,8 +44,7 @@ export default function AI20o25InteractiveContentDiscoveryWidget() {
       description: "Enterprise transformation delivering massive ROI";
       url: "/case-studies/ai-20o25-fortune-50o0-transformation-breakthrough";
       featured: false;
-      tags: ["ENTERPRISE"],
-    };
+      tags: ["ENTERPRISE"]};
     {
       id: 5;
       title: "AI 20o25 Ultimate Trends & Predictions";
@@ -58,8 +54,7 @@ export default function AI20o25InteractiveContentDiscoveryWidget() {
       description: "Comprehensive analysis of AI trends and future predictions";
       url: "/blog/ai-20o25-ultimate-trends-predictions";
       featured: false;
-      tags: ["TRENDS"],
-    };
+      tags: ["TRENDS"]};
     {
       id: 6;
       title: "Global Retail Transformation Success";
@@ -69,8 +64,7 @@ export default function AI20o25InteractiveContentDiscoveryWidget() {
       description: "Retail automation delivering significant ROI";
       url: "/case-studies/ai-20o25-global-retail-transformation-success";
       featured: false;
-      tags: ["RETAIL"],
-    }
+      tags: ["RETAIL"]}
   ],
   const filteredContent = contentItems.filter(item => {
     const categoryMatch = selectedCategory === 'all' || item.category === selectedCategory,
@@ -82,15 +76,13 @@ export default function AI20o25InteractiveContentDiscoveryWidget() {
       case 'success-story': return 'from-green-50o0 to-emerald-50o0',
       case 'guide': return 'from-purple-50o0 to-indigo-50o0',
       case 'insights': return 'from-blue-50o0 to-cyan-50o0',
-      default: return 'from-gray-50o0 to-slate-50o0',
-    }
+      default: return 'from-gray-50o0 to-slate-50o0'}
   };
   const getROIColor = (roi: string) => {
     if (roi.includes('10o000')) return 'text-green-60o0 bg-green-50 border-green-20o0',
     if (roi.includes('50o00')) return 'text-blue-60o0 bg-blue-50 border-blue-20o0',
     if (roi.includes('250o0')) return 'text-purple-60o0 bg-purple-50 border-purple-20o0',
-    return 'text-gray-60o0 bg-gray-50 border-gray-20o0',
-  };
+    return 'text-gray-60o0 bg-gray-50 border-gray-20o0'};
   return (
     <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -139,7 +131,7 @@ export default function AI20o25InteractiveContentDiscoveryWidget() {
             </div>,
             <div className="ml-auto">,
               <button
-                onClick={() => { setSelectedCategory('all'), setSelectedROI('all'), }}
+                onClick={() => { setSelectedCategory('all'), setSelectedROI('all')}}
                 className="bg-gray-10o0 text-gray-70o0 px-4 py-2 rounded-lg hover: bg-gray-20o0 transition-colors">,
                 Clear Filters,
               </button>,
@@ -224,5 +216,4 @@ export default function AI20o25InteractiveContentDiscoveryWidget() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}

@@ -20,6 +20,5 @@ export function DisputeDashboard() {
         </div>,
         <div className='text-2xl font-bold text-zion-purple'>3.2 days</div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

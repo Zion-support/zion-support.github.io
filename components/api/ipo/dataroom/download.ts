@@ -16,7 +16,6 @@ import path from "path",
 import mime from "mime-types",
 import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage",
 import { requireSuperadminApi } from "../../../../utils/api/auth",
-,
   const section = String(req && req.query.section || "General"),
   const file = String(req && req.query.file || ""),
   if (!file) return res && res.status(400).json({ error: "Missing file" }),
@@ -50,8 +49,7 @@ function handler() {
     `attachment, filename="${path && path.basename(fullPath)}"`;
   ),
   appendAuditLog({ type: "file_download", section, name: file }),
-  fs && fs.createReadStream(fullPath).pipe(res),
-}
+  fs && fs.createReadStream(fullPath).pipe(res)}
   const section = String(req.query.section || 'General'),
   const file = String(req.query.file || ''),
   if (!file) return res.status(400).json({ error: 'Missing file' }),
@@ -117,8 +115,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     `attachment, filename="${path.basename(fullPath)}"`;
   ),
   appendAuditLog({ type: "file_download", section, name: file }),
-  fs.createReadStream(fullPath).pipe(res),
-}
+  fs.createReadStream(fullPath).pipe(res)}
     return res.status (404).json ({ error: "Not found" }),
   const content_type =,
     (mime.lookup (full_path) as string) || "application / octet - stream",

@@ -31,15 +31,13 @@ export interface Innovative2030MicroSaasService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =,
   [
     // AI-Powered Business Intelligence,

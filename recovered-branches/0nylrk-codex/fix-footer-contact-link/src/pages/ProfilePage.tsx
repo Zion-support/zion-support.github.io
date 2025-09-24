@@ -66,7 +66,6 @@ export default function ProfilePage() {
   const [isError, setIsError] = useState(false),
   useEffect(() => {
     const fetchProfile = async () => {
-,
       setIsLoading(true),
       setIsError(false),
       try {
@@ -94,7 +93,6 @@ export default function ProfilePage() {
       </div>)}
 ,
   if (isError || !profileData) {
-,
     return (
       <div className="min-h-screen flex items-center justify-center">,
         <p className="text-red-500">Failed to load profile.</p>,
@@ -256,8 +254,7 @@ export default function ProfilePage() {
                 id: profileData?.id |'',
                 full_name: profileData?.full_name |'',
                 professional_title: profileData?.professional_title |'',
-                hourly_rate: profileData?.hourly_rate |0>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
-              }}
+                hourly_rate: profileData?.hourly_rate |0>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982}}
             />,
             {/* Placeholder for other sidebar elements */}
           </div>,
@@ -268,8 +265,7 @@ export default function ProfilePage() {
                 id: profileData?.id || '';
                 full_name: profileData?.full_name || '';
                 professional_title: profileData?.professional_title || '';
-                hourly_rate: profileData?.hourly_rate || 0,
-              }}
+                hourly_rate: profileData?.hourly_rate || 0}}
             />,
             {/* Placeholder for other sidebar elements */}
 ,
@@ -278,5 +274,4 @@ export default function ProfilePage() {
       </div>,
       <Footer />,
     </>)}
-,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

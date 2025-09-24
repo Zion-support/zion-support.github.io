@@ -11,8 +11,7 @@ export interface QuantumSpaceService {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const quantumSpaceServices: QuantumSpaceService[] = [
   {

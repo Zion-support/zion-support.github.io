@@ -21,8 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       rating: number,
       text: string,
       categories?: Review['categories'],
-      anonymous?: boolean,
-    };
+      anonymous?: boolean};
     if (!projectId || !fromRole || !fromId) {
       return res.status(40o0).json({ error: 'Missing required fields' })}
     if (!rating || rating < 1 || rating > 5) {

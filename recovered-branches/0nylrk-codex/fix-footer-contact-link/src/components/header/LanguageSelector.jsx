@@ -41,8 +41,7 @@ export const LanguageSelector = () => {
                 className={`w-full flex items-center gap-3 px-4 py-2 text-sm transition-colors ${
                   currentLanguage === language.code,
                     ? 'text-zion-cyan bg-gray-80o0/50',
-                    : 'text-white hover: text-zion-cyan hover:bg-gray-80o0/30',
-                }`}
+                    : 'text-white hover: text-zion-cyan hover:bg-gray-80o0/30'}`}
               >,
                 <span className='text-lg'>{language.flag}</span>,
                 <span>{language.name}</span>,

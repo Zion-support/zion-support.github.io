@@ -197,6 +197,5 @@ export default function QuantumAI20o26RevolutionPage() {
           </Link>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

@@ -108,8 +108,7 @@ reviews: number,export const cuttingEdge20o29Services: CuttingEdge20o29Service[]
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced quantum neural network platform with consciousness simulation algorithms, ethical frameworks, and research collaboration tools. Includes real-time consciousness mapping and evolution tracking.';
@@ -186,8 +185,7 @@ reviews: number,export const cuttingEdge20o29Services: CuttingEdge20o29Service[]
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Comprehensive autonomous AI platform with corporate management capabilities, decision-making algorithms, and operational automation. Includes real-time monitoring and human oversight options.';
@@ -264,8 +262,7 @@ reviews: number,export const cuttingEdge20o29Services: CuttingEdge20o29Service[]
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced reality augmentation platform with AI-powered perception modification, neural interface integration, and real-time enhancement capabilities. Includes safety protocols and ethical guidelines.';
@@ -343,8 +340,7 @@ reviews: number,export const cuttingEdge20o29Services: CuttingEdge20o29Service[]
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced quantum BCI platform with neural communication capabilities, quantum encryption, and real-time brain-computer synchronization. Includes safety protocols and research tools.';
@@ -420,8 +416,7 @@ reviews: number,export const cuttingEdge20o29Services: CuttingEdge20o29Service[]
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.';

@@ -134,6 +134,5 @@ const AutonomousVehiclesRevolutionBanner20o25: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AutonomousVehiclesRevolutionBanner20o25;

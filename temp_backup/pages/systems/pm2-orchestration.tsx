@@ -32,6 +32,5 @@ export default function Pm2Orchestration() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

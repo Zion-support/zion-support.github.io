@@ -17,8 +17,7 @@ const NeuralSuperintelligence20o25Banner = () => {
         accuracy: '99.97%';
         efficiency: '3,20o0%'};
       readingTime: '35 min read';
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'fortune-50o0-neural-success';
       title: 'Fortune 50o0 Neural Superintelligence Success: $45.8B Annual Savings';
@@ -29,11 +28,9 @@ const NeuralSuperintelligence20o25Banner = () => {
         roi: '12,0o00%';
         savings: '$45.8B';
         timeline: '18 months';
-        accuracy: '99.97%',
-      };
+        accuracy: '99.97%'};
       readingTime: '25 min read';
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'neural-implementation-guide';
       title: 'Neural Superintelligence Implementation Ultimate Guide 20o25-20o26';
@@ -46,8 +43,7 @@ const NeuralSuperintelligence20o25Banner = () => {
         timeline: '18 months';
         projects: '1,0o00+'};
       readingTime: '45 min read';
-      isNew: true,
-    }
+      isNew: true}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -190,8 +186,7 @@ const NeuralSuperintelligence20o25Banner = () => {
                 className={`p-4 rounded-lg border transition-all duration-20o0 hover: scale-10o5 ${
                   index === currentSlide,
                     ? 'bg-white/20 border-white/40',
-                    : 'bg-white/5 border-white/20 hover:bg-white/10',
-                }`}
+                    : 'bg-white/5 border-white/20 hover:bg-white/10'}`}
               >,
                 <div className="flex items-center justify-between mb-2">,
                   <span className="text-purple-20o0 text-sm font-medium">,

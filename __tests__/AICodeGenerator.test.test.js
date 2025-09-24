@@ -4,7 +4,6 @@ import AICodeGenerator from '../components/AICodeGenerator',
 import { render, screen } from '@testing-library/react',
 import React from 'react';
 import AICodeGeneratortest from '../components/AICodeGenerator.test',
-,
 describe('AICodeGeneratortest', () => {
   test('renders without crashing', () => {
     render(<AICodeGenerator  />),

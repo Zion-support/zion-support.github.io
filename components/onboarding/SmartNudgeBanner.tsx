@@ -4,8 +4,7 @@ X,
 export type SmartNudgeBannerProps = {
   role: 'talent' | 'client',
   userId?: string | null,
-  message: string,
-};
+  message: string};
 export default function SmartNudgeBanner({ roleuserIdmessage }: SmartNudgeBannerProps) {
   const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`[roleuserId]),
   const [hiddensetHidden] = React.useState<boolean>(false),

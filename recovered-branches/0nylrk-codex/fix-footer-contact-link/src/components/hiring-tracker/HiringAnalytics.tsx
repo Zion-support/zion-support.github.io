@@ -12,8 +12,7 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
     statusDistribution: any[],
     timeToHire: number,
     conversionRate: number,
-    funnelData: any[],
-  }>({
+    funnelData: any[]}>({
     statusDistribution: [];
     timeToHire: 0;
     conversionRate: 0;

@@ -15,6 +15,5 @@ export default function QuantumAiCognitive20o45Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

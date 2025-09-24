@@ -16,6 +16,5 @@ export default function DownloadPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

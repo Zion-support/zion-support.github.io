@@ -49,8 +49,7 @@ export default function ServicePage() {
           </a>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,
 <Link href="/services/rapid-1755539340o458-6lge19" className="internal-link">Related Content</Link>,
 <Link href="/services/rapid-1755539353529-war86k" className="internal-link">Related Content</Link>,

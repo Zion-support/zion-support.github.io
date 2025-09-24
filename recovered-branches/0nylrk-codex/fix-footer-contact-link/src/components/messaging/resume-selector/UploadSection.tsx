@@ -2,8 +2,7 @@
 ,
 interface UploadSectionProps {
   customFile: File | null,
-  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void,
-}
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void}
 export function UploadSection({
   customFile,
   onFileUpload}: UploadSectionProps) {
@@ -12,8 +11,7 @@ import { Button } from "@/components/ui/button",
 import { Upload, FileText } from "lucide-react",
 interface UploadSectionProps {
   customFile: File | null;
-  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void,
-}
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void}
 ,
 export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
   return (
@@ -50,8 +48,7 @@ import { Button } from "@/components/ui/button";
 import { Upload, FileText } from 'lucide-react';
 interface UploadSectionProps {
   customFile: File | null,
-  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void,
-}
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void}
 ,
 export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
   return (
@@ -105,6 +102,5 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             </span>,
           </div>,
         </div>)}
-    </div>),
-}
+    </div>)}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}})

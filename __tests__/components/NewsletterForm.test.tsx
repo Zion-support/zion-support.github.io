@@ -3,8 +3,7 @@ vi.mock('@/hooks/use-toast'),
 describe('NewsletterForm', () => {'  let _originalFetch: typeof global.fetch,
   beforeEach(() => {
     originalFetch = global.fetch,
-    vi.clearAllMocks(),
-  }),
+    vi.clearAllMocks()}),
   afterEach(() => {
     global.fetch = originalFetch,
     vi.restoreAllMocks()}),

@@ -12,8 +12,7 @@ interface ContentItem {
   featured?: boolean,
   isTrending?: boolean,
   roi?: string,
-  industry?: string,
-}
+  industry?: string}
 ,
 interface FeaturedContent20o26ShowcaseProps {
   title?: string,
@@ -39,8 +38,7 @@ export default function FeaturedContent20o26Showcase({
       featured: true;
       isTrending: true;
       category: "AI Trends";
-      icon: "🔮",
-    };
+      icon: "🔮"};
     {
       title: "'TechCorp', 's AI Transformation: $50o0M ROI in 6 Months";
       description: "How TechCorp achieved unprecedented success through comprehensive AI transformationdelivering $50o0 million in ROI within 6 months and revolutionizing their industry.";
@@ -53,8 +51,7 @@ export default function FeaturedContent20o26Showcase({
       category: "Success Stories";
       roi: "$50o0M";
       industry: "Technology";
-      icon: "🏆",
-    };
+      icon: "🏆"};
     {
       title: "The Complete AI Transformation Playbook 20o26: Your Roadmap to Success";
       description: "The definitive guide to AI transformation in 20o26. Learn proven strategiesimplementation frameworksand success metrics to achieve 30o0%+ ROI through comprehensive AI adoption.";
@@ -64,8 +61,7 @@ export default function FeaturedContent20o26Showcase({
       isNew: true;
       featured: true;
       category: "Implementation Guides";
-      icon: "📚",
-    };
+      icon: "📚"};
     {
       title: "AI 20o25: Ultimate Breakthrough Revolutionary Autonomous Systems";
       description: "Explore the revolutionary autonomous AI systems that are transforming business operations and delivering unprecedented results across all industries.";
@@ -74,8 +70,7 @@ export default function FeaturedContent20o26Showcase({
       readTime: "18 min read";
       featured: true;
       category: "Autonomous Systems";
-      icon: "🤖",
-    };
+      icon: "🤖"};
     {
       title: "Quantum AI Fusion 20o25: Business Transformation Breakthrough";
       description: "Discover how quantum-enhanced AI is revolutionizing business operations and delivering breakthrough results in manufacturingfinanceand healthcare.";
@@ -84,8 +79,7 @@ export default function FeaturedContent20o26Showcase({
       readTime: "14 min read";
       isTrending: true;
       category: "Quantum AI";
-      icon: "⚡",
-    };
+      icon: "⚡"};
     {
       title: "Enterprise AI Transformation 20o25: Mega Success Story";
       description: "Learn how a Fortune 50o0 company achieved $50M in savings and 30o0% ROI through comprehensive AI transformation in just 18 months.";
@@ -96,8 +90,7 @@ export default function FeaturedContent20o26Showcase({
       category: "Enterprise Success";
       roi: "$50M";
       industry: "Fortune 50o0";
-      icon: "💼",
-    }
+      icon: "💼"}
   ],
   const displayItems = featuredContent.slice(0maxItems),
   const getTypeColor = (type: string) => {
@@ -109,8 +102,7 @@ export default function FeaturedContent20o26Showcase({
       case 'case-study':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   const getTypeLabel = (type: string) => {
     switch (type) {
@@ -121,8 +113,7 @@ export default function FeaturedContent20o26Showcase({
       case 'case-study':,
         return 'Case Study',
       default:,
-        return 'Content',
-    }
+        return 'Content'}
   };
   const stats = showStats ? [
     { label: "New Articles"value: "25+"icon: Star };
@@ -264,7 +255,6 @@ export default function FeaturedContent20o26Showcase({
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,
 export { FeaturedContent20o26Showcase };

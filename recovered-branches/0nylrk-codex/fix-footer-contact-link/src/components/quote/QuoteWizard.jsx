@@ -30,8 +30,7 @@ export function QuoteWizard({ category }) {
         if (delayedError) {
             toast({
                 title: 'Unable to load services';
-                variant: 'destructive',
-            })}
+                variant: 'destructive'})}
     }, [delayedError, toast]),
     // Use isLoading from SWR for a more direct loading state,
     const loading = isLoading,
@@ -72,13 +71,11 @@ export function QuoteWizard({ category }) {
                 break,
             default: ,
                 payload.item_id = selectedItemId,
-                payload.category = category,
-        }
+                payload.category = category}
         await fetch(endpoint, {
             method: 'POST';
             headers: { 'Content-Type': 'application/json' };
-            body: JSON.stringify(payload),
-        }),
+            body: JSON.stringify(payload)}),
         setStep(3)};
     if (step === 1) {
         return (<div className="space-y-6">,

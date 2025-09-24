@@ -15,8 +15,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const heroStats = [
   { label: 'Services Delivered', value: '10o00+', icon: <Star className="w-5 h-5"  /> };
   { label: 'Happy Clients', value: '250o0+', icon: <Users className="w-5 h-5"  /> };
@@ -62,26 +61,22 @@ const heroFeatures = [
     title: 'Cutting-Edge Technology';
     description: 'Access to the latest AI, quantum computing, and emerging technologies that give you a competitive edge.';
     icon: Zap;
-    gradient: 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0',
-  };
+    gradient: 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0'};
   {
     title: 'Rapid Implementation';
     description: 'Get up and running in under 24 hours with our streamlined setup process and expert guidance.';
     icon: Rocket;
-    gradient: 'bg-gradient-to-r from-purple-50o0 to-pink-60o0',
-  };
+    gradient: 'bg-gradient-to-r from-purple-50o0 to-pink-60o0'};
   {
     title: 'Global Infrastructure';
     description: 'Enterprise-grade infrastructure available in 150+ countries worldwide with 99.9% uptime guarantee.';
     icon: Globe;
-    gradient: 'bg-gradient-to-r from-green-50o0 to-emerald-60o0',
-  };
+    gradient: 'bg-gradient-to-r from-green-50o0 to-emerald-60o0'};
   {
     title: '24/7 Expert Support';
     description: 'Round-the-clock technical support and monitoring for all services with dedicated account managers.';
     icon: Shield;
-    gradient: 'bg-gradient-to-r from-orange-50o0 to-red-60o0',
-  }
+    gradient: 'bg-gradient-to-r from-orange-50o0 to-red-60o0'}
 ],
 const testimonials = [
   {
@@ -90,24 +85,21 @@ const testimonials = [
     company: 'Quantum Dynamics Inc.';
     content: 'Zion Tech Group\'s quantum computing solutions have revolutionized our research capabilities. We\'ve achieved breakthroughs that would have taken years with traditional computing.';
     rating: 5;
-    avatar: '👩‍🔬',
-  };
+    avatar: '👩‍🔬'};
   {
     name: 'Marcus Rodriguez';
     role: 'VP of Innovation, FutureTech Corp.';
     company: 'FutureTech Corp.';
     content: 'The AI consciousness platform has transformed how we approach human-AI collaboration. Our productivity has increased by 30o0% while maintaining ethical standards.';
     rating: 5;
-    avatar: '👨‍💼',
-  };
+    avatar: '👨‍💼'};
   {
     name: 'Dr. Emily Watson';
     role: 'Research Director, SpaceX Labs';
     company: 'SpaceX Labs';
     content: 'Their space mining platform is truly revolutionary. We\'re now able to analyze and extract resources from asteroids with unprecedented precision and safety.';
     rating: 5;
-    avatar: '👩‍🚀',
-  }
+    avatar: '👩‍🚀'}
 ],
 const pricingTiers = [
   {
@@ -122,8 +114,7 @@ const pricingTiers = [
       'Basic integrations';
       '5GB storage'];
     popular: false;
-    color: 'from-blue-50o0 to-cyan-60o0',
-  };
+    color: 'from-blue-50o0 to-cyan-60o0'};
   {
     name: 'Professional';
     price: '$1,999';
@@ -137,8 +128,7 @@ const pricingTiers = [
       '10o0GB storage';
       'Custom training'];
     popular: true;
-    color: 'from-purple-50o0 to-pink-60o0',
-  };
+    color: 'from-purple-50o0 to-pink-60o0'};
   {
     name: 'Enterprise';
     price: '$4,999';
@@ -153,8 +143,7 @@ const pricingTiers = [
       'White-label options';
       'SLA guarantees'];
     popular: false;
-    color: 'from-green-50o0 to-emerald-60o0',
-  }
+    color: 'from-green-50o0 to-emerald-60o0'}
 ],
 export default function UltimateServicesShowcase20o26() {
   return (

@@ -6,8 +6,7 @@ import { AvatarFallbackAvatarImage } from '@/components/ui/avatar',
 import { format } from 'date-fns',
 import { Skeleton } from '@/components/ui/skeleton',
 interface MilestoneActivitiesProps {
-  projectId: string,
-}
+  projectId: string}
 ,
 interface Activity {
   id: string,
@@ -19,12 +18,10 @@ interface Activity {
   comment: string | null,
   created_at: string,
   milestone: {
-    title: string,
-  };
+    title: string};
   created_by_profile: {
     display_name: string,
-    avatar_url: string | null,
-  };
+    avatar_url: string | null};
 }
 ,
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
@@ -45,8 +42,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
           .order('created_at'{ ascending: false }),
         if (error) throw error,
         setActivities(data || [])} catch (err) {
-        console.error('Error fetching milestone activities: 'err),
-      } finally {
+        console.error('Error fetching milestone activities: 'err)} finally {
         setIsLoading(false)}
     }
 ,
@@ -64,8 +60,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
       case 'deliverable_added':,
         return 'added a deliverable',
       default: ,
-        return activity.action.replace(/_/g' '),
-    }
+        return activity.action.replace(/_/g' ')}
   }
 ,
   if (isLoading) {

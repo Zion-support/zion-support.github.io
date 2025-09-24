@@ -4,13 +4,11 @@ interface CountryPricing {
   country: string,
   currency: string,
   multiplier: number,
-  pricePerIncident: number,
-}
+  pricePerIncident: number}
 ,
 interface CountrySelectorProps {
   selectedCountry: CountryPricing | null,
-  onCountrySelect: (country: CountryPricing) => void,
-}
+  onCountrySelect: (country: CountryPricing) => void}
 ,
 const onsiteServicePricing: CountryPricing[] = [
   {
@@ -67,8 +65,7 @@ export default function CountrySelector({ selectedCountry, onCountrySelect }: Co
   const handleCountrySelect = (countryName: string) => {
     const selectedCountry = onsiteServicePricing.find(c => c.country === countryName),
     if (selectedCountry) {
-      onCountrySelect(selectedCountry),
-    }
+      onCountrySelect(selectedCountry)}
     setIsOpen(false)};
   return (
     <div className="relative">,

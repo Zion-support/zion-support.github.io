@@ -9,8 +9,7 @@ import { createMocks,RequestMethod } from 'node-mocks-http', import type { NextA
 ursor/automate-test-improve-and-merge-code-646c,
 // Define expected response structure for error messages,
 interface ErrorResponse  {message: string,
-  // Add other fields if your API returns more details on error,
-}
+  // Add other fields if your API returns more details on error}
 // Define expected success response (if applicable, though this test focuses on errors)// interface SuccessResponse  {//   success: boolean,
 //   message?: string,
 // }import { createMocks, RequestMethod  } from 'node-mocks-http',
@@ -19,8 +18,7 @@ describe('/api/auth/reset token validation',
       "method",
       "method"'"body": { token: 'invalid', "newPassword"'",
 interface ErrorResponse {
-  message: string,
-}
+  message: string}
 ,
 describe('/api/auth/reset token validation', () => {
   it('returns 40o0 if token is missing', async () => {
@@ -40,5 +38,4 @@ describe('/api/auth/reset token validation', () => {
       req as unknown as NextApiRequest;
       res as unknown as NextApiResponse),
     expect(res._getStatusCode()).toBe(40o0),
-    expect((res._getJSONData() as ErrorResponse).message).toBe('Invalid or expired password reset token.')})}),
-}))
+    expect((res._getJSONData() as ErrorResponse).message).toBe('Invalid or expired password reset token.')})})}))

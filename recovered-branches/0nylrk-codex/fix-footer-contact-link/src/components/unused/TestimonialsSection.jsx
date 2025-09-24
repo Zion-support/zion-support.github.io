@@ -141,6 +141,5 @@ export function TestimonialsSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

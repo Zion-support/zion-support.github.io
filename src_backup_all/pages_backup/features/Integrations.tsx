@@ -144,5 +144,4 @@ function IntegrationsFeature() {
             </Button>,
           </div>,
         </div>,
-      </main>,
-}))
+      </main>}))

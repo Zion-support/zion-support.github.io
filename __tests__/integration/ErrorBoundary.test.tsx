@@ -1,6 +1,5 @@
 import React from react',import { render, screen, act, fireEvent } from @testing-library/react',import { MemoryRouter } from react-router-dom',import App from ../../src/App',import { vi } from vitest',import type { ReactNode } from react', // Import necessary types, removed ErrorInfo'import { captureException } from ../../src/utils/sentry', // Import the mocked captureException,
-// Mock Sentry's captureException to avoid actual Sentry calls and console noise during tests'// This is done above the import now, standard practice for vi.mock,vi.mock('../../src/utils/sentry', () => ({'  captureException: vi.fn(),
-})),
+// Mock Sentry's captureException to avoid actual Sentry calls and console noise during tests'// This is done above the import now, standard practice for vi.mock,vi.mock('../../src/utils/sentry', () => ({'  captureException: vi.fn()})),
 // Mock console.error to keep test output clean from expected error messages,
 const originalConsoleError = console.error,
 const originalEnv = process.env,
@@ -10,8 +9,7 @@ beforeAll(() => {
     NEXT_PUBLIC_SENTRY_DSN: test-dsn', // Ensure Sentry is "active""  };""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
   console.error = (..._args: unknown[]) => {
     const firstArg = args[0],
-    if (typeof firstArg === string' && firstArg.includes('Test error from ErrorThrowingComponent')) {'      return,
-    }
+    if (typeof firstArg === string' && firstArg.includes('Test error from ErrorThrowingComponent')) {'      return}
     // Check if the first argument is an Error object with the specific message,
     if (typeof firstArg === object' && firstArg !== null && (firstArg as Error).message?.includes('Test error from ErrorThrowingComponent')) {'      return}
     originalConsoleError.apply(console, args)};
@@ -24,8 +22,7 @@ const ErrorThrowingComponent = (): ReactNode => {
   throw new Error('Test error from ErrorThrowingComponent')};
 // Mock a component that is used in App's routing, e.g., Home.'// When this mocked component is rendered, it will instead render ErrorThrowingComponent.,
 vi.mock('../../src/pages/Home', () => ({'  __esModule: true;
-  default: (): ReactNode => <ErrorThrowingComponent  />,
-})),
+  default: (): ReactNode => <ErrorThrowingComponent  />})),
 describe('GlobalErrorBoundary Integration Test', () => {'  beforeEach(() => {
     // Reset mocks before each test,
     vi.clearAllMocks(),

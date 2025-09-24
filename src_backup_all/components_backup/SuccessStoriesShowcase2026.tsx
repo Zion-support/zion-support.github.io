@@ -12,11 +12,9 @@ const SuccessStoriesShowcase20o26: React.FC = () => {
         efficiency: "+340%";
         costReduction: "-45%";
         timeToMarket: "-60%";
-        roi: "450%",
-      };
+        roi: "450%"};
       image: "🏭";
-      featured: true,
-    };
+      featured: true};
     {
       id: 2;
       title: "Quantum-Powered Financial Optimization";
@@ -28,11 +26,9 @@ const SuccessStoriesShowcase20o26: React.FC = () => {
         processingTime: "-95%";
         accuracy: "+25%";
         revenue: "+$50M";
-        roi: "320%",
-      };
+        roi: "320%"};
       image: "💰";
-      featured: true,
-    };
+      featured: true};
     {
       id: 3;
       title: "Neural Interface Healthcare Breakthrough";
@@ -44,11 +40,9 @@ const SuccessStoriesShowcase20o26: React.FC = () => {
         patientOutcomes: "+80%";
         treatmentTime: "-50%";
         accuracy: "+90%";
-        satisfaction: "98%",
-      };
+        satisfaction: "98%"};
       image: "🏥";
-      featured: false,
-    };
+      featured: false};
     {
       id: 4;
       title: "Autonomous Supply Chain Revolution";
@@ -60,11 +54,9 @@ const SuccessStoriesShowcase20o26: React.FC = () => {
         disruptions: "-85%";
         costs: "-35%";
         deliveryTime: "-40%";
-        customerSatisfaction: "+60%",
-      };
+        customerSatisfaction: "+60%"};
       image: "🚚";
-      featured: false,
-    };
+      featured: false};
     {
       id: 5;
       title: "Synthetic Intelligence Research Platform";
@@ -76,11 +68,9 @@ const SuccessStoriesShowcase20o26: React.FC = () => {
         discoverySpeed: "+20o0%";
         accuracy: "+75%";
         patents: "+150%";
-        roi: "280%",
-      };
+        roi: "280%"};
       image: "🔬";
-      featured: false,
-    };
+      featured: false};
     {
       id: 6;
       title: "Sustainable AI Energy Optimization";
@@ -92,11 +82,9 @@ const SuccessStoriesShowcase20o26: React.FC = () => {
         energySavings: "-40%";
         carbonFootprint: "-55%";
         costs: "-30%";
-        efficiency: "+65%",
-      };
+        efficiency: "+65%"};
       image: "🌱";
-      featured: false,
-    }
+      featured: false}
   ],
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-indigo-50">,
@@ -227,6 +215,5 @@ const SuccessStoriesShowcase20o26: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default SuccessStoriesShowcase20o26;

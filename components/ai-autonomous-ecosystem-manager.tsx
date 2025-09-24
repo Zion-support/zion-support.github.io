@@ -18,5 +18,4 @@ export default function AIAutonomousEcosystemManager() {
 				"Integrations: KubernetesSlack/TeamsJiraGitHub"]}
 			industries={["Platform Teams"R&D"Operations"Security"]}
 			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager",
-		 />),
-}
+		 />)}

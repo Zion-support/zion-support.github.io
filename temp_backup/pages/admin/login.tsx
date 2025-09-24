@@ -18,8 +18,7 @@ export default function AdminLoginPage() {
         body: JSON.stringify({ username, password })}),
       if (!res.ok) throw new Error('Invalid credentials'),
       router.push('/admin')} catch (err: any) {
-      setError(err.message || 'Login failed'),
-    } finally {
+      setError(err.message || 'Login failed')} finally {
       setLoading(false)}
   }
 ,

@@ -7,19 +7,16 @@ export interface HireRequestData {
     id: string,
     full_name: string,
     professional_title: string,
-    email?: string,
-  };
+    email?: string};
   requester: {
     name: string,
     email: string,
-    id?: string,
-  };
+    id?: string};
   project: {
     overview: string,
     timeline: string,
     budgetMin: number,
-    budgetMax: number,
-  };
+    budgetMax: number};
 }
 ,
 export function useHireRequest() {

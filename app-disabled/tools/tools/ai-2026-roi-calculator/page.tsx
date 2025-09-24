@@ -12,15 +12,13 @@ export default function AI20o26ROICalculator() {
     expectedEfficiency: '';
     implementationCost: '';
     maintenanceCost: '';
-    trainingCost: '',
-  }),
+    trainingCost: ''}),
   const [results, setResults] = useState({
     annualSavings: 0;
     totalCosts: 0;
     netBenefit: 0;
     roi: 0;
-    paybackPeriod: 0,
-  }),
+    paybackPeriod: 0}),
   const handleInputChange = (field: string, value: string) => {
     setInputs(prev => ({
       ...prev;
@@ -56,8 +54,7 @@ export default function AI20o26ROICalculator() {
       style: 'currency';
       currency: 'USD';
       minimumFractionDigits: 0;
-      maximumFractionDigits: 0,
-    }).format(amount)};
+      maximumFractionDigits: 0}).format(amount)};
   const formatPercentage = (value: number) => {
     return `${value.toFixed(1)}%`};
   return (
@@ -269,5 +266,4 @@ export default function AI20o26ROICalculator() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

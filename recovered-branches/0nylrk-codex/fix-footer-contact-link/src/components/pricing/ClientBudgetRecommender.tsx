@@ -15,8 +15,7 @@ interface ClientBudgetRecommenderProps {
   timeline?: string,
   scope?: string,
   experienceLevel?: string,
-  onSuggestionApplied: (minValue: numbermaxValue: number) => void,
-}
+  onSuggestionApplied: (minValue: numbermaxValue: number) => void}
 ,
 export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
   jobTitle;
@@ -42,8 +41,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       if (experienceLevel) params.experienceLevel = experienceLevel,
       const result = await getClientBudgetSuggestion(params),
       setSuggestion(result)} catch (error) {
-      console.error("Error generating budget suggestion: "error),
-    } finally {
+      console.error("Error generating budget suggestion: "error)} finally {
       setIsLoading(false)}
   };
   const handleApplySuggestion = () => {
@@ -56,8 +54,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestionType: 'client';
           suggestedMin: suggestion.minRate;
           suggestedMax: suggestion.maxRate;
-          accepted: true,
-        })}
+          accepted: true})}
     }
   };
   return (

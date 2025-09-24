@@ -20,8 +20,7 @@ const UltimateContentDiscoveryWidget20o25 = () => {
       roi: "2,40o0%";
       image: "🧠";
       tags: ["AI", "Neural Networks", "Consciousness", "Breakthrough"];
-      featured: true,
-    };
+      featured: true};
     {
       id: 2;
       title: "Quantum-Neural Fusion Implementation Guide";
@@ -34,8 +33,7 @@ const UltimateContentDiscoveryWidget20o25 = () => {
       roi: "5,0o00%";
       image: "⚛️";
       tags: ["Quantum Computing", "Neural Networks", "Implementation", "Guide"];
-      featured: true,
-    };
+      featured: true};
     {
       id: 3;
       title: "Autonomous Business Ecosystems Case Study";
@@ -48,8 +46,7 @@ const UltimateContentDiscoveryWidget20o25 = () => {
       roi: "8,0o00%";
       image: "🤖";
       tags: ["Case Study", "Autonomous Systems", "ROI", "Fortune 50o0"];
-      featured: false,
-    };
+      featured: false};
     {
       id: 4;
       title: "Synthetic Intelligence Revolution Framework";
@@ -62,8 +59,7 @@ const UltimateContentDiscoveryWidget20o25 = () => {
       roi: "10,0o00%";
       image: "🔬";
       tags: ["Synthetic Intelligence", "Framework", "Self-Improving AI", "Revolution"];
-      featured: true,
-    };
+      featured: true};
     {
       id: 5;
       title: "AI ROI Calculator: Ultimate Guide";
@@ -76,8 +72,7 @@ const UltimateContentDiscoveryWidget20o25 = () => {
       roi: "Variable";
       image: "💰";
       tags: ["ROI Calculator", "Tools", "Business", "Optimization"];
-      featured: false,
-    };
+      featured: false};
     {
       id: 6;
       title: "Edge Computing Revolution 20o25";
@@ -90,8 +85,7 @@ const UltimateContentDiscoveryWidget20o25 = () => {
       roi: "1,50o0%";
       image: "🌐";
       tags: ["Edge Computing", "AI Deployment", "Performance", "Revolution"];
-      featured: false,
-    };
+      featured: false};
     {
       id: 7;
       title: "AI Ethics and Governance Framework";
@@ -104,8 +98,7 @@ const UltimateContentDiscoveryWidget20o25 = () => {
       roi: "Risk Mitigation";
       image: "⚖️";
       tags: ["AI Ethics", "Governance", "Framework", "Responsible AI"];
-      featured: false,
-    };
+      featured: false};
     {
       id: 8;
       title: "Multimodal AI Applications Guide";
@@ -118,8 +111,7 @@ const UltimateContentDiscoveryWidget20o25 = () => {
       roi: "3,20o0%";
       image: "🎯";
       tags: ["Multimodal AI", "Implementation", "Guide", "Applications"];
-      featured: true,
-    }
+      featured: true}
   ],
   const categories = [
     { value: 'all', label: 'All Content', count: contentItems.length };
@@ -164,8 +156,7 @@ const UltimateContentDiscoveryWidget20o25 = () => {
       case 'Intermediate': return 'text-yellow-60o0 bg-yellow-10o0',
       case 'Advanced': return 'text-orange-60o0 bg-orange-10o0',
       case 'Expert': return 'text-red-60o0 bg-red-10o0',
-      default: return 'text-gray-60o0 bg-gray-10o0',
-    }
+      default: return 'text-gray-60o0 bg-gray-10o0'}
   };
   const getTypeIcon = (type) => {
     switch (type) {
@@ -174,8 +165,7 @@ const UltimateContentDiscoveryWidget20o25 = () => {
       case 'case-study': return '📊',
       case 'framework': return '🏗️',
       case 'tool': return '🛠️',
-      default: return '📄',
-    }
+      default: return '📄'}
   };
   return (
     <div className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">,
@@ -224,8 +214,7 @@ const UltimateContentDiscoveryWidget20o25 = () => {
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                       selectedCategory === category.value,
                         ? 'bg-purple-60o0 text-white',
-                        : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-                    }`}
+                        : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
                   >,
                     {category.label} ({category.count}),
                   </button>))}
@@ -265,8 +254,7 @@ const UltimateContentDiscoveryWidget20o25 = () => {
                 <div
                   key={item.id}
                   className={`bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 overflow-hidden ${
-                    item.featured ? 'ring-2 ring-purple-50o0' : '',
-                  }`}
+                    item.featured ? 'ring-2 ring-purple-50o0' : ''}`}
                 >,
                   {item.featured && (
                     <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white text-center py-2 text-sm font-semibold">,
@@ -354,6 +342,5 @@ const UltimateContentDiscoveryWidget20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateContentDiscoveryWidget20o25;

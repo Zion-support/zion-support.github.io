@@ -46,8 +46,7 @@ export function PageHero() {
           </p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
   )),
 import { GradientHeading } from "@/components/GradientHeading";
 import { Clock, Map, DollarSign } from "lucide-react",
@@ -81,6 +80,5 @@ export function PageHero() {
           <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

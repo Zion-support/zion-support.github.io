@@ -424,8 +424,7 @@ const EnhancedNavigation20o26V2 = () => {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category),
-  };
+    setActiveDropdown(activeDropdown === category ? null : category)};
   const filteredServices = serviceCategories.flatMap(category =>,
     category.services.filter(
       service =>,

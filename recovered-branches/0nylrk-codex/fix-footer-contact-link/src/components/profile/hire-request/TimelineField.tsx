@@ -4,8 +4,7 @@ import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui
 import { UseFormReturn } from "react-hook-form",
 import { FormValues } from "./useHireRequestForm",
 interface TimelineFieldProps {
-  form: UseFormReturn<FormValues>,
-}
+  form: UseFormReturn<FormValues>}
 ,
 export function TimelineField({ form }: TimelineFieldProps) {
   const timelineOptions = [

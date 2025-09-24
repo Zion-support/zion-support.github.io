@@ -12,8 +12,7 @@ interface PerformanceMetric {
   target: number,
   unit: string,
   status: 'excellent' | 'good' | 'warning' | 'critical',
-  trend: 'up' | 'down' | 'stable',
-}
+  trend: 'up' | 'down' | 'stable'}
 ,
 const AdvancedPerformanceOptimizer: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
@@ -29,8 +28,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
       target: 1.0;
       unit: 's';
       status: 'good';
-      trend: 'down',
-    };
+      trend: 'down'};
     {
       id: 'lcp';
       name: 'Largest Contentful Paint';
@@ -38,8 +36,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
       target: 0.6;
       unit: 's';
       status: 'good';
-      trend: 'down',
-    };
+      trend: 'down'};
     {
       id: 'fid';
       name: 'First Input Delay';
@@ -47,8 +44,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
       target: 30;
       unit: 'ms';
       status: 'warning';
-      trend: 'stable',
-    };
+      trend: 'stable'};
     {
       id: 'cls';
       name: 'Cumulative Layout Shift';
@@ -56,8 +52,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
       target: 0.0o3;
       unit: '';
       status: 'warning';
-      trend: 'stable',
-    };
+      trend: 'stable'};
     {
       id: 'ttfb';
       name: 'Time to First Byte';
@@ -65,8 +60,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
       target: 10o0;
       unit: 'ms';
       status: 'good';
-      trend: 'down',
-    };
+      trend: 'down'};
     {
       id: 'bundle-size';
       name: 'JavaScript Bundle Size';
@@ -74,8 +68,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
       target: 30o0;
       unit: 'KB';
       status: 'warning';
-      trend: 'up',
-    }
+      trend: 'up'}
   ]),
   const handleOptimize = async () => {
     setIsOptimizing(true),
@@ -86,8 +79,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
       ...metric;
       value: metric.value * 0.7, // Simulate 30% improvement,
       status: metric.value * 0.7 <= metric.target ? 'excellent' : 'good';
-      trend: 'down',
-    }))),
+      trend: 'down'}))),
     setIsOptimizing(false),
     setOptimizationComplete(true)};
   const getStatusColor = (status: string) => {
@@ -96,16 +88,14 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
       case 'good': return 'text-blue-50o0 bg-blue-10o0',
       case 'warning': return 'text-yellow-50o0 bg-yellow-10o0',
       case 'critical': return 'text-red-50o0 bg-red-10o0',
-      default: return 'text-gray-50o0 bg-gray-10o0',
-    }
+      default: return 'text-gray-50o0 bg-gray-10o0'}
   };
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return <TrendingUp className="w-4 h-4 text-red-50o0"  />,
       case 'down': return <TrendingUp className="w-4 h-4 text-green-50o0 rotate-180"  />,
       case 'stable': return <BarChart3 className="w-4 h-4 text-blue-50o0"  />,
-      default: return null,
-    }
+      default: return null}
   };
   if (!isVisible) return null,
   return (
@@ -210,8 +200,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
                   ? 'bg-yellow-50o0 cursor-not-allowed',
                   : optimizationComplete,
                   ? 'bg-green-50o0 cursor-not-allowed',
-                  : 'bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover: from-blue-70o0 hover:to-purple-70o0',
-              }`}
+                  : 'bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover: from-blue-70o0 hover:to-purple-70o0'}`}
             >,
               {isOptimizing ? (
                 <div className="flex items-center">,
@@ -293,6 +282,5 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AdvancedPerformanceOptimizer;

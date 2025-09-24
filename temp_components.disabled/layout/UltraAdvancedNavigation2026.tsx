@@ -37,8 +37,7 @@ const UltraAdvancedNavigation20o26: React.FC<UltraAdvancedNavigation20o26Props> 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null),
-      }
+        setActiveDropdown(null)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
@@ -46,8 +45,7 @@ const UltraAdvancedNavigation20o26: React.FC<UltraAdvancedNavigation20o26Props> 
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const navigationItems = [
     {
       name: 'Services';
@@ -73,8 +71,7 @@ const UltraAdvancedNavigation20o26: React.FC<UltraAdvancedNavigation20o26Props> 
     {
       name: 'Pricing';
       href: '/pricing';
-      icon: Star,
-    };
+      icon: Star};
     {
       name: 'Resources';
       href: '/resources';
@@ -97,8 +94,7 @@ const UltraAdvancedNavigation20o26: React.FC<UltraAdvancedNavigation20o26Props> 
       ]}
   ],
   const handleDropdownToggle = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name),
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault(),
     if (searchQuery.trim()) {

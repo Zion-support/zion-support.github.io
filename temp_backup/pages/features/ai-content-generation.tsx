@@ -15,6 +15,5 @@ export default function AiContentGenerationPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

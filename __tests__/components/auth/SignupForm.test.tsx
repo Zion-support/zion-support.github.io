@@ -1,14 +1,12 @@
 import React from react',import { renderWithProviders, screen, fireEvent, waitFor } from __tests__/test-utils.tsx',import { useRouter } from next/router',import axios from axios',import { toast } from @/hooks/use-toast',import SignupForm from @/components/auth/SignupForm',import { signIn } from next-auth/react',
 // Mock dependencies,
-jest.mock('next/router'),jest.mock('axios'),jest.mock('@/hooks/use-toast'),jest.mock('next-auth/react', () => ({'  signIn: jest.fn(),
-})),
+jest.mock('next/router'),jest.mock('axios'),jest.mock('@/hooks/use-toast'),jest.mock('next-auth/react', () => ({'  signIn: jest.fn()})),
 const mockPush = jest.fn(),
 const mockToastError = jest.fn(),
 const mockToastSuccess = jest.fn(),
 beforeEach(() => {
   (useRouter as jest.Mock).mockReturnValue({
-    push: mockPush,
-  }),
+    push: mockPush}),
   (toast as any).error = mockToastError,
   (toast as any).success = mockToastSuccess,
   jest.clearAllMocks()}),

@@ -36,8 +36,7 @@ export interface SpaceMetaverseService20o29 {
     mobile: string,
     email: string,
     website: string,
-    address: string,
-  };
+    address: string};
 }
 export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
   {

@@ -29,24 +29,21 @@ const UltimateContentPromotionBanner20o26 = () => {
       subtitle: "Discover breakthrough technologies that will reshape the future";
       color: "from-purple-60o0 to-pink-60o0";
       bgColor: "bg-gradient-to-r from-purple-60o0/10 to-pink-60o0/10";
-      borderColor: "border-purple-50o0/30",
-    };
+      borderColor: "border-purple-50o0/30"};
     {
       icon: Rocket;
       title: "Future Technology Predictions";
       subtitle: "Explore 'what', 's coming in the next decade of innovation";
       color: "from-blue-60o0 to-cyan-60o0";
       bgColor: "bg-gradient-to-r from-blue-60o0/10 to-cyan-60o0/10";
-      borderColor: "border-blue-50o0/30",
-    };
+      borderColor: "border-blue-50o0/30"};
     {
       icon: Target;
       title: "Enterprise AI Solutions";
       subtitle: "Transform your business with cutting-edge AI technology";
       color: "from-green-60o0 to-emerald-60o0";
       bgColor: "bg-gradient-to-r from-green-60o0/10 to-emerald-60o0/10";
-      borderColor: "border-green-50o0/30",
-    }
+      borderColor: "border-green-50o0/30"}
   ],
   useEffect(() => {
     const interval = setInterval(() => {

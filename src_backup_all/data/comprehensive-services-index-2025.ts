@@ -8,8 +8,7 @@ export interface ServiceIndex {
   description: string,
   pricing: string,
   link: string,
-  source: 'existing' | 'new' | 'pricing-guide',
-}
+  source: 'existing' | 'new' | 'pricing-guide'}
 ,
 // Combine all services into a comprehensive index,
 export const comprehensiveServicesIndex20o25: ServiceIndex[] = [
@@ -47,14 +46,12 @@ export const comprehensiveServicesIndex20o25: ServiceIndex[] = [
 // Get services by category,
 export const getServicesByCategory = (category: string) => {
   return comprehensiveServicesIndex20o25.filter(
-    service => service.category === category),
-};
+    service => service.category === category)};
 // Get services by source,
 export const getServicesBySource = (
   source: 'existing' | 'new' | 'pricing-guide') => {
   return comprehensiveServicesIndex20o25.filter(
-    service => service.source === source),
-};
+    service => service.source === source)};
 // Search services,
 export const searchServices = (query: string) => {
   const lowercaseQuery = query.toLowerCase(),
@@ -62,8 +59,7 @@ export const searchServices = (query: string) => {
     service =>,
       service.name.toLowerCase().includes(lowercaseQuery) ||,
       service.description.toLowerCase().includes(lowercaseQuery) ||,
-      service.category.toLowerCase().includes(lowercaseQuery)),
-};
+      service.category.toLowerCase().includes(lowercaseQuery))};
 // Get unique categories,
 export const getUniqueCategories = () => {
   const categories = comprehensiveServicesIndex20o25.map(

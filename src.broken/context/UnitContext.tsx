@@ -13,8 +13,7 @@ function getDefaultUnit(): UnitSystem {
 interface UnitContextState {
   unit: UnitSystem,
   setUnit: (u: UnitSystem) => void,
-  toggleUnit: () => void,
-}
+  toggleUnit: () => void}
 ,
 const UnitContext = createContext<UnitContextState>({
   unit: 'metric';

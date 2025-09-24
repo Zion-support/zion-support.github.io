@@ -24,7 +24,6 @@ import { Badge } from '@/components / ui / badge',
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from './lucide-react',
 import {supabase} from '@/integrations / supabase / client',
 import {ModelConfig} from '@/utils / zion - gpt',
-,
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
   errorMessage?: string,
@@ -70,9 +69,7 @@ if (throw error) {
         purpose: model.purpose;
         active: model.active;
         training_status: model.training_status;
-        error_message: model.error_message,
-      }))),
-} catch (error) {
+        error_message: model.error_message})))} catch (error) {
       console.error ('Error fetching models:', error)} finally {
       setIsLoading (false)}
   }
@@ -101,8 +98,7 @@ if (throw error) {
           error_message: data.error || null;
           // If training succeeded, automatically set to active,
           ...(data.status === 'succeeded' ? { active: true } : {})}),
-        .eq ('id', model_id),
-} catch (error) {
+        .eq ('id', model_id)} catch (error) {
       console.error (`Error checking status for model ${model_id}:`, error)} finally {
       setActiveJobs (prev => ({ ...prev, [model_id]: false }))}
   }
@@ -156,8 +152,7 @@ export function ZionGPTModelManager() {
         purpose: model && model.purpose;
         active: model && model.active;
         trainingStatus: model && model.training_status;
-        errorMessage: model && model.error_message,
-      })))} catch (error) {
+        errorMessage: model && model.error_message})))} catch (error) {
       console && console.error('Error fetching models:', error)} finally {
       setIsLoading(false)}
   };
@@ -183,8 +178,7 @@ export function ZionGPTModelManager() {
           error_message: data && data.error || null;
           // If training succeeded, automatically set to active,
           ...(data && data.status === 'succeeded' ? { active: true } : {})}),
-        .eq('id', modelId),
-} catch (error) {
+        .eq('id', modelId)} catch (error) {
       console && console.error(`Error checking status for model ${modelId}:`, error)} finally {
       setActiveJobs(prev => ({ ...prev, [modelId]: false }))}
   };

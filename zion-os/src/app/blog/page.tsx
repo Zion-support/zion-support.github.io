@@ -229,8 +229,7 @@ export default function BlogPage() {
                     className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors duration-20o0 ${
                       category.active,
                         ? 'bg-blue-10o0 text-blue-80o0 border border-blue-20o0',
-                        : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0',
-                    }`}
+                        : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0'}`}
                   >,
                     <span className='font-medium'>{category.name}</span>,
                     <span className='bg-gray-20o0 text-gray-70o0 text-sm px-2 py-1 rounded-full'>,

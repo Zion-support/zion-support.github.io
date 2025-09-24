@@ -56,13 +56,11 @@ interface AutomationSolution {
   pricing: {
     starter: string,
     professional: string,
-    enterprise: string,
-  };
+    enterprise: string};
   roi: string,
   implementation: string,
   isPopular?: boolean,
-  isNew?: boolean,
-}
+  isNew?: boolean}
 ,
 const EnterpriseAutomationSolutions20o25: React.FC = () => {
   const [selectedSolutionsetSelectedSolution] = useState<string | null>(null),
@@ -98,12 +96,10 @@ const EnterpriseAutomationSolutions20o25: React.FC = () => {
       pricing: {
         starter: '$50o0/month';
         professional: '$1,50o0/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       roi: '30o0% ROI in 6 months';
       implementation: '4-6 weeks';
-      isPopular: true,
-    };
+      isPopular: true};
     {
       id: 'data-pipeline';
       name: 'Data Pipeline Automation';
@@ -125,11 +121,9 @@ const EnterpriseAutomationSolutions20o25: React.FC = () => {
       pricing: {
         starter: '$80o0/month';
         professional: '$2,0o00/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       roi: '250% ROI in 4 months';
-      implementation: '6-8 weeks',
-    };
+      implementation: '6-8 weeks'};
     {
       id: 'customer-service';
       name: 'Customer Service Automation';
@@ -151,12 +145,10 @@ const EnterpriseAutomationSolutions20o25: React.FC = () => {
       pricing: {
         starter: '$30o0/month';
         professional: '$80o0/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       roi: '40o0% ROI in 3 months';
       implementation: '2-4 weeks';
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'financial-automation';
       name: 'Financial Process Automation';
@@ -178,11 +170,9 @@ const EnterpriseAutomationSolutions20o25: React.FC = () => {
       pricing: {
         starter: '$40o0/month';
         professional: '$1,20o0/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       roi: '350% ROI in 5 months';
-      implementation: '4-6 weeks',
-    };
+      implementation: '4-6 weeks'};
     {
       id: 'hr-automation';
       name: 'HR Process Automation';
@@ -204,11 +194,9 @@ const EnterpriseAutomationSolutions20o25: React.FC = () => {
       pricing: {
         starter: '$60o0/month';
         professional: '$1,80o0/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       roi: '280% ROI in 6 months';
-      implementation: '6-8 weeks',
-    };
+      implementation: '6-8 weeks'};
     {
       id: 'analytics-dashboard';
       name: 'Business Intelligence Automation';
@@ -230,11 +218,9 @@ const EnterpriseAutomationSolutions20o25: React.FC = () => {
       pricing: {
         starter: '$50o0/month';
         professional: '$1,50o0/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       roi: '320% ROI in 4 months';
-      implementation: '3-5 weeks',
-    }
+      implementation: '3-5 weeks'}
   ],
   const filteredSolutions = solutions.filter(solution =>,
     activeCategory === 'all' || solution.category === activeCategory),
@@ -293,8 +279,7 @@ const EnterpriseAutomationSolutions20o25: React.FC = () => {
               className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-blue-50o0 text-white shadow-lg shadow-blue-50o0/25',
-                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-              }`}
+                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -314,8 +299,7 @@ const EnterpriseAutomationSolutions20o25: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover: bg-white/10 transition-all duration-30o0 cursor-pointer group ${
-                    selectedSolution === solution.id ? 'ring-2 ring-blue-50o0' : '',
-                  }`}
+                    selectedSolution === solution.id ? 'ring-2 ring-blue-50o0' : ''}`}
                   onClick={() => setSelectedSolution(solution.id)}
                 >,
                   <div className="flex items-start justify-between mb-4">,

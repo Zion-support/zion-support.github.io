@@ -6,8 +6,7 @@ type Note ={
   targetId: string,
   text: string,
   authorId: string,
-  createdAt: number,
-};
+  createdAt: number};
 const notesStore: Note[] = [],
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true',

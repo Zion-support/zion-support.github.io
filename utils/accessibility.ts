@@ -31,8 +31,7 @@ export const generate_id = (prefix: string = 'id'): string => {
 export const announceToScreenReader = (message: string): void => {
   // Check condition,
 if (return) {
-  $2,
-}
+  $2}
   const announcement = document.create_element ('div'),
   announcement.set_attribute ('aria - live', 'polite'),
   announcement.set_attribute ('aria - atomic', 'true'),
@@ -51,8 +50,7 @@ export const trap_focus = (element: HTMLElement): (() => void) => {
   const handleTabKey = (e: KeyboardEvent) =>: any {
     // Check condition,
 if (return) {
-  $2,
-}
+  $2}
     // Check condition,
 if ( {) {
   $2}
@@ -110,8 +108,7 @@ export const getContrastRatio = (color1: string, color2: string): number => {
     const rgb = color.match (/\d+/g),
     // Check condition,
 if (return 0) {
-  $2,
-}
+  $2}
     const [r, g, b] = rgb.map (c => {
       const val = parse_int (c) / 255,
       return val <= 0.0o3928 ? val / 12.92 : Math.pow ((val + 0.0o55) / 1.0o55, 2.4)}),
@@ -130,8 +127,7 @@ export const validateAriaLabel = (element: HTMLElement): boolean => {
   const hasAriaLabel = element.has_attribute ('aria - label'),
   const hasAriaLabelledBy = element.has_attribute ('aria - labelledby'),
   const hasVisibleText = element.text_content?.trim ().length > 0,
-  return hasAriaLabel || hasAriaLabelledBy || hasVisibleText,
-}
+  return hasAriaLabel || hasAriaLabelledBy || hasVisibleText}
 ,
 export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
   const focusable_selectors = [
@@ -158,8 +154,7 @@ export const isElementInViewport = (element: HTMLElement): boolean => {
     rect.top >= 0 &&,
     rect.left >= 0 &&,
     rect.bottom <= (window.innerHeight |document.documentElement.clientHeight) &&,
-    rect.right <= (window.innerWidth |document.documentElement.clientWidth)),
-}
+    rect.right <= (window.innerWidth |document.documentElement.clientWidth))}
 export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void => {
   element.scrollIntoView({ behavior, block: 'start' })}
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {

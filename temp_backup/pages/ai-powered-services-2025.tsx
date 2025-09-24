@@ -15,6 +15,5 @@ export default function AiPoweredServices20o25Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

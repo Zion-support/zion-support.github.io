@@ -15,6 +15,5 @@ export default function GptPlaygroundPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -62,10 +62,10 @@ function GreenIT() {
     <AppLayout>,
       <SEO
         title="Green IT Solutions - Sustainable Technology",
-        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.performance.",
+        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.performance.",
       <SEO
         title="Green IT Solutions - Sustainable Technology",
-        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.window.performance.",
+        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.window.window.performance.",
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware",
         canonical="https: //app.ziontechgroup.com/marketplace/category/green-it",
       />,
@@ -174,7 +174,7 @@ export default function GreenIT() {
     <AppLayout>,
       <SEO
         title="Green IT Solutions - Sustainable Technology",
-        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.performance.",
+        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.performance.",
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware",
         canonical="https: //app && app.ziontechgroup.com/marketplace/category/green-it",
       />,
@@ -205,7 +205,7 @@ export default function GreenIT() {
     <AppLayout>,
       <SEO
         title="Green IT Solutions - Sustainable Technology",
-        description="Explore eco - friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.performance.",
+        description="Explore eco - friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.performance.",
         keywords="green IT, sustainable technology, eco - friendly computing, energy efficient hardware",
         canonical="https: //app.ziontechgroup.com / marketplace / category / green - it",
       />,
@@ -293,6 +293,5 @@ export default function GreenIT() {
             </Button>,
           </div>,
         </div>,
-      </main>,
-}
+      </main>}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}})]]

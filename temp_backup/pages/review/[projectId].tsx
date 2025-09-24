@@ -6,8 +6,7 @@ type Props = {
   fromRole: 'client' | 'talent',
   fromId: string,
   valid: boolean,
-  reason?: string,
-};
+  reason?: string};
 const ReviewSubmitPage: NextPage<Props> = ({
   projectId;
   fromRole;

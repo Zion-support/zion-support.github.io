@@ -37,20 +37,17 @@ const BusinessSolutionsShowcase20o27PromotionBanner = () => {
       title: "Enterprise Solutions";
       description: "Comprehensive enterprise-grade solutions";
       icon: Building2;
-      color: "from-blue-60o0 to-indigo-60o0",
-    };
+      color: "from-blue-60o0 to-indigo-60o0"};
     {
       title: "Startup Solutions",
       description: "Rapid deployment for growing startups";
       icon: Rocket;
-      color: "from-green-60o0 to-emerald-60o0",
-    };
+      color: "from-green-60o0 to-emerald-60o0"};
     {
       title: "SMB Solutions";
       description: "Affordable yet powerful for SMBs";
       icon: Users;
-      color: "from-purple-60o0 to-pink-60o0",
-    }
+      color: "from-purple-60o0 to-pink-60o0"}
   ],
   const features = [
     "AI-Powered Business Intelligence";

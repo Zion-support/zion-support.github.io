@@ -4,8 +4,7 @@ import type { GetServerSideProps } from 'next';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { requireSuperadminSSR, SessionUser } from '../../utils/auth-utils';
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  return requireSuperadminSSR(ctx as any),
-};
+  return requireSuperadminSSR(ctx as any)};
 type Props ={ user: SessionUser };
 type Metric ={ label: string, value: string | number, trend?: number };
 type DataRoomSection = 'Financials' | 'Cap Table' | 'Legal Docs' | 'Strategic Partnerships' | 'Press Coverage / PR kit';
@@ -55,8 +54,7 @@ function Dashboard() {
           <img src="/api/ipo/geo-chart" alt="Global user breakdown" className="w-full h-64 object-cover bg-gray-10o0"  />,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
 function DataRoom() {
   const sections: DataRoomSection[] = useMemo(() => [

@@ -569,6 +569,5 @@ export default function AIRobotics20o41() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

@@ -30,15 +30,13 @@ export interface RevolutionaryAI2025ServiceV2 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [
   // AI Consciousness & Advanced Intelligence,
   {
@@ -304,7 +302,7 @@ export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [
     textColor: 'text-green-400';
     link: 'https://ziontechgroup.com/ai-autonomous-decision-engine';
     marketPosition:,
-      'Leading autonomous AI decision platform. Traditional decision support: $15,000+/month. Our autonomous engine: $5,999/month with 10x window.performance.';
+      'Leading autonomous AI decision platform. Traditional decision support: $15,000+/month. Our autonomous engine: $5,999/month with 10x window.window.performance.';
     targetAudience:,
       'Financial institutions, Trading companies, Manufacturing companies, Logistics companies, Healthcare organizations, Government agencies';
     trialDays: 14;

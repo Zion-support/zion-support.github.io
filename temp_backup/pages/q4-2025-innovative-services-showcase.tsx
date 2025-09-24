@@ -20,6 +20,5 @@ export default function Q420o25InnovativeServicesShowcasePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

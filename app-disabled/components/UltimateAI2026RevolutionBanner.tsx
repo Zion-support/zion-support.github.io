@@ -119,6 +119,5 @@ export default function UltimateAI20o26RevolutionBanner() {
           </p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

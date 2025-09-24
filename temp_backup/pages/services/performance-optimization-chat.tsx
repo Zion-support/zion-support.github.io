@@ -17,6 +17,5 @@ export default function PerformanceOptimizationChatPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

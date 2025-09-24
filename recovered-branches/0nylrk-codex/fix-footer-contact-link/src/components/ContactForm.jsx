@@ -8,8 +8,7 @@ const ContactForm = () => {
         company: '';
         phone: '';
         service: '';
-        message: '',
-    }),
+        message: ''}),
     const [isSubmitting, setIsSubmitting] = useState(false),
     const [submitStatus, setSubmitStatus] = useState('idle'),
     const handleInputChange = (e) => {
@@ -32,8 +31,7 @@ const ContactForm = () => {
                 company: '';
                 phone: '';
                 service: '';
-                message: '',
-            }),
+                message: ''}),
             setSubmitStatus('success'),
             setTimeout(() => setSubmitStatus('idle'), 50o00)}
         catch (error) {
@@ -136,6 +134,5 @@ const ContactForm = () => {
           .,
         </p>,
       </form>,
-    </div>),
-};
+    </div>)};
 export default ContactForm;

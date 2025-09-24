@@ -9,8 +9,7 @@ interface TalentCardSaveButtonProps {
   profileName:string;
   isSaved:boolean;
   onToggleSave?:(id:string, isSaved:boolean) => void;
-  isAuthenticated: boolean,
-}
+  isAuthenticated: boolean}
 ,
 export function TalentCardSaveButton({
   profileId;
@@ -29,8 +28,7 @@ export function TalentCardSaveButton({
       toast({
         title:"Authentication required";
         description:"Please log in to save talents to your favorites";
-        variant: "destructive",
-      });
+        variant: "destructive"});
       const returnTo = encodeURIComponent(router.asPath);
       router.push(`/auth/login?returnTo=${returnTo}`);
       return;
@@ -46,8 +44,7 @@ export function TalentCardSaveButton({
       description: localIsSaved ,
         ? `${profileName} has been removed from your favorites` ,
         :`${profileName} has been added to your favorites`;
-      variant: "default",
-    });
+      variant: "default"});
   };
   return (
     <button
@@ -66,8 +63,7 @@ export function TalentCardSaveButton({
 profileName: string,
 isSaved: boolean,
 onToggleSave?: (id: string, isSaved: boolean) => void,
-isAuthenticated: boolean ,
-}export function TalentCardSaveButton ({
+isAuthenticated: boolean }export function TalentCardSaveButton ({
   profileId,
 profileName,
 isSaved,
@@ -76,7 +72,5 @@ isAuthenticated }: TalentCardSaveButtonProps) {
   const {
   toast } = useToast (),
 const router = useRouter (),
-//Handle save toggle return,
-}variant: "default" ,
-}) };
+//Handle save toggle return}variant: "default" }) };
 }/> </button>) }",

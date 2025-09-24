@@ -6,8 +6,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         enableTracking: true;
         enablePerformanceTracking: true;
         enableUserBehaviorTracking: true;
-        enableHeatmapTracking: false,
-    }),
+        enableHeatmapTracking: false}),
     const [isExpanded, setIsExpanded] = useState(false),
     const [selectedTimeRange, setSelectedTimeRange] = useState('24h'),
     const [analyticsSummary, setAnalyticsSummary] = useState(null),
@@ -39,8 +38,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             return [],
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({
             category;
-            count: count,
-        }))};
+            count: count}))};
     // Get performance score,
     const getPerformanceScore = () => {
         if (!performanceMetrics),
@@ -251,19 +249,16 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         <div className="flex gap-2">,
           <button onClick={() => {
             handleDashboardInteraction('refresh_clicked'),
-            updateAnalyticsSummary(),
-        }} className="flex-1 px-3 py-2 bg-blue-50o0 hover: bg-blue-60o0 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2">,
+            updateAnalyticsSummary()}} className="flex-1 px-3 py-2 bg-blue-50o0 hover: bg-blue-60o0 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2">,
             <RefreshCw className="w-4 h-4" />,
             Refresh Data,
           </button>,
           <button onClick={() => {
             handleTrackConversion(),
-            handleDashboardInteraction('conversion_tracked'),
-        }} className="px-3 py-2 bg-green-50o0 hover: bg-green-60o0 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">,
+            handleDashboardInteraction('conversion_tracked')}} className="px-3 py-2 bg-green-50o0 hover: bg-green-60o0 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">,
             <Target className="w-4 h-4" />,
             Track Goal,
           </button>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};

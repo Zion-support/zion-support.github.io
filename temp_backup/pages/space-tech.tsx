@@ -274,7 +274,6 @@ export default function SpaceTech() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,
 export default SpaceTech;

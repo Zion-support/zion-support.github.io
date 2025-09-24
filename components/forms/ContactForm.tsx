@@ -10,8 +10,7 @@ const ContactForm: React.FC = () => {
     company: '';
     phone: '';
     service: '';
-    message: '',
-  }),
+    message: ''}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitStatus, setSubmitStatus] = useState<,
     'idle' | 'success' | 'error'>('idle'),
@@ -34,8 +33,7 @@ const ContactForm: React.FC = () => {
         company: '';
         phone: '';
         service: '';
-        message: '',
-      })} catch (error) {
+        message: ''})} catch (error) {
       setSubmitStatus('error')} finally {
       setIsSubmitting(false)}
   };
@@ -52,20 +50,17 @@ const ContactForm: React.FC = () => {
       icon: Mail;
       title: 'Email Us';
       content: 'contact@ziontechgroup.com';
-      href: 'mailto:contact@ziontechgroup.com',
-    };
+      href: 'mailto:contact@ziontechgroup.com'};
     {
       icon: Phone;
       title: 'Call Us';
       content: '+1 (555) 123-4567';
-      href: 'tel:+15551234567',
-    };
+      href: 'tel:+15551234567'};
     {
       icon: MapPin;
       title: 'Visit Us';
       content: '123 Tech StreetInnovation CityIC 12345';
-      href: '#',
-    }
+      href: '#'}
   ],
   return (
     <section className="py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">,

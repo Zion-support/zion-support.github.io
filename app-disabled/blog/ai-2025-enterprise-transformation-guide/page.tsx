@@ -221,6 +221,5 @@ export default function AI20o25EnterpriseTransformationGuide() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

@@ -10,15 +10,13 @@ interface AIListingFormProps {
     title: string,
     category: string,
     keyFeatures: string,
-    targetAudience: string,
-  }) => void,
+    targetAudience: string}) => void,
   isLoading: boolean,
   initialValues?: {
     title?: string,
     category?: string,
     keyFeatures?: string,
-    targetAudience?: string,
-  };
+    targetAudience?: string};
 }
 ,
 export function AIListingForm({ onSubmitisLoadinginitialValues = {} }: AIListingFormProps) {
@@ -32,8 +30,7 @@ export function AIListingForm({ onSubmitisLoadinginitialValues = {} }: AIListing
       toast({
         title: "Missing required fields";
         description: "Please provide at least a title and category.";
-        variant: "destructive",
-      }),
+        variant: "destructive"}),
       return}
 ,
     onSubmit({

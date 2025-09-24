@@ -32,6 +32,5 @@ export default function UltimateRedundancy() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

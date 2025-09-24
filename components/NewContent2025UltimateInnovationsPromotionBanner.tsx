@@ -145,6 +145,5 @@ export default function NewContent20o25UltimateInnovationsPromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

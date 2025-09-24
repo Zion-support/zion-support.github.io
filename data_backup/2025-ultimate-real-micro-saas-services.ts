@@ -91,8 +91,7 @@ reviews: number,export const ultimateRealMicroSaasServices20o25: UltimateRealMic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Cloud-native SaaS platform with AI algorithms for customer behavior analysis, churn prediction, and automated success workflows.';
@@ -153,8 +152,7 @@ reviews: number,export const ultimateRealMicroSaasServices20o25: UltimateRealMic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise-grade SaaS platform with AI algorithms for supply chain optimization, real-time monitoring, and predictive analytics.';
@@ -215,8 +213,7 @@ reviews: number,export const ultimateRealMicroSaasServices20o25: UltimateRealMic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Cloud-native SaaS platform with AI algorithms for financial forecasting, automated planning, and intelligent financial insights.';
@@ -277,8 +274,7 @@ reviews: number,export const ultimateRealMicroSaasServices20o25: UltimateRealMic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise SaaS platform with AI algorithms for HR analytics, predictive modeling, and intelligent workforce insights.';
@@ -339,8 +335,7 @@ reviews: number,export const ultimateRealMicroSaasServices20o25: UltimateRealMic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Cloud-native SaaS platform with AI algorithms for sales intelligence, lead scoring, and automated sales workflows.';
@@ -401,8 +396,7 @@ reviews: number,export const ultimateRealMicroSaasServices20o25: UltimateRealMic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise-grade SaaS platform with advanced AI algorithms for decision modeling, predictive analytics, and business intelligence.';
@@ -463,8 +457,7 @@ reviews: number,export const ultimateRealMicroSaasServices20o25: UltimateRealMic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Cloud-native SaaS platform with AI algorithms for content generation, optimization, and multi-channel automation.';
@@ -525,8 +518,7 @@ reviews: number,export const ultimateRealMicroSaasServices20o25: UltimateRealMic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Intelligent SaaS platform that enhances existing CRM systems with AI-powered analytics, automation, and predictive insights.';
@@ -589,8 +581,7 @@ reviews: number,export const ultimateRealMicroSaasServices20o25: UltimateRealMic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   SDKs, OTel collectors, prebuilt dashboards and alert policies with guided onboarding.';
@@ -653,8 +644,7 @@ reviews: number,export const ultimateRealMicroSaasServices20o25: UltimateRealMic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Scanner engine with OpenAPI import, CI integration and dashboards.';
@@ -717,8 +707,7 @@ reviews: number,export const ultimateRealMicroSaasServices20o25: UltimateRealMic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   DNS checks, webhook ingestion and scoring dashboards.';
@@ -780,8 +769,7 @@ reviews: number,export const ultimateRealMicroSaasServices20o25: UltimateRealMic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   DNS polling and event rules with alerting and audits.';
@@ -844,8 +832,7 @@ reviews: number,export const ultimateRealMicroSaasServices20o25: UltimateRealMic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Cluster scanner, rules engine and policy generator with CI.';
@@ -908,8 +895,7 @@ reviews: number,export const ultimateRealMicroSaasServices20o25: UltimateRealMic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Ingest cloud billing, generate recs and automate remediation via tags and policies.';
@@ -972,8 +958,7 @@ reviews: number,export const ultimateRealMicroSaasServices20o25: UltimateRealMic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Runbook engine with chatops integrations, ownership model and templates.';
@@ -1036,8 +1021,7 @@ reviews: number,export const ultimateRealMicroSaasServices20o25: UltimateRealMic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Headless Chromium rendering service with queue and storage.';
@@ -1100,8 +1084,7 @@ reviews: number,export const ultimateRealMicroSaasServices20o25: UltimateRealMic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   SLO engine with burn rate policies and dashboards.';
@@ -1164,8 +1147,7 @@ reviews: number,export const ultimateRealMicroSaasServices20o25: UltimateRealMic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   JS SDK for RUM with ingestion and analytics UI.';

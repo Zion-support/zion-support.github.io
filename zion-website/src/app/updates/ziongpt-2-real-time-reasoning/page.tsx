@@ -40,6 +40,5 @@ export default function UpdateZionGPT2() {
           </a>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

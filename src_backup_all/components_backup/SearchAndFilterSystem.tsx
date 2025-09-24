@@ -25,22 +25,19 @@ interface SearchResult {
   location?: string,
   date?: string,
   rating?: number,
-  type: 'service' | 'article' | 'team' | 'technology',
-}
+  type: 'service' | 'article' | 'team' | 'technology'}
 ,
 interface FilterOption {
   id: string,
   label: string,
   value: string,
-  count: number,
-}
+  count: number}
 ,
 interface SearchAndFilterSystemProps {
   data: SearchResult[],
   onResultsChange?: (results: SearchResult[]) => void,
   placeholder?: string,
-  showFilters?: boolean,
-}
+  showFilters?: boolean}
 ,
 export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   data;
@@ -107,8 +104,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
         break,
       default: // relevance,
         // Keep original order for relevance,
-        break,
-    }
+        break}
 ,
     return results}, [data, searchQuery, selectedCategory, activeFilters, sortBy]),
   // Update parent component with results,
@@ -118,8 +114,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   const toggleFilter = (filterId: string) => {
     const newFilters = new Set(activeFilters),
     if (newFilters.has(filterId)) {
-      newFilters.delete(filterId),
-    } else {
+      newFilters.delete(filterId)} else {
       newFilters.add(filterId)}
     setActiveFilters(newFilters)};
   // Clear all filters,
@@ -134,8 +129,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       case 'article': return <Tag className="w-4 h-4"  />,
       case 'team': return <Users className="w-4 h-4"  />,
       case 'technology': return <Brain className="w-4 h-4"  />,
-      default: return <Globe className="w-4 h-4"  />,
-    }
+      default: return <Globe className="w-4 h-4"  />}
   };
   // Get category color,
   const getCategoryColor = (category: string) => {
@@ -233,8 +227,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-30o0 ${
               showFilterPanel,
                 ? 'bg-zion-cyan text-white',
-                : 'bg-zinc-90o0/50 text-zinc-30o0 hover: text-white border border-zinc-70o0/50',
-            }`}
+                : 'bg-zinc-90o0/50 text-zinc-30o0 hover: text-white border border-zinc-70o0/50'}`}
           >,
             <Filter className="w-4 h-4"  />,
             Filters,
@@ -292,8 +285,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                         className={`px-3 py-1 text-xs rounded-full transition-all duration-30o0 ${
                           activeFilters.has(tag.toLowerCase()),
                             ? 'bg-zion-cyan text-white',
-                            : 'bg-zinc-80o0/50 text-zinc-30o0 hover: bg-zinc-70o0/50',
-                        }`}
+                            : 'bg-zinc-80o0/50 text-zinc-30o0 hover: bg-zinc-70o0/50'}`}
                       >,
                         {tag}
                       </button>))}

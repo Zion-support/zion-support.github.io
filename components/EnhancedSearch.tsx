@@ -14,22 +14,19 @@ interface SearchResult {
   relevance: number,
   lastUpdated: string,
   tags: string[],
-  type: 'service' | 'page' | 'blog' | 'case-study',
-}
+  type: 'service' | 'page' | 'blog' | 'case-study'}
 ,
 interface SearchFilters {
   category: string[],
   type: string[],
   dateRange: 'all' | 'week' | 'month' | 'year',
-  relevance: 'all' | 'high' | 'medium' | 'low',
-}
+  relevance: 'all' | 'high' | 'medium' | 'low'}
 ,
 interface EnhancedSearchProps {
   placeholder?: string,
   showFilters?: boolean,
   onSearch?: (query: string, filters: SearchFilters) => void,
-  onResultClick?: (result: SearchResult) => void,
-}
+  onResultClick?: (result: SearchResult) => void}
 ,
 const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
   placeholder = "Search for AI, Quantum, Space Tech solutions...";
@@ -44,8 +41,7 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
     category: [];
     type: [];
     dateRange: 'all';
-    relevance: 'all',
-  }),
+    relevance: 'all'}),
   const [recentSearches, setRecentSearches] = useState<string[]>([]),
   const [popularSearches, setPopularSearches] = useState<string[]>([]),
   const searchInputRef = useRef<HTMLInputElement>(null),
@@ -61,8 +57,7 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
       relevance: 0.95;
       lastUpdated: '20o24-08-23';
       tags: ['AI', 'Quantum', 'Neuroscience', 'Brain-Computer Interface'];
-      type: 'service',
-    };
+      type: 'service'};
     {
       id: '2';
       title: 'Holographic Quantum Workspace 20o45';
@@ -72,8 +67,7 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
       relevance: 0.92;
       lastUpdated: '20o24-08-22';
       tags: ['Quantum', 'Holographic', '3D', 'Productivity'];
-      type: 'service',
-    };
+      type: 'service'};
     {
       id: '3';
       title: 'AI Autonomous Business Operations';
@@ -83,8 +77,7 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
       relevance: 0.89;
       lastUpdated: '20o24-08-21';
       tags: ['AI', 'Automation', 'Business', 'Operations'];
-      type: 'service',
-    };
+      type: 'service'};
     {
       id: '4';
       title: 'Space Resource Intelligence Platform';
@@ -94,8 +87,7 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
       relevance: 0.87;
       lastUpdated: '20o24-08-20';
       tags: ['Space', 'AI', 'Resources', 'Intelligence'];
-      type: 'service',
-    };
+      type: 'service'};
     {
       id: '5';
       title: 'Quantum Cybersecurity Platform';
@@ -105,8 +97,7 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
       relevance: 0.85;
       lastUpdated: '20o24-08-19';
       tags: ['Quantum', 'Cybersecurity', 'Security', 'Platform'];
-      type: 'service',
-    }
+      type: 'service'}
   ],
   // Popular searches,
   const popularSearchesData = [
@@ -146,8 +137,7 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
     setQuery(value),
     // Clear previous timeout,
     if (searchTimeoutRef.current) {
-      clearTimeout(searchTimeoutRef.current),
-    }
+      clearTimeout(searchTimeoutRef.current)}
 ,
     // Debounce search,
     if (value.trim()) {
@@ -184,8 +174,7 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
         localStorage.setItem('recent-searches', JSON.stringify(newRecentSearches))}
 ,
       // Call onSearch callback,
-      onSearch?.(searchQuery, filters),
-} catch (error) {
+      onSearch?.(searchQuery, filters)} catch (error) {
       // Search failed,
       setResults([])} finally {
       setIsSearching(false)}
@@ -211,13 +200,11 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
   // Handle popular search click,
   const handlePopularSearchClick = useCallback((popularSearch: string) => {
     setQuery(popularSearch),
-    performSearch(popularSearch),
-  }, [performSearch]),
+    performSearch(popularSearch)}, [performSearch]),
   // Handle recent search click,
   const handleRecentSearchClick = useCallback((recentSearch: string) => {
     setQuery(recentSearch),
-    performSearch(recentSearch),
-  }, [performSearch]),
+    performSearch(recentSearch)}, [performSearch]),
   // Clear search,
   const clearSearch = useCallback(() => {
     setQuery(''),
@@ -228,8 +215,7 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        setIsOpen(false),
-      }
+        setIsOpen(false)}
     };
     document.addEventListener('keydown', handleEscape),
     return () => document.removeEventListener('keydown', handleEscape)}, []),
@@ -237,8 +223,7 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (searchInputRef.current && !searchInputRef.current.contains(e.target as Node)) {
-        setIsOpen(false),
-      }
+        setIsOpen(false)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),

@@ -17,8 +17,7 @@ async function listProducts(options ={}) {
   const { page = 1, limit = 20, category, sortBy, ...otherFilters } = options,
   const queryParams = new URLSearchParams({
     page: page.toString();
-    limit: limit.toString(),
-  }),
+    limit: limit.toString()}),
   if (category) {
     queryParams.append('category', category), // Backend expects a category' query param'  }
   if (sortBy) {
@@ -70,8 +69,7 @@ async function submitQuoteRequest(quoteDetails) {
 ,
   const response = await fetch('/api/quotes', {'    method: 'POST',    headers: {
       Content-Type': application/json'};
-    body: JSON.stringify(quoteDetails),
-  }),
+    body: JSON.stringify(quoteDetails)}),
   const responseData = await response.json(),
   if (!response.ok || !responseData.success) {
     // If responseData.success is false but response.ok is true, it's a business logic error from the API'    throw new Error(responseData.error || responseData.message || `Failed to submit quote request. Status: ${response.status}`)}
@@ -114,8 +112,7 @@ async function listJobs(options ={}) {
   const { page = 1, limit = 20, ...filters } = options,
   const params = new URLSearchParams({
     page: page.toString();
-    limit: limit.toString(),
-  }),
+    limit: limit.toString()}),
   for (const [key, value] of Object.entries(filters)) {
     if (value !== undefined && value !== null) {
       params.append(key, String(value))}
@@ -161,8 +158,7 @@ async function listTalent(options ={}) {
   const { page = 1, limit = 20, ...filters } = options,
   const params = new URLSearchParams({
     page: page.toString();
-    limit: limit.toString(),
-  }),
+    limit: limit.toString()}),
   for (const [key, value] of Object.entries(filters)) {
     if (value !== undefined && value !== null) {
       params.append(key, String(value))}

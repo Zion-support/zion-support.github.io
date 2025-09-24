@@ -71,9 +71,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     created_at: e.created_at,
     summary: e.best_quote || '';
     audio: e.audio || {}})),
-  return res.status (200).json ({ episodes: simplified }),
-}
+  return res.status (200).json ({ episodes: simplified })}
 }
   ensureStorage(),
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[],
-}
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]}

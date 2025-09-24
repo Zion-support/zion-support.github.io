@@ -68,8 +68,7 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
                   className={`flex items-center space-x-2 text-sm font-medium transition-all duration-30o0 ${
                     activeSection === section.id,
                       ? 'text-cyan-40o0 border-b-2 border-cyan-40o0',
-                      : 'text-gray-30o0 hover: text-cyan-40o0',
-                  }`}
+                      : 'text-gray-30o0 hover: text-cyan-40o0'}`}
                 >,
                   <span>{section.icon}</span>,
                   <span>{section.label}</span>,
@@ -121,8 +120,7 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
                       className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-30o0 ${
                         activeSection === section.id,
                           ? 'bg-cyan-40o0/20 text-cyan-40o0',
-                          : 'text-gray-30o0 hover: bg-white/10',
-                      }`}
+                          : 'text-gray-30o0 hover: bg-white/10'}`}
                     >,
                       <span>{section.icon}</span>,
                       <span>{section.label}</span>,
@@ -252,8 +250,7 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
               <Suspense fallback={
                 <div className="h-80 bg-gray-80o0/50 rounded-2xl animate-pulse flex items-center justify-center">,
                   <div className="text-gray-40o0">Loading...</div>,
-                </div>,
-              }>,
+                </div>}>,
                 <UltraFuturisticServiceCard20o26
                   service={{
                     id: 'ai-ml';
@@ -265,8 +262,7 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
                     features: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'AI Ethics'];
                     popular: true;
                     category: 'AI';
-                    icon: '🧠',
-                  }}
+                    icon: '🧠'}}
                   variant="ai",
                  />,
               </Suspense>,
@@ -310,8 +306,7 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
               <Suspense fallback={
                 <div className="h-80 bg-gray-80o0/50 rounded-2xl animate-pulse flex items-center justify-center">,
                   <div className="text-gray-40o0">Loading...</div>,
-                </div>,
-              }>,
+                </div>}>,
                 <UltraFuturisticServiceCard20o26
                   service={{
                     id: 'process-automation';
@@ -323,8 +318,7 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
                     features: ['Workflow Automation', 'RPA', 'AI Integration', 'Analytics', 'Process Mining'];
                     popular: true;
                     category: 'Automation';
-                    icon: '⚡',
-                  }}
+                    icon: '⚡'}}
                   variant="automation",
                  />,
               </Suspense>,
@@ -343,8 +337,7 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
                     features: ['Post-Quantum Crypto', 'Quantum Key Distribution', 'Zero Trust', 'Compliance'];
                     popular: true;
                     category: 'Security';
-                    icon: '🔐',
-                  }}
+                    icon: '🔐'}}
                   variant="it",
                  />,
               </Suspense>,
@@ -531,43 +524,37 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
                   title: "AI & Machine Learning";
                   description: "Advanced artificial intelligence solutions for business transformation";
                   services: "50+ AI Services";
-                  color: "from-cyan-50o0 to-blue-60o0",
-                };
+                  color: "from-cyan-50o0 to-blue-60o0"};
                 {
                   icon: '⚛️';
                   title: "Quantum Technology";
                   description: "Breakthrough quantum computing and quantum-secure solutions";
                   services: "25+ Quantum Services";
-                  color: "from-purple-50o0 to-pink-60o0",
-                };
+                  color: "from-purple-50o0 to-pink-60o0"};
                 {
                   icon: '🛡️';
                   title: "Cybersecurity";
                   description: "Enterprise-grade security and compliance solutions";
                   services: "40+ Security Services";
-                  color: "from-red-50o0 to-orange-60o0",
-                };
+                  color: "from-red-50o0 to-orange-60o0"};
                 {
                   icon: '🌐';
                   title: "IT Infrastructure";
                   description: "Scalable and secure enterprise infrastructure solutions";
                   services: "35+ Infrastructure Services";
-                  color: "from-green-50o0 to-emerald-60o0",
-                };
+                  color: "from-green-50o0 to-emerald-60o0"};
                 {
                   icon: '📱';
                   title: "Micro SAAS";
                   description: "Innovative business solutions for modern enterprises";
                   services: "60+ Micro SAAS Services";
-                  color: "from-yellow-50o0 to-amber-60o0",
-                };
+                  color: "from-yellow-50o0 to-amber-60o0"};
                 {
                   icon: '🚀';
                   title: "Emerging Tech";
                   description: "Cutting-edge technologies for future-ready businesses";
                   services: "30+ Emerging Tech Services";
-                  color: "from-indigo-50o0 to-violet-60o0",
-                }
+                  color: "from-indigo-50o0 to-violet-60o0"}
               ].map((category, index) => (
                 <motion.div,
                   key={index}

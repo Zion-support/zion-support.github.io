@@ -89,8 +89,7 @@ reviews: number,export const innovativeITInfrastructureServices20o25: Innovative
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quantum-secure cloud infrastructure with post-quantum cryptography and quantum key distribution.';
@@ -137,7 +136,7 @@ reviews: number,export const innovativeITInfrastructureServices20o25: Innovative
   Kubernetes Edge, Docker Edge, MQTT, WebSocket, Redis, PostgreSQL, Node.js, Python'];
     integrations['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, Custom IoT platforms'];
     useCases['IoT deployment, Smart manufacturing, Retail analytics, Healthcare monitoring, Smart cities'];
-    "roi": 'IoT deployments achieve 30o0% ROI through reduced latency and improved window.performance.;
+    "roi": 'IoT deployments achieve 30o0% ROI through reduced latency and improved window.window.performance.;
     competitors[;
   AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'];
     "marketSize": '$15.8B edge computing market;
@@ -150,8 +149,7 @@ reviews: number,export const innovativeITInfrastructureServices20o25: Innovative
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Edge computing orchestration platform with intelligent workload distribution and edge-to-cloud synchronization.';
@@ -233,8 +231,7 @@ reviews: number,export const innovativeITInfrastructureServices20o25: Innovative
       address:;
   364 E Main St STE 10o08 Middletown DE 19709,
   ';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Neuromorphic computing infrastructure with brain-inspired neural architecture and ultra-efficient AI processing.,
@@ -319,8 +316,7 @@ reviews: number,export const innovativeITInfrastructureServices20o25: Innovative
       address:;
   364 E Main St STE 10o08 Middletown DE 19709,
   ';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Hybrid quantum-classical infrastructure with seamless resource orchestration and hybrid algorithm optimization.,
@@ -405,8 +401,7 @@ reviews: number,export const innovativeITInfrastructureServices20o25: Innovative
       address:;
   364 E Main St STE 10o08 Middletown DE 19709,
   ';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Autonomous data center management platform with AI-powered optimization and zero human intervention.,

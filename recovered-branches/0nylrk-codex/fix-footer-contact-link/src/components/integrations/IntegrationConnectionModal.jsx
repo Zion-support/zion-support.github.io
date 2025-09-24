@@ -10,8 +10,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
         autoCreateContacts: true;
         pushNotes: false;
         syncJobDetails: true;
-        syncApplicantData: true,
-    }),
+        syncApplicantData: true}),
     const handleConnectOAuth = () => {
         setIsConnecting(true),
         // Simulate OAuth flow,

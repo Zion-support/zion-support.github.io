@@ -33,8 +33,7 @@ export function usePortfolio() {
     project: PortfolioProject): Promise<string | null> => {
     if (!user) {
       setError('You must be logged in to add a portfolio project'),
-      return null,
-    }
+      return null}
 ,
     setIsLoading(true),
     setError(null),
@@ -75,8 +74,7 @@ export function usePortfolio() {
     project: PortfolioProject): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to update a portfolio project'),
-      return false,
-    }
+      return false}
 ,
     setIsLoading(true),
     setError(null),
@@ -114,8 +112,7 @@ export function usePortfolio() {
   const deleteProject = async (projectId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to delete a portfolio project'),
-      return false,
-    }
+      return false}
 ,
     setIsLoading(true),
     setError(null),

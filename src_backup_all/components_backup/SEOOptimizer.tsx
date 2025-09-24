@@ -23,8 +23,7 @@ interface SEOAnalysis {
   issues: SEOIssue[],
   suggestions: SEOSuggestion[],
   metrics: SEOMetrics,
-  lastUpdated: Date,
-}
+  lastUpdated: Date}
 ,
 interface SEOIssue {
   id: string,
@@ -33,8 +32,7 @@ interface SEOIssue {
   description: string,
   impact: 'high' | 'medium' | 'low',
   fixable: boolean,
-  category: 'content' | 'technical' | 'performance' | 'accessibility',
-}
+  category: 'content' | 'technical' | 'performance' | 'accessibility'}
 ,
 interface SEOSuggestion {
   id: string,
@@ -42,8 +40,7 @@ interface SEOSuggestion {
   description: string,
   priority: 'high' | 'medium' | 'low',
   effort: 'low' | 'medium' | 'high',
-  estimatedImpact: number,
-}
+  estimatedImpact: number}
 ,
 interface SEOMetrics {
   pageSpeed: number,
@@ -54,16 +51,14 @@ interface SEOMetrics {
   coreWebVitals: {
     lcp: number,
     fid: number,
-    cls: number,
-  };
+    cls: number};
 }
 ,
 interface SEOOptimizerProps {
   url?: string,
   autoAnalyze?: boolean,
   showDetails?: boolean,
-  onAnalysisComplete?: (analysis: SEOAnalysis) => void,
-}
+  onAnalysisComplete?: (analysis: SEOAnalysis) => void}
 ,
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   url;
@@ -86,8 +81,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         description: 'The page is missing a meta description tag, which is important for search engine snippets.';
         impact: 'medium';
         fixable: true;
-        category: 'content',
-      };
+        category: 'content'};
       {
         id: '2';
         type: 'error';
@@ -95,8 +89,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         description: 'Page load time is above the recommended 3-second threshold.';
         impact: 'high';
         fixable: true;
-        category: 'performance',
-      };
+        category: 'performance'};
       {
         id: '3';
         type: 'info';
@@ -104,8 +97,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         description: 'Some images are missing alt text, which affects accessibility.';
         impact: 'low';
         fixable: true;
-        category: 'accessibility',
-      }
+        category: 'accessibility'}
     ];
     suggestions: [
       {
@@ -114,24 +106,21 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         description: 'Compress and optimize images to improve page load speed.';
         priority: 'high';
         effort: 'medium';
-        estimatedImpact: 15,
-      };
+        estimatedImpact: 15};
       {
         id: '2';
         title: 'Add Schema Markup';
         description: 'Implement structured data to improve search engine understanding.';
         priority: 'medium';
         effort: 'low';
-        estimatedImpact: 8,
-      };
+        estimatedImpact: 8};
       {
         id: '3';
         title: 'Improve Internal Linking';
         description: 'Add more internal links to improve page authority distribution.';
         priority: 'low';
         effort: 'low';
-        estimatedImpact: 5,
-      }
+        estimatedImpact: 5}
     ];
     metrics: {
       pageSpeed: 78;
@@ -142,11 +131,9 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       coreWebVitals: {
         lcp: 2.8;
         fid: 45;
-        cls: 0.08,
-      }
+        cls: 0.08}
     };
-    lastUpdated: new Date(),
-  }), []),
+    lastUpdated: new Date()}), []),
   // Analyze SEO,
   const analyzeSEO = useCallback(async () => {
     setIsAnalyzing(true),
@@ -164,22 +151,19 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-50o0',
     if (score >= 70) return 'text-yellow-50o0',
-    return 'text-red-50o0',
-  };
+    return 'text-red-50o0'};
   // Get score background,
   const getScoreBackground = (score: number) => {
     if (score >= 90) return 'bg-green-10o0',
     if (score >= 70) return 'bg-yellow-10o0',
-    return 'bg-red-10o0',
-  };
+    return 'bg-red-10o0'};
   // Get impact color,
   const getImpactColor = (impact: string) => {
     switch (impact) {
       case 'high': return 'text-red-50o0',
       case 'medium': return 'text-yellow-50o0',
       case 'low': return 'text-blue-50o0',
-      default: return 'text-zion-slate',
-    }
+      default: return 'text-zion-slate'}
   };
   // Get priority color,
   const getPriorityColor = (priority: string) => {
@@ -187,8 +171,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       case 'high': return 'text-red-50o0 bg-red-50 border-red-20o0',
       case 'medium': return 'text-yellow-50o0 bg-yellow-50 border-yellow-20o0',
       case 'low': return 'text-blue-50o0 bg-blue-50 border-blue-20o0',
-      default: return 'text-zion-slate bg-zion-slate/10 border-zion-slate/20o0',
-    }
+      default: return 'text-zion-slate bg-zion-slate/10 border-zion-slate/20o0'}
   };
   // Filter issues by category,
   const filteredIssues = useMemo(() => {
@@ -209,8 +192,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           className="mt-4 px-6 py-2 bg-zion-cyan hover: bg-zion-cyan/80 text-white rounded-lg transition-colors">,
           Analyze SEO,
         </button>,
-      </div>),
-  }
+      </div>)}
 ,
   return (
     <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6">,
@@ -336,8 +318,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                     className={`px-3 py-1 text-xs rounded-lg transition-colors ${
                       selectedCategory === category,
                         ? 'bg-zion-cyan text-white',
-                        : 'bg-zion-slate/10 text-zion-slate hover: bg-zion-slate/20',
-                    }`}
+                        : 'bg-zion-slate/10 text-zion-slate hover: bg-zion-slate/20'}`}
                   >,
                     {category.charAt(0).toUpperCase() + category.slice(1)}
                   </button>))}

@@ -21,8 +21,7 @@ const Homepage2040: React.FC = () => {
   useEffect(() => {
     setIsVisible(true),
     const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % innovativeMicroSaasServices2025V2.length),
-    }5000),
+      setCurrentServiceIndex((prev) => (prev + 1) % innovativeMicroSaasServices2025V2.length)}5000),
     return () => clearInterval(interval)}[]),
   // Enhanced animation variants for better performance,
   const containerVariants = {
@@ -31,8 +30,7 @@ const Homepage2040: React.FC = () => {
       opacity: 1;
       transition: {
         staggerChildren: 0.1;
-        delayChildren: 0.2,
-      }
+        delayChildren: 0.2}
     }
   };
   const itemVariants = {
@@ -42,8 +40,7 @@ const Homepage2040: React.FC = () => {
       y: 0;
       transition: {
         duration: 0.6;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   const floatingVariants = {
@@ -52,8 +49,7 @@ const Homepage2040: React.FC = () => {
       transition: {
         duration: 3;
         repeat: -1;
-        ease: "easeInOut" as const,
-      }
+        ease: "easeInOut" as const}
     }
   };
   const statsData = [
@@ -63,32 +59,28 @@ const Homepage2040: React.FC = () => {
       description: "Cutting-edge solutions";
       icon: Sparkles;
       color: "text-cyan-400";
-      hoverColor: "group-hover:text-cyan-300",
-    };
+      hoverColor: "group-hover:text-cyan-300"};
     {
       number: "∞";
       label: "Future Possibilities";
       description: "Unlimited potential";
       icon: InfinityIcon;
       color: "text-purple-400";
-      hoverColor: "group-hover:text-purple-300",
-    };
+      hoverColor: "group-hover:text-purple-300"};
     {
       number: "24/7";
       label: "Autonomous Operations";
       description: "Always available";
       icon: Cpu;
       color: "text-blue-400";
-      hoverColor: "group-hover:text-blue-300",
-    };
+      hoverColor: "group-hover:text-blue-300"};
     {
       number: "10x";
       label: "Performance Boost";
       description: "Quantum enhancement";
       icon: Lightning;
       color: "text-green-400";
-      hoverColor: "group-hover:text-green-300",
-    }
+      hoverColor: "group-hover:text-green-300"}
   ],
   // Combine all services for showcase,
   const allServices = [...innovativeMicroSaasServices2025V2...emergingTechServices2025V2],
@@ -98,26 +90,22 @@ const Homepage2040: React.FC = () => {
       name: "AI & Machine Learning";
       icon: Brain;
       count: allServices.filter(s => s.category.includes('AI')).length;
-      color: "from-pink-500 to-rose-600",
-    };
+      color: "from-pink-500 to-rose-600"};
     {
       name: "Quantum Technology";
       icon: Atom;
       count: allServices.filter(s => s.category.includes('Quantum')).length;
-      color: "from-blue-500 to-cyan-600",
-    };
+      color: "from-blue-500 to-cyan-600"};
     {
       name: "Emerging Tech";
       icon: Rocket;
       count: allServices.filter(s => s.category.includes('Emerging') || s.category.includes('Space')).length;
-      color: "from-purple-500 to-indigo-600",
-    };
+      color: "from-purple-500 to-indigo-600"};
     {
       name: "Cybersecurity";
       icon: Shield;
       count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cyber')).length;
-      color: "from-green-500 to-emerald-600",
-    }
+      color: "from-green-500 to-emerald-600"}
   ],
   return (
     <Layout>,
@@ -160,8 +148,7 @@ const Homepage2040: React.FC = () => {
                   transition={{
                     duration: 3;
                     repeat: Infinity;
-                    delay: Math.random() * 3,
-                  }}
+                    delay: Math.random() * 3}}
                 />))}
             </div>,
           </div>,

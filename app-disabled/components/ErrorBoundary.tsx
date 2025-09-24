@@ -2,8 +2,7 @@
 import React from 'react';
 interface ErrorBoundaryState {
   hasError: boolean,
-  error?: Error,
-}
+  error?: Error}
 ,
 interface ErrorBoundaryProps {
   children: React.ReactNode,
@@ -41,8 +40,7 @@ function DefaultErrorFallback({
   reset;
 }: {
   error?: Error,
-  reset: () => void,
-}) {
+  reset: () => void}) {
   return (
     <div className='min-h-screen flex items-center justify-center bg-gray-90o0'>,
       <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6'>,
@@ -70,7 +68,6 @@ function DefaultErrorFallback({
           Try again,
         </button>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
 export default ErrorBoundary;

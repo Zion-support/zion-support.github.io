@@ -22,14 +22,14 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
       navigator.serviceWorker.register('/sw.js'),
         .then((reg) => {
           setRegistration(reg),
-          // console.log('Service Worker registered successfully:', reg),
+          // // console.log('Service Worker registered successfully:', reg),
           // Check for updates,
           if (autoCheck) {
             checkForUpdates(reg)}
 ,
           // Listen for updates,
           reg.addEventListener('updatefound', () => {
-            // console.log('Service Worker update found'),
+            // // console.log('Service Worker update found'),
             const newWorker = reg.installing,
             if (newWorker) {
               newWorker.addEventListener('statechange', () => {
@@ -42,7 +42,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
           }),
           // Listen for controller change (update applied),
           navigator.serviceWorker.addEventListener('controllerchange', () => {
-            // console.log('Service Worker controller changed - update applied'),
+            // // console.log('Service Worker controller changed - update applied'),
             setUpdateComplete(true),
             setUpdateAvailable(false),
             setUpdating(false),
@@ -62,8 +62,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
   const checkForUpdates = async (reg: ServiceWorkerRegistration) => {
     try {
       await reg.update(),
-      // console.log('Service Worker update check completed'),
-    } catch (error) {
+      // // console.log('Service Worker update check completed')} catch (error) {
       console.error('Service Worker update check failed:', error)}
   };
   const applyUpdate = async () => {

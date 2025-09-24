@@ -19,6 +19,5 @@ export default function AutonomousITOperationsCenter() {
       industries={['Enterprise IT', 'SaaS', 'Telecom', 'Finance']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/autonomous-it-operations-center',
-    />),
-}
+    />)}
 ,

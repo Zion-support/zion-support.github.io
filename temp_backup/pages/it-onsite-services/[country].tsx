@@ -15,5 +15,4 @@ export default function [country]Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

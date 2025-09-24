@@ -180,6 +180,5 @@ export default function QuantumNeuralFusion20o26PromotionBanner() {
           </Link>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

@@ -18,8 +18,7 @@ const Homepage2043: React.FC = () => {
     setIsVisible(true),
     // Auto-rotate featured services,
     const serviceInterval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6),
-    }4000),
+      setCurrentServiceIndex((prev) => (prev + 1) % 6)}4000),
     // Auto-rotate testimonials,
     const testimonialInterval = setInterval(() => {
       setCurrentTestimonialIndex((prev) => (prev + 1) % 3)}6000),
@@ -38,48 +37,42 @@ const Homepage2043: React.FC = () => {
       description: "Next-generation AI consciousness with human-level understanding",
       href: "/quantum-neural-consciousness-platform",
       color: "from-purple-500 to-pink-500";
-      gradient: "bg-gradient-to-br from-purple-500/20 to-pink-500/20",
-    };
+      gradient: "bg-gradient-to-br from-purple-500/20 to-pink-500/20"};
     {
       icon: AtomIcon,
       title: "Quantum Computing",
       description: "Revolutionary quantum computing with consciousness integration",
       href: "/quantum-bio-computing-platform",
       color: "from-blue-500 to-cyan-500";
-      gradient: "bg-gradient-to-br from-blue-500/20 to-cyan-500/20",
-    };
+      gradient: "bg-gradient-to-br from-blue-500/20 to-cyan-500/20"};
     {
       icon: Shield,
       title: "Future Cybersecurity",
       description: "Quantum-resistant security with consciousness-based protection",
       href: "/quantum-internet-security-gateway",
       color: "from-red-500 to-orange-500";
-      gradient: "bg-gradient-to-br from-red-500/20 to-orange-500/20",
-    };
+      gradient: "bg-gradient-to-br from-red-500/20 to-orange-500/20"};
     {
       icon: Rocket,
       title: "Space Technology",
       description: "AI-powered space resource intelligence and autonomous mining",
       href: "/autonomous-space-mining-ai",
       color: "from-indigo-500 to-purple-500";
-      gradient: "bg-gradient-to-br from-indigo-500/20 to-purple-500/20",
-    };
+      gradient: "bg-gradient-to-br from-indigo-500/20 to-purple-500/20"};
     {
       icon: Cpu,
       title: "Autonomous Systems",
       description: "Fully autonomous AI systems with consciousness",
       href: "/autonomous-business-ecosystem-ai",
       color: "from-emerald-500 to-teal-500";
-      gradient: "bg-gradient-to-br from-emerald-500/20 to-teal-500/20",
-    };
+      gradient: "bg-gradient-to-br from-emerald-500/20 to-teal-500/20"};
     {
       icon: Database,
       title: "Business Intelligence",
       description: "Autonomous business intelligence with consciousness insights",
       href: "/autonomous-healthcare-ai-ecosystem",
       color: "from-yellow-500 to-orange-500";
-      gradient: "bg-gradient-to-br from-yellow-500/20 to-orange-500/20",
-    }
+      gradient: "bg-gradient-to-br from-yellow-500/20 to-orange-500/20"}
   ],
   const stats = [
     { number: "2000+"label: "Revolutionary Services"icon: Starcolor: "from-yellow-400 to-orange-500" };
@@ -94,24 +87,21 @@ const Homepage2043: React.FC = () => {
       company: "QuantumTech Industries";
       content: "Zion Tech 'Group', 's quantum neural consciousness platform has revolutionized our AI research. 'We', 've achieved breakthroughs that would have taken decades using traditional methods.";
       rating: 5;
-      avatar: "👩‍🔬",
-    };
+      avatar: "👩‍🔬"};
     {
       name: "Marcus Rodriguez";
       role: "CTO";
       company: "SpaceMining Corp";
       content: "The autonomous space mining AI has increased our resource extraction efficiency by 500%. 'It', 's like having a team of expert miners working 24/7 without breaks.";
       rating: 5;
-      avatar: "👨‍🚀",
-    };
+      avatar: "👨‍🚀"};
     {
       name: "Dr. Emily Watson";
       role: "Research Director";
       company: "Consciousness Research Institute";
       content: "Working with Zion Tech 'Group', 's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless.";
       rating: 5;
-      avatar: "👩‍💻",
-    }
+      avatar: "👩‍💻"}
   ],
   const handleGetStarted = useCallback(() => {
     window.location.href = '/revolutionary-2040-2041-pricing-showcase'}[]),
@@ -152,8 +142,7 @@ const Homepage2043: React.FC = () => {
                     duration: 8 + i * 0.3;
                     repeat: Infinity as any;
                     delay: i * 0.2;
-                    ease: "easeInOut",
-                  }}
+                    ease: "easeInOut"}}
                   style={{
                     left: `${Math.random() * 100}%`;
                     top: `${Math.random() * 100}%`}}
@@ -163,8 +152,7 @@ const Homepage2043: React.FC = () => {
             <div className="absolute inset-0 opacity-20">,
               <div className="absolute inset-0" style={{
                 backgroundImage: `radial-gradient(circle at 1px 1pxrgba(255,255,255,0.15) 1pxtransparent 0)`;
-                backgroundSize: '50px 50px',
-              }}></div>,
+                backgroundSize: '50px 50px'}}></div>,
             </div>,
           </div>,
           {/* Hero Content */}
@@ -352,8 +340,7 @@ const Homepage2043: React.FC = () => {
                       className={`w-3 h-3 rounded-full transition-all duration-300 ${
                         index === currentServiceIndex,
                           ? 'bg-cyan-400 w-8',
-                          : 'bg-white/30 hover: bg-white/50',
-                      }`}
+                          : 'bg-white/30 hover: bg-white/50'}`}
                     />))}
                 </div>,
               </div>,
@@ -419,8 +406,7 @@ const Homepage2043: React.FC = () => {
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
                       index === currentTestimonialIndex,
                         ? 'bg-emerald-400 w-8',
-                        : 'bg-white/30 hover: bg-white/50',
-                    }`}
+                        : 'bg-white/30 hover: bg-white/50'}`}
                   />))}
               </div>,
             </div>,
@@ -491,6 +477,5 @@ const Homepage2043: React.FC = () => {
           </div>,
         </section>,
       </main>,
-    </Layout>),
-};
+    </Layout>)};
 export default Homepage2043;

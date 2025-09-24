@@ -344,8 +344,7 @@ export default function BlogPage() {
                   className={`flex items-center space-x-2 px-4 py-2 rounded-full border transition-all duration-30o0 ${
                     selectedCategory === category.id,
                       ? 'bg-blue-60o0 border-blue-50o0 text-white',
-                      : 'border-white/20 text-white/70 hover: border-white/40 hover:text-white',
-                  }`}
+                      : 'border-white/20 text-white/70 hover: border-white/40 hover:text-white'}`}
                 >,
                   <category.icon className='w-4 h-4' />,
                   <span>{category.name}</span>,
@@ -493,6 +492,5 @@ export default function BlogPage() {
         </div>,
       </section>,
       <EnhancedFooter />,
-    </div>),
-}
+    </div>)}
 ,

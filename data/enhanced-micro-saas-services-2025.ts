@@ -18,8 +18,7 @@ export interface MicroSaasService {
   capabilities: string[],
   pricing: {
     monthly: string,
-    yearly: string,
-  };
+    yearly: string};
   features: string[],
   roi: string,
   marketSize: string,
@@ -29,8 +28,7 @@ export interface MicroSaasService {
     email: string,
     mobile: string,
     address: string,
-    website: string,
-  };
+    website: string};
 }
 ,
 export const enhancedMicroSaasServices: MicroSaasService[] = [
@@ -62,8 +60,7 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
       'Cloud deployment'];
     pricing: {
       monthly: '$99';
-      yearly: '$990',
-    };
+      yearly: '$990'};
     features: [
       'Advanced analytics';
       'Custom dashboards';
@@ -77,8 +74,7 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
       email: 'ai@ziontechgroup.com';
       mobile: '+1 (555) 123-4567';
       address: '123 AI Street, Tech City, TC 12345';
-      website: 'https://ai.ziontechgroup.com',
-    }
+      website: 'https://ai.ziontechgroup.com'}
   };
   {
     id: 'quantum-cybersecurity';
@@ -108,8 +104,7 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
       'Security audits'];
     pricing: {
       monthly: '$149';
-      yearly: '$1490',
-    };
+      yearly: '$1490'};
     features: [
       'Quantum encryption';
       'AI monitoring';
@@ -123,8 +118,7 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
       email: 'security@ziontechgroup.com';
       mobile: '+1 (555) 123-4568';
       address: '456 Security Ave, Cyber City, CC 67890';
-      website: 'https://security.ziontechgroup.com',
-    }
+      website: 'https://security.ziontechgroup.com'}
   };
   {
     id: 'space-resource-intelligence';
@@ -154,8 +148,7 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
       'Performance metrics'];
     pricing: {
       monthly: '$79';
-      yearly: '$790',
-    };
+      yearly: '$790'};
     features: [
       'Space analytics';
       'Scheduling tools';
@@ -169,7 +162,6 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
       email: 'workplace@ziontechgroup.com';
       mobile: '+1 (555) 123-4569';
       address: '789 Workplace Blvd, Office City, OC 11111';
-      website: 'https://workplace.ziontechgroup.com',
-    }
+      website: 'https://workplace.ziontechgroup.com'}
   }
 ],

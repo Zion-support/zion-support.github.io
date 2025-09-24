@@ -41,8 +41,7 @@ interface UserProfileCardProps {
   user: {
     name: string,
     bio: string,
-    avatar: string,
-  };
+    avatar: string};
 }
 ,
 export const UserProfileCard: React.FC<UserProfileCardProps> = ({ user }) => {
@@ -56,8 +55,7 @@ export const UserProfileCard: React.FC<UserProfileCardProps> = ({ user }) => {
         </div>,
       </div>,
     </div>)};`;
-        time: 2.3,
-      }
+        time: 2.3}
     };
     {
       id: 'data-analyzer';
@@ -81,8 +79,7 @@ export const UserProfileCard: React.FC<UserProfileCardProps> = ({ user }) => {
 - Focus on European expansion,
 - Increase premium product marketing,
 - Develop enterprise-specific features`;
-        time: 3.1,
-      }
+        time: 3.1}
     };
     {
       id: 'image-generator';
@@ -93,8 +90,7 @@ export const UserProfileCard: React.FC<UserProfileCardProps> = ({ user }) => {
       demo: {
         input: 'A futuristic cityscape at sunset with flying cars and neon lights';
         output: 'Generated high-resolution image (20o48x20o48) with photorealistic qualityfeaturing a cyberpunk cityscape with glowing neon signsflying vehiclesand dramatic sunset lighting.';
-        time: 4.2,
-      }
+        time: 4.2}
     };
     {
       id: 'content-writer';
@@ -116,8 +112,7 @@ Machine learning algorithms are accelerating drug developmentreducing the time f
 AI analyzes patient data to create customized treatment plansensuring optimal outcomes for each individual.,
 ## The Road Ahead,
 As AI continues to evolvewe can expect even more groundbreaking innovations that will save lives and improve quality of care for millions worldwide.`;
-        time: 2.8,
-      }
+        time: 2.8}
     };
     {
       id: 'music-composer';
@@ -128,8 +123,7 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
       demo: {
         input: 'Compose an upbeat electronic track for a tech startup presentation';
         output: 'Generated 3-minute electronic track with:\n- 128 BPM tempo\n- Synthwave/cyberpunk style\n- Dynamic build-up and drop\n- Professional mixing and mastering\n- Available in WAVMP3and MIDI formats';
-        time: 5.5,
-      }
+        time: 5.5}
     };
     {
       id: 'video-editor';
@@ -140,8 +134,7 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
       demo: {
         input: 'Create a 30-second promotional video from raw footage';
         output: 'Generated promotional video featuring:\n- Automatic scene selection\n- Smooth transitions\n- Color grading\n- Background music sync\n- Text overlays and captions\n- Optimized for social media';
-        time: 6.2,
-      }
+        time: 6.2}
     }
   ],
   const runDemo = async () => {
@@ -161,8 +154,7 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
             tool: tool.name;
             input: tool.demo.input;
             output: tool.demo.output;
-            time: tool.demo.time,
-          }]),
+            time: tool.demo.time}]),
           return 10o0}
         return prev + increment})}interval)};
   const resetDemo = () => {
@@ -207,8 +199,7 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
                   className={`p-4 rounded-xl border-2 transition-all duration-30o0 text-left ${
                     activeTool === index,
                       ? `border-blue-50o0 bg-gradient-to-r ${tool.color} text-white shadow-lg`,
-                      : 'border-gray-20o0 bg-white hover: border-gray-30o0 hover:shadow-md',
-                  }`}
+                      : 'border-gray-20o0 bg-white hover: border-gray-30o0 hover:shadow-md'}`}
                 >,
                   <div className="flex items-center gap-3">,
                     <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
@@ -344,6 +335,5 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default InteractiveAIToolsDemo20o27;

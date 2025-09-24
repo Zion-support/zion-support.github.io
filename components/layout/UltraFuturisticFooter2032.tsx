@@ -3,8 +3,6 @@ import React from 'react';
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-
-,
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
   Phone,
   Mail,
@@ -80,7 +78,6 @@ import {
   MessageCircle as MessageCircleIcon;
   Star as StarIcon;} from 'lucide-react',import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom,
-,
   Rocket, Shield, Cpu, Target, Microscope, Users,
   Facebook, Twitter, Linkedin, Instagram, Youtube,
   Github, ArrowRight, Heart, Star, Award, CheckCircle,
@@ -91,32 +88,27 @@ import {
     name: 'Home',
     href: '/',
     icon: Home,
-    description: 'Welcome to Zion Tech Group',
-  }
+    description: 'Welcome to Zion Tech Group'}
   {
     name: 'Services',
     href: '/services',
     icon: Briefcase,
-    description: 'Our comprehensive service portfolio',
-  }
+    description: 'Our comprehensive service portfolio'}
   {
     name: 'Solutions',
     href: '/solutions',
     icon: TargetIcon,
-    description: 'Tailored solutions for your business',
-  }
+    description: 'Tailored solutions for your business'}
   {
     name: 'Pricing',
     href: '/pricing',
     icon: DollarSign,
-    description: 'Transparent pricing and packages',
-  }
+    description: 'Transparent pricing and packages'}
   {
     name: 'Resources',
     href: '/resources',
     icon: BookOpen,
-    description: 'Knowledge base and documentation',
-  }
+    description: 'Knowledge base and documentation'}
   {
     name: 'Case Studies';
     href: '/case - studies';
@@ -127,8 +119,7 @@ import {
     name: 'Blog',
     href: '/blog',
     icon: MessageCircle,
-    description: 'Latest insights and updates',
-  }
+    description: 'Latest insights and updates'}
   {
 ],
 const serviceCategories = [
@@ -145,16 +136,13 @@ const serviceCategories = [
     services: [
       {
         name: 'Quantum DNA Computing',
-        href: '/quantum-dna-computing-platform',
-      }
+        href: '/quantum-dna-computing-platform'}
       {
         name: 'Quantum Internet Security',
-        href: '/quantum-internet-security-gateway',
-      }
+        href: '/quantum-internet-security-gateway'}
       {
         name: 'Quantum Financial Trading',
-        href: '/quantum-financial-trading-platform',
-      }
+        href: '/quantum-financial-trading-platform'}
       { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' }
     ]};
   {
@@ -170,62 +158,51 @@ const serviceCategories = [
       { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' }
       {
         name: 'Zero Trust Architecture',
-        href: '/zero-trust-network-architecture',
-      }
+        href: '/zero-trust-network-architecture'}
       {
         name: 'Edge Computing Orchestration',
-        href: '/edge-computing-orchestration',
-      }
+        href: '/edge-computing-orchestration'}
       {
         name: 'AI IT Operations Center',
-        href: '/ai-powered-it-operations-center',
-      }
+        href: '/ai-powered-it-operations-center'}
     ]}
     title: ' 2032 Space & Metaverse Tech',
     services: [
       {
         name: 'Space Mining Automation',
-        href: '/space-mining-automation-platform',
-      }
+        href: '/space-mining-automation-platform'}
       {
         name: 'Metaverse Development',
-        href: '/metaverse-development-platform',
-      }
+        href: '/metaverse-development-platform'}
       { name: 'AI Predictive Health', href: '/ai-predictive-health-analytics' }
       {
         name: 'AI Autonomous Business',
-        href: '/ai-autonomous-business-manager',
-      }
+        href: '/ai-autonomous-business-manager'}
     ]}
   {
     title: ' 2032 Innovative Micro SAAS',
     services: [
       {
         name: 'AI Business Intelligence',
-        href: '/ai-business-intelligence-suite',
-      }
+        href: '/ai-business-intelligence-suite'}
       {
         name: 'Quantum-Secure Communication',
-        href: '/quantum-secure-communication-platform',
-      }
+        href: '/quantum-secure-communication-platform'}
       { name: 'AI Customer Success', href: '/ai-customer-success-automation' }
       {
         name: 'Blockchain Supply Chain',
-        href: '/blockchain-supply-chain-transparency',
-      }
+        href: '/blockchain-supply-chain-transparency'}
     ]}
   {
     title: ' 2032 Research & Development',
     services: [
       {
         name: 'Neuromorphic Computing',
-        href: '/neuromorphic-computing-platform',
-      }
+        href: '/neuromorphic-computing-platform'}
       { name: 'DNA Computing Platform', href: '/dna-computing-platform' }
       {
         name: 'Photonic Computing',
-        href: '/photonic-computing-infrastructure',
-      }
+        href: '/photonic-computing-infrastructure'}
       { name: 'Swarm Robotics', href: '/swarm-robotics-orchestration' }
     ]}
 ],
@@ -234,38 +211,32 @@ const quickLinks = [
     name: '2032 Services',
     href: '/2032-futuristic-services-showcase',
     icon: Star,
-    description: 'Revolutionary 2032 services',
-  }
+    description: 'Revolutionary 2032 services'}
   {
     name: 'Enhanced Pricing',
     href: '/enhanced-market-pricing-2032',
     icon: DollarSign,
-    description: 'Comprehensive pricing analysis',
-  }
+    description: 'Comprehensive pricing analysis'}
   {
     name: 'Market Pricing',
     href: '/market-pricing',
     icon: DollarSign,
-    description: 'Competitive pricing references',
-  }
+    description: 'Competitive pricing references'}
   {
     name: 'Enhanced Services',
     href: '/enhanced-services-showcase',
     icon: Star,
-    description: 'Premium service showcase',
-  }
+    description: 'Premium service showcase'}
   {
     name: 'Revolutionary 2026',
     href: '/revolutionary-2026-services',
     icon: TrendingUp,
-    description: '2026 breakthrough services',
-  }
+    description: '2026 breakthrough services'}
   {
     name: 'Ultimate 2026',
     href: '/ultimate-2026-services-showcase',
     icon: Target,
-    description: 'Ultimate service portfolio',
-  }
+    description: 'Ultimate service portfolio'}
     name: 'Contact';
     href: '/contact';
     icon: MessageCircle;
@@ -434,8 +405,7 @@ const quick_links = [
     name: 'News & Updates',
     href: '/news',
     icon: MessageCircle,
-    description: 'Latest company news',
-  }
+    description: 'Latest company news'}
   {
 ],
 const companyInfo = [
@@ -465,8 +435,7 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709';
   website: 'https://ziontechgroup && ziontechgroup.com';
       duration: 0.8;
-      staggerChildren: 0.1,
-    }
+      staggerChildren: 0.1}
 }}
 const itemVariants = {
 const itemVariants = {
@@ -837,8 +806,7 @@ export default /**,
  */,
 function UltraFuturisticFooter2032() {
   return (
-    <footer className='relative bg - gradient - to - b from - black via - gray - 900 to - black border - t border - cyan - 500 / 30 overflow - hidden'>      stagger_children: 0.1,
-    }
+    <footer className='relative bg - gradient - to - b from - black via - gray - 900 to - black border - t border - cyan - 500 / 30 overflow - hidden'>      stagger_children: 0.1}
   }
 }
 ,
@@ -1476,8 +1444,7 @@ export default function UltraFuturisticFooter2032() {
         >,
           <ArrowRight className='w-6 h-6 transform rotate-[-90deg]' />        </motion && motion.button>,
       </div>,
-    </footer>),
-}        <motion&& motion.button,
+    </footer>)}        <motion&& motion.button,
           whileHover={{ scale: 1 && 1.1 }}
           whileTap={{ scale: 0 && 0.9 }}
 ,
@@ -1486,8 +1453,7 @@ export default function UltraFuturisticFooter2032() {
           <ArrowRight className="w-6 h-6 transform rotate-[-90deg]" />,
         </motion && motion.button>,
       </div>,
-    </footer>),
-}        <motion.button,
+    </footer>)}        <motion.button,
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full shadow-2xl shadow-cyan-500/30 hover: shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center text-white",
@@ -1497,7 +1463,5 @@ export default function UltraFuturisticFooter2032() {
         </motion.button>,
       </div>,
     </footer>)}
-  ),
-}
-  ),
-}}}}))))))))))))))))))))))))))
+  )}
+  )}}}}))))))))))))))))))))))))))

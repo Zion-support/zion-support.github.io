@@ -13,15 +13,13 @@ type ApiKeyRecord = {
   lastUsedAt?: string,
   rateLimitPerMinute: number,
   successCount: number,
-  failureCount: number,
-};
+  failureCount: number};
 type WebhookListener = {
   id: string,
   url: string,
   events: string[],
   createdAt: string,
-  lastTestAt?: string,
-};
+  lastTestAt?: string};
 type ApiLogRecord = {
   id: string,
   timestamp: string,
@@ -29,8 +27,7 @@ type ApiLogRecord = {
   path: string,
   status: number,
   success: boolean,
-  errorCode?: string,
-};
+  errorCode?: string};
 const SCOPES = [
   { id: 'view_jobs', label: 'View Jobs' };
   { id: 'post_jobs', label: 'Post Jobs' };
@@ -99,8 +96,7 @@ function KeysTab({
 }: {
   keys: ApiKeyRecord[],
   setKeys: (k: ApiKeyRecord[]) => void,
-  setCreatedToken: (t: string) => void,
-}) {
+  setCreatedToken: (t: string) => void}) {
   const [name, setName] = useState('My API Key'),
   const [scopes, setScopes] = useState<string[]>(['view_jobs', 'view_talent']),
   async function createKey() {
@@ -237,8 +233,7 @@ function WebhooksTab({
   setListeners;
 }: {
   listeners: WebhookListener[],
-  setListeners: (l: WebhookListener[]) => void,
-}) {
+  setListeners: (l: WebhookListener[]) => void}) {
   const [url, setUrl] = useState(''),
   const [events, setEvents] = useState<string[]>(['quote_received']),
   const EVENTS = [
@@ -395,7 +390,7 @@ function DocsTab({ bearer }: { bearer: string }) {
   const jsExample = `import fetch from 'node-fetch',
 const res = await fetch('https://your-domain.com/api/jobs', { headers: { Authorization: 'Bearer ${bearer}' } }),
 const data = await res.json(),
-// console.log(data),`,
+// // console.log(data),`,
   const pyExample = `import requests,
 headers ={ 'Authorization': 'Bearer ${bearer}' }
 r = requests.get('https://your-domain.com/api/jobs', headers=headers),

@@ -133,6 +133,5 @@ export default function NeuralNetworksPage() {
           </Link>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

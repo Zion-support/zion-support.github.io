@@ -11,8 +11,7 @@ export interface CloudDevOpsService {
     enterprise: string,
     currency: string,
     trialDays: number,
-    setupTime: string,
-  };
+    setupTime: string};
   keyFeatures: string[],
   benefits: string[],
   targetAudience: string[],
@@ -33,8 +32,7 @@ export interface CloudDevOpsService {
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const advancedCloudDevOpsServices20o25: CloudDevOpsService[] = [
   {

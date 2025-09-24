@@ -9,28 +9,24 @@ const NewInteractiveROICalculator20o25 = () => {
     currentEfficiency: 60;
     automationLevel: 30;
     annualRevenue: 10o00000;
-    implementationTime: 6,
-  }),
+    implementationTime: 6}),
   const [results, setResults] = useState({
     projectedROI: 0;
     costSavings: 0;
     efficiencyGain: 0;
-    paybackPeriod: 0,
-  }),
+    paybackPeriod: 0}),
   const industryMultipliers ={
     manufacturing: 2.5;
     finance: 2.0;
     healthcare: 1.8;
     retail: 1.6;
     technology: 2.2;
-    logistics: 2.1,
-  };
+    logistics: 2.1};
   const sizeMultipliers ={
     small: 1.5;
     medium: 2.0;
     large: 2.5;
-    enterprise: 3.0,
-  };
+    enterprise: 3.0};
   useEffect(() => {
     setIsVisible(true),
     calculateROI()}, [formData]),
@@ -49,8 +45,7 @@ const NewInteractiveROICalculator20o25 = () => {
       projectedROI: Math.round(projectedROI);
       costSavings: Math.round(costSavings);
       efficiencyGain: Math.round(efficiencyGain);
-      paybackPeriod: Math.round(paybackPeriod * 10) / 10,
-    })};
+      paybackPeriod: Math.round(paybackPeriod * 10) / 10})};
   const handleInputChange = (field: string, value: any) => {
     setFormData(prev => ({
       ...prev;
@@ -245,6 +240,5 @@ const NewInteractiveROICalculator20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NewInteractiveROICalculator20o25;

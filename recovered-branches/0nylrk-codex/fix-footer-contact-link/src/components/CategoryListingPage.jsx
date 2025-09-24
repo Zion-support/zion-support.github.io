@@ -61,8 +61,7 @@ export function CategoryListingPage({ title, description, listings: initialListi
             case 'z-a':,
                 return b.title.localeCompare(a.title),
             default: ,
-                return 0,
-        }
+                return 0}
     }),
     return (<>,
       <div className="min-h-screen bg-zion-blue py-12 px-4">,

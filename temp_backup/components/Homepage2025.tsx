@@ -60,23 +60,19 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
     {
       title: "AI-Powered Innovation";
       description: "Cutting-edge artificial intelligence solutions that transform business operations and drive growth";
-      icon: Brain,
-    };
+      icon: Brain};
     {
       title: "Quantum Computing";
       description: "Next-generation quantum solutions for complex problem-solving and advanced cryptography";
-      icon: Atom,
-    };
+      icon: Atom};
     {
       title: "Cybersecurity Excellence";
       description: "Enterprise-grade security solutions with AI-powered threat detection and response";
-      icon: Shield,
-    };
+      icon: Shield};
     {
       title: "Process Automation";
       description: "Intelligent automation that streamlines operations and enhances productivity";
-      icon: Zap,
-    }
+      icon: Zap}
   ],
   const itemVariants ={
     initial: { opacity: 0, y: 20 };
@@ -87,8 +83,7 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
     initial: {};
     animate: {
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   return (
@@ -115,8 +110,7 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
                       className={`flex items-center space-x-2 text-sm font-medium transition-all duration-30o0 ${
                         activeSection === section.id,
                           ? 'text-cyan-40o0 border-b-2 border-cyan-40o0',
-                          : 'text-gray-30o0 hover: text-cyan-40o0',
-                      }`}
+                          : 'text-gray-30o0 hover: text-cyan-40o0'}`}
                     >,
                       <span>{section.icon}</span>,
                       <span>{section.label}</span>,
@@ -164,8 +158,7 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
                           className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-30o0 ${
                             activeSection === section.id,
                               ? 'bg-cyan-40o0/20 text-cyan-40o0',
-                              : 'text-gray-30o0 hover: bg-white/10',
-                          }`}
+                              : 'text-gray-30o0 hover: bg-white/10'}`}
                         >,
                           <span>{section.icon}</span>,
                           <span>{section.label}</span>,
@@ -455,6 +448,5 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
           </div>,
         </div>,
       </footer>,
-    </UltraFuturisticBackground20o26>),
-};
+    </UltraFuturisticBackground20o26>)};
 export default Homepage20o25;

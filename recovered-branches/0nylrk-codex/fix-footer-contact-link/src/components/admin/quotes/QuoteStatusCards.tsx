@@ -8,20 +8,17 @@ interface QuoteStatusCardsProps {
     new: number,
     in_review: number,
     responded: number,
-    accepted: number,
-  }
+    accepted: number}
 }
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
-  statusCounts,
-}) => {
+  statusCounts}) => {
 interface QuoteStatusCardsProps {
   statusCounts: {
     new: number;
     in_review: number;
     responded: number;
     accepted: number;
-    closed: number,
-  }
+    closed: number}
 }
 ,
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {
@@ -100,8 +97,7 @@ interface QuoteStatusCardsProps {
     in_review: number;
     responded: number;
     accepted: number;
-    closed: number,
-  }
+    closed: number}
 }
 ,
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {
@@ -116,8 +112,7 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
         </CardHeader>,
         <CardContent>,
           <p className="text-sm text-zion-slate-light">,
-    closed: number,
-  }
+    closed: number}
 }
 export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
   status_counts;

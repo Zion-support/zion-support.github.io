@@ -9,8 +9,7 @@ export interface AdvancedCybersecurityService20o27 {
     yearly: number,
     custom: string,
     currency: string,
-    pricingModel: string,
-  };
+    pricingModel: string};
   features: string[],
   benefits: string[],
   useCases: string[],
@@ -30,16 +29,14 @@ export interface AdvancedCybersecurityService20o27 {
     encryption: string,
     compliance: string[],
     monitoring: string,
-    response: string,
-  };
+    response: string};
   roi: string,
   estimatedDelivery: string,
   contactInfo: {
     phone: string,
     email: string,
     website: string,
-    address: string,
-  };
+    address: string};
 }
 ,
 export const ADVANCED_CYBERSECURITY_SERVICES_20o27: AdvancedCybersecurityService20o27[] = [
@@ -55,8 +52,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_20o27: AdvancedCybersecurityService
       yearly: 89990;
       custom: "Enterprise threat intelligence solutions";
       currency: "$";
-      pricingModel: "Monthly subscription with threat intelligence feeds",
-    };
+      pricingModel: "Monthly subscription with threat intelligence feeds"};
     features: [
       "Real-time threat detection";
       "AI behavioral analysis";
@@ -110,16 +106,14 @@ export const ADVANCED_CYBERSECURITY_SERVICES_20o27: AdvancedCybersecurityService
       encryption: "AES-256 encryption";
       compliance: ["SOC 2", "ISO 270o01", "NIST", "GDPR"];
       monitoring: "24/7 intelligent monitoring";
-      response: "Automated incident response",
-    };
+      response: "Automated incident response"};
     roi: "40o0-80o0%";
     estimatedDelivery: "12-16 weeks";
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   };
   // Quantum Cryptography Platform,
   {
@@ -133,8 +127,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_20o27: AdvancedCybersecurityService
       yearly: 150o000;
       custom: "Quantum security solutions";
       currency: "$";
-      pricingModel: "Quantum security platform subscription",
-    };
+      pricingModel: "Quantum security platform subscription"};
     features: [
       "Quantum key distribution (QKD)";
       "Post-quantum cryptography";
@@ -188,16 +181,14 @@ export const ADVANCED_CYBERSECURITY_SERVICES_20o27: AdvancedCybersecurityService
       encryption: "Quantum encryption";
       compliance: ["NIST", "FIPS", "Government standards", "Military compliance"];
       monitoring: "Quantum security monitoring";
-      response: "Quantum security response",
-    };
+      response: "Quantum security response"};
     roi: "80o0-150o0%";
     estimatedDelivery: "20-28 weeks";
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   };
   // Zero Trust Security Architecture,
   {
@@ -211,8 +202,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_20o27: AdvancedCybersecurityService
       yearly: 120o000;
       custom: "Zero trust architecture implementation";
       currency: "$";
-      pricingModel: "Architecture implementation with ongoing support",
-    };
+      pricingModel: "Architecture implementation with ongoing support"};
     features: [
       "Identity verification";
       "Device trust assessment";
@@ -266,16 +256,14 @@ export const ADVANCED_CYBERSECURITY_SERVICES_20o27: AdvancedCybersecurityService
       encryption: "End-to-end encryption";
       compliance: ["SOC 2", "ISO 270o01", "NIST", "Zero Trust framework"];
       monitoring: "24/7 security monitoring";
-      response: "Automated incident response",
-    };
+      response: "Automated incident response"};
     roi: "50o0-10o00%";
     estimatedDelivery: "16-24 weeks";
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   };
   // Autonomous Security Operations Center,
   {
@@ -289,8 +277,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_20o27: AdvancedCybersecurityService
       yearly: 250o000;
       custom: "Autonomous SOC implementation";
       currency: "$";
-      pricingModel: "Autonomous SOC platform subscription",
-    };
+      pricingModel: "Autonomous SOC platform subscription"};
     features: [
       "AI-powered threat detection";
       "Automated incident response";
@@ -344,16 +331,14 @@ export const ADVANCED_CYBERSECURITY_SERVICES_20o27: AdvancedCybersecurityService
       encryption: "Advanced encryption";
       compliance: ["SOC 2", "ISO 270o01", "NIST", "AI ethics"];
       monitoring: "Autonomous 24/7 monitoring";
-      response: "Autonomous incident response",
-    };
+      response: "Autonomous incident response"};
     roi: "60o0-120o0%";
     estimatedDelivery: "24-32 weeks";
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   };
   // Quantum-Resistant Cryptography Platform,
   {
@@ -367,8 +352,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_20o27: AdvancedCybersecurityService
       yearly: 80o000;
       custom: "Quantum-resistant security solutions";
       currency: "$";
-      pricingModel: "Post-quantum security platform subscription",
-    };
+      pricingModel: "Post-quantum security platform subscription"};
     features: [
       "Post-quantum algorithms";
       "Hybrid encryption systems";
@@ -422,15 +406,13 @@ export const ADVANCED_CYBERSECURITY_SERVICES_20o27: AdvancedCybersecurityService
       encryption: "Post-quantum encryption";
       compliance: ["NIST standards", "Post-quantum requirements", "Industry standards"];
       monitoring: "Quantum threat monitoring";
-      response: "Quantum-resistant response",
-    };
+      response: "Quantum-resistant response"};
     roi: "40o0-80o0%";
     estimatedDelivery: "16-20 weeks";
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   }
 ],

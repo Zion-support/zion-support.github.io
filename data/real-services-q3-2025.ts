@@ -52,19 +52,16 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'}
 export const realServicesQ32025: Q3Service[] = [
-  {  reviews?: number,
-}
+  {  reviews?: number}
 ,
 const contact = {
   mobile: '+1 302 464 0950';
   address: '364 E Main St STE 1008 Middletown DE 19709';
 const contact = {
-,
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-}
+  website: 'https://ziontechgroup.com'}
 const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -72,8 +69,7 @@ const contact = {
 export const realServicesQ32025: Q3Service[] = [
   {
     id: 'subscription-analytics-revenue-optimization',
-    name: 'Subscription Analytics & Revenue Optimization',
-}
+    name: 'Subscription Analytics & Revenue Optimization'}
 };
 export const realServicesQ32025: Q3Service[] = [
   {
@@ -164,8 +160,7 @@ export const realServicesQ32025: Q3Service[] = [
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
     contactInfo: contact,
     // @ts - expect - error augment common shape for UI components that expect contact_info,
-    contact_info: contact,
-  }
+    contact_info: contact}
   {
     targetAudience: 'Content sites, ecommerce, publishers on WordPress',
     trialDays: 7,
@@ -190,8 +185,7 @@ export const realServicesQ32025: Q3Service[] = [
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
     contactInfo: contact,
     // @ts - expect - error augment common shape for UI components that expect contact_info,
-    contact_info: contact,
-  }
+    contact_info: contact}
   {
     id: 'reviews - ugc - activation',
     name: 'Ecommerce Reviews & UGC Activation',
@@ -219,8 +213,7 @@ export const realServicesQ32025: Q3Service[] = [
     rating: 4.8,
     reviews: 12,
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
-    contactInfo: contact,
-  }
+    contactInfo: contact}
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14,
     setupTime: '1–2 weeks',
@@ -241,8 +234,7 @@ export const realServicesQ32025: Q3Service[] = [
     rating: 4.9,
     reviews: 31,
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
-    contactInfo: contact,
-  }
+    contactInfo: contact}
   {
     id: 'digital-product-commerce-stack',
     name: 'Digital Product Commerce Stack',
@@ -254,9 +246,7 @@ export const realServicesQ32025: Q3Service[] = [
       'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.',
     features: [
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
-    contactInfo: contact,
-  }],    contactInfo: contact,
-  }
+    contactInfo: contact}],    contactInfo: contact}
 ],
       'Churn and retention analysisCohort and funnel dashboards';
       'Price testing and packaging experimentsRevenue leakage detection';
@@ -332,7 +322,6 @@ export const realServicesQ32025: Q3Service[] = [
     reviews: 12;
     // @ts-expect-error augment common shape for UI components that expect contactInfo}
 ],
-,
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams';
     trialDays: 14;
     setupTime: '1–2 weeks';
@@ -362,8 +351,7 @@ export const realServicesQ32025: Q3Service[] = [
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
     contactInfo: contact,
     contactInfo: contact;
-    contactInfo: contact,
-  };
+    contactInfo: contact};
   {
     id: 'digital-product-commerce-stack';
     name: 'Digital Product Commerce Stack';
@@ -416,8 +404,7 @@ export const realServicesQ32025: Q3Service[] = [
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
     contactInfo: contact,
     contactInfo: contact;
-    contactInfo: contact,
-  };
+    contactInfo: contact};
   {
     id: 'wordpress-internal-linking-automation';
     name: 'WordPress Internal Linking Automation';
@@ -474,8 +461,7 @@ export const realServicesQ32025: Q3Service[] = [
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
     contactInfo: contact,
     contactInfo: contact;
-    contactInfo: contact,
-  };
+    contactInfo: contact};
   {
     id: 'reviews-ugc-activation';
     name: 'Ecommerce Reviews & UGC Activation';
@@ -528,10 +514,8 @@ export const realServicesQ32025: Q3Service[] = [
     contactInfo: contact,
     contactInfo: contact;
   }],    contactInfo: contact,
-    contactInfo: contact,
-  }
-],
-}
+    contactInfo: contact}
+]}
 };
 export const realServicesQ32025: Q3Service[] = [
   {
@@ -571,8 +555,7 @@ export const realServicesQ32025: Q3Service[] = [
     rating: 4.9;
     reviews: 31;
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
-    contactInfo: contact,
-  };
+    contactInfo: contact};
   {
     id: 'digital-product-commerce-stack';
     name: 'Digital Product Commerce Stack';
@@ -602,8 +585,7 @@ export const realServicesQ32025: Q3Service[] = [
     rating: 4.8;
     reviews: 18;
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
-    contactInfo: contact,
-  };
+    contactInfo: contact};
   {
     id: 'wordpress-internal-linking-automation';
     name: 'WordPress Internal Linking Automation';
@@ -634,8 +616,7 @@ export const realServicesQ32025: Q3Service[] = [
     rating: 4.7;
     reviews: 22;
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
-    contactInfo: contact,
-  };
+    contactInfo: contact};
   {
     id: 'reviews-ugc-activation';
     name: 'Ecommerce Reviews & UGC Activation';
@@ -665,6 +646,5 @@ export const realServicesQ32025: Q3Service[] = [
     rating: 4.8;
     reviews: 12;
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
-    contactInfo: contact,
-  }
+    contactInfo: contact}
 ]>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

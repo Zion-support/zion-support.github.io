@@ -35,22 +35,19 @@ const UltimateContentShowcase20o28 = () => {
           description: 'Breakthrough AI systems that leverage quantum computing principles for unprecedented processing power.';
           features: ['10,0o00x faster processing'99.9% accuracy'Real-time learning'];
           image: '/api/placeholder/40o0/30o0';
-          category: 'AI Technology',
-        };
+          category: 'AI Technology'};
         {
           title: 'Consciousness-Level AI Systems';
           description: 'AI that demonstrates genuine understanding and reasoning capabilities beyond current limitations.';
           features: ['Self-aware processing'Emotional intelligence'Creative problem solving'];
           image: '/api/placeholder/40o0/30o0';
-          category: 'Advanced AI',
-        };
+          category: 'Advanced AI'};
         {
           title: 'Autonomous Business Orchestration';
           description: 'AI systems that can independently manage entire business operations with minimal human oversight.';
           features: ['End-to-end automation'Strategic decision making'Resource optimization'];
           image: '/api/placeholder/40o0/30o0';
-          category: 'Business AI',
-        }
+          category: 'Business AI'}
       ]};
     'quantum-computing': {
       title: 'Quantum Computing Breakthroughs';
@@ -63,22 +60,19 @@ const UltimateContentShowcase20o28 = () => {
           description: 'Stable quantum systems ready for commercial deployment and real-world applications.';
           features: ['Error correction'Scalable architecture'Commercial viability'];
           image: '/api/placeholder/40o0/30o0';
-          category: 'Quantum Tech',
-        };
+          category: 'Quantum Tech'};
         {
           title: 'Quantum Machine Learning';
           description: 'Machine learning algorithms that exploit quantum superposition for exponential speedups.';
           features: ['Exponential speedup'Pattern recognition'Optimization'];
           image: '/api/placeholder/40o0/30o0';
-          category: 'Quantum ML',
-        };
+          category: 'Quantum ML'};
         {
           title: 'Quantum Internet Infrastructure';
           description: 'Global quantum communication networks enabling ultra-secure data transmission.';
           features: ['Quantum encryption'Global connectivity'Unhackable security'];
           image: '/api/placeholder/40o0/30o0';
-          category: 'Quantum Networks',
-        }
+          category: 'Quantum Networks'}
       ]};
     'neural-interfaces': {
       title: 'Neural Interface Revolution';
@@ -91,22 +85,19 @@ const UltimateContentShowcase20o28 = () => {
           description: 'Advanced neural interfaces that enable direct thought-to-computer communication.';
           features: ['Thought control'Real-time translation'Enhanced cognition'];
           image: '/api/placeholder/40o0/30o0';
-          category: 'Neural Tech',
-        };
+          category: 'Neural Tech'};
         {
           title: 'Memory Enhancement Systems';
           description: 'Technology that can augment and improve human memory capabilities.';
           features: ['Memory augmentation'Learning acceleration'Cognitive enhancement'];
           image: '/api/placeholder/40o0/30o0';
-          category: 'Cognitive Enhancement',
-        };
+          category: 'Cognitive Enhancement'};
         {
           title: 'Emotional AI Integration';
           description: 'AI systems that can read and respond to human emotions in real-time.';
           features: ['Emotion recognition'Empathetic responses'Personalized interactions'];
           image: '/api/placeholder/40o0/30o0';
-          category: 'Emotional AI',
-        }
+          category: 'Emotional AI'}
       ]};
     'future-predictions': {
       title: '20o30-20o35 Future Predictions';
@@ -119,22 +110,19 @@ const UltimateContentShowcase20o28 = () => {
           description: 'Comprehensive analysis of when artificial general intelligence will be achieved.';
           features: ['Timeline analysis'Impact assessment'Preparation strategies'];
           image: '/api/placeholder/40o0/30o0';
-          category: 'Future Studies',
-        };
+          category: 'Future Studies'};
         {
           title: 'Post-Human Society Models';
           description: 'Detailed projections of how society will evolve with advanced AI and human enhancement.';
           features: ['Social structures'Economic models'Cultural evolution'];
           image: '/api/placeholder/40o0/30o0';
-          category: 'Sociology',
-        };
+          category: 'Sociology'};
         {
           title: 'Interplanetary AI Networks';
           description: 'AI systems designed to operate across multiple planets and space environments.';
           features: ['Space adaptation'Multi-planetary coordination'Autonomous exploration'];
           image: '/api/placeholder/40o0/30o0';
-          category: 'Space AI',
-        }
+          category: 'Space AI'}
       ]}
   };
   const tabs = [
@@ -207,8 +195,7 @@ const UltimateContentShowcase20o28 = () => {
                 className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-30o0 ${
                   activeTab === tab.id,
                     ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                }`}
+                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
               >,
                 <Icon className="w-4 h-4"  />,
                 <span className="font-medium">{tab.label}</span>,
@@ -331,6 +318,5 @@ const UltimateContentShowcase20o28 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateContentShowcase20o28;

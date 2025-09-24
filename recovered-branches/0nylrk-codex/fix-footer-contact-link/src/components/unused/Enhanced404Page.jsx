@@ -77,6 +77,5 @@ export const Enhanced40o4Page = ({ requestedPath, suggestedRoutes = [] }) => {
           </Link>,
         </motion.div>,
       </motion.div>,
-    </div>),
-};
+    </div>)};
 export default Enhanced40o4Page;

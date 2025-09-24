@@ -117,8 +117,7 @@ const EnhancedComprehensiveServicesShowcase = () => {
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                   activeCategory === category.id,
                     ? 'bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white',
-                    : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-30o0 hover: bg-white/20',
-                }`}
+                    : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-30o0 hover: bg-white/20'}`}
               >,
                 {category.name} ({category.count}),
               </button>))}

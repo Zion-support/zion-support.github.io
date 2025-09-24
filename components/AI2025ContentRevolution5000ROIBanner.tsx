@@ -134,5 +134,4 @@ export default function AI20o25ContentRevolution50o00ROIBanner() {
           </p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

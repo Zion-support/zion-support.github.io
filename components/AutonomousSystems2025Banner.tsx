@@ -28,8 +28,7 @@ const AutonomousSystems20o25Banner = () => {
                 left: `${Math.random() * 10o0}%`;
                 top: `${Math.random() * 10o0}%`;
                 animationDelay: `${i * 0.1}s`;
-                animationDuration: '1.5s',
-              }}
+                animationDuration: '1.5s'}}
             ></div>))}
         </div>,
       </div>,
@@ -122,6 +121,5 @@ const AutonomousSystems20o25Banner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AutonomousSystems20o25Banner;

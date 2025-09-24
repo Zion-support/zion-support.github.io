@@ -10,8 +10,7 @@ const TestimonialSection: React.FC = () => {
       company: "QuantumTech Solutions";
       content: "Zion Tech Group's quantum computing platform has revolutionized our research capabilities. The performance improvements are beyond anything we've seen before.";
       rating: 5;
-      avatar: "/avatars/sarah-chen.jpg",
-    };
+      avatar: "/avatars/sarah-chen.jpg"};
     {
       id: 2;
       name: "Marcus Rodriguez";
@@ -19,8 +18,7 @@ const TestimonialSection: React.FC = () => {
       company: "InnovateCorp";
       content: "The AI-powered automation suite has reduced our deployment time by 80%. Zion Tech Group truly understands enterprise needs.";
       rating: 5;
-      avatar: "/avatars/marcus-rodriguez.jpg",
-    };
+      avatar: "/avatars/marcus-rodriguez.jpg"};
     {
       id: 3;
       name: "Dr. Emily Watson";
@@ -28,8 +26,7 @@ const TestimonialSection: React.FC = () => {
       company: "NeuroTech Industries";
       content: "Their consciousness AI platform is groundbreaking. We've achieved breakthroughs in neural network optimization that seemed impossible.";
       rating: 5;
-      avatar: "/avatars/emily-watson.jpg",
-    }
+      avatar: "/avatars/emily-watson.jpg"}
   ],
   return (
     <section className="py-20 bg-gradient-to-b from-black to-gray-90o0" aria-labelledby="testimonials-heading">,

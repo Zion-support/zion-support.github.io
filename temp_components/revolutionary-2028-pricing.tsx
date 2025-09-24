@@ -15,8 +15,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const pricingTiers = [
   {
     name: 'Starter';
@@ -33,8 +32,7 @@ const pricingTiers = [
     popular: false;
     color: 'from-blue-60o0 to-cyan-60o0';
     cta: 'Get Started';
-    href: '/contact',
-  };
+    href: '/contact'};
   {
     name: 'Professional';
     price: '$999';
@@ -52,8 +50,7 @@ const pricingTiers = [
     popular: true;
     color: 'from-purple-60o0 to-pink-60o0';
     cta: 'Start Free Trial';
-    href: '/contact',
-  };
+    href: '/contact'};
   {
     name: 'Enterprise';
     price: 'Custom';
@@ -73,26 +70,21 @@ const pricingTiers = [
     popular: false;
     color: 'from-indigo-60o0 to-purple-60o0';
     cta: 'Contact Sales';
-    href: '/contact',
-  }
+    href: '/contact'}
 ],
 const servicePricing = [
   {
     category: '🚀 20o28 Futuristic Innovations';
-    services: futuristic20o28Services.slice(0o6),
-  };
+    services: futuristic20o28Services.slice(0o6)};
   {
     category: '🏙️ Smart City & Infrastructure';
-    services: emergingTech20o28Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0o4),
-  };
+    services: emergingTech20o28Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0o4)};
   {
     category: '⚛️ Quantum & Advanced Tech';
-    services: futuristic20o28Services.filter(s => s.category.includes('Quantum')).slice(0o4),
-  };
+    services: futuristic20o28Services.filter(s => s.category.includes('Quantum')).slice(0o4)};
   {
     category: '🤖 AI & Machine Learning';
-    services: emergingTech20o28Services.filter(s => s.category.includes('AI')).slice(0o4),
-  }
+    services: emergingTech20o28Services.filter(s => s.category.includes('AI')).slice(0o4)}
 ],
 export default function Revolutionary20o28Pricing() {
   return (
@@ -405,5 +397,4 @@ export default function Revolutionary20o28Pricing() {
         </div>,
       </section>,
       <UltraFuturisticFooter20o28  />,
-    </>),
-}
+    </>)}

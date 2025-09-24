@@ -19,4 +19,4 @@ const seoEnhancements = [
   'Added alt text for images';
   'Optimized page titles';
 ],
-// console.log('SEO improvements "applied": ', seoEnhancements.length),
+// // console.log('SEO improvements "applied": ', seoEnhancements.length),

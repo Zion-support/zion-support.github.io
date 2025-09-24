@@ -8,38 +8,32 @@ export default function Cybersecurity() {
       icon: <Shield className="w-12 h-12 text-cyan-400" />;
       title: "Zero Trust Security";
       description: "Comprehensive zero trust network architecture and security platform";
-      href: "/zero-trust-security-platform",
-    };
+      href: "/zero-trust-security-platform"};
     {
       icon: <Lock className="w-12 h-12 text-blue-400" />;
       title: "Vulnerability Assessment";
       description: "Advanced penetration testing and security vulnerability analysis";
-      href: "/vulnerability-assessment-penetration-testing",
-    };
+      href: "/vulnerability-assessment-penetration-testing"};
     {
       icon: <Eye className="w-12 h-12 text-purple-400" />;
       title: "SOC2 Compliance";
       description: "Automated SOC2 compliance and evidence management";
-      href: "/soc2-compliance-automation",
-    };
+      href: "/soc2-compliance-automation"};
     {
       icon: <Zap className="w-12 h-12 text-green-400" />;
       title: "Incident Response";
       description: "AI-powered incident response and automation suite";
-      href: "/incident-automation-suite",
-    };
+      href: "/incident-automation-suite"};
     {
       icon: <Brain className="w-12 h-12 text-yellow-400" />;
       title: "AI Security";
       description: "Intelligent threat detection and security analytics";
-      href: "/quantum-cybersecurity-platform",
-    };
+      href: "/quantum-cybersecurity-platform"};
     {
       icon: <Globe className="w-12 h-12 text-pink-400" />;
       title: "Cloud Security";
       description: "Multi-cloud security and disaster recovery solutions";
-      href: "/multi-cloud-disaster-recovery",
-    }
+      href: "/multi-cloud-disaster-recovery"}
   ],
 export default function Cybersecurity() {
   return (
@@ -117,7 +111,6 @@ export default function Cybersecurity() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-};
+    </Layout>)};
 export default CybersecurityPage;
 }

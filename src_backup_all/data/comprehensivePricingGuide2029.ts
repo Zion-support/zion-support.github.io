@@ -12,8 +12,7 @@ export interface PricingTier {
   setupTime: string,
   support: string,
   integrations: string[],
-  limitations?: string[],
-}
+  limitations?: string[]}
 ,
 export interface ServiceCategory {
   id: string,
@@ -21,8 +20,7 @@ export interface ServiceCategory {
   description: string,
   icon: string,
   services: ProductListing[],
-  pricingTiers: PricingTier[],
-}
+  pricingTiers: PricingTier[]}
 ,
 export const COMPREHENSIVE_PRICING_GUIDE_20o29: ServiceCategory[] = [
   {

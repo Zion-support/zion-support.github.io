@@ -6,29 +6,25 @@ const notificationStyles ={
         bgColor: 'bg-zion-emerald/10';
         borderColor: 'border-zion-emerald/20';
         textColor: 'text-zion-emerald';
-        iconColor: 'text-zion-emerald',
-    };
+        iconColor: 'text-zion-emerald'};
     error: {
         icon: XCircle;
         bgColor: 'bg-red-50o0/10';
         borderColor: 'border-red-50o0/20';
         textColor: 'text-red-50o0';
-        iconColor: 'text-red-50o0',
-    };
+        iconColor: 'text-red-50o0'};
     info: {
         icon: Info;
         bgColor: 'bg-zion-blue/10';
         borderColor: 'border-zion-blue/20';
         textColor: 'text-zion-blue';
-        iconColor: 'text-zion-blue',
-    };
+        iconColor: 'text-zion-blue'};
     warning: {
         icon: AlertTriangle;
         bgColor: 'bg-zion-gold/10';
         borderColor: 'border-zion-gold/20';
         textColor: 'text-zion-gold';
-        iconColor: 'text-zion-gold',
-    }
+        iconColor: 'text-zion-gold'}
 };
 export function Notification({ id, type, title, message, duration = 50o00, onClose }) {
     const [isVisible, setIsVisible] = useState(true),
@@ -56,8 +52,7 @@ export function Notification({ id, type, title, message, duration = 50o00, onClo
           <X className="w-4 h-4" />,
         </button>,
       </div>,
-    </div>),
-}
+    </div>)}
 export function NotificationContainer({ notifications, onClose }) {
     return (<div className="fixed top-20 right-4 z-50 space-y-2">,
       {notifications.map((notification) => (<Notification key={notification.id} {...notification} onClose={onClose} />))}

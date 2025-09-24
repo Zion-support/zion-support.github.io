@@ -202,8 +202,7 @@ const AI20o25UltimateInnovationShowcase = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -214,8 +213,7 @@ const AI20o25UltimateInnovationShowcase = () => {
             <div
               key={content.id}
               className={`bg-white rounded-xl shadow-lg border border-gray-20o0 overflow-hidden transition-all duration-30o0 hover: shadow-xl hover:transform hover:scale-10o5 ${
-                content.featured ? 'ring-2 ring-purple-50o0' : '',
-              }`}
+                content.featured ? 'ring-2 ring-purple-50o0' : ''}`}
             >,
               {content.featured && (
                 <div className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-4 py-2 text-sm font-semibold'>,
@@ -291,6 +289,5 @@ const AI20o25UltimateInnovationShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25UltimateInnovationShowcase;

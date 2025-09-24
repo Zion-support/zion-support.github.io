@@ -90,8 +90,7 @@ export function ServiceProviderRegistrationForm() {
                         title: formData.title;
                         bio: formData.bio;
                         services: serviceTags;
-                        location: formData.location,
-                    }
+                        location: formData.location}
                 }
             }),
             if (error) {
@@ -145,8 +144,7 @@ export function ServiceProviderRegistrationForm() {
                                 title: values.title;
                                 bio: values.bio;
                                 services: serviceTags;
-                                location: values.location,
-                            }
+                                location: values.location}
                         }
                     }),
                     if (aiData) {

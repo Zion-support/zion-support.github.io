@@ -15,16 +15,14 @@ type Proposal = {
   endTime: number,
   status: string,
   queued?: boolean,
-  executedTxHash?: string,
-};
+  executedTxHash?: string};
 type Vote = {
   id: string,
   proposalId: string,
   voter: string,
   option: 'approve' | 'reject' | 'abstain',
   power: number,
-  createdAt: number,
-};
+  createdAt: number};
 export default function GovernanceHome() {
   const { address, connect, disconnect } = useWallet(),
   const [activeTab, setActiveTab] = useState<'board' | 'my' | 'dashboard'>(
@@ -176,8 +174,7 @@ function Dashboard({
   votes;
 }: {
   proposals: Proposal[],
-  votes: Vote[],
-}) {
+  votes: Vote[]}) {
   const numVoters = useMemo(
     () => new Set(votes.map(v => v.voter)).size;
     [votes]),

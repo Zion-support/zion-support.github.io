@@ -86,8 +86,7 @@ function AIPoweredContent() {
     "@type": "WebPage";
     "name": "AI Content Generation";
     "description": "Generate SEO - optimized content using ZionGPT to boost your online visibility.";
-    "url": "https: //app.ziontechgroup.com / features / ai - content - generation",
-  };
+    "url": "https: //app.ziontechgroup.com / features / ai - content - generation"};
 export default /**,
  * AIPoweredContent - Function description,
  */,
@@ -102,8 +101,7 @@ function AIPoweredContent() {
     url: 'https://app.ziontechgroup.com / features / ai - content - generation'}
   const { markAiExplored } = useAdvancedOnboardingStatus (),
   useEffect (() => {
-    markAiExplored (),
-}, [markAiExplored]),
+    markAiExplored ()}, [markAiExplored]),
   return (
     <>,
       <SEO
@@ -143,8 +141,7 @@ function AIPoweredContent() {
     "@type": "WebPage";
     "name": "AI Content Generation";
     "description": "Generate SEO - optimized content using ZionGPT to boost your online visibility.";
-    "url": "https: //app.ziontechgroup.com / features / ai - content - generation",
-  };
+    "url": "https: //app.ziontechgroup.com / features / ai - content - generation"};
 export default /**,
  * AIPoweredContent - Function description,
  */,
@@ -221,5 +218,4 @@ function AIPoweredContent() {
           </div>,
         </div>,
       </main>,
-,
 }}}})))

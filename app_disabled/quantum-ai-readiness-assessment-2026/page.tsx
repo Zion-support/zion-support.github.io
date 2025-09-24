@@ -8,12 +8,10 @@ interface AssessmentResults {
   implementationRoadmap: {
     phase: string,
     duration: string,
-    keyActivities: string[],
-  }[],
+    keyActivities: string[]}[],
   estimatedInvestment: number,
   expectedROI: number,
-  timeline: string,
-}
+  timeline: string}
 ,
 export default function QuantumAIReadinessAssessment() {
   const [formData, setFormData] = useState({
@@ -28,8 +26,7 @@ export default function QuantumAIReadinessAssessment() {
     technicalCapabilities: 3;
     leadershipCommitment: 3;
     changeManagement: 3;
-    riskTolerance: 3,
-  }),
+    riskTolerance: 3}),
   const [results, setResults] = useState<AssessmentResults | null>(null),
   const [isCalculating, setIsCalculating] = useState(false),
   const organizationSizes = {
@@ -87,16 +84,14 @@ export default function QuantumAIReadinessAssessment() {
         implementationRoadmap;
         estimatedInvestment;
         expectedROI;
-        timeline: formData.timeline,
-      }),
+        timeline: formData.timeline}),
 =======>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf,
       setIsCalculating(false)}, 2000)};
   const generateRecommendations = (score: number, data: any) => {
 =======,
     const recommendations = [],
     if (data.currentAIMaturity < 3) {
-      recommendations.push('Develop foundational AI capabilities before quantum implementation'),
-    }
+      recommendations.push('Develop foundational AI capabilities before quantum implementation')}
 ,
     if (data.quantumAwareness < 3) {
       recommendations.push('Invest in quantum computing education and awareness programs')}
@@ -199,8 +194,7 @@ export default function QuantumAIReadinessAssessment() {
     const baseROI = 200, // Base ROI percentage,
     const scoreMultiplier = score / 100,
     const potentialMultiplier = quantumPotential,
-    return Math.round(baseROI * scoreMultiplier * potentialMultiplier),
-  };
+    return Math.round(baseROI * scoreMultiplier * potentialMultiplier)};
   const handleInputChange = (field: string, value: any) => {
     setFormData(prev => ({
       ...prev;
@@ -216,15 +210,13 @@ export default function QuantumAIReadinessAssessment() {
     if (score >= 80) return 'text-green-600',
     if (score >= 60) return 'text-blue-600',
     if (score >= 40) return 'text-yellow-600',
-    return 'text-red-600',
-  };
+    return 'text-red-600'};
   const getReadinessColor = (level: string) => {
     switch (level) {
       case 'Quantum Ready': return 'bg-green-100 text-green-800',
       case 'Near Ready': return 'bg-blue-100 text-blue-800',
       case 'Developing': return 'bg-yellow-100 text-yellow-800',
-      default: return 'bg-red-100 text-red-800',
-    }
+      default: return 'bg-red-100 text-red-800'}
   };
   return (
     <div className="min-h-screen bg-gray-50 py-12">,
@@ -574,6 +566,5 @@ export default function Page() {
 		<main className="max-w-4xl mx-auto p-8">,
 			<h1 className="text-3xl font-bold mb-4">Quantum AI Readiness Assessment 2026</h1>,
 			<p className="text-gray-600">Interactive assessment will be available soon.</p>,
-		</main>)>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8: app/tools/quantum-ai-readiness-assessment-2026/page.tsx,
-}
+		</main>)>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8: app/tools/quantum-ai-readiness-assessment-2026/page.tsx}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

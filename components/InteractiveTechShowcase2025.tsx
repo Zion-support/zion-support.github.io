@@ -67,8 +67,7 @@ const InteractiveTechShowcase20o25 = () => {
           'Monitoring performance improvements...';
           'Scaling successful optimizations...';
           'Generating ROI reports...'];
-        currentStep: 0,
-      }
+        currentStep: 0}
     };
     {
       id: 'cybersecurity';
@@ -97,8 +96,7 @@ const InteractiveTechShowcase20o25 = () => {
           'Classifying threat level...';
           'Implementing countermeasures...';
           'Logging security events...'];
-        currentStep: 0,
-      }
+        currentStep: 0}
     };
     {
       id: 'cloud-optimization';
@@ -127,8 +125,7 @@ const InteractiveTechShowcase20o25 = () => {
           'Scaling resources...';
           'Optimizing configurations...';
           'Validating improvements...'];
-        currentStep: 0,
-      }
+        currentStep: 0}
     };
     {
       id: 'data-analytics';
@@ -157,8 +154,7 @@ const InteractiveTechShowcase20o25 = () => {
           'Generating insights...';
           'Creating visualizations...';
           'Updating dashboards...'];
-        currentStep: 0,
-      }
+        currentStep: 0}
     }
   ],
   const [currentStepsetCurrentStep] = useState(0),
@@ -175,8 +171,7 @@ const InteractiveTechShowcase20o25 = () => {
       y: 0;
       transition: {
         duration: 0.8;
-        staggerChildren: 0.2,
-      }
+        staggerChildren: 0.2}
     }
   };
   const itemVariants ={
@@ -232,8 +227,7 @@ const InteractiveTechShowcase20o25 = () => {
                   className={`flex items-center gap-3 px-6 py-4 rounded-xl font-medium transition-all duration-30o0 ${
                     activeDemo === index,
                       ? `bg-gradient-to-r ${demo.color} text-white shadow-lg transform scale-10o5`,
-                      : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white',
-                  }`}
+                      : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white'}`}
                 >,
                   <Icon className="w-5 h-5"  />,
                   {demo.title}
@@ -380,6 +374,5 @@ const InteractiveTechShowcase20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default InteractiveTechShowcase20o25;

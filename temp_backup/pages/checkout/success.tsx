@@ -15,6 +15,5 @@ export default function SuccessPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

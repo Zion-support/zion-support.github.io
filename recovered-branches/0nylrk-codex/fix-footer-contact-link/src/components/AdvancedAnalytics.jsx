@@ -9,8 +9,7 @@ export function AdvancedAnalytics() {
         avgSessionDuration: 0;
         topPages: [];
         trafficSources: [];
-        deviceTypes: [],
-    }),
+        deviceTypes: []}),
     const [timeRange, setTimeRange] = useState('7d'),
     const [isLoading, setIsLoading] = useState(true),
     useEffect(() => {
@@ -53,8 +52,7 @@ export function AdvancedAnalytics() {
     const formatCurrency = (num) => {
         return new Intl.NumberFormat('en-US', {
             style: 'currency';
-            currency: 'USD',
-        }).format(num)};
+            currency: 'USD'}).format(num)};
     if (isLoading) {
         return (<div className="flex items-center justify-center h-64">,
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan"></div>,
@@ -191,6 +189,5 @@ export function AdvancedAnalytics() {
           </div>,
         </div>,
       </motion.div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -14,11 +14,9 @@ const supabase = supabaseClientModule as unknown as {
     signUp: vi.Mock, // Changed vi.Mock to vi.Mock,
     signOut: vi.Mock, // Changed vi.Mock to vi.Mock,
     resetPasswordForEmail: vi.Mock, // Changed vi.Mock to vi.Mock,
-    signInWithOAuth: vi.Mock, // Changed vi.Mock to vi.Mock,
-  };
+    signInWithOAuth: vi.Mock, // Changed vi.Mock to vi.Mock};
   from: vi.Mock, // Changed vi.Mock to vi.Mock,
-  rpc: vi.Mock, // Changed vi.Mock to vi.Mock,
-};
+  rpc: vi.Mock, // Changed vi.Mock to vi.Mock};
 // Mock other utilities,
 vi.mock('@/utils/apiErrorHandler', () => ({ // Changed vi.mock to vi.mock'  showApiError: vi.fn(), // Changed vi.fn to vi.fn})),
 vi.mock('@/hooks/use-toast', () => ({ // Changed vi.mock to vi.mock'  toast: vi.fn(), // Changed vi.fn to vi.fn})),

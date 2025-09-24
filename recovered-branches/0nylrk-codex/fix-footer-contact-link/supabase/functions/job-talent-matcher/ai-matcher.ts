@@ -24,11 +24,9 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
             content: "You are a skill normalizer for a tech job platform. Normalize the provided skills to their standard industry naming conventions (e.g., 'react js' to 'React.js', 'nodejs' to 'Node.js'). Return only a comma-separated list of the normalized skills, nothing else."};
           {
             role: "user";
-            content: skillsString,
-          }
+            content: skillsString}
         ];
-        temperature: 0.3,
-      })}),
+        temperature: 0.3})}),
     const data = await response.json(),
     if (!data.choices || !data.choices[0] || !data.choices[0].message) {
       throw new Error("Failed to normalize skills with AI")}
@@ -36,8 +34,7 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
     // Extract and clean the normalized skills,
     const normalizedSkillsText = data.choices[0].message.content.trim(),
     const normalizedSkills = normalizedSkillsText.split(",").map((skill: string) => skill.trim()).filter(Boolean),
-    return normalizedSkills,
-  } catch (error) {
+    return normalizedSkills} catch (error) {
     console.error("Error in normalizeSkillsWithAI:", error),
     // If AI normalization fails, return the original skills,
     return skills}

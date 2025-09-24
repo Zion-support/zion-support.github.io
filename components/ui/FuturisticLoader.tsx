@@ -99,8 +99,7 @@ export default function FuturisticLoader({
       case 'matrix':,
         return renderMatrix(),
       default: ,
-        return renderSpinner(),
-    }
+        return renderSpinner()}
   };
   return (
     <div className='flex flex-col items-center justify-center space-y-4'>,

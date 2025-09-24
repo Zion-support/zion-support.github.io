@@ -15,6 +15,5 @@ export default function FeedbackAnalyticsPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

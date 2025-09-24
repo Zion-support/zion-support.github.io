@@ -107,6 +107,5 @@ export default function AI20o25QuantumConsciousnessBreakthroughBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

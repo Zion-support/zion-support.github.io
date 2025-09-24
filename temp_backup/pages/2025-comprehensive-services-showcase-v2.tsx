@@ -19,8 +19,7 @@ const fadeInUp ={
 const staggerContainer ={
   animate: {
     transition: {
-      staggerChildren: 0.1,
-    }
+      staggerChildren: 0.1}
   }
 };
 export default function ComprehensiveServicesShowcase20o25V2() {
@@ -37,46 +36,40 @@ export default function ComprehensiveServicesShowcase20o25V2() {
       icon: <Smartphone className="w-8 h-8"  />;
       color: 'from-blue-50o0 to-cyan-50o0';
       services: innovativeMicroSaas20o25ExpansionV2;
-      description: 'Cutting-edge micro SAAS solutions for modern businesses',
-    };
+      description: 'Cutting-edge micro SAAS solutions for modern businesses'};
     {
       id: 'it-infrastructure';
       name: 'IT Infrastructure Services';
       icon: <Cloud className="w-8 h-8"  />;
       color: 'from-purple-50o0 to-pink-50o0';
       services: innovativeITServices20o25ExpansionV2;
-      description: 'Advanced IT infrastructure and security solutions',
-    };
+      description: 'Advanced IT infrastructure and security solutions'};
     {
       id: 'ai-services';
       name: 'AI & Machine Learning';
       icon: <Brain className="w-8 h-8"  />;
       color: 'from-green-50o0 to-emerald-50o0';
       services: innovativeAIServices20o25ExpansionV2;
-      description: 'Intelligent AI solutions for business transformation',
-    };
+      description: 'Intelligent AI solutions for business transformation'};
     {
       id: 'industry-solutions';
       name: 'Industry Solutions';
       icon: <Building className="w-8 h-8"  />;
       color: 'from-orange-50o0 to-red-50o0';
       services: industrySpecificSolutions20o25V2;
-      description: 'Specialized solutions for specific industries',
-    };
+      description: 'Specialized solutions for specific industries'};
     {
       id: 'emerging-tech';
       name: 'Emerging Technology';
       icon: <Atom className="w-8 h-8"  />;
       color: 'from-indigo-50o0 to-purple-50o0';
       services: emergingTechBreakthroughs20o25V2;
-      description: 'Breakthrough technologies of the future',
-    }
+      description: 'Breakthrough technologies of the future'}
   ];
   const contactInfo ={
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709',
-  };
+    address: '364 E Main St STE 10o08 Middletown DE 19709'};
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
       <SEO
@@ -317,5 +310,4 @@ export default function ComprehensiveServicesShowcase20o25V2() {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}

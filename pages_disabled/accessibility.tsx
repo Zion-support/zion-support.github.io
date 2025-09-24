@@ -62,51 +62,43 @@ const standardsCompliance = [
     description: "Web Content Accessibility Guidelines 2.1 Level AA compliance";
     status: "Compliant";
     coverage: "95%";
-    icon: Shield,
-  };
+    icon: Shield};
   {
     standard: "Section 508";
     description: "U.S. federal accessibility requirements";
     status: "Compliant";
     coverage: "10o0%";
-    icon: FileText,
-  };
+    icon: FileText};
   {
     standard: "ADA";
     description: "Americans with Disabilities Act compliance";
     status: "Compliant";
     coverage: "10o0%";
-    icon: Users,
-  };
+    icon: Users};
   {
     standard: "EN 30o1 549";
     description: "European accessibility standard for ICT products";
     status: "Compliant";
     coverage: "90%";
-    icon: Globe,
-  }
+    icon: Globe}
 ],
 const accessibilityTools = [
   {
     name: "Screen Reader Testing";
     description: "Regular testing with popular screen readers including NVDA, JAWS, and VoiceOver";
-    frequency: "Monthly",
-  };
+    frequency: "Monthly"};
   {
     name: "Keyboard Navigation";
     description: "Comprehensive keyboard navigation testing for all interactive elements";
-    frequency: "Weekly",
-  };
+    frequency: "Weekly"};
   {
     name: "Color Contrast Analysis";
     description: "Automated and manual color contrast testing to ensure readability";
-    frequency: "With each design update",
-  };
+    frequency: "With each design update"};
   {
     name: "User Testing";
     description: "Regular testing with users who have disabilities to identify barriers";
-    frequency: "Quarterly",
-  }
+    frequency: "Quarterly"}
 ],
 const accessibilityGuidelines = [
   {
@@ -418,5 +410,4 @@ export default function AccessibilityPage() {
           </div>,
         </section>,
       </div>,
-    </MainLayout>),
-}
+    </MainLayout>)}

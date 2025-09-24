@@ -15,6 +15,5 @@ export default function WishlistPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

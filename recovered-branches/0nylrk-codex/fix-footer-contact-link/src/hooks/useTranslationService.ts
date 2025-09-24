@@ -61,8 +61,7 @@ export function useTranslationService() {
     translations: Record<SupportedLanguage string>;
     fallback: string = '') => {
     if (!translations) return fallback,
-    return translations[currentLanguage] || translations.en || fallback,
-  };
+    return translations[currentLanguage] || translations.en || fallback};
   return {
     translateContent;
     isTranslating;

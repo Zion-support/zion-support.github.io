@@ -15,6 +15,5 @@ export default function PortalPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

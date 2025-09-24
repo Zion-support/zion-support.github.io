@@ -10,8 +10,7 @@ interface JobMatchCardProps {
   match: JobMatch,
   onApply: (matchId: stringjobId: string) => void,
   onDecline: (matchId: string) => void,
-  showApplied?: boolean,
-}
+  showApplied?: boolean}
 ,
 export function JobMatchesCard({ matchonApplyonDeclineshowApplied = false }: JobMatchCardProps) {
   const job = match.job,

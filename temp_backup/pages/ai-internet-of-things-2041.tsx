@@ -94,7 +94,7 @@ export default function AIInternetOfThings20o41() {
                   icon: <Zap className='w-8 h-8' />;
                   title: 'Real-time Optimization';
                   description:,
-                    'Instant optimization of IoT networks and devices for maximum efficiency and window.performance.';
+                    'Instant optimization of IoT networks and devices for maximum efficiency and window.window.performance.';
                   color: 'from-red-50o0 to-pink-50o0';
                 };
                 {
@@ -499,7 +499,7 @@ export default function AIInternetOfThings20o41() {
                 {
                   title: 'Predictive Insights';
                   description:,
-                    'Gain predictive capabilities that help prevent issues and optimize window.performance.';
+                    'Gain predictive capabilities that help prevent issues and optimize window.window.performance.';
                   icon: <Target className='w-8 h-8' />;
                   color: 'from-blue-50o0 to-cyan-50o0';
                 };
@@ -558,6 +558,5 @@ export default function AIInternetOfThings20o41() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

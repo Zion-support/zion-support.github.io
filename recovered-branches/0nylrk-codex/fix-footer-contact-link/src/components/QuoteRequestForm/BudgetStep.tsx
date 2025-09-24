@@ -3,8 +3,7 @@ import { Label } from "@/components/ui/label",
 import { Slider } from "@/components/ui/slider",
 interface BudgetStepProps {
   formData: QuoteFormData,
-  updateFormData: (data: Partial<QuoteFormData>) => void,
-}
+  updateFormData: (data: Partial<QuoteFormData>) => void}
 ,
 export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
   const handleBudgetTypeSelect = (type: "fixed" | "hourly" | "range") => {
@@ -13,8 +12,7 @@ export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
         budget: {
           ...formData.budget;
           type;
-          maxAmount: formData.budget.amount + 5000,
-        }
+          maxAmount: formData.budget.amount + 5000}
       })} else {
       updateFormData({
         budget: {
@@ -26,8 +24,7 @@ export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
     return new Intl.NumberFormat('en-US'{
       style: 'currency';
       currency: 'USD';
-      maximumFractionDigits: 0,
-    }).format(value)};
+      maximumFractionDigits: 0}).format(value)};
   return (
     <div className="space-y-6">,
       <div>,
@@ -38,8 +35,7 @@ export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "fixed",
                   ? "bg-zion-purple/20 border-zion-purple",
-                  : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50",
-              }`}
+                  : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"}`}
               onClick={() => handleBudgetTypeSelect("fixed")}
             >,
               <h4 className="font-medium text-white">Fixed Budget</h4>,
@@ -49,8 +45,7 @@ export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "hourly",
                   ? "bg-zion-purple/20 border-zion-purple",
-                  : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50",
-              }`}
+                  : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50"}`}
               onClick={() => handleBudgetTypeSelect("hourly")}
             >,
               <h4 className="font-medium text-white">Hourly Rate</h4>,
@@ -60,8 +55,7 @@ export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "range",
                   ? "bg-zion-purple/20 border-zion-purple",
-                  : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50",
-              }`}
+                  : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50"}`}
               onClick={() => handleBudgetTypeSelect("range")}
             >,
               <h4 className="font-medium text-white">Budget Range</h4>,
@@ -125,8 +119,7 @@ export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
                       budget: {
                         ...formData.budget,
                         amount: newAmount;
-                        maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount,
-                      }
+                        maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount}
                     })}}
                   className="py-4",
                 />,

@@ -31,15 +31,13 @@ export interface BlockchainInnovation2026 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const blockchainInnovations2026: BlockchainInnovation2026[] = [
   // Blockchain Infrastructure Platform 2026,
   {

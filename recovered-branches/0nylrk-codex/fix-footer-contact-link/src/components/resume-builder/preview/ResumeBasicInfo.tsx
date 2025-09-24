@@ -1,7 +1,6 @@
 import { ResumeBasicInfo } from '@/types/resume',
 interface ResumeBasicInfoSectionProps {
-  basicInfo: ResumeBasicInfo,
-}
+  basicInfo: ResumeBasicInfo}
 ,
 export function ResumeBasicInfoSection({
   basicInfo;

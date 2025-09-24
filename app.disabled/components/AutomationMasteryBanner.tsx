@@ -91,6 +91,5 @@ const AutomationMasteryBanner = () => {
           </button>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AutomationMasteryBanner;

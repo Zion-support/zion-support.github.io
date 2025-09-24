@@ -55,8 +55,7 @@ export function ProductSubmissionForm() {
       form.setValue("image"file),
       const reader = new FileReader(),
       reader.onloadend = () => {
-        setImagePreview(reader.result as string),
-      };
+        setImagePreview(reader.result as string)};
       reader.readAsDataURL(file)}
   };
   // Apply AI-generated content to the form,
@@ -67,8 +66,7 @@ export function ProductSubmissionForm() {
     const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),
     form.setValue("price"averagePrice),
     // Switch to the manual tab to show applied content,
-    setActiveTab("manual"),
-  };
+    setActiveTab("manual")};
   // Handle form submission,
   const onSubmit = async (values: ProductFormValues) => {
     if (!user) {
@@ -117,8 +115,7 @@ export function ProductSubmissionForm() {
         const { error: updateError } = await supabase,
           .from('product_listings'),
           .update({
-            images: [publicUrlData.publicUrl],
-          }),
+            images: [publicUrlData.publicUrl]}),
           .eq('id'productRecord.id),
         if (updateError) {
           throw new Error(updateError.message)}
@@ -285,8 +282,7 @@ export function ProductSubmissionForm() {
           onApplyGenerated={handleApplyGenerated}
           initialValues={{
             title: form.getValues("title");
-            category: form.getValues("category"),
-          }}
+            category: form.getValues("category")}}
         />,
       </TabsContent>,
     </Tabs>)}

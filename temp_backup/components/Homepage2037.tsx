@@ -172,8 +172,7 @@ const Homepage20o37: React.FC = () => {
                       features: service.features.slice(0, 5);
                       popular: service.popular;
                       category: service.category;
-                      icon: service.icon,
-                    }}
+                      icon: service.icon}}
                     variant="ai",
                    />,
                 </motion.div>))}
@@ -232,8 +231,7 @@ const Homepage20o37: React.FC = () => {
                       features: service.features.slice(0, 5);
                       popular: service.popular;
                       category: service.category;
-                      icon: service.icon,
-                    }}
+                      icon: service.icon}}
                     variant="enterprise",
                    />,
                 </motion.div>))}
@@ -292,8 +290,7 @@ const Homepage20o37: React.FC = () => {
                       features: service.features.slice(0, 5);
                       popular: service.popular;
                       category: service.category;
-                      icon: service.icon,
-                    }}
+                      icon: service.icon}}
                     variant="automation",
                    />,
                 </motion.div>))}
@@ -426,6 +423,5 @@ const Homepage20o37: React.FC = () => {
           </div>,
         </section>,
       </main>,
-    </Layout>),
-};
+    </Layout>)};
 export default Homepage20o37;

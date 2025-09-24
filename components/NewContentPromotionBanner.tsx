@@ -23,8 +23,7 @@ const NewContentPromotionBanner = () => {
       link: "/ai-innovation-showcase-20o25";
       color: "from-purple-50o0 to-pink-50o0";
       bgColor: "from-purple-50o0/10 to-pink-50o0/10";
-      borderColor: "border-purple-50o0/30",
-    };
+      borderColor: "border-purple-50o0/30"};
     {
       id: 2;
       title: "✨ Success Stories & Case Studies";
@@ -32,8 +31,7 @@ const NewContentPromotionBanner = () => {
       link: "/success-stories-20o25";
       color: "from-blue-50o0 to-cyan-50o0";
       bgColor: "from-blue-50o0/10 to-cyan-50o0/10";
-      borderColor: "border-blue-50o0/30",
-    };
+      borderColor: "border-blue-50o0/30"};
     {
       id: 3;
       title: "🔮 Future Technology Predictions";
@@ -41,8 +39,7 @@ const NewContentPromotionBanner = () => {
       link: "/ai-20o25-20o30-ultimate-predictions";
       color: "from-green-50o0 to-emerald-50o0";
       bgColor: "from-green-50o0/10 to-emerald-50o0/10";
-      borderColor: "border-green-50o0/30",
-    }
+      borderColor: "border-green-50o0/30"}
   ],
   const currentPromotion = promotions[currentSlide],
   if (!isVisible) return null,

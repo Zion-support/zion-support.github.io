@@ -300,6 +300,5 @@ export default function AICybersecurity20o25Page() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

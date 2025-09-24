@@ -82,6 +82,5 @@ export default function AI20o26AdvancedAutomationPromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

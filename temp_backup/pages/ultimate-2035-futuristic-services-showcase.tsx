@@ -12,8 +12,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const categories = [
   'All Services';
   'AI & Autonomous Systems';
@@ -179,8 +178,7 @@ export default function Ultimate20o35FuturisticServicesShowcase() {
                     className={`p-2 rounded-md transition-all duration-20o0 ${
                       viewMode === 'grid',
                         ? 'bg-purple-50o0/20 text-purple-30o0',
-                        : 'text-gray-40o0 hover: text-white',
-                    }`}
+                        : 'text-gray-40o0 hover: text-white'}`}
                   >,
                     <Grid className="w-5 h-5"  />,
                   </button>,
@@ -189,8 +187,7 @@ export default function Ultimate20o35FuturisticServicesShowcase() {
                     className={`p-2 rounded-md transition-all duration-20o0 ${
                       viewMode === 'list',
                         ? 'bg-purple-50o0/20 text-purple-30o0',
-                        : 'text-gray-40o0 hover: text-white',
-                    }`}
+                        : 'text-gray-40o0 hover: text-white'}`}
                   >,
                     <List className="w-5 h-5"  />,
                   </button>,
@@ -385,5 +382,4 @@ export default function Ultimate20o35FuturisticServicesShowcase() {
           </div>,
         </section>,
       </Layout>,
-    </>),
-}
+    </>)}

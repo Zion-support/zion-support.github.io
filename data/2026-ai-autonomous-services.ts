@@ -12,8 +12,7 @@ export interface AiAutonomousService2026 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const aiAutonomousServices2026: AiAutonomousService2026[] = [
   {

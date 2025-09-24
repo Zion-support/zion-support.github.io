@@ -126,8 +126,7 @@ const QuantumNeuralFusionShowcase = () => {
             />,
           </svg>),
       default: ,
-        return null,
-    }
+        return null}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -138,8 +137,7 @@ const QuantumNeuralFusionShowcase = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <div className='py-16 bg-gray-50'>,
@@ -196,8 +194,7 @@ const QuantumNeuralFusionShowcase = () => {
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-30o0 ${
                 activeFilter === filter.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md'}`}
             >,
               {filter.label}
               <span className='ml-2 bg-white/20 text-xs px-2 py-1 rounded-full'>,
@@ -211,8 +208,7 @@ const QuantumNeuralFusionShowcase = () => {
             <div
               key={item.id}
               className={`bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-30o0 hover: shadow-2xl hover:transform hover:scale-10o5 ${
-                item.featured ? 'ring-2 ring-purple-50o0' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-50o0' : ''}`}
             >,
               {item.featured && (
                 <div className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white text-center py-2 text-sm font-medium'>,
@@ -302,6 +298,5 @@ const QuantumNeuralFusionShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default QuantumNeuralFusionShowcase;

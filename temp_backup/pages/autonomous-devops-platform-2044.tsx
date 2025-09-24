@@ -20,6 +20,5 @@ export default function AutonomousDevopsPlatform20o44Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

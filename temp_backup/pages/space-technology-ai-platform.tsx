@@ -32,6 +32,5 @@ export default function SpaceTechnologyAIPlatformPage() {
           </div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>),
-}
+    </UltraAdvancedFuturisticBackground>)}
 ,

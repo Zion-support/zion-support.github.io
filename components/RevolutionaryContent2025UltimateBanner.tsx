@@ -107,6 +107,5 @@ const RevolutionaryContent20o25UltimateBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryContent20o25UltimateBanner;

@@ -122,5 +122,4 @@ export default function AI20o26EnterpriseTransformation50o000ROIPromotionBanner(
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}

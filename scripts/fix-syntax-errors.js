@@ -5,13 +5,11 @@ import { glob } from 'glob',
 const fixes = [// Fix numeric literals in object properties,
   {
     "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g;
-    "replacement": '$1: $2$3',
-  };
+    "replacement": '$1: $2$3'};
   // Fix missing quotes around string values,
   {
     "pattern": /(\w+):\s*([a-zA-Z][a-zA-Z0-9\s]+)(?=\s*[}])/g;
-    "replacement": '$1: "$2"',
-  };
+    "replacement": '$1: "$2"'};
   // Fix malformed JSX attributes,
   {
     "pattern": /(\w+)={"([^"]+)"}/g;
@@ -19,8 +17,7 @@ const fixes = [// Fix numeric literals in object properties,
   // Fix missing colons in object properties,
   {
     "pattern": /(\w+)\s+(\d+)/g;
-    "replacement": '$1: $2',
-  };
+    "replacement": '$1: $2'};
   // Fix malformed style objects,
   {
     "pattern": /style={{\s*([^}]+)\s*}}/g;
@@ -68,7 +65,7 @@ function fixFile(filePath) {
       .replace(/(\w+)="([^"]*)\n([^"]*)"([^>]*>)/g, '$1="$2$3"$4'),
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8'),
-      // console.log(`"Fixed": ${filePath}`),
+      // // console.log(`"Fixed": ${filePath}`),
       return true}
     return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message),
@@ -87,7 +84,7 @@ async function main() {
         totalFixed++}
     }
   }
-  // console.log(`\nFixed ${totalFixed} files`)}
+  // // console.log(`\nFixed ${totalFixed} files`)}
 if (import.meta.url === `"file": //${process.argv[1]}`) {
   main()}
 export { fixFile, fixes };

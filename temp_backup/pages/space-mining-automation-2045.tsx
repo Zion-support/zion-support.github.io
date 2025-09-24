@@ -17,6 +17,5 @@ export default function SpaceMiningAutomation20o45Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

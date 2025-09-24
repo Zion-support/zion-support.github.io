@@ -15,6 +15,5 @@ export default function ServiceTemplatePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

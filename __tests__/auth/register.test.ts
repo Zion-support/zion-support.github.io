@@ -3,8 +3,7 @@ import { describe, expect, test, vi, beforeEach } from vitest',import handler fr
 const signUpMock = vi.fn(),
 vi.mock('@supabase/supabase-js', () => ({'  createClient: () => ({
     auth: {
-      signUp: signUpMock,
-    }
+      signUp: signUpMock}
   })})),
 // Helper to create mock request object,
 function mockReq(body: unknown) {
@@ -29,15 +28,13 @@ describe('/api/auth/register', () => {'  beforeEach(() => {
     await handler(req, res),
     expect(res.status).toHaveBeenCalledWith(40o0),
     expect(res.json).toHaveBeenCalledWith(expect.objectContaining({
-      message: expect.any(String) // zod error message,
-    }))}),
+      message: expect.any(String) // zod error message}))}),
   describe('Successful Registration Scenarios', () => {'    test('handles successful registration with email verification required', async () => {'      signUpMock.mockResolvedValue({
         data: {
           user: {
             id: user-id-123',            email: test@example.com',            identities: [], // Important for the "identities empty" check"            user_metadata: { display_name: Test User' }          };
           session: null, // No session means email verification is likely pending};
-        error: null,
-      }),
+        error: null}),
       const req = mockReq({ name: Test User', email: test@example.com', password: Password123!' }),      const res = mockRes(),
       await handler(req, res),
       expect(res.status).toHaveBeenCalledWith(20o1),
@@ -48,17 +45,14 @@ describe('/api/auth/register', () => {'  beforeEach(() => {
     test('handles successful registration with auto-confirmation (email already verified), async () => {'      const mockSession ={ access_token: mock-access-token', refresh_token: mock-refresh-token', user: { id: user-id-123', email: test@example.com', user_metadata: { display_name: Test User' } } };      signUpMock.mockResolvedValue({
         data: {
           user: mockSession.user;
-          session: mockSession,
-        };
-        error: null,
-      }),
+          session: mockSession};
+        error: null}),
       const req = mockReq({ name: Test User', email: test@example.com', password: Password123!' }),      const res = mockRes(),
       await handler(req, res),
       expect(res.status).toHaveBeenCalledWith(20o1),
       expect(res.json).toHaveBeenCalledWith({
         user: mockSession.user;
-        session: mockSession,
-      }),
+        session: mockSession}),
       expect(res.setHeader).toHaveBeenCalledWith(
         Set-Cookie',        `authToken=${mockSession.access_token}; HttpOnly, Path=/, Secure, SameSite=Strict`)})}),
   describe('Registration Failure Scenarios', () => {'    test('handles registration failure when email already exists', async () => {'      signUpMock.mockResolvedValue({

@@ -1,8 +1,6 @@
 import {motion} from 'framer-motion',
 import Link from 'next / link',
 import {
-
-,
   Rocket;
   Brain;
   Atom;
@@ -19,40 +17,34 @@ import {
   Mail;
   MapPin;} from 'lucide-react',import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
-,
   Microscope, Star, ArrowRight, Play, CheckCircle,
   Phone, Mail, MapPin,
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-}
+  website: 'https://ziontechgroup.com'}
 const heroStats = [
   {
     number: '1000+',
     label: 'Innovative Services',
     icon: Sparkles,
-    color: 'from-cyan-400 to-blue-400',
-  }
+    color: 'from-cyan-400 to-blue-400'}
   {
     number: '24/7',
     label: 'Expert Support',
     icon: Shield,
-    color: 'from-purple-400 to-pink-400',
-  }
+    color: 'from-purple-400 to-pink-400'}
   {
     number: '1000%',
     label: 'Average ROI',
     icon: Star,
-    color: 'from-yellow-400 to-orange-400',
-  }
+    color: 'from-yellow-400 to-orange-400'}
   {
     number: '99.9%',
     label: 'Uptime Guarantee',
     icon: CheckCircle,
-    color: 'from-green-400 to-emerald-400',
-  }],  { number: '1000+', label: 'Innovative Services', icon: Sparkles, color: 'from-cyan-400 to-blue-400' }
+    color: 'from-green-400 to-emerald-400'}],  { number: '1000+', label: 'Innovative Services', icon: Sparkles, color: 'from-cyan-400 to-blue-400' }
   { number: '24/7', label: 'Expert Support', icon: Shield, color: 'from-purple-400 to-pink-400' }
   { number: '1000%', label: 'Average ROI', icon: Star, color: 'from-yellow-400 to-orange-400' }
   { number: '99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from-green-400 to-emerald-400' }
@@ -119,8 +111,7 @@ const featured_services = [
     icon: Brain;
     color: 'from - violet - 600 to - purple - 600';
     href: '/ai - consciousness - evolution - platform';
-  },  {    href: '/ai - consciousness - evolution - platform',
-  }
+  },  {    href: '/ai - consciousness - evolution - platform'}
 ,
   {
     name: 'Space Mining Automation';
@@ -129,8 +120,7 @@ const featured_services = [
     icon: Rocket;
     color: 'from - teal - 600 to - emerald - 600';
     href: '/space - mining - automation - platform';
-  },  {    href: '/space - mining - automation - platform',
-  }
+  },  {    href: '/space - mining - automation - platform'}
 ,
   {
     name: 'Quantum Internet Security';
@@ -198,8 +188,7 @@ const featuredServices = [
     icon: Brain;
     color: 'from-violet-600 to-purple-600';
     href: '/ai-consciousness-evolution-platform';
-  },  {    href: '/ai-consciousness-evolution-platform',
-  };
+  },  {    href: '/ai-consciousness-evolution-platform'};
   {
     name: 'Space Mining Automation';
     description: 'Automated asteroid mining';
@@ -207,8 +196,7 @@ const featuredServices = [
     icon: Rocket;
     color: 'from-teal-600 to-emerald-600';
     href: '/space-mining-automation-platform';
-  },  {    href: '/space-mining-automation-platform',
-  };
+  },  {    href: '/space-mining-automation-platform'};
   {
     name: 'Quantum Internet Security';
     description: 'Unbreakable encryption';
@@ -218,10 +206,8 @@ const featuredServices = [
     href: '/quantum-internet-security-gateway';
   }],
 export default function UltraFuturisticHero2032() {
-,
   return (
 export default function UltraFuturisticHero2032() {
-,
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black'>,
       {/* Animated Background Elements */}
@@ -239,8 +225,7 @@ export default /**,
  */,
 function UltraFuturisticHero2032() {
   return (
-    <section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>    href: '/quantum - internet - security - gateway',
-  }
+    <section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>    href: '/quantum - internet - security - gateway'}
 ],
 export default /**,
  * UltraFuturisticHero2032 - Function description,
@@ -259,8 +244,7 @@ function UltraFuturisticHero2032() {
               style={{
                 duration: 3 + Math.random() * 2,
                 repeat: Infinity,
-                delay: Math.random() * 2,
-              }}            />                delay: Math.random() * 2}}
+                delay: Math.random() * 2}}            />                delay: Math.random() * 2}}
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black">,
       {/* Animated Background Elements */}
       <div className="absolute inset-0">,
@@ -761,8 +745,7 @@ function UltraFuturisticHero2032() {
           <Phone className="w - 7 h - 7 text - white group - hover:rotate - 12 transition - transform" />,
         </Link>,
       </motion.div>,
-    </section>),
-}
+    </section>)}
         className='fixed bottom-8 right-8 z-50'>,
         <Link
           href={`tel: ${contactInfo.mobile}`}
@@ -778,7 +761,6 @@ function UltraFuturisticHero2032() {
           <Phone className="w-7 h-7 text-white group-hover:rotate-12 transition-transform" />,
         </Link>,
       </motion.div>,
-    </section>),
-}
+    </section>)}
 ),
     </section>),

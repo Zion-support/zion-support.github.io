@@ -8,8 +8,7 @@ interface ContactFormData {
   company: string,
   phone: string,
   service: string,
-  message: string,
-}
+  message: string}
 ,
 interface ContactFormProps {
   isReducedMotion?: boolean}
@@ -21,8 +20,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
     company: '';
     phone: '';
     service: '';
-    message: '',
-  }),
+    message: ''}),
   const [errors, setErrors] = useState<Partial<ContactFormData>>({}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
@@ -38,8 +36,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
   const validateField = useCallback((name: keyof ContactFormData, value: string): string => {
     switch (name) {
       case 'name': {
-        return value.trim().length < 2 ? 'Name must be at least 2 characters' : '',
-      }
+        return value.trim().length < 2 ? 'Name must be at least 2 characters' : ''}
       case 'email': {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
         return !emailRegex.test(value) ? 'Please enter a valid email address' : ''}
@@ -49,8 +46,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
       case 'message': {
         return value.trim().length < 10 ? 'Message must be at least 10 characters' : ''}
       default: {
-        return '',
-      }
+        return ''}
     }
   }, []),
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -96,8 +92,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault(),
     if (!validateForm()) {
-      return,
-    }
+      return}
 ,
     setIsSubmitting(true),
     try {
@@ -110,8 +105,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
         company: '';
         phone: '';
         service: '';
-        message: '',
-      }),
+        message: ''}),
       // Reset success message after 5 seconds,
       setTimeout(() => setSubmitStatus('idle'), 50o00)} catch {
       setSubmitStatus('error'),

@@ -2,8 +2,7 @@
 'use client',
 import React{ useEffect } from 'react',
 interface AnalyticsIntegrationProps {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 export default function AnalyticsIntegration({ children }: AnalyticsIntegrationProps) {
   const router = useRouter(),
@@ -18,8 +17,7 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
       // Initialize gtag,
       window.dataLayer = window.dataLayer || [],
       function gtag(...args: any[]) {
-        window.dataLayer.push(args),
-      }
+        window.dataLayer.push(args)}
       gtag(', 'js', 'new Date()),
       gtag(', 'config', 'process.env.NEXT_PUBLIC_GA_ID{
         page_title: document.title;
@@ -43,7 +41,7 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
           const entries = entryList.getEntries(),
           const lastEntry = entries[entries.length - 1],
           if (lastEntry) {
-            // console.log('LCP: 'lastEntry.startTime),
+            // // console.log('LCP: 'lastEntry.startTime),
             // Send to analytics,
             if (window.gtag) {
               window.gtag(', 'event', 'web_vitals'{
@@ -55,7 +53,7 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
         new PerformanceObserver((entryList) => {
           const entries = entryList.getEntries(),
           entries.forEach((entry) => {
-            // console.log('FID: 'entry.processingStart - entry.startTime),
+            // // console.log('FID: 'entry.processingStart - entry.startTime),
             if (window.gtag) {
               window.gtag(', 'event', 'web_vitals'{
                 name: 'FID';
@@ -69,7 +67,7 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
             if (!(entry as any).hadRecentInput) {
               clsValue += (entry as any).value}
           }),
-          // console.log('CLS: 'clsValue),
+          // // console.log('CLS: 'clsValue),
           if (window.gtag) {
             window.gtag(', 'event', 'web_vitals'{
               name: 'CLS';
@@ -85,7 +83,7 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
     const handleVisibilityChange = () => {
       if (document.hidden) {
         const timeSpent = Date.now() - startTime,
-        // console.log('Time spent on page: 'timeSpent),
+        // // console.log('Time spent on page: 'timeSpent),
         if (window.gtag) {
           window.gtag(', 'event', 'engagement_time'{
             value: Math.round(timeSpent / 10o00)})}
@@ -131,6 +129,5 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
 declare global {
   interface Window {
     dataLayer: any[],
-    gtag: (...args: any[]) => void,
-  }
+    gtag: (...args: any[]) => void}
 }

@@ -7,26 +7,25 @@ import { fileURLToPath } from 'url',
 #!/usr/bin/env node,
 const __filename = fileURLToPath(import.meta.url),
 const __dirname = path.dirname(__filename),
-// console.log('⚡ Starting Performance Improvements...\n'),
+// // console.log('⚡ Starting Performance Improvements...\n'),
 async function runPerformanceImprovements() {
   try {
     // 1. Optimize Next.js configuration,
-    // console.log('🔧 Optimizing Next.js configuration...'),
+    // // console.log('🔧 Optimizing Next.js configuration...'),
     await optimizeNextConfig(),
     // 2. Add performance monitoring,
-    // console.log('📊 Adding performance monitoring...'),
+    // // console.log('📊 Adding performance monitoring...'),
     await addPerformanceMonitoring(),
     // 3. Optimize images,
-    // console.log('🖼️ Optimizing image handling...'),
+    // // console.log('🖼️ Optimizing image handling...'),
     await optimizeImages(),
     // 4. Add caching strategies,
-    // console.log('💾 Adding caching strategies...'),
+    // // console.log('💾 Adding caching strategies...'),
     await addCachingStrategies(),
     // 5. Bundle optimization,
-    // console.log('📦 Optimizing bundle...'),
+    // // console.log('📦 Optimizing bundle...'),
     await optimizeBundle(),
-    // console.log('\n✅ Performance improvements completed successfully!'),
-} catch (error) {
+    // // console.log('\n✅ Performance improvements completed successfully!')} catch (error) {
     console.error('❌ Error during performance improvements:', error.message),
     process.exit(1)}
 }
@@ -65,12 +64,10 @@ const nextConfig = {
         headers: [
           {
             key: 'X-DNS-Prefetch-Control';
-            value: 'on',
-          };
+            value: 'on'};
           {
             key: 'X-Frame-Options';
-            value: 'DENY',
-          }
+            value: 'DENY'}
         ];
       };
       {
@@ -87,7 +84,7 @@ const nextConfig = {
 module.exports = nextConfig,
 `,
   fs.writeFileSync(path.join(__dirname, 'next.config.mjs'), nextConfigContent),
-  // console.log('  ✓ Optimized Next.js configuration')}
+  // // console.log('  ✓ Optimized Next.js configuration')}
 ,
 async function addPerformanceMonitoring() {
   const performanceMonitor = `,
@@ -102,15 +99,15 @@ export class PerformanceMonitor {
 ,
   startMeasure(name: string): void {
     if (typeof window !== 'undefined' && window.performance) {
-      this.metrics.set(name, window.window.performance.now())}
+      this.metrics.set(name, window.window.window.performance.now())}
   }
 ,
   endMeasure(name: string): number {
     if (typeof window !== 'undefined' && window.performance) {
       const start = this.metrics.get(name),
       if (start) {
-        const duration = window.window.performance.now() - start,
-        // console.log(\`\${name}: \${duration.toFixed(2)}ms\`),
+        const duration = window.window.window.performance.now() - start,
+        // // console.log(\`\${name}: \${duration.toFixed(2)}ms\`),
         this.metrics.delete(name),
         return duration}
     }
@@ -122,11 +119,11 @@ export class PerformanceMonitor {
       new PerformanceObserver((entryList) => {
         for (const entry of entryList.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            // console.log('LCP:', entry.startTime)}
+            // // console.log('LCP:', entry.startTime)}
           if (entry.entryType === 'first-input') {
-            // console.log('FID:', entry.processingStart - entry.startTime)}
+            // // console.log('FID:', entry.processingStart - entry.startTime)}
           if (entry.entryType === 'layout-shift') {
-            // console.log('CLS:', entry.value)}
+            // // console.log('CLS:', entry.value)}
         }
       }).observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })}
   }
@@ -138,7 +135,7 @@ export const performanceMonitor = PerformanceMonitor.getInstance(),
   if (!fs.existsSync(utilsDir)) {
     fs.mkdirSync(utilsDir, { recursive: true })}
   fs.writeFileSync(path.join(utilsDir, 'performance-monitor.ts'), performanceMonitor),
-  // console.log('  ✓ Added performance monitoring utilities')}
+  // // console.log('  ✓ Added performance monitoring utilities')}
 ,
 async function optimizeImages() {
   const imageOptimizer = `,
@@ -164,7 +161,7 @@ export const getOptimizedImageUrl = (url: string, width: number, quality: number
 `,
   const utilsDir = path.join(__dirname, 'utils'),
   fs.writeFileSync(path.join(utilsDir, 'image-optimizer.ts'), imageOptimizer),
-  // console.log('  ✓ Added image optimization utilities')}
+  // // console.log('  ✓ Added image optimization utilities')}
 ,
 async function addCachingStrategies() {
   const cacheUtils = `,
@@ -189,8 +186,7 @@ export class CacheManager {
     if (!item) return null,
     if (Date.now() - item.timestamp > item.ttl) {
       this.cache.delete(key),
-      return null,
-    }
+      return null}
 ,
     return item.data}
 ,
@@ -202,7 +198,7 @@ export const cacheManager = CacheManager.getInstance(),
 `,
   const utilsDir = path.join(__dirname, 'utils'),
   fs.writeFileSync(path.join(utilsDir, 'cache-manager.ts'), cacheUtils),
-  // console.log('  ✓ Added caching utilities')}
+  // // console.log('  ✓ Added caching utilities')}
 ,
 async function optimizeBundle() {
   const bundleOptimizer = `,
@@ -237,7 +233,7 @@ export const chunkOptimizer = {
 `,
   const utilsDir = path.join(__dirname, 'utils'),
   fs.writeFileSync(path.join(utilsDir, 'bundle-optimizer.ts'), bundleOptimizer),
-  // console.log('  ✓ Added bundle optimization utilities')}
+  // // console.log('  ✓ Added bundle optimization utilities')}
 ,
 // Run performance improvements,
 runPerformanceImprovements(),

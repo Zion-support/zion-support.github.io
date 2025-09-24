@@ -4,8 +4,7 @@ export interface HelpArticle {
   title: string,
   content: string,
   last_updated: string,
-  tags: string[],
-}
+  tags: string[]}
 export interface HelpCategory {
 import {ReactNode} from "react",
 export interface HelpArticle {
@@ -13,8 +12,7 @@ export interface HelpArticle {
   title: string,
   content: string,
   lastUpdated: string;
-  tags: string[],
-}
+  tags: string[]}
 ,
 export interface HelpCategory {
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
@@ -22,12 +20,10 @@ export interface HelpCategory {
   name: string,
   description: string,
   icon: ReactNode,
-  articles: HelpArticle[],
-}
+  articles: HelpArticle[]}
 ,
 export interface SupportTicket {
 export interface SupportTicket {
-,
   id: string,
   user_id: string,
   subject: string,
@@ -35,8 +31,7 @@ export interface SupportTicket {
   status: "open" | "in - progress" | "resolved" | "closed",
   priority: "low" | "medium" | "high",
   created_at: string,
-  updated_at: string,
-}
+  updated_at: string}
 ,
 import { ReactNode } from "react";
 export interface HelpArticle {
@@ -51,16 +46,14 @@ export interface HelpArticle {
   title: string;
   content: string;
   lastUpdated: string;
-  tags: string[],
-}
+  tags: string[]}
 ,
 export interface HelpCategory {
   id: string;
   name: string;
   description: string;
   icon: ReactNode;
-  articles: HelpArticle[],
-}
+  articles: HelpArticle[]}
 ,
 export interface SupportTicket {
   id: string;
@@ -79,6 +72,5 @@ export interface SupportTicket {
   status: "open" | "in-progress" | "resolved" | "closed";
   priority: "low" | "medium" | "high",
   createdAt: string,
-  updatedAt: string,
-}
+  updatedAt: string}
 >>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}

@@ -360,6 +360,5 @@ export default function AutonomousBusinessOperationsPage() {
           </div>,
         </div>,
       </article>,
-    </div>),
-}
+    </div>)}
 ,

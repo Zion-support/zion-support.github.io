@@ -20,6 +20,5 @@ export default function QuantumDataCenterManagement20o44Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -298,8 +298,7 @@ export default function CaseStudiesPage() {
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-30o0 ${
                       selectedCategory === category,
                         ? 'bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white shadow-lg',
-                        : 'bg-white/5 border border-white/20 text-white/80 hover: bg-white/10 hover:border-white/40',
-                    }`}
+                        : 'bg-white/5 border border-white/20 text-white/80 hover: bg-white/10 hover:border-white/40'}`}
                   >,
                     {category}
                   </button>))}
@@ -316,8 +315,7 @@ export default function CaseStudiesPage() {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-30o0 ${
                     selectedIndustry === industry,
                       ? 'bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white shadow-lg',
-                      : 'bg-white/5 border border-white/20 text-white/80 hover: bg-white/10 hover:border-white/40',
-                  }`}
+                      : 'bg-white/5 border border-white/20 text-white/80 hover: bg-white/10 hover:border-white/40'}`}
                 >,
                   {industry}
                 </button>))}
@@ -499,6 +497,5 @@ export default function CaseStudiesPage() {
         </div>,
       </section>,
       <EnhancedFooter />,
-    </div>),
-}
+    </div>)}
 ,

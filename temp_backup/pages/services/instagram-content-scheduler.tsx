@@ -18,5 +18,4 @@ const ServicePage: NextPage<Props> = () => {
           </a>,
         </div>,
       </div>,
-    </>),
-};
+    </>)};

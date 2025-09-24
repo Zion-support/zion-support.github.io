@@ -43,7 +43,6 @@ import { Alert, AlertDescription, AlertTitle } from '@/components / ui / alert',
 import { toast } from '@/hooks / use - toast',
 import { Check, Flag, Search, Settings, X } from './lucide-react',
 import { supabase } from '@/integrations / supabase / client',
-,
 interface PartnerProfile {
   website?: string,
   bio?: string,
@@ -123,8 +122,7 @@ export default function PartnerManager() {
             bio: 'We create AI tutorials and insights for developers.',
             payout_method: 'paypal',
             fraud_flags: 0,
-            commission_rate: 25,
-          }
+            commission_rate: 25}
           {
             id: '2',
             user_id: 'user2',
@@ -138,8 +136,7 @@ export default function PartnerManager() {
             bio: 'Premiere online academy for machine learning enthusiasts.',
             payout_method: 'bank',
             fraud_flags: 0,
-            commission_rate: 30,
-          }
+            commission_rate: 30}
           {
             id: '3',
             user_id: 'user3',
@@ -153,8 +150,7 @@ export default function PartnerManager() {
             bio: 'We share insights about the latest in tech.',
             payout_method: 'crypto',
             fraud_flags: 2,
-            commission_rate: 20,
-          }
+            commission_rate: 20}
           {
             id: '4',
             user_id: 'user4',
@@ -168,8 +164,7 @@ export default function PartnerManager() {
             bio: 'Learn to code with our expert tutorials.',
             payout_method: 'paypal',
             fraud_flags: 0,
-            commission_rate: 25,
-          }
+            commission_rate: 25}
           {
             id: '5',
             user_id: 'user5',
@@ -183,8 +178,7 @@ export default function PartnerManager() {
             bio: 'Daily updates on the world of artificial intelligence.',
             payout_method: 'platform_credit',
             fraud_flags: 1,
-            commission_rate: 20,
-          }
+            commission_rate: 20}
         ],
         setPartners(mockData),
         filterPartners(mockData, activeTab, searchQuery)} else {
@@ -215,7 +209,6 @@ interface PartnerProfile {
   niche: string;
   audience_size: string;
   social_media?: Record<string string>,
-,
 interface PartnerProfile {
   id: string;
   user_id: string;
@@ -244,7 +237,6 @@ export default function PartnerManager() {
   const { user, isAuthenticated } = useAuth(),
   useEffect(() => {
     if (!isAuthenticated) {
-,
       navigate("/login"),
       return}
 ,
@@ -324,8 +316,7 @@ export default function PartnerManager() {
             bio: 'We create AI tutorials and insights for developers.',
             payout_method: 'paypal',
             fraud_flags: 0,
-            commission_rate: 25,
-          }
+            commission_rate: 25}
           {
             id: '2',
             user_id: 'user2',
@@ -339,8 +330,7 @@ export default function PartnerManager() {
             bio: 'Premiere online academy for machine learning enthusiasts.',
             payout_method: 'bank',
             fraud_flags: 0,
-            commission_rate: 30,
-          }
+            commission_rate: 30}
           {
             id: '3',
             user_id: 'user3',
@@ -354,8 +344,7 @@ export default function PartnerManager() {
             bio: 'We share insights about the latest in tech.',
             payout_method: 'crypto',
             fraud_flags: 2,
-            commission_rate: 20,
-          }
+            commission_rate: 20}
           {
             id: '4',
             user_id: 'user4',
@@ -369,8 +358,7 @@ export default function PartnerManager() {
             bio: 'Learn to code with our expert tutorials.',
             payout_method: 'paypal',
             fraud_flags: 0,
-            commission_rate: 25,
-          }
+            commission_rate: 25}
           {
             id: '5',
             user_id: 'user5',
@@ -384,8 +372,7 @@ export default function PartnerManager() {
             bio: 'Daily updates on the world of artificial intelligence.',
             payout_method: 'platform_credit',
             fraud_flags: 1,
-            commission_rate: 20,
-          }
+            commission_rate: 20}
         ],
         setPartners(mockData),
         filterPartners(mockData, activeTab, searchQuery)} else {
@@ -442,8 +429,7 @@ if ( {) {
             bio: 'We create AI tutorials and insights for developers.';
             payout_method: 'paypal';
             fraud_flags: 0;
-            commission_rate: 25,
-          }
+            commission_rate: 25}
           {
             id: '2';
             user_id: 'user2';
@@ -457,8 +443,7 @@ if ( {) {
             bio: 'Premiere online academy for machine learning enthusiasts.';
             payout_method: 'bank';
             fraud_flags: 0;
-            commission_rate: 30,
-          }
+            commission_rate: 30}
           {
             id: '3';
             user_id: 'user3';
@@ -472,8 +457,7 @@ if ( {) {
             bio: 'We share insights about the latest in tech.';
             payout_method: 'crypto';
             fraud_flags: 2;
-            commission_rate: 20,
-          }
+            commission_rate: 20}
           {
             id: '4';
             user_id: 'user4';
@@ -487,8 +471,7 @@ if ( {) {
             bio: 'Learn to code with our expert tutorials.';
             payout_method: 'paypal';
             fraud_flags: 0;
-            commission_rate: 25,
-          }
+            commission_rate: 25}
           {
             id: '5';
             user_id: 'user5';
@@ -502,21 +485,18 @@ if ( {) {
             bio: 'Daily updates on the world of artificial intelligence.';
             payout_method: 'platform_credit';
             fraud_flags: 1;
-            commission_rate: 20,
-          }
+            commission_rate: 20}
         ],
         set_partners (mock_data),
         filter_partners (mock_data, active_tab, search_query)} else {
         set_partners (data as PartnerProfile[]),
-        filter_partners (data as PartnerProfile[], active_tab, search_query),
-}
+        filter_partners (data as PartnerProfile[], active_tab, search_query)}
 ,
       console.error ("Error fetching partners:", error),
       toast ({
         title: "Error";
         description: "Failed to load partner data";
-        variant: "destructive"}),
-} finally {
+        variant: "destructive"})} finally {
       setIsLoading (false)}
   }
 } finally {
@@ -527,8 +507,7 @@ if ( {) {
     let filtered = partners,
     // Filter by status,
     if (status !== "all") {
-      filtered = filtered.filter(p => p.status === status),
-    }
+      filtered = filtered.filter(p => p.status === status)}
     // Filter by search query,
     if (query) {
       const lowerQuery = query.toLowerCase(),
@@ -574,19 +553,16 @@ if ( {) {
   };
   const handleViewDetails = (partner: PartnerProfile) => {
     setSelectedPartner(partner),
-    setIsDetailsOpen(true),
-  }
+    setIsDetailsOpen(true)}
   const handleOpenSettings = (partner: PartnerProfile) => {
     setSelectedPartner(partner),
     setCommissionRate(partner.commission_rate |25),
-    setIsSettingsOpen(true),
-  }
+    setIsSettingsOpen(true)}
   };
   const handleOpenSettings = (partner: PartnerProfile) => {
     setSelectedPartner(partner),
     setCommissionRate(partner.commission_rate |25),
-    setIsSettingsOpen(true),
-  };
+    setIsSettingsOpen(true)};
   const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {
     try {
       // In a real app, this would update the database,
@@ -644,8 +620,7 @@ if ( {) {
       case '10k-50k': return '10,000 - 50,000',
       case '50k-100k': return '50,000 - 100,000',
       case 'over100k': return 'Over 100,000',
-      default: return size,
-    }
+      default: return size}
   }
   };
     setFilteredPartners(filtered)};
@@ -692,8 +667,7 @@ if ( {) {
       case '10k-50k': return '10,000 - 50,000',
       case '50k-100k': return '50,000 - 100,000',
       case 'over100k': return 'Over 100,000',
-      default: return size,
-    }
+      default: return size}
 };
   const getStatusBadge = (status: string) => {
     switch (status) {
@@ -740,8 +714,7 @@ if ( {) {
                 <CardTitle className="text-sm font-medium text-zion-slate-light">,
                   Pending Applications,
                 </CardTitle>,
-                <div className="text-2xl font-bold text-white">,
-  };
+                <div className="text-2xl font-bold text-white">};
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':,
@@ -1107,8 +1080,7 @@ interface PartnerTableProps {
   onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void,
   onOpenSettings: (partner: PartnerProfile) => void,
   getStatusBadge: (status: string) => JSX.Element,
-  getFraudFlagBadge: (flags?: number) => JSX.Element | null,
-}
+  getFraudFlagBadge: (flags?: number) => JSX.Element | null}
 ,
 function PartnerTable({
   partners,
@@ -1139,8 +1111,7 @@ function PartnerTable({
     return (
       <div className="text-center py-8">,
         <p className="text-zion-slate-light">Loading partner data...</p>,
-      </div>),
-}
+      </div>)}
   if (partners.length === 0) {
     return (
       <div className="text-center py-8">,
@@ -1188,8 +1159,7 @@ interface PartnerTableProps {
   onUpdateStatus: (partner_id: string, status: 'approved' | 'rejected') => void;
   onOpenSettings: (partner: PartnerProfile) => void;
   getStatusBadge: (status: string) => JSX.Element;
-  getFraudFlagBadge: (flags?: number) => JSX.Element | null,
-}
+  getFraudFlagBadge: (flags?: number) => JSX.Element | null}
 /**,
  * PartnerTable - Function description,
  */,

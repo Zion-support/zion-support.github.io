@@ -114,7 +114,6 @@ import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase,
-,
   BookOpen, MessageCircle, Star, TrendingUp, Target,
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
   Earth, Factory, Car, Building, GraduationCap, Scale,
@@ -591,13 +590,11 @@ const companyLinks = [
   {
     name: ' Ultimate 2028',
     href: '/ultimate-2028-services-showcase',
-    icon: Star,
-  }
+    icon: Star}
   {
     name: ' 2028 Pricing',
     href: '/revolutionary-2028-pricing',
-    icon: DollarSign,
-  },  { name: ' Case Studies', href: '/case-studies', icon: Briefcase }
+    icon: DollarSign},  { name: ' Case Studies', href: '/case-studies', icon: Briefcase }
   { name: ' Blog & Resources', href: '/blog', icon: BookOpen }
   { name: ' About Us', href: '/about', icon: Users }
   { name: ' Contact', href: '/contact', icon: MessageCircle }
@@ -689,8 +686,7 @@ const company_links = [
   const handleCategoryHover = (categoryTitle: string) => {
     setActiveCategory(categoryTitle),
   const handleCategoryHover = (categoryTitle: string) => {
-    setActiveCategory(categoryTitle),
-  };
+    setActiveCategory(categoryTitle)};
   const handleCategoryLeave = () => {
     setActiveCategory(null)};
   const filteredServices = serviceCategories && serviceCategories.flatMap(category =>,
@@ -779,8 +775,7 @@ function UltraFuturisticNavigation2028() {
   const toggle_menu = () =>: any setIsOpen (!is_open),
   const close_menu = () =>: any setIsOpen (false),
   const handleCategoryHover = (category_title: string) =>: any {
-    setActiveCategory (category_title),
-  }
+    setActiveCategory (category_title)}
 ,
   const handleCategoryLeave = () =>: any {
     setActiveCategory (null)}
@@ -1375,8 +1370,7 @@ function UltraFuturisticNavigation2028() {
             </div>,
           </div>,
         </div>)}
-),
-}
+)}
 }
 ,
           </motion.div>)}

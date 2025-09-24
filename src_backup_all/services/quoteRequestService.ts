@@ -60,8 +60,7 @@ export const quoteRequestService = {
         .single(),
       if (queryError && queryError.code !== 'PGRST116') {
         // PGRST116: Row to be returned was not found,
-        throw queryError, // Re-throw actual errors,
-      }
+        throw queryError, // Re-throw actual errors}
 ,
       if (data && !data.viewed_at) {
         // Check if data exists and then if viewed_at is null/undefined,

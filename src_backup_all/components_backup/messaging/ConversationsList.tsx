@@ -8,8 +8,7 @@ interface ConversationsListProps {
   conversations: Conversation[],
   activeConversation: Conversation | null,
   setActiveConversation: (conversation: Conversation) => void,
-  markAsRead: (conversationId: string) => Promise<void>,
-}
+  markAsRead: (conversationId: string) => Promise<void>}
 ,
 export function ConversationsList({
   conversations;

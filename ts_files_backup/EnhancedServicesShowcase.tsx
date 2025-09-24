@@ -21,8 +21,7 @@ interface Service {
   growthRate: string,
   popular?: boolean,
   icon: React.ComponentType<any>,
-  color: string,
-}
+  color: string}
 ,
 const EnhancedServicesShowcase: React.FC = () => {
   const [selectedCategorysetSelectedCategory] = useState<string>('all'),
@@ -47,8 +46,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         'Improved operational efficiency';
         'Data-driven insights'];
       technologies: [', 'TensorFlow', 'PyTorch', 'OpenAI', 'Hugging 'Face', 'AWS SageMaker'];
-      href: '/services/ai',
-    };
+      href: '/services/ai'};
     {
       id: 'cloud';
       title: 'Cloud Infrastructure';
@@ -68,8 +66,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         'Reduced operational costs';
         'Enhanced security'];
       technologies: [', 'AWS', 'Azure'Google 'Cloud', 'Kubernetes'Docker'];
-      href: '/services/cloud',
-    };
+      href: '/services/cloud'};
     {
       id: 'security';
       title: 'Cybersecurity';
@@ -89,8 +86,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         '24/7 threat monitoring';
         'Reduced security risks'];
       technologies: [', 'SIEM', 'SOAR', 'EDR', 'XDR'Zero Trust'];
-      href: '/services/security',
-    };
+      href: '/services/security'};
     {
       id: 'quantum';
       title: 'Quantum Computing';
@@ -110,8 +106,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         'Future-ready technology';
         'Competitive advantage'];
       technologies: [', 'Qiskit', 'Cirq', 'PennyLane', 'IBM 'Quantum', 'Google Quantum'];
-      href: '/services/quantum',
-    }
+      href: '/services/quantum'}
   ],
   const stats = [
     { number: '500+'label: 'Projects Delivered' };
@@ -314,6 +309,5 @@ const EnhancedServicesShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default EnhancedServicesShowcase;

@@ -66,7 +66,7 @@ reviews: number,export const enterpriseBlockchainServices: EnterpriseBlockchainS
   text-blue-40o0';
     "link": 'https://ziontechgroup.com/enterprise-blockchain;
     marketPosition:;
-  Leading edge in enterprise blockchain. Competes with Hyperledger Fabric ($50o000+/month) and Corda ($30o000+/month) with superior window.performance.';
+  Leading edge in enterprise blockchain. Competes with Hyperledger Fabric ($50o000+/month) and Corda ($30o000+/month) with superior window.window.performance.';
     "targetAudience": Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Manufacturing companies, Logistics providers';
     "trialDays": 30;
     setupTime:;
@@ -111,8 +111,7 @@ reviews: number,export const enterpriseBlockchainServices: EnterpriseBlockchainS
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full enterprise blockchain platform with high performance, security, compliance, and comprehensive development tools.';
@@ -191,8 +190,7 @@ reviews: number,export const enterpriseBlockchainServices: EnterpriseBlockchainS
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full enterprise DeFi platform with institutional security, compliance tools, and comprehensive risk management.';
@@ -272,8 +270,7 @@ reviews: number,export const enterpriseBlockchainServices: EnterpriseBlockchainS
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full enterprise NFT platform with multi-chain support, advanced features, and comprehensive management tools.';
@@ -353,8 +350,7 @@ reviews: number,export const enterpriseBlockchainServices: EnterpriseBlockchainS
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full blockchain supply chain platform with traceability, automation, and comprehensive management tools.';
@@ -434,8 +430,7 @@ reviews: number,export const enterpriseBlockchainServices: EnterpriseBlockchainS
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full blockchain identity platform with self-sovereign identity, zero-knowledge proofs, and comprehensive security features.';

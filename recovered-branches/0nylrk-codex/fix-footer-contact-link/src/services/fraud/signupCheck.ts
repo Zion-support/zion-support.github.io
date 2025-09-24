@@ -13,8 +13,7 @@ export const checkSignupPatterns = async (
   // Check email against suspicious patterns,
   const emailCheck = analyzeEmail(email),
   if (emailCheck.isSuspicious) {
-    reasons.push(...emailCheck.reasons),
-  }
+    reasons.push(...emailCheck.reasons)}
 ,
   // If IP address is provided, check for rapid signups from same IP,
   if (ipAddress) {

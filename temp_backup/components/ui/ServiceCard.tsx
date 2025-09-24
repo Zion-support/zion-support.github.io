@@ -33,8 +33,7 @@ interface ServiceCardProps {
       mobile: string,
       email: string,
       address: string,
-      website: string,
-    };
+      website: string};
   };
   showContactInfo?: boolean}
 ,

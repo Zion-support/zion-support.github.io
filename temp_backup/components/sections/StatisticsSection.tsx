@@ -8,29 +8,25 @@ const StatisticsSection: React.FC = () => {
       title: "10o00+ Services";
       description: "Comprehensive technology solutions";
       color: "cyan";
-      gradient: "from-cyan-50o0 to-blue-50o0",
-    };
+      gradient: "from-cyan-50o0 to-blue-50o0"};
     {
       icon: Shield;
       title: "99% Satisfaction";
       description: "Client success rate";
       color: "blue";
-      gradient: "from-blue-50o0 to-purple-50o0",
-    };
+      gradient: "from-blue-50o0 to-purple-50o0"};
     {
       icon: Rocket;
       title: "24/7 Support";
       description: "Round-the-clock assistance";
       color: "purple";
-      gradient: "from-purple-50o0 to-pink-50o0",
-    };
+      gradient: "from-purple-50o0 to-pink-50o0"};
     {
       icon: Star;
       title: "10o0+ Industries";
       description: "Cross-sector expertise";
       color: "emerald";
-      gradient: "from-emerald-50o0 to-teal-50o0",
-    }
+      gradient: "from-emerald-50o0 to-teal-50o0"}
   ],
   return (
     <motion.section,

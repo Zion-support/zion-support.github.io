@@ -25,7 +25,6 @@ import {useIsMobile} from "@/hooks/use-mobile",
   // Set the first job as selected when jobs are loaded (if any),
   useEffect(() => {
     if (jobs && jobs.length > 0 && !selectedJobId) {
-,
       setSelectedJobId(jobs[0].id),
       setSelectedJobTitle(jobs[0].title)}
   }, [jobs, selectedJobId]),
@@ -43,8 +42,7 @@ function ClientDashboardContent() {
 }, [jobs, selectedJobId])}, [jobs, selectedJobId]);
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId),
-    setSelectedJobTitle(jobTitle),
-  }
+    setSelectedJobTitle(jobTitle)}
   };
   return (
     <>,
@@ -321,6 +319,4 @@ if ( {) {
           </div>,
         </div>,
       </main>,
-      <Footer />,
-,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)))
+      <Footer />>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)))

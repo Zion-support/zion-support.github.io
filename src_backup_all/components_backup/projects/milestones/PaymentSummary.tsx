@@ -4,8 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
 import { CreditCard } from 'lucide-react',
 interface PaymentSummaryProps {
   milestones: Milestone[],
-  paymentTerms: string | null,
-}
+  paymentTerms: string | null}
 ,
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
   milestones;

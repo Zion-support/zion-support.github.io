@@ -31,15 +31,13 @@ export interface EmergingTech2026Service {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const emergingTech2026Services: EmergingTech2026Service[] = [
   // Neural Interface Development Platform,
   {

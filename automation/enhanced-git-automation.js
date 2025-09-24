@@ -85,8 +85,8 @@ class EnhancedGitAutomation {
     if (level === 'error') {
       console.error(`❌ ${message}`)} else if (level === 'warn') {
       console.warn(`⚠️ ${message}`)} else if (level === 'success') {
-      // console.log(`✅ ${message}`)} else {
-      // console.log(`ℹ️ ${message}`)}
+      // // console.log(`✅ ${message}`)} else {
+      // // console.log(`ℹ️ ${message}`)}
   }
 ,
   async executeCommand(command, options ={}) {
@@ -382,7 +382,7 @@ switch (command) {
     break,
   case 'status':,
     const status = gitAutomation.getStatus(),
-    // console.log(
+    // // console.log(
       'Enhanced Git Automation Status:';
       JSON.stringify(status, null, 2)),
     break,
@@ -392,7 +392,7 @@ switch (command) {
       process.exit(1)}),
     break,
   default: ,
-    // console.log(`,
+    // // console.log(`,
 🚀 Enhanced Git Automation System,
 Usage:,
   node automation/enhanced-git-automation.js [command],
@@ -412,7 +412,6 @@ Examples:,
   node automation/enhanced-git-automation.js execute,
   node automation/enhanced-git-automation.js watch,
         `),
-    break,
-}
+    break}
 ,
 module.exports = EnhancedGitAutomation,

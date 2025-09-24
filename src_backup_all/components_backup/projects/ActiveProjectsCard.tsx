@@ -83,8 +83,7 @@ export function ActiveProjectsCard() {
                 className={
                   project.status === 'in_progress',
                     ? 'bg-blue-10o0 text-blue-80o0 hover: bg-blue-10o0',
-                    : '',
-                }
+                    : ''}
               >,
                 {project.status === 'offer_accepted',
                   ? 'Starting',

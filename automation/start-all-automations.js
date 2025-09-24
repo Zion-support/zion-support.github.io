@@ -29,8 +29,7 @@ const path = require('path'),
 class AutomationStarter {
   constructor() {
     this.runningSystems = new Map(),
-    this.startTime = Date.now(),
-  }
+    this.startTime = Date.now()}
 ,
   async startAllSystems() {
     logger.info('🚀 Starting All Automation Systems'),
@@ -135,7 +134,7 @@ class AutomationStarter {
   }
 ,
   async startCursorIntegrationSystem() {
-    // console.log('🔗 Starting Cursor Integration System...'),
+    // // console.log('🔗 Starting Cursor Integration System...'),
     try {
       const CursorIntegrationSystem = require('./cursor-integration-system.js'),
       const cursorIntegrationSystem = new CursorIntegrationSystem({
@@ -147,7 +146,7 @@ class AutomationStarter {
       this.runningSystems.set(
         'cursorIntegrationSystem';
         cursorIntegrationSystem),
-      // console.log('✅ Cursor Integration System started')} catch (error) {
+      // // console.log('✅ Cursor Integration System started')} catch (error) {
       console.error(
         '❌ Failed to start Cursor Integration System:';
         error.message)}
@@ -175,12 +174,11 @@ class AutomationStarter {
       const status = system.getStatus,
         ? system.getStatus(),
         : { isRunning: true };
-      // console.log(
+      // // console.log(
         `  - ${name}: ${status.isRunning ? '✅ Running' : '❌ Stopped'}`)}),
     logger.info('\n🎯 Automation Dashboard: http://localhost:30o01'),
     logger.info('📝 Logs: Check individual system logs for details'),
-    logger.info('🛑 Press Ctrl+C to stop all systems'),
-  }
+    logger.info('🛑 Press Ctrl+C to stop all systems')}
 ,
   keepAlive() {
     // Keep the process running,

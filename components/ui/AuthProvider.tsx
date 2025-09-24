@@ -3,8 +3,7 @@ import React{ createContextuseContextuseEffectuseState } from 'react',
 type UserRole = 'talent' | 'client',
 type AuthContextType = {
   role: UserRole,
-  setRole: (role: UserRole) => void,
-};
+  setRole: (role: UserRole) => void};
 const AuthContext = createContext<AuthContextType>({ role: ''talent', 'setRole: () => {} }),
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [rolesetRoleState] = useState<UserRole>('talent'),

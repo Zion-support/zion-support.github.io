@@ -24,8 +24,7 @@ export default function UltraFuturisticBackground2038({
       if (rect) {
         canvas.width = rect.width * (window.devicePixelRatio || 1),
         canvas.height = rect.height * (window.devicePixelRatio || 1),
-        ctx.scale(window.devicePixelRatio || 1),
-      }
+        ctx.scale(window.devicePixelRatio || 1)}
     };
     resizeCanvas(),
     window.addEventListener(', 'resize', 'resizeCanvas),
@@ -37,43 +36,37 @@ export default function UltraFuturisticBackground2038({
             primary: ['#ff0080'#00ffff'#ffff00'#ff00ff'#8000ff'#00ff80'];
             secondary: ['#ff8000'#0080ff'#ff4080'#40ffff'#ffff40'#ff40ff'];
             accent: ['#ff6b6b'#4ecdc4'#45b7d1'#96ceb4'#feca57'#ff9ff3'];
-            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444'],
-          };
+            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444']};
         case 'neon':,
           return {
             primary: ['#ff0080'#00ffff'#ffff00'#ff00ff'#8000ff'#00ff80'];
             secondary: ['#ff8000'#0080ff'#ff4080'#40ffff'#ffff40'#ff40ff'];
             accent: ['#ff6b6b'#4ecdc4'#45b7d1'#96ceb4'#feca57'#ff9ff3'];
-            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444'],
-          };
+            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444']};
         case 'holographic':,
           return {
             primary: ['#ff6b6b'#4ecdc4'#45b7d1'#96ceb4'#feca57'#ff9ff3'];
             secondary: ['#54a0ff'#5f27cd'#ff9ff3'#54a0ff'#5f27cd'#ff6b6b'];
             accent: ['#4ecdc4'#45b7d1'#96ceb4'#feca57'#ff9ff3'#54a0ff'];
-            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444'],
-          };
+            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444']};
         case 'cyberpunk':,
           return {
             primary: ['#ff0055'#00ffff'#ffff00'#ff00ff'#8000ff'#00ff80'];
             secondary: ['#ff8000'#0080ff'#ff4080'#40ffff'#ffff40'#ff40ff'];
             accent: ['#ffff40'#ff40ff'#ff6b6b'#4ecdc4'#45b7d1'#96ceb4'];
-            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444'],
-          };
+            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444']};
         case 'space':,
           return {
             primary: ['#1e3a8a'#7c3aed'#059669'#dc2626'#ea580c'#0891b2'];
             secondary: ['#8b5cf6'#ec4899'#f59e0b'#10b981'#06b6d4'#a855f7'];
             accent: ['#f97316'#ef4444'#84cc16'#06b6d4'#a855f7'#f97316'];
-            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444'],
-          };
+            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444']};
         default: // quantum,
           return {
             primary: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444'];
             secondary: ['#f59e0b'#ef4444'#8b5cf6'#06b6d4'#ec4899'#10b981'];
             accent: ['#ec4899'#10b981'#f59e0b'#ef4444'#8b5cf6'#06b6d4'];
-            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444'],
-          };
+            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444']};
       }
     };
     const colors = getThemeColors(),
@@ -96,8 +89,7 @@ export default function UltraFuturisticBackground2038({
       frequency: number,
       entanglement: number[],
       consciousness: number,
-      quantumState: number,
-    }> = [],
+      quantumState: number}> = [],
     // Initialize particles with enhanced consciousness and quantum effects,
     const initParticles = () => {
       particles = [],
@@ -124,8 +116,7 @@ export default function UltraFuturisticBackground2038({
           frequency: Math.random() * 0.02 + 0.01;
           entanglement: [Math.random()];
           consciousness: Math.random();
-          quantumState: Math.random(),
-        })}
+          quantumState: Math.random()})}
     };
     // Enhanced animation loop with consciousness and quantum effects,
     const animate = () => {
@@ -249,8 +240,7 @@ export default function UltraFuturisticBackground2038({
           background: theme === 'consciousness' ? 'radial-gradient(ellipse at centergba(1392460.1) 0%rgba(00.8) 100%)' :,
                    theme === 'quantum' ? 'radial-gradient(ellipse at centergba(6182120.1) 0%rgba(00.8) 100%)' :,
                    theme === 'holographic' ? 'radial-gradient(ellipse at centergba(782051960.1) 0%rgba(00.8) 100%)' :,
-                   'radial-gradient(ellipse at centergba(1392460.1) 0%rgba(00.8) 100%)',
-        }}
+                   'radial-gradient(ellipse at centergba(1392460.1) 0%rgba(00.8) 100%)'}}
       />,
       {/* Additional visual effects */}
       <div className="absolute inset-0">,
@@ -270,8 +260,7 @@ export default function UltraFuturisticBackground2038({
                 transition={{
                   duration: 3 + i * 0.2;
                   repeat: Infinity;
-                  ease: "easeInOut",
-                }}
+                  ease: "easeInOut"}}
               />))}
           </div>)}
 ,
@@ -289,8 +278,7 @@ export default function UltraFuturisticBackground2038({
                 transition={{
                   duration: 4 + i * 0.3;
                   repeat: Infinity;
-                  ease: "easeInOut",
-                }}
+                  ease: "easeInOut"}}
               />))}
           </div>)}
 ,
@@ -310,8 +298,7 @@ export default function UltraFuturisticBackground2038({
                 transition={{
                   duration: 6 + i * 0.5;
                   repeat: Infinity;
-                  ease: "easeInOut",
-                }}
+                  ease: "easeInOut"}}
               />))}
           </div>)}
       </div>,

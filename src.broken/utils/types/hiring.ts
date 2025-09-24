@@ -9,8 +9,7 @@ export interface TalentProfile {
   id: string,
   name: string,
   title?: string,
-  photoUrl?: string,
-}
+  photoUrl?: string}
 ,
 export interface JobApplication {
   id: string,
@@ -23,8 +22,7 @@ export interface JobApplication {
   createdAt?: string,
   updatedAt?: string,
   lastActivityAt?: string | null,
-  talent?: TalentProfile,
-}
+  talent?: TalentProfile}
 ,
 export interface ApplicationFilters {
   status?: CandidateStatus | 'all',

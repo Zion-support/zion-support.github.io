@@ -93,8 +93,7 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -105,8 +104,7 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -134,8 +132,7 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {
               className={`px-6 py-3 rounded-full font-medium transition-all duration-20o0 ${
                 selectedCategory === category.id,
                   ? 'bg-purple-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-purple-50 hover:text-purple-70o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-purple-50 hover:text-purple-70o0 border border-gray-20o0'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -146,8 +143,7 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {
             <div
               key={item.id}
               className={`bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 ${
-                item.featured ? 'ring-2 ring-purple-50o0' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-50o0' : ''}`}
             >,
               {/* Featured badge */}
               {item.featured && (

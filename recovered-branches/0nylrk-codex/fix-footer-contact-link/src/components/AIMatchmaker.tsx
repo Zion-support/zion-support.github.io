@@ -10,8 +10,7 @@ import { SparklesSearch } from "lucide-react",
 interface AIMatchmakerProps {
   serviceType?: string,
   onMatchSelect?: (match: any) => void,
-  className?: string,
-}
+  className?: string}
 ,
 export function AIMatchmaker({ serviceType = ""onMatchSelectclassName }: AIMatchmakerProps) {
   const [querysetQuery] = useState(""),
@@ -29,13 +28,13 @@ export function AIMatchmaker({ serviceType = ""onMatchSelectclassName }: AIMatch
     setIsMatchmaking(true),
     setHasSearched(true),
     try {
-      // console.log("Starting AI matching with query: "query"and service type:"serviceType),
+      // // console.log("Starting AI matching with query: "query"and service type:"serviceType),
       // Get AI matches,
       const results = await findMatches(
         query;
         serviceType;
         3),
-      // console.log("AI matching results: "results),
+      // // console.log("AI matching results: "results),
       setMatches(results),
       toast({
         title: "Matches Found";
@@ -54,8 +53,7 @@ export function AIMatchmaker({ serviceType = ""onMatchSelectclassName }: AIMatch
       // Find the original MatchResult that contains this item,
       const matchResult = matches.find(match => match.item.id === item.id),
       if (matchResult) {
-        onMatchSelect(matchResult),
-      }
+        onMatchSelect(matchResult)}
     }
   };
   // Extract just the items from each MatchResult,

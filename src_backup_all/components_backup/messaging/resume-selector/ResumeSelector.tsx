@@ -53,8 +53,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
     setSelectedOption(value),
     if (value === 'recent' && resumeOptions.length > 0 && resumeOptions[0]) {
       setSelectedResume(resumeOptions[0]),
-      onResumeSelected(resumeOptions[0]),
-    } else if (value === 'select') {
+      onResumeSelected(resumeOptions[0])} else if (value === 'select') {
       // Reset selection until user chooses,
       setSelectedResume(null)} else if (value === 'upload') {
       setSelectedResume(null)}
@@ -64,8 +63,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
     const selected = resumeOptions.find(opt => opt.id === resumeId),
     if (selected) {
       setSelectedResume(selected),
-      onResumeSelected(selected),
-    }
+      onResumeSelected(selected)}
   };
   // Handle custom file upload,
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {

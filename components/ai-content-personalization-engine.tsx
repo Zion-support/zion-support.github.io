@@ -18,5 +18,4 @@ export default function AIContentPersonalizationEngine() {
 				"Integrations: CDPESPCMSWeb SDK"]}
 			industries={["E‑commerce"Media"SaaS"Education"]}
 			canonical="https: //ziontechgroup.com/ai-content-personalization-engine",
-		 />),
-}
+		 />)}

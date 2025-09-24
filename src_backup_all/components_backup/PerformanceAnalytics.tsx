@@ -19,15 +19,13 @@ interface PerformanceMetric {
   unit: string,
   trend: 'up' | 'down' | 'stable',
   status: 'good' | 'warning' | 'critical',
-  icon: React.ComponentType<any>,
-}
+  icon: React.ComponentType<any>}
 ,
 interface PerformanceData {
   timestamp: number,
   metrics: PerformanceMetric[],
   alerts: string[],
-  recommendations: string[],
-}
+  recommendations: string[]}
 ,
 const PerformanceAnalytics: React.FC = () => {
   const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null),
@@ -43,48 +41,42 @@ const PerformanceAnalytics: React.FC = () => {
         unit: 'ms';
         trend: Math.random() > 0.5 ? 'up' : 'down';
         status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical';
-        icon: Clock,
-      };
+        icon: Clock};
       {
         name: 'Memory Usage';
         value: Math.random() * 40 + 60;
         unit: '%';
         trend: Math.random() > 0.5 ? 'up' : 'down';
         status: Math.random() > 0.6 ? 'good' : Math.random() > 0.3 ? 'warning' : 'critical';
-        icon: HardDrive,
-      };
+        icon: HardDrive};
       {
         name: 'CPU Usage';
         value: Math.random() * 30 + 20;
         unit: '%';
         trend: Math.random() > 0.5 ? 'up' : 'down';
         status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical';
-        icon: Cpu,
-      };
+        icon: Cpu};
       {
         name: 'Network Latency';
         value: Math.random() * 10o0 + 20;
         unit: 'ms';
         trend: Math.random() > 0.5 ? 'up' : 'down';
         status: Math.random() > 0.6 ? 'good' : Math.random() > 0.3 ? 'warning' : 'critical';
-        icon: Network,
-      };
+        icon: Network};
       {
         name: 'Error Rate';
         value: Math.random() * 2;
         unit: '%';
         trend: Math.random() > 0.5 ? 'up' : 'down';
         status: Math.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical';
-        icon: AlertTriangle,
-      };
+        icon: AlertTriangle};
       {
         name: 'Response Time';
         value: Math.random() * 50o0 + 10o0;
         unit: 'ms';
         trend: Math.random() > 0.5 ? 'up' : 'down';
         status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical';
-        icon: Zap,
-      }
+        icon: Zap}
     ],
     const alerts = [
       'High memory usage detected';
@@ -112,23 +104,20 @@ const PerformanceAnalytics: React.FC = () => {
       case 'good': return 'text-green-40o0',
       case 'warning': return 'text-yellow-40o0',
       case 'critical': return 'text-red-40o0',
-      default: return 'text-gray-40o0',
-    }
+      default: return 'text-gray-40o0'}
   };
   const getStatusBgColor = (status: string) => {
     switch (status) {
       case 'good': return 'bg-green-50o0/20',
       case 'warning': return 'bg-yellow-50o0/20',
       case 'critical': return 'bg-red-50o0/20',
-      default: return 'bg-gray-50o0/20',
-    }
+      default: return 'bg-gray-50o0/20'}
   };
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return <TrendingUp className="w-4 h-4 text-green-40o0"  />,
       case 'down': return <TrendingDown className="w-4 h-4 text-red-40o0"  />,
-      default: return <Activity className="w-4 h-4 text-blue-40o0"  />,
-    }
+      default: return <Activity className="w-4 h-4 text-blue-40o0"  />}
   };
   const formatValue = (value: number, unit: string) => {
     if (unit === '%') return `${value.toFixed(1)}%`,
@@ -171,8 +160,7 @@ const PerformanceAnalytics: React.FC = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 flex items-center ${
                 isMonitoring,
                   ? 'bg-red-60o0 hover: bg-red-70o0 text-white',
-                  : 'bg-green-60o0 hover:bg-green-70o0 text-white',
-              }`}
+                  : 'bg-green-60o0 hover:bg-green-70o0 text-white'}`}
             >,
               {isMonitoring ? (
                 <>,
@@ -319,6 +307,5 @@ const PerformanceAnalytics: React.FC = () => {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default PerformanceAnalytics;

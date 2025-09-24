@@ -41,13 +41,11 @@ interface CategorizedSkills {
   devops: string[],
   platforms: string[],
   softSkills: string[],
-  other: string[],
-}
+  other: string[]}
 ,
 interface EnhancedProfile {
   summary: string,
-  categorizedSkills: CategorizedSkills,
-}
+  categorizedSkills: CategorizedSkills}
 ,
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly,
@@ -78,14 +76,12 @@ export function TalentRegistrationForm() {
   };
   // Handle removing skill tags,
   const handleRemoveSkill = (skill: string) => {
-    setSkillTags(skillTags.filter((s) => s !== skill)),
-  };
+    setSkillTags(skillTags.filter((s) => s !== skill))};
   // Handle key press in skills input (add on enter),
   const handleSkillKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       e.preventDefault(),
-      handleAddSkill(),
-    }
+      handleAddSkill()}
   };
   // Handle avatar upload,
   const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -93,8 +89,7 @@ export function TalentRegistrationForm() {
     if (file) {
       const reader = new FileReader(),
       reader.onloadend = () => {
-        setUploadedAvatar(reader.result as string),
-      };
+        setUploadedAvatar(reader.result as string)};
       reader.readAsDataURL(file)}
   };
   // Generate enhanced profile with AI,
@@ -116,8 +111,7 @@ export function TalentRegistrationForm() {
             title: formData.title;
             bio: formData.bio;
             skills: skillTags;
-            location: formData.location,
-          }
+            location: formData.location}
         }
       }),
       if (error) {
@@ -163,8 +157,7 @@ export function TalentRegistrationForm() {
         if (Array.isArray(categorySkills)) {
           categorySkills.forEach(skill => {
             if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
-              newSkills.push(skill),
-            }
+              newSkills.push(skill)}
           })}
       }),
       if (newSkills.length > 0) {
@@ -179,8 +172,7 @@ export function TalentRegistrationForm() {
       case 'platforms': return 'bg-amber-50o0/20 hover:bg-amber-50o0/30 text-amber-50o0',
       case 'softSkills': return 'bg-purple-50o0/20 hover:bg-purple-50o0/30 text-purple-50o0',
       case 'other': return 'bg-gray-50o0/20 hover:bg-gray-50o0/30 text-gray-50o0',
-      default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple',
-    }
+      default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'}
   };
   // Send notification email,
   const sendEnhancementNotification = async (userId: string, email: string) => {
@@ -230,8 +222,7 @@ export function TalentRegistrationForm() {
                 title: values.title;
                 bio: values.bio;
                 skills: skillTags;
-                location: values.location,
-              }
+                location: values.location}
             }
           }),
           if (aiData) {
@@ -244,8 +235,7 @@ export function TalentRegistrationForm() {
               if (Array.isArray(categorySkills)) {
                 categorySkills.forEach(skill => {
                   if (typeof skill === 'string' && skill) {
-                    aiSkills.push(skill),
-                  }
+                    aiSkills.push(skill)}
                 })}
             }),
             // Create a unique set of skills,

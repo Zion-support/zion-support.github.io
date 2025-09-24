@@ -4,8 +4,7 @@ import { formatDate } from '@/utils/referralUtils',
 import { BadgeDollarSignBadge } from 'lucide-react',
 interface RewardsCardProps {
   rewards: ReferralReward[],
-  isLoading: boolean,
-}
+  isLoading: boolean}
 ,
 export function RewardsCard({ rewardsisLoading }: RewardsCardProps) {
   if (isLoading) {

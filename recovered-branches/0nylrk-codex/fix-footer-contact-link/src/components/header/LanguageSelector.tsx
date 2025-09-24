@@ -31,8 +31,7 @@ export function LanguageSelector() {
             className={`cursor-pointer ${
               currentLanguage === lang.code,
                 ? 'bg-zion-purple/20 text-zion-cyan',
-                : 'text-white hover: bg-zion-purple/10',
-            }`}
+                : 'text-white hover: bg-zion-purple/10'}`}
             onClick={() => changeLanguage(lang.code)}
           >,
             <div className='flex items-center gap-2'>,

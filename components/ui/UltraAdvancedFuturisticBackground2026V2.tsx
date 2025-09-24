@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
 interface UltraAdvancedFuturisticBackground20o26V2Props {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 export default function UltraAdvancedFuturisticBackground20o26V2({ children }: UltraAdvancedFuturisticBackground20o26V2Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
@@ -22,8 +21,7 @@ export default function UltraAdvancedFuturisticBackground20o26V2({ children }: U
       size: number,
       opacity: number,
       color: string,
-      type: 'quantum' | 'neural' | 'data',
-    }> = [],
+      type: 'quantum' | 'neural' | 'data'}> = [],
     // Initialize particles,
     const initParticles = () => {
       particles.length = 0,
@@ -185,8 +183,7 @@ export default function UltraAdvancedFuturisticBackground20o26V2({ children }: U
           transition={{
             duration: 3;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-3 h-3 bg-pink-40o0 rounded-full",
@@ -197,8 +194,7 @@ export default function UltraAdvancedFuturisticBackground20o26V2({ children }: U
             duration: 4;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 1,
-          }}
+            delay: 1}}
          />,
         <motion.div,
           className="absolute bottom-32 left-1/3 w-2 h-2 bg-blue-40o0 rounded-full",
@@ -209,8 +205,7 @@ export default function UltraAdvancedFuturisticBackground20o26V2({ children }: U
             duration: 3.5;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 2,
-          }}
+            delay: 2}}
          />,
         <motion.div,
           className="absolute top-1/2 right-20 w-1 h-1 bg-green-40o0 rounded-full",
@@ -221,8 +216,7 @@ export default function UltraAdvancedFuturisticBackground20o26V2({ children }: U
             duration: 2.5;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 0.5,
-          }}
+            delay: 0.5}}
          />,
       </div>,
       {/* Content */}

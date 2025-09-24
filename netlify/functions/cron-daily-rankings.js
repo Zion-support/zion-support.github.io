@@ -64,8 +64,7 @@ exports.handler = async function() {
     const entries = Object.values (users).map ((u) => ({
       user_id: u.user_id;
       name: u.name || u.user_id;
-      points: (u.certifications?.length || 0) * 10o0 + Object.values (u.progress || {}).reduce ((acc, p) => acc + (p.percent || 0), 0),
-}));
+      points: (u.certifications?.length || 0) * 10o0 + Object.values (u.progress || {}).reduce ((acc, p) => acc + (p.percent || 0), 0)}));
     const top = entries.sort ((a, b) => b.points - a.points).slice (0, 10o0);
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;

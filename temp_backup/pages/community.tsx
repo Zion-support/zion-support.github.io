@@ -633,6 +633,5 @@ export default function CommunityPage() {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

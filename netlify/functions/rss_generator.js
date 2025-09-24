@@ -44,8 +44,7 @@ exports.handler = async function(event, context) {
         title;
         link: origin + slug;
         date;
-        description: '',
-      })}
+        description: ''})}
 ,
     items.sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime()),
     const xml = rssTemplate(items),

@@ -113,8 +113,7 @@ export default function ServicesIndexPage() {
     return Array.from(set)}, [services]),
   const handleRequestQuote = (service: ServiceItem) => {
     setSelected(service),
-    setModalOpen(true),
-  };
+    setModalOpen(true)};
   const handleSubmit = async (values: QuoteFormValues) => {
     const res = await fetch('/api/quote-request', {
       method: 'POST';

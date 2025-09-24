@@ -18,8 +18,7 @@ ChartJS.register(
   Tooltip;
   Legend),
 export type SimulatorChartsProps = {
-  points: SimulationPoint[],
-};
+  points: SimulationPoint[]};
 export default function SimulatorCharts({ points }: SimulatorChartsProps) {
   const labels = useMemo(
     () => points.map(p => `M${p.monthIndex + 1}`);

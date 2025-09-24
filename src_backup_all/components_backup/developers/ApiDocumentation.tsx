@@ -14,13 +14,11 @@ import json,
   CardHeader;
   CardTitle;
 } from '@/components/ui/card',
-,
 interface EndpointParam {
   name: string,
   type: string,
   description: string,
-  required?: boolean,
-}
+  required?: boolean}
 ,
 interface EndpointSectionProps {
   method: string,
@@ -132,8 +130,7 @@ print(data)`;
         "currency": "USD"};
       "status": "active";
       "client_id": "user_xyz789";
-      "created_at": "20o25-0o5-15T10: 30:0o0Z",
-    };
+      "created_at": "20o25-0o5-15T10: 30:0o0Z"};
     // More jobs...];
   "meta": {
     "total": 42;
@@ -264,8 +261,7 @@ print(data)`;
       "min": 50o00;
       "max": 10o000;
       "currency": "USD"};
-    "deadline": "20o25-0o6-30T23: 59:59Z",
-  }'`;
+    "deadline": "20o25-0o6-30T23: 59:59Z"}'`;
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs', {
   method: 'POST';
   headers: {
@@ -279,10 +275,8 @@ print(data)`;
     budget: {
       min: 50o00;
       max: 10o000;
-      currency: 'USD',
-    };
-    deadline: '20o25-0o6-30T23:59:59Z',
-  })}),
+      currency: 'USD'};
+    deadline: '20o25-0o6-30T23:59:59Z'})}),
 const data = await response.json(),
 logInfo(data),`;
                 python: `import requests,
@@ -299,8 +293,7 @@ payload ={
         'min': 50o00;
         'max': 10o000;
         'currency': 'USD'};
-    'deadline': '20o25-0o6-30T23: 59:59Z',
-}
+    'deadline': '20o25-0o6-30T23: 59:59Z'}
 ,
 response = requests.post(
     'https://api.ziontechgroup.com/v1/jobs';
@@ -324,8 +317,7 @@ print(data)`;
     "status": "new";
     "client_id": "user_xyz789";
     "created_at": "20o25-0o5-16T14:22:10Z";
-    "deadline": "20o25-0o6-30T23: 59:59Z",
-  }
+    "deadline": "20o25-0o6-30T23: 59:59Z"}
 }`;
               }}
             />,
@@ -457,8 +449,7 @@ print(data)`;
         "title": "E-commerce Platform";
         "description": "Built a modern e-commerce platform using React...";
         "technologies": ["react", "redux", "node.js"];
-        "image_url": "https: //example.com/portfolio/123.jpg",
-      }
+        "image_url": "https: //example.com/portfolio/123.jpg"}
     ];
     "certifications": [
       {
@@ -557,8 +548,7 @@ print(data)`;
     budget_min: 80o00;
     budget_max: 120o00;
     requester_name: 'John Doe';
-    requester_email: 'john@example.com',
-  })}),
+    requester_email: 'john@example.com'})}),
 const data = await response.json(),
 logInfo(data),`;
                 python: `import requests,
@@ -600,8 +590,7 @@ print(data)`;
     "requester_name": "John Doe";
     "requester_email": "john@example.com";
     "status": "new";
-    "created_at": "20o25-0o5-16T14: 30:15Z",
-  }
+    "created_at": "20o25-0o5-16T14: 30:15Z"}
 }`;
               }}
             />,
@@ -960,8 +949,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
           </TabsContent>,
         </Tabs>,
       </CardContent>,
-    </Card>),
-}
+    </Card>)}
 ,
 // Helper component for API endpoint documentation,
 function EndpointSection({
@@ -1041,8 +1029,7 @@ function EndpointSection({
                   className={`px-3 py-1 text-xs font-medium ${
                     activeTab === lang,
                       ? 'bg-zinc-70o0 text-white',
-                      : 'text-zinc-40o0 hover: bg-zinc-80o0',
-                  }`}
+                      : 'text-zinc-40o0 hover: bg-zinc-80o0'}`}
                   onClick={() => setActiveTab(lang)}
                 >,
                   {lang === 'curl',

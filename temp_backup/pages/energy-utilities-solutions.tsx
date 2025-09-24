@@ -19,6 +19,5 @@ export default function EnergyUtilitiesSolutions() {
       industries={['Utilities', 'Renewables', 'Oil & Gas']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/energy-utilities-solutions',
-    />),
-}
+    />)}
 ,

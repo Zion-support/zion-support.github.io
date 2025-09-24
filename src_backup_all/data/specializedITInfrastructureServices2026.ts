@@ -20,15 +20,13 @@ export interface SpecializedITInfrastructureService20o26 {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string}
 ,
@@ -81,8 +79,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o26: SpecializedITInfrastr
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["5G Core", "RAN", "Network Slicing", "Edge Computing", "SDN/NFV"];
       integrations: ["AWS", "Azure", "Google Cloud", "IoT Platforms", "Security Systems"];
@@ -90,8 +87,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o26: SpecializedITInfrastr
       uptime: "99.99%";
       security: ["Zero Trust", "Network Security", "Encryption", "DDoS Protection"]};
     competitors: ["Verizon", "AT&T", "T-Mobile", "Ericsson", "Nokia"];
-    marketSize: "$67.8 billion by 20o26",
-  };
+    marketSize: "$67.8 billion by 20o26"};
   // Zero Trust Network Architecture,
   {
     id: "zero-trust-network-architecture-20o26";
@@ -140,8 +136,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o26: SpecializedITInfrastr
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Identity Management", "Network Segmentation", "Monitoring Tools", "Policy Engine"];
       integrations: ["Active Directory", "LDAP", "SIEM", "EDR", "Firewalls"];
@@ -149,8 +144,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o26: SpecializedITInfrastr
       uptime: "99.9%";
       security: ["SOC 2", "ISO 270o01", "NIST", "Zero Trust Architecture"]};
     competitors: ["Palo Alto Networks", "Cisco", "Fortinet", "VMware", "Microsoft"];
-    marketSize: "$51.6 billion by 20o26",
-  };
+    marketSize: "$51.6 billion by 20o26"};
   // Hybrid Cloud Infrastructure,
   {
     id: "hybrid-cloud-infrastructure-20o26";
@@ -199,8 +193,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o26: SpecializedITInfrastr
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["AWS", "Azure", "GCP", "VMware", "OpenStack", "Kubernetes"];
       integrations: ["On-premise Systems", "Cloud Services", "Storage Systems", "Networking"];
@@ -208,8 +201,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o26: SpecializedITInfrastr
       uptime: "99.9%";
       security: ["SOC 2", "ISO 270o01", "Encryption", "Access Control"]};
     competitors: ["AWS", "Microsoft Azure", "Google Cloud", "VMware", "IBM"];
-    marketSize: "$145.8 billion by 20o26",
-  };
+    marketSize: "$145.8 billion by 20o26"};
   // Software-Defined Networking (SDN),
   {
     id: "software-defined-networking-sdn-20o26";
@@ -258,8 +250,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o26: SpecializedITInfrastr
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["OpenFlow", "OpenDaylight", "OVS", "Linux", "Python", "Java"];
       integrations: ["Network Devices", "Management Systems", "Security Tools", "Monitoring"];
@@ -267,8 +258,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o26: SpecializedITInfrastr
       uptime: "99.9%";
       security: ["Network Security", "Access Control", "Encryption", "Audit Logging"]};
     competitors: ["Cisco", "VMware", "Juniper", "Arista", "Brocade"];
-    marketSize: "$32.7 billion by 20o26",
-  };
+    marketSize: "$32.7 billion by 20o26"};
   // Edge Computing Infrastructure,
   {
     id: "edge-computing-infrastructure-20o26";
@@ -317,8 +307,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o26: SpecializedITInfrastr
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Docker", "Kubernetes", "Edge Runtime", "Message Queues", "Databases"];
       integrations: ["Cloud Platforms", "IoT Devices", "Monitoring Tools", "Security Systems"];
@@ -326,8 +315,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o26: SpecializedITInfrastr
       uptime: "99.8%";
       security: ["Edge Security", "Data Encryption", "Access Control", "Device Authentication"]};
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "FogHorn", "ClearBlade"];
-    marketSize: "$43.4 billion by 20o26",
-  };
+    marketSize: "$43.4 billion by 20o26"};
   // Network Function Virtualization (NFV),
   {
     id: "network-function-virtualization-nfv-20o26";
@@ -376,8 +364,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o26: SpecializedITInfrastr
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["OpenStack", "Kubernetes", "Docker", "OVS", "DPDK", "SR-IOV"];
       integrations: ["Network Equipment", "Management Systems", "Orchestration Platforms"];
@@ -385,8 +372,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o26: SpecializedITInfrastr
       uptime: "99.9%";
       security: ["Network Security", "Virtualization Security", "Access Control", "Encryption"]};
     competitors: ["VMware", "Cisco", "Juniper", "Nokia", "Ericsson"];
-    marketSize: "$28.9 billion by 20o26",
-  };
+    marketSize: "$28.9 billion by 20o26"};
   // Intent-Based Networking,
   {
     id: "intent-based-networking-20o26";
@@ -435,8 +421,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o26: SpecializedITInfrastr
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "AI", "Network APIs", "Policy Engine", "Analytics"];
       integrations: ["Network Devices", "Management Systems", "Security Tools", "Monitoring"];
@@ -444,8 +429,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o26: SpecializedITInfrastr
       uptime: "99.9%";
       security: ["AI Security", "Policy Enforcement", "Access Control", "Audit Logging"]};
     competitors: ["Cisco", "Juniper", "VMware", "Arista", "Extreme Networks"];
-    marketSize: "$18.7 billion by 20o26",
-  };
+    marketSize: "$18.7 billion by 20o26"};
   // Network Automation Platform,
   {
     id: "network-automation-platform-20o26";
@@ -494,8 +478,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o26: SpecializedITInfrastr
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "Ansible", "Terraform", "Jenkins", "Git", "APIs"];
       integrations: ["Network Devices", "Management Systems", "Monitoring Tools", "Security"];
@@ -503,8 +486,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o26: SpecializedITInfrastr
       uptime: "99.8%";
       security: ["Access Control", "Audit Logging", "Encryption", "Role-based Security"]};
     competitors: ["Ansible", "Terraform", "Chef", "Puppet", "SaltStack"];
-    marketSize: "$15.3 billion by 20o26",
-  };
+    marketSize: "$15.3 billion by 20o26"};
   // Network Performance Monitoring,
   {
     id: "network-performance-monitoring-20o26";
@@ -553,8 +535,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o26: SpecializedITInfrastr
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["SNMP", "NetFlow", "Packet Analysis", "Analytics Engine", "Web Technologies"];
       integrations: ["Network Devices", "Management Systems", "Ticketing Systems", "APIs"];
@@ -562,6 +543,5 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o26: SpecializedITInfrastr
       uptime: "99.8%";
       security: ["Access Control", "Data Encryption", "Audit Logging", "Secure Communication"]};
     competitors: ["SolarWinds", "PRTG", "Nagios", "Zabbix", "Datadog"];
-    marketSize: "$12.8 billion by 20o26",
-  }
+    marketSize: "$12.8 billion by 20o26"}
 ],

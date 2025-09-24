@@ -20,6 +20,5 @@ export default function AIPoweredDevOpsPlatform() {
       industries={['SaaS', 'Fintech', 'E-commerce', 'Media']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/ai-powered-devops-platform',
-    />),
-}
+    />)}
 ,

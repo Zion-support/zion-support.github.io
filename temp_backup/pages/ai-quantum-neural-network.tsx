@@ -9,33 +9,27 @@ export default function AIQuantumNeuralNetwork() {
     {
       icon: <Brain className="w-6 h-6"  />;
       title: 'Quantum Neural Networks';
-      description: 'Advanced quantum neural networks with unprecedented computational power and learning capabilities.',
-    };
+      description: 'Advanced quantum neural networks with unprecedented computational power and learning capabilities.'};
     {
       icon: <Zap className="w-6 h-6"  />;
       title: 'Quantum Machine Learning';
-      description: 'Revolutionary quantum machine learning with exponential speed improvements over classical algorithms.',
-    };
+      description: 'Revolutionary quantum machine learning with exponential speed improvements over classical algorithms.'};
     {
       icon: <Target className="w-6 h-6"  />;
       title: 'Quantum Pattern Recognition';
-      description: 'Intelligent quantum pattern recognition with superior accuracy and processing speed.',
-    };
+      description: 'Intelligent quantum pattern recognition with superior accuracy and processing speed.'};
     {
       icon: <Shield className="w-6 h-6"  />;
       title: 'Quantum Security';
-      description: 'Advanced quantum security with unbreakable encryption and secure neural network operations.',
-    };
+      description: 'Advanced quantum security with unbreakable encryption and secure neural network operations.'};
     {
       icon: <TrendingUp className="w-6 h-6"  />;
       title: 'Quantum Optimization';
-      description: 'Comprehensive quantum optimization with AI-powered problem-solving and decision-making.',
-    };
+      description: 'Comprehensive quantum optimization with AI-powered problem-solving and decision-making.'};
     {
       icon: <Globe className="w-6 h-6"  />;
       title: 'Global Quantum Network';
-      description: 'Interconnected global quantum network enabling distributed quantum neural processing.',
-    }
+      description: 'Interconnected global quantum network enabling distributed quantum neural processing.'}
   ],
   const benefits = [
     'Accelerate AI training by 10o00x';
@@ -234,5 +228,4 @@ export default function AIQuantumNeuralNetwork() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}

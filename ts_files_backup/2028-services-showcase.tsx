@@ -12,7 +12,6 @@ import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticN
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',
 import { futuristic2028Services  } from '../data/2028-futuristic-innovations',
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services',
-,
   CheckCircle,
   ArrowRight,
   Star,
@@ -67,7 +66,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services',
   Music;
   Gamepad2;} from 'lucide-react',import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
-,
   CheckCircle;
   ArrowRight;
   Star;
@@ -95,7 +93,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services',
   Music;
   Gamepad2;} from 'lucide-react',import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
-,
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
   Building, Factory, Camera, Video, Music, Gamepad2} from 'lucide-react',
@@ -118,7 +115,6 @@ class ErrorBoundary extends React.Component {
 ,
     return this.props.children}
 }
-,
 ,
       {/* Hero Section */}
 ,
@@ -523,8 +519,7 @@ class ErrorBoundary extends React.Component {
       </section>,
       <UltraFuturisticFooter2028 />,
     </>)),
-    </>),
-}
+    </>)}
 }
 ,
           <div className='grid grid - cols - 1 md: grid - cols - 3 gap - 8'>            <motion.div            </h2>,

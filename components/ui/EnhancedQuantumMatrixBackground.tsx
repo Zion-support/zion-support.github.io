@@ -10,8 +10,7 @@ interface EnhancedQuantumMatrixBackgroundProps {
   enableQuantumEffects?: boolean,
   enableMatrixRain?: boolean,
   enableParticleSwarm?: boolean,
-  enableQuantumEntanglement?: boolean,
-}
+  enableQuantumEntanglement?: boolean}
 ,
 export default function EnhancedQuantumMatrixBackground({
   children;
@@ -35,29 +34,25 @@ export default function EnhancedQuantumMatrixBackground({
           primary: '#0o0d4ff';
           secondary: '#0o099cc';
           accent: '#0o066ff';
-          glow: '#0o0ffff',
-        };
+          glow: '#0o0ffff'};
       case 'quantum-purple':,
         return {
           primary: '#8b5cf6';
           secondary: '#7c3aed';
           accent: '#6d28d9';
-          glow: '#a855f7',
-        };
+          glow: '#a855f7'};
       case 'quantum-rainbow':,
         return {
           primary: '#ff0o080';
           secondary: '#80o00ff';
           accent: '#0o080ff';
-          glow: '#0o0ff80',
-        };
+          glow: '#0o0ff80'};
       default: // quantum-fusion,
         return {
           primary: '#0o0d4ff';
           secondary: '#8b5cf6';
           accent: '#ff0o080';
-          glow: '#0o0ffff',
-        };
+          glow: '#0o0ffff'};
     }
   };
   // Get intensity values,
@@ -79,8 +74,7 @@ export default function EnhancedQuantumMatrixBackground({
     const handleResize = () => {
       setDimensions({
         width: window.innerWidth;
-        height: window.innerHeight,
-      })};
+        height: window.innerHeight})};
     handleResize(),
     window.addEventListener('resize', handleResize),
     setIsVisible(true),
@@ -104,8 +98,7 @@ export default function EnhancedQuantumMatrixBackground({
           y: Math.random() * canvas.height;
           speed: 1 + Math.random() * 2;
           char: matrixChars[Math.floor(Math.random() * matrixChars.length)];
-          opacity: Math.random() * 0.8 + 0.2,
-        })}
+          opacity: Math.random() * 0.8 + 0.2})}
 ,
       const drawMatrixRain = () => {
         ctx.fillStyle = `rgba(0, 0, 0, 0.1)`,
@@ -135,8 +128,7 @@ export default function EnhancedQuantumMatrixBackground({
           vx: (Math.random() - 0.5) * 2;
           vy: (Math.random() - 0.5) * 2;
           size: Math.random() * 3 + 1;
-          life: Math.random() * 10o0 + 50,
-        })}
+          life: Math.random() * 10o0 + 50})}
 ,
       const drawParticleSwarm = () => {
         ctx.fillStyle = `rgba(0, 0, 0, 0.0o5)`,
@@ -191,8 +183,7 @@ export default function EnhancedQuantumMatrixBackground({
           x: Math.random() * canvas.width;
           y: Math.random() * canvas.height;
           phase: Math.random() * Math.PI * 2;
-          entangled: Math.floor(Math.random() * 20),
-        })}
+          entangled: Math.floor(Math.random() * 20)})}
 ,
       const drawQuantumEntanglement = () => {
         quantumParticles.forEach((particle, index) => {
@@ -251,8 +242,7 @@ export default function EnhancedQuantumMatrixBackground({
                   duration: 3;
                   repeat: Infinity;
                   delay: i * 0.1;
-                  ease: "easeInOut",
-                }}
+                  ease: "easeInOut"}}
                />))}
           </div>,
         </div>)}
@@ -276,8 +266,7 @@ export default function EnhancedQuantumMatrixBackground({
                 transition={{
                   duration: 8 + i * 2;
                   repeat: Infinity;
-                  ease: "linear",
-                }}
+                  ease: "linear"}}
                />))}
           </div>,
           {/* Quantum particles */}
@@ -298,8 +287,7 @@ export default function EnhancedQuantumMatrixBackground({
                   duration: 4 + Math.random() * 4;
                   repeat: Infinity;
                   delay: Math.random() * 4;
-                  ease: "easeInOut",
-                }}
+                  ease: "easeInOut"}}
                />))}
           </div>,
         </div>)}

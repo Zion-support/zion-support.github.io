@@ -32,6 +32,5 @@ export default function MultimodalFusionPage() {
         industries={['E‑commerce', 'Media', 'Healthcare', 'Security']}
         url='https: //ziontechgroup.com/ai-multimodal-fusion-platform',
       />,
-    </>),
-}
+    </>)}
 ,

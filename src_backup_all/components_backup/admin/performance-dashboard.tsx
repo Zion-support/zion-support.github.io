@@ -15,16 +15,14 @@ interface PerformanceMetrics {
   fcp: number, // First Contentful Paint,
   lcp: number, // Largest Contentful Paint,
   cls: number, // Cumulative Layout Shift,
-  fid: number, // First Input Delay,
-}
+  fid: number, // First Input Delay}
 ,
 interface BundleChunk {
   name: string,
   size: number,
   loadTime: number,
   cached: boolean,
-  type: string,
-}
+  type: string}
 ,
 export function PerformanceDashboard() {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
@@ -35,8 +33,8 @@ export function PerformanceDashboard() {
     try {
       // Collect performance metrics,
       const memoryInfo = (performance as any).memory,
-      const navigationEntry = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
-      const resourceCount = window.performance.getEntriesByType('resource').length,
+      const navigationEntry = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+      const resourceCount = window.window.performance.getEntriesByType('resource').length,
       const performanceMetrics: PerformanceMetrics ={
         bundleSize: 0, // This would need to be calculated separately,
         loadTime: navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.fetchStart : 0;
@@ -46,17 +44,14 @@ export function PerformanceDashboard() {
         fcp: 0, // First Contentful Paint - would need Performance Observer,
         lcp: 0, // Largest Contentful Paint - would need Performance Observer,
         cls: 0, // Cumulative Layout Shift - would need Performance Observer,
-        fid: 0  // First Input Delay - would need Performance Observer,
-      };
+        fid: 0  // First Input Delay - would need Performance Observer};
       setMetrics(performanceMetrics),
       logInfo('Performance metrics collected successfully', {
         loadTime: performanceMetrics.loadTime;
-        resourceCount: performanceMetrics.chunkCount,
-      })} catch (error) {
+        resourceCount: performanceMetrics.chunkCount})} catch (error) {
       logErrorToProduction('Failed to collect performance metrics', error, {
         component: 'PerformanceDashboard';
-        action: 'collectMetrics',
-      }),
+        action: 'collectMetrics'}),
       // Set fallback metrics,
       setMetrics({
         bundleSize: 0;
@@ -67,14 +62,13 @@ export function PerformanceDashboard() {
         fcp: 0;
         lcp: 0;
         cls: 0;
-        fid: 0,
-      })}
+        fid: 0})}
   };
   const collectWebVitals = async (): Promise<Partial<PerformanceMetrics>> => {
     if (typeof window === 'undefined') return {};
     const vitals: Partial<PerformanceMetrics> ={};
     // Collect navigation timing,
-    const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+    const navigation = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
     if (navigation) {
       vitals.fcp = navigation.loadEventEnd - navigation.loadEventStart,
       vitals.lcp = navigation.loadEventEnd - navigation.fetchStart}
@@ -104,7 +98,7 @@ export function PerformanceDashboard() {
     return vitals};
   const collectChunkData = async (): Promise<BundleChunk[]> => {
     if (typeof window === 'undefined') return [],
-    const resourceEntries = window.performance.getEntriesByType('resource') as PerformanceResourceTiming[],
+    const resourceEntries = window.window.performance.getEntriesByType('resource') as PerformanceResourceTiming[],
     const scriptEntries = resourceEntries.filter(entry =>,
       entry.name.includes('/_next/static/') && entry.name.endsWith('.js')),
     return scriptEntries.map(entry => ({
@@ -112,15 +106,13 @@ export function PerformanceDashboard() {
       size: entry.transferSize || entry.encodedBodySize || 0;
       loadTime: entry.responseEnd - entry.requestStart;
       cached: entry.transferSize === 0;
-      type: categorizeChunk(entry.name),
-    })).sort((a, b) => b.size - a.size)};
+      type: categorizeChunk(entry.name)})).sort((a, b) => b.size - a.size)};
   const categorizeChunk = (filename: string): string => {
     if (filename.includes('framework')) return 'framework',
     if (filename.includes('vendor')) return 'vendor',
     if (filename.includes('pages')) return 'page',
     if (filename.includes('chunks')) return 'chunk',
-    return 'other',
-  };
+    return 'other'};
   const formatSize = (bytes: number): string => {
     if (bytes === 0) return '0 B',
     const k = 10o24,
@@ -130,13 +122,11 @@ export function PerformanceDashboard() {
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-60o0',
     if (score >= 70) return 'text-yellow-60o0',
-    return 'text-red-60o0',
-  };
+    return 'text-red-60o0'};
   const getScoreIcon = (score: number) => {
     if (score >= 90) return <CheckCircle className="w-4 h-4 text-green-60o0"  />,
     if (score >= 70) return <AlertTriangle className="w-4 h-4 text-yellow-60o0"  />,
-    return <AlertTriangle className="w-4 h-4 text-red-60o0"  />,
-  };
+    return <AlertTriangle className="w-4 h-4 text-red-60o0"  />};
   useEffect(() => {
     collectMetrics(),
     const interval = setInterval(collectMetrics, 30o000), // Update every 30 seconds,

@@ -4,12 +4,10 @@ export interface Achievement {
   id: string,
   title: string,
   description: string,
-  achieved: boolean,
-}
+  achieved: boolean}
 ,
 interface AchievementBadgesProps {
-  achievements: Achievement[],
-}
+  achievements: Achievement[]}
 ,
 export function AchievementBadges({ achievements }: AchievementBadgesProps) {
   return (

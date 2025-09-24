@@ -41,7 +41,7 @@ function fixFile(filePath) {
       `<h1>${title}</h1>`),
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent, 'utf8'),
-      // console.log(`Fixed: ${filePath}`),
+      // // console.log(`Fixed: ${filePath}`),
       return true}
 ,
     return false} catch (error) {
@@ -63,7 +63,6 @@ function findAndFixFiles(dir) {
 ,
   return fixedCount}
 // Start fixing files,
-// console.log('Fixing invalid variable names in TypeScript files...'),
+// // console.log('Fixing invalid variable names in TypeScript files...'),
 const fixedCount = findAndFixFiles('./pages'),
-// console.log(`Fixed ${fixedCount} files.`),
-}}
+// // console.log(`Fixed ${fixedCount} files.`)}}

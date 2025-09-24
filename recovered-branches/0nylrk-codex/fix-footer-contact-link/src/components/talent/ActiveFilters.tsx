@@ -13,8 +13,7 @@ interface ActiveFiltersProps {
   setPriceRange: (range: [number]) => void,
   experienceRange: [number],
   setExperienceRange: (range: [number]) => void,
-  clearFilters: () => void,
-}
+  clearFilters: () => void}
 ,
 export function ActiveFilters({
   selectedSkills;
@@ -98,6 +97,5 @@ export function ActiveFilters({
         className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent">,
         Clear All,
       </Button>,
-    </div>),
-}
+    </div>)}
 ,

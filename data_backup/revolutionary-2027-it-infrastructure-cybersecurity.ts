@@ -113,8 +113,7 @@ reviews: number,export const revolutionary20o27ITInfrastructureCybersecurityServ
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Comprehensive zero-trust security platform with AI-powered threat detection, continuous authentication, and automated incident response.';
@@ -196,8 +195,7 @@ reviews: number,export const revolutionary20o27ITInfrastructureCybersecurityServ
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quantum-resistant cryptography platform with NIST-compliant algorithms, hybrid encryption, and comprehensive key management.';
@@ -265,7 +263,7 @@ reviews: number,export const revolutionary20o27ITInfrastructureCybersecurityServ
   'Capacity planning';
   'Compliance monitoring';
   'Predictive maintenance'];
-    "roi": 'Companies report 420% ROI through reduced downtime and improved network window.performance.;
+    "roi": 'Companies report 420% ROI through reduced downtime and improved network window.window.performance.;
     competitors[;
   SolarWinds';
   'Datadog';
@@ -282,8 +280,7 @@ reviews: number,export const revolutionary20o27ITInfrastructureCybersecurityServ
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered network operations center with 24/7 monitoring, automated incident response, and predictive maintenance capabilities.';
@@ -366,8 +363,7 @@ reviews: number,export const revolutionary20o27ITInfrastructureCybersecurityServ
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Edge computing infrastructure platform with intelligent workload orchestration, edge analytics, and seamless cloud integration.';
@@ -452,8 +448,7 @@ reviews: number,export const revolutionary20o27ITInfrastructureCybersecurityServ
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered DevOps automation platform with intelligent code review, automated testing, and comprehensive deployment automation.';

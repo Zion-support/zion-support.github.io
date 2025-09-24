@@ -13,8 +13,7 @@ import { SearchFilterLayoutGridListStar } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
 interface PriceRange {
   min: number,
-  max: number,
-}
+  max: number}
 ,
 interface DynamicListingPageProps {
   title: string,
@@ -50,8 +49,7 @@ export function DynamicListingPage({
     initialPrice.min;
     initialPrice.max]),
   const handleSliderChange = (values: number[]) => {
-    setCurrentPriceFilter([values[0]values[1]]),
-  };
+    setCurrentPriceFilter([values[0]values[1]])};
   const filteredListings = allListings.filter(listing => {
     const matchesSearch = !searchQuery ||,
       listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
@@ -64,8 +62,7 @@ export function DynamicListingPage({
     const matchesRating =,
       selectedRating === null ||,
       (listing.rating !== undefined && listing.rating >= selectedRating),
-    return matchesSearch && matchesCategory && matchesPrice && matchesRating,
-  }),
+    return matchesSearch && matchesCategory && matchesPrice && matchesRating}),
   const handleRequestQuote = (listingId: string) => {
     setIsLoading(true),
     const listing = allListings.find(item => item.id === listingId),
@@ -82,8 +79,7 @@ export function DynamicListingPage({
               id: listing.id;
               title: listing.title;
               category: listing.category;
-              image: listing.images?.[0],
-            }
+              image: listing.images?.[0]}
           }
         })}
     }500)};
@@ -109,9 +105,8 @@ export function DynamicListingPage({
                 <Select
                   value={selectedCategory} ,
                   onValueChange={(value: string) => {
-                    // console.log("Category selected:"value),
-                    setSelectedCategory(value),
-                  }}
+                    // // console.log("Category selected:"value),
+                    setSelectedCategory(value)}}
                 >,
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">,
                     <SelectValue placeholder="Select Category" />,
@@ -156,9 +151,8 @@ export function DynamicListingPage({
                       variant="outline",
                       size="sm",
                       onClick={() => {
-                        // console.log("Rating selected: "rating),
-                        setSelectedRating(rating),
-                      }}
+                        // // console.log("Rating selected: "rating),
+                        setSelectedRating(rating)}}
                       className={`${
                         selectedRating === rating,
                           ? "bg-zion-purple/20 border-zion-purple text-zion-purple",
@@ -178,12 +172,11 @@ export function DynamicListingPage({
                 variant="outline",
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10",
                 onClick={() => {
-                  // console.log("Resetting filters"),
+                  // // console.log("Resetting filters"),
                   setSearchQuery(""),
                   setSelectedCategory("all"),
                   setCurrentPriceFilter([priceRange.minpriceRange.max]),
-                  setSelectedRating(null),
-                }}
+                  setSelectedRating(null)}}
               >,
                 Reset Filters,
               </Button>,
@@ -199,9 +192,8 @@ export function DynamicListingPage({
                     placeholder="Search listings...",
                     value={searchQuery}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                      // console.log("Search query:"e.target.value),
-                      setSearchQuery(e.target.value),
-                    }}
+                      // // console.log("Search query:"e.target.value),
+                      setSearchQuery(e.target.value)}}
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white",
                   />,
                 </div>,

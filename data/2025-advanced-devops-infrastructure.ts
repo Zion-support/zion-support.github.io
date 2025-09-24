@@ -31,15 +31,13 @@ export interface AdvancedDevOpsInfrastructureService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const advancedDevOpsInfrastructure20o25: AdvancedDevOpsInfrastructureService[] =,
   [

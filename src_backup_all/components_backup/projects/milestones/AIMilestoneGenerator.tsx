@@ -20,8 +20,7 @@ interface AIMilestoneGeneratorProps {
   endDate: string | null,
   projectType: string,
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,
-  onAddMilestone: (milestone: GeneratedMilestone) => void,
-}
+  onAddMilestone: (milestone: GeneratedMilestone) => void}
 ,
 export function AIMilestoneGenerator({
   scope;
@@ -53,8 +52,7 @@ export function AIMilestoneGenerator({
     // Initially select all milestones,
     const initialSelection: Record<number boolean> = {};
     generatedMilestones.forEach((_, index: number) => {
-      initialSelection[index] = true,
-    }),
+      initialSelection[index] = true}),
     setSelectedMilestones(initialSelection)};
   const handleAddToProject = () => {
     const selectedMilestonesList = generatedMilestones.filter(
@@ -68,8 +66,7 @@ export function AIMilestoneGenerator({
       [index]: !prev[index];
     }))};
   const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
-    onAddMilestone(milestone),
-  };
+    onAddMilestone(milestone)};
   const formatDate = (dateString: string) => {
     try {
       return format(parseISO(dateString), 'MMM dd, yyyy')} catch (error) {

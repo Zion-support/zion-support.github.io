@@ -334,6 +334,5 @@ export default function AIFinancialPlanningPlatform() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -15,6 +15,5 @@ export default function IndexPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

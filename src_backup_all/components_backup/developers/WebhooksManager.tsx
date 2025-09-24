@@ -52,8 +52,7 @@ export function WebhooksManager() {
     await toggleWebhook(webhookId, !currentStatus)};
   const handleDeleteWebhook = async (webhookId: string) => {
     await deleteWebhook(webhookId),
-    setShowDeleteConfirm(null),
-  };
+    setShowDeleteConfirm(null)};
   const handleTestWebhook = async (webhookId: string) => {
     await testWebhook(webhookId, testEventType),
     setShowTestResult(true)};
@@ -372,6 +371,5 @@ export function WebhooksManager() {
           </AlertDialogFooter>,
         </AlertDialogContent>,
       </AlertDialog>,
-    </Card>),
-}
+    </Card>)}
 ,

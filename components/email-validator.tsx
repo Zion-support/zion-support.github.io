@@ -74,8 +74,7 @@ export default function EmailValidatorPage() {
       domain;
       isDisposable;
       hasTypo;
-      timestamp: new Date().toLocaleTimeString(),
-    };
+      timestamp: new Date().toLocaleTimeString()};
   };
   const getStatusIcon = (status: string) => {
     switch (status) {
@@ -88,8 +87,7 @@ export default function EmailValidatorPage() {
       case 'invalid':,
         return <XCircle className="w-5 h-5 text-red-400" />,
       default:,
-        return <AlertTriangle className="w-5 h-5 text-gray-400" />,
-    }
+        return <AlertTriangle className="w-5 h-5 text-gray-400" />}
   };
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -102,15 +100,13 @@ export default function EmailValidatorPage() {
       case 'invalid':,
         return 'text-red-400',
       default:,
-        return 'text-gray-400',
-    }
+        return 'text-gray-400'}
   };
   const getScoreColor = (score: number) => {
     if (score >= 80) return 'text-green-400',
     if (score >= 60) return 'text-yellow-400',
     if (score >= 40) return 'text-orange-400',
-    return 'text-red-400',
-  };
+    return 'text-red-400'};
   const copyResults = () => {
     const resultsText = validationResults.map(result =>,
       `${result.email} - ${result.status.toUpperCase()} (Score: ${result.score})`).join('\n'),
@@ -489,6 +485,5 @@ export default function EmailValidatorPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,

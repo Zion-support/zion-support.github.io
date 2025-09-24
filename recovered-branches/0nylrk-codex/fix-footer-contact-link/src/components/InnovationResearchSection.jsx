@@ -335,8 +335,7 @@ export function InnovationResearchSection() {
                   className='h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover: border-zion-cyan/50 transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer',
                   onClick={() =>,
                     setSelectedResearch(
-                      selectedResearch === area.id ? null : area.id),
-                  }
+                      selectedResearch === area.id ? null : area.id)}
                 >,
                   {/* Header */}
                   <div className='text-center mb-6'>,
@@ -552,6 +551,5 @@ export function InnovationResearchSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

@@ -3,8 +3,7 @@ import { AppHeader } from './AppHeader',
 import { Footer } from '@/components/Footer',
 interface AppLayoutProps {
   children: React.ReactNode,
-  hideFooter?: boolean,
-}
+  hideFooter?: boolean}
 ,
 export function AppLayout({ childrenhideFooter = false }: AppLayoutProps) {
   return (

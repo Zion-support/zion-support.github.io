@@ -15,6 +15,5 @@ export default function TransportationPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

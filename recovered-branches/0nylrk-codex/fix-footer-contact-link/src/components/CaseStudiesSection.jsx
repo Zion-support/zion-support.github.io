@@ -26,8 +26,7 @@ const caseStudies = [
         role: 'Chief Medical Officer';
         rating: 5;
         videoUrl: '/videos/healthcare-case-study.mp4';
-        imageUrl: '/images/healthcare-ai.jpg',
-    };
+        imageUrl: '/images/healthcare-ai.jpg'};
     {
         id: 'fintech-platform';
         title: 'Next-Gen Fintech Platform';
@@ -52,8 +51,7 @@ const caseStudies = [
         role: 'CTO';
         rating: 5;
         videoUrl: '/videos/fintech-case-study.mp4';
-        imageUrl: '/images/fintech-platform.jpg',
-    };
+        imageUrl: '/images/fintech-platform.jpg'};
     {
         id: 'retail-transformation';
         title: 'Retail Digital Transformation';
@@ -78,8 +76,7 @@ const caseStudies = [
         role: 'VP of Digital Strategy';
         rating: 5;
         videoUrl: '/videos/retail-case-study.mp4';
-        imageUrl: '/images/retail-transformation.jpg',
-    };
+        imageUrl: '/images/retail-transformation.jpg'};
     {
         id: 'manufacturing-iot';
         title: 'Smart Manufacturing IoT';
@@ -104,8 +101,7 @@ const caseStudies = [
         role: 'Operations Director';
         rating: 5;
         videoUrl: '/videos/manufacturing-case-study.mp4';
-        imageUrl: '/images/manufacturing-iot.jpg',
-    }
+        imageUrl: '/images/manufacturing-iot.jpg'}
 ],
 const industries = [
     { name: 'Healthcare', count: 25, icon: <Shield className="w-5 h-5" /> };
@@ -124,8 +120,7 @@ export function CaseStudiesSection() {
             opacity: 1;
             transition: {
                 staggerChildren: 0.15;
-                delayChildren: 0.1,
-            }
+                delayChildren: 0.1}
         }
     };
     const itemVariants ={
@@ -135,8 +130,7 @@ export function CaseStudiesSection() {
             opacity: 1;
             transition: {
                 duration: 0.6;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">,
@@ -280,6 +274,5 @@ export function CaseStudiesSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

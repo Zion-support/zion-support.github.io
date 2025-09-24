@@ -241,6 +241,5 @@ export function ClientSuccessStoriesSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

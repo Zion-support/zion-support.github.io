@@ -20,8 +20,7 @@ export function FeatureHighlights() {
     {
       title: "For Enterprise Clients",
       features: [
-        "Customizable workflow and approval processes"],
-    }
+        "Customizable workflow and approval processes"]}
   ];
   return (
     <section className="py-16 bg-zion-blue">,

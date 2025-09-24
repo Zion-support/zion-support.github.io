@@ -1,13 +1,10 @@
 import React from react',import { render, screen } from @testing-library/react',import IndexPage, { getServerSideProps, fetchHomeData } from ../../pages/index',import GlobalErrorBoundary from @/components/GlobalErrorBoundary',import { useRouter } from next/router',
-jest.mock('@sentry/nextjs', () => ({'  captureException: jest.fn(),
-})),
-jest.mock('next/router', () => ({'  useRouter: jest.fn(),
-})),
+jest.mock('@sentry/nextjs', () => ({'  captureException: jest.fn()})),
+jest.mock('next/router', () => ({'  useRouter: jest.fn()})),
 jest.mock('../../pages/index', () => {'  const originalModule = jest.requireActual('../../pages/index'),  return {
     __esModule: true;
     ...originalModule;
-    fetchHomeData: jest.fn(),
-  };
+    fetchHomeData: jest.fn()};
 }),
 const mockedFetchHomeData = fetchHomeData as jest.Mock,
 describe('Home page server side error handling', () => {'  it('renders error boundary fallback when getServerSideProps throws', async () => {'    mockedFetchHomeData.mockRejectedValueOnce(new Error('fail')),    (useRouter as jest.Mock).mockReturnValue({ query: {} }),

@@ -12,8 +12,7 @@ export default function UltraFuturisticBackground2035() {
     canvas.width = window.innerWidth * (window.devicePixelRatio || 1),
     canvas.height = window.innerHeight * (window.devicePixelRatio || 1),
     if (ctx) {
-      ctx.scale(window.devicePixelRatio || 1),
-    }
+      ctx.scale(window.devicePixelRatio || 1)}
 ,
     let animationFrameId: number,
     let particles: Array<{
@@ -23,8 +22,7 @@ export default function UltraFuturisticBackground2035() {
       vy: number,
       size: number,
       opacity: number,
-      color: string,
-    }> = [],
+      color: string}> = [],
     // Initialize particles,
     const initParticles = () => {
       particles = [],
@@ -54,8 +52,7 @@ export default function UltraFuturisticBackground2035() {
         case 'energy':,
           return ['#dc2626'#7c3aed'#059669'][Math.floor(Math.random() * 3)],
         default:,
-          return '#8b5cf6',
-      }
+          return '#8b5cf6'}
     };
     // Update and draw particles with enhanced effects,
     const updateParticles = () => {
@@ -108,8 +105,7 @@ export default function UltraFuturisticBackground2035() {
           break,
         case 'energy':,
           drawEnergyParticle(ctxparticle),
-          break,
-      }
+          break}
 ,
       ctx.restore()};
     // Quantum particle with wave-like effects,
@@ -126,8 +122,7 @@ export default function UltraFuturisticBackground2035() {
       ctx.beginPath(),
       ctx.arc(particle.xparticle.y + waveparticle.size * 0.50Math.PI * 2),
       ctx.fill(),
-      ctx.shadowBlur = 0,
-    };
+      ctx.shadowBlur = 0};
     // Hologram particle with transparency and distortion,
     const drawHologramParticle = (ctx: CanvasRenderingContext2Dparticle: any) => {
       const time = Date.now() * 0.002,
@@ -143,8 +138,7 @@ export default function UltraFuturisticBackground2035() {
       ctx.arc(particle.x + distortionparticle.yparticle.size * 1.50Math.PI * 2),
       ctx.strokeStyle = particle.color,
       ctx.lineWidth = 1,
-      ctx.stroke(),
-    };
+      ctx.stroke()};
     // Neon particle with bright glow,
     const drawNeonParticle = (ctx: CanvasRenderingContext2Dparticle: any) => {
       // Bright core,
@@ -159,8 +153,7 @@ export default function UltraFuturisticBackground2035() {
       ctx.arc(particle.xparticle.yparticle.size * 0.80Math.PI * 2),
       ctx.fillStyle = particle.color,
       ctx.fill(),
-      ctx.shadowBlur = 0,
-    };
+      ctx.shadowBlur = 0};
     // Energy particle with pulsing effect,
     const drawEnergyParticle = (ctx: CanvasRenderingContext2Dparticle: any) => {
       const time = Date.now() * 0.003,
@@ -175,8 +168,7 @@ export default function UltraFuturisticBackground2035() {
       ctx.beginPath(),
       ctx.arc(particle.xparticle.ysize * 20Math.PI * 2),
       ctx.fillStyle = particle.color,
-      ctx.fill(),
-    };
+      ctx.fill()};
     // Enhanced connection drawing with different effects,
     const drawConnections = (ctx: CanvasRenderingContext2Dparticles: any[]currentIndex: numbermaxDistance: numberopacity: number) => {
       particles.forEach((otherParticleotherIndex) => {
@@ -191,8 +183,7 @@ export default function UltraFuturisticBackground2035() {
               // Same type - stronger connection,
               ctx.globalAlpha = connectionOpacity * 1.5,
               ctx.strokeStyle = particles[currentIndex].color,
-              ctx.lineWidth = 2,
-            } else {
+              ctx.lineWidth = 2} else {
               // Different types - weaker connection,
               ctx.globalAlpha = connectionOpacity * 0.7,
               ctx.strokeStyle = '#ffffff',
@@ -242,8 +233,7 @@ export default function UltraFuturisticBackground2035() {
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-cyan-500/20 transform rotate-45",
@@ -254,8 +244,7 @@ export default function UltraFuturisticBackground2035() {
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         />,
         <motion.div,
           className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-500/20 rounded-full",
@@ -266,8 +255,7 @@ export default function UltraFuturisticBackground2035() {
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         />,
         {/* Neon Glow Effects */}
         <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse" />,
@@ -280,8 +268,7 @@ export default function UltraFuturisticBackground2035() {
               linear-gradient(rgba(1392460.1) 1pxtransparent 1px);
               linear-gradient(90degrgba(1392460.1) 1pxtransparent 1px),
             `;
-            backgroundSize: '50px 50px',
-          }} />,
+            backgroundSize: '50px 50px'}} />,
         </div>,
         {/* Canvas for animated particles */}
         <canvas
@@ -295,26 +282,22 @@ export default function UltraFuturisticBackground2035() {
           animate={{
             scale: [1.21];
             opacity: [0.20.40.2];
-            rotate: [0180360],
-          }}
+            rotate: [0180360]}}
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
         />,
         <motion.div,
           className="absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20",
           animate={{
             scale: [1.31];
             opacity: [0.20.50.2];
-            rotate: [360180],
-          }}
+            rotate: [360180]}}
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
         />,
         {/* Quantum energy waves */}
         <div className="absolute inset-0 overflow-hidden">,
@@ -326,14 +309,12 @@ export default function UltraFuturisticBackground2035() {
               top: `${Math.random() * 100}%`}}
             animate={{
               y: [-100-100];
-              opacity: [0.30],
-            }}
+              opacity: [0.30]}}
             transition={{
               duration: 3 + Math.random() * 2;
               repeat: Infinity;
               delay: Math.random() * 2;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
           />))}
 ,
         {/* Energy Waves */}
@@ -345,8 +326,7 @@ export default function UltraFuturisticBackground2035() {
           transition={{
             duration: 4;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         />,
         <motion.div,
           className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent",
@@ -357,8 +337,7 @@ export default function UltraFuturisticBackground2035() {
             duration: 4;
             repeat: Infinity;
             delay: 2;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         />,
         {/* Quantum Dots */}
         {[...Array(15)].map((_, i) => (
@@ -370,14 +349,12 @@ export default function UltraFuturisticBackground2035() {
               top: `${Math.random() * 100}%`}}
             animate={{
               y: [100-100];
-              opacity: [0.30],
-            }}
+              opacity: [0.30]}}
             transition={{
               duration: 5 + Math.random() * 3;
               repeat: Infinity;
               delay: Math.random() * 5;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
           />))}
 ,
         {/* Neural Network Connections */}
@@ -403,8 +380,7 @@ export default function UltraFuturisticBackground2035() {
                 duration: 4;
                 repeat: Infinity;
                 delay: i * 0.5;
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
             />))}
         </svg>,
         {/* Holographic Effects */}
@@ -418,8 +394,7 @@ export default function UltraFuturisticBackground2035() {
             transition={{
               duration: 20;
               repeat: Infinity;
-              ease: "linear",
-            }}
+              ease: "linear"}}
           />,
           <motion.div,
             className="absolute top-1/4 left-1/4 w-48 h-48 border border-purple-500/30 rounded-full",
@@ -430,8 +405,7 @@ export default function UltraFuturisticBackground2035() {
             transition={{
               duration: 15;
               repeat: Infinity;
-              ease: "linear",
-            }}
+              ease: "linear"}}
           />,
         </div>,
         {/* Data Streams */}
@@ -450,8 +424,7 @@ export default function UltraFuturisticBackground2035() {
                 duration: 2 + Math.random() * 2;
                 repeat: Infinity;
                 delay: Math.random() * 2;
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
             />))}
         </div>,
       </div>,

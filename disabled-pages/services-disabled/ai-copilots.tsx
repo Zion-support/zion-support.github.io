@@ -69,6 +69,5 @@ export default function AICopilots() {
           <p className="text-sm text-gray-50o0">Questions? Call +1 30o2 464 0950 or email <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>,
         </div>,
       </section>,
-    </main>),
-}
+    </main>)}
 ,

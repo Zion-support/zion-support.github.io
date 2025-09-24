@@ -26,5 +26,5 @@ content = content.replace(serviceRegex, (match, p1, p2) => {
   return `${p1}\n    tags: [${tags.map(tag => `'${tag}'`).join(', ')}],${p2}`}),
 // Write the file back,
 fs.writeFileSync(filePath, content, 'utf8'),
-// console.log(
+// // console.log(
   'Tags added to all services in 20o27-cutting-edge-comprehensive-services.ts'),

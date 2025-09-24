@@ -35,6 +35,5 @@ export default function EnterpriseMultimodalAgentsBlueprintPage() {
           </Link>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

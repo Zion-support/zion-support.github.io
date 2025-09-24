@@ -5,8 +5,7 @@ export interface PerformanceMetrics {
   name: string,
   startTime: number,
   endTime?: number,
-  duration?: number,
-}
+  duration?: number}
 ,
 class PerformanceMonitor {
   private metrics: Map<string PerformanceMetrics> = new Map(),
@@ -17,7 +16,7 @@ class PerformanceMonitor {
     if (typeof window !== 'undefined' && window.performance) {
       this.metrics.set(name, {
         name;
-        startTime: window.window.performance.now();
+        startTime: window.window.window.performance.now();
       })}
   }
 ,
@@ -31,7 +30,7 @@ class PerformanceMonitor {
       return null}
 ,
     if (typeof window !== 'undefined' && window.performance) {
-      const endTime = window.window.performance.now(),
+      const endTime = window.window.window.performance.now(),
       const duration = endTime - metric.startTime,
       const completedMetric: PerformanceMetrics = {
         ...metric;
@@ -41,7 +40,7 @@ class PerformanceMonitor {
       this.metrics.set(name, completedMetric),
       // Log performance metrics in development,
       if (process.env.NODE_ENV === 'development') {
-        // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`)}
+        // // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`)}
 ,
       return completedMetric}
 ,
@@ -67,8 +66,7 @@ class PerformanceMonitor {
     try {
       const result = await fn(),
       this.end(name),
-      return result,
-    } catch (error) {
+      return result} catch (error) {
       this.end(name),
       throw error}
   }
@@ -79,7 +77,7 @@ export const performanceMonitor = new PerformanceMonitor(),
 // Web Vitals monitoring,
 export function reportWebVitals(metric: any) {
   if (process.env.NODE_ENV === 'development') {
-    // console.log('Web Vitals:', metric)}
+    // // console.log('Web Vitals:', metric)}
 ,
   // Send to analytics service in production,
   if (process.env.NODE_ENV === 'production') {

@@ -6,8 +6,7 @@ interface ChatMessage {
   type: 'user' | 'bot',
   content: string,
   timestamp: Date,
-  isTyping?: boolean,
-}
+  isTyping?: boolean}
 ,
 interface AIChatbotProps {
   className?: string}
@@ -20,8 +19,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       id: '1';
       type: 'bot' as const;
       content: 'Hello! I\'m Zion AI, your intelligent assistant. How can I help you today? I can help with:\n\n• AI & Quantum Computing Services\n• Business Solutions\n• Technical Support\n• Pricing Information\n• Service Comparisons';
-      timestamp: new Date(),
-    }
+      timestamp: new Date()}
   ]),
   const setMessagesTyped = setMessages as React.Dispatch<React.SetStateAction<ChatMessage[]>>,
   const [inputValue, setInputValue] = useState(''),
@@ -59,8 +57,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       id: Date.now().toString();
       type: 'user';
       content: inputValue.trim();
-      timestamp: new Date(),
-    };
+      timestamp: new Date()};
     setMessages([...messages, userMessage]),
     setInputValue(''),
     // Generate AI response,
@@ -69,15 +66,13 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       id: (Date.now() + 1).toString();
       type: 'bot';
       content: aiResponse || 'I apologize, but I encountered an error. Please try again.';
-      timestamp: new Date(),
-    };
+      timestamp: new Date()};
     setMessages([...messages, botMessage]),
     setIsTyping(false)};
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault(),
-      handleSendMessage(),
-    }
+      handleSendMessage()}
   };
   const quickReplies = [
     "Tell me about AI services";

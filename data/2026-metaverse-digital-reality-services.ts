@@ -12,8 +12,7 @@ export interface MetaverseDigitalRealityService2026 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] =,
   [

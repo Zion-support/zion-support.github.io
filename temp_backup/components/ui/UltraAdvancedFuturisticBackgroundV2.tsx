@@ -10,8 +10,7 @@ interface UltraAdvancedFuturisticBackgroundV2Props {
   enableQuantum?: boolean,
   enableHolographic?: boolean,
   enableQuantumEffects?: boolean,
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 export default function UltraAdvancedFuturisticBackgroundV2({
   intensity = 'high';
@@ -80,8 +79,7 @@ export default function UltraAdvancedFuturisticBackgroundV2({
       color: string,
       life: number,
       maxLife: number,
-      type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk',
-    }> = [],
+      type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk'}> = [],
     // Initialize particles with enhanced variety,
     for (let i = 0, i < particleCount, i++) {
       particles.push({
@@ -269,8 +267,7 @@ export default function UltraAdvancedFuturisticBackgroundV2({
             className="fixed inset-0 pointer-events-none",
             style={{
               background: `radial-gradient(circle at 50% 50%, ${currentScheme.primary}10 0%, transparent 70%)`;
-              animation: 'quantum-pulse 4s ease-in-out infinite',
-            }}
+              animation: 'quantum-pulse 4s ease-in-out infinite'}}
            />)}
 ,
         {/* Holographic Matrix Overlay */}
@@ -283,8 +280,7 @@ export default function UltraAdvancedFuturisticBackgroundV2({
                 linear-gradient(0deg, ${currentScheme.secondary} 1px, transparent 1px),
               `;
               backgroundSize: '50px 50px';
-              animation: 'matrix-scroll 20s linear infinite',
-            }}
+              animation: 'matrix-scroll 20s linear infinite'}}
            />)}
 ,
         {/* Neural Network Overlay */}
@@ -309,22 +305,22 @@ export default function UltraAdvancedFuturisticBackgroundV2({
       {/* Enhanced CSS Animations */}
       <style jsx>{`,
         @keyframes quantum-pulse {
-          0%, 10o0% { opacity: 0.1, transform: scale(1), }
-          50% { opacity: 0.3, transform: scale(1.1), }
+          0%, 10o0% { opacity: 0.1, transform: scale(1)}
+          50% { opacity: 0.3, transform: scale(1.1)}
         }
 ,
         @keyframes matrix-scroll {
-          0% { transform: translateY(0), }
-          10o0% { transform: translateY(50px), }
+          0% { transform: translateY(0)}
+          10o0% { transform: translateY(50px)}
         }
 ,
         @keyframes neural-pulse {
-          0%, 10o0% { opacity: 0.0o5, }
-          50% { opacity: 0.15, }
+          0%, 10o0% { opacity: 0.0o5}
+          50% { opacity: 0.15}
         }
 ,
         @keyframes cyberpunk-glitch {
-          0%, 10o0% { transform: translate(0), }
+          0%, 10o0% { transform: translate(0)}
           20% { transform: translate(-2px, 2px)}
           40% { transform: translate(-2px, -2px)}
           60% { transform: translate(2px, 2px)}

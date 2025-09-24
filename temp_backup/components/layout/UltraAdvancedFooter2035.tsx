@@ -664,6 +664,5 @@ export default function UltraAdvancedFooter20o35() {
           </div>,
         </div>,
       </div>,
-    </footer>),
-}
+    </footer>)}
 ,

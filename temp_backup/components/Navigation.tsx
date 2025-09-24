@@ -30,8 +30,7 @@ const Navigation: React.FC = () => {
   ],
   const isCurrentPage = (href: string) => {
     if (href === '/') {
-      return router.pathname === '/',
-    }
+      return router.pathname === '/'}
     return router.pathname.startsWith(href)};
   return (
     <nav className='bg-white shadow-lg'>,
@@ -51,8 +50,7 @@ const Navigation: React.FC = () => {
                   className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
                     isCurrentPage(item.href),
                       ? 'border-blue-50o0 text-gray-90o0',
-                      : 'border-transparent text-gray-50o0 hover: border-gray-30o0 hover:text-gray-70o0',
-                  }`}
+                      : 'border-transparent text-gray-50o0 hover: border-gray-30o0 hover:text-gray-70o0'}`}
                 >,
                   {item.name}
                 </Link>))}
@@ -117,8 +115,7 @@ const Navigation: React.FC = () => {
                 className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${
                   isCurrentPage(item.href),
                     ? 'bg-blue-50 border-blue-50o0 text-blue-70o0',
-                    : 'border-transparent text-gray-50o0 hover: bg-gray-50 hover:border-gray-30o0 hover:text-gray-70o0',
-                }`}
+                    : 'border-transparent text-gray-50o0 hover: bg-gray-50 hover:border-gray-30o0 hover:text-gray-70o0'}`}
                 onClick={() => setIsOpen(false)}
               >,
                 {item.name}

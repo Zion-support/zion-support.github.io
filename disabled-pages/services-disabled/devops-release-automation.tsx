@@ -48,6 +48,5 @@ export default function DevOpsReleaseAutomation(...args: any[]): any {
           </Link>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

@@ -6,8 +6,7 @@ interface InterviewResponseFormProps {
   interview: Interview,
   onConfirm: () => Promise<void>,
   onClose: () => void,
-  isLoading: boolean,
-}
+  isLoading: boolean}
 ,
 export function InterviewResponseForm({ interviewonConfirmonCloseisLoading }: InterviewResponseFormProps) {
   // Format interview date and time,

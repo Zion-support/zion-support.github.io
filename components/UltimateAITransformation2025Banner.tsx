@@ -52,6 +52,5 @@ const UltimateAITransformation20o25Banner = () => {
           </Link>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateAITransformation20o25Banner;

@@ -4,8 +4,7 @@ import { Input } from '@/components/ui/input',
 interface MobileFilterBarProps {
   searchTerm: string,
   setSearchTerm: (value: string) => void,
-  setIsMobileFilterOpen: (isOpen: boolean) => void,
-}
+  setIsMobileFilterOpen: (isOpen: boolean) => void}
 ,
 export function MobileFilterBar({
   searchTerm;
@@ -38,6 +37,5 @@ export function MobileFilterBar({
           Search by name or skill,
         </p>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

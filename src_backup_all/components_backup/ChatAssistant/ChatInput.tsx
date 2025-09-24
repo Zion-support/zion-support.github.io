@@ -9,8 +9,7 @@ import { Button } from '@/components/ui/button',
 import { Send } from 'lucide-react',
 interface ChatInputProps {
   onSend: (message: string) => void,
-  disabled?: boolean,
-}
+  disabled?: boolean}
 ,
 export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
   const [message, setMessage] = useState(''),
@@ -22,16 +21,14 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
     e.preventDefault(),
     if (message.trim() && !disabled) {
       onSend(message),
-      setMessage(''),
-    }
+      setMessage('')}
   };
   const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault(),
       if (message.trim() && !disabled) {
         onSend(message),
-        setMessage(''),
-      }
+        setMessage('')}
     }
   };
   return (

@@ -23,8 +23,7 @@ import Head from 'next/head',
         'No unauthorized access or reverse engineering';
         'Compliance with AI safety guidelines';
         'Proper data handling and privacy protection'];
-      usage: 'Commercial and research applications',
-    };
+      usage: 'Commercial and research applications'};
     {
       service: 'Quantum Computing Solutions';
       description: 'Quantum computing infrastructure and algorithms';
@@ -32,8 +31,7 @@ import Head from 'next/head',
         'No quantum algorithm theft or copying';
         'Respect for quantum security protocols';
         'Proper quantum error handling'];
-      usage: 'Scientific research and enterprise applications',
-    };
+      usage: 'Scientific research and enterprise applications'};
     {
       service: 'Cybersecurity Services';
       description: 'Advanced security and threat protection';
@@ -41,8 +39,7 @@ import Head from 'next/head',
         'No testing against unauthorized systems';
         'Compliance with security regulations';
         'Proper incident reporting procedures'];
-      usage: 'Enterprise security and compliance',
-    };
+      usage: 'Enterprise security and compliance'};
     {
       service: 'Cloud Infrastructure';
       description: 'Scalable cloud computing resources';
@@ -50,8 +47,7 @@ import Head from 'next/head',
         'No resource abuse or unauthorized access';
         'Compliance with cloud security policies';
         'Proper cost management and optimization'];
-      usage: 'Business applications and development',
-    }
+      usage: 'Business applications and development'}
   ],
   const userObligations = [
     {
@@ -69,23 +65,19 @@ const TermsPage: React.FC = () => {
     {
       icon: Shield;
       title: 'Service Usage';
-      description: 'Our services are provided for legitimate business and research purposes only.',
-    };
+      description: 'Our services are provided for legitimate business and research purposes only.'};
     {
       icon: Users;
       title: 'User Responsibilities';
-      description: 'Users must comply with all applicable laws and regulations when using our services.',
-    };
+      description: 'Users must comply with all applicable laws and regulations when using our services.'};
     {
       icon: Globe;
       title: 'Global Compliance';
-      description: 'We maintain compliance with international laws and industry standards.',
-    };
+      description: 'We maintain compliance with international laws and industry standards.'};
     {
       icon: Scale;
       title: 'Legal Framework';
-      description: 'All services are governed by applicable laws and our service agreements.',
-    }
+      description: 'All services are governed by applicable laws and our service agreements.'}
   ],
   const serviceTerms = [
     {
@@ -191,26 +183,22 @@ export default function TermsPage() {
       icon: <Users className="w-8 h-8" />;
       title: 'Acceptance of Terms';
       description: 'By using our services, you agree to these terms and conditions';
-      color: 'from-blue-500 to-cyan-500',
-    };
+      color: 'from-blue-500 to-cyan-500'};
     {
       icon: <Shield className="w-8 h-8" />;
       title: 'Service Description';
       description: 'Comprehensive overview of our AI consciousness and quantum computing services';
-      color: 'from-purple-500 to-pink-500',
-    };
+      color: 'from-purple-500 to-pink-500'};
     {
       icon: <Lock className="w-8 h-8" />;
       title: 'User Obligations';
       description: 'Your responsibilities when using our services and platforms';
-      color: 'from-green-500 to-emerald-500',
-    };
+      color: 'from-green-500 to-emerald-500'};
     {
       icon: <Scale className="w-8 h-8" />;
       title: 'Legal Terms';
       description: 'Important legal provisions and dispute resolution procedures';
-      color: 'from-yellow-500 to-orange-500',
-    }
+      color: 'from-yellow-500 to-orange-500'}
   ],
   const serviceCategories = [
     {
@@ -218,29 +206,25 @@ export default function TermsPage() {
       description: 'Advanced AI systems with consciousness and emotional intelligence capabilities';
       features: ['Emotional intelligence', 'Self-awareness', 'Decision-making', 'Learning systems'];
       restrictions: ['No malicious use', 'Compliance with AI ethics', 'Data privacy requirements'];
-      icon: <Brain className="w-6 h-6" />,
-    };
+      icon: <Brain className="w-6 h-6" />};
     {
       category: 'Quantum Computing Platform';
       description: 'Quantum computing services for complex computational problems';
       features: ['Quantum algorithms', 'Hybrid classical-quantum', 'Optimization tools', 'Simulation capabilities'];
       restrictions: ['No weapon development', 'Export control compliance', 'Security protocols'];
-      icon: <Rocket className="w-6 h-6" />,
-    };
+      icon: <Rocket className="w-6 h-6" />};
     {
       category: 'Space Technology Solutions';
       description: 'Space resource intelligence and exploration technology services';
       features: ['Resource mapping', 'Celestial analysis', 'Exploration data', 'Intelligence platforms'];
       restrictions: ['No military applications', 'International space law compliance', 'Environmental protection'];
-      icon: <Globe className="w-6 h-6" />,
-    };
+      icon: <Globe className="w-6 h-6" />};
     {
       category: 'Enterprise Solutions';
       description: 'Comprehensive enterprise technology and infrastructure services';
       features: ['IT infrastructure', 'Cloud services', 'Security solutions', 'Consulting services'];
       restrictions: ['Valid business use', 'Compliance requirements', 'Licensing terms'];
-      icon: <Building className="w-6 h-6" />,
-    }
+      icon: <Building className="w-6 h-6" />}
   ],
   const userObligations = [
     {
@@ -252,8 +236,7 @@ export default function TermsPage() {
         'Maintain security and confidentiality';
         'No unauthorized access or interference'];
       icon: <CheckCircle className="w-6 h-6" />;
-      color: 'from-green-500 to-emerald-500',
-    };
+      color: 'from-green-500 to-emerald-500'};
     {
       obligation: 'Account Security';
       description: 'Maintain the security of your account and credentials';
@@ -263,8 +246,7 @@ export default function TermsPage() {
         'Report security incidents immediately';
         'No sharing of account credentials'];
       icon: <Shield className="w-6 h-6" />;
-      color: 'from-blue-500 to-cyan-500',
-    };
+      color: 'from-blue-500 to-cyan-500'};
     {
       obligation: 'Data Compliance';
       description: 'Ensure compliance with data protection and privacy requirements';
@@ -274,8 +256,7 @@ export default function TermsPage() {
         'Respect user privacy rights';
         'Report data breaches promptly'];
       icon: <Lock className="w-6 h-6" />;
-      color: 'from-purple-500 to-pink-500',
-    };
+      color: 'from-purple-500 to-pink-500'};
     {
       obligation: 'Payment Obligations';
       description: 'Timely payment of all fees and charges for services';
@@ -285,8 +266,7 @@ export default function TermsPage() {
         'Notify of billing disputes';
         'Comply with pricing agreements'];
       icon: <Zap className="w-6 h-6" />;
-      color: 'from-yellow-500 to-orange-500',
-    }
+      color: 'from-yellow-500 to-orange-500'}
   ],
   const legalProvisions = [
     {
@@ -368,50 +348,41 @@ const Terms: React.FC = () => {
     {
       title: 'Acceptance of Terms';
       content: `By accessing and using the Zion Tech Group website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.`;
-      icon: <FileText className="w-6 h-6 text-purple-400" />,
-    };
+      icon: <FileText className="w-6 h-6 text-purple-400" />};
     {
       title: 'Use License';
       content: `Permission is granted to temporarily download one copy of the materials (information or software) on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials, use the materials for any commercial purpose or for any public display, attempt to reverse engineer any software contained on Zion Tech Group's website, remove any copyright or other proprietary notations from the materials, or transfer the materials to another person or "mirror" the materials on any other server.`;
-      icon: <Lock className="w-6 h-6 text-blue-400" />,
-    };
+      icon: <Lock className="w-6 h-6 text-blue-400" />};
     {
       title: 'Service Description';
       content: `Zion Tech Group provides AI consciousness technology, quantum computing solutions, autonomous systems, and related consulting services. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.`;
-      icon: <Globe className="w-6 h-6 text-green-400" />,
-    };
+      icon: <Globe className="w-6 h-6 text-green-400" />};
     {
       title: 'User Responsibilities';
       content: `Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account. Users must not use our services for any illegal or unauthorized purpose, or in any way that violates applicable laws or regulations.`;
-      icon: <Users className="w-6 h-6 text-yellow-400" />,
-    };
+      icon: <Users className="w-6 h-6 text-yellow-400" />};
     {
       title: 'Privacy and Data Protection';
       content: `Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference. We are committed to protecting your data in accordance with applicable data protection laws.`;
-      icon: <Eye className="w-6 h-6 text-cyan-400" />,
-    };
+      icon: <Eye className="w-6 h-6 text-cyan-400" />};
     {
       title: 'Intellectual Property Rights';
       content: `All content on this website, including but not limited to text, graphics, logos, images, software, and other materials, is the property of Zion Tech Group or its licensors and is protected by copyright, trademark, and other intellectual property laws.`;
-      icon: <Shield className="w-6 h-6 text-red-400" />,
-    }
+      icon: <Shield className="w-6 h-6 text-red-400" />}
   ],
   const importantNotices = [
     {
       title: 'AI Technology Risks';
       content: 'Our AI consciousness technology involves experimental and cutting-edge research. Users acknowledge that such technology may carry inherent risks and uncertainties.';
-      type: 'warning',
-    };
+      type: 'warning'};
     {
       title: 'Quantum Computing Limitations';
       content: 'Quantum computing services are subject to current technological limitations and may not be suitable for all applications or use cases.';
-      type: 'info',
-    };
+      type: 'info'};
     {
       title: 'Service Availability';
       content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services due to factors beyond our control.';
-      type: 'info',
-    }
+      type: 'info'}
   ],
   return (
     <Layout>,
@@ -436,8 +407,7 @@ const termsSections = [
   {
     title: 'Limitations';
     icon: <Shield className="w-6 h-6 text-purple-400" />;
-    content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.',
-  }
+    content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'}
 ],
 export default function Terms() {
   return (
@@ -1952,12 +1922,10 @@ export default Terms;
           </section>,
         </main>,
       </Layout>,
-    </ErrorBoundary>),
-};
+    </ErrorBoundary>)};
 export default TermsPage;
 =======,
   return (
     <>,
       <Head><title>terms - Zion App</title><meta name="description" content="terms page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">terms</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover: underline">,
-            ← Back to Home</a></div></div></>),
-}}}}})))))]]
+            ← Back to Home</a></div></div></>)}}}}})))))]]

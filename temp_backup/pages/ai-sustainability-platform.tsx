@@ -293,6 +293,5 @@ export default function AISustainabilityPlatform() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -18,8 +18,7 @@ const SyntheticIntelligence20o26RevolutionBanner = () => {
       url: '/blog/ai-20o26-synthetic-intelligence-revolution-ultimate-breakthrough';
       type: 'blog';
       readingTime: '30 min read';
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'fortune-50o0-synthetic-intelligence-success';
       title: 'Fortune 50o0 Synthetic Intelligence Success';
@@ -29,13 +28,11 @@ const SyntheticIntelligence20o26RevolutionBanner = () => {
         roi: '2,50o0%';
         savings: '$18.7B';
         timeline: '18 months';
-        success: '99.7%',
-      };
+        success: '99.7%'};
       url: '/case-studies/fortune-50o0-synthetic-intelligence-transformation-250o0-roi-success-story';
       type: 'case-study';
       readingTime: '20 min read';
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'synthetic-intelligence-implementation-guide';
       title: 'Synthetic Intelligence Implementation Guide';
@@ -49,8 +46,7 @@ const SyntheticIntelligence20o26RevolutionBanner = () => {
       url: '/resources/synthetic-intelligence-implementation-ultimate-guide-20o26';
       type: 'resource';
       readingTime: '35 min read';
-      isNew: true,
-    }
+      isNew: true}
   ],
   useEffect(() => {
     const timer = setInterval(() => {

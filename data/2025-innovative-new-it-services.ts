@@ -31,15 +31,13 @@ export interface InnovativeNewITService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const innovativeNewITServices20o25: InnovativeNewITService[] = [
   // Quantum-Secure Cloud Infrastructure,
@@ -69,7 +67,7 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
     textColor: 'text-purple-40o0';
     link: 'https://ziontechgroup.com/quantum-secure-cloud-infrastructure';
     marketPosition:,
-      'Competes with AWS ($0.0o23/hour), Azure ($0.0o18/hour). Our advantage: Quantum-resistant security with 99.99% uptime and 50% better window.performance.';
+      'Competes with AWS ($0.0o23/hour), Azure ($0.0o18/hour). Our advantage: Quantum-resistant security with 99.99% uptime and 50% better window.window.performance.';
     targetAudience:,
       'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors';
     trialDays: 30;
@@ -191,7 +189,7 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
     textColor: 'text-green-40o0';
     link: 'https://ziontechgroup.com/edge-computing-orchestration-platform';
     marketPosition:,
-      'Competes with AWS Greengrass ($0.16/hour), Azure IoT Edge ($0.40/hour). Our advantage: Intelligent orchestration with 40% better window.performance.';
+      'Competes with AWS Greengrass ($0.16/hour), Azure IoT Edge ($0.40/hour). Our advantage: Intelligent orchestration with 40% better window.window.performance.';
     targetAudience:,
       'IoT companies, Edge computing providers, Manufacturing companies, Retail businesses, Smart city projects';
     trialDays: 14;
@@ -255,7 +253,7 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
     textColor: 'text-orange-40o0';
     link: 'https://ziontechgroup.com/blockchain-infrastructure-platform';
     marketPosition:,
-      'Competes with AWS Managed Blockchain ($0.30/hour), Azure Blockchain Service ($0.50/hour). Our advantage: Multi-blockchain support with 60% better window.performance.';
+      'Competes with AWS Managed Blockchain ($0.30/hour), Azure Blockchain Service ($0.50/hour). Our advantage: Multi-blockchain support with 60% better window.window.performance.';
     targetAudience:,
       'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Tech startups';
     trialDays: 21;

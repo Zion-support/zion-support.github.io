@@ -8,20 +8,17 @@ const LazyComponent = ({
   ...props}: {
   component: React.ComponentType<any>,
   fallback: ReactNode,
-  [key: string]: any,
-}) => (
+  [key: string]: any}) => (
   <Suspense fallback={fallback}>,
     <ComponentImpl {...props} />,
   </Suspense>),
 interface ErrorBoundaryState {
   hasError: boolean,
-  error?: Error,
-}
+  error?: Error}
 ,
 interface ErrorBoundaryProps {
   children: ReactNode,
-  fallback?: ReactNode,
-}
+  fallback?: ReactNode}
 ,
 export class ErrorBoundary extends Component<,
   ErrorBoundaryProps;
@@ -90,13 +87,13 @@ export function Skeleton({
     </div>)}
 ,
 export function usePerformanceMonitor(componentName: string) {
-  const startTime = window.performance.now(),
+  const startTime = window.window.performance.now(),
   return {
     endMeasure: () => {
-      const endTime = window.performance.now(),
+      const endTime = window.window.performance.now(),
       const duration = endTime - startTime,
       if (process.env.NODE_ENV === 'development') {
-        // console.log(`${componentName} render time: ${duration.toFixed(2)}ms`)}
+        // // console.log(`${componentName} render time: ${duration.toFixed(2)}ms`)}
 ,
       if (process.env.NODE_ENV === 'production' && duration > 100) {
         console.warn(

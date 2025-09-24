@@ -89,8 +89,7 @@ export default function AffiliateMarketingTracking() {
         'Email support';
         '1 admin user';
         'Basic integrations'];
-      popular: false,
-};
+      popular: false};
     {
       name: 'Professional';
       price: '$799';
@@ -104,8 +103,7 @@ export default function AffiliateMarketingTracking() {
         '5 admin users';
         'API access';
         'White-label options'];
-      popular: true,
-};
+      popular: true};
     {
       name: 'Enterprise';
       price: 'Custom';
@@ -119,8 +117,7 @@ export default function AffiliateMarketingTracking() {
         'Unlimited users';
         'Custom integrations';
         'SLA guarantee'];
-      popular: false,
-}
+      popular: false}
   ],
   return (
     <>,

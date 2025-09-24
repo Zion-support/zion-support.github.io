@@ -8,15 +8,13 @@ export default function QuantumAIROICalculator20o26() {
     currentEfficiency: 70;
     currentCosts: 50o000000;
     quantumInvestment: 10o000000;
-    implementationTime: 18,
-  }),
+    implementationTime: 18}),
   const [results, setResults] = useState({
     efficiencyGain: 0;
     costSavings: 0;
     revenueIncrease: 0;
     totalROI: 0;
-    paybackPeriod: 0,
-  }),
+    paybackPeriod: 0}),
   const calculateROI = () => {
     const efficiencyGain = 80, // 80% efficiency improvement,
     const costSavings = (inputs.currentCosts * 0.6), // 60% cost reduction,
@@ -227,5 +225,4 @@ export default function QuantumAIROICalculator20o26() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

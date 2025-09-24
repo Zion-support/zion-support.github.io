@@ -54,8 +54,7 @@ export function EnhancedLoadingSpinner({
       case 'futuristic':,
         return <Zap className='w-full h-full text-blue-40o0' />,
       default: ,
-        return <Loader2 className='w-full h-full text-gray-40o0' />,
-    }
+        return <Loader2 className='w-full h-full text-gray-40o0' />}
   };
   const getBackground = () => {
     switch (variant) {
@@ -66,8 +65,7 @@ export function EnhancedLoadingSpinner({
       case 'futuristic':,
         return 'bg-gradient-to-r from-blue-50o0/20 to-indigo-50o0/20 border-blue-40o0/30',
       default: ,
-        return 'bg-gray-10o0 border-gray-20o0',
-    }
+        return 'bg-gray-10o0 border-gray-20o0'}
   };
   return (
     <div className='flex flex-col items-center justify-center space-y-4 p-6'>,

@@ -327,8 +327,7 @@ function ITServiceCategory({ title, icon, description, services }: {
   title: string,
   icon: string,
   description: string,
-  services: string[],
-}) {
+  services: string[]}) {
   return (
     <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-20o0">,
       <div className="text-3xl mb-4">{icon}</div>,
@@ -389,8 +388,7 @@ function Plan({ name, price, duration, features }: {
   duration: string,
   features: string[],
   bestFor: string,
-  popular?: boolean,
-}) {
+  popular?: boolean}) {
   return (
     <div className={`relative bg-white border rounded-xl p-8 ${popular ? 'border-green-50o0 shadow-lg' : 'border-gray-20o0'}`}>,
       {popular && (
@@ -413,13 +411,11 @@ function Plan({ name, price, duration, features }: {
         className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular,
             ? 'bg-green-60o0 text-white hover:bg-green-70o0',
-            : 'border-2 border-green-60o0 text-green-60o0 hover:bg-green-60o0 hover:text-white',
-        }`}
+            : 'border-2 border-green-60o0 text-green-60o0 hover:bg-green-60o0 hover:text-white'}`}
 >,
         Get Started,
       </a>,
-    </div>),
-}
+    </div>)}
 ,
 function ITSolution({ title, description, features, price, timeline, useCase, marketSize }: {
   title: string,
@@ -428,8 +424,7 @@ function ITSolution({ title, description, features, price, timeline, useCase, ma
   price: string,
   timeline: string,
   useCase: string,
-  marketSize: string,
-}) {
+  marketSize: string}) {
   return (
     <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-20o0 hover: shadow-xl transition-shadow">,
       <h3 className="text-xl font-bold text-gray-90o0 mb-2">{title}</h3>,
@@ -460,8 +455,7 @@ function ITSolution({ title, description, features, price, timeline, useCase, ma
           Get Quote,
         </a>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
 function ITTechnology({ category, technologies }: { category: string, technologies: string[] }) {
   return (
@@ -478,8 +472,7 @@ function ITTechnology({ category, technologies }: { category: string, technologi
 function ComplianceCard({ title, description, icon }: {
   title: string,
   description: string,
-  icon: string,
-}) {
+  icon: string}) {
   return (
     <div className="bg-white rounded-lg p-6 shadow-md border border-gray-20o0 text-center">,
       <div className="text-3xl mb-4">{icon}</div>,
@@ -492,8 +485,7 @@ function ITPricingPlan({ name, price, duration, features, popular }: {
   price: string,
   duration: string,
   features: string[],
-  popular: boolean,
-}) {
+  popular: boolean}) {
   return (
     <div className={`bg-white rounded-xl p-8 shadow-lg border-2 ${popular ? 'border-green-50o0' : 'border-gray-20o0'} relative`}>,
       {popular && (
@@ -515,8 +507,7 @@ function ITPricingPlan({ name, price, duration, features, popular }: {
         className={`w-full mt-6 py-3 rounded-lg font-semibold text-center block transition-colors ${
           popular,
             ? 'bg-green-60o0 text-white hover:bg-green-70o0',
-            : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0',
-        }`}
+            : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0'}`}
       >,
         Get Started,
       </a>,
@@ -533,8 +524,7 @@ function ContactSection() {
 ,
 function ITTechStack({ title, technologies }: {
   title: string,
-  technologies: string[],
-}) {
+  technologies: string[]}) {
   return (
     <div className="border border-gray-20o0 rounded-xl p-6 bg-white">,
       <h3 className="text-xl font-bold text-gray-90o0 mb-4">{title}</h3>,
@@ -550,8 +540,7 @@ function IndustrySolution({ title, description, solutions, icon }: {
   title: string,
   description: string,
   solutions: string[],
-  icon: string,
-}) {
+  icon: string}) {
   return (
     <div className="border border-gray-20o0 rounded-xl p-6 bg-white hover: shadow-lg transition-shadow">,
       <div className="text-4xl mb-4">{icon}</div>,
@@ -569,8 +558,7 @@ function IndustrySolution({ title, description, solutions, icon }: {
 function ITBenefitCard({ title, description, icon }: {
   title: string,
   description: string,
-  icon: string,
-}) {
+  icon: string}) {
   return (
     <div className="text-center p-6 border border-gray-20o0 rounded-xl bg-white hover: shadow-lg transition-shadow">,
       <div className="text-4xl mb-4">{icon}</div>,
@@ -602,5 +590,4 @@ function Pricing() {
           popular={false}
          />,
       </div>,
-    </section>),
-}})
+    </section>)}})

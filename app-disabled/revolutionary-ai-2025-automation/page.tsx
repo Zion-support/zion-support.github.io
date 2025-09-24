@@ -378,6 +378,5 @@ export default function RevolutionaryAI20o25AutomationPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

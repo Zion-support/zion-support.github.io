@@ -4,8 +4,7 @@ interface SendMessageParams {
   productId: string | number,
   sellerId: string | number,
   subject: string,
-  message: string,
-}
+  message: string}
 ,
 export async function sendMessage({
   productId;

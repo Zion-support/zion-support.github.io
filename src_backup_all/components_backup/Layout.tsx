@@ -1,8 +1,7 @@
 import React, { useState } from 'react',
 import { ReactNode } from 'react',
 interface LayoutProps {
-  children: ReactNode,
-}
+  children: ReactNode}
 const navigation: NavItem[] = [
   { label: 'Home', href: '/' };
   {
@@ -106,8 +105,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   // Handle scroll effect for header,
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10),
-    };
+      setIsScrolled(window.scrollY > 10)};
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   // Close mobile menu when route changes,
@@ -116,11 +114,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     setSidebarOpen(false),
     setDropdownOpen(null)}, [location]),
   const toggleDropdown = (label: string) => {
-    setDropdownOpen(dropdownOpen === label ? null : label),
-  };
+    setDropdownOpen(dropdownOpen === label ? null : label)};
   const toggleSidebarDropdown = (label: string) => {
-    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label),
-  };
+    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label)};
   return (
     <div className='min-h-screen bg-zion-slate-dark'>,
       {/* Header */}
@@ -155,8 +151,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                       className={`transition-colors ${
                         isActive(item.href),
                           ? 'text-zion-cyan',
-                          : 'text-zion-slate-light hover: text-white',
-                      }`}
+                          : 'text-zion-slate-light hover: text-white'}`}
                     >,
                       {item.label}
                     </Link>)}
@@ -210,8 +205,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                       className={`block px-3 py-2 rounded-md transition-colors ${
                         isActive(item.href),
                           ? 'text-zion-cyan bg-zion-cyan/10',
-                          : 'text-zion-slate-light hover: text-white hover:bg-zion-cyan/10',
-                      }`}
+                          : 'text-zion-slate-light hover: text-white hover:bg-zion-cyan/10'}`}
                     >,
                       {item.icon && <item.icon className='w-4 h-4' />}
                       <span>{item.label}</span>,
@@ -264,8 +258,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   className={`flex items-center space-x-3 px-3 py-2 rounded-md transition-colors ${
                     isActive(item.href),
                       ? 'text-zion-cyan bg-zion-cyan/10',
-                      : 'text-zion-slate-light hover: text-white hover:bg-zion-cyan/10',
-                  }`}
+                      : 'text-zion-slate-light hover: text-white hover:bg-zion-cyan/10'}`}
                 >,
                   {item.icon && <item.icon className='w-4 h-4' />}
                   <span>{item.label}</span>,
@@ -423,6 +416,5 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </div>,
       </footer>,
       <ScrollToTop />,
-    </div>),
-}
+    </div>)}
 ,

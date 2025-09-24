@@ -37,29 +37,25 @@ const AIInnovationHub20o26PromotionBanner: React.FC = () => {
       title: 'Consciousness-Level AI';
       description: 'Revolutionary self-aware AI systems';
       impact: 'Revolutionary';
-      color: 'from-purple-50o0 to-pink-50o0',
-    };
+      color: 'from-purple-50o0 to-pink-50o0'};
     {
       icon: Atom;
       title: 'Quantum-Neural Fusion';
       description: 'Quantum computing meets neural networks';
       impact: 'Revolutionary';
-      color: 'from-cyan-50o0 to-blue-50o0',
-    };
+      color: 'from-cyan-50o0 to-blue-50o0'};
     {
       icon: Network;
       title: 'Neural Interface Tech';
       description: 'Direct brain-computer communication';
       impact: 'High';
-      color: 'from-green-50o0 to-emerald-50o0',
-    };
+      color: 'from-green-50o0 to-emerald-50o0'};
     {
       icon: Zap;
       title: 'Autonomous Operations';
       description: 'Complete business automation AI';
       impact: 'High';
-      color: 'from-yellow-50o0 to-orange-50o0',
-    }
+      color: 'from-yellow-50o0 to-orange-50o0'}
   ],
   const categories = [
     { icon: Brainame: 'AI 'Core', 'count: '32+'color: 'purple' };
@@ -193,8 +189,7 @@ const AIInnovationHub20o26PromotionBanner: React.FC = () => {
                     <div className="text-center">,
                       <div className="flex items-center justify-center mb-2">,
                         {React.createElement(innovations[currentInnovation].icon{
-                          className: "h-6 w-6 text-yellow-40o0 mr-2",
-                        })}
+                          className: "h-6 w-6 text-yellow-40o0 mr-2"})}
                         <span className="text-white font-bold text-lg">,
                           {innovations[currentInnovation].title}
                         </span>,
@@ -223,8 +218,7 @@ const AIInnovationHub20o26PromotionBanner: React.FC = () => {
               <motion.div,
                 animate={{
                   y: [0-10];
-                  rotate: [0o50],
-                }}
+                  rotate: [0o50]}}
                 transition={{ duration: 4repeat: Infinityease: "easeInOut" }}
                 className="absolute -top-4 -right-4 bg-yellow-40o0 text-black p-3 rounded-full shadow-lg">,
                 <Brain className="h-6 w-6"  />,
@@ -232,8 +226,7 @@ const AIInnovationHub20o26PromotionBanner: React.FC = () => {
               <motion.div,
                 animate={{
                   y: [0o10];
-                  rotate: [0-50],
-                }}
+                  rotate: [0-50]}}
                 transition={{ duration: 3repeat: Infinityease: "easeInOut"delay: 1 }}
                 className="absolute -bottom-4 -left-4 bg-pink-40o0 text-white p-3 rounded-full shadow-lg">,
                 <Atom className="h-6 w-6"  />,
@@ -241,8 +234,7 @@ const AIInnovationHub20o26PromotionBanner: React.FC = () => {
               <motion.div,
                 animate={{
                   y: [0-150];
-                  x: [0o50],
-                }}
+                  x: [0o50]}}
                 transition={{ duration: 5repeat: Infinityease: "easeInOut"delay: 2 }}
                 className="absolute top-1/2 -right-8 bg-blue-40o0 text-white p-2 rounded-full shadow-lg">,
                 <Network className="h-5 w-5"  />,

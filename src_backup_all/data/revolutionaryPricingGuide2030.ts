@@ -10,8 +10,7 @@ export interface PricingTier {
   limitations: string[],
   recommendedFor: string[],
   savings?: number,
-  popular?: boolean,
-}
+  popular?: boolean}
 ,
 export interface EnterprisePricing {
   id: string,
@@ -24,8 +23,7 @@ export interface EnterprisePricing {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
 }
 ,
 export interface ServicePricing {
@@ -37,16 +35,14 @@ export interface ServicePricing {
   marketComparison: {
     competitors: string[],
     ourAdvantage: string,
-    priceDifference: string,
-  };
+    priceDifference: string};
 }
 ,
 // Zion Tech Group Contact Information,
 const zionContact ={
   phone: "+1 30o2 464 0950";
   email: "kleber@ziontechgroup.com";
-  website: "https://ziontechgroup.com",
-};
+  website: "https://ziontechgroup.com"};
 // Revolutionary Micro SAAS Services Pricing,
 export const revolutionaryMicroSaasPricing: ServicePricing[] = [
   {
@@ -109,8 +105,7 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
           "Custom development"];
         limitations: [];
         recommendedFor: ["Large enterprises", "Multi-national companies", "Government agencies"];
-        popular: true,
-      }
+        popular: true}
     ];
     enterprise: {
       id: "neuralflow-custom";
@@ -138,13 +133,11 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
         "Integration with legacy systems";
         "Custom reporting dashboards";
         "Multi-language support"];
-      contactInfo: zionContact,
-    };
+      contactInfo: zionContact};
     marketComparison: {
       competitors: ["UiPath", "Automation Anywhere", "Blue Prism"];
       ourAdvantage: "AI-powered learning and optimization that gets smarter over time";
-      priceDifference: "20-40% more value for similar pricing",
-    }
+      priceDifference: "20-40% more value for similar pricing"}
   };
   {
     serviceId: "quantumsync-pro";
@@ -206,8 +199,7 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
           "Custom development"];
         limitations: [];
         recommendedFor: ["Large enterprises", "Government agencies", "Research institutions"];
-        popular: true,
-      }
+        popular: true}
     ];
     enterprise: {
       id: "quantumsync-custom";
@@ -234,13 +226,11 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
         "Integration with classical systems";
         "Custom quantum circuits";
         "Multi-qubit management"];
-      contactInfo: zionContact,
-    };
+      contactInfo: zionContact};
     marketComparison: {
       competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum"];
       ourAdvantage: "Hybrid quantum-classical processing with enterprise-grade support";
-      priceDifference: "30-50% more value for similar pricing",
-    }
+      priceDifference: "30-50% more value for similar pricing"}
   }
 ],
 // Revolutionary IT Services Pricing,
@@ -285,8 +275,7 @@ export const revolutionaryITServicesPricing: ServicePricing[] = [
           "SLA guarantees"];
         limitations: [];
         recommendedFor: ["Enterprises ready for quantum", "Research institutions", "Government agencies"];
-        popular: true,
-      }
+        popular: true}
     ];
     enterprise: {
       id: "quantum-custom";
@@ -313,13 +302,11 @@ export const revolutionaryITServicesPricing: ServicePricing[] = [
         "Integration with existing systems";
         "Custom security protocols";
         "Multi-site deployment"];
-      contactInfo: zionContact,
-    };
+      contactInfo: zionContact};
     marketComparison: {
       competitors: ["IBM", "Microsoft", "Google"];
       ourAdvantage: "End-to-end quantum infrastructure with dedicated support and customization";
-      priceDifference: "25-40% more value for similar pricing",
-    }
+      priceDifference: "25-40% more value for similar pricing"}
   }
 ],
 // Revolutionary AI Services Pricing,
@@ -383,8 +370,7 @@ export const revolutionaryAIServicesPricing: ServicePricing[] = [
           "White-label options"];
         limitations: [];
         recommendedFor: ["Large enterprises", "Technology companies", "Government agencies"];
-        popular: true,
-      }
+        popular: true}
     ];
     enterprise: {
       id: "multimodal-custom";
@@ -411,13 +397,11 @@ export const revolutionaryAIServicesPricing: ServicePricing[] = [
         "Integration with legacy systems";
         "Custom security protocols";
         "Multi-language support"];
-      contactInfo: zionContact,
-    };
+      contactInfo: zionContact};
     marketComparison: {
       competitors: ["OpenAI", "Google AI", "Microsoft AI"];
       ourAdvantage: "Enterprise-grade multimodal AI with customization and dedicated support";
-      priceDifference: "20-35% more value for similar pricing",
-    }
+      priceDifference: "20-35% more value for similar pricing"}
   }
 ],
 // Pricing Comparison and Recommendations,
@@ -425,23 +409,19 @@ export const pricingRecommendations ={
   smallBusiness: {
     recommendedServices: ["NeuralFlow Starter", "QuantumSync Researcher", "Multimodal AI Starter"];
     estimatedMonthlyCost: "$3,50o0 - $5,50o0";
-    roi: "20o0-30o0% within 12 months",
-  };
+    roi: "20o0-30o0% within 12 months"};
   mediumBusiness: {
     recommendedServices: ["NeuralFlow Professional", "QuantumSync Professional", "Multimodal AI Professional"];
     estimatedMonthlyCost: "$8,50o0 - $12,0o00";
-    roi: "30o0-40o0% within 12 months",
-  };
+    roi: "30o0-40o0% within 12 months"};
   enterprise: {
     recommendedServices: ["NeuralFlow Enterprise", "QuantumSync Enterprise", "Multimodal AI Enterprise"];
     estimatedMonthlyCost: "$15,0o00 - $25,0o00";
-    roi: "40o0-60o0% within 18 months",
-  }
+    roi: "40o0-60o0% within 18 months"}
 };
 // Export all pricing data,
 export const allRevolutionaryPricing20o30 ={
   microSaas: revolutionaryMicroSaasPricing;
   itServices: revolutionaryITServicesPricing;
   aiServices: revolutionaryAIServicesPricing;
-  recommendations: pricingRecommendations,
-};
+  recommendations: pricingRecommendations};

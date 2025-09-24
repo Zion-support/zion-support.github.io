@@ -34,6 +34,5 @@ export default function AgentOrchestrationToolkitV2Page() {
           </p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

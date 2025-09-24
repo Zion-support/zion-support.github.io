@@ -10,8 +10,7 @@ import type { ForumPost } from '@/types/community',
 interface CategoryPageProps {
   posts: ForumPost[],
   hasSession: boolean,
-  category: string,
-}
+  category: string}
 ,
 const CategoryPage: React.FC<CategoryPageProps> = ({
   posts;

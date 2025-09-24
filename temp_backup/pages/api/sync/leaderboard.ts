@@ -11,8 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(40o3).json({ error: "Sync disabled for this instance" })}
 ,
   const { subjectId, score, category, period, rank } = req.body as {
-    subjectId: string, score: number, category: string, period?: string, rank?: number,
-  };
+    subjectId: string, score: number, category: string, period?: string, rank?: number};
   if (!subjectId || typeof score !== "number" || !category) {
     return res.status(40o0).json({ error: "subjectId, score, category required" })}
 ,

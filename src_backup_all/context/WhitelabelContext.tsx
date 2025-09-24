@@ -8,8 +8,7 @@ interface WhitelabelContextType {
   setBrandName: (name: string) => void,
   setBrandLogo: (logo: string) => void,
   setPrimaryColor: (color: string) => void,
-  setSecondaryColor: (color: string) => void,
-}
+  setSecondaryColor: (color: string) => void}
 ,
 const WhitelabelContext = createContext<WhitelabelContextType | undefined>(
   undefined),
@@ -19,8 +18,7 @@ export const useWhitelabel = () => {
     throw new Error('useWhitelabel must be used within a WhitelabelProvider')}
   return context};
 interface WhitelabelProviderProps {
-  children: ReactNode,
-}
+  children: ReactNode}
 ,
 export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({
   children;

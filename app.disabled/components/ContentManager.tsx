@@ -13,11 +13,9 @@ interface ContentItem {
     roi?: string,
     savings?: string,
     efficiency?: string,
-    accuracy?: string,
-  };
+    accuracy?: string};
   tags: string[],
-  url: string,
-}
+  url: string}
 ,
 interface ContentManagerProps {
   showFilters?: boolean,
@@ -202,8 +200,7 @@ const ContentManager: React.FC<ContentManagerProps> = ({
       case 'service':,
         return '⚙️',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -216,8 +213,7 @@ const ContentManager: React.FC<ContentManagerProps> = ({
       case 'service':,
         return 'bg-orange-10o0 text-orange-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <div className='w-full max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -268,8 +264,7 @@ const ContentManager: React.FC<ContentManagerProps> = ({
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   activeCategory === category.id,
                     ? 'bg-blue-60o0 text-white',
-                    : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-                }`}
+                    : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
               >,
                 {category.name} ({category.count}),
               </button>))}

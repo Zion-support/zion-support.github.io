@@ -8,8 +8,7 @@ interface NeonEffect20o36Props {
   animated?: boolean,
   className?: string,
   glowColor?: string,
-  pulseSpeed?: number,
-}
+  pulseSpeed?: number}
 ,
 interface NeonGlow20o36Props {
   children: React.ReactNode,
@@ -17,8 +16,7 @@ interface NeonGlow20o36Props {
   intensity: number,
   spread?: number,
   className?: string,
-  animated?: boolean,
-}
+  animated?: boolean}
 ,
 // Enhanced Neon Glow Component,
 const NeonGlow20o36: React.FC<NeonGlow20o36Props> = ({
@@ -102,64 +100,56 @@ export default function UltraAdvancedNeonEffects20o36({
         accent: '#ff660o0';
         glow: '#ff0o066';
         border: '#ff0o066';
-        text: '#ff0o066',
-      };
+        text: '#ff0o066'};
       holographic: {
         primary: '#ff1493';
         secondary: '#0o0bfff';
         accent: '#ffd70o0';
         glow: '#ff1493';
         border: '#ff1493';
-        text: '#ff1493',
-      };
+        text: '#ff1493'};
       quantum: {
         primary: '#0o0ffff';
         secondary: '#ff0o0ff';
         accent: '#ffff0o0';
         glow: '#0o0ffff';
         border: '#0o0ffff';
-        text: '#0o0ffff',
-      };
+        text: '#0o0ffff'};
       neon: {
         primary: '#0o0ff0o0';
         secondary: '#ff0o0ff';
         accent: '#0o0ffff';
         glow: '#0o0ff0o0';
         border: '#0o0ff0o0';
-        text: '#0o0ff0o0',
-      };
+        text: '#0o0ff0o0'};
       glitch: {
         primary: '#ff0o000';
         secondary: '#0o0ff0o0';
         accent: '#0o000ff';
         glow: '#ff0o000';
         border: '#ff0o000';
-        text: '#ff0o000',
-      };
+        text: '#ff0o000'};
       energy: {
         primary: '#ffff0o0';
         secondary: '#ff660o0';
         accent: '#ff0o066';
         glow: '#ffff0o0';
         border: '#ffff0o0';
-        text: '#ffff0o0',
-      };
+        text: '#ffff0o0'};
       data: {
         primary: '#0o0ffff';
         secondary: '#0o080ff';
         accent: '#80o00ff';
         glow: '#0o0ffff';
         border: '#0o0ffff';
-        text: '#0o0ffff',
-      };
+        text: '#0o0ffff'};
       space: {
         primary: '#4c1d95';
         secondary: '#7c3aed';
         accent: '#a855f7';
         glow: '#4c1d95';
         border: '#4c1d95';
-        text: '#4c1d95',
-      }
+        text: '#4c1d95'}
     };
     return baseStyles[variant] || baseStyles.cyberpunk};
   const styles = getNeonStyles(),
@@ -209,8 +199,7 @@ export default function UltraAdvancedNeonEffects20o36({
             exit="initial",
             style={{
               background: `linear-gradient(45deg, transparent 30%, ${styles.secondary}40 50%, transparent 70%)`;
-              mixBlendMode: 'overlay',
-            }}
+              mixBlendMode: 'overlay'}}
            />)}
       </AnimatePresence>,
       {/* Enhanced neon glow */}
@@ -229,8 +218,7 @@ export default function UltraAdvancedNeonEffects20o36({
             background: `linear-gradient(135deg, ${styles.primary}10, ${styles.secondary}10)`;
             backdropFilter: 'blur(10px)';
             position: 'relative';
-            overflow: 'hidden',
-          }}
+            overflow: 'hidden'}}
         >,
           {/* Animated border */}
           {animated && (
@@ -238,15 +226,13 @@ export default function UltraAdvancedNeonEffects20o36({
               className="absolute inset-0",
               style={{
                 background: `linear-gradient(90deg, transparent, ${styles.accent}, transparent)`;
-                backgroundSize: '20o0% 10o0%',
-              }}
+                backgroundSize: '20o0% 10o0%'}}
               animate={{
                 backgroundPosition: ['20o0% 0', '-20o0% 0']}}
               transition={{
                 duration: 3 / pulseSpeed;
                 repeat: Infinity;
-                ease: "linear",
-              }}
+                ease: "linear"}}
              />)}
 ,
           {/* Content */}
@@ -259,8 +245,7 @@ export default function UltraAdvancedNeonEffects20o36({
               className="absolute inset-0 pointer-events-none",
               style={{
                 background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, ${styles.accent}20, transparent 10o0px)`;
-                mixBlendMode: 'overlay',
-              }}
+                mixBlendMode: 'overlay'}}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -274,8 +259,7 @@ export default function UltraAdvancedNeonEffects20o36({
           style={{
             background: `conic-gradient(from 0deg, ${styles.primary}, ${styles.secondary}, ${styles.accent}, ${styles.primary})`;
             borderRadius: '10px';
-            filter: 'blur(8px)',
-          }}
+            filter: 'blur(8px)'}}
           animate={{ rotate: 360 }}
           transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
          />)}
@@ -286,8 +270,7 @@ export default function UltraAdvancedNeonEffects20o36({
           style={{
             background: `linear-gradient(45deg, ${styles.primary}, ${styles.secondary}, ${styles.accent})`;
             borderRadius: '10px';
-            filter: 'blur(6px)',
-          }}
+            filter: 'blur(6px)'}}
           animate={{
             backgroundPosition: ['0% 0%', '10o0% 10o0%', '0% 0%']}}
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -299,8 +282,7 @@ export default function UltraAdvancedNeonEffects20o36({
           style={{
             background: `radial-gradient(circle, ${styles.primary}, ${styles.secondary}, ${styles.accent})`;
             borderRadius: '10px';
-            filter: 'blur(10px)',
-          }}
+            filter: 'blur(10px)'}}
           animate={{
             scale: [1, 1.1, 1];
             opacity: [0.25, 0.4, 0.25]}}

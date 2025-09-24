@@ -105,6 +105,5 @@ const AI20o25UltimateBusinessAutomationRevolutionBanner = () => {
           </Link>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25UltimateBusinessAutomationRevolutionBanner;

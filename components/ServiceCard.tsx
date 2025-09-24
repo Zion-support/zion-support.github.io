@@ -9,10 +9,8 @@ interface ServiceCardProps {
     description: string,
     type: string,
     pricing: {
-      starter: string,
-    };
-    slug: string,
-  };
+      starter: string};
+    slug: string};
   index: number,
   isCurrent: boolean,
   onClick: (service: { slug: string }) => void}
@@ -172,6 +170,5 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
       </div>,
       {/* Enhanced Border Glow */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-50o0/0 via-cyan-50o0/20 to-blue-50o0/0 opacity-0 group-hover: opacity-10o0 transition-opacity duration-50o0 pointer-events-none"  />,
-    </motion.div>),
-};
+    </motion.div>)};
 export default ServiceCard;

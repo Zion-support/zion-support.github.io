@@ -11,8 +11,7 @@ async function askZionGPT(prompt) {
         Content-Type': application/json',Authorization': `Bearer ${OPENAI_API_KEY}`'      };
       body: JSON.stringify({
         model: 'gpt-3.5-turbo',        messages: [{ role: 'user', content: prompt }]      });
-      signal: controller.signal,
-    }),
+      signal: controller.signal}),
     clearTimeout(timeoutId),
     if (!res.ok) {
       console.error('OpenAI request failed', res.status, await res.text()),      return { answer: Error contacting model' };    }

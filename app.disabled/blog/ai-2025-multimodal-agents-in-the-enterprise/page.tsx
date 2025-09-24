@@ -51,6 +51,5 @@ export default function MultimodalAgentsEnterprise20o25Page() {
           Read the 20o26 Blueprint,
         </Link>,
       </div>,
-    </main>),
-}
+    </main>)}
 ,

@@ -8,8 +8,7 @@ export interface Q420o25CuttingEdgeService {
     monthly: number,
     yearly: number,
     enterprise: number,
-    currency: string,
-  };
+    currency: string};
   benefits: string[],
   useCases: string[],
   technologies: string[],
@@ -18,8 +17,7 @@ export interface Q420o25CuttingEdgeService {
     phone: string,
     email: string,
     website: string,
-    address: string,
-  };
+    address: string};
 }
 ,
 export const q420o25CuttingEdgeServices: Q420o25CuttingEdgeService[] = [
@@ -41,8 +39,7 @@ export const q420o25CuttingEdgeServices: Q420o25CuttingEdgeService[] = [
       monthly: 250o00;
       yearly: 250o000;
       enterprise: 50o0000;
-      currency: "USD",
-    };
+      currency: "USD"};
     benefits: [
       "10o00x faster computation for complex problems";
       "Unprecedented AI model training speed";
@@ -67,8 +64,7 @@ export const q420o25CuttingEdgeServices: Q420o25CuttingEdgeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   };
   {
     id: "defi-2-0";
@@ -88,8 +84,7 @@ export const q420o25CuttingEdgeServices: Q420o25CuttingEdgeService[] = [
       monthly: 150o00;
       yearly: 150o000;
       enterprise: 30o0000;
-      currency: "USD",
-    };
+      currency: "USD"};
     benefits: [
       "Automated DeFi strategy execution";
       "Risk-optimized yield farming";
@@ -114,8 +109,7 @@ export const q420o25CuttingEdgeServices: Q420o25CuttingEdgeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   };
   {
     id: "iot-edge-ai";
@@ -135,8 +129,7 @@ export const q420o25CuttingEdgeServices: Q420o25CuttingEdgeService[] = [
       monthly: 120o00;
       yearly: 120o000;
       enterprise: 250o000;
-      currency: "USD",
-    };
+      currency: "USD"};
     benefits: [
       "Reduced latency for critical applications";
       "Lower bandwidth requirements";
@@ -161,8 +154,7 @@ export const q420o25CuttingEdgeServices: Q420o25CuttingEdgeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   };
   {
     id: "ai-cybersecurity";
@@ -182,8 +174,7 @@ export const q420o25CuttingEdgeServices: Q420o25CuttingEdgeService[] = [
       monthly: 180o00;
       yearly: 180o000;
       enterprise: 40o0000;
-      currency: "USD",
-    };
+      currency: "USD"};
     benefits: [
       "Proactive threat prevention";
       "Reduced false positives";
@@ -208,8 +199,7 @@ export const q420o25CuttingEdgeServices: Q420o25CuttingEdgeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   };
   {
     id: "post-quantum-crypto";
@@ -229,8 +219,7 @@ export const q420o25CuttingEdgeServices: Q420o25CuttingEdgeService[] = [
       monthly: 20o000;
       yearly: 20o0000;
       enterprise: 450o000;
-      currency: "USD",
-    };
+      currency: "USD"};
     benefits: [
       "Quantum-resistant security";
       "Future-proof encryption";
@@ -255,8 +244,7 @@ export const q420o25CuttingEdgeServices: Q420o25CuttingEdgeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   };
   {
     id: "autonomous-ai-systems";
@@ -276,8 +264,7 @@ export const q420o25CuttingEdgeServices: Q420o25CuttingEdgeService[] = [
       monthly: 30o000;
       yearly: 30o0000;
       enterprise: 60o0000;
-      currency: "USD",
-    };
+      currency: "USD"};
     benefits: [
       "Reduced human intervention";
       "24/7 autonomous operation";
@@ -302,7 +289,6 @@ export const q420o25CuttingEdgeServices: Q420o25CuttingEdgeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   }
 ],

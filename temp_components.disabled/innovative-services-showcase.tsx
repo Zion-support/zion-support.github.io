@@ -13,16 +13,14 @@ export default function InnovativeServicesShowcase() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const containerVariants ={
     hidden: { opacity: 0 };
     visible: {
       opacity: 1;
       transition: {
         staggerChildren: 0.1;
-        delayChildren: 0.2,
-      }
+        delayChildren: 0.2}
     }
   };
   const itemVariants ={
@@ -32,8 +30,7 @@ export default function InnovativeServicesShowcase() {
       y: 0;
       transition: {
         duration: 0.6;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   const ServiceCard = ({ serviceindex }: { service: any, index: number }) => (

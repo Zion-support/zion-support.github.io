@@ -12,6 +12,5 @@ export function BackToDirectoryButton() {
           Back to Talent Directory,
         </Link>,
       </Button>,
-    </div>),
-}
+    </div>)}
 ,

@@ -93,8 +93,7 @@ const AI20o25AnalyticsContentShowcase: React.FC = () => {
       case 'resource':,
         return '📋',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -105,8 +104,7 @@ const AI20o25AnalyticsContentShowcase: React.FC = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50'>,
@@ -159,8 +157,7 @@ const AI20o25AnalyticsContentShowcase: React.FC = () => {
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 activeFilter === filter.id,
                   ? 'bg-blue-60o0 text-white',
-                  : 'bg-white text-gray-70o0 hover: bg-blue-50 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-blue-50 border border-gray-20o0'}`}
             >,
               {filter.label} ({filter.count}),
             </button>))}
@@ -260,6 +257,5 @@ const AI20o25AnalyticsContentShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25AnalyticsContentShowcase;

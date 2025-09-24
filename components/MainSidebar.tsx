@@ -35,8 +35,7 @@ import React, { useState } from 'react',
 import { Link, useLocation } from 'react-router-dom',
 interface SidebarProps {
   isOpen: boolean,
-  onClose: () => void,
-}
+  onClose: () => void}
 ,
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation(),
@@ -295,8 +294,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-20o0 ${
                 isActive(item.href),
                   ? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan',
-                  : 'text-gray-40o0 hover: text-white hover:bg-white/5',
-              }`}
+                  : 'text-gray-40o0 hover: text-white hover:bg-white/5'}`}
             >,
               {React.createElement(item.icon, {
                 className: 'w-4 h-4 flex-shrink-0';
@@ -385,8 +383,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-20o0 ${
                   isActive(item.href),
                     ? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan',
-                    : 'text-gray-30o0 hover: text-white hover:bg-white/5',
-                }`}
+                    : 'text-gray-30o0 hover: text-white hover:bg-white/5'}`}
               >,
                 {React.createElement(item.icon, {
                   className: 'w-4 h-4 flex-shrink-0';

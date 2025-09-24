@@ -268,6 +268,5 @@ const AITrends20o25_20o30FuturePredictionsBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AITrends20o25_20o30FuturePredictionsBanner;

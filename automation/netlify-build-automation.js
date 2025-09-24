@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const NetlifyBuildMonitor = require('./netlify-monitor'),
 const NetlifyErrorFixer = require('./netlify-error-fixer'),
@@ -38,14 +37,12 @@ class NetlifyBuildAutomation {
       buildHistory: [];
       fixesApplied: [];
       errors: [];
-      startTime: null,
-    };
+      startTime: null};
   }
 ,
   log(message, level = 'info') {
     const timestamp = new Date().toISOString(),
-    const logEntry = `[${timestamp}] [${level.toUpperCase()}] ${message}`,
-}
+    const logEntry = `[${timestamp}] [${level.toUpperCase()}] ${message}`}
 ,
   async start() {
     this.log('Starting Netlify build automation...'),
@@ -66,8 +63,7 @@ class NetlifyBuildAutomation {
       timestamp: new Date().toISOString();
       type: error.type;
       message: error.message;
-      buildId: error.buildId,
-    }),
+      buildId: error.buildId}),
     if (this.config.autoFix) {
       await this.autoFixError(error)}
 ,
@@ -78,8 +74,7 @@ class NetlifyBuildAutomation {
     this.status.lastBuild ={
       id: build.id;
       timestamp: new Date().toISOString();
-      state: 'success',
-    };
+      state: 'success'};
     this.status.buildHistory.unshift(this.status.lastBuild),
     // Keep only last 20 builds,
     if (this.status.buildHistory.length > 20) {
@@ -102,8 +97,7 @@ class NetlifyBuildAutomation {
             errorType: error.type;
             buildId: error.buildId;
             attempt: retries + 1;
-            success: true,
-          }),
+            success: true}),
           if (this.config.autoCommit) {
             await this.commitFixes()}
 ,
@@ -392,8 +386,7 @@ const timeoutId = setTimeout(resolve,                                           
         errorType: error.type;
         buildId: error.buildId;
         attempt: retries;
-        success: false,
-      })}
+        success: false})}
   }
 ,
   async commitFixes() {
@@ -401,8 +394,7 @@ const timeoutId = setTimeout(resolve,                                           
       this.log('Committing fixes...'),
       execSync('git add .', { stdio: 'inherit' }),
       execSync('git commit -m "Auto-fix: Apply Netlify build fixes"', {
-        stdio: 'inherit',
-      }),
+        stdio: 'inherit'}),
       execSync('git push', { stdio: 'inherit' }),
       this.log('Fixes committed successfully'),
       return true} catch (error) {
@@ -504,8 +496,7 @@ const timeoutId = setTimeout(resolve,                                           
           .length;
         uptime: this.status.startTime,
           ? Date.now() - new Date(this.status.startTime).getTime(),
-          : 0,
-      }
+          : 0}
     };
     fs.writeFileSync(
       path.join(__dirname, 'netlify-automation-report.json');

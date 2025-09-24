@@ -15,6 +15,5 @@ export default function ZgpLibraryPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

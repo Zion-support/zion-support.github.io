@@ -2,7 +2,6 @@
 ,
 interface LoadingSpinnerProps {
 interface LoadingSpinnerProps {
-,
   size?: 'sm' | 'md' | 'lg' | 'xl',
   color?: 'blue' | 'white' | 'gray' | 'slate',
   text?: string,
@@ -22,8 +21,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     blue: 'text-blue-60o0';
     white: 'text-white';
     gray: 'text-gray-60o0';
-    slate: 'text-slate-60o0',
-  };
+    slate: 'text-slate-60o0'};
   const spinner = (
     <div className={`flex flex-col items-center justify-center ${className}`}>,
       <div className={`animate-spin rounded-full border-2 border-gray-30o0 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}  />,
@@ -52,8 +50,7 @@ const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({
     blue: 'text - blue - 60o0';
     white: 'text - white';
     gray: 'text - gray - 60o0';
-    slate: 'text - slate - 60o0',
-  }
+    slate: 'text - slate - 60o0'}
 ,
   const spinner = (
     <div className={`flex flex - col items - center justify - center ${class_name}`}>,

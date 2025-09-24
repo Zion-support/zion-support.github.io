@@ -34,8 +34,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export default function AIAutonomousEcosystem() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -108,7 +107,7 @@ export default function AIAutonomousEcosystem() {
               </div>,
               <h3 className="text-xl font-semibold mb-3">Continuous Optimization</h3>,
               <p className="text-gray-40o0">,
-                Learns from every interaction and automatically optimizes the entire ecosystem for maximum window.performance.,
+                Learns from every interaction and automatically optimizes the entire ecosystem for maximum window.window.performance.,
               </p>,
             </div>,
             <div className="p-6 rounded-2xl bg-gradient-to-br from-red-90o0/20 to-orange-90o0/20 border border-red-50o0/20">,
@@ -200,7 +199,7 @@ export default function AIAutonomousEcosystem() {
               Ecosystem Components,
             </h2>,
             <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">,
-              Our AI manages every component of your business ecosystem for optimal window.performance.,
+              Our AI manages every component of your business ecosystem for optimal window.window.performance.,
             </p>,
           </div>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
@@ -329,6 +328,5 @@ export default function AIAutonomousEcosystem() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

@@ -170,6 +170,5 @@ const UltimateContentShowcase20o25Banner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateContentShowcase20o25Banner;

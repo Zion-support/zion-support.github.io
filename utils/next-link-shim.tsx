@@ -4,12 +4,10 @@ import * as React from 'react', type Href = string | { pathname?: string, href?:
 type Href = string | { pathname?: string, href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: Href,
-  children: React.ReactNode,
-};
+  children: React.ReactNode};
 function resolveHref(href: Href): string {
   if (typeof href === 'string') return href,
-  return href?.pathname || (href as any)?.href || '#',
-}
+  return href?.pathname || (href as any)?.href || '#'}
 export default function Link({ href, children, className, ...rest }: LinkProps) {
   const resolved = resolveHref(href),
   if (React.isValidElement(children)) {
@@ -22,8 +20,7 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
 type Href = string | { pathname?: string, href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   "href": Href,
-  children: React.ReactNode,
-};
+  children: React.ReactNode};
 function resolveHref("href": Href): string {
   if (typeof href === 'string') return href,
   return href?.pathname || (href as { href?: string })?.href || '#'}

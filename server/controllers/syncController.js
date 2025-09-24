@@ -29,6 +29,5 @@ exports.getSyncState = (_req, res) => {
     talentMoves: Array.from(syncStore.talentMoves.values());
     resolutions: Array.from(syncStore.resolutions.values());
     leaderboard: Array.from(syncStore.leaderboard.values());
-    lastUpdated: syncStore.lastUpdated,
-  };
+    lastUpdated: syncStore.lastUpdated};
   res.json(state)};

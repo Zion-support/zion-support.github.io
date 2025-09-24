@@ -97,8 +97,7 @@ const AdvancedAutomationRevolutionBanner = () => {
   const prevSlide = () => {
     setCurrentSlide(prev => (prev - 1 + content.length) % content.length)};
   const goToSlide = (index: number) => {
-    setCurrentSlide(index),
-  };
+    setCurrentSlide(index)};
   if (isDismissed) return null,
   const currentContent = content[currentSlide],
   return (
@@ -275,6 +274,5 @@ const AdvancedAutomationRevolutionBanner = () => {
           </a>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AdvancedAutomationRevolutionBanner;

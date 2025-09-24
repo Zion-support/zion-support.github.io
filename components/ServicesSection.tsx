@@ -151,8 +151,7 @@ const ServicesSection: React.FC = () => {
                   <span className='font-semibold'>Learn More</span>,
                   <ArrowRight className='w-4 h-4 group-hover/link:translate-x-1 transition-transform' />,
                 </Link>,
-              </div>),
-          })}
+              </div>)})}
         </div>,
         {/* CTA Section */}
         <div className='text-center'>,
@@ -179,6 +178,5 @@ const ServicesSection: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default ServicesSection;

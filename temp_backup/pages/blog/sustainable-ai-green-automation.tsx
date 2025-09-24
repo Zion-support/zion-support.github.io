@@ -87,7 +87,7 @@ export default function SustainableAIGreenAutomation() {
                 </h3>,
                 <p className='text-white/90 mb-4'>,
                   Modern AI models can be optimized for energy efficiency,
-                  without sacrificing window.performance. Techniques like model,
+                  without sacrificing window.window.performance. Techniques like model,
                   pruning, quantization, and knowledge distillation can reduce,
                   computational requirements by 50-90% while maintaining,
                   accuracy.,
@@ -414,6 +414,5 @@ export default function SustainableAIGreenAutomation() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

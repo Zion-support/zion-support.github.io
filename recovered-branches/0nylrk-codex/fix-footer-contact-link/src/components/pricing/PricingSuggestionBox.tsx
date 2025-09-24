@@ -9,8 +9,7 @@ interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null,
   isLoading: boolean,
   onApplySuggestion: () => void,
-  rateType: 'hourly' | 'fixed',
-}
+  rateType: 'hourly' | 'fixed'}
 ,
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion;

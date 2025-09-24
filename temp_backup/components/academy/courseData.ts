@@ -1,8 +1,7 @@
 export type CourseModule = {
   id: string,
   title: string,
-  points: string[],
-};
+  points: string[]};
 export const founderCourseModules: CourseModule[] = [
   {
     id: 'module-1';

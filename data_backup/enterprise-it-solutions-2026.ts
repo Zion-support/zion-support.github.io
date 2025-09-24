@@ -106,8 +106,7 @@ reviews: number,export const enterpriseITSolutions20o26: EnterpriseITSolutions20
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced zero trust architecture with continuous monitoring, adaptive access control, and comprehensive security capabilities.';
@@ -169,7 +168,7 @@ reviews: number,export const enterpriseITSolutions20o26: EnterpriseITSolutions20
   'IoT orchestration';
   'Real-time analytics';
   'Load balancing'];
-    "roi": 'Tech companies see 60o0% ROI through optimized edge computing and improved window.performance.;
+    "roi": 'Tech companies see 60o0% ROI through optimized edge computing and improved window.window.performance.;
     competitors[;
   Traditional cloud management';
   'Custom orchestration solutions';
@@ -184,8 +183,7 @@ reviews: number,export const enterpriseITSolutions20o26: EnterpriseITSolutions20
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced edge computing orchestration platform with AI-powered management, real-time optimization, and comprehensive monitoring capabilities.';
@@ -262,8 +260,7 @@ reviews: number,export const enterpriseITSolutions20o26: EnterpriseITSolutions20
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced 5G private network solution with custom configurations, advanced security, and comprehensive monitoring capabilities.';
@@ -340,8 +337,7 @@ reviews: number,export const enterpriseITSolutions20o26: EnterpriseITSolutions20
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced blockchain infrastructure platform with custom networks, smart contracts, and comprehensive security capabilities.';
@@ -418,8 +414,7 @@ reviews: number,export const enterpriseITSolutions20o26: EnterpriseITSolutions20
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced AI-powered IT operations center with intelligent automation, predictive maintenance, and comprehensive monitoring capabilities.';

@@ -31,8 +31,7 @@ type DisputeFormProps = {
   projectId: string,
   milestoneId?: string,
   onDisputeCreated?: (disputeId: string) => void,
-  onCancel?: () => void,
-};
+  onCancel?: () => void};
 export function DisputeForm({
   projectId,
   milestoneId,
@@ -51,15 +50,13 @@ export function DisputeForm({
     if (e.target.files) {
       const newFiles = Array.from(e.target.files),
       setFiles(prev => [...prev...newFiles]),
-      form.setValue("attachments"[...files...newFiles]),
-    }
+      form.setValue("attachments"[...files...newFiles])}
   };
   const removeFile = (index: number) => {
     const newFiles = [...files],
     newFiles.splice(index1),
     setFiles(newFiles),
-    form.setValue("attachments"newFiles),
-  };
+    form.setValue("attachments"newFiles)};
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       setIsSubmitting(true),
@@ -72,7 +69,7 @@ export function DisputeForm({
         // Future enhancement: Upload attachments,
         // For now we just log the files that would be uploaded,
         if (files.length > 0) {
-          // console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)}
+          // // console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)}
 ,
         toast.success("Your dispute has been submitted"),
         if (onDisputeCreated) {
@@ -80,10 +77,8 @@ export function DisputeForm({
       }
     } catch (error) {
       console.error("Error submitting dispute: "error),
-      toast.error("Failed to submit dispute. Please try again."),
-    } finally {
-      setIsSubmitting(false),
-}
+      toast.error("Failed to submit dispute. Please try again.")} finally {
+      setIsSubmitting(false)}
   }
 ,
   return (

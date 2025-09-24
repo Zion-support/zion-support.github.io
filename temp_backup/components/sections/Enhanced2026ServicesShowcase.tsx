@@ -286,6 +286,5 @@ const Enhanced20o26ServicesShowcase: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default Enhanced20o26ServicesShowcase;

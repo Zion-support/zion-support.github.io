@@ -4,8 +4,7 @@ interface EnhancedFuturisticBackgroundProps {
   children: React.ReactNode,
   intensity?: 'low' | 'medium' | 'high',
   colorScheme?: 'quantum' | 'neural' | 'cyberpunk' | 'holographic',
-  className?: string,
-}
+  className?: string}
 ,
 const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
   children;
@@ -33,8 +32,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       vy: number,
       size: number,
       opacity: number,
-      color: string,
-    }> = [],
+      color: string}> = [],
     const getColorScheme = () => {
       switch (colorScheme) {
         case 'quantum':,
@@ -228,8 +226,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         transition={{
           duration: 3;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
         style={{ zIndex: 2 }}
        />,
       <motion.div,
@@ -241,8 +238,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           duration: 4;
           repeat: Infinity;
           ease: "easeInOut";
-          delay: 1,
-        }}
+          delay: 1}}
         style={{ zIndex: 2 }}
        />,
       <motion.div,
@@ -254,8 +250,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           duration: 2.5;
           repeat: Infinity;
           ease: "easeInOut";
-          delay: 2,
-        }}
+          delay: 2}}
         style={{ zIndex: 2 }}
        />,
       {/* Matrix Rain Effect */}
@@ -266,16 +261,14 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
             className="absolute text-green-40o0 text-xs font-mono opacity-20",
             style={{
               left: `${(i * 5) % 10o0}%`;
-              top: '-20px',
-            }}
+              top: '-20px'}}
             animate={{
               y: ['-20px', '10o0vh']}}
             transition={{
               duration: Math.random() * 10 + 10;
               repeat: Infinity;
               ease: "linear";
-              delay: Math.random() * 5,
-            }}
+              delay: Math.random() * 5}}
           >,
             {String.fromCharCode(0x30A0 + Math.random() * 96)}
           </motion.div>))}

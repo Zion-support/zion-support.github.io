@@ -9,8 +9,7 @@ export interface ForumCategoryInfo {
   name: string,
   description: string,
   adminOnly: boolean,
-  icon: string,
-}
+  icon: string}
 ,
 export interface ForumPost {
   id: string,
@@ -30,8 +29,7 @@ export interface ForumPost {
   isAnswered?: boolean,
   isPinned?: boolean,
   isLocked?: boolean,
-  isFeatured?: boolean,
-}
+  isFeatured?: boolean}
 ,
 export interface ForumReply {
   id: string,
@@ -46,22 +44,19 @@ export interface ForumReply {
   updatedAt: string,
   upvotes: number,
   downvotes: number,
-  isAnswer?: boolean,
-}
+  isAnswer?: boolean}
 ,
 export interface Badge {
   id: string,
   name: string,
   description: string,
   icon: string,
-  color: string,
-}
+  color: string}
 ,
 export interface UserBadge {
   userId: string,
   badgeId: string,
-  awardedAt: string,
-}
+  awardedAt: string}
 ,
 export interface CommunityUser {
   id: string,
@@ -73,6 +68,5 @@ export interface CommunityUser {
   replyCount: number,
   badges: Badge[],
   isVerified: boolean,
-  isModerator: boolean,
-}
+  isModerator: boolean}
 ,

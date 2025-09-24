@@ -39,16 +39,14 @@ const RevolutionaryCaseStudiesShowcase20o26 = () => {
         roi: '50o0%';
         efficiency: '30o0%';
         costReduction: '60%';
-        customerSatisfaction: '95%',
-      };
+        customerSatisfaction: '95%'};
       timeline: '6 months';
       team: '15 experts';
       technologies: ['AI/'ML', 'Blockchain'Cloud 'Infrastructure', 'Real-time Analytics'];
       testimonial: {
         name: 'Sarah Chen';
         role: 'CTO';
-        content: 'Zion Tech Group transformed our entire payment ecosystem. The results exceeded our wildest expectations.',
-      }
+        content: 'Zion Tech Group transformed our entire payment ecosystem. The results exceeded our wildest expectations.'}
     };
     {
       id: 'healthcare-ai';
@@ -63,16 +61,14 @@ const RevolutionaryCaseStudiesShowcase20o26 = () => {
         roi: '40o0%';
         efficiency: '10o00%';
         costReduction: '45%';
-        customerSatisfaction: '98%',
-      };
+        customerSatisfaction: '98%'};
       timeline: '8 months';
       team: '20 experts';
       technologies: ['Computer 'Vision', 'NLP'Predictive 'Analytics', 'IoT Integration'];
       testimonial: {
         name: 'Dr. Michael Rodriguez';
         role: 'Chief Medical Officer';
-        content: 'Our diagnostic accuracy improved dramatically while reducing processing time from days to minutes.',
-      }
+        content: 'Our diagnostic accuracy improved dramatically while reducing processing time from days to minutes.'}
     };
     {
       id: 'ecommerce-automation';
@@ -87,16 +83,14 @@ const RevolutionaryCaseStudiesShowcase20o26 = () => {
         roi: '60o0%';
         efficiency: '40o0%';
         costReduction: '50%';
-        customerSatisfaction: '92%',
-      };
+        customerSatisfaction: '92%'};
       timeline: '10 months';
       team: '25 experts';
       technologies: ['Machine 'Learning', 'NLP'Computer 'Vision', 'Cloud Computing'];
       testimonial: {
         name: 'Jennifer Walsh';
         role: 'CEO';
-        content: 'The automation solutions revolutionized our operations. We saw immediate impact on both revenue and customer satisfaction.',
-      }
+        content: 'The automation solutions revolutionized our operations. We saw immediate impact on both revenue and customer satisfaction.'}
     };
     {
       id: 'manufacturing-iot';
@@ -111,16 +105,14 @@ const RevolutionaryCaseStudiesShowcase20o26 = () => {
         roi: '350%';
         efficiency: '250%';
         costReduction: '40%';
-        customerSatisfaction: '97%',
-      };
+        customerSatisfaction: '97%'};
       timeline: '12 months';
       team: '18 experts';
       technologies: [', 'IoT', 'Edge 'Computing', 'Predictive 'Analytics', 'Digital Twins'];
       testimonial: {
         name: 'Robert Kim';
         role: 'Operations Director';
-        content: 'We achieved zero unplanned downtime for 6 consecutive months. The predictive maintenance system is a game-changer.',
-      }
+        content: 'We achieved zero unplanned downtime for 6 consecutive months. The predictive maintenance system is a game-changer.'}
     }
   ],
   const overallStats = [
@@ -174,8 +166,7 @@ const RevolutionaryCaseStudiesShowcase20o26 = () => {
               className={`p-6 rounded-xl transition-all duration-30o0 ${
                 activeCase === index,
                   ? 'bg-white shadow-xl scale-10o5 border-2 border-blue-50o0',
-                  : 'bg-white shadow-lg hover: shadow-xl',
-              }`}
+                  : 'bg-white shadow-lg hover: shadow-xl'}`}
             >,
               <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${caseStudy.color} flex items-center justify-center mb-4 mx-auto`}>,
                 <caseStudy.icon className="w-6 h-6 text-white"  />,
@@ -299,6 +290,5 @@ const RevolutionaryCaseStudiesShowcase20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryCaseStudiesShowcase20o26;

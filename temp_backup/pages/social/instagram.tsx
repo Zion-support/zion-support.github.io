@@ -3,8 +3,7 @@ import Head from 'next/head',
 export default function InstagramRedirect() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      window.location.replace('https: //www.instagram.com/ziontechgroup'),
-    }
+      window.location.replace('https: //www.instagram.com/ziontechgroup')}
   }, []),
   return (
     <>,
@@ -24,6 +23,5 @@ export default function InstagramRedirect() {
           Continue to Instagram,
         </a>,
       </div>,
-    </>),
-}
+    </>)}
 ,

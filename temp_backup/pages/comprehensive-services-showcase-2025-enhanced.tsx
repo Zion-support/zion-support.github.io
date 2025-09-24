@@ -22,8 +22,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 // Combine all services,
 const allServices = [
   ...innovativeRealMicroSaasServices20o25;
@@ -76,8 +75,7 @@ export default function ComprehensiveServicesShowcase20o25Enhanced() {
                             case '$30o0 - $599': return price >= 30o0 && price <= 599,
                             case '$60o0 - $999': return price >= 60o0 && price <= 999,
                             case '$10o00+': return price >= 10o00,
-                            default: return true,
-                          }
+                            default: return true}
                         })(),
     return matchesSearch && matchesCategory && matchesPrice}),
   // Sort services,
@@ -94,16 +92,14 @@ export default function ComprehensiveServicesShowcase20o25Enhanced() {
       case 'newest':,
         return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   const containerVariants ={
     hidden: { opacity: 0 };
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -112,8 +108,7 @@ export default function ComprehensiveServicesShowcase20o25Enhanced() {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -374,5 +369,4 @@ export default function ComprehensiveServicesShowcase20o25Enhanced() {
           </div>,
         </motion.div>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}

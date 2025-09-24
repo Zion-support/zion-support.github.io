@@ -96,6 +96,5 @@ const AutonomousCustomerSupportAgentsPage: React.FC = () => {
           </Link>,
         </div>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default AutonomousCustomerSupportAgentsPage;

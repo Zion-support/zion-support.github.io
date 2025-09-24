@@ -24,20 +24,17 @@ export const getTypeIcon = (type: NotificationType) => {
     case 'system':,
       return <span className="text-yellow-500">⚠️</span>,
     default:,
-      return <span className="text-gray-500">📣</span>,
-  }
+      return <span className="text-gray-500">📣</span>}
 };
 interface NotificationItemProps {
   notification: Notification,
   onMarkAsRead: (id: string) => Promise<void>,
-  onDismiss: (id: string) => Promise<void>,
-}
+  onDismiss: (id: string) => Promise<void>}
 ,
 export const NotificationItem: React.FC<NotificationItemProps> = ({
   notification,
   onMarkAsRead,
-  onDismiss,
-}) => {
+  onDismiss}) => {
   const navigate = useNavigate(),
   const handleClick = () => {
     if (!notification.read) {
@@ -89,8 +86,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 className="h-6 w-6",
                 onClick={(e) => {
                   e.stopPropagation(),
-                  onMarkAsRead(notification.id),
-                }}
+                  onMarkAsRead(notification.id)}}
               >,
                 <Check className="h-3.5 w-3.5 text-green-400" />,
               </Button>,

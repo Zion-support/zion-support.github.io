@@ -19,8 +19,7 @@ export default function DesignMapPage() {
       }),
       const json = await res.json(),
       setSuggestion(json?.suggestion || 'No suggestion received')} catch (e: any) {
-      setSuggestion(e?.message || 'Failed to fetch suggestion'),
-    } finally {
+      setSuggestion(e?.message || 'Failed to fetch suggestion')} finally {
       setIsLoading(false)}
   }
 ,

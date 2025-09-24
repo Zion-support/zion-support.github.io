@@ -15,8 +15,7 @@ export default function ServicesShowcase2026() {
       icon: Brain;
       category: 'ai';
       features: ['Quantum AI 'Processing', 'Neural Interface 'Integration', 'Predictive Automation'];
-      pricing: 'Starting at $299/month',
-    };
+      pricing: 'Starting at $299/month'};
     {
       id: 'quantum-security-2026';
       name: 'Quantum Security 2026';
@@ -24,8 +23,7 @@ export default function ServicesShowcase2026() {
       icon: Shield;
       category: 'security';
       features: ['Quantum 'Encryption', 'AI Threat 'Detection', 'Zero Trust Architecture'];
-      pricing: 'Starting at $499/month',
-    };
+      pricing: 'Starting at $499/month'};
     {
       id: 'advanced-infrastructure-2026';
       name: 'Advanced Infrastructure 2026';
@@ -33,8 +31,7 @@ export default function ServicesShowcase2026() {
       icon: Zap;
       category: 'infrastructure';
       features: ['AI 'Optimization', 'Autonomous 'Scaling', 'Real-time Monitoring'];
-      pricing: 'Starting at $199/month',
-    }
+      pricing: 'Starting at $199/month'}
   ],
   const categories = [
     { id: ''all', 'name: 'All 'Services', 'icon: Globe };
@@ -93,8 +90,7 @@ export default function ServicesShowcase2026() {
                   className={`px-4 py-3 rounded-lg transition-all duration-200 flex items-center gap-2 ${
                     selectedCategory === category.id,
                       ? 'bg-purple-600 text-white',
-                      : 'bg-white/10 text-gray-300 hover: bg-white/20',
-                  }`}
+                      : 'bg-white/10 text-gray-300 hover: bg-white/20'}`}
                 >,
                   <category.icon className="w-4 h-4" />,
                   {category.name}
@@ -168,6 +164,5 @@ export default function ServicesShowcase2026() {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

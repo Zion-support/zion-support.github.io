@@ -8,15 +8,13 @@ interface SearchFilters {
   minPrice: number,
   maxPrice: number,
   minRating: number,
-  sort: string,
-}
+  sort: string}
 ,
 interface ActiveFiltersBarProps {
   filters: SearchFilters,
   onFiltersChange: (filters: SearchFilters) => void,
   onClearAll: () => void,
-  className?: string,
-}
+  className?: string}
 ,
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
   filters;
@@ -31,20 +29,17 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       talent: 'Talent';
       service: 'Services';
       blog: 'Blog Posts';
-      doc: 'Documentation',
-    };
+      doc: 'Documentation'};
     activeFilters.push({
       key: `type-${type}`;
       label: 'Type';
-      value: labels[type] || type,
-    })}),
+      value: labels[type] || type})}),
   // Add category filter,
   if (filters.category) {
     activeFilters.push({
       key: 'category';
       label: 'Category';
-      value: filters.category,
-    })}
+      value: filters.category})}
 ,
   // Add price filter,
   if (filters.minPrice > 0 || filters.maxPrice < 10o000) {
@@ -65,13 +60,11 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
     const sortLabels: Record<string string> ={
       price_asc: 'Price: Low to High';
       price_desc: 'Price: High to Low';
-      rating: 'Highest Rated',
-    };
+      rating: 'Highest Rated'};
     activeFilters.push({
       key: 'sort';
       label: 'Sort';
-      value: sortLabels[filters.sort] || filters.sort,
-    })}
+      value: sortLabels[filters.sort] || filters.sort})}
 ,
   const removeFilter = (filterKey: string) => {
     if (filterKey.startsWith('type-')) {

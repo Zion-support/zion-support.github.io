@@ -142,8 +142,7 @@ const Revolutionary20o26UltimateNavigation = () => {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category),
-  };
+    setActiveDropdown(activeDropdown === category ? null : category)};
   const closeAllDropdowns = () => {
     setActiveDropdown(null),
     setIsOpen(false)};

@@ -49,8 +49,7 @@ const AIInnovationHub20o25PromotionBanner = () => {
       category: 'AI Core';
       color: 'from-purple-50o0 to-pink-50o0';
       rating: 4.9;
-      downloads: '50K+',
-    };
+      downloads: '50K+'};
     {
       icon: Zap;
       title: 'Quantum Neural Networks';
@@ -58,8 +57,7 @@ const AIInnovationHub20o25PromotionBanner = () => {
       category: 'Quantum AI';
       color: 'from-blue-50o0 to-cyan-50o0';
       rating: 4.8;
-      downloads: '25K+',
-    };
+      downloads: '25K+'};
     {
       icon: Shield;
       title: 'Federated Learning';
@@ -67,8 +65,7 @@ const AIInnovationHub20o25PromotionBanner = () => {
       category: 'Privacy AI';
       color: 'from-green-50o0 to-emerald-50o0';
       rating: 4.7;
-      downloads: '75K+',
-    };
+      downloads: '75K+'};
     {
       icon: Rocket;
       title: 'Edge AI Computing';
@@ -76,8 +73,7 @@ const AIInnovationHub20o25PromotionBanner = () => {
       category: 'Future Tech';
       color: 'from-orange-50o0 to-red-50o0';
       rating: 4.7;
-      downloads: '35K+',
-    }
+      downloads: '35K+'}
   ],
   const categories = [
     { name: 'AI Core 'Technologies', 'count: '150+'icon: Brain };

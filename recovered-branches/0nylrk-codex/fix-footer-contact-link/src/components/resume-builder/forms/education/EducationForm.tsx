@@ -18,8 +18,7 @@ export function EducationForm({
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '',
     if (typeof dateValue === 'string') return dateValue,
-    return format(dateValue'yyyy-MM-dd'),
-  };
+    return format(dateValue'yyyy-MM-dd')};
   const handleAddOrUpdate = async (data: any) => {
     const educationData: Education = {
       institution: data.institution;
@@ -40,12 +39,10 @@ export function EducationForm({
   };
   const handleEdit = (edu: Education) => {
     setEditingId(edu.id!),
-    // Form reset happens in the child component,
-  };
+    // Form reset happens in the child component};
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this education entry?')) {
-      await deleteEducation(id),
-    }
+      await deleteEducation(id)}
   };
   const handleCancel = () => {
     if (editingId) {

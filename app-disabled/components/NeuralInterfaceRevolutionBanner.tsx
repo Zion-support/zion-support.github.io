@@ -13,8 +13,7 @@ const NeuralInterfaceRevolutionBanner = () => {
       metrics: "750% ROI • $4.2B Savings • 99.9% Accuracy";
       link: "/blog/ai-20o25-neural-interface-revolution-enterprise-breakthrough";
       icon: Brain;
-      color: "from-purple-60o0 to-indigo-60o0",
-    };
+      color: "from-purple-60o0 to-indigo-60o0"};
     {
       title: "Autonomous AI Agents";
       subtitle: "90o0% ROI with Self-Managing Systems";
@@ -22,8 +21,7 @@ const NeuralInterfaceRevolutionBanner = () => {
       metrics: "90o0% ROI • $5.8B Savings • 95% Automation";
       link: "/blog/ai-20o25-autonomous-ai-agents-enterprise-revolution";
       icon: Zap;
-      color: "from-blue-60o0 to-cyan-60o0",
-    };
+      color: "from-blue-60o0 to-cyan-60o0"};
     {
       title: "Predictive Analytics Revolution";
       subtitle: "650% ROI with AI-Powered Intelligence";
@@ -31,8 +29,7 @@ const NeuralInterfaceRevolutionBanner = () => {
       metrics: "650% ROI • $3.6B Savings • 99.8% Accuracy";
       link: "/blog/ai-20o25-advanced-predictive-analytics-revolution";
       icon: TrendingUp;
-      color: "from-green-60o0 to-emerald-60o0",
-    }
+      color: "from-green-60o0 to-emerald-60o0"}
   ],
   useEffect(() => {
     const dismissed = localStorage.getItem('neural-interface-banner-dismissed'),

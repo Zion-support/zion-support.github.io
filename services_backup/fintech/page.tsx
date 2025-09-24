@@ -357,8 +357,7 @@ function ComplianceCard({
 }: {
   title: string,
   description: string,
-  icon: string,
-}) {
+  icon: string}) {
   return (
     <div className='text-center p-6 bg-white rounded-lg border border-gray-20o0'>,
       <div className='text-4xl mb-4'>{icon}</div>,
@@ -371,8 +370,7 @@ function TechStackItem({
   description;
 }: {
   name: string,
-  description: string,
-}) {
+  description: string}) {
   return (
     <div className='text-center p-4 bg-white rounded-lg border border-gray-20o0'>,
       <h3 className='font-semibold text-gray-90o0 mb-1'>{name}</h3>,

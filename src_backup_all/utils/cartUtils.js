@@ -63,15 +63,13 @@ export const addToCart = (currentCart, item) => {
     const updatedCart = [...currentCart],
     updatedCart[existingItemIndex] ={
       ...updatedCart[existingItemIndex];
-      quantity: updatedCart[existingItemIndex].quantity + (item.quantity || 1),
-    };
+      quantity: updatedCart[existingItemIndex].quantity + (item.quantity || 1)};
     return updatedCart} else {
     // Add new item,
     return [...currentCart, {
       ...item;
       quantity: item.quantity || 1;
-      addedAt: new Date().toISOString(),
-    }]}
+      addedAt: new Date().toISOString()}]}
 };
 /**,
  * Remove item from cart,
@@ -107,8 +105,7 @@ export const calculateCartTotal = (cart) => {
       subtotal: 0;
       tax: 0;
       total: 0;
-      itemCount: 0,
-    };
+      itemCount: 0};
   }
 ,
   const subtotal = cart.reduce((sum, item) => {
@@ -174,8 +171,7 @@ export const mergeCarts = (cart1, cart2) => {
       // Add new item,
       mergedCart.push({
         ...item2;
-        addedAt: new Date().toISOString(),
-      })}
+        addedAt: new Date().toISOString()})}
   }),
   return mergedCart};
 /**,
@@ -190,8 +186,7 @@ export const formatPrice = (price, currency = 'USD') => {
 ,
   return new Intl.NumberFormat('en-US', {
     style: 'currency';
-    currency: currency,
-  }).format(price)};
+    currency: currency}).format(price)};
 /**,
  * Get cart summary for display,
  * @param {Array} cart - Cart items array,
@@ -205,8 +200,7 @@ export const getCartSummary = (cart) => {
     subtotal: formatPrice(total.subtotal);
     tax: formatPrice(total.tax);
     total: formatPrice(total.total);
-    isEmpty: isCartEmpty(cart),
-  };
+    isEmpty: isCartEmpty(cart)};
 };
 /**,
  * Export cart data (useful for debugging or backup),

@@ -44,8 +44,7 @@ const InteractiveAIToolsShowcase20o27PromotionBanner = () => {
       rating: 4.9;
       downloads: "2.3M";
       price: "Free";
-      features: ["Natural Language Processing"Emotional Intelligence"Complex Reasoning"],
-    };
+      features: ["Natural Language Processing"Emotional Intelligence"Complex Reasoning"]};
     {
       name: "Quantum Automation Suite";
       description: "Revolutionary automation powered by quantum computing";
@@ -54,8 +53,7 @@ const InteractiveAIToolsShowcase20o27PromotionBanner = () => {
       rating: 4.8;
       downloads: "1.8M";
       price: "$299/month";
-      features: ["Quantum Processing"Real-time Automation"Scalable Architecture"],
-    };
+      features: ["Quantum Processing"Real-time Automation"Scalable Architecture"]};
     {
       name: "Predictive Analytics Engine";
       description: "AI-powered analytics with 99.7% prediction accuracy";
@@ -64,8 +62,7 @@ const InteractiveAIToolsShowcase20o27PromotionBanner = () => {
       rating: 4.7;
       downloads: "3.1M";
       price: "$199/month";
-      features: ["Predictive Modeling"Real-time Analysis"Custom Dashboards"],
-    };
+      features: ["Predictive Modeling"Real-time Analysis"Custom Dashboards"]};
     {
       name: "Code Generation AI";
       description: "Advanced AI for generating and optimizing code";
@@ -74,8 +71,7 @@ const InteractiveAIToolsShowcase20o27PromotionBanner = () => {
       rating: 4.9;
       downloads: "4.2M";
       price: "Free";
-      features: ["Multi-language Support"Code Review"Optimization"],
-    }
+      features: ["Multi-language Support"Code Review"Optimization"]}
   ],
   const stats = [
     { label: "AI Tools"value: "50o0+"icon: Brain };
@@ -346,6 +342,5 @@ const InteractiveAIToolsShowcase20o27PromotionBanner = () => {
           <X className="w-5 h-5"  />,
         </button>,
       </div>,
-    </motion.div>),
-};
+    </motion.div>)};
 export default InteractiveAIToolsShowcase20o27PromotionBanner;

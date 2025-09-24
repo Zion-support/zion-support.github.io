@@ -15,6 +15,5 @@ export default function StoryPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

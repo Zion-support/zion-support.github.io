@@ -50,8 +50,7 @@ const SidebarMenuItem = forwardRef<HTMLButtonElementSidebarMenuItemProps>(
 SidebarMenuItem.displayName = "SidebarMenuItem",
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string,
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ titlechildren...props }) => {
   return (

@@ -10,13 +10,11 @@ type ToastComponentProps = ComponentProps<typeof Toast> & {
   id: string,
   title?: React.ReactNode,
   description?: React.ReactNode,
-  action?: ToastActionElement,
-};
+  action?: ToastActionElement};
 type ToasterToast = ToastComponentProps & {
   id: string,
   open?: boolean,
-  onOpenChange?: (open: boolean) => void,
-};
+  onOpenChange?: (open: boolean) => void};
 let count = 0,
 function genId() {
   count = (count + 1) % Number.MAX_VALUE,
@@ -25,23 +23,18 @@ function genId() {
 type Action =,
   | {
       type: 'ADD_TOAST',
-      toast: ToasterToast,
-    }
+      toast: ToasterToast}
   | {
       type: 'UPDATE_TOAST',
-      toast: Partial<ToasterToast>,
-    }
+      toast: Partial<ToasterToast>}
   | {
       type: 'DISMISS_TOAST',
-      toastId?: ToasterToast['id'],
-    }
+      toastId?: ToasterToast['id']}
   | {
       type: 'REMOVE_TOAST',
-      toastId?: ToasterToast['id'],
-    };
+      toastId?: ToasterToast['id']};
 interface State {
-  toasts: ToasterToast[],
-}
+  toasts: ToasterToast[]}
 ,
 const toastTimeouts = new Map<string ReturnType<typeof setTimeout>>(),
 export const reducer = (state: State, action: Action): State => {
@@ -87,8 +80,7 @@ export const reducer = (state: State, action: Action): State => {
         toasts: state.toasts.filter(t => t.id !== action.toastId);
       };
     default: ,
-      return state,
-  }
+      return state}
 };
 const listeners: Array<(state: State) => void> = [],
 let memoryState: State = { toasts: [] };
@@ -99,8 +91,7 @@ function dispatch(action: Action) {
 ,
 const addToRemoveQueue = (toastId: string) => {
   if (toastTimeouts.has(toastId)) {
-    return,
-  }
+    return}
 ,
   const timeout = setTimeout(() => {
     toastTimeouts.delete(toastId),
@@ -125,8 +116,7 @@ function toast({ ...props }: ToastProps) {
       id;
       open: true;
       onOpenChange: open => {
-        if (!open) dismiss(),
-      };
+        if (!open) dismiss()};
     };
   }),
   return {

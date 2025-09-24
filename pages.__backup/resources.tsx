@@ -413,6 +413,5 @@ export default function ResourcesPage() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

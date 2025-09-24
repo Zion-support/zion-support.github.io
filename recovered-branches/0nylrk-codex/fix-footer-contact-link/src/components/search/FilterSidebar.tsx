@@ -21,8 +21,7 @@ interface FilterSidebarProps {
     selectedLocations: string[],
     selectedAvailability: string[],
     selectedRating: number | null,
-  onClearFilters: () => void,
-}
+  onClearFilters: () => void}
 ,
 export function FilterSidebar({
   filters,
@@ -54,28 +53,23 @@ interface FilterSidebarProps {
     selectedProductTypes: string[];
     selectedLocations: string[];
     selectedAvailability: string[];
-    selectedRating: number | null,
-  };
+    selectedRating: number | null};
   filterOptions: FilterOptions;
   onFilterChange: (filterType: string, value: string) => void;
   onRatingChange: (rating: number | null) => void;
-  onClearFilters: () => void,
-}
+  onClearFilters: () => void}
 ,
 export function FilterSidebar(): any ({
-,
   filters,
   filterOptions,
   onFilterChange,
   onRatingChange,
   onClearFilters}: FilterSidebarProps) {
-,
   return (};
   filterOptions: FilterOptions;
   onFilterChange: (filterType: string, value: string) => void;
   onRatingChange: (rating: number | null) => void;
-  onClearFilters: () => void,
-}
+  onClearFilters: () => void}
 ,
   onClearFilters}: FilterSidebarProps) {
   return (
@@ -254,8 +248,7 @@ export function FilterSidebar(): any ({
               className={`${
                 filters && filters.selectedRating === rating ,
                   ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ,
-                  : "border-zion-blue-light text-zion-slate-light",
-}`}
+                  : "border-zion-blue-light text-zion-slate-light"}`}
             >,
               {rating === null ? (
                 "Any") : (
@@ -275,13 +268,11 @@ interface FilterSidebarProps {
     selectedProductTypes: string[];
     selected_locations: string[];
     selected_availability: string[];
-    selected_rating: number | null,
-  }
+    selected_rating: number | null}
   filter_options: FilterOptions;
   onFilterChange: (filter_type: string, value: string) => void;
   onRatingChange: (rating: number | null) => void;
-  onClearFilters: () => void,
-}
+  onClearFilters: () => void}
 export /**,
  * FilterSidebar - Function description,
  */,

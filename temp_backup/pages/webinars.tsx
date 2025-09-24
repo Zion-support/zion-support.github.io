@@ -17,24 +17,21 @@ const upcomingWebinars = [
     time: '2:00 PM EST';
     duration: '60 minutes';
     attendees: 150;
-    description: 'Learn how to implement AI solutions in your enterprise environment.',
-  };
+    description: 'Learn how to implement AI solutions in your enterprise environment.'};
   {
     title: 'Cloud Migration Strategies';
     date: '2024-02-22';
     time: '3:00 PM EST';
     duration: '45 minutes';
     attendees: 200;
-    description: 'Discover the best practices for migrating to the cloud.',
-  };
+    description: 'Discover the best practices for migrating to the cloud.'};
   {
     title: 'Cybersecurity Trends 2024';
     date: '2024-03-01';
     time: '1:00 PM EST';
     duration: '90 minutes';
     attendees: 300;
-    description: 'Stay ahead of the latest cybersecurity threats and solutions.',
-  }
+    description: 'Stay ahead of the latest cybersecurity threats and solutions.'}
 ],
 export default function WebinarsPage() {
   const [selectedWebinar, setSelectedWebinar] = useState(null),
@@ -178,6 +175,5 @@ export default function WebinarsPage() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

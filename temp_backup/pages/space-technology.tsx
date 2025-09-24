@@ -257,6 +257,5 @@ export default function SpaceTechnology() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

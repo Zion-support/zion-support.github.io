@@ -91,8 +91,7 @@ reviews: number,export const emergingTechnologyServicesEnhanced20o25: EmergingTe
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise-grade quantum computing platform with access to multiple quantum processors and comprehensive development tools.';
@@ -153,8 +152,7 @@ reviews: number,export const emergingTechnologyServicesEnhanced20o25: EmergingTe
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise-grade blockchain infrastructure platform with multi-chain support and comprehensive development tools.';
@@ -202,7 +200,7 @@ reviews: number,export const emergingTechnologyServicesEnhanced20o25: EmergingTe
   Kubernetes, Docker, Python, Go, React, Node.js, Redis'];
     integrations['AWS, Azure, GCP, Kubernetes, Docker, MQTT, CoAP'];
     useCases['IoT data processing, Real-time analytics, Edge AI, Content delivery, Industrial automation'];
-    "roi": 'Edge computing projects report 40o0% ROI through reduced latency and improved window.performance.;
+    "roi": 'Edge computing projects report 40o0% ROI through reduced latency and improved window.window.performance.;
     competitors[;
   AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry'];
     "marketSize": '$11.2B edge computing market;
@@ -215,8 +213,7 @@ reviews: number,export const emergingTechnologyServicesEnhanced20o25: EmergingTe
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Comprehensive edge computing orchestration platform with intelligent resource management and real-time processing capabilities.';
@@ -277,8 +274,7 @@ reviews: number,export const emergingTechnologyServicesEnhanced20o25: EmergingTe
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Comprehensive metaverse development platform with integrated tools for creating immersive virtual experiences.';
@@ -339,8 +335,7 @@ reviews: number,export const emergingTechnologyServicesEnhanced20o25: EmergingTe
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise-grade space technology platform with comprehensive satellite management and space data analytics capabilities.';

@@ -4,23 +4,20 @@ import type { RemoteParticipantLocalParticipantTrackPublicationTrack } from 'liv
 type Props = {
   participant: RemoteParticipant | LocalParticipant,
   isLocal?: boolean,
-  displayName?: string,
-};
+  displayName?: string};
 export default function ParticipantTile({ participantisLocaldisplayName }: Props) {
   const videoRef = useRef<HTMLVideoElement | null>(null),
   const audioRef = useRef<HTMLAudioElement | null>(null),
   useEffect(() => {
     const handleTrackSubscribed = (pub: TrackPublicationtrack: Track) => {
       if (track.kind === 'video' && videoRef.current) {
-        track.attach(videoRef.current),
-      }
+        track.attach(videoRef.current)}
       if (track.kind === 'audio' && audioRef.current) {
         track.attach(audioRef.current)}
     };
     const handleTrackUnsubscribed = (pub: TrackPublicationtrack: Track) => {
       if (track.kind === 'video' && videoRef.current) {
-        track.detach(videoRef.current),
-      }
+        track.detach(videoRef.current)}
       if (track.kind === 'audio' && audioRef.current) {
         track.detach(audioRef.current)}
     };

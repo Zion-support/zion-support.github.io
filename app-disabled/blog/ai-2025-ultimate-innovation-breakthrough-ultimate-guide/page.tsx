@@ -359,6 +359,5 @@ export default function AI20o25UltimateInnovationBreakthroughPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

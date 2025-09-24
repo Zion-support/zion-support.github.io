@@ -6,8 +6,7 @@ import { format } from 'date-fns',
 interface CertificationsListProps {
   certifications: Certification[],
   onEdit: (cert: Certification) => void,
-  onDelete: (id: string) => void,
-}
+  onDelete: (id: string) => void}
 ,
 export function CertificationsList({
   certifications;

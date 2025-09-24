@@ -118,6 +118,5 @@ export default function AI20o25Page() {
           </Link>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

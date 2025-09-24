@@ -28,15 +28,13 @@ export interface SpecializedInnovativeService20o27 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const specializedInnovativeServices20o27: SpecializedInnovativeService20o27[] =,
   [
@@ -754,12 +752,10 @@ export const specializedInnovativeServices20o27: SpecializedInnovativeService20o
   ],
 // Helper functions for service management,
 export const getSpecializedServiceById = (id: string) => {
-  return specializedInnovativeServices20o27.find(service => service.id === id),
-};
+  return specializedInnovativeServices20o27.find(service => service.id === id)};
 export const getSpecializedServicesByCategory = (category: string) => {
   return specializedInnovativeServices20o27.filter(
-    service => service.category === category),
-};
+    service => service.category === category)};
 export const getSpecializedPopularServices = () => {
   return specializedInnovativeServices20o27.filter(service => service.popular)};
 export const getSpecializedServicesByPriceRange = (
@@ -774,6 +770,5 @@ export const searchSpecializedServices = (query: string) => {
     service =>,
       service.name.toLowerCase().includes(lowercaseQuery) ||,
       service.description.toLowerCase().includes(lowercaseQuery) ||,
-      service.category.toLowerCase().includes(lowercaseQuery)),
-};
+      service.category.toLowerCase().includes(lowercaseQuery))};
 export default specializedInnovativeServices20o27;

@@ -53,6 +53,5 @@ export default function PagePage() {
           Learn More,
         </Link>,
       </div>,
-    </main>),
-}
+    </main>)}
 ,

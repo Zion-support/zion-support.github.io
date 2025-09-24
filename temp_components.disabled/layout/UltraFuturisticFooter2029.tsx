@@ -17,8 +17,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const serviceCategories = [
   {
     title: '🚀 Revolutionary Innovations';
@@ -393,5 +392,4 @@ export default function UltraFuturisticFooter20o29() {
           </Link>,
         </motion.div>,
       </motion.div>,
-    </footer>),
-}
+    </footer>)}

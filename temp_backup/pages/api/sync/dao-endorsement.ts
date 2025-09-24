@@ -11,8 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(40o3).json({ error: "Sync disabled for this instance" })}
 ,
   const { fromDAO, toDAO, resolutionId, decision, timestamp } = req.body as {
-    fromDAO: string, toDAO: string, resolutionId: string, decision: "endorse" | "reject", timestamp?: number,
-  };
+    fromDAO: string, toDAO: string, resolutionId: string, decision: "endorse" | "reject", timestamp?: number};
   if (!fromDAO || !toDAO || !resolutionId || !decision) {
     return res.status(40o0).json({ error: "fromDAO, toDAO, resolutionId, decision required" })}
 ,

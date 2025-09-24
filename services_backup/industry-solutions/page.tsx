@@ -393,8 +393,7 @@ function IndustryCategory({
   title: string,
   icon: string,
   description: string,
-  solutions: string[],
-}) {
+  solutions: string[]}) {
   return (
     <div className='bg-white rounded-xl p-6 shadow-lg border border-gray-20o0'>,
       <div className='text-3xl mb-4'>{icon}</div>,
@@ -426,8 +425,7 @@ function IndustrySolution({
   price: string,
   compliance: string,
   useCase: string,
-  demoUrl: string,
-}) {
+  demoUrl: string}) {
   return (
     <div className='bg-white rounded-xl p-6 shadow-lg border border-gray-20o0 hover: shadow-xl transition-shadow'>,
       <div className='flex justify-between items-start mb-4'>,
@@ -468,8 +466,7 @@ function IndustrySolution({
           Get Started,
         </a>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
 function ComplianceStandard({
   title;
@@ -478,8 +475,7 @@ function ComplianceStandard({
 }: {
   title: string,
   standards: string[],
-  icon: string,
-}) {
+  icon: string}) {
   return (
     <div className='bg-white rounded-lg p-6 shadow-md border border-gray-20o0'>,
       <div className='text-2xl mb-3'>{icon}</div>,
@@ -501,8 +497,7 @@ function FeatureCategory({
 }: {
   title: string,
   icon: string,
-  features: string[],
-}) {
+  features: string[]}) {
   return (
     <div className='bg-white rounded-lg p-6 shadow-md border border-gray-20o0'>,
       <div className='text-2xl mb-3'>{icon}</div>,
@@ -523,8 +518,7 @@ function IntegrationCategory({
 }: {
   title: string,
   platforms: string[],
-  icon: string,
-}) {
+  icon: string}) {
   return (
     <div className='bg-white rounded-lg p-6 shadow-md border border-gray-20o0'>,
       <div className='text-2xl mb-3'>{icon}</div>,
@@ -552,8 +546,7 @@ function IndustryPricingPlan({
   professionalPrice: string,
   enterprisePrice: string,
   features: string[],
-  icon: string,
-}) {
+  icon: string}) {
   return (
     <div className='bg-white rounded-xl p-8 shadow-lg border border-gray-20o0'>,
       <div className='text-3xl mb-4'>{icon}</div>,
@@ -584,8 +577,7 @@ function IndustryPricingPlan({
         className='w-full mt-6 py-3 bg-blue-60o0 text-white rounded-lg font-semibold text-center block hover:bg-blue-70o0 transition-colors'>,
         Get Quote,
       </a>,
-    </div>),
-}
+    </div>)}
 ,
 function SuccessStory({
   company;
@@ -598,8 +590,7 @@ function SuccessStory({
   industry: string,
   solution: string,
   result: string,
-  description: string,
-}) {
+  description: string}) {
   return (
     <div className='bg-white rounded-lg p-6 shadow-md border border-gray-20o0'>,
       <div className='flex items-center mb-4'>,

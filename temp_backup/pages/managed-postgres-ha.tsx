@@ -123,6 +123,5 @@ export default function ManagedPostgresHA() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

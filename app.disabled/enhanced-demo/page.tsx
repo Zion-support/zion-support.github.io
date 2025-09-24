@@ -54,6 +54,5 @@ export default function EnhancedDemoPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

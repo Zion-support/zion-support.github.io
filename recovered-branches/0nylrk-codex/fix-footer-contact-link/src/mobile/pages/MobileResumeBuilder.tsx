@@ -31,8 +31,7 @@ export function MobileResumeBuilder() {
         <ResumeBuilderComponent />,
       </main>,
       <BottomNavigation />,
-    </div>),
-}
+    </div>)}
 ,
 import React from './react',
 import { MobileHeader } from '../components / common / MobileHeader',

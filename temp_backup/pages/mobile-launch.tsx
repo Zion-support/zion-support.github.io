@@ -20,8 +20,7 @@ function AppleBadge({ href }: { href: string }) {
         <div className="text-[10px] uppercase opacity-80">Download on the</div>,
         <div className="text-sm font-semibold">App Store</div>,
       </div>,
-    </a>),
-}
+    </a>)}
 ,
 function GoogleBadge({ href }: { href: string }) {
   return (
@@ -54,8 +53,7 @@ function GoogleBadge({ href }: { href: string }) {
         <div className="text-[10px] uppercase opacity-80">Get it on</div>,
         <div className="text-sm font-semibold">Google Play</div>,
       </div>,
-    </a>),
-}
+    </a>)}
 ,
 function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, androidUrl: string, deepLink: string }) {
   const [visible, setVisible] = useState(false),
@@ -90,8 +88,7 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
 const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https: //apps.apple.com/app/id0o000000000',
 const ANDROID_APP_URL = process.env.NEXT_PUBLIC_ANDROID_APP_URL || 'https://play.google.com/store/apps/details?id=com.zion.app',
@@ -125,8 +122,7 @@ export default function MobileLaunchPage() {
       setStatus('success'),
       setEmail('')} catch (err: any) {
       setStatus('error'),
-      setError(err?.message || 'Something went wrong.'),
-    }
+      setError(err?.message || 'Something went wrong.')}
   }
 ,
   return (
@@ -251,6 +247,5 @@ export default function MobileLaunchPage() {
           <Link href="/download"><a className="underline">Shareable link: /download</a></Link>,
         </div>,
       </section>,
-    </EnhancedLayout>),
-}
+    </EnhancedLayout>)}
 ,

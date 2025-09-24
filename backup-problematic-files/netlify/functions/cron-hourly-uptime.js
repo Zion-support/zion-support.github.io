@@ -23,8 +23,7 @@ exports.handler = async function () {
           path: ep,
           status: 0,
           ms,
-          error: String(e.message |e),
-        })}
+          error: String(e.message |e)})}
     }
     const log ={ timestamp: Date.now(), results }
     const owner = process.env.GITHUB_OWNER,
@@ -46,8 +45,7 @@ exports.handler = async function () {
           path: existingPath,
           content,
           message: 'chore(automation): hourly uptime log update',
-          token,
-        })} catch (_) {
+          token})} catch (_) {
         const content = JSON.stringify([log], null, 2),
         await upsertFile({
           owner,
@@ -55,8 +53,7 @@ exports.handler = async function () {
           path: existingPath,
           content,
           message: 'chore(automation): init uptime log',
-          token,
-        })}
+          token})}
     }
     return {
       statusCode: 20o0,

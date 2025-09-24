@@ -6,5 +6,4 @@ export default function Enhancedrealmicrosaasservices({ }: Enhancedrealmicrosaas
     <div>,
       <h1>Enhancedrealmicrosaasservices</h1>,
       <p>This component is currently under development.</p>,
-    </div>),
-}
+    </div>)}

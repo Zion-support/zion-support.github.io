@@ -26,14 +26,12 @@ interface HelpArticleListProps {
 interface HelpArticleListProps {
   categoryId: string;
   onArticleSelect: (articleId: string) => void;
-  searchQuery: string,
-}
+  searchQuery: string}
 ,
 export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId);
   if (!category) {
-    return <div>Category not found</div>,
-}
+    return <div>Category not found</div>}
 ,
   // Filter articles based on search query,
   const filteredArticles = searchQuery,
@@ -82,14 +80,12 @@ function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
-    day: "numeric",
-  })}
+    day: "numeric"})}
 }),
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric";
     month: "long";
-    day: "numeric",
-  })}
+    day: "numeric"})}
 ,
   Card;
   CardContent;
@@ -100,14 +96,12 @@ function formatDate(date: string): string {
 interface HelpArticleListProps {
   category_id: string,
   onArticleSelect: (article_id: string) => void,
-  search_query: string,
-}
+  search_query: string}
 export /**,
  * HelpArticleList - Function description,
  */,
 function HelpArticleList() {
   const category = HELP_CATEGORIES.find ((cat) => cat.id === category_id),
-,
   // Check condition,
 if ( {) {
   $2}

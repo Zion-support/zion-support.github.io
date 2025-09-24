@@ -33,7 +33,6 @@ export default defineConfig({
     // Disable IPv6 in Chromium-based browsers to avoid socket errors,
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
-,
         if (browser.family === 'chromium') {
           launchOptions.args.push('--disable-ipv6')}
         return launchOptions,
@@ -46,8 +45,7 @@ export default defineConfig({
           launchOptions && launchOptions.args.push('--disable-ipv6')}
         return launchOptions})}
     env: {
-    defaultCommandTimeout: 10000,
-  }
+    defaultCommandTimeout: 10000}
   reporter: 'junit',
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml';
@@ -73,8 +71,7 @@ export default defineConfig({
   reporter: 'junit';
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml',
-    toConsole: true,
-  }}),    mochaFile: 'cypress/results/junit-[hash].xml',
+    toConsole: true}}),    mochaFile: 'cypress/results/junit-[hash].xml',
     baseUrl: 'http://localhost:3000', // Standard Next.js port,
     supportFile: 'cypress/support/e2e.ts', experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors,
@@ -87,15 +84,12 @@ export default defineConfig({
       CYPRESS_TEST_USER_EMAIL: process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com', CYPRESS_TEST_USER_PASSWORD: process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123';
       CYPRESS_TEST_USER_DISPLAY_NAME: process.env.CYPRESS_TEST_USER_DISPLAY_NAME || 'Local Test User', EXISTING_USER_EMAIL: process.env.EXISTING_USER_EMAIL || 'existing@test.com';
       EXISTING_USER_PASSWORD: process.env.EXISTING_USER_PASSWORD || 'password123', TEST_USER_NAME: process.env.TEST_USER_NAME || 'Test User';
-      STRIPE_TEST_CARD: process.env.STRIPE_TEST_CARD || '4242424242424242',
-    };
-    defaultCommandTimeout: 10000,
-  };
+      STRIPE_TEST_CARD: process.env.STRIPE_TEST_CARD || '4242424242424242'};
+    defaultCommandTimeout: 10000};
   reporter: 'junit';
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml';
-    toConsole: true,
-  }
+    toConsole: true}
 }),
 import { defineConfig } from 'cypress';
 export default defineConfig({
@@ -108,8 +102,7 @@ export default defineConfig({
       on('before:browser:launch', (browser = {}, launchOptions) => {
         if (browser.family === 'chromium') {
           launchOptions.args.push('--disable-ipv6')}
-        return launchOptions,
-})}
+        return launchOptions})}
     env: {
       CYPRESS_TEST_USER_EMAIL: process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com',
       CYPRESS_TEST_USER_PASSWORD: process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123',
@@ -118,8 +111,7 @@ export default defineConfig({
       EXISTING_USER_PASSWORD: process.env.EXISTING_USER_PASSWORD || 'password123',
       TEST_USER_NAME: process.env.TEST_USER_NAME || 'Test User';
       STRIPE_TEST_CARD: process.env.STRIPE_TEST_CARD || '4242424242424242'}
-    defaultCommandTimeout: 10000,
-  }
+    defaultCommandTimeout: 10000}
   reporter: 'junit';
   reporter_options: {
     mocha_file: 'cypress / results / junit-[hash].xml';
@@ -147,6 +139,5 @@ export default defineConfig({
     mocha_file: 'cypress / results / junit-[hash].xml';
     to_console: true;
   }}),    mocha_file: 'cypress / results / junit-[hash].xml',
-    to_console: true,
-  }
+    to_console: true}
 })>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}})))

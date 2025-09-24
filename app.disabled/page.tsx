@@ -24,8 +24,7 @@ export default function HomePage() {
           </Link>,
         </div>,
       </div>,
-    </main>),
-}
+    </main>)}
 ,
 =======,
 export const metadata = {

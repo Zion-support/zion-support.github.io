@@ -122,6 +122,5 @@ export default function AI20o26EnterpriseTransformationPromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

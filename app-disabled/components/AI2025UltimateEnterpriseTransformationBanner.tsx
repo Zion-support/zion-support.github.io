@@ -18,8 +18,7 @@ const AI20o25UltimateEnterpriseTransformationBanner = () => {
         efficiency: '5,0o00%'};
       url: '/blog/ai-20o25-ultimate-enterprise-transformation-revolution-ultimate-breakthrough';
       type: 'blog';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-success-story';
       title: 'Fortune 50o0 Ultimate Success: $20o0B Annual Savings';
@@ -29,12 +28,10 @@ const AI20o25UltimateEnterpriseTransformationBanner = () => {
         roi: '20,0o00%';
         savings: '$20o0B';
         timeline: '18 months';
-        satisfaction: '99.8%',
-      };
+        satisfaction: '99.8%'};
       url: '/case-studies/fortune-50o0-ultimate-enterprise-transformation-20o000-roi-success-story';
       type: 'case-study';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'implementation-guide';
       title: 'Complete Implementation Guide: 20,0o00% ROI Roadmap';
@@ -44,12 +41,10 @@ const AI20o25UltimateEnterpriseTransformationBanner = () => {
         success: '99.7%';
         timeline: '18 months';
         projects: '1,0o00+';
-        guide: '60 min read',
-      };
+        guide: '60 min read'};
       url: '/resources/ai-20o25-ultimate-enterprise-transformation-implementation-guide';
       type: 'resource';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -155,8 +150,7 @@ const AI20o25UltimateEnterpriseTransformationBanner = () => {
                 className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                   index === currentSlide,
                     ? 'bg-yellow-40o0 scale-125',
-                    : 'bg-white/30 hover: bg-white/50',
-                }`}
+                    : 'bg-white/30 hover: bg-white/50'}`}
               />))}
           </div>,
         </div>,
@@ -168,6 +162,5 @@ const AI20o25UltimateEnterpriseTransformationBanner = () => {
           <X className="w-6 h-6"  />,
         </button>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o25UltimateEnterpriseTransformationBanner;

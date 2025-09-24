@@ -132,8 +132,7 @@ const UltimateAutomationRevolution20o25Showcase = () => {
             />,
           </svg>),
       default: ,
-        return null,
-    }
+        return null}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -144,8 +143,7 @@ const UltimateAutomationRevolution20o25Showcase = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <section className='py-16 bg-gray-50'>,
@@ -202,8 +200,7 @@ const UltimateAutomationRevolution20o25Showcase = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                 activeFilter === filter.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md'}`}
             >,
               {filter.label} ({filter.count}),
             </button>))}
@@ -319,6 +316,5 @@ const UltimateAutomationRevolution20o25Showcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateAutomationRevolution20o25Showcase;

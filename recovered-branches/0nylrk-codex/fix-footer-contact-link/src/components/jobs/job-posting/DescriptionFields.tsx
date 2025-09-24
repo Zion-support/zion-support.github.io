@@ -5,8 +5,7 @@ import { JobSchemaType } from './validation',
 interface DescriptionFieldsProps {
   control: Control<JobSchemaType>,
   handleEditorChange: (content: string) => void,
-  editorContent: string,
-}
+  editorContent: string}
 ,
 export function DescriptionFields({
   controlhandleEditorChangeditorContent;

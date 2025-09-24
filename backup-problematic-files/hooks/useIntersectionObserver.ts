@@ -3,8 +3,7 @@
 interface UseIntersectionObserverProps {
   threshold?: number,
   root?: Element | null,
-  rootMargin?: string,
-}, [node, threshold, root, rootMargin, frozen]),
+  rootMargin?: string}, [node, threshold, root, rootMargin, frozen]),
   const prevNode = useRef<Element | null>(null),
   useEffect(() => {
     if (prevNode.current) {

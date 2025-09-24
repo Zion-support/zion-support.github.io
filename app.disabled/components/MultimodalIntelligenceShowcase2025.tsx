@@ -126,8 +126,7 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {
       case 'resource':,
         return <Award className='w-5 h-5' />,
       default:,
-        return <FileText className='w-5 h-5' />,
-    }
+        return <FileText className='w-5 h-5' />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -138,8 +137,7 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {
       case 'resource':,
         return 'bg-purple-50o0',
       default:,
-        return 'bg-gray-50o0',
-    }
+        return 'bg-gray-50o0'}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -207,8 +205,7 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {
               className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                 activeFilter === filter.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 shadow-md',
-              }`}
+                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 shadow-md'}`}
             >,
               {filter.label}
               <span
@@ -356,6 +353,5 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default MultimodalIntelligenceShowcase20o25;

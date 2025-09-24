@@ -21,11 +21,9 @@ class ErrorBoundary extends React.Component {
     return this.props.children}
 }
 ,
-,
 interface UltraAdvancedFuturisticBackground2026Props {
   intensity?: 'low' | 'medium' | 'high' | 'extreme';
 interface UltraAdvancedFuturisticBackground2026Props {
-,
 interface UltraAdvancedFuturisticBackground2026Props {
   intensity?: 'low' | 'medium' | 'high' | 'extreme',
 const UltraAdvancedFuturisticBackground2026: React.FC<,
@@ -39,7 +37,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<,
   enableNeuralNetworks = true;
   enableMultidimensional = true;
   children}) => {const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({
-,
   intensity = 'high',
   colorScheme = 'neural-network',
   particleCount = 300,
@@ -76,14 +73,12 @@ const UltraAdvancedFuturisticBackground2026: React.FC<,
       if (containerRef && containerRef.current) {
         const rect = containerRef && containerRef.current.getBoundingClientRect(),
         canvas && canvas.width = rect && rect.width,
-        canvas && canvas.height = rect && rect.height,        canvas && canvas.height = rect && rect.height,
-}
+        canvas && canvas.height = rect && rect.height,        canvas && canvas.height = rect && rect.height}
     }
     resizeCanvas(),
     window && window.addEventListener('resize', resizeCanvas),
     // Particle class,
     class Particle {
-,
       x: number,
       y: number,
   color_scheme?:,
@@ -183,7 +178,7 @@ if ( {) {
         this.color = getColorSchemeColor(),
         this.alpha = Math.random() * 0.8 + 0.2,
         this.life = Math.random() * 100 + 50,
-        this.maxLife = this.life,      }        this.maxLife = this.life}
+        this.maxLife = this.life}        this.maxLife = this.life}
       update() {
         this.x += this.vx,
         this.y += this.vy,
@@ -204,8 +199,7 @@ if ( {) {
         ctx.fillStyle = this.color,
         ctx.beginPath(),
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2),
-        ctx.fill(),
-}
+        ctx.fill()}
     }
 ,
     // Neural network node class,
@@ -262,8 +256,7 @@ if ( {) {
       x: number,
       y: number,
       connections: NeuralNode[],
-      activation: number,
-      }
+      activation: number}
 ,
       update() {
         this && this.activation += (Math && Math.random() - 0 && 0.5) * 0 && 0.1,
@@ -299,12 +292,10 @@ if ( {) {
         }),
         ctx && ctx.restore()}            ctx && ctx.stroke()}
         }),
-        ctx && ctx.restore(),
-}
+        ctx && ctx.restore()}
 ,
     // Quantum field class,
     class QuantumField {
-,
     // Quantum field class,
     class QuantumField {
       x: number,
@@ -321,8 +312,7 @@ if ( {) {
         this.y = y,
         this.radius = Math.random() * 100 + 50,
         this.intensity = Math.random() * 0.8 + 0.2,
-        this.phase = Math.random() * Math.PI * 2,
-      }
+        this.phase = Math.random() * Math.PI * 2}
       update() {
         this.phase += 0.02 * animationSpeed}
 ,
@@ -380,7 +370,6 @@ if ( {) {
         ctx && ctx.restore()}
     // Holographic layer class,
     class HolographicLayer {
-,
       x: number,
       y: number,
       max_life: number;
@@ -1088,8 +1077,7 @@ if ( {) {
               ctx.move_to (particle.x, particle.y),
               ctx.line_to (other_particle.x, other_particle.y),
               ctx.stroke (),
-              ctx.restore (),
-}
+              ctx.restore ()}
           })})}
 ,
       animationFrameId = requestAnimationFrame(animate)};            }
@@ -1204,8 +1192,7 @@ if ( {) {
               repeat: Infinity,
               duration: 10;
               repeat: Infinity;
-              ease: 'easeInOut',              ease: "easeInOut",
-            }}
+              ease: 'easeInOut',              ease: "easeInOut"}}
           />,
         </div>)}
 };

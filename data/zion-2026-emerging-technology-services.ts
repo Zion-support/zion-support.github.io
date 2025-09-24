@@ -31,22 +31,19 @@ export interface Zion20o26EmergingTechnologyService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 const contact ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export const zion20o26EmergingTechnologyServices: Zion20o26EmergingTechnologyService[] = [
   // Quantum-Enhanced Blockchain and Web3 Platform,
   {
@@ -92,8 +89,7 @@ export const zion20o26EmergingTechnologyServices: Zion20o26EmergingTechnologySer
     launchDate: '20o26-0o1-15';
     customers: 110o0;
     rating: 4.9;
-    reviews: 580,
-  };
+    reviews: 580};
   // AI-Powered Autonomous Metaverse Development Platform,
   {
     id: 'ai-autonomous-metaverse-development-platform-20o26';
@@ -138,8 +134,7 @@ export const zion20o26EmergingTechnologyServices: Zion20o26EmergingTechnologySer
     launchDate: '20o26-0o1-20';
     customers: 950;
     rating: 4.9;
-    reviews: 480,
-  };
+    reviews: 480};
   // Quantum-Enhanced Internet of Things (IoT) Platform,
   {
     id: 'quantum-enhanced-iot-platform-20o26';
@@ -184,8 +179,7 @@ export const zion20o26EmergingTechnologyServices: Zion20o26EmergingTechnologySer
     launchDate: '20o26-0o1-25';
     customers: 210o0;
     rating: 4.8;
-    reviews: 10o50,
-  };
+    reviews: 10o50};
   // AI-Powered Autonomous Space Technology Platform,
   {
     id: 'ai-autonomous-space-technology-platform-20o26';
@@ -230,8 +224,7 @@ export const zion20o26EmergingTechnologyServices: Zion20o26EmergingTechnologySer
     launchDate: '20o26-0o2-0o1';
     customers: 650;
     rating: 4.9;
-    reviews: 320,
-  };
+    reviews: 320};
   // Quantum-Enhanced Neural Network and Brain-Computer Interface Platform,
   {
     id: 'quantum-enhanced-neural-network-bci-platform-20o26';
@@ -276,8 +269,7 @@ export const zion20o26EmergingTechnologyServices: Zion20o26EmergingTechnologySer
     launchDate: '20o26-0o2-15';
     customers: 450;
     rating: 4.9;
-    reviews: 220,
-  };
+    reviews: 220};
   // AI-Powered Autonomous Biotechnology and Synthetic Biology Platform,
   {
     id: 'ai-autonomous-biotechnology-synthetic-biology-platform-20o26';
@@ -322,8 +314,7 @@ export const zion20o26EmergingTechnologyServices: Zion20o26EmergingTechnologySer
     launchDate: '20o26-0o1-30';
     customers: 780;
     rating: 4.9;
-    reviews: 390,
-  };
+    reviews: 390};
   // Quantum-Enhanced Climate and Environmental Technology Platform,
   {
     id: 'quantum-enhanced-climate-environmental-technology-platform-20o26';
@@ -368,8 +359,7 @@ export const zion20o26EmergingTechnologyServices: Zion20o26EmergingTechnologySer
     launchDate: '20o26-0o2-0o5';
     customers: 120o0;
     rating: 4.9;
-    reviews: 60o0,
-  };
+    reviews: 60o0};
   // AI-Powered Autonomous Robotics and Automation Platform,
   {
     id: 'ai-autonomous-robotics-automation-platform-20o26';
@@ -414,7 +404,6 @@ export const zion20o26EmergingTechnologyServices: Zion20o26EmergingTechnologySer
     launchDate: '20o26-0o2-10';
     customers: 1350;
     rating: 4.8;
-    reviews: 680,
-  }
+    reviews: 680}
 ],
 export default zion20o26EmergingTechnologyServices;

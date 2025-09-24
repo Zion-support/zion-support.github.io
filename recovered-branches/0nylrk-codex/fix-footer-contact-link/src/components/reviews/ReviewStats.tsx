@@ -3,8 +3,7 @@ import { Progress } from '@/components/ui/progress',
 interface ReviewStatsProps {
   averageRating: number,
   totalReviews: number,
-  ratingDistribution?: Record<number>,
-}
+  ratingDistribution?: Record<number>}
 ,
 export function ReviewStats({
   averageRatingtotalReviewsratingDistribution;
@@ -14,8 +13,7 @@ export function ReviewStats({
   // Calculate percentages for distribution if available,
   const getPercentage = (count: number) => {
     if (totalReviews === 0) return 0,
-    return (count / totalReviews) * 100,
-  };
+    return (count / totalReviews) * 100};
   return (
     <div className='bg-card border rounded-lg p-4'>,
       <div className='flex items-center justify-between mb-4'>,

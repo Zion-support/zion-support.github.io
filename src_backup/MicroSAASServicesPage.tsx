@@ -485,8 +485,7 @@ export default function MicroSAASServicesPage(...args: any[]): any {
                 className={`${
                   selectedCategory === category,
                     ? 'bg-zion-purple text-white',
-                    : 'border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10',
-                }`}
+                    : 'border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10'}`}
               >,
                 {category}
               </Button>))}
@@ -621,6 +620,5 @@ export default function MicroSAASServicesPage(...args: any[]): any {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

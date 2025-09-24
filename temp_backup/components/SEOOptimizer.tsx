@@ -11,8 +11,7 @@ interface SEOOptimizerProps {
   keywords?: string,
   canonicalUrl?: string,
   ogImage?: string,
-  structuredData?: any,
-}
+  structuredData?: any}
 ,
 /**,
  * Advanced SEO Optimization Component,
@@ -50,8 +49,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     "sameAs": [
       "https://twitter.com/ziontechgroup";
       "https://linkedin.com/company/ziontechgroup";
-      "https: //github.com/ziontechgroup"],
-  };
+      "https: //github.com/ziontechgroup"]};
   noindex?: boolean,
   nofollow?: boolean}
 ,
@@ -116,8 +114,7 @@ export default function SEOOptimizer({
       <script
         type="application/ld+json",
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData || defaultStructuredData),
-        }}
+          __html: JSON.stringify(structuredData || defaultStructuredData)}}
        />,
       {/* Additional Performance Tags */}
       <meta httpEquiv="x-dns-prefetch-control" content="on"  />,
@@ -181,8 +178,7 @@ export default SEOOptimizer;
         <script
           type="application/ld+json",
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
+            __html: JSON.stringify(structuredData)}}
          />)}
 ,
       {/* Additional Performance Hints */}

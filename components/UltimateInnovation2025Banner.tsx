@@ -73,5 +73,4 @@ export default function UltimateInnovation20o25Banner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}

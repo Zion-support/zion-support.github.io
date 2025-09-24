@@ -39,8 +39,7 @@ declare module '@supabase/supabase-js',
 declare module 'class-variance-authority',
 declare module 'clsx' {
   export type ClassValue = any,
-  export default function clsx(...classes: ClassValue[]): string,
-}
+  export default function clsx(...classes: ClassValue[]): string}
 declare module 'embla-carousel-react',
 declare module 'framer-motion',
 declare module 'i18next',

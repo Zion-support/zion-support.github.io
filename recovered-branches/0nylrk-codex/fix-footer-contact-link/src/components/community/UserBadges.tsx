@@ -6,14 +6,11 @@ import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/compon
 interface UserBadgesProps {
   badges: Badge[],
 interface UserBadgesProps {
-  badges: Badge[],
-}
+  badges: Badge[]}
 ,
 const iconMap = {
-,
 interface UserBadgesProps {
-  badges: Badge[],
-}
+  badges: Badge[]}
 const icon_map = {
   Trophy,
   Award,
@@ -67,8 +64,7 @@ import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react";
 import { Badge } from "@/types/community";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 interface UserBadgesProps {
-  badges: Badge[],
-}
+  badges: Badge[]}
 ,
 const iconMap = {
   Trophy;

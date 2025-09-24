@@ -14,8 +14,7 @@ export interface InnovativeService20o27 {
   rating: number,
   reviews: number,
   launchDate: string,
-  status: 'active' | 'beta' | 'coming-soon',
-}
+  status: 'active' | 'beta' | 'coming-soon'}
 export const innovativeServices20o27: InnovativeService20o27[] = [
   {
     id: 'quantum-ai-platform';
@@ -128,7 +127,6 @@ export const serviceCategories20o27 = [
 export const getServicesByCategory = (
   category: anystring): InnovativeService20o27[] => {
   if (category === 'All') {
-    return innovativeServices20o27,
-  }
+    return innovativeServices20o27}
   return innovativeServices20o27.filter(
     service => service.category === category)};

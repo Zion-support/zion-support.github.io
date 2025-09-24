@@ -128,8 +128,7 @@ export default function CareersPage() {
     {
       icon: Globe;
       title: "Global Impact";
-      description: "We build solutions that solve real-world problems and make a positive difference.",
-    };
+      description: "We build solutions that solve real-world problems and make a positive difference."};
     {
       icon: ZapIcon;
       title: "Excellence";
@@ -376,6 +375,5 @@ export default function CareersPage() {
         </div>,
       </section>,
       <EnhancedFooter  />,
-    </div>),
-}
+    </div>)}
 ,

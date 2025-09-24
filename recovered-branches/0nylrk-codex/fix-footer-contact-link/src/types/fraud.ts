@@ -16,8 +16,7 @@ export interface FraudFlag {
   action_taken?: 'none' | 'warning' | 'suspension' | 'ban',
   gpt_classification?: string,
   gpt_explanation?: string,
-  is_false_positive?: boolean,
-}
+  is_false_positive?: boolean}
 ,
 export interface FraudStats {
   total_flags: number,
@@ -25,6 +24,5 @@ export interface FraudStats {
   suspicious_count: number,
   dangerous_count: number,
   false_positives: number,
-  actioned_count: number,
-}
+  actioned_count: number}
 ,

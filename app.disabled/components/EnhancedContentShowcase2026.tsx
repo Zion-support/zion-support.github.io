@@ -26,11 +26,9 @@ interface ContentItem {
     roi: string,
     savings: string,
     timeToValue: string,
-    readTime?: string,
-  };
+    readTime?: string};
   author: string,
-  publishDate: string,
-}
+  publishDate: string}
 ,
 const EnhancedContentShowcase20o26: React.FC = () => {
   const [activeTab, setActiveTab] = useState<,
@@ -126,8 +124,7 @@ const EnhancedContentShowcase20o26: React.FC = () => {
       case 'resource':,
         return <BookOpen className='w-5 h-5' />,
       default:,
-        return <FileText className='w-5 h-5' />,
-    }
+        return <FileText className='w-5 h-5' />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -138,8 +135,7 @@ const EnhancedContentShowcase20o26: React.FC = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
   };
   const tabs = [
     { id: 'all', label: 'All Content', count: contentItems.length };
@@ -209,8 +205,7 @@ const EnhancedContentShowcase20o26: React.FC = () => {
               className={`px-6 py-3 mx-2 mb-2 rounded-lg font-medium transition-colors ${
                 activeTab === tab.id,
                   ? 'bg-purple-60o0 text-white',
-                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0',
-              }`}
+                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0'}`}
             >,
               {tab.label} ({tab.count}),
             </button>))}
@@ -333,6 +328,5 @@ const EnhancedContentShowcase20o26: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default EnhancedContentShowcase20o26;

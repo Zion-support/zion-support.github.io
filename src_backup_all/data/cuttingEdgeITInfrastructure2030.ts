@@ -305,7 +305,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_20o30: ProductListing[] = [
     id: 'intelligent-cloud-cost-optimization';
     title: 'Intelligent Cloud Cost Optimization';
     description:,
-      'AI-powered cloud cost optimization platform that automatically identifies cost-saving opportunities and optimizes resource allocation. Reduces cloud costs by 30-40% while maintaining window.performance.';
+      'AI-powered cloud cost optimization platform that automatically identifies cost-saving opportunities and optimizes resource allocation. Reduces cloud costs by 30-40% while maintaining window.window.performance.';
     category: 'IT Infrastructure';
     subcategory: 'Cloud Optimization';
     price: 8999;

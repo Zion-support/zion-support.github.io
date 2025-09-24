@@ -14,8 +14,7 @@ export const onsiteServicePricing = [
       'Email setup and configuration'];
     responseTime: '24-48 hours';
     category: 'basic';
-    popular: false,
-  };
+    popular: false};
   {
     id: 2;
     service: 'Network & Security';
@@ -33,8 +32,7 @@ export const onsiteServicePricing = [
       'Network monitoring tools'];
     responseTime: '24 hours';
     category: 'network';
-    popular: true,
-  };
+    popular: true};
   {
     id: 3;
     service: 'Server Management';
@@ -52,8 +50,7 @@ export const onsiteServicePricing = [
       'Server security hardening'];
     responseTime: '24 hours';
     category: 'server';
-    popular: false,
-  };
+    popular: false};
   {
     id: 4;
     service: 'Cloud Migration';
@@ -71,8 +68,7 @@ export const onsiteServicePricing = [
       'Training and documentation'];
     responseTime: '48 hours';
     category: 'cloud';
-    popular: false,
-  };
+    popular: false};
   {
     id: 5;
     service: 'Emergency Response';
@@ -90,8 +86,7 @@ export const onsiteServicePricing = [
       'After-hours availability'];
     responseTime: '2-4 hours';
     category: 'emergency';
-    popular: false,
-  };
+    popular: false};
   {
     id: 6;
     service: 'IT Consulting';
@@ -109,84 +104,71 @@ export const onsiteServicePricing = [
       'Project management'];
     responseTime: '72 hours';
     category: 'consulting';
-    popular: false,
-  }
+    popular: false}
 ],
 export const serviceCategories = [
   {
     name: 'Basic Support';
     description: 'Essential IT services for small businesses';
     icon: '🔧';
-    averageRate: 95,
-  };
+    averageRate: 95};
   {
     name: 'Network & Security';
     description: 'Professional networking and security solutions';
     icon: '🛡️';
-    averageRate: 125,
-  };
+    averageRate: 125};
   {
     name: 'Server Management';
     description: 'Enterprise server infrastructure services';
     icon: '🖥️';
-    averageRate: 150,
-  };
+    averageRate: 150};
   {
     name: 'Cloud Services';
     description: 'Cloud migration and management';
     icon: '☁️';
-    averageRate: 175,
-  };
+    averageRate: 175};
   {
     name: 'Emergency Support';
     description: '24/7 critical issue resolution';
     icon: '🚨';
-    averageRate: 20o0,
-  };
+    averageRate: 20o0};
   {
     name: 'Strategic Consulting';
     description: 'IT strategy and planning services';
     icon: '📊';
-    averageRate: 225,
-  }
+    averageRate: 225}
 ],
 export const additionalServices = [
   {
     name: 'Hardware Installation';
     price: 75;
     description: 'Per device installation and setup';
-    category: 'hardware',
-  };
+    category: 'hardware'};
   {
     name: 'Software Licensing';
     price: 'Varies';
     description: 'Software procurement and licensing';
-    category: 'software',
-  };
+    category: 'software'};
   {
     name: 'Training Sessions';
     price: 150;
     description: 'Staff IT training (per session)';
-    category: 'training',
-  };
+    category: 'training'};
   {
     name: 'Documentation';
     price: 10o0;
     description: 'Technical documentation creation';
-    category: 'documentation',
-  };
+    category: 'documentation'};
   {
     name: 'Remote Support';
     price: 65;
     description: 'Remote troubleshooting (per hour)';
-    category: 'remote',
-  };
+    category: 'remote'};
   {
     name: 'Maintenance Contracts';
     price: 'Monthly';
     description: 'Ongoing maintenance agreements';
-    category: 'maintenance',
-  }
+    category: 'maintenance'}
 ],
 export const getServiceById = (id) => {
   return onsiteServicePricing.find(service => service.id === id)};

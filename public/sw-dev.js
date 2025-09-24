@@ -15,7 +15,7 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME),
       .then((cache) => {
-        // console.log('Development SW: Caching static files'),
+        // // console.log('Development SW: Caching static files'),
         return Promise.allSettled(
           STATIC_FILES.map(url =>,
             cache.add(url).catch(error => {
@@ -24,7 +24,7 @@ self.addEventListener('install', (event) => {
       .then((results) => {
         const successful = results.filter(r => r.status === 'fulfilled').length,
         const failed = results.filter(r => r.status === 'rejected').length,
-        // console.log(`Dev SW: Static files cached: ${successful} successful, ${failed} failed`),
+        // // console.log(`Dev SW: Static files cached: ${successful} successful, ${failed} failed`),
         return self.skipWaiting()}),
       .catch((error) => {
         console.error('Dev SW: Error in install:', error)}))}),
@@ -36,13 +36,12 @@ self.addEventListener('activate', (event) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== CACHE_NAME) {
-              // console.log('Dev SW: Deleting old cache:', cacheName),
+              // // console.log('Dev SW: Deleting old cache:', cacheName),
               return caches.delete(cacheName)}
           }))}),
       .then(() => {
-        // console.log('Dev SW: Activated'),
-        return self.clients.claim(),
-      }))}),
+        // // console.log('Dev SW: Activated'),
+        return self.clients.claim()}))}),
 // Fetch event - network first for development,
 self.addEventListener('fetch', (event) => {
   const { request } = event,
@@ -71,7 +70,7 @@ self.addEventListener('fetch', (event) => {
             cache.put(request, responseClone)})}
         return response}),
       .catch((error) => {
-        // console.log('Dev SW: Network failed, trying cache:', url.href),
+        // // console.log('Dev SW: Network failed, trying cache:', url.href),
         // Try to serve from cache if network fails,
         return caches.match(request).then((cachedResponse) => {
           if (cachedResponse) {

@@ -6,8 +6,7 @@ const mockLogin = jest.fn().mockResolvedValue({}),
 jest.mock('@/hooks/useAuth', () => ({'  useAuth: () => ({
     signup: mockSignup;
     login: mockLogin;
-    loginWithGoogle: mockLoginWithGoogle,
-  })})),
+    loginWithGoogle: mockLoginWithGoogle})})),
 vi.mock('next/router', () => import('next-router-mock')),
 describe('SignUpForm', () => {'  test('calls loginWithGoogle when Google button is clicked', () => {'    render(
       <MemoryRouterProvider>,

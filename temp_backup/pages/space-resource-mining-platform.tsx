@@ -9,8 +9,7 @@ export default function SpaceResourceMiningPlatform() {
     {
       icon: <Rocket className="w-6 h-6"  />;
       title: 'Space Mining Operations';
-      description: 'Advanced space mining operations with autonomous spacecraft and resource extraction systems.',
-    };
+      description: 'Advanced space mining operations with autonomous spacecraft and resource extraction systems.'};
     {
       icon: <Zap className="w-6 h-6"  />;
       title: 'Resource Mapping';
@@ -18,23 +17,19 @@ export default function SpaceResourceMiningPlatform() {
     {
       icon: <Target className="w-6 h-6"  />;
       title: 'Autonomous Extraction';
-      description: 'Fully autonomous resource extraction with robotic systems and AI-driven operations.',
-    };
+      description: 'Fully autonomous resource extraction with robotic systems and AI-driven operations.'};
     {
       icon: <Shield className="w-6 h-6"  />;
       title: 'Safety Protocols';
-      description: 'Advanced safety protocols and risk management for space mining operations.',
-    };
+      description: 'Advanced safety protocols and risk management for space mining operations.'};
     {
       icon: <TrendingUp className="w-6 h-6"  />;
       title: 'Resource Processing';
-      description: 'In-space resource processing and refinement for immediate use or transport to Earth.',
-    };
+      description: 'In-space resource processing and refinement for immediate use or transport to Earth.'};
     {
       icon: <Globe className="w-6 h-6"  />;
       title: 'Logistics Management';
-      description: 'Comprehensive logistics management for space mining operations and resource transportation.',
-    }
+      description: 'Comprehensive logistics management for space mining operations and resource transportation.'}
   ],
   const benefits = [
     'Access unlimited space resources';
@@ -233,5 +228,4 @@ export default function SpaceResourceMiningPlatform() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}

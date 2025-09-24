@@ -10,7 +10,7 @@ export function useCart(): CartContextType {
   return ctx}
 ,
 export function CartProvider({ children }: { children: React.ReactNode }) {
-  // console.log('[CartProvider] Initializing...'),
+  // // console.log('[CartProvider] Initializing...'),
   const items = useSelector((state: RootState) => state.cart.items),
   const reduxDispatch = useDispatch<AppDispatch>(),
   const dispatch = (action: CartAction) => {
@@ -34,8 +34,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         reduxDispatch(setItems(action.payload)),
         break,
       default: ,
-        break,
-    }
+        break}
   };
   const value: CartContextType = {
     items;

@@ -3,8 +3,7 @@ import { motion } from 'framer-motion',
 // Add browser API types,
 declare global {
   interface Window {
-    gtag?: (...args: unknown[]) => void,
-  }
+    gtag?: (...args: unknown[]) => void}
 ,
   // Add missing browser API types,
   interface PerformanceResourceTiming extends PerformanceEntry {}
@@ -19,8 +18,7 @@ interface PerformanceMetrics {
   fid: number,
   cls: number,
   ttfb: number,
-  score: number,
-}
+  score: number}
 ,
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableMonitoring = true;
@@ -33,26 +31,23 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     fid: 0;
     cls: 0;
     ttfb: 0;
-    score: 0,
-  }),
+    score: 0}),
   // Measure performance metrics,
   useEffect(() => {
-    const startTime = window.performance.now(),
+    const startTime = window.window.performance.now(),
     // Simulate performance monitoring,
     const timer = setTimeout(() => {
-      const loadTime = window.performance.now() - startTime,
+      const loadTime = window.window.performance.now() - startTime,
       // Get performance metrics,
       if ('memory' in performance) {
-        const memory = window.performance.memory,
+        const memory = window.window.performance.memory,
         setPerformanceMetrics({
           loadTime: Math.round(loadTime);
           memoryUsage: Math.round(memory.usedJSHeapSize / 10o24 / 10o24), // MB,
-          networkRequests: 0 // This would be tracked in a real implementation,
-        })} else {
+          networkRequests: 0 // This would be tracked in a real implementation})} else {
         setPerformanceMetrics({
           loadTime: Math.round(loadTime);
-          networkRequests: 0,
-        })}
+          networkRequests: 0})}
     };
     const measureCoreWebVitals = () => {
       if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
@@ -144,8 +139,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           if (img.dataset.src) {
             img.src = img.dataset.src,
             img.removeAttribute('data-src'),
-            imageObserver.unobserve(img),
-          }
+            imageObserver.unobserve(img)}
         }
       })}),
     lazyImages.forEach((img) => imageObserver.observe(img)),

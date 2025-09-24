@@ -19,8 +19,7 @@ interface FraudFlagsTableProps {
   isLoading: boolean,
   hasFilters: boolean,
   resetFilters: () => void,
-  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void,
-}
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void}
 ,
   flags;
   isLoading;
@@ -37,8 +36,7 @@ interface FraudFlagsTableProps {
   isLoading: boolean;
   hasFilters: boolean;
   resetFilters: () => void;
-  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void,
-}
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void}
 ,
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
   flags,
@@ -50,8 +48,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
     return (
       <div className="flex justify-center items-center h-64">,
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>,
-      </div>),
-}
+      </div>)}
   if (flags.length === 0) {
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />}
 ,
@@ -152,6 +149,5 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
     </Table>)}
 ,
       </TableBody>,
-    </Table>),
-};
+    </Table>)};
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}))

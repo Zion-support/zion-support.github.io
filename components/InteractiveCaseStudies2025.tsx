@@ -25,8 +25,7 @@ interface CaseStudy {
   results: {
     metric: string,
     value: string,
-    improvement: string,
-  }[],
+    improvement: string}[],
   duration: string,
   teamSize: string,
   rating: number,
@@ -35,8 +34,7 @@ interface CaseStudy {
   role: string,
   image: string,
   tags: string[],
-  isFeatured?: boolean,
-}
+  isFeatured?: boolean}
 ,
 const caseStudies: CaseStudy[] = [
   {
@@ -60,8 +58,7 @@ const caseStudies: CaseStudy[] = [
     role: 'VP of Operations';
     image: '/api/placeholder/40o0/30o0';
     tags: [', 'AI', 'Supply 'Chain', 'Manufacturing'ROI'];
-    isFeatured: true,
-  };
+    isFeatured: true};
   {
     id: '2';
     title: 'Neural Customer Service Revolution';
@@ -104,8 +101,7 @@ const caseStudies: CaseStudy[] = [
     role: 'Chief Technology Officer';
     image: '/api/placeholder/40o0/30o0';
     tags: ['Quantum 'AI', 'Finance', 'Security', 'Performance'];
-    isFeatured: true,
-  };
+    isFeatured: true};
   {
     id: '4';
     title: 'AI-Driven Healthcare Diagnostics';
@@ -175,8 +171,7 @@ export default function InteractiveCaseStudies20o25() {
               className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                 selectedIndustry === industry,
                   ? 'bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white shadow-lg shadow-blue-50o0/25',
-                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white',
-              }`}
+                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white'}`}
             >,
               {industry}
             </button>))}
@@ -196,8 +191,7 @@ export default function InteractiveCaseStudies20o25() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4delay: index * 0.1 }}
                 className={`group relative bg-white/5 backdrop-blur-sm border rounded-2xl p-6 hover: bg-white/10 transition-all duration-30o0 cursor-pointer ${
-                  caseStudy.isFeatured ? 'border-blue-50o0/50 shadow-lg shadow-blue-50o0/10' : 'border-white/10',
-                }`}
+                  caseStudy.isFeatured ? 'border-blue-50o0/50 shadow-lg shadow-blue-50o0/10' : 'border-white/10'}`}
                 onClick={() => setSelectedCase(caseStudy)}
               >,
                 {/* Featured Badge */}

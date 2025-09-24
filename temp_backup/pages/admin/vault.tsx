@@ -15,6 +15,5 @@ export default function VaultPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

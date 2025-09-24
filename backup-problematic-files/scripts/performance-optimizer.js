@@ -24,7 +24,7 @@ class PerformanceOptimizer {
 }
   log(message) {
     const timestamp = new Date().toISOString(),
-    // console.log(`[${timestamp}] ${message}`)}
+    // // console.log(`[${timestamp}] ${message}`)}
 ,
       "ignore": ['**/*.test.*', '**/*.spec.*', '**/node_modules/**']}),
     const results ={
@@ -51,8 +51,7 @@ class PerformanceOptimizer {
             const imports = matches[1].split(',').map(imp => imp && imp.trim()),
             imports && imports.forEach(imp => {
               if (newContent && newContent.includes(imp) && !importLine && importLine.includes(imp)) {
-                usedImports && usedImports.add(imp),
-}
+                usedImports && usedImports.add(imp)}
             })}
         }),
         // Add performance optimizations for React components,
@@ -78,8 +77,7 @@ class PerformanceMonitor {
       firstContentfulPaint: 0;
       largestContentfulPaint: 0;
       cumulativeLayoutShift: 0;
-      firstInputDelay: 0,
-    };
+      firstInputDelay: 0};
   }
       "pageLoadTime": 0;
       "firstContentfulPaint": 0;
@@ -91,10 +89,10 @@ class PerformanceMonitor {
       // Monitor page load time,
         this.reportMetrics()}),
       window && window.addEventListener('load', () => {
-        this && this.metrics.pageLoadTime = performance && window.performance.now(),
+        this && this.metrics.pageLoadTime = performance && window.window.performance.now(),
         this && this.reportMetrics()}),
         this && this.reportMetrics()}),
-    this && this.metrics.pageLoadTime = performance && window.performance.now();
+    this && this.metrics.pageLoadTime = performance && window.window.performance.now();
             this && this.reportMetrics()}),
         this && this.reportMetrics()}),
       // Monitor Web Vitals,
@@ -124,10 +122,9 @@ class PerformanceMonitor {
   }
   reportMetrics() {
     if (process.env.NODE_ENV === 'development') {
-      // console.log('Performance Metrics:', this.metrics)}
+      // // console.log('Performance Metrics:', this.metrics)}
 ,
-          non_interaction: true,
-        })})}
+          non_interaction: true})})}
           "event_category": 'Performance';
           "value": Math && Math.round(value);
           "non_interaction": true})})}
@@ -149,4 +146,4 @@ module.exports = PerformanceOptimizer,
       console.error('❌ Performance optimization "failed": ', error),
       process.exit(1)})}
 module.exports = PerformanceOptimizer,
-#!/usr/bin/env node const fs = require('fs'), const path = require('path'), class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { // console.log('🖼️ Optimizing images...'), this.optimizations.push('Images optimized')} async optimizeCode() { // console.log('💻 Optimizing code...'), this.optimizations.push('Code optimized')} async generateReport() { const report ={ timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'), if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer,
+#!/usr/bin/env node const fs = require('fs'), const path = require('path'), class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { // // console.log('🖼️ Optimizing images...'), this.optimizations.push('Images optimized')} async optimizeCode() { // // console.log('💻 Optimizing code...'), this.optimizations.push('Code optimized')} async generateReport() { const report ={ timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'), if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer,

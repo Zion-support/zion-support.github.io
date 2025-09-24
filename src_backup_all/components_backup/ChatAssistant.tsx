@@ -105,8 +105,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       recognitionRef.current.onresult = (event: any) => {
         const transcript = event.results[0][0].transcript,
         setIsInputValue(transcript),
-        setIsListening(false),
-      };
+        setIsListening(false)};
       recognitionRef.current.onerror = (event: any) => {
         console.error('Speech recognition error:', event.error),
         setIsListening(false)};
@@ -179,15 +178,13 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       };
       setMessages(prev => [...prev, aiMessage]),
       // Update conversation history,
-      setConversationHistory(prev => [...prev, userMessage, response]),
-} catch (error) {
+      setConversationHistory(prev => [...prev, userMessage, response])} catch (error) {
       const errorMessage: Message ={
         id: Date.now().toString();
         type: 'assistant';
         content: "I apologize, but I'm experiencing some technical difficulties. Please try again or contact our support team.";
         timestamp: new Date();
-        error: 'AI response generation failed',
-      };
+        error: 'AI response generation failed'};
       setMessages(prev => [...prev, errorMessage])} finally {
       setIsTyping(false)}
   }, []),
@@ -199,8 +196,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       id: Date.now().toString();
       type: 'user';
       content: inputValue.trim() || `Uploaded ${selectedFiles.length} file(s)`;
-      timestamp: new Date(),
-    };
+      timestamp: new Date()};
     setMessages(prev => [...prev, userMessage]),
     setIsInputValue(''),
     setSelectedFiles([]),
@@ -209,8 +205,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   // Handle suggestion click,
   const handleSuggestionClick = useCallback((suggestion: string) => {
     setIsInputValue(suggestion),
-    inputRef.current?.focus(),
-  }, []),
+    inputRef.current?.focus()}, []),
   // Handle feedback,
   const handleFeedback = useCallback((messageId: string, feedback: 'positive' | 'negative') => {
     setMessages(prev => prev.map(msg =>,
@@ -219,8 +214,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'chat_feedback', {
         feedback_type: feedback;
-        message_id: messageId,
-      })}
+        message_id: messageId})}
   }, []),
   // Handle message actions,
   const handleMessageAction = useCallback((action: string, message: Message) => {
@@ -232,8 +226,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
         if (navigator.share) {
           navigator.share({
             title: 'Zion Tech Group Chat';
-            text: message.content,
-          })}
+            text: message.content})}
         break,
       case 'download':,
         if (message.metadata?.files) {
@@ -282,14 +275,12 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       case 'top-left':,
         return 'top-4 left-4',
       default: ,
-        return 'bottom-4 right-4',
-    }
+        return 'bottom-4 right-4'}
   };
   // Get theme classes,
   const getThemeClasses = () => {
     if (theme === 'auto') {
-      return 'dark: bg-gray-90o0 dark:text-white bg-white text-gray-90o0',
-    }
+      return 'dark: bg-gray-90o0 dark:text-white bg-white text-gray-90o0'}
     return theme === 'dark' ? 'bg-gray-90o0 text-white' : 'bg-white text-gray-90o0'};
   if (isMinimized) {
     return (
@@ -397,8 +388,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                           className={`p-1 rounded transition-colors ${
                             message.feedback === 'positive',
                               ? 'text-green-50o0 bg-green-50o0/20',
-                              : 'text-gray-40o0 hover: text-green-50o0',
-                          }`}
+                              : 'text-gray-40o0 hover: text-green-50o0'}`}
                         >,
                           <ThumbsUp className="w-3 h-3"  />,
                         </button>,
@@ -407,8 +397,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                           className={`p-1 rounded transition-colors ${
                             message.feedback === 'negative',
                               ? 'text-red-50o0 bg-red-50o0/20',
-                              : 'text-gray-40o0 hover: text-red-50o0',
-                          }`}
+                              : 'text-gray-40o0 hover: text-red-50o0'}`}
                         >,
                           <ThumbsDown className="w-3 h-3"  />,
                         </button>,
@@ -467,8 +456,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                     className={`p-2 transition-colors ${
                       isListening,
                         ? 'text-red-50o0 bg-red-50o0/20',
-                        : 'text-gray-50o0 hover: text-zion-cyan',
-                    }`}
+                        : 'text-gray-50o0 hover: text-zion-cyan'}`}
                     title={isListening ? 'Stop recording' : 'Start voice input'}
                   >,
                     {isListening ? <MicOff className="w-4 h-4"  /> : <Mic className="w-4 h-4"  />}

@@ -5,8 +5,7 @@ export interface ThemeColors {
   textColor: string,
   accentColor: string,
   buttonColor: string,
-  cardBackground: string,
-}
+  cardBackground: string}
 ,
 // Define theme presets,
 export function getThemeColors(

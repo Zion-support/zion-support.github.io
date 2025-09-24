@@ -22,6 +22,5 @@ export default function QuantumBioComputingPlatformPage() {
           computing.,
         </p>,
       </div>,
-    </>),
-}
+    </>)}
 ,

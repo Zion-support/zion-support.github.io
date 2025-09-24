@@ -12,8 +12,7 @@ interface InstanceCardProps {
     createdAt: Date,
     _count: {
       deployments: number,
-      features: number,
-    };
+      features: number};
   };
 }
 export function InstanceCard({ instance }: InstanceCardProps) {
@@ -29,8 +28,7 @@ export function InstanceCard({ instance }: InstanceCardProps) {
       case 'GOV':,
         return 'bg-purple-50o0/20 text-purple-40o0 border-purple-50o0/30',
       default:,
-        return 'bg-gray-50o0/20 text-gray-40o0 border-gray-50o0/30',
-    }
+        return 'bg-gray-50o0/20 text-gray-40o0 border-gray-50o0/30'}
   };
   const getGovernanceColor = (governance: string) => {
     switch (governance) {
@@ -39,8 +37,7 @@ export function InstanceCard({ instance }: InstanceCardProps) {
       case 'DAO_LITE':,
         return 'bg-blue-50o0/20 text-blue-40o0 border-blue-50o0/30',
       default:,
-        return 'bg-gray-50o0/20 text-gray-40o0 border-gray-50o0/30',
-    }
+        return 'bg-gray-50o0/20 text-gray-40o0 border-gray-50o0/30'}
   };
   const formatDate = (date: Date) => {
     return new Date(date).toLocaleDateString('en-US', {

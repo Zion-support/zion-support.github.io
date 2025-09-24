@@ -6,8 +6,7 @@ type Category = {
   id: string,
   slug: string,
   name: string,
-  isAdminOnly?: boolean,
-};
+  isAdminOnly?: boolean};
 type Thread = {
   id: string,
   categoryId: string,
@@ -23,8 +22,7 @@ type Thread = {
   isLocked: boolean,
   isFeatured: boolean,
   createdAt: string,
-  updatedAt: string,
-};
+  updatedAt: string};
 const fetchJson = async (url: string, opts?: RequestInit) => {
   const res = await fetch(url, {
     ...opts;
@@ -46,8 +44,7 @@ export default function CommunityPage() {
       setCategories(d.categories),
       const first =,
         d.categories.find((c: Category) => !c.isAdminOnly) || d.categories[0],
-      setActiveCategory(first?.id),
-    })}, []),
+      setActiveCategory(first?.id)})}, []),
   useEffect(() => {
     if (!activeCategory) return,
     setLoading(true),

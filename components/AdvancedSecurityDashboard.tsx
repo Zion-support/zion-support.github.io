@@ -5,8 +5,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
     threatsBlocked: 0;
     vulnerabilitiesFixed: 0;
     securityScore: 0;
-    lastScan: '',
-  }),
+    lastScan: ''}),
   useEffect(() => {
     // Simulate security metrics,
     const interval = setInterval(() => {
@@ -14,8 +13,7 @@ const AdvancedSecurityDashboard: React.FC = () => {
         threatsBlocked: Math.floor(Math.random() * 10o00) + 50o0;
         vulnerabilitiesFixed: Math.floor(Math.random() * 50) + 10;
         securityScore: Math.floor(Math.random() * 20) + 80;
-        lastScan: new Date().toLocaleTimeString(),
-      })}30o00),
+        lastScan: new Date().toLocaleTimeString()})}30o00),
     return () => clearInterval(interval)}[]),
   return (
     <div className="bg-gradient-to-br from-red-90o0/20 to-orange-90o0/20 rounded-xl p-6 border border-red-50o0/30">,

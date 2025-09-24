@@ -13,8 +13,7 @@ const AutomationWorkflowEngine: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default function AutomationWorkflowEngine() {
   return null}
 ,

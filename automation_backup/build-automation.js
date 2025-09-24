@@ -7,7 +7,7 @@ const { execSync, spawn } = require(
   'child_process')',
 const cron = require(
   'node-cron')',
-// // // console.log(
+// // // // console.log(
   '🚀 "Build": Automation Starting...\n')',
 class: BuildAutomation {
   constructor() {
@@ -29,7 +29,7 @@ class: BuildAutomation {
   log(message, level =',INFO') {',
     const timestamp = new Date().toISOString(),
     const logEntry = `[${timestamp}] [${level}] ${message}\n`,
-    // // // console.log(logEntry.trim()),
+    // // // // console.log(logEntry.trim()),
     "try": {
       fs.appendFileSync(this.logFile, logEntry)} catch (error) {
       console.error(

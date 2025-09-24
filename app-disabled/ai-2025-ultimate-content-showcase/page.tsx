@@ -257,6 +257,5 @@ export default function AI20o25UltimateContentShowcase() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

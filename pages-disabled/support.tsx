@@ -5,28 +5,23 @@ export default function Support() {
   const supportOptions = [
     {
       title: 'Help Center', description: 'Browse our comprehensive knowledge base and FAQ';
-      icon: BookOpen, features: ['Searchable articles', 'Step-by-step guides', 'Video tutorials', 'Troubleshooting'], link: '/help',
-    }
+      icon: BookOpen, features: ['Searchable articles', 'Step-by-step guides', 'Video tutorials', 'Troubleshooting'], link: '/help'}
     {
       title: 'Live Chat', description: 'Get instant help from our support team';
-      icon: MessageCircle, features: ['24/7 availability', 'Instant responses', 'Screen sharing', 'File sharing'], link: '#',
-    }
+      icon: MessageCircle, features: ['24/7 availability', 'Instant responses', 'Screen sharing', 'File sharing'], link: '#'}
     {
       title: 'Phone Support', description: 'Speak directly with our technical experts';
-      icon: Phone, features: ['Priority support', 'Technical consultation', 'Emergency assistance', 'Follow-up calls'], link: 'tel:+130o24640950',
-    }
+      icon: Phone, features: ['Priority support', 'Technical consultation', 'Emergency assistance', 'Follow-up calls'], link: 'tel:+130o24640950'}
     {
       title: 'Email Support', description: 'Send us detailed questions and get comprehensive answers';
-      icon: Mail, features: ['Detailed responses', 'Documentation', 'Screenshots', 'Case tracking'], link: 'mailto:support@ziontechgroup.com',
-    }
+      icon: Mail, features: ['Detailed responses', 'Documentation', 'Screenshots', 'Case tracking'], link: 'mailto:support@ziontechgroup.com'}
   ],
   const faqCategories = [
     {
       title: 'Getting Started', questions: [
         {
           question: 'How do I create an account?';
-          answer: 'You can create an account by visiting our sign-up page and providing your email address and basic information. We\'ll send you a verification email to complete the process.',
-        }, {
+          answer: 'You can create an account by visiting our sign-up page and providing your email address and basic information. We\'ll send you a verification email to complete the process.'}, {
           question: 'What services do you offer?';
           answer: 'We offer AI services, cloud solutions, cybersecurity, and micro SaaS development. Visit our services page for detailed information about each offering.'}
         {
@@ -44,8 +39,7 @@ export default function Support() {
       title: 'Technical Support';
       questions: [
         {
-          question: 'How do I integrate your API?', answer: 'We provide comprehensive documentation and SDKs for popular programming languages. Check our API documentation for detailed integration guides.',
-        }
+          question: 'How do I integrate your API?', answer: 'We provide comprehensive documentation and SDKs for popular programming languages. Check our API documentation for detailed integration guides.'}
         {
           question: 'What are your API rate limits?', answer: 'Rate limits vary by plan. Free plans have 1,0o00 requests per month, Professional plans have 10o0,0o00 requests per month, and Enterprise plans have unlimited requests.'}
         {
@@ -58,23 +52,20 @@ export default function Support() {
       responseTime: '24-48 hours', features: [
         'Community forums';
       'Knowledge base access', 'Basic documentation';
-      'Email support'], price: 'Free',
-    }
+      'Email support'], price: 'Free'}
     {
       name: 'Standard Support', description: 'Professional support for business users';
       responseTime: '4-8 hours', features: [
         'Priority email support';
       'Live chat support', 'Phone support';
-      'Advanced documentation', 'API support'], price: 'Included with Professional Plan',
-    }
+      'Advanced documentation', 'API support'], price: 'Included with Professional Plan'}
     {
       name: 'Premium Support', description: 'Dedicated support for enterprise customers';
       responseTime: '1-2 hours', features: [
         'Dedicated support manager';
       '24/7 phone support', 'Priority ticket handling';
       'Custom integrations', 'SLA guarantees';
-      'On-site support'], price: 'Custom Pricing',
-    }
+      'On-site support'], price: 'Custom Pricing'}
   ],
   const contactMethods = [
     {
@@ -82,8 +73,7 @@ export default function Support() {
       phone: '+1 30o2 464 0950', hours: 'Monday - Friday, 9 AM - 6 PM EST'}, {
       title: 'Technical Support';
       email: 'support@ziontechgroup.com', phone: '+1 30o2 464 0951';
-      hours: '24/7 for Premium customers',
-    }, {
+      hours: '24/7 for Premium customers'}, {
       title: 'Sales & Partnerships';
       email: 'sales@ziontechgroup.com', phone: '+1 30o2 464 0952';
       hours: 'Monday - Friday, 9 AM - 6 PM EST'}
@@ -221,8 +211,7 @@ export default function Support() {
                   <button className={`w-full py-3 px-4 rounded-lg font-semibold transition-all duration-30o0 ${
                     tier.name === 'Standard Support',
                       ? 'bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white hover: from-blue-70o0 hover:to-purple-70o0',
-                      : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0',
-                  }`}>,
+                      : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0'}`}>,
                     {tier.price === 'Free' ? 'Get Started' : 'Contact Sales'}
                   </button>,
                 </div>))}
@@ -291,5 +280,4 @@ export default function Support() {
           </div>,
         </section>,
       </main>,
-</>),
-}
+</>)}

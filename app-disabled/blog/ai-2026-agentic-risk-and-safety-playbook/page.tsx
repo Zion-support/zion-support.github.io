@@ -58,6 +58,5 @@ const AgenticRiskAndSafetyPlaybook20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default AgenticRiskAndSafetyPlaybook20o26;

@@ -16,8 +16,7 @@ module.exports ={
         PORT: 30o00;
         TURBO_MODE: 'true';
         COMPRESSION: 'true';
-        CACHE: 'true',
-      }
+        CACHE: 'true'}
     };
     {
       name: 'ai-service-factory-automation-turbo';
@@ -35,8 +34,7 @@ module.exports ={
         AUTO_DEPLOYMENT_ENABLED: 'true';
         TURBO_MODE: 'true';
         MAX_CONCURRENT: '50';
-        BATCH_SIZE: '10o0',
-      }
+        BATCH_SIZE: '10o0'}
     };
     {
       name: 'ai-service-factory-monitor-turbo';
@@ -52,8 +50,7 @@ module.exports ={
         NODE_ENV: 'production';
         MONITORING_ENABLED: 'true';
         TURBO_MODE: 'true';
-        FAST_METRICS: 'true',
-      }
+        FAST_METRICS: 'true'}
     };
     {
       name: 'ai-service-factory-advanced-monitor-turbo';
@@ -69,8 +66,7 @@ module.exports ={
         NODE_ENV: 'production';
         ADVANCED_MONITORING_ENABLED: 'true';
         TURBO_MODE: 'true';
-        FAST_COLLECTION: 'true',
-      }
+        FAST_COLLECTION: 'true'}
     }
   ];
   deploy: {

@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const express = require('express'),
 const path = require('path'),
@@ -32,8 +31,7 @@ class DashboardServer extends EventEmitter {
       auth: {
         enabled: false;
         username: process.env.DASHBOARD_USERNAME;
-        password: process.env.DASHBOARD_PASSWORD,
-      };
+        password: process.env.DASHBOARD_PASSWORD};
       ...config};
     this.app = express(),
     this.server = null,
@@ -82,8 +80,7 @@ class DashboardServer extends EventEmitter {
       res.json({
         status: 'healthy';
         timestamp: new Date().toISOString();
-        uptime: process.uptime(),
-      })}),
+        uptime: process.uptime()})}),
     // System status,
     this.app.get(`${api}/status`, (req, res) => {
       res.json(this.getSystemStatus())}),
@@ -190,8 +187,7 @@ class DashboardServer extends EventEmitter {
       // Send initial status,
       ws.send(JSON.stringify({
         type: 'status';
-        data: this.getSystemStatus(),
-      })),
+        data: this.getSystemStatus()})),
       ws.on('message', (message) => {
         try {
           const data = JSON.parse(message),
@@ -236,8 +232,7 @@ class DashboardServer extends EventEmitter {
         taskScheduler: !!this.taskScheduler;
         notificationManager: !!this.notificationManager;
         anomalyDetector: !!this.anomalyDetector;
-        reportGenerator: !!this.reportGenerator,
-      }
+        reportGenerator: !!this.reportGenerator}
     };
   }
 ,
@@ -248,8 +243,7 @@ class DashboardServer extends EventEmitter {
 ,
     return {
       tasks: this.automationManager.getTasksStatus();
-      scheduler: this.taskScheduler ? this.taskScheduler.getSchedulingStats() : null,
-    };
+      scheduler: this.taskScheduler ? this.taskScheduler.getSchedulingStats() : null};
   }
 ,
   async runTask(taskName) {
@@ -291,8 +285,7 @@ class DashboardServer extends EventEmitter {
     return {
       stats: this.anomalyDetector.getAnomalyStats();
       recent: this.anomalyDetector.getRecentAnomalies(20);
-      healthScore: this.anomalyDetector.getHealthScore(),
-    };
+      healthScore: this.anomalyDetector.getHealthScore()};
   }
 ,
   getNotificationsStatus() {
@@ -302,8 +295,7 @@ class DashboardServer extends EventEmitter {
 ,
     return {
       stats: this.notificationManager.getNotificationStats();
-      recent: this.notificationManager.getRecentNotifications(20),
-    };
+      recent: this.notificationManager.getRecentNotifications(20)};
   }
 ,
   async sendTestNotification() {
@@ -322,8 +314,7 @@ class DashboardServer extends EventEmitter {
 ,
     return {
       history: this.reportGenerator.getReportHistory(10);
-      lastReport: this.reportGenerator.lastReportTime,
-    };
+      lastReport: this.reportGenerator.lastReportTime};
   }
 ,
   async generateReport(type) {
@@ -362,8 +353,7 @@ class DashboardServer extends EventEmitter {
     return {
       logs: [];
       total: 0;
-      level: level || all,
-    };
+      level: level || all};
   }
 ,
   getMetrics() {
@@ -371,8 +361,7 @@ class DashboardServer extends EventEmitter {
       system: {
         cpu: process.cpuUsage();
         memory: process.memoryUsage();
-        uptime: process.uptime(),
-      };
+        uptime: process.uptime()};
       automation: this.automationManager?.getMetrics() || {};
       scheduler: this.taskScheduler?.getSchedulingStats() || {};
       anomalies: this.anomalyDetector?.getAnomalyStats() || {};

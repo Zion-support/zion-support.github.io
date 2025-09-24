@@ -6,12 +6,10 @@ interface Stat {
   description: string,
   avatar: string,
   icon: React.ComponentType<{ className?: string }>,
-  color: string,
-}
+  color: string}
 ,
 interface StatsSectionProps {
-  stats: Stat[],
-}
+  stats: Stat[]}
 ,
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   const ref = useRef(null),

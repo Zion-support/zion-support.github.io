@@ -22,12 +22,10 @@ const contactInfo = {
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709';
-	website: 'https://ziontechgroup.com',
-};
+	website: 'https://ziontechgroup.com'};
 function getPriceValue(price: Service['price']): string {
 	if (price && typeof price === 'object' && 'monthly' in price) {
-		return price.monthly.toString(),
-	}
+		return price.monthly.toString()}
 	if (typeof price === 'string') {
 		return price}
 	return '99'}
@@ -85,8 +83,7 @@ export async function getStaticPaths() {
 ,
 	return {
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } }));
-		fallback: false,
-	};
+		fallback: false};
 }
 ,
 export async function getStaticProps({ params }: { params: { slug: string } }) {
@@ -95,8 +92,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 	let service: Service | undefined = services.find((s) => {
 		if (!s.link) return false,
 		const fromLink = extractServiceSlugFromLink(s.link),
-		return fromLink === incomingSlug,
-	}),
+		return fromLink === incomingSlug}),
 	if (!service) {
 		service = services.find((s) => toSlug(s.id || ', ') === incomingSlug || toSlug(s.name || ', ') === incomingSlug)}
 ,
@@ -129,14 +125,12 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 								provider: {
 									"@type": "Organization";
 									name: "Zion Tech Group";
-									url: "https://ziontechgroup.com",
-								};
+									url: "https://ziontechgroup.com"};
 								offers: {
 									"@type": "Offer";
 									        price: "99";
 									priceCurrency: "USD";
-									availability: "https://schema.org/InStock",
-								}
+									availability: "https://schema.org/InStock"}
 							};
 							null;
 							2)}}
@@ -234,8 +228,7 @@ const ServiceDetail: NextPage = () => {
           <h1 className="text-xl font-semibold">Service not found</h1>,
           <Link href="/services"><a className="text-blue-600 hover: underline">Back to Services</a></Link>,
         </div>,
-      </EnhancedLayout>),
-  }
+      </EnhancedLayout>)}
 ,
   const priceRange = `$${service.priceRangeUSD[0]} - $${service.priceRangeUSD[1]}`,
   return (
@@ -264,8 +257,7 @@ const ServiceDetail: NextPage = () => {
           <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>,
         </aside>,
       </div>,
-    </EnhancedLayout>),
-};
+    </EnhancedLayout>)};
 export default ServiceDetail;
 =======}
 ,

@@ -88,6 +88,5 @@ const QuantumComputingRevolution20o25Banner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default QuantumComputingRevolution20o25Banner;

@@ -22,6 +22,5 @@ export default function AiPoweredCodeReviewSecurityScanner20o25Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -233,16 +233,14 @@ const getAutomations = async () => {
   try {
     const response = await apiClient.get('/automations'),
     return response.data} catch (error) {
-    console.error('Error fetching automations: 'error),
-  }
+    console.error('Error fetching automations: 'error)}
 };
 // Create automation,
 const createAutomation = async (automationData) => {
   try {
     const response = await apiClient.post('/automations'automationData),
     return response.data} catch (error) {
-    console.error('Error creating automation: 'error),
-  }
+    console.error('Error creating automation: 'error)}
 };`}</pre>,
                   </div>,
                 </div>,
@@ -419,6 +417,5 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \,
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

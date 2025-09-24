@@ -184,6 +184,5 @@ export function ClientDashboard() {
           </CardContent>,
         </Card>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

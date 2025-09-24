@@ -15,8 +15,7 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
       analysis.reasons.some(
         r => r.includes('payment') || r.includes('external')),
         ? 'dangerous',
-        : 'suspicious',
-  }
+        : 'suspicious'}
 ,
   return {
     ...analysis;

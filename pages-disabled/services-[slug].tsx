@@ -8,8 +8,7 @@ interface Service {
   tagline?: string,
   price?: string,
   features?: string[],
-  link?: string,
-}
+  link?: string}
 ,
 // Mock services data for now,
 const mockServices: Service[] = [
@@ -137,6 +136,5 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

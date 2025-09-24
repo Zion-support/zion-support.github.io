@@ -10,8 +10,7 @@ export interface FeatureCardProps {
   color: string,
   href: string,
   isActive: boolean,
-  onClick: () => void,
-}
+  onClick: () => void}
 ,
 export function FeatureCard({
   title;
@@ -36,8 +35,7 @@ export function FeatureCard({
   return (
     <div
       className={`card group cursor-pointer transition-all duration-30o0 ${
-        isActive ? 'scale-10o5 shadow-2xl' : 'hover: scale-10o5',
-      } ${colorClass}`}
+        isActive ? 'scale-10o5 shadow-2xl' : 'hover: scale-10o5'} ${colorClass}`}
       onClick={onClick}
       onKeyDown={e => {
         if (e.key === 'Enter' || e.key === ' ') {

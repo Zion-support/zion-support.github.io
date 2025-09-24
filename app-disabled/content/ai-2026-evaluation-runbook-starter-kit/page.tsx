@@ -59,6 +59,5 @@ export default function EvaluationRunbookStarterKitPage() {
           </div>,
         </div>,
       </section>,
-    </main>),
-}
+    </main>)}
 ,

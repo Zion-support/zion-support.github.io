@@ -172,6 +172,5 @@ const NewContent20o27ShowcaseBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NewContent20o27ShowcaseBanner;

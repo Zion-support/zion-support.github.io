@@ -16,8 +16,7 @@ import { PopoverContentPopoverTrigger } from "@/components/ui/popover",
 import { Calendar } from "@/components/ui/calendar",
 import { ContractFormValues } from "./ContractForm",
 interface ProjectDetailsFieldsProps {
-  form: UseFormReturn<ContractFormValues>,
-}
+  form: UseFormReturn<ContractFormValues>}
 ,
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
   return (

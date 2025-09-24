@@ -8,8 +8,7 @@ interface Service {
   badge: string,
   href: string,
   icon: string,
-  color: string,
-}
+  color: string}
 ,
 const services: Service[] = [
   {
@@ -21,8 +20,7 @@ const services: Service[] = [
     badge: 'BREAKTHROUGH';
     href: '/services/ai-automation-20o26';
     icon: '🤖';
-    color: 'from-blue-50o0 to-cyan-50o0',
-  };
+    color: 'from-blue-50o0 to-cyan-50o0'};
   {
     id: 'quantum-computing-20o26';
     title: 'Quantum Computing Services';
@@ -32,8 +30,7 @@ const services: Service[] = [
     badge: 'REVOLUTIONARY';
     href: '/services/quantum-computing-20o26';
     icon: '⚛️';
-    color: 'from-purple-50o0 to-pink-50o0',
-  };
+    color: 'from-purple-50o0 to-pink-50o0'};
   {
     id: 'neural-interfaces-20o26';
     title: 'Neural Interface Technology';
@@ -43,8 +40,7 @@ const services: Service[] = [
     badge: 'FUTURE';
     href: '/services/neural-interfaces-20o26';
     icon: '🧠';
-    color: 'from-green-50o0 to-emerald-50o0',
-  };
+    color: 'from-green-50o0 to-emerald-50o0'};
   {
     id: 'transcendent-ai-20o26';
     title: 'Transcendent AI Systems';
@@ -54,8 +50,7 @@ const services: Service[] = [
     badge: 'TRANSCENDENT';
     href: '/services/transcendent-ai-20o26';
     icon: '🌌';
-    color: 'from-yellow-50o0 to-orange-50o0',
-  };
+    color: 'from-yellow-50o0 to-orange-50o0'};
   {
     id: 'quantum-neural-fusion';
     title: 'Quantum-Neural Fusion';
@@ -65,8 +60,7 @@ const services: Service[] = [
     badge: 'SINGULARITY';
     href: '/services/quantum-neural-fusion';
     icon: '⚡';
-    color: 'from-cyan-50o0 to-blue-50o0',
-  };
+    color: 'from-cyan-50o0 to-blue-50o0'};
   {
     id: 'autonomous-systems-20o26';
     title: 'Autonomous Systems 20o26';
@@ -76,8 +70,7 @@ const services: Service[] = [
     badge: 'AUTONOMOUS';
     href: '/services/autonomous-systems-20o26';
     icon: '🚀';
-    color: 'from-red-50o0 to-pink-50o0',
-  }
+    color: 'from-red-50o0 to-pink-50o0'}
 ],
 export default function RevolutionaryServicesShowcase20o26() {
   const getBadgeColor = (badge: string) => {
@@ -95,8 +88,7 @@ export default function RevolutionaryServicesShowcase20o26() {
       case 'AUTONOMOUS':,
         return 'bg-green-50o0/20 border-green-50o0/30 text-green-40o0',
       default:,
-        return 'bg-gray-50o0/20 border-gray-50o0/30 text-gray-40o0',
-    }
+        return 'bg-gray-50o0/20 border-gray-50o0/30 text-gray-40o0'}
   };
   return (
     <div className="bg-gradient-to-br from-slate-90o0 via-gray-90o0 to-blue-90o0 py-20">,
@@ -207,5 +199,4 @@ export default function RevolutionaryServicesShowcase20o26() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

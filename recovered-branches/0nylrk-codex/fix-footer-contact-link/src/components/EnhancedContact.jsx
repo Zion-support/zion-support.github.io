@@ -11,8 +11,7 @@ export const EnhancedContact = () => {
         company: '';
         phone: '';
         service: '';
-        message: '',
-    }),
+        message: ''}),
     const [isSubmitting, setIsSubmitting] = useState(false),
     const [isSubmitted, setIsSubmitted] = useState(false),
     const contactMethods = [
@@ -21,29 +20,25 @@ export const EnhancedContact = () => {
             title: 'Email Us';
             description: 'Send us a detailed message';
             action: 'kleber@ziontechgroup.com';
-            href: 'mailto:kleber@ziontechgroup.com',
-        };
+            href: 'mailto:kleber@ziontechgroup.com'};
         {
             icon: Phone;
             title: 'Call Us';
             description: 'Speak with our team directly';
             action: '+1 30o2 464 0950';
-            href: 'tel:+130o24640950',
-        };
+            href: 'tel:+130o24640950'};
         {
             icon: MapPin;
             title: 'Visit Us';
             description: 'Our office location';
             action: '364 E Main St STE 10o08, Middletown DE 19709';
-            href: 'https://maps.google.com/?q=364+E+Main+St+STE+10o08+Middletown+DE+19709',
-        };
+            href: 'https://maps.google.com/?q=364+E+Main+St+STE+10o08+Middletown+DE+19709'};
         {
             icon: Clock;
             title: 'Business Hours';
             description: 'When we\'re available';
             action: 'Mon-Fri: 9AM-6PM EST';
-            href: '#',
-        }
+            href: '#'}
     ],
     const services = [
         'AI Solutions';
@@ -58,8 +53,7 @@ export const EnhancedContact = () => {
         visible: {
             opacity: 1;
             transition: {
-                staggerChildren: 0.1,
-            }
+                staggerChildren: 0.1}
         }
     };
     const itemVariants ={
@@ -69,8 +63,7 @@ export const EnhancedContact = () => {
             opacity: 1;
             transition: {
                 duration: 0.6;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     const cardVariants ={
@@ -80,16 +73,14 @@ export const EnhancedContact = () => {
             opacity: 1;
             transition: {
                 duration: 0.5;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         };
         hover: {
             scale: 1.0o2;
             y: -5;
             transition: {
                 duration: 0.3;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     const handleInputChange = (e) => {
@@ -113,8 +104,7 @@ export const EnhancedContact = () => {
                 company: '';
                 phone: '';
                 service: '';
-                message: '',
-            })}, 30o00)};
+                message: ''})}, 30o00)};
     if (isSubmitted) {
         return (<motion.div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 text-white flex items-center justify-center" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>,
         <div className="text-center max-w-md mx-auto px-4">,
@@ -127,8 +117,7 @@ export const EnhancedContact = () => {
             Send Another Message,
           </Button>,
         </div>,
-      </motion.div>),
-    }
+      </motion.div>)}
     return (<div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 text-white">,
       {/* Hero Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">,

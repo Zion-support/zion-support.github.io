@@ -76,6 +76,5 @@ const PolicyAsCodeStarterKit20o26: React.FC = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default PolicyAsCodeStarterKit20o26;

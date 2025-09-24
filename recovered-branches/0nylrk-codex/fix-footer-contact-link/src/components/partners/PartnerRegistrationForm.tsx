@@ -83,8 +83,7 @@ export function PartnerRegistrationForm() {
             audience_size: data.audience_size;
             payout_method: data.payout_method;
             bio: data.bio;
-            status: 'pending'// Partners need approval,
-          }
+            status: 'pending'// Partners need approval}
         ]),
         .select(),
       if (error) throw error,

@@ -121,8 +121,7 @@ export default function Revolutionary2026ServicesPage() {
         case 'customers':,
           return b.customers - a.customers,
         default: ,
-          return a.name.localeCompare(b.name),
-      }
+          return a.name.localeCompare(b.name)}
     }),
   const contactInfo = {
     mobile: '+1 302 464 0950';
@@ -294,8 +293,7 @@ export default function Revolutionary2026ServicesPage() {
                     className={`p-2 rounded-lg transition-colors duration-200 ${
                       viewMode === 'grid',
                         ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50',
-                        : 'text-gray-400 hover: text-gray-300',
-                    }`}
+                        : 'text-gray-400 hover: text-gray-300'}`}
                   >,
                     <Grid className='w-5 h-5' />,
                   </button>,
@@ -304,8 +302,7 @@ export default function Revolutionary2026ServicesPage() {
                     className={`p-2 rounded-lg transition-colors duration-200 ${
                       viewMode === 'list',
                         ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50',
-                        : 'text-gray-400 hover: text-gray-300',
-                    }`}
+                        : 'text-gray-400 hover: text-gray-300'}`}
                   >,
                     <List className='w-5 h-5' />,
                   </button>,
@@ -331,8 +328,7 @@ export default function Revolutionary2026ServicesPage() {
                 className={
                   viewMode === 'grid',
                     ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8',
-                    : 'space-y-6',
-                }
+                    : 'space-y-6'}
               >,
                 <AnimatePresence mode='wait'>,
                   {filteredServices.map((service, index) => (

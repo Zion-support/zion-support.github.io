@@ -111,7 +111,7 @@ export default function AI20o26EnterpriseAutomationUltimateGuide() {
           <p>,
             Automated systems that can detect, diagnose, and resolve issues,
             without human intervention, ensuring continuous operation and,
-            optimal window.performance.,
+            optimal window.window.performance.,
           </p>,
           <h4>4. Predictive Optimization</h4>,
           <p>,
@@ -323,6 +323,5 @@ export default function AI20o26EnterpriseAutomationUltimateGuide() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

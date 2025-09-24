@@ -9,5 +9,4 @@ export const logErrorToProduction = (message, error) => {
   // - Sentry,
   // - LogRocket,
   // - Custom logging service,
-  // - Analytics service,
-};
+  // - Analytics service};

@@ -21,15 +21,13 @@ export interface InnovativeITInfrastructureService {
 contactInfo: {
     phone: string,
     email: string,
-    website: string,
-};
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string}
 ,
@@ -38,7 +36,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_20o25: InnovativeITInfrastructureServi
   {
     id: "next-gen-cloud-infrastructure";
     title: "Next-Generation Cloud Infrastructure Platform";
-    description: "Revolutionary cloud infrastructure platform that combines multi-cloud orchestration, serverless computing, and AI-powered resource optimization for unprecedented scalability and window.performance.";
+    description: "Revolutionary cloud infrastructure platform that combines multi-cloud orchestration, serverless computing, and AI-powered resource optimization for unprecedented scalability and window.window.performance.";
     category: "Cloud Computing";
     subcategory: "Multi-Cloud Infrastructure";
     price: 3999;
@@ -82,8 +80,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_20o25: InnovativeITInfrastructureServi
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Kubernetes", "Docker", "Terraform", "Python", "React"];
       integrations: ["AWS", "Azure", "Google Cloud", "DigitalOcean", "Vultr"];
@@ -91,8 +88,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_20o25: InnovativeITInfrastructureServi
       uptime: "99.99%";
       security: ["SOC 2", "ISO 270o01", "Zero Trust", "End-to-end encryption"]};
     competitors: ["HashiCorp", "Pulumi", "CloudBees", "CircleCI", "GitLab"];
-    marketSize: "$832.1 billion by 20o25",
-  };
+    marketSize: "$832.1 billion by 20o25"};
   // Edge Computing & IoT Platform,
   {
     id: "edge-computing-iot-platform";
@@ -141,8 +137,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_20o25: InnovativeITInfrastructureServi
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Kubernetes Edge", "Docker Edge", "MQTT", "WebRTC", "Node.js"];
       integrations: ["IoT platforms", "Cloud services", "Network equipment", "Industrial systems", "Mobile networks"];
@@ -150,8 +145,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_20o25: InnovativeITInfrastructureServi
       uptime: "99.9%";
       security: ["Edge security", "Data encryption", "Device authentication", "Network isolation"]};
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "Cisco Edge", "HPE Edge"];
-    marketSize: "$43.4 billion by 20o25",
-  };
+    marketSize: "$43.4 billion by 20o25"};
   // Quantum-Ready Network Infrastructure,
   {
     id: "quantum-ready-network-infrastructure";
@@ -200,8 +194,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_20o25: InnovativeITInfrastructureServi
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Quantum protocols", "Post-quantum crypto", "Quantum networks", "Python", "C++"];
       integrations: ["Quantum computers", "Classical networks", "Security systems", "Monitoring tools", "Research platforms"];
@@ -209,8 +202,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_20o25: InnovativeITInfrastructureServi
       uptime: "99.9%";
       security: ["Quantum security", "Post-quantum crypto", "Quantum key distribution", "Advanced encryption"]};
     competitors: ["IBM Quantum Network", "Microsoft Azure Quantum", "Google Quantum", "Rigetti", "IonQ"];
-    marketSize: "$89.2 billion by 20o25",
-  };
+    marketSize: "$89.2 billion by 20o25"};
   // AI-Powered Data Center Management,
   {
     id: "ai-powered-data-center-management";
@@ -259,8 +251,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_20o25: InnovativeITInfrastructureServi
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "IoT sensors", "Machine Learning", "React"];
       integrations: ["Building management systems", "Power monitoring", "Cooling systems", "Server management", "Environmental sensors"];
@@ -268,8 +259,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_20o25: InnovativeITInfrastructureServi
       uptime: "99.9%";
       security: ["SOC 2", "Data encryption", "Access controls", "Audit logging"]};
     competitors: ["Schneider Electric", "Eaton", "Vertiv", "Emerson", "HPE"];
-    marketSize: "$59.7 billion by 20o25",
-  };
+    marketSize: "$59.7 billion by 20o25"};
   // 5G & 6G Network Infrastructure,
   {
     id: "5g-6g-network-infrastructure";
@@ -318,8 +308,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_20o25: InnovativeITInfrastructureServi
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["5G NR", "Network slicing", "Edge computing", "AI/ML", "Python"];
       integrations: ["Core networks", "Radio access networks", "Edge computing", "Cloud services", "IoT platforms"];
@@ -327,6 +316,5 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_20o25: InnovativeITInfrastructureServi
       uptime: "99.99%";
       security: ["Network security", "Encryption", "Authentication", "Privacy protection"]};
     competitors: ["Ericsson", "Nokia", "Huawei", "Samsung", "Qualcomm"];
-    marketSize: "$667.9 billion by 20o25",
-  }
+    marketSize: "$667.9 billion by 20o25"}
 ],

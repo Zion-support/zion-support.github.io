@@ -11,8 +11,7 @@ export interface EnterpriseIt20o26Service {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const enterpriseIT2026Services: EnterpriseIt2026Service[] = [
   {

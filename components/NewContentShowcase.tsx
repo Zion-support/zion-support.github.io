@@ -8,8 +8,7 @@ interface ContentItem {
   icon: string,
   gradient: string,
   roi: string,
-  category: string,
-}
+  category: string}
 ,
 export default function NewContentShowcase() {
   const newContent: ContentItem[] = [
@@ -191,6 +190,5 @@ export default function NewContentShowcase() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

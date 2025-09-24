@@ -9,8 +9,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         screenReader: false;
         keyboardNavigation: false;
         focusIndicator: true;
-        colorBlindness: 'none',
-    }),
+        colorBlindness: 'none'}),
     const [accessibilityScore, setAccessibilityScore] = useState(85),
     const [activeTab, setActiveTab] = useState('general'),
     useEffect(() => {
@@ -70,8 +69,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             screenReader: false;
             keyboardNavigation: false;
             focusIndicator: true;
-            colorBlindness: 'none',
-        };
+            colorBlindness: 'none'};
         setSettings(defaultSettings)};
     const tabs = [
         { id: 'general', label: 'General', icon: '⚙️' };

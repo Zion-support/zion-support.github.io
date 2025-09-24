@@ -63,8 +63,7 @@ export default function AI20o26QuantumNeuralBreakthroughBanner() {
           const banner = document.querySelector(
             '.ai-20o26-quantum-neural-banner'),
           if (banner) {
-            banner.style.display = 'none',
-          }
+            banner.style.display = 'none'}
         }}
         aria-label='Close banner'>,
         <svg

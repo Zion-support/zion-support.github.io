@@ -15,10 +15,8 @@ const AI20o25UltimateContentRevolutionPromotionBanner = () => {
         roi: '25,0o00%';
         savings: '$50o0B+';
         speed: '1,20o0%';
-        accuracy: '99.9%',
-      };
-      description: 'Transform your business with revolutionary AI content strategies that deliver unprecedented results.',
-    };
+        accuracy: '99.9%'};
+      description: 'Transform your business with revolutionary AI content strategies that deliver unprecedented results.'};
     {
       id: 'fortune-50o0-content-success';
       title: 'Fortune 50o0 AI Content Success: $50o0B Annual Savings - 25,0o00% ROI';
@@ -28,10 +26,8 @@ const AI20o25UltimateContentRevolutionPromotionBanner = () => {
         roi: '25,0o00%';
         savings: '$50o0B';
         timeline: '18 months';
-        accuracy: '99.9%',
-      };
-      description: 'How TechGlobal Industries achieved extraordinary results with AI content revolution.',
-    };
+        accuracy: '99.9%'};
+      description: 'How TechGlobal Industries achieved extraordinary results with AI content revolution.'};
     {
       id: 'content-implementation-guide';
       title: 'AI Content Revolution Implementation Guide: Complete Roadmap to 25,0o00% ROI';
@@ -41,10 +37,8 @@ const AI20o25UltimateContentRevolutionPromotionBanner = () => {
         roi: '25,0o00%';
         timeline: '18 months';
         success: '99.7%';
-        guide: 'Complete',
-      };
-      description: 'The definitive guide to transforming your content strategy with revolutionary AI technologies.',
-    }
+        guide: 'Complete'};
+      description: 'The definitive guide to transforming your content strategy with revolutionary AI technologies.'}
   ],
   useEffect(() => {
     const interval = setInterval(() => {

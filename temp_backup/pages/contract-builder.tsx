@@ -5,8 +5,7 @@ import html2canvas from 'html2canvas',
 import jsPDF from 'jspdf',
 interface Milestone {
   description: string,
-  amount: string,
-}
+  amount: string}
 ,
 export default function ContractBuilderPage() {
   const [projectTitle, setProjectTitle] = useState('Zion Project'),
@@ -55,8 +54,7 @@ export default function ContractBuilderPage() {
       }),
       const data = await res.json(),
       setMarkdown(data.markdown || '')} catch (e: any) {
-      setError(e?.message || 'Failed to generate contract'),
-    } finally {
+      setError(e?.message || 'Failed to generate contract')} finally {
       setLoading(false)}
   }
 ,
@@ -95,8 +93,7 @@ export default function ContractBuilderPage() {
       const data = await res.json(),
       return data.source as string} catch (e: any) {
       setError(e?.message || 'Failed to compile'),
-      return '',
-    } finally {
+      return ''} finally {
       setLoading(false)}
   }
 ,
@@ -108,8 +105,7 @@ export default function ContractBuilderPage() {
       // In a production version, use a compiler service to return ABI/bytecode.,
       alert(
         'For this MVP, deployment prepares a transaction template. Complete deploy via your wallet integration.')} catch (e: any) {
-      setError(e?.message || 'Deploy failed'),
-    }
+      setError(e?.message || 'Deploy failed')}
   }
 ,
   async function saveAgreement() {
@@ -127,8 +123,7 @@ export default function ContractBuilderPage() {
       const data = await res.json(),
       if (!data.ok) throw new Error(data.error || 'Save failed'),
       alert('Saved as ' + data.filename)} catch (e: any) {
-      setError(e?.message || 'Failed to save'),
-    }
+      setError(e?.message || 'Failed to save')}
   }
 ,
   return (

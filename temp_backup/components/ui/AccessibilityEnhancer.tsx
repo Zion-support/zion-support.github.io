@@ -22,8 +22,7 @@ interface AccessibilitySettings {
   screenReader: boolean,
   keyboardNavigation: boolean,
   focusIndicator: boolean,
-  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia',
-}
+  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia'}
 ,
 const AccessibilityEnhancer: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
@@ -49,8 +48,7 @@ const AccessibilityEnhancer: React.FC = () => {
     const root = document.documentElement,
     // High contrast,
     if (newSettings.highContrast) {
-      root.classList.add('high-contrast'),
-    } else {
+      root.classList.add('high-contrast')} else {
       root.classList.remove('high-contrast')}
 ,
     // Large text,
@@ -155,8 +153,7 @@ const AccessibilityEnhancer: React.FC = () => {
                   onClick={() =>,
                     updateSetting('highContrast', !settings.highContrast)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus: outline-none focus:ring-2 focus:ring-blue-50o0 focus:ring-offset-2 ${
-                    settings.highContrast ? 'bg-blue-60o0' : 'bg-gray-20o0',
-                  }`}
+                    settings.highContrast ? 'bg-blue-60o0' : 'bg-gray-20o0'}`}
                   role='switch',
                   aria-checked={settings.highContrast}
                 >,
@@ -176,8 +173,7 @@ const AccessibilityEnhancer: React.FC = () => {
                   onClick={() =>,
                     updateSetting('largeText', !settings.largeText)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus: outline-none focus:ring-2 focus:ring-blue-50o0 focus:ring-offset-2 ${
-                    settings.largeText ? 'bg-blue-60o0' : 'bg-gray-20o0',
-                  }`}
+                    settings.largeText ? 'bg-blue-60o0' : 'bg-gray-20o0'}`}
                   role='switch',
                   aria-checked={settings.largeText}
                 >,
@@ -197,8 +193,7 @@ const AccessibilityEnhancer: React.FC = () => {
                   onClick={() =>,
                     updateSetting('reducedMotion', !settings.reducedMotion)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus: outline-none focus:ring-2 focus:ring-blue-50o0 focus:ring-offset-2 ${
-                    settings.reducedMotion ? 'bg-blue-60o0' : 'bg-gray-20o0',
-                  }`}
+                    settings.reducedMotion ? 'bg-blue-60o0' : 'bg-gray-20o0'}`}
                   role='switch',
                   aria-checked={settings.reducedMotion}
                 >,
@@ -218,8 +213,7 @@ const AccessibilityEnhancer: React.FC = () => {
                   onClick={() =>,
                     updateSetting('focusIndicator', !settings.focusIndicator)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus: outline-none focus:ring-2 focus:ring-blue-50o0 focus:ring-offset-2 ${
-                    settings.focusIndicator ? 'bg-blue-60o0' : 'bg-gray-20o0',
-                  }`}
+                    settings.focusIndicator ? 'bg-blue-60o0' : 'bg-gray-20o0'}`}
                   role='switch',
                   aria-checked={settings.focusIndicator}
                 >,

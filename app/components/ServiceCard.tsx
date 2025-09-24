@@ -17,8 +17,7 @@ export default function ServiceCard({
   description,
   color,
   href = '#',
-  features = [],
-}: ServiceCardProps) {
+  features = []}: ServiceCardProps) {
   const [isHovered, setIsHovered] = useState(false)
 
   return (

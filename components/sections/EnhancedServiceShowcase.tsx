@@ -86,8 +86,7 @@ interface Service {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  }
+    website: string}
 ,
   real_implementation: boolean,
   implementation_details: string,
@@ -95,7 +94,6 @@ interface Service {
   customers: number,
   rating: number,
   reviews: number,
-,
 interface EnhancedServiceShowcaseProps {
   title: string,
   subtitle: string,
@@ -135,15 +133,13 @@ interface Service {
     mobile: string;
     email: string;
     address: string;
-    website: string,
-};
+    website: string};
     realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number,
-}
+  reviews: number}
 interface EnhancedServiceShowcaseProps {
   title: string;
   subtitle: string;
@@ -155,8 +151,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   subtitle,
   showFilters = false,
   services = [],
-  maxServices = 12,
-}) => {
+  maxServices = 12}) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
   const [sortBy, setSortBy] = useState<string>('popular'),
@@ -419,8 +414,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             parse_float (a.price.replace (/[$]/g, ''))),
         break,
       default: ,
-        break,
-    }
+        break}
 ,
           const aROI = parseInt(a.roi.match(/\d+/)?.[0] || '0'),
           const bROI = parseInt(b.roi.match(/\d+/)?.[0] || '0'),
@@ -431,27 +425,23 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
       label: 'Total Services',
       value: services.length,
       icon: Rocket,
-      color: 'text-blue-400',
-    }
+      color: 'text-blue-400'}
     {
       label: 'Active Customers',
       value: services.reduce((sum, s) => sum + (s.customers |0), 0),
       icon: Users,
-      color: 'text-green-400',
-    }
+      color: 'text-green-400'}
     {
       label: 'Average Rating',
       value: (
         services.reduce((sum, s) => sum + (s.rating |0), 0) / services.length).toFixed(1),
       icon: Star,
-      color: 'text-yellow-400',
-    }
+      color: 'text-yellow-400'}
     {
       label: 'Market Growth',
       value: '300%+',
       icon: TrendingUp,
-      color: 'text-purple-400',
-    }
+      color: 'text-purple-400'}
   ],
   return (
     <section className='py - 20 px - 4 sm: px - 6 lg:px - 8'>,
@@ -513,8 +503,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
       case 'price-high':,
         filtered && filtered.sort((a, b) => parseFloat(b && b.price.replace(/[$]/g, '')) - parseFloat(a && a.price.replace(/[$]/g, ''))),
         break,
-      default: break,
-    }
+      default: break}
 ,
     return filtered && filtered.slice(0, maxServices)}, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]),
   const stats = [
@@ -1091,8 +1080,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           </div>,
         </motion && motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 };
 export default EnhancedServiceShowcase)};
 export default EnhancedServiceShowcase;

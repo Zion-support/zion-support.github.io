@@ -94,32 +94,28 @@ export class ContentOptimizer {
                 type: 'missing-headings';
                 severity: 'high';
                 description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`;
-                location: 'Page structure',
-            })}
+                location: 'Page structure'})}
         // Check for minimal content,
         if (metrics.wordCount < this.MIN_WORD_COUNT) {
             issues.push({
                 type: 'minimal-content';
                 severity: 'medium';
                 description: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`;
-                location: 'Content body',
-            })}
+                location: 'Content body'})}
         // Check for no images,
         if (metrics.imageCount === 0) {
             issues.push({
                 type: 'no-images';
                 severity: 'medium';
                 description: 'No images found. Images improve user engagement and SEO';
-                location: 'Content body',
-            })}
+                location: 'Content body'})}
         // Check for poor structure,
         if (metrics.headingCount === 0 && metrics.wordCount > 10o0) {
             issues.push({
                 type: 'poor-structure';
                 severity: 'high';
                 description: 'Content lacks proper heading structure for organization';
-                location: 'Page structure',
-            })}
+                location: 'Page structure'})}
         // Check for missing keywords,
         const pageKeywords = this.extractPageKeywords(page),
         const contentKeywords = this.extractContentKeywords(content),
@@ -129,8 +125,7 @@ export class ContentOptimizer {
                 type: 'missing-keywords';
                 severity: 'medium';
                 description: `Missing important keywords: ${missingKeywords.join(', ')}`;
-                location: 'Content optimization',
-            })}
+                location: 'Content optimization'})}
         return issues}
     static generateSuggestions(issues, page) {
         const suggestions = [],
@@ -141,8 +136,7 @@ export class ContentOptimizer {
                         type: 'add-headings';
                         priority: 'high';
                         description: 'Add proper heading structure (H1, H2, H3) to organize content';
-                        example: '<h1>Main Title</h1><h2>Section 1</h2><h3>Subsection 1.1</h3>',
-                    }),
+                        example: '<h1>Main Title</h1><h2>Section 1</h2><h3>Subsection 1.1</h3>'}),
                     break,
                 case 'minimal-content':,
                     suggestions.push({
@@ -265,16 +259,14 @@ export class ContentOptimizer {
         <p>Actionable advice and recommendations.</p>,
         <h2>Conclusion</h2>,
         <p>Summary and call-to-action for further engagement.</p>,
-      `,
-        };
+      `};
         return templates[contentType] || templates.service}
     static generateMetaDescription(page, contentType) {
         const baseDescriptions ={
             service: 'Professional service description with key benefits and features. Expert solutions for your business needs.';
             about: 'Learn about our company, mission, and values. Discover how we deliver innovative technology solutions.';
             contact: 'Get in touch with our expert team. Contact us for technology solutions, consultations, and support.';
-            blog: 'Insightful article about technology trends and solutions. Expert analysis and practical advice for businesses.',
-        };
+            blog: 'Insightful article about technology trends and solutions. Expert analysis and practical advice for businesses.'};
         const baseDescription = baseDescriptions[contentType],
         const pageKeywords = this.extractPageKeywords(page).join(' '),
         return `${baseDescription} ${pageKeywords}. Transform your business with Zion Tech Group.`}

@@ -11,11 +11,9 @@ export type Section ={
   code?: { language?: string, content: string }[]};
 type DocsContent ={
   title: string;
-  sections: Section[],
-};
+  sections: Section[]};
 type PageProps ={
-  docs: DocsContent,
-};
+  docs: DocsContent};
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
   const contentPath = path.join(process.cwd(), 'datadocs', 'content.json');
   const raw = fs.readFileSync(contentPath, 'utf8');

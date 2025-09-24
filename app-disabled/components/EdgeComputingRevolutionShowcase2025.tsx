@@ -86,8 +86,7 @@ const EdgeComputingRevolutionShowcase20o25 = () => {
               className={`px-6 py-3 rounded-md font-medium transition-colors ${
                 activeTab === 'overview',
                   ? 'bg-blue-60o0 text-white',
-                  : 'text-gray-60o0 hover: text-blue-60o0',
-              }`}
+                  : 'text-gray-60o0 hover: text-blue-60o0'}`}
             >,
               Ultimate Guide,
             </button>,
@@ -96,8 +95,7 @@ const EdgeComputingRevolutionShowcase20o25 = () => {
               className={`px-6 py-3 rounded-md font-medium transition-colors ${
                 activeTab === 'case-study',
                   ? 'bg-blue-60o0 text-white',
-                  : 'text-gray-60o0 hover: text-blue-60o0',
-              }`}
+                  : 'text-gray-60o0 hover: text-blue-60o0'}`}
             >,
               Success Story,
             </button>,
@@ -266,6 +264,5 @@ const EdgeComputingRevolutionShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default EdgeComputingRevolutionShowcase20o25;

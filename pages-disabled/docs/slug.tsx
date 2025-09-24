@@ -3,8 +3,7 @@ import Link from 'next/link',
 import { marked } from 'marked',
 type DocPageProps = {
   title: string,
-  html: string,
-};
+  html: string};
 const DOC_FILES: string[] = [
   'README.md';
   'ARCHITECTURE.md';

@@ -17,11 +17,9 @@ const NewContent20o25AnalyticsRevolutionBanner = () => {
         roi: '450%';
         savings: '$3.2M';
         accuracy: '99.7%';
-        efficiency: '89%',
-      };
+        efficiency: '89%'};
       badge: 'NEW';
-      badgeColor: 'bg-red-50o0',
-    };
+      badgeColor: 'bg-red-50o0'};
     {
       id: 'fortune-50o0-case-study';
       title: 'Fortune 50o0 Manufacturing AI Analytics Success';
@@ -33,11 +31,9 @@ const NewContent20o25AnalyticsRevolutionBanner = () => {
         roi: '450%';
         savings: '$2.8M';
         accuracy: '99.7%';
-        efficiency: '89%',
-      };
+        efficiency: '89%'};
       badge: 'SUCCESS';
-      badgeColor: 'bg-green-50o0',
-    };
+      badgeColor: 'bg-green-50o0'};
     {
       id: 'implementation-guide';
       title: 'AI Analytics Implementation Master Guide 20o25';
@@ -49,11 +45,9 @@ const NewContent20o25AnalyticsRevolutionBanner = () => {
         success: '98%';
         roi: '450%';
         projects: '50o0+';
-        timeline: '6-8 months',
-      };
+        timeline: '6-8 months'};
       badge: 'GUIDE';
-      badgeColor: 'bg-blue-50o0',
-    }
+      badgeColor: 'bg-blue-50o0'}
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -169,6 +163,5 @@ const NewContent20o25AnalyticsRevolutionBanner = () => {
           </button>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NewContent20o25AnalyticsRevolutionBanner;

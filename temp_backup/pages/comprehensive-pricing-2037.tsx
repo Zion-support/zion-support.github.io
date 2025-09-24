@@ -13,15 +13,13 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const containerVariants ={
   hidden: { opacity: 0 };
   visible: {
     opacity: 1;
     transition: {
-      staggerChildren: 0.1,
-    }
+      staggerChildren: 0.1}
   }
 };
 const itemVariants ={
@@ -30,8 +28,7 @@ const itemVariants ={
     y: 0;
     opacity: 1;
     transition: {
-      duration: 0.5,
-    }
+      duration: 0.5}
   }
 };
 export default function ComprehensivePricing20o37() {
@@ -64,14 +61,12 @@ export default function ComprehensivePricing20o37() {
           case 'neural-quantum':,
             return service.category.includes('Neural') || (service.category.includes('Quantum') && service.category.includes('AI')),
           default: ,
-            return true,
-        }
+            return true}
       }),
   const toggleServiceExpansion = (serviceId: string) => {
     const newExpanded = new Set(expandedServices),
     if (newExpanded.has(serviceId)) {
-      newExpanded.delete(serviceId),
-    } else {
+      newExpanded.delete(serviceId)} else {
       newExpanded.add(serviceId)}
     setExpandedServices(newExpanded)};
   const getCategoryIcon = (category: string) => {
@@ -102,8 +97,7 @@ export default function ComprehensivePricing20o37() {
       case 'Quantum & Space':,
         return <Rocket className="w-6 h-6"  />,
       default:,
-        return <Target className="w-6 h-6"  />,
-    }
+        return <Target className="w-6 h-6"  />}
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
@@ -181,8 +175,7 @@ export default function ComprehensivePricing20o37() {
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                   selectedCategory === category.id,
                     ? `bg-gradient-to-r ${category.color} text-white`,
-                    : 'bg-slate-80o0 text-gray-30o0 hover: bg-slate-70o0',
-                }`}
+                    : 'bg-slate-80o0 text-gray-30o0 hover: bg-slate-70o0'}`}
               >,
                 {category.name}
               </motion.button>))}
@@ -466,5 +459,4 @@ export default function ComprehensivePricing20o37() {
           </div>,
         </div>,
       </footer>,
-    </div>),
-}
+    </div>)}

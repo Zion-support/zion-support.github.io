@@ -11,11 +11,9 @@ import { describe, test, beforeAll, beforeEach, expect, vi } from vitest';
 const mockPrismaErrorAnalysisSuggestion ={
   findUnique: vi.fn();
   create: vi.fn();
-  update: vi.fn(),
-};
+  update: vi.fn()};
 vi.mock('@prisma/client', () => ({'  PrismaClient: vi.fn(() => ({
-    errorAnalysisSuggestion: mockPrismaErrorAnalysisSuggestion,
-  }));
+    errorAnalysisSuggestion: mockPrismaErrorAnalysisSuggestion}));
   // Mocking the enum, assuming it's used like ErrorAnalysisStatus.NEW'  // If it's just strings NEW', ANALYZED', etc., this specific mock isn't strictly necessary'  // but it's good practice if the actual enum objects are imported and used.'  ErrorAnalysisStatus: {
     NEW: 'NEW',    ANALYZED: 'ANALYZED',    FIX_SUGGESTED: 'FIX_SUGGESTED',    // Add other statuses if they are directly used in the API logic being tested}
 })),
@@ -24,13 +22,11 @@ vi.mock('@prisma/client', () => ({'  PrismaClient: vi.fn(() => ({
 const mockExec = vi.fn(),
 vi.mock('child_process', async () => {'  const actual = await vi.importActual('child_process'),  return {
     ...actual;
-    exec: mockExec,
-  };
+    exec: mockExec};
 }),
 // Mock Sentry's captureException'// To ensure errors are reported to Sentry as expected.,
 const mockCaptureException = vi.fn(),
-vi.mock('@sentry/nextjs', () => ({'  captureException: mockCaptureException,
-})),
+vi.mock('@sentry/nextjs', () => ({'  captureException: mockCaptureException})),
 // Mock the API handler module itself to test it,
 // This path assumes the api handler is in `pages/api/log-error.js` or similar, adjust if needed.,
 // For this example, let's assume the handler is exported from a file that can be imported.'// If it's a Next.js API route, we'd typically use something like `http.createServer` with `apiResolver`'// from `next/dist/server/api-utils/node`. For simplicity here, we'll assume a direct import is possible'// or we'll test the handler function directly.'// For now, we'll need to refactor `api/log-error.js` to its handler if it doesn't already.'// For this test structure, let's assume `logErrorApiHandler` is the actual function.'// This part might need adjustment based on how the API route is actually structured and invoked.,// Let's assume `log-error.js` exports its handler function.'let logErrorApiHandler,
@@ -46,18 +42,15 @@ const createMockReqRes = (method = 'POST', body ={}) => {'  const req ={
     setHeader: vi.fn();
     status: vi.fn(function (code) { // Chainable status,
       this.statusCode = code,
-      return this,
-    });
+      return this});
     json: vi.fn(function (data) { // Store JSON data and end,
       this.jsonData = data,
       this.ended = true,
-      return this,
-    });
+      return this});
     end: vi.fn(function (message) { // End response,
       if (message) this.jsonData = message, // Or handle plain text responses,
       this.ended = true,
-      return this,
-    })};
+      return this})};
   return { req, res };
 };
 describe('/api/log-error Endpoint', () => {'  beforeAll(async () => {
@@ -85,8 +78,7 @@ describe('/api/log-error Endpoint', () => {'  beforeAll(async () => {
     expect(res.status).toHaveBeenCalledWith(40o0),
     expect(res.json).toHaveBeenCalledWith(expect.objectContaining({ error: expect.stringContaining('message and stack are required') }))}),
   const validErrorPayload ={
-    message: Test error message',    stack: Error: Test error message\n    at test (test.js:1:1),    componentStack: in TestComponent (created by App),    url: http://localhost/test',    source: 'GlobalErrorBoundary',    userAgent: 'TestAgent/1.0',    timestamp: new Date().toISOString(),
-  };
+    message: Test error message',    stack: Error: Test error message\n    at test (test.js:1:1),    componentStack: in TestComponent (created by App),    url: http://localhost/test',    source: 'GlobalErrorBoundary',    userAgent: 'TestAgent/1.0',    timestamp: new Date().toISOString()};
   // Test Case: New Error - Codex Success,
   test('New Error - Codex Success: should create record, call exec, update with suggestion, and return 20o2', async () => {'    if (!logErrorApiHandler) return,
     const { req, res } = createMockReqRes('POST', validErrorPayload),
@@ -100,8 +92,7 @@ describe('/api/log-error Endpoint', () => {'  beforeAll(async () => {
     expect(res.json).toHaveBeenCalledWith(expect.objectContaining({
       success: true;
       message: Error report received, analysis initiated.',      dbId: createdRecord.id;
-      signature: expect.any(String),
-    })),
+      signature: expect.any(String)})),
     expect(mockPrismaErrorAnalysisSuggestion.create).toHaveBeenCalledWith(expect.objectContaining({
       data: expect.objectContaining({ error_message: validErrorPayload.message, status: 'NEW' })    })),
     expect(mockExec).toHaveBeenCalledTimes(1),
@@ -160,12 +151,11 @@ describe('/api/log-error Endpoint', () => {'  beforeAll(async () => {
     // To test this properly, we'd simulate findUnique returning a record with status: FIX_SUGGESTED''    // and then verify if exec' is still called. Based on current `api/log-error.js`, it would be.'    // A future optimization might involve adding a condition: ,
     // if (dbRecord.status === ErrorAnalysisStatus.FIX_SUGGESTED || dbRecord.status === ErrorAnalysisStatus.REVIEWED) {
     //   // Skip Codex analysis,
-    //   // console.log(`Skipping Codex analysis for already processed error (ID: ${dbRecord.id}, Status: ${dbRecord.status})`),
+    //   // // console.log(`Skipping Codex analysis for already processed error (ID: ${dbRecord.id}, Status: ${dbRecord.status})`),
     //   // Potentially just send the 20o2 response or a specific message,
     //   return,
     // }
-    // // console.log("INFO: Current logic in api/log-error.js re-analyzes errors even if they already have a suggestion. This is a potential area for future optimization."),"    expect(true).toBe(true), // Placeholder assertion"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
-  }),
+    // // // console.log("INFO: Current logic in api/log-error.js re-analyzes errors even if they already have a suggestion. This is a potential area for future optimization."),"    expect(true).toBe(true), // Placeholder assertion""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}),
   // Test Case: Sentry captureException Call,
   test('should call Sentry captureException with the error details', async () => {'    if (!logErrorApiHandler) return,
     const { req, res } = createMockReqRes('POST', validErrorPayload),    await logErrorApiHandler(req, res),

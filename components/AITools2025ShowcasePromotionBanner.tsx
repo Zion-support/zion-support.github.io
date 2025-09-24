@@ -39,8 +39,7 @@ export default function AITools20o25ShowcasePromotionBanner() {
         className='absolute top-2 right-2 text-white hover: text-gray-20o0 transition-colors z-20',
         onClick={() => {
           const banner = document.querySelector('.ai-tools-banner'),
-          if (banner) banner.style.display = 'none',
-        }}
+          if (banner) banner.style.display = 'none'}}
         aria-label='Close banner'>,
         <svg
           className='w-5 h-5',

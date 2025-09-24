@@ -324,6 +324,5 @@ export default function EnterpriseAIAgents20o25() {
           </div>,
         </section>,
       </div>,
-    </ErrorBoundary>),
-}
+    </ErrorBoundary>)}
 ,

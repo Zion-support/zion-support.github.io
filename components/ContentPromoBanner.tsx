@@ -59,5 +59,4 @@ export default function ContentPromoBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

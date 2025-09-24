@@ -10,12 +10,10 @@ const SuccessStoriesShowcase = () => {
       results: {
         timeSaved: '95%';
         roi: '3,20o0%';
-        accuracy: '99.8%',
-      };
+        accuracy: '99.8%'};
       quote: 'Zion Tech Group transformed our entire operation. What used to take days now happens in minutes.';
       author: 'Sarah JohnsonCEO';
-      logo: '🏢',
-    };
+      logo: '🏢'};
     {
       company: 'FinanceMax Solutions';
       industry: 'Financial Services';
@@ -24,12 +22,10 @@ const SuccessStoriesShowcase = () => {
       results: {
         timeSaved: '90%';
         roi: '4,50o0%';
-        accuracy: '99.9%',
-      };
+        accuracy: '99.9%'};
       quote: 'The quantum computing solutions gave us an edge that competitors simply cannot match.';
       author: 'Michael ChenCTO';
-      logo: '💰',
-    };
+      logo: '💰'};
     {
       company: 'HealthTech Innovations';
       industry: 'Healthcare';
@@ -38,12 +34,10 @@ const SuccessStoriesShowcase = () => {
       results: {
         timeSaved: '85%';
         roi: '2,80o0%';
-        accuracy: '99.7%',
-      };
+        accuracy: '99.7%'};
       quote: 'Our diagnostic accuracy improved dramatically while reducing analysis time by 85%.';
       author: 'Dr. Emily RodriguezChief Medical Officer';
-      logo: '🏥',
-    };
+      logo: '🏥'};
     {
       company: 'ManufacturingPlus';
       industry: 'Manufacturing';
@@ -52,12 +46,10 @@ const SuccessStoriesShowcase = () => {
       results: {
         timeSaved: '92%';
         roi: '5,10o0%';
-        accuracy: '99.9%',
-      };
+        accuracy: '99.9%'};
       quote: 'The autonomous systems run our production 24/7 with zero downtime. Incredible results.';
       author: 'David ParkOperations Director';
-      logo: '🏭',
-    }
+      logo: '🏭'}
   ],
   return (
     <section className="py-20 bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-indigo-90o0 text-white">,
@@ -177,6 +169,5 @@ const SuccessStoriesShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default SuccessStoriesShowcase;

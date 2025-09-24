@@ -121,6 +121,5 @@ export default function RetailCaseStudy() {
           </footer>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

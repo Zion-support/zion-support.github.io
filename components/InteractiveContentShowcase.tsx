@@ -10,8 +10,7 @@ interface ContentItem {
   badge: string,
   href: string,
   gradient: string,
-  icon: string,
-}
+  icon: string}
 ,
 const contentItems: ContentItem[] = [
   {
@@ -23,8 +22,7 @@ const contentItems: ContentItem[] = [
     badge: 'REVOLUTIONARY';
     href: '/ai-20o25-ultimate-breakthrough-revolution';
     gradient: 'from-red-50o0 to-pink-60o0';
-    icon: '🚀',
-  };
+    icon: '🚀'};
   {
     id: '2';
     title: '15,0o00% ROI Success Story';
@@ -34,8 +32,7 @@ const contentItems: ContentItem[] = [
     badge: 'SUCCESS';
     href: '/case-studies/ai-20o25-ultimate-breakthrough-success';
     gradient: 'from-green-50o0 to-emerald-60o0';
-    icon: '🏆',
-  };
+    icon: '🏆'};
   {
     id: '3';
     title: 'AI 20o25 Revolutionary Trends & Predictions';
@@ -45,8 +42,7 @@ const contentItems: ContentItem[] = [
     badge: 'FUTURE';
     href: '/blog/ai-20o25-revolutionary-trends-predictions';
     gradient: 'from-purple-50o0 to-indigo-60o0';
-    icon: '🔮',
-  };
+    icon: '🔮'};
   {
     id: '4';
     title: 'Quantum Computing Breakthroughs 20o30';
@@ -56,8 +52,7 @@ const contentItems: ContentItem[] = [
     badge: 'BREAKTHROUGH';
     href: '/quantum-computing-breakthroughs-20o30';
     gradient: 'from-blue-50o0 to-cyan-60o0';
-    icon: '⚛️',
-  };
+    icon: '⚛️'};
   {
     id: '5';
     title: 'Neural Interface Revolution 20o30';
@@ -67,8 +62,7 @@ const contentItems: ContentItem[] = [
     badge: 'REVOLUTIONARY';
     href: '/neural-interface-revolution-20o30';
     gradient: 'from-cyan-50o0 to-blue-60o0';
-    icon: '🧠',
-  };
+    icon: '🧠'};
   {
     id: '6';
     title: 'Transcendent Intelligence Platform';
@@ -78,8 +72,7 @@ const contentItems: ContentItem[] = [
     badge: 'TRANSCENDENT';
     href: '/transcendent-intelligence-platform';
     gradient: 'from-indigo-50o0 to-purple-60o0';
-    icon: '🌌',
-  }
+    icon: '🌌'}
 ],
 export default function InteractiveContentShowcase() {
   const [selectedCategorysetSelectedCategory] = useState('All'),
@@ -112,8 +105,7 @@ export default function InteractiveContentShowcase() {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   selectedCategory === category,
                     ? 'bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white shadow-lg',
-                    : 'bg-white text-gray-60o0 hover: bg-gray-10o0 border border-gray-20o0',
-                }`}
+                    : 'bg-white text-gray-60o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
               >,
                 {category}
               </button>))}
@@ -125,8 +117,7 @@ export default function InteractiveContentShowcase() {
             <div
               key={item.id}
               className={`bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:scale-10o5 overflow-hidden ${
-                hoveredItem === item.id ? 'ring-4 ring-purple-30o0' : '',
-              }`}
+                hoveredItem === item.id ? 'ring-4 ring-purple-30o0' : ''}`}
               onMouseEnter={() => setHoveredItem(item.id)}
               onMouseLeave={() => setHoveredItem(null)}
             >,
@@ -186,5 +177,4 @@ export default function InteractiveContentShowcase() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

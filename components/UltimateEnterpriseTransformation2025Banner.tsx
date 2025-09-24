@@ -16,11 +16,9 @@ const UltimateEnterpriseTransformation20o25Banner = () => {
         roi: '15,0o00%';
         savings: '$50B+';
         efficiency: '2,80o0%';
-        accuracy: '99.97%',
-      };
+        accuracy: '99.97%'};
       readingTime: '25 min read';
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'fortune-50o0-ultimate-transformation-success';
       title: 'Fortune 50o0 Ultimate Enterprise Transformation Success Story';
@@ -31,11 +29,9 @@ const UltimateEnterpriseTransformation20o25Banner = () => {
         roi: '15,0o00%';
         savings: '$50B';
         timeline: '18 months';
-        satisfaction: '99.8%',
-      };
+        satisfaction: '99.8%'};
       readingTime: '20 min read';
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'ultimate-transformation-implementation-guide';
       title: 'Ultimate Enterprise Transformation Implementation Guide';
@@ -48,8 +44,7 @@ const UltimateEnterpriseTransformation20o25Banner = () => {
         timeline: '18 months';
         projects: '1,0o00+'};
       readingTime: '40 min read';
-      isNew: true,
-    }
+      isNew: true}
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -209,6 +204,5 @@ const UltimateEnterpriseTransformation20o25Banner = () => {
           </p>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateEnterpriseTransformation20o25Banner;

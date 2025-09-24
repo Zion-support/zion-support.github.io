@@ -73,8 +73,7 @@ interface NavigationItem {
   badge?: string,
   title?: string,
   featured?: boolean,
-  color?: string,
-}
+  color?: string}
 ,
 const contactInfo = {
   mobile: '+1 30o2 464 0950';
@@ -728,8 +727,7 @@ export default function UltraFuturisticNavigation20o36() {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name),
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
   const closeAllDropdowns = () => {
     setActiveDropdown(null),
     setIsOpen(false)};
@@ -806,8 +804,7 @@ export default function UltraFuturisticNavigation20o36() {
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-30o0 ${
                     activeDropdown === item.name,
                       ? 'text-white bg-white/10',
-                      : 'text-gray-30o0 hover: text-white hover:bg-white/5',
-                  }`}
+                      : 'text-gray-30o0 hover: text-white hover:bg-white/5'}`}
                 >,
                   {item.icon}
                   {item.name}

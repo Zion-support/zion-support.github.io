@@ -282,6 +282,5 @@ const DigitalTransformation = () => {
         </section>,
       </main>,
       <Footer />,
-    </>),
-};
+    </>)};
 export default DigitalTransformation;

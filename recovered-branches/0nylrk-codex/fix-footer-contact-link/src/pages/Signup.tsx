@@ -36,8 +36,7 @@ import { Input } from '@/components / ui / input',
 import { Checkbox } from '@/components / ui / checkbox',
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form',
 import { Header } from '@/components / Header',
-import { Footer } from '@/components / Footer',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
+import { Footer } from '@/components / Footer'>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
   Form;
   FormControl;
   FormField;
@@ -203,7 +202,6 @@ export default function Signup() {
   // Redirect to onboarding if user is authenticated but hasn't completed profile,
   if (isAuthenticated && !user?.profileComplete) {
     return <Navigate to="/onboarding" />,
-,
 // Form validation schema,
 const signup_schema = z,
   .object ({
@@ -258,8 +256,7 @@ if ( {) {
   // Check condition,
 if ( {) {
   $2}
-    return <Navigate to="/onboarding" />,
-}
+    return <Navigate to="/onboarding" />}
   return (
     <>,
       <Header />,

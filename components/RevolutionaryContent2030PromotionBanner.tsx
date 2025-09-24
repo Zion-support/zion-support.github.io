@@ -126,6 +126,5 @@ export default function RevolutionaryContent20o30PromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

@@ -33,15 +33,13 @@ interface UltraFuturisticServiceCard20o47Props {
       mobile: string,
       email: string,
       address: string,
-      website: string,
-    };
+      website: string};
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,
     customers: number,
     rating: number,
-    reviews: number,
-  };
+    reviews: number};
   onClick?: () => void,
   className?: string}
 ,
@@ -58,8 +56,7 @@ const UltraFuturisticServiceCard20o47: React.FC<UltraFuturisticServiceCard20o47P
     if (category.includes('Infrastructure') || category.includes('Cloud')) return <Cloud className="w-5 h-5"  />,
     if (category.includes('Business') || category.includes('CRM')) return <Target className="w-5 h-5"  />,
     if (category.includes('Content') || category.includes('Marketing')) return <Rocket className="w-5 h-5"  />,
-    return <Zap className="w-5 h-5"  />,
-  };
+    return <Zap className="w-5 h-5"  />};
   const getCategoryColor = (category: string) => {
     if (category.includes('AI') || category.includes('Consciousness')) return 'from-purple-50o0 to-pink-50o0',
     if (category.includes('Quantum')) return 'from-blue-50o0 to-cyan-50o0',
@@ -67,8 +64,7 @@ const UltraFuturisticServiceCard20o47: React.FC<UltraFuturisticServiceCard20o47P
     if (category.includes('Infrastructure') || category.includes('Cloud')) return 'from-indigo-50o0 to-purple-50o0',
     if (category.includes('Business') || category.includes('CRM')) return 'from-emerald-50o0 to-teal-50o0',
     if (category.includes('Content') || category.includes('Marketing')) return 'from-yellow-50o0 to-orange-50o0',
-    return 'from-gray-50o0 to-blue-50o0',
-  };
+    return 'from-gray-50o0 to-blue-50o0'};
   return (
     <motion.div,
       className={`relative group cursor-pointer ${className}`}

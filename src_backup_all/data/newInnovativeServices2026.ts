@@ -20,15 +20,13 @@ export interface NewInnovativeService20o26 {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string,
   aiCapabilities?: string[],
@@ -93,8 +91,7 @@ export const NEW_INNOVATIVE_SERVICES_20o26: NewInnovativeService20o26[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["GPT-4", "Machine Learning", "Predictive Analytics", "Real-time Processing", "Cloud-native Architecture"];
       integrations: ["Jira", "Slack", "Microsoft Teams", "Asana", "Trello", "GitHub", "Azure DevOps"];
@@ -163,8 +160,7 @@ export const NEW_INNOVATIVE_SERVICES_20o26: NewInnovativeService20o26[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "IoT Integration", "Real-time Analytics", "Predictive Modeling", "Blockchain"];
       integrations: ["SAP", "Oracle", "Salesforce", "Shopify", "WooCommerce", "QuickBooks", "NetSuite"];
@@ -233,8 +229,7 @@ export const NEW_INNOVATIVE_SERVICES_20o26: NewInnovativeService20o26[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "Deep Learning", "Behavioral Analytics", "Threat Intelligence", "Automation"];
       integrations: ["SIEM Systems", "EDR Solutions", "Firewalls", "Identity Providers", "Cloud Platforms"];
@@ -303,8 +298,7 @@ export const NEW_INNOVATIVE_SERVICES_20o26: NewInnovativeService20o26[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Natural Language Processing", "Machine Learning", "Predictive Analytics", "Real-time Processing", "AI/ML"];
       integrations: ["CRM Systems", "Help Desk Platforms", "E-commerce Platforms", "Social Media", "Analytics Tools"];
@@ -373,8 +367,7 @@ export const NEW_INNOVATIVE_SERVICES_20o26: NewInnovativeService20o26[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "Blockchain", "Real-time Processing", "Predictive Analytics", "AI/ML"];
       integrations: ["Core Banking Systems", "Payment Gateways", "CRM Platforms", "Accounting Software", "Regulatory Systems"];

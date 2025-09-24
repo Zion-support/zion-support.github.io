@@ -15,5 +15,4 @@ export default function 20o25RealServicesShowcasePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

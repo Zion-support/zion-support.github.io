@@ -173,8 +173,7 @@ export default function ListingDetail() {
                           className="w-full h-full object-cover",
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
-                            target.src = "/placeholder.svg",
-}}
+                            target.src = "/placeholder.svg"}}
                         />,
                       </div>))}
                   </div>)}
@@ -304,8 +303,7 @@ export default function ListingDetail() {
                       onPaymentInitiated={() => {
                         toast({
                           title: "Payment Processing",
-                          description: "Redirecting to secure checkout...",
-                        }),
+                          description: "Redirecting to secure checkout..."}),
                 <div className="space-y-3 mb-8">,
                   {listing.price !== null ? (
                     <PaymentButton
@@ -317,8 +315,7 @@ export default function ListingDetail() {
                       onPaymentInitiated={() => {
                         toast({
                           title: "Payment Processing",
-                          description: "Redirecting to secure checkout...",
-                        })>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements}}
+                          description: "Redirecting to secure checkout..."})>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements}}
                     />) : (
                     <Button
                       onClick={handleContact}
@@ -327,8 +324,7 @@ export default function ListingDetail() {
                       {isLoading ? "Processing..." : "Request Quote"}
                     </Button>)}
 ,
-                          target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name),
-                        }}
+                          target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)}}
                       />) : (
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">,
                         <span className="text-lg font-medium text-zion-purple">{listing && listing.author.name && name.charAt(0)}</span>,
@@ -356,8 +352,7 @@ export default function ListingDetail() {
                         alt={listing.author.name}
                         className="h-12 w-12 rounded-full",
                         onError={(e) => {
-                          target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name),
-                        }}
+                          target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)}}
                       />) : (
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">,
                         <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span>,
@@ -422,8 +417,7 @@ export default function ListingDetail() {
                         className="h-12 w-12 rounded-full",
                         onError={(e) => {
                           const target = e.target as HTMLImageElement,
-                          target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name),
-                        }}
+                          target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)}}
                       />) : (
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">,
                         <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span>,
@@ -616,8 +610,7 @@ export default function ListingDetail() {
                       onPaymentInitiated={() => {
                         toast ({
                           title: "Payment Processing";
-                          description: "Redirecting to secure checkout...",
-                        })}}
+                          description: "Redirecting to secure checkout..."})}}
                     />) : (
                     <Button
                       on_click={handle_contact}
@@ -645,8 +638,7 @@ export default function ListingDetail() {
                         className="h - 12 w - 12 rounded - full",
                         on_error={(e) => {
                           const target = e.target as HTMLImageElement,
-                          target.src = "https: //ui - avatars.com / api/?name=" + encodeURIComponent (listing.author.name),
-                        }}
+                          target.src = "https: //ui - avatars.com / api/?name=" + encodeURIComponent (listing.author.name)}}
                       />) : (
                       <div className="h - 12 w - 12 rounded - full bg - zion - purple / 20 flex items - center justify - center">,
                         <span className="text - lg font - medium text - zion - purple">{listing.author.name.char_at (0)}</span>,
@@ -672,8 +664,7 @@ export default function ListingDetail() {
             </div>,
           </div>,
         </div>,
-      </div>,
-}
+      </div>}
 ,
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>,
@@ -688,6 +679,5 @@ export default function ListingDetail() {
           />,
         </DialogContent>,
       </Dialog>,
-    </AppLayout>),
-}
+    </AppLayout>)}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}))

@@ -12,15 +12,13 @@ interface ContentItem {
   difficulty: 'beginner' | 'intermediate' | 'advanced',
   popularity: number,
   lastUpdated: string,
-  thumbnail?: string,
-}
+  thumbnail?: string}
 ,
 const AdvancedContentRecommendationEngine: React.FC = () => {
   const [userPreferencesetUserPreferences] = useState({
     categories: [] as string[];
     difficulty: 'all' as 'all' | 'beginner' | 'intermediate' | 'advanced';
-    readTime: 'any' as 'any' | 'quick' | 'medium' | 'long',
-  }),
+    readTime: 'any' as 'any' | 'quick' | 'medium' | 'long'}),
   const [recommendationsetRecommendations] = useState<ContentItem[]>([]),
   const [isLoadingsetIsLoading] = useState(false),
   const sampleContent: ContentItem[] = [
@@ -34,8 +32,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       difficulty: 'advanced';
       popularity: 95;
       lastUpdated: '2025-01-13';
-      thumbnail: '/images/ai-ml-2025.jpg',
-    };
+      thumbnail: '/images/ai-ml-2025.jpg'};
     {
       id: 'quantum-computing-basics';
       title: 'Quantum Computing Fundamentals';
@@ -45,8 +42,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       readTime: 12;
       difficulty: 'intermediate';
       popularity: 87;
-      lastUpdated: '2025-01-12',
-    };
+      lastUpdated: '2025-01-12'};
     {
       id: 'blockchain-enterprise';
       title: 'Enterprise Blockchain Solutions';
@@ -56,8 +52,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       readTime: 18;
       difficulty: 'advanced';
       popularity: 82;
-      lastUpdated: '2025-01-11',
-    };
+      lastUpdated: '2025-01-11'};
     {
       id: 'web3-getting-started';
       title: 'Getting Started with Web3 Development';
@@ -67,8 +62,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       readTime: 8;
       difficulty: 'beginner';
       popularity: 91;
-      lastUpdated: '2025-01-10',
-    };
+      lastUpdated: '2025-01-10'};
     {
       id: 'iot-security-best-practices';
       title: 'IoT Security Best Practices';
@@ -78,8 +72,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       readTime: 10;
       difficulty: 'intermediate';
       popularity: 78;
-      lastUpdated: '2025-01-09',
-    }
+      lastUpdated: '2025-01-09'}
   ],
   const categories = ['Artificial 'Intelligence', 'Quantum 'Computing', 'Blockchain', 'Web3', 'IoT', 'Cybersecurity', 'Cloud 'Computing', 'Data Science'],
   useEffect(() => {
@@ -105,8 +98,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
           case 'quick': return item.readTime <= 5,
           case 'medium': return item.readTime > 5 && item.readTime <= 15,
           case 'long': return item.readTime > 15,
-          default: return true,
-        }
+          default: return true}
       })}
 ,
     // Sort by popularity and relevance,
@@ -118,21 +110,18 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       ...prev;
       categories: prev.categories.includes(category),
         ? prev.categories.filter(c => c !== category),
-        : [...prev.categoriescategory],
-    }))};
+        : [...prev.categoriescategory]}))};
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'beginner': return 'bg-green-100 text-green-800',
       case 'intermediate': return 'bg-yellow-100 text-yellow-800',
       case 'advanced': return 'bg-red-100 text-red-800',
-      default: return 'bg-gray-100 text-gray-800',
-    }
+      default: return 'bg-gray-100 text-gray-800'}
   };
   const getReadTimeColor = (readTime: number) => {
     if (readTime <= 5) return 'text-green-600',
     if (readTime <= 15) return 'text-yellow-600',
-    return 'text-red-600',
-  };
+    return 'text-red-600'};
   return (
     <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
       <div className="text-center mb-12">,
@@ -289,6 +278,5 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
           <p className="text-gray-600">The system learns from your interactions to improve future recommendations.</p>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AdvancedContentRecommendationEngine;

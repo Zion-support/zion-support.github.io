@@ -95,8 +95,7 @@ export function useSavedTalents() {
   };
   // Check if talent is saved,
   const isTalentSaved = (talentId: string) => {
-    return savedTalentIds.includes(talentId),
-  };
+    return savedTalentIds.includes(talentId)};
   return {
     savedTalents;
     savedTalentIds;

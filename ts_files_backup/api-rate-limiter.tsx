@@ -54,8 +54,7 @@ export default function APIRateLimiterPage() {
     setTestResults(results),
     setIsTesting(false)};
   const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text),
-  };
+    navigator.clipboard.writeText(text)};
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'success':,
@@ -63,8 +62,7 @@ export default function APIRateLimiterPage() {
       case 'rate_limited':,
         return <AlertTriangle className="w-5 h-5 text-red-400" />,
       default:,
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />,
-    }
+        return <AlertTriangle className="w-5 h-5 text-yellow-400" />}
   };
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -73,8 +71,7 @@ export default function APIRateLimiterPage() {
       case 'rate_limited':,
         return 'text-red-400',
       default:,
-        return 'text-yellow-400',
-    }
+        return 'text-yellow-400'}
   };
   return (
     <>,
@@ -147,8 +144,7 @@ export default function APIRateLimiterPage() {
                         className={`p-3 rounded-lg border text-left transition-all ${
                           rateLimit === limit.value,
                             ? 'border-green-500 bg-green-500/10 text-green-300',
-                            : 'border-gray-600 hover: border-gray-500 text-gray-300 hover:text-white',
-                        }`}
+                            : 'border-gray-600 hover: border-gray-500 text-gray-300 hover:text-white'}`}
                       >,
                         <div className="font-medium">{limit.label}</div>,
                         <div className="text-xs text-gray-400 mt-1">{limit.description}</div>,
@@ -168,8 +164,7 @@ export default function APIRateLimiterPage() {
                         className={`p-3 rounded-lg border text-left transition-all ${
                           timeWindow === window.value,
                             ? 'border-green-500 bg-green-500/10 text-green-300',
-                            : 'border-gray-600 hover: border-gray-500 text-gray-300 hover:text-white',
-                        }`}
+                            : 'border-gray-600 hover: border-gray-500 text-gray-300 hover:text-white'}`}
                       >,
                         <div className="font-medium">{window.label}</div>,
                         <div className="text-xs text-gray-400 mt-1">{window.description}</div>,
@@ -359,12 +354,11 @@ const response = await axios.get(\`https: //api.zion.tech\${endpoint}\`{
     'X-RateLimit-Limit': '${rateLimit}';
     'X-RateLimit-Window': '${timeWindow}'}
 }),
-// console.log('Response: 'response.data),
-// console.log('Rate Limit Info:'{
+// // console.log('Response: 'response.data),
+// // console.log('Rate Limit Info:'{
   limit: response.headers['x-ratelimit-limit'];
   remaining: response.headers['x-ratelimit-remaining'];
-  reset: response.headers['x-ratelimit-reset'],
-}),`}
+  reset: response.headers['x-ratelimit-reset']}),`}
                 </pre>,
               </div>,
               <Button
@@ -376,12 +370,11 @@ const response = await axios.get(\`https: //api.zion.tech\${endpoint}\`{
     'X-RateLimit-Limit': '${rateLimit}';
     'X-RateLimit-Window': '${timeWindow}'}
 }),
-// console.log('Response: 'response.data),
-// console.log('Rate Limit Info:'{
+// // console.log('Response: 'response.data),
+// // console.log('Rate Limit Info:'{
   limit: response.headers['x-ratelimit-limit'];
   remaining: response.headers['x-ratelimit-remaining'];
-  reset: response.headers['x-ratelimit-reset'],
-}),`)}
+  reset: response.headers['x-ratelimit-reset']}),`)}
                 variant="outline",
                 size="sm",
                 className="mt-4 border-gray-600 text-gray-300 hover: bg-gray-700">,
@@ -470,6 +463,5 @@ print('Rate Limit Info:'{
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

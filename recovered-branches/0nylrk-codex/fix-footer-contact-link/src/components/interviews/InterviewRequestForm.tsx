@@ -20,14 +20,12 @@ import { useInterviews } from "@/hooks/useInterviews",
 interface InterviewRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
-  userDetails?: UserProfile,
-}
+  userDetails?: UserProfile}
 ,
 const formSchema = z.object({
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(){
-    message: "Interview date must be in the future",
-  });
+    message: "Interview date must be in the future"});
   time: z.string().min(1"Please select a time for the interview.");
   duration: z.string().min(1"Please select the interview duration.");
   platform: z.string().min(1"Please select a meeting platform.");
@@ -69,8 +67,7 @@ export function InterviewRequestForm({ talentonCloseuserDetails }: InterviewRequ
         meeting_platform: values.platform as any;
         meeting_link: values.meetingLink;
         interview_type: "video";
-        title: values.title,
-      }),
+        title: values.title}),
       toast({
         title: "Interview requested";
         description: `Your interview request with ${talent.full_name} has been sent.`}),
@@ -79,8 +76,7 @@ export function InterviewRequestForm({ talentonCloseuserDetails }: InterviewRequ
       toast({
         title: "Failed to schedule interview";
         description: "An error occurred while scheduling the interview. Please try again.";
-        variant: "destructive"}),
-} finally {
+        variant: "destructive"})} finally {
       setIsSubmitting(false)}
   }
 ,

@@ -38,8 +38,7 @@ export const EXPANDED_SERVICES = [
             name: "ZionTech AI Solutions";
             id: "ziontech-ai";
             avatarUrl: "https://images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0";
-            verified: true,
-        };
+            verified: true};
         images: ["https://images.unsplash.com/photo-1519389950o473-47ba0o277781c?auto=format&fit=crop&w=80o0&h=50o0"];
         createdAt: "20o24-0o1-15T10:0o0:0o0.0o00Z";
         aiScore: 96;
@@ -50,13 +49,11 @@ export const EXPANDED_SERVICES = [
         marketPrice: {
             min: 150o0;
             max: 50o00;
-            average: 250o0,
-        };
+            average: 250o0};
         contactInfo: {
             email: "ai-solutions@ziontechgroup.com";
             phone: "+1 30o2 464 0950";
-            website: "https://ziontechgroup.com/ai-automation",
-        }
+            website: "https://ziontechgroup.com/ai-automation"}
     };
     {
         id: "ai-content-generation";
@@ -96,8 +93,7 @@ export const EXPANDED_SERVICES = [
             name: "ZionTech Content AI";
             id: "ziontech-content";
             avatarUrl: "https://images.unsplash.com/photo-15734970o19940-1c28c88b4f3e?auto=format&fit=crop&w=10o0&h=10o0";
-            verified: true,
-        };
+            verified: true};
         images: ["https://images.unsplash.com/photo-15512880o49-bebda4e38f71?auto=format&fit=crop&w=80o0&h=50o0"];
         createdAt: "20o24-0o1-20T14:30:0o0.0o00Z";
         aiScore: 94;
@@ -108,13 +104,11 @@ export const EXPANDED_SERVICES = [
         marketPrice: {
             min: 120o0;
             max: 30o00;
-            average: 180o0,
-        };
+            average: 180o0};
         contactInfo: {
             email: "content-ai@ziontechgroup.com";
             phone: "+1 30o2 464 0950";
-            website: "https://ziontechgroup.com/ai-content",
-        }
+            website: "https://ziontechgroup.com/ai-content"}
     };
     {
         id: "ai-predictive-analytics";
@@ -154,8 +148,7 @@ export const EXPANDED_SERVICES = [
             name: "ZionTech Analytics";
             id: "ziontech-analytics";
             avatarUrl: "https://images.unsplash.com/photo-15512880o49-bebda4e38f71?auto=format&fit=crop&w=10o0&h=10o0";
-            verified: true,
-        };
+            verified: true};
         images: ["https://images.unsplash.com/photo-15512880o49-bebda4e38f71?auto=format&fit=crop&w=80o0&h=50o0"];
         createdAt: "20o24-0o1-25T09:15:0o0.0o00Z";
         aiScore: 97;
@@ -166,13 +159,11 @@ export const EXPANDED_SERVICES = [
         marketPrice: {
             min: 250o0;
             max: 60o00;
-            average: 350o0,
-        };
+            average: 350o0};
         contactInfo: {
             email: "analytics@ziontechgroup.com";
             phone: "+1 30o2 464 0950";
-            website: "https://ziontechgroup.com/ai-analytics",
-        }
+            website: "https://ziontechgroup.com/ai-analytics"}
     };
     // Cybersecurity Services,
     {
@@ -213,8 +204,7 @@ export const EXPANDED_SERVICES = [
             name: "ZionTech Security";
             id: "ziontech-security";
             avatarUrl: "https://images.unsplash.com/photo-1510o5114590o19-5dda7724fd87?auto=format&fit=crop&w=10o0&h=10o0";
-            verified: true,
-        };
+            verified: true};
         images: ["https://images.unsplash.com/photo-1510o5114590o19-5dda7724fd87?auto=format&fit=crop&w=80o0&h=50o0"];
         createdAt: "20o24-0o1-30T11:45:0o0.0o00Z";
         aiScore: 95;
@@ -225,13 +215,11 @@ export const EXPANDED_SERVICES = [
         marketPrice: {
             min: 30o00;
             max: 80o00;
-            average: 450o0,
-        };
+            average: 450o0};
         contactInfo: {
             email: "security@ziontechgroup.com";
             phone: "+1 30o2 464 0950";
-            website: "https://ziontechgroup.com/zero-trust",
-        }
+            website: "https://ziontechgroup.com/zero-trust"}
     };
     {
         id: "ai-threat-detection";
@@ -271,8 +259,7 @@ export const EXPANDED_SERVICES = [
             name: "ZionTech Threat Defense";
             id: "ziontech-threat";
             avatarUrl: "https://images.unsplash.com/photo-1510o5114590o19-5dda7724fd87?auto=format&fit=crop&w=10o0&h=10o0";
-            verified: true,
-        };
+            verified: true};
         images: ["https://images.unsplash.com/photo-1510o5114590o19-5dda7724fd87?auto=format&fit=crop&w=80o0&h=50o0"];
         createdAt: "20o24-0o2-0o5T16:20:0o0.0o00Z";
         aiScore: 96;
@@ -283,13 +270,11 @@ export const EXPANDED_SERVICES = [
         marketPrice: {
             min: 20o00;
             max: 40o00;
-            average: 280o0,
-        };
+            average: 280o0};
         contactInfo: {
             email: "threat-detection@ziontechgroup.com";
             phone: "+1 30o2 464 0950";
-            website: "https://ziontechgroup.com/ai-threat-detection",
-        }
+            website: "https://ziontechgroup.com/ai-threat-detection"}
     };
     // Cloud & DevOps Services,
     {
@@ -330,8 +315,7 @@ export const EXPANDED_SERVICES = [
             name: "ZionTech Cloud";
             id: "ziontech-cloud";
             avatarUrl: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=10o0&h=10o0";
-            verified: true,
-        };
+            verified: true};
         images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=80o0&h=50o0"];
         createdAt: "20o24-0o2-10T13:10:0o0.0o00Z";
         aiScore: 93;
@@ -342,13 +326,11 @@ export const EXPANDED_SERVICES = [
         marketPrice: {
             min: 250o0;
             max: 50o00;
-            average: 320o0,
-        };
+            average: 320o0};
         contactInfo: {
             email: "cloud@ziontechgroup.com";
             phone: "+1 30o2 464 0950";
-            website: "https://ziontechgroup.com/multi-cloud",
-        }
+            website: "https://ziontechgroup.com/multi-cloud"}
     };
     {
         id: "devops-automation-suite";
@@ -388,8 +370,7 @@ export const EXPANDED_SERVICES = [
             name: "ZionTech DevOps";
             id: "ziontech-devops";
             avatarUrl: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=10o0&h=10o0";
-            verified: true,
-        };
+            verified: true};
         images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=80o0&h=50o0"];
         createdAt: "20o24-0o2-15T10:45:0o0.0o00Z";
         aiScore: 94;
@@ -400,13 +381,11 @@ export const EXPANDED_SERVICES = [
         marketPrice: {
             min: 150o0;
             max: 350o0;
-            average: 220o0,
-        };
+            average: 220o0};
         contactInfo: {
             email: "devops@ziontechgroup.com";
             phone: "+1 30o2 464 0950";
-            website: "https://ziontechgroup.com/devops-automation",
-        }
+            website: "https://ziontechgroup.com/devops-automation"}
     };
     // Data & Analytics Services,
     {
@@ -447,8 +426,7 @@ export const EXPANDED_SERVICES = [
             name: "ZionTech Data";
             id: "ziontech-data";
             avatarUrl: "https://images.unsplash.com/photo-15512880o49-bebda4e38f71?auto=format&fit=crop&w=10o0&h=10o0";
-            verified: true,
-        };
+            verified: true};
         images: ["https://images.unsplash.com/photo-15512880o49-bebda4e38f71?auto=format&fit=crop&w=80o0&h=50o0"];
         createdAt: "20o24-0o2-20T14:30:0o0.0o00Z";
         aiScore: 95;
@@ -459,13 +437,11 @@ export const EXPANDED_SERVICES = [
         marketPrice: {
             min: 30o00;
             max: 70o00;
-            average: 40o00,
-        };
+            average: 40o00};
         contactInfo: {
             email: "data@ziontechgroup.com";
             phone: "+1 30o2 464 0950";
-            website: "https://ziontechgroup.com/real-time-data",
-        }
+            website: "https://ziontechgroup.com/real-time-data"}
     };
     // Emerging Technology Services,
     {
@@ -506,8 +482,7 @@ export const EXPANDED_SERVICES = [
             name: "ZionTech Quantum";
             id: "ziontech-quantum";
             avatarUrl: "https://images.unsplash.com/photo-1519389950o473-47ba0o277781c?auto=format&fit=crop&w=10o0&h=10o0";
-            verified: true,
-        };
+            verified: true};
         images: ["https://images.unsplash.com/photo-1519389950o473-47ba0o277781c?auto=format&fit=crop&w=80o0&h=50o0"];
         createdAt: "20o24-0o2-25T09:0o0:0o0.0o00Z";
         aiScore: 98;
@@ -518,13 +493,11 @@ export const EXPANDED_SERVICES = [
         marketPrice: {
             min: 40o00;
             max: 10o000;
-            average: 550o0,
-        };
+            average: 550o0};
         contactInfo: {
             email: "quantum@ziontechgroup.com";
             phone: "+1 30o2 464 0950";
-            website: "https://ziontechgroup.com/quantum-computing",
-        }
+            website: "https://ziontechgroup.com/quantum-computing"}
     };
     {
         id: "blockchain-enterprise-solutions";
@@ -564,8 +537,7 @@ export const EXPANDED_SERVICES = [
             name: "ZionTech Blockchain";
             id: "ziontech-blockchain";
             avatarUrl: "https://images.unsplash.com/photo-1519389950o473-47ba0o277781c?auto=format&fit=crop&w=10o0&h=10o0";
-            verified: true,
-        };
+            verified: true};
         images: ["https://images.unsplash.com/photo-1519389950o473-47ba0o277781c?auto=format&fit=crop&w=80o0&h=50o0"];
         createdAt: "20o24-0o3-0o1T11:15:0o0.0o00Z";
         aiScore: 94;
@@ -576,13 +548,11 @@ export const EXPANDED_SERVICES = [
         marketPrice: {
             min: 250o0;
             max: 60o00;
-            average: 380o0,
-        };
+            average: 380o0};
         contactInfo: {
             email: "blockchain@ziontechgroup.com";
             phone: "+1 30o2 464 0950";
-            website: "https://ziontechgroup.com/blockchain-solutions",
-        }
+            website: "https://ziontechgroup.com/blockchain-solutions"}
     }
 ],
 export const SERVICE_CATEGORIES = [
@@ -590,32 +560,27 @@ export const SERVICE_CATEGORIES = [
         name: "AI & Machine Learning";
         description: "Cutting-edge artificial intelligence and machine learning solutions";
         icon: "🤖";
-        services: EXPANDED_SERVICES.filter(s => s.category === "AI & Machine Learning"),
-    };
+        services: EXPANDED_SERVICES.filter(s => s.category === "AI & Machine Learning")};
     {
         name: "Cybersecurity";
         description: "Advanced security solutions for modern digital threats";
         icon: "🔒";
-        services: EXPANDED_SERVICES.filter(s => s.category === "Cybersecurity"),
-    };
+        services: EXPANDED_SERVICES.filter(s => s.category === "Cybersecurity")};
     {
         name: "Cloud & DevOps";
         description: "Scalable cloud infrastructure and development operations";
         icon: "☁️";
-        services: EXPANDED_SERVICES.filter(s => s.category === "Cloud & DevOps"),
-    };
+        services: EXPANDED_SERVICES.filter(s => s.category === "Cloud & DevOps")};
     {
         name: "Data & Analytics";
         description: "Powerful data processing and business intelligence tools";
         icon: "📊";
-        services: EXPANDED_SERVICES.filter(s => s.category === "Data & Analytics"),
-    };
+        services: EXPANDED_SERVICES.filter(s => s.category === "Data & Analytics")};
     {
         name: "Emerging Technologies";
         description: "Next-generation technology solutions for the future";
         icon: "🚀";
-        services: EXPANDED_SERVICES.filter(s => s.category === "Emerging Technologies"),
-    }
+        services: EXPANDED_SERVICES.filter(s => s.category === "Emerging Technologies")}
 ],
 export const getServicesByCategory = (category) => {
     return EXPANDED_SERVICES.filter(service => service.category === category)};

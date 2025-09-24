@@ -15,11 +15,9 @@ const GenerativeAIRevolutionBanner20o25 = () => {
         roi: '2,50o0%';
         savings: '$15.8B+';
         efficiency: '156%';
-        satisfaction: '98%',
-      };
+        satisfaction: '98%'};
       description: 'Transform your business with cutting-edge generative AI technologies delivering unprecedented returns on investment.';
-      readingTime: '25 min read',
-    };
+      readingTime: '25 min read'};
     {
       id: 'fortune-50o0-generative-ai-success';
       title: 'Fortune 50o0 Generative AI Transformation: $15.8B Annual Savings - 2,50o0% ROI Ultimate Success Story';
@@ -29,11 +27,9 @@ const GenerativeAIRevolutionBanner20o25 = () => {
         roi: '2,50o0%';
         savings: '$15.8B';
         timeline: '18 months';
-        satisfaction: '98.7%',
-      };
+        satisfaction: '98.7%'};
       description: 'How a global technology leader achieved unprecedented success with generative AI implementation.';
-      readingTime: '22 min read',
-    };
+      readingTime: '22 min read'};
     {
       id: 'generative-ai-implementation-guide';
       title: 'Generative AI Implementation Master Guide 20o25: Ultimate Roadmap to 2,50o0% ROI';
@@ -43,11 +39,9 @@ const GenerativeAIRevolutionBanner20o25 = () => {
         roi: '2,50o0%';
         success: '94%';
         timeline: '18 months';
-        guide: 'Complete',
-      };
+        guide: 'Complete'};
       description: 'The completestep-by-step guide to implementing generative AI in your enterprise.';
-      readingTime: '45 min read',
-    }
+      readingTime: '45 min read'}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -164,8 +158,7 @@ const GenerativeAIRevolutionBanner20o25 = () => {
               className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                 index === currentSlide,
                   ? 'bg-yellow-40o0 w-8',
-                  : 'bg-white/30 hover: bg-white/50',
-              }`}
+                  : 'bg-white/30 hover: bg-white/50'}`}
             />))}
         </div>,
       </div>,

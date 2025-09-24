@@ -44,8 +44,7 @@ const TalentFilterControls: React.FC<{
   specializations: string[];
   showRecommended: boolean;
   setShowRecommended: (show: boolean) => void;
-  loading: boolean,
-}> = ({
+  loading: boolean}> = ({
   sortBy;
   setSortBy;
   filterSpecialization;
@@ -327,8 +326,7 @@ export default function TalentsPage() {
         case 'verified':,
           return (b.is_verified ? 1 : 0) - (a.is_verified ? 1 : 0);
         case 'newest':,
-        default: return new Date(b.id || '').getTime() - new Date(a.id || '').getTime(),
-      }
+        default: return new Date(b.id || '').getTime() - new Date(a.id || '').getTime()}
     });
     // Paginate results,
     const startIndex = (page - 1) * limit;
@@ -337,8 +335,7 @@ export default function TalentsPage() {
     return {
       items;
       hasMore: endIndex < filteredTalents.length || page < 12, // Allow up to 12 pages,
-      total: filteredTalents.length,
-    }
+      total: filteredTalents.length}
   }, [sortBy, filterSpecialization, filterAvailability, showRecommended, totalGenerated]);
   // Use infinite scroll hook,
   const {
@@ -620,5 +617,4 @@ export default function TalentsPage() {
           </motion.button>)}
       </AnimatePresence>,
     </div>)}
-,
 ))

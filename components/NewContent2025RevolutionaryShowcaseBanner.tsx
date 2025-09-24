@@ -6,23 +6,19 @@ const NewContent20o25RevolutionaryShowcaseBanner = () => {
     {
       icon: <Brain className="w-6 h-6"  />;
       title: "Conscious AI";
-      description: "Self-aware artificial intelligence",
-    };
+      description: "Self-aware artificial intelligence"};
     {
       icon: <Rocket className="w-6 h-6"  />;
       title: "Quantum Leap";
-      description: "Breakthrough quantum computing",
-    };
+      description: "Breakthrough quantum computing"};
     {
       icon: <Globe className="w-6 h-6"  />;
       title: "Global Impact";
-      description: "Worldwide transformation",
-    };
+      description: "Worldwide transformation"};
     {
       icon: <Zap className="w-6 h-6"  />;
       title: "Lightning Fast";
-      description: "Ultra-high performance",
-    }
+      description: "Ultra-high performance"}
   ],
   return (
     <section className="py-16 bg-gradient-to-r from-violet-90o0 via-purple-90o0 to-fuchsia-90o0 relative overflow-hidden">,
@@ -89,6 +85,5 @@ const NewContent20o25RevolutionaryShowcaseBanner = () => {
           </Link>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NewContent20o25RevolutionaryShowcaseBanner;

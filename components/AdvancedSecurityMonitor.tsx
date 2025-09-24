@@ -10,8 +10,7 @@ interface SecurityEvent {
   timestamp: Date,
   source: string,
   status: 'active' | 'investigating' | 'resolved' | 'false_positive',
-  affectedSystems: string[],
-}
+  affectedSystems: string[]}
 ,
 interface SecurityMetric {
   id: string,
@@ -20,16 +19,14 @@ interface SecurityMetric {
   unit: string,
   trend: 'up' | 'down' | 'stable',
   status: 'secure' | 'warning' | 'critical',
-  lastUpdated: Date,
-}
+  lastUpdated: Date}
 ,
 interface ComplianceStatus {
   framework: string,
   status: 'compliant' | 'partial' | 'non_compliant',
   score: number,
   lastAudit: Date,
-  issues: number,
-}
+  issues: number}
 ,
 const AdvancedSecurityMonitor: React.FC = () => {
   const [eventsetEvents] = useState<SecurityEvent[]>([]),
@@ -41,8 +38,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
     generateMockData(),
     // Simulate real-time updates,
     const interval = setInterval(() => {
-      generateNewEvent(),
-    }10000), // New event every 10 seconds,
+      generateNewEvent()}10000), // New event every 10 seconds,
     return () => clearInterval(interval)}[]),
   const generateMockData = async () => {
     setIsLoading(true),
@@ -107,8 +103,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
         unit: '';
         trend: 'down';
         status: 'secure';
-        lastUpdated: new Date(),
-      };
+        lastUpdated: new Date()};
       {
         id: 'vulnerabilities';
         name: 'Active Vulnerabilities';
@@ -116,8 +111,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
         unit: '';
         trend: 'down';
         status: 'warning';
-        lastUpdated: new Date(),
-      };
+        lastUpdated: new Date()};
       {
         id: 'security-score';
         name: 'Security Score';
@@ -125,8 +119,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
         unit: '/100';
         trend: 'up';
         status: 'secure';
-        lastUpdated: new Date(),
-      };
+        lastUpdated: new Date()};
       {
         id: 'compliance-score';
         name: 'Compliance Score';
@@ -134,8 +127,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
         unit: '/100';
         trend: 'up';
         status: 'secure';
-        lastUpdated: new Date(),
-      };
+        lastUpdated: new Date()};
       {
         id: 'incident-response';
         name: 'Avg Response Time';
@@ -143,8 +135,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
         unit: 'min';
         trend: 'down';
         status: 'secure';
-        lastUpdated: new Date(),
-      };
+        lastUpdated: new Date()};
       {
         id: 'data-breaches';
         name: 'Data Breaches (30d)';
@@ -152,8 +143,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
         unit: '';
         trend: 'stable';
         status: 'secure';
-        lastUpdated: new Date(),
-      }
+        lastUpdated: new Date()}
     ],
     const mockCompliance: ComplianceStatus[] = [
       {
@@ -161,29 +151,25 @@ const AdvancedSecurityMonitor: React.FC = () => {
         status: 'compliant';
         score: 95;
         lastAudit: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-        issues: 0,
-      };
+        issues: 0};
       {
         framework: 'SOC 2 Type II';
         status: 'compliant';
         score: 92;
         lastAudit: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
-        issues: 2,
-      };
+        issues: 2};
       {
         framework: 'ISO 27001';
         status: 'partial';
         score: 78;
         lastAudit: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000);
-        issues: 5,
-      };
+        issues: 5};
       {
         framework: 'PCI DSS';
         status: 'compliant';
         score: 88;
         lastAudit: new Date(Date.now() - 90 * 24 * 60 * 60 * 1000);
-        issues: 1,
-      }
+        issues: 1}
     ],
     setEvents(mockEvents),
     setMetrics(mockMetrics),
@@ -209,8 +195,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
       case 'high': return 'text-orange-600 bg-orange-100 border-orange-200',
       case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200',
       case 'low': return 'text-blue-600 bg-blue-100 border-blue-200',
-      default: return 'text-gray-600 bg-gray-100 border-gray-200',
-    }
+      default: return 'text-gray-600 bg-gray-100 border-gray-200'}
   };
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -219,24 +204,21 @@ const AdvancedSecurityMonitor: React.FC = () => {
       case 'breach': return '💥',
       case 'compliance': return '📋',
       case 'access': return '🔑',
-      default: return '⚠️',
-    }
+      default: return '⚠️'}
   };
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'secure': return 'text-green-600 bg-green-100',
       case 'warning': return 'text-yellow-600 bg-yellow-100',
       case 'critical': return 'text-red-600 bg-red-100',
-      default: return 'text-gray-600 bg-gray-100',
-    }
+      default: return 'text-gray-600 bg-gray-100'}
   };
   const getComplianceStatusColor = (status: string) => {
     switch (status) {
       case 'compliant': return 'text-green-600 bg-green-100',
       case 'partial': return 'text-yellow-600 bg-yellow-100',
       case 'non_compliant': return 'text-red-600 bg-red-100',
-      default: return 'text-gray-600 bg-gray-100',
-    }
+      default: return 'text-gray-600 bg-gray-100'}
   };
   const formatTimeAgo = (timestamp: Date) => {
     const now = new Date(),
@@ -329,8 +311,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
                     className={`px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${
                       filter === level,
                         ? 'bg-blue-600 text-white',
-                        : 'bg-gray-100 text-gray-600 hover: bg-gray-200',
-                    }`}
+                        : 'bg-gray-100 text-gray-600 hover: bg-gray-200'}`}
                   >,
                     {level === 'all' ? 'All' : level.charAt(0).toUpperCase() + level.slice(1)}
                   </button>))}
@@ -428,6 +409,5 @@ const AdvancedSecurityMonitor: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AdvancedSecurityMonitor;

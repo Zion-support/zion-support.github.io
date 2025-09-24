@@ -104,7 +104,7 @@ function fixUtilsFile(filePath) {
     content = content.replace(/au,\s*t,\s*h/g, 'auth'),
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8'),
-      // console.log(`Fixed: ${filePath}`),
+      // // console.log(`Fixed: ${filePath}`),
       return true}
     return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message),
@@ -119,6 +119,5 @@ async function fixAllUtilsFiles() {
     if (fixUtilsFile(file)) {
       fixedCount++}
   }
-  // console.log(`Fixed ${fixedCount} utils files.`)}
-fixAllUtilsFiles(),
-}}}
+  // // console.log(`Fixed ${fixedCount} utils files.`)}
+fixAllUtilsFiles()}}}

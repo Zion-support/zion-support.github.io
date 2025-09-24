@@ -19,8 +19,7 @@ interface AIEnhancementButtonProps {
     | 'ghost',
     | 'link',
   size?: 'default' | 'sm' | 'lg' | 'icon',
-  contentLength?: number,
-}
+  contentLength?: number}
 ,
 export function AIEnhancementButton({
   options;
@@ -99,8 +98,7 @@ export function AIEnhancementButton({
           <X className='h-4 w-4 mr-1' />,
           Cancel,
         </Button>,
-      </div>),
-  }
+      </div>)}
 ,
   return (
     <Button

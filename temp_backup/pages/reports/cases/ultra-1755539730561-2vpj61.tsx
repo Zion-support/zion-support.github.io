@@ -38,8 +38,7 @@ export default function UltraCasePage() {
           </a>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-12290o1" className="internal-link">Related Content</Link>,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-122931" className="internal-link">Related Content</Link>,

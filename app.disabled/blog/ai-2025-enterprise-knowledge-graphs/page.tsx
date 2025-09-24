@@ -90,6 +90,5 @@ export default function Page() {
           </p>,
         </div>,
       </article>,
-    </main>),
-}
+    </main>)}
 ,

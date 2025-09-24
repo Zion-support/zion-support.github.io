@@ -3,12 +3,10 @@ import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 interface CreateKeyRequest {
   name: string,
   scopes: string[],
-  expiresAt?: string | null,
-}
+  expiresAt?: string | null}
 ,
 interface RegenerateKeyRequest {
-  keyId: string,
-}
+  keyId: string}
 ,
 // Create a Supabase client,
 const supabaseUrl = Deno.env.get('SUPABASE_URL') as string,

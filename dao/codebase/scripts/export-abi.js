@@ -17,7 +17,7 @@ function main() {
     if (fs.existsSync(p)) {
       const json = JSON.parse(fs.readFileSync(p, 'utf8')),
       fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2)),
-      // console.log('Exported ABI for', name)} else {
+      // // console.log('Exported ABI for', name)} else {
       console.warn('Missing artifact for', name)}
   }
 }

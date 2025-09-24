@@ -15,8 +15,7 @@ interface TalentRateRecommenderProps {
   yearsExperience:number;
   location?:string;
   onSuggestionApplied:(value:number) => void;
-  rateType: "hourly" | "fixed",
-}
+  rateType: "hourly" | "fixed"}
 ,
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   skills;
@@ -59,8 +58,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
           suggestedMin:suggestion.minRate;
           suggestedMax:suggestion.maxRate;
           actualValue:suggestedRate;
-          accepted: true,
-        });
+          accepted: true});
       }
     }
   };
@@ -96,7 +94,6 @@ const handleApplySuggestion = () => {
   if (suggestion) {
   //We'll use the middle of the range as the suggested rate //Track this suggestion application if (user && user.id) {
   trackPricingSuggestion ({
-  ,
 }
 }
 };
@@ -104,5 +101,4 @@ return (<div className="space-y-4" > <div> {","  !suggestion && !isLoading ? (<B
   suggestion }isLoading={
   isLoading }onApplySuggestion={
   handleApplySuggestion }rateType={
-  rateType } />) }</div> </div>) ,
-}}})
+  rateType } />) }</div> </div>) }}})

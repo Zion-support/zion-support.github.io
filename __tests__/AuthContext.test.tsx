@@ -16,8 +16,7 @@ describe('AuthContext login', () => {'  it('stores token and redirects on succes
       loginWithGoogle: jest.fn();
       loginWithFacebook: jest.fn();
       loginWithTwitter: jest.fn();
-      loginWithWeb3: jest.fn(),
-    }),
+      loginWithWeb3: jest.fn()}),
     render(
       <AuthProvider>,
         <AuthContext.Consumer>,

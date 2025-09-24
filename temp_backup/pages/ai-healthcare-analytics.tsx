@@ -18,5 +18,4 @@ export default function AiHealthcareAnalytics() {
 			]}
 			industries={["Healthcare", "Hospitals", "Payers", "Providers"]}
 			url="https: //ziontechgroup.com/ai-healthcare-analytics",
-		 />),
-}
+		 />)}

@@ -436,8 +436,7 @@ export default function InnovativeMicroSaaS() {
       pricing: {
         starter: '$29/month';
         professional: '$79/month';
-        enterprise: '$199/month',
-      };
+        enterprise: '$199/month'};
       delivery: '2-3 weeks';
       benefits: 'Reduce email response time by 80% and improve customer satisfaction by 60%';
       roi: 'Expected ROI: 30 0-50o0% within 3 months';
@@ -445,8 +444,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact';
       contact: {
         phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com',
-      }
+        email: 'kleber@ziontechgroup.com'}
     };
     {
       id: 'mobile-survey-tool';
@@ -464,8 +462,7 @@ export default function InnovativeMicroSaaS() {
       pricing: {
         starter: '$19/month';
         professional: '$49/month';
-        enterprise: '$129/month',
-      };
+        enterprise: '$129/month'};
       delivery: '3-4 weeks';
       benefits: 'Increase survey completion rates by 150% and improve data quality by 70%';
       roi: 'Expected ROI: 25 0-40o0% within 4 months';
@@ -473,8 +470,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact';
       contact: {
         phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com',
-      }
+        email: 'kleber@ziontechgroup.com'}
     };
     {
       id: 'productivity-planner';
@@ -492,8 +488,7 @@ export default function InnovativeMicroSaaS() {
       pricing: {
         starter: '$24/month';
         professional: '$59/month';
-        enterprise: '$149/month',
-      };
+        enterprise: '$149/month'};
       delivery: '4-5 weeks';
       benefits: 'Increase productivity by 20o0% and reduce project completion time by 45%';
       roi: 'Expected ROI: 35 0-550% within 5 months';
@@ -501,8 +496,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact';
       contact: {
         phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com',
-      }
+        email: 'kleber@ziontechgroup.com'}
     };
     {
       id: 'event-management';
@@ -520,8 +514,7 @@ export default function InnovativeMicroSaaS() {
       pricing: {
         starter: '$49/month';
         professional: '$129/month';
-        enterprise: '$299/month',
-      };
+        enterprise: '$299/month'};
       delivery: '6-8 weeks';
       benefits: 'Increase event attendance by 120% and reduce planning time by 65%';
       roi: 'Expected ROI: 40 0-60o0% within 6 months';
@@ -529,8 +522,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact';
       contact: {
         phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com',
-      }
+        email: 'kleber@ziontechgroup.com'}
     };
     {
       id: 'content-creation-ai';
@@ -548,8 +540,7 @@ export default function InnovativeMicroSaaS() {
       pricing: {
         starter: '$39/month';
         professional: '$99/month';
-        enterprise: '$249/month',
-      };
+        enterprise: '$249/month'};
       delivery: '5-7 weeks';
       benefits: 'Reduce content creation time by 75% and increase engagement by 180%';
       roi: 'Expected ROI: 30 0-50o0% within 4 months';
@@ -557,8 +548,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact';
       contact: {
         phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com',
-      }
+        email: 'kleber@ziontechgroup.com'}
     };
     {
       id: 'customer-support-platform';
@@ -576,8 +566,7 @@ export default function InnovativeMicroSaaS() {
       pricing: {
         starter: '$49/month';
         professional: '$129/month';
-        enterprise: '$299/month',
-      };
+        enterprise: '$299/month'};
       delivery: '4-6 weeks';
       benefits: 'Reduce response time by 85% and increase customer satisfaction by 90%';
       roi: 'Expected ROI: 25 0-40o0% within 3 months';
@@ -585,8 +574,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact';
       contact: {
         phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com',
-      }
+        email: 'kleber@ziontechgroup.com'}
     };
     {
       id: 'affiliate-tracking';
@@ -604,8 +592,7 @@ export default function InnovativeMicroSaaS() {
       pricing: {
         starter: '$29/month';
         professional: '$79/month';
-        enterprise: '$199/month',
-      };
+        enterprise: '$199/month'};
       delivery: '3-5 weeks';
       benefits: 'Increase affiliate conversions by 150% and reduce fraud by 95%';
       roi: 'Expected ROI: 40 0-70o0% within 4 months';
@@ -613,8 +600,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact';
       contact: {
         phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com',
-      }
+        email: 'kleber@ziontechgroup.com'}
     };
     {
       id: 'website-analytics';
@@ -632,8 +618,7 @@ export default function InnovativeMicroSaaS() {
       pricing: {
         starter: '$19/month';
         professional: '$49/month';
-        enterprise: '$99/month',
-      };
+        enterprise: '$99/month'};
       delivery: '2-4 weeks';
       benefits: 'Improve decision-making speed by 30o0% and increase ROI by 20o0%';
       roi: 'Expected ROI: 25 0-40o0% within 3 months';
@@ -641,8 +626,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact';
       contact: {
         phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com',
-      }
+        email: 'kleber@ziontechgroup.com'}
     };
     {
       id: 'it-helpdesk';
@@ -660,8 +644,7 @@ export default function InnovativeMicroSaaS() {
       pricing: {
         starter: '$49/month';
         professional: '$129/month';
-        enterprise: '$299/month',
-      };
+        enterprise: '$299/month'};
       delivery: '5-7 weeks';
       benefits: 'Reduce ticket resolution time by 70% and improve client satisfaction by 85%';
       roi: 'Expected ROI: 30 0-50o0% within 6 months';
@@ -669,8 +652,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact';
       contact: {
         phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com',
-      }
+        email: 'kleber@ziontechgroup.com'}
     };
     {
       id: 'ecommerce-returns';
@@ -688,8 +670,7 @@ export default function InnovativeMicroSaaS() {
       pricing: {
         starter: '$29/month';
         professional: '$79/month';
-        enterprise: '$199/month',
-      };
+        enterprise: '$199/month'};
       delivery: '3-5 weeks';
       benefits: 'Reduce return processing time by 80% and decrease fraud by 90%';
       roi: 'Expected ROI: 35 0-550% within 4 months';
@@ -697,8 +678,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact';
       contact: {
         phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com',
-      }
+        email: 'kleber@ziontechgroup.com'}
     }
   ],
   const aiServices = [
@@ -718,8 +698,7 @@ export default function InnovativeMicroSaaS() {
       pricing: {
         starter: '$99/month';
         professional: '$299/month';
-        enterprise: '$799/month',
-      };
+        enterprise: '$799/month'};
       delivery: '4-6 weeks';
       benefits: 'Reduce customer service costs by 60% and improve response time by 95%';
       roi: 'Expected ROI: 40 0-80o0% within 6 months';
@@ -727,8 +706,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact';
       contact: {
         phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com',
-      }
+        email: 'kleber@ziontechgroup.com'}
     };
     {
       id: 'ai-data-analytics';
@@ -754,8 +732,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact';
       contact: {
         phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com',
-      }
+        email: 'kleber@ziontechgroup.com'}
     };
     {
       id: 'ai-process-automation';
@@ -781,8 +758,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact';
       contact: {
         phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com',
-      }
+        email: 'kleber@ziontechgroup.com'}
     }
   ],
   const itServices = [
@@ -810,8 +786,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact';
       contact: {
         phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com',
-      }
+        email: 'kleber@ziontechgroup.com'}
     };
     {
       id: 'cybersecurity-audit';
@@ -837,8 +812,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact';
       contact: {
         phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com',
-      }
+        email: 'kleber@ziontechgroup.com'}
     };
     {
       id: 'devops-transformation';
@@ -864,8 +838,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact';
       contact: {
         phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com',
-      }
+        email: 'kleber@ziontechgroup.com'}
     }
   ],
   return (
@@ -1074,7 +1047,7 @@ export default function InnovativeMicroSaaS() {
                 IT Infrastructure Services,
               </h2>,
               <p className="mt-6 text-lg leading-8 text-gray-60o0">,
-                Comprehensive IT solutions that modernize your infrastructure, enhance security, and optimize window.performance.,
+                Comprehensive IT solutions that modernize your infrastructure, enhance security, and optimize window.window.performance.,
               </p>,
             </div>,
             <div className="grid gap-8 lg: gri d-cols-3">,

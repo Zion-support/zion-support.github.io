@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion',
 import {
 import Link from 'next / link',
 "use client",
-,
   Menu;
   ChevronDown;
   X;
@@ -154,7 +153,6 @@ interface NavigationItem {
   Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb,
   Search, Grid, List, TrendingUp, Shield as ShieldIcon, Globe as GlobeIcon,
   User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones,
-,
   Menu;
   ChevronDown;
   X;
@@ -283,7 +281,6 @@ interface NavigationItem {
   Code, Database, Network, Server, Monitor, Smartphone,
   Camera, Gamepad2, Palette, Music, Film, BookOpenCheck,
   Building, MessageCircle} from 'lucide-react',
-,
 interface NavigationItem {
   description?: string,
   children?: NavigationItem[],
@@ -297,8 +294,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const navigationItems: NavigationItem[] = [
   {
     name: 'Pricing';
@@ -310,16 +306,14 @@ const navigationItems: NavigationItem[] = [
       {
         name: 'Market Pricing',
         href: '/market-pricing',
-        description: 'Compare market averages',
-      }
+        description: 'Compare market averages'}
     ],
   featured?: boolean,  featured?: boolean}
 const contact_info = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'}  website: 'https://ziontechgroup.com',
-}
+  website: 'https://ziontechgroup.com'}  website: 'https://ziontechgroup.com'}
 ,
 const navigation_items: NavigationItem[] = [
   {
@@ -438,70 +432,57 @@ const navigation_items: NavigationItem[] = [
       {
         name: 'View All Services',
         href: '/comprehensive-services-showcase-2025',
-        description: 'Complete services portfolio',
-      }
+        description: 'Complete services portfolio'}
       {
         name: 'Ultimate 2035 Futuristic',
         href: '/ultimate-2035-futuristic-services-showcase',
         description: 'Revolutionary future technology',
-        featured: true,
-      }
+        featured: true}
       {
         name: 'Ultimate 2025 Micro SAAS',
         href: '/ultimate-2025-micro-saas-showcase',
         description: 'Latest innovative services',
-        featured: true,
-      }
+        featured: true}
       {
         name: 'Service Categories',
         href: '/comprehensive-services-showcase-2025#categories',
-        description: 'Browse by category',
-      }
+        description: 'Browse by category'}
       {
         name: 'Pricing Comparison',
         href: '/comprehensive-services-showcase-2025#pricing',
-        description: 'Compare service costs',
-      }
+        description: 'Compare service costs'}
       {
         name: 'Service Search',
         href: '/comprehensive-services-showcase-2025#search',
-        description: 'Find specific services',
-      }
+        description: 'Find specific services'}
       {
         name: 'Market Pricing',
         href: '/market-pricing',
-        description: 'Average market prices & references',
-      }
+        description: 'Average market prices & references'}
       {
         name: 'Latest Innovations',
         href: '/revolutionary-2025-services-showcase',
-        description: 'Cutting-edge solutions',
-      }
+        description: 'Cutting-edge solutions'}
       {
         name: '2026 Services',
         href: '/revolutionary-2026-services',
-        description: 'Next generation solutions',
-      }
+        description: 'Next generation solutions'}
       {
         name: '2027 Services',
         href: '/revolutionary-2027-services-showcase',
-        description: 'Future-ready services',
-      }
+        description: 'Future-ready services'}
       {
         name: 'Ultimate 2026',
         href: '/ultimate-2026-services-showcase',
-        description: 'Premium service collection',
-      }
+        description: 'Premium service collection'}
       {
         name: 'Enterprise Solutions',
         href: '/enterprise-solutions-showcase',
-        description: 'Enterprise-grade solutions',
-      }
+        description: 'Enterprise-grade solutions'}
       {
         name: 'Innovative Business Solutions',
         href: '/innovative-business-solutions',
-        description: 'Business transformation services',
-      }
+        description: 'Business transformation services'}
     ]}
   {
     name: 'AI & Consciousness',
@@ -624,8 +605,7 @@ const navigation_items: NavigationItem[] = [
       { name: 'Quantum & Emerging', href: '/services?filter = quantum - emerging', description: 'Quantum, space, frontier' }
       { name: 'Micro SAAS', href: '/services?filter = micro - saas', description: 'Business accelerators' };
       { name: 'Creative & Media', href: '/services?filter = creative - media', description: 'Content, media, design' }
-    ],
-}
+    ]}
   {
     name: 'All Services';
     href: '/comprehensive - services - showcase - 2025';
@@ -679,78 +659,63 @@ const navigation_items: NavigationItem[] = [
         name: 'AI Customer Success Platform',
         href: '/ai-customer-success-platform',
         description: 'Predict and prevent churn with AI',
-        featured: true,
-      }
+        featured: true}
       {
         name: 'AI Sales Intelligence',
         href: '/ai-sales-intelligence-platform',
-        description: 'Supercharge sales with AI automation',
-      }
+        description: 'Supercharge sales with AI automation'}
       {
         name: 'AI Financial Planning',
         href: '/ai-financial-planning-platform',
-        description: 'Intelligent financial forecasting',
-      }
+        description: 'Intelligent financial forecasting'}
       {
         name: 'AI Decision Engine',
         href: '/ai-powered-decision-engine',
-        description: 'AI-powered business decisions',
-      }
+        description: 'AI-powered business decisions'}
       {
         name: 'AI Content Automation',
         href: '/intelligent-content-automation-platform',
-        description: 'Automate content creation',
-      }
+        description: 'Automate content creation'}
       {
         name: 'AI HR Analytics',
         href: '/ai-hr-analytics-platform',
-        description: 'Transform HR with AI insights',
-      }
+        description: 'Transform HR with AI insights'}
       {
         name: 'AI Consciousness Evolution',
         href: '/ai-consciousness-evolution-2029',
-        description: 'Emotional intelligence and self-awareness',
-      }
+        description: 'Emotional intelligence and self-awareness'}
       {
         name: 'AI Quantum Neural Network',
         href: '/ai-quantum-neural-network',
-        description: 'Hybrid AI-Quantum computing platform',
-      }
+        description: 'Hybrid AI-Quantum computing platform'}
       {
         name: 'AI Autonomous Business Operations',
         href: '/ai-autonomous-business-operations',
-        description: 'Fully autonomous business management',
-      }
+        description: 'Fully autonomous business management'}
       {
         name: 'AI Autonomous Research',
         href: '/ai-autonomous-research-assistant',
-        description: 'Self-directed AI research',
-      }
+        description: 'Self-directed AI research'}
       {
         name: 'AI Emotional Intelligence',
         href: '/ai-emotional-intelligence-training',
-        description: 'EQ training platform',
-      }
+        description: 'EQ training platform'}
       {
         name: 'AI Predictive Maintenance',
         href: '/ai-predictive-maintenance-platform',
-        description: 'Equipment failure prediction',
-      }
+        description: 'Equipment failure prediction'}
       {
         name: 'AI Content Personalization',
         href: '/ai-content-personalization-engine',
-        description: 'Personalized content delivery',
-      }
+        description: 'Personalized content delivery'}
       {
         name: 'AI Autonomous Ecosystem',
         href: '/ai-autonomous-ecosystem-manager',
-        description: 'Self-managing AI systems',
-      }
+        description: 'Self-managing AI systems'}
       {
         name: 'AI Ethics & Governance',
         href: '/ai-ethics-governance-framework',
-        description: 'Ethical AI frameworks',
-      }
+        description: 'Ethical AI frameworks'}
       {
         name: 'Advanced AI Automation',
         href: '/advanced-ai-automation-services',
@@ -924,43 +889,35 @@ const navigation_items: NavigationItem[] = [
         name: 'Customer Success Platform',
         href: '/ai-customer-success-platform',
         description: 'AI-powered customer retention',
-        featured: true,
-      }
+        featured: true}
       {
         name: 'Supply Chain Optimization',
         href: '/intelligent-supply-chain-optimization',
-        description: 'AI-powered supply chain management',
-      }
+        description: 'AI-powered supply chain management'}
       {
         name: 'Financial Planning Platform',
         href: '/ai-financial-planning-platform',
-        description: 'Intelligent financial planning',
-      }
+        description: 'Intelligent financial planning'}
       {
         name: 'HR Analytics Platform',
         href: '/ai-hr-analytics-platform',
-        description: 'AI-powered HR insights',
-      }
+        description: 'AI-powered HR insights'}
       {
         name: 'Sales Intelligence Platform',
         href: '/ai-sales-intelligence-platform',
-        description: 'AI-powered sales automation',
-      }
+        description: 'AI-powered sales automation'}
       {
         name: 'CRM Intelligence Suite',
         href: '/smart-crm-intelligence-suite',
-        description: 'Transform your CRM with AI',
-      }
+        description: 'Transform your CRM with AI'}
       {
         name: 'Content Automation Platform',
         href: '/intelligent-content-automation-platform',
-        description: 'AI-powered content management',
-      }
+        description: 'AI-powered content management'}
       {
         name: 'Decision Engine',
         href: '/ai-powered-decision-engine',
-        description: 'AI-powered business decisions',
-      }
+        description: 'AI-powered business decisions'}
       {
         name: 'Helpdesk & Support',
         href: '/helpdesk-automation',
@@ -968,8 +925,7 @@ const navigation_items: NavigationItem[] = [
       {
         name: 'Learning Management (LMS)',
         href: '/lms-platform',
-        description: 'Adaptive training and certifications',
-      }
+        description: 'Adaptive training and certifications'}
       {
         name: 'Ecommerce Returns',
         href: '/ecommerce-returns-management',
@@ -977,13 +933,11 @@ const navigation_items: NavigationItem[] = [
       {
         name: 'SEO Content Optimizer',
         href: '/seo-content-optimizer',
-        description: 'On-page AI scoring and fixes',
-      }
+        description: 'On-page AI scoring and fixes'}
       {
         name: 'Keyword Research Engine',
         href: '/keyword-research-engine',
-        description: 'Low-competition keywords discovery',
-      }
+        description: 'Low-competition keywords discovery'}
       {
         name: 'Privacy Analytics Suite',
         href: '/analytics-suite',
@@ -991,8 +945,7 @@ const navigation_items: NavigationItem[] = [
       {
         name: 'Invoice Studio',
         href: '/invoice-studio',
-        description: 'Instant branded invoices and payments',
-      }
+        description: 'Instant branded invoices and payments'}
     ]}
   {
     name: 'Quantum & Emerging Tech',
@@ -1151,83 +1104,67 @@ const navigation_items: NavigationItem[] = [
       {
         name: 'Quantum-Secure Cloud Infrastructure',
         href: '/quantum-secure-cloud-infrastructure',
-        description: 'Unbreakable quantum encryption',
-      }
+        description: 'Unbreakable quantum encryption'}
       {
         name: 'Quantum Financial Trading Platform',
         href: '/quantum-financial-trading',
-        description: 'Ultra-fast quantum trading',
-      }
+        description: 'Ultra-fast quantum trading'}
       {
         name: 'Quantum Internet Security Platform',
         href: '/quantum-internet-security-platform',
-        description: 'Future-proof internet security',
-      }
+        description: 'Future-proof internet security'}
       {
         name: 'Space Resource Mining',
         href: '/space-resource-mining-platform',
-        description: 'Asteroid mining and space resources',
-      }
+        description: 'Asteroid mining and space resources'}
       {
         name: 'Quantum Internet Security',
         href: '/quantum-internet-security-platform',
-        description: 'Unbreakable encryption',
-      }
+        description: 'Unbreakable encryption'}
       {
         name: 'Brain-Computer Interface',
         href: '/brain-computer-interface-platform',
-        description: 'Neural interface technology',
-      }
+        description: 'Neural interface technology'}
       {
         name: 'Quantum Materials Discovery',
         href: '/quantum-materials-discovery-platform',
-        description: 'Materials science acceleration',
-      }
+        description: 'Materials science acceleration'}
       {
         name: 'Autonomous Vehicle AI',
         href: '/autonomous-vehicle-ai-platform',
-        description: 'Self-driving AI systems',
-      }
+        description: 'Self-driving AI systems'}
       {
         name: 'Quantum Bio-Computing',
         href: '/quantum-bio-computing-platform',
-        description: 'Quantum-biological hybrid processing',
-      }
+        description: 'Quantum-biological hybrid processing'}
       {
         name: 'Quantum Energy Platform',
         href: '/quantum-energy-platform',
-        description: 'Fusion power simulation',
-      }
+        description: 'Fusion power simulation'}
       {
         name: 'Quantum Robotics',
         href: '/quantum-robotics',
-        description: 'Quantum-enhanced robotics',
-      }
+        description: 'Quantum-enhanced robotics'}
       {
         name: 'Quantum Cybersecurity',
         href: '/quantum-cybersecurity-platform',
-        description: 'Next-gen security',
-      }
+        description: 'Next-gen security'}
       {
         name: 'Quantum Logistics',
         href: '/quantum-logistics-optimization',
-        description: 'Route optimization',
-      }
+        description: 'Route optimization'}
       {
         name: 'Quantum Metaverse',
         href: '/quantum-metaverse',
-        description: 'Quantum-enhanced virtual worlds',
-      }
+        description: 'Quantum-enhanced virtual worlds'}
       {
         name: 'Quantum IoT Platform',
         href: '/quantum-iot',
-        description: 'Quantum-secured IoT',
-      }
+        description: 'Quantum-secured IoT'}
       {
         name: 'AI-Powered Space Technology',
         href: '/ai-powered-space-technology',
-        description: 'Revolutionary space AI',
-      }
+        description: 'Revolutionary space AI'}
     ]}
   {
     name: 'Enterprise IT',
@@ -1393,43 +1330,35 @@ const navigation_items: NavigationItem[] = [
       {
         name: 'Zero Trust Security',
         href: '/zero-trust-security-platform',
-        description: 'Next-generation security architecture',
-      }
+        description: 'Next-generation security architecture'}
       {
         name: 'Quantum Cloud Infrastructure',
         href: '/quantum-cloud-infrastructure',
-        description: 'Quantum-enhanced cloud computing',
-      }
+        description: 'Quantum-enhanced cloud computing'}
       {
         name: 'Autonomous IT Operations',
         href: '/autonomous-it-operations-center',
-        description: 'Self-managing IT infrastructure',
-      }
+        description: 'Self-managing IT infrastructure'}
       {
         name: 'Edge Computing Orchestration',
         href: '/edge-computing-orchestration',
-        description: 'Distributed edge computing',
-      }
+        description: 'Distributed edge computing'}
       {
         name: 'Blockchain Infrastructure',
         href: '/blockchain-infrastructure-platform',
-        description: 'Enterprise blockchain solutions',
-      }
+        description: 'Enterprise blockchain solutions'}
       {
         name: 'AI-Powered DevOps',
         href: '/ai-powered-devops-platform',
-        description: 'Intelligent development operations',
-      }
+        description: 'Intelligent development operations'}
       {
         name: 'Quantum Cybersecurity',
         href: '/quantum-cybersecurity-services',
-        description: 'Next-gen quantum security',
-      }
+        description: 'Next-gen quantum security'}
       {
         name: 'AI-Powered Cybersecurity',
         href: '/ai-powered-cybersecurity',
-        description: 'Intelligent threat detection',
-      }
+        description: 'Intelligent threat detection'}
     href: '/enterprise-it';
     icon: <Shield className="w-5 h-5" />;
     description: 'Advanced enterprise infrastructure and security';
@@ -1454,43 +1383,35 @@ const navigation_items: NavigationItem[] = [
       {
         name: 'Healthcare AI',
         href: '/healthcare-ai-solutions',
-        description: 'AI-powered healthcare',
-      }
+        description: 'AI-powered healthcare'}
       {
         name: 'Financial Technology',
         href: '/fintech-solutions',
-        description: 'Next-gen fintech',
-      }
+        description: 'Next-gen fintech'}
       {
         name: 'Manufacturing AI',
         href: '/manufacturing-ai-solutions',
-        description: 'Smart manufacturing',
-      }
+        description: 'Smart manufacturing'}
       {
         name: 'Retail Technology',
         href: '/innovative-business-solutions',
-        description: 'Digital retail transformation',
-      }
+        description: 'Digital retail transformation'}
       {
         name: 'Education Technology',
         href: '/training',
-        description: 'AI-powered learning',
-      }
+        description: 'AI-powered learning'}
       {
         name: 'Government Solutions',
         href: '/enterprise-solutions-showcase',
-        description: 'Public sector innovation',
-      }
+        description: 'Public sector innovation'}
       {
         name: 'Energy & Utilities',
         href: '/quantum-energy',
-        description: 'Sustainable energy tech',
-      }
+        description: 'Sustainable energy tech'}
       {
         name: 'Biotech AI Research',
         href: '/biotech-ai',
-        description: 'AI-driven biotech',
-      }
+        description: 'AI-driven biotech'}
     ]}
   {
     name: 'Resources',
@@ -1501,29 +1422,24 @@ const navigation_items: NavigationItem[] = [
       {
         name: 'Documentation',
         href: '/docs',
-        description: 'Technical documentation',
-      }
+        description: 'Technical documentation'}
       {
         name: 'API Reference',
         href: '/api-documentation',
-        description: 'API documentation',
-      }
+        description: 'API documentation'}
       {
         name: 'Case Studies',
         href: '/case-studies',
-        description: 'Success stories',
-      }
+        description: 'Success stories'}
       { name: 'Blog & News', href: '/blog', description: 'Latest insights' }
       {
         name: 'Support Center',
         href: '/support',
-        description: 'Help and support',
-      }
+        description: 'Help and support'}
       {
         name: 'Training',
         href: '/training',
-        description: 'Learning resources',
-      }
+        description: 'Learning resources'}
       { name: 'Community', href: '/community', description: 'User community' }
     ]}
 ],
@@ -1532,44 +1448,36 @@ const quickActions = [
     name: 'Get Started',
     href: '/contact',
     icon: <ArrowRight className='w-4 h-4' />,
-    primary: true,
-  }
+    primary: true}
   {
     name: 'Get a Quote',
     href: '/quote',
-    icon: <DollarSign className='w-4 h-4' />,
-  }
+    icon: <DollarSign className='w-4 h-4' />}
   { name: 'Book Demo', href: '/demo', icon: <Video className='w-4 h-4' /> }
   {
     name: 'Live Chat',
     href: '/chat',
-    icon: <MessageCircle className='w-4 h-4' />,
-  }
+    icon: <MessageCircle className='w-4 h-4' />}
   {
     name: 'View Pricing',
     href: '/pricing',
-    icon: <DollarSign className='w-4 h-4' />,
-  }
+    icon: <DollarSign className='w-4 h-4' />}
   {
     name: 'Market Pricing',
     href: '/market-pricing',
-    icon: <BarChart3 className='w-4 h-4' />,
-  }
+    icon: <BarChart3 className='w-4 h-4' />}
   {
     name: 'Services Advertising',
     href: '/services-advertising',
-    icon: <Sparkles className='w-4 h-4' />,
-  }
+    icon: <Sparkles className='w-4 h-4' />}
   {
     name: 'Documentation',
     href: '/docs',
-    icon: <BookOpen className='w-4 h-4' />,
-  }
+    icon: <BookOpen className='w-4 h-4' />}
   {
     name: 'Support',
     href: '/support',
-    icon: <HelpCircle className='w-4 h-4' />,
-  }],  { name: 'Get Started', href: '/contact', icon: <ArrowRight className="w-4 h-4" />, primary: true }
+    icon: <HelpCircle className='w-4 h-4' />}],  { name: 'Get Started', href: '/contact', icon: <ArrowRight className="w-4 h-4" />, primary: true }
   { name: 'Get a Quote', href: '/quote', icon: <DollarSign className="w-4 h-4" /> }
   { name: 'Book Demo', href: '/demo', icon: <Video className="w-4 h-4" /> }
   { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
@@ -1588,8 +1496,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name),
-  }
+    setActiveDropdown(activeDropdown === name ? null : name)}
   const closeDropdowns = () => {
     setActiveDropdown(null)}
         name: 'Market Pricing';
@@ -1773,8 +1680,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name),
-  }
+    setActiveDropdown(activeDropdown === name ? null : name)}
   const closeDropdowns = () => {
     setActiveDropdown(null),
   featured?: boolean,  featured?: boolean}
@@ -1783,8 +1689,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup && ziontechgroup.com'};  website: 'https://ziontechgroup && ziontechgroup.com',
-};
+  website: 'https://ziontechgroup && ziontechgroup.com'};  website: 'https://ziontechgroup && ziontechgroup.com'};
 const navigationItems: NavigationItem[] = [
   {
     name: 'Pricing';
@@ -2525,8 +2430,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     window && window.addEventListener('scroll', handleScroll),
     return () => window && window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name),
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
   const closeDropdowns = () => {
     setActiveDropdown(null)};
   const closeMobileMenu = () => {
@@ -2535,8 +2439,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     window && window.addEventListener('scroll', handleScroll),
     return () => window && window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name),
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
   const closeDropdowns = () => {
     setActiveDropdown(null)};
   const closeMobileMenu = () => {
@@ -2737,8 +2640,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     window.addEventListener ('scroll', handle_scroll),
     return () => window.removeEventListener ('scroll', handle_scroll)}, []),
   const toggle_dropdown = (name: string) =>: any {
-    setActiveDropdown (active_dropdown === name ? null : name),
-  }
+    setActiveDropdown (active_dropdown === name ? null : name)}
 ,
   const close_dropdowns = () =>: any {
     setActiveDropdown (null)}
@@ -2750,8 +2652,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     window.addEventListener ('scroll', handle_scroll),
     return () => window.removeEventListener ('scroll', handle_scroll)}, []),
   const toggle_dropdown = (name: string) =>: any {
-    setActiveDropdown (active_dropdown === name ? null : name),
-  }
+    setActiveDropdown (active_dropdown === name ? null : name)}
 ,
   const close_dropdowns = () =>: any {
     setActiveDropdown (null)}
@@ -2945,8 +2846,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 ,
                                 className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${
                                   child && child.featured,
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover: bg-cyan-500/20'                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50',
-                                }`}
+                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover: bg-cyan-500/20'                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'}`}
                                 onClick={closeDropdowns}
                               >                        onMouseLeave={closeDropdowns}
                       >,
@@ -2983,8 +2883,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                   child && child.featured,
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover: bg-cyan-500/20'                                  child && child.featured,
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20',
-                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50',
-                                }`}
+                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'}`}
                                 onClick={closeDropdowns}>,
                                 {child && child.featured && (
                                   <Star className='w-4 h-4 text-cyan-400' />)}
@@ -3000,8 +2899,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                               </Link>,
                                   child.featured,
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover: bg-cyan-500/20',
-                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50',
-                                }`}
+                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'}`}
                                 onClick={closeDropdowns}
                               >,
                                 {child.featured && (
@@ -3039,8 +2937,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                     className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
                       action.primary,
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover: from-cyan-600 hover:to-blue-600 shadow-lg shadow-cyan-500/25',
-                        : 'text-gray-300 hover:text-white hover:bg-gray-800/50',
-                    }`}
+                        : 'text-gray-300 hover:text-white hover:bg-gray-800/50'}`}
                   >,
                     {action && action.icon}
                     <span>{action && action.name}</span>,
@@ -3071,8 +2968,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                 href={child.href}
                                 className={`flex items - center gap - 3 p - 3 rounded - xl transition - all duration - 200 ${
                                   child.featured,
-                                    ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover: bg - cyan - 500 / 20'                                    : 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50',
-                                }`}
+                                    ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover: bg - cyan - 500 / 20'                                    : 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50'}`}
                                 on_click={close_dropdowns}
                               >                        onMouseLeave={close_dropdowns}
                       >,
@@ -3094,8 +2990,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                   child.featured,
                                     ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover: bg - cyan - 500 / 20'                                  child.featured,
                                     ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover:bg - cyan - 500 / 20',
-                                    : 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50',
-                                }`}
+                                    : 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50'}`}
                                 on_click={close_dropdowns}
                               >,
                                 {child.featured && (
@@ -3129,8 +3024,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                     className={`flex items - center gap - 2 px - 4 py - 2 rounded - xl text - sm font - medium transition - all duration - 200 ${
                       action.primary,
                         ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white hover: from - cyan - 600 hover:to - blue - 600 shadow - lg shadow - cyan - 500 / 25',
-                        : 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50',
-                    }`}
+                        : 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50'}`}
                   >,
                     {action.icon}
                     <span>{action.name}</span>,
@@ -3185,8 +3079,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name),
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
   const closeDropdowns = () => {
     setActiveDropdown(null)};
   const closeMobileMenu = () => {
@@ -3298,8 +3191,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                 href={child.href}
                                 className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${
                                   child.featured,
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover: bg-cyan-500/20'                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50',
-                                }`}
+                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover: bg-cyan-500/20'                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'}`}
                                 onClick={closeDropdowns}
 ,
                               <Link
@@ -3309,8 +3201,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                   child.featured,
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover: bg-cyan-500/20'                                  child.featured,
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20',
-                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50',
-                                }`}
+                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'}`}
                                 onClick={closeDropdowns}
                               >))}
                           </div>,
@@ -3368,8 +3259,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                     className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
                       action.primary,
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover: from-cyan-600 hover:to-blue-600 shadow-lg shadow-cyan-500/25',
-                        : 'text-gray-300 hover:text-white hover:bg-gray-800/50',
-                    }`}
+                        : 'text-gray-300 hover:text-white hover:bg-gray-800/50'}`}
                   >,
                     {action.icon}
                     <span>{action.name}</span>,
@@ -3469,8 +3359,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                   child && child.featured,
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400'                                  child && child.featured,
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400',
-                                    : 'text-gray-400 hover: text-white hover:bg-gray-800/50',
-                                }`}
+                                    : 'text-gray-400 hover: text-white hover:bg-gray-800/50'}`}
                                 onClick={closeMobileMenu}>,
                                 <div className='font-medium'>{child && child.name}</div>,
                                 {child && child.description && (
@@ -3497,8 +3386,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                           className={`flex items-center gap-3 p-3 rounded-xl text-sm font-medium transition-all duration-200 ${
                             action && action.primary,
                               ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white',
-                              : 'text-gray-300 hover: text-white hover:bg-gray-800/50',
-                          }`}
+                              : 'text-gray-300 hover: text-white hover:bg-gray-800/50'}`}
                           onClick={closeMobileMenu}>,
                           {action && action.icon}
                           <span>{action && action.name}</span>,
@@ -3557,14 +3445,12 @@ const UltraFuturisticNavigation2035: React.FC = () => {
   child.name}href= {
   child.href}className= {
   `flex items-center gap-3 p-3 rounded-xl transition-all duration-200 $ {
-  child.featured ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover: bg-cyan-500/20': 'text-gray-300 hover:text-white hover:bg-gray-800/50',
-}`}onClick= {
+  child.featured ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover: bg-cyan-500/20': 'text-gray-300 hover:text-white hover:bg-gray-800/50'}`}onClick= {
   closeDropdowns}>)}</div> <ArrowRight className="w-4 h-4 opacity-50" /> </a>) )}</div> </div> </motion.div>)}</AnimatePresence> </div>) )}</div> <Link key= {
   action.name}href= {
   action.href}className= {
   `flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 $ {
-  action.primary ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover: from-cyan-600 hover:to-blue-600 shadow-lg shadow-cyan-500/25': 'text-gray-300 hover:text-white hover:bg-gray-800/50',
-}`}> </a> </div> </div> {
+  action.primary ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover: from-cyan-600 hover:to-blue-600 shadow-lg shadow-cyan-500/25': 'text-gray-300 hover:text-white hover:bg-gray-800/50'}`}> </a> </div> </div> {
   /* Mobile Menu Button */}<button </button> </div> </div> {
   /* Mobile Menu */}<AnimatePresence> <span className= {
   `px-2 py-1 text-xs rounded-full $ {
@@ -3577,14 +3463,12 @@ const UltraFuturisticNavigation2035: React.FC = () => {
   child.name}href= {
   child.href}className= {
   `block p-3 rounded-lg transition-colors duration-200 $ {
-  child.featured ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400': 'text-gray-400 hover: text-white hover:bg-gray-800/50',
-}`}onClick= {
+  child.featured ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400': 'text-gray-400 hover: text-white hover:bg-gray-800/50'}`}onClick= {
   closeMobileMenu}>) }</a>) ) }</motion && motion.div>) }</AnimatePresence> </div>) ) }<Linkkey= {
   action && action.name}href= {
   action.href}className= {
   `flex items-center gap-3 p-3 rounded-xl text-sm font-medium transition-all duration-200 $ {
-  action.primary ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white': 'text-gray-300 hover: text-white hover:bg-gray-800/50',
-}`}onClick= {
+  action.primary ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white': 'text-gray-300 hover: text-white hover:bg-gray-800/50'}`}onClick= {
   closeMobileMenu}>) ) }</div> </div> </div> </div> </div> </div> </div> </motion && motion.div>) }</AnimatePresence> </div> </nav>) };
                   {/* Mobile Contact Info */}
                   <div className="pt-4 border-t border-gray-800/50">,
@@ -3648,8 +3532,7 @@ export default UltraFuturisticNavigation2035;
                                 href={child.href}
                                 className={`block p - 3 rounded - lg transition - colors duration - 200 ${
                                   child.featured,
-                                    ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 text - cyan - 400'                                    : 'text - gray - 400 hover: text - white hover:bg - gray - 800 / 50',
-                                }`}
+                                    ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 text - cyan - 400'                                    : 'text - gray - 400 hover: text - white hover:bg - gray - 800 / 50'}`}
                                 on_click={closeMobileMenu}
                               >                            className="ml - 6 mt - 2 space - y-2">,
                             {item.children?.map ((child) => (
@@ -3660,8 +3543,7 @@ export default UltraFuturisticNavigation2035;
                                   child.featured,
                                     ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 text - cyan - 400'                                  child.featured,
                                     ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 text - cyan - 400',
-                                    : 'text - gray - 400 hover: text - white hover:bg - gray - 800 / 50',
-                                }`}
+                                    : 'text - gray - 400 hover: text - white hover:bg - gray - 800 / 50'}`}
                                 on_click={closeMobileMenu}
                               >,
                                 <div className='font - medium'>{child.name}</div>,
@@ -3687,8 +3569,7 @@ export default UltraFuturisticNavigation2035;
                           className={`flex items - center gap - 3 p - 3 rounded - xl text - sm font - medium transition - all duration - 200 ${
                             action.primary,
                               ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white',
-                              : 'text - gray - 300 hover: text - white hover:bg - gray - 800 / 50',
-                          }`}
+                              : 'text - gray - 300 hover: text - white hover:bg - gray - 800 / 50'}`}
                           on_click={closeMobileMenu}
                         >,
                           {action.icon}
@@ -3746,14 +3627,12 @@ export default UltraFuturisticNavigation2035;
   child.name}href= {
   child.href}className= {
   `flex items - center gap - 3 p - 3 rounded - xl transition - all duration - 200 $ {
-  child.featured ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover: bg - cyan - 500 / 20': 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50',
-}`}on_click= {
+  child.featured ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover: bg - cyan - 500 / 20': 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50'}`}on_click= {
   close_dropdowns}>)}</div> <ArrowRight className="w - 4 h - 4 opacity - 50" /> </a>) )}</div> </div> </motion.div>)}</AnimatePresence> </div>) )}</div> <Link key= {
   action.name}href= {
   action.href}className= {
   `flex items - center gap - 2 px - 4 py - 2 rounded - xl text - sm font - medium transition - all duration - 200 $ {
-  action.primary ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white hover: from - cyan - 600 hover:to - blue - 600 shadow - lg shadow - cyan - 500 / 25': 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50',
-}`}> </a> </div> </div> {
+  action.primary ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white hover: from - cyan - 600 hover:to - blue - 600 shadow - lg shadow - cyan - 500 / 25': 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50'}`}> </a> </div> </div> {
   /* Mobile Menu Button */}<button </button> </div> </div> {
   /* Mobile Menu */}<AnimatePresence> <span className= {
   `px - 2 py - 1 text - xs rounded - full $ {
@@ -3766,19 +3645,16 @@ export default UltraFuturisticNavigation2035;
   child.name}href= {
   child.href}className= {
   `block p - 3 rounded - lg transition - colors duration - 200 $ {
-  child.featured ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 text - cyan - 400': 'text - gray - 400 hover: text - white hover:bg - gray - 800 / 50',
-}`}on_click= {
+  child.featured ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 text - cyan - 400': 'text - gray - 400 hover: text - white hover:bg - gray - 800 / 50'}`}on_click= {
   closeMobileMenu}>)}</a>) )}</motion.div>)}</AnimatePresence> </div>) )}<Link key= {
   action.name}href= {
   action.href}className= {
   `flex items - center gap - 3 p - 3 rounded - xl text - sm font - medium transition - all duration - 200 $ {
-  action.primary ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white': 'text - gray - 300 hover: text - white hover:bg - gray - 800 / 50',
-}`}on_click= {
+  action.primary ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white': 'text - gray - 300 hover: text - white hover:bg - gray - 800 / 50'}`}on_click= {
   closeMobileMenu}>) )}</div> </div> </div> </div> </div> </div> </div> </motion.div>)}</AnimatePresence> </div> </nav>)}
 export default UltraFuturisticNavigation2035)}
 ,
 export default UltraFuturisticNavigation2035;
-,
   closeMobileMenu}>) )}</div> </div> </div> </div> </div> </div> </div> </motion.div>)}</AnimatePresence> </div> </nav>)};
 export default UltraFuturisticNavigation2035;
 export default UltraFuturisticNavigation2035)};

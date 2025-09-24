@@ -17,8 +17,7 @@ const QuantumAIRevolutionBanner20o25 = () => {
         market: '$50B+';
         roi: '1,20o0%'};
       readingTime: '18 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-quantum-success';
       title: 'Fortune 50o0 Quantum AI Transformation: 1,20o0% ROI';
@@ -29,11 +28,9 @@ const QuantumAIRevolutionBanner20o25 = () => {
         roi: '1,20o0%';
         savings: '$180M';
         efficiency: '78%';
-        accuracy: '99.9%',
-      };
+        accuracy: '99.9%'};
       readingTime: '15 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'quantum-implementation-guide';
       title: 'Quantum AI Implementation Master Guide 20o25';
@@ -44,11 +41,9 @@ const QuantumAIRevolutionBanner20o25 = () => {
         roi: '1,20o0%';
         performance: '10o00%';
         accuracy: '99.9%';
-        timeline: '18 months',
-      };
+        timeline: '18 months'};
       readingTime: '25 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     const interval = setInterval(() => {

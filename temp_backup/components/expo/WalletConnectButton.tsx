@@ -7,8 +7,7 @@ declare global {
 export default function WalletConnectButton({
   onConnected;
 }: {
-  onConnected?: (address: string) => void,
-}) {
+  onConnected?: (address: string) => void}) {
   const [address, setAddress] = useState<string | null>(null),
   const [available, setAvailable] = useState(false),
   useEffect(() => {

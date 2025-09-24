@@ -12,8 +12,7 @@ interface InteractiveCardProps {
   href: string,
   color?: string,
   className?: string,
-  children?: React.ReactNode,
-}
+  children?: React.ReactNode}
 ,
 export default function InteractiveCard({
   title;
@@ -56,8 +55,7 @@ export default function InteractiveCard({
               <span>Learn More</span>,
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
-                  isHovered ? 'translate-x-2' : '',
-                }`}
+                  isHovered ? 'translate-x-2' : ''}`}
                 fill='none',
                 stroke='currentColor',
                 viewBox='0 0 24 24'>,
@@ -123,8 +121,7 @@ export function TestimonialCard({
   position: string,
   company: string,
   rating?: number,
-  className?: string,
-}) {
+  className?: string}) {
   return (
     <div
       className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover: bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}

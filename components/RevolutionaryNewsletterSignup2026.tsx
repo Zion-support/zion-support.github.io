@@ -10,8 +10,7 @@ export default function RevolutionaryNewsletterSignup20o26() {
     // Simulate API call,
     await new Promise(resolve => setTimeout(resolve20o00)),
     setIsSubscribed(true),
-    setIsLoading(false),
-  };
+    setIsLoading(false)};
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-r from-green-90o0 via-emerald-90o0 to-teal-90o0 text-white py-16">,
@@ -43,8 +42,7 @@ export default function RevolutionaryNewsletterSignup20o26() {
             </div>,
           </div>,
         </div>,
-      </div>),
-  }
+      </div>)}
 ,
   return (
     <div className="bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16">,
@@ -185,5 +183,4 @@ export default function RevolutionaryNewsletterSignup20o26() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

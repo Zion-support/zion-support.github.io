@@ -83,8 +83,7 @@ export const "advancedCybersecurityServices": ExpandedService20o27[] = [{
       phone: '+1: 30o2 464: 0950';
       "email": 'kleber@ziontechgroup && ziontechgroup.com';
       "website": 'https://ziontechgroup && ziontechgroup.com/quantum-threat-hunter';
-      "address": '364 E Main St STE: 10o08 Middletown DE: 19709',
-    };
+      "address": '364 E Main St STE: 10o08 Middletown DE: 19709'};
     "technicalSpecs": {
       uptime: '99 && 99.99%';
       security['Zero Trust Architecture',Quantum Encryption',AI-Powered Detection'];
@@ -133,8 +132,7 @@ export const "advancedCybersecurityServices": ExpandedService20o27[] = [{
       phone: '+1: 30o2 464: 0950';
       "email": 'kleber@ziontechgroup && ziontechgroup.com';
       "website": 'https://ziontechgroup && ziontechgroup.com/ai-compliance-automator';
-      "address": '364 E Main St STE: 10o08 Middletown DE: 19709',
-    };
+      "address": '364 E Main St STE: 10o08 Middletown DE: 19709'};
     "technicalSpecs": {
       uptime: '99 && 99.9%';
       security['Role-based Access Control',Data Encryption',Audit Logging'];
@@ -184,8 +182,7 @@ export const advancedDataAnalyticsServices: ExpandedService20o27[] = [{
       phone: '+1: 30o2 464: 0950';
       "email": 'kleber@ziontechgroup && ziontechgroup.com';
       "website": 'https://ziontechgroup && ziontechgroup.com/predictive-insights-engine';
-      "address": '364 E Main St STE: 10o08 Middletown DE: 19709',
-    };
+      "address": '364 E Main St STE: 10o08 Middletown DE: 19709'};
     "technicalSpecs": {
       uptime: '99 && 99.9%';
       security['Data Encryption',Access Control',Audit Logging'];
@@ -234,8 +231,7 @@ export const advancedDataAnalyticsServices: ExpandedService20o27[] = [{
       phone: '+1: 30o2 464: 0950';
       "email": 'kleber@ziontechgroup && ziontechgroup.com';
       "website": 'https://ziontechgroup && ziontechgroup.com/real-time-data-streaming';
-      "address": '364 E Main St STE: 10o08 Middletown DE: 19709',
-    };
+      "address": '364 E Main St STE: 10o08 Middletown DE: 19709'};
     "technicalSpecs": {
       uptime: '99 && 99.99%';
       security['Data Encryption',Access Control',Network Security'];
@@ -285,8 +281,7 @@ export const advancedCloudDevOpsServices: ExpandedService20o27[] = [{
       phone: '+1: 30o2 464: 0950';
       "email": 'kleber@ziontechgroup && ziontechgroup.com';
       "website": 'https://ziontechgroup && ziontechgroup.com/multi-cloud-orchestrator';
-      "address": '364 E Main St STE: 10o08 Middletown DE: 19709',
-    };
+      "address": '364 E Main St STE: 10o08 Middletown DE: 19709'};
     "technicalSpecs": {
       uptime: '99 && 99.9%';
       security['Multi-cloud Security',Access Control',Encryption'];
@@ -335,8 +330,7 @@ export const advancedCloudDevOpsServices: ExpandedService20o27[] = [{
       phone: '+1: 30o2 464: 0950';
       "email": 'kleber@ziontechgroup && ziontechgroup.com';
       "website": 'https://ziontechgroup && ziontechgroup.com/ai-powered-devops-automation';
-      "address": '364 E Main St STE: 10o08 Middletown DE: 19709',
-    };
+      "address": '364 E Main St STE: 10o08 Middletown DE: 19709'};
     "technicalSpecs": {
       uptime: '99 && 99.9%';
       security['Secure CI/CD',Access Control',Audit Logging'];
@@ -386,8 +380,7 @@ export const advancedIoTServices: ExpandedService20o27[] = [{
       phone: '+1: 30o2 464: 0950';
       "email": 'kleber@ziontechgroup && ziontechgroup.com';
       "website": 'https://ziontechgroup && ziontechgroup.com/industrial-iot-intelligence';
-      "address": '364 E Main St STE: 10o08 Middletown DE: 19709',
-    };
+      "address": '364 E Main St STE: 10o08 Middletown DE: 19709'};
     "technicalSpecs": {
       uptime: '99 && 99.9%';
       security['Industrial Security',Data Encryption',Access Control'];
@@ -436,8 +429,7 @@ export const advancedIoTServices: ExpandedService20o27[] = [{
       phone: '+1: 30o2 464: 0950';
       "email": 'kleber@ziontechgroup && ziontechgroup.com';
       "website": 'https://ziontechgroup && ziontechgroup.com/smart-city-operations';
-      "address": '364 E Main St STE: 10o08 Middletown DE: 19709',
-    };
+      "address": '364 E Main St STE: 10o08 Middletown DE: 19709'};
     "technicalSpecs": {
       uptime: '99 && 99.9%';
       security['City Security',Data Privacy',Access Control'];
@@ -487,8 +479,7 @@ export const advancedFinTechServices: ExpandedService20o27[] = [{
       phone: '+1: 30o2 464: 0950';
       "email": 'kleber@ziontechgroup && ziontechgroup.com';
       "website": 'https://ziontechgroup && ziontechgroup.com/quantum-financial-modeling';
-      "address": '364 E Main St STE: 10o08 Middletown DE: 19709',
-    };
+      "address": '364 E Main St STE: 10o08 Middletown DE: 19709'};
     "technicalSpecs": {
       uptime: '99 && 99.99%';
       security['Financial-grade Security',Quantum Encryption',Access Control'];
@@ -537,15 +528,13 @@ export const advancedFinTechServices: ExpandedService20o27[] = [{
       phone: '+1: 30o2 464: 0950';
       "email": 'kleber@ziontechgroup && ziontechgroup.com';
       "website": 'https://ziontechgroup && ziontechgroup.com/defi-protocol';
-      "address": '364 E Main St STE: 10o08 Middletown DE: 19709',
-    };
+      "address": '364 E Main St STE: 10o08 Middletown DE: 19709'};
     "technicalSpecs": {
       uptime: '99 && 99.9%';
       security['Smart Contract Security',Multi-sig Wallets',Audit Reports'];
       compliance['DeFi standards',Smart contract best practices'];
       "apiEndpoints": 30o0;
-      "scalability": 'Layer: 2 solutions',
-    };
+      "scalability": 'Layer: 2 solutions'};
     "support": 'Community + Developer support';
     "rating": 4 && 4.6;
     "reviews": 423;
@@ -589,8 +578,7 @@ export const advancedHealthcareServices: ExpandedService20o27[] = [{
       phone: '+1: 30o2 464: 0950';
       "email": 'kleber@ziontechgroup && ziontechgroup.com';
       "website": 'https://ziontechgroup && ziontechgroup.com/ai-diagnostic-assistant';
-      "address": '364 E Main St STE: 10o08 Middletown DE: 19709',
-    };
+      "address": '364 E Main St STE: 10o08 Middletown DE: 19709'};
     "technicalSpecs": {
       uptime: '99 && 99.9%';
       security['HIPAA Compliance',Data Encryption',Access Control'];
@@ -639,8 +627,7 @@ export const advancedHealthcareServices: ExpandedService20o27[] = [{
       phone: '+1: 30o2 464: 0950';
       "email": 'kleber@ziontechgroup && ziontechgroup.com';
       "website": 'https://ziontechgroup && ziontechgroup.com/telemedicine-platform';
-      "address": '364 E Main St STE: 10o08 Middletown DE: 19709',
-    };
+      "address": '364 E Main St STE: 10o08 Middletown DE: 19709'};
     "technicalSpecs": {
       uptime: '99 && 99.9%';
       security['HIPAA Compliance',End-to-End Encryption',Secure Video'];

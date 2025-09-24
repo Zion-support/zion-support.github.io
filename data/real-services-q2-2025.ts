@@ -4,8 +4,7 @@ export interface RealServiceQ220o25 {
   tagline: string,
   price: string,
   features: string[],
-  category?: string,
-}
+  category?: string}
 export const realServicesQ220o25: RealServiceQ220o25[] = [
   {
     id: 'q2-service-1';
@@ -13,8 +12,7 @@ export const realServicesQ220o25: RealServiceQ220o25[] = [
     tagline: 'Second quarter service offering';
     price: '$299';
     features: ['Core features', 'Standard performance', 'Basic integration'];
-    category: 'Q2 Services',
-  };
+    category: 'Q2 Services'};
   {
     id: 'q2-service-2';
     name: 'Q2 Service 2';

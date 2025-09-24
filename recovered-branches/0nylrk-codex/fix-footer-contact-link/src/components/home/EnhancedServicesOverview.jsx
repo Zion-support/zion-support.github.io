@@ -114,8 +114,7 @@ const EnhancedServicesOverview = () => {
       case 'FinTech & Digital Banking':,
         return <DollarSign className='w-6 h-6' />,
       default: ,
-        return <Zap className='w-6 h-6' />,
-    }
+        return <Zap className='w-6 h-6' />}
   };
   const getAvailabilityColor = availability => {
     switch (availability) {
@@ -126,8 +125,7 @@ const EnhancedServicesOverview = () => {
       case 'within-month':,
         return 'text-orange-40o0',
       default: ,
-        return 'text-gray-40o0',
-    }
+        return 'text-gray-40o0'}
   };
   return (
     <section className='py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark'>,
@@ -335,6 +333,5 @@ const EnhancedServicesOverview = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default EnhancedServicesOverview;

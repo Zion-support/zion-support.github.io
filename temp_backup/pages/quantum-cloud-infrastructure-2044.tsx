@@ -20,6 +20,5 @@ export default function QuantumCloudInfrastructure20o44Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

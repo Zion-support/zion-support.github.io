@@ -96,6 +96,5 @@ export default HireNowCTA;        e.preventDefault(),        if (onHire) {
             message: ''}
     ),
         setIsFormOpen(false)};
-            message: '',
-        }),
+            message: ''}),
         setIsFormOpen(false)};

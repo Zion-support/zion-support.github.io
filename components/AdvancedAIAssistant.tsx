@@ -5,16 +5,14 @@ interface Message {
   text: string,
   sender: 'user' | 'assistant',
   timestamp: Date,
-  type: 'text' | 'code' | 'analysis' | 'recommendation',
-}
+  type: 'text' | 'code' | 'analysis' | 'recommendation'}
 ,
 interface AICapability {
   id: string,
   name: string,
   description: string,
   icon: string,
-  category: 'analysis' | 'automation' | 'optimization' | 'insights',
-}
+  category: 'analysis' | 'automation' | 'optimization' | 'insights'}
 ,
 const AdvancedAIAssistant: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([]),
@@ -102,20 +100,15 @@ const AdvancedAIAssistant: React.FC = () => {
   const generateAIResponse = (input: string): string => {
     const lowerInput = input.toLowerCase(),
     if (lowerInput.includes('business') || lowerInput.includes('analysis')) {
-      return `Based on your business analysis request, here are my key insights: \n\n📊 Business Performance Metrics:\n- Revenue growth: +23% YoY\n- Customer acquisition cost: -15% improvement\n- Market share: Expanding in 3 new segments\n\n🎯 Strategic Recommendations:\n1. Focus on high-value customer segments\n2. Implement AI-driven personalization\n3. Expand into emerging markets\n\n💡 Next Steps:\n- Conduct deeper customer behavior analysis\n- Implement predictive analytics\n- Consider strategic partnerships\n\nWould you like me to dive deeper into any specific area?`,
-    }
+      return `Based on your business analysis request, here are my key insights: \n\n📊 Business Performance Metrics:\n- Revenue growth: +23% YoY\n- Customer acquisition cost: -15% improvement\n- Market share: Expanding in 3 new segments\n\n🎯 Strategic Recommendations:\n1. Focus on high-value customer segments\n2. Implement AI-driven personalization\n3. Expand into emerging markets\n\n💡 Next Steps:\n- Conduct deeper customer behavior analysis\n- Implement predictive analytics\n- Consider strategic partnerships\n\nWould you like me to dive deeper into any specific area?`}
     if (lowerInput.includes('code') || lowerInput.includes('review')) {
-      return `Code Review Analysis: \n\nStrengths:\n- Clean architecture and separation of concerns\n- Good error handling implementation\n- Comprehensive test coverage\n\nAreas for Improvement:\n- Some functions exceed 50 lines (consider refactoring)\n- Missing JSDoc comments for complex functions\n- Potential memory leaks in event listeners\n\nSecurity Considerations:\n- Input validation looks solid\n- No sensitive data exposure detected\n- CSRF protection implemented correctly\n\nPerformance Optimization:\n- Database queries could be optimized with indexing\n- Consider implementing caching for frequently accessed data\n- Image compression could reduce bundle size by ~30%`,
-    }
+      return `Code Review Analysis: \n\nStrengths:\n- Clean architecture and separation of concerns\n- Good error handling implementation\n- Comprehensive test coverage\n\nAreas for Improvement:\n- Some functions exceed 50 lines (consider refactoring)\n- Missing JSDoc comments for complex functions\n- Potential memory leaks in event listeners\n\nSecurity Considerations:\n- Input validation looks solid\n- No sensitive data exposure detected\n- CSRF protection implemented correctly\n\nPerformance Optimization:\n- Database queries could be optimized with indexing\n- Consider implementing caching for frequently accessed data\n- Image compression could reduce bundle size by ~30%`}
     if (lowerInput.includes('performance') || lowerInput.includes('optimize')) {
-      return `Performance Optimization Analysis: \n\nCurrent Metrics:\n- Page load time: 2.3s (Target: <2s)\n- Core Web Vitals: Good\n- Bundle size: 1.2MB (Could be reduced by 25%)\n\nOptimization Recommendations:\n1. Code Splitting: Implement lazy loading for non-critical components\n2. Image Optimization: Use WebP format and responsive images\n3. Caching Strategy: Implement Redis for API responses\n4. CDN: Deploy static assets to global CDN\n\nImmediate Actions:\n- Enable gzip compression\n- Implement service worker for offline functionality\n- Optimize database queries with proper indexing\n\nExpected Results:\n- 40% faster page load times\n- 60% reduction in server load\n- Improved user experience scores`,
-    }
+      return `Performance Optimization Analysis: \n\nCurrent Metrics:\n- Page load time: 2.3s (Target: <2s)\n- Core Web Vitals: Good\n- Bundle size: 1.2MB (Could be reduced by 25%)\n\nOptimization Recommendations:\n1. Code Splitting: Implement lazy loading for non-critical components\n2. Image Optimization: Use WebP format and responsive images\n3. Caching Strategy: Implement Redis for API responses\n4. CDN: Deploy static assets to global CDN\n\nImmediate Actions:\n- Enable gzip compression\n- Implement service worker for offline functionality\n- Optimize database queries with proper indexing\n\nExpected Results:\n- 40% faster page load times\n- 60% reduction in server load\n- Improved user experience scores`}
     if (lowerInput.includes('security') || lowerInput.includes('audit')) {
-      return `Security Audit Results:\n\nOverall Security Score: 8.5/10\n\nStrengths:\n- HTTPS enforcement implemented\n- Strong password policies in place\n- Regular security updates applied\n- Input sanitization working correctly\n\nVulnerabilities Found:\n- Medium Risk: Missing rate limiting on API endpoints\n- Low Risk: Some third-party dependencies need updates\n- Low Risk: Session timeout could be optimized\n\nRecommendations:\n1. Implement API rate limiting (Redis-based)\n2. Update dependencies to latest secure versions\n3. Add security headers (CSP, HSTS, X-Frame-Options)\n4. Conduct penetration testing quarterly\n\nCompliance Status: \n- GDPR: Compliant\n- SOC 2: Compliant\n- ISO 27001: In progress`,
-    }
+      return `Security Audit Results:\n\nOverall Security Score: 8.5/10\n\nStrengths:\n- HTTPS enforcement implemented\n- Strong password policies in place\n- Regular security updates applied\n- Input sanitization working correctly\n\nVulnerabilities Found:\n- Medium Risk: Missing rate limiting on API endpoints\n- Low Risk: Some third-party dependencies need updates\n- Low Risk: Session timeout could be optimized\n\nRecommendations:\n1. Implement API rate limiting (Redis-based)\n2. Update dependencies to latest secure versions\n3. Add security headers (CSP, HSTS, X-Frame-Options)\n4. Conduct penetration testing quarterly\n\nCompliance Status: \n- GDPR: Compliant\n- SOC 2: Compliant\n- ISO 27001: In progress`}
     if (lowerInput.includes('automation') || lowerInput.includes('automate')) {
-      return `Automation Opportunities Analysis:\n\nHigh-Impact Automation Targets:\n1. Customer Onboarding (Save 15 hours/week)\n2. Report Generation (Save 8 hours/week)\n3. Content Management (Save 12 hours/week)\n\nImplementation Roadmap:\n- Phase 1: Email automation (2 weeks)\n- Phase 2: Report automation (3 weeks)\n- Phase 3: Content automation (4 weeks)\n\nROI Projection:\n- Time savings: 35 hours/week\n- Cost savings: $3,500/month\n- Payback period: 2.5 months`,
-    }
+      return `Automation Opportunities Analysis:\n\nHigh-Impact Automation Targets:\n1. Customer Onboarding (Save 15 hours/week)\n2. Report Generation (Save 8 hours/week)\n3. Content Management (Save 12 hours/week)\n\nImplementation Roadmap:\n- Phase 1: Email automation (2 weeks)\n- Phase 2: Report automation (3 weeks)\n- Phase 3: Content automation (4 weeks)\n\nROI Projection:\n- Time savings: 35 hours/week\n- Cost savings: $3,500/month\n- Payback period: 2.5 months`}
     return `I can help with business analysis, code review, performance optimization, security audit, process automation suggestions, and market research. Please provide more specifics about what you'd like analyzed.`};
   const determineResponseType = (
     input: string): 'text' | 'code' | 'analysis' | 'recommendation' => {
@@ -125,8 +118,7 @@ const AdvancedAIAssistant: React.FC = () => {
       return 'analysis',
     if (lowerInput.includes('recommend') || lowerInput.includes('suggest')),
       return 'recommendation',
-    return 'text',
-  };
+    return 'text'};
   const handleCapabilityClick = (capability: AICapability) => {
     setActiveCapability(capability.id),
     const capabilityMessage: Message = {
@@ -169,8 +161,7 @@ const AdvancedAIAssistant: React.FC = () => {
                   className={`w-full text-left p-4 rounded-xl border-2 transition-all duration-200 ${
                     activeCapability === capability.id,
                       ? 'border-blue-500 bg-blue-50',
-                      : 'border-gray-200 hover: border-blue-300 hover:bg-gray-50',
-                  }`}
+                      : 'border-gray-200 hover: border-blue-300 hover:bg-gray-50'}`}
                 >,
                   <div className='flex items-start space-x-3'>,
                     <span className='text-2xl'>{capability.icon}</span>,
@@ -275,8 +266,7 @@ const AdvancedAIAssistant: React.FC = () => {
           <button
             onClick={() =>,
               setInputText(
-                'Analyze my business performance and suggest improvements'),
-            }
+                'Analyze my business performance and suggest improvements')}
             className='bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-200 text-left'>,
             <div className='text-3xl mb-3'>📊</div>,
             <h4 className='font-semibold text-gray-900 mb-2'>,
@@ -288,8 +278,7 @@ const AdvancedAIAssistant: React.FC = () => {
           </button>,
           <button
             onClick={() =>,
-              setInputText('Review my code quality and suggest optimizations'),
-            }
+              setInputText('Review my code quality and suggest optimizations')}
             className='bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-200 text-left'>,
             <div className='text-3xl mb-3'>🔍</div>,
             <h4 className='font-semibold text-gray-900 mb-2'>Code Review</h4>,
@@ -299,8 +288,7 @@ const AdvancedAIAssistant: React.FC = () => {
           </button>,
           <button
             onClick={() =>,
-              setInputText('Suggest automation opportunities for my business'),
-            }
+              setInputText('Suggest automation opportunities for my business')}
             className='bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-200 text-left'>,
             <div className='text-3xl mb-3'>🤖</div>,
             <h4 className='font-semibold text-gray-900 mb-2'>,
@@ -312,6 +300,5 @@ const AdvancedAIAssistant: React.FC = () => {
           </button>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AdvancedAIAssistant;

@@ -71,22 +71,19 @@ interface Service {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 interface Revolutionary20o26ServicesShowcaseProps {
   services: Service[],
   title?: string,
   subtitle?: string,
-  maxServices?: number,
-}
+  maxServices?: number}
 ,
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'AI Consciousness & Ethics': BrainIcon;
@@ -197,8 +194,7 @@ export default function Revolutionary20o26ServicesShowcase({
           return (
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()),
         default: ,
-          return 0,
-      }
+          return 0}
     }),
     .slice(0, maxServices),
   const containerVariants = {
@@ -296,8 +292,7 @@ export default function Revolutionary20o26ServicesShowcase({
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-30o0 ${
                   selectedCategory === category,
                     ? 'bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white shadow-lg shadow-cyan-50o0/25',
-                    : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 hover:text-white',
-                }`}
+                    : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 hover:text-white'}`}
               >,
                 {category}
               </button>))}

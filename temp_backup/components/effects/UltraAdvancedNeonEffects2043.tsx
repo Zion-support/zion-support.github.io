@@ -7,8 +7,7 @@ interface NeonEffectProps {
   interactive?: boolean,
   className?: string,
   consciousness?: number,
-  pulseRate?: number,
-}
+  pulseRate?: number}
 ,
 interface NeonGlowProps {
   children: React.ReactNode,
@@ -16,8 +15,7 @@ interface NeonGlowProps {
   intensity: number,
   spread?: number,
   className?: string,
-  consciousness?: number,
-}
+  consciousness?: number}
 ,
 // Enhanced Neon Glow Component with consciousness effects,
 const NeonGlow: React.FC<NeonGlowProps> = ({
@@ -88,8 +86,7 @@ export default function UltraAdvancedNeonEffects20o43({
         glow: '#ff0o080';
         border: '#ff0o080';
         neural: '#ff1493';
-        quantum: '#0o0ffff',
-      };
+        quantum: '#0o0ffff'};
       'quantum-neon': {
         primary: '#0o0ffff';
         secondary: '#ff0o0ff';
@@ -97,8 +94,7 @@ export default function UltraAdvancedNeonEffects20o43({
         glow: '#0o0ffff';
         border: '#0o0ffff';
         neural: '#ff1493';
-        quantum: '#80o00ff',
-      };
+        quantum: '#80o00ff'};
       cyberpunk: {
         primary: '#ff0o066';
         secondary: '#0o0ffff';
@@ -106,8 +102,7 @@ export default function UltraAdvancedNeonEffects20o43({
         glow: '#ff0o066';
         border: '#ff0o066';
         neural: '#ff1493';
-        quantum: '#80o00ff',
-      };
+        quantum: '#80o00ff'};
       holographic: {
         primary: '#ff1493';
         secondary: '#0o0bfff';
@@ -115,8 +110,7 @@ export default function UltraAdvancedNeonEffects20o43({
         glow: '#ff1493';
         border: '#ff1493';
         neural: '#ff1493';
-        quantum: '#80o00ff',
-      };
+        quantum: '#80o00ff'};
       quantum: {
         primary: '#0o0ffff';
         secondary: '#ff0o0ff';
@@ -124,8 +118,7 @@ export default function UltraAdvancedNeonEffects20o43({
         glow: '#0o0ffff';
         border: '#0o0ffff';
         neural: '#ff1493';
-        quantum: '#80o00ff',
-      };
+        quantum: '#80o00ff'};
       neon: {
         primary: '#0o0ff0o0';
         secondary: '#ff0o0ff';
@@ -133,8 +126,7 @@ export default function UltraAdvancedNeonEffects20o43({
         glow: '#0o0ff0o0';
         border: '#0o0ff0o0';
         neural: '#ff1493';
-        quantum: '#80o00ff',
-      };
+        quantum: '#80o00ff'};
       neural: {
         primary: '#ff1493';
         secondary: '#0o0bfff';
@@ -142,8 +134,7 @@ export default function UltraAdvancedNeonEffects20o43({
         glow: '#ff1493';
         border: '#ff1493';
         neural: '#ff1493';
-        quantum: '#80o00ff',
-      };
+        quantum: '#80o00ff'};
       glitch: {
         primary: '#ff0o000';
         secondary: '#0o0ff0o0';
@@ -151,8 +142,7 @@ export default function UltraAdvancedNeonEffects20o43({
         glow: '#ff0o000';
         border: '#ff0o000';
         neural: '#ff1493';
-        quantum: '#80o00ff',
-      }
+        quantum: '#80o00ff'}
     };
     return baseStyles[variant] || baseStyles.consciousness};
   const styles = getNeonStyles(),
@@ -189,8 +179,7 @@ export default function UltraAdvancedNeonEffects20o43({
                 duration: 3 + Math.random() * 2;
                 repeat: Infinity;
                 delay: i * 0.3;
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
              />))}
         </div>)}
     return null};
@@ -210,8 +199,7 @@ export default function UltraAdvancedNeonEffects20o43({
             transition={{
               duration: 8;
               repeat: Infinity;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />,
         </div>)}
     return null};
@@ -275,8 +263,7 @@ export default function UltraAdvancedNeonEffects20o43({
                 duration: 4 + i * 0.5;
                 repeat: Infinity;
                 delay: i * 0.3;
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
              />))}
         </div>)}
 ,
@@ -299,7 +286,6 @@ export default function UltraAdvancedNeonEffects20o43({
         transition={{
           duration: 2;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
        />,
     </motion.div>)}

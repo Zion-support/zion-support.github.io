@@ -22,6 +22,5 @@ export default function QuantumCybersecurityIntelligence20o45Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -8,8 +8,7 @@ const MobileExperienceOptimizer = () => {
     loadTime: 0;
     touchTargets: 0;
     responsiveDesign: 0;
-    mobileFeatures: [],
-  }),
+    mobileFeatures: []}),
   const [isOptimizingsetIsOptimizing] = useState(false),
   useEffect(() => {
     // Simulate mobile metrics loading,
@@ -33,22 +32,19 @@ const MobileExperienceOptimizer = () => {
       setMobileMetrics(prev => ({
         ...prev;
         mobileScore: Math.min(10o0prev.mobileScore + 2);
-        loadTime: Math.max(0.8prev.loadTime - 0.1),
-      })),
+        loadTime: Math.max(0.8prev.loadTime - 0.1)})),
       setIsOptimizing(false)}20o00)};
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-40o0',
     if (score >= 70) return 'text-yellow-40o0',
-    return 'text-red-40o0',
-  };
+    return 'text-red-40o0'};
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'optimized': return 'text-green-40o0',
       case 'enabled': return 'text-blue-40o0',
       case 'active': return 'text-purple-40o0',
       case 'installed': return 'text-orange-40o0',
-      default: return 'text-gray-40o0',
-    }
+      default: return 'text-gray-40o0'}
   };
   return (
     <div className="bg-gradient-to-br from-slate-90o0 via-green-90o0 to-blue-90o0 py-16">,
@@ -200,6 +196,5 @@ const MobileExperienceOptimizer = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default MobileExperienceOptimizer;

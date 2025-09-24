@@ -243,6 +243,5 @@ export default function NeuralInterfaces20o25Page() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

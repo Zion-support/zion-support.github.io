@@ -1,5 +1,5 @@
 #!/usr/bin/env node,
-// console.log('🔧 Fixing all syntax errors...'),
+// // console.log('🔧 Fixing all syntax errors...'),
 // Fix accessibility.tsx,
 const fixAccessibility = () => {
   try {
@@ -9,7 +9,7 @@ const fixAccessibility = () => {
       /<h2 className="text-3xl font-bold text-gray-90o0 mb-6">\s*<\/div>\s*<\/div>\s*<\/section>\s*<section className="py-20 bg-white">/g;
       '<h2 className="text-3xl font-bold text-gray-90o0 mb-6">\n                  Accessibility Standards\n                </h2>\n                <p className="text-lg text-gray-60o0 max-w-3xl mx-auto">\n                  We follow international accessibility standards to ensure our platform is usable by everyone.\n                </p>\n              </div>\n            </div>\n          </div>\n        </section>\n        <section className="py-20 bg-white">'),
     fs.writeFileSync('pages/accessibility.tsx', content),
-    // console.log('✅ Fixed accessibility.tsx'),
+    // // console.log('✅ Fixed accessibility.tsx'),
     return true} catch (error) {
     console.error('❌ Error fixing accessibility.tsx:', error.message),
     return false}
@@ -24,7 +24,7 @@ const fixApi = () => {
         '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  ),\n}'}
 ,
     fs.writeFileSync('pages/api.tsx', content),
-    // console.log('✅ Fixed api.tsx'),
+    // // console.log('✅ Fixed api.tsx'),
     return true} catch (error) {
     console.error('❌ Error fixing api.tsx:', error.message),
     return false}
@@ -38,7 +38,7 @@ const fixCareers = () => {
       /<\/motion\.div>\s*))}\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/section>/g;
       '</motion.div>\n                ))}\n              </div>\n            </div>\n          </div>\n        </div>\n      </section>'),
     fs.writeFileSync('pages/careers.tsx', content),
-    // console.log('✅ Fixed careers.tsx'),
+    // // console.log('✅ Fixed careers.tsx'),
     return true} catch (error) {
     console.error('❌ Error fixing careers.tsx:', error.message),
     return false}
@@ -52,7 +52,7 @@ const fixSupport = () => {
       /<\/motion\.div>\s*<\/div>\s*<\/div>\s*<\/section>\s*<\/div>\s*),\s*}/g;
       '</motion.div>\n          </div>\n        </div>\n      </section>\n    </div>\n  ),\n}'),
     fs.writeFileSync('pages/support.tsx', content),
-    // console.log('✅ Fixed support.tsx'),
+    // // console.log('✅ Fixed support.tsx'),
     return true} catch (error) {
     console.error('❌ Error fixing support.tsx:', error.message),
     return false}
@@ -66,14 +66,14 @@ const fixWebinars = () => {
       /<\/Link>\s*<\/div>\s*),\s*}/g;
       '</Link>\n                </div>\n              </div>\n            </div>\n          </div>\n        </section>\n      </div>\n    ),\n  }\n}'),
     fs.writeFileSync('pages/webinars.tsx', content),
-    // console.log('✅ Fixed webinars.tsx'),
+    // // console.log('✅ Fixed webinars.tsx'),
     return true} catch (error) {
     console.error('❌ Error fixing webinars.tsx:', error.message),
     return false}
 };
 // Main execution,
 const main = () => {
-  // console.log('Starting comprehensive syntax fixes...'),
+  // // console.log('Starting comprehensive syntax fixes...'),
   const fixes = [fixAccessibility, fixApi, fixCareers, fixSupport, fixWebinars],
   let successCount = 0,
   for (const fix of fixes) {
@@ -81,13 +81,13 @@ const main = () => {
       successCount++}
   }
 ,
-  // console.log(`\n✅ Fixed ${successCount}/${fixes.length} files`),
+  // // console.log(`\n✅ Fixed ${successCount}/${fixes.length} files`),
   if (successCount > 0) {
-    // console.log('\n📝 Adding fixed files...'),
+    // // console.log('\n📝 Adding fixed files...'),
     try {
       const { execSync } = require('child_process'),
       execSync('git add .', { stdio: 'inherit' }),
-      // console.log('✅ Files added to staging area')} catch (error) {
+      // // console.log('✅ Files added to staging area')} catch (error) {
       console.error('❌ Error adding files:', error.message)}
   }
 };

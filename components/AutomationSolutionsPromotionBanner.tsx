@@ -73,6 +73,5 @@ export default function AutomationSolutionsPromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -15,6 +15,5 @@ export default function TalentsPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

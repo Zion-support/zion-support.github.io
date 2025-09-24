@@ -217,6 +217,5 @@ export function InnovationResearchSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

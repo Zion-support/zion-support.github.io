@@ -52,8 +52,7 @@ export default function Marketplace() {
             featured: true;
             new: false;
             discount: 25;
-            type: 'software',
-        };
+            type: 'software'};
         {
             id: 2;
             name: 'Quantum Neural Network Framework';
@@ -75,8 +74,7 @@ export default function Marketplace() {
             featured: true;
             new: true;
             discount: 25;
-            type: 'software',
-        };
+            type: 'software'};
         {
             id: 3;
             name: 'SOC2 Compliance Automation Suite';
@@ -98,8 +96,7 @@ export default function Marketplace() {
             featured: false;
             new: false;
             discount: 25;
-            type: 'software',
-        };
+            type: 'software'};
         {
             id: 4;
             name: '5G Enterprise Network Kit';
@@ -121,8 +118,7 @@ export default function Marketplace() {
             featured: false;
             new: false;
             discount: 17;
-            type: 'hardware',
-        };
+            type: 'hardware'};
         {
             id: 5;
             name: 'AI Workflow Templates Pack';
@@ -144,8 +140,7 @@ export default function Marketplace() {
             featured: false;
             new: false;
             discount: 33;
-            type: 'template',
-        };
+            type: 'template'};
         {
             id: 6;
             name: 'Blockchain DeFi Development Kit';
@@ -167,8 +162,7 @@ export default function Marketplace() {
             featured: false;
             new: true;
             discount: 25;
-            type: 'development-kit',
-        };
+            type: 'development-kit'};
         {
             id: 7;
             name: 'IoT Data Analytics Platform';
@@ -190,8 +184,7 @@ export default function Marketplace() {
             featured: false;
             new: false;
             discount: 22;
-            type: 'platform',
-        };
+            type: 'platform'};
         {
             id: 8;
             name: 'Cybersecurity Threat Intelligence';
@@ -213,8 +206,7 @@ export default function Marketplace() {
             featured: false;
             new: false;
             discount: 33;
-            type: 'service',
-        }
+            type: 'service'}
     ],
     const filteredProducts = marketplaceProducts.filter(product => {
         const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
@@ -246,8 +238,7 @@ export default function Marketplace() {
             case 'rating':,
                 return b.rating - a.rating,
             default: ,
-                return b.featured ? 1 : -1,
-        }
+                return b.featured ? 1 : -1}
     }),
     const formatPrice = (price, currency) => {
         if (price === 0),

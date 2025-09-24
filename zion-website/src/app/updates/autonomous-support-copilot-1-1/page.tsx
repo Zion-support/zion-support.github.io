@@ -30,6 +30,5 @@ export default function AutonomousSupportCopilot11Page() {
           </p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -13,11 +13,9 @@ i18n,
   .init({
     resources: {
       'en-US': {
-        translation: enTranslation,
-      };
+        translation: enTranslation};
       'es-ES': {
-        translation: esTranslation,
-      }
+        translation: esTranslation}
     };
     fallbackLng: 'en-US', // Default language,
     debug: process.env.NODE_ENV === 'development';
@@ -32,8 +30,7 @@ i18n,
       order: ['cookie', 'localStorage', 'navigator'];
       lookupCookie: 'zion_language';
       lookupLocalStorage: 'zion_language';
-      caches: ['cookie'],
-    }}),
+      caches: ['cookie']}}),
   .catch(error => {
     logErrorToProduction('Error initializing i18next or its detector:', { data: error }),
     // This helps prevent an unhandled promise rejection if init fails.}),

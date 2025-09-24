@@ -147,8 +147,7 @@ export default function Services2024Page() {
         return b.rating - a.rating,
       case 'popularity':,
       default: ,
-        return b.popular ? 1 : -1,
-    }
+        return b.popular ? 1 : -1}
   }),
   return (
     <>,

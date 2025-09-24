@@ -5,12 +5,10 @@ export type ProviderFiltersState ={
   category: string, // 'all' or a specific category,
   minRating: number, // 0-5,
   minAiMatch: number, // 0-10o0,
-  sortBy: 'relevance' | 'ai' | 'rating',
-};
+  sortBy: 'relevance' | 'ai' | 'rating'};
 export type ProviderFiltersProps ={
   state: ProviderFiltersState,
-  onChange: (next: ProviderFiltersState) => void,
-};
+  onChange: (next: ProviderFiltersState) => void};
 export default function ProviderFilters({ state, onChange }: ProviderFiltersProps) {
   const onText = (e: ChangeEvent<HTMLInputElement>) => onChange({ ...state, search: e.target.value }),
   const onCategory = (e: ChangeEvent<HTMLSelectElement>) => onChange({ ...state, category: e.target.value }),
@@ -46,5 +44,4 @@ export default function ProviderFilters({ state, onChange }: ProviderFiltersProp
           <option value="rating">Sort: Rating</option>,
         </select>,
       </div>,
-    </div>),
-}
+    </div>)}

@@ -9,13 +9,11 @@ export const fsDb = {
   read: (path: string) => null;
   write: (path: string, data: any) => null;
   exists: (path: string) => false;
-  delete: (path: string) => null,
-};
+  delete: (path: string) => null};
   read: (path: string) => null;
   write: (path: string, data: any) => null;
   exists: (path: string) => false;
-  delete: (path: string) => null,
-};
+  delete: (path: string) => null};
 import { promises as fs } from 'fs',
 import path from 'path',
 const DATA_DIR = path.join(process.cwd(), 'data'),

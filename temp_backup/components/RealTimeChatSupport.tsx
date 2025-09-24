@@ -8,8 +8,7 @@ interface ChatMessage {
   type: 'user' | 'bot' | 'system',
   content: string,
   timestamp: Date,
-  status?: 'sending' | 'sent' | 'error',
-}
+  status?: 'sending' | 'sent' | 'error'}
 ,
 interface ChatSupportProps {
   className?: string}
@@ -22,8 +21,7 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
       id: '1';
       type: 'bot';
       content: 'Hello! I\'m your AI assistant from Zion Tech Group. How can I help you today?';
-      timestamp: new Date(),
-    }
+      timestamp: new Date()}
   ]),
   const [inputValue, setInputValue] = useState(''),
   const [isTyping, setIsTyping] = useState(false),
@@ -44,8 +42,7 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
       type: 'user';
       content: inputValue;
       timestamp: new Date();
-      status: 'sending',
-    };
+      status: 'sending'};
     setMessages(prev => [...prev, userMessage]),
     setInputValue(''),
     setIsTyping(true),
@@ -55,8 +52,7 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
         id: (Date.now() + 1).toString();
         type: 'bot';
         content: generateAIResponse(inputValue);
-        timestamp: new Date(),
-      };
+        timestamp: new Date()};
       setMessages(prev => [
         ...prev.map(msg =>,
           msg.id === userMessage.id,
@@ -67,8 +63,7 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
   const generateAIResponse = (userInput: string): string => {
     const input = userInput.toLowerCase(),
     if (input.includes('pricing') || input.includes('cost')) {
-      return 'Our pricing is competitive and transparent. We offer flexible plans starting from $99/month. Would you like me to show you our detailed pricing structure?',
-    } else if (input.includes('ai') || input.includes('artificial intelligence')) {
+      return 'Our pricing is competitive and transparent. We offer flexible plans starting from $99/month. Would you like me to show you our detailed pricing structure?'} else if (input.includes('ai') || input.includes('artificial intelligence')) {
       return 'We specialize in cutting-edge AI solutions including AI consciousness evolution, quantum neural networks, and autonomous business intelligence. What specific AI capabilities are you looking for?'} else if (input.includes('quantum') || input.includes('quantum computing')) {
       return 'Our quantum computing solutions are revolutionary! We offer quantum cybersecurity, quantum cloud infrastructure, and quantum neural ecosystems. Would you like to learn more about any specific quantum technology?'} else if (input.includes('space') || input.includes('space technology')) {
       return 'We\'re pioneers in space technology! From space resource intelligence to interplanetary communication platforms, we\'re building the future of space exploration. What interests you most?'} else if (input.includes('contact') || input.includes('support')) {
@@ -85,8 +80,7 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault(),
-      handleSendMessage(),
-    }
+      handleSendMessage()}
   };
   const quickReplies = [
     'Tell me about AI services';

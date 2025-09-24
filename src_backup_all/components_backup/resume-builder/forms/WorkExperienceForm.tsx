@@ -36,8 +36,7 @@ interface WorkExperienceFormProps {
   resumeId: string,
   workExperiences: WorkExperience[],
   onComplete: () => void,
-  onBack: () => void,
-}
+  onBack: () => void}
 ,
 export function WorkExperienceForm({
   resumeId;
@@ -97,8 +96,7 @@ export function WorkExperienceForm({
         }),
         setEditingId(null)}
     } catch (err: any) {
-      setError(err.message || 'An error occurred'),
-    }
+      setError(err.message || 'An error occurred')}
   };
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!),
@@ -112,8 +110,7 @@ export function WorkExperienceForm({
     })};
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this work experience?')) {
-      await deleteWorkExperience(id),
-    }
+      await deleteWorkExperience(id)}
   };
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)};

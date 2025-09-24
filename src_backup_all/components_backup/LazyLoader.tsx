@@ -3,8 +3,7 @@ import { LoadingSpinner } from './ui/LoadingSpinner',
 interface LazyLoaderProps extends React.PropsWithChildren<{}> {
   component: React.ComponentType<any>,
   fallback?: React.ReactNode,
-  props?: any,
-}
+  props?: any}
 ,
 export const LazyLoader: React.FC<LazyLoaderProps> = ({
   component: Component;

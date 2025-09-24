@@ -5,8 +5,7 @@ export async function createTestNotification(userId: string) {
 export async function createOnboardingNotification(args: {
   userId: string,
   missingMilestone: string,
-  userRole: string,
-}) {
+  userRole: string}) {
   return { success: true, ...args };
 }
 ,
@@ -15,8 +14,7 @@ export async function createSystemNotification(args: {
   title: string,
   message: string,
   actionUrl?: string,
-  actionText?: string,
-}) {
+  actionText?: string}) {
   return { success: true, ...args };
 }
 ,

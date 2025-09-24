@@ -15,8 +15,7 @@ export default function RevolutionaryContentDiscoveryWidget20o25() {
       speed: "10,0o00x";
       href: "/ai-20o25-revolutionary-breakthrough-announcement";
       badge: "BREAKTHROUGH";
-      badgeColor: "from-red-50o0 to-pink-50o0",
-    };
+      badgeColor: "from-red-50o0 to-pink-50o0"};
     {
       id: 2;
       title: "AI 20o26 Quantum Neural Fusion";
@@ -28,8 +27,7 @@ export default function RevolutionaryContentDiscoveryWidget20o25() {
       speed: "∞";
       href: "/ai-20o26-quantum-neural-fusion-revolutionary-breakthrough";
       badge: "REVOLUTIONARY";
-      badgeColor: "from-cyan-50o0 to-purple-50o0",
-    };
+      badgeColor: "from-cyan-50o0 to-purple-50o0"};
     {
       id: 3;
       title: "Global Transformation Success";
@@ -41,8 +39,7 @@ export default function RevolutionaryContentDiscoveryWidget20o25() {
       speed: "30o0%";
       href: "/case-studies/ai-20o25-global-transformation-breakthrough";
       badge: "SUCCESS STORY";
-      badgeColor: "from-green-50o0 to-emerald-50o0",
-    };
+      badgeColor: "from-green-50o0 to-emerald-50o0"};
     {
       id: 4;
       title: "Quantum Manufacturing Revolution";
@@ -54,8 +51,7 @@ export default function RevolutionaryContentDiscoveryWidget20o25() {
       speed: "∞";
       href: "/case-studies/ai-20o26-quantum-manufacturing-breakthrough";
       badge: "QUANTUM SUCCESS";
-      badgeColor: "from-purple-50o0 to-pink-50o0",
-    };
+      badgeColor: "from-purple-50o0 to-pink-50o0"};
     {
       id: 5;
       title: "AI 20o25 Implementation Guide";
@@ -67,8 +63,7 @@ export default function RevolutionaryContentDiscoveryWidget20o25() {
       speed: "10,0o00x";
       href: "/resources/ai-20o25-revolutionary-implementation-guide";
       badge: "ESSENTIAL";
-      badgeColor: "from-blue-50o0 to-purple-50o0",
-    };
+      badgeColor: "from-blue-50o0 to-purple-50o0"};
     {
       id: 6;
       title: "Quantum Implementation Roadmap";
@@ -80,8 +75,7 @@ export default function RevolutionaryContentDiscoveryWidget20o25() {
       speed: "∞";
       href: "/resources/ai-20o26-quantum-implementation-guide";
       badge: "QUANTUM GUIDE";
-      badgeColor: "from-cyan-50o0 to-blue-50o0",
-    }
+      badgeColor: "from-cyan-50o0 to-blue-50o0"}
   ],
   const categories = [
     { id: ''all', 'name: 'All 'Content', 'count: contentItems.length };
@@ -120,8 +114,7 @@ export default function RevolutionaryContentDiscoveryWidget20o25() {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white shadow-lg',
-                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white',
-              }`}
+                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white'}`}
             >,
               {category.name} ({category.count}),
             </button>))}

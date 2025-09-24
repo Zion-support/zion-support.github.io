@@ -15,8 +15,7 @@ const NeuralInterfaceContentShowcase20o25 = () => {
         roi: '80o0%';
         savings: '$75M';
         efficiency: '95%';
-        accuracy: '99.9%',
-      };
+        accuracy: '99.9%'};
       readingTime: '18 min read';
       featured: true;
       tags: ['Neural 'Interfaces', 'Business 'Revolution', 'ROI'Enterprise'20o25']};
@@ -31,8 +30,7 @@ const NeuralInterfaceContentShowcase20o25 = () => {
         roi: '80o0%';
         savings: '$75M';
         efficiency: '98%';
-        satisfaction: '98%',
-      };
+        satisfaction: '98%'};
       readingTime: '15 min read';
       featured: true;
       tags: ['Case 'Study', 'Fortune 50o0'Neural 'Interfaces', 'ROI'Success Story']};
@@ -47,8 +45,7 @@ const NeuralInterfaceContentShowcase20o25 = () => {
         roi: '80o0%';
         success: '98%';
         timeline: '12 months';
-        implementations: '50o0+',
-      };
+        implementations: '50o0+'};
       readingTime: '25 min read';
       featured: true;
       tags: ['Implementation 'Guide', 'Neural 'Interfaces', 'Strategy', 'ROI', 'Framework']}
@@ -80,8 +77,7 @@ const NeuralInterfaceContentShowcase20o25 = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"  />,
           </svg>),
       default: ,
-        return null,
-    }
+        return null}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -92,8 +88,7 @@ const NeuralInterfaceContentShowcase20o25 = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <div className="py-20 bg-gradient-to-br from-slate-50 via-white to-purple-50">,
@@ -141,8 +136,7 @@ const NeuralInterfaceContentShowcase20o25 = () => {
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-20o0 ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-purple-50 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-purple-50 border border-gray-20o0'}`}
             >,
               {category.name}
               <span className="ml-2 text-xs bg-white/20 px-2 py-1 rounded-full">,
@@ -250,6 +244,5 @@ const NeuralInterfaceContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NeuralInterfaceContentShowcase20o25;

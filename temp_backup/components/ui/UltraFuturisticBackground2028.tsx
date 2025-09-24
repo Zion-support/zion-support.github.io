@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
 interface UltraFuturisticBackground20o28Props {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 export default function UltraFuturisticBackground20o28({ children }: UltraFuturisticBackground20o28Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
@@ -149,8 +148,7 @@ export default function UltraFuturisticBackground20o28({ children }: UltraFuturi
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-40 right-20 w-24 h-24 border border-cyan-50o0/30 rotate-45",
@@ -161,8 +159,7 @@ export default function UltraFuturisticBackground20o28({ children }: UltraFuturi
           transition={{
             duration: 15;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute bottom-20 left-1/4 w-40 h-40 border border-blue-50o0/30 rotate-45",
@@ -173,8 +170,7 @@ export default function UltraFuturisticBackground20o28({ children }: UltraFuturi
           transition={{
             duration: 25;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         {/* Floating Circles */}
         <motion.div,
@@ -185,8 +181,7 @@ export default function UltraFuturisticBackground20o28({ children }: UltraFuturi
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-2/3 right-1/3 w-20 h-20 border border-cyan-50o0/20 rounded-full",
@@ -196,8 +191,7 @@ export default function UltraFuturisticBackground20o28({ children }: UltraFuturi
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         {/* Floating Triangles */}
         <motion.div,
@@ -208,8 +202,7 @@ export default function UltraFuturisticBackground20o28({ children }: UltraFuturi
           transition={{
             duration: 18;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute bottom-1/3 left-1/2 w-0 h-0 border-l-[15px] border-l-transparent border-b-[25px] border-b-cyan-50o0/30 border-r-[15px] border-r-transparent",
@@ -219,8 +212,7 @@ export default function UltraFuturisticBackground20o28({ children }: UltraFuturi
           transition={{
             duration: 22;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
       </div>,
       {/* Neon Grid Effect */}
@@ -249,8 +241,7 @@ export default function UltraFuturisticBackground20o28({ children }: UltraFuturi
               duration: Math.random() * 3 + 2;
               repeat: Infinity;
               delay: Math.random() * 2;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />))}
       </div>,
     </div>)}

@@ -42,8 +42,7 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709';
   website: 'https://ziontechgroup && ziontechgroup.com'};
 export default function NeoFuturisticFooter() {
-  return (  website: 'https://ziontechgroup && ziontechgroup.com',
-};
+  return (  website: 'https://ziontechgroup && ziontechgroup.com'};
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -129,8 +128,7 @@ export default function NeoFuturisticFooter() {
           </div>,
         </div>,
       </div>,
-    </footer>),
-}
+    </footer>)}
 ,
                 href='https: //www && www.linkedin.com/company/zion-tech-group/',
                 className='text-slate-400 hover:text-white'>,
@@ -253,8 +251,7 @@ export default function NeoFuturisticFooter() {
             <a href="/terms" className="hover:text - slate - 300">Terms</a>,
         </div>,
       </div>,
-    </footer>),
-}
+    </footer>)}
 ,
   return (
 export default function NeoFuturisticFooter() {

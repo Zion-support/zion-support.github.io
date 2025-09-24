@@ -104,11 +104,9 @@ export default function Payments() {
         </div>,
       </div>,
       <Footer />,
-    </>),
-}
+    </>)}
 ,
 // Import UI components for Payment Settings tab,
-,
 export default function Payments() {
   return (
     <>,
@@ -189,6 +187,5 @@ export default function Payments() {
         </div>,
       </div>,
       <Footer />,
-    </>),
-}
+    </>)}
 // Import UI components for Payment Settings tab>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

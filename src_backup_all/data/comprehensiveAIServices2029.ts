@@ -22,15 +22,13 @@ export interface ComprehensiveAIService20o29 {
     phone: string,
     email: string,
     website: string,
-    address: string,
-  };
+    address: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string,
   demoUrl?: string,
@@ -86,8 +84,7 @@ export const COMPREHENSIVE_AI_SERVICES_20o29: ComprehensiveAIService20o29[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["GPT-4", "Claude", "TensorFlow", "Python", "React", "Node.js"];
       integrations: ["Databases", "Cloud platforms", "Business applications", "Data sources"];
@@ -97,8 +94,7 @@ export const COMPREHENSIVE_AI_SERVICES_20o29: ComprehensiveAIService20o29[] = [
     competitors: ["Tableau", "Power BI", "Qlik", "Looker", "Sisense"];
     marketSize: "$18.7B (Business Intelligence)";
     demoUrl: "https://ziontechgroup.com/demo/ai-business-intelligence-platform";
-    documentationUrl: "https://ziontechgroup.com/docs/ai-business-intelligence-platform",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/ai-business-intelligence-platform"};
   // AI-Powered Customer Experience,
   {
     id: "ai-customer-experience-platform";
@@ -148,8 +144,7 @@ export const COMPREHENSIVE_AI_SERVICES_20o29: ComprehensiveAIService20o29[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Machine Learning", "Python", "React", "Node.js", "MongoDB"];
       integrations: ["CRM systems", "E-commerce platforms", "Analytics tools", "Communication platforms"];
@@ -159,8 +154,7 @@ export const COMPREHENSIVE_AI_SERVICES_20o29: ComprehensiveAIService20o29[] = [
     competitors: ["Qualtrics", "Medallia", "SurveyMonkey", "Typeform", "Hotjar"];
     marketSize: "$8.5B (Customer Experience Management)";
     demoUrl: "https://ziontechgroup.com/demo/ai-customer-experience-platform";
-    documentationUrl: "https://ziontechgroup.com/docs/ai-customer-experience-platform",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/ai-customer-experience-platform"};
   // AI-Powered Content Creation,
   {
     id: "ai-content-creation-suite";
@@ -210,8 +204,7 @@ export const COMPREHENSIVE_AI_SERVICES_20o29: ComprehensiveAIService20o29[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["GPT-4", "Claude", "BERT", "React", "Node.js", "PostgreSQL"];
       integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social media platforms"];
@@ -221,8 +214,7 @@ export const COMPREHENSIVE_AI_SERVICES_20o29: ComprehensiveAIService20o29[] = [
     competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot", "Grammarly"];
     marketSize: "$15.2B (Content Marketing)";
     demoUrl: "https://ziontechgroup.com/demo/ai-content-creation-suite";
-    documentationUrl: "https://ziontechgroup.com/docs/ai-content-creation-suite",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/ai-content-creation-suite"};
   // AI-Powered Marketing Automation,
   {
     id: "ai-marketing-automation-platform";
@@ -272,8 +264,7 @@ export const COMPREHENSIVE_AI_SERVICES_20o29: ComprehensiveAIService20o29[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL"];
       integrations: ["CRM systems", "Email platforms", "Social media", "Analytics tools", "E-commerce platforms"];
@@ -283,8 +274,7 @@ export const COMPREHENSIVE_AI_SERVICES_20o29: ComprehensiveAIService20o29[] = [
     competitors: ["HubSpot", "Marketo", "Pardot", "ActiveCampaign", "ConvertKit"];
     marketSize: "$12.5B (Marketing Automation)";
     demoUrl: "https://ziontechgroup.com/demo/ai-marketing-automation-platform";
-    documentationUrl: "https://ziontechgroup.com/docs/ai-marketing-automation-platform",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/ai-marketing-automation-platform"};
   // AI-Powered Sales Intelligence,
   {
     id: "ai-sales-intelligence-platform";
@@ -334,8 +324,7 @@ export const COMPREHENSIVE_AI_SERVICES_20o29: ComprehensiveAIService20o29[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL"];
       integrations: ["CRM systems", "Sales platforms", "Email tools", "Analytics platforms"];
@@ -345,8 +334,7 @@ export const COMPREHENSIVE_AI_SERVICES_20o29: ComprehensiveAIService20o29[] = [
     competitors: ["Salesforce Einstein", "HubSpot Sales Hub", "Pipedrive", "Zoho CRM", "Freshsales"];
     marketSize: "$9.8B (Sales Intelligence)";
     demoUrl: "https://ziontechgroup.com/demo/ai-sales-intelligence-platform";
-    documentationUrl: "https://ziontechgroup.com/docs/ai-sales-intelligence-platform",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/ai-sales-intelligence-platform"};
   // AI-Powered Financial Analytics,
   {
     id: "ai-financial-analytics-platform";
@@ -396,8 +384,7 @@ export const COMPREHENSIVE_AI_SERVICES_20o29: ComprehensiveAIService20o29[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Machine Learning", "Python", "TensorFlow", "React", "Node.js", "PostgreSQL"];
       integrations: ["Financial data sources", "Trading platforms", "Banking systems", "Analytics tools"];
@@ -407,8 +394,7 @@ export const COMPREHENSIVE_AI_SERVICES_20o29: ComprehensiveAIService20o29[] = [
     competitors: ["Bloomberg", "Reuters", "FactSet", "Morningstar", "Yahoo Finance"];
     marketSize: "$12.8B (Financial Analytics)";
     demoUrl: "https://ziontechgroup.com/demo/ai-financial-analytics-platform";
-    documentationUrl: "https://ziontechgroup.com/docs/ai-financial-analytics-platform",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/ai-financial-analytics-platform"};
   // AI-Powered Healthcare Analytics,
   {
     id: "ai-healthcare-analytics-platform";
@@ -458,8 +444,7 @@ export const COMPREHENSIVE_AI_SERVICES_20o29: ComprehensiveAIService20o29[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Machine Learning", "Python", "TensorFlow", "React", "Node.js", "PostgreSQL"];
       integrations: ["EMR systems", "HL7", "FHIR", "Healthcare platforms", "Analytics tools"];
@@ -469,8 +454,7 @@ export const COMPREHENSIVE_AI_SERVICES_20o29: ComprehensiveAIService20o29[] = [
     competitors: ["Epic", "Cerner", "Allscripts", "Athenahealth", "Practice Fusion"];
     marketSize: "$31.2B (Healthcare Analytics)";
     demoUrl: "https://ziontechgroup.com/demo/ai-healthcare-analytics-platform";
-    documentationUrl: "https://ziontechgroup.com/docs/ai-healthcare-analytics-platform",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/ai-healthcare-analytics-platform"};
   // AI-Powered Supply Chain Optimization,
   {
     id: "ai-supply-chain-optimization";
@@ -520,8 +504,7 @@ export const COMPREHENSIVE_AI_SERVICES_20o29: ComprehensiveAIService20o29[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Machine Learning", "Python", "TensorFlow", "React", "Node.js", "MongoDB"];
       integrations: ["ERP systems", "WMS platforms", "Logistics platforms", "Analytics tools"];
@@ -531,8 +514,7 @@ export const COMPREHENSIVE_AI_SERVICES_20o29: ComprehensiveAIService20o29[] = [
     competitors: ["SAP", "Oracle", "Manhattan Associates", "JDA Software", "Blue Yonder"];
     marketSize: "$18.7B (Supply Chain Management)";
     demoUrl: "https://ziontechgroup.com/demo/ai-supply-chain-optimization";
-    documentationUrl: "https://ziontechgroup.com/docs/ai-supply-chain-optimization",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/ai-supply-chain-optimization"};
   // AI-Powered Cybersecurity,
   {
     id: "ai-cybersecurity-platform";
@@ -582,8 +564,7 @@ export const COMPREHENSIVE_AI_SERVICES_20o29: ComprehensiveAIService20o29[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Machine Learning", "Python", "TensorFlow", "React", "Node.js", "Elasticsearch"];
       integrations: ["SIEM systems", "EDR solutions", "Security tools", "Monitoring platforms"];
@@ -593,7 +574,6 @@ export const COMPREHENSIVE_AI_SERVICES_20o29: ComprehensiveAIService20o29[] = [
     competitors: ["CrowdStrike", "SentinelOne", "Cylance", "Darktrace", "Cisco"];
     marketSize: "$22.1B (Cybersecurity)";
     demoUrl: "https://ziontechgroup.com/demo/ai-cybersecurity-platform";
-    documentationUrl: "https://ziontechgroup.com/docs/ai-cybersecurity-platform",
-  }
+    documentationUrl: "https://ziontechgroup.com/docs/ai-cybersecurity-platform"}
 ],
 export default COMPREHENSIVE_AI_SERVICES_20o29;

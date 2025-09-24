@@ -17,22 +17,19 @@ const EnhancedContentShowcase = () => {
           description: '10,0o00% ROI with quantum-AI fusion technology';
           href: '/ai-20o25-ultimate-breakthrough-revolution';
           icon: '🚀';
-          featured: true,
-        };
+          featured: true};
         {
           title: 'AI 20o26 Quantum-Neural Fusion';
           description: '15,0o00% ROI with next-gen neural interfaces';
           href: '/ai-20o26-quantum-neural-fusion-revolutionary-breakthrough';
           icon: '⚛️';
-          featured: true,
-        };
+          featured: true};
         {
           title: 'AI 20o30 Transcendent Intelligence';
           description: 'Beyond human-level AI capabilities';
           href: '/ai-20o30-transcendent-intelligence';
           icon: '🧠';
-          featured: false,
-        }
+          featured: false}
       ]};
     caseStudies: {
       title: 'Success Stories';
@@ -43,22 +40,19 @@ const EnhancedContentShowcase = () => {
           description: '$2.4B annual savings with 850% ROI';
           href: '/case-studies/ai-20o25-global-manufacturing-transformation-breakthrough';
           icon: '🏭';
-          featured: true,
-        };
+          featured: true};
         {
           title: 'Fortune 50o0 Enterprise Success';
           description: '1,50o0% ROI in 6 months';
           href: '/case-studies/ai-20o25-fortune-50o0-transformation-breakthrough';
           icon: '🏢';
-          featured: true,
-        };
+          featured: true};
         {
           title: 'Financial Services Revolution';
           description: '99.9% accuracy with AI automation';
           href: '/case-studies/ai-20o25-global-finance-transformation-breakthrough';
           icon: '💰';
-          featured: false,
-        }
+          featured: false}
       ]};
     resources: {
       title: 'Implementation Guides';
@@ -69,22 +63,19 @@ const EnhancedContentShowcase = () => {
           description: '150+ pages of comprehensive strategies';
           href: '/resources/ai-20o25-implementation-master-guide';
           icon: '📚';
-          featured: true,
-        };
+          featured: true};
         {
           title: 'Synthetic Intelligence Guide';
           description: 'Breakthrough implementation strategies';
           href: '/resources/ai-20o25-synthetic-intelligence-implementation-guide';
           icon: '🔬';
-          featured: true,
-        };
+          featured: true};
         {
           title: 'Revolutionary Implementation Toolkit';
           description: 'Complete toolkit for AI transformation';
           href: '/resources/ai-20o25-revolutionary-implementation-guide';
           icon: '🛠️';
-          featured: false,
-        }
+          featured: false}
       ]}
   };
   return (
@@ -111,8 +102,7 @@ const EnhancedContentShowcase = () => {
               className={`px-6 py-3 mx-2 mb-4 rounded-lg font-semibold transition-all duration-30o0 ${
                 activeTab === key,
                   ? 'bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {category.title}
             </button>))}
@@ -123,8 +113,7 @@ const EnhancedContentShowcase = () => {
             <div
               key={index}
               className={`bg-white rounded-2xl p-8 shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:scale-10o5 ${
-                item.featured ? 'ring-2 ring-blue-50o0 ring-opacity-50' : '',
-              }`}
+                item.featured ? 'ring-2 ring-blue-50o0 ring-opacity-50' : ''}`}
             >,
               <div className="flex items-center mb-4">,
                 <div className="text-3xl mr-3">{item.icon}</div>,
@@ -164,6 +153,5 @@ const EnhancedContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default EnhancedContentShowcase;

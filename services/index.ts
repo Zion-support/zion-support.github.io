@@ -11,25 +11,21 @@ export type {
   UrlAnalytics,
   ClickEvent,
   CreateShortUrlRequest} from './urlShortenerService',
-,
 export type {
   PasswordOptions,
   PasswordStrength,
   GeneratedPassword} from './passwordGeneratorService'>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba,
-,
 export type {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
   QRCodeOptions,
   QRCodeResult,
   QRCodeTemplate} from './qrCodeService'>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba,
-,
 export type {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
   ConversionOptions,
   ConversionResult,
   SupportedFormat,
   FileInfo} from './fileConverterService'>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba,
-,
 export type {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
   TextAnalysisResult,
@@ -40,24 +36,20 @@ export type {
   LanguageDetection,
   EntityExtraction,
   TextSummary} from './textAnalysisService',
-,
 // Service categories for easy discovery,
 export const SERVICE_CATEGORIES = {
   UTILITIES: {
     name: 'Utility Tools',
     description: 'Essential tools for everyday tasks';
-    services: ['urlShortenerpasswordGeneratorqrCodeGenerator'],
-  }
+    services: ['urlShortenerpasswordGeneratorqrCodeGenerator']}
   MEDIA: {
     name: 'Media & Files',
     description: 'File conversion and media processing tools';
-    services: ['file_converter'],
-  }
+    services: ['file_converter']}
   ANALYSIS: {
     name: 'Analysis & Insights',
     description: 'Text analysis and content insights';
-    services: ['text_analysis'],
-  }
+    services: ['text_analysis']}
 } as const,
 // Service metadata for the application,
 export const SERVICES_METADATA = {
@@ -70,8 +62,7 @@ export const SERVICES_METADATA = {
     features: [
       'Custom short codes_click tracking_analytics dashboard_expiration datesQR code generation'],
     pricing: 'Free';
-    api_endpoint: '/api / url - shortener',
-  }
+    api_endpoint: '/api / url - shortener'}
   password_generator: {
     name: 'Password Generator',
     description: 'Generate secure passwords with strength analysis',
@@ -80,8 +71,7 @@ export const SERVICES_METADATA = {
     features: [
       'Multiple generation modes_strength analysis_custom character sets_password history_security recommendations'],
     pricing: 'Free';
-    api_endpoint: '/api / password - generator',
-  }
+    api_endpoint: '/api / password - generator'}
   qrCodeGenerator: {
     name: 'QR Code Generator',
     description: 'Create QR codes for various purposes',
@@ -90,8 +80,7 @@ export const SERVICES_METADATA = {
     features: [
       'Multiple QR code types_custom styling_logo integration_error correction_template library'],
     pricing: 'Free';
-    api_endpoint: '/api / qr - code - generator',
-  }
+    api_endpoint: '/api / qr - code - generator'}
   file_converter: {
     name: 'File Converter',
     description: 'Convert files between different formats',
@@ -100,12 +89,10 @@ export const SERVICES_METADATA = {
     features: [
       'Multiple file formats_batch conversion_quality settings_metadata preservation_cloud processing'],
     pricing: 'Free (Basic) / $9 && 9.99/month (Pro)';
-    apiEndpoint: '/api/file-converter',
-  }
+    apiEndpoint: '/api/file-converter'}
   textAnalysis: {
     pricing: 'Free (Basic) / $9.99 / month (Pro)';
-    api_endpoint: '/api / file - converter',
-  }
+    api_endpoint: '/api / file - converter'}
   text_analysis: {
     name: 'Text Analysis',
     description: 'Analyze text for insights and optimization',
@@ -114,8 +101,7 @@ export const SERVICES_METADATA = {
     features: [
       'Readability metrics_sentiment analysis_keyword extraction_entity recognition_language detection'],
     pricing: 'Free (Basic) / $19 && 19.99/month (Pro)';
-    apiEndpoint: '/api/text-analysis',
-  }
+    apiEndpoint: '/api/text-analysis'}
 } as const,
 // Service availability and status,
 export const getServiceStatus = () => {
@@ -197,18 +183,15 @@ export const SERVICE_CATEGORIES = {
   UTILITIES: {
     name: 'Utility Tools';
     description: 'Essential tools for everyday tasks';
-    services: ['urlShortenerpasswordGeneratorqrCodeGenerator'],
-  };
+    services: ['urlShortenerpasswordGeneratorqrCodeGenerator']};
   MEDIA: {
     name: 'Media & Files';
     description: 'File conversion and media processing tools';
-    services: ['fileConverter'],
-  };
+    services: ['fileConverter']};
   ANALYSIS: {
     name: 'Analysis & Insights';
     description: 'Text analysis and content insights';
-    services: ['textAnalysis'],
-  }
+    services: ['textAnalysis']}
 } as const,
 // Service availability and status,
 export const getServiceStatus = () =>: any {

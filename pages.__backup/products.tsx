@@ -77,8 +77,7 @@ export default function ProductsPage() {
         'Real-time Learning'];
       icon: Brain;
       color: 'from-purple-40o0 to-pink-50o0';
-      status: 'Available Now',
-    };
+      status: 'Available Now'};
     {
       name: 'Quantum Computing Suite';
       description: 'Enterprise-grade quantum computing solutions for complex optimization and simulation problems.';
@@ -89,8 +88,7 @@ export default function ProductsPage() {
         'Simulation Tools'];
       icon: Zap;
       color: 'from-cyan-40o0 to-blue-50o0';
-      status: 'Early Access',
-    };
+      status: 'Early Access'};
     {
       name: 'SecureNet Enterprise';
       description: 'Comprehensive cybersecurity platform with advanced threat detection and response capabilities.';
@@ -101,46 +99,39 @@ export default function ProductsPage() {
         'Incident Response'];
       icon: Shield;
       color: 'from-red-40o0 to-pink-50o0';
-      status: 'Available Now',
-    }
+      status: 'Available Now'}
   ],
   const productBenefits = [
     {
       title: 'Increased Efficiency';
       description: 'Automate repetitive tasks and streamline operations';
       icon: Rocket;
-      color: 'from-green-40o0 to-emerald-50o0',
-    };
+      color: 'from-green-40o0 to-emerald-50o0'};
     {
       title: 'Cost Reduction';
       description: 'Lower operational costs through intelligent automation';
       icon: BarChart3;
-      color: 'from-blue-40o0 to-cyan-50o0',
-    };
+      color: 'from-blue-40o0 to-cyan-50o0'};
     {
       title: 'Enhanced Security';
       description: 'Protect your business with advanced security measures';
       icon: Lock;
-      color: 'from-red-40o0 to-pink-50o0',
-    };
+      color: 'from-red-40o0 to-pink-50o0'};
     {
       title: 'Scalability';
       description: 'Grow your business without infrastructure limitations';
       icon: Globe;
-      color: 'from-purple-40o0 to-indigo-50o0',
-    };
+      color: 'from-purple-40o0 to-indigo-50o0'};
     {
       title: 'Real-time Insights';
       description: 'Make data-driven decisions with instant analytics';
       icon: Cpu;
-      color: 'from-orange-40o0 to-yellow-50o0',
-    };
+      color: 'from-orange-40o0 to-yellow-50o0'};
     {
       title: 'Future-Proof';
       description: 'Built with cutting-edge technology for tomorrow\'s challenges';
       icon: Zap;
-      color: 'from-cyan-40o0 to-blue-50o0',
-    }
+      color: 'from-cyan-40o0 to-blue-50o0'}
   ],
   return (
     <>,
@@ -351,5 +342,4 @@ export default function ProductsPage() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}

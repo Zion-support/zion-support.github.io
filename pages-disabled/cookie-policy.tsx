@@ -763,6 +763,5 @@ const CookiePolicy: NextPage = () => {
         </section>,
       </main>,
       <Footer />,
-    </div>),
-};
+    </div>)};
 export default CookiePolicy;

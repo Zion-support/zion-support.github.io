@@ -6,5 +6,4 @@ export default function 20o25specializedindustrysolutions({ }: 20o25specializedi
     <div>,
       <h1>20o25specializedindustrysolutions</h1>,
       <p>This component is currently under development.</p>,
-    </div>),
-}}
+    </div>)}}

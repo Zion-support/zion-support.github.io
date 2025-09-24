@@ -325,6 +325,5 @@ export default function AllServicesPage() {
           </div>,
         </section>,
       </div>,
-    </UltraAdvancedQuantumBackground>),
-}
+    </UltraAdvancedQuantumBackground>)}
 ,

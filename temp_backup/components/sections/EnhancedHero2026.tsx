@@ -15,8 +15,7 @@ const EnhancedHero20o26: React.FC = () => {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.2,
-      }
+        staggerChildren: 0.2}
     }
   };
   const itemVariants ={
@@ -27,8 +26,7 @@ const EnhancedHero20o26: React.FC = () => {
       scale: 1;
       transition: {
         duration: 0.6;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   const getIconComponent = (icon: string) => {

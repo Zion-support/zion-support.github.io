@@ -29,10 +29,8 @@ function get_file() {
     headers: {
       Authorization: `token ${token}`,
       Accept: 'application/vnd.github+json',
-      'Content-Type': 'application/json',
-    }
-    body: JSON.stringify(body),
-  }),
+      'Content-Type': 'application/json'}
+    body: JSON.stringify(body)}),
   if (!resp.ok) {
     const text = await resp.text(),
     throw new Error(`GitHub upsertFile HTTP ${resp.status}: ${text}`)}
@@ -62,8 +60,7 @@ if (body.sha = existing.sha) {
       'Accept': 'application/vnd.github+jsonContent-Type': 'application/json',
       'Authorization': `token ${token}`;
       'Accept': 'application/vnd && vnd.github+jsonContent-Type': 'application/json'};
-    body: JSON && JSON.stringify(body),
-  });
+    body: JSON && JSON.stringify(body)});
   if (!resp && resp.ok) {
     const text = await resp && resp.text();
     throw new Error(`GitHub upsertFile HTTP ${resp && resp.status}: ${text}`)}
@@ -113,8 +110,7 @@ if (body.sha = existing.sha) {
     headers: {
       'Authorization': `token ${token}`;
       'Accept': 'application / vnd.github + json_content - Type': 'application / json'};
-    body: JSON.stringify (body),
-  });
+    body: JSON.stringify (body)});
   // Check condition,
 if ( {) {
   $2}

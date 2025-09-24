@@ -12,8 +12,7 @@ export default function EnhancedServicesShowcase20o29() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -22,8 +21,7 @@ export default function EnhancedServicesShowcase20o29() {
       opacity: 1;
       y: 0;
       transition: {
-        duration: 0.6,
-      }
+        duration: 0.6}
     }
   };
   const categories = [
@@ -32,22 +30,19 @@ export default function EnhancedServicesShowcase20o29() {
       icon: Crown;
       color: 'from-violet-60o0 via-purple-60o0 to-indigo-70o0';
       services: cuttingEdge20o29Services.slice(0, 4);
-      description: 'Beyond the future of technology',
-    };
+      description: 'Beyond the future of technology'};
     {
       title: '⚡ Emerging Technology Solutions';
       icon: Zap;
       color: 'from-blue-60o0 via-cyan-60o0 to-teal-70o0';
       services: emergingTech20o29Services.slice(0, 4);
-      description: 'Next-generation tech infrastructure',
-    };
+      description: 'Next-generation tech infrastructure'};
     {
       title: '💎 Micro SAAS Innovations';
       icon: Gem;
       color: 'from-emerald-60o0 via-green-60o0 to-teal-70o0';
       services: microSaas20o29Services.slice(0, 4);
-      description: 'Practical business solutions',
-    }
+      description: 'Practical business solutions'}
   ],
   return (
     <section className="relative py-20 bg-gradient-to-b from-black via-gray-90o0 to-black overflow-hidden">,
@@ -215,5 +210,4 @@ export default function EnhancedServicesShowcase20o29() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}

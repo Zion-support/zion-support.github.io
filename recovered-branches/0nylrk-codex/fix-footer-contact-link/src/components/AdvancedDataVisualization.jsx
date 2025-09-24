@@ -37,8 +37,7 @@ export function AdvancedDataVisualization() {
         showLegend: true;
         showGrid: true;
         animate: true;
-        responsive: true,
-    }),
+        responsive: true}),
     const [data, setData] = useState(mockChartData),
     const [isRefreshing, setIsRefreshing] = useState(false),
     const [autoRefresh, setAutoRefresh] = useState(false),
@@ -51,8 +50,7 @@ export function AdvancedDataVisualization() {
         setTimeout(() => {
             const newData = data.map(item => ({
                 ...item;
-                value: item.value + Math.floor(Math.random() * 10o0000 - 50o000),
-            })),
+                value: item.value + Math.floor(Math.random() * 10o0000 - 50o000)})),
             setData(newData),
             setIsRefreshing(false)}, 10o00)};
     useEffect(() => {
@@ -62,7 +60,7 @@ export function AdvancedDataVisualization() {
     }, [autoRefresh]),
     const downloadChart = (format) => {
         // Simulate chart download,
-        // console.log(`Downloading chart as ${format}`)};
+        // // console.log(`Downloading chart as ${format}`)};
     const renderChart = () => {
         switch (selectedChartType) {
             case 'bar':,
@@ -76,8 +74,7 @@ export function AdvancedDataVisualization() {
             case 'scatter':,
                 return renderScatterChart(),
             default: ,
-                return renderBarChart(),
-        }
+                return renderBarChart()}
     };
     const renderBarChart = () => {
         const maxValue = Math.max(...filteredData.map(item => item.value)),
@@ -86,8 +83,7 @@ export function AdvancedDataVisualization() {
         {filteredData.map((item, index) => (<div key={item.id} className="flex flex-col items-center">,
             <div className="w-16 bg-gradient-to-t from-zion-cyan to-zion-purple rounded-t-lg transition-all duration-50o0 hover: scale-110 cursor-pointer" style={{
                     height: `${(item.value / maxValue) * 280}px`;
-                    backgroundColor: colors[index % colors.length],
-                }} title={`${item.name}: ${item.value.toLocaleString()}`} />,
+                    backgroundColor: colors[index % colors.length]}} title={`${item.name}: ${item.value.toLocaleString()}`} />,
             <div className="mt-2 text-center">,
               <div className="text-xs font-medium text-zion-slate">{item.name}</div>,
               <div className="text-xs text-zion-slate-light">{item.value.toLocaleString()}</div>,
@@ -154,8 +150,7 @@ export function AdvancedDataVisualization() {
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-68 p-3 bg-zion-cyan hover: bg-zion-cyan-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-30o0 z-50" title="Advanced Data Visualization">,
         <BarChart3 className="w-5 h-5" />,
-      </button>),
-    }
+      </button>)}
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-68 z-50">,
         <div className="bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">,
@@ -167,8 +162,7 @@ export function AdvancedDataVisualization() {
             </button>,
           </div>,
         </div>,
-      </div>),
-    }
+      </div>)}
     return (<div className={`fixed bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-30o0 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[10o00px] h-[70o0px]'}`} ref={containerRef}>,
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">,

@@ -7,8 +7,7 @@ function Contact() {
     email: '',
     company: '',
     message: '',
-    service: '',
-  })
+    service: ''})
   const [formErrors, setFormErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
@@ -36,13 +35,11 @@ function Contact() {
     const { name, value } = e.target
     setFormData({
       ...formData,
-      [name]: value,
-    })
+      [name]: value})
     if (formErrors[name]) {
       setFormErrors({
         ...formErrors,
-        [name]: '',
-      })
+        [name]: ''})
     }
   }
   const handleSubmit = async (e) => {
@@ -91,7 +88,7 @@ function Contact() {
               Contact <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Us</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ready to transform your business with cutting-edge technology? Let&apos;s discuss your project and how we can help you achieve your goals.
+              Ready to transform your business with cutting-edge technology? Let's discuss your project and how we can help you achieve your goals.
             </p>
           </div>,
           <div className="grid lg:grid-cols-2 gap-12">
@@ -135,7 +132,7 @@ function Contact() {
                 </div>,
                   <div>
                   <label htmlFor="company" className="block text-white font-semibold mb-2">Company</label>,
-                  <input,
+                  <input
                     type="text",
                     id="company",
                     name="company",
@@ -152,8 +149,7 @@ function Contact() {
                     name="service",
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent",
-                  >
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
                     <option value="">Select a service</option>,
                     <option value="ai-ml">AI & Machine Learning</option>,
                     <option value="cloud">Cloud Infrastructure</option>,
@@ -181,7 +177,7 @@ function Contact() {
                 </div>,
                 {submitSuccess && (
                   <div className="bg-green-600/20 border border-green-500/50 text-green-400 px-4 py-3 rounded-lg">
-                    Thank you for your message! We&apos;ll get back to you soon.
+                    Thank you for your message! We'll get back to you soon.
                   </div>
                 )}
 ,
@@ -258,7 +254,7 @@ function Contact() {
           </div>,
         </div>,
       </main>,
-      {/* Footer */,}
+      {/* Footer */}
       <footer className="bg-black/40 backdrop-blur-md border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center text-gray-400">

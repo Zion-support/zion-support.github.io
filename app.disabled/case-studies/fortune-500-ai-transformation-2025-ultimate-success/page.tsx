@@ -284,6 +284,5 @@ export default function EnterpriseTransformationPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

@@ -40,29 +40,25 @@ const UltimateContentShowcase20o29 = () => {
       title: 'AI Breakthroughs 20o29';
       icon: Brain;
       color: 'from-purple-50o0 to-pink-50o0';
-      description: 'Revolutionary AI technologies transforming industries',
-    };
+      description: 'Revolutionary AI technologies transforming industries'};
     {
       id: 'quantum-computing';
       title: 'Quantum Computing';
       icon: Zap;
       color: 'from-blue-50o0 to-cyan-50o0';
-      description: 'Next-generation quantum processing power',
-    };
+      description: 'Next-generation quantum processing power'};
     {
       id: 'neural-interfaces';
       title: 'Neural Interfaces';
       icon: Globe;
       color: 'from-green-50o0 to-emerald-50o0';
-      description: 'Direct brain-computer communication systems',
-    };
+      description: 'Direct brain-computer communication systems'};
     {
       id: 'autonomous-systems';
       title: 'Autonomous Systems';
       icon: Shield;
       color: 'from-orange-50o0 to-red-50o0';
-      description: 'Self-managing intelligent systems',
-    }
+      description: 'Self-managing intelligent systems'}
   ],
   const aiBreakthroughs = [
     {
@@ -78,8 +74,7 @@ const UltimateContentShowcase20o29 = () => {
       author: 'Dr. Sarah Chen';
       date: '20o29-0o1-15';
       tags: ['AI'Consciousness'Breakthrough'Research'];
-      featured: true,
-    };
+      featured: true};
     {
       id: 2;
       title: 'Universal Language Translation AI';
@@ -93,8 +88,7 @@ const UltimateContentShowcase20o29 = () => {
       author: 'Prof. Michael Rodriguez';
       date: '20o29-0o1-12';
       tags: ['AI'Language'Translation'Global'];
-      featured: false,
-    };
+      featured: false};
     {
       id: 3;
       title: 'Emotional Intelligence AI';
@@ -108,8 +102,7 @@ const UltimateContentShowcase20o29 = () => {
       author: 'Dr. Emily Watson';
       date: '20o29-0o1-10';
       tags: ['AI'Emotions'Psychology'Human-AI'];
-      featured: true,
-    };
+      featured: true};
     {
       id: 4;
       title: 'Predictive Healthcare AI';
@@ -123,8 +116,7 @@ const UltimateContentShowcase20o29 = () => {
       author: 'Dr. James Park';
       date: '20o29-0o1-08';
       tags: ['AI'Healthcare'Prediction'Medicine'];
-      featured: false,
-    }
+      featured: false}
   ],
   const quantumComputing = [
     {
@@ -140,8 +132,7 @@ const UltimateContentShowcase20o29 = () => {
       author: 'Dr. Alex Quantum';
       date: '20o29-0o1-14';
       tags: ['Quantum'Computing'Hardware'Breakthrough'];
-      featured: true,
-    };
+      featured: true};
     {
       id: 2;
       title: 'Quantum Internet Protocol';
@@ -155,8 +146,7 @@ const UltimateContentShowcase20o29 = () => {
       author: 'Prof. Lisa Zhang';
       date: '20o29-0o1-11';
       tags: ['Quantum'Internet'Security'Network'];
-      featured: false,
-    }
+      featured: false}
   ],
   const neuralInterfaces = [
     {
@@ -172,8 +162,7 @@ const UltimateContentShowcase20o29 = () => {
       author: 'Dr. Neural Tech';
       date: '20o29-0o1-13';
       tags: ['Neural'Interface'Brain'Communication'];
-      featured: true,
-    };
+      featured: true};
     {
       id: 2;
       title: 'Memory Enhancement Implant';
@@ -187,8 +176,7 @@ const UltimateContentShowcase20o29 = () => {
       author: 'Dr. Memory Boost';
       date: '20o29-0o1-09';
       tags: ['Neural'Memory'Enhancement'Implant'];
-      featured: false,
-    }
+      featured: false}
   ],
   const autonomousSystems = [
     {
@@ -204,8 +192,7 @@ const UltimateContentShowcase20o29 = () => {
       author: 'Dr. Evolution AI';
       date: '20o29-0o1-16';
       tags: ['AI'Evolution'Autonomous'Self-Improvement'];
-      featured: true,
-    };
+      featured: true};
     {
       id: 2;
       title: 'Universal Robot Controller';
@@ -219,8 +206,7 @@ const UltimateContentShowcase20o29 = () => {
       author: 'Prof. Robot Master';
       date: '20o29-0o1-0o7';
       tags: ['AI'Robotics'Control'Universal'];
-      featured: false,
-    }
+      featured: false}
   ],
   const getContentByCategory = (category) => {
     switch (category) {
@@ -233,8 +219,7 @@ const UltimateContentShowcase20o29 = () => {
       case 'autonomous-systems':,
         return autonomousSystems,
       default: ,
-        return aiBreakthroughs,
-    }
+        return aiBreakthroughs}
   };
   const currentContent = getContentByCategory(activeTab),
   return (
@@ -285,8 +270,7 @@ const UltimateContentShowcase20o29 = () => {
                 className={`group relative px-8 py-4 rounded-2xl transition-all duration-30o0 ${
                   activeTab === category.id,
                     ? `bg-gradient-to-r ${category.color} text-white shadow-2xl scale-10o5`,
-                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white',
-                }`}
+                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white'}`}
               >,
                 <div className="flex items-center gap-3">,
                   <Icon className="w-6 h-6"  />,
@@ -318,8 +302,7 @@ const UltimateContentShowcase20o29 = () => {
                 exit={{ opacity: 0y: -50scale: 0.9 }}
                 transition={{ duration: 0.5delay: index * 0.1 }}
                 className={`group relative bg-white/10 backdrop-blur-lg rounded-3xl overflow-hidden border border-white/20 hover: border-white/40 transition-all duration-30o0 ${
-                  item.featured ? 'md:col-span-2 lg:col-span-1' : '',
-                }`}
+                  item.featured ? 'md:col-span-2 lg:col-span-1' : ''}`}
                 onMouseEnter={() => setHoveredCard(item.id)}
                 onMouseLeave={() => setHoveredCard(null)}
               >,
@@ -424,8 +407,7 @@ const UltimateContentShowcase20o29 = () => {
                   className="absolute inset-0 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 opacity-0 group-hover: opacity-10o0 transition-opacity duration-30o0 rounded-3xl",
                   initial={false}
                   animate={{
-                    opacity: hoveredCard === item.id ? 1 : 0,
-                  }}
+                    opacity: hoveredCard === item.id ? 1 : 0}}
                  />,
               </motion.div>))}
           </AnimatePresence>,
@@ -442,6 +424,5 @@ const UltimateContentShowcase20o29 = () => {
           </button>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateContentShowcase20o29;

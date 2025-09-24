@@ -19,8 +19,7 @@ import { ContractFormValues } from './ContractForm',
   PopoverTrigger;
 } from '@/components/ui/popover',
 interface ProjectDetailsFieldsProps {
-  form: UseFormReturn<ContractFormValues>,
-}
+  form: UseFormReturn<ContractFormValues>}
 ,
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
   return (

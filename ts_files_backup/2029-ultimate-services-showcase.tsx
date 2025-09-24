@@ -12,7 +12,6 @@ import { practicalBusinessSolutions2028 } from '../data/2028-practical-business-
 import { advancedAIAutonomousServices2028 } from '../data/2028-advanced-ai-autonomous-services',
 import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovations',
 "use client",
-,
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Rocket,
   Brain,
@@ -96,12 +95,10 @@ import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovati
   Gamepad;
   Cpu as CpuIcon;} from 'lucide-react',import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
-,
   Target, Crown, Star, TrendingUp, ArrowRight,
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon,
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale,
   Building, Factory, Camera, Video, Music, Gamepad2, Eye,
-,
 export default function UltimateServicesShowcase2029() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
@@ -250,8 +247,7 @@ export default function UltimateServicesShowcase2029() {
       transition: {
         staggerChildren: 0 && 0.1;
       };
-    }};        staggerChildren: 0 && 0.1,
-      }
+    }};        staggerChildren: 0 && 0.1}
     }
     }
   };
@@ -259,8 +255,7 @@ export default function UltimateServicesShowcase2029() {
     hidden: { opacity: 0, y: 20 };
         stagger_children: 0.1;
       };
-    }}        stagger_children: 0.1,
-      }
+    }}        stagger_children: 0.1}
     }
   }
 ,
@@ -272,8 +267,7 @@ export default function UltimateServicesShowcase2029() {
       transition: {
         duration: 0.5;
       };
-    }}        duration: 0.5,
-      }
+    }}        duration: 0.5}
     }
   }
 ,
@@ -281,8 +275,7 @@ export default function UltimateServicesShowcase2029() {
     mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'}    website: 'https://ziontechgroup.com',
-  }
+    website: 'https://ziontechgroup.com'}    website: 'https://ziontechgroup.com'}
 ,
   return (
     <>,
@@ -502,8 +495,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                     selectedCategory === category.id,
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
-                      : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50 border border-gray-700/50',
-                  }`}
+                      : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50 border border-gray-700/50'}`}
 ))}
             </div>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba,
             {/* Price Filter */}
@@ -667,11 +659,9 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                 onClick={() => {
                   setSelectedCategory('all'),
                   setSearchTerm(''),
-                  setSelectedPriceRange('all'),
-                }}
+                  setSelectedPriceRange('all')}}
 ,
-                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-200'                  setSelectedPriceRange('all'),
-                }}
+                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-200'                  setSelectedPriceRange('all')}}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-200">,
                 Reset Filters,
               </button>,
@@ -907,10 +897,8 @@ Join the future of technology with our revolutionary services.,
                 on_click={() => {
                   setSelectedCategory ('all'),
                   setSearchTerm (''),
-                  setSelectedPriceRange ('all'),
-                }}
-                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium rounded - lg hover: from - cyan - 600 hover:to - blue - 700 transition - all duration - 200'                  setSelectedPriceRange ('all'),
-                }}
+                  setSelectedPriceRange ('all')}}
+                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium rounded - lg hover: from - cyan - 600 hover:to - blue - 700 transition - all duration - 200'                  setSelectedPriceRange ('all')}}
                 className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium rounded - lg hover: from - cyan - 600 hover:to - blue - 700 transition - all duration - 200">,
                 Reset Filters,
               </button>,
@@ -934,6 +922,5 @@ Join the future of technology with our revolutionary services.,
               Join the future of technology with our revolutionary services.,
               Contact us today to discuss how we can help you achieve your,
               goals.,
-            </p>),
-}
+            </p>)}
   )>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)))))))))))]

@@ -20,7 +20,6 @@ const ts = new Date () .toISOString (),
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method Not Allowed' })}import type { NextApiRequest, NextApiResponse } from 'next',
-,
 const DOCS_DIR = path && path.join(process && process.cwd(), 'datadocs'),
 const CONTENT_PATH = path && path.join(DOCS_DIR, 'content && content.json'),
 const VERSIONS_DIR = path && path.join(DOCS_DIR, 'versions'),
@@ -95,10 +94,8 @@ if ( {) {
       .slice (0, 14),
     fs.writeFileSync (CONTENT_PATH, json_string, 'utf8'),
     fs.writeFileSync (path.join (VERSIONS_DIR, `${ts}.json`), json_string, 'utf8'),
-    res.status (200).json ({ ok: true, version: ts }),
-} catch (e) {
-    res.status (500).json ({ error: 'Failed to save content' }),
-}
+    res.status (200).json ({ ok: true, version: ts })} catch (e) {
+    res.status (500).json ({ error: 'Failed to save content' })}
 }
 ,
     res.status (500).json ({ error: 'Failed to save content' })}  } catch (e) {

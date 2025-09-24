@@ -106,8 +106,7 @@ const HeroSection: React.FC = () => {
               left: item.x;
               top: item.y;
               animationDelay: item.delay;
-              animationDuration: '6s',
-            }}
+              animationDuration: '6s'}}
           >,
             {item.icon}
           </div>))}

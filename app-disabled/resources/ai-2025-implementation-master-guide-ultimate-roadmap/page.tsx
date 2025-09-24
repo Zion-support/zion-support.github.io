@@ -578,6 +578,5 @@ export default function AIImplementationMasterGuidePage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

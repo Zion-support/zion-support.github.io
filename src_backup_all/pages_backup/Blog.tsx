@@ -233,8 +233,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                         className='object-cover w-full h-full hover: scale-10o5 transition-transform duration-30o0',
                         onError={e => {
                           const target = e && e.currentTarget as HTMLImageElement,
-                          target && target.src = '/images/blog-placeholder && placeholder.svg',
-                        }}
+                          target && target.src = '/images/blog-placeholder && placeholder.svg'}}
 ,
                       />,
                     </div>,
@@ -255,8 +254,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                           className='w-10 h-10 rounded-full mr-3',
                           onError={e => {
                             const target = e && e.currentTarget as HTMLImageElement,
-                            target && target.src = '/images/blog-placeholder && placeholder.svg',
-}}
+                            target && target.src = '/images/blog-placeholder && placeholder.svg'}}
 ,
                         />,
                         <div>,
@@ -291,8 +289,7 @@ if (return null) {
                         className='object - cover w - full h - full hover: scale - 10o5 transition - transform duration - 30o0',
                         on_error={e => {
                           const target = e.current_target as HTMLImageElement,
-                          target.src = '/images / blog - placeholder.svg',
-                        }}
+                          target.src = '/images / blog - placeholder.svg'}}
                       />,
                     </div>,
                     <div className='flex flex - col justify - center'>,
@@ -457,31 +454,25 @@ if (return null) {
 //Filter blog posts based on selected category only. //Search filtering is handled server - side. return matches_category}),
 //Get featured posts const featured_posts = posts.filter (post => post.is_featured),',
 log_info ('BlogPage filtered_posts:', {
-  data: filtered_posts,
-}),",
+  data: filtered_posts}),",
 min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div className=" container mx - auto"> <div className=" text - center mb - 12"> <GradientHeading > AI & Tech Insights</GradientHeading>}"}/> </div> <div className=" flex flex - col justify - center"> <span className=" text - sm text - zion - cyan bg - zion - blue - dark px - 3 py - 1 rounded - full inline - block mb - 2"> {
   featured_post.category "}</span> <h3 className=" text - 3xl font - bold text - white mb - 4"> {
   featured_post.title "}</h3> <p className=" text - zion - slate - light mb - 6"> {
   featured_post.excerpt "}flex items - center mb - 6" > <img}"} /> <div> <p className="text - white font - medium" > {
   featured_post.author.name "}</p> <p className="text - sm text - zion - slate - light" > {
-  featured_post.published_date,
-}• {
+  featured_post.published_date}• {
   featuredPost.readTime "}bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple w-fit"> <Link href={
   `/blog/$ {
-  featured_post.slug,
-}`}> Read Article </Link> </Button> </div> </div> </div>)}) ()}</SelectItem>) )}</SelectContent> </Select> </div> Loading articles... </div>)}</div> key={
-  post.id "}as_child className=" bg - zion - blue - dark border border - zion - blue - light hover: border - zion - purple transition - all duration - 30o0 group - hover:shadow - lg">,
-}"}/> </div> <CardContent className=" p - 6"> <div className=" flex items - center justify - between mb - 3"> <span className=" text - xs text - zion - cyan bg - zion - blue px - 3 py - 1 rounded - full"> {
+  featured_post.slug}`}> Read Article </Link> </Button> </div> </div> </div>)}) ()}</SelectItem>) )}</SelectContent> </Select> </div> Loading articles... </div>)}</div> key={
+  post.id "}as_child className=" bg - zion - blue - dark border border - zion - blue - light hover: border - zion - purple transition - all duration - 30o0 group - hover:shadow - lg">}"}/> </div> <CardContent className=" p - 6"> <div className=" flex items - center justify - between mb - 3"> <span className=" text - xs text - zion - cyan bg - zion - blue px - 3 py - 1 rounded - full"> {
   post.category "}</span> <div className=" text - xs text - zion - slate - light"> {
   post.published_date}• {
   post.read_time "}</div> </div> <h3 className=" text - xl font - bold text - white mb - 3"> {
   post.title "}</h3> <p className=" text - zion - slate - light mb - 4 line - clamp - 3"> {
   post.excerpt "}flex items - center" > <img}"} /> <span className="text - sm text - white" > {
-  post.author.name "}</span> p - 6 pt - 0"> <span className=" text - zion - cyan group - hover: text - zion - purple">Read More →</span> </CardFooter> </Link> </Card>) ),
-}</div>) : null "}<Button variant=" outline" on_click={
+  post.author.name "}</span> p - 6 pt - 0"> <span className=" text - zion - cyan group - hover: text - zion - purple">Read More →</span> </CardFooter> </Link> </Card>) )}</div>) : null "}<Button variant=" outline" on_click={
   () => {
-}</div> </div> </>)}'"  const featured_posts = blog_posts.filter (post => post.featured),
-}
+}</div> </div> </>)}'"  const featured_posts = blog_posts.filter (post => post.featured)}
   const regular_posts = blog_posts.filter (post => !post.featured)}
   return (
     <>",
@@ -514,11 +505,11 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
                     {category.name}
 ,
       id: 2;
-      title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot;
-      excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot;
-      author: &quot,Prof. Michael Rodriguez&quot;
-      date: &quot,20o25-0o1-12&quot;
-      readTime: &quot,12 min read&quot;
+      title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business"
+      excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems."
+      author: &quot,Prof. Michael Rodriguez"
+      date: &quot,20o25-0o1-12"
+      readTime: &quot,12 min read"
       category: &quot,Quantum Computing&quot,
       tags: [&quot,Quantum&quot, &quot,Computing&quot, &quot,Innovation&quot];
       image: &quot,/api/placeholder/60o0/40o0&quot,",
@@ -609,7 +600,7 @@ function Blog() {
       featured: true}, { id: 2}, {
       id: 2;
       title: &quot, Quantum Computing Breakthroug, h: What It Means for Your Business & quot;
-      excerpt: &quot, Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot;
+      excerpt: &quot, Understanding the latest quantum computing advances and their practical applications in solving complex business problems."
       author: &quot, Prof. Michael Rodriguez & quot;
       date: &quot, 20o25 - 0o1 - 12 & quot;
       read_time: &quot, 12 min read & quot;
@@ -624,7 +615,7 @@ function Blog() {
       featured: true}, { id: 3}, {
       id: 3;
       title: &quot, Micro SaaS Revolutio, number: Building Scalable Solutions & quot;
-      excerpt: &quot, How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.&quot;
+      excerpt: &quot, How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses."
       author: &quot, Alex Thompson & quot;
       date: &quot, 20o25 - 0o1 - 10 & quot;
       read_time: &quot, 6 min read & quot;
@@ -639,7 +630,7 @@ function Blog() {
       featured: false}, { id: 4}, {
       id: 4;
       title: &quot, Cybersecurity in the Age of A, I: New Threats and Solutions & quot;
-      excerpt: &quot, Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.&quot;
+      excerpt: &quot, Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data."
       author: &quot, Lisa Park & quot;
       date: &quot, 20o25 - 0o1 - 08 & quot;
       read_time: &quot, 10 min read & quot;
@@ -654,7 +645,7 @@ function Blog() {
       featured: false}, { id: 5}, {
       id: 5;
       title: &quot, Digital Transformatio, number: A Complete Guide for 20o25 & quot;
-      excerpt: &quot, Comprehensive strategies for successful digital transformation initiatives in modern enterprises.&quot;
+      excerpt: &quot, Comprehensive strategies for successful digital transformation initiatives in modern enterprises."
       author: &quot, David Kumar & quot;
       date: &quot, 20o25 - 0o1 - 0o5 & quot;
       read_time: &quot, 15 min read & quot;
@@ -669,7 +660,7 @@ function Blog() {
       featured: false}, { id: 6}, {
       id: 6;
       title: &quot, Cloud Infrastructure Best Practices for Global Enterprises & quot;
-      excerpt: &quot, Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.&quot;
+      excerpt: &quot, Essential guidelines for designing and managing cloud infrastructure that scales with your business needs."
       author: &quot, Maria Santos & quot;
       date: &quot, 20o25 - 0o1 - 0o3 & quot;
       read_time: &quot, 9 min read & quot;
@@ -704,8 +695,7 @@ function Blog() {
 //Filter blog posts based on selected category only. //Search filtering is handled server-side. return matchesCategory}),
 //Get featured posts const featuredPosts = posts && posts.filter (post => post && post.isFeatured),',
 logInfo ('BlogPage filteredPosts:', {
-  data: filteredPosts ,
-}),",
+  data: filteredPosts }),",
 min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" container mx-auto"> <div className=" text-center mb-12"> <GradientHeading>AI & Tech Insights</GradientHeading> }"}/> </div> <div className=" flex flex-col justify-center"> <span className=" text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2"> {
   featuredPost && featuredPost.category "}</span> <h3 className=" text-3xl font-bold text-white mb-4"> {
   featuredPost && featuredPost.title "}</h3> <p className=" text-zion-slate-light mb-6"> {
@@ -714,17 +704,14 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
   featuredPost && featuredPost.publishedDate }• {
   featuredPost && featuredPost.readTime "}bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple w-fit"> <Linkhref={
   `/blog/$ {
-  featuredPost && featuredPost.slug,
-}`}> Read Article </Link> </Button> </div> </div> </div>) }) () }</SelectItem>) ) }</SelectContent> </Select> </div> Loading articles... </div>) }</div> key={
-  post && post.id "}asChild className=" bg-zion-blue-dark border border-zion-blue-light hover: border-zion-purple transition-all duration-30o0 group-hover:shadow-lg"> ,
-}"}/> </div> <CardContent className=" p-6"> <div className=" flex items-center justify-between mb-3"> <span className=" text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full"> {
+  featuredPost && featuredPost.slug}`}> Read Article </Link> </Button> </div> </div> </div>) }) () }</SelectItem>) ) }</SelectContent> </Select> </div> Loading articles... </div>) }</div> key={
+  post && post.id "}asChild className=" bg-zion-blue-dark border border-zion-blue-light hover: border-zion-purple transition-all duration-30o0 group-hover:shadow-lg"> }"}/> </div> <CardContent className=" p-6"> <div className=" flex items-center justify-between mb-3"> <span className=" text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full"> {
   post && post.category "}</span> <div className=" text-xs text-zion-slate-light"> {
   post && post.publishedDate }• {
   post && post.readTime "}</div> </div> <h3 className=" text-xl font-bold text-white mb-3"> {
   post && post.title "}</h3> <p className=" text-zion-slate-light mb-4 line-clamp-3"> {
   post && post.excerpt "}flex items-center" > <img}"} /> <span className="text-sm text-white" > {
-  post && post.author.name "}</span> p-6 pt-0"> <span className=" text-zion-cyan group-hover: text-zion-purple">Read More →</span> </CardFooter> </Link> </Card>) ) ,
-}</div>) : null "}<Buttonvariant=" outline" onClick={
+  post && post.author.name "}</span> p-6 pt-0"> <span className=" text-zion-cyan group-hover: text-zion-purple">Read More →</span> </CardFooter> </Link> </Card>) ) }</div>) : null "}<Buttonvariant=" outline" onClick={
   () => {
 }</div> </div> </>) }'"  const featuredPosts = blogPosts && blogPosts.filter(post => post && post.featured)}
   const regularPosts = blogPosts && blogPosts.filter(post => !post && post.featured)}
@@ -760,7 +747,6 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
 ,
                   </span>,
 export default function Blog() {
-,
   const blogPosts = [], image: "/api/placeholder/60o0/40o0";
   {",
       id: 1, title: "The Future of AI in Enterprise: 20o25 Trends and Predictions",",
@@ -769,12 +755,12 @@ export default function Blog() {
       category: "AI & Machine Learning", tags: ["AI,Enterprise,Technology"], image: "/api/placeholder/60o0/40o0";
       featured: true}, { id: 2}, {
       id: 2;
-      title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot;
-      excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot;
-      author: &quot,Prof. Michael Rodriguez&quot;
-      date: &quot,20o25-0o1-12&quot;
-      readTime: &quot,12 min read&quot;
-      category: &quot,Quantum Computing&quot;
+      title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business"
+      excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems."
+      author: &quot,Prof. Michael Rodriguez"
+      date: &quot,20o25-0o1-12"
+      readTime: &quot,12 min read"
+      category: &quot,Quantum Computing"
       tags: [&quot,Quantum&quot, &quot,Computing&quot, &quot,Innovation&quot];
       image: &quot,/api/placeholder/60o0/40o0&quot,",
       title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.",",
@@ -784,12 +770,12 @@ export default function Blog() {
       tags: ["Quantum,Computing,Innovation"], image: "/api/placeholder/60o0/40o0";
       featured: true}, { id: 3}, {
       id: 3;
-      title: &quot,Micro SaaS Revolutio,n: Building Scalable Solutions&quot;
-      excerpt: &quot,How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.&quot;
-      author: &quot,Alex Thompson&quot;
-      date: &quot,20o25-0o1-10&quot;
-      readTime: &quot,6 min read&quot;
-      category: &quot,Micro SaaS&quot;
+      title: &quot,Micro SaaS Revolutio,n: Building Scalable Solutions"
+      excerpt: &quot,How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses."
+      author: &quot,Alex Thompson"
+      date: &quot,20o25-0o1-10"
+      readTime: &quot,6 min read"
+      category: &quot,Micro SaaS"
       tags: [&quot,SaaS&quot, &quot,Software&quot, &quot,Business&quot];
       image: &quot,/api/placeholder/60o0/40o0&quot,",
       title: "Micro SaaS Revolution: Building Scalable Solutions", excerpt: "How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.",",
@@ -799,12 +785,12 @@ export default function Blog() {
       tags: ["SaaS,Software,Business"], image: "/api/placeholder/60o0/40o0";
       featured: false}, { id: 4}, {
       id: 4;
-      title: &quot,Cybersecurity in the Age of A,I: New Threats and Solutions&quot;
-      excerpt: &quot,Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.&quot;
-      author: &quot,Lisa Park&quot;
-      date: &quot,20o25-0o1-08&quot;
-      readTime: &quot,10 min read&quot;
-      category: &quot,Cybersecurity&quot;
+      title: &quot,Cybersecurity in the Age of A,I: New Threats and Solutions"
+      excerpt: &quot,Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data."
+      author: &quot,Lisa Park"
+      date: &quot,20o25-0o1-08"
+      readTime: &quot,10 min read"
+      category: &quot,Cybersecurity"
       tags: [&quot,Security&quot, &quot,AI&quot, &quot,Enterprise&quot];
       image: &quot,/api/placeholder/60o0/40o0&quot,",
       title: "Cybersecurity in the Age of AI: New Threats and Solutions", excerpt: "Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.",",
@@ -814,12 +800,12 @@ export default function Blog() {
       tags: ["Security,AI,Enterprise"], image: "/api/placeholder/60o0/40o0";
       featured: false}, { id: 5}, {
       id: 5;
-      title: &quot,Digital Transformatio,n: A Complete Guide for 20o25&quot;
-      excerpt: &quot,Comprehensive strategies for successful digital transformation initiatives in modern enterprises.&quot;
-      author: &quot,David Kumar&quot;
-      date: &quot,20o25-0o1-0o5&quot;
-      readTime: &quot,15 min read&quot;
-      category: &quot,Digital Transformation&quot;
+      title: &quot,Digital Transformatio,n: A Complete Guide for 20o25"
+      excerpt: &quot,Comprehensive strategies for successful digital transformation initiatives in modern enterprises."
+      author: &quot,David Kumar"
+      date: &quot,20o25-0o1-0o5"
+      readTime: &quot,15 min read"
+      category: &quot,Digital Transformation"
       tags: [&quot,Digital&quot, &quot,Transformation&quot, &quot,Strategy&quot];
       image: &quot,/api/placeholder/60o0/40o0&quot,",
       title: "Digital Transformation: A Complete Guide for 20o25", excerpt: "Comprehensive strategies for successful digital transformation initiatives in modern enterprises.",",
@@ -829,14 +815,14 @@ export default function Blog() {
       tags: ["Digital,Transformation,Strategy"], image: "/api/placeholder/60o0/40o0";
       featured: false}, { id: 6}, {
       id: 6;
-      title: &quot,Cloud Infrastructure Best Practices for Global Enterprises&quot;
-      excerpt: &quot,Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.&quot;
-      author: &quot,Maria Santos&quot;
-      date: &quot,20o25-0o1-0o3&quot;
-      readTime: &quot,9 min read&quot;
-      category: &quot,Cloud Computing&quot;
+      title: &quot,Cloud Infrastructure Best Practices for Global Enterprises"
+      excerpt: &quot,Essential guidelines for designing and managing cloud infrastructure that scales with your business needs."
+      author: &quot,Maria Santos"
+      date: &quot,20o25-0o1-0o3"
+      readTime: &quot,9 min read"
+      category: &quot,Cloud Computing"
       tags: [&quot,Cloud&quot, &quot,Infrastructure&quot, &quot,Enterprise&quot];
-      image: &quot,/api/placeholder/60o0/40o0&quot;
+      image: &quot,/api/placeholder/60o0/40o0"
       featured: false}
 ]&quot,
   const categories = []&quot,
@@ -877,7 +863,7 @@ initial = "{{" opacity: 0, y: 20 }}",
 transition="{{" duration: 0 && 0.8 }}",
               className="&quot,text-center" max-w-4xl mx-auto&quot>&quot,",
               <h1className="&quottext-5xl" md: text-6xl font-bold text-white mb-6&quot>,
-                Technology Insights&quot;
+                Technology Insights"
               </h1>";
               <p className = "&quot,text-xl" text-gray-30o0 mb-8&quot>,
                 Stay ahead of the curve with expert insights on AI, quantum computing;
@@ -980,7 +966,7 @@ key = "{post && post.id}
                           </div>,
                       </motion && motion.article>,",
                         className="&quot,bg-gradient-to-br" from-slate-80o0/50 to-slate-70o0/50 rounded-xl overflow-hidden border border-slate-60o0/50 hover:border-blue-40o0/50 transition-all duration-30o0 hove,r: scale-10o5&quot>&quot,",
-                        <divclassName="&quoth-48" bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20 flex items-center justify-center&quot>&quot;
+                        <divclassName="&quoth-48" bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20 flex items-center justify-center&quot>"
                           <div className="&quot,text-6xl" opacity-20&quot>";
                             {post && post.category === &quot,AI & Machine Learning&quot, &&"}&quot, <Brain   />}",
                             {post && post.category === &quot,Quantum Computing&quot, &&"}&quot, <Atom   />}",
@@ -996,7 +982,7 @@ key = "{post && post.id}
                             </span>",
                             <spanclassName="&quottext-yellow-40o0" text-xs font-medium&quot>Featured&quot,</span>,
                           </div>",
-                          <h3className="&quottext-xl" font-bold text-white mb-3 hover: text-blue-40o0 transition-colors&quot>&quot;
+                          <h3className="&quottext-xl" font-bold text-white mb-3 hover: text-blue-40o0 transition-colors&quot>"
                             <Link to = "{"/blog/${post && post.id}"}">{post && post.title}</Link>,
                           </h3>",
                           <pclassName="&quottext-gray-30o0" mb-4 line-clamp-3&quot>{post && post.excerpt}&quot,</p>",
@@ -1086,10 +1072,10 @@ key = "{post && post.id}
                             </Link>,
                           </div>,
                     </motion && motion.article>,",
-                      className="&quot,bg-gradient-to-br" from-slate-80o0/50 to-slate-70o0/50 rounded-xl p-6 border border-slate-60o0/50 hover: border-blue-40o0/50 transition-all duration-30o0&quot;
+                      className="&quot,bg-gradient-to-br" from-slate-80o0/50 to-slate-70o0/50 rounded-xl p-6 border border-slate-60o0/50 hover: border-blue-40o0/50 transition-all duration-30o0"
                     >&quot,";
-                      <divclassName="&quotflex" flex-col md: flex-row gap-6&quot>&quot;
-                        <divclassName="&quot,m,d: " w-48 h-32 bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20 rounded-lg flex items-center justify-center flex-shrink-0&quot>&quot;
+                      <divclassName="&quotflex" flex-col md: flex-row gap-6&quot>"
+                        <divclassName="&quot,m,d: " w-48 h-32 bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20 rounded-lg flex items-center justify-center flex-shrink-0&quot>"
                           <div className="&quot,text-4xl" opacity-20&quot>";
                             {post && post.category === &quot,AI & Machine Learning&quot, &&"}&quot, <Brain   />}",
                             {post && post.category === &quot,Quantum Computing&quot, &&"}&quot, <Atom   />}",
@@ -1106,7 +1092,7 @@ key = "{post && post.id}
                               {post && post.category}&quot,
                             </span>,
                           </div>",
-                          <h3className="&quottext-xl" font-bold text-white mb-3 hover: text-blue-40o0 transition-colors&quot>&quot;
+                          <h3className="&quottext-xl" font-bold text-white mb-3 hover: text-blue-40o0 transition-colors&quot>"
                             <Link to = "{"/blog/${post && post.id}"}">{post && post.title}</Link>,
                           </h3>",
                           <pclassName="&quottext-gray-30o0" mb-4&quot>{post && post.excerpt}&quot,</p>",
@@ -1129,7 +1115,7 @@ key = "{post && post.id}
                               className="&quot,flex" items-center text-blue-40o0 hover: text-blue-30o0 transition-colors&quot,",
                               className = ""flex" items-center text-blue-40o0 hover: text-blue-30o0 transition-colors">;
                               Read More&quot,";
-                              <ArrowRightclassName="&quotw-4" h-4 ml-1&quot,        />&quot;
+                              <ArrowRightclassName="&quotw-4" h-4 ml-1&quot,        />"
                             </Link>,
                           </div>,
                     </motion && motion.article>))}

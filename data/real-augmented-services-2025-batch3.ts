@@ -3,8 +3,7 @@ export interface RealAugmentedService20o25Batch3 {
   name: string,
   tagline: string,
   price: string,
-  features: string[],
-}
+  features: string[]}
 ,
 export const augmentedServicesBatch3: RealAugmentedService20o25Batch3[] = [
   {

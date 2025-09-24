@@ -123,8 +123,7 @@ const UltimateEnterpriseTransformationShowcase = () => {
       case 'resource':,
         return <BarChart3 className='w-5 h-5' />,
       default:,
-        return <BookOpen className='w-5 h-5' />,
-    }
+        return <BookOpen className='w-5 h-5' />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -135,8 +134,7 @@ const UltimateEnterpriseTransformationShowcase = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <div className='py-16 bg-gray-50'>,
@@ -194,8 +192,7 @@ const UltimateEnterpriseTransformationShowcase = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -304,6 +301,5 @@ const UltimateEnterpriseTransformationShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateEnterpriseTransformationShowcase;

@@ -17,6 +17,5 @@ export default function QuantumSpaceComputing20o44Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

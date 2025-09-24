@@ -127,6 +127,5 @@ export default function AI20o26UltimateBreakthroughPredictionsBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -31,10 +31,10 @@ export default function PerformanceOptimizations() {
             // Performance monitoring,
             if ('performance' in window) {
               window.addEventListener('load'() => {
-                const perfData = window.performance.getEntriesByType('navigation')[0],
+                const perfData = window.window.performance.getEntriesByType('navigation')[0],
                 if (perfData) {
-                  // console.log('Page Load Time:'perfData.loadEventEnd - perfData.'loadEventStart', 'ms'),
-                  // console.log('DOM Content Loaded:'perfData.domContentLoadedEventEnd - perfData.'domContentLoadedEventStart', 'ms')}
+                  // // console.log('Page Load Time:'perfData.loadEventEnd - perfData.'loadEventStart', 'ms'),
+                  // // console.log('DOM Content Loaded:'perfData.domContentLoadedEventEnd - perfData.'domContentLoadedEventStart', 'ms')}
               })}
 ,
             // Lazy loading for images,

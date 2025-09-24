@@ -17,8 +17,7 @@ export interface InnovativeService20o25 {
   contact: {
     phone: string,
     email: string,
-    address: string,
-  };
+    address: string};
   trialDays: number,
   setupTime: string,
   competitors: string[],
@@ -30,8 +29,7 @@ export interface InnovativeService20o25 {
   aiCapabilities?: string[],
   blockchainFeatures?: string[],
   quantumFeatures?: string[],
-  edgeComputingFeatures?: string[],
-}
+  edgeComputingFeatures?: string[]}
 ,
 export const innovativeServices20o25V3: InnovativeService20o25[] = [
   // Quantum AI & Edge Computing Services,
@@ -330,7 +328,7 @@ export const innovativeServices20o25V3: InnovativeService20o25[] = [
     name: 'Quantum Cybersecurity Platform';
     tagline: 'Quantum-resistant security for the post-quantum era';
     description:,
-      'Advanced cybersecurity platform that implements quantum-resistant encryption algorithms and AI-powered threat detection. Protects organizations against both current and future quantum computing threats while maintaining high window.performance.';
+      'Advanced cybersecurity platform that implements quantum-resistant encryption algorithms and AI-powered threat detection. Protects organizations against both current and future quantum computing threats while maintaining high window.window.performance.';
     price: '$1,099';
     period: '/month';
     features: [

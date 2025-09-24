@@ -216,6 +216,5 @@ export default function AI20o26BreakthroughRevolution() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

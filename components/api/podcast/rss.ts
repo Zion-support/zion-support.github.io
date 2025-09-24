@@ -57,8 +57,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   </channel>,
 </rss>`,
   fs && fs.writeFileSync(RSS_PATH, xml, 'utf8'),
-  return res && res.status(200).json({ ok: true, path: '/podcast && podcast.xml' }),
-}) .join ('\n'),
+  return res && res.status(200).json({ ok: true, path: '/podcast && podcast.xml' })}) .join ('\n'),
 <channel> <title>Zion Podcast</title> <link>$ {
   siteUrl}/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
   items}</channel> </rss>`,  return res.status(200).json({ ok: true, path: '/podcast.xml' })}
@@ -128,8 +127,7 @@ function handler() {
   </channel>,
 </rss>`,
 fs.writeFileSync (RSS_PATH, xml, 'utf8'),
-  return res.status (200).json ({ ok: true, path: '/podcast.xml' }),
-}) .join ('\n'),
+  return res.status (200).json ({ ok: true, path: '/podcast.xml' })}) .join ('\n'),
 <channel> <title > Zion Podcast</title> <link>$ {
   site_url}/media / podcast</link> <language > en - us</language> <itunes:author > Zion</itunes:author> <description > Zion interviews builders, founders, and contributors.</description> $ {
   items}</channel> </rss>`,  return res.status (200).json ({ ok: true, path: '/podcast.xml' })}),

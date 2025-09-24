@@ -6,14 +6,12 @@ interface User {
   role: 'user' | 'admin' | 'moderator',
   userType?: string,
   displayName?: string,
-  avatarUrl?: string,
-}
+  avatarUrl?: string}
 ,
 interface AuthState {
   user: User | null,
   isAuthenticated: boolean,
-  isLoading: boolean,
-}
+  isLoading: boolean}
 ,
 export function useAuth() {
   const [authState, setAuthState] = useState<AuthState>({

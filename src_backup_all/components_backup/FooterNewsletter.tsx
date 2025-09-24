@@ -21,8 +21,7 @@ export function FooterNewsletter(): React.ReactElement {
     const trimmedEmail = email.trim(),
     if (!EMAIL_REGEX.test(trimmedEmail)) {
       setEmailError("Please enter a valid email address."),
-      return,
-    } else {
+      return} else {
       setEmailError("")}
 ,
     setIsSubmitting(true),

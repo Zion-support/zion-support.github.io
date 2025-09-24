@@ -13,6 +13,5 @@ const TechnicalWritingChat: NextPage = () => {
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>),
-};
+    </div>)};
 export default TechnicalWritingChat;

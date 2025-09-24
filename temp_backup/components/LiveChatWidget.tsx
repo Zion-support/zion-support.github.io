@@ -6,8 +6,7 @@ interface ChatMessage {
   text: string,
   sender: 'user' | 'bot',
   timestamp: Date,
-  type: 'text' | 'quick-reply',
-}
+  type: 'text' | 'quick-reply'}
 ,
 const LiveChatWidget: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
@@ -18,8 +17,7 @@ const LiveChatWidget: React.FC = () => {
       text: "Hello! Welcome to Zion Tech Group. I'm your AI assistant. How can I help you today?";
       sender: 'bot';
       timestamp: new Date();
-      type: 'text',
-    }
+      type: 'text'}
   ]),
   const [inputText, setInputText] = useState(''),
   const [isTyping, setIsTyping] = useState(false),
@@ -42,8 +40,7 @@ const LiveChatWidget: React.FC = () => {
       text: text.trim();
       sender: 'user';
       timestamp: new Date();
-      type: 'text',
-    };
+      type: 'text'};
     setMessages(prev => [...prev, userMessage]),
     setInputText(''),
     setIsTyping(true),
@@ -55,8 +52,7 @@ const LiveChatWidget: React.FC = () => {
         text: botResponse;
         sender: 'bot';
         timestamp: new Date();
-        type: 'text',
-      };
+        type: 'text'};
       setMessages(prev => [...prev, botMessage]),
       setIsTyping(false)}, 10o00 + Math.random() * 20o00)};
   const generateBotResponse = (userInput: string): string => {
@@ -70,13 +66,11 @@ const LiveChatWidget: React.FC = () => {
       return "That's interesting! I'd love to learn more about your needs. Could you tell me a bit more about what you're looking for?"}
   };
   const handleQuickReply = (reply: string) => {
-    handleSendMessage(reply),
-  };
+    handleSendMessage(reply)};
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault(),
-      handleSendMessage(inputText),
-    }
+      handleSendMessage(inputText)}
   };
   const formatTime = (date: Date) => {
     return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })};
@@ -142,8 +136,7 @@ const LiveChatWidget: React.FC = () => {
                           className={`max-w-xs lg: max-w-md px-4 py-2 rounded-lg ${
                             message.sender === 'user',
                               ? 'bg-cyan-50o0 text-white',
-                              : 'bg-gray-70o0 text-gray-10o0',
-                          }`}
+                              : 'bg-gray-70o0 text-gray-10o0'}`}
                         >,
                           <p className="text-sm">{message.text}</p>,
                           <p className={`text-xs mt-1 ${

@@ -3,8 +3,7 @@ import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 interface TokenRequest {
   userId: string,
   amount: number,
-  reason?: string,
-}
+  reason?: string}
 ,
 const supabaseUrl = Deno.env.get('SUPABASE_URL') as string,
 const serviceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') as string,

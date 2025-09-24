@@ -9,13 +9,10 @@ export interface TenantInfo {
   landing_page_copy: {
     headline: string,
     subtitle: string,
-    cta: string,
-  };
-  is_active: boolean,
-}
+    cta: string};
+  is_active: boolean}
 ,
 export interface TenantResponse {
   tenant: TenantInfo | null,
-  error?: string,
-}
+  error?: string}
 ,

@@ -3,14 +3,12 @@ interface Notification {
   id: string,
   type: 'success' | 'error' | 'warning' | 'info',
   message: string,
-  title?: string,
-}
+  title?: string}
 ,
 interface NotificationSystemProps {
   notifications: Notification[],
   onDismiss?: (id: string) => void,
-  className?: string,
-}
+  className?: string}
 ,
 export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   notifications;

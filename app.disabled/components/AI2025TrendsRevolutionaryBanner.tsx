@@ -15,11 +15,9 @@ const AI20o25TrendsRevolutionaryBanner = () => {
         roi: '15,0o00%';
         savings: '$20o0B+';
         efficiency: '2,40o0%';
-        accuracy: '99.97%',
-      };
+        accuracy: '99.97%'};
       readingTime: '35 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-ai-trends-success';
       title: 'Fortune 50o0 AI Trends Success Story';
@@ -30,11 +28,9 @@ const AI20o25TrendsRevolutionaryBanner = () => {
         roi: '15,0o00%';
         savings: '$20o0B';
         timeline: '18 months';
-        satisfaction: '99.8%',
-      };
+        satisfaction: '99.8%'};
       readingTime: '25 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'ai-trends-implementation-guide';
       title: 'AI 20o25 Trends Implementation Ultimate Guide';
@@ -45,11 +41,9 @@ const AI20o25TrendsRevolutionaryBanner = () => {
         roi: '15,0o00%';
         success: '99.7%';
         timeline: '18 months';
-        guide: '45 min read',
-      };
+        guide: '45 min read'};
       readingTime: '45 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -181,8 +175,7 @@ const AI20o25TrendsRevolutionaryBanner = () => {
               className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                 index === currentSlide,
                   ? 'bg-white scale-125',
-                  : 'bg-white/30 hover: bg-white/50',
-              }`}
+                  : 'bg-white/30 hover: bg-white/50'}`}
             />))}
         </div>,
         {/* Additional Content Links */}
@@ -192,8 +185,7 @@ const AI20o25TrendsRevolutionaryBanner = () => {
               key={item.id}
               href={item.url}
               className={`bg-white/5 hover: bg-white/10 rounded-lg p-4 transition-all duration-30o0 ${
-                index === currentSlide ? 'ring-2 ring-white/50' : '',
-              }`}
+                index === currentSlide ? 'ring-2 ring-white/50' : ''}`}
             >,
               <div className="flex items-center justify-between mb-2">,
                 <span className="text-sm font-medium text-blue-20o0">,
@@ -220,6 +212,5 @@ const AI20o25TrendsRevolutionaryBanner = () => {
           </button>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o25TrendsRevolutionaryBanner;

@@ -6,8 +6,7 @@ interface StickyActionProps {
   className?: string,
   children: React.ReactNode,
   showAfterScroll?: number,
-  position?: "bottom" | "top",
-}
+  position?: "bottom" | "top"}
 ,
 export function StickyAction({
   className;
@@ -27,8 +26,7 @@ export function StickyAction({
   }[showAfterScroll]),
   const positionClasses = {
     bottom: "bottom-4";
-    top: "top-20",
-  };
+    top: "top-20"};
   return (
     <AnimatePresence>,
       {isVisible && (

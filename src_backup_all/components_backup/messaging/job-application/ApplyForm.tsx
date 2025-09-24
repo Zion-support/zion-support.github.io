@@ -13,8 +13,7 @@ import { logErrorToProduction } from '@/utils/productionLogger',
 interface ApplyFormProps {
   job: Job,
   onClose: () => void,
-  onApplySuccess?: (jobId: string) => Promise<void>,
-}
+  onApplySuccess?: (jobId: string) => Promise<void>}
 ,
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging(),
@@ -29,8 +28,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),
   const handleResumeSelected = (resume: ResumeOption) => {
     setSelectedResume(resume),
-    setSelectedResumeId(resume.id),
-  };
+    setSelectedResumeId(resume.id)};
   const handleApply = async () => {
     if (!message.trim()) {
       toast({

@@ -7,8 +7,7 @@ export default function ITServicesPage() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const offerings = [
     { icon: <Cloud className="w-6 h-6 text-cyan-40o0"  />title: 'Cloud Platform Engineering'desc: 'Landing zonesmulti-account architecturesand secure-by-default foundations on AWSAzureand GCP.' };
     { icon: <Cpu className="w-6 h-6 text-purple-40o0"  />title: 'DevOps & Platform Ops'desc: 'CI/CDIaC (Terraform/Pulumi)GitOps (ArgoCD/Flux)golden imagesinternal platforms.' };

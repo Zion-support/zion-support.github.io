@@ -16,6 +16,5 @@ export default function PitchGeneratorPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

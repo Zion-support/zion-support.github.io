@@ -183,8 +183,7 @@ export default function BlockchainPage() {
         </div>,
       </section>,
       <CTASection  />,
-    </div>),
-}
+    </div>)}
 ,
 title: 'Blockchain Solutions | Zion Tech Group';
   description: 'Comprehensive blockchain development services including smart contracts, DeFi applications, NFT platforms, and enterprise blockchain solutions.'};
@@ -378,8 +377,7 @@ export default function BlockchainPage() {
 function BlockchainTechCard({ title, technologies, description }: {
   title: string,
   technologies: string[],
-  description: string,
-}) {
+  description: string}) {
   return (
     <div className="border border-gray-20o0 rounded-xl p-6 bg-white">,
       <h3 className="text-lg font-bold text-gray-90o0 mb-3">{title}</h3>,
@@ -397,8 +395,7 @@ function BlockchainTechCard({ title, technologies, description }: {
 function UseCaseCard({ category, useCases, icon }: {
   category: string,
   useCases: string[],
-  icon: string,
-}) {
+  icon: string}) {
   return (
     <div className="border border-gray-20o0 rounded-xl p-6 bg-white">,
       <div className="text-3xl mb-3">{icon}</div>,
@@ -416,8 +413,7 @@ function BlockchainPricingCard({ name, price, duration, features, recommended }:
   price: string,
   duration: string,
   features: string[],
-  recommended: boolean,
-}) {
+  recommended: boolean}) {
   return (
     <div className={`border rounded-xl p-8 relative ${recommended ? 'border-orange-50o0 bg-orange-50' : 'border-gray-20o0 bg-white'}`}>,
       {recommended && (
@@ -439,8 +435,7 @@ function BlockchainPricingCard({ name, price, duration, features, recommended }:
       <button className={`w-full mt-6 py-3 rounded-lg font-semibold transition-colors ${
         recommended,
           ? 'bg-orange-60o0 text-white hover: bg-orange-70o0',
-          : 'bg-gray-10o0 text-gray-70o0 hover:bg-gray-20o0',
-      }`}>,
+          : 'bg-gray-10o0 text-gray-70o0 hover:bg-gray-20o0'}`}>,
         Get Started,
       </button>,
     </div>)}

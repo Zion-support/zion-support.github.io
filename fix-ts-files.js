@@ -19,7 +19,7 @@ describe('${componentName}', () => {
     render(<${componentName} />)})}),
 `,
     fs.writeFileSync(filePath, content),
-    // console.log(`Fixed: ${filePath}`)} catch (error) {
+    // // console.log(`Fixed: ${filePath}`)} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)}
 }
 ,
@@ -28,7 +28,7 @@ const testDir = path.join(__dirname, '__tests__'),
 const files = fs,
   .readdirSync(testDir),
   .filter(file => file.endsWith('.test.ts') || file.endsWith('.test.tsx')),
-// console.log(`Found ${files.length} TypeScript test files to fix`),
+// // console.log(`Found ${files.length} TypeScript test files to fix`),
 files.forEach(file => {
   const filePath = path.join(testDir, file),
   fixTsTestFile(filePath)}),
@@ -48,7 +48,6 @@ describe('App', () => {
     render(<App  />)})}),
 `,
   fs.writeFileSync(appTestPath, appContent),
-  // console.log('Fixed: App.test.ts'),
-}
+  // // console.log('Fixed: App.test.ts')}
 ,
-// console.log('TypeScript test file fixing completed!'),
+// // console.log('TypeScript test file fixing completed!'),

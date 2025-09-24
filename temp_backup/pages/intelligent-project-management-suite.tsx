@@ -575,6 +575,5 @@ export default function IntelligentProjectManagementSuite() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

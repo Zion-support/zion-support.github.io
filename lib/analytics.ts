@@ -15,10 +15,9 @@ export function measurePerformance(): null | {
   loadTime: number,
   domContentLoaded: number,
   firstPaint: number,
-  firstContentfulPaint: number,
-} {
+  firstContentfulPaint: number} {
   if (typeof window !== 'undefined' && 'performance' in window) {
-    const navigation = window.performance.getEntriesByType('navigation')[0] as,
+    const navigation = window.window.performance.getEntriesByType('navigation')[0] as,
       | PerformanceNavigationTiming,
       | undefined,
     if (!navigation) return null,
@@ -29,12 +28,12 @@ export function measurePerformance(): null | {
         navigation.domContentLoadedEventStart;
       firstPaint: ,
         (
-          window.performance.getEntriesByName('first-paint')[0] as,
+          window.window.performance.getEntriesByName('first-paint')[0] as,
             | PerformanceEntry,
             | undefined)?.startTime || 0;
       firstContentfulPaint: ,
         (
-          window.performance.getEntriesByName('first-contentful-paint')[0] as,
+          window.window.performance.getEntriesByName('first-contentful-paint')[0] as,
             | PerformanceEntry,
             | undefined)?.startTime || 0;
     };
@@ -45,8 +44,7 @@ export function measurePerformance(): null | {
 interface WebVitalMetric {
   name: string,
   value: number,
-  id: string,
-}
+  id: string}
 ,
 export function trackWebVitals(metric: WebVitalMetric): void {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {

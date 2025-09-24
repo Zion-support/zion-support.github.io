@@ -13,8 +13,7 @@ export function NewsletterForm() {
     setTimeout(() => {
       setIsSubmitting(false),
       setIsSubmitted(true),
-      setEmail(""),
-    }1000)};
+      setEmail("")}1000)};
   return (
     <div className="w-full max-w-md mx-auto">,
       {isSubmitted ? (

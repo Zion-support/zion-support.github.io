@@ -14,12 +14,10 @@ const ComprehensiveContentShowcase20o25: React.FC = () => {
         incidentReduction: '89%';
         detectionSpeed: '340%';
         annualSavings: '$2.8M';
-        accuracy: '99.7%',
-      };
+        accuracy: '99.7%'};
       icon: Shield;
       color: 'from-red-50o0 to-purple-60o0';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'cloud-optimization';
       title: 'AI 20o25: Cloud Optimization Breakthrough';
@@ -30,12 +28,10 @@ const ComprehensiveContentShowcase20o25: React.FC = () => {
         costReduction: '67%';
         performance: '340%';
         utilization: '89%';
-        annualSavings: '$4.2M',
-      };
+        annualSavings: '$4.2M'};
       icon: Cloud;
       color: 'from-blue-50o0 to-cyan-60o0';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'cybersecurity-success';
       title: 'AI Cybersecurity Enterprise Success';
@@ -46,12 +42,10 @@ const ComprehensiveContentShowcase20o25: React.FC = () => {
         incidentReduction: '99.9%';
         annualSavings: '$12.8M';
         detectionSpeed: '340%';
-        zeroBreaches: '24 months',
-      };
+        zeroBreaches: '24 months'};
       icon: TrendingUp;
       color: 'from-green-50o0 to-emerald-60o0';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'cloud-optimization-guide';
       title: 'AI Cloud Optimization Master Guide 20o25';
@@ -62,12 +56,10 @@ const ComprehensiveContentShowcase20o25: React.FC = () => {
         averageROI: '340%';
         costReduction: '67%';
         utilization: '89%';
-        annualSavings: '$4.2M',
-      };
+        annualSavings: '$4.2M'};
       icon: CheckCircle;
       color: 'from-purple-50o0 to-pink-60o0';
-      featured: true,
-    }
+      featured: true}
   ],
   return (
     <section className="py-16 bg-gray-50">,
@@ -94,8 +86,7 @@ const ComprehensiveContentShowcase20o25: React.FC = () => {
               <div
                 key={content.id}
                 className={`bg-white rounded-2xl shadow-lg hover: shadow-xl transition-all duration-30o0 overflow-hidden group ${
-                  content.featured ? 'ring-2 ring-purple-50o0 ring-opacity-50' : '',
-                }`}
+                  content.featured ? 'ring-2 ring-purple-50o0 ring-opacity-50' : ''}`}
               >,
                 {/* Header */}
                 <div className={`bg-gradient-to-r ${content.color} p-6 text-white`}>,
@@ -132,8 +123,7 @@ const ComprehensiveContentShowcase20o25: React.FC = () => {
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform"  />,
                   </Link>,
                 </div>,
-              </div>),
-          })}
+              </div>)})}
         </div>,
         {/* Success Metrics */}
         <div className="bg-white rounded-2xl shadow-lg p-8">,
@@ -168,6 +158,5 @@ const ComprehensiveContentShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default ComprehensiveContentShowcase20o25;

@@ -13,16 +13,14 @@ type MockableAppKit ={
   subscribeProvider: jest.Mock,
   on: jest.Mock,
   off: jest.Mock,
-  getWalletProvider: jest.Mock,
-};
+  getWalletProvider: jest.Mock};
 // Forward declaration for TestMockAppKit type,
 type TestMockAppKitInstance = Partial<MockableAppKit> & {
     _triggerSubscriptionCallback: (providerVal?: any) => Promise<void>,
     _triggerOnProviderChangedCallback: () => Promise<void>,
     _clearSubscriptionCallbacks: () => void,
     _clearOnProviderChangedCallbacks: () => void,
-    _associatedMockEip1193Provider?: any,
-};
+    _associatedMockEip1193Provider?: any};
 // Helper function to create a new mock AppKit object for each test.,
 const makeMockAppKit = (config: Partial<MockableAppKit> ={}): TestMockAppKitInstance => {
   const subscriptionCallbacksStorage: (((provider?: any) => void) | ((provider?: any) => Promise<void>))[] = [],
@@ -30,7 +28,7 @@ const makeMockAppKit = (config: Partial<MockableAppKit> ={}): TestMockAppKitInst
   let _selfReferentialMock: TestMockAppKitInstance,
   const associatedMockEip1193Provider ={
     request: jest.fn(async (args: { method: string, params?: any[] }) => {
-      // // console.log(`AssociatedMockProvider received request: ${args.method}`, args.params),
+      // // // console.log(`AssociatedMockProvider received request: ${args.method}`, args.params),
       switch (args.method) {
         case eth_chainId': {'          const chainId = selfReferentialMock.getChainId?.() as (number | string | null | undefined),
           return chainId != null ? `0x${Number(chainId).toString(16)}` : 0x1'}
@@ -43,8 +41,7 @@ const makeMockAppKit = (config: Partial<MockableAppKit> ={}): TestMockAppKitInst
           return Promise.resolve(undefined)}
     });
     on: jest.fn();
-    removeListener: jest.fn(),
-  };
+    removeListener: jest.fn()};
   const baseMockPart: Omit<MockableAppKit getWalletProvider'> ={'    open: jest.fn().mockResolvedValue(undefined) as jest.Mock;
     close: jest.fn().mockResolvedValue(undefined) as jest.Mock;
     disconnect: jest.fn().mockResolvedValue(undefined) as jest.Mock;
@@ -57,8 +54,7 @@ const makeMockAppKit = (config: Partial<MockableAppKit> ={}): TestMockAppKitInst
         const index = subscriptionCallbacksStorage.indexOf(callback),
         if (index > -1) subscriptionCallbacksStorage.splice(index, 1)})}) as jest.Mock;
     on: jest.fn((event: string, callback: (() => void) | (() => Promise<void>)) => {
-      if (event === providerChanged') {'        onProviderChangedCallbacksStorage.push(callback),
-      }
+      if (event === providerChanged') {'        onProviderChangedCallbacksStorage.push(callback)}
     }) as jest.Mock;
     off: jest.fn((event: string, callback: (...args: unknown[]) => void) => {
       if (event === providerChanged') {'        const index = onProviderChangedCallbacksStorage.indexOf(callback as () => void),
@@ -70,18 +66,15 @@ const makeMockAppKit = (config: Partial<MockableAppKit> ={}): TestMockAppKitInst
     ...config;
     _triggerSubscriptionCallback: async (providerVal?: any) => {
       for (const cb of subscriptionCallbacksStorage) {
-        await cb(providerVal),
-      }
+        await cb(providerVal)}
     };
     _triggerOnProviderChangedCallback: async () => {
       for (const cb of onProviderChangedCallbacksStorage) {
-        await cb(),
-      }
+        await cb()}
     };
-    _clearSubscriptionCallbacks: () => { subscriptionCallbacksStorage.length = 0, };
-    _clearOnProviderChangedCallbacks: () => { onProviderChangedCallbacksStorage.length = 0, };
-    _associatedMockEip1193Provider: associatedMockEip1193Provider,
-  };
+    _clearSubscriptionCallbacks: () => { subscriptionCallbacksStorage.length = 0};
+    _clearOnProviderChangedCallbacks: () => { onProviderChangedCallbacksStorage.length = 0};
+    _associatedMockEip1193Provider: associatedMockEip1193Provider};
   return selfReferentialMock};
 type TestMockAppKit = ReturnType<typeof makeMockAppKit>,
 const mockUseAppKit = jest.fn(),
@@ -89,8 +82,7 @@ const mockCreateAppKit = jest.fn(),
 const initialMockAppKitInstance = makeMockAppKit(),
 mockCreateAppKit.mockReturnValue(initialMockAppKitInstance),
 jest.mock('@reown/appkit/react', () => ({'  createAppKit: mockCreateAppKit;
-  useAppKit: mockUseAppKit,
-})),
+  useAppKit: mockUseAppKit})),
 jest.mock('@/config/env', () => ({'  getAppKitProjectId: () => test_project_id_from_mock'})),
 import { WalletProvider, useWallet, WalletContextType } from ../../src/context/WalletContext';
 const WalletConsumer: React.FC<{ onUpdate: (wallet: WalletContextType) => void }> = ({ onUpdate }) => {
@@ -104,8 +96,7 @@ const WalletConsumer: React.FC<{ onUpdate: (wallet: WalletContextType) => void }
       <div data-testid="address">{wallet.address}</div>"      <div data-testid="displayAddress">{wallet.displayAddress}</div>"      <div data-testid="chainId">{wallet.chainId?.toString()}</div>"      <div data-testid="isConnected">{String(wallet.isConnected)}</div>"      <div data-testid="appKitAvailable">{String(!!wallet.appKit)}</div>"    </div>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""")};
 describe('WalletProvider', () => {'  let _currentWalletState: WalletContextType,
   const onUpdateMock = jest.fn((wallet) => {
-    currentWalletState = wallet,
-  }),
+    currentWalletState = wallet}),
   let _activeUseAppKitMock: TestMockAppKit,
   let activeCreateAppKitMock: TestMockAppKit,
   beforeEach(() => {
@@ -195,7 +186,7 @@ describe('WalletProvider', () => {'  let _currentWalletState: WalletContextType,
     // Allow initial effects to run (AppKit initialization, isWalletSystemAvailable set),
     await act(async () => {
       // No specific action needed here, just waiting for effects,
-      // // console.log('Initial currentWalletState:', currentWalletState?.isWalletSystemAvailable)}),
+      // // // console.log('Initial currentWalletState:', currentWalletState?.isWalletSystemAvailable)}),
     // Verify wallet system is available after initial setup,
     expect(currentWalletState.isWalletSystemAvailable).toBe(true),
     // Also check AppKit instance on WalletContext (via currentWalletState.appKit),
@@ -224,15 +215,13 @@ describe('WalletProvider', () => {'  let _currentWalletState: WalletContextType,
     // This implicitly tests that the BrowserProvider was created correctly.,
     if (currentWalletState.provider) {
       const network = await currentWalletState.provider.getNetwork(),
-      expect(network.chainId).toBe(BigInt(1)), // Chain ID is 1,
-    }
+      expect(network.chainId).toBe(BigInt(1)), // Chain ID is 1}
     if (currentWalletState.signer) {
         const signerAddress = await currentWalletState.signer.getAddress(),
         expect(signerAddress).toBe(MOCK_ADDRESS_1)}
   }),
   test('uses on/off for event handling if subscribeProvider is not available', async () => {'    const localActiveUseAppKitMock = makeMockAppKit({
-        subscribeProvider: undefined as any,
-    }),
+        subscribeProvider: undefined as any}),
      (localActiveUseAppKitMock.on as jest.Mock).mockImplementation((event, callback) => {
         if (event === providerChanged') {'            (localActiveUseAppKitMock as any)._onProviderChangedCallbackSpecific = callback}
     }),

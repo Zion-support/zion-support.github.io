@@ -8,8 +8,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 export default function SupportRequests({
   initialRequests;
 }: {
-  initialRequests: any[],
-}) {
+  initialRequests: any[]}) {
   const [requests, setRequests] = useState(initialRequests),
   async function resolve(id: string) {
     await fetch('/api/support/resolve', {

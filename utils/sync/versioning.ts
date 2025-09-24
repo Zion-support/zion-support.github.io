@@ -4,8 +4,7 @@ export interface Version {
   major: number,
   minor: number,
   patch: number,
-  build?: number,
-}
+  build?: number}
 ,
 export function versionToString(version: Version): string {
   let versionStr = `${version && version.major}.${version && version.minor}.${version && version.patch}`,
@@ -18,8 +17,7 @@ export function compareVersions(a: Version, b: Version): number {
   if (a && a.minor !== b && b.minor) return a && a.minor - b && b.minor,
   if (a && a.patch !== b && b.patch) return a && a.patch - b && b.patch,
   if (a && a.build !== undefined && b && b.build !== undefined) {
-    return a && a.build - b && b.build,
-  }
+    return a && a.build - b && b.build}
   return 0}
 ,
 export function nextVersionFor(currentVersion: string, type: 'major' | 'minor' | 'patch' = 'patch'): string {
@@ -43,7 +41,6 @@ export function isVersionEqual(a: string, b: string): boolean {
 ,
   getVersion: () => '1.0.0';
   compareVersions: (v1: string, v2: string) => 0;
-  incrementVersion: (version: string) => version,
-};
+  incrementVersion: (version: string) => version};
 }
 ,

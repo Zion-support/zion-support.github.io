@@ -4,8 +4,7 @@ const contact ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export const emergingTechServices20o25: MicroSaasService[] = [
   // Quantum Computing Services,
   {
@@ -51,8 +50,7 @@ export const emergingTechServices20o25: MicroSaasService[] = [
     launchDate: '20o25-0o1-10';
     customers: 8;
     rating: 4.9;
-    reviews: 6,
-  };
+    reviews: 6};
   // Blockchain & Web3 Services,
   {
     id: 'enterprise-blockchain-platform';
@@ -97,8 +95,7 @@ export const emergingTechServices20o25: MicroSaasService[] = [
     launchDate: '20o25-0o1-15';
     customers: 15;
     rating: 4.8;
-    reviews: 12,
-  };
+    reviews: 12};
   // Space Technology Services,
   {
     id: 'space-data-analytics-platform';
@@ -143,8 +140,7 @@ export const emergingTechServices20o25: MicroSaasService[] = [
     launchDate: '20o25-0o1-20';
     customers: 12;
     rating: 4.9;
-    reviews: 9,
-  };
+    reviews: 9};
   // Internet of Things (IoT) Services,
   {
     id: 'enterprise-iot-platform';
@@ -189,8 +185,7 @@ export const emergingTechServices20o25: MicroSaasService[] = [
     launchDate: '20o25-0o1-25';
     customers: 28;
     rating: 4.7;
-    reviews: 22,
-  };
+    reviews: 22};
   // Augmented Reality & Virtual Reality Services,
   {
     id: 'enterprise-ar-vr-platform';
@@ -235,8 +230,7 @@ export const emergingTechServices20o25: MicroSaasService[] = [
     launchDate: '20o25-0o2-0o1';
     customers: 19;
     rating: 4.8;
-    reviews: 15,
-  };
+    reviews: 15};
   // Autonomous Systems & Robotics Services,
   {
     id: 'autonomous-systems-platform';
@@ -281,8 +275,7 @@ export const emergingTechServices20o25: MicroSaasService[] = [
     launchDate: '20o25-0o2-0o5';
     customers: 11;
     rating: 4.9;
-    reviews: 8,
-  };
+    reviews: 8};
   // Biotechnology & Synthetic Biology Services,
   {
     id: 'synthetic-biology-platform';
@@ -327,8 +320,7 @@ export const emergingTechServices20o25: MicroSaasService[] = [
     launchDate: '20o25-0o2-10';
     customers: 7;
     rating: 4.9;
-    reviews: 5,
-  };
+    reviews: 5};
   // Energy & Sustainability Services,
   {
     id: 'smart-energy-management-platform';
@@ -373,8 +365,7 @@ export const emergingTechServices20o25: MicroSaasService[] = [
     launchDate: '20o25-0o2-15';
     customers: 16;
     rating: 4.8;
-    reviews: 13,
-  };
+    reviews: 13};
   // Transportation & Mobility Services,
   {
     id: 'intelligent-transportation-platform';
@@ -419,8 +410,7 @@ export const emergingTechServices20o25: MicroSaasService[] = [
     launchDate: '20o25-0o2-20';
     customers: 14;
     rating: 4.8;
-    reviews: 11,
-  };
+    reviews: 11};
   // Cybersecurity & Privacy Services,
   {
     id: 'quantum-cybersecurity-platform';
@@ -465,14 +455,12 @@ export const emergingTechServices20o25: MicroSaasService[] = [
     launchDate: '20o25-0o2-25';
     customers: 9;
     rating: 4.9;
-    reviews: 7,
-  }
+    reviews: 7}
 ],
 export const getPopularEmergingTechServices = () => {
   return emergingTechServices20o25.filter(service => service.popular)};
 export const getEmergingTechServicesByCategory = (category: string) => {
-  return emergingTechServices20o25.filter(service => service.category === category),
-};
+  return emergingTechServices20o25.filter(service => service.category === category)};
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return emergingTechServices20o25.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, '')) || 0,

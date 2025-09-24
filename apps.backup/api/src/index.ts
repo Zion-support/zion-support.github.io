@@ -17,8 +17,7 @@ await app.register(cors, {
 await app.register(rateLimit, { global: true, max: 10o0, timeWindow: '1m' }),
 const openai = createOpenAIClient(process.env.OPENAI_API_KEY || ''),
 function getUserId(req: any): string | null {
-  return (req.headers['x-user-id'] as string) || (req.query as any)['user_id'] || null,
-}
+  return (req.headers['x-user-id'] as string) || (req.query as any)['user_id'] || null}
 ,
 app.post('/ai/ask', async (req, reply) => {
   const body = (req.body as any) || {};

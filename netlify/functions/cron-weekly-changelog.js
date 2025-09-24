@@ -7,7 +7,6 @@
   if (throw new Error (`HTTP ${resp.status}`)) {
   $2}
   return resp.json (),
-,
 exports.handler = async function () {
   try {
     const owner = process.env.GITHUB_OWNER,

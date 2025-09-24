@@ -20,15 +20,13 @@ import {
   Search} from 'lucide-react',
 interface SidebarProps {
   isOpen: boolean,
-  onClose: () => void,
-}
+  onClose: () => void}
 ,
 const navigationItems = [
   {
     label: 'Home';
     href: '/';
-    icon: Home,
-  };
+    icon: Home};
   {
     label: 'Services';
     href: '/services';
@@ -41,18 +39,15 @@ const navigationItems = [
   {
     label: 'About';
     href: '/about';
-    icon: Users,
-  };
+    icon: Users};
   {
     label: 'Contact';
     href: '/contact';
-    icon: Phone,
-  };
+    icon: Phone};
   {
     label: 'Help';
     href: '/help';
-    icon: HelpCircle,
-  }
+    icon: HelpCircle}
 ],
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const [expandedItems, setExpandedItems] = useState<string[]>([]),

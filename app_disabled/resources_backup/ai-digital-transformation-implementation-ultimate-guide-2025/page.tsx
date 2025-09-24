@@ -592,6 +592,5 @@ export default function AIDigitalTransformationImplementationGuidePage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

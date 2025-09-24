@@ -65,8 +65,7 @@ export const innovativeAIServices20o25ExpansionV2 = [// AI Consciousness Evoluti
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Consciousness algorithms, emotional intelligence, cognitive evolution, ethical decision making.';
@@ -140,8 +139,7 @@ export const innovativeAIServices20o25ExpansionV2 = [// AI Consciousness Evoluti
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quantum neural networks, consciousness integration, superintelligent learning, quantum optimization.';
@@ -214,8 +212,7 @@ export const innovativeAIServices20o25ExpansionV2 = [// AI Consciousness Evoluti
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Autonomous research, hypothesis generation, experimental design, scientific discovery.';
@@ -290,8 +287,7 @@ export const innovativeAIServices20o25ExpansionV2 = [// AI Consciousness Evoluti
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Emotional understanding, empathy development, social intelligence, therapeutic applications.';
@@ -366,8 +362,7 @@ export const innovativeAIServices20o25ExpansionV2 = [// AI Consciousness Evoluti
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quantum metaverse creation, AI consciousness integration, immersive experiences, quantum rendering.';
@@ -443,8 +438,7 @@ export const innovativeAIServices20o25ExpansionV2 = [// AI Consciousness Evoluti
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Autonomous analysis, strategic decision making, business insights, predictive analytics.';

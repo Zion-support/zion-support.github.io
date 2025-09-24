@@ -29,15 +29,13 @@ export interface InnovativeMicroSaasService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 const contact = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -899,7 +897,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
         'Supplier management';
         'Cost optimization';
       ];
-      roi: 'Average 400% ROI with 30% reduction in logistics costs and 25% improvement in delivery window.performance.';
+      roi: 'Average 400% ROI with 30% reduction in logistics costs and 25% improvement in delivery window.window.performance.';
       competitors: [
         'Blue Yonder';
         'Manhattan Associates';
@@ -1323,7 +1321,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
       price: '$3,500';
       period: '/month';
       description:,
-        'AI-enhanced CRM platform that provides intelligent customer insights, automated workflows, and predictive analytics to improve customer relationships and sales window.performance.';
+        'AI-enhanced CRM platform that provides intelligent customer insights, automated workflows, and predictive analytics to improve customer relationships and sales window.window.performance.';
       features: [
         'AI-powered customer behavior analysis';
         'Predictive lead scoring and qualification';

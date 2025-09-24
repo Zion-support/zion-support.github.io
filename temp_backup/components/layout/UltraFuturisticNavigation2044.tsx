@@ -46,8 +46,7 @@ interface NavigationItem {
   title?: string,
   featured?: boolean,
   category?: string,
-  color?: string,
-}
+  color?: string}
 ,
 function normalizeHref(href: string): string {
   if (!href) return href,
@@ -56,8 +55,7 @@ function normalizeHref(href: string): string {
     href.startsWith('https://') ||,
     href.startsWith('mailto:') ||,
     href.startsWith('tel:')) {
-    return href,
-  }
+    return href}
   if (!href.startsWith('/')) return href,
   const hasQueryOrHash = href.includes('?') || href.includes('#'),
   if (hasQueryOrHash) return href,
@@ -276,8 +274,7 @@ const UltraFuturisticNavigation20o44: React.FC = () => {
   // Handle dropdown interactions,
   const handleDropdownToggle = useCallback(
     (itemName: string) => {
-      setActiveDropdown(activeDropdown === itemName ? null : itemName),
-    };
+      setActiveDropdown(activeDropdown === itemName ? null : itemName)};
     [activeDropdown]),
   // Handle search,
   const handleSearch = useCallback(
@@ -300,8 +297,7 @@ const UltraFuturisticNavigation20o44: React.FC = () => {
     (e: React.KeyboardEvent, action: () => void) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault(),
-        action(),
-      }
+        action()}
     };
     []),
   return (
@@ -378,8 +374,7 @@ const UltraFuturisticNavigation20o44: React.FC = () => {
                               className={`block p-3 rounded-xl transition-all duration-20o0 group/item ${
                                 child.featured,
                                   ? 'bg-gradient-to-r from-cyan-50o0/10 to-blue-50o0/10 border border-cyan-50o0/20',
-                                  : 'hover: bg-gray-80o0/50',
-                              }`}
+                                  : 'hover: bg-gray-80o0/50'}`}
                               onClick={closeMobileMenu}
                               role='menuitem'>,
                               <div className='flex items-start space-x-3'>,

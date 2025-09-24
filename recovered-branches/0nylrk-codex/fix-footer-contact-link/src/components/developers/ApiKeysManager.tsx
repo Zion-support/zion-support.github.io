@@ -41,12 +41,10 @@ export function ApiKeysManager() {
     setSelectedScopes([])};
   const handleRegenerateKey = async (keyId: string) => {
     await regenerateApiKey(keyId),
-    setShowRegenerateConfirm(null),
-  };
+    setShowRegenerateConfirm(null)};
   const handleRevokeKey = async (keyId: string) => {
     await revokeApiKey(keyId),
-    setShowDeleteConfirm(null),
-  };
+    setShowDeleteConfirm(null)};
   // Scope options,
   const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = [
     { value: 'jobs:read'label: 'Read Jobs'description: 'Access to view job listings' };
@@ -59,13 +57,11 @@ export function ApiKeysManager() {
     setSelectedScopes(prev =>,
       prev.includes(scope),
         ? prev.filter(s => s !== scope),
-        : [...prevscope]),
-  };
+        : [...prevscope])};
   const getExampleCode = (key: string) => {
     return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\,
   -H "Authorization: Bearer ${key}" \\,
-  -H "Content-Type: application/json"`,
-  };
+  -H "Content-Type: application/json"`};
   // Reset form when dialog closes,
   const handleDialogClose = () => {
     setKeyName(""),
@@ -301,6 +297,5 @@ export function ApiKeysManager() {
           </AlertDialogFooter>,
         </AlertDialogContent>,
       </AlertDialog>,
-    </Card>),
-}
+    </Card>)}
 ,

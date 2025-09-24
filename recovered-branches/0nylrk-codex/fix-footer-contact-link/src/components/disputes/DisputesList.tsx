@@ -16,8 +16,7 @@ import { ShieldAlert } from "lucide-react",
 import { Link } from "react-router-dom",
 type DisputesListProps = {
   disputes: Dispute[],
-  isLoading: boolean,
-};
+  isLoading: boolean};
 export function DisputesList({ disputesisLoading }: DisputesListProps) {
   const [statusFiltersetStatusFilter] = useState<DisputeStatus | "all">("all"),
   const filteredDisputes = statusFilter === "all",
@@ -34,8 +33,7 @@ export function DisputesList({ disputesisLoading }: DisputesListProps) {
       case "closed":,
         return "outline",
       default:,
-        return "default",
-    }
+        return "default"}
   };
   if (isLoading) {
     return (

@@ -29,8 +29,7 @@ export function PointsBadge() {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!isAuthenticated) {
       e.preventDefault(),
-      setLoginOpen(true),
-    }
+      setLoginOpen(true)}
   };
   const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault(),
@@ -38,8 +37,7 @@ export function PointsBadge() {
     if (!isAuthenticated) return,
     setIsRefreshing(true),
     try {
-      await fetchLedger(),
-    } catch (error) {
+      await fetchLedger()} catch (error) {
       logErrorToProduction('Failed to refresh points:', { data: error })} finally {
       setIsRefreshing(false)}
   };

@@ -21,7 +21,6 @@ import {useAuth} from '@/hooks/useAuth',
 import {MessageBubble} from './MessageBubble',
 import {DateDivider} from './DateDivider',
 export function ConversationDetailView() {
-,
   const { user } = useAuth(),
   const {
     activeConversation,
@@ -95,12 +94,10 @@ export function ConversationDetailView() {
       existingGroup.messages.push(message)} else {
       groupedMessages.push({
         date: messageDate,
-        messages: [message],
-      })}
+        messages: [message]})}
   }),
   const hasContextData = activeConversation.context_data &&,
     (activeConversation.context_data.title |activeConversation.context_data.description),
-,
   // Group messages by date,
   const groupedMessages: { date: string, messages: any[] }[] = [];
   activeMessages && activeMessages.forEach(message => {
@@ -110,8 +107,7 @@ export function ConversationDetailView() {
       existingGroup && existingGroup.messages.push(message)} else {
       groupedMessages && groupedMessages.push({
         date: messageDate;
-        messages: [message],
-      })}
+        messages: [message]})}
 });
   const hasContextData = activeConversation.context_data &&,
     (activeConversation.context_data.title || activeConversation.context_data.description);
@@ -214,8 +210,7 @@ if ( {) {
       existing_group.messages.push (message)} else {
       grouped_messages.push ({
         date: message_date;
-        messages: [message],
-      })}
+        messages: [message]})}
   }),
   const hasContextData = active_conversation.context_data &&,
     (active_conversation.context_data.title || active_conversation.context_data.description),
@@ -386,6 +381,5 @@ if ( {) {
             Send,
           </Button>,
         </form>,
-      </div>>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
-}
+      </div>>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}

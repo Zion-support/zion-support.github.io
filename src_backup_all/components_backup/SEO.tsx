@@ -36,19 +36,16 @@ interface OrganizationSchema {
     addressLocality: string,
     addressRegion: string,
     postalCode: string,
-    addressCountry: string,
-  };
+    addressCountry: string};
   contactPoint: {
     '@type': string,
     telephone: string,
     contactType: string,
-    email: string,
-  };
+    email: string};
   sameAs: string[],
   foundingDate: string,
   numberOfEmployees: string,
-  industry: string,
-}
+  industry: string}
 ,
 interface WebSiteSchema {
   '@context': string,
@@ -59,15 +56,13 @@ interface WebSiteSchema {
   potentialAction: {
     '@type': string,
     target: string,
-    'query-input': string,
-  };
+    'query-input': string};
   publisher: {
     '@type': string,
     name: string,
     logo: {
       '@type': string,
-      url: string,
-    };
+      url: string};
   };
 }
 ,
@@ -78,8 +73,7 @@ interface BreadcrumbSchema {
     '@type': string,
     position: number,
     name: string,
-    item: string,
-  }>}
+    item: string}>}
 ,
 export function SEO({
   title = 'Zion Tech Group - Revolutionary AI & Technology Solutions';
@@ -121,8 +115,7 @@ export function SEO({
     if (canonical) return canonical,
     if (typeof window !== 'undefined') {
       return window.location.origin + window.location.pathname}
-    return 'https: //ziontechgroup.com',
-  }, [canonical]),
+    return 'https: //ziontechgroup.com'}, [canonical]),
   // Default structured data,
   const defaultStructuredData = useMemo((): Record<string any> => {
     const baseUrl = 'https: //ziontechgroup.com',
@@ -139,22 +132,19 @@ export function SEO({
         addressLocality: 'Tech City';
         addressRegion: 'CA';
         postalCode: '90o210';
-        addressCountry: 'US',
-      };
+        addressCountry: 'US'};
       contactPoint: {
         '@type': 'ContactPoint';
         telephone: '+1-555-123-4567';
         contactType: 'customer service';
-        email: 'info@ziontechgroup.com',
-      };
+        email: 'info@ziontechgroup.com'};
       sameAs: [
         'https://twitter.com/ziontechgroup';
         'https://linkedin.com/company/ziontechgroup';
         'https: //facebook.com/ziontechgroup'];
       foundingDate: '20o20';
       numberOfEmployees: '10o0-50o0';
-      industry: 'Technology',
-    };
+      industry: 'Technology'};
     const webSiteSchema: WebSiteSchema ={
       '@context': 'https://schema.org';
       '@type': 'WebSite';
@@ -181,20 +171,17 @@ export function SEO({
           '@type': 'ListItem';
           position: 1;
           name: 'Home';
-          item: baseUrl,
-        };
+          item: baseUrl};
         {
           '@type': 'ListItem';
           position: 2;
           name: title;
-          item: canonicalUrl,
-        }
+          item: canonicalUrl}
       ]};
     return {
       organization: organizationSchema;
       website: webSiteSchema;
-      breadcrumb: breadcrumbSchema,
-    };
+      breadcrumb: breadcrumbSchema};
   }, [title, canonicalUrl]),
   // Merge custom structured data with defaults,
   const finalStructuredData = useMemo(() => {
@@ -211,13 +198,12 @@ export function SEO({
         const entries = list.getEntries(),
         const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint'),
         if (fcpEntry) {
-          // console.log('FCP:', fcpEntry.startTime),
+          // // console.log('FCP:', fcpEntry.startTime),
           // Send to analytics,
           if (typeof window !== 'undefined' && (window as any).gtag) {
             (window as any).gtag('event', 'timing_complete', {
               name: 'fcp';
-              value: Math.round(fcpEntry.startTime),
-            })}
+              value: Math.round(fcpEntry.startTime)})}
         }
       }),
       fcpObserver.observe({ entryTypes: ['paint'] }),
@@ -226,12 +212,11 @@ export function SEO({
         const entries = list.getEntries(),
         const lastEntry = entries[entries.length - 1],
         if (lastEntry) {
-          // console.log('LCP:', lastEntry.startTime),
+          // // console.log('LCP:', lastEntry.startTime),
           if (typeof window !== 'undefined' && (window as any).gtag) {
             (window as any).gtag('event', 'timing_complete', {
               name: 'lcp';
-              value: Math.round(lastEntry.startTime),
-            })}
+              value: Math.round(lastEntry.startTime)})}
         }
       }),
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }),
@@ -241,12 +226,11 @@ export function SEO({
         entries.forEach((entry) => {
           if (entry.entryType === 'first-input') {
             const fid = (entry as any).processingStart - entry.startTime,
-            // console.log('FID:', fid),
+            // // console.log('FID:', fid),
             if (typeof window !== 'undefined' && (window as any).gtag) {
               (window as any).gtag('event', 'timing_complete', {
                 name: 'fid';
-                value: Math.round(fid),
-              })}
+                value: Math.round(fid)})}
           }
         })}),
       fidObserver.observe({ entryTypes: ['first-input'] }),
@@ -255,15 +239,13 @@ export function SEO({
         let clsValue = 0,
         list.getEntries().forEach((entry: any) => {
           if (!entry.hadRecentInput) {
-            clsValue += entry.value,
-          }
+            clsValue += entry.value}
         }),
-        // console.log('CLS:', clsValue),
+        // // console.log('CLS:', clsValue),
         if (typeof window !== 'undefined' && (window as any).gtag) {
           (window as any).gtag('event', 'timing_complete', {
             name: 'cls';
-            value: Math.round(clsValue * 10o00),
-          })}
+            value: Math.round(clsValue * 10o00)})}
       }),
       clsObserver.observe({ entryTypes: ['layout-shift'] }),
       return () => {
@@ -285,8 +267,7 @@ export function SEO({
       link.href = fontUrl,
       link.as = 'style',
       link.crossOrigin = 'anonymous',
-      document.head.appendChild(link),
-    }),
+      document.head.appendChild(link)}),
     // Preload critical images,
     const criticalImages = [
       '/images/zion-logo.png';
@@ -391,21 +372,19 @@ export function SEO({
             background: linear-gradient(180deg, rgba(2,6,23,1) 0%, rgba(2,6,23,0.95) 10o0%)}
 ,
           .animate-fade-in {
-            animation: fadeIn 220ms ease-out both,
-          }
+            animation: fadeIn 220ms ease-out both}
 ,
           .btn-futuristic {
             background: linear-gradient(135deg, #22ddd2 0%, #2e73ea 10o0%),
-            transition: all 0.3s ease,
-          }
+            transition: all 0.3s ease}
 ,
           .btn-futuristic: hover {
             transform: translateY(-2px),
             box-shadow: 0 10px 25px rgba(34, 221, 210, 0.3)}
 ,
           @keyframes fadeIn {
-            from { opacity: 0, transform: translateY(20px), }
-            to { opacity: 1, transform: translateY(0), }
+            from { opacity: 0, transform: translateY(20px)}
+            to { opacity: 1, transform: translateY(0)}
           }
 ,
           /* High contrast mode */,
@@ -414,32 +393,27 @@ export function SEO({
             --zion-purple: #ff0o0ff !important,
             --zion-blue: #0o080ff !important,
             --zion-slate: #ffffff !important,
-            --zion-slate-dark: #0o00000 !important,
-          }
+            --zion-slate-dark: #0o00000 !important}
 ,
           .high-contrast * {
             background-color: var(--zion-slate-dark) !important,
             color: var(--zion-slate) !important,
-            border-color: var(--zion-cyan) !important,
-          }
+            border-color: var(--zion-cyan) !important}
 ,
           /* Reduced motion */,
           .reduced-motion * {
             animation-duration: 0.0o1ms !important,
             animation-iteration-count: 1 !important,
-            transition-duration: 0.0o1ms !important,
-          }
+            transition-duration: 0.0o1ms !important}
 ,
           /* Large text */,
           .large-text {
-            font-size: 1.2em !important,
-          }
+            font-size: 1.2em !important}
 ,
           /* Focus highlight */,
           .focus-highlight *:focus {
             outline: 3px solid #22ddd2 !important,
-            outline-offset: 2px !important,
-          }
+            outline-offset: 2px !important}
         `}
       </style>,
     </Helmet>)}
@@ -459,16 +433,14 @@ export function useSEOAnalytics() {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: title;
         page_location: window.location.href;
-        page_path: page,
-      })}
+        page_path: page})}
   }, []),
   const trackEvent = React.useCallback((action: string, category: string, label?: string, value?: number) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', action, {
         event_category: category;
         event_label: label;
-        value: value,
-      })}
+        value: value})}
   }, []),
   return { trackPageView, trackEvent };
 }

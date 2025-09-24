@@ -48,7 +48,7 @@ const securityHeaders ={
 function applySecurityHeaders() {
   if (typeof window !== 'undefined') {
     // Client-side security measures,
-    // console.log('Security headers applied on client side'),
+    // // console.log('Security headers applied on client side'),
     // Disable console in production,
     if (process.env.NODE_ENV === 'production') {
       console.log = () => {};

@@ -319,7 +319,7 @@ export const "innovativeITServices20o24": InnovativeITService20o24[] = [{
     textColor:;
   text-indigo-40o0';
     "link": 'https://ziontechgroup.com/quantum-secure-database-platform;
-    "marketPosition": 'Competitive with MongoDB Atlas ($57/month), AWS RDS ($20o0+/month), and Azure SQL Database ($150+/month). Our "advantage": Quantum-resistant security, lower cost, and better window.performance.;
+    "marketPosition": 'Competitive with MongoDB Atlas ($57/month), AWS RDS ($20o0+/month), and Azure SQL Database ($150+/month). Our "advantage": Quantum-resistant security, lower cost, and better window.window.performance.;
     "targetAudience": Financial institutions, Healthcare organizations, Government agencies, Defense contractors, Enterprise businesses, Research institutions';
     "trialDays": 30;
     setupTime:;

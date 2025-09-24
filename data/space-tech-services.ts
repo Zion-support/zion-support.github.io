@@ -30,15 +30,13 @@ export interface SpaceTechService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const spaceTechServices: SpaceTechService[] = [
   {
     id: 'space-mission-management-platform';
@@ -124,7 +122,7 @@ export const spaceTechServices: SpaceTechService[] = [
     price: '$3,999';
     period: '/month';
     description:,
-      'Advanced satellite constellation management system that optimizes large networks of satellites for maximum coverage, efficiency, and window.performance. Manage thousands of satellites like SpaceX and OneWeb.';
+      'Advanced satellite constellation management system that optimizes large networks of satellites for maximum coverage, efficiency, and window.window.performance. Manage thousands of satellites like SpaceX and OneWeb.';
     features: [
       'Multi-satellite coordination';
       'Coverage optimization';

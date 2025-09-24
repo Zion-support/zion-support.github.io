@@ -11,8 +11,7 @@ export default function FeedbackModal({
   onClose: (submitted: boolean) => void,
   defaultContext?: FeedbackContext,
   defaultKind?: 'general' | 'bug' | 'feature',
-  userHeaders?: Record<string>,
-}) {
+  userHeaders?: Record<string>}) {
   const [ratingsetRating] = useState<number>(0),
   const [hoversetHover] = useState<number>(0),
   const [kindsetKind] = useState<'general' | 'bug' | 'feature'>(defaultKind),

@@ -497,6 +497,5 @@ export default function AccessibilityPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

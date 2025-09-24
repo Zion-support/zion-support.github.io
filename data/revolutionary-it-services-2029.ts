@@ -28,15 +28,13 @@ export interface RevolutionaryITService {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const revolutionaryITServices20o29: RevolutionaryITService[] = [
   {
@@ -511,7 +509,7 @@ export const revolutionaryITServices20o29: RevolutionaryITService[] = [
     price: '$899';
     period: '/month';
     description:,
-      'Revolutionary infrastructure platform that combines quantum computing with machine learning to accelerate training times and improve model window.performance.';
+      'Revolutionary infrastructure platform that combines quantum computing with machine learning to accelerate training times and improve model window.window.performance.';
     features: [
       'Quantum-enhanced ML algorithms';
       'Accelerated training times';

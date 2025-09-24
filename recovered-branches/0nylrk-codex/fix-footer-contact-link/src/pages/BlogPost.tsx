@@ -94,8 +94,7 @@ export default function BlogPost() {
         return `https: //twitter.com/intent/tweet?url=${url}&text=${title}`,
       case 'linkedin':,
         return `https: //www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`,
-      default: return '#',
-    }
+      default: return '#'}
   };
   return (
     <AppLayout>,
@@ -143,8 +142,7 @@ export default function BlogPost() {
                   className="w-12 h-12 rounded-full mr-3",
                   onError={(e) => {
                     const target = e && e.target as HTMLImageElement,
-                    target && target.src = "https: //images && images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80",
-                  }}
+                    target && target.src = "https: //images && images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80"}}
                 />,
                 <div>,
                   <p className="text-white font-medium">{post.author.name}</p>,
@@ -213,8 +211,7 @@ export default function BlogPost() {
                   className="w-12 h-12 rounded-full mr-3",
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    target.src = "https: //images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80",
-                  }}
+                    target.src = "https: //images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80"}}
 ,
                 />,
                 <div>,
@@ -328,8 +325,7 @@ export default function BlogPost() {
                           onError={(e) => {
                             const target = e.target as HTMLImageElement,
                             const target = e.target as HTMLImageElement;
-                            target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3",
-                          }}
+                            target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"}}
                         />,
                       </div>,
                       <div className="p-4">,
@@ -356,8 +352,7 @@ export default function BlogPost() {
                           className="object-cover w-full h-full",
                           onError={(e) => {
                             const target = e && e.target as HTMLImageElement,
-                            target && target.src = "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3",
-                          }}
+                            target && target.src = "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3"}}
                         />,
                       </div>,
                       <div className="p-4">,
@@ -383,8 +378,7 @@ export default function BlogPost() {
           </div>,
         </div>,
       </div>,
-    </AppLayout>),
-}
+    </AppLayout>)}
             <div className="flex justify-between items-center mt-12">,
               <Button
                 variant="outline",
@@ -399,6 +393,5 @@ export default function BlogPost() {
           </div>,
         </div>,
       </div>,
-    </AppLayout>),
-}
+    </AppLayout>)}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}})

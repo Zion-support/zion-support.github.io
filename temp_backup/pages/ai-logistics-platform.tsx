@@ -37,8 +37,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export default function AILogisticsPlatform() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -138,7 +137,7 @@ export default function AILogisticsPlatform() {
               </div>,
               <h3 className="text-xl font-semibold mb-3">Real-time Tracking</h3>,
               <p className="text-gray-40o0">,
-                Live visibility into shipments, inventory, and operational window.performance.,
+                Live visibility into shipments, inventory, and operational window.window.performance.,
               </p>,
             </div>,
           </div>,
@@ -356,5 +355,4 @@ export default function AILogisticsPlatform() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}

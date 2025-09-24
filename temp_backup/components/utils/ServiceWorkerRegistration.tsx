@@ -39,7 +39,7 @@ export const useServiceWorker = (props?: ServiceWorkerRegistrationProps) => {
           if (event.data && event.data.type === 'SKIP_WAITING') {
             swRegistration.waiting?.postMessage({ type: 'SKIP_WAITING' })}
         }),
-        // console.log('Service Worker registered successfully')} catch (error) {
+        // // console.log('Service Worker registered successfully')} catch (error) {
         console.error('Service Worker registration failed:', error)}
     };
     registerServiceWorker(),
@@ -83,6 +83,5 @@ export const ServiceWorkerRegistration: React.FC<,
           Update,
         </button>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default ServiceWorkerRegistration;

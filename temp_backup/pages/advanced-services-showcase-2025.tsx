@@ -20,6 +20,5 @@ export default function AdvancedServicesShowcase20o25Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

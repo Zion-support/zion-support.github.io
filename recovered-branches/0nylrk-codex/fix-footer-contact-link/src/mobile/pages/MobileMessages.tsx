@@ -43,8 +43,7 @@ interface Message {
   content: string,
   timestamp: string,
   isMe: boolean,
-  status: "read" | "sent" | "delivered",
-}
+  status: "read" | "sent" | "delivered"}
 const mockMessages: Message[] = [
   {
     id: "1",
@@ -91,8 +90,7 @@ export function MobileMessages() {
   const [messages, setMessages] = useState<Message[]>(mockMessages),
 export function MobileMessages() {
   const handleSelectConversation = (id: string) => {
-    setActiveConversation(id),
-  };
+    setActiveConversation(id)};
   const handleBack = () => {
     setActiveConversation(null)};
   const handleSendMessage = (content: string) => {
@@ -146,8 +144,7 @@ interface Message {
   content: string;
   timestamp: string;
   isMe: boolean;
-  status: "read" | "sent" | "delivered",
-}
+  status: "read" | "sent" | "delivered"}
 ,
 const mockMessages: Message[] = [
   {
@@ -184,8 +181,7 @@ export function MobileMessages() {
   const [activeConversation, setActiveConversation] = useState<string | null>(null),
   const [messages, setMessages] = useState<Message[]>(mockMessages),
   const handleSelectConversation = (id: string) => {
-    setActiveConversation(id),
-  };
+    setActiveConversation(id)};
   const handleBack = () => {
     setActiveConversation(null)};
   const handleSendMessage = (content: string) => {
@@ -204,8 +200,7 @@ export function MobileMessages() {
           contact={{
             id: currentContact?.id |"",
             name: currentContact?.name |"",
-            status: "Online",
-          }}
+            status: "Online"}}
           messages={messages}
           on_back={handle_back}
           onSendMessage={handleSendMessage}

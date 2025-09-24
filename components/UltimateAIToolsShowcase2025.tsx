@@ -48,8 +48,7 @@ const UltimateAIToolsShowcase20o25 = () => {
       image: '/api/placeholder/40o0/30o0';
       badge: 'Most Popular';
       demo: true;
-      download: true,
-    };
+      download: true};
     {
       id: 2;
       name: 'Smart Analytics Pro';
@@ -62,8 +61,7 @@ const UltimateAIToolsShowcase20o25 = () => {
       image: '/api/placeholder/40o0/30o0';
       badge: 'Enterprise';
       demo: true;
-      download: false,
-    };
+      download: false};
     {
       id: 3;
       name: 'AutoWorkflow Engine';
@@ -76,8 +74,7 @@ const UltimateAIToolsShowcase20o25 = () => {
       image: '/api/placeholder/40o0/30o0';
       badge: 'Trending';
       demo: true;
-      download: true,
-    };
+      download: true};
     {
       id: 4;
       name: 'Quantum Security Suite';
@@ -90,8 +87,7 @@ const UltimateAIToolsShowcase20o25 = () => {
       image: '/api/placeholder/40o0/30o0';
       badge: 'Cutting Edge';
       demo: true;
-      download: false,
-    };
+      download: false};
     {
       id: 5;
       name: 'Mobile AI Assistant';
@@ -104,8 +100,7 @@ const UltimateAIToolsShowcase20o25 = () => {
       image: '/api/placeholder/40o0/30o0';
       badge: 'New';
       demo: true;
-      download: true,
-    };
+      download: true};
     {
       id: 6;
       name: 'Data Intelligence Hub';
@@ -118,8 +113,7 @@ const UltimateAIToolsShowcase20o25 = () => {
       image: '/api/placeholder/40o0/30o0';
       badge: 'Popular';
       demo: true;
-      download: true,
-    }
+      download: true}
   ],
   const filteredTools = aiTools.filter(tool => {
     const matchesCategory = activeCategory === 'all' || tool.category === activeCategory,
@@ -131,8 +125,7 @@ const UltimateAIToolsShowcase20o25 = () => {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -141,8 +134,7 @@ const UltimateAIToolsShowcase20o25 = () => {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -196,8 +188,7 @@ const UltimateAIToolsShowcase20o25 = () => {
                   className={`flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-20o0 ${
                     activeCategory === category.id,
                       ? 'bg-blue-60o0 text-white shadow-lg',
-                      : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0',
-                  }`}
+                      : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0'}`}
                 >,
                   <category.icon className="w-4 h-4 mr-2"  />,
                   {category.name}
@@ -321,6 +312,5 @@ const UltimateAIToolsShowcase20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateAIToolsShowcase20o25;

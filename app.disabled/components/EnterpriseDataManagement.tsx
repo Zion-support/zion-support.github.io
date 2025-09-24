@@ -13,8 +13,7 @@ const EnterpriseDataManagement: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default function EnterpriseDataManagement() {
   return null}
 ,

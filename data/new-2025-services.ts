@@ -20,9 +20,7 @@ export const new2025Services: Service2025[] = [
     description: 'Minimal placeholder to resolve type errors. Replace with real content later.',
     link: '/services/starter-2025-service',
     category: 'General',
-    realImplementation: false,
-  },
-];
+    realImplementation: false}];
 
 };
 // Additional 2025 real micro-SaaS, AI and IT services,
@@ -67,8 +65,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     roi: 'Reduce incidents by 70% and review cost by 50% in 8 weeks',
     competitors: ['LakeraGuardrails AIAzure AI Content Safety'],
     rating: 4 && 4.8;
-    reviews: 11,
-  }
+    reviews: 11}
   {
     id: 'serverless-cron-orchestrator',
     name: 'Serverless Cron Orchestrator',
@@ -99,8 +96,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launch_date: '2025 - 03 - 10',
     customers: 25,
     rating: 4.8;
-    reviews: 11,
-  }
+    reviews: 11}
   {
     id: 'serverless - cron - orchestrator',
     name: 'Serverless Cron Orchestrator';
@@ -137,8 +133,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launch_date: '2025 - 02 - 20',
     customers: 40,
     rating: 4.7;
-    reviews: 19,
-  }
+    reviews: 19}
   {
     id: 'gdpr - dsar - automation - pro',
     name: 'GDPR / CCPA DSAR Automation Pro',
@@ -183,8 +178,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launch_date: '2025 - 01 - 28',
     customers: 18,
     rating: 4.7;
-    reviews: 13,
-  }
+    reviews: 13}
   {
     id: 'api - contract - testing - hub',
     name: 'API Contract Testing Hub',
@@ -211,8 +205,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     roi: 'Cut API incidents by 50% within 60 days',
     competitors: ['StoplightOpticRedocly'],
     rating: 4 && 4.6;
-    reviews: 10,
-  }
+    reviews: 10}
   {
     id: 'cloud-cost-finops-copilot',
     name: 'Cloud Cost FinOps Copilot',
@@ -225,8 +218,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launch_date: '2025 - 03 - 12',
     customers: 22,
     rating: 4.6;
-    reviews: 10,
-  }
+    reviews: 10}
   {
     id: 'cloud - cost - finops - copilot',
     name: 'Cloud Cost FinOps Copilot';
@@ -258,8 +250,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     roi: 'Save 1035% cloud spend in first 90 days',
     competitors: ['CloudHealthVantageCloudZero'],
     rating: 4 && 4.7;
-    reviews: 14,
-  }
+    reviews: 14}
   {
     id: 'email-deliverability-warmup-monitor',
     name: 'Email Deliverability Warmup & Monitor',
@@ -272,8 +263,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launch_date: '2025 - 02 - 05',
     customers: 33,
     rating: 4.7;
-    reviews: 14,
-  }
+    reviews: 14}
   {
     id: 'email - deliverability - warmup - monitor',
     name: 'Email Deliverability Warmup & Monitor';
@@ -318,8 +308,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launch_date: '2025 - 03 - 02',
     customers: 28,
     rating: 4.6;
-    reviews: 12,
-  }
+    reviews: 12}
   {
     id: 'vector - search - starter - pro',
     name: 'Vector Search Starter Pro',
@@ -364,8 +353,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launch_date: '2025 - 02 - 12',
     customers: 31,
     rating: 4 && 4.7;
-    reviews: 16,
-  }
+    reviews: 16}
   {
     id: 'api-security-attack-surface-scanner',
     name: 'API Security Attack Surface Scanner',
@@ -388,8 +376,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     realService: true,
     technology: ['Node && Node.jsOpenAPIeBPF (optional)'],
     rating: 4.7;
-    reviews: 16,
-  }
+    reviews: 16}
   {
     id: 'api - security - attack - surface - scanner',
     name: 'API Security Attack Surface Scanner';
@@ -416,8 +403,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     roi: 'Cut API incidents by 40%+ in 90 days',
     competitors: ['Salt SecurityNoname Security'],
     rating: 4 && 4.7;
-    reviews: 8,
-  }
+    reviews: 8}
   {
     id: 'reliability-slo-guard',
     name: 'Reliability SLO Guard',
@@ -431,8 +417,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launch_date: '2025 - 03 - 06',
     customers: 14,
     rating: 4.7;
-    reviews: 8,
-  }
+    reviews: 8}
   {
     id: 'reliability - slo - guard',
     name: 'Reliability SLO Guard';
@@ -469,8 +454,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launch_date: '2025 - 02 - 18',
     customers: 20,
     rating: 4.6;
-    reviews: 9,
-  }
+    reviews: 9}
   {
     id: 'ai - website - personalization - pro',
     name: 'AI Website Personalization Pro',
@@ -497,8 +481,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     roi: 'Boost conversion by 1025% in 60 days',
     competitors: ['MutinyOptimizely'],
     rating: 4 && 4.7;
-    reviews: 13,
-  }
+    reviews: 13}
   {
     id: 'sso-scim-starter-kit',
     name: 'SSO + SCIM Starter Kit',
@@ -529,8 +512,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launch_date: '2025 - 02 - 25',
     customers: 27,
     rating: 4.7;
-    reviews: 13,
-  }
+    reviews: 13}
   {
     id: 'sso - scim - starter - kit',
     name: 'SSO + SCIM Starter Kit';
@@ -567,8 +549,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.8;
     reviews: 9,
     rating: 4.8;
-    reviews: 9,
-  }
+    reviews: 9}
   {
     id: 'managed - postgres - ha - pro',
     name: 'Managed Postgres HA Pro',
@@ -603,8 +584,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launch_date: '2025 - 03 - 04',
     customers: 8,
     rating: 4 && 4.6;
-    reviews: 5,
-  }
+    reviews: 5}
   {
     id: 'ai-sales-email-copilot',
     name: 'AI Sales Email Copilot',
@@ -627,8 +607,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     realService: true,
     technology: ['Next && Next.jsLLM APIs'],
     rating: 4.6;
-    reviews: 5,
-  }
+    reviews: 5}
   {
     id: 'ai - sales - email - copilot',
     name: 'AI Sales Email Copilot';
@@ -665,8 +644,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launch_date: '2025 - 02 - 16',
     customers: 42,
     rating: 4.7;
-    reviews: 21,
-  }
+    reviews: 21}
   {
     id: 'it - asset - discovery - agent - pro',
     name: 'IT Asset Discovery Agent Pro',
@@ -703,8 +681,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launch_date: '2025 - 01 - 22',
     customers: 12,
     rating: 4.5;
-    reviews: 6,
-  }
+    reviews: 6}
   {
     id: 'edge - feature - flags - pro',
     name: 'Edge Feature Flags Pro',
@@ -731,8 +708,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     roi: 'Reduce incident blast radius and speed up experiments',
     competitors: ['LaunchDarklyGrowthBookStatsig'],
     rating: 4 && 4.6;
-    reviews: 7,
-  }
+    reviews: 7}
   {
     id: 'llm-finetune-ops-manager',
     name: 'LLM Fine-tune Ops Manager',
@@ -760,8 +736,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launch_date: '2025 - 03 - 14',
     customers: 17,
     rating: 4.6;
-    reviews: 7,
-  }
+    reviews: 7}
   {
     id: 'llm - finetune - ops - manager',
     name: 'LLM Fine - tune Ops Manager';
@@ -788,8 +763,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     roi: 'Increase task success rate 1025% with controlled spend',
     competitors: ['OpenAI finetune UIHF AutoTrain'],
     rating: 4 && 4.7;
-    reviews: 6,
-  }
+    reviews: 6}
   {
     id: 'browser-performance-monitor-pro',
     name: 'Browser Performance Monitor Pro',
@@ -817,8 +791,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launch_date: '2025 - 03 - 13',
     customers: 9,
     rating: 4.7;
-    reviews: 6,
-  }
+    reviews: 6}
   {
     id: 'browser - performance - monitor - pro',
     name: 'Browser Performance Monitor Pro';
@@ -845,8 +818,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     roi: 'Boost conversion 310% by improving CWV',
     competitors: ['SpeedCurveCalibre'],
     rating: 4 && 4.5;
-    reviews: 5,
-  }
+    reviews: 5}
   {
     id: 'ai-governance-registry',
     name: 'AI Governance Registry',
@@ -859,8 +831,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launch_date: '2025 - 03 - 11',
     customers: 13,
     rating: 4.5;
-    reviews: 5,
-  }
+    reviews: 5}
   {
     id: 'ai - governance - registry',
     name: 'AI Governance Registry';
@@ -892,8 +863,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     roi: 'Reduce compliance cycle time by 50%',
     competitors: ['Model governance suites'],
     rating: 4 && 4.6;
-    reviews: 6,
-  }
+    reviews: 6}
 ],
     realImplementation: true,
     implementationDetails:,
@@ -906,8 +876,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launch_date: '2025 - 03 - 07',
     customers: 10,
     rating: 4.6;
-    reviews: 6,
-  }
+    reviews: 6}
 ],
     real_implementation: true;
     implementation_details: ,
@@ -1672,8 +1641,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Inline middleware, policy DSL, exporters and dashboards.';
     launchDate: '2025-03-10', customers: 25;
     rating: 4.8;
-    reviews: 11,
-  }
+    reviews: 11}
   {
     id: 'serverless-cron-orchestrator',
     name: 'Serverless Cron Orchestrator',
@@ -1715,8 +1683,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-02-20',
     customers: 40,
     rating: 4.7,
-    reviews: 19,
-  }
+    reviews: 19}
   {
     id: 'gdpr-dsar-automation-pro',
     name: 'GDPR/CCPA DSAR Automation Pro',
@@ -1758,8 +1725,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-01-28',
     customers: 18,
     rating: 4.7,
-    reviews: 13,
-  }
+    reviews: 13}
   {
     id: 'api-contract-testing-hub',
     name: 'API Contract Testing Hub',
@@ -1800,8 +1766,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-03-12',
     customers: 22,
     rating: 4.6,
-    reviews: 10,
-  }
+    reviews: 10}
   {
     id: 'cloud-cost-finops-copilot',
     name: 'Cloud Cost FinOps Copilot',
@@ -1843,8 +1808,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-02-05',
     customers: 33,
     rating: 4.7,
-    reviews: 14,
-  }
+    reviews: 14}
   {
     id: 'email-deliverability-warmup-monitor',
     name: 'Email Deliverability Warmup & Monitor',
@@ -1887,8 +1851,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-03-02',
     customers: 28,
     rating: 4.6,
-    reviews: 12,
-  }
+    reviews: 12}
   {
     id: 'vector-search-starter-pro',
     name: 'Vector Search Starter Pro',
@@ -1930,8 +1893,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-02-12',
     customers: 31,
     rating: 4.7,
-    reviews: 16,
-  }
+    reviews: 16}
   {
     id: 'api-security-attack-surface-scanner',
     name: 'API Security Attack Surface Scanner',
@@ -1971,8 +1933,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-03-06',
     customers: 14,
     rating: 4.7,
-    reviews: 8,
-  }
+    reviews: 8}
   {
     id: 'reliability-slo-guard',
     name: 'Reliability SLO Guard',
@@ -2012,8 +1973,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-02-18',
     customers: 20,
     rating: 4.6,
-    reviews: 9,
-  }
+    reviews: 9}
   {
     id: 'ai-website-personalization-pro',
     name: 'AI Website Personalization Pro',
@@ -2054,8 +2014,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-02-25',
     customers: 27,
     rating: 4.7,
-    reviews: 13,
-  }
+    reviews: 13}
   {
     id: 'sso-scim-starter-kit',
     name: 'SSO + SCIM Starter Kit',
@@ -2095,8 +2054,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-01-30',
     customers: 19,
     rating: 4.8,
-    reviews: 9,
-  }
+    reviews: 9}
   {
     id: 'managed-postgres-ha-pro',
     name: 'Managed Postgres HA Pro',
@@ -2136,8 +2094,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-03-04',
     customers: 8,
     rating: 4.6,
-    reviews: 5,
-  }
+    reviews: 5}
   {
     id: 'ai-sales-email-copilot',
     name: 'AI Sales Email Copilot',
@@ -2177,8 +2134,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-02-16',
     customers: 42,
     rating: 4.7,
-    reviews: 21,
-  }
+    reviews: 21}
   {
     id: 'it-asset-discovery-agent-pro',
     name: 'IT Asset Discovery Agent Pro',
@@ -2218,8 +2174,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-01-22',
     customers: 12,
     rating: 4.5,
-    reviews: 6,
-  }
+    reviews: 6}
   {
     id: 'edge-feature-flags-pro',
     name: 'Edge Feature Flags Pro',
@@ -2260,8 +2215,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-03-14',
     customers: 17,
     rating: 4.6,
-    reviews: 7,
-  }
+    reviews: 7}
   {
     id: 'llm-finetune-ops-manager',
     name: 'LLM Fine-tune Ops Manager',
@@ -2302,8 +2256,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-03-13',
     customers: 9,
     rating: 4.7,
-    reviews: 6,
-  }
+    reviews: 6}
   {
     id: 'browser-performance-monitor-pro',
     name: 'Browser Performance Monitor Pro',
@@ -2343,8 +2296,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-03-11',
     customers: 13,
     rating: 4.5,
-    reviews: 5,
-  }
+    reviews: 5}
   {
     id: 'ai-governance-registry',
     name: 'AI Governance Registry',
@@ -2411,8 +2363,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-03-10';
     customers: 25;
     rating: 4.8;
-    reviews: 11,
-  };
+    reviews: 11};
   {
     id: 'serverless-cron-orchestrator';
     name: 'Serverless Cron Orchestrator';
@@ -2449,8 +2400,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-02-20';
     customers: 40;
     rating: 4.7;
-    reviews: 19,
-  };
+    reviews: 19};
   {
     id: 'gdpr-dsar-automation-pro';
     name: 'GDPR/CCPA DSAR Automation Pro';
@@ -2487,8 +2437,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-01-28';
     customers: 18;
     rating: 4.7;
-    reviews: 13,
-  };
+    reviews: 13};
   {
     id: 'api-contract-testing-hub';
     name: 'API Contract Testing Hub';
@@ -2525,8 +2474,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-03-12';
     customers: 22;
     rating: 4.6;
-    reviews: 10,
-  };
+    reviews: 10};
   {
     id: 'cloud-cost-finops-copilot';
     name: 'Cloud Cost FinOps Copilot';
@@ -2563,8 +2511,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-02-05';
     customers: 33;
     rating: 4.7;
-    reviews: 14,
-  };
+    reviews: 14};
   {
     id: 'email-deliverability-warmup-monitor';
     name: 'Email Deliverability Warmup & Monitor';
@@ -2601,8 +2548,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-03-02';
     customers: 28;
     rating: 4.6;
-    reviews: 12,
-  };
+    reviews: 12};
   {
     id: 'vector-search-starter-pro';
     name: 'Vector Search Starter Pro';
@@ -2639,8 +2585,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-02-12';
     customers: 31;
     rating: 4.7;
-    reviews: 16,
-  };
+    reviews: 16};
   {
     id: 'api-security-attack-surface-scanner';
     name: 'API Security Attack Surface Scanner';
@@ -2677,8 +2622,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-03-06';
     customers: 14;
     rating: 4.7;
-    reviews: 8,
-  };
+    reviews: 8};
   {
     id: 'reliability-slo-guard';
     name: 'Reliability SLO Guard';
@@ -2715,8 +2659,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-02-18';
     customers: 20;
     rating: 4.6;
-    reviews: 9,
-  };
+    reviews: 9};
   {
     id: 'ai-website-personalization-pro';
     name: 'AI Website Personalization Pro';
@@ -2753,8 +2696,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-02-25';
     customers: 27;
     rating: 4.7;
-    reviews: 13,
-  };
+    reviews: 13};
   {
     id: 'sso-scim-starter-kit';
     name: 'SSO + SCIM Starter Kit';
@@ -2791,8 +2733,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-01-30';
     customers: 19;
     rating: 4.8;
-    reviews: 9,
-  };
+    reviews: 9};
   {
     id: 'managed-postgres-ha-pro';
     name: 'Managed Postgres HA Pro';
@@ -2829,8 +2770,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-03-04';
     customers: 8;
     rating: 4.6;
-    reviews: 5,
-  };
+    reviews: 5};
   {
     id: 'ai-sales-email-copilot';
     name: 'AI Sales Email Copilot';
@@ -2867,8 +2807,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-02-16';
     customers: 42;
     rating: 4.7;
-    reviews: 21,
-  };
+    reviews: 21};
   {
     id: 'it-asset-discovery-agent-pro';
     name: 'IT Asset Discovery Agent Pro';
@@ -2905,8 +2844,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-01-22';
     customers: 12;
     rating: 4.5;
-    reviews: 6,
-  };
+    reviews: 6};
   {
     id: 'edge-feature-flags-pro';
     name: 'Edge Feature Flags Pro';
@@ -2943,8 +2881,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-03-14';
     customers: 17;
     rating: 4.6;
-    reviews: 7,
-  };
+    reviews: 7};
   {
     id: 'llm-finetune-ops-manager';
     name: 'LLM Fine-tune Ops Manager';
@@ -2981,8 +2918,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-03-13';
     customers: 9;
     rating: 4.7;
-    reviews: 6,
-  };
+    reviews: 6};
   {
     id: 'browser-performance-monitor-pro';
     name: 'Browser Performance Monitor Pro';
@@ -3019,8 +2955,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-03-11';
     customers: 13;
     rating: 4.5;
-    reviews: 5,
-  };
+    reviews: 5};
   {
     id: 'ai-governance-registry';
     name: 'AI Governance Registry';
@@ -3060,7 +2995,5 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 reviews: 6;
   };
 ],
-    reviews: 6,
-  }
-],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
+    reviews: 6}
+]>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

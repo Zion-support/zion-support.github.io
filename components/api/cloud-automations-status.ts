@@ -10,7 +10,6 @@ import path from './path',
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-,
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   const dir = path.resolve(process.cwd(), "data/cloud-automations"),
   const data: Record<string any> = {}
@@ -58,8 +57,7 @@ data[f && f.replace(".json", "")] = JSON && JSON.parse(
   res.status(200).json({ ok: true, data })}
 ,
   res.status (200).json ({ ok: true, data }),
-  res.status (200).json ({ ok: true, data }),
-}
+  res.status (200).json ({ ok: true, data })}
   res.status(200).json({ ok: true, data }),
 res.status(200).json({ ok: true, data }),
   res.status(200).json({ ok: true, data })}

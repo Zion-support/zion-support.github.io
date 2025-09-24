@@ -56,8 +56,7 @@ export default function PricingPage() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   // Group services by category for better organization,
   const servicesByCategory = filteredServices.reduce((acc, service) => {
     const category = Array.isArray(service.category) ? service.category[0] : service.category,
@@ -83,8 +82,7 @@ export default function PricingPage() {
       answer: 'Yes, you can cancel your subscription at any time. You\'ll continue to have access until the end of your billing period.'};
     {
       question: 'Is there a setup fee?';
-      answer: 'No setup fees for any of our plans. You can start using our services immediately after signing up.',
-    }
+      answer: 'No setup fees for any of our plans. You can start using our services immediately after signing up.'}
   ],
   const categories = [
     'All';
@@ -357,6 +355,5 @@ export default function PricingPage() {
         </section>,
       </main>,
       <UltraFuturisticFooter20o29  />,
-    </UltraFuturisticBackground20o29>),
-}
+    </UltraFuturisticBackground20o29>)}
 ,

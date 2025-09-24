@@ -30,15 +30,13 @@ export interface InnovativeAgricultureService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 const contact = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';

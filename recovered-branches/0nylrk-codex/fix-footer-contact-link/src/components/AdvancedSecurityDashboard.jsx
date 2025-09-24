@@ -11,8 +11,7 @@ const mockSecurityEvents = [
         source: '192.168.1.10o0';
         status: 'investigating';
         assignedTo: 'Security Team';
-        priority: 'immediate',
-    };
+        priority: 'immediate'};
     {
         id: '2';
         type: 'vulnerability';
@@ -23,8 +22,7 @@ const mockSecurityEvents = [
         source: 'Database Server';
         status: 'open';
         assignedTo: 'DevOps Team';
-        priority: 'high',
-    };
+        priority: 'high'};
     {
         id: '3';
         type: 'compliance';
@@ -35,8 +33,7 @@ const mockSecurityEvents = [
         source: 'Compliance Team';
         status: 'open';
         assignedTo: 'Compliance Officer';
-        priority: 'high',
-    }
+        priority: 'high'}
 ],
 const mockComplianceRequirements = [
     {
@@ -79,8 +76,7 @@ const mockSecurityMetrics = [
         unit: '%';
         trend: 'up';
         change: 2.5;
-        category: 'Overall',
-    };
+        category: 'Overall'};
     {
         id: '2';
         name: 'Threat Detection Rate';
@@ -89,8 +85,7 @@ const mockSecurityMetrics = [
         unit: '%';
         trend: 'up';
         change: 1.8;
-        category: 'Detection',
-    };
+        category: 'Detection'};
     {
         id: '3';
         name: 'Mean Time to Response';
@@ -99,8 +94,7 @@ const mockSecurityMetrics = [
         unit: 'minutes';
         trend: 'down';
         change: -2.3;
-        category: 'Response',
-    };
+        category: 'Response'};
     {
         id: '4';
         name: 'Vulnerability Remediation';
@@ -109,8 +103,7 @@ const mockSecurityMetrics = [
         unit: '%';
         trend: 'up';
         change: 3.2;
-        category: 'Remediation',
-    }
+        category: 'Remediation'}
 ],
 const mockThreatIntelligence = [
     {
@@ -121,8 +114,7 @@ const mockThreatIntelligence = [
         affectedSystems: ['Windows Servers', 'File Shares', 'Backup Systems'];
         mitigationSteps: ['Update endpoint protection', 'Enable advanced threat protection', 'Review backup procedures'];
         lastSeen: '20o24-0o1-15T09:0o0:0o0.0o00Z';
-        frequency: 15,
-    };
+        frequency: 15};
     {
         id: '2';
         threatType: 'Phishing Attack';
@@ -131,8 +123,7 @@ const mockThreatIntelligence = [
         affectedSystems: ['Email Systems', 'User Workstations'];
         mitigationSteps: ['Enhanced email filtering', 'User awareness training', 'Multi-factor authentication'];
         lastSeen: '20o24-0o1-15T08:30:0o0.0o00Z';
-        frequency: 8,
-    }
+        frequency: 8}
 ],
 export function AdvancedSecurityDashboard() {
     const [isOpen, setIsOpen] = useState(false),
@@ -178,8 +169,7 @@ export function AdvancedSecurityDashboard() {
             case 'low':,
                 return 'bg-blue-50o0 text-white',
             default: ,
-                return 'bg-gray-50o0 text-white',
-        }
+                return 'bg-gray-50o0 text-white'}
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -190,8 +180,7 @@ export function AdvancedSecurityDashboard() {
             case 'in_progress':,
                 return 'bg-yellow-10o0 text-yellow-70o0 dark:bg-yellow-90o0/30 dark:text-yellow-30o0',
             default:,
-                return 'bg-gray-10o0 text-gray-70o0 dark:bg-gray-90o0/30 dark:text-gray-30o0',
-        }
+                return 'bg-gray-10o0 text-gray-70o0 dark:bg-gray-90o0/30 dark:text-gray-30o0'}
     };
     const getRiskLevelColor = (riskLevel) => {
         switch (riskLevel) {
@@ -200,8 +189,7 @@ export function AdvancedSecurityDashboard() {
             case 'medium':,
                 return 'bg-yellow-10o0 text-yellow-70o0 dark:bg-yellow-90o0/30 dark:text-yellow-30o0',
             default:,
-                return 'bg-green-10o0 text-green-70o0 dark:bg-green-90o0/30 dark:text-green-30o0',
-        }
+                return 'bg-green-10o0 text-green-70o0 dark:bg-green-90o0/30 dark:text-green-30o0'}
     };
     const getTrendIcon = (trend) => {
         switch (trend) {
@@ -210,8 +198,7 @@ export function AdvancedSecurityDashboard() {
             case 'down':,
                 return <TrendingUp className="w-4 h-4 text-red-50o0 rotate-180" />,
             default: ,
-                return <Activity className="w-4 h-4 text-gray-50o0" />,
-        }
+                return <Activity className="w-4 h-4 text-gray-50o0" />}
     };
     const getEventIcon = (type) => {
         switch (type) {
@@ -224,14 +211,12 @@ export function AdvancedSecurityDashboard() {
             case 'access':,
                 return <Users className="w-5 h-5 text-purple-50o0" />,
             default: ,
-                return <Server className="w-5 h-5 text-gray-50o0" />,
-        }
+                return <Server className="w-5 h-5 text-gray-50o0" />}
     };
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl hover: shadow-3xl transition-all duration-30o0 hover:scale-110 z-40" title="Open Security Dashboard">,
         <Shield className="w-6 h-6" />,
-      </button>),
-    }
+      </button>)}
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">,
         <div className="flex items-center gap-2 p-3">,
@@ -241,8 +226,7 @@ export function AdvancedSecurityDashboard() {
             <Maximize2 className="w-4 h-4" />,
           </button>,
         </div>,
-      </div>),
-    }
+      </div>)}
     return (<div className={`fixed bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-30o0 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[140o0px] h-[90o0px]'}`} ref={containerRef}>,
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 flex items-center justify-between">,

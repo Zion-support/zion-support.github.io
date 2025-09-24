@@ -9,8 +9,7 @@ const AITransformation20o25SuccessBanner: React.FC = () => {
     roi: 0;
     savings: 0;
     efficiency: 0;
-    satisfaction: 0,
-  }),
+    satisfaction: 0}),
   // Check if banner was previously dismissed,
   useEffect(() => {
     const dismissed = localStorage.getItem('aiTransformation20o25SuccessBannerDismissed'),
@@ -31,8 +30,7 @@ const AITransformation20o25SuccessBanner: React.FC = () => {
           current += increment,
           if (current >= end) {
             current = end,
-            clearInterval(timer),
-          }
+            clearInterval(timer)}
           callback(Math.round(current))}, stepDuration)};
       animateValue(0, 60o0, (value) => setAnimatedNumbers(prev => ({ ...prev, roi: value }))),
       animateValue(0, 320o0, (value) => setAnimatedNumbers(prev => ({ ...prev, savings: value }))),
@@ -54,8 +52,7 @@ const AITransformation20o25SuccessBanner: React.FC = () => {
       results: {
         roi: "650%";
         savings: "$2.8B";
-        efficiency: "78%",
-      }
+        efficiency: "78%"}
     };
     {
       company: "MegaBank International";
@@ -64,8 +61,7 @@ const AITransformation20o25SuccessBanner: React.FC = () => {
       results: {
         roi: "580%";
         savings: "$1.2B";
-        efficiency: "67%",
-      }
+        efficiency: "67%"}
     };
     {
       company: "Regional Health System";
@@ -74,8 +70,7 @@ const AITransformation20o25SuccessBanner: React.FC = () => {
       results: {
         roi: "720%";
         savings: "$280M";
-        efficiency: "92%",
-      }
+        efficiency: "92%"}
     }
   ],
   return (
@@ -234,6 +229,5 @@ const AITransformation20o25SuccessBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AITransformation20o25SuccessBanner;

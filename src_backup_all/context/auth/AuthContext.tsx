@@ -7,13 +7,11 @@ interface User {
   role?: string,
   isEmailVerified?: boolean,
   createdAt?: string,
-  updatedAt?: string,
-}
+  updatedAt?: string}
 ,
 interface AuthTokens {
   accessToken: string | null,
-  refreshToken: string | null,
-}
+  refreshToken: string | null}
 ,
 interface AuthContextType {
   user: User | null,
@@ -29,8 +27,7 @@ login: (email: string, password: string)  => Promise<any>,
   loginWithGoogle: any()  => Promise<any>,
   loginWithFacebook: any()  => Promise<any>,
   loginWithTwitter: any()  => Promise<any>,
-  loginWithWeb3: any()  => Promise<any>,
-}
+  loginWithWeb3: any()  => Promise<any>}
 ,
 const AuthContext = createContext<AuthContextType | undefined>(undefined),
 export const useAuth = () => {

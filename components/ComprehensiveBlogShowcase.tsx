@@ -331,8 +331,7 @@ const ComprehensiveBlogShowcase = () => {
                           ? 'border-orange-50o0',
                           : category.color === 'pink',
                             ? 'border-pink-50o0',
-                            : 'border-indigo-50o0',
-                }`}
+                            : 'border-indigo-50o0'}`}
               >,
                 <div className='text-2xl mb-2'>,
                   {category.name === 'AI Trends',
@@ -381,6 +380,5 @@ const ComprehensiveBlogShowcase = () => {
           </p>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default ComprehensiveBlogShowcase;

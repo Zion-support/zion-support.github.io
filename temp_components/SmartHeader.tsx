@@ -5,8 +5,7 @@ import { NavigationItem } from '../types/navigation',
 interface DropdownMenuProps {
   trigger: React.ReactNode,
   children: React.ReactNode,
-  className?: string,
-}
+  className?: string}
 ,
 const DropdownMenu: React.FC<DropdownMenuProps> = ({
   trigger;
@@ -242,8 +241,7 @@ export default function SmartHeader() {
                             View All Services →,
                           </Link>,
                         </div>,
-                      </DropdownMenu>),
-                  }
+                      </DropdownMenu>)}
 ,
                   if (item.id === 'categories-dropdown') {
                     return (
@@ -284,8 +282,7 @@ export default function SmartHeader() {
                             Explore All Categories →,
                           </Link>,
                         </div>,
-                      </DropdownMenu>),
-                  }
+                      </DropdownMenu>)}
                 }
 ,
                 return (

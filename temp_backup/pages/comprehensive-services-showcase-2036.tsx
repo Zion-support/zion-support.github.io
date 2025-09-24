@@ -180,8 +180,7 @@ export default function ComprehensiveServicesShowcase2036() {
         case 'rating':,
           return (b.rating || 0) - (a.rating || 0),
         default: ,
-          return 0,
-      }
+          return 0}
     }),
     setFilteredServices(filtered)}, [selectedCategory, sortBy, searchQuery]),
   const getServicePricing = (service: any) => {
@@ -198,13 +197,11 @@ export default function ComprehensiveServicesShowcase2036() {
   const getServiceFeatures = (service: any) => {
     if (service.features) return service.features,
     if (service.keyFeatures) return service.keyFeatures,
-    return [],
-  };
+    return []};
   const getServiceDescription = (service: any) => {
     if (service.description) return service.description,
     if (service.tagline) return service.tagline,
-    return 'No description available',
-  };
+    return 'No description available'};
   return (
     <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-black'>,
       <Head>,
@@ -272,8 +269,7 @@ export default function ComprehensiveServicesShowcase2036() {
                 className={`p-2 rounded-md transition-colors ${
                   viewMode === 'grid',
                     ? 'bg-cyan-500 text-white',
-                    : 'text-white/60 hover: text-white',
-                }`}
+                    : 'text-white/60 hover: text-white'}`}
               >,
                 <Grid className='w-5 h-5' />,
               </button>,
@@ -282,8 +278,7 @@ export default function ComprehensiveServicesShowcase2036() {
                 className={`p-2 rounded-md transition-colors ${
                   viewMode === 'list',
                     ? 'bg-cyan-500 text-white',
-                    : 'text-white/60 hover: text-white',
-                }`}
+                    : 'text-white/60 hover: text-white'}`}
               >,
                 <List className='w-5 h-5' />,
               </button>,
@@ -318,8 +313,7 @@ export default function ComprehensiveServicesShowcase2036() {
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-300 ${
                   selectedCategory === category.id,
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white border-transparent shadow-lg shadow-cyan-500/25',
-                    : 'bg-white/5 border-white/10 text-white/70 hover: bg-white/10 hover:text-white',
-                }`}
+                    : 'bg-white/5 border-white/10 text-white/70 hover: bg-white/10 hover:text-white'}`}
               >,
                 {category.icon}
                 <span className='font-medium'>{category.name}</span>,
@@ -348,8 +342,7 @@ export default function ComprehensiveServicesShowcase2036() {
                 className={
                   viewMode === 'grid',
                     ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6',
-                    : 'space-y-4',
-                }
+                    : 'space-y-4'}
               >,
                 {filteredServices.map((service, index) => (
                   <motion.div,
@@ -358,8 +351,7 @@ export default function ComprehensiveServicesShowcase2036() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                     className={`bg-white/5 border border-white/10 rounded-xl p-6 hover: border-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 ${
-                      viewMode === 'list' ? 'flex items-start space-x-4' : '',
-                    }`}
+                      viewMode === 'list' ? 'flex items-start space-x-4' : ''}`}
                   >,
                     {/* Service Icon */}
                     <div

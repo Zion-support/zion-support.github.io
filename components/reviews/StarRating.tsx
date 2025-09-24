@@ -4,8 +4,7 @@ type Props = {
   value: number,
   onChange: (val: number) => void,
   size?: number,
-  readOnly?: boolean,
-};
+  readOnly?: boolean};
 export const StarRating: React.FC<Props> = ({ valueonChangesize = 24readOnly }) => {
   const [hoveredsetHovered] = useState<number | null>(null),
   const stars = [12345],

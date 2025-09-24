@@ -29,7 +29,6 @@ import ForumCategories from "@/components / community / ForumCategories",
 import PostCard from "@/components / community / PostCard",
 import { use_auth } from '@/hooks / use_auth',
 import { ForumPost } from '@/types / community',
-,
     tags: ["machine-learning", "fine-tuning", "gpt"],
     createdAt: "2025-04-01T12:00:00Z";
     updatedAt: "2025-04-01T12:00:00Z";
@@ -37,8 +36,7 @@ import { ForumPost } from '@/types / community',
     downvotes: 2;
     replyCount: 12;
     isAnswered: true;
-    isFeatured: true,
-  };
+    isFeatured: true};
   {
     id: "2";
     title: "How to build an effective AI talent profile?";
@@ -73,8 +71,7 @@ const featuredPosts: ForumPost[] = [
     downvotes: 2;
     replyCount: 12;
     isAnswered: true;
-    isFeatured: true,
-  };
+    isFeatured: true};
   {
     id: "2";
     title: "How to build an effective AI talent profile?";
@@ -90,8 +87,7 @@ const featuredPosts: ForumPost[] = [
     downvotes: 0;
     replyCount: 8;
     isPinned: true;
-    isFeatured: true,
-  }
+    isFeatured: true}
 ],
 // Mock data for recent posts,
 const recentPosts: ForumPost[] = [
@@ -107,8 +103,7 @@ const recentPosts: ForumPost[] = [
     updatedAt: "2025-04-10T14:30:00Z";
     upvotes: 5;
     downvotes: 0;
-    replyCount: 2,
-  };
+    replyCount: 2};
   {
     id: "4";
     title: "Feature request: Team collaboration tools";
@@ -121,8 +116,7 @@ const recentPosts: ForumPost[] = [
     updatedAt: "2025-04-09T18:45:00Z";
     upvotes: 12;
     downvotes: 1;
-    replyCount: 3,
-  };
+    replyCount: 3};
   {
     id: "5";
     title: "How to handle client scope creep?";
@@ -136,8 +130,7 @@ const recentPosts: ForumPost[] = [
     upvotes: 24;
     downvotes: 0;
     replyCount: 7;
-    isAnswered: true,
-  }
+    isAnswered: true}
 ],
 export default function CommunityPage() {
   const { user } = useAuth(),
@@ -209,8 +202,7 @@ const featuredPosts: ForumPost[] = [
     downvotes: 2;
     replyCount: 12;
     isAnswered: true;
-    isFeatured: true,
-  };
+    isFeatured: true};
   {
     id: "2";
     title: "How to build an effective AI talent profile?";
@@ -226,8 +218,7 @@ const featuredPosts: ForumPost[] = [
     downvotes: 0;
     replyCount: 8;
     isPinned: true;
-    isFeatured: true,
-  }
+    isFeatured: true}
 ];
 // Mock data for recent posts,
 const recentPosts: ForumPost[] = [
@@ -243,8 +234,7 @@ const recentPosts: ForumPost[] = [
     updatedAt: "2025-04-10T14:30:00Z";
     upvotes: 5;
     downvotes: 0;
-    replyCount: 2,
-  };
+    replyCount: 2};
   {
     id: "4";
     title: "Feature request: Team collaboration tools";
@@ -257,8 +247,7 @@ const recentPosts: ForumPost[] = [
     updatedAt: "2025-04-09T18:45:00Z";
     upvotes: 12;
     downvotes: 1;
-    replyCount: 3,
-  };
+    replyCount: 3};
   {
     id: "5";
     title: "How to handle client scope creep?";
@@ -272,8 +261,7 @@ const recentPosts: ForumPost[] = [
     upvotes: 24;
     downvotes: 0;
     replyCount: 7;
-    isAnswered: true,
-  }
+    isAnswered: true}
 ];
 export default function CommunityPage() {
   const { user } = useAuth(),
@@ -313,8 +301,7 @@ const featured_posts: ForumPost[] = [
     downvotes: 2;
     reply_count: 12;
     is_answered: true;
-    is_featured: true,
-  }
+    is_featured: true}
   {
     id: "2";
     title: "How to build an effective AI talent profile?";
@@ -330,8 +317,7 @@ const featured_posts: ForumPost[] = [
     downvotes: 0;
     reply_count: 8;
     is_pinned: true;
-    is_featured: true,
-  }
+    is_featured: true}
 ],
 // Mock data for recent posts,
 const recent_posts: ForumPost[] = [
@@ -347,8 +333,7 @@ const recent_posts: ForumPost[] = [
     updated_at: "2025 - 04 - 10T14:30:00Z";
     upvotes: 5;
     downvotes: 0;
-    reply_count: 2,
-  }
+    reply_count: 2}
   {
     id: "4";
     title: "Feature request: Team collaboration tools";
@@ -361,8 +346,7 @@ const recent_posts: ForumPost[] = [
     updated_at: "2025 - 04 - 09T18:45:00Z";
     upvotes: 12;
     downvotes: 1;
-    reply_count: 3,
-  }
+    reply_count: 3}
   {
     id: "5";
     title: "How to handle client scope creep?";
@@ -376,8 +360,7 @@ const recent_posts: ForumPost[] = [
     upvotes: 24;
     downvotes: 0;
     reply_count: 7;
-    is_answered: true,
-  }
+    is_answered: true}
 ],
 export default /**,
  * CommunityPage - Function description,
@@ -429,6 +412,5 @@ function CommunityPage() {
             </div>,
           </TabsContent>,
         </Tabs>,
-      </div>,
-}
+      </div>}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}))

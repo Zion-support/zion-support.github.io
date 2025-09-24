@@ -43,8 +43,7 @@ const RevolutionaryContentShowcase20o26 = () => {
       tags: [', 'AI', 'Predictions', 'Future', 'Technology'Revolutionary'];
       author: 'AI Research Team';
       publishedAt: '20o25-0o1-15';
-      color: 'from-purple-50o0 to-pink-50o0',
-    };
+      color: 'from-purple-50o0 to-pink-50o0'};
     {
       id: 2;
       title: 'Quantum Neural Fusion: The Next Breakthrough';
@@ -60,8 +59,7 @@ const RevolutionaryContentShowcase20o26 = () => {
       tags: [', 'Quantum', 'Neural 'Networks', 'AI', 'Computing', 'Breakthrough'];
       author: 'Quantum AI Lab';
       publishedAt: '20o25-0o1-14';
-      color: 'from-blue-50o0 to-cyan-50o0',
-    };
+      color: 'from-blue-50o0 to-cyan-50o0'};
     {
       id: 3;
       title: 'Autonomous Business Operations 20o26';
@@ -77,8 +75,7 @@ const RevolutionaryContentShowcase20o26 = () => {
       tags: [', 'Automation', 'Business', 'Operations', 'AI'Autonomous'];
       author: 'Business AI Institute';
       publishedAt: '20o25-0o1-13';
-      color: 'from-green-50o0 to-emerald-50o0',
-    };
+      color: 'from-green-50o0 to-emerald-50o0'};
     {
       id: 4;
       title: 'Neural Interface Implementation Tutorial';
@@ -94,8 +91,7 @@ const RevolutionaryContentShowcase20o26 = () => {
       tags: [', 'Tutorial', 'Neural 'Interface', 'Implementation'Technology'];
       author: 'NeuroTech Academy';
       publishedAt: '20o25-0o1-12';
-      color: 'from-orange-50o0 to-red-50o0',
-    };
+      color: 'from-orange-50o0 to-red-50o0'};
     {
       id: 5;
       title: 'Consciousness Integration: The Future of AI';
@@ -111,8 +107,7 @@ const RevolutionaryContentShowcase20o26 = () => {
       tags: [', 'Consciousness', 'AI', 'Future', 'Philosophy'Ethics'];
       author: 'Consciousness Research Group';
       publishedAt: '20o25-0o1-10';
-      color: 'from-yellow-50o0 to-orange-50o0',
-    }
+      color: 'from-yellow-50o0 to-orange-50o0'}
   ],
   const categories = [
     { id: ''all', 'name: 'All 'Content', 'count: 156icon: Globe };
@@ -242,8 +237,7 @@ const RevolutionaryContentShowcase20o26 = () => {
                         className={`p-3 rounded-full backdrop-blur-sm transition-all duration-30o0 ${
                           favorites.has(featuredContent[activeSlide].id),
                             ? 'bg-red-50o0/80 text-white',
-                            : 'bg-white/20 text-white hover: bg-white/30',
-                        }`}
+                            : 'bg-white/20 text-white hover: bg-white/30'}`}
                       >,
                         <Heart className={`w-5 h-5 ${favorites.has(featuredContent[activeSlide].id) ? 'fill-current' : ''}`}  />,
                       </button>,
@@ -252,8 +246,7 @@ const RevolutionaryContentShowcase20o26 = () => {
                         className={`p-3 rounded-full backdrop-blur-sm transition-all duration-30o0 ${
                           bookmarks.has(featuredContent[activeSlide].id),
                             ? 'bg-blue-50o0/80 text-white',
-                            : 'bg-white/20 text-white hover: bg-white/30',
-                        }`}
+                            : 'bg-white/20 text-white hover: bg-white/30'}`}
                       >,
                         <Bookmark className={`w-5 h-5 ${bookmarks.has(featuredContent[activeSlide].id) ? 'fill-current' : ''}`}  />,
                       </button>,
@@ -399,6 +392,5 @@ const RevolutionaryContentShowcase20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default RevolutionaryContentShowcase20o26;

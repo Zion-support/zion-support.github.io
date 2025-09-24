@@ -144,6 +144,5 @@ export function FeaturesSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

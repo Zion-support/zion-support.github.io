@@ -7,8 +7,7 @@ vi.mock('sonner', () => ({'  toast: {
     warning: vi.fn();
     loading: vi.fn();
     custom: vi.fn();
-    dismiss: vi.fn(),
-  }
+    dismiss: vi.fn()}
 })),
 // Mock logError as it's called by the destructive toast'vi.mock('@/utils/logError', () => ({'  logError: vi.fn(() => mocked-trace-id')})),
 describe('useToast', () => {'  const sonnerToast = vi.mocked(vi.importMock('sonner').toast) as {'    _error: vi.Mock,
@@ -17,8 +16,7 @@ describe('useToast', () => {'  const sonnerToast = vi.mocked(vi.importMock('sonn
     warning: vi.Mock,
     loading: vi.Mock,
     custom: vi.Mock,
-    dismiss: vi.Mock,
-  };
+    dismiss: vi.Mock};
   beforeEach(() => {
     vi.clearAllMocks(),
     // Reset the deduplication internal state for each test,
@@ -29,8 +27,7 @@ describe('useToast', () => {'  const sonnerToast = vi.mocked(vi.importMock('sonn
     toast({
       variant: destructive',      title;
       description;
-      onRetry: mockOnRetry,
-    }),
+      onRetry: mockOnRetry}),
     expect(sonnerToast.error).toHaveBeenCalledTimes(1),
     const [message, options] = (sonnerToast.error as vi.Mock).mock.calls[0], // Changed vi.Mock to vi.Mock,
     expect(message).toBe(`${title} (Trace ID: mocked-trace-id)`),
@@ -39,15 +36,13 @@ describe('useToast', () => {'  const sonnerToast = vi.mocked(vi.importMock('sonn
     expect(options.action.type).toBe('button'),    expect(options.action.props.children).toBe('Retry'),
     // Simulate clicking the retry button,
     options.action.props.onClick(),
-    expect(mockOnRetry).toHaveBeenCalledTimes(1),
-  }),
+    expect(mockOnRetry).toHaveBeenCalledTimes(1)}),
   it('should call sonnerToast.error without a custom Retry button if onRetry is not provided', () => {'    const title = Another Error',    toast({
       variant: destructive',      title}),
     expect(sonnerToast.error).toHaveBeenCalledTimes(1),
     const [message, options] = (sonnerToast.error as vi.Mock).mock.calls[0], // Changed vi.Mock to vi.Mock,
     expect(message).toBe(`${title} (Trace ID: mocked-trace-id)`),
-    expect(options.action).toBeUndefined(),
-  }),
+    expect(options.action).toBeUndefined()}),
    it('should call sonnerToast.error with a generic action when action prop is provided and onRetry is not', () => {'    const mockActionOnClick = vi.fn(), // Changed vi.fn to vi.fn,
     const title = Error With Generic Action',    const actionLabel = Custom Action',
     toast({
@@ -62,16 +57,14 @@ describe('useToast', () => {'  const sonnerToast = vi.mocked(vi.importMock('sonn
     expect(options.action.type).toBe('button'),    expect(options.action.props.children).toBe(actionLabel),
     // Simulate clicking the action button,
     options.action.props.onClick(),
-    expect(mockActionOnClick).toHaveBeenCalledTimes(1),
-  }),
+    expect(mockActionOnClick).toHaveBeenCalledTimes(1)}),
   it('should prioritize onRetry over generic action for destructive toasts', () => {'    const mockOnRetry = vi.fn(), // Changed vi.fn to vi.fn,
     const mockActionOnClick = vi.fn(), // Changed vi.fn to vi.fn,
     const title = Error With Both Actions',    const actionLabel = Generic Action',
     toast({
       variant: destructive',      title;
       action: { label: actionLabel, onClick: mockActionOnClick };
-      onRetry: mockOnRetry,
-    }),
+      onRetry: mockOnRetry}),
     expect(sonnerToast.error).toHaveBeenCalledTimes(1),
     const [message, options] = (sonnerToast.error as vi.Mock).mock.calls[0], // Changed vi.Mock to vi.Mock,
     expect(message).toBe(`${title} (Trace ID: mocked-trace-id)`),
@@ -81,8 +74,7 @@ describe('useToast', () => {'  const sonnerToast = vi.mocked(vi.importMock('sonn
     // Simulate clicking the retry button,
     options.action.props.onClick(),
     expect(mockOnRetry).toHaveBeenCalledTimes(1),
-    expect(mockActionOnClick).not.toHaveBeenCalled(),
-  }),
+    expect(mockActionOnClick).not.toHaveBeenCalled()}),
   // Test deduplication logic,
   it('should not show identical toasts rapidly', () => {'    const title = "Unique Error Message for Dedupe Test","    toast({ title, variant: destructive' }),    expect(sonnerToast.error).toHaveBeenCalledTimes(1),
     // Try to show the same toast again immediately,

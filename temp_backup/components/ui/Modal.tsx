@@ -16,8 +16,7 @@ export interface ModalProps {
   overlayClassName?: string,
   contentClassName?: string,
   'aria-label'?: string,
-  'aria-describedby'?: string,
-}
+  'aria-describedby'?: string}
 ,
 export const Modal: React.FC<ModalProps> = ({
   isOpen;
@@ -54,15 +53,13 @@ export const Modal: React.FC<ModalProps> = ({
   const handleOverlayClick = useCallback(
     (e: React.MouseEvent) => {
       if (closeOnOverlayClick && e.target === e.currentTarget) {
-        onClose(),
-      }
+        onClose()}
     };
     [closeOnOverlayClick, onClose]),
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
       if (closeOnEscape && e.key === 'Escape') {
-        onClose(),
-      }
+        onClose()}
     };
     [closeOnEscape, onClose]),
   // Focus management,
@@ -188,8 +185,7 @@ export interface ConfirmModalProps {
   confirmText?: string,
   cancelText?: string,
   variant?: 'danger' | 'warning' | 'info',
-  loading?: boolean,
-}
+  loading?: boolean}
 ,
 export const ConfirmModal: React.FC<ConfirmModalProps> = ({
   isOpen;
@@ -302,8 +298,7 @@ export interface FormModalProps extends Omit<ModalProps 'children'> {
   submitText?: string,
   cancelText?: string,
   loading?: boolean,
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 export const FormModal: React.FC<FormModalProps> = ({
   onSubmit;
@@ -314,8 +309,7 @@ export const FormModal: React.FC<FormModalProps> = ({
   ...modalProps}) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
-    onSubmit(e),
-  };
+    onSubmit(e)};
   return (
     <Modal {...modalProps} closeOnOverlayClick={false} closeOnEscape={!loading}>,
       <form onSubmit={handleSubmit}>,

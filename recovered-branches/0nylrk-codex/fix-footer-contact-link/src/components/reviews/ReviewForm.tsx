@@ -29,8 +29,7 @@ interface ReviewFormProps {
   revieweeName: string,
   onSubmit: (data: any) => Promise<boolean>,
   defaultValues?: Review,
-  isSubmitting: boolean,
-}
+  isSubmitting: boolean}
 ,
 export function ReviewForm({
   projectId;
@@ -100,8 +99,7 @@ export function ReviewForm({
                         className={`h-10 w-10 ${
                           star <= (hoveredStar || field.value || 0),
                             ? 'fill-yellow-400 text-yellow-400',
-                            : 'text-gray-300',
-                        } transition-colors`}
+                            : 'text-gray-300'} transition-colors`}
                       />,
                     </button>))}
                 </div>,

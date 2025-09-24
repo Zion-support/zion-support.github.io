@@ -5,11 +5,9 @@ export type GenerateServiceDescriptionRequest ={
   keyFeatures: string[],
   targetAudience: string,
   additionalNotes?: string,
-  tone?: 'professional' | 'friendly' | 'persuasive' | 'technical',
-};
+  tone?: 'professional' | 'friendly' | 'persuasive' | 'technical'};
 export type GenerateServiceDescriptionResponse ={
-  description: string,
-};
+  description: string};
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 export default async function handler(
   req: NextApiRequest;
@@ -52,8 +50,7 @@ Requirements: ,
       description = output.content,
         .filter((c) => c.type === 'output_text'),
         .map((c: any) => c.text),
-        .join('\n'),
-    }
+        .join('\n')}
 ,
     if (!description) {
       // Fallback to top-level text if available,

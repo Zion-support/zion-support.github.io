@@ -63,8 +63,7 @@ export function ServiceTypeStep({ formData, updateFormData }) {
         updateFormData({
             specificItem: item;
             serviceCategory: item.category;
-            serviceType: item.category.toLowerCase(),
-        })};
+            serviceType: item.category.toLowerCase()})};
     const sourceListings = listings,
     const filteredListings = sourceListings.filter(item => {
         // Filter by category only when a service type has been selected,

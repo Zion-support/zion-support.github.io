@@ -289,6 +289,5 @@ export default function AI2026ROICalculator() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

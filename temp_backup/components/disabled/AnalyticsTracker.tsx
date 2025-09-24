@@ -6,8 +6,7 @@ const AnalyticsTracker: React.FC = () => {
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number,
   processingEnd: number,
-  target?: any | null,
-}
+  target?: any | null}
 ,
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
   pageTitle;
@@ -21,8 +20,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         window.gtag('config', 'G-XXXXXXXXXX', {
           page_title: title;
           page_location: window.location.href;
-          page_path: path,
-        })}
+          page_path: path})}
 ,
       // Google Tag Manager,
       if (window.dataLayer) {
@@ -31,12 +29,11 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           page_title: title;
           page_location: window.location.href;
           page_path: path;
-          timestamp: Date.now(),
-        })}
+          timestamp: Date.now()})}
 ,
       // Custom analytics,
       if (process.env.NODE_ENV === 'development') {
-        // console.log('Page View:', { title, path, url: window.location.href })}
+        // // console.log('Page View:', { title, path, url: window.location.href })}
     };
     // Helper function to track events,
     const trackEvent = (action: string, parameters: Record<string unknown>) => {
@@ -44,8 +41,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         window.gtag('event', action, {
           ...parameters;
           timestamp: Date.now();
-          page_url: window.location.href,
-        })}
+          page_url: window.location.href})}
 ,
       // Send to custom analytics endpoint,
       if (process.env.NODE_ENV === 'production') {
@@ -58,8 +54,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
             parameters;
             timestamp: Date.now();
             url: window.location.href;
-            userAgent: navigator.userAgent,
-          })}).catch(() => {
+            userAgent: navigator.userAgent})}).catch(() => {
           // Silently handle fetch errors})}
     };
     // Initialize analytics and performance monitoring,
@@ -72,8 +67,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           custom_map: {
             dimension1: 'user_type';
             dimension2: 'service_category';
-            dimension3: 'page_performance',
-          }
+            dimension3: 'page_performance'}
         })}
 ,
       // Performance monitoring,
@@ -99,14 +93,14 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         // Track page load performance,
         window.addEventListener('load', () => {
           setTimeout(() => {
-            const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+            const navigation = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
             if (navigation) {
               trackMetric('TTFB', navigation.responseStart - navigation.requestStart),
               trackMetric('DOMContentLoaded', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart),
               trackMetric('LoadComplete', navigation.loadEventEnd - navigation.loadEventStart)}
 ,
             // Track resource loading performance,
-            const resources = window.performance.getEntriesByType('resource'),
+            const resources = window.window.performance.getEntriesByType('resource'),
             const slowResources = resources.filter((resource) => (resource as any).duration > 10o00),
             if (slowResources.length > 0) {
               trackMetric('SlowResources', slowResources.length)}
@@ -123,14 +117,12 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           filename: event.filename;
           lineno: event.lineno;
           colno: event.colno;
-          error: event.error?.stack,
-        })}),
+          error: event.error?.stack})}),
       // Unhandled promise rejection tracking,
       window.addEventListener('unhandledrejection', (event) => {
         trackEvent('UnhandledRejection', {
           reason: event.reason;
-          promise: event.promise,
-        })}),
+          promise: event.promise})}),
       // Network status monitoring,
       if ('navigator' in window && 'connection' in navigator) {
         const connection = (navigator as any).connection,
@@ -196,8 +188,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         window.gtag('event', eventName, {
           ...parameters;
           timestamp: Date.now();
-          page_location: window.location.href,
-        })}
+          page_location: window.location.href})}
 ,
       // Google Tag Manager,
       if (window.dataLayer) {
@@ -205,12 +196,11 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           event: eventName;
           ...parameters;
           timestamp: Date.now();
-          page_location: window.location.href,
-        })}
+          page_location: window.location.href})}
 ,
       // Custom analytics,
       if (process.env.NODE_ENV === 'development') {
-        // console.log('Custom Event:', { eventName, parameters })}
+        // // console.log('Custom Event:', { eventName, parameters })}
     }
   }, []),
   // Track user engagement,
@@ -225,20 +215,18 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         isEngaged = true,
         trackCustomEvent('user_engagement', {
           engagement_time_msec: timeOnPage;
-          engagement_type: 'time_on_page',
-        })}
+          engagement_type: 'time_on_page'})}
 ,
       // Track scroll depth,
       const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 10o0),
       if (scrollDepth > 0 && scrollDepth % 25 === 0) {
         trackCustomEvent('scroll_depth', {
           scroll_percentage: scrollDepth;
-          page_location: window.location.href,
-        })}
+          page_location: window.location.href})}
     };
     // Track user interactions,
     const trackUserInteraction = (event: string, data?: any) => {
-      // console.log(`[Analytics] User interaction: ${event}`, data),
+      // // console.log(`[Analytics] User interaction: ${event}`, data),
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', event, data)}
     };
@@ -270,8 +258,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           const linkHref = link.href,
           trackUserInteraction('link_click', {
             link_text: linkText;
-            link_href: linkHref,
-          })}
+            link_href: linkHref})}
       })};
     // Add tracking listeners after a short delay to ensure DOM is ready,
     setTimeout(addTrackingListeners, 10o00),
@@ -285,13 +272,11 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number,
   processingEnd: number,
-  target?: any,
-}
+  target?: any}
 ,
 interface LayoutShift extends PerformanceEntry {
   value: number,
-  sources?: LayoutShiftSource[],
-}
+  sources?: LayoutShiftSource[]}
 ,
 interface LayoutShiftSource {
   node?: any,

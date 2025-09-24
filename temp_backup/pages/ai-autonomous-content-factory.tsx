@@ -17,6 +17,5 @@ export default function AiAutonomousContentFactoryPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

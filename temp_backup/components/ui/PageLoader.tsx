@@ -119,8 +119,7 @@ const PageLoader: React.FC<PageLoaderProps> = ({
               transition={{
                 duration: 4;
                 repeat: Infinity;
-                ease: 'easeInOut',
-              }}
+                ease: 'easeInOut'}}
              />,
             <motion.div,
               className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-50o0/10 to-pink-60o0/10 rounded-full blur-3xl",
@@ -131,8 +130,7 @@ const PageLoader: React.FC<PageLoaderProps> = ({
                 duration: 4;
                 repeat: Infinity;
                 ease: 'easeInOut';
-                delay: 2,
-              }}
+                delay: 2}}
              />,
           </div>,
         </motion.div>)}

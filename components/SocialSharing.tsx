@@ -4,8 +4,7 @@ interface SocialSharingProps {
   url: string,
   description?: string,
   hashtags?: string[],
-  className?: string,
-}
+  className?: string}
 ,
 export default function SocialSharing({
   title,
@@ -29,8 +28,7 @@ export default function SocialSharing({
       await navigator.clipboard.writeText(url),
       // You could add a toast notification here,
       alert('Link copied to clipboard!')} catch (err) {
-      console.error('Failed to copy: 'err),
-    }
+      console.error('Failed to copy: 'err)}
   };
   return (
     <div className={`flex flex-wrap items-center gap-3 ${className}`}>,

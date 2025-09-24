@@ -19,6 +19,5 @@ export default function APIDocumentation() {
 					<li><a className="text-cyan-400" href="/docs">Developer Docs</a></li>,
 				</ul>,
 			</div>,
-		</div>),
-}
+		</div>)}
 ,

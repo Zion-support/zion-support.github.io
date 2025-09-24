@@ -64,6 +64,5 @@ const ExecutiveGuideAgentAdoption: React.FC = () => {
           </Link>,
         </div>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default ExecutiveGuideAgentAdoption;

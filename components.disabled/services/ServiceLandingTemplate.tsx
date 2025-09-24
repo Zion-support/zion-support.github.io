@@ -5,8 +5,7 @@ interface ServiceLandingTemplateProps {
   features: string[],
   benefits: string[],
   ctaText?: string,
-  ctaLink?: string,
-}
+  ctaLink?: string}
 ,
 const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
   title;

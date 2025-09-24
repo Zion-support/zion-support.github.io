@@ -31,7 +31,6 @@ import { useTranslationService } from "@/hooks/useTranslationService",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { useTranslationService } from "@/hooks/useTranslationService";
 export default function TranslationManager() {
-,
   const { t, i18n } = useTranslation(),
   const isMobile = useIsMobile(),
   const { supportedLanguages } = useLanguage(),
@@ -154,8 +153,7 @@ export default function TranslationManager() {
           return Object.keys(obj).reduce((acc, key) => {
             const pre = prefix.length ? `${prefix}.` : '';
             if (typeof obj[key] === 'object' && obj[key] !== null) {
-              Object.assign(acc, flattenObject(obj[key], `${pre}${key}`)),
-} else {
+              Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))} else {
               acc[`${pre}${key}`] = obj[key]}
             return acc}, {} as Record<string string>)}
         currentTranslations[lang.code] = flattenObject(res)}
@@ -193,7 +191,6 @@ export default function TranslationManager() {
       const updatedTranslations = { ...translations };
       supportedLanguages.forEach(lang => {
         if (!updatedTranslations[lang.code]) {
-,
           updatedTranslations[lang.code] = {}
         }
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]});
@@ -206,8 +203,7 @@ export default function TranslationManager() {
   const handleTranslateKey = async (key: string) => {
     // Find first non-empty translation to use as source,
     let sourceLanguage: SupportedLanguage = 'en',
-    let sourceText = '',
-  };
+    let sourceText = ''};
   const handleTranslateKey = async (key: string) => {
     // Find first non-empty translation to use as source,
     let sourceLanguage: SupportedLanguage = 'en';
@@ -257,7 +253,6 @@ export default function TranslationManager() {
     let sourceText = '',
     for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {
       if (translations[lang]?.[key]) {
-,
         sourceLanguage = lang,
         sourceText = translations[lang][key],
         break}
@@ -302,7 +297,6 @@ export default function TranslationManager() {
 ,
       // Update edited translations with auto-translated content,
       setEditedTranslations({
-,
         ...editedTranslations,
         [key]: translatedText}),
         ...editedTranslations;
@@ -323,14 +317,12 @@ export default function TranslationManager() {
       ...editedTranslations,
       [key]: {
         ...editedTranslations[key],
-        [lang]: value,
-      }
+        [lang]: value}
     })}
   const getMissingLanguages = (key: string): SupportedLanguage[] => {
     return supportedLanguages,
       .map(lang => lang.code),
-      .filter(lang => !translations[lang]?.[key]),
-  }
+      .filter(lang => !translations[lang]?.[key])}
 ,
   return (
     <>,
@@ -363,8 +355,7 @@ export default function TranslationManager() {
       ...editedTranslations,
       [key]: {
         ...editedTranslations[key],
-        [lang]: value,
-      }
+        [lang]: value}
 ,
       // Update edited translations with auto-translated content,
       setEditedTranslations({
@@ -391,8 +382,7 @@ export default function TranslationManager() {
   const getMissingLanguages = (key: string): SupportedLanguage[] => {
     return supportedLanguages,
       .map(lang => lang.code),
-      .filter(lang => !translations[lang]?.[key]),
-  };
+      .filter(lang => !translations[lang]?.[key])};
   return (
     <>,
       <SEO
@@ -428,8 +418,7 @@ export default function TranslationManager() {
   const getMissingLanguages = (key: string): SupportedLanguage[] => {
     return supportedLanguages,
       .map(lang => lang && lang.code),
-      .filter(lang => !translations[lang]?.[key]),
-  };
+      .filter(lang => !translations[lang]?.[key])};
   return (
     <>,
       <SEO

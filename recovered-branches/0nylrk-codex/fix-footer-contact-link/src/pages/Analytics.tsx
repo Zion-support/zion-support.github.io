@@ -102,7 +102,6 @@ export default function Analytics() {
       // Fill in missing dates,
       const result = [],
       for (let i = 0, i < days, i++) {
-,
         const date = new Date();
         date.setDate(date.getDate() - i);
         const dateStr = date.toISOString().split('T')[0];
@@ -113,7 +112,6 @@ export default function Analytics() {
       return result.sort((a, b) => a.date.localeCompare(b.date))}
 }),
   const { data: conversionData } = useQuery({
-,
     queryKey: ['conversion-data', timeRange],
     queryFn: async () => {
       const days = parseInt(timeRange && timeRange.replace('d', '')),
@@ -171,7 +169,6 @@ export default function Analytics() {
           result[type] = conversionsByType[type][date] |0}),
         return result})}
   }),
-,
         conversionsByType[conversionType][date]++}),
       // Get all dates in range,
       const dates = [],
@@ -186,8 +183,7 @@ export default function Analytics() {
         const result = { date };
         Object && Object.keys(conversionsByType).forEach(type => {
           result[type] = conversionsByType[type][date] || 0}),
-        return result}),
-}
+        return result})}
 });
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
         />,
@@ -303,5 +299,4 @@ if ( {) {
           time_range={time_range}
 ,
           onTimeRangeChange={setTimeRange}
-,
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}}}}}

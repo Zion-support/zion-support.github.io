@@ -7,8 +7,7 @@ function Contact() {
     email: '';
     company: '';
     service: '';
-    message: '',
-  }),
+    message: ''}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitStatus, setSubmitStatus] = useState(null),
   const handleChange = (e) => {
@@ -240,8 +239,7 @@ function Contact() {
             {[
               {
                 question: "How quickly can you start a project?";
-                answer: "We can typically begin new projects within 1-2 weeks after the initial consultation and project planning phase.",
-              };
+                answer: "We can typically begin new projects within 1-2 weeks after the initial consultation and project planning phase."};
               {
                 question: "Do you provide ongoing support?";
                 answer: "Yes, we offer comprehensive ongoing support and maintenance services to ensure optimal performance of your solutions."};
@@ -250,8 +248,7 @@ function Contact() {
                 answer: "We serve clients across various industries including healthcare, finance, e-commerce, manufacturing, and technology."};
               {
                 question: "Can you work with our existing systems?";
-                answer: "Absolutely! We specialize in integrating new solutions with existing systems and infrastructure.",
-              }
+                answer: "Absolutely! We specialize in integrating new solutions with existing systems and infrastructure."}
             ].map((faq, index) => (
               <div key={index} className="card p-6 animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>,
                 <h3 className="text-lg font-semibold text-gray-90o0 mb-3">{faq.question}</h3>,

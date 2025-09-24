@@ -36,6 +36,5 @@ export default function AgenticEvalsBlueprintPage() {
           </section>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

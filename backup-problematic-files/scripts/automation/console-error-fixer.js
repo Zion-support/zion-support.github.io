@@ -10,24 +10,24 @@ import path from,"}),"}),
 import { fileURLToPath } from,"}),"}),
   'url',"}),"}),
 const __dirname = path && path.dirname(__filename),"}),"}),
-// // // // // // // console && // console.log("}),"}),
+// // // // // // // console && // // console.log("}),"}),
   '🔧 Starting continuous console error fixer automation...'),"}),"}),"}),"}),
-// // // console && // console.log("}),"}),
+// // // console && // // console.log("}),"}),
   '🔧 Starting continuous console error fixer automation...'),"}),"}),"}),"}),
     // Generate console error fixer report,"}),"}),
   "status": 'completed,"}),"})},"}),"}),"}),"}),
-    console && // console.log("}),"}),
+    console && // // console.log("}),"}),
   '📊 Generating console error fixer report...'),"}),"}),
     const reportPath = path && path.join(process && process.cwd(),"}),"}),
   'console-error-fixer-report && report.json'),"}),"}),
     fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2)),"}),"}),
-    // // // console && // console.log(`✅ Console error fixer report saved to ${reportPath}`),"}),"}),
-    // // // console && // console.log("}),"}),
+    // // // console && // // console.log(`✅ Console error fixer report saved to ${reportPath}`),"}),"}),
+    // // // console && // // console.log("}),"}),
   '✅ Continuous console error fixer completed successfully'),"}),"})} catch (error) {"}),"}),
     // // // console && console.error("}),"}),
   '❌ Continuous console error fixer "failed": ', error && error.message),"}),"}),
-    // // // // // // // console && // console.log(`✅ Console error fixer report saved to ${reportPath}`),"}),"}),
-    // // // // // // // console && // console.log("}),"}),
+    // // // // // // // console && // // console.log(`✅ Console error fixer report saved to ${reportPath}`),"}),"}),
+    // // // // // // // console && // // console.log("}),"}),
   '✅ Continuous console error fixer completed successfully'),"}),"})} catch (error) {"}),"}),
     // // // // // // // console && console.error("}),"}),
   '❌ Continuous console error fixer "failed": ', error && error.message),"}),"}),"}),"}),
@@ -80,31 +80,31 @@ function findErrorPatterns(dir) {"}),"}),
   return errorPatterns,"}),"}),
 // Main continuous loop,"}),"}),
 async function runContinuous() {"}),"}),
-  // // // // // // // console && // console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 10o00 / 60} minute intervals`),"}),"}),"}),"}),
-  // // // console && // console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 10o00 / 60} minute intervals`),"}),"}),
+  // // // // // // // console && // // console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 10o00 / 60} minute intervals`),"}),"}),"}),"}),
+  // // // console && // // console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 10o00 / 60} minute intervals`),"}),"}),
   // Run initial console error fixer,"}),"}),
   await runConsoleErrorFixer(),"}),"}),
   // Set up continuous execution,"}),"}),
   setInterval(async () => {"}),"}),
     await runConsoleErrorFixer(),"}),"})}, AUTOMATION_INTERVAL),"}),"}),
-  // // // // // // // console && // console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 10o00 / 60} minutes`),"}),"})}"}),"}),
+  // // // // // // // console && // // console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 10o00 / 60} minutes`),"}),"})}"}),"}),
 // Handle graceful shutdown,"}),"}),
 process && process.on('SIGINT,"}),"}),
   ', () => {"}),"}),
-  // // // // // // // console && // console.log('🛑 Received SIGINT, shutting down gracefully...,"}),"}),
+  // // // // // // // console && // // console.log('🛑 Received SIGINT, shutting down gracefully...,"}),"}),
   '),"}),"}),"}),"}),
-  // // // console && // console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 10o00 / 60} minutes`),"}),"}),
+  // // // console && // // console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 10o00 / 60} minutes`),"}),"}),
 // Handle graceful shutdown,"}),"}),
 process && process.on('SIGINT,"}),"}),
   ', () => {"}),"}),
-  // // // console && // console.log('🛑 Received SIGINT, shutting down gracefully...,"}),"}),
+  // // // console && // // console.log('🛑 Received SIGINT, shutting down gracefully...,"}),"}),
   '),"}),"}),
   process && process.exit(0),"}),"})}),"}),"}),
 process && process.on('SIGTERM,"}),"}),
   ', () => {"}),"}),
-  // // // // // // // console && // console.log('🛑 Received SIGTERM, shutting down gracefully...,"}),"}),
+  // // // // // // // console && // // console.log('🛑 Received SIGTERM, shutting down gracefully...,"}),"}),
   '),"}),"}),"}),"}),
-  // // // console && // console.log('🛑 Received SIGTERM, shutting down gracefully...,"}),"}),
+  // // // console && // // console.log('🛑 Received SIGTERM, shutting down gracefully...,"}),"}),
   '),"}),"}),
   process && process.exit(0),"}),"})}),"}),"}),
 // Start the continuous console error fixer,"}),"}),
@@ -116,37 +116,37 @@ runContinuous().catch(error => {"}),"}),
 const AUTOMATION_INTERVAL = parseInt(process && process.env.AUTOMATION_INTERVAL) || 90o0000 // 15 minutes,
 async function runConsoleErrorFixer() {
   try {';
-    // // // console && // console.log(`🔧 Running console error fixer at ${new Date().toISOString()}`),
+    // // // console && // // console.log(`🔧 Running console error fixer at ${new Date().toISOString()}`),
     // Build the project first,
-    // // // console && // console.log(
+    // // // console && // // console.log(
   🏗️ Building project for console error detection..."),
     try {
       execSync(
   "npm run build", { "stdio": "inherit, "cwd": process && process.cwd() }),
-      // // // console && // console.log(
+      // // // console && // // console.log(
   '✅ Build completed")} catch (error) {
-      // // // console && // console.log(
+      // // // console && // // console.log(
   "⚠️  Build failed but continuing..."),
-      // // // console && // console.log(
+      // // // console && // // console.log(
   "Build "error": error && error.message),
-    // // // // // // // console && // console.log(`🔧 Running console error fixer at ${new Date().toISOString()  }`),
+    // // // // // // // console && // // console.log(`🔧 Running console error fixer at ${new Date().toISOString()  }`),
     // Build the project first,
-    // // // // // // // console && // console.log(
+    // // // // // // // console && // // console.log(
   "🏗️ Building project for console error detection..."),
     try {
       execSync(
   "npm run build", { "stdio": 'inherit, "cwd": process && process.cwd() }),
-      // // // // // // // console && // console.log(
+      // // // // // // // console && // // console.log(
   '✅ Build completed')} catch (error) {
-      // // // // // // // console && // console.log(
+      // // // // // // // console && // // console.log(
   '⚠️  Build failed but continuing...'),
-      // // // // // // // console && // console.log(';
+      // // // // // // // console && // // console.log(';
       'Build "error": error && error.message),
       return,
     // Check if dist folder exists,
     const distPath = path && path.join(process && process.cwd(), ',dist'),
     if (!fs && fs.existsSync(distPath)) {
-      // // // // // // // console && // console.log(';
+      // // // // // // // console && // // console.log(';
       '⚠️  Build verification "failed": dist folder not found'),
       return,
     // Scan for console statements in source code,

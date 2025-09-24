@@ -308,6 +308,5 @@ export default function CaseStudiesPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

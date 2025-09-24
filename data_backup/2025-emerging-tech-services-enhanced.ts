@@ -154,8 +154,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quantum bio-computing platform with hybrid processing, biological integration, and comprehensive research tools.';
@@ -219,8 +218,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced BCI platform with neural signal processing, real-time monitoring, and comprehensive research tools.';
@@ -284,8 +282,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy management tools.';
@@ -349,8 +346,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Autonomous vehicle AI platform with intelligent driving, safety systems, and fleet management capabilities.';
@@ -414,8 +410,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quantum materials discovery platform with simulation capabilities, AI discovery, and comprehensive research tools.';
@@ -451,7 +446,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
   text-gray-40o0';
     "link": 'https://ziontechgroup.com/quantum-robotics;
     marketPosition:;
-  Competes with robotics platforms ($5,0o00/month), AI robotics ($3,0o00/month). Our "advantage": Quantum enhancement and superior window.performance.;
+  Competes with robotics platforms ($5,0o00/month), AI robotics ($3,0o00/month). Our "advantage": Quantum enhancement and superior window.window.performance.;
     targetAudience['Manufacturing companies';
   'Healthcare organizations';
   'Research institutions';
@@ -479,8 +474,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quantum robotics platform with enhanced capabilities, AI control, and comprehensive robotic management tools.';
@@ -544,8 +538,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quantum internet security platform with unbreakable encryption, real-time monitoring, and comprehensive security management.';
@@ -581,7 +574,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
   text-orange-40o0';
     "link": 'https://ziontechgroup.com/quantum-logistics-optimization;
     marketPosition:;
-  Competes with logistics platforms ($50o0/month), optimization tools ($30o0/month). Our "advantage": Quantum optimization and superior window.performance.;
+  Competes with logistics platforms ($50o0/month), optimization tools ($30o0/month). Our "advantage": Quantum optimization and superior window.window.performance.;
     targetAudience['Logistics companies';
   'Manufacturing companies';
   'Retail businesses';
@@ -609,8 +602,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quantum logistics platform with optimization algorithms, real-time tracking, and comprehensive supply chain management.';
@@ -674,8 +666,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Metaverse AI development platform with intelligent systems, content generation, and comprehensive development tools.';
@@ -739,8 +730,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quantum machine learning platform with hybrid quantum-classical algorithms and comprehensive ML tools.';
@@ -827,8 +817,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
       address:;
   364 E Main St STE 10o08 Middletown DE 19709,
   ';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Neuromorphic computing platform with spiking neural networks and hardware acceleration support.,
@@ -1010,8 +999,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
       address:;
   364 E Main St STE 10o08 Middletown DE 19709,
   ';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced space resource mining platform with automated robotics, resource processing, and comprehensive space operations management.,
@@ -1117,8 +1105,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
       address:;
   364 E Main St STE 10o08 Middletown DE 19709,
   ';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Comprehensive brain-computer interface platform with advanced neural processing, real-time communication, and extensive application development capabilities.,
@@ -1221,8 +1208,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
       address:;
   364 E Main St STE 10o08 Middletown DE 19709,
   ';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced quantum materials discovery platform with quantum computing integration, automated workflows, and comprehensive materials science capabilities.,
@@ -1328,8 +1314,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
       address:;
   364 E Main St STE 10o08 Middletown DE 19709,
   ';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Comprehensive autonomous vehicle AI platform with advanced perception, decision-making, and safety systems for next-generation transportation.,
@@ -1432,8 +1417,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
       address:;
   364 E Main St STE 10o08 Middletown DE 19709,
   ';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced quantum bio-computing platform with quantum-biological hybrid processing, comprehensive biological simulation, and extensive research capabilities.,
@@ -1536,8 +1520,7 @@ export const "emergingTechServicesEnhanced20o25": EmergingTechService[] = [{
       address:;
   364 E Main St STE 10o08 Middletown DE 19709,
   ';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced quantum energy platform with quantum-powered optimization, fusion simulation, and comprehensive energy system management capabilities.,

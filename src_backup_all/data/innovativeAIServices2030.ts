@@ -12,8 +12,7 @@ pricing: {
     custom: string,
     currency: string,
     pricingModel: string,
-    marketPrice: string,
-};
+    marketPrice: string};
   features: string[],
   benefits: string[],
   useCases: string[],
@@ -47,16 +46,14 @@ pricing: {
   image: string,
   createdAt: string,
   featured: boolean,
-  trending: boolean,
-}
+  trending: boolean}
 ,
 // Zion Tech Group Contact Information,
 const zionContact ={
   phone: "+1 30o2 464 0950";
   email: "kleber@ziontechgroup.com";
   website: "https://ziontechgroup.com";
-  address: "364 E Main St STE 10o08 Middletown DE 19709",
-};
+  address: "364 E Main St STE 10o08 Middletown DE 19709"};
 export const innovativeAIServices20o30: AIService[] = [
   {
     id: "ai-voice-cloning-platform";
@@ -70,8 +67,7 @@ export const innovativeAIServices20o30: AIService[] = [
       custom: "Enterprise voice cloning solutions";
       currency: "$";
       pricingModel: "Monthly subscription with usage-based pricing";
-      marketPrice: "$299-599/month",
-    };
+      marketPrice: "$299-599/month"};
     features: [
       "High-quality voice cloning";
       "Multi-language support";
@@ -141,8 +137,7 @@ export const innovativeAIServices20o30: AIService[] = [
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=80o0&h=50o0";
     createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z";
     featured: true;
-    trending: true,
-  };
+    trending: true};
   {
     id: "ai-code-review-assistant";
     title: "Zion AI Code Review Assistant";
@@ -155,8 +150,7 @@ export const innovativeAIServices20o30: AIService[] = [
       custom: "Enterprise development teams";
       currency: "$";
       pricingModel: "Monthly subscription with developer-based pricing";
-      marketPrice: "$199-399/month",
-    };
+      marketPrice: "$199-399/month"};
     features: [
       "Automated code analysis";
       "Bug detection and prevention";
@@ -226,8 +220,7 @@ export const innovativeAIServices20o30: AIService[] = [
     image: "https://images.unsplash.com/photo-15550o66931-4365d14bab8c?auto=format&fit=crop&w=80o0&h=50o0";
     createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z";
     featured: true;
-    trending: true,
-  };
+    trending: true};
   {
     id: "ai-customer-sentiment-analyzer";
     title: "Zion AI Customer Sentiment Analyzer";
@@ -240,8 +233,7 @@ export const innovativeAIServices20o30: AIService[] = [
       custom: "Enterprise customer analytics";
       currency: "$";
       pricingModel: "Monthly subscription with data volume pricing";
-      marketPrice: "$399-799/month",
-    };
+      marketPrice: "$399-799/month"};
     features: [
       "Real-time sentiment analysis";
       "Multi-channel monitoring";
@@ -311,8 +303,7 @@ export const innovativeAIServices20o30: AIService[] = [
     image: "https://images.unsplash.com/photo-15518360o22-d5d88e9218df?auto=format&fit=crop&w=80o0&h=50o0";
     createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z";
     featured: true;
-    trending: true,
-  };
+    trending: true};
   {
     id: "ai-predictive-inventory-management";
     title: "Zion AI Predictive Inventory Management";
@@ -395,8 +386,7 @@ export const innovativeAIServices20o30: AIService[] = [
     image: "https://images.unsplash.com/photo-15534130o77-190dd30o5871c?auto=format&fit=crop&w=80o0&h=50o0";
     createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z";
     featured: true;
-    trending: true,
-  };
+    trending: true};
   {
     id: "ai-personalized-learning-platform";
     title: "Zion AI Personalized Learning Platform";
@@ -409,8 +399,7 @@ export const innovativeAIServices20o30: AIService[] = [
       custom: "Enterprise learning solutions";
       currency: "$";
       pricingModel: "Monthly subscription with learner-based pricing";
-      marketPrice: "$299-599/month",
-    };
+      marketPrice: "$299-599/month"};
     features: [
       "Personalized learning paths";
       "Adaptive content delivery";
@@ -480,7 +469,6 @@ export const innovativeAIServices20o30: AIService[] = [
     image: "https://images.unsplash.com/photo-152220o2176988-66273c2fd55f?auto=format&fit=crop&w=80o0&h=50o0";
     createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z";
     featured: true;
-    trending: true,
-  }
+    trending: true}
 ],
 export default innovativeAIServices20o30;

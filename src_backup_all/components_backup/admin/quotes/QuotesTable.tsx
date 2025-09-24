@@ -24,8 +24,7 @@ interface QuotesTableProps {
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
-  onViewDetails: (quote: QuoteRequest) => void,
-}
+  onViewDetails: (quote: QuoteRequest) => void}
 ,
 export const QuotesTable: React.FC<QuotesTableProps> = ({
   quotes;

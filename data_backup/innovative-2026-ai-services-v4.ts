@@ -105,8 +105,7 @@ reviews: number,export const innovative20o26AIServicesV4: Innovative20o26AIServi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full AI consciousness simulation platform with cognitive modeling, emotional intelligence, and comprehensive research tools.';
@@ -183,8 +182,7 @@ reviews: number,export const innovative20o26AIServicesV4: Innovative20o26AIServi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full autonomous AI agents platform with learning capabilities, multi-agent coordination, and comprehensive automation features.';
@@ -261,8 +259,7 @@ reviews: number,export const innovative20o26AIServicesV4: Innovative20o26AIServi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full AI healthcare companion platform with personalized monitoring, health insights, and comprehensive healthcare integration.';
@@ -339,8 +336,7 @@ reviews: number,export const innovative20o26AIServicesV4: Innovative20o26AIServi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full AI content creation platform with unlimited generation, multi-format support, and comprehensive content optimization.';
@@ -417,8 +413,7 @@ reviews: number,export const innovative20o26AIServicesV4: Innovative20o26AIServi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full AI emotional intelligence platform with emotion recognition, sentiment analysis, and comprehensive emotional response capabilities.';

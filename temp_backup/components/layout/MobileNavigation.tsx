@@ -39,8 +39,7 @@ import {
 import Link from 'next/link',
 interface MobileNavigationProps {
   isOpen: boolean,
-  onClose: () => void,
-}
+  onClose: () => void}
 ,
 const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onClose }) => {
   const [activeSection, setActiveSection] = useState<string | null>(null),
@@ -51,8 +50,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onClose }) 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (isOpen && !(event.target as Element).closest('.mobile-nav')) {
-        onClose(),
-      }
+        onClose()}
     };
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside),
@@ -121,13 +119,12 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onClose }) 
     e.preventDefault(),
     if (searchQuery.trim()) {
       // Implement search functionality,
-      // console.log('Searching for:', searchQuery),
+      // // console.log('Searching for:', searchQuery),
       setIsSearchOpen(false),
       setSearchQuery('')}
   };
   const toggleSection = (sectionId: string) => {
-    setActiveSection(activeSection === sectionId ? null : sectionId),
-  };
+    setActiveSection(activeSection === sectionId ? null : sectionId)};
   return (
     <AnimatePresence>,
       {isOpen && (

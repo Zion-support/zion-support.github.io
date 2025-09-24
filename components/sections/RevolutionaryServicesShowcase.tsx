@@ -87,8 +87,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   }
         duration: 0.5;
@@ -185,8 +184,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover: shadow-xl hover:shadow-cyan-500/30 ${
                 activeCategory === category && category.id,
                   ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25',
-                  : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50',
-              }`}
+                  : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50'}`}
             >,
               {category.name}
 ,
@@ -232,8 +230,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
               <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">,
         stagger_children: 0.1;
       };
-    }}        stagger_children: 0.1,
-      }
+    }}        stagger_children: 0.1}
     }
   }
 ,
@@ -312,8 +309,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
               className={`px - 6 py - 3 rounded - full font - semibold transition - all duration - 300 transform hover: shadow - xl hover:shadow - cyan - 500 / 30 ${
                 active_category === category.id,
                   ? 'bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white shadow - lg shadow - cyan - 500 / 25',
-                  : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50 border border - gray - 600 / 50',
-              }`}
+                  : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50 border border - gray - 600 / 50'}`}
             >,
               {category.name}
               <span className='ml - 2 px - 2 py - 1 bg - white / 20 rounded - full text - xs'>                {category.count}              <span className="ml - 2 px - 2 py - 1 bg - white / 20 rounded - full text - xs">,
@@ -743,6 +739,5 @@ const RevolutionaryServicesShowcase: React.FC = () => {
       </div>,
     </section>),
 export default RevolutionaryServicesShowcase;
-export default RevolutionaryServicesShowcase),
-}
+export default RevolutionaryServicesShowcase)}
 export default RevolutionaryServicesShowcase)))))

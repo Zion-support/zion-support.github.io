@@ -4,12 +4,10 @@ import { LucideIcon } from 'lucide-react',
 interface Stat {
   number: string,
   label: string,
-  icon: LucideIcon,
-}
+  icon: LucideIcon}
 ,
 interface StatsSectionProps {
-  stats: Stat[],
-}
+  stats: Stat[]}
 ,
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   return (

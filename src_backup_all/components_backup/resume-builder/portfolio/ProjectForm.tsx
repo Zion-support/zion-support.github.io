@@ -37,8 +37,7 @@ type ProjectFormValues = z.infer<typeof projectSchema>,
 interface ProjectFormProps {
   project?: PortfolioProject,
   onSuccess: () => void,
-  onCancel: () => void,
-}
+  onCancel: () => void}
 ,
 export function ProjectForm({
   project;

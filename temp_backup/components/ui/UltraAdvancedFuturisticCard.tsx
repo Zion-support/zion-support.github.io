@@ -20,8 +20,7 @@ interface UltraAdvancedFuturisticCardProps {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
 }
 ,
 const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = ({
@@ -53,8 +52,7 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
         y: Math.random() * 20o0;
         vx: (Math.random() - 0.5) * 4;
         vy: (Math.random() - 0.5) * 4;
-        life: 0,
-      })),
+        life: 0})),
       setParticles(newParticles)}
   }, [isHovered, variant]),
   useEffect(() => {
@@ -65,8 +63,7 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
             ...p;
             x: p.x + p.vx;
             y: p.y + p.vy;
-            life: p.life + 1,
-          })).filter(p => p.life < 10o0))}, 50),
+            life: p.life + 1})).filter(p => p.life < 10o0))}, 50),
       return () => clearInterval(interval)}
   }, [particles]),
   const getVariantStyles = () => {
@@ -147,8 +144,7 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
               style={{
                 left: particle.x;
                 top: particle.y;
-                opacity: 1 - particle.life / 10o0,
-              }}
+                opacity: 1 - particle.life / 10o0}}
               animate={{
                 scale: [0, 1, 0];
                 opacity: [0, 1, 0]}}
@@ -190,8 +186,7 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
             transition={{
               duration: 0.1;
               repeat: Infinity;
-              repeatDelay: 3,
-            }}
+              repeatDelay: 3}}
            />,
         </div>)}
 ,
@@ -214,8 +209,7 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
                 transition={{
                   duration: 2;
                   repeat: Infinity;
-                  delay: i * 0.3,
-                }}
+                  delay: i * 0.3}}
                />))}
           </svg>,
         </div>)}
@@ -362,8 +356,7 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
               transition={{
                 duration: 4;
                 repeat: Infinity;
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
              />,
           </div>)}
       </div>,

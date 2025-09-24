@@ -89,8 +89,7 @@ reviews: number,export const cuttingEdge20o29Services: CuttingEdge20o29Service[]
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Fully functional AI consciousness development platform with advanced neural networks, consciousness algorithms, and real-time monitoring capabilities.';
@@ -149,8 +148,7 @@ reviews: number,export const cuttingEdge20o29Services: CuttingEdge20o29Service[]
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production-ready emotional intelligence platform with real-time emotion detection, analysis, and response generation.';
@@ -210,8 +208,7 @@ reviews: number,export const cuttingEdge20o29Services: CuttingEdge20o29Service[]
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production quantum security gateway with quantum key distribution and post-quantum cryptography capabilities.';
@@ -271,8 +268,7 @@ reviews: number,export const cuttingEdge20o29Services: CuttingEdge20o29Service[]
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced space mining automation platform with AI robotics, automated prospecting, and resource extraction capabilities.';
@@ -332,8 +328,7 @@ reviews: number,export const cuttingEdge20o29Services: CuttingEdge20o29Service[]
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production metaverse platform with AI-powered world generation, realistic physics, and cross-platform compatibility.';
@@ -393,8 +388,7 @@ reviews: number,export const cuttingEdge20o29Services: CuttingEdge20o29Service[]
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced autonomous business management system with AI-powered decision making and process optimization.';
@@ -454,8 +448,7 @@ reviews: number,export const cuttingEdge20o29Services: CuttingEdge20o29Service[]
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced DNA computing platform with biological computation, molecular algorithms, and DNA-based data processing.';
@@ -502,7 +495,7 @@ reviews: number,export const cuttingEdge20o29Services: CuttingEdge20o29Service[]
   Quantum computing, Financial algorithms, Machine learning, Risk modeling, Market analysis'];
     integrations['Trading platforms, Financial data feeds, Risk management systems, Portfolio management, Market data'];
     useCases['Algorithmic trading, Risk management, Portfolio optimization, Market analysis, Financial prediction'];
-    "roi": 'Revolutionary trading accuracy. Customers see 120o0%+ ROI through improved trading window.performance.;
+    "roi": 'Revolutionary trading accuracy. Customers see 120o0%+ ROI through improved trading window.window.performance.;
     competitors[;
   Goldman Sachs Quantum, JP Morgan Quantum, Traditional trading platforms'];
     "marketSize": '$45B market;
@@ -515,8 +508,7 @@ reviews: number,export const cuttingEdge20o29Services: CuttingEdge20o29Service[]
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production quantum financial trading platform with quantum algorithms, real-time analysis, and automated trading capabilities.';
@@ -576,8 +568,7 @@ reviews: number,export const cuttingEdge20o29Services: CuttingEdge20o29Service[]
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced AI creativity platform with multi-model orchestration, creative idea generation, and innovation management.';

@@ -84,16 +84,14 @@ export default function Revolutionary20o27ServicesShowcase() {
         case 'launchDate':,
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
         default: ,
-          return a.name.localeCompare(b.name),
-      }
+          return a.name.localeCompare(b.name)}
     }),
     return filtered}[allServicesearchTermselectedCategoryselectedPriceRangesortBy]),
   const contactInfo ={
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>,
       <Head>,
@@ -373,5 +371,4 @@ export default function Revolutionary20o27ServicesShowcase() {
           </motion.div>,
         </div>,
       </section>,
-    </UltraQuantumHolographicBackground>),
-}
+    </UltraQuantumHolographicBackground>)}

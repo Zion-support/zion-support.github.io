@@ -17,8 +17,7 @@ export interface HeaderProps {
   customTheme?: {
     primaryColor: string,
     backgroundColor: string,
-    textColor: string,
-  };
+    textColor: string};
 }
 ,
 export function Header({ hideLogin = falsecustomLogocustomTheme }: HeaderProps) {
@@ -32,8 +31,7 @@ export function Header({ hideLogin = falsecustomLogocustomTheme }: HeaderProps) 
   const effectiveTheme = customTheme || (isWhitelabel ? {
     primaryColor;
     backgroundColor: '#0f172a'// Default dark background,
-    textColor: '#ffffff'// Default light text,
-  } : undefined),
+    textColor: '#ffffff'// Default light text} : undefined),
   const headerStyle = effectiveTheme ? {
     backgroundColor: effectiveTheme.backgroundColor;
     color: effectiveTheme.textColor;

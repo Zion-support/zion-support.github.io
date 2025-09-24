@@ -10,8 +10,7 @@ interface UltraFuturisticLayout20o46Props {
   description?: string,
   keywords?: string,
   ogImage?: string,
-  canonical?: string,
-}
+  canonical?: string}
 ,
 const UltraFuturisticLayout20o46: React.FC<UltraFuturisticLayout20o46Props> = ({
   children;

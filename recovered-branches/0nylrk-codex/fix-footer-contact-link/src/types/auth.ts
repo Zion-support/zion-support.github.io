@@ -28,8 +28,7 @@ export interface UserProfile {
   headline?: string,
   role?: string,
   permissions?: string[],
-  companyId?: string,
-}
+  companyId?: string}
 ,
 // Update AuthContextType definition to match implementation,
 export interface AuthContextType {

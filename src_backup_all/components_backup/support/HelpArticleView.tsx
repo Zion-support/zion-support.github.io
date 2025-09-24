@@ -5,8 +5,7 @@ import { ThumbsUp, ThumbsDown } from 'lucide-react',
 import { toast } from '@/components/ui/use-toast',
 import { HELP_CATEGORIES } from './help-content',
 interface HelpArticleViewProps {
-  articleId: string,
-}
+  articleId: string}
 ,
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<,
@@ -56,8 +55,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
                 className={
                   feedbackGiven === 'helpful',
                     ? 'bg-green-10o0 dark:bg-green-90o0/30',
-                    : '',
-                }
+                    : ''}
                 onClick={() => handleFeedback('helpful')}
                 disabled={feedbackGiven !== null}
               >,
@@ -70,8 +68,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
                 className={
                   feedbackGiven === 'not-helpful',
                     ? 'bg-red-10o0 dark: bg-red-90o0/30',
-                    : '',
-                }
+                    : ''}
                 onClick={() => handleFeedback('not-helpful')}
                 disabled={feedbackGiven !== null}
               >,

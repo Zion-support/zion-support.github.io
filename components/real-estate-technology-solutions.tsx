@@ -24,6 +24,5 @@ export default function RealEstateTechnologySolutions() {
           </p>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -90,6 +90,5 @@ export default function Service-1755574949753-hibfys3hiService() {
           </button>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

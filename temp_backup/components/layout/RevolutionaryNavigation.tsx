@@ -23,26 +23,22 @@ const RevolutionaryNavigation: React.FC = () => {
           name: 'AI Services';
           href: '/ai-services';
           icon: <Brain className="w-4 h-4"  />;
-          description: 'Advanced AI solutions for business',
-        };
+          description: 'Advanced AI solutions for business'};
         {
           name: 'IT Services';
           href: '/it-services';
           icon: <Zap className="w-4 h-4"  />;
-          description: 'Enterprise IT infrastructure',
-        };
+          description: 'Enterprise IT infrastructure'};
         {
           name: 'Quantum Computing';
           href: '/quantum-ai-cognitive';
           icon: <Shield className="w-4 h-4"  />;
-          description: 'Next-generation quantum solutions',
-        };
+          description: 'Next-generation quantum solutions'};
         {
           name: 'Micro SaaS';
           href: '/micro-saas';
           icon: <Rocket className="w-4 h-4"  />;
-          description: 'Specialized business applications',
-        }
+          description: 'Specialized business applications'}
       ]};
     {
       name: 'Solutions';
@@ -52,26 +48,22 @@ const RevolutionaryNavigation: React.FC = () => {
           name: 'Manufacturing';
           href: '/autonomous-manufacturing';
           icon: <Zap className="w-4 h-4"  />;
-          description: 'AI-powered manufacturing automation',
-        };
+          description: 'AI-powered manufacturing automation'};
         {
           name: 'Finance';
           href: '/quantum-blockchain';
           icon: <Shield className="w-4 h-4"  />;
-          description: 'Quantum blockchain financial solutions',
-        };
+          description: 'Quantum blockchain financial solutions'};
         {
           name: 'Healthcare';
           href: '/biotech-ai';
           icon: <Brain className="w-4 h-4"  />;
-          description: 'AI biotech research platform',
-        };
+          description: 'AI biotech research platform'};
         {
           name: 'Space Tech';
           href: '/space-technology';
           icon: <Rocket className="w-4 h-4"  />;
-          description: 'AI space technology solutions',
-        }
+          description: 'AI space technology solutions'}
       ]};
     {
       name: 'Company';
@@ -81,20 +73,17 @@ const RevolutionaryNavigation: React.FC = () => {
           name: 'About Us';
           href: '/about';
           icon: <User className="w-4 h-4"  />;
-          description: 'Learn about our mission',
-        };
+          description: 'Learn about our mission'};
         {
           name: 'Careers';
           href: '/careers';
           icon: <Zap className="w-4 h-4"  />;
-          description: 'Join our revolutionary team',
-        };
+          description: 'Join our revolutionary team'};
         {
           name: 'Contact';
           href: '/contact';
           icon: <Mail className="w-4 h-4"  />;
-          description: 'Get in touch with us',
-        }
+          description: 'Get in touch with us'}
       ]};
     {
       name: 'Resources';
@@ -104,27 +93,23 @@ const RevolutionaryNavigation: React.FC = () => {
           name: 'Documentation';
           href: '/docs';
           icon: <Globe className="w-4 h-4"  />;
-          description: 'Technical documentation',
-        };
+          description: 'Technical documentation'};
         {
           name: 'Blog';
           href: '/blog';
           icon: <Brain className="w-4 h-4"  />;
-          description: 'Latest insights and updates',
-        };
+          description: 'Latest insights and updates'};
         {
           name: 'Case Studies';
           href: '/case-studies';
           icon: <Rocket className="w-4 h-4"  />;
-          description: 'Success stories and results',
-        }
+          description: 'Success stories and results'}
       ]}
   ],
   const contactInfo ={
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709',
-  };
+    address: '364 E Main St STE 10o08 Middletown DE 19709'};
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
       isScrolled,

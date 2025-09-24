@@ -217,6 +217,5 @@ export default function AI20o27BreakthroughPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

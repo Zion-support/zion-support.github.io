@@ -37,6 +37,5 @@ export default function AgentObservability20o25Page() {
           </a>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

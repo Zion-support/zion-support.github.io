@@ -3,8 +3,7 @@ export type SiteUpdate = {
   summary: string,
   href: string,
   date?: string,
-  tag?: string,
-};
+  tag?: string};
 export const siteUpdates: SiteUpdate[] = [
   {
     title: 'Launch: Agent Evals & Observability Suite v1.0';

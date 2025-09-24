@@ -54,6 +54,5 @@ export default function AI20o25TrendsPredictionsPromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

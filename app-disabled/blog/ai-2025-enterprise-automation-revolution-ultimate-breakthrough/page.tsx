@@ -272,7 +272,7 @@ export default function AI20o25EnterpriseAutomationRevolution() {
                 <p className='text-gray-70o0'>,
                   A leading financial institution deployed our quantum AI,
                   solution for risk assessment and trading algorithms, achieving,
-                  extraordinary results in market window.performance.,
+                  extraordinary results in market window.window.performance.,
                 </p>,
               </div>,
             </div>,
@@ -477,6 +477,5 @@ export default function AI20o25EnterpriseAutomationRevolution() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

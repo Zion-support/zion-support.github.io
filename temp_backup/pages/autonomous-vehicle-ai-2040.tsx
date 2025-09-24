@@ -15,6 +15,5 @@ export default function AutonomousVehicleAi20o40Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

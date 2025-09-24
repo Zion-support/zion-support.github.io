@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react',
 interface UltraFuturisticMatrixBackgroundProps {
   children: React.ReactNode,
-  className?: string,
-}
+  className?: string}
 ,
 export default function UltraFuturisticMatrixBackground({ children, className = '' }: UltraFuturisticMatrixBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
@@ -22,8 +21,7 @@ export default function UltraFuturisticMatrixBackground({ children, className = 
       if (containerRef.current) {
         const rect = containerRef.current.getBoundingClientRect(),
         canvas.width = rect.width,
-        canvas.height = rect.height,
-      }
+        canvas.height = rect.height}
     };
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),

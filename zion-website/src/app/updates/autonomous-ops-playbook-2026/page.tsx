@@ -46,6 +46,5 @@ export default function AutonomousOpsPlaybook20o26() {
           </a>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

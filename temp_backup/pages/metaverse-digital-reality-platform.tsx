@@ -422,6 +422,5 @@ const MetaverseDigitalRealityPlatformPage: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </>),
-};
+    </>)};
 export default MetaverseDigitalRealityPlatformPage;

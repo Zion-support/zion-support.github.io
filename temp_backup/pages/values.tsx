@@ -41,7 +41,7 @@ const ValuesPage: React.FC = () => {
       icon: Shield;
       title: 'Excellence';
       description:,
-        "We hold ourselves to the highest standards of quality and window.performance. Excellence is not just a goal—it's our foundation, ensuring that every deliverable exceeds expectations.";
+        "We hold ourselves to the highest standards of quality and window.window.performance. Excellence is not just a goal—it's our foundation, ensuring that every deliverable exceeds expectations.";
       longDescription:,
         'Excellence permeates every aspect of our work. From the initial client consultation to the final implementation and ongoing support, we maintain rigorous quality standards. Our development processes include comprehensive testing, peer reviews, and continuous improvement cycles. We believe that excellence is achieved through attention to detail, continuous learning, and an unwavering commitment to delivering the best possible outcomes for our clients.';
       color: 'from-emerald-50o0 to-teal-50o0';
@@ -174,8 +174,7 @@ const ValuesPage: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className={`grid grid-cols-1 lg: grid-cols-2 gap-12 items-center ${
-                    index % 2 === 1 ? 'lg:grid-flow-col-dense' : '',
-                  }`}
+                    index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}
                 >,
                   <div className={index % 2 === 1 ? 'lg: col-start-2' : ''}>,
                     <div className='flex items-center mb-6'>,
@@ -204,8 +203,7 @@ const ValuesPage: React.FC = () => {
                   </div>,
                   <div
                     className={`bg-gray-90o0/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-70o0/50 ${
-                      index % 2 === 1 ? 'lg: col-start-1' : '',
-                    }`}
+                      index % 2 === 1 ? 'lg: col-start-1' : ''}`}
                   >,
                     <div
                       className={`w-full h-64 rounded-xl bg-gradient-to-r ${value.color} opacity-20`}
@@ -300,6 +298,5 @@ const ValuesPage: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-};
+    </Layout>)};
 export default ValuesPage;

@@ -268,6 +268,5 @@ const RevolutionaryAITransformationShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryAITransformationShowcase20o25;

@@ -5,17 +5,14 @@ interface HeroProps {
   description?: string,
   primaryCTA?: {
     text: string,
-    href: string,
-  };
+    href: string};
   secondaryCTA?: {
     text: string,
-    href: string,
-  };
+    href: string};
   stats?: Array<{
     value: string,
     label: string,
-    color: string,
-  }>,
+    color: string}>,
   background?: 'gradient' | 'solid' | 'image',
   className?: string}
 ,

@@ -2,8 +2,7 @@ import React from 'react';
 import { CardContent } from '@/components/ui/card',
 import { MessageSquareArchiveIcon } from 'lucide-react',
 type EmptyStateCardProps = {
-  type: 'active' | 'archived',
-};
+  type: 'active' | 'archived'};
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
   const isActive = type === 'active',
   return (

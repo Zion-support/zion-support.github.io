@@ -13,8 +13,7 @@ interface ServiceLandingProps {
   features: string[],
   industries?: string[],
   ctaHref?: string,
-  canonical?: string,
-}
+  canonical?: string}
 ,
 export default function ServiceLanding(props: ServiceLandingProps) {
   const {
@@ -130,8 +129,7 @@ export default function ServiceLanding(props: ServiceLandingProps) {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,
 function ClockIcon() {
   return (
@@ -148,6 +146,5 @@ function ClockIcon() {
       className='w-3 h-3'>,
       <path d='M12 6v6l4 2'></path>,
       <circle cx='12' cy='12' r='10'></circle>,
-    </svg>),
-}
+    </svg>)}
 ,

@@ -3,8 +3,7 @@ interface ModernUIEnhancerProps {
   enabled?: boolean}
 ,
 export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
-  enabled = true,
-}) => {
+  enabled = true}) => {
   const [isDarkMode, setIsDarkMode] = useState(false),
   const [accentColor, setAccentColor] = useState('#0ea5e9'),
   const enhanceTypography = useCallback(() => {
@@ -44,8 +43,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
         60o0: '#475569';
         70o0: '#334155';
         80o0: '#1e293b';
-        90o0: '#0f172a',
-      }
+        90o0: '#0f172a'}
     };
     // Apply CSS custom properties,
     Object.entries(colors).forEach(([key, value]) => {
@@ -79,8 +77,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       20: '80px';
       24: '96px';
       28: '112px';
-      32: '128px',
-    };
+      32: '128px'};
     Object.entries(spacing).forEach(([key, value]) => {
       root.style.setProperty(`--spacing-${key}`, value)})}, [enabled]),
   const enhanceShadows = useCallback(() => {
@@ -94,8 +91,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       lg: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)';
       xl: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)';
       '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)';
-      inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.0o5)',
-    };
+      inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.0o5)'};
     Object.entries(shadows).forEach(([key, value]) => {
       root.style.setProperty(`--shadow-${key}`, value)})}, [enabled]),
   const enhanceTransitions = useCallback(() => {
@@ -123,8 +119,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       xl: '12px';
       '2xl': '16px';
       '3xl': '24px';
-      full: '9999px',
-    };
+      full: '9999px'};
     Object.entries(radius).forEach(([key, value]) => {
       root.style.setProperty(`--radius-${key}`, value)})}, [enabled]),
   const enhanceDarkMode = useCallback(() => {
@@ -156,8 +151,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
           transition: var(--transition-normal),
           font-weight: var(--font-weight-medium),
           box-shadow: var(--shadow-sm),
-        `,
-      }
+        `}
     }),
     // Add modern card styles,
     const cards = document.querySelectorAll('.card, [class*="card"], [class*="Card"]'),
@@ -169,8 +163,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
           box-shadow: var(--shadow-md),
           transition: var(--transition-normal),
           border: 1px solid var(--border-color),
-        `,
-      }
+        `}
     })}, [enabled]),
   useEffect(() => {
     if (!enabled) return,

@@ -3217,7 +3217,7 @@ address: string};export const "additionalEnhancedServices": AdditionalRealServic
     "price": '$159;
     period:;
   /month';
-    "description": Intelligent DevOps platform that autonomously manages infrastructure, automates deployments, and optimizes window.performance.';
+    "description": Intelligent DevOps platform that autonomously manages infrastructure, automates deployments, and optimizes window.window.performance.';
     features['Self-healing infrastructure';
   'Intelligent deployment';
   'Performance optimization';
@@ -3337,7 +3337,7 @@ address: string};export const "additionalEnhancedServices": AdditionalRealServic
     "price": '$89;
     period:;
   /month';
-    "description": AI-powered content platform that creates, optimizes, and analyzes content for maximum engagement and SEO window.performance.';
+    "description": AI-powered content platform that creates, optimizes, and analyzes content for maximum engagement and SEO window.window.performance.';
     features['AI content generation';
   'SEO optimization';
   'Content analytics';
@@ -3515,7 +3515,7 @@ address: string};export const "additionalEnhancedServices": AdditionalRealServic
     "price": '$179;
     period:;
   /month';
-    "description": 'Advanced cryptographic solutions designed to protect against quantum computing threats while maintaining high window.performance.;
+    "description": 'Advanced cryptographic solutions designed to protect against quantum computing threats while maintaining high window.window.performance.;
     features['Post-quantum cryptography';
   'Quantum key distribution';
   'Hybrid encryption';

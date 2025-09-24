@@ -530,6 +530,5 @@ export default function Revolutionary20o37Pricing() {
           </div>,
         </footer>,
       </UltraFuturisticBackground>,
-    </div>),
-}
+    </div>)}
 ,

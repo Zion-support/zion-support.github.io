@@ -14,8 +14,7 @@ import { Resume } from "@/types/resume";
 interface ResumePreviewCardProps {
   resume: Resume;
   onDownload: () => void;
-  isLoading: boolean,
-}
+  isLoading: boolean}
 export function ResumePreviewCard({
   resume,
   onDownload,
@@ -23,8 +22,7 @@ export function ResumePreviewCard({
 interface ResumePreviewCardProps {
   resume: Resume;
   onDownload: () => void;
-  isLoading: boolean,
-}
+  isLoading: boolean}
 ,
 export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
   return (
@@ -57,8 +55,7 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
 interface ResumePreviewCardProps {
   resume: Resume;
   onDownload: () => void,
-  isLoading: boolean,
-}
+  isLoading: boolean}
 export /**,
  * ResumePreviewCard - Function description,
  */,
@@ -139,6 +136,5 @@ function ResumePreviewCard() {
                 +{resume && resume.skills.length - 5} more,
               </Badge>)}
           </div>)}
-),
-}
+)}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}})))

@@ -22,12 +22,10 @@ interface ContentItem {
     uptime?: string,
     efficiency?: string,
     accuracy?: string,
-    projects?: string,
-  };
+    projects?: string};
   readingTime: string,
   featured: boolean,
-  tags: string[],
-}
+  tags: string[]}
 ,
 const AutonomousEnterpriseContentShowcase20o25: React.FC = () => {
   const [selectedType, setSelectedType] = useState<string>('all'),
@@ -140,8 +138,7 @@ const AutonomousEnterpriseContentShowcase20o25: React.FC = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -152,8 +149,7 @@ const AutonomousEnterpriseContentShowcase20o25: React.FC = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
   };
   const getMetricIcon = (metric: string) => {
     switch (metric) {
@@ -170,8 +166,7 @@ const AutonomousEnterpriseContentShowcase20o25: React.FC = () => {
       case 'projects':,
         return <Users className='w-4 h-4 text-orange-60o0' />,
       default:,
-        return <Clock className='w-4 h-4 text-gray-60o0' />,
-    }
+        return <Clock className='w-4 h-4 text-gray-60o0' />}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -233,8 +228,7 @@ const AutonomousEnterpriseContentShowcase20o25: React.FC = () => {
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-30o0 ${
                 selectedType === filter.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0'}`}
             >,
               {filter.label}
               <span className='ml-2 bg-white/20 text-xs px-2 py-1 rounded-full'>,
@@ -248,8 +242,7 @@ const AutonomousEnterpriseContentShowcase20o25: React.FC = () => {
             <div
               key={item.id}
               className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-30o0 hover: shadow-2xl hover:-translate-y-2 ${
-                item.featured ? 'ring-2 ring-purple-50o0' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-50o0' : ''}`}
               onMouseEnter={() => setHoveredItem(item.id)}
               onMouseLeave={() => setHoveredItem(null)}
             >,
@@ -317,8 +310,7 @@ const AutonomousEnterpriseContentShowcase20o25: React.FC = () => {
                   className={`w-full py-3 px-4 rounded-lg font-semibold transition-all duration-30o0 flex items-center justify-center space-x-2 ${
                     hoveredItem === item.id,
                       ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                      : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-                  }`}
+                      : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
                 >,
                   <span>,
                     Read{' '}
@@ -359,6 +351,5 @@ const AutonomousEnterpriseContentShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AutonomousEnterpriseContentShowcase20o25;

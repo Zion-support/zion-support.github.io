@@ -73,6 +73,5 @@ export default function OperationalBlueprintPage() {
           </div>,
         </div>,
       </section>,
-    </main>),
-}
+    </main>)}
 ,

@@ -469,6 +469,5 @@ export default function AITransformation20o25Guide() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

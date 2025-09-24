@@ -32,6 +32,5 @@ export default function ComprehensiveRedundancy() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

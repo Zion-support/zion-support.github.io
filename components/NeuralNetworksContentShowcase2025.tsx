@@ -119,6 +119,5 @@ const NeuralNetworksContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NeuralNetworksContentShowcase20o25;

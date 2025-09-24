@@ -13,8 +13,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
     // Set canvas size,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
-    };
+      canvas.height = window.innerHeight};
     resizeCanvas(),
     window.addEventListener(', 'resize', 'resizeCanvas),
     // Particle class,
@@ -183,8 +182,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
         // Add wave interference,
         for (let j = 0, j < height, j += 10) {
           const waveY = y + Math.sin(time * 2 + i * 0.3) * 30,
-          ctx.lineTo(x + Math.sin(time + j * 0.01) * 20j),
-        }
+          ctx.lineTo(x + Math.sin(time + j * 0.01) * 20j)}
 ,
         ctx.stroke()}
     };
@@ -202,8 +200,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
           ctx.lineTo(x + gridSize + offsety),
           ctx.moveTo(xy + offset),
           ctx.lineTo(xy + gridSize + offset),
-          ctx.stroke(),
-        }
+          ctx.stroke()}
       }
     };
     // Start animation,
@@ -229,8 +226,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
         transition={{
           duration: 10;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
       />,
       {/* Quantum particle canvas */}
       <canvas

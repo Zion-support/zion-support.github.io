@@ -18,6 +18,5 @@ export default function Navigation() {
           </a>,
         </div>,
       </div>,
-    </nav>),
-}
+    </nav>)}
 ,

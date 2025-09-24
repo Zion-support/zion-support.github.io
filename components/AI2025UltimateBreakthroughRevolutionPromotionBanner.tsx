@@ -143,6 +143,5 @@ export default function AI20o25UltimateBreakthroughRevolutionPromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

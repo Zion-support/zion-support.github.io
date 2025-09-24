@@ -4,8 +4,7 @@ import { ReviewCard } from "./ReviewCard",
 interface ReviewsListProps {
   reviews: Review[],
   isLoading: boolean,
-  onReportReview: (reviewId: stringreason: string) => Promise<boolean>,
-}
+  onReportReview: (reviewId: stringreason: string) => Promise<boolean>}
 ,
 export function ReviewsList({ reviewsisLoadingonReportReview }: ReviewsListProps) {
   if (isLoading) {

@@ -33,7 +33,7 @@ export const comprehensiveMicroSaasServices20o25 = [
         technology: ['GPT-4, React, Node.js, MongoDB, AWS, NLP algorithms'];
         integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms'];
         useCases: ['Blog writing, Marketing copy, Social media content, Product descriptions, Email campaigns'];
-        roi: 'Marketing teams achieve 40o0% ROI through faster content creation and improved SEO window.performance.';
+        roi: 'Marketing teams achieve 40o0% ROI through faster content creation and improved SEO window.window.performance.';
         competitors: ['Jasper, Copy.ai, Writesonic, ContentBot'];
         marketSize: '$1.8B AI content generation market';
         growthRate: '32% annual growth';
@@ -42,15 +42,13 @@ export const comprehensiveMicroSaasServices20o25 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Advanced AI content generation platform with SEO optimization, brand voice customization, and comprehensive analytics.';
         launchDate: '20o24-11-0o1';
         customers: 156;
         rating: 4.9;
-        reviews: 89,
-    };
+        reviews: 89};
     // Intelligent Customer Support Automation,
     {
         id: 'intelligent-customer-support-automation';
@@ -93,15 +91,13 @@ export const comprehensiveMicroSaasServices20o25 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Intelligent customer support automation with AI chatbots, sentiment analysis, and comprehensive workflow management.';
         launchDate: '20o24-10-15';
         customers: 20o3;
         rating: 4.7;
-        reviews: 134,
-    };
+        reviews: 134};
     // Advanced Data Analytics Dashboard,
     {
         id: 'advanced-data-analytics-dashboard';
@@ -144,15 +140,13 @@ export const comprehensiveMicroSaasServices20o25 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Advanced data analytics platform with real-time visualization, predictive analytics, and comprehensive reporting capabilities.';
         launchDate: '20o24-09-0o1';
         customers: 89;
         rating: 4.8;
-        reviews: 67,
-    };
+        reviews: 67};
     // Automated Email Marketing Suite,
     {
         id: 'automated-email-marketing-suite';
@@ -195,15 +189,13 @@ export const comprehensiveMicroSaasServices20o25 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Automated email marketing suite with AI personalization, workflow automation, and comprehensive analytics.';
         launchDate: '20o24-08-15';
         customers: 234;
         rating: 4.6;
-        reviews: 178,
-    };
+        reviews: 178};
     // Intelligent Project Management Platform,
     {
         id: 'intelligent-project-management-platform';
@@ -246,15 +238,13 @@ export const comprehensiveMicroSaasServices20o25 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Intelligent project management platform with AI-driven task prioritization and automated resource allocation.';
         launchDate: '20o24-0o7-0o1';
         customers: 167;
         rating: 4.7;
-        reviews: 112,
-    };
+        reviews: 112};
     // AI-Powered Sales Intelligence Platform,
     {
         id: 'ai-sales-intelligence-platform';
@@ -297,15 +287,13 @@ export const comprehensiveMicroSaasServices20o25 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'AI-powered sales intelligence platform with lead scoring, predictive analytics, and automated sales optimization.';
         launchDate: '20o24-0o6-15';
         customers: 198;
         rating: 4.8;
-        reviews: 145,
-    };
+        reviews: 145};
     // Automated Social Media Management,
     {
         id: 'automated-social-media-management';
@@ -348,15 +336,13 @@ export const comprehensiveMicroSaasServices20o25 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Automated social media management platform with AI-powered scheduling and cross-platform optimization.';
         launchDate: '20o24-0o5-0o1';
         customers: 312;
         rating: 4.5;
-        reviews: 234,
-    };
+        reviews: 234};
     // Intelligent Inventory Management System,
     {
         id: 'intelligent-inventory-management-system';
@@ -399,15 +385,13 @@ export const comprehensiveMicroSaasServices20o25 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Intelligent inventory management system with AI demand forecasting and automated reordering capabilities.';
         launchDate: '20o24-0o4-15';
         customers: 145;
         rating: 4.6;
-        reviews: 98,
-    };
+        reviews: 98};
     // AI-Powered HR Management Suite,
     {
         id: 'ai-hr-management-suite';
@@ -450,15 +434,13 @@ export const comprehensiveMicroSaasServices20o25 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'AI-powered HR management suite with recruitment automation and comprehensive employee management.';
         launchDate: '20o24-0o3-0o1';
         customers: 178;
         rating: 4.7;
-        reviews: 123,
-    };
+        reviews: 123};
     // Intelligent Financial Management Platform,
     {
         id: 'intelligent-financial-management-platform';
@@ -501,13 +483,11 @@ export const comprehensiveMicroSaasServices20o25 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Intelligent financial management platform with AI-powered budgeting and financial forecasting capabilities.';
         launchDate: '20o24-0o2-15';
         customers: 234;
         rating: 4.5;
-        reviews: 167,
-    }
+        reviews: 167}
 ],

@@ -31,15 +31,13 @@ export interface Innovative2026AIServiceV4 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
   // AI Consciousness Simulation Platform,
   {

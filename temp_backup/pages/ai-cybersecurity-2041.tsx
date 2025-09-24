@@ -457,6 +457,5 @@ export default function AICybersecurity20o41() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

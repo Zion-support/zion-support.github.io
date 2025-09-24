@@ -26,6 +26,5 @@ export default function HelpdeskAutomation() {
         'Professional Services';
       ]}
       canonical='https: //ziontechgroup.com/helpdesk-automation',
-    />),
-}
+    />)}
 ,

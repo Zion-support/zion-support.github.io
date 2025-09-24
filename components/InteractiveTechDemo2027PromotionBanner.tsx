@@ -30,20 +30,17 @@ const InteractiveTechDemo20o27PromotionBanner = () => {
       icon: Brain;
       title: 'AI Quantum Processing';
       description: '1.2M ops/sec';
-      color: 'from-purple-50o0 to-blue-50o0',
-    };
+      color: 'from-purple-50o0 to-blue-50o0'};
     {
       icon: Zap;
       title: 'Autonomous Automation';
       description: '847 tasks automated';
-      color: 'from-green-50o0 to-teal-50o0',
-    };
+      color: 'from-green-50o0 to-teal-50o0'};
     {
       icon: Rocket;
       title: 'Neural Interface';
       description: '12ms response time';
-      color: 'from-orange-50o0 to-red-50o0',
-    }
+      color: 'from-orange-50o0 to-red-50o0'}
   ],
   const features = [
     'Real-time Processing';

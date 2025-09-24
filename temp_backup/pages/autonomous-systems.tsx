@@ -52,7 +52,7 @@ export default function AutonomousSystems() {
                   Autonomous systems are AI-powered platforms that operate,
                   independently, making intelligent decisions and taking actions,
                   without human intervention. They continuously learn, adapt;
-                  and optimize their window.performance.,
+                  and optimize their window.window.performance.,
                 </p>,
                 <div className='space-y-4'>,
                   <div className='flex items-start space-x-3'>,
@@ -423,6 +423,5 @@ export default function AutonomousSystems() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

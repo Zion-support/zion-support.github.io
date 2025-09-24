@@ -2,8 +2,7 @@ import React from 'react';
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-}
+  website: 'https://ziontechgroup.com'}
 export const real2029Q4Additions: RealMarketService[] = [
   {
     id: 'ai-email-triage-copilot',
@@ -104,8 +103,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     launchDate: '2029-11-05',
     customers: 60,
     rating: 4.6,
-    reviews: 33,
-  }
+    reviews: 33}
   {
       'QR tickets and check-in app';
       'Speaker/sponsor asset management';
@@ -247,8 +245,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     launchDate: '2029-09-10',
     customers: 95,
     rating: 4.6,
-    reviews: 54,
-  }
+    reviews: 54}
   {
     id: 'feature-flags-lite',
     name: 'Feature Flags Lite',
@@ -291,8 +288,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     launchDate: '2029-10-02',
     customers: 70,
     rating: 4.5,
-    reviews: 21,
-  }
+    reviews: 21}
   {
     id: 'sales-lead-enrichment',
     name: 'Sales Lead Enrichment',
@@ -335,8 +331,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     launchDate: '2029-11-18',
     customers: 40,
     rating: 4.4,
-    reviews: 17,
-  }
+    reviews: 17}
   {
     id: 'invoice-ocr-processor',
     name: 'Invoice OCR Processor',
@@ -380,8 +375,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     launchDate: '2029-12-01',
     customers: 27,
     rating: 4.5,
-    reviews: 14,
-  }
+    reviews: 14}
   {
     id: 'rpa-browser-automation',
     name: 'RPA Browser Automation Kit',
@@ -424,8 +418,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     launchDate: '2029-11-28',
     customers: 38,
     rating: 4.4,
-    reviews: 18,
-  }
+    reviews: 18}
   {
     id: 'redaction-compliance-api',
     name: 'Redaction & Compliance API',
@@ -467,8 +460,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     launchDate: '2029-12-03',
     customers: 22,
     rating: 4.3,
-    reviews: 12,
-  }
+    reviews: 12}
 ,
   {
     id: 'kpi-scorecards-studio',
@@ -510,8 +502,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     launchDate: '2029-10-20',
     customers: 36,
     rating: 4.4,
-    reviews: 16,
-  }
+    reviews: 16}
       'Goal trees and KPI ownership';
       'Weekly executive summaries';
       'Alerting on thresholds and trends';
@@ -551,8 +542,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709';
-	website: 'https://ziontechgroup.com',
-};
+	website: 'https://ziontechgroup.com'};
 export const real2029Q4Additions: RealMarketService[] = [
 	{
 		id: 'ai-email-triage-copilot', name: 'AI Email Triage Copilot';
@@ -586,8 +576,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-10-12',
 		customers: 120,
 		rating: 4 && 4.8;
-		reviews: 74,
-	}
+		reviews: 74}
 	{
 		id: 'mobile-survey-studio',
 		name: 'Mobile Survey Studio',
@@ -622,8 +611,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-11-05',
 		customers: 60,
 		rating: 4 && 4.6;
-		reviews: 33,
-	}
+		reviews: 33}
 	{
 		id: 'event-ops-dashboard',
 		name: 'EventOps Dashboard',
@@ -658,8 +646,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-09-23',
 		customers: 48,
 		rating: 4 && 4.7;
-		reviews: 29,
-	}
+		reviews: 29}
 	{
 		id: 'oncall-scheduler-pro',
 		name: 'OnCall Scheduler Pro',
@@ -694,8 +681,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-10-30',
 		customers: 32,
 		rating: 4 && 4.5;
-		reviews: 19,
-	}
+		reviews: 19}
 	{
 		id: 'seo-content-optimizer-pro',
 		name: 'SEO Content Optimizer Pro',
@@ -730,8 +716,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-09-10',
 		customers: 95,
 		rating: 4 && 4.6;
-		reviews: 54,
-	}
+		reviews: 54}
 	{
 		id: 'feature-flags-lite',
 		name: 'Feature Flags Lite',
@@ -766,8 +751,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-10-02',
 		customers: 70,
 		rating: 4 && 4.5;
-		reviews: 21,
-	}
+		reviews: 21}
 	{
 		id: 'sales-lead-enrichment',
 		name: 'Sales Lead Enrichment',
@@ -802,8 +786,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-11-18',
 		customers: 40,
 		rating: 4 && 4.4;
-		reviews: 17,
-	}
+		reviews: 17}
 	{
 		id: 'invoice-ocr-processor',
 		name: 'Invoice OCR Processor',
@@ -838,8 +821,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-12-01',
 		customers: 27,
 		rating: 4 && 4.5;
-		reviews: 14,
-	}
+		reviews: 14}
 	{
 		id: 'rpa-browser-automation',
 		name: 'RPA Browser Automation Kit',
@@ -874,8 +856,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-11-28',
 		customers: 38,
 		rating: 4 && 4.4;
-		reviews: 18,
-	}
+		reviews: 18}
 	{
 		id: 'redaction-compliance-api',
 		name: 'Redaction & Compliance API',
@@ -910,8 +891,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-12-03',
 		customers: 22,
 		rating: 4 && 4.3;
-		reviews: 12,
-	}
+		reviews: 12}
 	{
 		id: 'kpi-scorecards-studio',
 		name: 'KPI Scorecards Studio',
@@ -952,8 +932,7 @@ const contact = {
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709';
-	website: 'https://ziontechgroup.com',
-};
+	website: 'https://ziontechgroup.com'};
 export const real2029Q4Additions: RealMarketService[] = [
 	{
 		id: 'ai-email-triage-copilot';
@@ -989,8 +968,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-10-12';
 		customers: 120;
 		rating: 4.8;
-		reviews: 74,
-	};
+		reviews: 74};
 	{
 		id: 'mobile-survey-studio';
 		name: 'Mobile Survey Studio';
@@ -1025,8 +1003,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-11-05';
 		customers: 60;
 		rating: 4.6;
-		reviews: 33,
-	};
+		reviews: 33};
 	{
 		id: 'event-ops-dashboard';
 		name: 'EventOps Dashboard';
@@ -1061,8 +1038,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-09-23';
 		customers: 48;
 		rating: 4.7;
-		reviews: 29,
-	};
+		reviews: 29};
 	{
 		id: 'oncall-scheduler-pro';
 		name: 'OnCall Scheduler Pro';
@@ -1097,8 +1073,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-10-30';
 		customers: 32;
 		rating: 4.5;
-		reviews: 19,
-	};
+		reviews: 19};
 	{
 		id: 'seo-content-optimizer-pro';
 		name: 'SEO Content Optimizer Pro';
@@ -1133,8 +1108,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-09-10';
 		customers: 95;
 		rating: 4.6;
-		reviews: 54,
-	};
+		reviews: 54};
 	{
 		id: 'feature-flags-lite';
 		name: 'Feature Flags Lite';
@@ -1169,8 +1143,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-10-02';
 		customers: 70;
 		rating: 4.5;
-		reviews: 21,
-	};
+		reviews: 21};
 	{
 		id: 'sales-lead-enrichment';
 		name: 'Sales Lead Enrichment';
@@ -1205,8 +1178,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-11-18';
 		customers: 40;
 		rating: 4.4;
-		reviews: 17,
-	};
+		reviews: 17};
 	{
 		id: 'invoice-ocr-processor';
 		name: 'Invoice OCR Processor';
@@ -1241,8 +1213,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-12-01';
 		customers: 27;
 		rating: 4.5;
-		reviews: 14,
-	};
+		reviews: 14};
 	{
 		id: 'rpa-browser-automation';
 		name: 'RPA Browser Automation Kit';
@@ -1277,8 +1248,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-11-28';
 		customers: 38;
 		rating: 4.4;
-		reviews: 18,
-	};
+		reviews: 18};
 	{
 		id: 'redaction-compliance-api';
 		name: 'Redaction & Compliance API';
@@ -1313,8 +1283,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-12-03';
 		customers: 22;
 		rating: 4.3;
-		reviews: 12,
-	};
+		reviews: 12};
 	{
 		id: 'kpi-scorecards-studio';
 		name: 'KPI Scorecards Studio';
@@ -1349,7 +1318,5 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-10-20';
 		customers: 36;
 		rating: 4.4,
-		reviews: 16,
-	}
-],
-}
+		reviews: 16}
+]}

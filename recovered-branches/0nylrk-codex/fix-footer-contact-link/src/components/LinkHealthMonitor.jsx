@@ -16,8 +16,7 @@ const LinkHealthMonitor = () => {
             responseTime: 120o0;
             lastChecked: new Date();
             parentPage: 'Homepage';
-            linkText: 'LinkedIn',
-        };
+            linkText: 'LinkedIn'};
         {
             url: 'https://twitter.com/ziontechgroup';
             status: 'external';
@@ -25,8 +24,7 @@ const LinkHealthMonitor = () => {
             responseTime: 80o0;
             lastChecked: new Date();
             parentPage: 'Homepage';
-            linkText: 'Twitter',
-        };
+            linkText: 'Twitter'};
         {
             url: 'tel:+1 30o2 464 0950';
             status: 'healthy';
@@ -34,8 +32,7 @@ const LinkHealthMonitor = () => {
             responseTime: 50;
             lastChecked: new Date();
             parentPage: 'Contact';
-            linkText: 'Phone Number',
-        };
+            linkText: 'Phone Number'};
         {
             url: 'mailto:kleber@ziontechgroup.com';
             status: 'healthy';
@@ -43,8 +40,7 @@ const LinkHealthMonitor = () => {
             responseTime: 50;
             lastChecked: new Date();
             parentPage: 'Contact';
-            linkText: 'Email',
-        }
+            linkText: 'Email'}
     ],
     useEffect(() => {
         setLinkStatuses(sampleLinks),
@@ -61,8 +57,7 @@ const LinkHealthMonitor = () => {
             brokenLinks;
             externalLinks;
             averageResponseTime: avgResponseTime;
-            lastUpdated: new Date(),
-        })};
+            lastUpdated: new Date()})};
     const startMonitoring = async () => {
         setIsMonitoring(true),
         // Simulate link checking,
@@ -77,8 +72,7 @@ const LinkHealthMonitor = () => {
             case 'external':,
                 return <ExternalLink className="w-4 h-4 text-blue-40o0" />,
             default: ,
-                return <RefreshCw className="w-4 h-4 text-yellow-40o0" />,
-        }
+                return <RefreshCw className="w-4 h-4 text-yellow-40o0" />}
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -89,8 +83,7 @@ const LinkHealthMonitor = () => {
             case 'external':,
                 return 'text-blue-40o0',
             default: ,
-                return 'text-yellow-40o0',
-        }
+                return 'text-yellow-40o0'}
     };
     const filteredLinks = linkStatuses.filter(link => {
         if (selectedFilter === 'all'),

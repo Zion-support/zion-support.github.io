@@ -109,8 +109,7 @@ function TalentDirectory() {
     handleToggleSave} = useTalentDirectory();
   const handleRequestHire = (talent: TalentProfile) => {
     setSelectedTalent(talent),
-    setIsHireModalOpen(true),
-  }
+    setIsHireModalOpen(true)}
   const viewProfile = (id: string) => {
     // Navigate to the talent profile page,
     navigate(`/talent/${id}`)}

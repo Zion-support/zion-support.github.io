@@ -236,8 +236,7 @@ const UltimateContent20o26Showcase = () => {
       case 'resource':,
         return 'from-purple-50o0 to-pink-50o0',
       default:,
-        return 'from-gray-50o0 to-gray-60o0',
-    }
+        return 'from-gray-50o0 to-gray-60o0'}
   };
   const getCategoryColor = (category: string) => {
     switch (category) {
@@ -250,8 +249,7 @@ const UltimateContent20o26Showcase = () => {
       case 'autonomous-systems':,
         return 'from-orange-50o0 to-red-50o0',
       default:,
-        return 'from-gray-50o0 to-gray-60o0',
-    }
+        return 'from-gray-50o0 to-gray-60o0'}
   };
   return (
     <div className='bg-gradient-to-br from-gray-50 to-blue-50 py-16'>,
@@ -281,8 +279,7 @@ const UltimateContent20o26Showcase = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 transform hover: scale-10o5 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover:bg-gray-10o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover:bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -398,6 +395,5 @@ const UltimateContent20o26Showcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateContent20o26Showcase;

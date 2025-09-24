@@ -21,8 +21,7 @@ export type LineChartProps = {
   labels: string[],
   data: number[],
   color?: string, // css color,
-  height?: number,
-};
+  height?: number};
 export default function LineChart({
   labels;
   data;

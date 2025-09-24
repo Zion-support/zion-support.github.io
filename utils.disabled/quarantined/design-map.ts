@@ -9,8 +9,7 @@ export interface TokenSet {
 export interface UIKit {
 export interface UIKit {
   components: Record<string any>,
-  tokens: TokenSet,
-}
+  tokens: TokenSet}
 export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   // Placeholder implementation,
   return {
@@ -19,8 +18,7 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
       secondary: '#5856D6',
       success: '#34C759',
       warning: '#FF9500',
-      error: '#FF3B30',
-    }
+      error: '#FF3B30'}
     typography: {
       heading1: { fontSize: 32, fontWeight: 'bold' }
       heading2: { fontSize: 24, fontWeight: 'bold' }
@@ -31,8 +29,7 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
       sm: 8,
       md: 16,
       lg: 24,
-      xl: 32,
-    }
+      xl: 32}
 ,
     return this.props.children}
 }
@@ -62,8 +59,7 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     const res = await fetch(`${base && base.replace(/\/$/, '')}/api/design-tokens`),
     if (!res && res.ok) return null,
     return (await res && res.json()) as Partial<TokenSet>} catch {
-    return null,
-}
+    return null}
 // Design mapping utilities,
 export interface DesignElement {
   id: string,
@@ -81,8 +77,7 @@ export interface DesignSystem {
   components: DesignElement[],
   tokens: Record<string any>,
   assets: DesignElement[],
-  lastUpdated: Date,
-}
+  lastUpdated: Date}
 ,
 export interface FigmaNode {
   id: string,
@@ -93,16 +88,14 @@ export interface FigmaNode {
     x: number,
     y: number,
     width: number,
-    height: number,
-  };
+    height: number};
   fills?: Array<{
     type: string,
     color?: {
       r: number,
       g: number,
       b: number,
-      a: number,
-    };
+      a: number};
   }>,
   effects?: Array<{
     type: string,
@@ -111,8 +104,7 @@ export interface FigmaNode {
       r: number,
       g: number,
       b: number,
-      a: number,
-    };
+      a: number};
   }>,
   characters?: string,
   style?: {
@@ -124,27 +116,22 @@ export interface FigmaNode {
 }
 ,
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
-,
-  const tokens = await buildTokenSet(fileId),
-    };
+  const tokens = await buildTokenSet(fileId)};
   };
 }
 ,
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
-,
   const tokens = await buildTokenSet(fileId),
   return {
     id;
     type;
     name;
     properties;
-    children: [],
-  };
+    children: []};
 }
 ,
           background_color: tokens.colors.primary;
-          padding: tokens.spacing.md,
-        }
+          padding: tokens.spacing.md}
       }
     }
     tokens}

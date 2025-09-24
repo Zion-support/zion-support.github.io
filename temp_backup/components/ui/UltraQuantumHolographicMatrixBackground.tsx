@@ -63,8 +63,7 @@ export default function UltraQuantumHolographicMatrixBackground({
     const updateDimensions = () => {
       setDimensions({
         width: window.innerWidth;
-        height: window.innerHeight,
-      })};
+        height: window.innerHeight})};
     updateDimensions(),
     window.addEventListener('resize', updateDimensions),
     return () => window.removeEventListener('resize', updateDimensions)}, []),
@@ -72,8 +71,7 @@ export default function UltraQuantumHolographicMatrixBackground({
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({
         x: e.clientX / dimensions.width;
-        y: e.clientY / dimensions.height,
-      })};
+        y: e.clientY / dimensions.height})};
     window.addEventListener('mousemove', handleMouseMove),
     return () => window.removeEventListener('mousemove', handleMouseMove)}, [dimensions]),
   useEffect(() => {
@@ -92,8 +90,7 @@ export default function UltraQuantumHolographicMatrixBackground({
       opacity: number,
       type: 'quantum' | 'holographic' | 'matrix' | 'neural',
       life: number,
-      maxLife: number,
-    }> = [],
+      maxLife: number}> = [],
     // Initialize particles,
     for (let i = 0, i < particleCount, i++) {
       particles.push({
@@ -105,8 +102,7 @@ export default function UltraQuantumHolographicMatrixBackground({
         opacity: Math.random() * 0.8 + 0.2;
         type: ['quantum', 'holographic', 'matrix', 'neural'][Math.floor(Math.random() * 4)] as any;
         life: Math.random() * 10o0;
-        maxLife: 10o0,
-      })}
+        maxLife: 10o0})}
 ,
     // Matrix flow effect,
     const matrixChars = '0o1アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン',
@@ -115,16 +111,14 @@ export default function UltraQuantumHolographicMatrixBackground({
       y: number,
       speed: number,
       chars: string[],
-      opacity: number,
-    }> = [],
+      opacity: number}> = [],
     for (let i = 0, i < 20, i++) {
       matrixStreams.push({
         x: Math.random() * dimensions.width;
         y: Math.random() * dimensions.height;
         speed: Math.random() * 2 + 1;
         chars: Array.from({ length: 20 }, () => matrixChars[Math.floor(Math.random() * matrixChars.length)]);
-        opacity: Math.random() * 0.5 + 0.1,
-      })}
+        opacity: Math.random() * 0.5 + 0.1})}
 ,
     // Neural network connections,
     const neuralNodes: Array<{ x: number, y: number, connections: number[] }> = [],
@@ -132,8 +126,7 @@ export default function UltraQuantumHolographicMatrixBackground({
       neuralNodes.push({
         x: Math.random() * dimensions.width;
         y: Math.random() * dimensions.height;
-        connections: [],
-      })}
+        connections: []})}
 ,
     // Create neural connections,
     neuralNodes.forEach((node, i) => {
@@ -315,31 +308,27 @@ export default function UltraQuantumHolographicMatrixBackground({
           className="absolute inset-0",
           style={{
             background: `linear-gradient(45deg, transparent 30%, ${colors.glow} 50%, transparent 70%)`;
-            opacity: 0.1,
-          }}
+            opacity: 0.1}}
           animate={{
             x: ['-10o0%', '20o0%'];
             y: ['-10o0%', '20o0%']}}
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: 'linear',
-          }}
+            ease: 'linear'}}
          />,
         <motion.div,
           className="absolute inset-0",
           style={{
             background: `radial-gradient(circle at 30% 20%, ${colors.matrix} 0%, transparent 50%)`;
-            opacity: 0.0o5,
-          }}
+            opacity: 0.0o5}}
           animate={{
             scale: [1, 1.2, 1];
             opacity: [0.0o5, 0.1, 0.0o5]}}
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
          />,
       </div>,
     </div>)}

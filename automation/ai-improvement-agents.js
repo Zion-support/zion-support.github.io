@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 /**,
  * Zion App - Specialized AI Improvement Agents,
@@ -95,8 +94,7 @@ class PerformanceAgent {
       timestamp: new Date().toISOString();
       issues: [];
       suggestions: [];
-      optimizations: [],
-    };
+      optimizations: []};
     // Analyze bundle size,
     const bundleAnalysis = await this.analyzeBundleSize(),
     analysis.bundleSize = bundleAnalysis,
@@ -156,16 +154,14 @@ class PerformanceAgent {
         type: 'bundle-optimization';
         priority: 'high';
         description: Bundle size is too large';
-        action: Implement tree shaking and code splitting,
-      })}
+        action: Implement tree shaking and code splitting})}
 ,
     if (analysis.loadTimes.firstContentfulPaint > 150o0) {
       suggestions.push({
         type: 'load-time-optimization';
         priority: 'high';
         description: First contentful paint is slow';
-        action: Optimize critical rendering path,
-      })}
+        action: Optimize critical rendering path})}
 ,
     return suggestions}
 }
@@ -185,8 +181,7 @@ class SecurityAgent {
       timestamp: new Date().toISOString();
       vulnerabilities: [];
       suggestions: [];
-      securityScore: 0,
-    };
+      securityScore: 0};
     // Run security scans,
     const npmAudit = await this.runNpmAudit(),
     analysis.npmAudit = npmAudit,
@@ -217,8 +212,7 @@ class SecurityAgent {
       xss: 2;
       csrf: 0;
       authentication: 1;
-      authorization: 0,
-    };
+      authorization: 0};
   }
 ,
   async scanDependencies() {
@@ -234,8 +228,7 @@ class SecurityAgent {
     return {
       exposedSecrets: 0;
       weakPasswords: 0;
-      insecureConfigs: 1,
-    };
+      insecureConfigs: 1};
   }
 ,
   calculateSecurityScore(analysis) {
@@ -256,16 +249,14 @@ class SecurityAgent {
         type: 'security-hardening';
         priority: 'critical';
         description: Security score is below threshold';
-        action: Fix identified vulnerabilities immediately,
-      })}
+        action: Fix identified vulnerabilities immediately})}
 ,
     if (analysis.codeScan.xss > 0) {
       suggestions.push({
         type: 'xss-prevention';
         priority: 'high';
         description: XSS vulnerabilities detected';
-        action: Implement proper input sanitization,
-      })}
+        action: Implement proper input sanitization})}
 ,
     return suggestions}
 }
@@ -285,8 +276,7 @@ class CodeQualityAgent {
       timestamp: new Date().toISOString();
       issues: [];
       suggestions: [];
-      qualityScore: 0,
-    };
+      qualityScore: 0};
     // Run linting,
     const lintResults = await this.runLinting(),
     analysis.linting = lintResults,
@@ -362,16 +352,14 @@ class CodeQualityAgent {
         type: 'code-quality';
         priority: 'medium';
         description: Code quality score is below threshold';
-        action: Fix linting errors and reduce complexity,
-      })}
+        action: Fix linting errors and reduce complexity})}
 ,
     if (analysis.linting.errors > 0) {
       suggestions.push({
         type: 'linting-fixes';
         priority: 'high';
         description: Linting errors detected';
-        action: Fix all linting errors,
-      })}
+        action: Fix all linting errors})}
 ,
     return suggestions}
 }
@@ -391,8 +379,7 @@ class AccessibilityAgent {
       timestamp: new Date().toISOString();
       issues: [];
       suggestions: [];
-      accessibilityScore: 0,
-    };
+      accessibilityScore: 0};
     // Run accessibility tests,
     const axeResults = await this.runAxeTests(),
     analysis.axeResults = axeResults,
@@ -465,16 +452,14 @@ class AccessibilityAgent {
         type: 'accessibility-improvement';
         priority: 'medium';
         description: Accessibility score is below threshold';
-        action: Fix accessibility violations,
-      })}
+        action: Fix accessibility violations})}
 ,
     if (analysis.axeResults.violations > 0) {
       suggestions.push({
         type: 'axe-violations';
         priority: 'high';
         description: Accessibility violations detected';
-        action: Fix all axe violations,
-      })}
+        action: Fix all axe violations})}
 ,
     return suggestions}
 }
@@ -494,8 +479,7 @@ class SEOAgent {
       timestamp: new Date().toISOString();
       issues: [];
       suggestions: [];
-      seoScore: 0,
-    };
+      seoScore: 0};
     // Analyze meta tags,
     const metaAnalysis = await this.analyzeMetaTags(),
     analysis.metaTags = metaAnalysis,
@@ -573,16 +557,14 @@ class SEOAgent {
         type: 'seo-optimization';
         priority: 'low';
         description: SEO score is below threshold';
-        action: Implement SEO best practices,
-      })}
+        action: Implement SEO best practices})}
 ,
     if (analysis.metaTags.ogTags === 'partial') {
       suggestions.push({
         type: 'og-tags';
         priority: 'medium';
         description: Incomplete Open Graph tags';
-        action: Complete all Open Graph meta tags,
-      })}
+        action: Complete all Open Graph meta tags})}
 ,
     return suggestions}
 }
@@ -602,8 +584,7 @@ class TestCoverageAgent {
       timestamp: new Date().toISOString();
       issues: [];
       suggestions: [];
-      coverageScore: 0,
-    };
+      coverageScore: 0};
     // Run test coverage,
     const coverageResults = await this.runTestCoverage(),
     analysis.coverage = coverageResults,
@@ -626,8 +607,7 @@ class TestCoverageAgent {
         lineCoverage: 75;
         branchCoverage: 68;
         functionCoverage: 82;
-        statementCoverage: 78,
-      };
+        statementCoverage: 78};
     } catch (error) {
       return { error: error.message };
     }
@@ -666,16 +646,14 @@ class TestCoverageAgent {
         type: 'test-coverage';
         priority: 'medium';
         description: Test coverage is below threshold';
-        action: Add more comprehensive tests,
-      })}
+        action: Add more comprehensive tests})}
 ,
     if (analysis.coverage.lineCoverage < 80) {
       suggestions.push({
         type: 'line-coverage';
         priority: 'high';
         description: Line coverage is insufficient';
-        action: Add unit tests for uncovered lines,
-      })}
+        action: Add unit tests for uncovered lines})}
 ,
     return suggestions}
 }

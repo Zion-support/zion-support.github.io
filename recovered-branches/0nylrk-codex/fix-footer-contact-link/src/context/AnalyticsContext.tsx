@@ -26,8 +26,7 @@ export interface AnalyticsEvent {
   elementId?: string,
   timestamp: number,
   userId?: string | null,
-  metadata?: Record<stringany>,
-}
+  metadata?: Record<stringany>}
 ,
 export interface AnalyticsContextType {
   trackEvent: (type: AnalyticsEventTypemetadata?: Record<stringany>) => void,
@@ -35,8 +34,7 @@ export interface AnalyticsContextType {
   pageViews: number,
   lastEvent: AnalyticsEvent | null,
   events: AnalyticsEvent[],
-  clearEvents: () => void,
-}
+  clearEvents: () => void}
 ,
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined),
@@ -67,11 +65,9 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
         event_type: type;
         path: location.pathname;
         user_id: user?.id;
-        metadata: metadata,
-      }]),
-      // console.log(`Analytics event tracked: ${type}`metadata)} catch (error) {
-      console.error('Error logging analytics event: 'error),
-    }
+        metadata: metadata}]),
+      // // console.log(`Analytics event tracked: ${type}`metadata)} catch (error) {
+      console.error('Error logging analytics event: 'error)}
   };
   // Function to track conversion events,
   const trackConversion = (conversionType: stringvalue?: numbermetadata: Record<stringany> = {}) => {

@@ -32,6 +32,5 @@ export default function MentalHealthCompanionPage() {
         industries={['Healthcare', 'Employers', 'Universities']}
         url='https: //ziontechgroup.com/ai-mental-health-companion',
       />,
-    </>),
-}
+    </>)}
 ,

@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowLeft } from 'lucide-react',
 interface ProfileErrorStateProps {
-  error: string | null,
-}
+  error: string | null}
 ,
 export function ProfileErrorState({ error } ProfileErrorStateProps) {
   return (
@@ -17,14 +16,12 @@ export function ProfileErrorState({ error } ProfileErrorStateProps) {
           Back to Talent Directory,
         </Link>,
       </Button>,
-    </div>),}
+    </div>)}
  import {
   {
   {
   ArrowLeft }from 'lucide-react' interface ProfileErrorStateProps {
-  error: string | null ,
-}export function ProfileErrorState ({
+  error: string | null }export function ProfileErrorState ({
   error }: ProfileErrorStateProps) {
-,
   return (<div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4" > <div className="text-red-40o0 mb-4 text-xl" > {",
   error || "Something went wrong" }</div> }'"}})

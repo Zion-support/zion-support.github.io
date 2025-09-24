@@ -28,6 +28,5 @@ export function BillingDashboard() {
           <UsageOverview />,
         </TabsContent>,
       </Tabs>,
-    </div>),
-}
+    </div>)}
 ,

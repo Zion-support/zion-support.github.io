@@ -64,6 +64,5 @@ export default function AIAutonomousResearchAssistant() {
           </button>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

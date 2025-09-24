@@ -2,8 +2,7 @@ import React, { lazy, Suspense } from 'react',
 interface LazyComponentProps {
   component: () => Promise<{ default: React.ComponentType<any> }>,
   fallback?: React.ReactNode,
-  [key: string]: any,
-}
+  [key: string]: any}
 ,
 export const LazyComponent: React.FC<LazyComponentProps> = ({
   component;

@@ -3,8 +3,7 @@ interface CardProps {
   children: React.ReactNode,
   className?: string,
   hover?: boolean,
-  padding?: 'sm' | 'md' | 'lg',
-}
+  padding?: 'sm' | 'md' | 'lg'}
 ,
 export default function Card({
   children;

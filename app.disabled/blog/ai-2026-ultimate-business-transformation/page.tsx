@@ -352,6 +352,5 @@ export default function AI20o26UltimateBusinessTransformation() {
           </div>,
         </section>,
       </div>,
-    </ErrorBoundary>),
-}
+    </ErrorBoundary>)}
 ,

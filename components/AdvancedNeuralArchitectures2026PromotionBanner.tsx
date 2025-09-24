@@ -26,7 +26,7 @@ export default function AdvancedNeuralArchitectures20o26PromotionBanner() {
             <div className="text-3xl mb-4">🔄</div>,
             <h3 className="text-xl font-bold mb-3">Self-Optimizing Networks</h3>,
             <p className="text-gray-30o0 text-sm">,
-              Neural networks that continuously adapt and optimize their own architecture based on window.performance.,
+              Neural networks that continuously adapt and optimize their own architecture based on window.window.performance.,
             </p>,
           </div>,
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 border border-white border-opacity-20">,
@@ -94,5 +94,4 @@ export default function AdvancedNeuralArchitectures20o26PromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}

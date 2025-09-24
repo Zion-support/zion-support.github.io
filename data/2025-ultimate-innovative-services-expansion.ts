@@ -29,8 +29,7 @@ export interface UltimateInnovativeService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -40,8 +39,7 @@ export interface UltimateInnovativeService {
   innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging',
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source',
   aiCapabilities: string[],
-  marketDisruption: string,
-}
+  marketDisruption: string}
 ,
 const contact = {
   mobile: '+1 30o2 464 0950';

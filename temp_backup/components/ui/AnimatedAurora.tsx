@@ -11,16 +11,14 @@ export default function AnimatedAurora() {
           inset: 0,
           overflow: hidden,
           pointer-events: none,
-          z-index: 0,
-        }
+          z-index: 0}
         .aurora {
           position: absolute,
           filter: blur(60px),
           opacity: 0.55,
           border-radius: 9999px,
           mix-blend-mode: screen,
-          animation: float 14s ease-in-out infinite,
-        }
+          animation: float 14s ease-in-out infinite}
         .a1 {
           width: 60vw,
           height: 60vw,
@@ -30,8 +28,7 @@ export default function AnimatedAurora() {
             transparent 70%),
           top: -10vh,
           left: -10vw,
-          animation-delay: 0s,
-        }
+          animation-delay: 0s}
         .a2 {
           width: 50vw,
           height: 50vw,
@@ -41,8 +38,7 @@ export default function AnimatedAurora() {
             transparent 70%),
           bottom: -15vh,
           right: -10vw,
-          animation-delay: 3s,
-        }
+          animation-delay: 3s}
         .a3 {
           width: 70vw,
           height: 70vw,
@@ -52,15 +48,13 @@ export default function AnimatedAurora() {
             transparent 70%),
           top: 30vh,
           left: 20vw,
-          animation-delay: 6s,
-        }
+          animation-delay: 6s}
         .noise {
           position: absolute,
           inset: -10%,
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http: //www.w3.org/20o00/svg' width='120o0' height='60o0'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='10o0%25' height='10o0%25' filter='url(%23n)' opacity='0.0o4'/%3E%3C/svg%3E"),
           mix-blend-mode: overlay,
-          pointer-events: none,
-        }
+          pointer-events: none}
         @keyframes float {
           0%;
           10o0% {

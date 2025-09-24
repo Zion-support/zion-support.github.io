@@ -37,8 +37,7 @@ interface Project {
   client: string,
   budget: number,
   tags: string[],
-  milestones: Milestone[],
-}
+  milestones: Milestone[]}
 ,
 interface Milestone {
   id: string,
@@ -47,8 +46,7 @@ interface Milestone {
   dueDate: string,
   status: 'pending' | 'in-progress' | 'completed' | 'overdue',
   assignee: string,
-  priority: 'low' | 'medium' | 'high',
-}
+  priority: 'low' | 'medium' | 'high'}
 ,
 interface ProjectManagementTimelineProps {
   showFilters?: boolean,
@@ -91,8 +89,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             dueDate: '20o24-0o1-15';
             status: 'completed';
             assignee: 'Sarah Johnson';
-            priority: 'high',
-          };
+            priority: 'high'};
           {
             id: 'm2';
             title: 'System Architecture Design';
@@ -100,8 +97,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             dueDate: '20o24-0o2-15';
             status: 'completed';
             assignee: 'Michael Chen';
-            priority: 'high',
-          };
+            priority: 'high'};
           {
             id: 'm3';
             title: 'Core Development';
@@ -109,8 +105,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             dueDate: '20o24-0o4-15';
             status: 'in-progress';
             assignee: 'Emily Rodriguez';
-            priority: 'high',
-          };
+            priority: 'high'};
           {
             id: 'm4';
             title: 'Testing & QA';
@@ -118,13 +113,12 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             dueDate: '20o24-0o5-15';
             status: 'pending';
             assignee: 'Sarah Johnson';
-            priority: 'medium',
-          }
+            priority: 'medium'}
         ]};
       {
         id: '2';
         name: 'Cloud Migration & Infrastructure Modernization';
-        description: 'Migrate legacy systems to cloud infrastructure and modernize the technology stack for improved scalability and window.performance.';
+        description: 'Migrate legacy systems to cloud infrastructure and modernize the technology stack for improved scalability and window.window.performance.';
         status: 'active';
         priority: 'critical';
         startDate: '20o24-0o2-0o1';
@@ -142,8 +136,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             dueDate: '20o24-0o2-28';
             status: 'completed';
             assignee: 'David Kim';
-            priority: 'critical',
-          };
+            priority: 'critical'};
           {
             id: 'm6';
             title: 'Cloud Setup';
@@ -151,8 +144,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             dueDate: '20o24-0o4-15';
             status: 'in-progress';
             assignee: 'Lisa Thompson';
-            priority: 'critical',
-          }
+            priority: 'critical'}
         ]};
       {
         id: '3';
@@ -175,8 +167,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             dueDate: '20o24-0o3-31';
             status: 'in-progress';
             assignee: 'James Wilson';
-            priority: 'high',
-          }
+            priority: 'high'}
         ]}
     ],
     setProjects(sampleProjects),
@@ -230,8 +221,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
       case 'medium': return 'text-yellow-40o0 bg-yellow-40o0/20',
       case 'high': return 'text-orange-40o0 bg-orange-40o0/20',
       case 'critical': return 'text-red-40o0 bg-red-40o0/20',
-      default: return 'text-zinc-40o0 bg-zinc-40o0/20',
-    }
+      default: return 'text-zinc-40o0 bg-zinc-40o0/20'}
   };
   // Get milestone status color,
   const getMilestoneStatusColor = (status: string) => {
@@ -240,8 +230,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
       case 'in-progress': return 'text-blue-40o0 bg-blue-40o0/20',
       case 'completed': return 'text-green-40o0 bg-green-40o0/20',
       case 'overdue': return 'text-red-40o0 bg-red-40o0/20',
-      default: return 'text-zinc-40o0 bg-zinc-40o0/20',
-    }
+      default: return 'text-zinc-40o0 bg-zinc-40o0/20'}
   };
   // Format currency,
   const formatCurrency = (amount: number) => {
@@ -249,16 +238,14 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
       style: 'currency';
       currency: 'USD';
       minimumFractionDigits: 0;
-      maximumFractionDigits: 0,
-    }).format(amount)};
+      maximumFractionDigits: 0}).format(amount)};
   // Calculate days remaining,
   const getDaysRemaining = (endDate: string) => {
     const end = new Date(endDate),
     const today = new Date(),
     const diffTime = end.getTime() - today.getTime(),
     const diffDays = Math.ceil(diffTime / (10o00 * 60 * 60 * 24)),
-    return diffDays,
-  };
+    return diffDays};
   return (
     <div className="w-full max-w-7xl mx-auto p-6">,
       {/* Header */}
@@ -281,8 +268,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-30o0 ${
                   viewMode === mode.id,
                     ? 'bg-zion-cyan text-white',
-                    : 'text-zinc-40o0 hover: text-white hover:bg-zinc-80o0/50',
-                }`}
+                    : 'text-zinc-40o0 hover: text-white hover:bg-zinc-80o0/50'}`}
               >,
                 {mode.icon}
                 {mode.label}

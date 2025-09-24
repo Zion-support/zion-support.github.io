@@ -171,8 +171,7 @@ export default function AIAutomationFAQ() {
                     className={`px-6 py-3 rounded-lg border transition-all duration-30o0 flex items-center gap-2 ${
                       openCategory === category.id,
                         ? 'bg-cyan-40o0/20 border-cyan-40o0 text-cyan-40o0',
-                        : 'bg-white/10 border-white/20 text-white/80 hover: border-cyan-40o0/30 hover:text-cyan-40o0',
-                    }`}
+                        : 'bg-white/10 border-white/20 text-white/80 hover: border-cyan-40o0/30 hover:text-cyan-40o0'}`}
                   >,
                     <span className='text-lg'>{category.icon}</span>,
                     {category.name}
@@ -262,6 +261,5 @@ export default function AIAutomationFAQ() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

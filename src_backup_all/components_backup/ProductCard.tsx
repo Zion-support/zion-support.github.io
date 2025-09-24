@@ -24,8 +24,7 @@ interface ProductCardProps {
   onBuy?: () => Promise<void>, // Changed to allow async and signal completion/failure,
   onBuyAttemptComplete?: () => void, // Callback to signal the buy attempt is finished (success or fail),
   /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */,
-  buyDisabled?: boolean,
-}
+  buyDisabled?: boolean}
 ,
 export default function ProductCard({
   product;

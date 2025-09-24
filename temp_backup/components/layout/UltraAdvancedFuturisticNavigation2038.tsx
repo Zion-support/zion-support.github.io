@@ -37,8 +37,7 @@ interface NavigationItem {
   title?: string,
   featured?: boolean,
   category?: string,
-  price?: string,
-}
+  price?: string}
 ,
 function normalizeHref(href: string): string {
   if (!href) return href,
@@ -47,8 +46,7 @@ function normalizeHref(href: string): string {
     href.startsWith('https://') ||,
     href.startsWith('mailto:') ||,
     href.startsWith('tel:')) {
-    return href,
-  }
+    return href}
   if (!href.startsWith('/')) return href,
   const hasQueryOrHash = href.includes('?') || href.includes('#'),
   if (hasQueryOrHash) return href,
@@ -263,8 +261,7 @@ const UltraAdvancedFuturisticNavigation20o38: React.FC = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (isOpen && !(event.target as HTMLElement).closest('.mobile-menu')) {
-        setIsOpen(false),
-      }
+        setIsOpen(false)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, [isOpen]),
@@ -273,14 +270,12 @@ const UltraAdvancedFuturisticNavigation20o38: React.FC = () => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setIsOpen(false),
-        setActiveDropdown(null),
-      }
+        setActiveDropdown(null)}
     };
     document.addEventListener('keydown', handleKeyDown),
     return () => document.removeEventListener('keydown', handleKeyDown)}, []),
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category),
-  };
+    setActiveDropdown(activeDropdown === category ? null : category)};
   const closeDropdown = () => {
     setActiveDropdown(null)};
   const filteredServices = navigationItems.flatMap(
@@ -440,8 +435,7 @@ const UltraAdvancedFuturisticNavigation20o38: React.FC = () => {
                         className={`w-4 h-4 transition-transform duration-20o0 ${
                           activeDropdown === (item.category || item.name),
                             ? 'rotate-180',
-                            : '',
-                        }`}
+                            : ''}`}
                       />,
                     </button>,
                   </div>,

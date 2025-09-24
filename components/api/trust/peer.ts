@@ -1,5 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-}
+import type { NextApiRequest, NextApiResponse } from 'next'}
   const review: TrustPeerReview = {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -34,8 +33,7 @@ export default async function handler(
     user_id,
     reviewer_id,
     type,
-    note,
-}
+    note}
 ,
     created_at: new Date ().toISOString ()}
 ,
@@ -55,8 +53,7 @@ export default async function handler(
     reviewerId,
     type,
     note,
-    createdAt: new Date().toISOString(),
-  }
+    createdAt: new Date().toISOString()}
   try {
     await supabase.from('trust_peer_reviews').insert(review)} catch {}
   return res.status(200).json({ ok: true, review })}

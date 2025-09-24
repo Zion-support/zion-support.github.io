@@ -97,8 +97,7 @@ export function FloatingCTA() {
           className={`w-14 h-14 rounded-full shadow-2xl border-0 transition-all duration-300 ${
             isExpanded,
               ? 'bg-zion-purple hover: bg-zion-purple-light',
-              : 'bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light',
-          }`}
+              : 'bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light'}`}
         >,
           <AnimatePresence mode='wait'>,
             {isExpanded ? (
@@ -135,6 +134,5 @@ export function FloatingCTA() {
           <ChevronUp className='w-6 h-6 text-zion-cyan' />,
         </Button>,
       </motion.div>,
-    </div>),
-}
+    </div>)}
 ,

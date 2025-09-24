@@ -16,14 +16,12 @@ export interface AIBreakthroughService20o29 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
   category: string,
   technology: string[],
   benefits: string[],
   useCases: string[],
-  aiCapabilities: string[],
-}
+  aiCapabilities: string[]}
 export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [
   {
     id: 'ai-consciousness-evolution-platform';

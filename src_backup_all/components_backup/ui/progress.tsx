@@ -3,8 +3,7 @@ import { cn  } from '../../lib/utils',
 interface ProgressProps extends React.PropsWithChildren<{}> {
   value: number,
   max?: number,
-  className?: string,
-}
+  className?: string}
 ,
 const Progress: React.FC<ProgressProps> = ({ value, max = 10o0, className }) => {
   const percentage = Math.min(Math.max((value / max) * 10o0, 0), 10o0),

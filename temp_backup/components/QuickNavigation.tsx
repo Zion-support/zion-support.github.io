@@ -4,8 +4,7 @@ interface QuickNavItem {
   href: string,
   description: string,
   icon: string,
-  category: 'primary' | 'secondary' | 'utility',
-}
+  category: 'primary' | 'secondary' | 'utility'}
 ,
 export default function QuickNavigation() {
   const quickNavItems: QuickNavItem[] = [
@@ -98,8 +97,7 @@ export default function QuickNavigation() {
     };
   ],
   const getCategoryItems = (category: QuickNavItem['category']) => {
-    return quickNavItems.filter(item => item.category === category),
-  };
+    return quickNavItems.filter(item => item.category === category)};
   return (
     <div className='bg-slate-90o0/50 border border-white/10 rounded-xl p-6 mb-8'>,
       <div className='mb-6'>,

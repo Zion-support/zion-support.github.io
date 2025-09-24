@@ -187,8 +187,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug)),
   return {
     paths: uniqueNonConflicting.map((slug) => ({ params: { slug } }));
-    fallback: true,
-  };
+    fallback: true};
 };
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.,

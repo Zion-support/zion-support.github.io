@@ -20,6 +20,5 @@ export default function BrainComputerInterface20o40Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

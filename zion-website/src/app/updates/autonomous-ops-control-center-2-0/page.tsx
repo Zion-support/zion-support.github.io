@@ -34,6 +34,5 @@ export default function AutonomousOpsControlCenter20Page() {
           </p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

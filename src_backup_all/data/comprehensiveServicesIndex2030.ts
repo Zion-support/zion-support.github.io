@@ -65,8 +65,7 @@ export const SERVICE_STATISTICS_20o30 ={
   aiServices: anyCOMPREHENSIVE_SERVICES_INDEX_20o30.filter(service  =>,
     service.category.includes('AI') || service.aiScore > 90).length;
   emergingTechServices: anyCOMPREHENSIVE_SERVICES_INDEX_20o30.filter(service  =>,
-    service.category === 'Emerging Technology').length,
-};
+    service.category === 'Emerging Technology').length};
 // Featured Services,
 export const FEATURED_SERVICES_20o30 = COMPREHENSIVE_SERVICES_INDEX_20o30.filter(service => service.featured),
 // High-ROI Services (ROI > 50o0%),

@@ -198,8 +198,7 @@ const Revolutionary20o26UltimateServicesShowcase = () => {
                 className={`p-2 rounded-lg transition-all ${
                   viewMode === 'grid',
                     ? 'bg-purple-60o0 text-white',
-                    : 'text-gray-40o0 hover: text-white',
-                }`}
+                    : 'text-gray-40o0 hover: text-white'}`}
               >,
                 <Grid className='w-5 h-5' />,
               </button>,
@@ -208,8 +207,7 @@ const Revolutionary20o26UltimateServicesShowcase = () => {
                 className={`p-2 rounded-lg transition-all ${
                   viewMode === 'list',
                     ? 'bg-purple-60o0 text-white',
-                    : 'text-gray-40o0 hover: text-white',
-                }`}
+                    : 'text-gray-40o0 hover: text-white'}`}
               >,
                 <List className='w-5 h-5' />,
               </button>,
@@ -224,8 +222,7 @@ const Revolutionary20o26UltimateServicesShowcase = () => {
                 className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${
                   selectedCategory === category.id,
                     ? 'bg-gradient-to-r from-purple-60o0 to-pink-60o0 border-transparent text-white',
-                    : 'bg-gray-90o0/50 border-gray-70o0 text-gray-30o0 hover: border-purple-50o0 hover:text-white',
-                }`}
+                    : 'bg-gray-90o0/50 border-gray-70o0 text-gray-30o0 hover: border-purple-50o0 hover:text-white'}`}
               >,
                 <category.icon className='w-4 h-4' />,
                 <span>{category.name}</span>,
@@ -244,8 +241,7 @@ const Revolutionary20o26UltimateServicesShowcase = () => {
           className={`grid gap-6 ${
             viewMode === 'grid',
               ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3',
-              : 'grid-cols-1',
-          }`}
+              : 'grid-cols-1'}`}
         >,
           <AnimatePresence>,
             {filteredServices.map((service, index) => (
@@ -402,6 +398,5 @@ const Revolutionary20o26UltimateServicesShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default Revolutionary20o26UltimateServicesShowcase;

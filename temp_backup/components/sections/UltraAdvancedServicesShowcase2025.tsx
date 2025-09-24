@@ -72,15 +72,13 @@ const UltraAdvancedServicesShowcase20o25: React.FC = () => {
         case 'name': {
           return a.name.localeCompare(b.name)}
         default: ,
-          return 0,
-      }
+          return 0}
     }),
   const contactInfo ={
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   return (
     <section className="relative bg-black text-white py-20 overflow-hidden">,
       {/* Background effects */}
@@ -95,15 +93,13 @@ const UltraAdvancedServicesShowcase20o25: React.FC = () => {
               linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px);
               linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px),
             `;
-            backgroundSize: '20o0px 20o0px',
-          }}
+            backgroundSize: '20o0px 20o0px'}}
           animate={{
             backgroundPosition: ['0px 0px', '20o0px 20o0px']}}
           transition={{
             duration: 40;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
       </div>,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -180,8 +176,7 @@ const UltraAdvancedServicesShowcase20o25: React.FC = () => {
                 className={`flex items-center space-x-2 px-4 py-2 rounded-full border transition-all duration-20o0 ${
                   selectedCategory === category.id,
                     ? 'bg-gradient-to-r from-cyan-50o0 to-purple-60o0 border-transparent text-white shadow-lg shadow-cyan-50o0/25',
-                    : 'bg-white/5 border-white/20 text-gray-30o0 hover: bg-white/10 hover:border-white/30',
-                }`}
+                    : 'bg-white/5 border-white/20 text-gray-30o0 hover: bg-white/10 hover:border-white/30'}`}
                 whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
               >,
@@ -210,8 +205,7 @@ const UltraAdvancedServicesShowcase20o25: React.FC = () => {
               <button
                 onClick={() => setViewMode('grid')}
                 className={`p-2 rounded-lg transition-colors ${
-                  viewMode === 'grid' ? 'bg-cyan-50o0 text-white' : 'bg-white/10 text-gray-40o0 hover: bg-white/20',
-                }`}
+                  viewMode === 'grid' ? 'bg-cyan-50o0 text-white' : 'bg-white/10 text-gray-40o0 hover: bg-white/20'}`}
               >,
                 <div className="grid grid-cols-2 gap-1 w-4 h-4">,
                   <div className="bg-current rounded-sm"  />,
@@ -223,8 +217,7 @@ const UltraAdvancedServicesShowcase20o25: React.FC = () => {
               <button
                 onClick={() => setViewMode('list')}
                 className={`p-2 rounded-lg transition-colors ${
-                  viewMode === 'list' ? 'bg-cyan-50o0 text-white' : 'bg-white/10 text-gray-40o0 hover: bg-white/20',
-                }`}
+                  viewMode === 'list' ? 'bg-cyan-50o0 text-white' : 'bg-white/10 text-gray-40o0 hover: bg-white/20'}`}
               >,
                 <div className="space-y-1 w-4 h-4">,
                   <div className="bg-current rounded-sm h-1"  />,
@@ -243,8 +236,7 @@ const UltraAdvancedServicesShowcase20o25: React.FC = () => {
           className={`${
             viewMode === 'grid',
               ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8',
-              : 'space-y-6',
-          }`}
+              : 'space-y-6'}`}
         >,
           <AnimatePresence>,
             {filteredServices.map((service, index) => (
@@ -255,8 +247,7 @@ const UltraAdvancedServicesShowcase20o25: React.FC = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-white/20 transition-all duration-30o0 group ${
-                  viewMode === 'list' ? 'flex items-center space-x-6' : '',
-                }`}
+                  viewMode === 'list' ? 'flex items-center space-x-6' : ''}`}
               >,
                 {/* Service Icon */}
                 <div className={`${

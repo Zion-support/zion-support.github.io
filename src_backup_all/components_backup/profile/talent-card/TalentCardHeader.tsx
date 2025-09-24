@@ -6,8 +6,7 @@ interface TalentCardHeaderProps {
   professionalTitle: string,
   profilePicture?: string,
   availabilityType: string,
-  yearsExperience: number,
-}
+  yearsExperience: number}
 ,
 export function TalentCardHeader({
   fullName;

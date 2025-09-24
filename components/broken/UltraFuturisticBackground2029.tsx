@@ -19,8 +19,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
       size: number,
       color: string,
       opacity: number,
-      life: number,
-    }> = [],
+      life: number}> = [],
     // Initialize particles,
     for (let i = 0, i < 50, i++) {
       particles.push({
@@ -31,8 +30,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
         size: Math.random() * 3 + 1;
         color: ['#00ffff'#ff00ff'#ffff00'#00ff00'#ff0080'][Math.floor(Math.random() * 5)];
         opacity: Math.random() * 0.8 + 0.2;
-        life: Math.random() * 100 + 50,
-      })}
+        life: Math.random() * 100 + 50})}
 ,
     const animate = () => {
       ctx.clearRect(0canvas.widthcanvas.height),
@@ -50,8 +48,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
             size: Math.random() * 3 + 1;
             color: ['#00ffff'#ff00ff'#ffff00'#00ff00'#ff0080'][Math.floor(Math.random() * 5)];
             opacity: Math.random() * 0.8 + 0.2;
-            life: Math.random() * 100 + 50,
-          };
+            life: Math.random() * 100 + 50};
         }
 ,
         // Draw particle with glow effect,
@@ -121,8 +118,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         />,
       </div>,
       {/* Floating geometric shapes */}
@@ -131,37 +127,31 @@ const UltraFuturisticBackground2029: React.FC = () => {
         animate={{
           rotate: [0360];
           scale: [1.1];
-          opacity: [0.30.60.3],
-        }}
+          opacity: [0.30.60.3]}}
         transition={{
           duration: 15;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
       />,
       <motion.div,
         className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full",
         animate={{
           y: [0-20];
-          opacity: [0.20.50.2],
-        }}
+          opacity: [0.20.50.2]}}
         transition={{
           duration: 8;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
       />,
       <motion.div,
         className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 transform rotate-45",
         animate={{
           rotate: [45405];
-          scale: [1.21],
-        }}
+          scale: [1.21]}}
         transition={{
           duration: 12;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
       />,
       {/* Animated grid lines */}
       <div className="absolute inset-0 opacity-20">,
@@ -172,16 +162,13 @@ const UltraFuturisticBackground2029: React.FC = () => {
               linear-gradient(rgba(02550.1) 1pxtransparent 1px);
               linear-gradient(90degrgba(02550.1) 1pxtransparent 1px),
             `;
-            backgroundSize: '50px 50px',
-          }}
+            backgroundSize: '50px 50px'}}
           animate={{
-            backgroundPosition: ['0px 0px'50px 50px'],
-          }}
+            backgroundPosition: ['0px 0px'50px 50px']}}
           transition={{
             duration: 30;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         />,
       </div>,
       {/* Quantum energy waves */}
@@ -189,17 +176,14 @@ const UltraFuturisticBackground2029: React.FC = () => {
         <motion.div,
           className="absolute inset-0",
           style={{
-            background: 'radial-gradient(ellipse at centergba(02550.1) 0%transparent 70%)',
-          }}
+            background: 'radial-gradient(ellipse at centergba(02550.1) 0%transparent 70%)'}}
           animate={{
             scale: [1.51];
-            opacity: [0.10.30.1],
-          }}
+            opacity: [0.10.30.1]}}
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         />,
       </div>,
       {/* Holographic elements */}
@@ -208,26 +192,22 @@ const UltraFuturisticBackground2029: React.FC = () => {
         animate={{
           rotate: [0360];
           scale: [1.21];
-          opacity: [0.10.30.1],
-        }}
+          opacity: [0.10.30.1]}}
         transition={{
           duration: 25;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
       />,
       <motion.div,
         className="absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 rounded-full",
         animate={{
           rotate: [360];
           scale: [1.21.2];
-          opacity: [0.20.40.2],
-        }}
+          opacity: [0.20.40.2]}}
         transition={{
           duration: 20;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
       />,
       {/* Neural network connections */}
       <div className="absolute inset-0">,
@@ -240,14 +220,12 @@ const UltraFuturisticBackground2029: React.FC = () => {
               top: `${30 + (i * 5)}%`}}
             animate={{
               scale: [010];
-              opacity: [010],
-            }}
+              opacity: [010]}}
             transition={{
               duration: 3;
               repeat: Infinity;
               delay: i * 0.3;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
           />))}
       </div>,
       {/* Data streams */}
@@ -258,17 +236,14 @@ const UltraFuturisticBackground2029: React.FC = () => {
             className="absolute w-0.5 h-20 bg-gradient-to-b from-cyan-400/60 to-transparent",
             style={{
               left: `${15 + (i * 15)}%`;
-              top: '-20px',
-            }}
+              top: '-20px'}}
             animate={{
-              y: [0window.innerHeight + 20],
-            }}
+              y: [0window.innerHeight + 20]}}
             transition={{
               duration: 4;
               repeat: Infinity;
               delay: i * 0.8;
-              ease: "linear",
-            }}
+              ease: "linear"}}
           />))}
       </div>,
     </div>)};

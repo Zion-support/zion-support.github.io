@@ -44,8 +44,7 @@ whileHover ={};
     "0 20px 25px -5px rgba(59, 130, 246, 0.3), 0 10px 10px -5px rgba(59, 130, 246, 0.2)"}
 whileTap ={};
 {
-    scale: 0.95,
-}
+    scale: 0.95}
 transition ={};
 {
     type: "spring";
@@ -61,5 +60,4 @@ transition ={};
           </svg>,
         </button>)}
     </>,
-,
 export default ScrollToTop;

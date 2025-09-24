@@ -117,6 +117,5 @@ export default function UltimateContent20o25ShowcaseBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

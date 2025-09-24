@@ -54,7 +54,7 @@ export async function upsertFlag(flag: FlaggedContent): Promise<void> {
   await writeAllFlags(all);
 }
 
-export async function createFlag(init: Omit<FlaggedContent, 'id' | 'createdAt' | 'updatedAt' | 'aiScores' | 'status'> & { status?: ModerationStatus; aiScores?: AiScores }): Promise<FlaggedContent> {
+export async function createFlag(init: Omit<FlaggedContent 'id' | 'createdAt' | 'updatedAt' | 'aiScores' | 'status'> & { status?: ModerationStatus; aiScores?: AiScores }): Promise<FlaggedContent> {
   const now = new Date().toISOString();
   const flag: FlaggedContent = {
     id: generateFlagId(),
@@ -62,8 +62,7 @@ export async function createFlag(init: Omit<FlaggedContent, 'id' | 'createdAt' |
     updatedAt: now,
     status: init.status || 'pending',
     aiScores: init.aiScores || generateAiScores(init.contentId + init.userId),
-    ...init,
-  };
+    ...init};
   const all = await readAllFlags();
   all.push(flag);
   await writeAllFlags(all);

@@ -5,8 +5,7 @@ interface FuturisticCardProps {
   className?: string,
   variant?: 'default' | 'gradient' | 'glass' | 'neon' | 'holographic',
   hoverEffect?: boolean,
-  onClick?: () => void,
-}
+  onClick?: () => void}
 ,
 export default function FuturisticCard({
   children;
@@ -101,8 +100,7 @@ export function ServiceCard({
   features: string[],
   popular?: boolean,
   className?: string,
-  onClick?: () => void,
-}) {
+  onClick?: () => void}) {
   return (
     <FuturisticCard
       variant="gradient",
@@ -132,8 +130,7 @@ export function ServiceCard({
       <button className="w-full bg-gradient-to-r from-blue-50o0 to-purple-60o0 hover: from-blue-60o0 hover:to-purple-70o0 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-30o0 transform hover:scale-10o5">,
         Get Started,
       </button>,
-    </FuturisticCard>),
-}
+    </FuturisticCard>)}
 ,
 export function FeatureCard({
   title;
@@ -145,8 +142,7 @@ export function FeatureCard({
   description: string,
   icon: string,
   className?: string,
-  onClick?: () => void,
-}) {
+  onClick?: () => void}) {
   return (
     <FuturisticCard
       variant="glass",

@@ -11,8 +11,7 @@ export default function AgendaTimeline({
   activeTrack;
 }: {
   items: AgendaItem[],
-  activeTrack: 'All' | 'AI' | 'DAO' | 'Talent' | 'Global',
-}) {
+  activeTrack: 'All' | 'AI' | 'DAO' | 'Talent' | 'Global'}) {
   const filtered =,
     activeTrack === 'All' ? items : items.filter(i => i.track === activeTrack),
   return (

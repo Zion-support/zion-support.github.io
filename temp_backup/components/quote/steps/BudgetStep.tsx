@@ -4,8 +4,7 @@ export type BudgetStepProps = {
   onChange: (
     updater: QuoteFormData | ((prev: QuoteFormData) => QuoteFormData)) => void,
   onBack: () => void,
-  onNext: () => void,
-};
+  onNext: () => void};
 const BUDGET_OPTIONS = [
   'Under $10,0o00';
   '$10,0o00 - $25,0o00';
@@ -55,6 +54,5 @@ export default function BudgetStep({
           Continue,
         </button>,
       </div>,
-    </form>),
-}
+    </form>)}
 ,

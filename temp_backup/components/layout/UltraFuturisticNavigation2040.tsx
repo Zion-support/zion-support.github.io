@@ -16,15 +16,13 @@ interface NavigationItem {
   children?: NavigationItem[],
   icon?: React.ReactNode,
   description?: string,
-  badge?: string,
-}
+  badge?: string}
 ,
 const navigationItems: NavigationItem[] = [
   {
     label: 'Home';
     href: '/';
-    icon: <Zap className="w-4 h-4"  />,
-  };
+    icon: <Zap className="w-4 h-4"  />};
   {
     label: 'Services';
     children: [
@@ -33,53 +31,45 @@ const navigationItems: NavigationItem[] = [
         href: '/services';
         description: 'Complete revolutionary services overview';
         icon: <Grid className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: '20o25 Innovative Services Showcase';
         href: '/comprehensive-20o25-innovative-services-showcase';
         description: 'Comprehensive showcase of our latest innovations';
         icon: <Star className="w-4 h-4"  />;
         color: 'from-purple-50o0 to-pink-50o0';
-        featured: true,
-      };
+        featured: true};
       {
         name: 'AI Consciousness Evolution';
         href: '/ai-consciousness-evolution-20o40';
         description: 'Next-generation AI consciousness';
         icon: <Brain className="w-4 h-4"  />;
-        description: 'Advanced AI solutions for enterprise',
-      };
+        description: 'Advanced AI solutions for enterprise'};
       {
         label: 'Quantum Computing';
         href: '/quantum-computing';
         icon: <Atom className="w-4 h-4"  />;
-        description: 'Next-generation quantum solutions',
-      };
+        description: 'Next-generation quantum solutions'};
       {
         label: 'Cybersecurity';
         href: '/cybersecurity';
         icon: <Lock className="w-4 h-4"  />;
-        description: 'Enterprise security solutions',
-      };
+        description: 'Enterprise security solutions'};
       {
         label: 'Cloud Platform';
         href: '/cloud-platform';
         icon: <Globe className="w-4 h-4"  />;
-        description: 'Innovative space solutions',
-      };
+        description: 'Innovative space solutions'};
       {
         label: 'Space Technology';
         href: '/space-tech';
         icon: <Star className="w-4 h-4"  />;
-        description: 'Innovative space solutions',
-      };
+        description: 'Innovative space solutions'};
       {
         label: 'Innovative 20o40 Services';
         href: '/innovative-20o40-futuristic-services-showcase';
         icon: <Star className="w-4 h-4"  />;
-        description: 'Cutting-edge futuristic technology solutions',
-      };
+        description: 'Cutting-edge futuristic technology solutions'};
       {
         label: 'View All Services';
         href: '/services';
@@ -94,115 +84,99 @@ const navigationItems: NavigationItem[] = [
             icon: <Star className="w-4 h-4"  />;
             description: 'All our revolutionary services in one place';
             featured: true;
-            neonColor: 'shadow-yellow-40o0/50',
-          };
+            neonColor: 'shadow-yellow-40o0/50'};
           {
             label: 'AI & Machine Learning';
             href: '/services?category=ai-ml';
             icon: <Brain className="w-4 h-4"  />;
             description: 'Advanced AI solutions for enterprise';
             featured: true;
-            neonColor: 'shadow-purple-40o0/50',
-          };
+            neonColor: 'shadow-purple-40o0/50'};
           {
             label: 'Quantum Computing';
             href: '/services?category=quantum';
             icon: <Atom className="w-4 h-4"  />;
             description: 'Next-generation quantum solutions';
             featured: true;
-            neonColor: 'shadow-blue-40o0/50',
-          };
+            neonColor: 'shadow-blue-40o0/50'};
           {
             label: 'Space Technology';
             href: '/services?category=space-tech';
             icon: <Rocket className="w-4 h-4"  />;
             description: 'Innovative space tech applications';
             featured: true;
-            neonColor: 'shadow-pink-40o0/50',
-          };
+            neonColor: 'shadow-pink-40o0/50'};
       {
         label: 'Quantum Cybersecurity 20o45';
         href: '/quantum-cybersecurity-platform-20o45';
         icon: <Shield className="w-4 h-4"  />;
-        color: 'from-red-50o0 to-orange-50o0',
-      };
+        color: 'from-red-50o0 to-orange-50o0'};
       {
         name: 'Brain-Computer Interface';
         href: '/brain-computer-interface-20o40';
         description: 'Neural interface technology';
         icon: <Brain className="w-4 h-4"  />;
-        color: 'from-pink-50o0 to-purple-50o0',
-      };
+        color: 'from-pink-50o0 to-purple-50o0'};
       {
         name: 'AI Autonomous Research 20o41';
         href: '/ai-autonomous-research-20o41';
         description: 'Autonomous AI research systems';
         icon: <Brain className="w-4 h-4"  />;
-        color: 'from-emerald-50o0 to-teal-50o0',
-      };
+        color: 'from-emerald-50o0 to-teal-50o0'};
       {
         name: 'AI Content Personalization 20o41';
         href: '/ai-content-personalization-20o41';
         description: 'Conscious content personalization';
         icon: <Brain className="w-4 h-4"  />;
-        color: 'from-pink-50o0 to-purple-50o0',
-      };
+        color: 'from-pink-50o0 to-purple-50o0'};
       {
         name: 'AI Ethics & Governance 20o41';
         href: '/ai-ethics-governance-20o41';
         description: 'Ethical AI governance';
         icon: <Shield className="w-4 h-4"  />;
-        color: 'from-green-50o0 to-blue-50o0',
-      };
+        color: 'from-green-50o0 to-blue-50o0'};
       {
         name: 'AI Autonomous Ecosystem 20o41';
         href: '/ai-autonomous-ecosystem-20o41';
         description: 'Autonomous AI ecosystems';
         icon: <Network className="w-4 h-4"  />;
-        color: 'from-indigo-50o0 to-purple-50o0',
-      };
+        color: 'from-indigo-50o0 to-purple-50o0'};
       {
         name: 'AI Predictive Maintenance 20o41';
         href: '/ai-predictive-maintenance-20o41';
         description: 'Predictive maintenance AI';
         icon: <Wrench className="w-4 h-4"  />;
-        color: 'from-orange-50o0 to-red-50o0',
-      };
+        color: 'from-orange-50o0 to-red-50o0'};
       {
         name: 'AI Customer Success 20o41';
         href: '/ai-customer-success-20o41';
         description: 'Customer success AI';
         icon: <Users className="w-4 h-4"  />;
-        color: 'from-blue-50o0 to-cyan-50o0',
-      };
+        color: 'from-blue-50o0 to-cyan-50o0'};
       {
         name: 'AI Sales Intelligence 20o41';
         href: '/ai-sales-intelligence-20o41';
         description: 'Sales intelligence AI';
         icon: <TrendingUp className="w-4 h-4"  />;
-        color: 'from-emerald-50o0 to-teal-50o0',
-      };
+        color: 'from-emerald-50o0 to-teal-50o0'};
       {
         name: 'Quantum Internet Security 20o41';
         href: '/quantum-internet-security-20o41';
         description: 'Quantum internet security';
         icon: <Shield className="w-4 h-4"  />;
-        color: 'from-red-50o0 to-orange-50o0',
-      };
+        color: 'from-red-50o0 to-orange-50o0'};
       {
         name: 'Brain-Computer Interface';
         href: '/brain-computer-interface-20o40';
         description: 'Direct neural integration';
         icon: <Brain className="w-4 h-4"  />;
-        color: 'from-purple-50o0 to-pink-50o0',
-      };
+        color: 'from-purple-50o0 to-pink-50o0'};
       {
         name: 'AI Emotional Intelligence';
         href: '/ai-emotional-intelligence-20o40';
         description: 'Consciousness-based empathy';
         icon: <Heart className="w-4 h-4"  />;
-        color: 'from-red-50o0 to-pink-50o0',
-      }
+        color: 'from-red-50o0 to-pink-50o0'}
     ]};
   {
     label: 'Company';
@@ -211,26 +185,22 @@ const navigationItems: NavigationItem[] = [
         label: 'About Us';
         href: '/about';
         icon: <Users className="w-4 h-4"  />;
-        description: 'Our mission and team',
-      };
+        description: 'Our mission and team'};
       {
         label: 'Case Studies';
         href: '/case-studies';
         icon: <Award className="w-4 h-4"  />;
-        description: 'Success stories and results',
-      };
+        description: 'Success stories and results'};
       {
         label: 'Careers';
         href: '/careers';
         icon: <Users className="w-4 h-4"  />;
-        description: 'Join our team',
-      };
+        description: 'Join our team'};
       {
         label: 'News & Updates';
         href: '/news';
         icon: <Globe className="w-4 h-4"  />;
-        description: 'Latest company news',
-      }
+        description: 'Latest company news'}
     ]};
   {
     label: 'Resources';
@@ -239,26 +209,22 @@ const navigationItems: NavigationItem[] = [
         label: 'Blog';
         href: '/blog';
         icon: <Globe className="w-4 h-4"  />;
-        description: 'Industry insights and articles',
-      };
+        description: 'Industry insights and articles'};
       {
         label: 'Documentation';
         href: '/docs';
         icon: <Globe className="w-4 h-4"  />;
-        description: 'Technical guides and APIs',
-      };
+        description: 'Technical guides and APIs'};
       {
         label: 'Support';
         href: '/support';
         icon: <Phone className="w-4 h-4"  />;
-        description: 'Help and assistance',
-      };
+        description: 'Help and assistance'};
       {
         label: 'Get Started';
         href: '/get-started';
         icon: <ArrowRight className="w-4 h-4"  />;
-        description: 'Quick start guide',
-      }
+        description: 'Quick start guide'}
     ]};
   {
     label: 'Company';
@@ -267,26 +233,22 @@ const navigationItems: NavigationItem[] = [
         label: 'About Us';
         href: '/about';
         icon: <Users className="w-4 h-4"  />;
-        description: 'Learn about Zion Tech Group',
-      };
+        description: 'Learn about Zion Tech Group'};
       {
         label: 'Careers';
         href: '/careers';
         icon: <Star className="w-4 h-4"  />;
-        description: 'Join our team',
-      };
+        description: 'Join our team'};
       {
         label: 'Partners';
         href: '/partners';
         icon: <Users className="w-4 h-4"  />;
-        description: 'Strategic partnerships',
-      };
+        description: 'Strategic partnerships'};
       {
         label: 'News';
         href: '/news';
         icon: <Globe className="w-4 h-4"  />;
-        description: 'Latest updates and insights',
-      }
+        description: 'Latest updates and insights'}
     ]};
   {
     label: 'Resources';
@@ -295,26 +257,22 @@ const navigationItems: NavigationItem[] = [
         label: 'Blog';
         href: '/blog';
         icon: <BookOpen className="w-4 h-4"  />;
-        description: 'Industry insights and analysis',
-      };
+        description: 'Industry insights and analysis'};
       {
         label: 'Case Studies';
         href: '/case-studies';
         icon: <Target className="w-4 h-4"  />;
-        description: 'Success stories and implementations',
-      };
+        description: 'Success stories and implementations'};
       {
         label: 'Support';
         href: '/support';
         icon: <HelpCircle className="w-4 h-4"  />;
-        description: 'Technical support and documentation',
-      };
+        description: 'Technical support and documentation'};
       {
         label: 'Training';
         href: '/training';
         icon: <Users className="w-4 h-4"  />;
-        description: 'Professional development programs',
-      }
+        description: 'Professional development programs'}
     ]};
   {
     name: 'Innovative Services 20o25';
@@ -330,72 +288,61 @@ const navigationItems: NavigationItem[] = [
         href: '/services#cybersecurity-threat-intelligence';
         description: 'Advanced cybersecurity solutions';
         icon: <Shield className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: 'AI Emotional Intelligence 20o40';
         href: '/ai-emotional-intelligence-20o40';
         description: 'Advanced emotional AI with consciousness';
         icon: <HeartIcon className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: 'Brain-Computer Interface 20o40';
         href: '/brain-computer-interface-20o40';
         description: 'Direct neural integration';
-        icon: <Brain className="w-4 h-4"  />,
-      };
+        icon: <Brain className="w-4 h-4"  />};
       {
         name: 'AI Autonomous Research 20o41';
         href: '/ai-autonomous-research-20o41';
         description: 'Fully autonomous AI research';
         icon: <CodeIcon className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: 'AI Content Personalization 20o41';
         href: '/ai-content-personalization-20o41';
         description: 'Consciousness-based content AI';
         icon: <PaletteIcon className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: 'AI Ethics & Governance 20o41';
         href: '/ai-ethics-governance-20o41';
         description: 'Comprehensive AI ethics framework';
-        icon: <Shield className="w-4 h-4"  />,
-      };
+        icon: <Shield className="w-4 h-4"  />};
       {
         name: 'AI Autonomous Research Assistant';
         href: '/ai-autonomous-research-assistant';
         description: 'Fully autonomous research and analysis';
         icon: <Search className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: 'AI Autonomous Content Factory';
         href: '/ai-autonomous-content-factory';
         description: 'End-to-end autonomous content creation';
-        icon: <Palette className="w-4 h-4"  />,
-      };
+        icon: <Palette className="w-4 h-4"  />};
       {
         name: 'AI Autonomous Customer Success';
         href: '/ai-autonomous-customer-success';
         description: 'Intelligent customer success automation';
-        icon: <Users className="w-4 h-4"  />,
-      };
+        icon: <Users className="w-4 h-4"  />};
       {
         name: 'AI Autonomous Sales Intelligence';
         href: '/ai-autonomous-sales-intelligence';
         description: 'Intelligent sales automation';
-        icon: <TrendingUp className="w-4 h-4"  />,
-      };
+        icon: <TrendingUp className="w-4 h-4"  />};
       {
         name: 'AI Autonomous Product Management';
         href: '/ai-autonomous-product-management';
         description: 'Intelligent product lifecycle management';
-        icon: <Settings className="w-4 h-4"  />,
-      }
+        icon: <Settings className="w-4 h-4"  />}
     ]};
   {
     name: 'Quantum Technology';
@@ -413,49 +360,42 @@ const navigationItems: NavigationItem[] = [
         icon: <Atom className="w-4 h-4"  />;
         description: 'Next-generation quantum solutions';
         featured: true;
-        badge: 'New',
-      };
+        badge: 'New'};
       {
         label: 'Space Technology';
         href: '/space-tech';
         icon: <Satellite className="w-4 h-4"  />;
         description: 'Innovative space solutions';
-        featured: true,
-      };
+        featured: true};
       {
         label: 'Cybersecurity';
         href: '/cybersecurity';
         icon: <Shield className="w-4 h-4"  />;
         description: 'Enterprise security solutions';
-        featured: true,
-      };
+        featured: true};
       {
         name: 'Quantum Internet Security 20o41';
         href: '/quantum-internet-security-20o41';
         description: 'Quantum internet protection';
         icon: <Network className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         label: 'Micro SaaS';
         href: '/micro-saas';
         icon: <Layers className="w-4 h-4"  />;
         description: 'Rapid deployment SaaS solutions';
-        featured: true,
-      };
+        featured: true};
       {
         name: 'Quantum Bio-Computing 20o41';
         href: '/quantum-bio-computing-20o41';
         description: 'Quantum biological computing';
-        icon: <Atom className="w-4 h-4"  />,
-      };
+        icon: <Atom className="w-4 h-4"  />};
       {
         name: 'Quantum-Ready Cloud Infrastructure';
         href: '/quantum-ready-cloud-infrastructure';
         description: 'Future-proof cloud infrastructure';
         icon: <Server className="w-4 h-4"  />;
-        featured: true,
-      }
+        featured: true}
     ]};
     {
     name: 'Enterprise Solutions';
@@ -471,38 +411,32 @@ const navigationItems: NavigationItem[] = [
         href: '/it-services';
         description: 'Complete enterprise solutions overview';
         icon: <Grid className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: 'Autonomous Business Intelligence 20o40';
         href: '/autonomous-business-intelligence-20o40';
         description: 'Consciousness-driven BI';
-        icon: <BarChart3 className="w-4 h-4"  />,
-      };
+        icon: <BarChart3 className="w-4 h-4"  />};
       {
         name: 'AI Customer Success 20o41';
         href: '/ai-customer-success-20o41';
         description: 'Autonomous customer management';
-        icon: <Heart className="w-4 h-4"  />,
-      };
+        icon: <Heart className="w-4 h-4"  />};
       {
         name: 'AI Sales Intelligence 20o41';
         href: '/ai-sales-intelligence-20o41';
         description: 'Consciousness-based sales AI';
-        icon: <TrendingUp className="w-4 h-4"  />,
-      };
+        icon: <TrendingUp className="w-4 h-4"  />};
       {
         name: 'AI Autonomous Ecosystem 20o41';
         href: '/ai-autonomous-ecosystem-20o41';
         description: 'Multi-AI coordination';
-        icon: <Network className="w-4 h-4"  />,
-      };
+        icon: <Network className="w-4 h-4"  />};
       {
         name: 'AI Predictive Maintenance 20o41';
         href: '/ai-predictive-maintenance-20o41';
         description: 'Consciousness-based maintenance';
-        icon: <Monitor className="w-4 h-4"  />,
-      }
+        icon: <Monitor className="w-4 h-4"  />}
     ]};
   {
     name: 'Micro SAAS Solutions';
@@ -518,32 +452,27 @@ const navigationItems: NavigationItem[] = [
         href: '/ai-powered-email-automation';
         description: 'Intelligent email marketing automation';
         icon: <Mail className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: 'Smart Invoice Automation';
         href: '/smart-invoice-automation';
         description: 'Intelligent invoice processing';
-        icon: <FileText className="w-4 h-4"  />,
-      };
+        icon: <FileText className="w-4 h-4"  />};
       {
         name: 'AI-Powered Customer Support';
         href: '/ai-powered-customer-support';
         description: 'Intelligent customer support automation';
-        icon: <MessageCircle className="w-4 h-4"  />,
-      };
+        icon: <MessageCircle className="w-4 h-4"  />};
       {
         name: 'Smart Project Management';
         href: '/smart-project-management';
         description: 'AI-powered project management';
-        icon: <Target className="w-4 h-4"  />,
-      };
+        icon: <Target className="w-4 h-4"  />};
       {
         name: 'AI-Powered SEO Optimization';
         href: '/ai-powered-seo-optimization';
         description: 'Intelligent SEO automation';
-        icon: <Search className="w-4 h-4"  />,
-      }
+        icon: <Search className="w-4 h-4"  />}
     ]};
   {
     name: 'Resources & Support';
@@ -557,32 +486,27 @@ const navigationItems: NavigationItem[] = [
         name: 'Documentation';
         href: '/docs';
         description: 'Comprehensive service documentation';
-        icon: <FileText className="w-4 h-4"  />,
-      };
+        icon: <FileText className="w-4 h-4"  />};
       {
         name: 'API Reference';
         href: '/api';
         description: 'Developer API documentation';
-        icon: <Code className="w-4 h-4"  />,
-      };
+        icon: <Code className="w-4 h-4"  />};
       {
         name: 'Support Center';
         href: '/support';
         description: '24/7 technical support';
-        icon: <HelpCircle className="w-4 h-4"  />,
-      };
+        icon: <HelpCircle className="w-4 h-4"  />};
       {
         name: 'Training & Certification';
         href: '/training';
         description: 'Professional training programs';
-        icon: <GraduationCap className="w-4 h-4"  />,
-      };
+        icon: <GraduationCap className="w-4 h-4"  />};
       {
         name: 'Community Forum';
         href: '/community';
         description: 'User community and discussions';
-        icon: <Users className="w-4 h-4"  />,
-      }
+        icon: <Users className="w-4 h-4"  />}
     ]};
   {
     name: 'Company';
@@ -598,26 +522,22 @@ const navigationItems: NavigationItem[] = [
         href: '/about';
         description: 'Learn about our mission and team';
         icon: <Building className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: 'Careers';
         href: '/careers';
         description: 'Join our revolutionary team';
-        icon: <Users className="w-4 h-4"  />,
-      };
+        icon: <Users className="w-4 h-4"  />};
       {
         name: 'Contact';
         href: '/contact';
         description: 'Get in touch with us';
-        icon: <Mail className="w-4 h-4"  />,
-      };
+        icon: <Mail className="w-4 h-4"  />};
       {
         name: 'News';
         href: '/news';
         description: 'Latest company updates';
-        icon: <Globe className="w-4 h-4"  />,
-      }
+        icon: <Globe className="w-4 h-4"  />}
     ]};
   {
     name: 'Resources';
@@ -633,26 +553,22 @@ const navigationItems: NavigationItem[] = [
         href: '/blog';
         description: 'Insights and articles';
         icon: <BookOpen className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: 'Whitepapers';
         href: '/whitepapers';
         description: 'Research and technical docs';
-        icon: <FileText className="w-4 h-4"  />,
-      };
+        icon: <FileText className="w-4 h-4"  />};
       {
         name: 'Webinars';
         href: '/webinars';
         description: 'Live and recorded sessions';
-        icon: <Video className="w-4 h-4"  />,
-      };
+        icon: <Video className="w-4 h-4"  />};
       {
         name: 'Support';
         href: '/support';
         description: 'Help and documentation';
-        icon: <HelpCircle className="w-4 h-4"  />,
-      }
+        icon: <HelpCircle className="w-4 h-4"  />}
     ]};
   {
     name: 'Company';
@@ -666,26 +582,22 @@ const navigationItems: NavigationItem[] = [
         name: 'About Us';
         href: '/about';
         description: 'Learn about our mission and vision';
-        icon: <Building className="w-4 h-4"  />,
-      };
+        icon: <Building className="w-4 h-4"  />};
       {
         name: 'Contact';
         href: '/contact';
         description: 'Get in touch with our team';
-        icon: <MessageCircle className="w-4 h-4"  />,
-      };
+        icon: <MessageCircle className="w-4 h-4"  />};
       {
         name: 'Careers';
         href: '/careers';
         description: 'Join our revolutionary team';
-        icon: <User className="w-4 h-4"  />,
-      };
+        icon: <User className="w-4 h-4"  />};
       {
         name: 'News';
         href: '/news';
         description: 'Latest updates and insights';
-        icon: <Globe className="w-4 h-4"  />,
-      }
+        icon: <Globe className="w-4 h-4"  />}
     ]};
   {
     name: 'Resources';
@@ -699,26 +611,22 @@ const navigationItems: NavigationItem[] = [
         name: 'Documentation';
         href: '/docs';
         description: 'Technical documentation and guides';
-        icon: <Code className="w-4 h-4"  />,
-      };
+        icon: <Code className="w-4 h-4"  />};
       {
         name: 'Support';
         href: '/support';
         description: 'Get help and support';
-        icon: <HelpCircle className="w-4 h-4"  />,
-      };
+        icon: <HelpCircle className="w-4 h-4"  />};
       {
         name: 'Blog';
         href: '/blog';
         description: 'Insights and thought leadership';
-        icon: <BookOpen className="w-4 h-4"  />,
-      };
+        icon: <BookOpen className="w-4 h-4"  />};
       {
         name: 'Training';
         href: '/training';
         description: 'Learn our technologies';
-        icon: <GraduationCap className="w-4 h-4"  />,
-      }
+        icon: <GraduationCap className="w-4 h-4"  />}
     ]}
 ],
 const contactInfo ={
@@ -741,8 +649,7 @@ const UltraFuturisticNavigation20o40: React.FC = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null),
-      }
+        setActiveDropdown(null)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
@@ -750,8 +657,7 @@ const UltraFuturisticNavigation20o40: React.FC = () => {
   const handleKeyDown = (event: React.KeyboardEvent, action: () => void) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault(),
-      action(),
-    }
+      action()}
   };
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode),
@@ -767,8 +673,7 @@ const UltraFuturisticNavigation20o40: React.FC = () => {
     router.push(url),
     setShowSearch(false),
     setSearchQuery(''),
-    setSearchResults([]),
-  };
+    setSearchResults([])};
   return (
     <nav
       ref={navRef}

@@ -13,8 +13,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const allServices = [
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
@@ -25,43 +24,37 @@ const categories = [
     name: 'All Services';
     icon: <Grid className="w-6 h-6" />;
     color: 'from-gray-500 to-slate-500';
-    description: 'Complete portfolio of advanced services',
-  };
+    description: 'Complete portfolio of advanced services'};
   {
     id: 'enterprise';
     name: 'Enterprise Solutions';
     icon: <Building className="w-6 h-6" />;
     color: 'from-blue-500 to-purple-500';
-    description: 'Enterprise-grade AI and IT solutions',
-  };
+    description: 'Enterprise-grade AI and IT solutions'};
   {
     id: 'micro-saas';
     name: 'Micro SAAS';
     icon: <Globe className="w-6 h-6" />;
     color: 'from-green-500 to-emerald-500';
-    description: 'Innovative micro SAAS solutions',
-  };
+    description: 'Innovative micro SAAS solutions'};
   {
     id: 'infrastructure';
     name: 'IT Infrastructure';
     icon: <Shield className="w-6 h-6" />;
     color: 'from-orange-500 to-red-500';
-    description: 'Cutting-edge infrastructure services',
-  };
+    description: 'Cutting-edge infrastructure services'};
   {
     id: 'ai-ml';
     name: 'AI & Machine Learning';
     icon: <Brain className="w-6 h-6" />;
     color: 'from-purple-500 to-pink-500';
-    description: 'Advanced AI and ML platforms',
-  };
+    description: 'Advanced AI and ML platforms'};
   {
     id: 'quantum';
     name: 'Quantum Computing';
     icon: <Atom className="w-6 h-6" />;
     color: 'from-violet-500 to-indigo-500';
-    description: 'Quantum computing solutions',
-  }
+    description: 'Quantum computing solutions'}
 ];
 const getServiceCategory = (service: any) => {
   if (service.category) return service.category;
@@ -113,8 +106,7 @@ export default function AdvancedServicesShowcase() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className={`relative bg-white dark: bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
-        service.popular ? 'ring-2 ring-blue-500' : '',
-      }`}
+        service.popular ? 'ring-2 ring-blue-500' : ''}`}
     >,
       {service.popular && (
         <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">,
@@ -209,8 +201,7 @@ export default function AdvancedServicesShowcase() {
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
       className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${
-        service.popular ? 'ring-2 ring-blue-500' : '',
-      }`}
+        service.popular ? 'ring-2 ring-blue-500' : ''}`}
     >,
       <div className="p-6">,
         <div className="flex items-start gap-6">,
@@ -407,8 +398,7 @@ export default function AdvancedServicesShowcase() {
                   className={`p-2 rounded-lg transition-all duration-300 ${
                     viewMode === 'grid',
                       ? 'bg-blue-100 dark: bg-blue-900 text-blue-600 dark:text-blue-400',
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600',
-                  }`}
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'}`}
                 >,
                   <Grid className="w-5 h-5" />,
                 </button>,
@@ -417,8 +407,7 @@ export default function AdvancedServicesShowcase() {
                   className={`p-2 rounded-lg transition-all duration-300 ${
                     viewMode === 'list',
                       ? 'bg-blue-100 dark: bg-blue-900 text-blue-600 dark:text-blue-400',
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600',
-                  }`}
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'}`}
                 >,
                   <List className="w-5 h-5" />,
                 </button>,
@@ -435,8 +424,7 @@ export default function AdvancedServicesShowcase() {
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
                     selectedCategory === category.id,
                       ? 'bg-gradient-to-r text-white shadow-lg',
-                      : 'bg-white dark: bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700',
-                  } ${category.color}`}
+                      : 'bg-white dark: bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700'} ${category.color}`}
                 >,
                   {category.icon}
                   {category.name}
@@ -521,6 +509,5 @@ export default function AdvancedServicesShowcase() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -64,8 +64,7 @@ function handleGenerateWithAI() {
       // Check condition,
 if ( {) {
   $2}
-        set_project ((p) => ({ ...p, chapters: data.chapters })),
-}
+        set_project ((p) => ({ ...p, chapters: data.chapters }))}
     } finally {
       set_busy (false)}
   }
@@ -87,8 +86,7 @@ function handleExportPdf() {
       a.href = url;
       a.download = 'zion - os - book.pdf';
       a.click ();
-      URL.revokeObjectURL (url),
-} finally {
+      URL.revokeObjectURL (url)} finally {
       set_busy (false)}
   }
 ,
@@ -108,8 +106,7 @@ function handleExportEpub() {
       a.href = url;
       a.download = 'zion - os - book.epub';
       a.click ();
-      URL.revokeObjectURL (url),
-} finally {
+      URL.revokeObjectURL (url)} finally {
       set_busy (false)}
   }
 ,
@@ -247,8 +244,7 @@ if (return) {
                 on_change={(e) => {
                   const quote_callouts = [...project.visuals.quote_callouts];
                   quote_callouts[i] = { ...quote_callouts[i], text: e.target.value };
-                  set_project ({ ...project, visuals: { ...project.visuals, quote_callouts } }),
-}}
+                  set_project ({ ...project, visuals: { ...project.visuals, quote_callouts } })}}
               />,
               <input
                 className="border rounded px - 2 py - 1",
@@ -264,5 +260,4 @@ if (return) {
             </div>))}
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}

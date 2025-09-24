@@ -82,6 +82,5 @@ const UltimateAIAutomationShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateAIAutomationShowcase20o25;

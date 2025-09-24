@@ -104,6 +104,5 @@ export default function ServicesShowcase2026V3() {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

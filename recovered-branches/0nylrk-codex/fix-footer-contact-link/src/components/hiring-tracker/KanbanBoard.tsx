@@ -11,14 +11,12 @@ import { KanbanColumn } from "./KanbanColumn",
 import { useIsMobile } from "@/hooks/use-mobile",
 interface DnDLocation {
   droppableId: string,
-  index: number,
-}
+  index: number}
 ,
 interface DropResult {
   draggableId: string,
   source: DnDLocation,
-  destination?: DnDLocation | null,
-}
+  destination?: DnDLocation | null}
 ,
 // Define the kanban board columns based on application statuses,
 const COLUMNS = [

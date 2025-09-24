@@ -20,12 +20,10 @@ interface MessageBubbleProps {
   isUserMessage: boolean,
 interface MessageBubbleProps {
   message: Message;
-  isUserMessage: boolean,
-}
+  isUserMessage: boolean}
 ,
   message: Message,
-  isUserMessage: boolean,
-}
+  isUserMessage: boolean}
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
     <div className={cn(
@@ -62,8 +60,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
 ,
 interface MessageBubbleProps {
   message: Message;
-  isUserMessage: boolean,
-}
+  isUserMessage: boolean}
 ,
         {message && message.attachment_url && (
           <a
@@ -82,8 +79,7 @@ interface MessageBubbleProps {
     </div>)}
 interface MessageBubbleProps {
   message: Message;
-  isUserMessage: boolean,
-}
+  isUserMessage: boolean}
 export /**,
  * MessageBubble - Function description,
  */,

@@ -184,6 +184,5 @@ export default function AnalyticsPage() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

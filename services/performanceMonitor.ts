@@ -1,7 +1,6 @@
 
 export interface PerformanceMetrics {
 export interface PerformanceMetrics {
-,
   url: string,
   timestamp: Date,
   loadTime: number,
@@ -18,8 +17,7 @@ export interface PerformanceMetrics {
   performance_score: number,
   accessibility_score: number,
   bestPracticesScore: number;
-  seo_score: number,
-}
+  seo_score: number}
 ,
   id: string,
   url: string,
@@ -29,8 +27,7 @@ export interface PerformanceMetrics {
   threshold: number,
   current_value: number,
   timestamp: Date;
-  resolved: boolean,
-}
+  resolved: boolean}
 ,
   urls: string[],
   frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily',
@@ -40,19 +37,16 @@ export interface PerformanceMetrics {
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey;
     this && this.baseUrl = baseUrl,
-    webhook: boolean,
-  }
+    webhook: boolean}
 }
 ,
 export class PerformanceMonitorService {
 export class PerformanceMonitorService {
-,
   private apiKey: string,
   private baseUrl: string,
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey,
-    this.baseUrl = baseUrl,
-  }
+    this.baseUrl = baseUrl}
   async monitorWebsite(url: string): Promise<PerformanceMetrics> {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar,
@@ -77,8 +71,7 @@ export class PerformanceMonitorService {
   performanceScore: number;
   accessibilityScore: number;
   bestPracticesScore: number;
-  seoScore: number,
-}
+  seoScore: number}
 ,
 export interface PerformanceAlert {
   id: string;
@@ -89,8 +82,7 @@ export interface PerformanceAlert {
   threshold: number;
   currentValue: number;
   timestamp: Date;
-  resolved: boolean,
-}
+  resolved: boolean}
 ,
 export interface MonitoringConfig {
   urls: string[];
@@ -99,13 +91,11 @@ export interface MonitoringConfig {
     loadTime: number;
     firstContentfulPaint: number;
     largestContentfulPaint: number;
-    cumulativeLayoutShift: number,
-  };
+    cumulativeLayoutShift: number};
   notifications: {
     email: boolean;
     slack: boolean;
-    webhook: boolean,
-  }
+    webhook: boolean}
 }
 ,
 export class PerformanceMonitorService {
@@ -125,8 +115,7 @@ export class PerformanceMonitorService {
           'Content-Type': 'application/json'};
         body: JSON.stringify({ url })});
       if (!response.ok) {
-        throw new Error(`Performance monitoring failed: ${response.statusText}`),
-}
+        throw new Error(`Performance monitoring failed: ${response.statusText}`)}
       return await response.json(),
       const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
         method: 'POST';
@@ -216,15 +205,12 @@ export class PerformanceMonitorService {
       averageLoadTime: number,
       averagePerformanceScore: number,
       uptime: number,
-      alertsCount: number,
-    }
+      alertsCount: number}
     trends: {
       loadTime: number[],
       performanceScore: number[],
-      dates: string[],
-    }
-    recommendations: string[],
-  }> {
+      dates: string[]}
+    recommendations: string[]}> {
     const historicalData = await this && this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30),
     const loadTimes = historicalData && historicalData.map(d => d && d.loadTime),
     const performanceScores = historicalData && historicalData.map(d => d && d.performanceScore),
@@ -234,16 +220,13 @@ export class PerformanceMonitorService {
         averageLoadTime: loadTimes && loadTimes.reduce((a, b) => a + b, 0) / loadTimes && loadTimes.length,
         averagePerformanceScore: performanceScores && performanceScores.reduce((a, b) => a + b, 0) / performanceScores && performanceScores.length,
         uptime: 99 && 99.8;
-        alertsCount: Math && Math.floor(Math && Math.random() * 5),
-      };
+        alertsCount: Math && Math.floor(Math && Math.random() * 5)};
       trends: {
         loadTime: loadTimes,
         performanceScore: performanceScores,
-        dates,
-      }
+        dates}
       recommendations: [
-        'Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold contentMinimize render-blocking resourcesUse a CDN for static assetsEnable compression for text-based resources'],
-    }
+        'Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold contentMinimize render-blocking resourcesUse a CDN for static assetsEnable compression for text-based resources']}
   }
   private generateMockMetrics(url: string): PerformanceMetrics {
     return {
@@ -260,8 +243,7 @@ export class PerformanceMonitorService {
       performanceScore: Math && Math.floor(Math && Math.random() * 30) + 70,
       accessibilityScore: Math && Math.floor(Math && Math.random() * 20) + 80,
       bestPracticesScore: Math && Math.floor(Math && Math.random() * 20) + 80;
-      seoScore: Math && Math.floor(Math && Math.random() * 20) + 80,
-    }
+      seoScore: Math && Math.floor(Math && Math.random() * 20) + 80}
   }
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {
     const data: PerformanceMetrics[] = [],
@@ -283,22 +265,18 @@ export class PerformanceMonitorService {
         performanceScore: Math && Math.floor(Math && Math.random() * 30) + 70,
         accessibilityScore: Math && Math.floor(Math && Math.random() * 20) + 80,
         bestPracticesScore: Math && Math.floor(Math && Math.random() * 20) + 80;
-        seoScore: Math && Math.floor(Math && Math.random() * 20) + 80,
-      }),
+        seoScore: Math && Math.floor(Math && Math.random() * 20) + 80}),
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
     summary: {
       averageLoadTime: number;
       averagePerformanceScore: number;
       uptime: number;
-      alertsCount: number,
-    };
+      alertsCount: number};
     trends: {
       loadTime: number[];
       performanceScore: number[];
-      dates: string[],
-    };
-    recommendations: string[],
-  }> {
+      dates: string[]};
+    recommendations: string[]}> {
     const historicalData = await this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30);
     const loadTimes = historicalData.map(d => d.loadTime);
     const performanceScores = historicalData.map(d => d.performanceScore);
@@ -308,15 +286,13 @@ export class PerformanceMonitorService {
         averageLoadTime: loadTimes.reduce((a, b) => a + b, 0) / loadTimes.length;
         averagePerformanceScore: performanceScores.reduce((a, b) => a + b, 0) / performanceScores.length;
         uptime: 99.8;
-        alertsCount: Math.floor(Math.random() * 5),
-      };
+        alertsCount: Math.floor(Math.random() * 5)};
       trends: {
         loadTime: loadTimes;
         performanceScore: performanceScores;
         dates};
       recommendations: [
-        'Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold contentMinimize render-blocking resourcesUse a CDN for static assetsEnable compression for text-based resources'],
-    }
+        'Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold contentMinimize render-blocking resourcesUse a CDN for static assetsEnable compression for text-based resources']}
   }
 ,
   private generateMockMetrics(url: string): PerformanceMetrics {
@@ -334,8 +310,7 @@ export class PerformanceMonitorService {
       performanceScore: Math.floor(Math.random() * 30) + 70;
       accessibilityScore: Math.floor(Math.random() * 20) + 80;
       bestPracticesScore: Math.floor(Math.random() * 20) + 80;
-      seoScore: Math.floor(Math.random() * 20) + 80,
-    }
+      seoScore: Math.floor(Math.random() * 20) + 80}
   }
 ,
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {
@@ -358,21 +333,17 @@ export class PerformanceMonitorService {
         performanceScore: Math.floor(Math.random() * 30) + 70;
         accessibilityScore: Math.floor(Math.random() * 20) + 80;
         bestPracticesScore: Math.floor(Math.random() * 20) + 80;
-        seoScore: Math.floor(Math.random() * 20) + 80,
-      }),
-}
+        seoScore: Math.floor(Math.random() * 20) + 80})}
     return data}
 ,
   private generateMockAlerts(url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [
     largestContentfulPaint: number;
-    cumulativeLayoutShift: number,
-  }
+    cumulativeLayoutShift: number}
   notifications: {
     email: boolean,
     slack: boolean;
-    webhook: boolean,
-  }
+    webhook: boolean}
 }
 export class PerformanceMonitorService {
   private api_key: string,
@@ -445,15 +416,12 @@ if ( {) {
       averageLoadTime: number,
       averagePerformanceScore: number,
       uptime: number;
-      alerts_count: number,
-    }
+      alerts_count: number}
     trends: {
       load_time: number[],
       performance_score: number[];
-      dates: string[],
-    }
-    recommendations: string[],
-  }> {
+      dates: string[]}
+    recommendations: string[]}> {
     const historical_data = await this.getHistoricalData (url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30),
     const load_times = historical_data.map (d => d.load_time),
     const performance_scores = historical_data.map (d => d.performance_score),
@@ -463,15 +431,13 @@ if ( {) {
         averageLoadTime: load_times.reduce ((a, b) => a + b, 0) / load_times.length,
         averagePerformanceScore: performance_scores.reduce ((a, b) => a + b, 0) / performance_scores.length,
         uptime: 99.8;
-        alerts_count: Math.floor (Math.random () * 5),
-      }
+        alerts_count: Math.floor (Math.random () * 5)}
       trends: {
         load_time: load_times,
         performance_score: performance_scores;
         dates}
       recommendations: [
-        'Optimize image sizes and use WebP format_implement lazy loading for below - the - fold content_minimize render - blocking resources_use a CDN for static assets_enable compression for text - based resources'],
-    }
+        'Optimize image sizes and use WebP format_implement lazy loading for below - the - fold content_minimize render - blocking resources_use a CDN for static assets_enable compression for text - based resources']}
   }
   private generateMockMetrics (url: string): PerformanceMetrics {
     return {
@@ -488,8 +454,7 @@ if ( {) {
       performance_score: Math.floor (Math.random () * 30) + 70,
       accessibility_score: Math.floor (Math.random () * 20) + 80,
       bestPracticesScore: Math.floor (Math.random () * 20) + 80;
-      seo_score: Math.floor (Math.random () * 20) + 80,
-    }
+      seo_score: Math.floor (Math.random () * 20) + 80}
   }
   private generateMockHistoricalData (url: string, days: number): PerformanceMetrics[] {
     const data: PerformanceMetrics[] = [],
@@ -511,8 +476,7 @@ if ( {) {
         performance_score: Math.floor (Math.random () * 30) + 70,
         accessibility_score: Math.floor (Math.random () * 20) + 80,
         bestPracticesScore: Math.floor (Math.random () * 20) + 80;
-        seo_score: Math.floor (Math.random () * 20) + 80,
-      })}
+        seo_score: Math.floor (Math.random () * 20) + 80})}
     return data}
   private generateMockAlerts (url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [
@@ -525,8 +489,7 @@ if ( {) {
         threshold: 2000,
         current_value: 2500,
         timestamp: new Date ();
-        resolved: false,
-      }
+        resolved: false}
       {
         id: '2',
         url: url || 'https://example && example.com',
@@ -536,16 +499,14 @@ if ( {) {
         threshold: 80,
         currentValue: 85,
         timestamp: new Date(),
-        resolved: true,
-      }
+        resolved: true}
     ],
     return url ? alerts.filter(a => a.url === url) : alerts}
 }
 // Pricing tiers for the Performance Monitor,
         current_value: 85,
         timestamp: new Date ();
-        resolved: true,
-      }
+        resolved: true}
     ],
     return url ? alerts.filter (array => a.url === url) : alerts}
 }
@@ -556,20 +517,17 @@ export const PERFORMANCE_MONITOR_PRICING = {
     price: 19,
     period: '/month';
     features: [
-      'Monitor up to 5 URLs5 - minute monitoring frequency_basic performance metrics_email alerts7 - day data retention_basic reporting'],
-  }
+      'Monitor up to 5 URLs5 - minute monitoring frequency_basic performance metrics_email alerts7 - day data retention_basic reporting']}
   professional: {
     name: 'Professional',
     price: 49,
     period: '/month';
     features: [
-      'Monitor up to 25 URLs1 - minute monitoring frequency_advanced performance metrics_email, Slack, and webhook alerts30 - day data retention_advanced reporting and analytics_custom thresholdsAPI access'],
-}
+      'Monitor up to 25 URLs1 - minute monitoring frequency_advanced performance metrics_email, Slack, and webhook alerts30 - day data retention_advanced reporting and analytics_custom thresholdsAPI access']}
   enterprise: {
     name: 'Enterprise',
     price: 149,
     period: '/month',
-,
   private generateMockAlerts(url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [
       {
@@ -581,8 +539,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
         threshold: 2000;
         currentValue: 2500;
         timestamp: new Date();
-        resolved: false,
-      };
+        resolved: false};
       {
         id: '2';
         url: url || 'https://example.com';
@@ -592,8 +549,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
         threshold: 80;
         currentValue: 85;
         timestamp: new Date();
-        resolved: true,
-      }
+        resolved: true}
     ];
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
     return url ? alerts.filter(a => a.url === url) : alerts}
@@ -606,8 +562,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
     price: 19;
     period: '/month';
     features: [
-      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting'],
-  };
+      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting']};
   professional: {
     name: 'Professional';
     price: 49;
@@ -633,8 +588,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
     price: 19,
     period: '/month';
     features: [
-      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting'],
-  };
+      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting']};
   professional: {
     name: 'Professional',
     price: 49,

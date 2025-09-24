@@ -11,8 +11,7 @@ export default function OpenApp() {
     const timeout = setTimeout(() => {
       const elapsed = Date.now() - now,
       if (elapsed < 2000) {
-        window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL,
-      }
+        window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL}
     }1200),
     // Try to open the deep link,
     const iframe = document.createElement('iframe'),

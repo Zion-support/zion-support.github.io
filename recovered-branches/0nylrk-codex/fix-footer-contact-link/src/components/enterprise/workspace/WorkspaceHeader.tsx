@@ -2,8 +2,7 @@ import { Button } from '@/components/ui/button',
 import { type Company } from './CompanyDashboard',
 import { BellUsersSettings } from 'lucide-react',
 interface WorkspaceHeaderProps {
-  company: Company,
-}
+  company: Company}
 ,
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
@@ -58,6 +57,5 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
           <div className='text-2xl font-medium'>12</div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

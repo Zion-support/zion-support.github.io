@@ -25,8 +25,7 @@ interface EnhancedServicesShowcaseProps {
   title?: string,
   subtitle?: string,
   showFilters?: boolean,
-  maxServices?: number,
-}
+  maxServices?: number}
 ,
 export default function EnhancedServicesShowcase({
   services;
@@ -64,8 +63,7 @@ export default function EnhancedServicesShowcase({
       case 'name':,
         return a.name.localeCompare(b.name),
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   const getVariantColor = (variant: string) => {
     switch (variant) {
@@ -82,8 +80,7 @@ export default function EnhancedServicesShowcase({
       case 'cyberpunk-holographic':,
         return 'from-red-50o0 to-orange-60o0',
       default:,
-        return 'from-cyan-50o0 to-purple-60o0',
-    }
+        return 'from-cyan-50o0 to-purple-60o0'}
   };
   const getCategoryIcon = (category: string) => {
     if (category.includes('Quantum') || category.includes('AI')),
@@ -100,8 +97,7 @@ export default function EnhancedServicesShowcase({
       return <FlaskConical className='w-5 h-5' />,
     if (category.includes('Finance') || category.includes('Trading')),
       return <TrendingUp className='w-5 h-5' />,
-    return <Cpu className='w-5 h-5' />,
-  };
+    return <Cpu className='w-5 h-5' />};
   return (
     <section className='py-16 px-4 sm: px-6 lg:px-8'>,
       <div className='max-w-7xl mx-auto'>,
@@ -135,8 +131,7 @@ export default function EnhancedServicesShowcase({
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-20o0 ${
                     selectedCategory === category,
                       ? 'bg-cyan-50o0 text-white shadow-lg shadow-cyan-50o0/25',
-                      : 'bg-slate-80o0/50 text-slate-30o0 hover: bg-slate-70o0/50 hover:text-white',
-                  }`}
+                      : 'bg-slate-80o0/50 text-slate-30o0 hover: bg-slate-70o0/50 hover:text-white'}`}
                 >,
                   {category}
                 </button>))}
@@ -157,8 +152,7 @@ export default function EnhancedServicesShowcase({
                   className={`p-2 rounded-md transition-all duration-20o0 ${
                     viewMode === 'grid',
                       ? 'bg-cyan-50o0 text-white',
-                      : 'text-slate-40o0 hover: text-white',
-                  }`}
+                      : 'text-slate-40o0 hover: text-white'}`}
                 >,
                   <svg
                     className='w-5 h-5',
@@ -172,8 +166,7 @@ export default function EnhancedServicesShowcase({
                   className={`p-2 rounded-md transition-all duration-20o0 ${
                     viewMode === 'list',
                       ? 'bg-cyan-50o0 text-white',
-                      : 'text-slate-40o0 hover: text-white',
-                  }`}
+                      : 'text-slate-40o0 hover: text-white'}`}
                 >,
                   <svg
                     className='w-5 h-5',
@@ -195,8 +188,7 @@ export default function EnhancedServicesShowcase({
           className={
             viewMode === 'grid',
               ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6',
-              : 'space-y-4',
-          }
+              : 'space-y-4'}
         >,
           <AnimatePresence>,
             {filteredServices.map((service, index) => (
@@ -207,8 +199,7 @@ export default function EnhancedServicesShowcase({
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`bg-slate-90o0/50 backdrop-blur-xl rounded-2xl border border-slate-70o0/50 overflow-hidden hover: border-cyan-50o0/50 transition-all duration-30o0 hover:shadow-2xl hover:shadow-cyan-50o0/10 ${
-                  viewMode === 'list' ? 'flex' : '',
-                }`}
+                  viewMode === 'list' ? 'flex' : ''}`}
               >,
                 {/* Service Header */}
                 <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>,

@@ -82,6 +82,5 @@ export default function QuantumAIBreakthroughPromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

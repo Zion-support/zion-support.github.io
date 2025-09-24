@@ -34,7 +34,7 @@ export default function UltraInsightPage() {
           <h2 className='text-2xl font-bold mb-4'>💡 The Insight</h2>,
           <p className='text-xl text-white/90'>,
             AI-powered automation represents a paradigm shift in how we approach,
-            enhance system window.performance.,
+            enhance system window.window.performance.,
           </p>,
         </section>,
         <section className='mb-8'>,
@@ -52,6 +52,5 @@ export default function UltraInsightPage() {
           </a>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

@@ -12,8 +12,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     | 'ghost',
     | 'link',
   size?: 'default' | 'sm' | 'lg' | 'icon',
-  asChild?: boolean,
-}
+  asChild?: boolean}
 ,
 const Button = React.forwardRef<HTMLButtonElement ButtonProps>(
   (

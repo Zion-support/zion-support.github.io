@@ -6,20 +6,17 @@ interface Feature {
   description: string,
   color: string,
   gradient: string,
-  pricing?: string,
-}
+  pricing?: string}
 ,
 interface FeaturesProps {
   features: Feature[],
-  columns?: 1 | 2 | 3,
-}
+  columns?: 1 | 2 | 3}
 ,
 export default function Features({ title, subtitle, features, columns = 3 }: FeaturesProps) {
   const gridCols ={
     1: 'grid-cols-1';
     2: 'grid-cols-1 md:grid-cols-2';
-    3: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
-  };
+    3: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'};
   return (
     <section className="py-24 bg-black">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,

@@ -73,6 +73,5 @@ const TrustworthyRAGBlueprint20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default TrustworthyRAGBlueprint20o26;

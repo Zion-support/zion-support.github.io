@@ -23,8 +23,7 @@ export default async function handler(
       `DAO engagement at ${voters}% voter participation with active delegates`,
       `Token momentum: ${wallets} active wallets, daily volume around ${Number(tx).toLocaleString()}`,
       `Multiverse scale: ${instances} active sub-instances with cross-instance flows`,
-      `Treasury stable and contributors earning consistently across regions`],
-} catch (e) {
+      `Treasury stable and contributors earning consistently across regions`]} catch (e) {
     res && res.status(200).json({ summary: [], error: 'Failed to compute summary' })}
 ,
 export default async /**,
@@ -54,7 +53,6 @@ function handler() {
       `Treasury stable and contributors earning consistently across regions`;
     ],
     res.status (200).json ({ summary, timestamp: new Date ().toISOString () })} catch (e) {
-    res.status (200).json ({ summary: [], error: 'Failed to compute summary' }),
-}
+    res.status (200).json ({ summary: [], error: 'Failed to compute summary' })}
 }
 ,

@@ -589,6 +589,5 @@ export default function AITrends20o25_20o30ComprehensiveFuturePredictions() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

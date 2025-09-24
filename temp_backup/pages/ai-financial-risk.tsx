@@ -54,6 +54,5 @@ export default function AIFinancialRiskPage() {
           </div>,
         </div>,
       </div>,
-    </UltraFuturisticBackground>),
-}
+    </UltraFuturisticBackground>)}
 ,

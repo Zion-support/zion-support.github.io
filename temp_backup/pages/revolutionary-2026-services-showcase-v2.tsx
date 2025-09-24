@@ -100,8 +100,7 @@ export default function Revolutionary20o26ServicesShowcaseV2() {
     if (category.includes('Vehicle')) return <Car className="w-5 h-5"  />,
     if (category.includes('Biotech')) return <TestTube className="w-5 h-5"  />,
     if (category.includes('Climate')) return <Leaf className="w-5 h-5"  />,
-    return <Zap className="w-5 h-5"  />,
-  };
+    return <Zap className="w-5 h-5"  />};
   const getCategoryColor = (category: string) => {
     if (category.includes('AI')) return 'from-purple-50o0 to-pink-50o0',
     if (category.includes('Quantum')) return 'from-blue-50o0 to-cyan-50o0',
@@ -117,8 +116,7 @@ export default function Revolutionary20o26ServicesShowcaseV2() {
     if (category.includes('Vehicle')) return 'from-blue-50o0 to-indigo-50o0',
     if (category.includes('Biotech')) return 'from-green-50o0 to-teal-50o0',
     if (category.includes('Climate')) return 'from-emerald-50o0 to-green-50o0',
-    return 'from-gray-50o0 to-blue-50o0',
-  };
+    return 'from-gray-50o0 to-blue-50o0'};
   return (
     <>,
       <Head>,
@@ -224,8 +222,7 @@ export default function Revolutionary20o26ServicesShowcaseV2() {
                     className={`p-2 rounded-lg transition-colors ${
                       viewMode === 'grid',
                         ? 'bg-purple-50o0 text-white',
-                        : 'bg-white/10 text-gray-40o0 hover: bg-white/20',
-                    }`}
+                        : 'bg-white/10 text-gray-40o0 hover: bg-white/20'}`}
                   >,
                     <Grid className="w-5 h-5"  />,
                   </button>,
@@ -234,8 +231,7 @@ export default function Revolutionary20o26ServicesShowcaseV2() {
                     className={`p-2 rounded-lg transition-colors ${
                       viewMode === 'list',
                         ? 'bg-purple-50o0 text-white',
-                        : 'bg-white/10 text-gray-40o0 hover: bg-white/20',
-                    }`}
+                        : 'bg-white/10 text-gray-40o0 hover: bg-white/20'}`}
                   >,
                     <List className="w-5 h-5"  />,
                   </button>,
@@ -267,8 +263,7 @@ export default function Revolutionary20o26ServicesShowcaseV2() {
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       className={`bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden hover: border-purple-50o0/50 transition-all duration-30o0 hover:transform hover:scale-10o5 ${
-                        viewMode === 'list' ? 'flex' : '',
-                      }`}
+                        viewMode === 'list' ? 'flex' : ''}`}
                     >,
                       {viewMode === 'list' ? (
                         <div className="flex-1 p-6">,
@@ -376,8 +371,7 @@ export default function Revolutionary20o26ServicesShowcaseV2() {
         </section>,
         </div>,
       </UltraQuantumHolographicBackground>,
-    </>),
-}
+    </>)}
 ,
 // Icon components for the categories,
 const Atom = ({ className }: { className?: string }) => (

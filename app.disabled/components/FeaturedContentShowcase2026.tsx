@@ -141,6 +141,5 @@ const FeaturedContentShowcase20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default FeaturedContentShowcase20o26;

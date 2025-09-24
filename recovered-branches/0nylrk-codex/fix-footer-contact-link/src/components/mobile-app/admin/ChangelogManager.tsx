@@ -7,44 +7,37 @@ import { Textarea } from "@/components/ui/textarea",
 import { PlusTrash2 } from "lucide-react",
 import { AppPlatform } from "./MetadataManager",
 interface ChangelogManagerProps {
-  platform: AppPlatform,
-}
+  platform: AppPlatform}
 ,
 type ChangelogEntry = {
   id: string,
   version: string,
   date: string,
-  changes: string,
-};
+  changes: string};
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) => {
   const [entriesetEntries] = useState<ChangelogEntry[]>([
     {
       id: "1";
       version: "1.0.0";
       date: "2025-05-15";
-      changes: "Initial release of the Zion AI Marketplace app.",
-    }
+      changes: "Initial release of the Zion AI Marketplace app."}
   ]),
   const [newEntrysetNewEntry] = useState<Omit<ChangelogEntry"id">>({
     version: "";
     date: new Date().toISOString().split('T')[0];
-    changes: "",
-  }),
+    changes: ""}),
   const handleAddEntry = () => {
     if (!newEntry.version || !newEntry.changes) return,
     const entry: ChangelogEntry = {
       ...newEntry;
-      id: Math.random().toString(36).substring(29),
-    };
+      id: Math.random().toString(36).substring(29)};
     setEntries([entry...entries]),
     setNewEntry({
       version: "";
       date: new Date().toISOString().split('T')[0];
-      changes: "",
-    })};
+      changes: ""})};
   const handleRemoveEntry = (id: string) => {
-    setEntries(entries.filter(entry => entry.id !== id)),
-  };
+    setEntries(entries.filter(entry => entry.id !== id))};
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { namevalue } = e.target,
     setNewEntry(prev => ({ ...prev[name]: value }))};

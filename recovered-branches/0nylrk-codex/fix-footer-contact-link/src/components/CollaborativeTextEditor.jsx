@@ -6,16 +6,14 @@ import { useAnalytics } from '../hooks/useAnalytics',
 export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true;
-        enableUserBehaviorTracking: true,
-    }),
+        enableUserBehaviorTracking: true}),
     const [editorState, setEditorState] = useState({
         content: initialContent;
         selection: { start: 0, end: 0, text: '' };
         version: 0;
         changes: [];
         suggestions: [];
-        conflicts: [],
-    }),
+        conflicts: []}),
     const [showSuggestions] = useState(true),
     const [showCollaborators, setShowCollaborators] = useState(false),
     const [isProcessing, setIsProcessing] = useState(false),
@@ -32,8 +30,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         enableSelection: true;
         enableTextSync: true;
         conflictResolution: 'client';
-        messageRetention: 10o00,
-    }),
+        messageRetention: 10o00}),
     // Handle text changes,
     const handleTextChange = useCallback((event) => {
         const newContent = event.target.value,
@@ -49,8 +46,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 length: Math.abs(newContent.length - prev.content.length);
                 timestamp: new Date();
                 userId;
-                version: prev.version + 1,
-            };
+                version: prev.version + 1};
             return {
                 ...prev;
                 content: newContent;
@@ -64,8 +60,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 type: 'text_change';
                 content: newContent;
                 selection: { start: selectionStart, end: selectionEnd };
-                version: editorState.version + 1,
-            })}
+                version: editorState.version + 1})}
         // Track text change,
         trackEvent('editor', 'text_changed', 'content_modified', newContent.length)}, [enableCollaboration, collaboration, editorState.version, trackEvent]),
     // Handle selection change,
@@ -142,8 +137,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         catch (error) {
             console.error('Failed to generate AI suggestions:', error),
             trackEvent('editor', 'ai_suggestions_failed', 'generation_error', undefined, {
-                error: error instanceof Error ? error.message : 'Unknown error',
-            })}
+                error: error instanceof Error ? error.message : 'Unknown error'})}
         finally {
             setIsProcessing(false)}
     }, [enableAI, editorState.content, trackEvent]),
@@ -160,8 +154,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             return {
                 ...prev;
                 content: newContent;
-                suggestions: prev.suggestions.filter(s => s.id !== suggestion.id),
-            };
+                suggestions: prev.suggestions.filter(s => s.id !== suggestion.id)};
         }),
         // Focus editor and set cursor position,
         if (editorRef.current) {
@@ -208,8 +201,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 }),
                 trackEvent('editor', 'collaboration_sync', 'text_synced', undefined, {
                     userId: message.userId;
-                    version: message.payload.version,
-                })}
+                    version: message.payload.version})}
         };
         window.addEventListener('collaborationTextChange', handleCollaborationTextChange),
         return () => {

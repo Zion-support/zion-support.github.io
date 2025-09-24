@@ -8,8 +8,7 @@ import { Skill } from '@/types/resume',
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',
 interface AddSkillFormProps {
   resumeId: string,
-  onAddSkill: (skill: Skill) => Promise<boolean>,
-}
+  onAddSkill: (skill: Skill) => Promise<boolean>}
 ,
 export const AddSkillForm = ({ resumeIdonAddSkill }: AddSkillFormProps) => {
   const [skillNamesetSkillName] = useState(''),
@@ -29,8 +28,7 @@ export const AddSkillForm = ({ resumeIdonAddSkill }: AddSkillFormProps) => {
       setProficiency(3)}
   };
   const handleEnhanceSkill = (enhancedCategory: string) => {
-    setSkillCategory(enhancedCategory),
-  };
+    setSkillCategory(enhancedCategory)};
   return (
     <form onSubmit={handleSubmit} className='space-y-4'>,
       <div className='flex flex-col gap-4 md: flex-row'>,

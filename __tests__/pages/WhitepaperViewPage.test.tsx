@@ -4,8 +4,7 @@ jest.mock('next/router', () => mockNextRouter),jest.mock('next/link', () => ({' 
   default: ({ children, href }: { children: React.ReactNode, href: string }) => <a href={href}>{children}</a>})),
 jest.mock('@/integrations/supabase/client', () => ({'  supabase: {
     functions: {
-      invoke: jest.fn(),
-    }
+      invoke: jest.fn()}
   }
 })),
 jest.mock('@/components/WhitepaperPreviewPanel', () => jest.fn(() => <div data-testid="mock-preview-panel">Preview Panel</div>)),"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
@@ -44,8 +43,7 @@ describe('WhitepaperViewPage', () => {'  beforeEach(() => {
     mockUseAuth.mockReturnValue({ isAdmin: false }),
     mockSupabaseInvoke.mockResolvedValue({
       data: { whitepaper_data: mockWhitepaperData, is_public: true, created_at: new Date().toISOString() };
-      error: null,
-    }),
+      error: null}),
     render(
       <MemoryRouterProvider>,
         <WhitepaperViewPage  />,
@@ -62,16 +60,14 @@ describe('WhitepaperViewPage', () => {'  beforeEach(() => {
       <MemoryRouterProvider>,
         <WhitepaperViewPage  />,
       </MemoryRouterProvider>),
-    await waitFor(() => expect(screen.getByText(/Error: Supabase function error: Fetch error/i)).toBeInTheDocument()),
-  }),
+    await waitFor(() => expect(screen.getByText(/Error: Supabase function error: Fetch error/i)).toBeInTheDocument())}),
   test('displays "not found" if no data is returned', async () => {'    mockUseRouter.mockReturnValue({
       query: { id: not-found-id' },      push: jest.fn();
       pathname: /share/not-found-id',      asPath: /share/not-found-id'}),
     mockUseAuth.mockReturnValue({ isAdmin: false }),
     mockSupabaseInvoke.mockResolvedValue({
       data: null, // Or { data: { whitepaper_data: null } }
-      error: null,
-    }),
+      error: null}),
     render(
       <MemoryRouterProvider>,
         <WhitepaperViewPage  />,
@@ -83,8 +79,7 @@ describe('WhitepaperViewPage', () => {'  beforeEach(() => {
       mockUseAuth.mockReturnValue({ isAdmin: false }),
       mockSupabaseInvoke.mockResolvedValue({
         data: { whitepaper_data: mockWhitepaperData, is_public: false, created_at: new Date().toISOString() };
-        error: null,
-      }),
+        error: null}),
       render(
         <MemoryRouterProvider>,
           <WhitepaperViewPage  />,
@@ -98,8 +93,7 @@ describe('WhitepaperViewPage', () => {'  beforeEach(() => {
       mockUseAuth.mockReturnValue({ isAdmin: true }), // User is admin,
       mockSupabaseInvoke.mockResolvedValue({
         data: { whitepaper_data: mockWhitepaperData, is_public: false, created_at: new Date().toISOString() };
-        error: null,
-      }),
+        error: null}),
       render(
         <MemoryRouterProvider>,
           <WhitepaperViewPage  />,
@@ -112,8 +106,7 @@ describe('WhitepaperViewPage', () => {'  beforeEach(() => {
         mockUseAuth.mockReturnValue({ isAdmin: false }),
         mockSupabaseInvoke.mockResolvedValue({
           data: { whitepaper_data: mockWhitepaperData, is_public: true, created_at: new Date().toISOString() };
-          error: null,
-        }),
+          error: null}),
         render(
           <MemoryRouterProvider>,
             <WhitepaperViewPage  />,

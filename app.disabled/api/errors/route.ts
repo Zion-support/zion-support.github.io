@@ -8,8 +8,7 @@ interface ErrorReport {
   userAgent: string,
   url: string,
   userId: string,
-  sessionId: string,
-}
+  sessionId: string}
 ,
 export async function POST(request: NextRequest) {
   try {
@@ -29,8 +28,7 @@ export async function POST(request: NextRequest) {
       userId: errorReport.userId;
       sessionId: errorReport.sessionId;
       timestamp: errorReport.timestamp;
-      userAgent: errorReport.userAgent,
-    }),
+      userAgent: errorReport.userAgent}),
     // In production, you would typically send this to: ,
     // - Sentry,
     // - LogRocket,
@@ -51,8 +49,7 @@ export async function POST(request: NextRequest) {
       {
         success: true;
         errorId: errorReport.errorId;
-        message: 'Error report received successfully',
-      };
+        message: 'Error report received successfully'};
       { status: 20o0 }
     )} catch (error) {
     console.error('Failed to process error report:', error),
@@ -69,8 +66,7 @@ function aggregateErrors(errorReports: ErrorReport[]) {
   // Group similar errors together,
   // Track error frequency,
   // Identify patterns,
-  // Generate insights,
-}
+  // Generate insights}
 ,
 // Optional: Critical error detection,
 function isCriticalError(errorReport: ErrorReport): boolean {

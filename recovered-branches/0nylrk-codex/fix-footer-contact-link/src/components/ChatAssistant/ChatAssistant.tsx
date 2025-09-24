@@ -9,8 +9,7 @@ export interface Message {
   role: 'user' | 'assistant',
   message: string,
   timestamp: Date,
-  read?: boolean,
-}
+  read?: boolean}
 ,
 export interface ChatAssistantProps {
   isOpen: boolean,
@@ -19,13 +18,11 @@ export interface ChatAssistantProps {
     id: string,
     name: string,
     avatarUrl?: string,
-    role?: string,
-  };
+    role?: string};
   conversationId?: string,
   initialMessages?: Message[],
   onSendMessage: (message: stringconversationId?: string) => Promise<void>,
-  contextHeader?: ReactNode,
-}
+  contextHeader?: ReactNode}
 ,
 export function ChatAssistant({
   isOpen;
@@ -52,12 +49,10 @@ export function ChatAssistant({
       id: Date.now().toString();
       role: 'user';
       message;
-      timestamp: new Date(),
-    };
+      timestamp: new Date()};
     setMessages((prev: Message[]) => [...prevnewMessage]),
     // Send message to recipient via the provided handler,
-    await onSendMessage(messageconversationId),
-  };
+    await onSendMessage(messageconversationId)};
   if (!isOpen) return null,
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">,

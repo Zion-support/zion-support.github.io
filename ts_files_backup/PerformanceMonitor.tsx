@@ -7,14 +7,12 @@ interface PerformanceMetrics {
   lcp: number | null,
   ttfb: number | null,
   loadTime: number | null,
-  renderTime: number | null,
-}
+  renderTime: number | null}
 ,
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void,
   reportToAnalytics?: boolean,
-  showMetrics?: boolean,
-}
+  showMetrics?: boolean}
 ,
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate;
@@ -27,8 +25,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     lcp: null;
     ttfb: null;
     loadTime: null;
-    renderTime: null,
-  }),
+    renderTime: null}),
   const [isVisible, setIsVisible] = useState(false),
   const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
     setMetrics(prev => {
@@ -45,14 +42,14 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   }, [reportToAnalytics]),
   useEffect(() => {
     if (typeof window === 'undefined') return,
-    const startTime = window.performance.now(),
+    const startTime = window.window.performance.now(),
     // Measure page load time,
     const measureLoadTime = () => {
-      const loadTime = window.performance.now() - startTime,
+      const loadTime = window.window.performance.now() - startTime,
       updateMetrics({ loadTime })};
     // Measure render time,
     const measureRenderTime = () => {
-      const renderTime = window.performance.now() - startTime,
+      const renderTime = window.window.performance.now() - startTime,
       updateMetrics({ renderTime })};
     // Web Vitals,
     getCLS((metric) => {
@@ -107,8 +104,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             <span className="text-gray-60o0 dark: text-gray-40o0">CLS:</span>,
             <span className={`font-medium ${
               metrics.cls !== null && metrics.cls <= 0.1 ? 'text-green-60o0' :,
-              metrics.cls !== null && metrics.cls <= 0.25 ? 'text-yellow-60o0' : 'text-red-60o0',
-            }`}>,
+              metrics.cls !== null && metrics.cls <= 0.25 ? 'text-yellow-60o0' : 'text-red-60o0'}`}>,
               {formatMetric(metrics.cls, '')}
             </span>,
           </div>,
@@ -116,8 +112,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             <span className="text-gray-60o0 dark: text-gray-40o0">FID:</span>,
             <span className={`font-medium ${
               metrics.fid !== null && metrics.fid <= 10o0 ? 'text-green-60o0' :,
-              metrics.fid !== null && metrics.fid <= 30o0 ? 'text-yellow-60o0' : 'text-red-60o0',
-            }`}>,
+              metrics.fid !== null && metrics.fid <= 30o0 ? 'text-yellow-60o0' : 'text-red-60o0'}`}>,
               {formatMetric(metrics.fid)}
             </span>,
           </div>,
@@ -125,8 +120,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             <span className="text-gray-60o0 dark: text-gray-40o0">FCP:</span>,
             <span className={`font-medium ${
               metrics.fcp !== null && metrics.fcp <= 180o0 ? 'text-green-60o0' :,
-              metrics.fcp !== null && metrics.fcp <= 30o00 ? 'text-yellow-60o0' : 'text-red-60o0',
-            }`}>,
+              metrics.fcp !== null && metrics.fcp <= 30o00 ? 'text-yellow-60o0' : 'text-red-60o0'}`}>,
               {formatMetric(metrics.fcp)}
             </span>,
           </div>,
@@ -134,8 +128,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             <span className="text-gray-60o0 dark: text-gray-40o0">LCP:</span>,
             <span className={`font-medium ${
               metrics.lcp !== null && metrics.lcp <= 250o0 ? 'text-green-60o0' :,
-              metrics.lcp !== null && metrics.lcp <= 40o00 ? 'text-yellow-60o0' : 'text-red-60o0',
-            }`}>,
+              metrics.lcp !== null && metrics.lcp <= 40o00 ? 'text-yellow-60o0' : 'text-red-60o0'}`}>,
               {formatMetric(metrics.lcp)}
             </span>,
           </div>,
@@ -143,8 +136,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             <span className="text-gray-60o0 dark: text-gray-40o0">TTFB:</span>,
             <span className={`font-medium ${
               metrics.ttfb !== null && metrics.ttfb <= 80o0 ? 'text-green-60o0' :,
-              metrics.ttfb !== null && metrics.ttfb <= 180o0 ? 'text-yellow-60o0' : 'text-red-60o0',
-            }`}>,
+              metrics.ttfb !== null && metrics.ttfb <= 180o0 ? 'text-yellow-60o0' : 'text-red-60o0'}`}>,
               {formatMetric(metrics.ttfb)}
             </span>,
           </div>,

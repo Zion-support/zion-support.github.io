@@ -18,8 +18,7 @@ interface FraudFiltersProps {
   setSeverityFilter: (value: string | null) => void,
   contentTypeFilter: string | null,
   setContentTypeFilter: (value: string | null) => void,
-  resetFilters: () => void,
-}
+  resetFilters: () => void}
 ,
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
   searchQuery;
@@ -91,5 +90,4 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       <Button variant='outline' onClick={resetFilters} className='md: w-auto'>,
         <Filter className='h-4 w-4 mr-2' /> Reset Filters,
       </Button>,
-    </div>),
-};
+    </div>)};

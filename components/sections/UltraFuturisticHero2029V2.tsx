@@ -6,8 +6,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const heroStats = [
   { label: 'Services Delivered', value: '50o0+', icon: CheckCircle };
   { label: 'Client Satisfaction', value: '99.2%', icon: Star };
@@ -21,24 +20,21 @@ const featuredServices = [
     price: '$2,999/month';
     href: '/ai-business-predictor-pro';
     icon: Brain;
-    color: 'from-purple-60o0 via-pink-60o0 to-rose-60o0',
-  };
+    color: 'from-purple-60o0 via-pink-60o0 to-rose-60o0'};
   {
     name: 'Quantum Secure Communication';
     description: 'Unbreakable quantum encryption for enterprise';
     price: '$8,999/month';
     href: '/quantum-secure-communication-enterprise';
     icon: Shield;
-    color: 'from-blue-60o0 via-indigo-60o0 to-purple-60o0',
-  };
+    color: 'from-blue-60o0 via-indigo-60o0 to-purple-60o0'};
   {
     name: 'Space Mining Operations';
     description: 'Automated asteroid mining and resource extraction';
     price: '$75,999/month';
     href: '/space-mining-operations-platform';
     icon: Rocket;
-    color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0',
-  }
+    color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0'}
 ],
 export default function UltraFuturisticHero20o29V2() {
   return (
@@ -53,8 +49,7 @@ export default function UltraFuturisticHero20o29V2() {
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
           className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 rounded-full blur-3xl",
          />,
         <motion.div,
@@ -64,8 +59,7 @@ export default function UltraFuturisticHero20o29V2() {
           transition={{
             duration: 25;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
           className="absolute top-40 right-20 w-40 h-40 bg-gradient-to-r from-blue-50o0/20 to-cyan-50o0/20 rounded-full blur-3xl",
          />,
         <motion.div,
@@ -75,8 +69,7 @@ export default function UltraFuturisticHero20o29V2() {
           transition={{
             duration: 30;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
           className="absolute bottom-20 left-1/2 w-36 h-36 bg-gradient-to-r from-green-50o0/20 to-yellow-50o0/20 rounded-full blur-3xl",
          />,
       </div>,

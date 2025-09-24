@@ -59,20 +59,17 @@ class ErrorBoundary extends React.Component {
   BookOpen;
   Briefcase;
   Atom;
-} from 'lucide-react',
-} from 'lucide-react',
+} from 'lucide-react'} from 'lucide-react',
 interface FooterLink {
 interface FooterLink {
   label: string,
   href: string,
   description?: string,
   external?: boolean,
-,
 interface FooterSection {
 interface FooterSection {
   title: string,
-  links: FooterLink[],} from 'lucide-react',
-,
+  links: FooterLink[]} from 'lucide-react',
 const footerSections: FooterSection[] = [
   {
     title: 'Services';
@@ -92,33 +89,27 @@ const footerSections: FooterSection[] = [
       {
         label: 'Healthcare & Biotech',
         href: '/healthcare-solutions',
-        description: 'Medical technology',
-      }
+        description: 'Medical technology'}
       {
         label: 'Financial Services',
         href: '/solutions?industry=financial',
-        description: 'Fintech solutions',
-      }
+        description: 'Fintech solutions'}
       {
         label: 'Manufacturing',
         href: '/solutions?industry=manufacturing',
-        description: 'Industry 4.0',
-      }
+        description: 'Industry 4.0'}
       {
         label: 'Retail & E-commerce',
         href: '/solutions?industry=retail',
-        description: 'Digital commerce',
-      }
+        description: 'Digital commerce'}
       {
         label: 'Government',
         href: '/solutions?industry=government',
-        description: 'Public sector',
-      }
+        description: 'Public sector'}
       {
         label: 'Education',
         href: '/solutions?industry=education',
-        description: 'EdTech solutions',
-      }
+        description: 'EdTech solutions'}
   {
     title: 'Solutions',
     links: [
@@ -142,8 +133,7 @@ const footerSections: FooterSection[] = [
       {
         label: 'About Us',
         href: '/about',
-        description: 'Our mission and values',
-      }
+        description: 'Our mission and values'}
       { label: 'Careers', href: '/careers', description: 'Join our team' }
       { label: 'Contact', href: '/contact', description: 'Get in touch' }
     ]},  {
@@ -173,23 +163,19 @@ const footerSections: FooterSection[] = [
       {
         label: 'White Papers',
         href: '/white-papers',
-        description: 'In-depth research',
-      }
+        description: 'In-depth research'}
       {
         label: 'Webinars',
         href: '/webinars',
-        description: 'Educational content',
-      }
+        description: 'Educational content'}
       {
         label: 'Documentation',
         href: '/docs',
-        description: 'Technical guides',
-      }
+        description: 'Technical guides'}
       {
         label: 'Case Studies',
         href: '/case-studies',
-        description: 'Success stories',
-      }
+        description: 'Success stories'}
       { label: 'Support', href: '/support', description: 'Help & assistance' }
     ]}
   {
@@ -198,28 +184,23 @@ const footerSections: FooterSection[] = [
       {
         label: 'Healthcare',
         href: '/healthcare-solutions',
-        description: 'Medical technology',
-      }
+        description: 'Medical technology'}
       {
         label: 'Finance',
         href: '/financial-solutions',
-        description: 'Fintech solutions',
-      }
+        description: 'Fintech solutions'}
       {
         label: 'Manufacturing',
         href: '/manufacturing-ai-solutions',
-        description: 'Industry 4.0',
-      }
+        description: 'Industry 4.0'}
       {
         label: 'Government',
         href: '/government-technology-solutions',
-        description: 'Public sector',
-      }
+        description: 'Public sector'}
       {
         label: 'Education',
         href: '/education-technology-solutions',
-        description: 'EdTech solutions',
-      }
+        description: 'EdTech solutions'}
     ]}
 ],
 const socialLinks = [
@@ -227,20 +208,17 @@ const socialLinks = [
     icon: <Linkedin className='w-5 h-5' />,
     href: 'https://linkedin.com/company/ziontechgroup',
     label: 'LinkedIn',
-    external: true,
-  }
+    external: true}
   {
     icon: <Twitter className='w-5 h-5' />,
     href: 'https://twitter.com/ziontechgroup',
     label: 'Twitter',
-    external: true,
-  }
+    external: true}
   {
     icon: <Github className='w-5 h-5' />,
     href: 'https://github.com/ziontechgroup',
     label: 'GitHub',
-    external: true,
-  }
+    external: true}
 ],
 const quickLinks = [
   { name: 'About Us', href: '/about', icon: <Users className='w-4 h-4' /> }
@@ -248,13 +226,11 @@ const quickLinks = [
   {
     name: 'Support',
     href: '/support',
-    icon: <HelpCircle className='w-4 h-4' />,
-  }
+    icon: <HelpCircle className='w-4 h-4' />}
   {
     name: 'Documentation',
     href: '/docs',
-    icon: <FileText className='w-4 h-4' />,
-  }
+    icon: <FileText className='w-4 h-4' />}
   { name: 'API Reference', href: '/api', icon: <Code className='w-4 h-4' /> }
   { name: 'Status', href: '/status', icon: <TrendingUp className='w-4 h-4' /> }],
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
@@ -273,8 +249,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   external?: boolean}
 interface FooterSection {
   title: string;
-  links: FooterLink[],
-}
+  links: FooterLink[]}
 const footer_sections: FooterSection[] = [
   {
     title: 'Services';
@@ -529,7 +504,6 @@ const footer_sections: FooterSection[] = [
       ];
     };
   ],
-,
   const social_links = [
     {
       icon: Twitter;
@@ -557,8 +531,7 @@ const footer_sections: FooterSection[] = [
   };
 interface FooterSection {
   title: string;
-  links: FooterLink[],
-}
+  links: FooterLink[]}
 ,
 const footerSections: FooterSection[] = [
   {
@@ -831,8 +804,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
               duration: 15 + Math.random() * 10,
               repeat: -1,
               delay: Math.random() * 8,
-              ease: 'easeInOut',
-            }}
+              ease: 'easeInOut'}}
           />))}
 ,
         {/* Gradient Overlays */}
@@ -1372,8 +1344,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                 </div>,
               </div>,
             </div>,
-          </div>,
-};
+          </div>};
 export default UltraAdvancedFuturisticFooter2025;      </motion && motion.button>,
     </footer>),
       {/* Scroll to Top Button */}
@@ -1390,8 +1361,7 @@ export default UltraAdvancedFuturisticFooter2025;      </motion && motion.button
       >,
         <ArrowUp className="w-6 h-6 mx-auto" />,
       </motion.button>,
-    </footer>),
-}
+    </footer>)}
 };
 export default UltraAdvancedFuturisticFooter2025;      </motion.button>,
     </footer>)}

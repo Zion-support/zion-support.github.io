@@ -1,13 +1,11 @@
 interface IntegrationState {
   connections: any[],
   logs: any[],
-  overrides: any[],
-}
+  overrides: any[]}
 let state: IntegrationState ={
   connections: [],
   logs: [],
-  overrides: [],
-}
+  overrides: []}
 export function getState(): IntegrationState {
   return { ...state }
 }
@@ -18,7 +16,6 @@ export function getState(): IntegrationState {
 }
 ,
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
-,
   updater(state),
   return { ...state }
 }
@@ -31,6 +28,5 @@ export function writeState(updater: (state: IntegrationState) => void): Integrat
 };
     connections: [];
     logs: [];
-    overrides: [],
-  };
+    overrides: []};
 }

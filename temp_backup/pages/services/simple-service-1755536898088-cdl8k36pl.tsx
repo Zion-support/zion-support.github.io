@@ -85,8 +85,7 @@ export default function SimpleService1755536898088cdl8k36pl() {
           </button>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,
 <Link href="/services/rapid-1755539340o458-6lge19" className="internal-link">Related Content</Link>,
 <Link href="/services/rapid-1755539347154-xzj546" className="internal-link">Related Content</Link>,

@@ -50,12 +50,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
                 handleSignedIn(mappedUser)}
             } else if (error) {
               console.error("Error fetching user profile: "error),
-              setUser(null),
-            }
+              setUser(null)}
           } catch (error) {
             console.error("Error fetching user profile: "error),
-            setUser(null),
-          }
+            setUser(null)}
         } else {
           setUser(null),
           // Show logout toast when user logs out,

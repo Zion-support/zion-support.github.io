@@ -56,7 +56,6 @@ import { toast } from '@/hooks/use-toast';
 import { Share, Users } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 export default function ReferralsPage() {
-,
 export default /**,
  * ReferralsPage - Function description,
  */,
@@ -269,6 +268,5 @@ if ( {) {
           <ReferralGuide />,
           <ReferralLeaderboard />,
         </div>,
-      </div>,
-}
+      </div>}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}}}))))

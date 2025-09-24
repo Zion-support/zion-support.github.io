@@ -40,22 +40,19 @@ const BusinessSolutionsShowcase20o27 = () => {
           description: 'Advanced analytics and insights powered by machine learning algorithms';
           features: ['Real-time 'Analytics', 'Predictive 'Modeling', 'Custom Dashboards'];
           icon: BarChart3;
-          roi: '30o0% ROI',
-        };
+          roi: '30o0% ROI'};
         {
           title: 'Enterprise Security Suite';
           description: 'Comprehensive security solutions protecting your digital assets';
           features: ['Zero-Trust 'Architecture', 'AI Threat 'Detection', 'Compliance Management'];
           icon: Shield;
-          roi: '99.9% Security',
-        };
+          roi: '99.9% Security'};
         {
           title: 'Cloud Infrastructure Management';
           description: 'Scalable cloud solutions optimized for enterprise workloads';
           features: ['Multi-Cloud 'Support', 'Auto-'Scaling', 'Cost Optimization'];
           icon: Cloud;
-          roi: '50% Cost Reduction',
-        }
+          roi: '50% Cost Reduction'}
       ]};
     startup: {
       title: 'Startup Solutions';
@@ -68,22 +65,19 @@ const BusinessSolutionsShowcase20o27 = () => {
           description: 'Fast-track your product development with our proven frameworks';
           features: ['2-Week 'Delivery', 'Scalable 'Architecture', 'Technical Support'];
           icon: Zap;
-          roi: '80% Faster Launch',
-        };
+          roi: '80% Faster Launch'};
         {
           title: 'Growth Analytics Platform';
           description: 'Data-driven insights to accelerate your startup growth';
           features: ['User Behavior 'Analysis', 'Conversion 'Tracking', 'Growth Hacking Tools'];
           icon: TrendingUp;
-          roi: '20o0% Growth Rate',
-        };
+          roi: '20o0% Growth Rate'};
         {
           title: 'Automated Operations';
           description: 'Streamline operations with intelligent automation tools';
           features: ['Process 'Automation', 'Workflow 'Optimization', 'Resource Management'];
           icon: Settings;
-          roi: '60% Efficiency Gain',
-        }
+          roi: '60% Efficiency Gain'}
       ]};
     smb: {
       title: 'SMB Solutions';
@@ -96,22 +90,19 @@ const BusinessSolutionsShowcase20o27 = () => {
           description: 'Complete digital transformation tailored for SMBs';
           features: ['Process 'Digitization', 'Customer 'Experience', 'Operational Efficiency'];
           icon: Lightbulb;
-          roi: '150% Productivity',
-        };
+          roi: '150% Productivity'};
         {
           title: 'Customer Relationship Management';
           description: 'AI-powered CRM to enhance customer relationships';
           features: ['Lead 'Management', 'Sales 'Automation', 'Customer Insights'];
           icon: Target;
-          roi: '40% Sales Increase',
-        };
+          roi: '40% Sales Increase'};
         {
           title: 'Financial Management Suite';
           description: 'Comprehensive financial tools for better business management';
           features: ['Expense 'Tracking', 'Revenue 'Analytics', 'Financial Forecasting'];
           icon: BarChart3;
-          roi: '25% Cost Savings',
-        }
+          roi: '25% Cost Savings'}
       ]}
   };
   const testimonials = [
@@ -121,24 +112,21 @@ const BusinessSolutionsShowcase20o27 = () => {
       company: "Fortune 50o0";
       content: "Zion Tech Group transformed our entire digital infrastructure. The results exceeded our expectations with 30o0% ROI in just 6 months.";
       rating: 5;
-      avatar: "SJ",
-    };
+      avatar: "SJ"};
     {
       name: "Michael Chen";
       role: "FounderStartupXYZ";
       company: "Series A Startup";
       content: "Their rapid MVP development helped us launch 3 months ahead of schedule. The quality and speed were incredible.";
       rating: 5;
-      avatar: "MC",
-    };
+      avatar: "MC"};
     {
       name: "Emily Rodriguez";
       role: "Operations DirectorLocalBiz";
       company: "SMB";
       content: "The digital transformation package revolutionized our operations. 'We', 're now 60% more efficient and our customers love the new experience.";
       rating: 5;
-      avatar: "ER",
-    }
+      avatar: "ER"}
   ],
   const stats = [
     { number: "50o0+"label: "Projects Completed"icon: CheckCircle };
@@ -181,8 +169,7 @@ const BusinessSolutionsShowcase20o27 = () => {
               className={`flex items-center gap-3 px-6 py-4 rounded-2xl font-medium transition-all duration-30o0 ${
                 activeCategory === key,
                   ? 'bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white shadow-lg shadow-blue-50o0/25',
-                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white',
-              }`}
+                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white'}`}
             >,
               <category.icon className="w-6 h-6"  />,
               {category.title}
@@ -337,6 +324,5 @@ const BusinessSolutionsShowcase20o27 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default BusinessSolutionsShowcase20o27;

@@ -122,6 +122,5 @@ const NewContentShowcase20o25Banner = () => {
           </p>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NewContentShowcase20o25Banner;

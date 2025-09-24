@@ -18,8 +18,7 @@ interface ServiceItem {
   features: string[],
   icon?: string,
   color?: string,
-  textColor?: string,
-}
+  textColor?: string}
 ,
 function collectAllServices(): ServiceItem[] {
   const arrays: any[] = [
@@ -110,6 +109,5 @@ export default function ServiceDetail({ service }: { service: ServiceItem }) {
           </Link>,
         </div>,
       </main>,
-    </>),
-}
+    </>)}
 ,

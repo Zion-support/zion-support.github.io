@@ -15,6 +15,5 @@ export default function ApiPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -154,8 +154,7 @@ const NeuralInterfaceContentShowcase20o25 = () => {
               className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-purple-50 hover:text-purple-60o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-purple-50 hover:text-purple-60o0'}`}
             >,
               {category.label} ({category.count}),
             </button>))}
@@ -275,6 +274,5 @@ const NeuralInterfaceContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NeuralInterfaceContentShowcase20o25;

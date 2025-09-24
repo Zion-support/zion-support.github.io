@@ -6,8 +6,7 @@ export type TalentRateRecommenderProps = {
   skills: string[],
   yearsExperience: number,
   location: string,
-  onApplySuggestion?: (hourly: number, min: number, max: number) => void,
-};
+  onApplySuggestion?: (hourly: number, min: number, max: number) => void};
 export default function TalentRateRecommender(
   props: TalentRateRecommenderProps) {
   const [loading, setLoading] = useState(false),
@@ -17,8 +16,7 @@ export default function TalentRateRecommender(
     min: number,
     max: number,
     confidence: 'Low' | 'Medium' | 'High',
-    rationale: string,
-  } | null>(null),
+    rationale: string} | null>(null),
   async function fetchSuggestion() {
     setLoading(true),
     setError(null),

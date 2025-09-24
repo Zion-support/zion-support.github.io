@@ -92,6 +92,5 @@ const EnterpriseFoundationModelsPracticalGuide20o25 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default EnterpriseFoundationModelsPracticalGuide20o25;

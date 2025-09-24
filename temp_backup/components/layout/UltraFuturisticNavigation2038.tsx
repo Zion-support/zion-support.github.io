@@ -63,8 +63,7 @@ interface NavigationItem {
   title?: string,
   featured?: boolean,
   category?: string,
-  color?: string,
-}
+  color?: string}
 ,
 function normalizeHref(href: string): string {
   if (!href) return href,
@@ -73,8 +72,7 @@ function normalizeHref(href: string): string {
     href.startsWith('https://') ||,
     href.startsWith('mailto:') ||,
     href.startsWith('tel:')) {
-    return href,
-  }
+    return href}
   if (!href.startsWith('/')) return href,
   const hasQueryOrHash = href.includes('?') || href.includes('#'),
   if (hasQueryOrHash) return href,
@@ -366,8 +364,7 @@ export default function UltraFuturisticNavigation20o38() {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name),
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
   const closeAllDropdowns = () => {
     setActiveDropdown(null),
     setIsOpen(false)};
@@ -473,8 +470,7 @@ export default function UltraFuturisticNavigation20o38() {
                               className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-20o0 group ${
                                 child.featured,
                                   ? 'bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 border border-white/20',
-                                  : 'hover: bg-white/5',
-                              }`}
+                                  : 'hover: bg-white/5'}`}
                             >,
                               <div
                                 className={`w-8 h-8 rounded-lg flex items-center justify-center ${

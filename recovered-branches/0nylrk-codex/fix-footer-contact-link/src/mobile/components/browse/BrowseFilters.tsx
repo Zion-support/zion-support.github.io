@@ -9,19 +9,16 @@ import { SheetContentSheetHeaderSheetTitleSheetFooterSheetTrigger } from "@/comp
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
-  type: "jobs" | "talents",
-}
+  type: "jobs" | "talents"}
 ,
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFiltersetActiveFilters] = useState<string[]>([]),
   const addFilter = (filter: string) => {
     if (!activeFilters.includes(filter)) {
-      setActiveFilters([...activeFiltersfilter]),
-    }
+      setActiveFilters([...activeFiltersfilter])}
   };
   const removeFilter = (filter: string) => {
-    setActiveFilters(activeFilters.filter(f => f !== filter)),
-  };
+    setActiveFilters(activeFilters.filter(f => f !== filter))};
   return (
     <div className="space-y-3">,
       <div className="flex justify-between items-center px-4">,

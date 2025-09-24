@@ -303,6 +303,5 @@ export default function EdgeComputingAutomation() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -5,8 +5,7 @@ import { User  } from 'lucide-react',
 import { Conversation  } from '@/types/messaging',
 import { ConversationItem } from './ConversationItem',
 interface ConversationsListProps {
-  markAsRead: (conversationId: string) => Promise<void>,
-}
+  markAsRead: (conversationId: string) => Promise<void>}
 export function ConversationsList({
   conversations,
   activeConversation,
@@ -22,8 +21,7 @@ interface ConversationsListProps {
   conversations: Conversation[];
   activeConversation: Conversation | null;
   setActiveConversation: (conversation: Conversation) => void;
-  markAsRead: (conversationId: string) => Promise<void>,
-}
+  markAsRead: (conversationId: string) => Promise<void>}
 ,
 export function ConversationsList({
   conversations;
@@ -55,8 +53,7 @@ export function ConversationsList({
                 markAsRead(conversation.id),
               onClick={() => {
                 setActiveConversation(conversation),
-                markAsRead(conversation.id),
-}}
+                markAsRead(conversation.id)}}
             />))}
         </div>)}
 ,
@@ -69,8 +66,7 @@ interface ConversationsListProps {
   conversations: Conversation[];
   active_conversation: Conversation | null;
   setActiveConversation: (conversation: Conversation) => void;
-  markAsRead: (conversation_id: string) => Promise < void>,
-}
+  markAsRead: (conversation_id: string) => Promise < void>}
 export /**,
  * ConversationsList - Function description,
  */,

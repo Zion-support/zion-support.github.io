@@ -90,8 +90,7 @@ export default function WebsiteAnalytics() {
         'Email support';
         'Standard reports';
         'Mobile app access'];
-      popular: false,
-};
+      popular: false};
     {
       name: 'Professional';
       price: '$79';
@@ -105,8 +104,7 @@ export default function WebsiteAnalytics() {
         'Custom reports';
         'E-commerce tracking';
         'API access'];
-      popular: true,
-};
+      popular: true};
     {
       name: 'Business';
       price: '$199';
@@ -120,8 +118,7 @@ export default function WebsiteAnalytics() {
         'White-label reports';
         'Advanced integrations';
         'SLA guarantee'];
-      popular: false,
-}
+      popular: false}
   ],
   const benefits = [
     {
@@ -131,18 +128,15 @@ export default function WebsiteAnalytics() {
     {
       icon: Zap;
       title: 'Real-time Data';
-      description: 'Get instant updates on your website performance and visitor behavior',
-};
+      description: 'Get instant updates on your website performance and visitor behavior'};
     {
       icon: Target;
       title: 'Goal-Focused';
-      description: 'Track what matters most to your business with custom goal setting',
-};
+      description: 'Track what matters most to your business with custom goal setting'};
     {
       icon: Smartphone;
       title: 'Mobile Access';
-      description: 'Monitor your analytics on-the-go with our mobile-optimized interface',
-}
+      description: 'Monitor your analytics on-the-go with our mobile-optimized interface'}
   ],
   return (
     <>,

@@ -30,15 +30,13 @@ export interface EmergingTechBreakthrough20o30 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const emergingTechBreakthroughs20o30: EmergingTechBreakthrough20o30[] = [
   // Neuromorphic Computing,
@@ -83,15 +81,13 @@ export const emergingTechBreakthroughs20o30: EmergingTechBreakthrough20o30[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production-ready neuromorphic computing platform with brain-inspired architecture and cognitive computing capabilities.';
     launchDate: '20o24-10-0o1';
     customers: 18;
     rating: 4.9;
-    reviews: 9,
-  };
+    reviews: 9};
   // Photonic Computing,
   {
     id: 'photonic-computing-infrastructure';
@@ -134,15 +130,13 @@ export const emergingTechBreakthroughs20o30: EmergingTechBreakthrough20o30[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production-ready photonic computing infrastructure with light-speed processing and quantum communication capabilities.';
     launchDate: '20o24-09-0o1';
     customers: 12;
     rating: 4.8;
-    reviews: 6,
-  };
+    reviews: 6};
   // Swarm Robotics,
   {
     id: 'swarm-robotics-orchestration';
@@ -185,15 +179,13 @@ export const emergingTechBreakthroughs20o30: EmergingTechBreakthrough20o30[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production-ready swarm robotics platform with advanced coordination algorithms and collective intelligence capabilities.';
     launchDate: '20o24-08-15';
     customers: 34;
     rating: 4.7;
-    reviews: 18,
-  };
+    reviews: 18};
   // Brain-Computer Interfaces,
   {
     id: 'brain-computer-interface-platform';
@@ -236,15 +228,13 @@ export const emergingTechBreakthroughs20o30: EmergingTechBreakthrough20o30[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production-ready BCI platform with advanced neural processing, safety protocols, and accessibility enhancement capabilities.';
     launchDate: '20o24-0o7-0o1';
     customers: 8;
     rating: 5.0;
-    reviews: 4,
-  };
+    reviews: 4};
   // Quantum Machine Learning,
   {
     id: 'quantum-machine-learning-platform';
@@ -287,15 +277,13 @@ export const emergingTechBreakthroughs20o30: EmergingTechBreakthrough20o30[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production-ready quantum ML platform with quantum-enhanced algorithms and hybrid quantum-classical computing capabilities.';
     launchDate: '20o24-0o6-0o1';
     customers: 15;
     rating: 4.9;
-    reviews: 8,
-  };
+    reviews: 8};
   // Synthetic Biology,
   {
     id: 'synthetic-biology-automation-platform';
@@ -338,13 +326,11 @@ export const emergingTechBreakthroughs20o30: EmergingTechBreakthrough20o30[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production-ready synthetic biology platform with automated research workflows, DNA design, and biological optimization capabilities.';
     launchDate: '20o24-0o5-0o1';
     customers: 22;
     rating: 4.8;
-    reviews: 12,
-  }
+    reviews: 12}
 ],

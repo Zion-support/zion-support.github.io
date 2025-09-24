@@ -171,8 +171,7 @@ const UltimateContentRevolutionShowcase20o25 = () => {
                 className={`px-6 py-2 rounded-md font-semibold transition-colors ${
                   activeFilter === category,
                     ? 'bg-purple-60o0 text-white',
-                    : 'text-gray-60o0 hover: text-gray-90o0',
-                }`}
+                    : 'text-gray-60o0 hover: text-gray-90o0'}`}
               >,
                 {category === 'all' ? 'All Content' : category}
               </button>))}
@@ -253,6 +252,5 @@ const UltimateContentRevolutionShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateContentRevolutionShowcase20o25;

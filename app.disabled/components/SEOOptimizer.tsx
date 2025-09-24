@@ -15,13 +15,11 @@ interface SEOData {
   publishedTime?: string,
   modifiedTime?: string,
   section?: string,
-  tags?: string[],
-}
+  tags?: string[]}
 ,
 interface SEOOptimizerProps {
   seoData: SEOData,
-  children?: React.ReactNode,
-}
+  children?: React.ReactNode}
 ,
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ seoData, children }) => {
   const {
@@ -239,13 +237,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ seoData, children }) => {
         list.getEntries().forEach(entry => {
           if (entry.entryType === 'largest-contentful-paint') {
             // Track LCP,
-            // console.log('LCP:', entry.startTime)}
+            // // console.log('LCP:', entry.startTime)}
           if (entry.entryType === 'first-input') {
             // Track FID,
-            // console.log('FID:', entry.processingStart - entry.startTime)}
+            // // console.log('FID:', entry.processingStart - entry.startTime)}
           if (entry.entryType === 'layout-shift') {
             // Track CLS,
-            // console.log('CLS:', entry.value)}
+            // // console.log('CLS:', entry.value)}
         })}),
       observer.observe({
         entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'];

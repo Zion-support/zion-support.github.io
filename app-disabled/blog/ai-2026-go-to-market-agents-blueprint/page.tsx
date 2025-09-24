@@ -83,6 +83,5 @@ const GTMAgentsBlueprintBlog: React.FC = () => {
           </div>,
         </div>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default GTMAgentsBlueprintBlog;

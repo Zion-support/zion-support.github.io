@@ -106,8 +106,7 @@ const InteractiveAIAssessmentTool = () => {
       challenges: answers.current_challenges || [];
       goals: answers.goals || [];
       budget: answers.budget_range || 'Not sure yet';
-      timeline: answers.timeline || 'Flexible timeline',
-    };
+      timeline: answers.timeline || 'Flexible timeline'};
     // Calculate AI maturity score,
     let maturityScore = 0,
     const readinessMap ={
@@ -237,8 +236,7 @@ const InteractiveAIAssessmentTool = () => {
             </div>,
           </div>,
         </div>,
-      </section>),
-  }
+      </section>)}
 ,
   const currentQuestion = questions[currentStep],
   return (

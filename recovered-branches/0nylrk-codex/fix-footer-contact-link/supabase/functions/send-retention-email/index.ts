@@ -20,8 +20,7 @@ interface EmailData {
   days_inactive?: number,
   onboarding_status?: any,
   job_id?: string,
-  job_title?: string,
-}
+  job_title?: string}
 ,
 serve(async req => {
   // Handle CORS preflight requests,

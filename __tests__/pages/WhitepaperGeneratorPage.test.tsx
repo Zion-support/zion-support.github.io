@@ -2,15 +2,13 @@ import React from react',import { render, screen, fireEvent, waitFor, act } from
 // --- Mocks ---,
 jest.mock('@/integrations/supabase/client', () => ({'  supabase: {
     functions: {
-      invoke: jest.fn(),
-    }
+      invoke: jest.fn()}
   }
 })),
 jest.mock('sonner', () => ({'  toast: {
     success: jest.fn();
     error: jest.fn();
-    info: jest.fn(),
-  }
+    info: jest.fn()}
 })),
 jest.mock('react-markdown', () => {'  const MockReactMarkdown = (props: { children: React.ReactNode }) => <div data-testid="mock-markdown">{props.children}</div>,"  MockReactMarkdown.displayName = MockReactMarkdown',  return MockReactMarkdown}),
 jest.mock('@/components/WhitepaperSectionEditor', () => {'  const MockWhitepaperSectionEditor = ({ title, content, onContentChange }: any) => (
@@ -60,8 +58,7 @@ describe('WhitepaperGeneratorPage', () => {'  beforeEach(() => {
   // ... (similar tests for other basic input fields like supply, useCases, etc.),
   describe('"Generate Draft" button', () => {'    test('calls generate-whitepaper, renders sections on success', async () => {'      const mockGeneratedDraft = "## Section 1\nContent 1\n## Section 2\nContent 2","      mockSupabaseInvoke.mockResolvedValueOnce({""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
         data: { whitepaperDraft: mockGeneratedDraft };
-        error: null,
-      }),
+        error: null}),
       render(<WhitepaperGeneratorPage  />),
       const generateButton = screen.getByRole('button', { name: /Generate Whitepaper Draft/i }),      fireEvent.click(generateButton),
       expect(generateButton).toBeDisabled(),
@@ -74,8 +71,7 @@ describe('WhitepaperGeneratorPage', () => {'  beforeEach(() => {
         data: null;
         error: { message:' 'Generation failed' }}),
       render(<WhitepaperGeneratorPage  />),
-      fireEvent.click(screen.getByRole('button', { name: /Generate Whitepaper Draft/i })),      await waitFor(() => expect(screen.getByText(/Supabase function error: Generation failed/i)).toBeInTheDocument()),
-    })}),
+      fireEvent.click(screen.getByRole('button', { name: /Generate Whitepaper Draft/i })),      await waitFor(() => expect(screen.getByText(/Supabase function error: Generation failed/i)).toBeInTheDocument())})}),
   describe('Download Buttons', () => {'    // Simulate that sections have been generated,
     // const _setupPageWithSections = () => {
     //     render(<WhitepaperGeneratorPage  />),
@@ -132,8 +128,7 @@ describe('WhitepaperGeneratorPage', () => {'  beforeEach(() => {
       const newToggleButton = screen.getByRole('button', { name: /Make Private/i }),      fireEvent.click(newToggleButton),
       await waitFor(() => expect(mockSupabaseInvoke).toHaveBeenCalledWith('set-shared-whitepaper-public-status', {'        body: { whitepaperId: shareId, isPublic: false }
       })),
-      await waitFor(() => expect(screen.getByRole('button', { name: /Make Public/i })).toBeInTheDocument()),       expect(screen.getByText(/Currently: Private/i)).toBeInTheDocument(),
-    })}),
+      await waitFor(() => expect(screen.getByRole('button', { name: /Make Public/i })).toBeInTheDocument()),       expect(screen.getByText(/Currently: Private/i)).toBeInTheDocument()})}),
   describe('"Submit to Counsel" Button', () => {'     beforeEach(async () => {
         // Ensure sections are generated,
         mockSupabaseInvoke.mockResolvedValueOnce({ data: { whitepaperDraft: "## Counsel\nContent" }, error: null }),"        render(<WhitepaperGeneratorPage  />),""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",

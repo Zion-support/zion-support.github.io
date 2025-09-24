@@ -99,6 +99,5 @@ const RevolutionaryTech20o25PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryTech20o25PromotionBanner;

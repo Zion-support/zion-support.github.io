@@ -300,8 +300,7 @@ export default function Services() {
 					</div>,
 				</div>,
 			</section>,
-		</>),
-}
+		</>)}
 ,
 const Services-broken: React.FC<Services-brokenProps> = ({ className }) => {
   return (

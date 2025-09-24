@@ -380,6 +380,5 @@ export default function InnovationTracker() {
           </section>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

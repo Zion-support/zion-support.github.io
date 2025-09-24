@@ -218,6 +218,5 @@ export default function AutonomousSystemsShowcase20o25() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

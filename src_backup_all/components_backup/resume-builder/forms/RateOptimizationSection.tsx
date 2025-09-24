@@ -17,8 +17,7 @@ interface RateOptimizationSectionProps {
   skills: string[],
   yearsExperience: number,
   location?: string,
-  rateType: 'hourly' | 'fixed',
-}
+  rateType: 'hourly' | 'fixed'}
 ,
 export const RateOptimizationSection: React.FC<,
   RateOptimizationSectionProps> = ({ control, setValue, skills, yearsExperience, location, rateType }) => {

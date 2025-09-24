@@ -15,6 +15,5 @@ export default function InnovationLabPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

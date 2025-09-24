@@ -76,6 +76,5 @@ export default function AI20o25RevolutionaryTrendsBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

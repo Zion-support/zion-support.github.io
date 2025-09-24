@@ -117,6 +117,5 @@ const NotFound: NextPage = () => {
           </div>,
         </div>,
       </div>,
-    </>),
-};
+    </>)};
 export default NotFound;

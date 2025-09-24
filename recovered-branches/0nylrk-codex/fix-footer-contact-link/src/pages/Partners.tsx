@@ -23,7 +23,6 @@ import { PartnerDashboard } from "@/components/partners/PartnerDashboard";
 import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard";
 import { PartnerResources } from "@/components/partners/PartnerResources";
 export default function Partners() {
-,
   const [activeTab, setActiveTab] = useState("overview"),
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),

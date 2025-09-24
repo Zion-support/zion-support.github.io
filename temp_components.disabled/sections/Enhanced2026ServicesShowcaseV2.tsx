@@ -15,8 +15,7 @@ const Enhanced20o26ServicesShowcaseV2: React.FC = () => {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -27,8 +26,7 @@ const Enhanced20o26ServicesShowcaseV2: React.FC = () => {
       scale: 1;
       transition: {
         duration: 0.6;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   const ServiceCard: React.FC<{ service: any, index: number }> = ({ service, index }) => (
@@ -227,6 +225,5 @@ const Enhanced20o26ServicesShowcaseV2: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default Enhanced20o26ServicesShowcaseV2;

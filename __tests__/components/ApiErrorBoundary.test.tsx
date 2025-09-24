@@ -3,10 +3,8 @@ import React from react',import { render, screen, fireEvent, waitFor } from @tes
 jest.mock('@sentry/nextjs', () => ({'  withScope: jest.fn((callback) => callback({
     setTag: jest.fn();
     setContext: jest.fn();
-    setLevel: jest.fn(),
-  }));
-  captureException: jest.fn(),
-})),
+    setLevel: jest.fn()}));
+  captureException: jest.fn()})),
 // Component that throws an error,
 const ThrowError = ({ shouldError }: { _shouldError: boolean }) => {
   if (shouldError) {
@@ -39,7 +37,7 @@ describe('ApiErrorBoundary', () => {'  let _queryClient: QueryClient,
       </QueryClientProvider>),
     expect(screen.getByText('Something went wrong')).toBeInTheDocument(),    expect(screen.getByText('An unexpected error occurred while loading the page.')).toBeInTheDocument(),    expect(screen.getByRole('button', { name: /try again/i })).toBeInTheDocument(),    expect(screen.getByRole('button', { name: /reload page/i })).toBeInTheDocument()}),
   it('shows network error message for network-related errors', () => {'    const NetworkError = () => {
-      throw new Error('fetch failed: network error'),    };
+      throw new Error('fetch failed: network error')};
     render(
       <QueryClientProvider client={queryClient}>,
         <ApiErrorBoundary queryClient={queryClient}>,

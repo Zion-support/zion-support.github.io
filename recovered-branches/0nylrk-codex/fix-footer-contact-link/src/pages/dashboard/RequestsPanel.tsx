@@ -48,8 +48,7 @@ export default function RequestsPanel() {
     toggleArchive} = useTalentQuotes(),
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote),
-    setShowDetails(true),
-  } = useTalentQuotes();
+    setShowDetails(true)} = useTalentQuotes();
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote);
     setShowDetails(true);

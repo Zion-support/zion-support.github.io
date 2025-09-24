@@ -5,8 +5,7 @@ class_name?: string}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5,
 export default function Docs({ }: DocsProps) {
 ursor/integrate-build-improve-and-re-verify-8f7d: pages_backup_conflicts/docs.tsx,
-  className?: string,
-}
+  className?: string}
 export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
 origin/main,
   return (
@@ -38,13 +37,11 @@ export default function ModernNavigation(): any ({}: ModernNavigationProps) {
       <p>This component is currently under development.</p>,
     </div>),
 :ModernNavigation.tsx}
-ursor/integrate-build-improve-and-re-verify-8f7d: pages_backup_conflicts/docs.tsx,
-}
+ursor/integrate-build-improve-and-re-verify-8f7d: pages_backup_conflicts/docs.tsx}
 }
 ursor/add-new-services-and-deploy-updates-0o462,
 ursor/fix-syntax-push-and-merge-to-main-40de,
 :ModernNavigation.tsx,
 origin/cursor/integrate-build-improve-and-re-verify-c7b5,
-ursor/integrate-build-improve-and-re-verify-8f7d: pages_backup_conflicts/docs.tsx,
-}
+ursor/integrate-build-improve-and-re-verify-8f7d: pages_backup_conflicts/docs.tsx}
 origin/main)

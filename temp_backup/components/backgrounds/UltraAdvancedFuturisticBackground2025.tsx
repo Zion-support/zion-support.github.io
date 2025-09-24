@@ -27,8 +27,7 @@ export default function UltraAdvancedFuturisticBackground20o25({
     type: 'particle' | 'wave' | 'quantum' | 'neon' | 'holographic' | 'energy' | 'matrix',
     rotation: number,
     rotationSpeed: number,
-    pulsePhase: number,
-  }>>([]),
+    pulsePhase: number}>>([]),
   // Enhanced theme-based color schemes,
   const getThemeColors = useCallback(() => {
     switch (theme) {
@@ -100,8 +99,7 @@ export default function UltraAdvancedFuturisticBackground20o25({
         type: particleTypes[Math.floor(Math.random() * particleTypes.length)] as any;
         rotation: Math.random() * Math.PI * 2;
         rotationSpeed: (Math.random() - 0.5) * 0.1;
-        pulsePhase: Math.random() * Math.PI * 2,
-      })}
+        pulsePhase: Math.random() * Math.PI * 2})}
   }, [intensity, getThemeColors]),
   // Enhanced animation loop with better performance,
   const animate = useCallback(() => {
@@ -247,8 +245,7 @@ export default function UltraAdvancedFuturisticBackground20o25({
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute bottom-20 right-20 w-24 h-24 border border-purple-40o0/20 rounded-full",
@@ -259,8 +256,7 @@ export default function UltraAdvancedFuturisticBackground20o25({
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         {/* Energy waves */}
         <motion.div,
@@ -271,8 +267,7 @@ export default function UltraAdvancedFuturisticBackground20o25({
           transition={{
             duration: 4;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-0 left-3/4 h-full w-px bg-gradient-to-b from-transparent via-pink-40o0 to-transparent",
@@ -282,8 +277,7 @@ export default function UltraAdvancedFuturisticBackground20o25({
             duration: 6;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 3,
-          }}
+            delay: 3}}
          />,
         {/* Floating Data Points */}
         <motion.div,
@@ -294,8 +288,7 @@ export default function UltraAdvancedFuturisticBackground20o25({
           transition={{
             duration: 5;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         >,
           0o1.10o1.0o10,
         </motion.div>,
@@ -307,8 +300,7 @@ export default function UltraAdvancedFuturisticBackground20o25({
           transition={{
             duration: 7;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         >,
           QUANTUM_0o01,
         </motion.div>,
@@ -321,8 +313,7 @@ export default function UltraAdvancedFuturisticBackground20o25({
           transition={{
             duration: 25;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         >,
           <div className="w-full h-full border border-cyan-40o0/30 rounded-full"></div>,
           <div className="absolute inset-4 border border-purple-40o0/30 rounded-full"></div>,
@@ -336,8 +327,7 @@ export default function UltraAdvancedFuturisticBackground20o25({
           transition={{
             duration: 3;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         >,
           <svg className="w-full h-full" viewBox="0 0 120o0 120" preserveAspectRatio="none">,
             <path

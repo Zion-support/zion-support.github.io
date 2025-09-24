@@ -81,6 +81,5 @@ export default function Page() {
           Evaluation Harness,
         </Link>,
       </div>,
-    </main>),
-}
+    </main>)}
 ,

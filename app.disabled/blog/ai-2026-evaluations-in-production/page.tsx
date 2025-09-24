@@ -52,6 +52,5 @@ export default function EvaluationsInProductionArticle() {
           More articles,
         </Link>,
       </div>,
-    </main>),
-}
+    </main>)}
 ,

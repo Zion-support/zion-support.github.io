@@ -36,28 +36,23 @@ export default function AccessibilityEnhancer20o26() {
       skipLink.href = '#main-content',
       skipLink.textContent = 'Skip to main content',
       skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-blue-60o0 focus:text-white focus:px-4 focus:py-2 focus:rounded',
-      document.body.insertBefore(skipLinkdocument.body.firstChild),
-    };
+      document.body.insertBefore(skipLinkdocument.body.firstChild)};
     // Improve color contrast,
     const improveColorContrast = () => {
       const style = document.createElement('style'),
       style.textContent = `,
         .banner.showcase {
-          color-scheme: light dark,
-        }
+          color-scheme: light dark}
 ,
         .text-gray-60o0 {
-          color: #374151 !important,
-        }
+          color: #374151 !important}
 ,
         .text-gray-70o0 {
-          color: #1f2937 !important,
-        }
+          color: #1f2937 !important}
 ,
         @media (prefers-contrast: high) {
           .banner.showcase {
-            border: 2px solid currentColor,
-          }
+            border: 2px solid currentColor}
         }
       `,
       document.head.appendChild(style)};
@@ -81,8 +76,7 @@ export default function AccessibilityEnhancer20o26() {
       improveFocusManagement()}),
     observer.observe(document.body{
       childList: true;
-      subtree: true,
-    }),
+      subtree: true}),
     return () => {
       observer.disconnect()};
   }[]),

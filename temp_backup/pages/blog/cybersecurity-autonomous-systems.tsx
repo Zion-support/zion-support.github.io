@@ -322,6 +322,5 @@ export default function CybersecurityAutonomousSystems() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -33,7 +33,7 @@ export const trackError = (error, context = {}) => {
     })}
 };
 export const trackPerformance = (metric, value) => {
-  // console.log(`Performance "metric": ${metric} = ${value}`),
+  // // console.log(`Performance "metric": ${metric} = ${value}`),
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'timing_complete', {
       name: metric;
@@ -41,7 +41,7 @@ export const trackPerformance = (metric, value) => {
     })}
 };
 export const trackUserAction = (action, category, label) => {
-  // console.log(`User "action": ${action} in ${category}`),
+  // // console.log(`User "action": ${action} in ${category}`),
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', action, {
       event_category: category;
@@ -58,7 +58,7 @@ export const trackError = (error, context = {}) => {
     })}
 };
 export const trackPerformance = (metric, value) => {
-  // console.log(`Performance metric: ${metric} = ${value}`),
+  // // console.log(`Performance metric: ${metric} = ${value}`),
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'timing_complete', {
       name: 'metric';
@@ -66,7 +66,7 @@ export const trackPerformance = (metric, value) => {
     })}
 };
 export const trackUserAction = (action, category, label) => {
-  // console.log(`User action: ${action} in ${category}`),
+  // // console.log(`User action: ${action} in ${category}`),
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', action, {
       event_category: 'category';
@@ -83,7 +83,7 @@ export const trackError = (error, context = {}) => {
     })}
 };
 export const trackPerformance = (metric, value) => {
-  // console.log(`Performance metric: ${metric} = ${value}`),
+  // // console.log(`Performance metric: ${metric} = ${value}`),
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'timing_complete', {
       name: metric;
@@ -91,7 +91,7 @@ export const trackPerformance = (metric, value) => {
     })}
 };
 export const trackUserAction = (action, category, label) => {
-  // console.log(`User action: ${action} in ${category}`),
+  // // console.log(`User action: ${action} in ${category}`),
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', action, {
       event_category: category;

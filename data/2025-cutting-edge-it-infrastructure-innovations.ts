@@ -30,15 +30,13 @@ export interface CuttingEdgeITInfrastructureInnovation2025 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const cuttingEdgeITInfrastructureInnovations2025 = [
   // Quantum-Safe Cloud Infrastructure Platform,
   {
@@ -47,7 +45,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
     tagline:,
       'Future-proof cloud infrastructure resistant to quantum computing attacks';
     description:,
-      'Revolutionary cloud infrastructure platform built with quantum-resistant cryptography and advanced security protocols. Ensures data protection against both current and future quantum computing threats while maintaining exceptional window.performance.';
+      'Revolutionary cloud infrastructure platform built with quantum-resistant cryptography and advanced security protocols. Ensures data protection against both current and future quantum computing threats while maintaining exceptional window.window.performance.';
     category: 'IT Infrastructure & Security';
     type: 'Micro SAAS';
     pricing: {

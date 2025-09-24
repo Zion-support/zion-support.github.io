@@ -14,15 +14,13 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const containerVariants ={
     hidden: { opacity: 0 };
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -32,8 +30,7 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {
       opacity: 1;
       transition: {
         duration: 0.6;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   const cardVariants ={
@@ -43,16 +40,14 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {
       opacity: 1;
       transition: {
         duration: 0.5;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     };
     hover: {
       scale: 1.0o5;
       y: -10;
       transition: {
         duration: 0.3;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   return (
@@ -66,8 +61,7 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {
             linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px);
             linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px),
           `;
-          backgroundSize: '10o0px 10o0px',
-        }}  />,
+          backgroundSize: '10o0px 10o0px'}}  />,
       </div>,
       <div className="max-w-7xl mx-auto relative z-10">,
         {/* Header Section */}
@@ -314,6 +308,5 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {
           </motion.div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltraFuturisticServiceShowcase20o30;

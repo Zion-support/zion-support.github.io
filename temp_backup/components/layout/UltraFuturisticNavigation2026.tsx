@@ -51,28 +51,23 @@ const UltraFuturisticNavigation20o26: React.FC<UltraFuturisticNavigation20o26Pro
         {
           label: 'AI Autonomous Content Factory Pro';
           href: '/ai-autonomous-content-factory-pro';
-          description: 'Autonomous content creation and distribution',
-        };
+          description: 'Autonomous content creation and distribution'};
         {
           label: 'AI Autonomous HR Platform';
           href: '/ai-autonomous-hr-platform';
-          description: 'Intelligent HR management and automation',
-        };
+          description: 'Intelligent HR management and automation'};
         {
           label: 'AI Autonomous Education Platform';
           href: '/ai-autonomous-education-platform';
-          description: 'Personalized learning and adaptive education',
-        };
+          description: 'Personalized learning and adaptive education'};
         {
           label: 'AI Autonomous Project Management';
           href: '/ai-autonomous-project-management';
-          description: 'Intelligent project planning and optimization',
-        };
+          description: 'Intelligent project planning and optimization'};
         {
           label: 'AI Autonomous Cybersecurity Sentinel';
           href: '/ai-autonomous-cybersecurity-sentinel';
-          description: 'Autonomous threat detection and response',
-        }
+          description: 'Autonomous threat detection and response'}
       ]};
     {
       label: 'Quantum Technology';
@@ -83,28 +78,23 @@ const UltraFuturisticNavigation20o26: React.FC<UltraFuturisticNavigation20o26Pro
         {
           label: 'Quantum Edge Computing Platform';
           href: '/quantum-edge-computing-platform';
-          description: 'Quantum-enhanced edge processing platform',
-        };
+          description: 'Quantum-enhanced edge processing platform'};
         {
           label: 'Neuromorphic Computing Infrastructure';
           href: '/neuromorphic-computing-infrastructure';
-          description: 'Brain-inspired computing infrastructure',
-        };
+          description: 'Brain-inspired computing infrastructure'};
         {
           label: 'Holographic Data Center Platform';
           href: '/holographic-data-center-platform';
-          description: '3D holographic storage and processing',
-        };
+          description: '3D holographic storage and processing'};
         {
           label: 'Bio-Computing Infrastructure';
           href: '/bio-computing-infrastructure';
-          description: 'DNA-based computing solutions',
-        };
+          description: 'DNA-based computing solutions'};
         {
           label: 'Quantum Internet Backbone';
           href: '/quantum-internet-backbone';
-          description: 'Ultra-secure quantum networking',
-        }
+          description: 'Ultra-secure quantum networking'}
       ]};
     {
       label: 'IT Infrastructure';
@@ -115,38 +105,31 @@ const UltraFuturisticNavigation20o26: React.FC<UltraFuturisticNavigation20o26Pro
         {
           label: 'Cloud Migration';
           href: '/cloud-migration';
-          description: 'Seamless cloud infrastructure migration',
-        };
+          description: 'Seamless cloud infrastructure migration'};
         {
           label: 'DevOps Automation';
           href: '/devops-automation';
-          description: 'Automated development and deployment',
-        };
+          description: 'Automated development and deployment'};
         {
           label: 'Edge Computing';
           href: '/edge-computing';
-          description: 'Distributed edge computing solutions',
-        };
+          description: 'Distributed edge computing solutions'};
         {
           label: 'Data Center Optimization';
           href: '/data-center-optimization';
-          description: 'Performance and efficiency optimization',
-        };
+          description: 'Performance and efficiency optimization'};
         {
           label: '5G Private Network Solutions';
           href: '/5g-private-network-solutions';
-          description: 'Enterprise-grade 5G private networks',
-        };
+          description: 'Enterprise-grade 5G private networks'};
         {
           label: 'Autonomous DevOps Platform 20o44';
           href: '/autonomous-devops-platform-20o44';
-          description: 'AI-powered DevOps automation',
-        };
+          description: 'AI-powered DevOps automation'};
         {
           label: 'Quantum Data Center Management 20o44';
           href: '/quantum-data-center-management-20o44';
-          description: 'Quantum-optimized data center management',
-        }
+          description: 'Quantum-optimized data center management'}
       ]};
     {
       label: 'Micro SAAS';
@@ -157,43 +140,35 @@ const UltraFuturisticNavigation20o26: React.FC<UltraFuturisticNavigation20o26Pro
         {
           label: 'AI Content Factory Pro';
           href: '/ai-autonomous-content-factory-pro';
-          description: 'Autonomous content creation platform',
-        };
+          description: 'Autonomous content creation platform'};
         {
           label: 'Quantum CRM Intelligence';
           href: '/quantum-crm-intelligence-suite';
-          description: 'Quantum-powered customer relationship management',
-        };
+          description: 'Quantum-powered customer relationship management'};
         {
           label: 'AI HR Platform';
           href: '/ai-autonomous-hr-platform';
-          description: 'Intelligent human resources management',
-        };
+          description: 'Intelligent human resources management'};
         {
           label: 'Quantum Financial Intelligence';
           href: '/quantum-financial-intelligence-platform';
-          description: 'Advanced financial analytics and insights',
-        };
+          description: 'Advanced financial analytics and insights'};
         {
           label: 'AI Education Platform';
           href: '/ai-autonomous-education-platform';
-          description: 'Personalized learning experiences',
-        };
+          description: 'Personalized learning experiences'};
         {
           label: 'Quantum Supply Chain Optimizer';
           href: '/quantum-supply-chain-optimizer';
-          description: 'Quantum-powered supply chain optimization',
-        };
+          description: 'Quantum-powered supply chain optimization'};
         {
           label: 'Quantum Data Analytics Platform';
           href: '/quantum-data-analytics-platform';
-          description: 'Quantum-enhanced data analytics',
-        };
+          description: 'Quantum-enhanced data analytics'};
         {
           label: 'Quantum Customer Intelligence Platform';
           href: '/quantum-customer-intelligence-platform';
-          description: 'Advanced customer behavior analysis',
-        }
+          description: 'Advanced customer behavior analysis'}
       ]};
     {
       label: 'Cybersecurity';
@@ -204,28 +179,23 @@ const UltraFuturisticNavigation20o26: React.FC<UltraFuturisticNavigation20o26Pro
         {
           label: 'Zero Trust Architecture';
           href: '/zero-trust-network-architecture';
-          description: 'Comprehensive security framework',
-        };
+          description: 'Comprehensive security framework'};
         {
           label: 'Threat Intelligence';
           href: '/threat-intelligence-platform';
-          description: 'Real-time threat detection and analysis',
-        };
+          description: 'Real-time threat detection and analysis'};
         {
           label: 'Compliance Automation';
           href: '/compliance-automation';
-          description: 'Automated regulatory compliance',
-        };
+          description: 'Automated regulatory compliance'};
         {
           label: 'Quantum Cybersecurity Platform 20o44';
           href: '/quantum-cybersecurity-platform-20o44';
-          description: 'Quantum-powered security platform',
-        };
+          description: 'Quantum-powered security platform'};
         {
           label: 'AI Autonomous Cybersecurity Sentinel';
           href: '/ai-autonomous-cybersecurity-sentinel';
-          description: 'Autonomous threat detection and response',
-        }
+          description: 'Autonomous threat detection and response'}
       ]};
     {
       label: 'Solutions';
@@ -236,23 +206,19 @@ const UltraFuturisticNavigation20o26: React.FC<UltraFuturisticNavigation20o26Pro
         {
           label: 'Healthcare Solutions';
           href: '/healthcare-solutions';
-          description: 'Digital health transformation',
-        };
+          description: 'Digital health transformation'};
         {
           label: 'Financial Solutions';
           href: '/financial-solutions';
-          description: 'FinTech innovation and optimization',
-        };
+          description: 'FinTech innovation and optimization'};
         {
           label: 'Manufacturing Solutions';
           href: '/manufacturing-solutions';
-          description: 'Industry 4.0 and smart manufacturing',
-        };
+          description: 'Industry 4.0 and smart manufacturing'};
         {
           label: 'Retail Solutions';
           href: '/retail-technology-solutions';
-          description: 'Digital retail transformation',
-        }
+          description: 'Digital retail transformation'}
       ]}
   ],
   // Handle scroll effect,
@@ -265,14 +231,12 @@ const UltraFuturisticNavigation20o26: React.FC<UltraFuturisticNavigation20o26Pro
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null),
-      }
+        setActiveDropdown(null)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label),
-  };
+    setActiveDropdown(activeDropdown === label ? null : label)};
   return (
     <motion.nav,
       ref={navRef}

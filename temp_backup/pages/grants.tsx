@@ -15,6 +15,5 @@ export default function GrantsPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -15,6 +15,5 @@ export default function ResearchPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -312,5 +312,4 @@ export default function SpaceColonizationServices() {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>),
-}
+    </Layout>)}

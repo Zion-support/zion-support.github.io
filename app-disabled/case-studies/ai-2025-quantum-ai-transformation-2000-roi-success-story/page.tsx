@@ -358,6 +358,5 @@ export default function QuantumAISuccessStoryPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

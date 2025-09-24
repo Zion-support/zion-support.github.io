@@ -21,15 +21,13 @@ export interface ComprehensiveRealService {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string,
   demoUrl?: string,
@@ -84,8 +82,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"];
       integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"];
@@ -95,8 +92,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     competitors: ["Tableau", "Power BI", "Looker", "Qlik"];
     marketSize: "$29.9 billion by 20o25";
     demoUrl: "https://ziontechgroup.com/demo/ai-bi";
-    documentationUrl: "https://ziontechgroup.com/docs/ai-bi",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/ai-bi"};
   // AI-Powered Content Creation Suite,
   {
     id: "ai-content-creation-suite";
@@ -145,8 +141,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["GPT-4", "BERT", "React", "Node.js", "MongoDB"];
       integrations: ["WordPress", "Shopify", "Mailchimp", "Hootsuite", "Google Analytics"];
@@ -156,8 +151,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"];
     marketSize: "$15.7 billion by 20o25";
     demoUrl: "https://ziontechgroup.com/demo/ai-content";
-    documentationUrl: "https://ziontechgroup.com/docs/ai-content",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/ai-content"};
   // AI-Powered Customer Support Platform,
   {
     id: "ai-customer-support-platform";
@@ -206,8 +200,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["NLP", "Machine Learning", "React", "Node.js", "Redis"];
       integrations: ["Zendesk", "Intercom", "Salesforce", "Shopify", "Slack"];
@@ -217,8 +210,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     competitors: ["Intercom", "Zendesk", "Freshdesk", "Help Scout"];
     marketSize: "$12.4 billion by 20o25";
     demoUrl: "https://ziontechgroup.com/demo/ai-support";
-    documentationUrl: "https://ziontechgroup.com/docs/ai-support",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/ai-support"};
   // AI-Powered Sales Copilot,
   {
     id: "ai-sales-copilot";
@@ -267,8 +259,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "NLP", "React", "Node.js", "PostgreSQL"];
       integrations: ["Salesforce", "HubSpot", "Pipedrive", "Outreach", "LinkedIn"];
@@ -278,8 +269,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     competitors: ["Outreach", "SalesLoft", "HubSpot Sales", "Pipedrive"];
     marketSize: "$18.2 billion by 20o25";
     demoUrl: "https://ziontechgroup.com/demo/ai-sales";
-    documentationUrl: "https://ziontechgroup.com/docs/ai-sales",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/ai-sales"};
   // AI-Powered Cybersecurity Suite,
   {
     id: "ai-cybersecurity-suite";
@@ -328,8 +318,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "Deep Learning", "Python", "React", "Elasticsearch"];
       integrations: ["SIEM", "EDR", "Firewall", "Cloud platforms", "Identity providers"];
@@ -339,8 +328,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"];
     marketSize: "$45.6 billion by 20o25";
     demoUrl: "https://ziontechgroup.com/demo/ai-security";
-    documentationUrl: "https://ziontechgroup.com/docs/ai-security",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/ai-security"};
   // AI-Powered Data Analytics & BI,
   {
     id: "ai-data-analytics-bi";
@@ -389,8 +377,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "React", "Node.js", "Apache Spark"];
       integrations: ["Databases", "Cloud platforms", "CRM systems", "ERP systems", "APIs"];
@@ -400,8 +387,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     competitors: ["Tableau", "Power BI", "Looker", "Qlik", "Domo"];
     marketSize: "$29.9 billion by 20o25";
     demoUrl: "https://ziontechgroup.com/demo/ai-analytics";
-    documentationUrl: "https://ziontechgroup.com/docs/ai-analytics",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/ai-analytics"};
   // Cloud Infrastructure & DevOps,
   {
     id: "cloud-infrastructure-devops";
@@ -450,8 +436,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"];
       integrations: ["GitHub", "GitLab", "Jenkins", "Prometheus", "Grafana"];
@@ -461,8 +446,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     competitors: ["AWS", "Azure", "GCP", "DigitalOcean", "Heroku"];
     marketSize: "$67.8 billion by 20o25";
     demoUrl: "https://ziontechgroup.com/demo/cloud-devops";
-    documentationUrl: "https://ziontechgroup.com/docs/cloud-devops",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/cloud-devops"};
   // Cybersecurity & Compliance,
   {
     id: "cybersecurity-compliance";
@@ -511,8 +495,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["SIEM", "EDR", "Firewall", "IDS/IPS", "Vulnerability scanners"];
       integrations: ["Active Directory", "Cloud platforms", "SIEM systems", "Ticketing systems"];
@@ -522,8 +505,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "Check Point"];
     marketSize: "$45.6 billion by 20o25";
     demoUrl: "https://ziontechgroup.com/demo/cybersecurity";
-    documentationUrl: "https://ziontechgroup.com/docs/cybersecurity",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/cybersecurity"};
   // Quantum Computing Services,
   {
     id: "quantum-computing-services";
@@ -572,8 +554,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Qiskit", "Cirq", "PennyLane", "Python", "Quantum simulators"];
       integrations: ["Cloud quantum platforms", "Research tools", "Data analysis platforms"];
@@ -583,8 +564,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket"];
     marketSize: "$8.9 billion by 20o25";
     demoUrl: "https://ziontechgroup.com/demo/quantum";
-    documentationUrl: "https://ziontechgroup.com/docs/quantum",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/quantum"};
   // Blockchain & Web3 Solutions,
   {
     id: "blockchain-web3-solutions";
@@ -633,8 +613,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Ethereum", "Solana", "Polygon", "Solidity", "Web3.js"];
       integrations: ["MetaMask", "WalletConnect", "IPFS", "The Graph", "Chainlink"];
@@ -644,8 +623,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     competitors: ["Consensys", "Alchemy", "Infura", "Chainstack"];
     marketSize: "$19.9 billion by 20o25";
     demoUrl: "https://ziontechgroup.com/demo/blockchain";
-    documentationUrl: "https://ziontechgroup.com/docs/blockchain",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/blockchain"};
   // IoT & Edge Computing Services,
   {
     id: "iot-edge-computing-services";
@@ -694,8 +672,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["MQTT", "CoAP", "Kubernetes", "Docker", "TensorFlow Lite"];
       integrations: ["Cloud platforms", "Database systems", "Analytics tools", "Security systems"];
@@ -705,8 +682,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT"];
     marketSize: "$25.6 billion by 20o25";
     demoUrl: "https://ziontechgroup.com/demo/iot-edge";
-    documentationUrl: "https://ziontechgroup.com/docs/iot-edge",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/iot-edge"};
   // Digital Twin Solutions,
   {
     id: "digital-twin-solutions";
@@ -755,8 +731,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Unity3D", "Unreal Engine", "Three.js", "WebGL", "Python"];
       integrations: ["IoT platforms", "CAD systems", "PLM systems", "Analytics platforms"];
@@ -766,8 +741,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     competitors: ["Siemens", "GE Digital", "PTC", "Dassault Systèmes"];
     marketSize: "$12.9 billion by 20o25";
     demoUrl: "https://ziontechgroup.com/demo/digital-twin";
-    documentationUrl: "https://ziontechgroup.com/docs/digital-twin",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/digital-twin"};
   // Space Technology Solutions,
   {
     id: "space-technology-solutions";
@@ -816,8 +790,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "C++", "MATLAB", "STK", "Space simulation tools"];
       integrations: ["Satellite data providers", "Ground stations", "Mission control systems"];
@@ -827,8 +800,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     competitors: ["Lockheed Martin", "Boeing", "Northrop Grumman", "SpaceX"];
     marketSize: "$6.7 billion by 20o25";
     demoUrl: "https://ziontechgroup.com/demo/space-tech";
-    documentationUrl: "https://ziontechgroup.com/docs/space-tech",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/space-tech"};
   // Green IT Solutions,
   {
     id: "green-it-solutions";
@@ -877,8 +849,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Energy monitoring tools", "Sustainability platforms", "Green software frameworks"];
       integrations: ["Energy management systems", "Building management systems", "Reporting platforms"];
@@ -888,8 +859,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"];
     marketSize: "$14.2 billion by 20o25";
     demoUrl: "https://ziontechgroup.com/demo/green-it";
-    documentationUrl: "https://ziontechgroup.com/docs/green-it",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/green-it"};
   // Zero Trust Network Architecture,
   {
     id: "zero-trust-network-architecture";
@@ -938,8 +908,7 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Identity providers", "Network segmentation", "Security monitoring", "Access management"];
       integrations: ["Active Directory", "Cloud platforms", "SIEM systems", "Identity providers"];
@@ -949,7 +918,6 @@ export const COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [
     competitors: ["Cisco", "Palo Alto Networks", "Check Point", "Fortinet"];
     marketSize: "$19.8 billion by 20o25";
     demoUrl: "https://ziontechgroup.com/demo/zero-trust";
-    documentationUrl: "https://ziontechgroup.com/docs/zero-trust",
-  }
+    documentationUrl: "https://ziontechgroup.com/docs/zero-trust"}
 ],
 export default COMPREHENSIVE_REAL_SERVICES_20o25;

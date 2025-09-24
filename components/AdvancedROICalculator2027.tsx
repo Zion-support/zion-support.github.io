@@ -8,8 +8,7 @@ const AdvancedROICalculator20o27 = () => {
     automationLevel: 30;
     industry: 'technology';
     companySize: 'enterprise';
-    currentEfficiency: 70,
-  }),
+    currentEfficiency: 70}),
   const [results, setResults] = useState(null),
   const [isVisible, setIsVisible] = useState(false),
   useEffect(() => {
@@ -56,8 +55,7 @@ const AdvancedROICalculator20o27 = () => {
       annualSavings: Math.round(annualSavings);
       efficiencyImprovement: Math.round(efficiencyImprovement);
       employeeSavings: Math.round(employeeSavings);
-      revenueIncrease: Math.round(revenueIncrease),
-    })};
+      revenueIncrease: Math.round(revenueIncrease)})};
   const handleInputChange = (field, value) => {
     setFormData(prev => ({
       ...prev;
@@ -279,6 +277,5 @@ const AdvancedROICalculator20o27 = () => {
           </div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default AdvancedROICalculator20o27;

@@ -9,12 +9,10 @@ interface BannerContent {
     roi: string,
     savings: string,
     efficiency?: string,
-    accuracy?: string,
-  };
+    accuracy?: string};
   url: string,
   type: 'blog' | 'case-study' | 'resource',
-  featured: boolean,
-}
+  featured: boolean}
 ,
 const RevolutionaryContent20o25UltimateBanner: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0),
@@ -28,12 +26,10 @@ const RevolutionaryContent20o25UltimateBanner: React.FC = () => {
         roi: "60o0%";
         savings: "$2.8M annually";
         efficiency: "89%";
-        accuracy: "99.7%",
-      };
+        accuracy: "99.7%"};
       url: "/blog/ai-20o25-advanced-automation-revolution-ultimate-guide";
       type: "blog";
-      featured: true,
-    };
+      featured: true};
     {
       id: "enterprise-transformation";
       title: "AI 20o25 Enterprise Transformation Success";
@@ -42,12 +38,10 @@ const RevolutionaryContent20o25UltimateBanner: React.FC = () => {
         roi: "650%";
         savings: "$325M";
         efficiency: "94%";
-        accuracy: "99.8%",
-      };
+        accuracy: "99.8%"};
       url: "/case-studies/ai-20o25-enterprise-transformation-ultimate-success-story";
       type: "case-study";
-      featured: true,
-    };
+      featured: true};
     {
       id: "implementation-roadmap";
       title: "AI 20o25 Implementation Ultimate Roadmap";
@@ -56,12 +50,10 @@ const RevolutionaryContent20o25UltimateBanner: React.FC = () => {
         roi: "70o0%";
         savings: "$4.2M annually";
         efficiency: "94%";
-        accuracy: "99.7%",
-      };
+        accuracy: "99.7%"};
       url: "/resources/ai-20o25-implementation-ultimate-roadmap-comprehensive-guide";
       type: "resource";
-      featured: true,
-    };
+      featured: true};
     {
       id: "quantum-computing";
       title: "AI 20o25: Quantum Computing Breakthrough";
@@ -70,12 +62,10 @@ const RevolutionaryContent20o25UltimateBanner: React.FC = () => {
         roi: "80o0%";
         savings: "$180M annually";
         efficiency: "1,20o0%";
-        accuracy: "99.97%",
-      };
+        accuracy: "99.97%"};
       url: "/blog/ai-20o25-quantum-computing-breakthrough-enterprise-solutions";
       type: "blog";
-      featured: true,
-    };
+      featured: true};
     {
       id: "autonomous-systems";
       title: "AI 20o25 Autonomous Systems Revolution";
@@ -84,8 +74,7 @@ const RevolutionaryContent20o25UltimateBanner: React.FC = () => {
         roi: "90o0%";
         savings: "$750M";
         efficiency: "95%";
-        accuracy: "99.8%",
-      };
+        accuracy: "99.8%"};
       url: "/case-studies/ai-20o25-autonomous-systems-revolution-success-story";
       type: "case-study";
       featured: true,
@@ -93,8 +82,7 @@ const RevolutionaryContent20o25UltimateBanner: React.FC = () => {
       subtitle: "Direct Brain-Computer Integration";
       description: "Seamless human-AI collaboration through advanced neural interfaces";
       cta: "Discover Now";
-      link: "/neural-interfaces-2025",
-    }
+      link: "/neural-interfaces-2025"}
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -110,8 +98,7 @@ const RevolutionaryContent20o25UltimateBanner: React.FC = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -122,8 +109,7 @@ const RevolutionaryContent20o25UltimateBanner: React.FC = () => {
       case 'resource':,
         return 'bg-purple-50o0',
       default:,
-        return 'bg-gray-50o0',
-    }
+        return 'bg-gray-50o0'}
   };
   if (!isVisible) return null,
   return (
@@ -232,8 +218,7 @@ const RevolutionaryContent20o25UltimateBanner: React.FC = () => {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
-                  index === currentIndex ? 'bg-white' : 'bg-white/50 hover: bg-white/75',
-                }`}
+                  index === currentIndex ? 'bg-white' : 'bg-white/50 hover: bg-white/75'}`}
                 aria-label={`Go to slide ${index + 1}`}
               />))}
           </div>,

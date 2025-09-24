@@ -15,6 +15,5 @@ export default function ApiDevelopmentChatPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -105,8 +105,7 @@ reviews: number,export const emergingTechServices: EmergingTechService[] = [// Q
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full quantum security platform with QKD hardware, post-quantum algorithms, comprehensive monitoring, and government compliance.';
@@ -186,8 +185,7 @@ reviews: number,export const emergingTechServices: EmergingTechService[] = [// Q
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full development platform with EEG processing, ML algorithms, comprehensive APIs, and medical device compliance.';
@@ -267,8 +265,7 @@ reviews: number,export const emergingTechServices: EmergingTechService[] = [// Q
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full autonomous vehicle platform with advanced AI, computer vision, safety systems, and comprehensive testing tools.';
@@ -348,8 +345,7 @@ reviews: number,export const emergingTechServices: EmergingTechService[] = [// Q
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full space technology platform with AI algorithms, materials science, mission planning, and comprehensive development tools.';
@@ -429,8 +425,7 @@ reviews: number,export const emergingTechServices: EmergingTechService[] = [// Q
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full biotech AI platform with advanced algorithms, computational biology tools, research collaboration, and regulatory compliance.';

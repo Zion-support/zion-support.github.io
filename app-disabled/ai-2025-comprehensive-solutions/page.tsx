@@ -431,6 +431,5 @@ export default function AI20o25ComprehensiveSolutions() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

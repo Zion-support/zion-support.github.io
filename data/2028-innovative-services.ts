@@ -15,8 +15,7 @@ export interface InnovativeService {
   support: string,
   trial: string,
   website: string,
-  contact: string,
-}
+  contact: string}
 ,
 export const innovative20o28Services: InnovativeService[] = [
   {

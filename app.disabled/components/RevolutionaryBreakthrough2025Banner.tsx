@@ -11,24 +11,21 @@ const RevolutionaryBreakthrough20o25Banner: React.FC = () => {
       metrics: "2,50o0% ROI • $45.2B Savings • 99.7% Accuracy";
       cta: "Read the Guide";
       link: "/blog/ai-20o25-revolutionary-breakthrough-ultimate-success-guide";
-      type: "blog",
-    };
+      type: "blog"};
     {
       title: "Fortune 50o0 AI Transformation: $45.2B Annual Savings - 2,50o0% ROI Success Story";
       subtitle: "How a Global Manufacturing Leader Achieved Unprecedented Results";
       metrics: "18 Months • 2,50o0% ROI • $45.2B Annual Savings";
       cta: "View Case Study";
       link: "/case-studies/fortune-50o0-ai-transformation-250o0-roi-ultimate-success";
-      type: "case-study",
-    };
+      type: "case-study"};
     {
       title: "AI 20o25 Implementation Ultimate Roadmap: Complete Guide to 2,50o0% ROI";
       subtitle: "The Definitive Step-by-Step Guide to Transforming Your Business";
       metrics: "94% Success Rate • 3.8 Month Payback • Proven Framework";
       cta: "Download Roadmap";
       link: "/resources/ai-20o25-implementation-ultimate-roadmap-250o0-roi";
-      type: "resource",
-    }
+      type: "resource"}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -110,8 +107,7 @@ const RevolutionaryBreakthrough20o25Banner: React.FC = () => {
                 className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                   index === currentSlide,
                     ? 'bg-yellow-40o0 scale-125',
-                    : 'bg-white/30 hover: bg-white/50',
-                }`}
+                    : 'bg-white/30 hover: bg-white/50'}`}
               />))}
           </div>,
         </div>,
@@ -131,8 +127,7 @@ const RevolutionaryBreakthrough20o25Banner: React.FC = () => {
               className={`w-2 h-2 rounded-full transition-all duration-30o0 ${
                 index === currentSlide,
                   ? 'bg-yellow-40o0 scale-125',
-                  : 'bg-white/30 hover: bg-white/50',
-              }`}
+                  : 'bg-white/30 hover: bg-white/50'}`}
             />))}
         </div>,
         {/* Dismiss Button */}

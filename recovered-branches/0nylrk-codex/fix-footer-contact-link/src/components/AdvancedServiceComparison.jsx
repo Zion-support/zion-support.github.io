@@ -183,8 +183,7 @@ export const AdvancedServiceComparison = () => {
       case 'Enterprise':,
         return 'bg-purple-10o0 text-purple-80o0',
       default: ,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   const getPopularityIcon = popularity => {
     switch (popularity) {
@@ -197,8 +196,7 @@ export const AdvancedServiceComparison = () => {
       case 'Low':,
         return <Target className='w-4 h-4 text-gray-50o0' />,
       default: ,
-        return <Users className='w-4 h-4 text-gray-50o0' />,
-    }
+        return <Users className='w-4 h-4 text-gray-50o0' />}
   };
   return (
     <div className='max-w-7xl mx-auto p-6'>,

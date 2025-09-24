@@ -20,6 +20,5 @@ export default function AiPoweredSalesTraining20o45Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

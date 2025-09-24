@@ -11,8 +11,7 @@ export interface InnovativeMicroSaasService {
     currency: string,
     trialDays: number,
     setupTime: string,
-    enterprise: number,
-  };
+    enterprise: number};
   features: string[],
   benefits: string[],
   targetAudience: string[],
@@ -35,8 +34,7 @@ export interface InnovativeMicroSaasService {
   rating: number,
   reviews: number,
   marketSize: string,
-  growthRate: string,
-}
+  growthRate: string}
 ,
 export const innovativeMicroSaasServicesV2: InnovativeMicroSaasService[] = [
   {
@@ -51,8 +49,7 @@ export const innovativeMicroSaasServicesV2: InnovativeMicroSaasService[] = [
       currency: 'USD';
       trialDays: 14;
       setupTime: '10 minutes';
-      enterprise: 299,
-    };
+      enterprise: 299};
     features: [
       'Legal document templates (50o0+ templates)';
       'AI-powered contract analysis';
@@ -102,8 +99,7 @@ export const innovativeMicroSaasServicesV2: InnovativeMicroSaasService[] = [
     rating: 4.8;
     reviews: 450;
     marketSize: '$12.5B legal tech market';
-    growthRate: '25% annually',
-  };
+    growthRate: '25% annually'};
   {
     id: 'quantum-financial-forecasting';
     name: 'Quantum Financial Forecasting Platform';
@@ -116,8 +112,7 @@ export const innovativeMicroSaasServicesV2: InnovativeMicroSaasService[] = [
       currency: 'USD';
       trialDays: 7;
       setupTime: '30 minutes';
-      enterprise: 999,
-    };
+      enterprise: 999};
     features: [
       'Quantum-enhanced market analysis';
       'Portfolio optimization algorithms';
@@ -167,8 +162,7 @@ export const innovativeMicroSaasServicesV2: InnovativeMicroSaasService[] = [
     rating: 4.9;
     reviews: 280;
     marketSize: '$28B financial analytics market';
-    growthRate: '18% annually',
-  };
+    growthRate: '18% annually'};
   {
     id: 'ai-healthcare-diagnostic-assistant';
     name: 'AI Healthcare Diagnostic Assistant';
@@ -181,8 +175,7 @@ export const innovativeMicroSaasServicesV2: InnovativeMicroSaasService[] = [
       currency: 'USD';
       trialDays: 30;
       setupTime: '2 hours';
-      enterprise: 599,
-    };
+      enterprise: 599};
     features: [
       'AI-powered symptom analysis';
       'Medical image recognition';
@@ -232,8 +225,7 @@ export const innovativeMicroSaasServicesV2: InnovativeMicroSaasService[] = [
     rating: 4.7;
     reviews: 520;
     marketSize: '$45B healthcare AI market';
-    growthRate: '35% annually',
-  };
+    growthRate: '35% annually'};
   {
     id: 'quantum-cybersecurity-suite';
     name: 'Quantum Cybersecurity Suite';
@@ -246,8 +238,7 @@ export const innovativeMicroSaasServicesV2: InnovativeMicroSaasService[] = [
       currency: 'USD';
       trialDays: 14;
       setupTime: '1 hour';
-      enterprise: 499,
-    };
+      enterprise: 499};
     features: [
       'Quantum-resistant encryption';
       'AI-powered threat detection';
@@ -297,8 +288,7 @@ export const innovativeMicroSaasServicesV2: InnovativeMicroSaasService[] = [
     rating: 4.9;
     reviews: 780;
     marketSize: '$150B cybersecurity market';
-    growthRate: '12% annually',
-  };
+    growthRate: '12% annually'};
   {
     id: 'ai-supply-chain-optimizer';
     name: 'AI Supply Chain Optimizer';
@@ -311,8 +301,7 @@ export const innovativeMicroSaasServicesV2: InnovativeMicroSaasService[] = [
       currency: 'USD';
       trialDays: 21;
       setupTime: '4 hours';
-      enterprise: 399,
-    };
+      enterprise: 399};
     features: [
       'AI demand forecasting';
       'Inventory optimization';
@@ -362,8 +351,7 @@ export const innovativeMicroSaasServicesV2: InnovativeMicroSaasService[] = [
     rating: 4.6;
     reviews: 320;
     marketSize: '$18B supply chain software market';
-    growthRate: '22% annually',
-  };
+    growthRate: '22% annually'};
   {
     id: 'quantum-data-analytics-platform';
     name: 'Quantum Data Analytics Platform';
@@ -376,8 +364,7 @@ export const innovativeMicroSaasServicesV2: InnovativeMicroSaasService[] = [
       currency: 'USD';
       trialDays: 14;
       setupTime: '2 hours';
-      enterprise: 699,
-    };
+      enterprise: 699};
     features: [
       'Quantum-enhanced data processing';
       'Real-time analytics dashboard';
@@ -427,6 +414,5 @@ export const innovativeMicroSaasServicesV2: InnovativeMicroSaasService[] = [
     rating: 4.8;
     reviews: 290;
     marketSize: '$22B business intelligence market';
-    growthRate: '28% annually',
-  }
+    growthRate: '28% annually'}
 ],

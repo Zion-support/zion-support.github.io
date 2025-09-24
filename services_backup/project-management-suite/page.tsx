@@ -95,8 +95,7 @@ export default function ProjectManagementSuitePage() {
       </div>,
       <PricingSection />,
       <ContactSection />,
-    </div>),
-}
+    </div>)}
 ,
 function FeatureCard({
   title;
@@ -105,8 +104,7 @@ function FeatureCard({
 }: {
   title: string,
   features: string[],
-  icon: string,
-}) {
+  icon: string}) {
   return (
     <div className='bg-white border border-gray-20o0 rounded-xl p-6 hover: shadow-lg transition-shadow'>,
       <div className='text-4xl mb-4'>{icon}</div>,
@@ -185,8 +183,7 @@ function PricingCard({
   price: string,
   duration: string,
   features: string[],
-  popular: boolean,
-}) {
+  popular: boolean}) {
   return (
     <div
       className={`relative bg-white border-2 rounded-xl p-8 ${popular ? 'border-orange-50o0 shadow-lg' : 'border-gray-20o0'}`}
@@ -212,8 +209,7 @@ function PricingCard({
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular,
             ? 'bg-orange-60o0 text-white hover:bg-orange-70o0',
-            : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0',
-        }`}
+            : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0'}`}
       >,
         Get Started,
       </a>,

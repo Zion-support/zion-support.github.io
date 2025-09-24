@@ -1,8 +1,7 @@
 import React from react',import { render, screen, fireEvent } from @testing-library/react',import GlobalErrorBoundary from @/components/GlobalErrorBoundary',// We might not need GlobalErrorFallback directly if we test through GlobalErrorBoundary,
 // import GlobalErrorFallback from @/components/GlobalErrorBoundary', // Keep if direct testing is chosen,
 // Mocking logError to prevent actual logging during tests,
-jest.mock('@/utils/logError', () => ({'  logError: jest.fn(),
-})),
+jest.mock('@/utils/logError', () => ({'  logError: jest.fn()})),
 // Mocking console.error to keep test output clean,
 let _consoleErrorMock: jest.SpyInstance,
 beforeAll(() => {

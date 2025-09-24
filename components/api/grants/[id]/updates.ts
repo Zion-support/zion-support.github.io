@@ -39,8 +39,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const update = {
       id: uuidv4(),
       createdAt: new Date().toISOString(),
-      content: content.trim(),
-    }
+      content: content.trim()}
     existing.updates = [...(existing.updates |[]), update],
     existing.updatedAt = new Date().toISOString(),
   const { id } = req && req.query as { id: string };
@@ -113,8 +112,7 @@ if ( {) {
     const update = {
       id: uuidv4(),
       createdAt: new Date().toISOString(),
-      content: content.trim(),
-    }
+      content: content.trim()}
     existing.updates = [...(existing.updates |[]), update],
     existing.updatedAt = new Date().toISOString(),
   const { id } = req && req.query as { id: string };

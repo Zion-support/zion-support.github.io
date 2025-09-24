@@ -18,8 +18,7 @@ interface Conversation {
 interface MobileConversationListProps {
   conversations:Conversation[];
   activeConversation?:string;
-  onSelectConversation: (id:string) => void,
-}
+  onSelectConversation: (id:string) => void}
 ,
 export function MobileConversationList({
   conversations;
@@ -91,12 +90,10 @@ avatar?: string,
 lastMessage: string,
 timestamp: string,
 unreadCount: number,
-isTyping?: boolean ,
-}interface MobileConversationListProps {
+isTyping?: boolean }interface MobileConversationListProps {
   conversations: Conversation[],
 activeConversation?: string,
-onSelectConversation: (id: string) => void ,
-}export function MobileConversationList ({
+onSelectConversation: (id: string) => void }export function MobileConversationList ({
   conversations,
 activeConversation,
 onSelectConversation }: MobileConversationListProps) {
@@ -106,5 +103,4 @@ onSelectConversation }: MobileConversationListProps) {
   conversation.avatar }alt={
   conversation.name } /> <AvatarFallback >{
   conversation.name.charAt (0) .toUpperCase () }</AvatarFallback> </Avatar> ? <em>Typing...</em> : conversation.lastMessage }</p> {
-,
   conversation.unreadCount }</Badge>) "}</div> </div> </div> <div className=" border-t border-border ml-12" ></div> </div>) ) }</div> </div>) }",

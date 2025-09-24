@@ -6,8 +6,7 @@ interface SEOProps {
   ogImage?: string,
   ogUrl?: string,
   canonical?: string,
-  noindex?: boolean,
-}
+  noindex?: boolean}
 ,
 export function SEO({
   title;

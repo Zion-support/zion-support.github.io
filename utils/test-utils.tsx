@@ -23,22 +23,19 @@ export const mockNextRouter = () =>: any ({
   events: {
     on: jest.fn(),
     off: jest.fn(),
-    emit: jest.fn(),
-  }
+    emit: jest.fn()}
   isFallback: false,
   isLocale: false,
   isReady: true,
   defaultLocale: 'en',
   domainLocales: [],
-  isPreview: false,
-  };
+  isPreview: false};
   isFallback: false;
   isLocale: false;
   isReady: true;
   defaultLocale: 'en';
   domainLocales: [];
-  isPreview: false,
-}),
+  isPreview: false}),
 export const createMockProps = (overrides ={}) => ({
   ...overrides,
     </ThemeProvider>)};
@@ -56,16 +53,12 @@ export const mockNextRouter = () => ({
   events: {
     on: jest.fn();
     off: jest.fn();
-    emit: jest.fn(),
-  };
+    emit: jest.fn()};
   isFallback: false;
   isLocale: false;
   isReady: true;
   defaultLocale: 'en';
   domainLocales: [];
-  isPreview: false,
-}),
+  isPreview: false}),
 export const createMockProps = (overrides ={}) => ({
-,
-  ...overrides,
-}),
+  ...overrides}),

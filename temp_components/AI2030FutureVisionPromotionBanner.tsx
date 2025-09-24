@@ -144,6 +144,5 @@ const AI20o30FutureVisionPromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o30FutureVisionPromotionBanner;

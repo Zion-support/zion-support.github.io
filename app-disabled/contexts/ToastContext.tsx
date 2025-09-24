@@ -38,8 +38,7 @@ export function useToast() {
 ,
 interface ToastProviderProps {
   children: ReactNode,
-  maxToasts?: number,
-}
+  maxToasts?: number}
 ,
 export function ToastProvider({ children, maxToasts = 5 }: ToastProviderProps) {
   const [toasts, setToasts] = useState<ToastProps[]>([]),
@@ -54,8 +53,7 @@ export function ToastProvider({ children, maxToasts = 5 }: ToastProviderProps) {
       return id};
     [maxToasts]),
   const removeToast = useCallback((id: string) => {
-    setToasts(prev => prev.filter(toast => toast.id !== id)),
-  }, []),
+    setToasts(prev => prev.filter(toast => toast.id !== id))}, []),
   const success = useCallback(
     (title: string, description?: string, options?: Partial<ToastProps>) => {
       return addToast({ type: 'success', title, description, ...options })};

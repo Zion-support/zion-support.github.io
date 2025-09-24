@@ -65,6 +65,5 @@ export default function AIAgentsROIPlaybook20o26() {
           </div>,
         </div>,
       </section>,
-    </main>),
-}
+    </main>)}
 ,

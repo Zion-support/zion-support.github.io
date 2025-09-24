@@ -38,8 +38,7 @@ export default function ServiceDescriptionGeneratorPage() {
 ,
       const data = (await response.json()) as { description: string };
       setGenerated(data.description || '')} catch (err: any) {
-      setError(err.message || 'Something went wrong'),
-    } finally {
+      setError(err.message || 'Something went wrong')} finally {
       setLoading(false)}
   }
 ,
@@ -95,8 +94,7 @@ export default function ServiceDescriptionGeneratorPage() {
           <textarea
             className='w-full min-h-[120px] rounded-md border border-gray-30o0 dark: border-gray-70o0 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-50o0',
             placeholder={
-              'e.g.\nCore Web Vitals deep-dive\nActionable prioritised recommendations\nHands-on fixes or step-by-step guidance',
-            }
+              'e.g.\nCore Web Vitals deep-dive\nActionable prioritised recommendations\nHands-on fixes or step-by-step guidance'}
             value={featuresInput}
             onChange={e => setFeaturesInput(e.target.value)}
             required,

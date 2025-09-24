@@ -33,8 +33,7 @@ export default function AiToolsPage() {
       textColor: 'text-green-400';
       gradient: 'from-green-400 to-emerald-500';
       popular: true;
-      category: 'Conversational AI',
-    };
+      category: 'Conversational AI'};
     {
       icon: <Image className="w-8 h-8 text-white" />;
       title: 'Midjourney';
@@ -52,8 +51,7 @@ export default function AiToolsPage() {
       textColor: 'text-purple-400';
       gradient: 'from-purple-400 to-pink-500';
       popular: true;
-      category: 'Image Generation',
-    };
+      category: 'Image Generation'};
     {
       icon: <Code className="w-8 h-8 text-white" />;
       title: 'GitHub Copilot';
@@ -71,8 +69,7 @@ export default function AiToolsPage() {
       textColor: 'text-gray-400';
       gradient: 'from-gray-400 to-black';
       popular: true;
-      category: 'Code Generation',
-    };
+      category: 'Code Generation'};
     {
       icon: <Video className="w-8 h-8 text-white" />;
       title: 'Runway ML';
@@ -90,8 +87,7 @@ export default function AiToolsPage() {
       textColor: 'text-blue-400';
       gradient: 'from-blue-400 to-indigo-500';
       popular: false;
-      category: 'Video Generation',
-    };
+      category: 'Video Generation'};
     {
       icon: <MessageSquare className="w-8 h-8 text-white" />;
       title: 'Claude Pro';
@@ -109,8 +105,7 @@ export default function AiToolsPage() {
       textColor: 'text-orange-400';
       gradient: 'from-orange-400 to-red-500';
       popular: false;
-      category: 'Conversational AI',
-    };
+      category: 'Conversational AI'};
     {
       icon: <FileText className="w-8 h-8 text-white" />;
       title: 'Jasper AI';
@@ -128,66 +123,56 @@ export default function AiToolsPage() {
       textColor: 'text-teal-400';
       gradient: 'from-teal-400 to-cyan-500';
       popular: false;
-      category: 'Content Creation',
-    }
+      category: 'Content Creation'}
   ],
   const aiMarketStats = [
     {
       title: 'AI Market Size';
       value: '$136.6B';
       growth: '+37% YoY';
-      description: 'Global AI market value in 2024',
-    };
+      description: 'Global AI market value in 2024'};
     {
       title: 'AI Adoption Rate';
       value: '35%';
       growth: '+12% YoY';
-      description: 'Businesses actively using AI tools',
-    };
+      description: 'Businesses actively using AI tools'};
     {
       title: 'AI Investment';
       value: '$93.5B';
       growth: '+28% YoY';
-      description: 'Global AI investment in 2024',
-    };
+      description: 'Global AI investment in 2024'};
     {
       title: 'AI Productivity Gain';
       value: '40%';
       growth: '+15% YoY';
-      description: 'Average productivity improvement',
-    }
+      description: 'Average productivity improvement'}
   ],
   const aiCategories = [
     {
       name: 'Conversational AI';
       description: 'Chatbotsvirtual assistantsand language models';
       tools: 3;
-      avgPrice: '$20/month',
-    };
+      avgPrice: '$20/month'};
     {
       name: 'Image Generation';
       description: 'AI-powered artdesignand visual content creation';
       tools: 1;
-      avgPrice: '$20/month',
-    };
+      avgPrice: '$20/month'};
     {
       name: 'Code Generation';
       description: 'AI-assisted programming and development tools';
       tools: 1;
-      avgPrice: '$10/month',
-    };
+      avgPrice: '$10/month'};
     {
       name: 'Video Generation';
       description: 'AI video creation and editing tools';
       tools: 1;
-      avgPrice: '$44/month',
-    };
+      avgPrice: '$44/month'};
     {
       name: 'Content Creation';
       description: 'AI-powered writing and content generation';
       tools: 1;
-      avgPrice: '$82/month',
-    }
+      avgPrice: '$82/month'}
   ],
   return (
     <>,
@@ -434,6 +419,5 @@ export default function AiToolsPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,

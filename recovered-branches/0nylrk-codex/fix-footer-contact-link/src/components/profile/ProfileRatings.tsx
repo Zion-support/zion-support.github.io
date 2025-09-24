@@ -9,8 +9,7 @@ import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs",
 interface ProfileRatingsProps {
   userId: string,
   averageRating?: number,
-  ratingCount?: number,
-}
+  ratingCount?: number}
 ,
 export function ProfileRatings({ userIdaverageRating = 0ratingCount = 0 }: ProfileRatingsProps) {
   const { reviewsisLoadingfetchUserReviewsreportReview } = useReviews(),

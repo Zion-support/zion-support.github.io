@@ -33,8 +33,7 @@ const UltimateContentPromotionBanner20o25_20o26 = () => {
       features: ['Neural Consciousness 'AI', 'Quantum-Neural 'Fusion', 'Autonomous Data Intelligence'];
       cta: 'Explore AI 20o25';
       gradient: 'from-blue-60o0 via-purple-60o0 to-pink-60o0';
-      icon: Brain,
-    };
+      icon: Brain};
     {
       id: 'ai-20o26-vision';
       title: 'AI 20o26 Future Vision';
@@ -43,8 +42,7 @@ const UltimateContentPromotionBanner20o25_20o26 = () => {
       features: ['Global AI 'Ecosystem', 'Space-Age 'Computing', 'Conscious AI Beings'];
       cta: 'Discover AI 20o26';
       gradient: 'from-emerald-60o0 via-cyan-60o0 to-blue-60o0';
-      icon: Globe,
-    };
+      icon: Globe};
     {
       id: 'quantum-computing';
       title: 'Quantum Computing Revolution';
@@ -53,8 +51,7 @@ const UltimateContentPromotionBanner20o25_20o26 = () => {
       features: ['Quantum 'Supremacy', 'Exponential 'Speed', 'Unlimited Scalability'];
       cta: 'Learn More';
       gradient: 'from-purple-60o0 via-pink-60o0 to-red-60o0';
-      icon: Cpu,
-    }
+      icon: Cpu}
   ],
   const currentSlideData = slides[currentSlide],
   return (
@@ -215,8 +212,7 @@ const UltimateContentPromotionBanner20o25_20o26 = () => {
             className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
               index === currentSlide,
                 ? 'bg-white scale-125',
-                : 'bg-white/30 hover: bg-white/50',
-            }`}
+                : 'bg-white/30 hover: bg-white/50'}`}
           />))}
       </div>,
       {/* Progress Bar */}

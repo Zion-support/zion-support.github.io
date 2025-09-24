@@ -10,15 +10,13 @@ interface Props {
   fallback?: ReactNode,
   onError?: (error: Error, errorInfo: ErrorInfo) => void,
   showDetails?: boolean,
-  enableRecovery?: boolean,
-}
+  enableRecovery?: boolean}
 ,
 interface State {
   hasError: boolean,
   error: Error | null,
   errorInfo: ErrorInfo | null,
-  errorId: string,
-}
+  errorId: string}
 ,
 class ErrorBoundary extends Component<Props State> {
   constructor(props: Props) {
@@ -27,8 +25,7 @@ class ErrorBoundary extends Component<Props State> {
       hasError: false;
       error: null;
       errorInfo: null;
-      errorId: '',
-    };
+      errorId: ''};
   }
 ,
   static getDerivedStateFromError(error: Error): State {
@@ -60,8 +57,7 @@ class ErrorBoundary extends Component<Props State> {
         componentStack: errorInfo.componentStack;
         timestamp: new Date().toISOString();
         userAgent: navigator.userAgent;
-        url: window.location.href,
-      };
+        url: window.location.href};
       // Send to your error reporting service,
       // fetch('/api/error-reporting', {
       //   method: 'POST';
@@ -74,8 +70,7 @@ class ErrorBoundary extends Component<Props State> {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'exception', {
         description: error.message;
-        fatal: true,
-      })}
+        fatal: true})}
   }
 ,
   private handleRetry = () => {
@@ -83,8 +78,7 @@ class ErrorBoundary extends Component<Props State> {
       hasError: false;
       error: null;
       errorInfo: null;
-      errorId: '',
-    })};
+      errorId: ''})};
   private handleGoHome = () => {
     if (typeof window !== 'undefined') {
       window.location.href = '/'}
@@ -92,8 +86,7 @@ class ErrorBoundary extends Component<Props State> {
   private handleContactSupport = () => {
     window.location.href = '/contact'};
   private handleCallSupport = () => {
-    window.location.href = 'tel: +1-555-123-4567',
-  };
+    window.location.href = 'tel: +1-555-123-4567'};
   private getErrorType(): string {
     if (!this.state.error) return 'Unknown Error',
     const error = this.state.error,
@@ -126,8 +119,7 @@ class ErrorBoundary extends Component<Props State> {
   private getRecoverySuggestions(): string[] {
     const suggestions: string[] = [],
     if (this.state.retryCount < 2) {
-      suggestions.push('Try refreshing the page'),
-    }
+      suggestions.push('Try refreshing the page')}
 ,
     if (this.state.retryCount < 3) {
       suggestions.push('Check your internet connection')}

@@ -15,5 +15,4 @@ export default function 20o37CuttingEdgeServicesShowcasePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

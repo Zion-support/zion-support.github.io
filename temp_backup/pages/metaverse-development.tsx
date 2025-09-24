@@ -15,6 +15,5 @@ export default function MetaverseDevelopmentPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

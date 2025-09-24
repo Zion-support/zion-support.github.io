@@ -10,12 +10,10 @@ export function extractClientIp(req: NextApiRequest): string | null {
     (req.socket?.remoteAddress ?? null),
   if (!ip) return null,
   if (ip.startsWith('::ffff: ')) return ip.substring(7),
-  return ip,
-}
+  return ip}
 ,
 export function getClientIp(req: any): string {
 export function getClientIp(req: any): string {
-,
   const forwarded = req.headers['x-forwarded-for'],
   const remoteAddress = req.socket?.remoteAddress,
   if (forwarded) {

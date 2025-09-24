@@ -419,8 +419,7 @@ export default function UltraFuturisticNavigation20o28() {
   const toggleMenu = () => setIsOpen(!isOpen),
   const closeMenu = () => setIsOpen(false),
   const handleCategoryHover = (categoryTitle: string) => {
-    setActiveCategory(categoryTitle),
-  };
+    setActiveCategory(categoryTitle)};
   const handleCategoryLeave = () => {
     setActiveCategory(null)};
   const filteredServices = serviceCategories.flatMap(category =>,

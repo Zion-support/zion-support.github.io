@@ -196,8 +196,7 @@ export default function QuantumHolographicNavbar() {
     };
   ],
   const handleDropdownEnter = (name: string) => {
-    setActiveDropdown(name),
-  };
+    setActiveDropdown(name)};
   const handleDropdownLeave = () => {
     setActiveDropdown(null)};
   return (

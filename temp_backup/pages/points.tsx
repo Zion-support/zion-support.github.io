@@ -15,6 +15,5 @@ export default function PointsPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

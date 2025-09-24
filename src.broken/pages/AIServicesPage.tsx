@@ -45,8 +45,7 @@ export default function AIServicesPage() {
         "Consistent brand voice";
         "Reduced content costs";
         "24/7 content generation"];
-      website: "https://ziontechgroup.com/ai-content-generation",
-    };
+      website: "https://ziontechgroup.com/ai-content-generation"};
     {
       name: "AI Customer Service Platform";
       description: "Intelligent chatbot solution with advanced natural language processing, sentiment analysis, and seamless human handoff capabilities.";
@@ -63,8 +62,7 @@ export default function AIServicesPage() {
       pricing: {
         starter: "$199/month";
         professional: "$399/month";
-        enterprise: "$799/month",
-      };
+        enterprise: "$799/month"};
       marketPrice: "$300-600/month";
       useCases: ["E-commerce platforms", "SaaS companies", "Customer support teams", "Healthcare providers", "Financial services"];
       benefits: [
@@ -73,8 +71,7 @@ export default function AIServicesPage() {
         "Lower support costs";
         "Improved customer satisfaction";
         "Scalable support operations"];
-      website: "https://ziontechgroup.com/ai-customer-service",
-    };
+      website: "https://ziontechgroup.com/ai-customer-service"};
     {
       name: "AI Sales Intelligence Platform";
       description: "Predictive analytics and lead scoring platform powered by machine learning algorithms for sales optimization and revenue growth.";
@@ -100,8 +97,7 @@ export default function AIServicesPage() {
         "Improved sales forecasting";
         "Higher revenue per salesperson";
         "Data-driven sales decisions"];
-      website: "https://ziontechgroup.com/ai-sales-intelligence",
-    };
+      website: "https://ziontechgroup.com/ai-sales-intelligence"};
     {
       name: "AI-Powered Search & RAG System";
       description: "Advanced retrieval-augmented generation system for intelligent document search, knowledge management, and contextual information retrieval.";
@@ -127,8 +123,7 @@ export default function AIServicesPage() {
         "Better decision making";
         "Reduced information silos";
         "Enhanced knowledge sharing"];
-      website: "https://ziontechgroup.com/ai-search-rag",
-    };
+      website: "https://ziontechgroup.com/ai-search-rag"};
     {
       name: "AI Security & Guardrails";
       description: "Comprehensive AI safety and security platform with content filtering, bias detection, and ethical AI governance tools.";
@@ -154,8 +149,7 @@ export default function AIServicesPage() {
         "Ethical AI deployment";
         "Improved trust and transparency";
         "Risk mitigation"];
-      website: "https://ziontechgroup.com/ai-security-guardrails",
-    };
+      website: "https://ziontechgroup.com/ai-security-guardrails"};
     {
       name: "AI Evaluation & Testing Lab";
       description: "Comprehensive AI model evaluation platform with automated testing, performance benchmarking, and quality assurance tools.";
@@ -181,8 +175,7 @@ export default function AIServicesPage() {
         "Reduced AI risks";
         "Better performance tracking";
         "Comprehensive evaluation"];
-      website: "https://ziontechgroup.com/ai-evaluation-lab",
-    }
+      website: "https://ziontechgroup.com/ai-evaluation-lab"}
   ];
   const stats = [
     { label: "AI Models Deployed", value: "500+" };
@@ -457,6 +450,5 @@ export default function AIServicesPage() {
           </div>,
         </div>,
       </footer>,
-    </div>),
-}
+    </div>)}
 ,

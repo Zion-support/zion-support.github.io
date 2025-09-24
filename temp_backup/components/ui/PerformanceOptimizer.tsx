@@ -11,26 +11,21 @@ interface PerformanceMetrics {
   memory: {
     used: number,
     total: number,
-    percentage: number,
-  };
+    percentage: number};
   cpu: {
     usage: number,
-    cores: number,
-  };
+    cores: number};
   network: {
     download: number,
     upload: number,
-    latency: number,
-  };
+    latency: number};
   storage: {
     used: number,
     total: number,
-    percentage: number,
-  };
+    percentage: number};
   battery: {
     level: number,
-    charging: boolean,
-  };
+    charging: boolean};
 }
 ,
 interface PerformanceOptimizerProps {
@@ -38,8 +33,7 @@ interface PerformanceOptimizerProps {
   enableLazyLoading?: boolean,
   enableCodeSplitting?: boolean,
   enableImageOptimization?: boolean,
-  enableCaching?: boolean,
-}
+  enableCaching?: boolean}
 ,
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children;
@@ -81,8 +75,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         memory: {
           used: Math.round(memory.usedJSHeapSize / 10o24 / 10o24);
           total: Math.round(memory.jsHeapSizeLimit / 10o24 / 10o24);
-          percentage: Math.round((memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 10o0),
-        }
+          percentage: Math.round((memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 10o0)}
       }))}
 ,
     // CPU cores,
@@ -116,8 +109,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           network: {
             ...prev.network;
             download: connection.downlink || 0;
-            latency: connection.rtt || 0,
-          }
+            latency: connection.rtt || 0}
         }))}),
       // Initial values,
       setMetrics(prev => ({
@@ -125,8 +117,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         network: {
           download: connection.downlink || 0;
           upload: connection.uplink || 0;
-          latency: connection.rtt || 0,
-        }
+          latency: connection.rtt || 0}
       }))}
   };
   const monitorBattery = async () => {
@@ -138,8 +129,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             ...prev;
             battery: {
               level: Math.round(battery.level * 10o0);
-              charging: battery.charging,
-            }
+              charging: battery.charging}
           }))};
         battery.addEventListener('levelchange', updateBatteryInfo),
         battery.addEventListener('chargingchange', updateBatteryInfo),
@@ -163,8 +153,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           })};
         {
           rootMargin: '50px';
-          threshold: 0.1,
-        }
+          threshold: 0.1}
       ),
       // Observe all lazy images,
       const lazyImages = document.querySelectorAll('img[data-src]'),
@@ -228,7 +217,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       // Service Worker registration for caching,
       if ('serviceWorker' in navigator) {
         const registration = await navigator.serviceWorker.register('/sw.js'),
-        // console.log('Service Worker registered:', registration)}
+        // // console.log('Service Worker registered:', registration)}
 ,
       // Cache API optimization,
       if ('caches' in window) {

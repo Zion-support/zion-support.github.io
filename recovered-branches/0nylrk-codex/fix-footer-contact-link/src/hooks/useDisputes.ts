@@ -50,8 +50,7 @@ export function useDisputes() {
       setError(null)} catch (err: any) {
       console.error('Error fetching disputes:', err),
       setError('Failed to fetch disputes: ' + err.message),
-      toast.error('Failed to fetch disputes'),
-    } finally {
+      toast.error('Failed to fetch disputes')} finally {
       setIsLoading(false)}
   };
   const getDisputeById = async (disputeId: string): Promise<Dispute | null> => {
@@ -90,8 +89,7 @@ export function useDisputes() {
     project_id: string,
     milestone_id?: string,
     reason_code: string,
-    description: string,
-  }): Promise<Dispute | null> => {
+    description: string}): Promise<Dispute | null> => {
     if (!user) {
       toast.error('You must be logged in to create a dispute'),
       return null}

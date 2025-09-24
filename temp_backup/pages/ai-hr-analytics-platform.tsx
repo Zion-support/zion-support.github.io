@@ -292,6 +292,5 @@ export default function AIHRAnalyticsPlatform() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

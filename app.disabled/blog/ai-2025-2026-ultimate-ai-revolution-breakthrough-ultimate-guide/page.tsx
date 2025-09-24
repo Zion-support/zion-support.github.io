@@ -423,6 +423,5 @@ export default function AIRevolutionBlogPost() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -42,6 +42,5 @@ export default function SmartCRMSuite() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,

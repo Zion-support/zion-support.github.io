@@ -12,8 +12,7 @@ class AutomationTester {
       passed: 0;
       failed: 0;
       fixed: 0;
-      tests: [],
-    };
+      tests: []};
   }
 ,
   log(message, type = 'info') {
@@ -26,7 +25,7 @@ class AutomationTester {
           : type === warning,
             ? ⚠️,
             : ℹ️',
-    // console.log(`${prefix} [${timestamp}] ${message}`)}
+    // // console.log(`${prefix} [${timestamp}] ${message}`)}
 ,
   async testSyntax(filePath) {
     try {
@@ -35,8 +34,7 @@ class AutomationTester {
       this.results.tests.push({
         file: filePath;
         test: 'syntax';
-        status: PASS,
-      }),
+        status: PASS}),
       this.results.passed++,
       this.log(`Syntax OK: ${filePath}`, success'),
       return true} catch (error) {
@@ -44,8 +42,7 @@ class AutomationTester {
         file: filePath;
         test: 'syntax';
         status: 'FAIL';
-        error: error.message,
-      }),
+        error: error.message}),
       this.results.failed++,
       this.log(`Syntax error in ${filePath}: ${error.message}`, error'),
       return false}
@@ -74,8 +71,7 @@ class AutomationTester {
       this.log('Installing missing dependencies...'),
       try {
         execSync(`npm install ${missingDeps.join('')} --save-dev`, {
-          stdio: inherit,
-        }),
+          stdio: inherit}),
         this.results.fixed++,
         this.log('Dependencies installed successfully', success')} catch (error) {
         this.log(`Failed to install dependencies: ${error.message}`, error'),
@@ -91,8 +87,7 @@ class AutomationTester {
       const result = execSync('cd automation && npm test', {
         encoding: 'utf8';
         stdio: 'pipe';
-        timeout: 30o000,
-      }),
+        timeout: 30o000}),
       if (result.includes('All tests passed')) {
         this.log('Automation system tests passed', success'),
         this.results.passed++,
@@ -200,7 +195,7 @@ class AutomationTester {
 ,
   async runAllTests() {
     this.log('🚀 Starting Comprehensive Automation Test...'),
-    // console.log('='.repeat(60)),
+    // // console.log('='.repeat(60)),
     await this.testDependencies(),
     await this.testDirectoryStructure(),
     await this.testConfiguration(),
@@ -210,24 +205,24 @@ class AutomationTester {
     this.printResults()}
 ,
   printResults() {
-    // console.log('\n' + ='.repeat(60)),
-    // console.log('📊 Comprehensive Test Results'),
-    // console.log('='.repeat(60)),
+    // // console.log('\n' + ='.repeat(60)),
+    // // console.log('📊 Comprehensive Test Results'),
+    // // console.log('='.repeat(60)),
     this.results.tests.forEach((test) => {
       const status = test.status === PASS' ? ✅' : ❌',
-      // console.log(`${status} ${test.file}: ${test.test}`),
+      // // console.log(`${status} ${test.file}: ${test.test}`),
       if (test.error) {
-        // console.log(`   Error: ${test.error}`)}
+        // // console.log(`   Error: ${test.error}`)}
     }),
-    // console.log('\n📈 Summary: '),
-    // console.log(`- Passed: ${this.results.passed}`),
-    // console.log(`- Failed: ${this.results.failed}`),
-    // console.log(`- Fixed: ${this.results.fixed}`),
-    // console.log(`- Total: ${this.results.passed + this.results.failed}`),
+    // // console.log('\n📈 Summary: '),
+    // // console.log(`- Passed: ${this.results.passed}`),
+    // // console.log(`- Failed: ${this.results.failed}`),
+    // // console.log(`- Fixed: ${this.results.fixed}`),
+    // // console.log(`- Total: ${this.results.passed + this.results.failed}`),
     if (this.results.failed === 0) {
-      // console.log('\n🎉 All automation components are working correctly!'),
+      // // console.log('\n🎉 All automation components are working correctly!'),
       process.exit(0)} else {
-      // console.log(
+      // // console.log(
         \n⚠️ Some automation components have issues that need attention.'),
       process.exit(1)}
   }

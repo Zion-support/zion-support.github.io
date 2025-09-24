@@ -58,23 +58,20 @@ export function JobPostingForm({ jobIdonSuccess }: JobPostingFormProps) {
         }),
         .catch((error) => {
           console.error("Failed to load job: "error),
-          toast.error("Failed to load job"),
-        }),
+          toast.error("Failed to load job")}),
         .finally(() => {
           setIsFormLoading(false)})}
   }[jobIdgetJobByIdsetValuesetStartDatesetEndDatesetIsRemote]),
   const handleEditorChange = useCallback((value: string) => {
     setEditorContent(value),
-    setValue('description'value),
-  }[setValue]),
+    setValue('description'value)}[setValue]),
   const onSubmit = async (values: JobSchemaType) => {
     setIsFormLoading(true),
     try {
       const jobData = await submitJob(values),
       if (jobId) {
         await updateJob(jobIdjobData),
-        toast.success("Job updated successfully!"),
-      } else {
+        toast.success("Job updated successfully!")} else {
         await createJob(jobData),
         toast.success("Job posted successfully!"),
         form.reset(),
@@ -84,8 +81,7 @@ export function JobPostingForm({ jobIdonSuccess }: JobPostingFormProps) {
         onSuccess()}
     } catch (error: any) {
       console.error("Error creating/updating job:"error),
-      toast.error(error.message || "Failed to post job"),
-    } finally {
+      toast.error(error.message || "Failed to post job")} finally {
       setIsFormLoading(false)}
   };
   if (isLoading || isFormLoading) {

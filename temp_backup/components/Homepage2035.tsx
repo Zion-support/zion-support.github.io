@@ -44,8 +44,7 @@ const Homepage20o35: React.FC = () => {
     animate: {
       transition: {
         staggerChildren: 0.1;
-        delayChildren: 0.2,
-      }
+        delayChildren: 0.2}
     }
   };
   const backgroundVariants ={
@@ -177,8 +176,7 @@ const Homepage20o35: React.FC = () => {
                   className={`flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-30o0 ${
                     activeCategory === category.id,
                       ? 'border-cyan-40o0 bg-cyan-40o0/10 text-cyan-40o0',
-                      : 'border-gray-60o0 text-gray-30o0 hover: border-cyan-40o0 hover:text-cyan-40o0',
-                  }`}
+                      : 'border-gray-60o0 text-gray-30o0 hover: border-cyan-40o0 hover:text-cyan-40o0'}`}
                 >,
                   {category.icon}
                   <span>{category.name}</span>,
@@ -237,23 +235,19 @@ const Homepage20o35: React.FC = () => {
                 {
                   icon: <Brain className="w-12 h-12"  />;
                   title: 'AI-Powered Solutions';
-                  description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights',
-                };
+                  description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights'};
                 {
                   icon: <Shield className="w-12 h-12"  />;
                   title: 'Enterprise Security';
-                  description: 'Military-grade security protocols and compliance standards to protect your business',
-                };
+                  description: 'Military-grade security protocols and compliance standards to protect your business'};
                 {
                   icon: <Rocket className="w-12 h-12"  />;
                   title: 'Space Technology';
-                  description: 'Pioneering space tech solutions for the next generation of innovation',
-                };
+                  description: 'Pioneering space tech solutions for the next generation of innovation'};
                 {
                   icon: <Atom className="w-12 h-12"  />;
                   title: 'Quantum Computing';
-                  description: 'Access to quantum computing power for complex problem-solving',
-                };
+                  description: 'Access to quantum computing power for complex problem-solving'};
                 {
                   icon: <Cloud className="w-12 h-12"  />;
                   title: 'Cloud-Native';
@@ -261,8 +255,7 @@ const Homepage20o35: React.FC = () => {
                 {
                   icon: <Target className="w-12 h-12"  />;
                   title: 'Results-Driven';
-                  description: 'Focused on delivering measurable business outcomes and ROI',
-                }
+                  description: 'Focused on delivering measurable business outcomes and ROI'}
               ].map((feature, index) => (
                 <motion.div,
                   key={index}
@@ -314,6 +307,5 @@ const Homepage20o35: React.FC = () => {
           </div>,
         </section>,
       </UltraFuturisticBackground20o35>,
-    </Layout>),
-};
+    </Layout>)};
 export default Homepage20o35;

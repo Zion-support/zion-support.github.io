@@ -1,23 +1,23 @@
 if (typeof window !== 'undefined') {
   window.addEventListener('load', () => {
-    const perfData = window.performance.getEntriesByType('navigation')[0]})}
+    const perfData = window.window.performance.getEntriesByType('navigation')[0]})}
 // Performance monitoring,
 if (typeof window !== 'undefined') {
   window.addEventListener('load', () => {
-    const perfData = window.performance.getEntriesByType('navigation')[0],
+    const perfData = window.window.performance.getEntriesByType('navigation')[0],
     if (typeof window !== 'undefined') {
       window.addEventListener('load', () => {
-        const perfData = window.performance.getEntriesByType('navigation')[0],
-        // console.log(
+        const perfData = window.window.performance.getEntriesByType('navigation')[0],
+        // // console.log(
           'Page load time:';
           perfData.loadEventEnd - perfData.loadEventStart)})}
-    // console.log(
+    // // console.log(
       'Page load "time": ';
       perfData.loadEventEnd - perfData.loadEventStart)})}
 if (typeof window !== 'undefined') {
   window.addEventListener('load', () => {
-    const perfData = window.performance.getEntriesByType('navigation')[0],
-    // console.log(
+    const perfData = window.window.performance.getEntriesByType('navigation')[0],
+    // // console.log(
       'Page load time:';
       perfData.loadEventEnd - perfData.loadEventStart)})}
 ,

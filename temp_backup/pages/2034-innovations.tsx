@@ -390,6 +390,5 @@ export default function Innovations2034Page() {
           </section>,
         </div>,
       </Layout>,
-    </>),
-}
+    </>)}
 ,

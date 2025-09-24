@@ -107,8 +107,7 @@ const AI20o25_20o26TechnologyShowcase = () => {
               className={`inline-flex items-center px-6 py-3 rounded-lg font-medium transition-all duration-30o0 ${
                 activeTab === tab.id,
                   ? 'bg-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {tab.icon}
               <span className="ml-2">{tab.name}</span>,
@@ -208,6 +207,5 @@ const AI20o25_20o26TechnologyShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25_20o26TechnologyShowcase;

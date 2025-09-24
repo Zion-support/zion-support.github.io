@@ -8,8 +8,7 @@ export const ThemeToggle = () => {
       '(prefers-color-scheme: dark)').matches,
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
       setIsDark(true),
-      document.documentElement.classList.add('dark'),
-    }
+      document.documentElement.classList.add('dark')}
   }, []),
   const toggleTheme = () => {
     const newTheme = !isDark,

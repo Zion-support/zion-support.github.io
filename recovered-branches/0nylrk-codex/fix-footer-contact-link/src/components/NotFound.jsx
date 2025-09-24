@@ -192,6 +192,5 @@ const NotFound = () => {
           </a>,
         </motion.p>,
       </motion.div>,
-    </div>),
-};
+    </div>)};
 export default NotFound;

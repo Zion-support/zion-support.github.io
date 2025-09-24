@@ -317,6 +317,5 @@ export default function AI20o252026UltimateTransformation() {
           </div>,
         </section>,
       </div>,
-    </ErrorBoundary>),
-}
+    </ErrorBoundary>)}
 ,

@@ -3,8 +3,7 @@ import { Feature } from '../../types/roadmap',
 type Props = {
   feature: Feature,
   onUpvote: (feature: Feature) => void,
-  onFollow: (feature: Feature) => void,
-};
+  onFollow: (feature: Feature) => void};
 export default function RoadmapCard({ feature, onUpvote, onFollow }: Props) {
   return (
     <div className='rounded-xl border border-zinc-80o0 bg-zinc-90o0/40 backdrop-blur p-4 shadow-sm hover: shadow-md transition-shadow'>,
@@ -72,6 +71,5 @@ export default function RoadmapCard({ feature, onUpvote, onFollow }: Props) {
           </button>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

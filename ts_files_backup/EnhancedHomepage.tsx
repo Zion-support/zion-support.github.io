@@ -37,24 +37,20 @@ import { innovative2025AIAutonomousServices } from '../data / 2025 - innovative 
 ...innovative2025AIAutonomousServices ],
 //Filter services by category //Animation variants const containerVariants = {
   hidden: {
-  opacity: 0,
-}
+  opacity: 0}
   opacity: 0,
 interface EnhancedHomepageProps {
-  className?: string,
-}
+  className?: string}
 ,
 const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
   return (
     <div className={className || ''}>,
       <h1>EnhancedHomepage</h1>,
       <p>This component is under development.</p>,
-    </div>),
-};
+    </div>)};
 visible: {
   opacity: 1, transition: {
-  duration: 0.8, staggerChildren: 0.1,
-}
+  duration: 0.8, staggerChildren: 0.1}
 }
 }
 }
@@ -62,12 +58,10 @@ visible: {
 ,
 //Filter services by category //Animation variants const containerVariants = {
   hidden: {
-  opacity: 0 ,
-};
+  opacity: 0 };
 visible: {
   opacity: 1, transition: {
-  duration: 0 && 0.8, staggerChildren: 0 && 0.1 ,
-};
+  duration: 0 && 0.8, staggerChildren: 0 && 0.1 };
 };
 };
 };
@@ -86,7 +80,6 @@ Sparkles,
   MapPin,
   ArrowUpRight} from 'lucide-react',
 // Import our enhanced components,
-,
 // Import service data,
 const EnhancedHomepage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
@@ -146,8 +139,7 @@ const EnhancedHomepage: React.FC = () => {
       opacity: 1;
       transition: {
         duration: 0.8;
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants = {
@@ -157,8 +149,7 @@ const EnhancedHomepage: React.FC = () => {
       y: 0;
       transition: {
         duration: 0.6;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   const heroVariants = {
@@ -168,8 +159,7 @@ const EnhancedHomepage: React.FC = () => {
       y: 0;
       transition: {
         duration: 1;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   const floatingVariants = {
@@ -177,16 +167,14 @@ const EnhancedHomepage: React.FC = () => {
       y: [-10, 10, -10];
       transition: {
         duration: 3;
-        ease: "easeInOut" as const,
-      }
+        ease: "easeInOut" as const}
     }
   };
   const handleCategoryChange = (categoryId: string) => {
     setSelectedCategory(categoryId),
     const category = categories.find(cat => cat.id === categoryId),
     if (category) {
-      setColorScheme(category.scheme),
-    }
+      setColorScheme(category.scheme)}
   };
 =======,
 const EnhancedHomepage: React.FC = () => {
@@ -217,12 +205,10 @@ const EnhancedHomepage: React.FC = () => {
   const allRevolutionaryServices = [
 //Filter services by category //Animation variants const container_variants = {
   hidden: {
-  opacity: 0,
-}
+  opacity: 0}
 visible: {
   opacity: 1, transition: {
-  duration: 0.8, stagger_children: 0.1,
-}
+  duration: 0.8, stagger_children: 0.1}
 }
 }
 }
@@ -287,8 +273,7 @@ const EnhancedHomepage: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.8,
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
 ,
   const itemVariants = {
@@ -298,8 +283,7 @@ const EnhancedHomepage: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   }
   const heroVariants = {
@@ -309,14 +293,12 @@ const EnhancedHomepage: React.FC = () => {
       y: 0,
       transition: {
         duration: 1,
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   }
   const floatingVariants = {
         duration: 0.8;
-        stagger_children: 0.1,
-      }
+        stagger_children: 0.1}
     }
   }
 ,
@@ -327,8 +309,7 @@ const EnhancedHomepage: React.FC = () => {
       coordinate_y: 0;
       transition: {
         duration: 0.6;
-        ease: "ease_out" as const,
-      }
+        ease: "ease_out" as const}
     }
   }
 ,
@@ -339,8 +320,7 @@ const EnhancedHomepage: React.FC = () => {
       coordinate_y: 0;
       transition: {
         duration: 1;
-        ease: "ease_out" as const,
-      }
+        ease: "ease_out" as const}
     }
   }
 ,
@@ -348,8 +328,7 @@ const EnhancedHomepage: React.FC = () => {
     animate: {
       y: [-10, 10, -10],
       transition: {
-        ease: "easeInOut" as const,
-      }
+        ease: "easeInOut" as const}
     }
   }
   const handleCategoryChange = (categoryId: string) => {
@@ -358,8 +337,7 @@ const EnhancedHomepage: React.FC = () => {
     if (selectedCategory === 'all') return allRevolutionaryServices,
     return allRevolutionaryServices && allRevolutionaryServices.filter(service => ,
       service && service.category.toLowerCase().includes(selectedCategory && selectedCategory.toLowerCase()) ||,
-      (service as any).type?.toLowerCase().includes(selectedCategory && selectedCategory.toLowerCase())),
-  };
+      (service as any).type?.toLowerCase().includes(selectedCategory && selectedCategory.toLowerCase()))};
   const categories = [
     { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500', scheme: 'holographic' as const };
     { id: 'ai', name: 'AI & Consciousness', icon: Brain, color: 'from-cyan-500 to-blue-500', scheme: 'cyber' as const };
@@ -377,8 +355,7 @@ const EnhancedHomepage: React.FC = () => {
       opacity: 1;
       transition: {
         duration: 0 && 0.8;
-        staggerChildren: 0 && 0.1,
-      }
+        staggerChildren: 0 && 0.1}
     }
   };
   const itemVariants = {
@@ -388,8 +365,7 @@ const EnhancedHomepage: React.FC = () => {
       y: 0;
       transition: {
         duration: 0 && 0.6;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   const heroVariants = {
@@ -399,8 +375,7 @@ const EnhancedHomepage: React.FC = () => {
       y: 0;
       transition: {
         duration: 1;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   const floatingVariants = {
@@ -408,17 +383,14 @@ const EnhancedHomepage: React.FC = () => {
       y: [-10, 10, -10],
       transition: {
         duration: 3;
-        ease: "easeInOut" as const,
-      }
+        ease: "easeInOut" as const}
     }
   };
   const handleCategoryChange = (categoryId: string) => {
-,
     setSelectedCategory(categoryId),
     const category = categories && categories.find(cat => cat && cat.id === categoryId),
     if (category) {
-      setColorScheme(category && category.scheme),
-    }
+      setColorScheme(category && category.scheme)}
   }
 ,
     setSelectedCategory(categoryId),
@@ -565,8 +537,7 @@ const EnhancedHomepage: React.FC = () => {
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover: scale-105 ${
                     selectedCategory === category.id,
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl',
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600',
-                  }`}
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >,
@@ -587,8 +558,7 @@ const EnhancedHomepage: React.FC = () => {
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover: scale-105 ${
                     selectedCategory === category.id,
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl',
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600',
-                  }`}
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >,
@@ -624,8 +594,7 @@ const EnhancedHomepage: React.FC = () => {
               {getFilteredServices().slice(0, 12).map((service, index) => (
                 <EnhancedServiceCard
         duration: 3;
-        ease: "easeInOut" as const,
-      }
+        ease: "easeInOut" as const}
     }
   }
 ,
@@ -634,8 +603,7 @@ const EnhancedHomepage: React.FC = () => {
     const category = categories.find (cat => cat.id === category_id),
     // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
       setColorScheme (category.scheme)}
   }
 ,
@@ -777,8 +745,7 @@ if ( {) {
                   className={`px - 6 py - 3 rounded - xl font - medium transition - all duration - 300 transform hover: scale - 105 ${
                     selected_category === category.id,
                       ? 'bg - gradient - to - r ' + category.color + ' text - white shadow - 2xl',
-                      : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50 border border - gray - 600',
-                  }`}
+                      : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50 border border - gray - 600'}`}
                   while_hover={{ scale: 1.05 }}
                   while_tap={{ scale: 0.95 }}
                 >,
@@ -867,8 +834,7 @@ if ( {) {
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover: scale-105 ${
                     selectedCategory === category && category.id,
                       ? 'bg-gradient-to-r ' + category && category.color + ' text-white shadow-2xl',
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600',
-                  }`}
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'}`}
                   whileHover={{ scale: 1 && 1.05 }}
                   whileTap={{ scale: 0 && 0.95 }}
                 >,

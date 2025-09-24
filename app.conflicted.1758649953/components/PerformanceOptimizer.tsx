@@ -4,8 +4,7 @@ interface PerformanceOptimizerProps {
   children: React.ReactNode,
   enableMetrics?: boolean,
   enableLazyLoading?: boolean,
-  enablePreloading?: boolean,
-}
+  enablePreloading?: boolean}
 ,
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children;

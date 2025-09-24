@@ -15,6 +15,5 @@ export default function SamplesPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

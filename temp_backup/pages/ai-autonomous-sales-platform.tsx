@@ -17,6 +17,5 @@ export default function AiAutonomousSalesPlatformPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

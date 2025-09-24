@@ -73,6 +73,5 @@ export default function AgentFailureModesPage() {
           </div>,
         </div>,
       </section>,
-    </main>),
-}
+    </main>)}
 ,

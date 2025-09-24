@@ -17,8 +17,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const serviceCategories = [
   {
     title: '🚀 20o28-20o29 Futuristic Innovations';
@@ -166,8 +165,7 @@ export default function UltraFuturisticNavigation20o29() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null),
   const [isScrolled, setIsScrolled] = useState(false),
   const handleCategoryHover = (categoryTitle: string) => {
-    setActiveCategory(categoryTitle),
-  };
+    setActiveCategory(categoryTitle)};
   const handleCategoryLeave = () => {
     setActiveCategory(null)};
   const filteredCategories = serviceCategories.filter(category =>,

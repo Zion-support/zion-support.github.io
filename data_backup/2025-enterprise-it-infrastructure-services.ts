@@ -429,7 +429,7 @@ export const "enterpriseITInfrastructureServices20o25": EnterpriseITInfrastructu
     "tagline": 'Self-optimizing networks that adapt and improve performance automatically';
     "price": '$9,999';
     "period": '/month';
-    "description": 'Revolutionary autonomous network management platform that continuously optimizes network performance, security, and efficiency. Uses AI to predict issues, optimize routing, and maintain peak window.performance.';
+    "description": 'Revolutionary autonomous network management platform that continuously optimizes network performance, security, and efficiency. Uses AI to predict issues, optimize routing, and maintain peak window.window.performance.';
     features['Autonomous optimization';
       'Performance prediction';
       'Automatic routing';

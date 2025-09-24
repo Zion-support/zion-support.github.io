@@ -191,6 +191,5 @@ const SuccessMetricsShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default SuccessMetricsShowcase20o25;

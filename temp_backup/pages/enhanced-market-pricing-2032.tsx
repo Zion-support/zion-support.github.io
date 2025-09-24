@@ -647,6 +647,5 @@ export default function EnhancedMarketPricing20o32() {
         </div>,
       </section>,
       <UltraFuturisticFooter20o32 />,
-    </>),
-}
+    </>)}
 ,

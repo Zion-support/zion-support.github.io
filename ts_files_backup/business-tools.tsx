@@ -15,8 +15,7 @@ export default function BusinessToolsPage() {
           website: 'https://notion.so';
           icon: <FileText className="w-6 h-6" />;
           color: 'bg-gradient-to-br from-gray-800 to-black';
-          popular: true,
-        };
+          popular: true};
         {
           name: 'Asana';
           description: 'Work management platform for teams to organizetrackand manage their work.';
@@ -24,8 +23,7 @@ export default function BusinessToolsPage() {
           pricing: 'Free - $10.99/month';
           website: 'https://asana.com';
           icon: <CheckCircle className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-pink-500 to-red-600',
-        };
+          color: 'bg-gradient-to-br from-pink-500 to-red-600'};
         {
           name: 'Monday.com';
           description: 'Visual project management platform with customizable workflows and automation.';
@@ -33,8 +31,7 @@ export default function BusinessToolsPage() {
           pricing: '$8/month - $16/month';
           website: 'https://monday.com';
           icon: <Calendar className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-red-500 to-pink-600',
-        }
+          color: 'bg-gradient-to-br from-red-500 to-pink-600'}
       ]};
     {
       category: 'Communication & Collaboration';
@@ -47,8 +44,7 @@ export default function BusinessToolsPage() {
           website: 'https://slack.com';
           icon: <MessageSquare className="w-6 h-6" />;
           color: 'bg-gradient-to-br from-purple-500 to-pink-600';
-          popular: true,
-        };
+          popular: true};
         {
           name: 'Microsoft Teams';
           description: 'Unified communication platform with chatvideo meetingsand file collaboration.';
@@ -56,8 +52,7 @@ export default function BusinessToolsPage() {
           pricing: 'Free - $6/month';
           website: 'https://teams.microsoft.com';
           icon: <Users className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
-        };
+          color: 'bg-gradient-to-br from-blue-500 to-indigo-600'};
         {
           name: 'Zoom';
           description: 'Video conferencing platform for meetingswebinarsand team collaboration.';
@@ -65,8 +60,7 @@ export default function BusinessToolsPage() {
           pricing: 'Free - $14.99/month';
           website: 'https://zoom.us';
           icon: <Video className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-        }
+          color: 'bg-gradient-to-br from-blue-500 to-cyan-600'}
       ]};
     {
       category: 'Marketing & Sales';
@@ -79,8 +73,7 @@ export default function BusinessToolsPage() {
           website: 'https://hubspot.com';
           icon: <Target className="w-6 h-6" />;
           color: 'bg-gradient-to-br from-orange-500 to-red-600';
-          popular: true,
-        };
+          popular: true};
         {
           name: 'Mailchimp';
           description: 'Email marketing platform for growing businesses and creators.';
@@ -88,8 +81,7 @@ export default function BusinessToolsPage() {
           pricing: 'Free - $13/month';
           website: 'https://mailchimp.com';
           icon: <Mail className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
-        };
+          color: 'bg-gradient-to-br from-yellow-500 to-orange-600'};
         {
           name: 'Salesforce';
           description: 'Customer relationship management platform for saleserviceand marketing.';
@@ -97,8 +89,7 @@ export default function BusinessToolsPage() {
           pricing: '$25/month - $300/month';
           website: 'https://salesforce.com';
           icon: <TrendingUp className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
-        }
+          color: 'bg-gradient-to-br from-blue-500 to-indigo-600'}
       ]};
     {
       category: 'Finance & Accounting';
@@ -111,8 +102,7 @@ export default function BusinessToolsPage() {
           website: 'https://quickbooks.intuit.com';
           icon: <CreditCard className="w-6 h-6" />;
           color: 'bg-gradient-to-br from-green-500 to-emerald-600';
-          popular: true,
-        };
+          popular: true};
         {
           name: 'Stripe';
           description: 'Payment processing platform for internet businesses.';
@@ -120,8 +110,7 @@ export default function BusinessToolsPage() {
           pricing: '2.9% + 30¢ per transaction';
           website: 'https://stripe.com';
           icon: <CreditCard className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-purple-500 to-blue-600',
-        };
+          color: 'bg-gradient-to-br from-purple-500 to-blue-600'};
         {
           name: 'Xero';
           description: 'Cloud-based accounting software for small businesses and accountants.';
@@ -129,8 +118,7 @@ export default function BusinessToolsPage() {
           pricing: '$13/month - $70/month';
           website: 'https://xero.com';
           icon: <ChartBar className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-        }
+          color: 'bg-gradient-to-br from-blue-500 to-cyan-600'}
       ]};
     {
       category: 'Design & Creative';
@@ -143,8 +131,7 @@ export default function BusinessToolsPage() {
           website: 'https://figma.com';
           icon: <Palette className="w-6 h-6" />;
           color: 'bg-gradient-to-br from-purple-500 to-pink-600';
-          popular: true,
-        };
+          popular: true};
         {
           name: 'Canva';
           description: 'Create professional designs with drag-and-drop simplicity.';
@@ -152,8 +139,7 @@ export default function BusinessToolsPage() {
           pricing: 'Free - $12.99/month';
           website: 'https://canva.com';
           icon: <Image className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-        };
+          color: 'bg-gradient-to-br from-blue-500 to-cyan-600'};
         {
           name: 'Adobe Creative Cloud';
           description: 'Complete creative software suite for designphotographyand video.';
@@ -161,8 +147,7 @@ export default function BusinessToolsPage() {
           pricing: '$52.99/month';
           website: 'https://adobe.com/creativecloud';
           icon: <Palette className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-orange-500 to-red-600',
-        }
+          color: 'bg-gradient-to-br from-orange-500 to-red-600'}
       ]};
     {
       category: 'Analytics & Business Intelligence';
@@ -175,8 +160,7 @@ export default function BusinessToolsPage() {
           website: 'https://analytics.google.com';
           icon: <BarChart3 className="w-6 h-6" />;
           color: 'bg-gradient-to-br from-blue-500 to-green-600';
-          popular: true,
-        };
+          popular: true};
         {
           name: 'Tableau';
           description: 'Data visualization and business intelligence platform for analytics.';
@@ -184,8 +168,7 @@ export default function BusinessToolsPage() {
           pricing: '$70/month - $35/month';
           website: 'https://tableau.com';
           icon: <ChartBar className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
-        };
+          color: 'bg-gradient-to-br from-blue-500 to-indigo-600'};
         {
           name: 'Mixpanel';
           description: 'Product analytics platform for understanding user behavior and product usage.';
@@ -193,8 +176,7 @@ export default function BusinessToolsPage() {
           pricing: 'Free - $25/month';
           website: 'https://mixpanel.com';
           icon: <TrendingUp className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-purple-500 to-pink-600',
-        }
+          color: 'bg-gradient-to-br from-purple-500 to-pink-600'}
       ]}
   ],
   const businessInsights = [
@@ -202,48 +184,40 @@ export default function BusinessToolsPage() {
       title: 'Remote Work Tools';
       description: 'Essential tools for distributed teams and hybrid work environments.';
       trend: '📈 Growing Demand';
-      color: 'text-green-400',
-    };
+      color: 'text-green-400'};
     {
       title: 'AI-Powered Solutions';
       description: 'Business tools leveraging AI for automation and intelligent insights.';
       trend: '🚀 High Growth';
-      color: 'text-blue-400',
-    };
+      color: 'text-blue-400'};
     {
       title: 'Cloud-Native Platforms';
       description: 'Business applications built for scalability and global accessibility.';
       trend: '☁️ Mainstream';
-      color: 'text-cyan-400',
-    };
+      color: 'text-cyan-400'};
     {
       title: 'Security & Compliance';
       description: 'Tools ensuring data protection and regulatory compliance.';
       trend: '🔒 Critical';
-      color: 'text-orange-400',
-    }
+      color: 'text-orange-400'}
   ],
   const productivityTips = [
     {
       title: 'Start with Free Tiers';
       description: 'Most tools offer free versions to test before committing to paid plans.';
-      icon: <CheckCircle className="w-6 h-6 text-green-400" />,
-    };
+      icon: <CheckCircle className="w-6 h-6 text-green-400" />};
     {
       title: 'Focus on Integration';
       description: 'Choose tools that work well together to avoid data silos and manual work.';
-      icon: <Cog className="w-6 h-6 text-blue-400" />,
-    };
+      icon: <Cog className="w-6 h-6 text-blue-400" />};
     {
       title: 'Measure ROI';
       description: 'Track how each tool improves your team\'s productivity and business outcomes.';
-      icon: <ChartBar className="w-6 h-6 text-purple-400" />,
-    };
+      icon: <ChartBar className="w-6 h-6 text-purple-400" />};
     {
               title: 'Train Your Team';
         description: 'Invest in proper training to maximize the value of your chosen tools.';
-        icon: <Users className="w-6 h-6 text-orange-400" />,
-    }
+        icon: <Users className="w-6 h-6 text-orange-400" />}
   ],
   return (
     <>,
@@ -422,6 +396,5 @@ export default function BusinessToolsPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,

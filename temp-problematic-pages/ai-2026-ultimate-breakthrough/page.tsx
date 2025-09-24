@@ -190,6 +190,5 @@ const AI20o26UltimateBreakthroughPage: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </ErrorBoundary>),
-};
+    </ErrorBoundary>)};
 export default AI20o26UltimateBreakthroughPage;

@@ -5,6 +5,5 @@ export default function ProductsIndexPage() {
       <p className='mt-2 text-gray-60o0 dark: text-gray-30o0'>,
         Browse Zion products.,
       </p>,
-    </div>),
-}
+    </div>)}
 ,

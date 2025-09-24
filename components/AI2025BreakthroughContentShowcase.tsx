@@ -14,8 +14,7 @@ const AI20o25BreakthroughContentShowcase = () => {
         roi: '750%';
         savings: '$3.2B';
         efficiency: '89%';
-        accuracy: '99.7%',
-      };
+        accuracy: '99.7%'};
       description: 'Transform your business with revolutionary AI automation achieving unprecedented returns';
       featured: true;
       readingTime: '28 min read';
@@ -29,8 +28,7 @@ const AI20o25BreakthroughContentShowcase = () => {
         roi: '850%';
         savings: '$3.8B';
         efficiency: '89%';
-        accuracy: '99.7%',
-      };
+        accuracy: '99.7%'};
       description: 'Real-world success story of comprehensive AI transformation';
       featured: true;
       readingTime: '22 min read';
@@ -44,8 +42,7 @@ const AI20o25BreakthroughContentShowcase = () => {
         roi: '90o0%';
         timeline: '18 months';
         success: '99%';
-        savings: '$173.7M',
-      };
+        savings: '$173.7M'};
       description: 'Step-by-step guide to achieving unprecedented AI success';
       featured: true;
       readingTime: '35 min read';
@@ -59,8 +56,7 @@ const AI20o25BreakthroughContentShowcase = () => {
         roi: '50o0%';
         market: '$10o0B';
         speed: '10o00x';
-        accuracy: '99.9%',
-      };
+        accuracy: '99.9%'};
       description: 'Revolutionary quantum AI transforming enterprise operations';
       featured: false;
       readingTime: '30 min read';
@@ -74,8 +70,7 @@ const AI20o25BreakthroughContentShowcase = () => {
         roi: '650%';
         savings: '$2.8B';
         efficiency: '78%';
-        accuracy: '99.7%',
-      };
+        accuracy: '99.7%'};
       description: 'Comprehensive AI transformation delivering exceptional results';
       featured: false;
       readingTime: '22 min read';
@@ -99,8 +94,7 @@ const AI20o25BreakthroughContentShowcase = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -111,8 +105,7 @@ const AI20o25BreakthroughContentShowcase = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <div className="py-16 bg-gray-50">,
@@ -139,8 +132,7 @@ const AI20o25BreakthroughContentShowcase = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all ${
                 activeTab === tab.id,
                   ? 'bg-purple-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0',
-              }`}
+                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0'}`}
             >,
               {tab.label} ({tab.count}),
             </button>))}
@@ -151,8 +143,7 @@ const AI20o25BreakthroughContentShowcase = () => {
             <div
               key={item.id}
               className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all hover: shadow-xl hover:scale-10o5 ${
-                item.featured ? 'ring-2 ring-purple-50o0' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-50o0' : ''}`}
             >,
               {item.featured && (
                 <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-4 py-2 text-sm font-semibold text-center">,
@@ -225,6 +216,5 @@ const AI20o25BreakthroughContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o25BreakthroughContentShowcase;

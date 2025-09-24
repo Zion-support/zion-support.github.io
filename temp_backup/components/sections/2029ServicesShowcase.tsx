@@ -269,6 +269,5 @@ export default function ServicesShowcase20o29() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

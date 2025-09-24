@@ -25,8 +25,7 @@ export const ADVANCED_AI_SERVICES_20o30: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-research-assistant";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$7,0o00-15,0o00";
     competitors: ["OpenAI Research", "Anthropic Claude", "Google DeepMind"];
     roi: "80o0% within 12 months";
@@ -55,8 +54,7 @@ export const ADVANCED_AI_SERVICES_20o30: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-metaverse-platform";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$10,0o00-25,0o00";
     competitors: ["Unity", "Unreal Engine", "Roblox Studio"];
     roi: "10o00% within 18 months";
@@ -85,8 +83,7 @@ export const ADVANCED_AI_SERVICES_20o30: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-space-analytics";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$12,0o00-30,0o00";
     competitors: ["Maxar Technologies", "Planet Labs", "SpaceX"];
     roi: "120o0% within 24 months";
@@ -115,8 +112,7 @@ export const ADVANCED_AI_SERVICES_20o30: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-quantum-ml";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$15,0o00-50,0o00";
     competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Quantum"];
     roi: "20o00% within 36 months";
@@ -145,8 +141,7 @@ export const ADVANCED_AI_SERVICES_20o30: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-environmental-tech";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$6,0o00-15,0o00";
     competitors: ["Climate Corp", "Carbon Engineering", "Pachama"];
     roi: "60o0% within 15 months";
@@ -175,8 +170,7 @@ export const ADVANCED_AI_SERVICES_20o30: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-entertainment-content";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$8,0o00-20,0o00";
     competitors: ["Runway ML", "Synthesia", "Descript"];
     roi: "70o0% within 18 months";
@@ -205,8 +199,7 @@ export const ADVANCED_AI_SERVICES_20o30: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-education-platform";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$5,0o00-15,0o00";
     competitors: ["Knewton", "DreamBox", "Carnegie Learning"];
     roi: "50o0% within 12 months";

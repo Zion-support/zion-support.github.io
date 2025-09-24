@@ -18,20 +18,20 @@ export default function PerformanceMonitor() {
     if (!isDev && !isAdmin) return,
     const measurePerformance = () => {
       try {
-        const perfData = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+        const perfData = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
         const basicMetrics: PerformanceMetrics ={
           ttfb: perfData.responseStart - perfData.requestStart};
         // Measure Core Web Vitals,
         if ('web-vitals' in window) {
-          // console.log('Core Web Vitals monitoring enabled')}
+          // // console.log('Core Web Vitals monitoring enabled')}
 ,
         // Log performance metrics,
         console.group('🚀 Performance Metrics'),
-        // console.log('DOM Content Loaded:', `${(perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart).toFixed(2)}ms`),
-        // console.log('Load Complete:', `${(perfData.loadEventEnd - perfData.loadEventStart).toFixed(2)}ms`),
-        // console.log('Total Load Time:', `${(perfData.loadEventEnd - perfData.fetchStart).toFixed(2)}ms`),
-        // console.log('First Paint:', `${window.performance.getEntriesByName('first-paint')[0]?.startTime || 0}ms`),
-        // console.log('First Contentful Paint:', `${window.performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0}ms`),
+        // // console.log('DOM Content Loaded:', `${(perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart).toFixed(2)}ms`),
+        // // console.log('Load Complete:', `${(perfData.loadEventEnd - perfData.loadEventStart).toFixed(2)}ms`),
+        // // console.log('Total Load Time:', `${(perfData.loadEventEnd - perfData.fetchStart).toFixed(2)}ms`),
+        // // console.log('First Paint:', `${window.window.performance.getEntriesByName('first-paint')[0]?.startTime || 0}ms`),
+        // // console.log('First Contentful Paint:', `${window.window.performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0}ms`),
         console.groupEnd(),
         // Send to analytics service (placeholder),
         if (typeof (window as any).gtag === 'function') {
@@ -44,8 +44,7 @@ export default function PerformanceMonitor() {
             metric_2: Math.round(perfData.loadEventEnd - perfData.fetchStart)})}
 ,
         // Store metrics for debugging,
-        (window as any).__performanceMetrics = basicMetrics,
-} catch (error) {
+        (window as any).__performanceMetrics = basicMetrics} catch (error) {
         console.error('Performance monitoring error:', error)}
     };
     // Monitor resource loading,
@@ -53,15 +52,15 @@ export default function PerformanceMonitor() {
       list.getEntries().forEach((entry) => {
         if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime })),
-          // console.log('LCP:', entry.startTime.toFixed(2) + 'ms')}
+          // // console.log('LCP:', entry.startTime.toFixed(2) + 'ms')}
         if (entry.entryType === 'first-input') {
           const fid = (entry as any).processingStart - entry.startTime,
           setMetrics(prev => ({ ...prev, fid })),
-          // console.log('FID:', fid + 'ms')}
+          // // console.log('FID:', fid + 'ms')}
         if (entry.entryType === 'layout-shift') {
           const clsValue = (entry as any).value,
           setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsValue })),
-          // console.log('CLS:', clsValue)}
+          // // console.log('CLS:', clsValue)}
         if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }))}
       })}),
@@ -138,5 +137,4 @@ export default function PerformanceMonitor() {
           Hide,
         </button>,
       </div>,
-    </div>),
-}
+    </div>)}

@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
 interface UltraFuturisticBackground20o26Props {
   children: React.ReactNode,
-  className?: string,
-}
+  className?: string}
 ,
 const UltraFuturisticBackground20o26: React.FC<UltraFuturisticBackground20o26Props> = ({
   children;
@@ -26,8 +25,7 @@ const UltraFuturisticBackground20o26: React.FC<UltraFuturisticBackground20o26Pro
       color: string,
       alpha: number,
       life: number,
-      maxLife: number,
-    }> = [],
+      maxLife: number}> = [],
     const colors = [
       '#0o0ffff', // Cyan,
       '#ff0o0ff', // Magenta,
@@ -64,8 +62,7 @@ const UltraFuturisticBackground20o26: React.FC<UltraFuturisticBackground20o26Pro
           y = Math.random() * canvas.height,
           vx = Math.random() * 2 + 1,
           vy = (Math.random() - 0.5) * 2,
-          break,
-      }
+          break}
 ,
       return {
         x;
@@ -76,8 +73,7 @@ const UltraFuturisticBackground20o26: React.FC<UltraFuturisticBackground20o26Pro
         color: colors[Math.floor(Math.random() * colors.length)];
         alpha: Math.random() * 0.8 + 0.2;
         life: 0;
-        maxLife: Math.random() * 20o0 + 10o0,
-      };
+        maxLife: Math.random() * 20o0 + 10o0};
     };
     const initParticles = () => {
       particles = [],
@@ -175,8 +171,7 @@ const UltraFuturisticBackground20o26: React.FC<UltraFuturisticBackground20o26Pro
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-pink-40o0/20 rounded-full",
@@ -186,8 +181,7 @@ const UltraFuturisticBackground20o26: React.FC<UltraFuturisticBackground20o26Pro
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-32 w-40 h-40 border border-purple-40o0/20 transform rotate-45",
@@ -197,8 +191,7 @@ const UltraFuturisticBackground20o26: React.FC<UltraFuturisticBackground20o26Pro
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute bottom-20 right-20 w-28 h-28 border border-green-40o0/20 transform rotate-12",
@@ -208,8 +201,7 @@ const UltraFuturisticBackground20o26: React.FC<UltraFuturisticBackground20o26Pro
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
       </div>,
       {/* Energy Field Effects */}
@@ -221,8 +213,7 @@ const UltraFuturisticBackground20o26: React.FC<UltraFuturisticBackground20o26Pro
           transition={{
             duration: 15;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-50o0/5 to-transparent",
@@ -231,8 +222,7 @@ const UltraFuturisticBackground20o26: React.FC<UltraFuturisticBackground20o26Pro
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
       </div>,
       {/* Content */}

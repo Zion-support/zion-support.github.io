@@ -46,8 +46,7 @@ export default function ServicesShowcase20o27() {
       case 'roi':,
         return parseInt(a.roi.replace(/[^0-9]/g, '')) - parseInt(b.roi.replace(/[^0-9]/g, '')),
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length };
@@ -72,8 +71,7 @@ export default function ServicesShowcase20o27() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   return (
     <UltraFuturisticMatrixBackground20o27>,
       <Head>,
@@ -387,5 +385,4 @@ export default function ServicesShowcase20o27() {
           </div>,
         </div>,
       </footer>,
-    </UltraFuturisticMatrixBackground20o27>),
-}
+    </UltraFuturisticMatrixBackground20o27>)}

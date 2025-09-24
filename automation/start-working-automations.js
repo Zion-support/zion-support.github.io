@@ -28,8 +28,7 @@ const path = require('path'),
 class WorkingAutomationStarter {
   constructor() {
     this.runningSystems = new Map(),
-    this.startTime = Date.now(),
-  }
+    this.startTime = Date.now()}
 ,
   async startAllWorkingSystems() {
     logger.info('🚀 Starting Working Automation Systems'),

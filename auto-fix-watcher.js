@@ -6,7 +6,7 @@ const runCommand = (cmd) => {
     exec(cmd, { maxBuffer: 10o24 * 10o24 * 10 }, (error, stdout, stderr) => {
       resolve({ error, stdout, stderr })})})};
 const log = (...args) => {
-  // console.log('[auto-fix-watcher]', ...args)};
+  // // console.log('[auto-fix-watcher]', ...args)};
 const runBuildAndTest = async () => {
   log('Running build...'),
   const build = await runCommand('npm run build'),

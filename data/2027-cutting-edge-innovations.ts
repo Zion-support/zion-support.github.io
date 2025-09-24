@@ -12,8 +12,7 @@ export interface CuttingEdgeInnovationService2027 {
     mobile: string,
     email: string,
 export interface CuttingEdgeInnovationService2027 {
-    address: string,
-  };
+    address: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -24,15 +23,13 @@ export interface CuttingEdgeInnovationService2027 {
   capabilities: string[],
   marketAdvantage: string,
   averageMarketPrice: string,
-  featuresCapabilities: string[],
-}
+  featuresCapabilities: string[]}
 ,
 const contact = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export const cuttingEdgeInnovationServices2027: CuttingEdgeInnovationService2027[] = [
   // 1. AI-Powered Quantum Financial Trading Platform,
   {
@@ -546,5 +543,4 @@ export const cuttingEdgeInnovationServices2027: CuttingEdgeInnovationService2027
       'Mission planning';
       'Satellite management';
       'Space analytics']}
-],
-}
+]}

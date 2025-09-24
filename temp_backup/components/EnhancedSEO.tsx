@@ -11,8 +11,7 @@ interface SEOData {
   keywords: string[],
   ogImage: string,
   canonical: string,
-  structuredData: any,
-}
+  structuredData: any}
 ,
 interface SEOMetrics {
   titleLength: number,
@@ -20,8 +19,7 @@ interface SEOMetrics {
   keywordDensity: number,
   imageOptimization: number,
   mobileOptimization: number,
-  overallScore: number,
-}
+  overallScore: number}
 ,
 interface SEOIssue {
   id: string,
@@ -29,8 +27,7 @@ interface SEOIssue {
   message: string,
   impact: 'high' | 'medium' | 'low',
   fix: string,
-  category: 'meta' | 'content' | 'technical' | 'performance',
-}
+  category: 'meta' | 'content' | 'technical' | 'performance'}
 ,
 const EnhancedSEO: React.FC = () => {
   const [seoData, setSeoData] = useState<SEOData>({
@@ -100,8 +97,7 @@ const EnhancedSEO: React.FC = () => {
     };
     return {
       organization: organizationSchema;
-      website: websiteSchema,
-    };
+      website: websiteSchema};
   }, []),
   // Analyze SEO metrics,
   const analyzeSEO = useCallback(async () => {
@@ -115,16 +111,14 @@ const EnhancedSEO: React.FC = () => {
         message: 'Title is too short';
         impact: 'medium';
         fix: 'Title should be between 30-60 characters';
-        category: 'meta',
-      })} else if (seoData.title.length > 60) {
+        category: 'meta'})} else if (seoData.title.length > 60) {
       newIssues.push({
         id: 'title-long';
         type: 'warning';
         message: 'Title is too long';
         impact: 'medium';
         fix: 'Title should be between 30-60 characters';
-        category: 'meta',
-      })}
+        category: 'meta'})}
 ,
     // Analyze description,
     if (seoData.description.length < 120) {
@@ -134,16 +128,14 @@ const EnhancedSEO: React.FC = () => {
         message: 'Description is too short';
         impact: 'medium';
         fix: 'Description should be between 120-160 characters';
-        category: 'meta',
-      })} else if (seoData.description.length > 160) {
+        category: 'meta'})} else if (seoData.description.length > 160) {
       newIssues.push({
         id: 'description-long';
         type: 'warning';
         message: 'Description is too long';
         impact: 'medium';
         fix: 'Description should be between 120-160 characters';
-        category: 'meta',
-      })}
+        category: 'meta'})}
 ,
     // Check for missing keywords,
     if (seoData.keywords.length < 3) {
@@ -153,8 +145,7 @@ const EnhancedSEO: React.FC = () => {
         message: 'Too few keywords';
         impact: 'low';
         fix: 'Include 3-5 relevant keywords';
-        category: 'meta',
-      })}
+        category: 'meta'})}
 ,
     // Check for missing OG image,
     if (!seoData.ogImage) {
@@ -164,8 +155,7 @@ const EnhancedSEO: React.FC = () => {
         message: 'Open Graph image missing';
         impact: 'high';
         fix: 'Add an OG image for social media sharing';
-        category: 'meta',
-      })}
+        category: 'meta'})}
 ,
     // Calculate metrics,
     const titleLength = seoData.title.length,
@@ -232,14 +222,12 @@ const EnhancedSEO: React.FC = () => {
         <script
           type="application/ld+json",
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(metaTags.structuredData.organization),
-          }}
+            __html: JSON.stringify(metaTags.structuredData.organization)}}
          />,
         <script
           type="application/ld+json",
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(metaTags.structuredData.website),
-          }}
+            __html: JSON.stringify(metaTags.structuredData.website)}}
          />,
         {/* Additional Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1"  />,

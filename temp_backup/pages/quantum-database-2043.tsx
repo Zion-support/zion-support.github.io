@@ -15,6 +15,5 @@ export default function QuantumDatabase20o43Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

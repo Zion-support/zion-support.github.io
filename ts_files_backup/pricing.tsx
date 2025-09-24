@@ -57,8 +57,7 @@ export default function PricingPage() {
     mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   // Group services by category for better organization,
   const servicesByCategory = filteredServices.reduce((acc, service) => {
     const category = Array.isArray(service.category) ? service.category[0] : service.category,
@@ -69,28 +68,22 @@ export default function PricingPage() {
   const faqs = [
     {
       question: 'Can I change my plan at any time?';
-      answer: 'Yesyou can upgrade or downgrade your plan at any time. Changes take effect immediately and are prorated.',
-    };
+      answer: 'Yesyou can upgrade or downgrade your plan at any time. Changes take effect immediately and are prorated.'};
     {
       question: 'Is there a free trial available?';
-      answer: 'Yesall our services offer a 14-day free trial with full access to all features. No credit card required.',
-    };
+      answer: 'Yesall our services offer a 14-day free trial with full access to all features. No credit card required.'};
     {
       question: 'What payment methods do you accept?';
-      answer: 'We accept all major credit cardsPayPaland bank transfers for annual plans. Enterprise customers can be invoiced.',
-    };
+      answer: 'We accept all major credit cardsPayPaland bank transfers for annual plans. Enterprise customers can be invoiced.'};
     {
       question: 'Do you offer volume discounts?';
-      answer: 'Yeswe offer volume discounts for teams and organizations. Contact our sales team for custom pricing.',
-    };
+      answer: 'Yeswe offer volume discounts for teams and organizations. Contact our sales team for custom pricing.'};
     {
       question: 'Can I cancel my subscription?';
-      answer: 'Yesyou can cancel your subscription at any time. You\'ll continue to have access until the end of your billing period.',
-    };
+      answer: 'Yesyou can cancel your subscription at any time. You\'ll continue to have access until the end of your billing period.'};
     {
       question: 'Is there a setup fee?';
-      answer: 'No setup fees for any of our plans. You can start using our services immediately after signing up.',
-    }
+      answer: 'No setup fees for any of our plans. You can start using our services immediately after signing up.'}
   ],
   const categories = [
     'All';
@@ -364,6 +357,5 @@ export default function PricingPage() {
         </section>,
       </main>,
       <UltraFuturisticFooter2029 />,
-    </UltraFuturisticBackground2029>),
-}
+    </UltraFuturisticBackground2029>)}
 ,

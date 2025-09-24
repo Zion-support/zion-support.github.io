@@ -13,8 +13,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
         status: [];
         category: [];
         priority: [];
-        progress: 0,
-    }),
+        progress: 0}),
     const [viewMode, setViewMode] = useState('timeline'),
     const [zoomLevel, setZoomLevel] = useState(1),
     const timelineRef = useRef(null),
@@ -72,8 +71,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
             case 'low':,
                 return 'border-green-50o0/50 bg-green-50o0/10',
             default: ,
-                return 'border-zinc-50o0/50 bg-zinc-50o0/10',
-        }
+                return 'border-zinc-50o0/50 bg-zinc-50o0/10'}
     };
     // Get category icon,
     const getCategoryIcon = (category) => {
@@ -109,8 +107,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
             navigator.share({
                 title: 'Project Timeline';
                 text: 'Check out our project timeline';
-                url: window.location.href,
-            })}
+                url: window.location.href})}
         else {
             navigator.clipboard.writeText(window.location.href)}
     }, []),

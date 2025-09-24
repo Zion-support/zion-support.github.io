@@ -17,8 +17,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
       const target = event.target as HTMLElement,
       if (!target.closest('.accessibility-controls')) {
         setIsOpen(false),
-        setIsExpanded(false),
-      }
+        setIsExpanded(false)}
     };
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside),
@@ -42,8 +41,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
         return 'bottom-4 right-4',
       case 'floating':,
       default: ,
-        return 'bottom-4 right-4',
-    }
+        return 'bottom-4 right-4'}
   };
   return (
     <div className={`accessibility-controls fixed ${getPositionClasses()} z-50 ${className}`}>,

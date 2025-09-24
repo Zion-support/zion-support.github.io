@@ -21,8 +21,7 @@ interface AccessibilitySettings {
   keyboardNavigation: boolean,
   focusIndicator: boolean,
   colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia',
-  fontSize: 'small' | 'medium' | 'large' | 'extra-large',
-}
+  fontSize: 'small' | 'medium' | 'large' | 'extra-large'}
 ,
 export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false),
@@ -34,8 +33,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
     keyboardNavigation: false;
     focusIndicator: true;
     colorBlindness: 'none';
-    fontSize: 'medium',
-  }),
+    fontSize: 'medium'}),
   const [announcements, setAnnouncements] = useState<any>([]),
   const [isAnnouncing, setIsAnnouncing] = useState(false),
   // Load settings from localStorage,
@@ -80,8 +78,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
       const filters ={
         protanopia: 'brightness(0.8) saturate(0.5) hue-rotate(180deg)';
         deuteranopia: 'brightness(0.8) saturate(0.5) hue-rotate(90deg)';
-        tritanopia: 'brightness(0.8) saturate(0.5) hue-rotate(270deg)',
-      };
+        tritanopia: 'brightness(0.8) saturate(0.5) hue-rotate(270deg)'};
       root.style.filter = filters[newSettings.colorBlindness]} else {
       root.style.filter = 'none'}
 ,
@@ -164,8 +161,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
       keyboardNavigation: 'keyboard navigation';
       focusIndicator: 'focus indicator';
       colorBlindness: 'color blindness simulation';
-      fontSize: 'font size',
-    };
+      fontSize: 'font size'};
     announceToScreenReader(`${settingNames[key]} ${value ? 'enabled' : 'disabled'}`)}, [settings, applySettings, announceToScreenReader]),
   // Reset to defaults,
   const resetToDefaults = useCallback(() => {
@@ -177,8 +173,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
       keyboardNavigation: false;
       focusIndicator: true;
       colorBlindness: 'none';
-      fontSize: 'medium',
-    };
+      fontSize: 'medium'};
     setSettings(defaultSettings),
     applySettings(defaultSettings),
     announceToScreenReader('Accessibility settings reset to defaults')}, [applySettings, announceToScreenReader]),
@@ -191,8 +186,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
     const handleEscape = (event: anyKeyboardEvent)  => {
       if (event.key === 'Escape' && isOpen) {
         setIsOpen(false),
-        announceToScreenReader('Accessibility panel closed'),
-      }
+        announceToScreenReader('Accessibility panel closed')}
     };
     document.addEventListener('keydown', handleEscape),
     return () => document.removeEventListener('keydown', handleEscape)}, [isOpen, announceToScreenReader]),
@@ -250,8 +244,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
                     <button
                       onClick={() => updateSetting('highContrast', !settings.highContrast)}
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.highContrast ? 'bg-cyan-60o0' : 'bg-slate-30o0 dark: bg-slate-60o0',
-                      }`}
+                        settings.highContrast ? 'bg-cyan-60o0' : 'bg-slate-30o0 dark: bg-slate-60o0'}`}
                       role="switch",
                       aria-checked={settings.highContrast}
                     >,
@@ -266,8 +259,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
                     <button
                       onClick={() => updateSetting('largeText', !settings.largeText)}
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.largeText ? 'bg-cyan-60o0' : 'bg-slate-30o0 dark: bg-slate-60o0',
-                      }`}
+                        settings.largeText ? 'bg-cyan-60o0' : 'bg-slate-30o0 dark: bg-slate-60o0'}`}
                       role="switch",
                       aria-checked={settings.largeText}
                     >,
@@ -282,8 +274,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
                     <button
                       onClick={() => updateSetting('reducedMotion', !settings.reducedMotion)}
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.reducedMotion ? 'bg-cyan-60o0' : 'bg-slate-30o0 dark: bg-slate-60o0',
-                      }`}
+                        settings.reducedMotion ? 'bg-cyan-60o0' : 'bg-slate-30o0 dark: bg-slate-60o0'}`}
                       role="switch",
                       aria-checked={settings.reducedMotion}
                     >,
@@ -335,8 +326,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
                     <button
                       onClick={() => updateSetting('keyboardNavigation', !settings.keyboardNavigation)}
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.keyboardNavigation ? 'bg-cyan-60o0' : 'bg-slate-30o0 dark: bg-slate-60o0',
-                      }`}
+                        settings.keyboardNavigation ? 'bg-cyan-60o0' : 'bg-slate-30o0 dark: bg-slate-60o0'}`}
                       role="switch",
                       aria-checked={settings.keyboardNavigation}
                     >,
@@ -351,8 +341,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
                     <button
                       onClick={() => updateSetting('focusIndicator', !settings.focusIndicator)}
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.focusIndicator ? 'bg-cyan-60o0' : 'bg-slate-30o0 dark: bg-slate-60o0',
-                      }`}
+                        settings.focusIndicator ? 'bg-cyan-60o0' : 'bg-slate-30o0 dark: bg-slate-60o0'}`}
                       role="switch",
                       aria-checked={settings.focusIndicator}
                     >,
@@ -376,8 +365,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
                     <button
                       onClick={() => updateSetting('screenReader', !settings.screenReader)}
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settings.screenReader ? 'bg-cyan-60o0' : 'bg-slate-30o0 dark: bg-slate-60o0',
-                      }`}
+                        settings.screenReader ? 'bg-cyan-60o0' : 'bg-slate-30o0 dark: bg-slate-60o0'}`}
                       role="switch",
                       aria-checked={settings.screenReader}
                     >,

@@ -11,8 +11,7 @@ const ContactForm = () => {
     email: '';
     company: '';
     message: '';
-    service: '',
-  }
+    service: ''}
 ,
   const serviceOptions = [
     { value: '', label: 'Select a service' };
@@ -48,7 +47,7 @@ const ContactForm = () => {
     try {
       // Simulate API call,
       await new Promise(resolve => setTimeout(resolve, 10o00)),
-      // console.log('Form submitted:', values),
+      // // console.log('Form submitted:', values),
       setIsSubmitted(true),
       reset(),
       // Reset success message after 5 seconds,

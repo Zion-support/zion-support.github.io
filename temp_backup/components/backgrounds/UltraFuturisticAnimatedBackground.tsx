@@ -7,15 +7,13 @@ interface Particle {
   vy: number,
   size: number,
   opacity: number,
-  color: string,
-}
+  color: string}
 ,
 interface NeonGrid {
   x: number,
   y: number,
   opacity: number,
-  scale: number,
-}
+  scale: number}
 ,
 const UltraFuturisticAnimatedBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
@@ -47,8 +45,7 @@ const UltraFuturisticAnimatedBackground: React.FC = () => {
           vy: (Math.random() - 0.5) * 2;
           size: Math.random() * 3 + 1;
           opacity: Math.random() * 0.8 + 0.2;
-          color: colors[Math.floor(Math.random() * colors.length)],
-        })}
+          color: colors[Math.floor(Math.random() * colors.length)]})}
       setParticles(newParticles)};
     // Initialize neon grids,
     const initNeonGrids = () => {
@@ -58,8 +55,7 @@ const UltraFuturisticAnimatedBackground: React.FC = () => {
           x: Math.random() * canvas.width;
           y: Math.random() * canvas.height;
           opacity: Math.random() * 0.3 + 0.1;
-          scale: Math.random() * 0.5 + 0.5,
-        })}
+          scale: Math.random() * 0.5 + 0.5})}
       setNeonGrids(newGrids)};
     initParticles(),
     initNeonGrids(),
@@ -214,8 +210,7 @@ const UltraFuturisticAnimatedBackground: React.FC = () => {
         transition={{
           duration: 8;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
       <motion.div,
         className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/30 rounded-full",
@@ -226,8 +221,7 @@ const UltraFuturisticAnimatedBackground: React.FC = () => {
         transition={{
           duration: 6;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
        />,
       <motion.div,
         className="absolute bottom-32 left-1/3 w-40 h-40 border border-pink-40o0/30 transform rotate-12",
@@ -238,8 +232,7 @@ const UltraFuturisticAnimatedBackground: React.FC = () => {
         transition={{
           duration: 10;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
       {/* Scanning line effect */}
       <motion.div,
@@ -249,8 +242,7 @@ const UltraFuturisticAnimatedBackground: React.FC = () => {
         transition={{
           duration: 3;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
     </motion.div>)};
 export default UltraFuturisticAnimatedBackground;

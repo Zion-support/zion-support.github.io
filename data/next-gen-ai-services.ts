@@ -31,15 +31,13 @@ export interface NextGenAIService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const nextGenAIServices: NextGenAIService[] = [
   // Advanced AI & Neural Network Services,
   {
@@ -1303,7 +1301,7 @@ export const nextGenAIServices: NextGenAIService[] = [
       'Strategy backtesting';
       'Performance optimization';
     ];
-    roi: 'Average customer sees 200% ROI within 6 months through improved trading window.performance.';
+    roi: 'Average customer sees 200% ROI within 6 months through improved trading window.window.performance.';
     competitors: [
       'AlgoTrader';
       'MetaTrader';

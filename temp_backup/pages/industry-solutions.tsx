@@ -70,6 +70,5 @@ export default function IndustrySolutions() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

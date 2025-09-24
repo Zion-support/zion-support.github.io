@@ -302,6 +302,5 @@ export default function AICodeReviewAssistantPro() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

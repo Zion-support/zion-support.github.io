@@ -370,12 +370,11 @@ const UltraFuturisticNavigation20o34: React.FC = () => {
   const toggleMenu = () => setIsOpen(!isOpen),
   const closeMenu = () => setIsOpen(false),
   const handleDropdownToggle = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category),
-  };
+    setActiveDropdown(activeDropdown === category ? null : category)};
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault(),
     // Implement search functionality,
-    // console.log('Searching for:', searchQuery)};
+    // // console.log('Searching for:', searchQuery)};
   return (
     <nav className='relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-50o0/20'>,
       {/* Top contact bar */}

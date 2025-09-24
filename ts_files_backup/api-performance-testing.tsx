@@ -60,6 +60,5 @@ export default function ApiPerformanceTestingPage() {
           </div>,
         </section>,
       </main>,
-    </>),
-}
+    </>)}
 ,

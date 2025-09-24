@@ -50,8 +50,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                 originalUrl;
                 newUrl;
                 type: 'redirect';
-                reason: 'Automatically fixed broken internal link',
-            };
+                reason: 'Automatically fixed broken internal link'};
             setFixedLinks(prev => [...prev, fix])}
     };
     // Fix all broken links,
@@ -75,8 +74,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             scanTime: lastScanTime?.toISOString();
             totalBrokenLinks: brokenLinks.length;
             brokenLinks: brokenLinks;
-            fixedLinks: fixedLinks,
-        };
+            fixedLinks: fixedLinks};
         const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' }),
         const url = URL.createObjectURL(blob),
         const a = document.createElement('a'),

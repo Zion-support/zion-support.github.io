@@ -3,8 +3,7 @@ interface UltraFuturisticBackgroundProps {
   variant?: 'neural' | 'quantum' | 'holographic' | 'cyberpunk',
   intensity?: 'low' | 'medium' | 'high' | 'extreme',
   children: React.ReactNode,
-  className?: string,
-}
+  className?: string}
 ,
 const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   children;
@@ -97,8 +96,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
         this.y = y,
         this.originalX = x,
         this.originalY = y,
-        this.offset = Math.random() * Math.PI * 2,
-      }
+        this.offset = Math.random() * Math.PI * 2}
 ,
       update() {
         this.x = this.originalX + Math.sin(time * 0.0o05 + this.offset) * 20,

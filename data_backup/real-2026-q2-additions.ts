@@ -35,8 +35,7 @@ export const real20o26Q2Additions = [{
     "marketPosition": 'Strong enterprise traction with compliance-led buyers;
     roi:;
   Reduce audit prep by 60% and non-compliance risk by 40%';
-    "link": 'https: //ziontechgroup.com/services/ai-governance-compliance-hub,
-  };
+    "link": 'https: //ziontechgroup.com/services/ai-governance-compliance-hub};
   {
     id:;
   ai-synthetic-data-factory';
@@ -69,8 +68,7 @@ export const real20o26Q2Additions = [{
     "marketPosition": 'Growing demand driven by privacy regulations;
     roi:;
   Cut data collection costs by 50% and improve model accuracy by 8%';
-    "link": 'https: //ziontechgroup.com/services/ai-synthetic-data-factory,
-  };
+    "link": 'https: //ziontechgroup.com/services/ai-synthetic-data-factory};
   {
     id:;
   ecommerce-returns-orchestrator';
@@ -104,8 +102,7 @@ export const real20o26Q2Additions = [{
     "marketPosition": 'Ideal for mid-market brands and marketplaces;
     roi:;
   Reduce manual handling by 70% and increase exchanges by 20%';
-    "link": 'https: //ziontechgroup.com/services/ecommerce-returns-orchestrator,
-  };
+    "link": 'https: //ziontechgroup.com/services/ecommerce-returns-orchestrator};
   {
     id:;
   ai-analytics-observability-kit';
@@ -140,8 +137,7 @@ export const real20o26Q2Additions = [{
     "marketPosition": 'Hot category with fast adoption in AI apps;
     roi:;
   Cut token spend by 25% and improve response quality by 12%';
-    "link": 'https: //ziontechgroup.com/services/ai-analytics-observability-kit,
-  };
+    "link": 'https: //ziontechgroup.com/services/ai-analytics-observability-kit};
   {
     id:;
   cloud-cost-anomaly-guard';
@@ -174,8 +170,7 @@ export const real20o26Q2Additions = [{
     "marketPosition": 'Proven ROI for cloud-native teams;
     roi:;
   Reduce cloud waste by 30% within 60 days';
-    "link": 'https: //ziontechgroup.com/services/cloud-cost-anomaly-guard,
-  };
+    "link": 'https: //ziontechgroup.com/services/cloud-cost-anomaly-guard};
   {
     id:;
   secure-pdf-signing-api';
@@ -207,8 +202,7 @@ export const real20o26Q2Additions = [{
     "marketPosition": 'SMB to mid-market developer teams;
     roi:;
   Accelerate time-to-sign by 50% and cut manual errors by 70%';
-    "link": 'https: //ziontechgroup.com/services/secure-pdf-signing-api,
-  };
+    "link": 'https: //ziontechgroup.com/services/secure-pdf-signing-api};
   {
     id:;
   status-slo-plus';
@@ -239,8 +233,7 @@ export const real20o26Q2Additions = [{
     "marketPosition": 'Great value with SLO-first approach;
     roi:;
   Improve uptime communications and reduce churn risk';
-    "link": 'https: //ziontechgroup.com/services/status-slo-plus,
-  };
+    "link": 'https: //ziontechgroup.com/services/status-slo-plus};
   {
     id:;
   vendor-risk-automation-pro';
@@ -272,8 +265,7 @@ export const real20o26Q2Additions = [{
     "marketPosition": 'Sales-assisted and security-led adoption;
     roi:;
   Shorten sales cycles by 20% and reduce vendor risk exposure';
-    "link": 'https: //ziontechgroup.com/services/vendor-risk-automation-pro,
-  };
+    "link": 'https: //ziontechgroup.com/services/vendor-risk-automation-pro};
   {
     id:;
   ai-docs-search-answers';
@@ -304,8 +296,7 @@ export const real20o26Q2Additions = [{
     "marketPosition": 'High adoption for self-serve docs;
     roi:;
   Reduce tickets by 30% and improve time-to-answer';
-    "link": 'https: //ziontechgroup.com/services/ai-docs-search-answers,
-  };
+    "link": 'https: //ziontechgroup.com/services/ai-docs-search-answers};
   {
     id:;
   msp-remote-device-ops';

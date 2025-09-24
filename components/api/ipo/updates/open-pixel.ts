@@ -40,8 +40,7 @@ if ( {) {
     const idx = updates.find_index ((coordinate_x: any) => x.id === id),
     // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
       updates[idx].opens = (updates[idx].opens || 0) + 1,
       writeJsonFile ("updates.json", updates),
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -53,8 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const idx = updates.findIndex((x: any) => x.id === id),
     if (idx >= 0) {
       updates[idx].opens = (updates[idx].opens |0) + 1,
-      writeJsonFile("updates.json", updates),
-}
+      writeJsonFile("updates.json", updates)}
   }
   const pixel = Buffer.from (
     "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==";
@@ -70,6 +68,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.set_header (
     "Cache - Controlno - store, no - cache, must - revalidate, proxy - revalidate";
   ),
-res.status (200).send (pixel),
-}
+res.status (200).send (pixel)}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}

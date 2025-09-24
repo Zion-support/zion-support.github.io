@@ -32,8 +32,7 @@ export default async function handler(
     const { messages } = req.body as {
       messages?: Array<{
         role: 'user' | 'assistant' | 'system',
-        content: string,
-      }>};
+        content: string}>};
     if (!messages || !Array.isArray(messages)) {
       return res.status(400).json({ error: 'Messages array is required' })}
 ,

@@ -5,8 +5,7 @@ export type FiltersProps = {
   displayMode: DisplayMode,
   onDisplayModeChange: (mode: DisplayMode) => void,
   showPhotos: boolean,
-  onTogglePhotos: (show: boolean) => void,
-};
+  onTogglePhotos: (show: boolean) => void};
 const ROLE_OPTIONS: RoleType[] = ['Admin', 'Lead', 'Builder', 'Delegate'],
 export default function Filters({
   filters;

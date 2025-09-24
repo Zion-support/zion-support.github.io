@@ -18,8 +18,7 @@ export interface Milestone {
   created_at: string,
   updated_at: string,
   created_by: string,
-  deliverables?: any[],
-}
+  deliverables?: any[]}
 ,
 export interface MilestoneActivity {
   id: string,
@@ -32,7 +31,6 @@ export interface MilestoneActivity {
   created_at: string,
   created_by_profile?: {
     display_name: string,
-    avatar_url?: string,
-  };
+    avatar_url?: string};
 }
 ,

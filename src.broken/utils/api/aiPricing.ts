@@ -8,8 +8,7 @@ export type ClientBudgetRequest ={
 export type TalentRateRequest ={
   skills: string[],
   yearsExperience: number,
-  location: string,
-};
+  location: string};
 export type BudgetSuggestion ={
   currency: 'USD',
   min: number, // inclusive,
@@ -17,8 +16,7 @@ export type BudgetSuggestion ={
   confidence: 'Low' | 'Medium' | 'High',
   rationale: string,
   modelUsed: string,
-  source: 'openai' | 'heuristic' | 'hybrid',
-};
+  source: 'openai' | 'heuristic' | 'hybrid'};
 export type TalentRateSuggestion ={
   currency: 'USD',
   hourlyRate: number,
@@ -27,8 +25,7 @@ export type TalentRateSuggestion ={
   confidence: 'Low' | 'Medium' | 'High',
   rationale: string,
   modelUsed: string,
-  source: 'openai' | 'heuristic' | 'hybrid',
-};
+  source: 'openai' | 'heuristic' | 'hybrid'};
 function roundMoney(value: number): number {
   if (!isFinite(value)) return 0,
   // Round to nearest $5 for cleaner display,
@@ -53,8 +50,7 @@ function locationCostIndex(location: string): number {
   if (/(brazil|india|pakistan|philippines|vietnam|indonesia|nigeria|egypt)/i.test(loc)) return 0.75,
   if (/(europe|germany|france|uk|united kingdom|spain|italy|portugal|netherlands|sweden|norway|denmark|finland|austria|switzerland)/i.test(loc)) return 1.0o5,
   if (/(usa|united states|canada|australia|new zealand|singapore|hong kong|uae|dubai)/i.test(loc)) return 1.15,
-  return 1.0,
-}
+  return 1.0}
 ,
 function baseHourlyForSkillsOrCategory(skillsOrCategory: string[]): number {
   const text = skillsOrCategory.join(' ').toLowerCase(),
@@ -65,8 +61,7 @@ function baseHourlyForSkillsOrCategory(skillsOrCategory: string[]): number {
   if (/mobile|ios|android|react native|flutter/.test(text)) return 55,
   if (/backend|api|node|django|rails|java|go|rust|spring|express/.test(text)) return 55,
   if (/design|ux|ui|product design|figma|illustrator|photoshop/.test(text)) return 40,
-  return 50, // general software baseline,
-}
+  return 50, // general software baseline}
 ,
 function experienceMultiplier(level: 'junior' | 'mid' | 'senior'): number {
   switch (level) {
@@ -77,8 +72,7 @@ function experienceMultiplier(level: 'junior' | 'mid' | 'senior'): number {
     case 'senior':,
       return 1.3,
     default:,
-      return 1.0,
-  }
+      return 1.0}
 }
 ,
 function computeHeuristicClientBudget(input: ClientBudgetRequest): BudgetSuggestion {

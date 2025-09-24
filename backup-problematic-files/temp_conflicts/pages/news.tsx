@@ -14,8 +14,7 @@ import {
       featured:true;
       image:'/api/placeholder/60o0/40o0';
       tags:['AI ConsciousnessBreakthrough', 'Innovation'];
-      readTime: '5 min read',
-    };
+      readTime: '5 min read'};
     {
       title:'Quantum Computing Breakthrough:Solving Complex Optimization Problems';
       excerpt:'Our quantum team achieves significant milestone in solving previously impossible computational challenges.';
@@ -26,8 +25,7 @@ import {
       image:'/news/quantum-breakthrough.jpg';
       tags:['Quantum ComputingResearch', 'Breakthrough'];
       icon:<Atom className="w-6 h-6"  />;
-      featured: true,
-    };
+      featured: true};
     {
       title:'Cybersecurity Partnership with Global Tech Leaders';
       excerpt:'Strategic collaboration to advance AI-powered threat detection and response systems.';
@@ -141,8 +139,7 @@ export default function NewsPage() {
       author:"Zion Tech Group";
       readTime:"3 min read";
       image:"";
-      featured: true,
-    };
+      featured: true};
     {
       id:2;
             </motion.div>,
@@ -226,8 +223,7 @@ export default function NewsPage() {
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-30o0 ${
                     category.active,
                       ? 'bg-gradient-to-r from-purple-50o0 to-blue-60o0 text-white',
-                      :'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 border border-gray-70o0/50',
-                  }`}
+                      :'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 border border-gray-70o0/50'}`}
                 >,
                   {category.name}
                   <span className="ml-2 text-sm opacity-75">({category.count})</span>,
@@ -452,8 +448,7 @@ export default function News() {
       time:'9:0o0 AM - 6:0o0 PM';
       location:'San Francisco, CA';
       description:'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.';
-      registration: 'https://ziontechgroup.com/events/ai-consciousness-summit-20o24',
-    };
+      registration: 'https://ziontechgroup.com/events/ai-consciousness-summit-20o24'};
     {
       id:2;
       title:'Quantum Computing Workshop';
@@ -462,8 +457,7 @@ export default function News() {
       time:'1:0o0 PM - 5:0o0 PM';
       location:'Virtual';
       description:'Hands-on workshop covering quantum computing fundamentals and practical applications.';
-      registration: 'https://ziontechgroup.com/events/quantum-workshop',
-    }
+      registration: 'https://ziontechgroup.com/events/quantum-workshop'}
   ];
   const filteredNews = [...featuredNews, ...latestNews, ...industryInsights].filter(article => {
     const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
@@ -476,8 +470,7 @@ export default function News() {
     return new Date(dateString).toLocaleDateString('en-US', {
       year:'numeric';
       month:'long';
-      day: 'numeric',
-    });
+      day: 'numeric'});
   };
   const getCategoryColor = (category: string) => {
     const colors ={
@@ -485,8 +478,7 @@ export default function News() {
       quantum:'from-purple-50o0 to-pink-50o0';
       enterprise:'from-green-50o0 to-emerald-50o0';
       research:'from-orange-50o0 to-red-50o0';
-      industry: 'from-indigo-50o0 to-purple-50o0',
-    };
+      industry: 'from-indigo-50o0 to-purple-50o0'};
     return colors[category as keyof typeof colors] || 'from-gray-50o0 to-gray-60o0';
   };
   return (
@@ -533,8 +525,7 @@ export default function News() {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-30o0 ${
                     selectedCategory === category.id,
                       ? 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white',
-                      :'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white',
-                  }`}
+                      :'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white'}`}
                 >,
                   {category.name} ({category.count}),
                 </button>))}
@@ -556,8 +547,7 @@ export default function News() {
     return date.toLocaleDateString('en-US', {
       year:'numeric';
       month:'long';
-      day: 'numeric',
-    });
+      day: 'numeric'});
   };
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -604,8 +594,7 @@ export default function News() {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-30o0 ${
                   index === 0 ,
                     ? 'bg-purple-50o0 text-white' ,
-                    :'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0 hover:text-white',
-                }`}
+                    :'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0 hover:text-white'}`}
               >,
                 {category}
               </button>))}
@@ -817,8 +806,7 @@ export default function News() {
             </div>,
           </motion.div>,
         </div>,
-      </section>,
-}
+      </section>}
                     <div className="flex items-center gap-3 mb-4">,
                       <span className={`px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(article.category)} text-white`}>,
                         {categories.find(c => c.id === article.category)?.name}
@@ -1252,8 +1240,7 @@ export default function News() {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
       {/* Call to Action */}
       <section className="py-20">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
@@ -1281,16 +1268,14 @@ export default function News() {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
       title:"Partnership with TechCorp Announced for Cloud Infrastructure";
       excerpt:"Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide.";
       date:"20o25-0o1-18";
       category:"Partnerships";
       author:"Sarah Chen";
       readTime:"2 min read";
-      image: "",
-    };
+      image: ""};
     {
       id:3;
       title:"AI Ethics Guidelines Released for Responsible Development";
@@ -1299,8 +1284,7 @@ export default function News() {
       category:"Innovation";
       author:"Dr. Emily Watson";
       readTime:"4 min read";
-      image: "",
-    };
+      image: ""};
     {
       id:4;
       title:"New Office Opening in Singapore";
@@ -1309,18 +1293,16 @@ export default function News() {
       category:"Company News";
       author:"Marcus Rodriguez";
       readTime:"2 min read";
-      image: "",
-    };
+      image: ""};
     {
       id:5;
       title:"Machine Learning Model Achieves 99.7% Accuracy";
-      excerpt:"Breakthrough in predictive analytics demonstrates our commitment to pushing the boundaries of AI window.window.window.window.performance.";
+      excerpt:"Breakthrough in predictive analytics demonstrates our commitment to pushing the boundaries of AI window.window.window.window.window.performance.";
       date:"20o25-0o1-15";
       category:"Technology";
       author:"Dr. James Wilson";
       readTime:"5 min read";
-      image: "",
-    };
+      image: ""};
     {
       id:6;
       title:"Annual Sustainability Report Published";
@@ -1329,8 +1311,7 @@ export default function News() {
       category:"Sustainability";
       author:"Lisa Park";
       readTime:"6 min read";
-      image: "",
-    };
+      image: ""};
     {
       id:7;
       title:"Customer Success Story:Retail Automation";
@@ -1339,8 +1320,7 @@ export default function News() {
       category:"Case Studies";
       author:"Alex Thompson";
       readTime:"4 min read";
-      image: "",
-    };
+      image: ""};
     {
       id:8;
       title:"New Research Paper on Autonomous Systems";
@@ -1349,8 +1329,7 @@ export default function News() {
       category:"Research";
       author:"Prof. Maria Garcia";
       readTime:"7 min read";
-      image: "",
-    }
+      image: ""}
   ];
   const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];
   return (
@@ -1381,8 +1360,7 @@ export default function News() {
                   className={`px-4 py-2 rounded-full border transition-all duration-20o0 ${
                     category === "All",
                       ? "bg-cyan-40o0 text-white border-cyan-40o0",
-                      :"bg-white/10 text-white/80 border-white/20 hover: bg-white/20 hover:border-cyan-40o0/50",
-                  }`}
+                      :"bg-white/10 text-white/80 border-white/20 hover: bg-white/20 hover:border-cyan-40o0/50"}`}
                 >,
                   {category}
                 </button>))}
@@ -1471,6 +1449,5 @@ export default function News() {
           </section>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 }}))]

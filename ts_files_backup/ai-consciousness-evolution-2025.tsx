@@ -10,8 +10,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const features = [
   'Emotional intelligence training modules';
   'Consciousness expansion exercises';
@@ -63,24 +62,21 @@ const testimonials = [
     company: 'Mindful Wellness Center';
     content: 'The AI Consciousness Evolution platform has revolutionized how we approach emotional intelligence training. Our clients show remarkable improvements in self-awareness and empathy.';
     rating: 5;
-    avatar: '👩‍⚕️',
-  };
+    avatar: '👩‍⚕️'};
   {
     name: 'Michael Rodriguez';
     role: 'CEO';
     company: 'InnovateTech Solutions';
     content: 'Implementing this platform in our leadership development program has transformed our company culture. Our executives are more emotionally intelligent and effective leaders.';
     rating: 5;
-    avatar: '👨‍💼',
-  };
+    avatar: '👨‍💼'};
   {
     name: 'Dr. Emily Watson';
     role: 'Research Director';
     company: 'Consciousness Research Institute';
     content: 'This is the most advanced consciousness development tool I\'ve ever encountered. The AI integration makes personal growth accessible to everyone.';
     rating: 5;
-    avatar: '👩‍🔬',
-  }
+    avatar: '👩‍🔬'}
 ],
 export default function AIConsciousnessEvolution2025() {
   return (
@@ -247,20 +243,17 @@ export default function AIConsciousnessEvolution2025() {
                 step: '01';
                 title: 'AI Assessment';
                 description: 'Our AI analyzes your current consciousness level and creates a personalized development plan.';
-                icon: <Brain className="w-12 h-12" />,
-              };
+                icon: <Brain className="w-12 h-12" />};
               {
                 step: '02';
                 title: 'Personalized Training';
                 description: 'AI-generated exercises and experiences tailored to your specific needs and goals.';
-                icon: <Target className="w-12 h-12" />,
-              };
+                icon: <Target className="w-12 h-12" />};
               {
                 step: '03';
                 title: 'Continuous Evolution';
                 description: 'Real-time feedback and adaptation ensure continuous growth and development.';
-                icon: <TrendingUp className="w-12 h-12" />,
-              }
+                icon: <TrendingUp className="w-12 h-12" />}
             ].map((stepindex) => (
               <motion.div,
                 key={step.step}
@@ -432,8 +425,7 @@ export default function AIConsciousnessEvolution2025() {
                   'Progress tracking';
                   'Email support';
                   'Mobile app access'];
-                popular: false,
-              };
+                popular: false};
               {
                 name: 'Professional';
                 price: '$299';
@@ -447,8 +439,7 @@ export default function AIConsciousnessEvolution2025() {
                   'Advanced analytics';
                   'Integration with wearables';
                   'Group sessions'];
-                popular: true,
-              };
+                popular: true};
               {
                 name: 'Enterprise';
                 price: '$799';
@@ -462,8 +453,7 @@ export default function AIConsciousnessEvolution2025() {
                   'White-label options';
                   'Advanced reporting';
                   'API access'];
-                popular: false,
-              }
+                popular: false}
             ].map((planindex) => (
               <motion.div,
                 key={plan.name}
@@ -501,8 +491,7 @@ export default function AIConsciousnessEvolution2025() {
                 <button className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
                   plan.popular,
                     ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover: from-purple-600 hover:to-pink-700 hover:scale-105',
-                    : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white',
-                }`}>,
+                    : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'}`}>,
                   Get Started,
                 </button>,
               </motion.div>))}

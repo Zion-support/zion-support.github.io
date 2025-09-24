@@ -14,22 +14,19 @@ export default function RevolutionaryContentDiscoveryWidget() {
           description: 'Experience 10,0o00% ROI with transcendent intelligence';
           roi: '10,0o00% ROI';
           link: '/ai-20o25-ultimate-breakthrough-revolution';
-          featured: true,
-        };
+          featured: true};
         {
           title: 'Quantum Computing Integration';
           description: 'Revolutionary quantum-AI fusion technology';
           roi: '15,0o00% ROI';
           link: '/quantum-computing-solutions-20o25';
-          featured: true,
-        };
+          featured: true};
         {
           title: 'Neural Interface Technology';
           description: 'Direct brain-computer interface capabilities';
           roi: '8,0o00% ROI';
           link: '/neural-interface-solutions';
-          featured: false,
-        }
+          featured: false}
       ]};
     caseStudies: {
       title: 'Success Stories';
@@ -41,22 +38,19 @@ export default function RevolutionaryContentDiscoveryWidget() {
           description: 'Fortune 50o0 company achieves 10,0o00% ROI';
           roi: '10,0o00% ROI';
           link: '/case-studies/ai-20o25-global-transformation-breakthrough';
-          featured: true,
-        };
+          featured: true};
         {
           title: 'Quantum Financial Optimization';
           description: 'Tech startup achieves 15,0o00% ROI';
           roi: '15,0o00% ROI';
           link: '/case-studies/quantum-ai-financial-optimization-breakthrough-20o26';
-          featured: true,
-        };
+          featured: true};
         {
           title: 'Enterprise Automation Success';
           description: 'Manufacturing company achieves 8,50o0% ROI';
           roi: '8,50o0% ROI';
           link: '/case-studies/ai-20o26-autonomous-manufacturing-revolution';
-          featured: false,
-        }
+          featured: false}
       ]};
     resources: {
       title: 'Implementation Guides';
@@ -68,22 +62,19 @@ export default function RevolutionaryContentDiscoveryWidget() {
           description: 'Complete guide to achieving 10,0o00% ROI';
           roi: 'Essential';
           link: '/resources/ai-20o25-ultimate-implementation-toolkit';
-          featured: true,
-        };
+          featured: true};
         {
           title: 'Quantum Computing Mastery';
           description: 'Master quantum-AI integration techniques';
           roi: 'Advanced';
           link: '/resources/quantum-computing-mastery-guide-20o25';
-          featured: true,
-        };
+          featured: true};
         {
           title: 'Neural Interface Implementation';
           description: 'Step-by-step neural interface setup';
           roi: 'Expert';
           link: '/resources/neural-interface-implementation-guide';
-          featured: false,
-        }
+          featured: false}
       ]}
   };
   return (
@@ -111,8 +102,7 @@ export default function RevolutionaryContentDiscoveryWidget() {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                 activeTab === key,
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-10o5`,
-                  : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50',
-              }`}
+                  : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50'}`}
             >,
               <span className="mr-2">{category.icon}</span>,
               {category.title}
@@ -124,8 +114,7 @@ export default function RevolutionaryContentDiscoveryWidget() {
             <div
               key={index}
               className={`relative bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 rounded-xl border border-gray-70o0/50 p-6 hover: border-gray-60o0/50 transition-all duration-30o0 hover:transform hover:scale-10o5 ${
-                item.featured ? 'ring-2 ring-yellow-50o0/50' : '',
-              }`}
+                item.featured ? 'ring-2 ring-yellow-50o0/50' : ''}`}
             >,
               {item.featured && (
                 <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black text-xs font-bold px-3 py-1 rounded-full">,
@@ -168,5 +157,4 @@ export default function RevolutionaryContentDiscoveryWidget() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

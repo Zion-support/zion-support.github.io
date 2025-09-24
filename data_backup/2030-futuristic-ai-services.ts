@@ -89,8 +89,7 @@ reviews: number,export const futuristicAIServices20o30: FuturisticAIService20o30
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced AI consciousness development platform with real-time monitoring, ethical frameworks, and consciousness validation protocols.';
@@ -150,8 +149,7 @@ reviews: number,export const futuristicAIServices20o30: FuturisticAIService20o30
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced quantum AI computing platform with real-time quantum AI processing and validation.';
@@ -211,8 +209,7 @@ reviews: number,export const futuristicAIServices20o30: FuturisticAIService20o30
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced AI autonomous operations platform with autonomous decision-making, self-optimization, and AI evolution.';
@@ -272,8 +269,7 @@ reviews: number,export const futuristicAIServices20o30: FuturisticAIService20o30
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced AI metaverse integration platform with AI-powered experiences, virtual beings, and intelligent virtual worlds.';
@@ -333,8 +329,7 @@ reviews: number,export const futuristicAIServices20o30: FuturisticAIService20o30
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced AI space technology platform with autonomous space missions, AI-powered exploration, and intelligent space operations.';

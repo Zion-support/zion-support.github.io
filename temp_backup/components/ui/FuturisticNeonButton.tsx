@@ -9,8 +9,7 @@ interface FuturisticNeonButtonProps {
   icon?: LucideIcon,
   disabled?: boolean,
   className?: string,
-  neonIntensity?: 'low' | 'medium' | 'high',
-}
+  neonIntensity?: 'low' | 'medium' | 'high'}
 ,
 const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
   children;
@@ -28,51 +27,44 @@ const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
       glow: 'shadow-cyan-40o0/50';
       hoverGlow: 'hover:shadow-cyan-40o0/80';
       bg: 'bg-cyan-40o0/10';
-      hoverBg: 'hover:bg-cyan-40o0/20',
-    };
+      hoverBg: 'hover:bg-cyan-40o0/20'};
     secondary: {
       border: 'border-purple-40o0';
       text: 'text-purple-40o0';
       glow: 'shadow-purple-40o0/50';
       hoverGlow: 'hover:shadow-purple-40o0/80';
       bg: 'bg-purple-40o0/10';
-      hoverBg: 'hover:bg-purple-40o0/20',
-    };
+      hoverBg: 'hover:bg-purple-40o0/20'};
     success: {
       border: 'border-emerald-40o0';
       text: 'text-emerald-40o0';
       glow: 'shadow-emerald-40o0/50';
       hoverGlow: 'hover:shadow-emerald-40o0/80';
       bg: 'bg-emerald-40o0/10';
-      hoverBg: 'hover:bg-emerald-40o0/20',
-    };
+      hoverBg: 'hover:bg-emerald-40o0/20'};
     warning: {
       border: 'border-amber-40o0';
       text: 'text-amber-40o0';
       glow: 'shadow-amber-40o0/50';
       hoverGlow: 'hover:shadow-amber-40o0/80';
       bg: 'bg-amber-40o0/10';
-      hoverBg: 'hover:bg-amber-40o0/20',
-    };
+      hoverBg: 'hover:bg-amber-40o0/20'};
     danger: {
       border: 'border-red-40o0';
       text: 'text-red-40o0';
       glow: 'shadow-red-40o0/50';
       hoverGlow: 'hover:shadow-red-40o0/80';
       bg: 'bg-red-40o0/10';
-      hoverBg: 'hover:bg-red-40o0/20',
-    }
+      hoverBg: 'hover:bg-red-40o0/20'}
   };
   const sizes ={
     sm: 'px-4 py-2 text-sm';
     md: 'px-6 py-3 text-base';
-    lg: 'px-8 py-4 text-lg',
-  };
+    lg: 'px-8 py-4 text-lg'};
   const neonIntensities ={
     low: 'shadow-lg';
     medium: 'shadow-xl';
-    high: 'shadow-2xl',
-  };
+    high: 'shadow-2xl'};
   const selectedVariant = variants[variant],
   const selectedSize = sizes[size],
   const selectedNeonIntensity = neonIntensities[neonIntensity],
@@ -126,8 +118,7 @@ const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
         transition={{
           duration: 3;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
       {/* Ripple effect on click */}
       <motion.div,

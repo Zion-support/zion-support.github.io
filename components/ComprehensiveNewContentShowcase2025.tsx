@@ -167,6 +167,5 @@ export default function ComprehensiveNewContentShowcase20o25() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

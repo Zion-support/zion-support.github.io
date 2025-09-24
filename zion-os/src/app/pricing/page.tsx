@@ -8,8 +8,7 @@ interface PricingTier {
   features: string[],
   popular?: boolean,
   cta: string,
-  ctaLink: string,
-}
+  ctaLink: string}
 ,
 interface ServicePricing {
   serviceName: string,
@@ -17,8 +16,7 @@ interface ServicePricing {
   description: string,
   tiers: PricingTier[],
   features: string[],
-  benefits: string[],
-}
+  benefits: string[]}
 ,
 const servicePricing: ServicePricing[] = [
   {
@@ -461,8 +459,7 @@ export default function PricingPage() {
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                 selectedCategory === category,
                   ? 'bg-blue-60o0 text-white',
-                  : 'text-gray-30o0 hover: text-white hover:bg-zinc-70o0',
-              }`}
+                  : 'text-gray-30o0 hover: text-white hover:bg-zinc-70o0'}`}
             >,
               {category}
             </button>))}
@@ -539,8 +536,7 @@ export default function PricingPage() {
                       className={`block w-full text-center py-3 px-4 rounded-lg font-medium transition-colors ${
                         tier.popular,
                           ? 'bg-blue-60o0 hover: bg-blue-70o0 text-white',
-                          : 'bg-zinc-70o0 hover:bg-zinc-60o0 text-white',
-                      }`}
+                          : 'bg-zinc-70o0 hover:bg-zinc-60o0 text-white'}`}
                     >,
                       {tier.cta}
                     </a>,
@@ -609,6 +605,5 @@ export default function PricingPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

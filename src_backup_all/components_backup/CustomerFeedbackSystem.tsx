@@ -27,8 +27,7 @@ interface Feedback {
   helpful: number,
   unhelpful: number,
   tags: string[],
-  verified: boolean,
-}
+  verified: boolean}
 ,
 interface FeedbackStats {
   totalFeedback: number,
@@ -53,8 +52,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
     averageRating: 0;
     positivePercentage: 0;
     responseRate: 0;
-    topCategories: [],
-  }),
+    topCategories: []}),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [selectedRating, setSelectedRating] = useState<number>(0),
   const [searchQuery, setSearchQuery] = useState(''),
@@ -62,8 +60,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   const [newFeedback, setNewFeedback] = useState({
     rating: 0;
     comment: '';
-    category: 'overall' as Feedback['category'],
-  }),
+    category: 'overall' as Feedback['category']}),
   // Sample feedback data,
   useEffect(() => {
     const sampleFeedback: Feedback[] = [
@@ -78,8 +75,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         helpful: 24;
         unhelpful: 1;
         tags: ['AI', 'Consulting', 'Machine Learning'];
-        verified: true,
-      };
+        verified: true};
       {
         id: '2';
         customerName: 'Michael Chen';
@@ -91,8 +87,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         helpful: 18;
         unhelpful: 2;
         tags: ['Cloud', 'Migration', 'Support'];
-        verified: true,
-      };
+        verified: true};
       {
         id: '3';
         customerName: 'Emily Rodriguez';
@@ -104,8 +99,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         helpful: 31;
         unhelpful: 0;
         tags: ['Digital Transformation', 'Infrastructure', 'ROI'];
-        verified: true,
-      };
+        verified: true};
       {
         id: '4';
         customerName: 'David Kim';
@@ -117,8 +111,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         helpful: 12;
         unhelpful: 5;
         tags: ['Security', 'Communication', 'Project Management'];
-        verified: true,
-      };
+        verified: true};
       {
         id: '5';
         customerName: 'Lisa Thompson';
@@ -130,8 +123,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         helpful: 28;
         unhelpful: 1;
         tags: ['AI', 'Efficiency', 'Implementation'];
-        verified: true,
-      }
+        verified: true}
     ],
     setFeedback(sampleFeedback),
     setFilteredFeedback(sampleFeedback)}, []),
@@ -149,8 +141,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         .map(([category, count]) => ({
           category: category.charAt(0).toUpperCase() + category.slice(1);
           count;
-          percentage: (count / totalFeedback) * 10o0,
-        })),
+          percentage: (count / totalFeedback) * 10o0})),
         .sort((a, b) => b.count - a.count),
         .slice(0, 4),
       setStats({
@@ -190,8 +181,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       helpful: 0;
       unhelpful: 0;
       tags: [];
-      verified: false,
-    };
+      verified: false};
     setFeedback(prev => [feedback, ...prev]),
     setNewFeedback({ rating: 0, comment: '', category: 'overall' }),
     setShowFeedbackForm(false)};
@@ -202,8 +192,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         return {
           ...f;
           helpful: type === 'helpful' ? f.helpful + 1 : f.helpful;
-          unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful,
-        };
+          unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful};
       }
       return f}))};
   // Get sentiment color,
@@ -211,8 +200,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
     switch (sentiment) {
       case 'positive': return 'text-green-40o0 bg-green-40o0/20',
       case 'negative': return 'text-red-40o0 bg-red-40o0/20',
-      default: return 'text-yellow-40o0 bg-yellow-40o0/20',
-    }
+      default: return 'text-yellow-40o0 bg-yellow-40o0/20'}
   };
   // Get category color,
   const getCategoryColor = (category: string) => {
@@ -363,8 +351,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
                         className="p-2 hover: scale-110 transition-transform">,
                         <Star
                           className={`w-8 h-8 ${
-                            star <= newFeedback.rating ? 'text-yellow-40o0 fill-current' : 'text-zinc-60o0',
-                          }`}
+                            star <= newFeedback.rating ? 'text-yellow-40o0 fill-current' : 'text-zinc-60o0'}`}
                          />,
                       </button>))}
                   </div>,

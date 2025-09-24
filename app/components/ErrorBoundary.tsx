@@ -52,15 +52,15 @@ class ErrorBoundary extends React.Component<
 			console.groupEnd();
 		}
 
-		if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag === 'function') {
-			((window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag)('event', 'exception', {
+		if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: (command: string, action: string, parameters: Record<string unknown>) => void }).gtag === 'function') {
+			((window as unknown as { gtag: (command: string, action: string, parameters: Record<string unknown>) => void }).gtag)('event', 'exception', {
 				description: error.message,
 				fatal: true});
 		}
 
 		if (typeof window !== 'undefined') {
 			// eslint-disable-next-line no-console
-			// console.log('Error would be sent to error tracking service:', errorDetails);
+			// // console.log('Error would be sent to error tracking service:', errorDetails);
 		}
 		this.setState({
 			error,

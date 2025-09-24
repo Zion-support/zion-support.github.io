@@ -15,8 +15,7 @@ interface CertificationsFormProps {
   resumeId: string,
   certifications: Certification[],
   onComplete: () => void,
-  onBack: () => void,
-}
+  onBack: () => void}
 ,
 export function CertificationsForm({
   resumeId;
@@ -75,8 +74,7 @@ export function CertificationsForm({
         }),
         setEditingId(null)}
     } catch (err: any) {
-      setError(err.message || 'An error occurred'),
-    }
+      setError(err.message || 'An error occurred')}
   };
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!),
@@ -87,8 +85,7 @@ export function CertificationsForm({
     })};
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this certification?')) {
-      await deleteCertification(id),
-    }
+      await deleteCertification(id)}
   };
   return (
     <div className='space-y-6'>,

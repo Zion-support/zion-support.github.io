@@ -8,8 +8,7 @@ interface Testimonial {
   content: string,
   rating: number,
   avatar: string,
-  category: string,
-}
+  category: string}
 ,
 const EnhancedTestimonialsSection: React.FC = () => {
   const testimonials: Testimonial[] = [
@@ -21,8 +20,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
       content: 'Zion Tech Group transformed our AI infrastructure completely. Their quantum cybersecurity solution prevented multiple sophisticated attacks and their AI business intelligence platform gave us insights we never had before. ROI exceeded 400% within 8 months.';
       rating: 5;
       avatar: 'SC';
-      category: 'AI & Security',
-    };
+      category: 'AI & Security'};
     {
       id: '2';
       name: 'Marcus Rodriguez';
@@ -31,8 +29,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
       content: 'Working with Zion Tech Group on our space technology platform was game-changing. Their edge computing orchestration and AI-powered mission planning reduced our satellite deployment time by 60% and increased mission success rate to 98%.';
       rating: 5;
       avatar: 'MR';
-      category: 'Space Technology',
-    };
+      category: 'Space Technology'};
     {
       id: '3';
       name: 'Dr. Emily Watson';
@@ -41,8 +38,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
       content: 'Zion Tech Group\'s neural interface development tools are revolutionary. Their AI consciousness simulation platform accelerated our research by 3x and opened new possibilities we hadn\'t considered. The team\'s expertise is unmatched.';
       rating: 5;
       avatar: 'EW';
-      category: 'Emerging Tech',
-    };
+      category: 'Emerging Tech'};
     {
       id: '4';
       name: 'James Thompson';
@@ -51,8 +47,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
       content: 'The edge computing orchestration solution from Zion Tech Group transformed our IoT infrastructure. We saw 50% latency reduction and 40% cost savings while improving reliability. Their support team is incredibly responsive.';
       rating: 5;
       avatar: 'JT';
-      category: 'Infrastructure',
-    };
+      category: 'Infrastructure'};
     {
       id: '5';
       name: 'Dr. Lisa Park';
@@ -61,8 +56,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
       content: 'Zion Tech Group\'s quantum AI neural networks are cutting-edge. We\'ve achieved breakthroughs in consciousness simulation that seemed impossible. Their technology is truly ahead of its time.';
       rating: 5;
       avatar: 'LP';
-      category: 'Quantum AI',
-    };
+      category: 'Quantum AI'};
     {
       id: '6';
       name: 'Robert Kim';
@@ -71,8 +65,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
       content: 'Implementing Zion Tech Group\'s AI business intelligence suite revolutionized our decision-making process. We now have real-time insights across all departmentsleading to 35% faster market response and 28% cost optimization.';
       rating: 5;
       avatar: 'RK';
-      category: 'AI & Analytics',
-    }
+      category: 'AI & Analytics'}
   ],
   const stats = [
     { number: '500+'label: 'Projects 'Delivered', 'icon: CheckCircle };
@@ -207,7 +200,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default EnhancedTestimonialsSection;
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

@@ -94,8 +94,7 @@ export default function FuturisticServicesShowcase20o37() {
       return <Cpu className='w-6 h-6' />,
     if (category.includes('Micro') || category.includes('SAAS')),
       return <Target className='w-6 h-6' />,
-    return <Star className='w-6 h-6' />,
-  };
+    return <Star className='w-6 h-6' />};
   const getServiceColor = (category: string) => {
     if (category.includes('AI')) return 'from-purple-50o0 to-pink-50o0',
     if (category.includes('Quantum')) return 'from-blue-50o0 to-cyan-50o0',
@@ -104,8 +103,7 @@ export default function FuturisticServicesShowcase20o37() {
       return 'from-orange-50o0 to-red-50o0',
     if (category.includes('Micro') || category.includes('SAAS')),
       return 'from-emerald-50o0 to-cyan-50o0',
-    return 'from-gray-50o0 to-slate-50o0',
-  };
+    return 'from-gray-50o0 to-slate-50o0'};
   return (
     <>,
       <SEO
@@ -233,8 +231,7 @@ export default function FuturisticServicesShowcase20o37() {
                       className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-30o0 ${
                         selectedCategory === category.id,
                           ? `bg-gradient-to-r ${category.color} text-white border-transparent`,
-                          : 'border-white/20 text-white/70 hover: border-white/40 hover:text-white',
-                      }`}
+                          : 'border-white/20 text-white/70 hover: border-white/40 hover:text-white'}`}
                     >,
                       {category.icon}
                       <span>{category.name}</span>,
@@ -273,8 +270,7 @@ export default function FuturisticServicesShowcase20o37() {
               className={
                 viewMode === 'grid',
                   ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8',
-                  : 'space-y-6',
-              }
+                  : 'space-y-6'}
             >,
               {filteredServices.map((service, index) => (
                 <motion.div,
@@ -283,8 +279,7 @@ export default function FuturisticServicesShowcase20o37() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`bg-gradient-to-br from-gray-90o0/50 to-black/50 border border-white/10 rounded-xl p-6 hover: border-cyan-50o0/30 transition-all duration-30o0 hover:transform hover:scale-10o5 ${
-                    viewMode === 'list' ? 'flex items-start space-x-4' : '',
-                  }`}
+                    viewMode === 'list' ? 'flex items-start space-x-4' : ''}`}
                 >,
                   {viewMode === 'list' && (
                     <div className='flex-shrink-0'>,
@@ -453,6 +448,5 @@ export default function FuturisticServicesShowcase20o37() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

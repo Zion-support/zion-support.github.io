@@ -12,8 +12,7 @@ export interface Zion20o26AIMarketplaceService {
     monthly: number,
     yearly: number,
     enterprise: number,
-    currency: string,
-  };
+    currency: string};
   features: string[],
   benefits: string[],
   roi: string,
@@ -26,8 +25,7 @@ export interface Zion20o26AIMarketplaceService {
     phone: string,
     email: string,
     website: string,
-    address: string,
-  };
+    address: string};
 }
 ,
 export const zion20o26AIMarketplaceServices: Zion20o26AIMarketplaceService[] = [

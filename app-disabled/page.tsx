@@ -59,8 +59,7 @@ export default function HomePage() {
           </div>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
       {/* New Promo: GTM Agents Blueprint (Sept 20o25) */}
       <section className="py-8 bg-gradient-to-r from-purple-50 to-blue-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -717,8 +716,7 @@ export default function HomePage() {
               logo: "https://zion.app/images/zion-tech-group-logo.png";
               sameAs: [
                 "https://twitter.com/ZionTechGroup";
-                "https: //linkedin.com/company/zion-tech-group"],
-            }} ,
+                "https: //linkedin.com/company/zion-tech-group"]}} ,
            />,
           <StructuredData
             type="WebSite",

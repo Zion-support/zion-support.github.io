@@ -15,6 +15,5 @@ export default function QuantumThreatDetectionPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

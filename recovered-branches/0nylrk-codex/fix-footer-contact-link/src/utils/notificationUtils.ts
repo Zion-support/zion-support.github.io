@@ -26,8 +26,7 @@ export async function createNotification({
   relatedId?: string | null,
   sendEmail?: boolean,
   actionUrl?: string | null,
-  actionText?: string | null,
-}) {
+  actionText?: string | null}) {
   void actionUrl,
   void actionText,
   try {
@@ -72,8 +71,7 @@ export async function createHireRequestNotifications({
   requesterEmail: string,
   projectType?: string,
   projectSummary?: string,
-  hireRequestId: string,
-}) {
+  hireRequestId: string}) {
   const projectInfo = projectType ? `${projectType} project` : 'project',
   const summaryText = projectSummary ? `: "${projectSummary}"` : '',
   // Create notification for talent,
@@ -122,8 +120,7 @@ export async function createOnboardingNotification({
 }: {
   userId: string,
   missingMilestone: string,
-  userRole: 'talent' | 'client',
-}) {
+  userRole: 'talent' | 'client'}) {
   let title = '',
   let message = '',
   let actionUrl = '',
@@ -197,8 +194,7 @@ export async function createSystemNotification({
   message: string,
   actionUrl?: string | null,
   actionText?: string | null,
-  sendEmail?: boolean,
-}) {
+  sendEmail?: boolean}) {
   return createNotification({
     userId;
     title;

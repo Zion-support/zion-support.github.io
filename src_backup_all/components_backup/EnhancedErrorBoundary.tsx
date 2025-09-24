@@ -14,16 +14,14 @@ interface Props {
   children: ReactNode,
   fallback?: ReactNode,
   onError?: (error: Error, errorInfo: ErrorInfo) => void,
-  showDetails?: boolean,
-}
+  showDetails?: boolean}
 ,
 interface State {
   hasError: boolean,
   error: Error | null,
   errorInfo: ErrorInfo | null,
   showErrorDetails: boolean,
-  errorId: string,
-}
+  errorId: string}
 ,
 export class EnhancedErrorBoundary extends Component<Props State> {
   constructor(props: Props) {
@@ -33,8 +31,7 @@ export class EnhancedErrorBoundary extends Component<Props State> {
       error: null;
       errorInfo: null;
       showErrorDetails: false;
-      errorId: this.generateErrorId(),
-    };
+      errorId: this.generateErrorId()};
   }
 ,
   static getDerivedStateFromError(error: Error): State {
@@ -71,8 +68,7 @@ export class EnhancedErrorBoundary extends Component<Props State> {
         (window as any).gtag('event', 'exception', {
           description: error.message;
           fatal: true;
-          error_id: this.state.errorId,
-        })}
+          error_id: this.state.errorId})}
     } catch (e) {
       console.warn('Failed to log error to service:', e)}
   }
@@ -90,8 +86,7 @@ export class EnhancedErrorBoundary extends Component<Props State> {
         url: window.location.href;
         viewport: {
           width: window.innerWidth;
-          height: window.innerHeight,
-        }
+          height: window.innerHeight}
       };
       // Store error report locally instead of sending to non-existent API,
       try {
@@ -105,7 +100,7 @@ export class EnhancedErrorBoundary extends Component<Props State> {
         localStorage.setItem('error-reports', JSON.stringify(errors)),
         // Log error for debugging (remove in production),
         if (process.env['NODE_ENV'] === 'development') {
-          // console.log('Error report stored locally:', errorReport)}
+          // // console.log('Error report stored locally:', errorReport)}
       } catch (e) {
         console.warn('Failed to store error report locally:', e)}
     } catch (e) {
@@ -118,16 +113,14 @@ export class EnhancedErrorBoundary extends Component<Props State> {
       error: null;
       errorInfo: null;
       showErrorDetails: false;
-      errorId: this.generateErrorId(),
-    })};
+      errorId: this.generateErrorId()})};
   handleGoHome = () => {
     window.location.href = '/'};
   handleGoBack = () => {
     window.history.back()};
   handleToggleErrorDetails = () => {
     this.setState(prev => ({
-      showErrorDetails: !prev.showErrorDetails,
-    }))};
+      showErrorDetails: !prev.showErrorDetails}))};
   handleCopyErrorDetails = async () => {
     if (!this.state.error) return,
     const errorText = `,
@@ -151,8 +144,7 @@ Timestamp: ${new Date().toISOString()}
       textarea.select(),
       document.execCommand('copy'),
       document.body.removeChild(textarea),
-      this.showToast('Error details copied to clipboard'),
-    }
+      this.showToast('Error details copied to clipboard')}
   };
   handleShareError = async () => {
     if (!this.state.error) return,
@@ -165,8 +157,7 @@ Timestamp: ${new Date().toISOString()}
         await navigator.share(shareData)} else {
         // Fallback: copy to clipboard,
         await navigator.clipboard.writeText(shareData.url),
-        this.showToast('Error report link copied to clipboard'),
-      }
+        this.showToast('Error report link copied to clipboard')}
     } catch (e) {
       console.warn('Failed to share error:', e)}
   };
@@ -177,8 +168,7 @@ Timestamp: ${new Date().toISOString()}
     toast.textContent = message,
     document.body.appendChild(toast),
     setTimeout(() => {
-      toast.remove(),
-    }, 30o00)};
+      toast.remove()}, 30o00)};
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
@@ -332,8 +322,7 @@ Timestamp: ${new Date().toISOString()}
               <X className="w-6 h-6"  />,
             </button>,
           </motion.div>,
-        </div>),
-    }
+        </div>)}
 ,
     return this.props.children}
 }
@@ -346,8 +335,7 @@ export function useErrorHandler() {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'exception', {
         description: error.message;
-        fatal: false,
-      })}
+        fatal: false})}
 ,
     // You can also send to your error tracking service here};
   return { handleError };

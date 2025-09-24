@@ -22,6 +22,5 @@ export default function QuantumAiHybridComputingPlatform20o45Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

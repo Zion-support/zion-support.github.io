@@ -20,13 +20,11 @@ interface ContentItem {
     roi: string,
     savings: string,
     efficiency: string,
-    satisfaction: string,
-  };
+    satisfaction: string};
   description: string,
   readingTime: string,
   featured: boolean,
-  tags: string[],
-}
+  tags: string[]}
 ,
 const AutonomousEnterpriseShowcase20o25: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<string>('all'),
@@ -117,8 +115,7 @@ const AutonomousEnterpriseShowcase20o25: React.FC = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
   };
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -129,8 +126,7 @@ const AutonomousEnterpriseShowcase20o25: React.FC = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getMetricIcon = (metric: string) => {
     switch (metric) {
@@ -143,8 +139,7 @@ const AutonomousEnterpriseShowcase20o25: React.FC = () => {
       case 'satisfaction':,
         return <Users className='w-4 h-4 text-purple-50o0' />,
       default:,
-        return <Star className='w-4 h-4 text-yellow-50o0' />,
-    }
+        return <Star className='w-4 h-4 text-yellow-50o0' />}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -209,8 +204,7 @@ const AutonomousEnterpriseShowcase20o25: React.FC = () => {
               className={`px-6 py-3 rounded-full font-medium transition-all duration-20o0 ${
                 activeFilter === filter.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {filter.label} ({filter.count}),
             </button>))}
@@ -221,8 +215,7 @@ const AutonomousEnterpriseShowcase20o25: React.FC = () => {
             <div
               key={item.id}
               className={`bg-white rounded-xl shadow-lg overflow-hidden border border-gray-10o0 hover: shadow-xl transition-all duration-30o0 transform hover:-translate-y-1 ${
-                item.featured ? 'ring-2 ring-purple-20o0' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-20o0' : ''}`}
             >,
               {/* Header */}
               <div className='p-6 border-b border-gray-10o0'>,
@@ -348,6 +341,5 @@ const AutonomousEnterpriseShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AutonomousEnterpriseShowcase20o25;

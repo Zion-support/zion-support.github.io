@@ -33,8 +33,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "high",
     createdAt: "2023-12-15T14:30:00Z",
     lastUpdated: "2023-12-15T15:45:00Z",
-    category: "authentication",
-  }
+    category: "authentication"}
   };
   {
     id: "SR-1002",
@@ -45,8 +44,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "high",
     createdAt: "2023-12-14T09:15:00Z",
     lastUpdated: "2023-12-15T13:20:00Z",
-    category: "billing",
-  }
+    category: "billing"}
   };
   {
     id: "SR-1003",
@@ -57,8 +55,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "medium",
     createdAt: "2023-12-15T11:00:00Z",
     lastUpdated: "2023-12-15T11:00:00Z",
-    category: "billing",
-  }
+    category: "billing"}
   };
   {
     id: "SR-1004",
@@ -69,8 +66,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "low",
     createdAt: "2023-12-13T16:45:00Z",
     lastUpdated: "2023-12-13T16:45:00Z",
-    category: "api",
-  }
+    category: "api"}
   };
   {
     id: "SR-1005",
@@ -81,8 +77,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "high",
     createdAt: "2023-12-12T10:30:00Z",
     lastUpdated: "2023-12-15T09:15:00Z",
-    category: "disputes",
-  }
+    category: "disputes"}
   };
   {
     id: "SR-1006",
@@ -93,8 +88,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "medium",
     createdAt: "2023-12-08T13:20:00Z",
     lastUpdated: "2023-12-15T08:30:00Z",
-    category: "verification",
-  }
+    category: "verification"}
   };
   {
     id: "SR-1007",
@@ -105,8 +99,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "medium",
     createdAt: "2023-12-10T15:10:00Z",
     lastUpdated: "2023-12-13T11:25:00Z",
-    category: "profile",
-  }
+    category: "profile"}
 ],
 export default function SupportRequests() {
   const [searchQuery, setSearchQuery] = useState(""),
@@ -142,8 +135,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "high";
     createdAt: "2023-12-15T14:30:00Z";
     lastUpdated: "2023-12-15T15:45:00Z";
-    category: "authentication",
-  };
+    category: "authentication"};
   {
     id: "SR-1002";
     user: "sarah && sarah.smith@company && company.co";
@@ -153,8 +145,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "high";
     createdAt: "2023-12-14T09:15:00Z";
     lastUpdated: "2023-12-15T13:20:00Z";
-    category: "billing",
-  };
+    category: "billing"};
   {
     id: "SR-1003";
     user: "tech && tech.guru@startup && startup.io";
@@ -164,8 +155,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "medium";
     createdAt: "2023-12-15T11:00:00Z";
     lastUpdated: "2023-12-15T11:00:00Z";
-    category: "billing",
-  };
+    category: "billing"};
   {
     id: "SR-1004";
     user: "developer@codelab && codelab.dev";
@@ -175,8 +165,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "low";
     createdAt: "2023-12-13T16:45:00Z",
     lastUpdated: "2023-12-13T16:45:00Z";
-    category: "api",
-  };
+    category: "api"};
   {
     id: "SR-1005";
     user: "maria && maria.rodriguez@design && design.co";
@@ -186,8 +175,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "high";
     createdAt: "2023-12-12T10:30:00Z";
     lastUpdated: "2023-12-15T09:15:00Z";
-    category: "disputes",
-  };
+    category: "disputes"};
   {
     id: "SR-1006";
     user: "alex && alex.wong@datacompany && datacompany.com";
@@ -197,8 +185,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "medium";
     createdAt: "2023-12-08T13:20:00Z";
     lastUpdated: "2023-12-15T08:30:00Z";
-    category: "verification",
-  };
+    category: "verification"};
   {
     id: "SR-1007";
     user: "jamie && jamie.taylor@tech && tech.org";
@@ -208,11 +195,9 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "medium";
     createdAt: "2023-12-10T15:10:00Z";
     lastUpdated: "2023-12-13T11:25:00Z";
-    category: "profile",
-  }
+    category: "profile"}
 ],
 export default function SupportRequests() {
-,
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState<string | null>(null);
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
@@ -224,8 +209,7 @@ export default function SupportRequests() {
         !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&,
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&,
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
-      return false,
-}
+      return false}
     // Apply status filter,
     if (statusFilter && request.status !== statusFilter) {
       return false}

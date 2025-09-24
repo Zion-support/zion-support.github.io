@@ -74,8 +74,7 @@ interface TeamMember {
   lastSeen: string,
   skills: string[],
   projects: string[],
-  availability: 'available' | 'busy' | 'unavailable',
-}
+  availability: 'available' | 'busy' | 'unavailable'}
 ,
 interface Project {
   id: string,
@@ -90,8 +89,7 @@ interface Project {
   tasks: Task[],
   budget: number,
   client: string,
-  tags: string[],
-}
+  tags: string[]}
 ,
 interface Task {
   id: string,
@@ -105,8 +103,7 @@ interface Task {
   actualHours: number,
   dependencies: string[],
   tags: string[],
-  comments: Comment[],
-}
+  comments: Comment[]}
 ,
 interface Comment {
   id: string,
@@ -114,8 +111,7 @@ interface Comment {
   content: string,
   timestamp: string,
   likes: number,
-  replies: Comment[],
-}
+  replies: Comment[]}
 ,
 interface Message {
   id: string,
@@ -125,8 +121,7 @@ interface Message {
   type: 'text' | 'file' | 'image' | 'link',
   attachments?: string[],
   reactions: { type: string, count: number }[],
-  isRead: boolean,
-}
+  isRead: boolean}
 ,
 interface FileItem {
   id: string,
@@ -139,8 +134,7 @@ interface FileItem {
   tags: string[],
   sharedWith: string[],
   permissions: 'view' | 'edit' | 'admin',
-  version: string,
-}
+  version: string}
 ,
 interface TeamCollaborationToolsProps {
   showTeamMembers?: boolean,
@@ -179,8 +173,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         lastSeen: '2 minutes ago';
         skills: ['Machine Learning', 'Python', 'TensorFlow', 'AI/ML'];
         projects: ['AI Platform Development', 'ML Model Optimization'];
-        availability: 'available',
-      };
+        availability: 'available'};
       {
         id: '2';
         name: 'Michael Chen';
@@ -191,8 +184,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         lastSeen: '15 minutes ago';
         skills: ['AWS', 'Azure', 'Kubernetes', 'DevOps'];
         projects: ['Cloud Migration', 'Infrastructure Modernization'];
-        availability: 'busy',
-      };
+        availability: 'busy'};
       {
         id: '3';
         name: 'David Kim';
@@ -203,8 +195,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         lastSeen: '1 minute ago';
         skills: ['Penetration Testing', 'Threat Detection', 'Incident Response'];
         projects: ['Security Audit', 'Threat Intelligence'];
-        availability: 'available',
-      };
+        availability: 'available'};
       {
         id: '4';
         name: 'Lisa Thompson';
@@ -215,8 +206,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         lastSeen: '1 hour ago';
         skills: ['Agile', 'Scrum', 'Risk Management', 'Stakeholder Communication'];
         projects: ['Digital Transformation', 'Process Optimization'];
-        availability: 'unavailable',
-      };
+        availability: 'unavailable'};
       {
         id: '5';
         name: 'Alex Wong';
@@ -227,8 +217,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         lastSeen: '5 minutes ago';
         skills: ['Docker', 'Jenkins', 'Terraform', 'Monitoring'];
         projects: ['CI/CD Pipeline', 'Infrastructure as Code'];
-        availability: 'available',
-      }
+        availability: 'available'}
     ],
     const sampleProjects: Project[] = [
       {
@@ -282,8 +271,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         timestamp: '2 minutes ago';
         type: 'text';
         reactions: [{ type: 'thumbsUp', count: 3 }];
-        isRead: true,
-      };
+        isRead: true};
       {
         id: '2';
         sender: 'Michael Chen';
@@ -291,8 +279,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         timestamp: '15 minutes ago';
         type: 'text';
         reactions: [{ type: 'check', count: 2 }];
-        isRead: false,
-      };
+        isRead: false};
       {
         id: '3';
         sender: 'David Kim';
@@ -300,8 +287,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         timestamp: '1 hour ago';
         type: 'text';
         reactions: [{ type: 'star', count: 1 }];
-        isRead: true,
-      }
+        isRead: true}
     ],
     const sampleFiles: FileItem[] = [
       {
@@ -315,8 +301,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         tags: ['Architecture', 'AI', 'Documentation'];
         sharedWith: ['Michael Chen', 'Alex Wong'];
         permissions: 'edit';
-        version: '1.2',
-      };
+        version: '1.2'};
       {
         id: '2';
         name: 'Cloud_Migration_Plan.xlsx';
@@ -328,8 +313,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         tags: ['Migration', 'Cloud', 'Planning'];
         sharedWith: ['Sarah Johnson', 'David Kim'];
         permissions: 'view';
-        version: '2.1',
-      };
+        version: '2.1'};
       {
         id: '3';
         name: 'Security_Audit_Report.docx';
@@ -341,8 +325,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         tags: ['Security', 'Audit', 'Report'];
         sharedWith: ['Lisa Thompson'];
         permissions: 'view';
-        version: '1.0',
-      }
+        version: '1.0'}
     ],
     setTeamMembers(sampleTeamMembers),
     setProjects(sampleProjects),
@@ -366,8 +349,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
       case 'review': return 'text-yellow-40o0 bg-yellow-40o0/20',
       case 'completed': return 'text-purple-40o0 bg-purple-40o0/20',
       case 'on-hold': return 'text-red-40o0 bg-red-40o0/20',
-      default: return 'text-zinc-40o0 bg-zinc-40o0/20',
-    }
+      default: return 'text-zinc-40o0 bg-zinc-40o0/20'}
   };
   // Get priority color,
   const getPriorityColor = (priority: string) => {
@@ -376,8 +358,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
       case 'medium': return 'text-yellow-40o0 bg-yellow-40o0/20',
       case 'high': return 'text-orange-40o0 bg-orange-40o0/20',
       case 'critical': return 'text-red-40o0 bg-red-40o0/20',
-      default: return 'text-zinc-40o0 bg-zinc-40o0/20',
-    }
+      default: return 'text-zinc-40o0 bg-zinc-40o0/20'}
   };
   // Get file type icon,
   const getFileTypeIcon = (type: string) => {
@@ -387,8 +368,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
       case 'video': return <Video className="w-5 h-5"  />,
       case 'audio': return <File className="w-5 h-5"  />,
       case 'archive': return <Folder className="w-5 h-5"  />,
-      default: return <File className="w-5 h-5"  />,
-    }
+      default: return <File className="w-5 h-5"  />}
   };
   // Format file size,
   const formatFileSize = (size: number) => {
@@ -397,16 +377,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
     return `${(size / 10o24).toFixed(1)} GB`};
   // Handle project selection,
   const handleProjectSelect = (project: Project) => {
-    setSelectedProject(project),
-  };
+    setSelectedProject(project)};
   // Handle message reactions,
   const handleMessageReaction = (messageId: string, reactionType: string) => {
     setMessages(prev => prev.map(msg => {
       if (msg.id === messageId) {
         const existingReaction = msg.reactions.find(r => r.type === reactionType),
         if (existingReaction) {
-          existingReaction.count += 1,
-        } else {
+          existingReaction.count += 1} else {
           msg.reactions.push({ type: reactionType, count: 1 })}
       }
       return msg}))};
@@ -432,8 +410,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
               className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-30o0 ${
                 activeTab === tab.id,
                   ? 'bg-zion-cyan text-white',
-                  : 'text-zinc-40o0 hover: text-white hover:bg-zinc-80o0/50',
-              }`}
+                  : 'text-zinc-40o0 hover: text-white hover:bg-zinc-80o0/50'}`}
             >,
               {tab.icon}
               {tab.label}
@@ -755,8 +732,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className={`p-4 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl hover: bg-zinc-90o0/50 transition-all duration-30o0 ${
-                  !message.isRead ? 'border-zion-cyan/50 bg-zion-cyan/5' : '',
-                }`}
+                  !message.isRead ? 'border-zion-cyan/50 bg-zion-cyan/5' : ''}`}
               >,
                 <div className="flex items-start gap-4">,
                   <div className="w-10 h-10 bg-zinc-80o0 rounded-full flex items-center justify-center text-zion-cyan font-semibold">,

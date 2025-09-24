@@ -12,8 +12,7 @@ export interface APIDocumentation {
     totalEndpoints: number,
     coverage: number,
     languages: string[],
-    frameworks: string[],
-  };
+    frameworks: string[]};
 }
 export interface APIEndpoint {
   id: string,
@@ -27,8 +26,7 @@ export interface APIEndpoint {
   tags: string[],
   deprecated: boolean,
   rateLimit?: RateLimit,
-  authentication?: AuthenticationRequirement,
-}
+  authentication?: AuthenticationRequirement}
 export interface APIParameter {
   name: string,
   in: 'path' | 'query' | 'header' | 'cookie',
@@ -36,8 +34,7 @@ export interface APIParameter {
   schema: APISchema,
   description: string,
   example?: any,
-  deprecated?: boolean,
-}
+  deprecated?: boolean}
 export interface APIRequestBody {
   required: boolean,
   content: Record<string APIContent>,
@@ -54,8 +51,7 @@ export interface APIResponse {
 export interface APIHeader {
   description: string,
   schema: APISchema,
-  required: boolean,
-}
+  required: boolean}
 export interface APISchema {
   type?: string,
   format?: string,
@@ -83,8 +79,7 @@ export interface APIExample {
   description: string,
   request: ExampleRequest,
   response: ExampleResponse,
-  tags: string[],
-}
+  tags: string[]}
 export interface ExampleRequest {
   method: string,
   url: string,
@@ -93,18 +88,15 @@ export interface ExampleRequest {
 export interface ExampleResponse {
   status: number,
   headers: Record<string string>,
-  body: any,
-}
+  body: any}
 export interface RateLimit {
   requests: number,
   window: string,
-  description?: string,
-}
+  description?: string}
 export interface AuthenticationRequirement {
   type: 'bearer' | 'apiKey' | 'oauth2' | 'basic',
   description: string,
-  required: boolean,
-}
+  required: boolean}
 export interface DocumentationConfig {
   outputFormat: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi',
   includeExamples: boolean,
@@ -184,8 +176,7 @@ export class APIDocGeneratorService {
     endpoints: APIEndpoint[],
     schemas: APISchema[],
     languages: string[],
-    frameworks: string[],
-  }> {
+    frameworks: string[]}> {
     const endpoints: APIEndpoint[] = [],
     const schemas: APISchema[] = [],
     const languages: string[] = [],
@@ -546,8 +537,7 @@ export class APIDocGeneratorService {
   private extractProjectName(sourcePath: string): string {
     // Extract project name from path,
     const parts = sourcePath.split('/'),
-    return parts[parts.length - 1] || 'API Documentation',
-  }
+    return parts[parts.length - 1] || 'API Documentation'}
   private async extractVersion(sourcePath: string): Promise<string> {
     // Simulate version extraction from package.json, requirements.txt, etc.,
     return '1.0.0'}
@@ -556,16 +546,14 @@ export class APIDocGeneratorService {
     return 'Comprehensive API documentation automatically generated from source code'}
   private async extractBaseUrl(sourcePath: string): Promise<string> {
     // Simulate base URL extraction from configuration files,
-    return 'https://api.example.com',
-  }
+    return 'https://api.example.com'}
   private calculateCoverage(endpoints: APIEndpoint[]): number {
     // Calculate documentation coverage based on endpoints,
     if (endpoints.length === 0) return 0,
     let documentedEndpoints = 0,
     for (const endpoint of endpoints) {
       if (endpoint.description && endpoint.description.length > 10) {
-        documentedEndpoints++,
-      }
+        documentedEndpoints++}
     }
 ,
     return Math.round((documentedEndpoints / endpoints.length) * 100)}

@@ -29,15 +29,13 @@ export interface AdvancedAIAutomationService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 const contact = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -167,7 +165,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     price: '$1,299';
     period: '/month';
     description:,
-      'Intelligent marketing automation platform that continuously optimizes campaigns, budgets, and strategies using AI. Automatically adjusts bids, targeting, and creative elements for maximum window.performance.';
+      'Intelligent marketing automation platform that continuously optimizes campaigns, budgets, and strategies using AI. Automatically adjusts bids, targeting, and creative elements for maximum window.window.performance.';
     features: [
       'Campaign optimization';
       'Budget allocation';

@@ -450,8 +450,7 @@ export default function Revolutionary2026Pricing() {
                   className={`relative overflow-hidden rounded-2xl p-8 border transition-all duration-300 transform hover: scale-105 ${
                     tier.highlight,
                       ? 'bg-gradient-to-br from-gray-800 to-gray-900 border-cyan-500 shadow-2xl shadow-cyan-500/25',
-                      : 'bg-gradient-to-br from-gray-800 to-gray-900 border-gray-700 hover:border-cyan-500/50',
-                  }`}
+                      : 'bg-gradient-to-br from-gray-800 to-gray-900 border-gray-700 hover:border-cyan-500/50'}`}
                 >,
                   <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover: opacity-100 transition-opacity duration-300'></div>,
                   <div className='relative z-10'>,
@@ -496,8 +495,7 @@ export default function Revolutionary2026Pricing() {
                       className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hover: scale-105 ${
                         tier.highlight,
                           ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700',
-                          : 'bg-gray-700 text-white hover:bg-gray-600',
-                      }`}
+                          : 'bg-gray-700 text-white hover:bg-gray-600'}`}
                     >,
                       {tier.cta}
                     </button>,

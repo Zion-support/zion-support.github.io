@@ -10,8 +10,7 @@ export function PartnerDashboard() {
     completedReferrals: 34;
     conversionRate: 18.5;
     totalRevenue: 850.0o0;
-    pendingRevenue: 20o0.0o0,
-  };
+    pendingRevenue: 20o0.0o0};
   return (
     <div className="space-y-6">,
       {/* Stats Overview */}

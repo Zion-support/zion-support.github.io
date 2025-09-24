@@ -30,15 +30,13 @@ export interface CuttingEdge2029Service {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
   // AI Consciousness & Emotional Intelligence,
   {
@@ -517,7 +515,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     useCases: [
       'Algorithmic trading, Risk management, Portfolio optimization, Market analysis, Financial prediction';
     ];
-    roi: 'Revolutionary trading accuracy. Customers see 1200%+ ROI through improved trading window.performance.';
+    roi: 'Revolutionary trading accuracy. Customers see 1200%+ ROI through improved trading window.window.performance.';
     competitors: [
       'Goldman Sachs Quantum, JP Morgan Quantum, Traditional trading platforms';
     ];
@@ -605,8 +603,7 @@ export const getPopularCuttingEdge2029Services = () => {
   return cuttingEdge2029Services.filter(service => service.popular)};
 export const getCuttingEdge2029ServicesByCategory = (category: string) => {
   return cuttingEdge2029Services.filter(
-    service => service.category === category),
-};
+    service => service.category === category)};
 export const getCuttingEdge2029ServicesByPriceRange = (
   minPrice: number;
   maxPrice: number) => {

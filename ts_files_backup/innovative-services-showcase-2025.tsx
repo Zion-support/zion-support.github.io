@@ -24,8 +24,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const serviceCategories = [
   {
     id: 'financial-technology';
@@ -35,8 +34,7 @@ const serviceCategories = [
     color: 'from-green-500 to-emerald-500';
     services: [...innovativeFinancialServices2025];
     gradient: 'from-green-500/20 to-emerald-500/20';
-    badge: 'New',
-  };
+    badge: 'New'};
   {
     id: 'healthcare-biotech';
     title: '🏥 Healthcare & Biotech';
@@ -45,8 +43,7 @@ const serviceCategories = [
     color: 'from-blue-500 to-indigo-500';
     services: [...innovativeHealthcareServices2025];
     gradient: 'from-blue-500/20 to-indigo-500/20';
-    badge: 'Hot',
-  };
+    badge: 'Hot'};
   {
     id: 'education-technology';
     title: '🎓 Education Technology';
@@ -55,8 +52,7 @@ const serviceCategories = [
     color: 'from-purple-500 to-pink-500';
     services: [...innovativeEducationServices2025];
     gradient: 'from-purple-500/20 to-pink-500/20';
-    badge: 'Innovative',
-  };
+    badge: 'Innovative'};
   {
     id: 'sustainability-green-tech';
     title: '🌱 Sustainability & Green Tech';
@@ -65,8 +61,7 @@ const serviceCategories = [
     color: 'from-emerald-500 to-teal-500';
     services: [...innovativeSustainabilityServices2025];
     gradient: 'from-emerald-500/20 to-teal-500/20';
-    badge: 'Eco-Friendly',
-  };
+    badge: 'Eco-Friendly'};
   {
     id: 'logistics-supply-chain';
     title: '🚚 Logistics & Supply Chain';
@@ -75,8 +70,7 @@ const serviceCategories = [
     color: 'from-orange-500 to-red-500';
     services: [...innovativeLogisticsServices2025];
     gradient: 'from-orange-500/20 to-red-500/20';
-    badge: 'Autonomous',
-  };
+    badge: 'Autonomous'};
   {
     id: 'ai-consciousness';
     title: '🧠 AI & Consciousness';
@@ -85,8 +79,7 @@ const serviceCategories = [
     color: 'from-violet-500 to-purple-500';
     services: [...innovativeAIServices2025];
     gradient: 'from-violet-500/20 to-indigo-500/20';
-    badge: 'Revolutionary',
-  };
+    badge: 'Revolutionary'};
   {
     id: 'quantum-emerging';
     title: '⚛️ Quantum & Emerging Tech';
@@ -95,8 +88,7 @@ const serviceCategories = [
     color: 'from-indigo-500 to-blue-500';
     services: [...emergingTechServices2025];
     gradient: 'from-indigo-500/20 to-cyan-500/20';
-    badge: 'Quantum',
-  };
+    badge: 'Quantum'};
   {
     id: 'enterprise-it';
     title: '🏙️ Enterprise IT';
@@ -105,8 +97,7 @@ const serviceCategories = [
     color: 'from-blue-500 to-cyan-500';
     services: [...innovativeITServices2025];
     gradient: 'from-blue-500/20 to-teal-500/20';
-    badge: 'Enterprise',
-  };
+    badge: 'Enterprise'};
   {
     id: 'micro-saas';
     title: '🎯 Micro SAAS';
@@ -115,8 +106,7 @@ const serviceCategories = [
     color: 'from-teal-500 to-green-500';
     services: [...realMicroSaasServices2025];
     gradient: 'from-teal-500/20 to-green-500/20';
-    badge: 'Popular',
-  }
+    badge: 'Popular'}
 ],
 export default function InnovativeServicesShowcase2025() {
   const [searchTermsetSearchTerm] = useState(''),
@@ -138,8 +128,7 @@ export default function InnovativeServicesShowcase2025() {
       case 'category':,
         return a.category.localeCompare(b.category),
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   return (
     <Layout>,

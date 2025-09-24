@@ -204,6 +204,5 @@ export default function AnalyticsDemoPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

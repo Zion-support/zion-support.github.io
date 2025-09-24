@@ -31,8 +31,7 @@ export interface SpecializedEnterpriseService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -41,8 +40,7 @@ export interface SpecializedEnterpriseService {
   reviews: number,
   benefits: string[],
   capabilities: string[],
-  marketAdvantage: string,
-}
+  marketAdvantage: string}
 ,
 const contact = {
   mobile: '+1 30o2 464 0950';

@@ -31,15 +31,13 @@ export interface EmergingTechnologyService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[] =,
   [
     // Quantum Computing as a Service,
@@ -203,7 +201,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
       useCases: [
         'IoT data processing, Real-time analytics, Edge AI, Content delivery, Industrial automation';
       ];
-      roi: 'Edge computing projects report 400% ROI through reduced latency and improved window.performance.';
+      roi: 'Edge computing projects report 400% ROI through reduced latency and improved window.window.performance.';
       competitors: [
         'AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry';
       ];

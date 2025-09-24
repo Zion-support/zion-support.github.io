@@ -31,15 +31,13 @@ export interface Innovative20o25Service {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const innovative20o25NewServices: Innovative20o25Service[] = [
   // AI-Powered Micro SAAS Services,

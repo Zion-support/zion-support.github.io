@@ -26,8 +26,7 @@ export function MobileResumeBuilder() {
       case 'skills':,
         return <SkillsStep />,
       default: ,
-        return <BasicsStep />,
-    }
+        return <BasicsStep />}
   };
   return (
     <div className='space-y-6 px-4 pb-24'>,
@@ -137,8 +136,7 @@ function ExperienceStep() {
     const newId = (experiences.length + 1).toString(),
     setExperiences([...experiences, { id: newId }])};
   const removeExperience = (id: string) => {
-    setExperiences(experiences.filter(exp => exp.id !== id)),
-  };
+    setExperiences(experiences.filter(exp => exp.id !== id))};
   return (
     <div className='space-y-4'>,
       {experiences.map((exp, index) => (
@@ -206,8 +204,7 @@ function EducationStep() {
     const newId = (educations.length + 1).toString(),
     setEducations([...educations, { id: newId }])};
   const removeEducation = (id: string) => {
-    setEducations(educations.filter(edu => edu.id !== id)),
-  };
+    setEducations(educations.filter(edu => edu.id !== id))};
   return (
     <div className='space-y-4'>,
       {educations.map((edu, index) => (
@@ -275,8 +272,7 @@ function SkillsStep() {
     const newId = (skills.length + 1).toString(),
     setSkills([...skills, { id: newId, name: '', proficiency: 'beginner' }])};
   const removeSkill = (id: string) => {
-    setSkills(skills.filter(skill => skill.id !== id)),
-  };
+    setSkills(skills.filter(skill => skill.id !== id))};
   const updateSkill = (id: string, field: string, value: string) => {
     setSkills(
       skills.map(skill =>,

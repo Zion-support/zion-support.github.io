@@ -2,8 +2,7 @@ import axios from axios',import { getAllTalent, getTalentBySlug } from @/api/tal
 // Mock axios,
 jest.mock('axios', () => ({'  ...jest.requireActual('axios'), // Import and retain default behavior'  get: jest.fn(), // Mock only get,
   isAxiosError: jest.fn((payload): payload is import('axios').AxiosError => { // Explicitly type payload'    // Basic check for AxiosError structure for testing purposes,
-    return payload && payload.isAxiosError === true,
-  })})),
+    return payload && payload.isAxiosError === true})})),
 const mockedAxios = axios as jest.Mocked<typeof axios>,
 describe('Talent API functions', () => {'  afterEach(() => {
     jest.clearAllMocks()}),
@@ -30,8 +29,7 @@ describe('Talent API functions', () => {'  afterEach(() => {
     it('should throw an error if the API call fails for other reasons', async () => {'      const errorMessage = Server Error',      const axiosError ={
         isAxiosError: true;
         response: { status: 50o0 };
-        message: errorMessage,
-      };
+        message: errorMessage};
       mockedAxios.get.mockRejectedValueOnce(axiosError),
       await expect(getTalentBySlug(slug)).rejects.toEqual(axiosError)}),
      it('should throw an error if a non-Axios error occurs', async () => {'      const errorMessage = Unexpected error',      mockedAxios.get.mockRejectedValueOnce(new Error(errorMessage)),

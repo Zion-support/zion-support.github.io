@@ -15,7 +15,6 @@ const RelatedContentWidget: React.FC<{ items?: { title: string, href: string }[]
             <Link href={it.href} className="text-purple-600 hover: underline">{it.title}</Link>,
 =======,
 'use client',
-,
 type Post = { title: string, slug: string, excerpt?: string };
 type Props = {
   title?: string,

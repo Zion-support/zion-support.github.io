@@ -13,8 +13,7 @@ const UltimateBreakthrough20o25Banner = () => {
       url: '/blog/ai-20o25-20o26-ultimate-breakthrough-revolution';
       type: 'blog';
       featured: true;
-      readingTime: '35 min read',
-    };
+      readingTime: '35 min read'};
     {
       id: 'fortune-10o0-250o0-roi-success';
       title: 'Fortune 10o0 Achieves 2,50o0% ROI in 18 Months';
@@ -23,8 +22,7 @@ const UltimateBreakthrough20o25Banner = () => {
       url: '/case-studies/ai-20o25-20o26-revolutionary-transformation-250o0-roi-success';
       type: 'case-study';
       featured: true;
-      readingTime: '22 min read',
-    };
+      readingTime: '22 min read'};
     {
       id: 'ai-implementation-ultimate-framework';
       title: 'AI 20o25-20o26 Implementation Ultimate Framework';
@@ -33,8 +31,7 @@ const UltimateBreakthrough20o25Banner = () => {
       url: '/resources/ai-20o25-20o26-implementation-ultimate-framework';
       type: 'resource';
       featured: true;
-      readingTime: '45 min read',
-    }
+      readingTime: '45 min read'}
   ],
   useEffect(() => {
     const timer = setInterval(() => {

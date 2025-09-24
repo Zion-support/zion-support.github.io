@@ -5,13 +5,11 @@ interface ContentMetrics {
   timeOnPage: number,
   scrollDepth: number,
   clickThroughRate: number,
-  bounceRate: number,
-}
+  bounceRate: number}
 ,
 interface ContentAnalyticsProps {
   pageId: string,
-  pageTitle: string,
-}
+  pageTitle: string}
 ,
 export default function ContentAnalytics({ pageIdpageTitle }: ContentAnalyticsProps) {
   const [metricsetMetrics] = useState<ContentMetrics>({
@@ -19,16 +17,14 @@ export default function ContentAnalytics({ pageIdpageTitle }: ContentAnalyticsPr
     timeOnPage: 0;
     scrollDepth: 0;
     clickThroughRate: 0;
-    bounceRate: 0,
-  }),
+    bounceRate: 0}),
   const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {
     // Track page view,
     const trackPageView = () => {
       setMetrics(prev => ({
         ...prev;
-        pageViews: prev.pageViews + 1,
-      }))};
+        pageViews: prev.pageViews + 1}))};
     // Track scroll depth,
     const trackScrollDepth = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop,
@@ -36,8 +32,7 @@ export default function ContentAnalytics({ pageIdpageTitle }: ContentAnalyticsPr
       const scrollDepth = Math.round((scrollTop / scrollHeight) * 10o0),
       setMetrics(prev => ({
         ...prev;
-        scrollDepth: Math.max(prev.scrollDepth),
-      }))};
+        scrollDepth: Math.max(prev.scrollDepth)}))};
     // Track time on page,
     const startTime = Date.now(),
     const trackTimeOnPage = () => {
@@ -51,8 +46,7 @@ export default function ContentAnalytics({ pageIdpageTitle }: ContentAnalyticsPr
       if (target.tagName === 'A' || target.closest('a')) {
         setMetrics(prev => ({
           ...prev;
-          clickThroughRate: prev.clickThroughRate + 1,
-        }))}
+          clickThroughRate: prev.clickThroughRate + 1}))}
     };
     // Initial tracking,
     trackPageView(),

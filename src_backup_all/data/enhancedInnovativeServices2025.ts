@@ -2,8 +2,7 @@ export interface ServiceContact {
   phone: string,
   email: string,
   website: string,
-  address: string,
-}
+  address: string}
 export interface MicroSaasService {
   id: number,
   name: string,
@@ -24,8 +23,7 @@ export interface MicroSaasService {
   setupTime: string,
   integrations: string[],
   freeTier: boolean,
-  trialPeriod: string,
-}
+  trialPeriod: string}
 export interface ITService {
   id: number,
   name: string,
@@ -43,8 +41,7 @@ export interface ITService {
   sla: string,
   certifications: string[],
   deliveryTime: string,
-  support: string,
-}
+  support: string}
 export interface AIService {
   id: number,
   name: string,
@@ -64,8 +61,7 @@ export interface AIService {
   trainingData: string,
   compliance: string[],
   aiScore: number,
-  useCases: string[],
-}
+  useCases: string[]}
 export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services,
   {
@@ -107,8 +103,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
       name: "Zion Tech Group";
       id: "zion-tech-group";
       avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
-      verified: true,
-    };
+      verified: true};
     images: ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
     createdAt: "20o25-0o1-15T10:0o0:0o0.0o00Z";
     technologyStack: ["Quantum Algorithms", "TensorFlow", "PyTorch", "Qiskit", "Cirq"];
@@ -156,8 +151,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
       name: "Zion Tech Group";
       id: "zion-tech-group";
       avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
-      verified: true,
-    };
+      verified: true};
     images: ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
     createdAt: "20o25-0o1-15T10:0o0:0o0.0o00Z";
     technologyStack: ["Ethereum", "Polygon", "Solana", "IPFS", "Zero-Knowledge Proofs"];
@@ -205,8 +199,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
       name: "Zion Tech Group";
       id: "zion-tech-group";
       avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
-      verified: true,
-    };
+      verified: true};
     images: ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
     createdAt: "20o25-0o1-15T10:0o0:0o0.0o00Z";
     technologyStack: ["MQTT", "CoAP", "LoRaWAN", "5G", "Edge Computing"];
@@ -254,8 +247,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
       name: "Zion Tech Group";
       id: "zion-tech-group";
       avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
-      verified: true,
-    };
+      verified: true};
     images: ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
     createdAt: "20o25-0o1-15T10:0o0:0o0.0o00Z";
     technologyStack: ["Machine Learning", "Deep Learning", "NLP", "Graph Analytics", "SIEM"];
@@ -303,8 +295,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
       name: "Zion Tech Group";
       id: "zion-tech-group";
       avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
-      verified: true,
-    };
+      verified: true};
     images: ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
     createdAt: "20o25-0o1-15T10:0o0:0o0.0o00Z";
     technologyStack: ["IoT Sensors", "Machine Learning", "Blockchain", "Cloud Computing", "Analytics"];
@@ -352,8 +343,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
       name: "Zion Tech Group";
       id: "zion-tech-group";
       avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
-      verified: true,
-    };
+      verified: true};
     images: ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
     createdAt: "20o25-0o1-15T10:0o0:0o0.0o00Z";
     technologyStack: ["Deep Learning", "Computer Vision", "NLP", "TensorFlow", "PyTorch"];
@@ -401,8 +391,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
       name: "Zion Tech Group";
       id: "zion-tech-group";
       avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
-      verified: true,
-    };
+      verified: true};
     images: ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
     createdAt: "20o25-0o1-15T10:0o0:0o0.0o00Z";
     technologyStack: ["Machine Learning", "Deep Learning", "Graph Analytics", "Real-time Processing", "Cloud Computing"];
@@ -450,8 +439,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
       name: "Zion Tech Group";
       id: "zion-tech-group";
       avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
-      verified: true,
-    };
+      verified: true};
     images: ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
     createdAt: "20o25-0o1-15T10:0o0:0o0.0o00Z";
     technologyStack: ["Unity", "Unreal Engine", "ARKit", "ARCore", "WebXR"];
@@ -492,16 +480,14 @@ export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/quantumflow-analytics";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$199-599/month";
     competitors: ["Tableau", "Power BI", "Looker"];
     roi: "40o0% within 8 months";
     setupTime: "2 hours";
     integrations: ["Salesforce", "HubSpot", "Google Analytics", "AWS", "Azure"];
     freeTier: false;
-    trialPeriod: "30 days",
-  };
+    trialPeriod: "30 days"};
   {
     id: 2;
     name: "CyberShield Pro";
@@ -533,16 +519,14 @@ export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/cybershield-pro";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$299-899/month";
     competitors: ["CrowdStrike", "SentinelOne", "Carbon Black"];
     roi: "50o0% within 6 months";
     setupTime: "4 hours";
     integrations: ["SIEM systems", "Firewalls", "EDR", "Cloud platforms"];
     freeTier: false;
-    trialPeriod: "14 days",
-  };
+    trialPeriod: "14 days"};
   {
     id: 3;
     name: "CloudMatrix Orchestrator";
@@ -574,16 +558,14 @@ export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/cloudmatrix-orchestrator";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$149-449/month";
     competitors: ["Terraform", "Ansible", "Chef"];
     roi: "350% within 5 months";
     setupTime: "3 hours";
     integrations: ["AWS", "Azure", "GCP", "Kubernetes", "Docker"];
     freeTier: true;
-    trialPeriod: "21 days",
-  };
+    trialPeriod: "21 days"};
   {
     id: 4;
     name: "DataVault Enterprise";
@@ -615,16 +597,14 @@ export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/datavault-enterprise";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$399-999/month";
     competitors: ["Informatica", "Talend", "Alteryx"];
     roi: "450% within 7 months";
     setupTime: "6 hours";
     integrations: ["Databases", "Cloud platforms", "BI tools", "ETL systems"];
     freeTier: false;
-    trialPeriod: "30 days",
-  };
+    trialPeriod: "30 days"};
   {
     id: 5;
     name: "AIStudio Creator";
@@ -656,16 +636,14 @@ export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/aistudio-creator";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$79-299/month";
     competitors: ["DataRobot", "H2O.ai", "RapidMiner"];
     roi: "30o0% within 4 months";
     setupTime: "1 hour";
     integrations: ["Cloud platforms", "Databases", "APIs", "Webhooks"];
     freeTier: true;
-    trialPeriod: "14 days",
-  };
+    trialPeriod: "14 days"};
   {
     id: 6;
     name: "GreenTech Carbon Tracker";
@@ -697,16 +675,14 @@ export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/greentech-carbon-tracker";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$89-299/month";
     competitors: ["Watershed", "Normative", "Persefoni"];
     roi: "30o0% within 6 months";
     setupTime: "2 hours";
     integrations: ["ERP systems", "IoT sensors", "Cloud platforms", "Sustainability databases"];
     freeTier: true;
-    trialPeriod: "30 days",
-  };
+    trialPeriod: "30 days"};
   {
     id: 7;
     name: "EdgeAI IoT Platform";
@@ -738,16 +714,14 @@ export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/edgeai-iot-platform";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$129-399/month";
     competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT"];
     roi: "40o0% within 8 months";
     setupTime: "4 hours";
     integrations: ["MQTT", "CoAP", "HTTP", "Cloud platforms", "Database systems"];
     freeTier: true;
-    trialPeriod: "21 days",
-  };
+    trialPeriod: "21 days"};
   {
     id: 8;
     name: "Blockchain Supply Chain Tracker";
@@ -779,16 +753,14 @@ export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/blockchain-supply-chain";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$0.0o1-0.0o5 per transaction";
     competitors: ["IBM Food Trust", "VeChain", "OriginTrail"];
     roi: "50o0% within 12 months";
     setupTime: "8 hours";
     integrations: ["ERP systems", "WMS", "Logistics platforms", "E-commerce", "Mobile apps"];
     freeTier: false;
-    trialPeriod: "10o00 transactions",
-  };
+    trialPeriod: "10o00 transactions"};
   {
     id: 9;
     name: "AR/VR Training Simulator";
@@ -820,16 +792,14 @@ export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ar-vr-training-simulator";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$199-599/month";
     competitors: ["Strivr", "Talespin", "Pixvana"];
     roi: "350% within 9 months";
     setupTime: "6 hours";
     integrations: ["LMS platforms", "HR systems", "Analytics tools", "VR devices", "Mobile apps"];
     freeTier: true;
-    trialPeriod: "14 days",
-  };
+    trialPeriod: "14 days"};
   {
     id: 10;
     name: "Quantum Cryptography Platform";
@@ -861,15 +831,13 @@ export const ENHANCED_INNOVATIVE_SERVICES_20o25: EnhancedInnovativeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/quantum-cryptography";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$2,999-8,999/month";
     competitors: ["ISARA", "PQShield", "Cryptosense"];
     roi: "60o0% within 18 months";
     setupTime: "24 hours";
     integrations: ["PKI systems", "VPN solutions", "Cloud platforms", "Security tools", "Compliance systems"];
     freeTier: false;
-    trialPeriod: "7 days",
-  }
+    trialPeriod: "7 days"}
 ],
 export default ENHANCED_INNOVATIVE_SERVICES_20o25;

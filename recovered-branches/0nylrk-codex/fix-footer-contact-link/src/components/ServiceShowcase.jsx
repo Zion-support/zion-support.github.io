@@ -20,8 +20,7 @@ export function ServiceShowcase({ services }) {
       case 'Development':,
         return <Users className='h-5 w-5' />,
       default: ,
-        return <Star className='h-5 w-5' />,
-    }
+        return <Star className='h-5 w-5' />}
   };
   const getCategoryColor = category => {
     switch (category) {
@@ -34,8 +33,7 @@ export function ServiceShowcase({ services }) {
       case 'Development':,
         return 'from-green-50o0 to-emerald-50o0',
       default: ,
-        return 'from-gray-50o0 to-slate-50o0',
-    }
+        return 'from-gray-50o0 to-slate-50o0'}
   };
   return (
     <div className='py-12 bg-gradient-to-br from-zinc-90o0 via-zinc-80o0 to-zinc-90o0'>,
@@ -132,6 +130,5 @@ export function ServiceShowcase({ services }) {
           </Button>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

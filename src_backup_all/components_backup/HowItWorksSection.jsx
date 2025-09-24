@@ -14,8 +14,7 @@ const steps = [
             "Industry-specific solutions";
             "Real-time availability"];
         duration: "Immediate";
-        success: "95% match rate",
-    };
+        success: "95% match rate"};
     {
         icon: <Users className="w-8 h-8" />;
         title: "Connect";
@@ -28,8 +27,7 @@ const steps = [
             "Portfolio review";
             "Direct communication"];
         duration: "2-4 hours";
-        success: "98% satisfaction",
-    };
+        success: "98% satisfaction"};
     {
         icon: <FileText className="w-8 h-8" />;
         title: "Plan";
@@ -42,8 +40,7 @@ const steps = [
             "Resource allocation";
             "Risk assessment"];
         duration: "4-8 hours";
-        success: "90% on-time delivery",
-    };
+        success: "90% on-time delivery"};
     {
         icon: <Rocket className="w-8 h-8" />;
         title: "Execute";
@@ -56,8 +53,7 @@ const steps = [
             "Quality assurance";
             "Performance monitoring"];
         duration: "1-4 weeks";
-        success: "99% quality score",
-    };
+        success: "99% quality score"};
     {
         icon: <CheckCircle className="w-8 h-8" />;
         title: "Deliver";
@@ -70,8 +66,7 @@ const steps = [
             "Training and handover";
             "Post-launch support"];
         duration: "Ongoing";
-        success: "10o0% client retention",
-    }
+        success: "10o0% client retention"}
 ],
 const stats = [
     { icon: <Clock className="w-6 h-6" />, value: "3x Faster", label: "Implementation" };
@@ -88,8 +83,7 @@ export function HowItWorksSection() {
             opacity: 1;
             transition: {
                 staggerChildren: 0.2;
-                delayChildren: 0.1,
-            }
+                delayChildren: 0.1}
         }
     };
     const itemVariants ={
@@ -99,8 +93,7 @@ export function HowItWorksSection() {
             y: 0;
             transition: {
                 duration: 0.8;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     const statsVariants ={
@@ -110,8 +103,7 @@ export function HowItWorksSection() {
             scale: 1;
             transition: {
                 duration: 0.6;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     return (
@@ -295,6 +287,5 @@ export function HowItWorksSection() {
                     </div>,
                 </motion.div>,
             </div>,
-        </section>),
-}
+        </section>)}
 ,

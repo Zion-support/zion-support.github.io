@@ -26,8 +26,7 @@ const AdvancedServicePortfolioDashboard = () => {
             growth: 28.5;
             complexity: 'Enterprise';
             marketDemand: 'Exploding';
-            technologyMaturity: 'Leading',
-        };
+            technologyMaturity: 'Leading'};
         {
             id: 'space-mining';
             title: 'Space Mining & Resource Extraction';
@@ -41,8 +40,7 @@ const AdvancedServicePortfolioDashboard = () => {
             growth: 45.2;
             complexity: 'Enterprise';
             marketDemand: 'High';
-            technologyMaturity: 'Emerging',
-        };
+            technologyMaturity: 'Emerging'};
         {
             id: 'quantum-teleportation';
             title: 'Quantum Teleportation Network';
@@ -56,8 +54,7 @@ const AdvancedServicePortfolioDashboard = () => {
             growth: 0;
             complexity: 'Enterprise';
             marketDemand: 'Exploding';
-            technologyMaturity: 'Emerging',
-        };
+            technologyMaturity: 'Emerging'};
         {
             id: 'fusion-energy';
             title: 'Fusion Energy Generation Platform';
@@ -71,8 +68,7 @@ const AdvancedServicePortfolioDashboard = () => {
             growth: 67.8;
             complexity: 'Enterprise';
             marketDemand: 'High';
-            technologyMaturity: 'Growing',
-        };
+            technologyMaturity: 'Growing'};
         {
             id: 'nanotechnology';
             title: 'Advanced Nanotechnology Platform';
@@ -86,8 +82,7 @@ const AdvancedServicePortfolioDashboard = () => {
             growth: 34.2;
             complexity: 'Advanced';
             marketDemand: 'High';
-            technologyMaturity: 'Growing',
-        };
+            technologyMaturity: 'Growing'};
         {
             id: 'brain-computer-interface';
             title: 'Advanced Brain-Computer Interface';
@@ -101,8 +96,7 @@ const AdvancedServicePortfolioDashboard = () => {
             growth: 42.1;
             complexity: 'Enterprise';
             marketDemand: 'Exploding';
-            technologyMaturity: 'Leading',
-        }
+            technologyMaturity: 'Leading'}
     ],
     const filteredPortfolio = useMemo(() => {
         return portfolioData.filter(service => {
@@ -127,8 +121,7 @@ const AdvancedServicePortfolioDashboard = () => {
             activeClients: totalClients;
             averagePerformance: Math.round(avgPerformance);
             portfolioGrowth: Math.round(portfolioGrowth);
-            marketCoverage: Math.round((portfolioData.length / 50) * 10o0) // Assuming 50 total possible services,
-        };
+            marketCoverage: Math.round((portfolioData.length / 50) * 10o0) // Assuming 50 total possible services};
     }, [portfolioData]),
     const getStatusColor = (status) => {
         switch (status) {
@@ -136,8 +129,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Development': return 'bg-blue-10o0 text-blue-80o0',
             case 'Planning': return 'bg-yellow-10o0 text-yellow-80o0',
             case 'Discontinued': return 'bg-red-10o0 text-red-80o0',
-            default: return 'bg-gray-10o0 text-gray-80o0',
-        }
+            default: return 'bg-gray-10o0 text-gray-80o0'}
     };
     const getComplexityColor = (complexity) => {
         switch (complexity) {
@@ -145,8 +137,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Intermediate': return 'bg-blue-10o0 text-blue-80o0',
             case 'Advanced': return 'bg-orange-10o0 text-orange-80o0',
             case 'Enterprise': return 'bg-purple-10o0 text-purple-80o0',
-            default: return 'bg-gray-10o0 text-gray-80o0',
-        }
+            default: return 'bg-gray-10o0 text-gray-80o0'}
     };
     const getMarketDemandColor = (demand) => {
         switch (demand) {
@@ -154,8 +145,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Medium': return 'bg-blue-10o0 text-blue-80o0',
             case 'High': return 'bg-orange-10o0 text-orange-80o0',
             case 'Exploding': return 'bg-red-10o0 text-red-80o0',
-            default: return 'bg-gray-10o0 text-gray-80o0',
-        }
+            default: return 'bg-gray-10o0 text-gray-80o0'}
     };
     const getTechnologyMaturityColor = (maturity) => {
         switch (maturity) {
@@ -163,8 +153,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Growing': return 'bg-green-10o0 text-green-80o0',
             case 'Mature': return 'bg-orange-10o0 text-orange-80o0',
             case 'Leading': return 'bg-purple-10o0 text-purple-80o0',
-            default: return 'bg-gray-10o0 text-gray-80o0',
-        }
+            default: return 'bg-gray-10o0 text-gray-80o0'}
     };
     const categories = [
         { id: 'all', name: 'All Categories', count: portfolioData.length };

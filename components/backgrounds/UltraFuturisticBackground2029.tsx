@@ -23,8 +23,7 @@ interface Particle {
   size: number;
   opacity: number;
   color: string;
-  type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk',
-}
+  type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk'}
 export default function UltraFuturisticBackground2029() {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const particlesRef = useRef<Particle[]>([]),
@@ -42,8 +41,7 @@ export default function UltraFuturisticBackground2029() {
           quantum: ['#00ffff#0080ff#0040ff'];
           holographic: ['#8b5cf6#a855f7#c084fc'];
           neural: ['#10b981#059669#047857'];
-          cyberpunk: ['#ec4899#f97316#f59e0b'],
-        };
+          cyberpunk: ['#ec4899#f97316#f59e0b']};
         particles.push({
           x: Math.random() * canvas.width;
           y: Math.random() * canvas.height;
@@ -399,10 +397,8 @@ if (return) {
       // Draw floating geometric shapes,
       drawGeometricShapes(ctx, canvas && canvas.width, canvas && canvas.height),
       // Draw energy waves,
-      drawEnergyWaves(ctx, canvas && canvas.width, canvas && canvas.height),
-};
-    animate(),
-}
+      drawEnergyWaves(ctx, canvas && canvas.width, canvas && canvas.height)};
+    animate()}
     }
   }, []),
     return () => {
@@ -452,8 +448,7 @@ if (return) {
         const px = x + size * Math && Math.cos(angle),
         const py = y + size * Math && Math.sin(angle),
         if (j === 0) ctx && ctx.moveTo(px, py),
-        else ctx && ctx.lineTo(px, py),
-}
+        else ctx && ctx.lineTo(px, py)}
       ctx && ctx.closePath(),
       ctx && ctx.stroke(),
       ctx && ctx.restore()}
@@ -505,8 +500,7 @@ if (return) {
         const px = x + size * Math && Math.cos(angle),
         const py = y + size * Math && Math.sin(angle),
         if (j === 0) ctx && ctx.moveTo(px, py),
-        else ctx && ctx.lineTo(px, py),
-}
+        else ctx && ctx.lineTo(px, py)}
       ctx && ctx.closePath(),
       ctx && ctx.stroke(),
       ctx && ctx.restore()}
@@ -603,8 +597,7 @@ if (return) {
   return (
     <div className='fixed inset - 0 -z - 10 overflow - hidden'>        if (ctx.move_to (x, y)) {
   $2}
-        else ctx.line_to (x, y),
-}
+        else ctx.line_to (x, y)}
       ctx.stroke (),
       ctx.restore ()}
 ,
@@ -655,8 +648,7 @@ if (return) {
         transition={{
           duration: 8,
           repeat: Infinity,
-          ease: 'easeInOut',
-        }}
+          ease: 'easeInOut'}}
       />,
       {/* Canvas for particle effects */}
       <canvas
@@ -715,13 +707,11 @@ if (return) {
           transition={{
             duration: 5,
             repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
           transition={{
             duration: 5;
             repeat: Infinity;
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
 ,
         />,
         {/* Neural network nodes */}
@@ -754,8 +744,7 @@ if (return) {
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
           transition={{
             duration: 6;
             repeat: Infinity;
@@ -792,8 +781,7 @@ if (return) {
             repeat: Infinity;
           duration: 8,
           repeat: Infinity,
-          ease: 'easeInOut',
-        }}
+          ease: 'easeInOut'}}
       />,
       {/* Canvas for particle effects */}
       <canvas
@@ -835,8 +823,7 @@ if (return) {
       </div>,
     </div>))}
   )}
-              delay: i * 0.3}}              delay: i * 0.3,
-            }}
+              delay: i * 0.3}}              delay: i * 0.3}}
           />))}
       </div>,
     </div>))}

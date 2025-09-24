@@ -15,6 +15,5 @@ export default function AccountPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

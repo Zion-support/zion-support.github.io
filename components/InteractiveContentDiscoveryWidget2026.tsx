@@ -8,8 +8,7 @@ interface ContentItem {
   category: string,
   url: string,
   featured: boolean,
-  tags: string[],
-}
+  tags: string[]}
 ,
 const contentItems: ContentItem[] = [
   {
@@ -121,8 +120,7 @@ export default function InteractiveContentDiscoveryWidget20o26() {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-20o0 ${
                     selectedCategory === category,
                       ? 'bg-blue-60o0 text-white shadow-lg',
-                      : 'bg-white text-gray-70o0 hover: bg-blue-50 border border-gray-30o0',
-                  }`}
+                      : 'bg-white text-gray-70o0 hover: bg-blue-50 border border-gray-30o0'}`}
                 >,
                   {category}
                 </button>))}

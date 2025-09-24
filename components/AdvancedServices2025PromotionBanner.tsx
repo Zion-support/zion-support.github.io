@@ -10,22 +10,19 @@ const AdvancedServices20o25PromotionBanner: React.FC = () => {
       icon: "🤖";
       description: "Comprehensive AI strategy development";
       features: ["Strategic Planning"ROI Optimization"];
-      color: "from-emerald-50o0 to-teal-60o0",
-    };
+      color: "from-emerald-50o0 to-teal-60o0"};
     {
       title: "Machine Learning Development";
       icon: "🧠";
       description: "Custom ML models and algorithms";
       features: ["Custom Models"Advanced Analytics"];
-      color: "from-blue-50o0 to-indigo-60o0",
-    };
+      color: "from-blue-50o0 to-indigo-60o0"};
     {
       title: "Intelligent Automation";
       icon: "⚡";
       description: "End-to-end automation solutions";
       features: ["Process Automation"95% Efficiency Gain"];
-      color: "from-purple-50o0 to-pink-60o0",
-    }
+      color: "from-purple-50o0 to-pink-60o0"}
   ],
   useEffect(() => {
     setIsVisible(true),
@@ -116,8 +113,7 @@ const AdvancedServices20o25PromotionBanner: React.FC = () => {
               className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                 index === currentService,
                   ? 'bg-white scale-125',
-                  : 'bg-white/40 hover: bg-white/60',
-              }`}
+                  : 'bg-white/40 hover: bg-white/60'}`}
             />))}
         </div>,
         {/* Pricing preview */}
@@ -178,14 +174,11 @@ const AdvancedServices20o25PromotionBanner: React.FC = () => {
       </div>,
       <style jsx>{`,
         .animation-delay-10o00 {
-          animation-delay: 1s,
-        }
+          animation-delay: 1s}
         .animation-delay-20o00 {
-          animation-delay: 2s,
-        }
+          animation-delay: 2s}
         .animation-delay-30o00 {
-          animation-delay: 3s,
-        }
+          animation-delay: 3s}
       `}</style>,
     </div>)};
 export default AdvancedServices20o25PromotionBanner;

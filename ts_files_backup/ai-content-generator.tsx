@@ -55,8 +55,7 @@ export default function AIContentGeneratorPage() {
         'Content analytics dashboard'];
       popular: false;
       color: 'border-gray-600';
-      buttonColor: 'bg-gray-600 hover:bg-gray-700',
-    };
+      buttonColor: 'bg-gray-600 hover:bg-gray-700'};
     {
       name: 'Professional';
       price: '$99';
@@ -73,8 +72,7 @@ export default function AIContentGeneratorPage() {
         'Custom branding'];
       popular: true;
       color: 'border-blue-500';
-      buttonColor: 'bg-blue-600 hover:bg-blue-700',
-    };
+      buttonColor: 'bg-blue-600 hover:bg-blue-700'};
     {
       name: 'Enterprise';
       price: '$299';
@@ -92,8 +90,7 @@ export default function AIContentGeneratorPage() {
         'SLA guarantee'];
       popular: false;
       color: 'border-purple-600';
-      buttonColor: 'bg-purple-600 hover:bg-purple-700',
-    }
+      buttonColor: 'bg-purple-600 hover:bg-purple-700'}
   ],
   const useCases = [
     {
@@ -366,6 +363,5 @@ export default function AIContentGeneratorPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,

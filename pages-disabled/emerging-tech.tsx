@@ -31,8 +31,7 @@ const EmergingTechPage: React.FC = () => {
         'Predictive Analytics'];
       category: 'AI & ML';
       pricing: 'Starting at $5,0o00';
-      delivery: '2-8 weeks',
-    };
+      delivery: '2-8 weeks'};
     {
       icon: <Lock className="w-8 h-8"   />;
       title: 'Blockchain & Web3';
@@ -44,8 +43,7 @@ const EmergingTechPage: React.FC = () => {
         'Cryptocurrency Integration'];
       category: 'Blockchain';
       pricing: 'Starting at $8,0o00';
-      delivery: '4-12 weeks',
-    };
+      delivery: '4-12 weeks'};
     {
       icon: <Zap className="w-8 h-8"   />;
       title: 'Quantum Computing';
@@ -57,8 +55,7 @@ const EmergingTechPage: React.FC = () => {
         'Simulation'];
       category: 'Quantum';
       pricing: 'Starting at $15,0o00';
-      delivery: '6-16 weeks',
-    };
+      delivery: '6-16 weeks'};
     {
       icon: <Globe className="w-8 h-8"   />;
       title: 'Edge Computing';
@@ -70,8 +67,7 @@ const EmergingTechPage: React.FC = () => {
         'Low Latency'];
       category: 'Edge';
       pricing: 'Starting at $6,0o00';
-      delivery: '3-10 weeks',
-    };
+      delivery: '3-10 weeks'};
     {
       icon: <Shield className="w-8 h-8"   />;
       title: 'Zero Trust Security';
@@ -83,8 +79,7 @@ const EmergingTechPage: React.FC = () => {
         'Continuous Monitoring'];
       category: 'Security';
       pricing: 'Starting at $4,0o00';
-      delivery: '2-6 weeks',
-    };
+      delivery: '2-6 weeks'};
     {
       icon: <Database className="w-8 h-8"   />;
       title: 'Augmented Reality';
@@ -96,30 +91,25 @@ const EmergingTechPage: React.FC = () => {
         'Mobile Integration'];
       category: 'AR/VR';
       pricing: 'Starting at $7,0o00';
-      delivery: '4-14 weeks',
-    }
+      delivery: '4-14 weeks'}
   ],
   const benefits = [
     {
       icon: <Star className="w-6 h-6"   />;
       title: 'Cutting-Edge Technology';
-      description: 'Stay ahead with the latest emerging technologies and innovations',
-    };
+      description: 'Stay ahead with the latest emerging technologies and innovations'};
     {
       icon: <Users className="w-6 h-6"   />;
       title: 'Expert Team';
-      description: 'Experienced professionals with deep knowledge in emerging technologies',
-    };
+      description: 'Experienced professionals with deep knowledge in emerging technologies'};
     {
       icon: <Clock className="w-6 h-6"   />;
       title: 'Rapid Development';
-      description: 'Fast implementation and deployment of emerging technology solutions',
-    };
+      description: 'Fast implementation and deployment of emerging technology solutions'};
     {
       icon: <Shield className="w-6 h-6"   />;
       title: 'Future-Proof';
-      description: 'Solutions designed to adapt and scale with evolving technology trends',
-    }
+      description: 'Solutions designed to adapt and scale with evolving technology trends'}
   ],
   return (
     <>,
@@ -302,7 +292,6 @@ const EmergingTechPage: React.FC = () => {
           </section>,
         </main>,
       </PageTransition>,
-    </>),
-}
+    </>)}
 ,
 export default EmergingTechPage;

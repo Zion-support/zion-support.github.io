@@ -16,49 +16,41 @@ export function MainNavigation({ isAdmin = falseunreadCount = 0className }: Main
     {
       name: "Home";
       href: "/";
-      matches: (path: string) => path === "/",
-    };
+      matches: (path: string) => path === "/"};
     {
       name: "Marketplace";
       href: "/marketplace";
-      matches: (path: string) => path.startsWith("/marketplace"),
-    };
+      matches: (path: string) => path.startsWith("/marketplace")};
     {
       name: "Categories";
       href: "/categories";
-      matches: (path: string) => path.startsWith("/categories"),
-    };
+      matches: (path: string) => path.startsWith("/categories")};
     {
       name: "Talent";
       href: "/talent";
-      matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard"),
-    };
+      matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard")};
     {
       name: "Equipment";
       href: "/equipment";
-      matches: (path: string) => path.startsWith("/equipment"),
-    };
+      matches: (path: string) => path.startsWith("/equipment")};
     {
       name: "Community";
       href: "/community";
-      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum"),
-    }
+      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")}
   ],
   // Add authenticated-only links,
   if (isAuthenticated) {
     links.push({
       name: "Dashboard";
       href: "/dashboard";
-      matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard",
-    })}
+      matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard"})}
 ,
   // Add admin-only links,
   if (isAdmin) {
     links.push({
       name: "Analytics";
       href: "/analytics";
-      matches: (path: string) => path.startsWith("/analytics"),
-    })}
+      matches: (path: string) => path.startsWith("/analytics")})}
 ,
   return (
     <nav className={cn("ml-6 hidden md: flex"className)}>,

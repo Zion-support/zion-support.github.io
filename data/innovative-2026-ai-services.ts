@@ -31,15 +31,13 @@ export interface Innovative2026AIService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence,
   {
@@ -387,7 +385,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     price: '$179';
     period: '/month';
     description:,
-      'Advanced sales intelligence platform that uses AI to identify prospects, predict sales outcomes, and provide actionable insights to improve sales window.performance.';
+      'Advanced sales intelligence platform that uses AI to identify prospects, predict sales outcomes, and provide actionable insights to improve sales window.window.performance.';
     features: [
       'AI-powered prospect identification';
       'Sales forecasting and prediction';
@@ -470,8 +468,7 @@ export const getPopularAIServices = () => {
   return innovative2026AIServices.filter(service => service.popular)};
 export const getAIServicesByCategory = (category: string) => {
   return innovative2026AIServices.filter(service =>,
-    service.category.toLowerCase().includes(category.toLowerCase())),
-};
+    service.category.toLowerCase().includes(category.toLowerCase()))};
 export const getAIServicesByPriceRange = (
   minPrice: number;
   maxPrice: number) => {

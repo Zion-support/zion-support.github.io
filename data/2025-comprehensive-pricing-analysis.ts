@@ -11,33 +11,28 @@ export interface PricingAnalysis {
     valueProposition: string,
     targetMarket: string,
     marketSize: string,
-    growthRate: string,
-  };
+    growthRate: string};
   pricingStrategy: {
     strategy: string,
     justification: string,
     priceElasticity: string,
     bundlingOptions: string[],
-    discountStructure: string[],
-  };
+    discountStructure: string[]};
   competitiveAnalysis: {
     directCompetitors: string[],
     indirectCompetitors: string[],
     competitiveAdvantages: string[],
-    differentiationFactors: string[],
-  };
+    differentiationFactors: string[]};
   roiAnalysis: {
     customerROI: string,
     implementationCost: string,
     paybackPeriod: string,
-    totalCostOfOwnership: string,
-  };
+    totalCostOfOwnership: string};
   contactInfo: {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
 }
 export const comprehensivePricingAnalysis20o25: PricingAnalysis[] = [
   // AI AUTONOMOUS BUSINESS MANAGER,
@@ -374,12 +369,10 @@ export const comprehensivePricingAnalysis20o25: PricingAnalysis[] = [
   };
 ],
 export const getPricingAnalysisByService = (serviceId: string) => {
-  return comprehensivePricingAnalysis20o25.find(s => s.serviceId === serviceId),
-};
+  return comprehensivePricingAnalysis20o25.find(s => s.serviceId === serviceId)};
 export const getPricingAnalysisByCategory = (category: string) => {
   if (!category || category === 'All') return comprehensivePricingAnalysis20o25,
-  return comprehensivePricingAnalysis20o25.filter(s => s.category === category),
-};
+  return comprehensivePricingAnalysis20o25.filter(s => s.category === category)};
 export const getMarketInsights = () => {
   const insights = {
     totalMarketSize: '$1.2T+';

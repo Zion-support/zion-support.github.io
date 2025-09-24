@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
 interface UltraFuturisticBackground20o30Props {
   children: React.ReactNode,
-  className?: string,
-}
+  className?: string}
 ,
 const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Props> = ({
   children;
@@ -25,8 +24,7 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
       size: number,
       color: string,
       alpha: number,
-      type: 'quantum' | 'holographic' | 'neon',
-    }> = [],
+      type: 'quantum' | 'holographic' | 'neon'}> = [],
     // Initialize particles,
     const initParticles = () => {
       particles = [],
@@ -166,8 +164,7 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
               linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px);
               linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px),
             `;
-            backgroundSize: '50px 50px',
-          }}  />,
+            backgroundSize: '50px 50px'}}  />,
         </div>,
         {/* Holographic Orbs */}
         <div className="absolute top-20 left-20 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-40o0 to-blue-50o0 opacity-30 blur-xl animate-pulse"  />,
@@ -183,8 +180,7 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
             transition={{
               duration: 8;
               repeat: Infinity;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />,
           <motion.div,
             className="absolute top-3/4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-40o0 to-transparent",
@@ -195,8 +191,7 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
               duration: 10;
               repeat: Infinity;
               ease: "easeInOut";
-              delay: 2,
-            }}
+              delay: 2}}
            />,
         </div>,
       </div>,
@@ -221,8 +216,7 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         {/* Holographic Data Streams */}
         <motion.div,
@@ -233,8 +227,7 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
           transition={{
             duration: 15;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         {/* Neural Network Nodes */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">,
@@ -252,8 +245,7 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
                 duration: 3;
                 repeat: Infinity;
                 ease: "easeInOut";
-                delay: i * 0.5,
-              }}
+                delay: i * 0.5}}
              />))}
         </div>,
       </div>,

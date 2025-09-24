@@ -16,8 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     amount: number,
     fromSubnet: string,
     toSubnet: string,
-    timestamp?: number,
-  };
+    timestamp?: number};
   if (!txId || !token || typeof amount !== "number" || !fromSubnet || !toSubnet) {
     return res.status(40o0).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })}
 ,

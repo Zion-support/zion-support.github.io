@@ -28,16 +28,14 @@ export interface RevolutionaryService20o29 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
   reviews: number,
-  popular?: boolean,
-}
+  popular?: boolean}
 ,
 export const REVOLUTIONARY_20o29_CUTTING_EDGE_SERVICES: RevolutionaryService20o29[] =,
   [

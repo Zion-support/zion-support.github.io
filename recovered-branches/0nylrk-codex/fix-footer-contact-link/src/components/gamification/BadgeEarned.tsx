@@ -5,8 +5,7 @@ interface BadgeEarnedProps {
   size?: number,
   showName?: boolean,
   showDesc?: boolean,
-  earnedDate?: string,
-}
+  earnedDate?: string}
 ,
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
   badge;

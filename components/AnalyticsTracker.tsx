@@ -8,8 +8,7 @@ interface AnalyticsTrackerProps {
     category: string,
     action: string,
     label?: string,
-    value?: number,
-  }>}
+    value?: number}>}
 ,
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
   pageName;

@@ -328,8 +328,7 @@ const UltraFuturisticFooter20o45V2: React.FC = () => {
                         className={`w-8 h-8 rounded-lg bg-gradient-to-br ${
                           link.featured,
                             ? 'from-cyan-50o0 to-blue-60o0',
-                            : 'from-gray-60o0 to-gray-70o0',
-                        } p-1.5 flex-shrink-0 group-hover: scale-110 transition-transform duration-30o0`}
+                            : 'from-gray-60o0 to-gray-70o0'} p-1.5 flex-shrink-0 group-hover: scale-110 transition-transform duration-30o0`}
                       >,
                         {React.cloneElement(link.icon, {
                           className: 'w-5 h-5 text-white';
@@ -505,6 +504,5 @@ const UltraFuturisticFooter20o45V2: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </footer>),
-};
+    </footer>)};
 export default UltraFuturisticFooter20o45V2;

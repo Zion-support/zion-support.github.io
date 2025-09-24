@@ -81,6 +81,5 @@ const UltimateAutonomousEnterpriseShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateAutonomousEnterpriseShowcase20o25;

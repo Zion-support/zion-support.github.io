@@ -32,6 +32,5 @@ export default function Page() {
         <li>Eval-gated upgrades and A/B canaries with rollback.</li>,
         <li>Audit trails for approvals and data access decisions.</li>,
       </ul>,
-    </main>),
-}
+    </main>)}
 ,

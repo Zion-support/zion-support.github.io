@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
 interface UltraFuturisticBackground20o41Props {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 const UltraFuturisticBackground20o41: React.FC<UltraFuturisticBackground20o41Props> = ({ children }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
@@ -21,8 +20,7 @@ const UltraFuturisticBackground20o41: React.FC<UltraFuturisticBackground20o41Pro
       vy: number,
       size: number,
       opacity: number,
-      color: string,
-    }> = [],
+      color: string}> = [],
     // Initialize particles,
     const initParticles = () => {
       particles = [],
@@ -99,8 +97,7 @@ const UltraFuturisticBackground20o41: React.FC<UltraFuturisticBackground20o41Pro
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         {/* Top-right gradient */}
         <motion.div,
@@ -112,8 +109,7 @@ const UltraFuturisticBackground20o41: React.FC<UltraFuturisticBackground20o41Pro
             duration: 10;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 2,
-          }}
+            delay: 2}}
          />,
         {/* Bottom-left gradient */}
         <motion.div,
@@ -125,8 +121,7 @@ const UltraFuturisticBackground20o41: React.FC<UltraFuturisticBackground20o41Pro
             duration: 12;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 4,
-          }}
+            delay: 4}}
          />,
         {/* Center gradient */}
         <motion.div,
@@ -138,8 +133,7 @@ const UltraFuturisticBackground20o41: React.FC<UltraFuturisticBackground20o41Pro
             duration: 15;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 6,
-          }}
+            delay: 6}}
          />,
       </div>,
       {/* Floating Elements */}
@@ -155,8 +149,7 @@ const UltraFuturisticBackground20o41: React.FC<UltraFuturisticBackground20o41Pro
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-1/3 right-1/3 w-3 h-3 bg-purple-40o0 rounded-full",
@@ -169,8 +162,7 @@ const UltraFuturisticBackground20o41: React.FC<UltraFuturisticBackground20o41Pro
             duration: 8;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 1,
-          }}
+            delay: 1}}
          />,
         <motion.div,
           className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-emerald-40o0 rounded-full",
@@ -183,8 +175,7 @@ const UltraFuturisticBackground20o41: React.FC<UltraFuturisticBackground20o41Pro
             duration: 7;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 3,
-          }}
+            delay: 3}}
          />,
         <motion.div,
           className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-blue-40o0 rounded-full",
@@ -197,8 +188,7 @@ const UltraFuturisticBackground20o41: React.FC<UltraFuturisticBackground20o41Pro
             duration: 9;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 2,
-          }}
+            delay: 2}}
          />,
       </div>,
       {/* Grid Pattern */}
@@ -210,8 +200,7 @@ const UltraFuturisticBackground20o41: React.FC<UltraFuturisticBackground20o41Pro
               linear-gradient(rgba(10o0, 20o0, 255, 0.1) 1px, transparent 1px);
               linear-gradient(90deg, rgba(10o0, 20o0, 255, 0.1) 1px, transparent 1px),
             `;
-            backgroundSize: '50px 50px',
-          }}
+            backgroundSize: '50px 50px'}}
          />,
       </div>,
       {/* Content */}

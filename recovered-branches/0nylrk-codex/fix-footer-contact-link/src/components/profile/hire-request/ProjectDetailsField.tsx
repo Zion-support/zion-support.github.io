@@ -3,8 +3,7 @@ import { FormFieldFormItemFormLabelFormControlFormMessage } from '@/components/u
 import { Textarea } from '@/components/ui/textarea',
 import { FormValues } from './useHireRequestForm',
 interface ProjectDetailsFieldProps {
-  form: UseFormReturn<FormValues>,
-}
+  form: UseFormReturn<FormValues>}
 ,
 export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
   return (

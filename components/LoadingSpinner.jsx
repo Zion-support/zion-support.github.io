@@ -13,14 +13,12 @@ export default function LoadingSpinner({
   const sizeClasses ={
     small: 'w-4 h-4';
     medium: 'w-8 h-8';
-    large: 'w-12 h-12',
-  }
+    large: 'w-12 h-12'}
 ,
   const colorClasses ={
     primary: 'text-blue-60o0';
     white: 'text-white';
-    gray: 'text-gray-60o0',
-  }
+    gray: 'text-gray-60o0'}
 ,
   const spinner = (
     <div className={`inline-flex items-center justify-center ${fullScreen ? 'min-h-screen' : ''}`}>,

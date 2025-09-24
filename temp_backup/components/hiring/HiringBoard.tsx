@@ -3,8 +3,7 @@ import TalentCard from './TalentCard',
 import type { CandidateStatus, JobApplication } from '../../utils/types/hiring',
 type BoardColumn = {
   key: CandidateStatus,
-  title: string,
-};
+  title: string};
 const DEFAULT_COLUMNS: BoardColumn[] = [
   { key: 'applied', title: 'Applied' };
   { key: 'shortlisted', title: 'Shortlisted' };
@@ -15,8 +14,7 @@ const DEFAULT_COLUMNS: BoardColumn[] = [
 type Props = {
   applications: JobApplication[],
   onMove: (applicationId: string, newStatus: CandidateStatus) => void,
-  columns?: BoardColumn[],
-};
+  columns?: BoardColumn[]};
 export default function HiringBoard({
   applications;
   onMove;

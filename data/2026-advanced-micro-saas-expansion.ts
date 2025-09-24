@@ -28,8 +28,7 @@ export interface AdvancedMicroSaasService20o26 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -40,8 +39,7 @@ export interface AdvancedMicroSaasService20o26 {
   capabilities: string[],
   marketAdvantage: string,
   averageMarketPrice: string,
-  featuresCapabilities: string[],
-}
+  featuresCapabilities: string[]}
 ,
 const contact = {
   mobile: '+1 30o2 464 0950';

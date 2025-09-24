@@ -523,6 +523,5 @@ export default function AI20o25EnterpriseAutomationRevolution() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

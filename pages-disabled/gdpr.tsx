@@ -298,6 +298,5 @@ export default function GDPR() {
         </section>,
       </main>,
       <SimpleFooter />,
-    </>),
-}
+    </>)}
 ,

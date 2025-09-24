@@ -9,20 +9,17 @@ interface SitemapUrl {
     | 'monthly',
     | 'yearly',
     | 'never',
-  priority?: number,
-}
+  priority?: number}
 ,
 interface SitemapConfig {
   baseUrl: string,
   urls: SitemapUrl[],
-  outputPath?: string,
-}
+  outputPath?: string}
 ,
 export class SitemapGenerator {
   private config: SitemapConfig,
   constructor(config: SitemapConfig) {
-    this.config = config,
-  }
+    this.config = config}
 ,
   /**,
    * Generate XML sitemap content,
@@ -69,8 +66,7 @@ Allow: /contact,
 Allow: /blog,
 Allow: /careers,
 # Crawl delay (optional),
-Crawl-delay: 1`,
-  }
+Crawl-delay: 1`}
 ,
   /**,
    * Generate sitemap index for large sites,
@@ -195,13 +191,11 @@ export const defaultSitemapConfig: SitemapConfig = {
 export function generateSitemap(
   config: SitemapConfig = defaultSitemapConfig): string {
   const generator = new SitemapGenerator(config),
-  return generator.generateXML(),
-}
+  return generator.generateXML()}
 ,
 // Utility function to generate robots.txt,
 export function generateRobotsTxt(
   config: SitemapConfig = defaultSitemapConfig): string {
   const generator = new SitemapGenerator(config),
-  return generator.generateRobotsTxt(),
-}
+  return generator.generateRobotsTxt()}
 ,

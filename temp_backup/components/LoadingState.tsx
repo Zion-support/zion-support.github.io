@@ -64,8 +64,7 @@ const LoadingState: React.FC = () => {
           transition={{
             duration: 4;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-purple-50o0/20 rounded-full blur-3xl",
@@ -75,8 +74,7 @@ const LoadingState: React.FC = () => {
           transition={{
             duration: 5;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
       </div>,
       <div className="relative z-10 text-center max-w-2xl mx-auto px-4">,
@@ -160,8 +158,7 @@ const LoadingState: React.FC = () => {
                 duration: 1.5;
                 repeat: Infinity;
                 delay: i * 0.2;
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
              />))}
         </motion.div>,
         {/* Status Message */}
@@ -194,8 +191,7 @@ const LoadingState: React.FC = () => {
               duration: 3 + Math.random() * 2;
               repeat: Infinity;
               delay: Math.random() * 2;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />))}
       </div>,
     </div>)};

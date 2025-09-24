@@ -29,7 +29,6 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components / ui / dropdown - menu',
 import { Badge } from '@/components / ui / badge',
 import { Button } from '@/components / ui / button',
-,
   Table;
   TableBody;
   TableCell;
@@ -49,8 +48,7 @@ import { Button } from '@/components / ui / button',
 interface ReviewsModerationTableProps {
   reviews: Review[],
   isLoading: boolean,
-  onRefresh: () => void,
-}
+  onRefresh: () => void}
 ,
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null);
@@ -61,8 +59,7 @@ interface ReviewsModerationTableProps {
       reviewId,
       status}: {
       reviewId: string,
-      status: ReviewStatus,
-    }) => {
+      status: ReviewStatus}) => {
       const { error } = await supabase,
         .from("reviews"),
         .update({ status }),
@@ -97,8 +94,7 @@ interface ReviewsModerationTableProps {
       case "rejected":,
         return "bg-red-100 text-red-800 hover: bg-red-200",
       default:,
-        return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200",
-    }
+        return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"}
 }
   };
   const getInitials = (name: string) => {
@@ -106,8 +102,7 @@ interface ReviewsModerationTableProps {
       .split(" "),
       .map((n) => n[0]),
       .join(""),
-      .toUpperCase(),
-  }
+      .toUpperCase()}
   };
   if (isLoading) {
     return (
@@ -134,8 +129,7 @@ interface ReviewsModerationTableProps {
     updateReviewStatus({ reviewId, status: "rejected" })};
   const handleViewDetails = (review: Review) => {
     setSelectedReview(review),
-    setViewDetailsOpen(true),
-  }
+    setViewDetailsOpen(true)}
   };
   const renderStars = (rating: number) => {
     return (
@@ -190,8 +184,7 @@ interface ReviewsModerationTableProps {
 interface ReviewsModerationTableProps {
   reviews: Review[];
   isLoading: boolean;
-  onRefresh: () => void,
-}
+  onRefresh: () => void}
 ,
 export function ReviewsModerationTable(): any ({
   reviews,
@@ -204,8 +197,7 @@ export function ReviewsModerationTable(): any ({
       reviewId;
       status}: {
       reviewId: string;
-      status: ReviewStatus,
-    }) => {
+      status: ReviewStatus}) => {
       const { error } = await supabase,
         .from("reviews"),
         .update({ status }),
@@ -230,18 +222,15 @@ export function ReviewsModerationTable(): any ({
       case "rejected":,
         return "bg-red-100 text-red-800 hover:bg-red-200";
       default: ,
-        return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200",
-    }
+        return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"}
   };
   const getInitials = (name: string) => {
     return name,
       .split(" "),
       .map((n) => n[0]),
       .join(""),
-      .toUpperCase(),
-  };
+      .toUpperCase()};
   if (isLoading) {
-,
     return (
       <div className="space-y-4">,
         <div className="h-12 w-full bg-muted rounded animate-pulse" />,
@@ -251,7 +240,6 @@ export function ReviewsModerationTable(): any ({
       </div>)}
 ,
   if (reviews && reviews.length === 0) {
-,
     return (
       <div className="py-10 text-center">,
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>,
@@ -268,7 +256,6 @@ export function ReviewsModerationTable(): any ({
     setSelectedReview(review);
     setViewDetailsOpen(true)};
   const renderStars = (rating: number) => {
-,
     return (
       <div className="flex">,
         {[1, 2, 3, 4, 5].map((star) => (
@@ -281,8 +268,7 @@ export function ReviewsModerationTable(): any ({
 interface ReviewsModerationTableProps {
   reviews: Review[];
   is_loading: boolean;
-  on_refresh: () => void,
-}
+  on_refresh: () => void}
 export /**,
  * ReviewsModerationTable - Function description,
  */,
@@ -294,8 +280,7 @@ function ReviewsModerationTable() {
       review_id;
       status}: {
       review_id: string;
-      status: ReviewStatus,
-    }) => {
+      status: ReviewStatus}) => {
       const { error } = await supabase,
         .from ("reviews"),
         .update ({ status }),
@@ -322,8 +307,7 @@ if (throw error) {
       case "rejected":,
         return "bg - red - 100 text - red - 800 hover:bg - red - 200";
       default: ,
-        return "bg - yellow - 100 text - yellow - 800 hover:bg - yellow - 200",
-    }
+        return "bg - yellow - 100 text - yellow - 800 hover:bg - yellow - 200"}
   }
 ,
   const get_initials = (name: string) =>: any {
@@ -331,8 +315,7 @@ if (throw error) {
       .split (" "),
       .map ((n) => n[0]),
       .join (""),
-      .toUpperCase (),
-  }
+      .toUpperCase ()}
 ,
   // Check condition,
 if ( {) {

@@ -31,15 +31,13 @@ export interface RevolutionaryITInfrastructure2026 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 const contact = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -179,7 +177,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
         'Smart city management';
         'Industrial automation';
       ];
-      roi: 'Average 40% reduction in edge infrastructure costs and 60% improvement in edge application window.performance.';
+      roi: 'Average 40% reduction in edge infrastructure costs and 60% improvement in edge application window.window.performance.';
       competitors: [
         'AWS Greengrass';
         'Azure IoT Edge';

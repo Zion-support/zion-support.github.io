@@ -4,14 +4,12 @@ interface Toast {
   id: string,
   title?: string,
   description?: string,
-  variant?: 'default' | 'destructive',
-}
+  variant?: 'default' | 'destructive'}
 ,
 interface ToastContextType {
   toasts: Toast[],
   toast: (toast: Omit<Toast 'id'>) => void,
-  dismiss: (id: string) => void,
-}
+  dismiss: (id: string) => void}
 ,
 const ToastContext = createContext<ToastContextType | undefined>(undefined),
 export function ToastProvider({ children }: { children: React.ReactNode }) {
@@ -40,8 +38,7 @@ export function useToast() {
   const context = useContext(ToastContext),
   if (!context) {
     throw new Error('useToast must be used within a ToastProvider')}
-  return context,
-}
+  return context}
 ,
 export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [toasts, setToasts] = useState<Toast[]>([]),
@@ -52,8 +49,7 @@ export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     setTimeout(() => {
       setToasts(prev => prev.filter(t => t.id !== id))}, 50o00)}, []),
   const dismiss = useCallback((id: string) => {
-    setToasts(prev => prev.filter(t => t.id !== id)),
-  }, []),
+    setToasts(prev => prev.filter(t => t.id !== id))}, []),
   return (
     <ToastContext.Provider value={{ toasts, toast, dismiss }}>,
       {children}

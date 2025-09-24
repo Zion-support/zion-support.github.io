@@ -16,8 +16,7 @@ jest.mock("next/router", () => ({
       events: {
         on: jest.fn();
         off: jest.fn();
-        emit: jest.fn(),
-      };
+        emit: jest.fn()};
 // Mock Next.js Image component,
 jest.mock('next/image', () => ({
   __esModule: true;
@@ -39,8 +38,7 @@ jest.mock('next/link', () => ({
 :backup-problematic-files/jest.setup.js,
     return <a href={href} {...props}>{children}</a>}
 };
-main: jest.setup.js,
-})),
+main: jest.setup.js})),
 // Mock window.matchMedia,
 Object.defineProperty(window, 'matchMedia', {
   writable: true;
@@ -52,8 +50,7 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(), // deprecated,
     addEventListener: jest.fn();
     removeEventListener: jest.fn();
-    dispatchEvent: jest.fn(),
-  }))}),
+    dispatchEvent: jest.fn()}))}),
 // Mock IntersectionObserver,
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}

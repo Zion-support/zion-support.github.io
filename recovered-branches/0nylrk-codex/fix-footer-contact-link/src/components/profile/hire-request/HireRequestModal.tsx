@@ -7,8 +7,7 @@ interface HireRequestModalProps {
   talent: TalentProfile | null,
   isOpen: boolean,
   onClose: () => void,
-  userDetails?: UserProfile,
-}
+  userDetails?: UserProfile}
 ,
 export function HireRequestModal({
   talentisOpenonCloseuserDetails;

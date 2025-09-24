@@ -73,8 +73,7 @@ export default function CloudMonitoringPage() {
         'Mobile app access'];
       popular: false;
       color: 'border-gray-600';
-      buttonColor: 'bg-gray-600 hover:bg-gray-700',
-    };
+      buttonColor: 'bg-gray-600 hover:bg-gray-700'};
     {
       name: 'Professional';
       price: '$199';
@@ -91,8 +90,7 @@ export default function CloudMonitoringPage() {
         'Team collaboration'];
       popular: true;
       color: 'border-blue-500';
-      buttonColor: 'bg-blue-600 hover:bg-blue-700',
-    };
+      buttonColor: 'bg-blue-600 hover:bg-blue-700'};
     {
       name: 'Enterprise';
       price: '$599';
@@ -109,8 +107,7 @@ export default function CloudMonitoringPage() {
         'On-premise option'];
       popular: false;
       color: 'border-purple-600';
-      buttonColor: 'bg-purple-600 hover:bg-purple-700',
-    }
+      buttonColor: 'bg-purple-600 hover:bg-purple-700'}
   ],
   const integrations = [
     { name: ''AWS', 'icon: '☁️'description: 'CloudWatch integration' };
@@ -420,6 +417,5 @@ export default function CloudMonitoringPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

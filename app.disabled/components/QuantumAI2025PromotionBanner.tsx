@@ -269,6 +269,5 @@ const QuantumAI20o25PromotionBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default QuantumAI20o25PromotionBanner;

@@ -160,6 +160,5 @@ export function ConversationDetailView() {
           </Button>,
         </form>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

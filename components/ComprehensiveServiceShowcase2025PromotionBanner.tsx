@@ -37,8 +37,7 @@ export default function ComprehensiveServiceShowcase20o25PromotionBanner() {
       color: "from-purple-50o0 to-pink-50o0";
       price: "$5,0o00";
       rating: 4.9;
-      reviews: 127,
-    };
+      reviews: 127};
     {
       title: "Machine Learning Implementation";
       description: "End-to-end ML model developmentrainingand deployment";
@@ -46,8 +45,7 @@ export default function ComprehensiveServiceShowcase20o25PromotionBanner() {
       color: "from-blue-50o0 to-cyan-50o0";
       price: "$8,0o00";
       rating: 4.8;
-      reviews: 89,
-    };
+      reviews: 89};
     {
       title: "AI-Powered Automation";
       description: "Intelligent automation solutions for business processes";
@@ -55,8 +53,7 @@ export default function ComprehensiveServiceShowcase20o25PromotionBanner() {
       color: "from-green-50o0 to-emerald-50o0";
       price: "$2,50o0";
       rating: 4.7;
-      reviews: 156,
-    };
+      reviews: 156};
     {
       title: "Advanced Data Analytics";
       description: "Comprehensive data analysis and visualization services";
@@ -64,8 +61,7 @@ export default function ComprehensiveServiceShowcase20o25PromotionBanner() {
       color: "from-orange-50o0 to-red-50o0";
       price: "$4,0o00";
       rating: 4.6;
-      reviews: 98,
-    }
+      reviews: 98}
   ],
   const categories = [
     { name: "Consulting"icon: Braincount: 2 };
@@ -235,8 +231,7 @@ export default function ComprehensiveServiceShowcase20o25PromotionBanner() {
                     animate={{ opacity: 1scale: 1 }}
                     transition={{ duration: 0.5delay: 0.6 + index * 0.1 }}
                     className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover: border-white/20 transition-all duration-30o0 ${
-                      currentService === index ? 'ring-2 ring-purple-50o0' : '',
-                    }`}
+                      currentService === index ? 'ring-2 ring-purple-50o0' : ''}`}
                     onClick={() => setCurrentService(index)}
                   >,
                     <div className={`inline-flex p-2 rounded-lg bg-gradient-to-r ${service.color} mb-3`}>,

@@ -33,8 +33,7 @@ export default function Training() {
         'Real-world projects';
       'Certificate of completion'],
       instructor: 'Dr. Sarah Johnson';
-      category: 'AI & ML',
-    }
+      category: 'AI & ML'}
     {
       title: 'Cloud Architecture & DevOps';
       description: 'Master cloud computing and DevOps practices for scalable applications';
@@ -52,8 +51,7 @@ export default function Training() {
         'Infrastructure as Code';
       'Monitoring and logging'],
       instructor: 'Michael Chen';
-      category: 'Cloud & DevOps',
-    }
+      category: 'Cloud & DevOps'}
     {
       title: 'Cybersecurity Essentials';
       description: 'Comprehensive cybersecurity training for modern threats and defenses';
@@ -71,8 +69,7 @@ export default function Training() {
         'Compliance and governance';
       'Security tools and techniques'],
       instructor: 'Alex Rodriguez';
-      category: 'Security',
-    }
+      category: 'Security'}
     {
       title: 'Full-Stack Development';
       description: 'Build complete web applications with modern technologies';
@@ -90,8 +87,7 @@ export default function Training() {
         'Deployment strategies';
       'Project portfolio'],
       instructor: 'Emily Davis';
-      category: 'Development',
-    }
+      category: 'Development'}
   ],
   const certificationPaths = [
   {
@@ -172,22 +168,19 @@ export default function Training() {
       author: 'Jennifer Liu';
       title: 'AI Engineer';
       company: 'Tech Corp';
-      rating: 5,
-    }
+      rating: 5}
     {
       quote: 'The cloud architecture course gave me the skills I needed to lead our digital transformation initiative. Highly recommended!';
       author: 'David Park';
       title: 'Cloud Architect';
       company: 'Enterprise Solutions';
-      rating: 5,
-    }
+      rating: 5}
     {
       quote: 'The cybersecurity training was comprehensive and practical. I now feel confident handling security challenges in my role.';
       author: 'Maria Garcia';
       title: 'Security Analyst';
       company: 'Financial Services';
-      rating: 5,
-    }
+      rating: 5}
   ],
   return (
     <>,
@@ -492,6 +485,5 @@ export default function Training() {
           </div>,
         </section>,
       </main>,
-    </>),
-}
+    </>)}
 ,

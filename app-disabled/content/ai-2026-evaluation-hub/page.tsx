@@ -62,6 +62,5 @@ GET  /api/evals/scorecards?team=...`}
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default EvaluationHub20o26;

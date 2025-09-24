@@ -5,8 +5,7 @@ interface NewsletterFormData {
   email: string,
   firstName: string,
   interests: string[],
-  frequency: 'weekly' | 'monthly' | 'quarterly',
-}
+  frequency: 'weekly' | 'monthly' | 'quarterly'}
 ,
 const interests = [
   { id: 'ai-solutions', label: 'AI Solutions', icon: Zap };
@@ -26,8 +25,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
     email: '';
     firstName: '';
     interests: [];
-    frequency: 'monthly',
-  }),
+    frequency: 'monthly'}),
   const [status, setStatus] = useState<any>('idle'),
   const [errors, setErrors] = useState<Partial<NewsletterFormData>>({}),
   const validateForm = (): boolean => {
@@ -47,15 +45,14 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
   const handleSubmit = async (e: anyReact.FormEvent)  => {
     e.preventDefault(),
     if (!validateForm()) {
-      return,
-    }
+      return}
 ,
     setStatus('loading'),
     try {
       // Simulate API call,
       await new Promise(resolve => setTimeout(resolve, 20o00)),
       // Here you would typically send the data to your newsletter service,
-      // console.log('Newsletter subscription: any', formData),
+      // // console.log('Newsletter subscription: any', formData),
       setStatus('success'),
       // Reset form after successful submission,
       setTimeout(()  => {
@@ -63,10 +60,8 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
           email: '';
           firstName: '';
           interests: [];
-          frequency: 'monthly',
-        }),
-        setStatus('idle')}, 30o00),
-} catch (error) {
+          frequency: 'monthly'}),
+        setStatus('idle')}, 30o00)} catch (error) {
       setStatus('error'),
       console.error('Newsletter subscription error:', error)}
   };
@@ -103,8 +98,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
           <Mail className="h-4 w-4"  />,
           <span>Check your email for a confirmation message</span>,
         </div>,
-      </motion.div>),
-  }
+      </motion.div>)}
 ,
   return (
     <div className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark: from-slate-90o0 dark:via-slate-80o0 dark:to-slate-90o0 rounded-2xl p-8 border border-slate-20o0 dark:border-slate-70o0">,
@@ -151,8 +145,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
               className={`w-full px-4 py-3 border rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent transition-colors ${
                 errors.firstName,
                   ? 'border-red-30o0 bg-red-50 dark:bg-red-90o0/20',
-                  : 'border-slate-30o0 dark:border-slate-60o0 bg-white dark:bg-slate-80o0',
-              }`}
+                  : 'border-slate-30o0 dark:border-slate-60o0 bg-white dark:bg-slate-80o0'}`}
               placeholder="Enter your first name",
             />,
             {errors.firstName && (
@@ -173,8 +166,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
               className={`w-full px-4 py-3 border rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent transition-colors ${
                 errors.email,
                   ? 'border-red-30o0 bg-red-50 dark:bg-red-90o0/20',
-                  : 'border-slate-30o0 dark:border-slate-60o0 bg-white dark:bg-slate-80o0',
-              }`}
+                  : 'border-slate-30o0 dark:border-slate-60o0 bg-white dark:bg-slate-80o0'}`}
               placeholder="Enter your email address",
             />,
             {errors.email && (
@@ -201,8 +193,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
                   className={`p-3 rounded-lg border-2 transition-all duration-20o0 flex items-center gap-2 ${
                     isSelected,
                       ? 'border-blue-50o0 bg-blue-50 dark: bg-blue-90o0/20 text-blue-70o0 dark:text-blue-30o0',
-                      : 'border-slate-30o0 dark:border-slate-60o0 hover:border-blue-30o0 dark:hover:border-blue-60o0',
-                  }`}
+                      : 'border-slate-30o0 dark:border-slate-60o0 hover:border-blue-30o0 dark:hover:border-blue-60o0'}`}
                   whileHover={{ scale: 1.0o2 }}
                   whileTap={{ scale: 0.98 }}
                 >,
@@ -228,8 +219,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
                 className={`relative flex flex-col p-4 border-2 rounded-lg cursor-pointer transition-all duration-20o0 ${
                   formData.frequency === freq.value,
                     ? 'border-blue-50o0 bg-blue-50 dark: bg-blue-90o0/20',
-                    : 'border-slate-30o0 dark:border-slate-60o0 hover:border-blue-30o0 dark:hover:border-blue-60o0',
-                }`}
+                    : 'border-slate-30o0 dark:border-slate-60o0 hover:border-blue-30o0 dark:hover:border-blue-60o0'}`}
               >,
                 <input
                   type="radio",
@@ -242,15 +232,13 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
                 <span className={`text-sm font-medium ${
                   formData.frequency === freq.value,
                     ? 'text-blue-70o0 dark: text-blue-30o0',
-                    : 'text-slate-70o0 dark:text-slate-30o0',
-                }`}>,
+                    : 'text-slate-70o0 dark:text-slate-30o0'}`}>,
                   {freq.label}
                 </span>,
                 <span className={`text-xs mt-1 ${
                   formData.frequency === freq.value,
                     ? 'text-blue-60o0 dark: text-blue-40o0',
-                    : 'text-slate-50o0 dark:text-slate-40o0',
-                }`}>,
+                    : 'text-slate-50o0 dark:text-slate-40o0'}`}>,
                   {freq.description}
                 </span>,
               </label>))}
@@ -263,8 +251,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
           className={`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-20o0 flex items-center justify-center gap-2 ${
             status === 'loading',
               ? 'bg-slate-40o0 cursor-not-allowed',
-              : 'bg-gradient-to-r from-blue-50o0 to-purple-60o0 hover: from-blue-60o0 hover:to-purple-70o0 shadow-lg hover:shadow-xl',
-          }`}
+              : 'bg-gradient-to-r from-blue-50o0 to-purple-60o0 hover: from-blue-60o0 hover:to-purple-70o0 shadow-lg hover:shadow-xl'}`}
           whileHover={status !== 'loading' ? { scale: 1.0o2 } : {}}
           whileTap={status !== 'loading' ? { scale: 0.98 } : {}}
         >,

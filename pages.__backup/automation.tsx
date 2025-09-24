@@ -5,26 +5,22 @@ export default function AutomationPage() {
       title: "Autonomous Cloud Management";
       description: "Self-managing cloud infrastructure that monitorscalesand optimizes automatically.";
       icon: "☁️";
-      benefits: ["24/7 monitoring"Auto-scaling"Cost optimization"],
-    };
+      benefits: ["24/7 monitoring"Auto-scaling"Cost optimization"]};
     {
       title: "AI Content Generation";
       description: "Automated content creation that learns from your brand and generates relevant material.";
       icon: "✍️";
-      benefits: ["SEO optimization"Brand consistency"Scalable content"],
-    };
+      benefits: ["SEO optimization"Brand consistency"Scalable content"]};
     {
       title: "Intelligent DevOps";
       description: "Self-healing CI/CD pipelines that detect and fix issues automatically.";
       icon: "🔄";
-      benefits: ["Error detection"Auto-fixing"Deployment optimization"],
-    };
+      benefits: ["Error detection"Auto-fixing"Deployment optimization"]};
     {
       title: "Smart Security";
       description: "Proactive security systems that identify and respond to threats in real-time.";
       icon: "🔒";
-      benefits: ["Threat detection"Auto-response"Vulnerability scanning"],
-    }
+      benefits: ["Threat detection"Auto-response"Vulnerability scanning"]}
   ],
   return (
     <>,
@@ -101,5 +97,4 @@ export default function AutomationPage() {
           </div>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

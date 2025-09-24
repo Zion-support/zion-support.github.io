@@ -117,6 +117,5 @@ const QuantumNeuralBreakthroughBanner20o26: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default QuantumNeuralBreakthroughBanner20o26;

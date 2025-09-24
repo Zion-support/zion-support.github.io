@@ -151,8 +151,7 @@ const UltimateCaseStudiesShowcase20o25 = () => {
                 className={`p-4 rounded-2xl cursor-pointer transition-all duration-30o0 ${
                   activeCase === index,
                     ? `bg-gradient-to-r ${caseStudy.color} text-white shadow-2xl scale-10o5`,
-                    : 'bg-white shadow-lg hover: shadow-xl',
-                }`}
+                    : 'bg-white shadow-lg hover: shadow-xl'}`}
                 onClick={() => setActiveCase(index)}
               >,
                 <div className='flex items-center space-x-4'>,
@@ -308,6 +307,5 @@ const UltimateCaseStudiesShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateCaseStudiesShowcase20o25;

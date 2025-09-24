@@ -49,8 +49,7 @@ export const useUploadDeliverable = () => {
       return newDeliverable} catch (err: any) {
       console.error('Error uploading deliverable:', err),
       toast.error('Failed to upload deliverable: ' + err.message),
-      return null,
-    } finally {
+      return null} finally {
       setIsSubmitting(false)}
   };
   return {

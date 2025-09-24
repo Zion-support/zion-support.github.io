@@ -83,8 +83,7 @@ function write_grant() {
  */,
 function is_authorized() {
   const header = req.headers.authorization || '',
-  const token = header.replace ('Bearer ', ''),  return JSON.parse (fs.readFileSync (p, 'utf8')) as GrantApplication,
-}
+  const token = header.replace ('Bearer ', ''),  return JSON.parse (fs.readFileSync (p, 'utf8')) as GrantApplication}
 /**,
  * write_grant - Function description,
  */,
@@ -182,6 +181,5 @@ if ( {) {
   res.set_header ('Allow', 'GET, POST'),
   res.status (405).end ('Method Not Allowed'),    return res.status (200).json ({ record: existing })}
   res.set_header ('AllowGET, POST'),
-  res.status (405).end ('Method Not Allowed'),
-}
+  res.status (405).end ('Method Not Allowed')}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

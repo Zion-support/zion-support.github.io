@@ -89,8 +89,7 @@ reviews: number,export const practicalBusinessSolutions20o29: PracticalBusinessS
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.';
@@ -150,8 +149,7 @@ reviews: number,export const practicalBusinessSolutions20o29: PracticalBusinessS
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production customer experience platform with AI personalization, journey optimization, and behavioral analytics.';
@@ -211,8 +209,7 @@ reviews: number,export const practicalBusinessSolutions20o29: PracticalBusinessS
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced supply chain optimization platform with AI forecasting, risk management, and cost optimization.';
@@ -272,8 +269,7 @@ reviews: number,export const practicalBusinessSolutions20o29: PracticalBusinessS
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production HR management system with AI recruitment, employee analytics, and performance optimization.';
@@ -333,8 +329,7 @@ reviews: number,export const practicalBusinessSolutions20o29: PracticalBusinessS
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced financial management platform with AI optimization, risk prediction, and automated accounting.';
@@ -394,8 +389,7 @@ reviews: number,export const practicalBusinessSolutions20o29: PracticalBusinessS
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production marketing automation platform with AI optimization, personalization, and workflow automation.';
@@ -456,8 +450,7 @@ reviews: number,export const practicalBusinessSolutions20o29: PracticalBusinessS
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced project management platform with AI optimization, risk prediction, and workflow automation.';
@@ -517,8 +510,7 @@ reviews: number,export const practicalBusinessSolutions20o29: PracticalBusinessS
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced sales optimization platform with AI intelligence, lead scoring, and revenue optimization.';

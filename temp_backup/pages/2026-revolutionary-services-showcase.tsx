@@ -91,8 +91,7 @@ export default function Revolutionary20o26ServicesShowcase() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   return (
     <UltraAdvancedFuturisticBackground
       intensity="extreme",
@@ -203,8 +202,7 @@ export default function Revolutionary20o26ServicesShowcase() {
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-20o0 ${
                         selectedCategory === category.id,
                           ? 'bg-purple-60o0 text-white',
-                          : 'bg-black/40 text-gray-30o0 hover: bg-black/60 hover:text-white',
-                      }`}
+                          : 'bg-black/40 text-gray-30o0 hover: bg-black/60 hover:text-white'}`}
                     >,
                       {category.icon} {category.name} ({category.count}),
                     </button>))}
@@ -220,8 +218,7 @@ export default function Revolutionary20o26ServicesShowcase() {
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-20o0 ${
                         selectedPriceRange === range.id,
                           ? 'bg-blue-60o0 text-white',
-                          : 'bg-black/40 text-gray-30o0 hover: bg-black/60 hover:text-white',
-                      }`}
+                          : 'bg-black/40 text-gray-30o0 hover: bg-black/60 hover:text-white'}`}
                     >,
                       {range.name}
                     </button>))}
@@ -244,8 +241,7 @@ export default function Revolutionary20o26ServicesShowcase() {
                       className={`p-2 rounded-md transition-all duration-20o0 ${
                         viewMode === 'grid',
                           ? 'bg-purple-60o0 text-white',
-                          : 'text-gray-40o0 hover: text-white',
-                      }`}
+                          : 'text-gray-40o0 hover: text-white'}`}
                     >,
                       <Grid className="w-4 h-4"  />,
                     </button>,
@@ -254,8 +250,7 @@ export default function Revolutionary20o26ServicesShowcase() {
                       className={`p-2 rounded-md transition-all duration-20o0 ${
                         viewMode === 'list',
                           ? 'bg-purple-60o0 text-white',
-                          : 'text-gray-40o0 hover: text-white',
-                      }`}
+                          : 'text-gray-40o0 hover: text-white'}`}
                     >,
                       <List className="w-4 h-4"  />,
                     </button>,
@@ -296,8 +291,7 @@ export default function Revolutionary20o26ServicesShowcase() {
                   className={`grid gap-6 ${
                     viewMode === 'grid',
                       ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3',
-                      : 'grid-cols-1',
-                  }`}
+                      : 'grid-cols-1'}`}
                 >,
                   {filteredServices.map((service, index) => (
                     <motion.div,
@@ -306,13 +300,11 @@ export default function Revolutionary20o26ServicesShowcase() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       className={`group relative ${
-                        viewMode === 'list' ? 'flex flex-col lg: flex-row' : '',
-                      }`}
+                        viewMode === 'list' ? 'flex flex-col lg: flex-row' : ''}`}
                     >,
                       <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 to-pink-60o0/20 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-50o0"></div>,
                       <div className={`relative bg-black/40 backdrop-blur-xl border border-purple-50o0/20 rounded-2xl p-6 hover:border-purple-50o0/40 transition-all duration-30o0 ${
-                        viewMode === 'list' ? 'flex-1' : '',
-                      }`}>,
+                        viewMode === 'list' ? 'flex-1' : ''}`}>,
                         {/* Service Header */}
                         <div className={`${viewMode === 'list' ? 'flex items-start space-x-4' : ''}`}>,
                           <div className={`${viewMode === 'list' ? 'flex-shrink-0' : 'mb-4'}`}>,

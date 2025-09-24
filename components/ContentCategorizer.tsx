@@ -15,8 +15,7 @@ interface ContentItem {
   relevance: 'high' | 'medium' | 'low',
   tags: string[],
   source: string,
-  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature',
-}
+  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'}
 ,
 interface ContentCategory {
   id: string,
@@ -25,8 +24,7 @@ interface ContentCategory {
   description: string,
   color: string,
   count: number,
-  subcategories?: string[],
-}
+  subcategories?: string[]}
 ,
 const ContentCategorizer: React.FC = () => {
   const [searchTermsetSearchTerm] = useState(''),
@@ -50,8 +48,7 @@ const ContentCategorizer: React.FC = () => {
       relevance: 'high';
       tags: [', 'seo', 'json-'ld', 'schema'audit'];
       source: 'autonomous-auditor';
-      type: 'report',
-    };
+      type: 'report'};
     {
       id: '2';
       title: 'Security Vulnerability Scan Results';
@@ -63,8 +60,7 @@ const ContentCategorizer: React.FC = () => {
       relevance: 'high';
       tags: [', 'security', 'vulnerability', 'scan', 'remediation'];
       source: 'security-scanner';
-      type: 'security',
-    };
+      type: 'security'};
     {
       id: '3';
       title: 'AI Model Performance Update';
@@ -76,8 +72,7 @@ const ContentCategorizer: React.FC = () => {
       relevance: 'high';
       tags: [', 'ai', 'performance', 'optimization', 'metrics'];
       source: 'ai-monitor';
-      type: 'update',
-    };
+      type: 'update'};
     {
       id: '4';
       title: 'Feature Deployment Summary';
@@ -89,8 +84,7 @@ const ContentCategorizer: React.FC = () => {
       relevance: 'medium';
       tags: [', 'features', 'deployment', 'ux', 'impact'];
       source: 'deployment-tracker';
-      type: 'feature',
-    };
+      type: 'feature'};
     {
       id: '5';
       title: 'System Health Dashboard';
@@ -102,8 +96,7 @@ const ContentCategorizer: React.FC = () => {
       relevance: 'medium';
       tags: [', 'monitoring', 'performance', 'infrastructure', 'health'];
       source: 'health-monitor';
-      type: 'report',
-    };
+      type: 'report'};
     {
       id: '6';
       title: 'User Behavior Insights';
@@ -115,8 +108,7 @@ const ContentCategorizer: React.FC = () => {
       relevance: 'high';
       tags: [', 'analytics', 'user-'behavior', 'engagement'optimization'];
       source: 'behavior-analyzer';
-      type: 'insight',
-    }
+      type: 'insight'}
   ],
   const categories: ContentCategory[] = [
     {
@@ -125,8 +117,7 @@ const ContentCategorizer: React.FC = () => {
       icon: Globe;
       description: 'Complete collection of autonomous content';
       color: 'from-blue-500 to-cyan-500';
-      count: contentItems.length,
-    };
+      count: contentItems.length};
     {
       id: 'seo';
       name: 'SEO & Analytics';
@@ -226,20 +217,17 @@ const ContentCategorizer: React.FC = () => {
     return filtered}[searchTermselectedCategoryselectedSubcategoryselectedTypeselectedRelevancesortBysortOrder]),
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.id === category),
-    return cat ? cat.icon : Globe,
-  };
+    return cat ? cat.icon : Globe};
   const getRelevanceColor = (relevance: string) => {
     switch (relevance) {
       case 'high': return 'text-green-400',
       case 'medium': return 'text-yellow-400',
       case 'low': return 'text-red-400',
-      default: return 'text-gray-400',
-    }
+      default: return 'text-gray-400'}
   };
   const getTypeIcon = (type: string) => {
     const typeInfo = contentTypes.find(t => t.id === type),
-    return typeInfo ? typeInfo.icon : Globe,
-  };
+    return typeInfo ? typeInfo.icon : Globe};
   const clearAllFilters = () => {
     setSearchTerm(', '),
     setSelectedCategory('all'),
@@ -357,8 +345,7 @@ const ContentCategorizer: React.FC = () => {
               className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${
                 selectedCategory === category.id,
                   ? 'border-cyan-500 bg-cyan-500/20 text-cyan-300',
-                  : 'border-white/10 bg-white/5 text-white/70 hover: border-white/20 hover:bg-white/10',
-              }`}
+                  : 'border-white/10 bg-white/5 text-white/70 hover: border-white/20 hover:bg-white/10'}`}
             >,
               <category.icon className="w-4 h-4" />,
               {category.name}
@@ -442,8 +429,7 @@ const ContentCategorizer: React.FC = () => {
                   <span aria-hidden>→</span>,
                 </a>,
               </div>,
-            </div>),
-        })}
+            </div>)})}
       </div>,
       {/* No Results */}
       {filteredItems.length === 0 && (

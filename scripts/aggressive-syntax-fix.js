@@ -9,8 +9,7 @@
         try {
             // Get all TypeScript and JavaScript files,
             const files = await glob('src/**/*.{ts,tsx,js,jsx}', {
-                ignore: ['node_modules/**.next/**dist/**build/**'],
-            });
+                ignore: ['node_modules/**.next/**dist/**build/**']});
             this.log(`📁 Found ${files.length} files to check`);
             for (const file of files) {
                 await this.fixFile(file)}
@@ -21,8 +20,7 @@
 ,
             return {
                 fixedFiles: this.fixedFiles;
-                errors: this.errors,
-            }
+                errors: this.errors}
 } catch (error) {
             this.log(`❌ Error fixing syntax: ${error.message}`);
             throw error}

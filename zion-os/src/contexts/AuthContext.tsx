@@ -7,8 +7,7 @@ type User = {
   name: string,
   email: string,
   role: string,
-  onboardingCompleted: boolean,
-};
+  onboardingCompleted: boolean};
 interface AuthContextType {
   user: User | null,
   isLoading: boolean,
@@ -19,8 +18,7 @@ interface AuthContextType {
   completeOnboarding: () => Promise<void>,
   // Aliases for compatibility,
   signIn: (email: string, password: string) => Promise<void>,
-  signUp: (name: string, email: string, password: string) => Promise<void>,
-}
+  signUp: (name: string, email: string, password: string) => Promise<void>}
 ,
 const AuthContext = createContext<AuthContextType | undefined>(undefined),
 export function AuthProvider({ children }: { children: React.ReactNode }) {
@@ -34,8 +32,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           ? window.localStorage.getItem('zion-os: user'),
           : null,
       if (stored) {
-        setUser(JSON.parse(stored) as User),
-      }
+        setUser(JSON.parse(stored) as User)}
     } catch {}
     setIsLoading(false)}, []),
   const login = async (email: string, password: string) => {
@@ -53,8 +50,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const logout = async () => {
     setUser(null),
     try {
-      window.localStorage.removeItem('zion-os: user'),
-    } catch {}
+      window.localStorage.removeItem('zion-os: user')} catch {}
     router.push('/')};
   const register = async (_name: string, email: string, password: string) => {
     await login(email, password)};

@@ -9,8 +9,7 @@ interface UseIntersectionObserverOptions {
 interface UseIntersectionObserverReturn {
   ref: React.RefObject<Element>,
   isIntersecting: boolean,
-  entry?: IntersectionObserverEntry,
-}
+  entry?: IntersectionObserverEntry}
 ,
 export const useIntersectionObserver = (
   options: UseIntersectionObserverOptions = {}
@@ -119,8 +118,7 @@ export const useAnimateOnScroll = (
           };
         };
       default: ,
-        return baseVariants,
-    }
+        return baseVariants}
   };
   return {
     ref;

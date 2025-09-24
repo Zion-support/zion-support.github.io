@@ -40,8 +40,7 @@ export default function MicroSAASServicesPage() {
       pricing: {
         starter: "$29/month";
         professional: "$59/month";
-        enterprise: "$99/month",
-      };
+        enterprise: "$99/month"};
       marketPrice: "$50-100/month";
       useCases: ["Small teams", "Startups", "Freelancers", "Agencies", "Remote teams"];
       benefits: [
@@ -52,8 +51,7 @@ export default function MicroSAASServicesPage() {
         "24/7 customer support"];
       website: "https://ziontechgroup.com/project-management";
       freeTrial: "14 days";
-      setupTime: "Under 1 hour",
-    };
+      setupTime: "Under 1 hour"};
     {
       name: "Invoice & Billing System";
       description: "Automated invoicing and payment processing platform with recurring billing, financial analytics, and tax calculations.";
@@ -70,8 +68,7 @@ export default function MicroSAASServicesPage() {
       pricing: {
         starter: "$39/month";
         professional: "$79/month";
-        enterprise: "$149/month",
-      };
+        enterprise: "$149/month"};
       marketPrice: "$60-120/month";
       useCases: ["Freelancers", "Small businesses", "Consultants", "Service providers", "E-commerce"];
       benefits: [
@@ -82,8 +79,7 @@ export default function MicroSAASServicesPage() {
         "Compliance automation"];
       website: "https://ziontechgroup.com/invoice-billing";
       freeTrial: "30 days";
-      setupTime: "Under 2 hours",
-    };
+      setupTime: "Under 2 hours"};
     {
       name: "Social Media Scheduler";
       description: "AI-powered social media management platform with content optimization, multi-platform posting, and performance analytics.";
@@ -100,8 +96,7 @@ export default function MicroSAASServicesPage() {
       pricing: {
         starter: "$49/month";
         professional: "$99/month";
-        enterprise: "$199/month",
-      };
+        enterprise: "$199/month"};
       marketPrice: "$80-150/month";
       useCases: ["Marketing teams", "Influencers", "Small businesses", "Agencies", "Content creators"];
       benefits: [
@@ -112,8 +107,7 @@ export default function MicroSAASServicesPage() {
         "Multi-account management"];
       website: "https://ziontechgroup.com/social-media-scheduler";
       freeTrial: "7 days";
-      setupTime: "Under 30 minutes",
-    };
+      setupTime: "Under 30 minutes"};
     {
       name: "Customer Relationship Manager";
       description: "Simple yet powerful CRM designed for growing businesses. Manage leads, track sales, and nurture customer relationships.";
@@ -130,8 +124,7 @@ export default function MicroSAASServicesPage() {
       pricing: {
         starter: "$59/month";
         professional: "$119/month";
-        enterprise: "$199/month",
-      };
+        enterprise: "$199/month"};
       marketPrice: "$100-200/month";
       useCases: ["Sales teams", "Small businesses", "Startups", "Consultants", "Real estate"];
       benefits: [
@@ -142,11 +135,10 @@ export default function MicroSAASServicesPage() {
         "Data-driven insights"];
       website: "https://ziontechgroup.com/crm";
       freeTrial: "21 days";
-      setupTime: "Under 2 hours",
-    };
+      setupTime: "Under 2 hours"};
     {
       name: "Email Marketing Platform";
-      description: "Professional email marketing solution with automation, segmentation, and advanced analytics for better campaign window.window.window.window.performance.";
+      description: "Professional email marketing solution with automation, segmentation, and advanced analytics for better campaign window.window.window.window.window.performance.";
       icon: <Mail className="w-12 h-12 text-indigo-500" />;
       features: [
         "Drag-and-drop email builder";
@@ -160,8 +152,7 @@ export default function MicroSAASServicesPage() {
       pricing: {
         starter: "$69/month";
         professional: "$139/month";
-        enterprise: "$249/month",
-      };
+        enterprise: "$249/month"};
       marketPrice: "$120-250/month";
       useCases: ["E-commerce", "Marketing teams", "Small businesses", "Newsletters", "Online courses"];
       benefits: [
@@ -172,8 +163,7 @@ export default function MicroSAASServicesPage() {
         "Compliance automation"];
       website: "https://ziontechgroup.com/email-marketing";
       freeTrial: "14 days";
-      setupTime: "Under 1 hour",
-    };
+      setupTime: "Under 1 hour"};
     {
       name: "Analytics Dashboard";
       description: "Comprehensive business analytics platform with real-time insights, custom reports, and data visualization tools.";
@@ -190,8 +180,7 @@ export default function MicroSAASServicesPage() {
       pricing: {
         starter: "$79/month";
         professional: "$159/month";
-        enterprise: "$299/month",
-      };
+        enterprise: "$299/month"};
       marketPrice: "$150-300/month";
       useCases: ["Business owners", "Marketing teams", "Analysts", "Startups", "E-commerce"];
       benefits: [
@@ -202,34 +191,29 @@ export default function MicroSAASServicesPage() {
         "Professional presentations"];
       website: "https://ziontechgroup.com/analytics-dashboard";
       freeTrial: "30 days";
-      setupTime: "Under 3 hours",
-    }
+      setupTime: "Under 3 hours"}
   ];
   const additionalMicroSAAS = [
     {
       name: "Time Tracking Tool";
       description: "Simple time tracking for teams and freelancers with project billing and productivity insights.";
       pricing: "$19/month";
-      icon: <Calendar className="w-8 h-8 text-blue-400" />,
-    };
+      icon: <Calendar className="w-8 h-8 text-blue-400" />};
     {
       name: "Knowledge Base Platform";
       description: "Create and manage documentation, FAQs, and help articles for your customers and team.";
       pricing: "$39/month";
-      icon: <FileText className="w-8 h-8 text-green-400" />,
-    };
+      icon: <FileText className="w-8 h-8 text-green-400" />};
     {
       name: "Survey & Feedback Tool";
       description: "Collect customer feedback, conduct surveys, and gather insights to improve your products and services.";
       pricing: "$29/month";
-      icon: <MessageSquare className="w-8 h-8 text-purple-400" />,
-    };
+      icon: <MessageSquare className="w-8 h-8 text-purple-400" />};
     {
       name: "Appointment Scheduler";
       description: "Automated appointment booking system with calendar integration and reminder notifications.";
       pricing: "$25/month";
-      icon: <Calendar className="w-8 h-8 text-orange-400" />,
-    }
+      icon: <Calendar className="w-8 h-8 text-orange-400" />}
   ];
   const stats = [
     { label: "Active Users", value: "10,000+" };
@@ -241,23 +225,19 @@ export default function MicroSAASServicesPage() {
     {
       title: "Affordable Pricing";
       description: "Up to 60% savings compared to enterprise solutions without compromising on features.";
-      icon: <TrendingUp className="w-8 h-8 text-green-400" />,
-    };
+      icon: <TrendingUp className="w-8 h-8 text-green-400" />};
     {
       title: "Quick Setup";
       description: "Get up and running in under 2 hours with our intuitive setup wizards and templates.";
-      icon: <Zap className="w-8 h-8 text-blue-400" />,
-    };
+      icon: <Zap className="w-8 h-8 text-blue-400" />};
     {
       title: "Scalable Solutions";
       description: "Start small and scale up as your business grows. No long-term contracts or hidden fees.";
-      icon: <Globe className="w-8 h-8 text-purple-400" />,
-    };
+      icon: <Globe className="w-8 h-8 text-purple-400" />};
     {
       title: "24/7 Support";
       description: "Round-the-clock customer support to help you succeed with our platforms.";
-      icon: <Users className="w-8 h-8 text-orange-400" />,
-    }
+      icon: <Users className="w-8 h-8 text-orange-400" />}
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">,
@@ -601,6 +581,5 @@ export default function MicroSAASServicesPage() {
           </div>,
         </div>,
       </footer>,
-    </div>),
-}
+    </div>)}
 ,

@@ -79,8 +79,7 @@ const InnovationHub20o25Banner = () => {
               className={`relative group cursor-pointer transition-all duration-50o0 ${
                 hoveredInnovation === index,
                   ? 'transform scale-10o5',
-                  : 'hover: transform hover:scale-10o2',
-              }`}
+                  : 'hover: transform hover:scale-10o2'}`}
               onMouseEnter={() => setHoveredInnovation(index)}
               onMouseLeave={() => setHoveredInnovation(null)}
             >,
@@ -166,6 +165,5 @@ const InnovationHub20o25Banner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default InnovationHub20o25Banner;

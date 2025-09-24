@@ -2,8 +2,7 @@
 // Rate limiting utilities,
 interface RateLimitEntry {
   count: number,
-  resetTime: number,
-}
+  resetTime: number}
 ,
 export class RateLimiter {
   private requests: Map<string RateLimitEntry> = new Map(),
@@ -31,14 +30,12 @@ export class RateLimiter {
   getRemainingRequests(identifier: string): number {
     const entry = this.requests.get(identifier),
     if (!entry || Date.now() > entry.resetTime) {
-      return this.maxRequests,
-    }
+      return this.maxRequests}
     return Math.max(0, this.maxRequests - entry.count)}
 ,
   getResetTime(identifier: string): number {
     const entry = this.requests.get(identifier),
-    return entry?.resetTime || Date.now() + this.windowMs,
-  }
+    return entry?.resetTime || Date.now() + this.windowMs}
 }
 ,
 export const rateLimiter = new RateLimiter(),

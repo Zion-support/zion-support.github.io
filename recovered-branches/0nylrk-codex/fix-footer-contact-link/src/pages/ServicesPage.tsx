@@ -19,7 +19,6 @@ import { TrustedBySection } from '@/components / TrustedBySection',
 import { Button } from '@/components / ui / button',
 import { Link } from './react-router-dom',
 import { Globe } from './lucide-react',
-,
     id: "service-1",
     title: "AI Development & Integration",
     description: "Full-stack AI development services to integrate advanced machine learning models into your existing business systems.",
@@ -212,7 +211,6 @@ export default function ServicesPage() {
       />,
       <TrustedBySection />,
     </AppLayout>)};
-,
 // Sample service listings,
 const SERVICE_LISTINGS: ProductListing[] = [
   {

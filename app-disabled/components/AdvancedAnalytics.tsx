@@ -7,8 +7,7 @@ interface AnalyticsData {
   bounceRate: number,
   avgSessionDuration: number,
   topPages: Array<{ path: string, views: number }>,
-  realTimeUsers: number,
-}
+  realTimeUsers: number}
 ,
 export default function AdvancedAnalytics() {
   const [analytics, setAnalytics] = useState<AnalyticsData>({
@@ -17,8 +16,7 @@ export default function AdvancedAnalytics() {
     bounceRate: 0;
     avgSessionDuration: 0;
     topPages: [];
-    realTimeUsers: 0,
-  }),
+    realTimeUsers: 0}),
   const [isLoading, setIsLoading] = useState(true),
   useEffect(() => {
     // Simulate analytics data fetching,
@@ -39,8 +37,7 @@ export default function AdvancedAnalytics() {
           { path: '/contact', views: Math.floor(Math.random() * 40o0) + 150 };
           { path: '/portfolio', views: Math.floor(Math.random() * 30o0) + 10o0 }
         ];
-        realTimeUsers: Math.floor(Math.random() * 50) + 10,
-      }
+        realTimeUsers: Math.floor(Math.random() * 50) + 10}
 ,
       setAnalytics(mockData),
       setIsLoading(false)}
@@ -50,12 +47,10 @@ export default function AdvancedAnalytics() {
     const interval = setInterval(() => {
       setAnalytics(prev => ({
         ...prev;
-        realTimeUsers: Math.floor(Math.random() * 50) + 10,
-      }))}, 30o000),
+        realTimeUsers: Math.floor(Math.random() * 50) + 10}))}, 30o000),
     return () => clearInterval(interval)}, []),
   const formatNumber = (num: number) => {
-    return new Intl.NumberFormat().format(num),
-  }
+    return new Intl.NumberFormat().format(num)}
 ,
   const formatDuration = (seconds: number) => {
     const mins = Math.floor(seconds / 60),

@@ -12,8 +12,7 @@ export default function SolutionsPage() {
         'Medical Imaging AI';
         'Drug Discovery Platform'];
       icon: '🏥';
-      color: 'from-green-50o0 to-emerald-60o0',
-    };
+      color: 'from-green-50o0 to-emerald-60o0'};
     {
       industry: 'Finance';
       description: 'Quantum-powered trading algorithmsfraud detectionand risk management';
@@ -24,8 +23,7 @@ export default function SolutionsPage() {
         'Regulatory Compliance';
         'Portfolio Optimization'];
       icon: '💼';
-      color: 'from-blue-50o0 to-cyan-60o0',
-    };
+      color: 'from-blue-50o0 to-cyan-60o0'};
     {
       industry: 'Manufacturing';
       description: 'Smart manufacturingpredictive maintenanceand supply chain optimization';
@@ -36,8 +34,7 @@ export default function SolutionsPage() {
         'Energy Management';
         'Production Planning'];
       icon: '🏭';
-      color: 'from-orange-50o0 to-red-60o0',
-    };
+      color: 'from-orange-50o0 to-red-60o0'};
     {
       industry: 'Retail & E-commerce';
       description: 'Personalized shopping experiencesinventory managementand customer analytics';
@@ -48,8 +45,7 @@ export default function SolutionsPage() {
         'Demand Forecasting';
         'Customer Service AI'];
       icon: '🛍️';
-      color: 'from-purple-50o0 to-pink-60o0',
-    };
+      color: 'from-purple-50o0 to-pink-60o0'};
     {
       industry: 'Education';
       description: 'Adaptive learning platformstudent performance analyticsand virtual classrooms';
@@ -60,8 +56,7 @@ export default function SolutionsPage() {
         'Content Personalization';
         'Assessment Automation'];
       icon: '🎓';
-      color: 'from-indigo-50o0 to-blue-60o0',
-    };
+      color: 'from-indigo-50o0 to-blue-60o0'};
     {
       industry: 'Transportation & Logistics';
       description: 'Route optimizationfleet managementand predictive logistics';
@@ -72,8 +67,7 @@ export default function SolutionsPage() {
         'Traffic Analysis';
         'Supply Chain Visibility'];
       icon: '🚚';
-      color: 'from-yellow-50o0 to-orange-60o0',
-    }
+      color: 'from-yellow-50o0 to-orange-60o0'}
   ],
   const technologySolutions = [
     {
@@ -83,18 +77,15 @@ export default function SolutionsPage() {
         {
           name: 'AI Decision Engine';
           description: 'Intelligent decision-making systems for complex business scenarios';
-          features: ['Real-time Analysis'Predictive Modeling'Automated Decision Making'],
-        };
+          features: ['Real-time Analysis'Predictive Modeling'Automated Decision Making']};
         {
           name: 'Natural Language Processing';
           description: 'Advanced text and speech processing capabilities';
-          features: ['Text Analysis'Sentiment Analysis'Language Translation'],
-        };
+          features: ['Text Analysis'Sentiment Analysis'Language Translation']};
         {
           name: 'Computer Vision';
           description: 'Image and video analysis for automation and quality control';
-          features: ['Object Detection'Quality Control'Process Automation'],
-        }
+          features: ['Object Detection'Quality Control'Process Automation']}
       ]};
     {
       category: 'Quantum Computing';
@@ -103,18 +94,15 @@ export default function SolutionsPage() {
         {
           name: 'Quantum Optimization';
           description: 'Solve complex optimization problems with quantum algorithms';
-          features: ['Supply Chain Optimization'Financial Modeling'Logistics Planning'],
-        };
+          features: ['Supply Chain Optimization'Financial Modeling'Logistics Planning']};
         {
           name: 'Quantum Machine Learning';
           description: 'Enhanced machine learning with quantum computing power';
-          features: ['Quantum Neural Networks'Enhanced Pattern Recognition'Faster Training'],
-        };
+          features: ['Quantum Neural Networks'Enhanced Pattern Recognition'Faster Training']};
         {
           name: 'Quantum Cryptography';
           description: 'Unbreakable encryption using quantum principles';
-          features: ['Quantum Key Distribution'Secure Communication'Future-Proof Security'],
-        }
+          features: ['Quantum Key Distribution'Secure Communication'Future-Proof Security']}
       ]};
     {
       category: 'Cloud & Infrastructure';
@@ -123,18 +111,15 @@ export default function SolutionsPage() {
         {
           name: 'Multi-Cloud Management';
           description: 'Unified management across multiple cloud providers';
-          features: ['Cost Optimization'Performance Monitoring'Security Management'],
-        };
+          features: ['Cost Optimization'Performance Monitoring'Security Management']};
         {
           name: 'Serverless Architecture';
           description: 'Modern serverless computing for scalable applications';
-          features: ['Auto-scaling'Pay-per-use'Reduced Maintenance'],
-        };
+          features: ['Auto-scaling'Pay-per-use'Reduced Maintenance']};
         {
           name: 'Edge Computing';
           description: 'Distributed computing for low-latency applications';
-          features: ['Local Processing'Reduced Latency'Bandwidth Optimization'],
-        }
+          features: ['Local Processing'Reduced Latency'Bandwidth Optimization']}
       ]}
   ],
   const useCases = [
@@ -142,26 +127,22 @@ export default function SolutionsPage() {
       title: 'Customer Service Automation';
       description: 'AI-powered chatbots and virtual assistants that provide 24/7 customer support';
       benefits: ['24/7 Availability'Instant Response'Cost Reduction'Improved Satisfaction'];
-      industries: ['Retail'Healthcare'Finance'Technology'],
-    };
+      industries: ['Retail'Healthcare'Finance'Technology']};
     {
       title: 'Predictive Analytics';
       description: 'Forecast trends and behaviors to make proactive business decisions';
       benefits: ['Risk Mitigation'Opportunity Identification'Resource Optimization'Competitive Advantage'];
-      industries: ['Manufacturing'Finance'Healthcare'Transportation'],
-    };
+      industries: ['Manufacturing'Finance'Healthcare'Transportation']};
     {
       title: 'Cybersecurity Enhancement';
       description: 'Advanced threat detection and prevention using AI and quantum technologies';
       benefits: ['Real-time Protection'Threat Intelligence'Compliance Assurance'Incident Response'];
-      industries: ['All Industries'Government'Finance'Healthcare'],
-    };
+      industries: ['All Industries'Government'Finance'Healthcare']};
     {
       title: 'Process Automation';
       description: 'Streamline operations and reduce manual work through intelligent automation';
       benefits: ['Efficiency Gains'Error Reduction'Cost Savings'Scalability'];
-      industries: ['Manufacturing'Finance'Healthcare'Retail'],
-    }
+      industries: ['Manufacturing'Finance'Healthcare'Retail']}
   ],
   return (
     <>,
@@ -310,5 +291,4 @@ export default function SolutionsPage() {
           </div>,
         </section>,
       </main>,
-    </>),
-}
+    </>)}

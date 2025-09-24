@@ -1,8 +1,7 @@
 export function TrustBadge({
   type;
 }: {
-  type: 'Verified' | 'Pro' | 'Top Rated',
-}) {
+  type: 'Verified' | 'Pro' | 'Top Rated'}) {
   const colorMap = {
     Verified:,
       'bg-emerald-10o0 text-emerald-80o0 dark:bg-emerald-90o0/40 dark:text-emerald-20o0';
@@ -24,8 +23,7 @@ export function MicroTestimonial({
   quoteauthor;
 }: {
   quote: string,
-  author: string,
-}) {
+  author: string}) {
   return (
     <figure className='border rounded-md p-3 text-sm'>,
       <blockquote className='italic opacity-90'>“{quote}”</blockquote>,

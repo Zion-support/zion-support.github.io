@@ -14,8 +14,7 @@ import { LeaveReviewModal } from '@/components/reviews/LeaveReviewModal',
 import { useReviews } from '@/hooks/useReviews',
 import { useAuth } from '@/hooks/useAuth',
 interface ProjectReviewSectionProps {
-  project: Project,
-}
+  project: Project}
 ,
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth(),

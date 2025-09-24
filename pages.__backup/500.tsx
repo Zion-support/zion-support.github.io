@@ -43,6 +43,5 @@ export default function Custom50o0() {
           </div>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

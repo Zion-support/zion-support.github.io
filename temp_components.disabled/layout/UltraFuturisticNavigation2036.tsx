@@ -25,14 +25,12 @@ interface NavigationItem {
   badge?: string,
   title?: string,
   featured?: boolean,
-  category?: string,
-}
+  category?: string}
 ,
 function normalizeHref(href: string): string {
   if (!href) return href,
   if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:')) {
-    return href,
-  }
+    return href}
   if (!href.startsWith('/')) return href,
   const hasQueryOrHash = href.includes('?') || href.includes('#'),
   if (hasQueryOrHash) return href,
@@ -52,98 +50,83 @@ const navigationItems: NavigationItem[] = [
         href: '/services';
         description: 'Complete services overview';
         icon: <Grid className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: 'Ultimate 20o36 Showcase';
         href: '/ultimate-20o36-futuristic-services-showcase';
         description: 'Latest futuristic services';
         icon: <Sparkles className="w-4 h-4"  />;
         featured: true;
-        badge: 'NEW',
-      };
+        badge: 'NEW'};
       {
         name: '20o38 Futuristic Services';
         href: '/ultimate-20o38-futuristic-services-showcase';
         description: 'Ultimate 20o38 futuristic services showcase';
         icon: <Sparkles className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: '20o25 Innovative Services';
         href: '/comprehensive-20o25-innovative-services-showcase';
         description: 'Cutting-edge innovative services showcase';
         icon: <Star className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: '20o26 Services Showcase';
         href: '/ultimate-20o26-services-showcase';
         description: 'Ultimate showcase of our 20o26 services';
         icon: <Star className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: 'Innovative 20o36 Services';
         href: '/innovative-20o36-services-showcase';
         description: 'Revolutionary micro SAAS solutions';
         icon: <Star className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: 'AI & Machine Learning';
         href: '/services?category=ai';
         description: 'Advanced AI solutions';
-        icon: <Play className="w-4 h-4"  />,
-      };
+        icon: <Play className="w-4 h-4"  />};
       {
         name: 'Quantum Technology';
         href: '/services?category=quantum';
         description: 'Quantum computing solutions';
-        icon: <AtomIcon className="w-4 h-4"  />,
-      };
+        icon: <AtomIcon className="w-4 h-4"  />};
       {
         name: 'Space Technology';
         href: '/space-technology';
         description: 'Space exploration solutions';
-        icon: <Rocket className="w-4 h-4"  />,
-      };
+        icon: <Rocket className="w-4 h-4"  />};
       {
         name: 'IT Solutions';
         href: '/it-services';
         description: 'Enterprise IT infrastructure';
-        icon: <Cpu className="w-4 h-4"  />,
-      };
+        icon: <Cpu className="w-4 h-4"  />};
       {
         name: 'Industry Solutions';
         href: '/solutions';
         description: 'Industry-specific solutions';
-        icon: <TargetIcon className="w-4 h-4"  />,
-      };
+        icon: <TargetIcon className="w-4 h-4"  />};
       {
         name: 'Cybersecurity';
         href: '/services?category=security';
         description: 'Security and compliance';
-        icon: <Zap className="w-4 h-4"  />,
-      };
+        icon: <Zap className="w-4 h-4"  />};
       {
         name: 'IT Infrastructure';
         href: '/services?category=infrastructure';
         description: 'Enterprise IT solutions';
-        icon: <Zap className="w-4 h-4"  />,
-      };
+        icon: <Zap className="w-4 h-4"  />};
       {
         name: 'Micro SAAS';
         href: '/services?category=micro-saas';
         description: 'Business solutions';
-        icon: <Zap className="w-4 h-4"  />,
-      };
+        icon: <Zap className="w-4 h-4"  />};
       {
         name: 'Emerging Tech';
         href: '/services?category=emerging';
         description: 'Cutting-edge technologies';
-        icon: <Zap className="w-4 h-4"  />,
-      }
+        icon: <Zap className="w-4 h-4"  />}
     ]};
   {
     name: 'Showcase & Pricing';
@@ -158,45 +141,38 @@ const navigationItems: NavigationItem[] = [
         href: '/comprehensive-20o36-services-showcase';
         description: 'Latest innovative services';
         icon: <Grid className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: '20o25 Services Showcase';
         href: '/comprehensive-services-showcase-20o25';
         description: 'Previous services overview';
-        icon: <Grid className="w-4 h-4"  />,
-      };
+        icon: <Grid className="w-4 h-4"  />};
       {
         name: 'Pricing Plans';
         href: '/pricing';
         description: 'Service pricing information';
-        icon: <Play className="w-4 h-4"  />,
-      };
+        icon: <Play className="w-4 h-4"  />};
       {
         name: '20o26 Pricing';
         href: '/pricing-20o36';
         description: 'Competitive pricing for 20o36';
         icon: <DollarSign className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: 'Market Pricing';
         href: '/market-pricing';
         description: 'Market price references';
-        icon: <Star className="w-4 h-4"  />,
-      };
+        icon: <Star className="w-4 h-4"  />};
       {
         name: '20o26 Services';
         href: '/ultimate-20o26-services-showcase';
         description: 'Latest 20o26 services';
-        icon: <Star className="w-4 h-4"  />,
-      };
+        icon: <Star className="w-4 h-4"  />};
       {
         name: '20o35 Futuristic';
         href: '/ultimate-20o35-futuristic-services-showcase';
         description: 'Future-ready services';
-        icon: <Star className="w-4 h-4"  />,
-      }
+        icon: <Star className="w-4 h-4"  />}
     ]};
   {
     name: 'Solutions';
@@ -211,38 +187,32 @@ const navigationItems: NavigationItem[] = [
         href: '/solutions';
         description: 'Complete solutions overview';
         icon: <Grid className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: 'Financial Services';
         href: '/solutions?industry=financial';
         description: 'Banking and fintech solutions';
-        icon: <Target className="w-4 h-4"  />,
-      };
+        icon: <Target className="w-4 h-4"  />};
       {
         name: 'Healthcare';
         href: '/solutions?industry=healthcare';
         description: 'Healthcare technology solutions';
-        icon: <Target className="w-4 h-4"  />,
-      };
+        icon: <Target className="w-4 h-4"  />};
       {
         name: 'Manufacturing';
         href: '/solutions?industry=manufacturing';
         description: 'Industrial automation solutions';
-        icon: <Target className="w-4 h-4"  />,
-      };
+        icon: <Target className="w-4 h-4"  />};
       {
         name: 'Retail & E-commerce';
         href: '/solutions?industry=retail';
         description: 'Digital commerce solutions';
-        icon: <Target className="w-4 h-4"  />,
-      };
+        icon: <Target className="w-4 h-4"  />};
       {
         name: 'Government';
         href: '/solutions?industry=government';
         description: 'Public sector solutions';
-        icon: <Target className="w-4 h-4"  />,
-      }
+        icon: <Target className="w-4 h-4"  />}
     ]};
   {
     name: 'Company';
@@ -256,32 +226,27 @@ const navigationItems: NavigationItem[] = [
         href: '/about';
         description: 'Our story and mission';
         icon: <Users className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: 'Leadership';
         href: '/leadership';
         description: 'Meet our team';
-        icon: <Star className="w-4 h-4"  />,
-      };
+        icon: <Star className="w-4 h-4"  />};
       {
         name: 'Contact';
         href: '/contact';
         description: 'Get in touch';
-        icon: <MessageCircle className="w-4 h-4"  />,
-      };
+        icon: <MessageCircle className="w-4 h-4"  />};
       {
         name: 'Partners';
         href: '/partners';
         description: 'Partnership opportunities';
-        icon: <div className="w-4 h-4"  />,
-      };
+        icon: <div className="w-4 h-4"  />};
       {
         name: 'Careers';
         href: '/careers';
         description: 'Join our team';
-        icon: <Play className="w-4 h-4"  />,
-      }
+        icon: <Play className="w-4 h-4"  />}
     ]};
   {
     name: 'Resources';
@@ -294,26 +259,22 @@ const navigationItems: NavigationItem[] = [
         name: 'Documentation';
         href: '/docs';
         description: 'Technical documentation';
-        icon: <Play className="w-4 h-4"  />,
-      };
+        icon: <Play className="w-4 h-4"  />};
       {
         name: 'Blog';
         href: '/blog';
         description: 'Latest insights';
-        icon: <Play className="w-4 h-4"  />,
-      };
+        icon: <Play className="w-4 h-4"  />};
       {
         name: 'Case Studies';
         href: '/case-studies';
         description: 'Success stories';
-        icon: <Star className="w-4 h-4"  />,
-      };
+        icon: <Star className="w-4 h-4"  />};
       {
         name: 'Support';
         href: '/support';
         description: 'Technical support';
-        icon: <Play className="w-4 h-4"  />,
-      }
+        icon: <Play className="w-4 h-4"  />}
     ]};
   {
     name: 'Solutions';
@@ -326,38 +287,32 @@ const navigationItems: NavigationItem[] = [
         name: 'Healthcare';
         href: '/healthcare-solutions';
         description: 'Healthcare technology solutions';
-        icon: <Play className="w-4 h-4"  />,
-      };
+        icon: <Play className="w-4 h-4"  />};
       {
         name: 'Finance';
         href: '/financial-solutions';
         description: 'Financial technology solutions';
-        icon: <Play className="w-4 h-4"  />,
-      };
+        icon: <Play className="w-4 h-4"  />};
       {
         name: 'Manufacturing';
         href: '/manufacturing-ai-solutions';
         description: 'Manufacturing AI';
-        icon: <Settings className="w-4 h-4"  />,
-      };
+        icon: <Settings className="w-4 h-4"  />};
       {
         name: 'Education';
         href: '/education-technology-solutions';
         description: 'Education technology';
-        icon: <BookOpen className="w-4 h-4"  />,
-      };
+        icon: <BookOpen className="w-4 h-4"  />};
       {
         name: 'Energy';
         href: '/energy-technology-solutions';
         description: 'Energy technology';
-        icon: <Zap className="w-4 h-4"  />,
-      }
+        icon: <Zap className="w-4 h-4"  />}
     ]}
 ],
 interface UltraFuturisticNavigation20o36Props {
   onMenuToggle: () => void,
-  'aria-expanded': boolean,
-}
+  'aria-expanded': boolean}
 ,
 export default function UltraFuturisticNavigation20o36({ onMenuToggle, 'aria-expanded': ariaExpanded }: UltraFuturisticNavigation20o36Props) {
   const [isOpen, setIsOpen] = useState(false),
@@ -369,8 +324,7 @@ export default function UltraFuturisticNavigation20o36({ onMenuToggle, 'aria-exp
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as HTMLElement)) {
-        setIsOpen(false),
-      }
+        setIsOpen(false)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
@@ -382,16 +336,14 @@ export default function UltraFuturisticNavigation20o36({ onMenuToggle, 'aria-exp
     hidden: {
       opacity: 0;
       y: -10;
-      scale: 0.95,
-    };
+      scale: 0.95};
     visible: {
       opacity: 1;
       y: 0;
       scale: 1;
       transition: {
         duration: 0.2;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   return (
@@ -570,8 +522,7 @@ export default function UltraFuturisticNavigation20o36({ onMenuToggle, 'aria-exp
                 className="lg: hidden p-2 text-white hover:text-cyan-40o0 transition-colors",
                 onClick={() => {
                   setIsOpen(!isOpen),
-                  onMenuToggle(),
-                }}
+                  onMenuToggle()}}
                 aria-label="Toggle mobile menu",
                 aria-expanded={ariaExpanded}
               >,
@@ -610,8 +561,7 @@ export default function UltraFuturisticNavigation20o36({ onMenuToggle, 'aria-exp
                   className={`group flex items-center space-x-1 px-3 py-2 text-sm font-medium rounded-md transition-all duration-20o0 ${
                     activeDropdown === item.name,
                       ? 'text-cyan-40o0 bg-cyan-40o0/10',
-                      : 'text-gray-30o0 hover: text-white hover:bg-white/5',
-                  }`}
+                      : 'text-gray-30o0 hover: text-white hover:bg-white/5'}`}
                   aria-expanded={activeDropdown === item.name}
                   aria-haspopup={!!item.children}
                   aria-label={`${item.name} menu`}

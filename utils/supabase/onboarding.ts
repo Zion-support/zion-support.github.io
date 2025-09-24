@@ -3,14 +3,12 @@ export type TalentOnboarding = {
   profile_complete: boolean,
   skills_added: boolean,
   availability_set: boolean,
-  first_job_applied: boolean,
-};
+  first_job_applied: boolean};
 export type ClientOnboarding = {
   job_posted: boolean,
   talent_invited: boolean,
   quote_received: boolean,
-  first_hire_complete: boolean,
-};
+  first_hire_complete: boolean};
 export type OnboardingRecord = {
   user_id: string,
   role: 'talent' | 'client',
@@ -24,8 +22,7 @@ export type OnboardingRecord = {
   talent_invited?: boolean,
   quote_received?: boolean,
   first_hire_complete?: boolean,
-  updated_at?: string,
-};
+  updated_at?: string};
 export async function getCurrentUserId(): Promise<string | null> {
   try {
     const { data } = await supabase.auth.getUser(),

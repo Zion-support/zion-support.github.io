@@ -302,6 +302,5 @@ export default function EdgeComputingRevolutionPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

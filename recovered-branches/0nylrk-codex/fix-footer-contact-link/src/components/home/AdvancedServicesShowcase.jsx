@@ -217,6 +217,5 @@ export function AdvancedServicesShowcase() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

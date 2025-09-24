@@ -78,6 +78,5 @@ export default function NewContent20o26UltimateBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

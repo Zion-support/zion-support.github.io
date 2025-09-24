@@ -18,5 +18,4 @@ export default function IntelligentHrAnalyticsPlatform() {
 			]}
 			industries={["Enterprise", "Mid-market", "Healthcare", "Financial Services", "Manufacturing"]}
 			url="https: //ziontechgroup.com/intelligent-hr-analytics-platform",
-		 />),
-}
+		 />)}

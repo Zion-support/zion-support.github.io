@@ -81,6 +81,5 @@ export default function SiteHealth() {
           </div>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

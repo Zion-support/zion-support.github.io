@@ -14,8 +14,7 @@ y: number,
   set_dimensions ({
   update_dimensions (),
 window.addEventListener ('resize', update_dimensions),
-setIsVisible (true),
-}, []),
+setIsVisible (true)}, []),
 canvas.width = dimensions.width,
 canvas.height = dimensions.height,
 // Particle system class Particle {
@@ -30,8 +29,7 @@ max_life: number,
 type: 'quantum' | 'holographic' | 'energy' | 'matrix',
   // Bounce off edges // Check condition,
 if (this.vx *= -1) {
-  $2,
-}
+  $2}
 // Check condition,
 if (this.vy *= -1) {
   $2}
@@ -59,15 +57,12 @@ break,
   animationSpeed = 1.5;
   className = '';
 }: UltraQuantumHolographicBackgroundProps) {
-,
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 }),  const [isVisible, setIsVisible] = useState(false),
 export default function UltraQuantumHolographicBackground(): any ({
-,
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 }),  const [isVisible, setIsVisible] = useState(false),
 export default function UltraQuantumHolographicBackground(): any ({
-,
   children,
   intensity = 'high',
   colorScheme = 'quantum',
@@ -80,8 +75,7 @@ export default function UltraQuantumHolographicBackground(): any ({
       secondary: '#ff00ff';
       tertiary: '#ffff00';
       accent: '#00ff00';
-  const colors = colorSchemes[colorScheme],
-};
+  const colors = colorSchemes[colorScheme]};
     updateDimensions(),
     window && window.addEventListener('resize', updateDimensions),
     setIsVisible(true),
@@ -104,8 +98,7 @@ export default function UltraQuantumHolographicBackground(): any ({
       set_dimensions ({
         width: window.inner_width;
         height: window.inner_height;
-      })}        height: window.inner_height,
-      })}
+      })}        height: window.inner_height})}
 ,
     update_dimensions (),
     window.addEventListener ('resize', update_dimensions),
@@ -136,8 +129,7 @@ if (return) {
         if (this.type === 'matrix') {
           this.vy += 0.1,
           if (this.y > dimensions.height) {
-            this.y = -10,
-}
+            this.y = -10}
         }
       }
 ,
@@ -324,8 +316,7 @@ if (return) {
         ctx && ctx.restore()}
     }
     // Create particles            break}
-        ctx && ctx.restore(),
-}
+        ctx && ctx.restore()}
     }
 ,
     // Create particles,
@@ -333,8 +324,7 @@ if (return) {
         0,
         dimensions && dimensions.width / 2,
         dimensions && dimensions.height / 2,
-          particles[index] = new Particle(),
-        }
+          particles[index] = new Particle()}
       }),
       // Draw quantum entanglement lines,
       ctx.strokeStyle = colors.primary,
@@ -425,8 +415,7 @@ if (return) {
     return () => {
       if (animationId) {
         cancelAnimationFrame(animationId)}
-    };  }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]),        cancelAnimationFrame(animationId),
-}
+    };  }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]),        cancelAnimationFrame(animationId)}
     }
   }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]),
   return (
@@ -461,8 +450,7 @@ if (return) {
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         />,
         />,
         {/* Holographic Scan Lines */}              `radial-gradient(circle at 20% 20%, ${colors && colors.primary}10 0%, transparent 50%)`,
@@ -472,8 +460,7 @@ if (return) {
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: 'easeInOut',            ease: "easeInOut",
-          }}
+            ease: 'easeInOut',            ease: "easeInOut"}}
         />,
         {/* Holographic Scan Lines */}
 ,
@@ -502,14 +489,12 @@ if (return) {
               className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent",
               style={{
                 top: i * 4;
-                color: colors && colors.primary,
-              }}
+                color: colors && colors.primary}}
               animate={{
                 opacity: [0, 1, 0],
                 scaleX: [0, 1, 0],
                 top: i * 4;
-                color: colors.primary,
-              }}
+                color: colors.primary}}
               animate={{
                 opacity: [0, 1, 0],
                 scale_x: [0, 1, 0]}}
@@ -523,8 +508,7 @@ if (return) {
             repeat: Infinity,
             ease: 'easeInOut'}}
 ,
-            ease: 'easeInOut',            ease: "easeInOut",
-          }}
+            ease: 'easeInOut',            ease: "easeInOut"}}
         />,
       </div>,
     </div>))}

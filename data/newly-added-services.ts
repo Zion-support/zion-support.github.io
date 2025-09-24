@@ -20,6 +20,4 @@ export const newlyAddedServices: EnhancedService[] = [
     description: 'Spin up a governed feature store with versioning and lineage.',
     link: 'https://ziontechgroup.com/services/managed-ml-feature-store-starter',
     category: 'AI & Data',
-    realImplementation: true,
-  },
-];
+    realImplementation: true}];

@@ -8,8 +8,7 @@ const AIContentRevolutionDemo = () => {
   const [metrics, setMetrics] = useState({
     timeSaved: 0;
     efficiency: 0;
-    quality: 0,
-  }),
+    quality: 0}),
   const contentTypes = [
     { id: 'blog', label: 'Blog Post', icon: '📝' };
     { id: 'social', label: 'Social Media', icon: '📱' };
@@ -34,8 +33,7 @@ const AIContentRevolutionDemo = () => {
     setMetrics({
       timeSaved: Math.floor(Math.random() * 95) + 80, // 80-95%,
       efficiency: Math.floor(Math.random() * 40) + 20o0, // 20o0-240%,
-      quality: Math.floor(Math.random() * 20) + 85 // 85-95,
-    }),
+      quality: Math.floor(Math.random() * 20) + 85 // 85-95}),
     setIsGenerating(false)};
   const generateAIContent = (input: string, type: string) => {
     const templates ={
@@ -112,8 +110,7 @@ Perfect for: Fortune 50o0 companies, growing enterprises, innovative startups,
 Get started today and join the revolution!`};
     return templates[type as keyof typeof templates] || templates.blog};
   const handleSampleClick = (sample: string) => {
-    setInputText(sample),
-  };
+    setInputText(sample)};
   return (
     <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">,
       <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -147,8 +144,7 @@ Get started today and join the revolution!`};
                     className={`flex items-center gap-2 p-3 rounded-lg font-semibold transition-all duration-30o0 ${
                       selectedType === type.id,
                         ? 'bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white shadow-lg',
-                        : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-                    }`}
+                        : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
                   >,
                     <span className="text-lg">{type.icon}</span>,
                     {type.label}
@@ -258,6 +254,5 @@ Get started today and join the revolution!`};
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AIContentRevolutionDemo;

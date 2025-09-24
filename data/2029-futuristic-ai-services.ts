@@ -11,8 +11,7 @@ export interface FuturisticAiService20o29 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const futuristicAIServices2029: FuturisticAiService2029[] = [
   {

@@ -2,7 +2,6 @@ import React from 'react';
 
 export interface SpaceMetaverseService {
 export interface SpaceMetaverseService {
-,
   id: string,
   name: string,
   tagline: string,
@@ -318,8 +317,7 @@ export interface SpaceMetaverseService {
     launchDate: '2024-01-20',
     customers: 1800,
     rating: 4.7,
-    reviews: 1400,
-  }
+    reviews: 1400}
 ,
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards';
     ];
@@ -406,8 +404,7 @@ export interface SpaceMetaverseService {
     monthly: number, yearly: number;
     currency: string, trialDays: number;
     setupTime: string;
-    enterprise: string,
-    };
+    enterprise: string};
     features: string[], benefits: string[];
   targetAudience: string[], marketPosition: string;
   competitors: string[], techStack: string[];
@@ -418,8 +415,7 @@ export interface SpaceMetaverseService {
   icon: string, color: string;
   popular: boolean, launchDate: string;
   customers: number, rating: number;
-  reviews: number,
-}
+  reviews: number}
 ],      'Employee training_virtual meetings_product design review_safety training_remote collaboration_customer presentations'],
     integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems'],
     icon: '🥽',
@@ -430,7 +426,6 @@ export interface SpaceMetaverseService {
     rating: 4 && 4.7;
     reviews: 1400],
 export interface SpaceMetaverseService {
-,
   id: string;
   name: string;
   tagline: string;
@@ -442,8 +437,7 @@ export interface SpaceMetaverseService {
     currency: string;
     trialDays: number;
     setupTime: string;
-    enterprise: string,
-  };
+    enterprise: string};
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -464,8 +458,7 @@ export interface SpaceMetaverseService {
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number,
-}
+  reviews: number}
 ,
 export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
   {
@@ -480,8 +473,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
       currency: 'USD';
       trialDays: 30;
       setupTime: '2-4 weeks';
-      enterprise: 'Custom pricing',
-    };
+      enterprise: 'Custom pricing'};
     features: [
       'AI-powered resource detectionMulti-spectral data analysis3D mapping and visualizationResource optimization algorithmsReal-time satellite data processingPredictive resource modelingMining operation planningCost-benefit analysis';
       'Regulatory compliance monitoringAPI for space agencies'];
@@ -507,8 +499,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     launchDate: '2024-02-01';
     customers: 180;
     rating: 4.9;
-    reviews: 120,
-  };
+    reviews: 120};
   {
     id: 'metaverse-development-platform';
     name: 'Metaverse Development Platform';
@@ -521,8 +512,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
       currency: 'USD';
       trialDays: 21;
       setupTime: '1-2 weeks';
-      enterprise: 'Custom pricing',
-    };
+      enterprise: 'Custom pricing'};
     features: [
       'AI-powered world generation3D modeling and animation toolsVirtual reality integrationBlockchain asset managementMulti-user collaborationReal-time rendering engineCustom scripting languageAsset marketplace';
       'Analytics and insightsAPI for developers'];
@@ -548,8 +538,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     launchDate: '2024-01-15';
     customers: 3200;
     rating: 4.7;
-    reviews: 2400,
-  };
+    reviews: 2400};
   {
     id: 'quantum-space-communications-network';
     name: 'Quantum Space Communications Network';
@@ -562,8 +551,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
       currency: 'USD';
       trialDays: 30;
       setupTime: '4-6 weeks';
-      enterprise: 'Custom pricing',
-    };
+      enterprise: 'Custom pricing'};
     features: [
       'Quantum entanglement communicationsSatellite quantum networksGround station integrationReal-time quantum key distributionMulti-node quantum routingAdvanced quantum protocolsNetwork monitoringSecurity analytics';
       'API for space agenciesCustom quantum protocols'];
@@ -589,8 +577,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     launchDate: '2024-03-01';
     customers: 85;
     rating: 4.9;
-    reviews: 65,
-  };
+    reviews: 65};
   {
     id: 'ai-powered-space-traffic-management';
     name: 'AI-Powered Space Traffic Management Platform';
@@ -603,8 +590,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
       currency: 'USD';
       trialDays: 21;
       setupTime: '2-3 weeks';
-      enterprise: 'Custom pricing',
-    };
+      enterprise: 'Custom pricing'};
     features: [
       'Real-time space traffic monitoringAI-powered collision predictionAutomated collision avoidanceOrbital path optimizationSatellite trackingDebris monitoringRegulatory complianceAdvanced analytics';
       'API for space agenciesMobile monitoring app'];
@@ -630,8 +616,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     launchDate: '2024-02-15';
     customers: 420;
     rating: 4.8;
-    reviews: 320,
-  };
+    reviews: 320};
   {
     id: 'virtual-reality-enterprise-platform';
     name: 'Virtual Reality Enterprise Platform';
@@ -644,8 +629,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
       currency: 'USD';
       trialDays: 14;
       setupTime: '1-2 weeks';
-      enterprise: 'Custom pricing',
-    };
+      enterprise: 'Custom pricing'};
     features: [
       'VR training simulationsVirtual collaboration spaces3D visualization toolsCustom VR applicationsMulti-user VR experiencesAnalytics and reportingMobile VR supportAPI for integration';
       'Content management systemEnterprise security features'];
@@ -671,6 +655,5 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     launchDate: '2024-01-20';
     customers: 1800;
     rating: 4.7;
-    reviews: 1400,
-  }
+    reviews: 1400}
 ]>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

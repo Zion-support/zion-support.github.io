@@ -31,15 +31,13 @@ export interface EnterpriseBlockchainService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
   // Enterprise Blockchain Platform,
   {
@@ -68,7 +66,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/enterprise-blockchain';
     marketPosition:,
-      'Leading edge in enterprise blockchain. Competes with Hyperledger Fabric ($50000+/month) and Corda ($30000+/month) with superior window.performance.';
+      'Leading edge in enterprise blockchain. Competes with Hyperledger Fabric ($50000+/month) and Corda ($30000+/month) with superior window.window.performance.';
     targetAudience:,
       'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Manufacturing companies, Logistics providers';
     trialDays: 30;

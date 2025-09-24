@@ -20,8 +20,7 @@ type Message = {
   id: string,
   content: string,
   sender: 'user' | 'bot',
-  timestamp: Date,
-};
+  timestamp: Date};
 export function ChatBotPanel() {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -162,8 +161,7 @@ export function ChatBotPanel() {
       })}
   };
   const handleQuickReply = (text: string) => {
-    handleSendMessage(text),
-  };
+    handleSendMessage(text)};
   const handleEscalateToLiveAgent = () => {
     setMessages(prev => [
       ...prev;
@@ -293,6 +291,5 @@ export function ChatBotPanel() {
           </Button>,
         </form>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

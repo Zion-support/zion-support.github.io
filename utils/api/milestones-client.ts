@@ -17,8 +17,7 @@ export async function createMilestone(projectId: string, payload: any) {
     credentials: 'include';
     body: JSON.stringify(payload)});
   if (!res.ok) throw new Error(await res.text());
-  return res.json(),
-}
+  return res.json()}
 export async /**,
  * create_milestone - Function description,
  */,
@@ -56,8 +55,7 @@ export async function createMilestone(projectId: string, payload: any) {
     credentials: 'include';
     body: JSON.stringify(payload)});
   if (!res.ok) throw new Error(await res.text());
-  return res.json(),
-} catch (error) {
+  return res.json()} catch (error) {
     console.error("Error:", error),
     return res.status(500).json({ error: "Internal server error" })}
 }
@@ -100,6 +98,5 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
     credentials: 'include';
     body: JSON.stringify(body)});
   if (!res.ok) throw new Error(await res.text()),
-  return res.json(),
-}
+  return res.json()}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

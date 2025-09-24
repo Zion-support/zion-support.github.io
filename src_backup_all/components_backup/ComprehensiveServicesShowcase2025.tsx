@@ -406,8 +406,7 @@ interface ServiceContact {
   mobile: string,
   email: string,
   address: string,
-  website: string,
-}
+  website: string}
 ,
 const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {
   const [activeCategory, setActiveCategory] = useState('all'),
@@ -460,12 +459,10 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {
       case 'category':,
         return a.category.localeCompare(b.category),
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   const handleServiceClick = (service: anyany)  => {
-    setSelectedService(service),
-  };
+    setSelectedService(service)};
   const closeModal = () => {
     setSelectedService(null)};
   const containerVariants ={
@@ -473,8 +470,7 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -484,8 +480,7 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {
       opacity: 1;
       transition: {
         duration: 0.5;
-        ease: "easeOut",
-      }
+        ease: "easeOut"}
     }
   };
   const getCategoryIcon = (category: anystring)  => {
@@ -501,16 +496,14 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {
       case 'Metaverse': return <Globe2 className="w-5 h-5"  />,
       case 'Edge Computing': return <Network className="w-5 h-5"  />,
       case 'Cybersecurity': return <Shield className="w-5 h-5"  />,
-      default: return <Zap className="w-5 h-5"  />,
-    }
+      default: return <Zap className="w-5 h-5"  />}
   };
   const getInnovationIcon = (level: anystring)  => {
     switch (level) {
       case 'Advanced': return <Star className="w-4 h-4 text-yellow-50o0"  />,
       case 'Cutting-edge': return <Zap className="w-4 h-4 text-blue-50o0"  />,
       case 'Revolutionary': return <Crown className="w-4 h-4 text-purple-50o0"  />,
-      default: return <Star className="w-4 h-4 text-gray-40o0"  />,
-    }
+      default: return <Star className="w-4 h-4 text-gray-40o0"  />}
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">,
@@ -615,8 +608,7 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${
                     viewMode === 'grid',
                       ? 'bg-zion-cyan text-white',
-                      : 'text-zion-slate-40o0 hover: text-white',
-                  }`}
+                      : 'text-zion-slate-40o0 hover: text-white'}`}
                 >,
                   <Grid className="w-4 h-4 mx-auto"  />,
                 </button>,
@@ -625,8 +617,7 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${
                     viewMode === 'list',
                       ? 'bg-zion-cyan text-white',
-                      : 'text-zion-slate-40o0 hover: text-white',
-                  }`}
+                      : 'text-zion-slate-40o0 hover: text-white'}`}
                 >,
                   <List className="w-4 h-4 mx-auto"  />,
                 </button>,
@@ -675,16 +666,14 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {
             animate="visible",
             className={viewMode === 'grid',
               ? 'grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6',
-              : 'space-y-4',
-            }
+              : 'space-y-4'}
           >,
             {sortedServices.map((service)  => (
               <motion.div,
                 key={service.id}
                 variants={itemVariants}
                 className={`bg-zion-slate-80o0/50 backdrop-blur-sm border border-zion-slate-70o0 rounded-2xl p-6 hover: border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-30o0 cursor-pointer group ${
-                  viewMode === 'list' ? 'flex items-center gap-6' : '',
-                }`}
+                  viewMode === 'list' ? 'flex items-center gap-6' : ''}`}
                 onClick={() => handleServiceClick(service)}
               >,
                 {viewMode === 'grid' ? (

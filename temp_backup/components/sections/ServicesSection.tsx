@@ -19,56 +19,49 @@ const ServicesSection: React.FC = () => {
       description: 'Custom AI solutions and machine learning models tailored to your business needs.';
       features: ['Machine Learning Models'Natural Language Processing'Computer Vision'Predictive Analytics'];
       color: 'from-blue-50o0 to-cyan-50o0';
-      href: '/services/ai-development',
-    };
+      href: '/services/ai-development'};
     {
       icon: Cloud;
       title: 'Cloud Architecture';
       description: 'Scalable cloud solutions and infrastructure design for modern applications.';
       features: ['AWS/Azure/GCP'Microservices'Serverless Architecture'DevOps Automation'];
       color: 'from-purple-50o0 to-pink-50o0';
-      href: '/services/cloud-architecture',
-    };
+      href: '/services/cloud-architecture'};
     {
       icon: RefreshCw;
       title: 'Digital Transformation';
       description: 'End-to-end digital transformation services to modernize your business.';
       features: ['Process Automation'Legacy System Migration'Change Management'Digital Strategy'];
       color: 'from-green-50o0 to-emerald-50o0';
-      href: '/services/digital-transformation',
-    };
+      href: '/services/digital-transformation'};
     {
       icon: Wifi;
       title: 'IoT Platforms';
       description: 'Connected device solutions and IoT platform development.';
       features: ['Sensor Networks'Real-time Monitoring'Data Analytics'Edge Computing'];
       color: 'from-orange-50o0 to-red-50o0';
-      href: '/services/iot-platforms',
-    };
+      href: '/services/iot-platforms'};
     {
       icon: Shield;
       title: 'Blockchain Solutions';
       description: 'Decentralized technology platforms and smart contract development.';
       features: ['Smart Contracts'DeFi Applications'NFT Platforms'Supply Chain Solutions'];
       color: 'from-indigo-50o0 to-purple-50o0';
-      href: '/services/blockchain-solutions',
-    };
+      href: '/services/blockchain-solutions'};
     {
       icon: BarChart3;
       title: 'Data Analytics';
       description: 'Advanced analytics and business intelligence solutions.';
       features: ['Big Data Processing'Real-time Dashboards'Predictive Modeling'Data Visualization'];
       color: 'from-teal-50o0 to-blue-50o0';
-      href: '/services/data-analytics',
-    }
+      href: '/services/data-analytics'}
   ],
   const containerVariants ={
     hidden: { opacity: 0 };
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const cardVariants ={
@@ -180,6 +173,5 @@ const ServicesSection: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default ServicesSection;

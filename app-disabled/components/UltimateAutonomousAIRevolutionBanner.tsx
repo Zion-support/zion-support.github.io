@@ -16,8 +16,7 @@ const UltimateAutonomousAIRevolutionBanner = () => {
         accuracy: "99.97%";
         efficiency: "4,20o0%"};
       cta: "Get Ultimate Guide";
-      href: "/blog/ai-20o25-ultimate-autonomous-ai-revolution-ultimate-breakthrough",
-    };
+      href: "/blog/ai-20o25-ultimate-autonomous-ai-revolution-ultimate-breakthrough"};
     {
       title: "Fortune 50o0 Success Story";
       subtitle: "$75.2B Annual Savings - 15,0o00% ROI";
@@ -26,11 +25,9 @@ const UltimateAutonomousAIRevolutionBanner = () => {
         roi: "15,0o00%";
         savings: "$75.2B";
         company: "$12.8B";
-        timeline: "18 months",
-      };
+        timeline: "18 months"};
       cta: "Read Success Story";
-      href: "/case-studies/fortune-50o0-ultimate-autonomous-ai-150o00-roi-success-story",
-    };
+      href: "/case-studies/fortune-50o0-ultimate-autonomous-ai-150o00-roi-success-story"};
     {
       title: "Implementation Master Guide";
       subtitle: "Complete Roadmap to 15,0o00% ROI";
@@ -39,11 +36,9 @@ const UltimateAutonomousAIRevolutionBanner = () => {
         roi: "15,0o00%";
         success: "99.7%";
         timeline: "18 months";
-        guide: "45 min read",
-      };
+        guide: "45 min read"};
       cta: "Download Guide";
-      href: "/resources/ultimate-autonomous-ai-implementation-guide-20o25",
-    }
+      href: "/resources/ultimate-autonomous-ai-implementation-guide-20o25"}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -161,6 +156,5 @@ const UltimateAutonomousAIRevolutionBanner = () => {
         className="absolute top-4 right-4 text-white/70 hover: text-white transition-colors">,
         <X className="w-6 h-6"  />,
       </button>,
-    </div>),
-};
+    </div>)};
 export default UltimateAutonomousAIRevolutionBanner;

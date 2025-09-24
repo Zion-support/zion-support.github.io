@@ -100,8 +100,7 @@ const EnhancedContentDiscovery20o25: React.FC = () => {
       case 'Expert':,
         return 'bg-red-10o0 text-red-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <section className='py-20 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -135,8 +134,7 @@ const EnhancedContentDiscovery20o25: React.FC = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 activeCategory === key,
                   ? 'bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-blue-50 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-blue-50 border border-gray-20o0'}`}
             >,
               <span className='mr-2'>{category.icon}</span>,
               {category.label}
@@ -254,6 +252,5 @@ const EnhancedContentDiscovery20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default EnhancedContentDiscovery20o25;

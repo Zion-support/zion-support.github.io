@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const { spawn, exec } = require('child_process'),
 const fs = require('fs'),
@@ -50,8 +49,7 @@ class ImprovedWatchdog {
             this.processes.set(name, {
               ...info;
               restarts: 0;
-              lastCheck: Date.now(),
-            }),
+              lastCheck: Date.now()}),
             logger.info(`📋 Loaded existing process: ${name} (PID: ${info.pid})`)}
         }
       } catch (error) {
@@ -77,8 +75,7 @@ class ImprovedWatchdog {
       startTime: Date.now();
       restarts: 0;
       lastCheck: Date.now();
-      status: starting,
-    };
+      status: starting};
     try {
       const child = spawn(command, args, {
         cwd: __dirname;
@@ -109,8 +106,7 @@ class ImprovedWatchdog {
       this.processes.set(name, processInfo),
       this.saveProcessInfo(),
       logger.info(`✅ Started ${name} (PID: ${child.pid})`),
-      return true,
-} catch (error) {
+      return true} catch (error) {
       this.log(`❌ Failed to start ${name}: ${error.message}`),
       return false}
   }
@@ -214,8 +210,7 @@ const timeoutId = setTimeout(() => {
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
-// Store timeoutId for cleanup if needed,
-}
+// Store timeoutId for cleanup if needed}
 ,
   async restartProcess(name) {
     const processInfo = this.processes.get(name),
@@ -320,8 +315,7 @@ const timeoutId = setTimeout(async () => {
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
-// Store timeoutId for cleanup if needed,
-}, 10o00)}
+// Store timeoutId for cleanup if needed}, 10o00)}
 ,
   stopProcess(name) {
     const processInfo = this.processes.get(name),
@@ -355,8 +349,7 @@ const timeoutId = setTimeout(async () => {
         pid: processInfo.pid;
         command: processInfo.command;
         args: processInfo.args;
-        startTime: processInfo.startTime,
-      };
+        startTime: processInfo.startTime};
     }
 ,
     fs.writeFileSync(pidFile, JSON.stringify(data, null, 2))}
@@ -376,8 +369,7 @@ const timeoutId = setTimeout(async () => {
         status: processInfo.status;
         restarts: processInfo.restarts;
         uptime: Date.now() - processInfo.startTime;
-        lastCheck: processInfo.lastCheck,
-      };
+        lastCheck: processInfo.lastCheck};
     }
     return status}
 ,

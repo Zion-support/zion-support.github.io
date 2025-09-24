@@ -6,8 +6,7 @@ interface AdvancedHeroProps {
   description: string,
   ctaText?: string,
   ctaLink?: string,
-  backgroundImage?: string,
-}
+  backgroundImage?: string}
 ,
 export default function AdvancedHero({
   title;
@@ -57,6 +56,5 @@ export default function AdvancedHero({
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

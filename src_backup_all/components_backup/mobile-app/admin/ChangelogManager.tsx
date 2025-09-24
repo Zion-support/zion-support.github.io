@@ -6,15 +6,13 @@ import { Textarea } from '@/components/ui/textarea',
 import { Plus, Trash2 } from 'lucide-react',
 import { AppPlatform } from './MetadataManager',
 interface ChangelogManagerProps {
-  platform: AppPlatform,
-}
+  platform: AppPlatform}
 ,
 type ChangelogEntry = {
   id: string,
   version: string,
   date: string,
-  changes: string,
-};
+  changes: string};
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
   platform;
 }) => {
@@ -48,8 +46,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
       changes: '';
     })};
   const handleRemoveEntry = (id: string) => {
-    setEntries(entries.filter(entry => entry.id !== id)),
-  };
+    setEntries(entries.filter(entry => entry.id !== id))};
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,

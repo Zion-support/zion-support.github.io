@@ -348,6 +348,5 @@ export default function QuantumInternetSecurity() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

@@ -12,8 +12,7 @@ type Props = {
   serverUrl: string,
   token: string,
   startMode: StartMode,
-  onLeave?: (durationSec: number) => void,
-};
+  onLeave?: (durationSec: number) => void};
 export default function CallRoom({ projectIduserIdisplayNameroomNameserverUrltokenstartModeonLeave }: Props) {
   const [roomsetRoom] = useState<Room | null>(null),
   const [participantsetParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]),
@@ -45,8 +44,7 @@ export default function CallRoom({ projectIduserIdisplayNameroomNameserverUrltok
     const r = current || room,
     if (!r) return,
     const list: Array<RemoteParticipant | LocalParticipant> = [r.localParticipant...Array.from(r.participants.values())],
-    setParticipants(list),
-  };
+    setParticipants(list)};
   useEffect(() => {
     connect(),
     return () => {
@@ -65,8 +63,7 @@ export default function CallRoom({ projectIduserIdisplayNameroomNameserverUrltok
     if (count === 2) return 'grid-cols-2',
     if (count <= 4) return 'grid-cols-2 md: grid-cols-2',
     if (count <= 6) return 'grid-cols-2 md:grid-cols-3',
-    return 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4',
-  }[participants.length]),
+    return 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4'}[participants.length]),
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 flex flex-col">,
       <div className="p-4 flex items-center justify-between border-b border-gray-800">,

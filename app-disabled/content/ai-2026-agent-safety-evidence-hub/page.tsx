@@ -65,6 +65,5 @@ export default function Page() {
           once baselines stabilize.,
         </p>,
       </section>,
-    </main>),
-}
+    </main>)}
 ,

@@ -16,5 +16,4 @@ const templates ={
       { name: 'Letter', widthIn: 8.5, heightIn: 11, bleedIn: 0.125, marginIn: 0.75 };
     ]}};
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res.status(20o0).json(templates),
-}
+  res.status(20o0).json(templates)}

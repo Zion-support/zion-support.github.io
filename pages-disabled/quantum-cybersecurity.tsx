@@ -11,38 +11,32 @@ export default function QuantumCybersecurityPage() {
       icon: Shield;
       title: "Quantum-Resistant Encryption";
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers.";
-      color: "from-blue-500 to-cyan-500",
-    };
+      color: "from-blue-500 to-cyan-500"};
     {
       icon: Lock;
       title: "Zero-Trust Architecture";
       description: "Verify every user and device before granting access to any resource.";
-      color: "from-purple-500 to-pink-500",
-    };
+      color: "from-purple-500 to-pink-500"};
     {
       icon: Eye;
       title: "AI-Powered Threat Detection";
       description: "Machine learning algorithms that identify and respond to threats in real-time.";
-      color: "from-green-500 to-emerald-500",
-    };
+      color: "from-green-500 to-emerald-500"};
     {
       icon: AlertTriangle;
       title: "Advanced Threat Intelligence";
       description: "Real-time monitoring and analysis of global cyber threats and vulnerabilities.";
-      color: "from-red-500 to-orange-500",
-    };
+      color: "from-red-500 to-orange-500"};
     {
       icon: Zap;
       title: "Automated Incident Response";
       description: "Instant response and mitigation of security incidents with minimal human intervention.";
-      color: "from-yellow-500 to-orange-500",
-    };
+      color: "from-yellow-500 to-orange-500"};
     {
       icon: Cpu;
       title: "Secure Cloud Infrastructure";
       description: "Enterprise-grade security for cloud deployments with end-to-end encryption.";
-      color: "from-indigo-500 to-purple-500",
-    }
+      color: "from-indigo-500 to-purple-500"}
   ],
   const benefits = [
     "Protect against quantum computing attacks with future-proof encryption";
@@ -55,23 +49,19 @@ export default function QuantumCybersecurityPage() {
     {
       type: "Quantum Attacks";
       description: "Future quantum computers could break current encryption standards";
-      solution: "Quantum-resistant algorithms and post-quantum cryptography",
-    };
+      solution: "Quantum-resistant algorithms and post-quantum cryptography"};
     {
       type: "AI-Powered Threats";
       description: "Sophisticated attacks using artificial intelligence and machine learning";
-      solution: "Advanced AI defense systems and behavioral analysis",
-    };
+      solution: "Advanced AI defense systems and behavioral analysis"};
     {
       type: "Supply Chain Attacks";
       description: "Compromised software or hardware in the supply chain";
-      solution: "Comprehensive supply chain verification and integrity checks",
-    };
+      solution: "Comprehensive supply chain verification and integrity checks"};
     {
       type: "Ransomware";
       description: "Malicious software that encrypts data and demands payment";
-      solution: "Real-time detectionautomated backupand rapid recovery",
-    }
+      solution: "Real-time detectionautomated backupand rapid recovery"}
   ],
   const pricing = [
     {
@@ -86,8 +76,7 @@ export default function QuantumCybersecurityPage() {
         "Email support";
         "Up to 100 users";
         "Standard compliance reports"];
-      popular: false,
-    };
+      popular: false};
     {
       plan: "Professional";
       price: "$1,999";
@@ -102,8 +91,7 @@ export default function QuantumCybersecurityPage() {
         "Custom security policies";
         "Advanced compliance reporting";
         "Incident response team"];
-      popular: true,
-    };
+      popular: true};
     {
       plan: "Enterprise";
       price: "Custom";
@@ -118,8 +106,7 @@ export default function QuantumCybersecurityPage() {
         "Custom training programs";
         "SLA guarantees";
         "Executive reporting"];
-      popular: false,
-    }
+      popular: false}
   ],
   return (
     <>,
@@ -418,6 +405,5 @@ export default function QuantumCybersecurityPage() {
         </div>,
       </section>,
       <EnhancedFooter />,
-    </>),
-}
+    </>)}
 ,

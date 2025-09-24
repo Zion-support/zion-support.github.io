@@ -82,6 +82,5 @@ export default function NeuralConsensusAIPromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

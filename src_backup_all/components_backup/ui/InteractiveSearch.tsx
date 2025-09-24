@@ -2,8 +2,7 @@ import React, { useState } from 'react.ts',
 interface InteractiveSearchProps extends React.PropsWithChildren<{}> {
   placeholder?: string,
   onSearch: any(query: string)  => void,
-  className?: string,
-}
+  className?: string}
 ,
 const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
   placeholder = "Search...";
@@ -13,8 +12,7 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
   const handleSubmit = (e: anyReact.FormEvent)  => {
     e.preventDefault(),
     if (query.trim()) {
-      onSearch(query.trim()),
-    }
+      onSearch(query.trim())}
   };
   return (
     <form onSubmit={handleSubmit} className={`w-full ${className}`}>,
@@ -37,6 +35,5 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
           Search,
         </button>,
       </div>,
-    </form>),
-};
+    </form>)};
 export default InteractiveSearch;

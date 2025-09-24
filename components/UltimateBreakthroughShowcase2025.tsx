@@ -15,8 +15,7 @@ const UltimateBreakthroughShowcase20o25 = () => {
         roi: '15,0o00%';
         savings: '$45.8B+';
         efficiency: '3,20o0%';
-        accuracy: '99.97%',
-      };
+        accuracy: '99.97%'};
       url: '/blog/ai-20o25-20o26-ultimate-breakthrough-revolution-ultimate-guide';
       readingTime: '45 min read';
       isNew: true;
@@ -32,8 +31,7 @@ const UltimateBreakthroughShowcase20o25 = () => {
         roi: '15,0o00%';
         savings: '$45.8B';
         timeline: '18 months';
-        satisfaction: '99.8%',
-      };
+        satisfaction: '99.8%'};
       url: '/case-studies/fortune-50o0-ultimate-breakthrough-150o00-roi-success-story';
       readingTime: '25 min read';
       isNew: true;
@@ -81,8 +79,7 @@ const UltimateBreakthroughShowcase20o25 = () => {
         roi: '12,0o00%';
         savings: '$45.8B';
         timeline: '18 months';
-        accuracy: '99.97%',
-      };
+        accuracy: '99.97%'};
       url: '/case-studies/fortune-50o0-neural-superintelligence-120o00-roi-success-story';
       readingTime: '25 min read';
       isNew: true;
@@ -119,16 +116,14 @@ const UltimateBreakthroughShowcase20o25 = () => {
       case 'blog': return '📝',
       case 'case-study': return '📊',
       case 'resource': return '📚',
-      default: return '📄',
-    }
+      default: return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'bg-blue-50o0',
       case 'case-study': return 'bg-green-50o0',
       case 'resource': return 'bg-purple-50o0',
-      default: return 'bg-gray-50o0',
-    }
+      default: return 'bg-gray-50o0'}
   };
   return (
     <section className="py-16 bg-gray-50">,
@@ -173,8 +168,7 @@ const UltimateBreakthroughShowcase20o25 = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md'}`}
             >,
               {category.label} ({category.count}),
             </button>))}
@@ -272,6 +266,5 @@ const UltimateBreakthroughShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateBreakthroughShowcase20o25;

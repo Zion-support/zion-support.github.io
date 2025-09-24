@@ -16,8 +16,7 @@ const NewContent20o25RoboticsRevolutionBanner = () => {
         roi: '80o0%';
         savings: '$5.2B';
         efficiency: '95%';
-        quality: '99.7%',
-      };
+        quality: '99.7%'};
       description: 'Transform manufacturing, healthcare, and service industries with AI-powered robotics achieving 80o0% ROI';
       readingTime: '18 min read';
       tags: ['AI Robotics', 'Manufacturing', 'ROI', 'Enterprise']};
@@ -30,8 +29,7 @@ const NewContent20o25RoboticsRevolutionBanner = () => {
         roi: '80o0%';
         savings: '$5.2B';
         efficiency: '95%';
-        quality: '99.7%',
-      };
+        quality: '99.7%'};
       description: 'How a global manufacturing giant revolutionized operations with AI-powered robotics';
       readingTime: '15 min read';
       tags: ['Case Study', 'Fortune 50o0', 'Manufacturing', 'Success Story']};
@@ -44,8 +42,7 @@ const NewContent20o25RoboticsRevolutionBanner = () => {
         roi: '80o0%';
         success: '98%';
         timeline: '18 months';
-        projects: '20o0+',
-      };
+        projects: '20o0+'};
       description: 'Complete framework for transforming your business with AI-powered robotics';
       readingTime: '35 min read';
       tags: ['Implementation Guide', 'Strategy', 'ROI', 'Framework']}
@@ -253,6 +250,5 @@ const NewContent20o25RoboticsRevolutionBanner = () => {
           </div>,
         </div>,
       </motion.div>,
-    </AnimatePresence>),
-};
+    </AnimatePresence>)};
 export default NewContent20o25RoboticsRevolutionBanner;

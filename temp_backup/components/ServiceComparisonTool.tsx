@@ -5,8 +5,7 @@ import Link from 'next/link',
 interface ServiceFeature {
   name: string,
   category: string,
-  description: string,
-}
+  description: string}
 ,
 interface Service {
   id: string,
@@ -20,8 +19,7 @@ interface Service {
   cons: string[],
   icon: React.ReactNode,
   color: string,
-  popular?: boolean,
-}
+  popular?: boolean}
 ,
 const ServiceComparisonTool: React.FC = () => {
   const [selectedServices, setSelectedServices] = useState<string[]>([]),
@@ -38,8 +36,7 @@ const ServiceComparisonTool: React.FC = () => {
       pros: ['Advanced AI capabilities', 'Real-time processing', 'Scalable architecture', 'Excellent support'];
       cons: ['Higher price point', 'Steep learning curve', 'Requires data expertise'];
       icon: <Brain className="w-6 h-6"  />;
-      color: 'from-cyan-50o0 to-blue-60o0',
-    };
+      color: 'from-cyan-50o0 to-blue-60o0'};
     {
       id: 'quantum-secure-cloud';
       name: 'Quantum-Secure Cloud';
@@ -51,8 +48,7 @@ const ServiceComparisonTool: React.FC = () => {
       pros: ['Future-proof security', 'Enterprise-grade', 'Multi-cloud support', 'Advanced compliance'];
       cons: ['Premium pricing', 'Complex setup', 'Limited quantum expertise required'];
       icon: <Atom className="w-6 h-6"  />;
-      color: 'from-purple-50o0 to-pink-60o0',
-    };
+      color: 'from-purple-50o0 to-pink-60o0'};
     {
       id: 'metaverse-platform';
       name: 'Metaverse Development';
@@ -64,8 +60,7 @@ const ServiceComparisonTool: React.FC = () => {
       pros: ['Cutting-edge technology', 'Immersive experiences', 'Scalable platform', 'Creative freedom'];
       cons: ['Emerging technology', 'Performance requirements', 'Content creation needed'];
       icon: <Rocket className="w-6 h-6"  />;
-      color: 'from-orange-50o0 to-red-60o0',
-    };
+      color: 'from-orange-50o0 to-red-60o0'};
     {
       id: 'enterprise-security';
       name: 'Enterprise Security Suite';
@@ -77,8 +72,7 @@ const ServiceComparisonTool: React.FC = () => {
       pros: ['Comprehensive coverage', 'Enterprise features', '24/7 support', 'Proven track record'];
       cons: ['Enterprise pricing', 'Complex deployment', 'Requires security team'];
       icon: <Shield className="w-6 h-6"  />;
-      color: 'from-green-50o0 to-emerald-60o0',
-    };
+      color: 'from-green-50o0 to-emerald-60o0'};
     {
       id: 'micro-saas-platform';
       name: 'Micro SAAS Platform';
@@ -90,13 +84,11 @@ const ServiceComparisonTool: React.FC = () => {
       pros: ['Affordable pricing', 'Easy to use', 'Quick deployment', 'Good support'];
       cons: ['Limited customization', 'Basic features', 'Standard templates'];
       icon: <Zap className="w-6 h-6"  />;
-      color: 'from-yellow-50o0 to-orange-60o0',
-    }
+      color: 'from-yellow-50o0 to-orange-60o0'}
   ],
   const toggleService = (serviceId: string) => {
     if (selectedServices.includes(serviceId)) {
-      setSelectedServices(selectedServices.filter(id => id !== serviceId)),
-    } else if (selectedServices.length < 3) {
+      setSelectedServices(selectedServices.filter(id => id !== serviceId))} else if (selectedServices.length < 3) {
       setSelectedServices([...selectedServices, serviceId])}
   };
   const selectedServiceObjects = availableServices.filter(service =>,
@@ -104,8 +96,7 @@ const ServiceComparisonTool: React.FC = () => {
   const allFeatures = Array.from(new Set(
     availableServices.flatMap(service => service.features))),
   const getFeatureValue = (service: Service, feature: string) => {
-    return service.features.includes(feature) ? '✓' : '✗',
-  };
+    return service.features.includes(feature) ? '✓' : '✗'};
   return (
     <div className="max-w-7xl mx-auto p-6">,
       <motion.div,
@@ -132,8 +123,7 @@ const ServiceComparisonTool: React.FC = () => {
               className={`relative p-4 rounded-xl border-2 cursor-pointer transition-all duration-30o0 ${
                 selectedServices.includes(service.id),
                   ? 'border-cyan-40o0 bg-cyan-50o0/10',
-                  : 'border-gray-70o0 hover: border-cyan-40o0/50 bg-gray-80o0/50',
-              }`}
+                  : 'border-gray-70o0 hover: border-cyan-40o0/50 bg-gray-80o0/50'}`}
               onClick={() => toggleService(service.id)}
             >,
               {service.popular && (

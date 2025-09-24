@@ -21,15 +21,13 @@ export interface RealInnovativeService {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string}
 ,
@@ -82,8 +80,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"];
       integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"];
@@ -91,8 +88,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "GDPR", "HIPAA", "End-to-end encryption"]};
     competitors: ["Tableau", "Power BI", "Looker", "Qlik"];
-    marketSize: "$29.9 billion by 20o25",
-  };
+    marketSize: "$29.9 billion by 20o25"};
   // AI-Powered Cybersecurity Suite,
   {
     id: "ai-cybersecurity-suite";
@@ -141,8 +137,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "Python", "Elasticsearch", "Kafka", "Docker"];
       integrations: ["SIEM", "EDR", "Firewall", "IDS/IPS", "Vulnerability scanners"];
@@ -150,8 +145,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
       uptime: "99.99%";
       security: ["SOC 2 Type II", "ISO 270o01", "NIST", "Zero Trust"]};
     competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"];
-    marketSize: "$45.2 billion by 20o25",
-  };
+    marketSize: "$45.2 billion by 20o25"};
   // AI Content Marketing Suite,
   {
     id: "ai-content-marketing-suite";
@@ -200,8 +194,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["GPT-4", "BERT", "React", "Node.js", "MongoDB"];
       integrations: ["WordPress", "Shopify", "Mailchimp", "Hootsuite", "Google Analytics"];
@@ -209,8 +202,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
       uptime: "99.8%";
       security: ["GDPR", "CCPA", "SSL", "Data encryption"]};
     competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"];
-    marketSize: "$15.8 billion by 20o25",
-  };
+    marketSize: "$15.8 billion by 20o25"};
   // AI Sales Copilot,
   {
     id: "ai-sales-copilot";
@@ -259,8 +251,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL"];
       integrations: ["Salesforce", "HubSpot", "Pipedrive", "Outreach", "Gmail"];
@@ -268,8 +259,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "GDPR", "Data encryption", "Access control"]};
     competitors: ["Gong", "Chorus", "Outreach", "SalesLoft"];
-    marketSize: "$18.3 billion by 20o25",
-  };
+    marketSize: "$18.3 billion by 20o25"};
   // AI Customer Support Platform,
   {
     id: "ai-customer-support-platform";
@@ -318,8 +308,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["NLP", "Machine Learning", "React", "Node.js", "MongoDB"];
       integrations: ["Zendesk", "Intercom", "Slack", "Teams", "Email"];
@@ -327,8 +316,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
       uptime: "99.9%";
       security: ["GDPR", "CCPA", "Data encryption", "Secure hosting"]};
     competitors: ["Intercom", "Zendesk", "Freshdesk", "Help Scout"];
-    marketSize: "$12.7 billion by 20o25",
-  };
+    marketSize: "$12.7 billion by 20o25"};
   // AI Data Analytics & BI,
   {
     id: "ai-data-analytics-bi";
@@ -377,8 +365,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"];
       integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"];
@@ -386,8 +373,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "GDPR", "HIPAA", "End-to-end encryption"]};
     competitors: ["Tableau", "Power BI", "Looker", "Qlik"];
-    marketSize: "$29.9 billion by 20o25",
-  };
+    marketSize: "$29.9 billion by 20o25"};
   // Cloud Infrastructure & DevOps,
   {
     id: "cloud-infrastructure-devops";
@@ -436,8 +422,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"];
       integrations: ["GitHub", "GitLab", "Jenkins", "Prometheus", "Grafana"];
@@ -445,8 +430,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "ISO 270o01", "NIST", "Zero Trust"]};
     competitors: ["AWS", "Azure", "GCP", "DigitalOcean"];
-    marketSize: "$178.9 billion by 20o25",
-  };
+    marketSize: "$178.9 billion by 20o25"};
   // IT Helpdesk & Support,
   {
     id: "it-helpdesk-support";
@@ -495,8 +479,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Remote desktop", "Monitoring tools", "Ticketing system", "Asset management"];
       integrations: ["Active Directory", "Office 365", "Google Workspace", "Slack"];
@@ -504,8 +487,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
       uptime: "99.5%";
       security: ["SOC 2", "HIPAA", "GDPR", "Data encryption"]};
     competitors: ["MSPs", "Internal IT", "Break-fix services"];
-    marketSize: "$25.8 billion by 20o25",
-  };
+    marketSize: "$25.8 billion by 20o25"};
   // Data Management & Backup,
   {
     id: "data-management-backup";
@@ -554,8 +536,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Backup software", "Cloud storage", "Encryption", "Monitoring tools"];
       integrations: ["Active Directory", "SQL Server", "Exchange", "File servers"];
@@ -563,8 +544,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "HIPAA", "GDPR", "End-to-end encryption"]};
     competitors: ["Veeam", "Acronis", "Backup Exec", "Cloud providers"];
-    marketSize: "$18.4 billion by 20o25",
-  };
+    marketSize: "$18.4 billion by 20o25"};
   // Network & Security Infrastructure,
   {
     id: "network-security-infrastructure";
@@ -613,8 +593,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Cisco", "Juniper", "Fortinet", "Palo Alto", "Monitoring tools"];
       integrations: ["Active Directory", "SIEM", "Firewall", "VPN", "Load balancers"];
@@ -622,8 +601,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "ISO 270o01", "NIST", "Zero Trust"]};
     competitors: ["Cisco", "Juniper", "Fortinet", "Palo Alto"];
-    marketSize: "$32.1 billion by 20o25",
-  };
+    marketSize: "$32.1 billion by 20o25"};
   // Digital Transformation Consulting,
   {
     id: "digital-transformation-consulting";
@@ -672,8 +650,7 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Assessment tools", "Strategy frameworks", "Project management", "Analytics"];
       integrations: ["Enterprise systems", "Cloud platforms", "Analytics tools", "Communication platforms"];
@@ -681,6 +658,5 @@ export const REAL_INNOVATIVE_SERVICES_20o25: RealInnovativeService[] = [
       uptime: "N/A";
       security: ["Confidentiality", "Data protection", "Secure communication"]};
     competitors: ["McKinsey", "BCG", "Bain", "Deloitte"];
-    marketSize: "$67.8 billion by 20o25",
-  }
+    marketSize: "$67.8 billion by 20o25"}
 ],

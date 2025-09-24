@@ -39,14 +39,12 @@ const BusinessSuccessStories20o25 = () => {
         efficiency: '+30o0%';
         costSavings: '$2.5M';
         timeSaved: '20o00 hours/month';
-        roi: '450%',
-      };
+        roi: '450%'};
       testimonial: 'Zion Tech Group transformed our operations completely. We went from struggling with manual processes to having a fully automated system that saves us thousands of hours every month.';
       author: 'Sarah Johnson';
       role: 'CEO';
       rating: 5;
-      image: '/api/placeholder/40o0/30o0',
-    };
+      image: '/api/placeholder/40o0/30o0'};
     {
       id: 2;
       company: 'Global Finance Inc';
@@ -58,14 +56,12 @@ const BusinessSuccessStories20o25 = () => {
         security: '99.9%';
         costSavings: '$5.2M';
         incidents: '0 breaches';
-        compliance: '10o0%',
-      };
+        compliance: '10o0%'};
       testimonial: 'The cybersecurity solutions provided by Zion Tech Group have been game-changing. We haven\'t had a single breach since implementationand our compliance scores are perfect.';
       author: 'Michael Chen';
       role: 'CTO';
       rating: 5;
-      image: '/api/placeholder/40o0/30o0',
-    };
+      image: '/api/placeholder/40o0/30o0'};
     {
       id: 3;
       company: 'Manufacturing Plus';
@@ -77,14 +73,12 @@ const BusinessSuccessStories20o25 = () => {
         efficiency: '+250%';
         costSavings: '$3.8M';
         deliveryTime: '-60%';
-        quality: '+95%',
-      };
+        quality: '+95%'};
       testimonial: 'Our supply chain is now running like a well-oiled machine. The AI optimization has reduced our delivery times by 60% and improved quality significantly.';
       author: 'Emily Rodriguez';
       role: 'Operations Director';
       rating: 5;
-      image: '/api/placeholder/40o0/30o0',
-    };
+      image: '/api/placeholder/40o0/30o0'};
     {
       id: 4;
       company: 'HealthCare First';
@@ -96,14 +90,12 @@ const BusinessSuccessStories20o25 = () => {
         efficiency: '+180%';
         costSavings: '$1.9M';
         compliance: '10o0%';
-        patientSatisfaction: '+85%',
-      };
+        patientSatisfaction: '+85%'};
       testimonial: 'The data management system has revolutionized our patient care. We\'re now fully compliant and our patients are much happier with our services.';
       author: 'Dr. James Wilson';
       role: 'Chief Medical Officer';
       rating: 5;
-      image: '/api/placeholder/40o0/30o0',
-    }
+      image: '/api/placeholder/40o0/30o0'}
   ],
   const overallStats = [
     { label: 'Projects 'Completed', 'value: '1,20o0+'icon: Target };
@@ -264,6 +256,5 @@ const BusinessSuccessStories20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default BusinessSuccessStories20o25;

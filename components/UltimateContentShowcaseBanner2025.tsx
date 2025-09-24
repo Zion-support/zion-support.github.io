@@ -144,5 +144,4 @@ export default function UltimateContentShowcaseBanner20o25() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

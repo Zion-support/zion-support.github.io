@@ -33,7 +33,7 @@ serve(async req => {
       .lt('scheduled_date', thirtyMinutesFromNow.toISOString()),
       .is('reminder_sent', null),
     if (error) throw error,
-    // console.log(
+    // // console.log(
       `Found ${interviews?.length || 0} interviews to send reminders for`),
     const results = [],
     if (interviews && interviews.length > 0) {

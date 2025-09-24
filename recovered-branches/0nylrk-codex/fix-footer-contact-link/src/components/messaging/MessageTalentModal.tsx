@@ -31,7 +31,6 @@ import { use_navigate } from './react-router-dom',
   DialogHeader,
   DialogTitle,
   DialogDescription,
-,
   Dialog;
   DialogContent;
   DialogHeader;
@@ -42,8 +41,7 @@ export interface MessageTalentModalProps {
   talent: TalentProfile,
   isOpen: boolean,
   onClose: () => void,
-  jobTitle?: string,
-}
+  jobTitle?: string}
 ,
   jobTitle}: MessageTalentModalProps) {
   const { createConversation } = useMessaging(),
@@ -72,8 +70,7 @@ export interface MessageTalentModalProps {
       toast({
         title: "Message required";
         description: "Please enter a message before sending.";
-        variant: "destructive",
-      }),
+        variant: "destructive"}),
       return}
 ,
 export interface MessageTalentModalProps {
@@ -98,8 +95,7 @@ function MessageTalentModal() {
       toast ({
         title: "Message required";
         description: "Please enter a message before sending.";
-        variant: "destructive",
-      }),
+        variant: "destructive"}),
       return}
     try {
       setIsSubmitting(true),
@@ -107,15 +103,13 @@ function MessageTalentModal() {
       const contextData = {
         title: jobTitle |`Discussion with ${talent.full_name}`,
         description: talent.bio |talent.professional_title |"",
-        image_url: talent.profile_picture_url |"",
-      }
+        image_url: talent.profile_picture_url |""}
       setIsSubmitting(true);
       // Create context data for the conversation,
       const contextData = {
         title: jobTitle || `Discussion with ${talent.full_name}`;
         description: talent.bio || talent.professional_title || "";
-        image_url: talent.profile_picture_url || "",
-      };
+        image_url: talent.profile_picture_url || ""};
       // Create conversation with this talent,
       await createConversation(
         talent.user_id;
@@ -137,8 +131,7 @@ function MessageTalentModal() {
       toast({
         title: "Message not sent",
         description: "There was an error sending your message. Please try again.",
-        variant: "destructive",
-      })} finally {
+        variant: "destructive"})} finally {
       setIsSubmitting(false)}
 }
   };
@@ -179,8 +172,7 @@ export function MessageTalentModal({
       toast({
         title: "Message required";
         description: "Please enter a message before sending.";
-        variant: "destructive",
-      });
+        variant: "destructive"});
       return}
 ,
     try {
@@ -189,8 +181,7 @@ export function MessageTalentModal({
       const contextData = {
         title: jobTitle || `Discussion with ${talent.full_name}`;
         description: talent.bio || talent.professional_title || "";
-        image_url: talent.profile_picture_url || "",
-      };
+        image_url: talent.profile_picture_url || ""};
       // Create conversation with this talent,
       await createConversation(
         talent.user_id;
@@ -208,8 +199,7 @@ export function MessageTalentModal({
       toast({
         title: "Message not sent";
         description: "There was an error sending your message. Please try again.";
-        variant: "destructive",
-      })} finally {
+        variant: "destructive"})} finally {
       setIsSubmitting(false)}
   }
 ,

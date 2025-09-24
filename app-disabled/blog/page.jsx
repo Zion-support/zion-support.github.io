@@ -177,6 +177,5 @@ const BlogPage = () => {
           </div>,
         </section>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default BlogPage;

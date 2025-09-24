@@ -221,8 +221,7 @@ export default function PortfolioPage() {
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                   selectedCategory === category,
                     ? 'bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white',
-                    : 'bg-white/5 text-white/70 hover: bg-white/10 hover:text-white',
-                }`}
+                    : 'bg-white/5 text-white/70 hover: bg-white/10 hover:text-white'}`}
               >,
                 {category}
               </button>))}
@@ -324,6 +323,5 @@ export default function PortfolioPage() {
         </div>,
       </section>,
       <EnhancedFooter />,
-    </div>),
-}
+    </div>)}
 ,

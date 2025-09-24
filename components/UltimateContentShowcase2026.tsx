@@ -254,6 +254,5 @@ const UltimateContentShowcase20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateContentShowcase20o26;

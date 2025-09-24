@@ -302,8 +302,7 @@ const UltraAdvancedFuturisticFooter20o40: React.FC = () => {
             transition={{
               duration: 4;
               repeat: -1;
-              delay: Math.random() * 3,
-            }}
+              delay: Math.random() * 3}}
            />))}
       </div>,
     </footer>)};

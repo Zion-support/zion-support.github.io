@@ -16,14 +16,12 @@ interface NavigationItem {
   title?: string,
   featured?: boolean,
   category?: string,
-  color?: string,
-}
+  color?: string}
 ,
 function normalizeHref(href: string): string {
   if (!href) return href,
   if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:')) {
-    return href,
-  }
+    return href}
   if (!href.startsWith('/')) return href,
   const hasQueryOrHash = href.includes('?') || href.includes('#'),
   if (hasQueryOrHash) return href,
@@ -45,65 +43,55 @@ const navigationItems: NavigationItem[] = [
         href: '/services';
         description: 'Complete overview of all micro SAAS solutions';
         icon: <Grid className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: 'AI Content Optimizer Pro';
         href: '/ai-content-optimizer-pro';
         description: 'AI-powered content optimization for maximum engagement';
         icon: <Brain className="w-4 h-4"  />;
         color: 'from-purple-50o0 to-pink-50o0';
-        featured: true,
-      };
+        featured: true};
       {
         name: 'Smart Inventory Manager';
         href: '/smart-inventory-manager';
         description: 'Intelligent inventory tracking and optimization';
         icon: <Package className="w-4 h-4"  />;
-        color: 'from-blue-50o0 to-cyan-50o0',
-      };
+        color: 'from-blue-50o0 to-cyan-50o0'};
       {
         label: 'Cybersecurity';
         href: '/services?category=cybersecurity';
         icon: <Shield className="w-4 h-4"  />;
-        description: 'Enterprise-grade security solutions',
-      };
+        description: 'Enterprise-grade security solutions'};
       {
         label: 'Cloud Platform';
         href: '/cloud-platform';
         icon: <Cpu className="w-4 h-4"  />;
-        description: 'Scalable cloud infrastructure',
-      };
+        description: 'Scalable cloud infrastructure'};
       {
         label: 'Space Technology';
         href: '/space-tech';
         icon: <Rocket className="w-4 h-4"  />;
-        description: 'Innovative space tech applications',
-      };
+        description: 'Innovative space tech applications'};
       {
         label: 'Q4 20o25 Innovation';
         href: '/innovative-20o25-q4-showcase';
         icon: <Sparkles className="w-4 h-4"  />;
-        description: 'Latest revolutionary services',
-      };
+        description: 'Latest revolutionary services'};
       {
         label: 'Pricing Guide';
         href: '/comprehensive-pricing-20o25-q4';
         icon: <DollarSign className="w-4 h-4"  />;
-        description: 'Comprehensive pricing for all services',
-      };
+        description: 'Comprehensive pricing for all services'};
       {
         label: 'Cybersecurity';
         href: '/cybersecurity';
         icon: <Shield className="w-4 h-4"  />;
-        description: 'Enterprise-grade security solutions',
-      };
+        description: 'Enterprise-grade security solutions'};
       {
         label: 'Cloud Platform';
         href: '/cloud-platform';
         icon: <Globe className="w-4 h-4"  />;
-        description: 'Scalable cloud infrastructure',
-      }
+        description: 'Scalable cloud infrastructure'}
     ]};
   {
     label: 'Industries';
@@ -115,32 +103,27 @@ const navigationItems: NavigationItem[] = [
         label: 'Healthcare';
         href: '/healthcare-solutions';
         icon: <Heart className="w-4 h-4"  />;
-        description: 'Medical technology solutions',
-      };
+        description: 'Medical technology solutions'};
       {
         label: 'Financial Services';
         href: '/financial-solutions';
         icon: <DollarSign className="w-4 h-4"  />;
-        description: 'Fintech and banking solutions',
-      };
+        description: 'Fintech and banking solutions'};
       {
         label: 'Manufacturing';
         href: '/manufacturing-ai-solutions';
         icon: <Factory className="w-4 h-4"  />;
-        description: 'Industry 4.0 AI solutions',
-      };
+        description: 'Industry 4.0 AI solutions'};
       {
         label: 'Government';
         href: '/government-technology-solutions';
         icon: <Building className="w-4 h-4"  />;
-        description: 'Public sector technology',
-      };
+        description: 'Public sector technology'};
       {
         label: 'Education';
         href: '/education-technology-solutions';
         icon: <GraduationCap className="w-4 h-4"  />;
-        description: 'EdTech solutions',
-      }
+        description: 'EdTech solutions'}
     ]};
   {
     label: 'Company';
@@ -152,26 +135,22 @@ const navigationItems: NavigationItem[] = [
         label: 'About Us';
         href: '/about';
         icon: <Users className="w-4 h-4"  />;
-        description: 'Our mission and values',
-      };
+        description: 'Our mission and values'};
       {
         label: 'Case Studies';
         href: '/case-studies';
         icon: <TrendingUp className="w-4 h-4"  />;
-        description: 'Success stories and results',
-      };
+        description: 'Success stories and results'};
       {
         label: 'Careers';
         href: '/careers';
         icon: <Users className="w-4 h-4"  />;
-        description: 'Join our team',
-      };
+        description: 'Join our team'};
       {
         label: 'News';
         href: '/news';
         icon: <Newspaper className="w-4 h-4"  />;
-        description: 'Latest company updates',
-      }
+        description: 'Latest company updates'}
     ]};
   {
     label: 'Resources';
@@ -183,20 +162,17 @@ const navigationItems: NavigationItem[] = [
         label: 'Blog';
         href: '/blog';
         icon: <BookOpen className="w-4 h-4"  />;
-        description: 'Latest insights and updates',
-      };
+        description: 'Latest insights and updates'};
       {
         label: 'Case Studies';
         href: '/case-studies';
         icon: <Briefcase className="w-4 h-4"  />;
-        description: 'Success stories and results',
-      };
+        description: 'Success stories and results'};
       {
         label: 'White Papers';
         href: '/white-papers';
         icon: <BookOpen className="w-4 h-4"  />;
-        description: 'In-depth research and analysis',
-      }
+        description: 'In-depth research and analysis'}
     ]};
   {
     label: 'Company';
@@ -208,14 +184,12 @@ const navigationItems: NavigationItem[] = [
         label: 'Careers';
         href: '/careers';
         icon: <Briefcase className="w-4 h-4"  />;
-        description: 'Join our team',
-      };
+        description: 'Join our team'};
       {
         label: 'News';
         href: '/news';
         icon: <Globe className="w-4 h-4"  />;
-        description: 'Company updates and announcements',
-      }
+        description: 'Company updates and announcements'}
     ]};
   {
     label: 'Contact';
@@ -223,8 +197,7 @@ const navigationItems: NavigationItem[] = [
     icon: <Phone className="w-5 h-5"  />;
     description: 'Get in touch with our team';
     category: 'company';
-    color: 'from-green-50o0 to-emerald-50o0',
-  }
+    color: 'from-green-50o0 to-emerald-50o0'}
 ],
 const UltraAdvancedFuturisticNavigation20o25: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false),
@@ -237,8 +210,7 @@ const UltraAdvancedFuturisticNavigation20o25: React.FC = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as HTMLElement)) {
-        setIsSearchOpen(false),
-      }
+        setIsSearchOpen(false)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
@@ -246,8 +218,7 @@ const UltraAdvancedFuturisticNavigation20o25: React.FC = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as HTMLElement)) {
-        setIsMobileMenuOpen(false),
-      }
+        setIsMobileMenuOpen(false)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
@@ -264,8 +235,7 @@ const UltraAdvancedFuturisticNavigation20o25: React.FC = () => {
     if (e.key === 'Escape') {
       setIsSearchOpen(false),
       setIsMobileMenuOpen(false),
-      setActiveDropdown(null),
-    }
+      setActiveDropdown(null)}
   };
   // Close mobile menu on route change,
   useEffect(() => {
@@ -299,8 +269,7 @@ const UltraAdvancedFuturisticNavigation20o25: React.FC = () => {
                   duration: 8 + i * 0.5;
                   repeat: -1;
                   delay: i * 0.3;
-                  ease: "easeInOut",
-                }}
+                  ease: "easeInOut"}}
                 style={{
                   left: `${Math.random() * 10o0}%`;
                   top: `${Math.random() * 10o0}%`}}

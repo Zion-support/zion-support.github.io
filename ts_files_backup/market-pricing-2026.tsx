@@ -43,8 +43,7 @@ export default function MarketPricing2026() {
     mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   // Calculate pricing statistics,
   const pricingStats = {
     totalServices: allServices.length;
@@ -136,8 +135,7 @@ export default function MarketPricing2026() {
                         className={`p-3 rounded-xl text-sm font-medium transition-all duration-300 ${
                           selectedCategory === category.id,
                             ? 'bg-cyan-500 text-black',
-                            : 'bg-gray-700/50 text-gray-300 hover: bg-gray-600/50',
-                        }`}
+                            : 'bg-gray-700/50 text-gray-300 hover: bg-gray-600/50'}`}
                       >,
                         <div className="flex items-center justify-center space-x-2">,
                           <category.icon className="w-4 h-4" />,
@@ -158,8 +156,7 @@ export default function MarketPricing2026() {
                         className={`w-full p-3 rounded-xl text-left transition-all duration-300 ${
                           priceRange === range.id,
                             ? 'bg-cyan-500 text-black',
-                            : 'bg-gray-700/50 text-gray-300 hover: bg-gray-600/50',
-                        }`}
+                            : 'bg-gray-700/50 text-gray-300 hover: bg-gray-600/50'}`}
                       >,
                         <div className="font-medium">{range.name}</div>,
                         <div className="text-xs opacity-75">{range.range}</div>,
@@ -402,6 +399,5 @@ export default function MarketPricing2026() {
           </div>,
         </section>,
       </div>,
-    </UltraAdvancedFuturisticBackground>),
-}
+    </UltraAdvancedFuturisticBackground>)}
 ,

@@ -34,8 +34,7 @@ interface MobileMetrics {
   touchSupport: boolean,
   connectionType: string,
   batteryLevel: number,
-  isCharging: boolean,
-}
+  isCharging: boolean}
 ,
 interface MobileExperienceEnhancerProps {
   enabled?: boolean,
@@ -71,8 +70,7 @@ export function MobileExperienceEnhancer({
       touchSupport: 'ontouchstart' in window || navigator.maxTouchPoints > 0;
       connectionType: (navigator as any).connection?.effectiveType || 'unknown';
       batteryLevel: 0;
-      isCharging: false,
-    };
+      isCharging: false};
     // Get battery information if available,
     if ('getBattery' in navigator) {
       (navigator as any).getBattery().then((battery: any) => {
@@ -162,8 +160,7 @@ export function MobileExperienceEnhancer({
       touchStartRef.current ={
         x: touch.clientX;
         y: touch.clientY;
-        time: Date.now(),
-      };
+        time: Date.now()};
     };
     const handleTouchEnd = (e: TouchEvent) => {
       if (!touchStartRef.current) return,
@@ -176,8 +173,7 @@ export function MobileExperienceEnhancer({
         if (deltaX > 0) {
           // Swipe right - go back,
           if (window.history.length > 1) {
-            window.history.back(),
-          }
+            window.history.back()}
         } else {
           // Swipe left - go forward,
           window.history.forward()}
@@ -201,8 +197,7 @@ export function MobileExperienceEnhancer({
         const target = e.target as HTMLElement,
         if (target.tagName === 'IMG') {
           target.style.transform = target.style.transform === 'scale(1.5)' ? 'scale(1)' : 'scale(1.5)',
-          target.style.transition = 'transform 0.3s ease',
-        }
+          target.style.transition = 'transform 0.3s ease'}
       }
       lastTap = currentTime};
     document.addEventListener('touchstart', handleTouchStart, { passive: true }),
@@ -306,8 +301,7 @@ export function MobileExperienceEnhancer({
                   <button
                     onClick={() => {
                       const score = calculateMobileScore(),
-                      setMobileScore(score),
-                    }}
+                      setMobileScore(score)}}
                     className="text-xs text-green-60o0 hover: text-green-70o0 dark:text-green-40o0 dark:hover:text-green-30o0">,
                     Refresh,
                   </button>,
@@ -315,16 +309,14 @@ export function MobileExperienceEnhancer({
                 <div className="flex items-center gap-3">,
                   <div className={`text-2xl font-bold ${
                     mobileScore >= 90 ? 'text-green-50o0' :,
-                    mobileScore >= 70 ? 'text-yellow-50o0' : 'text-red-50o0',
-                  }`}>,
+                    mobileScore >= 70 ? 'text-yellow-50o0' : 'text-red-50o0'}`}>,
                     {mobileScore}%,
                   </div>,
                   <div className="flex-1 bg-gray-20o0 dark: bg-gray-70o0 rounded-full h-2">,
                     <div
                       className={`h-2 rounded-full transition-all duration-30o0 ${
                         mobileScore >= 90 ? 'bg-green-50o0' :,
-                        mobileScore >= 70 ? 'bg-yellow-50o0' : 'bg-red-50o0',
-                      }`}
+                        mobileScore >= 70 ? 'bg-yellow-50o0' : 'bg-red-50o0'}`}
                       style={{ width: `${mobileScore}%` }}
                     />,
                   </div>,
@@ -465,8 +457,7 @@ export function MobileExperienceEnhancer({
               right: 0,
               bottom: 0,
               pointer-events: none,
-              z-index: 9999,
-            }
+              z-index: 9999}
 ,
             .touch-feedback-overlay: :before {
               content: '',
@@ -477,12 +468,10 @@ export function MobileExperienceEnhancer({
               border-radius: 50%,
               transform: translate(-50%, -50%),
               opacity: 0,
-              transition: opacity 0.3s ease,
-            }
+              transition: opacity 0.3s ease}
 ,
             .touch-feedback-overlay: active::before {
-              opacity: 1,
-            }
+              opacity: 1}
           `}</style>,
         </div>)}
     </>)}

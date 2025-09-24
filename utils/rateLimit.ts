@@ -16,8 +16,7 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
     // Reset or initialize,
     rateLimitMap.set(key, {
       count: 1,
-      resetTime: now + RATE_LIMIT_WINDOW,
-    }),
+      resetTime: now + RATE_LIMIT_WINDOW}),
     return true}
   if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
     res.status(429).json({ error: 'Too Many Requests' }),

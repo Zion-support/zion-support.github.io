@@ -574,8 +574,7 @@ export const getPopularEmergingTechServices = () => {
   return emergingTechServices2025.filter(service => service.popular)};
 export const getEmergingTechServicesByCategory = (category: string) => {
   return emergingTechServices2025.filter(
-    service => service.category === category),
-};
+    service => service.category === category)};
 export const getEmergingTechServicesByPriceRange = (
   minPrice: number;
   maxPrice: number) => {

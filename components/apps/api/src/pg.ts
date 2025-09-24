@@ -20,8 +20,7 @@ export async function withUser<T>(
     await client.query('COMMIT'),
     return result} catch (err: any) {
     await client.query('ROLLBACK'),
-    throw err,
-  } finally {
+    throw err} finally {
     client.release()}
 }
 ,

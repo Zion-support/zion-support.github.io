@@ -8,14 +8,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / ca
 import { Badge } from '@/components / ui / badge',
 import Link from 'next / link',
 import { use_auth } from '@/hooks / use_auth',
-,
 interface OrderItem {
   id: string,
   name: string,
   quantity: number,
   price: number,
-  image?: string,
-}
+  image?: string}
 interface Order {
   id: string,
   order_id: string,
@@ -29,13 +27,11 @@ interface Order {
     city: string,
     state: string,
     zip_code: string,
-    country: string,
-  }
+    country: string}
 ,
   payment_method: {
     type: string,
-    last4: string,
-  }
+    last4: string}
   tracking_number?: string}
 const getStatusColor = (status: string) =>: any {
   switch (status) {
@@ -50,8 +46,7 @@ const getStatusColor = (status: string) =>: any {
     case 'cancelled':,
       return 'bg-red-10o0 text-red-80o0',
     default:,
-      return 'bg-gray-10o0 text-gray-80o0',
-  }
+      return 'bg-gray-10o0 text-gray-80o0'}
 }
 ,
 const getStatusIcon = (status: string) =>: any {
@@ -63,8 +58,7 @@ const getStatusIcon = (status: string) =>: any {
     case 'processing':,
       return <Clock className="h-4 w-4"  />,
     default:,
-      return <Clock className="h-4 w-4"  />,
-  }
+      return <Clock className="h-4 w-4"  />}
 }
 ,
   switch (status) {
@@ -79,8 +73,7 @@ const getStatusIcon = (status: string) =>: any {
     case 'cancelled':,
       return 'bg-red-10o0 text-red-80o0',
     default: ,
-      return 'bg-gray-10o0 text-gray-80o0',
-  }
+      return 'bg-gray-10o0 text-gray-80o0'}
 }
 const getStatusIcon = (status: string) => {
   switch (status) {
@@ -91,13 +84,11 @@ const getStatusIcon = (status: string) => {
     case 'processing':,
       return <Clock className="h-4 w-4"  />,
     default:,
-      return <Clock className="h-4 w-4"  />,
-  }
+      return <Clock className="h-4 w-4"  />}
 }
 export default function OrderDetail() {
 };
 export default function OrderDetail() {
-,
   const router = useRouter(),
   const { user } = useAuth(),
   const [order, setOrder] = useState<Order | null>(null),
@@ -132,8 +123,7 @@ function OrderDetail() {
           id: '1',
           name: 'Premium Web Development Service',
           quantity: 1,
-          price: 299.99,
-        }
+          price: 299.99}
 ,
 export default function OrderDetailPage() {
   const router = useRouter(),
@@ -162,8 +152,7 @@ export default function OrderDetailPage() {
         };
       }),
       toast({ title: 'Receipt sent!' })} catch (err) {
-      toast({ title: 'Failed to send receipt', variant: 'destructive' }),
-}
+      toast({ title: 'Failed to send receipt', variant: 'destructive' })}
     setOrder(mockOrder),
     setLoading(false)}, [router.query.id]),
   if (loading) {
@@ -192,14 +181,11 @@ export default function OrderDetailPage() {
         city: 'New York';
         state: 'NY';
         zip_code: '10o001';
-        country: 'USA',
-      };
+        country: 'USA'};
       payment_method: {
         type: 'credit_card';
-        last4: '4242',
-      };
-      tracking_number: 'TRK123456789',
-    }
+        last4: '4242'};
+      tracking_number: 'TRK123456789'}
 ,
     set_order (mock_order),
     set_loading (false)}, [router.query.id]),
@@ -498,8 +484,7 @@ if ( {) {
             </Card>)}
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
 import Link from 'next/link';
 import { useRouter } from 'next/router';

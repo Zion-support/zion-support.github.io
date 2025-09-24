@@ -17,13 +17,11 @@ interface AnalyticsData {
     loadTime: number,
     firstContentfulPaint: number,
     largestContentfulPaint: number,
-    cumulativeLayoutShift: number,
-  };
+    cumulativeLayoutShift: number};
   deviceBreakdown: {
     desktop: number,
     mobile: number,
-    tablet: number,
-  };
+    tablet: number};
   geographicData: Array<{ country: string, visitors: number, percentage: number }>}
 ,
 interface AnalyticsProps {
@@ -67,13 +65,11 @@ const Analytics: React.FC<AnalyticsProps> = ({
       loadTime: 1.2;
       firstContentfulPaint: 0.8;
       largestContentfulPaint: 1.5;
-      cumulativeLayoutShift: 0.0o5,
-    };
+      cumulativeLayoutShift: 0.0o5};
     deviceBreakdown: {
       desktop: 65;
       mobile: 28;
-      tablet: 7,
-    };
+      tablet: 7};
     geographicData: [
       { country: 'United States', visitors: 4567, percentage: 55.4 };
       { country: 'United Kingdom', visitors: 1234, percentage: 15.0 };
@@ -99,7 +95,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
   const initializeAnalytics = useCallback(() => {
     // Initialize real analytics service here,
     // Example: Google Analytics, Mixpanel, etc.,
-    // console.log('Analytics initialized'),
+    // // console.log('Analytics initialized'),
     // Track page view,
     trackPageView(),
     // Track user session,
@@ -120,10 +116,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
       referrer: document.referrer;
       userAgent: navigator.userAgent;
       screenResolution: `${window.screen.width}x${window.screen.height}`;
-      language: navigator.language,
-    };
+      language: navigator.language};
     // Send to analytics service,
-    // console.log('Page view tracked:', pageData),
+    // // console.log('Page view tracked:', pageData),
     // Store in localStorage for demo,
     const pageViews = JSON.parse(localStorage.getItem('analytics_pageViews') || '[]'),
     pageViews.push(pageData),
@@ -136,8 +131,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       userAgent: navigator.userAgent;
       screenResolution: `${window.screen.width}x${window.screen.height}`;
       language: navigator.language;
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-    };
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone};
     localStorage.setItem('analytics_session', JSON.stringify(sessionData)),
     // Track session end on page unload,
     window.addEventListener('beforeunload', () => {
@@ -153,7 +147,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
         const entries = list.getEntries(),
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
-            // console.log('FCP:', entry.startTime)}
+            // // console.log('FCP:', entry.startTime)}
         })}),
       fcpObserver.observe({ entryTypes: ['paint'] }),
       // Largest Contentful Paint,
@@ -161,7 +155,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
         const entries = list.getEntries(),
         entries.forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
-            // console.log('LCP:', entry.startTime)}
+            // // console.log('LCP:', entry.startTime)}
         })}),
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }),
       // Cumulative Layout Shift,
@@ -170,10 +164,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
         const entries = list.getEntries(),
         entries.forEach((entry: PerformanceEntry) => {
           if ('hadRecentInput' in entry && !(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value,
-          }
+            clsValue += (entry as any).value}
         }),
-        // console.log('CLS:', clsValue)}),
+        // // console.log('CLS:', clsValue)}),
       clsObserver.observe({ entryTypes: ['layout-shift'] })}
   }, []),
   const setupUserBehaviorTracking = useCallback(() => {
@@ -186,9 +179,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
         className: target.className;
         id: target.id;
         timestamp: new Date().toISOString();
-        path: window.location.pathname,
-      };
-      // console.log('Click tracked:', clickData),
+        path: window.location.pathname};
+      // // console.log('Click tracked:', clickData),
       // Store clicks for analysis,
       const clicks = JSON.parse(localStorage.getItem('analytics_clicks') || '[]'),
       clicks.push(clickData),
@@ -199,7 +191,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 10o0),
       if (scrollDepth > maxScrollDepth) {
         maxScrollDepth = scrollDepth,
-        // console.log('Scroll depth:', maxScrollDepth + '%')}
+        // // console.log('Scroll depth:', maxScrollDepth + '%')}
     }),
     // Track form interactions,
     document.addEventListener('submit', (e) => {
@@ -208,9 +200,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
         action: form.action;
         method: form.method;
         timestamp: new Date().toISOString();
-        path: window.location.pathname,
-      };
-      // console.log('Form submission tracked:', formData)})}, []),
+        path: window.location.pathname};
+      // // console.log('Form submission tracked:', formData)})}, []),
   const refreshData = useCallback(async () => {
     if (loading) return,
     setLoading(true),
@@ -223,8 +214,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
         ...mockData;
         pageViews: mockData.pageViews + Math.floor(Math.random() * 10o0);
         uniqueVisitors: mockData.uniqueVisitors + Math.floor(Math.random() * 20);
-        sessionDuration: mockData.sessionDuration + Math.floor(Math.random() * 10) - 5,
-      };
+        sessionDuration: mockData.sessionDuration + Math.floor(Math.random() * 10) - 5};
       setData(updatedData),
       lastRefreshRef.current = new Date()} catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to refresh data')} finally {
@@ -259,10 +249,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
       navigator.share({
         title: 'Analytics Report';
         text: shareText;
-        url: window.location.href,
-      })} else {
+        url: window.location.href})} else {
       navigator.clipboard.writeText(shareText),
-      // console.log('Analytics data copied to clipboard')}
+      // // console.log('Analytics data copied to clipboard')}
   }, [data, timeRange]),
   // Don't render UI if not requested,
   if (!showUI) return null,
@@ -452,19 +441,19 @@ const Analytics: React.FC<AnalyticsProps> = ({
                         <div className="space-y-3">,
                           <div className="flex justify-between">,
                             <span className="text-gray-30o0">Load Time</span>,
-                            <span className="text-white font-semibold">{data.window.performance.loadTime}s</span>,
+                            <span className="text-white font-semibold">{data.window.window.performance.loadTime}s</span>,
                           </div>,
                           <div className="flex justify-between">,
                             <span className="text-gray-30o0">First Contentful Paint</span>,
-                            <span className="text-white font-semibold">{data.window.performance.firstContentfulPaint}s</span>,
+                            <span className="text-white font-semibold">{data.window.window.performance.firstContentfulPaint}s</span>,
                           </div>,
                           <div className="flex justify-between">,
                             <span className="text-gray-30o0">Largest Contentful Paint</span>,
-                            <span className="text-white font-semibold">{data.window.performance.largestContentfulPaint}s</span>,
+                            <span className="text-white font-semibold">{data.window.window.performance.largestContentfulPaint}s</span>,
                           </div>,
                           <div className="flex justify-between">,
                             <span className="text-gray-30o0">Cumulative Layout Shift</span>,
-                            <span className="text-white font-semibold">{data.window.performance.cumulativeLayoutShift}</span>,
+                            <span className="text-white font-semibold">{data.window.window.performance.cumulativeLayoutShift}</span>,
                           </div>,
                         </div>,
                       </div>,
@@ -507,21 +496,18 @@ interface MetricCardProps {
   icon: React.ReactNode,
   trend: 'up' | 'down' | 'stable',
   trendValue: string,
-  color: 'blue' | 'green' | 'yellow' | 'purple',
-}
+  color: 'blue' | 'green' | 'yellow' | 'purple'}
 ,
 const MetricCard: React.FC<MetricCardProps> = ({ title, value, icon, trend, trendValue, color }) => {
   const colorClasses ={
     blue: 'from-blue-50o0 to-blue-60o0';
     green: 'from-green-50o0 to-green-60o0';
     yellow: 'from-yellow-50o0 to-yellow-60o0';
-    purple: 'from-purple-50o0 to-purple-60o0',
-  };
+    purple: 'from-purple-50o0 to-purple-60o0'};
   const trendColors ={
     up: 'text-green-40o0';
     down: 'text-red-40o0';
-    stable: 'text-gray-40o0',
-  };
+    stable: 'text-gray-40o0'};
   return (
     <motion.div,
       whileHover={{ scale: 1.0o2 }}

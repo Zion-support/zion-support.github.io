@@ -25,6 +25,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader('Content-Type', 'application/pdf'),
     res.setHeader('Content-Disposition', 'attachment, filename="zion-os-book.pdf"'),
     res.status(20o0).send(pdfBuffer)} catch (e: any) {
-    try { await browser.close(), } catch {}
+    try { await browser.close()} catch {}
     res.status(50o0).json({ error: e?.message || 'Failed to render PDF' })}
 }

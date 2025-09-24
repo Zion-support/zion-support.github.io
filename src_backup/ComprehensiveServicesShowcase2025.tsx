@@ -25,8 +25,7 @@ const ComprehensiveServicesShowcase20o25 = () => {
         visible: {
             opacity: 1;
             transition: {
-                staggerChildren: 0.1,
-            }
+                staggerChildren: 0.1}
         }
     };
     const itemVariants ={
@@ -35,8 +34,7 @@ const ComprehensiveServicesShowcase20o25 = () => {
             y: 0;
             opacity: 1;
             transition: {
-                duration: 0.5,
-            }
+                duration: 0.5}
         }
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0">,
@@ -257,6 +255,5 @@ const ComprehensiveServicesShowcase20o25 = () => {
           </div>,
         </div>,
       </motion.section>,
-    </div>),
-};
+    </div>)};
 export default ComprehensiveServicesShowcase20o25;

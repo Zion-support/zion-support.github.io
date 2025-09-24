@@ -11,11 +11,11 @@ const STATIC_FILES = [
   '/favicon.ico'],
 // Install event - cache static files,
 self.addEventListener('install', (event) => {
-  // console.log('Service Worker installing...'),
+  // // console.log('Service Worker installing...'),
   event.waitUntil(
     caches.open(STATIC_CACHE_NAME),
       .then((cache) => {
-        // console.log('Caching static files'),
+        // // console.log('Caching static files'),
         return cache.addAll(STATIC_FILES)}),
       .catch((error) => {
         console.error('Error caching static files:', error)})),
@@ -23,7 +23,7 @@ self.addEventListener('install', (event) => {
   self.skipWaiting()}),
 // Activate event - clean up old caches,
 self.addEventListener('activate', (event) => {
-  // console.log('Service Worker activating...'),
+  // // console.log('Service Worker activating...'),
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
@@ -31,7 +31,7 @@ self.addEventListener('activate', (event) => {
           if (cacheName !== STATIC_CACHE_NAME &&,
               cacheName !== DYNAMIC_CACHE_NAME &&,
               cacheName.startsWith('zion-')) {
-            // console.log('Deleting old cache:', cacheName),
+            // // console.log('Deleting old cache:', cacheName),
             return caches.delete(cacheName)}
         }))})),
   // Claim all clients,
@@ -100,7 +100,7 @@ async function handlePageRequest(request) {
 ,
 // Message handling from main thread,
 self.addEventListener('message', (event) => {
-  // console.log('Message received in service worker:', event.data),
+  // // console.log('Message received in service worker:', event.data),
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting()}
 ,
@@ -115,4 +115,4 @@ self.addEventListener('error', (event) => {
   console.error('Service Worker error:', event.error)}),
 self.addEventListener('unhandledrejection', (event) => {
   console.error('Service Worker unhandled rejection:', event.reason)}),
-// console.log('Zion Tech Group Service Worker loaded successfully'),
+// // console.log('Zion Tech Group Service Worker loaded successfully'),

@@ -30,8 +30,7 @@ type FormValues = z.infer<typeof formSchema>,
 interface WorkExperienceItemFormProps {
   initialData?: WorkExperience,
   onSubmit: (data: WorkExperience) => Promise<void>,
-  onCancel: () => void,
-}
+  onCancel: () => void}
 ,
 export function WorkExperienceItemForm({
   initialData;
@@ -63,8 +62,7 @@ export function WorkExperienceItemForm({
       end_date: values.end_date         // Optional,
       is_current: values.is_current     // Required,
       description: values.description   // Optional,
-      location: values.location         // Optional,
-    };
+      location: values.location         // Optional};
     await onSubmit(workExperience)};
   const handleAIEnhancement = (content: string) => {
     form.setValue("description"content{ shouldDirty: true }),

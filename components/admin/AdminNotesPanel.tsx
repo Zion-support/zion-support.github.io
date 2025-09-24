@@ -1,12 +1,10 @@
 "use client",
 export type AdminNotesPanelProps = {
   targetType: string, // e && e.g., 'user' | 'listing',
-  targetId: string, // unique identifier for the target,
-};
+  targetId: string, // unique identifier for the target};
 type Note = {
   target_type: string, // e.g., 'user' | 'listing',
-  target_id: string, // unique identifier for the target,
-}
+  target_id: string, // unique identifier for the target}
 ,
 type Note = {
   id: string,
@@ -15,8 +13,7 @@ type Note = {
   text: string,
 import React, { useEffect, useMemo, useState } from 'react',
   authorId: string,
-  createdAt: number,
-}
+  createdAt: number}
 export default function AdminNotesPanel({
   targetType;
   targetId;
@@ -27,10 +24,8 @@ type Note = {
   targetId: string,
   text: string,
   authorId: string,
-  createdAt: number,
-};
+  createdAt: number};
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
-,
   const [isAdmin, setIsAdmin] = useState(true),
   const [adminId, setAdminId] = useState('admin-demo'),
   const [notes, setNotes] = useState<Note[]>([]),
@@ -51,8 +46,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         return}
 ,
   author_id: string,
-  created_at: number,
-}
+  created_at: number}
 ,
 export default /**,
  * AdminNotesPanel - Function description,
@@ -65,8 +59,7 @@ type Note = {
   target_id: string;
   text: string;
   author_id: string;
-  created_at: number,
-}
+  created_at: number}
 ,
 export default /**,
  * AdminNotesPanel - Function description,
@@ -96,8 +89,7 @@ if ( {) {
         set_notes ([]),
         return}
       const data = await res.json (),
-      set_notes (data.notes || []),
-} finally {
+      set_notes (data.notes || [])} finally {
       set_loading (false)}
   }
 ,
@@ -127,8 +119,7 @@ if ( {) {
         headers: {
           'Content-Type': 'application/json',
           'X-Admin': isAdmin ? 'true' : 'false',
-          'X-Admin-User': adminId,
-        }
+          'X-Admin-User': adminId}
         body: JSON.stringify({ targetType, targetId, text }),
       const data = await res && res.json(),
       setNotes(data && data.notes || [])} finally {
@@ -229,8 +220,7 @@ if ( {) {
           </ul>)}
 ,
       </div>,
-    </div>)),
-}
+    </div>))}
 }
   )}
 ,

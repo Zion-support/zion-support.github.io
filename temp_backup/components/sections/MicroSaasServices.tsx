@@ -115,8 +115,7 @@ const MicroSaasServices: React.FC<MicroSaasServicesProps> = ({
               className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-30o0 ${
                 selectedCategory === 'all',
                   ? 'bg-blue-60o0 text-white shadow-lg',
-                  : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0 hover:text-white',
-              }`}
+                  : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0 hover:text-white'}`}
             >,
               All Services,
             </button>,
@@ -127,8 +126,7 @@ const MicroSaasServices: React.FC<MicroSaasServicesProps> = ({
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-30o0 flex items-center gap-2 ${
                   selectedCategory === category,
                     ? 'bg-blue-60o0 text-white shadow-lg',
-                    : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0 hover:text-white',
-                }`}
+                    : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0 hover:text-white'}`}
               >,
                 {getCategoryIcon(category)}
                 {category}
@@ -275,6 +273,5 @@ const MicroSaasServices: React.FC<MicroSaasServicesProps> = ({
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default MicroSaasServices;

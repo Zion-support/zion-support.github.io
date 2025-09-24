@@ -15,6 +15,5 @@ export default function WalletPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

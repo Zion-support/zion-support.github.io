@@ -119,6 +119,5 @@ export default function LatestContentPromotionBanner20o26() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

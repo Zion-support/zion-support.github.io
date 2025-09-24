@@ -28,8 +28,7 @@ interface AnalyticsData {
   trend: 'up' | 'down' | 'stable',
   icon: React.ComponentType<any>,
   color: string,
-  description: string,
-}
+  description: string}
 ,
 const AdvancedAnalyticsDashboard20o26 = () => {
   const [analyticsDatasetAnalyticsData] = useState<AnalyticsData[]>([]),
@@ -49,8 +48,7 @@ const AdvancedAnalyticsDashboard20o26 = () => {
           trend: 'up';
           icon: DollarSign;
           color: 'from-green-50o0 to-emerald-50o0';
-          description: 'Monthly recurring revenue',
-        };
+          description: 'Monthly recurring revenue'};
         {
           id: 'users';
           title: 'Active Users';
@@ -59,8 +57,7 @@ const AdvancedAnalyticsDashboard20o26 = () => {
           trend: 'up';
           icon: Users;
           color: 'from-blue-50o0 to-cyan-50o0';
-          description: 'Daily active users',
-        };
+          description: 'Daily active users'};
         {
           id: 'conversion';
           title: 'Conversion Rate';
@@ -69,8 +66,7 @@ const AdvancedAnalyticsDashboard20o26 = () => {
           trend: 'down';
           icon: Target;
           color: 'from-purple-50o0 to-pink-50o0';
-          description: 'Visitor to customer conversion',
-        };
+          description: 'Visitor to customer conversion'};
         {
           id: 'pageviews';
           title: 'Page Views';
@@ -79,8 +75,7 @@ const AdvancedAnalyticsDashboard20o26 = () => {
           trend: 'up';
           icon: Eye;
           color: 'from-orange-50o0 to-red-50o0';
-          description: 'Total page views this month',
-        };
+          description: 'Total page views this month'};
         {
           id: 'sessions';
           title: 'Sessions';
@@ -89,8 +84,7 @@ const AdvancedAnalyticsDashboard20o26 = () => {
           trend: 'up';
           icon: Activity;
           color: 'from-teal-50o0 to-cyan-50o0';
-          description: 'User sessions this month',
-        };
+          description: 'User sessions this month'};
         {
           id: 'bounce';
           title: 'Bounce Rate';
@@ -99,8 +93,7 @@ const AdvancedAnalyticsDashboard20o26 = () => {
           trend: 'down';
           icon: MousePointer;
           color: 'from-indigo-50o0 to-purple-50o0';
-          description: 'Single-page sessions',
-        };
+          description: 'Single-page sessions'};
         {
           id: 'avg-session';
           title: 'Avg. Session';
@@ -109,8 +102,7 @@ const AdvancedAnalyticsDashboard20o26 = () => {
           trend: 'up';
           icon: Clock;
           color: 'from-yellow-50o0 to-orange-50o0';
-          description: 'Average session duration',
-        };
+          description: 'Average session duration'};
         {
           id: 'ai-usage';
           title: 'AI Features Used';
@@ -119,8 +111,7 @@ const AdvancedAnalyticsDashboard20o26 = () => {
           trend: 'up';
           icon: Brain;
           color: 'from-pink-50o0 to-rose-50o0';
-          description: 'AI-powered interactions',
-        }
+          description: 'AI-powered interactions'}
       ],
       setAnalyticsData(data),
       setIsLoading(false)};
@@ -130,12 +121,10 @@ const AdvancedAnalyticsDashboard20o26 = () => {
       case 'up': return <ArrowUpRight className="w-4 h-4 text-green-40o0"  />,
       case 'down': return <ArrowDownRight className="w-4 h-4 text-red-40o0"  />,
       case 'stable': return <TrendingUp className="w-4 h-4 text-gray-40o0"  />,
-      default: return <TrendingUp className="w-4 h-4 text-gray-40o0"  />,
-    }
+      default: return <TrendingUp className="w-4 h-4 text-gray-40o0"  />}
   };
   const getChangeColor = (change: number) => {
-    return change >= 0 ? 'text-green-40o0' : 'text-red-40o0',
-  };
+    return change >= 0 ? 'text-green-40o0' : 'text-red-40o0'};
   const timeframes = [
     { value: '24'h', 'label: '24 Hours' };
     { value: '7'd', 'label: '7 Days' };
@@ -171,8 +160,7 @@ const AdvancedAnalyticsDashboard20o26 = () => {
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 selectedTimeframe === timeframe.value,
                   ? 'bg-purple-50o0 text-white',
-                  : 'bg-white/10 text-gray-40o0 hover: bg-white/20 hover:text-white',
-              }`}
+                  : 'bg-white/10 text-gray-40o0 hover: bg-white/20 hover:text-white'}`}
             >,
               {timeframe.label}
             </button>))}
@@ -281,6 +269,5 @@ const AdvancedAnalyticsDashboard20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AdvancedAnalyticsDashboard20o26;

@@ -201,7 +201,7 @@ const Homepage2026: React.FC = () => {
                 <h3 className="text-2xl font-semibold text-white mb-4">IT Infrastructure Services</h3>,
                 <p className="text-gray-300 mb-6">,
                   Robust infrastructure solutions for modern digital businesses.,
-                  Edge computingzero trust securityand hybrid cloud management for enterprise-grade window.performance.,
+                  Edge computingzero trust securityand hybrid cloud management for enterprise-grade window.window.performance.,
                 </p>,
                 <div className="space-y-3 mb-6">,
                   <div className="flex items-center space-x-2 text-sm text-gray-300">,
@@ -372,6 +372,5 @@ const Homepage2026: React.FC = () => {
           </div>,
         </section>,
       </main>,
-    </Layout>),
-};
+    </Layout>)};
 export default Homepage2026;

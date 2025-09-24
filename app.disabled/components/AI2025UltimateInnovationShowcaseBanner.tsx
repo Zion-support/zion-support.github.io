@@ -13,8 +13,7 @@ const AI20o25UltimateInnovationShowcaseBanner = () => {
       url: '/blog/ai-20o25-ultimate-innovation-showcase-revolution';
       type: 'Blog Post';
       readingTime: '35 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-innovation-success';
       title: 'Fortune 50o0 AI Innovation Success Story';
@@ -23,8 +22,7 @@ const AI20o25UltimateInnovationShowcaseBanner = () => {
       url: '/case-studies/fortune-50o0-ai-innovation-showcase-420o0-roi-success-story';
       type: 'Case Study';
       readingTime: '22 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'ai-innovation-implementation-guide';
       title: 'AI Innovation Implementation Ultimate Guide';
@@ -33,8 +31,7 @@ const AI20o25UltimateInnovationShowcaseBanner = () => {
       url: '/resources/ai-innovation-implementation-ultimate-guide-20o25-20o26';
       type: 'Implementation Guide';
       readingTime: '45 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -111,8 +108,7 @@ const AI20o25UltimateInnovationShowcaseBanner = () => {
                     className={`p-3 rounded-lg cursor-pointer transition-all duration-30o0 ${
                       index === currentSlide,
                         ? 'bg-white/20 border border-white/30',
-                        : 'bg-white/5 hover: bg-white/10',
-                    }`}
+                        : 'bg-white/5 hover: bg-white/10'}`}
                     onClick={() => setCurrentSlide(index)}
                   >,
                     <div className="text-sm font-medium">{content.title}</div>,

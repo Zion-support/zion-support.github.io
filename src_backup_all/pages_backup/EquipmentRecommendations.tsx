@@ -53,7 +53,6 @@ export default function EquipmentRecommendations() {
   const [error, setError] = useState<boolean>(false);
   useEffect(() => {
     if (isAuthenticated && user?.id) {
-,
 export default function EquipmentRecommendations() { const { isAuthenticated, user  } = useAuth();
   const [ listings, setListings ] = useState<ProductListing[]>([]);
   const [ loading, setLoading ] = useState<boolean>(false);
@@ -174,5 +173,4 @@ if ( {) {
       </div>,
     </div>)}
 }
-,
 }}}}}}}}))

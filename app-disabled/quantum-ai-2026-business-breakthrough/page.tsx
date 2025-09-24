@@ -294,6 +294,5 @@ export default function QuantumAI20o26BusinessBreakthrough() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -120,6 +120,5 @@ export default function NewContent20o25ShowcaseBanner() {
           </Link>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

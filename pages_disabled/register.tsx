@@ -23,7 +23,7 @@ export default function RegisterPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     // Handle registration logic here,
-    // console.log('Registration attempt:', formData)};
+    // // console.log('Registration attempt:', formData)};
   return (
     <>,
       <Head>,
@@ -242,6 +242,5 @@ export default function RegisterPage() {
           </motion.div>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

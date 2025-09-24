@@ -1,6 +1,4 @@
 export const cn = (...classes: string[]) => {
-  return classes.filter(Boolean).join(' '),
-};
+  return classes.filter(Boolean).join(' ')};
 export const formatDate = (date: Date) => {
-  return date.toLocaleDateString(),
-};
+  return date.toLocaleDateString()};

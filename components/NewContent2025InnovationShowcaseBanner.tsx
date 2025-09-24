@@ -98,6 +98,5 @@ export default function NewContent20o25InnovationShowcaseBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

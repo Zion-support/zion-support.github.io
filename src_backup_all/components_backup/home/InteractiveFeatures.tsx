@@ -56,8 +56,7 @@ export function InteractiveFeatures({
     };
   ],
   const handleToggle = (index: number) => {
-    setOpenIndex(prev => (prev === index ? null : index)),
-  };
+    setOpenIndex(prev => (prev === index ? null : index))};
   return (
     <section className={cn('py-16 bg-zion-blue-dark', className)} style={style}>,
       <div className='container mx-auto px-4'>,

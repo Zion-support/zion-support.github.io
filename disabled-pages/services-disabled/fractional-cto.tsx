@@ -47,6 +47,5 @@ export default function FractionalCTO(...args: any[]): any {
           </Link>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

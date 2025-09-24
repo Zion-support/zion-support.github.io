@@ -17,8 +17,7 @@ export interface ComprehensiveService {
   contact: {
     phone: string,
     email: string,
-    address: string,
-  };
+    address: string};
   trialDays: number,
   setupTime: string,
   competitors: string[],
@@ -26,8 +25,7 @@ export interface ComprehensiveService {
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const comprehensiveRealServices: ComprehensiveService[] = [
   // AI & Machine Learning Services,
   {

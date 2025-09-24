@@ -317,6 +317,5 @@ const EnhancedFuturisticFooter: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </footer>),
-};
+    </footer>)};
 export default EnhancedFuturisticFooter;

@@ -28,7 +28,7 @@ const path = require('path');
 const { execSync } = require('child_process'),
 const fs = require('fs'),
 const path = require('path'),
-// console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...');
+// // console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...');
 // Function to fix merge conflicts in a file,
 function fixMergeConflicts(filePath) {
   try {
@@ -43,7 +43,7 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/[\s\S]*?[a-f0-9]+/g, '');
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      // console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
+      // // console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
       return true}
     return false} catch (error) {
     console.log (`❌ Error fixing ${file_path}: ${error.message}`);
@@ -51,7 +51,6 @@ function fixMergeConflicts(filePath) {
 }
 // Function to get all files recursively,
 function getAllFiles(dir, extensions) {
-,
   let files = [];
   try {
     const items = fs.readdirSync(dir);

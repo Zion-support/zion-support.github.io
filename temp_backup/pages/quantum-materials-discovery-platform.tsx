@@ -19,6 +19,5 @@ export default function QuantumMaterialsDiscoveryPlatform() {
       industries={['Energy', 'Semiconductors', 'Pharma', 'Aerospace']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/quantum-materials-discovery-platform',
-    />),
-}
+    />)}
 ,

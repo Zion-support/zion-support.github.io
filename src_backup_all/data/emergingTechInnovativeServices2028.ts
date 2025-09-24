@@ -20,15 +20,13 @@ export interface EmergingTechInnovativeService20o28 {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string,
   aiCapabilities?: string[],
@@ -85,8 +83,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_20o28: EmergingTechInnovativeServ
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Ethereum", "Hyperledger", "Smart Contracts", "Web3", "Cloud Computing"];
       integrations: ["ERP Systems", "WMS Platforms", "Logistics Software", "Payment Gateways"];
@@ -145,8 +142,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_20o28: EmergingTechInnovativeServ
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Computer Vision", "Machine Learning", "LIDAR", "Radar", "GPS", "Edge Computing"];
       integrations: ["Vehicle Systems", "Traffic Management", "Weather APIs", "Navigation Services"];
@@ -205,8 +201,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_20o28: EmergingTechInnovativeServ
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "Computer Vision", "Robotics", "Satellite Technology", "Ground Systems"];
       integrations: ["Satellite Networks", "Ground Stations", "Mission Control", "Data Centers"];
@@ -265,8 +260,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_20o28: EmergingTechInnovativeServ
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "Deep Learning", "Bioinformatics", "Cloud Computing", "High-Performance Computing"];
       integrations: ["Laboratory Systems", "Research Databases", "Clinical Trial Platforms", "Genetic Databases"];
@@ -325,8 +319,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_20o28: EmergingTechInnovativeServ
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "IoT Sensors", "Big Data Analytics", "Cloud Computing", "Edge Computing"];
       integrations: ["SCADA Systems", "Weather APIs", "Energy Markets", "Grid Infrastructure"];
@@ -385,8 +378,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_20o28: EmergingTechInnovativeServ
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "Big Data Analytics", "Satellite Imagery", "IoT Sensors", "Cloud Computing"];
       integrations: ["Climate Databases", "Satellite Systems", "Weather APIs", "Environmental Sensors"];
@@ -445,8 +437,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_20o28: EmergingTechInnovativeServ
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Quantum Computing", "Quantum Entanglement", "AI", "Fiber Optics", "Quantum Memory"];
       integrations: ["Classical Networks", "Quantum Repeaters", "Quantum Memories", "Detection Systems"];

@@ -15,6 +15,5 @@ export default function SentryTestPagePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

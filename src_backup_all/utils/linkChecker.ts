@@ -3,15 +3,13 @@ export interface LinkInfo {
   status: 'working' | 'broken' | 'missing' | 'external',
   page: string,
   anchor?: string,
-  error?: string,
-}
+  error?: string}
 ,
 export interface PageInfo {
   path: string,
   title: string,
   links: LinkInfo[],
-  exists: boolean,
-}
+  exists: boolean}
 ,
 export class LinkChecker {
   private baseUrl: string,
@@ -19,8 +17,7 @@ export class LinkChecker {
   private brokenLinks: LinkInfo[] = [],
   private missingPages: string[] = [],
   constructor(baseUrl: string = 'https://ziontechgroup.com') {
-    this.baseUrl = baseUrl,
-  }
+    this.baseUrl = baseUrl}
 ,
   // Check if a link is internal or external,
   isInternalLink(url: string): boolean {
@@ -34,8 +31,7 @@ export class LinkChecker {
   normalizeUrl(url: string, basePage: string): string {
     try {
       if (url.startsWith('http')) {
-        return url,
-      }
+        return url}
       if (url.startsWith('/')) {
         return `${this.baseUrl}${url}`}
       if (url.startsWith('#')) {
@@ -97,8 +93,7 @@ export class LinkChecker {
     const checkedLinks: LinkInfo[] = [],
     for (const link of links) {
       if (this.visitedUrls.has(link.url)) {
-        continue,
-      }
+        continue}
 ,
       this.visitedUrls.add(link.url),
       if (this.isInternalLink(link.url)) {
@@ -123,8 +118,7 @@ export class LinkChecker {
   // Extract page title,
   private extractPageTitle(content: string): string {
     const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i),
-    return titleMatch ? titleMatch[1].trim() : 'Untitled',
-  }
+    return titleMatch ? titleMatch[1].trim() : 'Untitled'}
 ,
   // Get analysis summary,
   getSummary() {

@@ -36,8 +36,7 @@ const AutonomousBIRevolutionBanner20o25: React.FC = () => {
       link: '/blog/ai-20o25-autonomous-business-intelligence-revolution';
       type: 'blog';
       readingTime: '28 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-success';
       title: 'Fortune 50o0 Autonomous BI Success Story';
@@ -47,13 +46,11 @@ const AutonomousBIRevolutionBanner20o25: React.FC = () => {
         roi: '1,80o0%';
         savings: '$51M';
         timeline: '18 months';
-        reliability: '99.7%',
-      };
+        reliability: '99.7%'};
       link: '/case-studies/fortune-50o0-autonomous-bi-180o0-roi-success';
       type: 'case-study';
       readingTime: '22 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'implementation-guide';
       title: 'Autonomous BI Implementation Master Guide 20o25';
@@ -63,13 +60,11 @@ const AutonomousBIRevolutionBanner20o25: React.FC = () => {
         roi: '1,80o0%';
         success: '98%';
         timeline: '18 months';
-        savings: '$51M+',
-      };
+        savings: '$51M+'};
       link: '/resources/autonomous-bi-implementation-master-guide-20o25';
       type: 'resource';
       readingTime: '35 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   const currentContent = contentSlides[currentSlide],
   if (!isVisible || isDismissed) {
@@ -169,8 +164,7 @@ const AutonomousBIRevolutionBanner20o25: React.FC = () => {
                   className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                     index === currentSlide,
                       ? 'bg-white scale-125',
-                      : 'bg-white bg-opacity-40 hover: bg-opacity-60',
-                  }`}
+                      : 'bg-white bg-opacity-40 hover: bg-opacity-60'}`}
                 />))}
             </div>,
             {/* Dismiss Button */}
@@ -183,6 +177,5 @@ const AutonomousBIRevolutionBanner20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AutonomousBIRevolutionBanner20o25;

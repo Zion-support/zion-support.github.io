@@ -7,16 +7,14 @@ export type ZionGPTUsage ={
   modelId: string,
   tokensUsed: number,
   cost: number,
-  timestamp: Date,
-};
+  timestamp: Date};
 export interface ModelConfig {
   id: ModelVersion,
   version: number,
   createdAt: string,
   baseModel: string,
   purpose: string,
-  active: boolean,
-}
+  active: boolean}
 ,
 // Get the latest active model ID for a specific purpose,
 export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): Promise<ModelVersion> {
@@ -36,8 +34,7 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
         case 'job': return 'zion-job-generator-v1',
         case 'resume': return 'zion-resume-enhancer-v1',
         case 'support': return 'zion-support-v1',
-        default: return 'gpt-3.5-turbo',
-      }
+        default: return 'gpt-3.5-turbo'}
     }
 ,
     return data.id as ModelVersion} catch (error) {
@@ -61,9 +58,7 @@ export async function logModelUsage(
         cost: cost;
         feature: feature;
         user_id: userId || null;
-        timestamp: new Date().toISOString(),
-      }),
-} catch (error) {
+        timestamp: new Date().toISOString()})} catch (error) {
     console.error('Error logging model usage:', error),
     // Non-blocking - we don't want to fail the main operation}
 }
@@ -72,8 +67,7 @@ export async function logModelUsage(
 function calculateCost(modelId: string, tokens: number): number {
   // These are example rates - adjust based on actual OpenAI pricing for fine-tuned models,
   const ratePerToken = modelId.includes('zion') ? 0.0o00016 : 0.0o00008, // Higher for fine-tuned models,
-  return tokens * ratePerToken,
-}
+  return tokens * ratePerToken}
 ,
 // Function to call ZionGPT models through Supabase Edge Function,
 export async function callZionGPT({
@@ -86,8 +80,7 @@ export async function callZionGPT({
   purpose: 'job' | 'resume' | 'support',
   maxTokens?: number,
   temperature?: number,
-  userId?: string,
-}): Promise<string> {
+  userId?: string}): Promise<string> {
   try {
     // Dynamically get the proper model ID based on purpose,
     const modelId = await getActiveModelId(purpose),

@@ -11,8 +11,7 @@ async function fetchTalentProfiles(
       .catch(() => ({ message: response.statusText })),
     throw new Error(errorData.message || `API error: ${response.status}`)}
   const data: TalentListResponse = await response.json(),
-  return data,
-}
+  return data}
 ,
 export function useTalentData(page = 1, limit = 12) {
   const { data, isLoading, error } = useQuery<TalentListResponse Error>({

@@ -659,6 +659,5 @@ export default function NeuralFinanceAI() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

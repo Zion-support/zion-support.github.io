@@ -28,15 +28,13 @@ export interface InnovativeMicroSAASService {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const innovativeMicroSAASServices20o29: InnovativeMicroSAASService[] = [
   {
@@ -406,7 +404,7 @@ export const innovativeMicroSAASServices20o29: InnovativeMicroSAASService[] = [
     price: '$599';
     period: '/month';
     description:,
-      'Revolutionary machine learning platform that leverages quantum computing to accelerate training and improve model window.performance.';
+      'Revolutionary machine learning platform that leverages quantum computing to accelerate training and improve model window.window.performance.';
     features: [
       'Quantum-enhanced ML algorithms';
       'Faster model training';

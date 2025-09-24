@@ -33,8 +33,7 @@ export default function EmailValidatorPage() {
       'gmail.com': ['gmial.comgamil.comgmai.com'],
       'yahoo.com': ['yaho.comyahooo.comyhaoo.com'],
       'hotmail.com': ['hotmai.comhotmial.comhotmeil.com'],
-      'outlook.com': ['outlok.comoutloook.comoutlok.com'],
-    }
+      'outlook.com': ['outlok.comoutloook.comoutlok.com']}
     const domain = email.split('@')[1],
     const isDisposable = disposableDomains.includes(domain),
     const hasTypo = Object.entries(commonTypos).some(([correct, typos]) =>,
@@ -48,8 +47,7 @@ export default function EmailValidatorPage() {
       score = 20,
       issues.push('Disposable email domain')} else if (hasTypo) {status = 'suspicious',
       score = 60,
-      issues.push('Possible typo in domain'),
-}
+      issues.push('Possible typo in domain')}
 ,
     // Additional checks,
     if (email.length > 254) {
@@ -122,8 +120,7 @@ if (email.length > 254) {
   const getScoreColor = (score: number) => {if (score >= 80) return 'text-green-40o0',
     if (score >= 60) return 'text-yellow-40o0',
     if (score >= 40) return 'text-orange-40o0',
-    return 'text-red-40o0',
-  }
+    return 'text-red-40o0'}
   const copyResults = () => {const resultsText = validationResults.map(result =>,
       `${result.email} - ${result.status.toUpperCase()} (Score: ${result.score})`).join('\n'),
     navigator.clipboard.writeText(resultsText)}
@@ -286,8 +283,7 @@ onClick={copyResults}
                         result.status === 'valid' ? 'border - green - 50o0 / 30 bg - green - 50o0 / 10' :,
                         result.status === 'suspicious' ? 'border - yellow - 50o0 / 30 bg - yellow - 50o0 / 10' :,
                         result.status === 'disposable' ? 'border - orange - 50o0 / 30 bg - orange - 50o0 / 10' :,
-                        'border - red - 50o0 / 30 bg - red - 50o0 / 10',
-}`}
+                        'border - red - 50o0 / 30 bg - red - 50o0 / 10'}`}
 >,
                       <div className=&quot,flex items - center justify - between mb - 2&quot>,
                         <div className=&quot,flex items - center space - x-3 & quot>,
@@ -371,7 +367,6 @@ key={index}
           </div>,
         </div>,
       </section>,
-,
       {/* Features */}
 ,
 <section className=&quot,py - 20 bg - gray - 80o0 & quot>,

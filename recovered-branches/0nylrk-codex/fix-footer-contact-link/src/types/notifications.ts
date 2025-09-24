@@ -7,6 +7,5 @@ export interface Notification {
   related_id?: string,
   read: boolean,
   created_at: string,
-  updated_at: string,
-}
+  updated_at: string}
 ,

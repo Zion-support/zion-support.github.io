@@ -44,8 +44,7 @@ export default function MicroSaasServicesPage() {
       marketPrice: '$29-299/month';
       competitors: ['Jasper AICopy.ai', 'Writesonic'];
       website: 'https://ai-content.ziontech.ai';
-      demo: 'https://demo.ai-content.ziontech.ai',
-    };
+      demo: 'https://demo.ai-content.ziontech.ai'};
     {
       id: 'performance-monitor';
       name: 'Website Performance Monitor';
@@ -68,9 +67,8 @@ export default function MicroSaasServicesPage() {
       };
       marketPrice: '$19-149/month';
       competitors: ['PingdomGTmetrix', 'WebPageTest'];
-      website: 'https://window.window.window.window.performance.ziontech.ai';
-      demo: 'https://demo.window.window.window.window.performance.ziontech.ai',
-    };
+      website: 'https://window.window.window.window.window.performance.ziontech.ai';
+      demo: 'https://demo.window.window.window.window.window.performance.ziontech.ai'};
     {
       id: 'seo-analytics';
       name: 'SEO Analytics Dashboard';
@@ -94,8 +92,7 @@ export default function MicroSaasServicesPage() {
       marketPrice: '$39-199/month';
       competitors: ['AhrefsSEMrush', 'Moz'];
       website: 'https://seo.ziontech.ai';
-      demo: 'https://demo.seo.ziontech.ai',
-    };
+      demo: 'https://demo.seo.ziontech.ai'};
     {
       id: 'api-rate-limiter';
       name: 'API Rate Limiter';
@@ -119,8 +116,7 @@ export default function MicroSaasServicesPage() {
       marketPrice: '$25-199/month';
       competitors: ['KongTyk', 'AWS API Gateway'];
       website: 'https://rate-limiter.ziontech.ai';
-      demo: 'https://demo.rate-limiter.ziontech.ai',
-    };
+      demo: 'https://demo.rate-limiter.ziontech.ai'};
     {
       id: 'email-marketing';
       name: 'Email Marketing Automation';
@@ -144,8 +140,7 @@ export default function MicroSaasServicesPage() {
       marketPrice: '$29-199/month';
       competitors: ['MailchimpConvertKit', 'ActiveCampaign'];
       website: 'https://email.ziontech.ai';
-      demo: 'https://demo.email.ziontech.ai',
-    };
+      demo: 'https://demo.email.ziontech.ai'};
     {
       id: 'social-media-scheduler';
       name: 'Social Media Scheduler';
@@ -169,46 +164,39 @@ export default function MicroSaasServicesPage() {
       marketPrice: '$19-129/month';
       competitors: ['BufferHootsuite', 'Later'];
       website: 'https://social.ziontech.ai';
-      demo: 'https://demo.social.ziontech.ai',
-    }
+      demo: 'https://demo.social.ziontech.ai'}
   ];
   const marketInsights = [
     {
       title: 'AI Content Generation';
       marketSize: '$1.2B';
       growth: '+23%';
-      description: 'Rapidly growing market with increasing demand for automated content creation',
-    };
+      description: 'Rapidly growing market with increasing demand for automated content creation'};
     {
       title: 'Performance Monitoring';
       marketSize: '$3.8B';
       growth: '+18%';
-      description: 'Essential for modern web applications and user experience optimization',
-    };
+      description: 'Essential for modern web applications and user experience optimization'};
     {
       title: 'SEO Analytics';
       marketSize: '$2.1B';
       growth: '+21%';
-      description: 'Critical for digital marketing and search engine optimization',
-    };
+      description: 'Critical for digital marketing and search engine optimization'};
     {
       title: 'API Management';
       marketSize: '$4.2B';
       growth: '+25%';
-      description: 'Growing demand for API security and traffic management',
-    };
+      description: 'Growing demand for API security and traffic management'};
     {
       title: 'Email Marketing';
       marketSize: '$7.5B';
       growth: '+15%';
-      description: 'Mature market with strong automation and personalization trends',
-    };
+      description: 'Mature market with strong automation and personalization trends'};
     {
       title: 'Social Media Management';
       marketSize: '$2.8B';
       growth: '+19%';
-      description: 'Increasing need for multi-platform social media coordination',
-    }
+      description: 'Increasing need for multi-platform social media coordination'}
   ];
   return (
     <>,
@@ -456,5 +444,4 @@ export default function MicroSaasServicesPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}

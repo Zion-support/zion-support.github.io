@@ -163,8 +163,7 @@ const AI20o25RevolutionaryContentShowcase = () => {
       case 'resource':,
         return <ArrowRight className='w-4 h-4' />,
       default:,
-        return <Star className='w-4 h-4' />,
-    }
+        return <Star className='w-4 h-4' />}
   };
   const getBadgeColor = (badge: string) => {
     switch (badge) {
@@ -181,8 +180,7 @@ const AI20o25RevolutionaryContentShowcase = () => {
       case 'SUCCESS':,
         return 'bg-gradient-to-r from-green-50o0 to-teal-60o0',
       default:,
-        return 'bg-gradient-to-r from-gray-50o0 to-gray-60o0',
-    }
+        return 'bg-gradient-to-r from-gray-50o0 to-gray-60o0'}
   };
   return (
     <div className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -234,8 +232,7 @@ const AI20o25RevolutionaryContentShowcase = () => {
               className={`px-6 py-3 rounded-full font-medium transition-all duration-20o0 ${
                 activeFilter === filter.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md'}`}
             >,
               {filter.label} ({filter.count}),
             </button>))}
@@ -246,8 +243,7 @@ const AI20o25RevolutionaryContentShowcase = () => {
             <div
               key={item.id}
               className={`bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-30o0 transform hover:scale-10o5 ${
-                item.featured ? 'ring-2 ring-purple-50o0 ring-opacity-50' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-50o0 ring-opacity-50' : ''}`}
             >,
               <div className='p-6'>,
                 {/* Header */}
@@ -344,6 +340,5 @@ const AI20o25RevolutionaryContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o25RevolutionaryContentShowcase;

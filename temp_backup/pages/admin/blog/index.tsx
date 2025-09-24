@@ -50,8 +50,7 @@ export default function AdminBlog() {
       setPosts(list.items || []),
       alert('Saved')} else {
       const err = await res.json().catch(() => ({})),
-      alert('Error: ' + (err.error || res.statusText)),
-    }
+      alert('Error: ' + (err.error || res.statusText))}
   };
   const startEdit = (p?: BlogPost) => {
     if (p) setEditing(p),

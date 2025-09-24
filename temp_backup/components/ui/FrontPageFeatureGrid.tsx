@@ -3,8 +3,7 @@ import Link from 'next/link',
 interface AppPageMeta {
   route: string,
   title: string,
-  category: string,
-}
+  category: string}
 ,
 const FrontPageFeatureGrid: React.FC = () => {
   const [pages, setPages] = useState<AppPageMeta[]>([]),
@@ -16,8 +15,7 @@ const FrontPageFeatureGrid: React.FC = () => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`),
         const data = await res.json(),
         setPages(Array.isArray(data.pages) ? data.pages : [])} catch (e: any) {
-        setError(e?.message || 'Failed to load'),
-      }
+        setError(e?.message || 'Failed to load')}
     }
     load()}, []),
   if (error) {

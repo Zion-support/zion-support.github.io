@@ -27,31 +27,27 @@ export default function MarketPricing() {
           pricing: '$0.002-$0.02 per 1K tokens';
           strengths: ['Advanced language 'models', 'Strong brand 'recognition', 'Large user base'];
           weaknesses: ['Limited consciousness 'features', 'High API 'costs', 'Privacy concerns'];
-          rating: 4.2,
-        };
+          rating: 4.2};
         {
           name: 'Anthropic';
           marketShare: '18%';
           pricing: '$0.015-$0.03 per 1K tokens';
           strengths: ['Safety-focused 'approach', 'Constitutional 'AI', 'Research-driven'];
           weaknesses: ['Smaller model 'variety', 'Limited enterprise 'features', 'Higher pricing'];
-          rating: 4.0,
-        };
+          rating: 4.0};
         {
           name: 'Zion Tech Group';
           marketShare: '12%';
           pricing: '$0.008-$0.015 per 1K tokens';
           strengths: ['True AI 'consciousness', 'Enterprise-grade 'security', 'Competitive pricing'];
           weaknesses: ['Smaller market 'presence', 'Limited brand 'recognition', 'Newer player'];
-          rating: 4.8,
-        }
+          rating: 4.8}
       ];
       pricingAnalysis: {
         lowEnd: '$0.005 per 1K tokens';
         midRange: '$0.015 per 1K tokens';
         highEnd: '$0.025 per 1K tokens';
-        ourPosition: 'Mid-range with premium features',
-      }
+        ourPosition: 'Mid-range with premium features'}
     };
     'quantum-computing': {
       marketSize: '$8.7B';
@@ -65,31 +61,27 @@ export default function MarketPricing() {
           pricing: '$1.60 per quantum hour';
           strengths: ['Established 'infrastructure', 'Qiskit 'ecosystem', 'Research partnerships'];
           weaknesses: ['Limited qubit 'count', 'High 'costs', 'Complex access'];
-          rating: 4.1,
-        };
+          rating: 4.1};
         {
           name: 'Google';
           marketShare: '22%';
           pricing: '$2.00 per quantum hour';
           strengths: ['Quantum 'supremacy', 'Advanced 'algorithms', 'Research focus'];
           weaknesses: ['Limited commercial 'access', 'High 'pricing', 'Complex setup'];
-          rating: 4.3,
-        };
+          rating: 4.3};
         {
           name: 'Zion Tech Group';
           marketShare: '8%';
           pricing: '$1.20 per quantum hour';
           strengths: ['Competitive 'pricing', 'Enterprise 'focus', 'Simplified access'];
           weaknesses: ['Smaller 'infrastructure', 'Limited qubit 'variety', 'Newer platform'];
-          rating: 4.5,
-        }
+          rating: 4.5}
       ];
       pricingAnalysis: {
         lowEnd: '$0.80 per quantum hour';
         midRange: '$1.50 per quantum hour';
         highEnd: '$2.50 per quantum hour';
-        ourPosition: 'Competitive mid-range pricing',
-      }
+        ourPosition: 'Competitive mid-range pricing'}
     };
     'autonomous-systems': {
       marketSize: '$23.1B';
@@ -103,31 +95,27 @@ export default function MarketPricing() {
           pricing: '$420-$1,200 per user/month';
           strengths: ['Market 'leader', 'Comprehensive 'platform', 'Strong partnerships'];
           weaknesses: ['High 'costs', 'Complex 'implementation', 'Limited AI features'];
-          rating: 4.0,
-        };
+          rating: 4.0};
         {
           name: 'Automation Anywhere';
           marketShare: '20%';
           pricing: '$750-$1,500 per user/month';
           strengths: ['Enterprise 'focus', 'Cloud-'native', 'Security features'];
           weaknesses: [', 'Expensive', 'Steep learning 'curve', 'Limited customization'];
-          rating: 3.8,
-        };
+          rating: 3.8};
         {
           name: 'Zion Tech Group';
           marketShare: '6%';
           pricing: '$350-$800 per user/month';
           strengths: ['AI-powered 'automation', 'Competitive 'pricing', 'Easy implementation'];
           weaknesses: ['Smaller 'ecosystem', 'Limited 'integrations', 'Newer platform'];
-          rating: 4.4,
-        }
+          rating: 4.4}
       ];
       pricingAnalysis: {
         lowEnd: '$300 per user/month';
         midRange: '$750 per user/month';
         highEnd: '$1,200 per user/month';
-        ourPosition: 'Competitive pricing with AI advantages',
-      }
+        ourPosition: 'Competitive pricing with AI advantages'}
     };
     'enterprise-it': {
       marketSize: '$1.2T';
@@ -141,39 +129,34 @@ export default function MarketPricing() {
           pricing: '$22-$57 per user/month';
           strengths: ['Market 'dominance', 'Integrated 'ecosystem', 'Global presence'];
           weaknesses: ['Complex 'licensing', 'High 'costs', 'Vendor lock-in'];
-          rating: 4.2,
-        };
+          rating: 4.2};
         {
           name: 'Salesforce';
           marketShare: '18%';
           pricing: '$25-$300 per user/month';
           strengths: ['CRM 'leadership', 'Cloud-'native', 'Extensive integrations'];
           weaknesses: [', 'Expensive', 'Complex 'pricing', 'Implementation costs'];
-          rating: 4.1,
-        };
+          rating: 4.1};
         {
           name: 'Zion Tech Group';
           marketShare: '3%';
           pricing: '$18-$45 per user/month';
           strengths: ['AI-powered 'features', 'Competitive 'pricing', 'Modern architecture'];
           weaknesses: ['Smaller 'ecosystem', 'Limited 'integrations', 'Newer player'];
-          rating: 4.3,
-        }
+          rating: 4.3}
       ];
       pricingAnalysis: {
         lowEnd: '$20 per user/month';
         midRange: '$40 per user/month';
         highEnd: '$100 per user/month';
-        ourPosition: 'Competitive pricing with AI advantages',
-      }
+        ourPosition: 'Competitive pricing with AI advantages'}
     }
   };
   const currentMarket = marketData[selectedMarket as keyof typeof marketData],
   const getGrowthIcon = (trend: string) => {
     return trend === 'up' ?,
       <TrendingUp className="w-5 h-5 text-green-400" /> :,
-      <TrendingDown className="w-5 h-5 text-red-400" />,
-  };
+      <TrendingDown className="w-5 h-5 text-red-400" />};
   const getRatingStars = (rating: number) => {
     return Array.from({ length: 5 }(_i) => (
       <Star
@@ -685,16 +668,13 @@ export default function MarketPricing() {
               {[
                 {
                   title: 'Competitive Pricing';
-                  description: 'Positioned in the mid-range with premium features that justify our pricing strategy.',
-                };
+                  description: 'Positioned in the mid-range with premium features that justify our pricing strategy.'};
                 {
                   title: 'AI-First Approach';
-                  description: 'Unique focus on AI consciousness and emotional intelligence sets us apart from competitors.',
-                };
+                  description: 'Unique focus on AI consciousness and emotional intelligence sets us apart from competitors.'};
                 {
                   title: 'Enterprise Focus';
-                  description: 'Built specifically for enterprise needs with securityscalabilityand compliance features.',
-                }
+                  description: 'Built specifically for enterprise needs with securityscalabilityand compliance features.'}
               ].map((advantageindex) => (
                 <div key={index} className="p-4 rounded-xl bg-white/5 border border-white/10">,
                   <h4 className="font-semibold text-cyan-400 mb-2">{advantage.title}</h4>,
@@ -791,6 +771,5 @@ export default function MarketPricing() {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default MarketPricing;

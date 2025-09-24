@@ -1,8 +1,7 @@
 module.exports ={
   experimental: {
     esmExternals: false;
-    optimizeCss: true,
-  };
+    optimizeCss: true};
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback ={
@@ -18,8 +17,7 @@ module.exports ={
         https: false;
         assert: false;
         os: false;
-        path: false,
-      };
+        path: false};
     }
 ,
     // Handle polyfills,
@@ -29,12 +27,9 @@ module.exports ={
     return config};
   images: {
     domains: ['localhost'];
-    unoptimized: true,
-  };
+    unoptimized: true};
   typescript: {
-    ignoreBuildErrors: false,
-  };
+    ignoreBuildErrors: false};
   eslint: {
-    ignoreDuringBuilds: false,
-  }
+    ignoreDuringBuilds: false}
 };

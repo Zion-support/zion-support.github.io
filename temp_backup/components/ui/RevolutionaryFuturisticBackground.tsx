@@ -3,8 +3,7 @@ import { motion } from 'framer-motion',
 interface RevolutionaryFuturisticBackgroundProps {
   children: React.ReactNode,
   variant?: 'quantum' | 'holographic' | 'cyberpunk' | 'neural' | 'quantum-holographic',
-  intensity?: 'low' | 'medium' | 'high',
-}
+  intensity?: 'low' | 'medium' | 'high'}
 ,
 const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgroundProps> = ({
   children;
@@ -28,8 +27,7 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
       size: number,
       color: string,
       life: number,
-      maxLife: number,
-    }> = [],
+      maxLife: number}> = [],
     // Holographic grid system,
     const gridPoints: Array<{ x: number, y: number, phase: number }> = [],
     // Initialize particles,
@@ -42,8 +40,7 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
         size: Math.random() * 3 + 1;
         color: `hsl(${Math.random() * 360}, 70%, 60%)`;
         life: Math.random() * 10o0;
-        maxLife: 10o0,
-      })}
+        maxLife: 10o0})}
 ,
     // Initialize grid points,
     for (let x = 0, x < canvas.width, x += 50) {
@@ -51,8 +48,7 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
         gridPoints.push({
           x;
           y;
-          phase: Math.random() * Math.PI * 2,
-        })}
+          phase: Math.random() * Math.PI * 2})}
     }
 ,
     const animate = () => {
@@ -182,8 +178,7 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
           gridPoints.push({
             x;
             y;
-            phase: Math.random() * Math.PI * 2,
-          })}
+            phase: Math.random() * Math.PI * 2})}
       }
     };
     window.addEventListener('resize', handleResize),
@@ -210,8 +205,7 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/30 rounded-full",
@@ -221,8 +215,7 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-1/3 w-40 h-40 border border-pink-40o0/20 transform rotate-45",
@@ -232,8 +225,7 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
       </div>,
       {/* Quantum field effects */}
@@ -246,8 +238,7 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-purple-40o0/10",
@@ -258,8 +249,7 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
             duration: 8;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 2,
-          }}
+            delay: 2}}
          />,
       </div>,
       {/* Content */}

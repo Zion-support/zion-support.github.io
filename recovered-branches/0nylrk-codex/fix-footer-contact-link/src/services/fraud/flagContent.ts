@@ -16,7 +16,7 @@ export const flagContent = async (
   reason: string;
   ipAddress?: string): Promise<FlagResult> => {
   try {
-    // console.log('Flagging content for review:', {
+    // // console.log('Flagging content for review:', {
       userId;
       contentType;
       contentId;
@@ -32,15 +32,13 @@ export const flagContent = async (
       reason;
       ip_address: ipAddress;
       timestamp: new Date().toISOString();
-      status: 'pending',
-    }),
+      status: 'pending'}),
     if (error) throw error,
     return { success: true };
   } catch (error) {
     console.error('Error flagging content:', error),
     return {
       success: false;
-      error: error instanceof Error ? error.message : 'Unknown error',
-    };
+      error: error instanceof Error ? error.message : 'Unknown error'};
   }
 };

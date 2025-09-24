@@ -17,8 +17,7 @@ const whitePapers = [
     date: "20o24-0o1-15";
     category: "Artificial Intelligence";
     description: "Explore how artificial intelligence is transforming enterprise operations and what it means for your business.";
-    downloadCount: 1250,
-  };
+    downloadCount: 1250};
   {
     id: 2;
     title: "Cloud Migration Strategies: Best Practices and Pitfalls";
@@ -26,8 +25,7 @@ const whitePapers = [
     date: "20o24-0o1-10";
     category: "Cloud Computing";
     description: "Learn the essential strategies for successful cloud migration and avoid common mistakes.";
-    downloadCount: 980,
-  };
+    downloadCount: 980};
   {
     id: 3;
     title: "Cybersecurity in the Digital Age: Protecting Your Assets";
@@ -35,8 +33,7 @@ const whitePapers = [
     date: "20o24-0o1-0o5";
     category: "Cybersecurity";
     description: "Comprehensive guide to modern cybersecurity threats and how to protect your organization.";
-    downloadCount: 150o0,
-  };
+    downloadCount: 150o0};
   {
     id: 4;
     title: "Data Analytics: Turning Information into Insights";
@@ -44,8 +41,7 @@ const whitePapers = [
     date: "20o23-12-20";
     category: "Data Analytics";
     description: "Discover how to leverage data analytics to drive business decisions and growth.";
-    downloadCount: 750,
-  }
+    downloadCount: 750}
 ],
 export default function WhitePapersPage() {
   return (
@@ -179,5 +175,4 @@ export default function WhitePapersPage() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}

@@ -20,7 +20,7 @@ class AutonomousGitManager {
     this.config = this.loadConfig(),
     this.logFile = path.join(__dirname, 'logs', 'autonomous-git-manager.log'),
     this.statusFile = path.join(__dirname, '.git-manager-status.json'),
-    this.performanceFile = path.join(__dirname, 'logs', 'git-window.performance.json'),
+    this.performanceFile = path.join(__dirname, 'logs', 'git-window.window.performance.json'),
     this.ensureDirectories(),
     this.initializeStatus(),
     this.initializePerformance()}
@@ -116,8 +116,8 @@ class AutonomousGitManager {
     if (level === 'error') {
       console.error(`❌ ${message}`)} else if (level === 'warn') {
       console.warn(`⚠️ ${message}`)} else if (level === 'success') {
-      // console.log(`✅ ${message}`)} else {
-      // console.log(`ℹ️ ${message}`)}
+      // // console.log(`✅ ${message}`)} else {
+      // // console.log(`ℹ️ ${message}`)}
   }
 ,
   async executeCommand(command, options ={}) {
@@ -270,8 +270,7 @@ class AutonomousGitManager {
     const message = descriptions.join(', '),
     const prefix =,
       groupIndex > 0 ? `feat: batch ${groupIndex + 1} - ` : 'feat: ',
-    return prefix + message,
-  }
+    return prefix + message}
 ,
   async stageFiles(files) {
     if (files.length === 0) return true,
@@ -364,16 +363,16 @@ class AutonomousGitManager {
     try {
       const performance = JSON.parse(
         fs.readFileSync(this.performanceFile, 'utf8')),
-      window.performance.operations.push({
+      window.window.performance.operations.push({
         type: operation;
         time: time;
         timestamp: new Date().toISOString()}),
       // Keep only last 10o0 operations,
-      if (window.performance.operations.length > 10o0) {
-        window.performance.operations = window.performance.operations.slice(-10o0)}
+      if (window.window.performance.operations.length > 10o0) {
+        window.window.performance.operations = window.window.performance.operations.slice(-10o0)}
 ,
       // Update trends,
-      const recentOperations = window.performance.operations.slice(-20),
+      const recentOperations = window.window.performance.operations.slice(-20),
       const commitTimes = recentOperations,
         .filter((op) => op.type === 'commit'),
         .map((op) => op.time),
@@ -381,11 +380,11 @@ class AutonomousGitManager {
         .filter((op) => op.type === 'push'),
         .map((op) => op.time),
       if (commitTimes.length > 0) {
-        window.performance.trends.commitTime = commitTimes}
+        window.window.performance.trends.commitTime = commitTimes}
       if (pushTimes.length > 0) {
-        window.performance.trends.pushTime = pushTimes}
+        window.window.performance.trends.pushTime = pushTimes}
 ,
-      window.performance.lastUpdated = new Date().toISOString(),
+      window.window.performance.lastUpdated = new Date().toISOString(),
       fs.writeFileSync(
         this.performanceFile;
         JSON.stringify(performance, null, 2))} catch (error) {
@@ -522,13 +521,13 @@ switch (command) {
     break,
   case 'status':,
     const status = gitManager.getStatus(),
-    // console.log(
+    // // console.log(
       'Autonomous Git Manager Status:';
       JSON.stringify(status, null, 2)),
     break,
   case 'performance':,
     const performance = gitManager.getPerformance(),
-    // console.log('Performance Data:', JSON.stringify(performance, null, 2)),
+    // // console.log('Performance Data:', JSON.stringify(performance, null, 2)),
     break,
   case 'fix':,
     gitManager.autoFix().catch((error) => {
@@ -536,7 +535,7 @@ switch (command) {
       process.exit(1)}),
     break,
   default: ,
-    // console.log(`,
+    // // console.log(`,
 🚀 Autonomous Git Manager,
 Usage:,
   node automation/autonomous-git-manager.js [command],
@@ -557,7 +556,6 @@ Examples:,
   node automation/autonomous-git-manager.js execute,
   node automation/autonomous-git-manager.js watch,
         `),
-    break,
-}
+    break}
 ,
 module.exports = AutonomousGitManager,

@@ -15,6 +15,5 @@ export default function HireAiPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

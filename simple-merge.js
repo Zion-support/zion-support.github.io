@@ -1,10 +1,10 @@
 
 const { execSync } = require('child_process'),
-// console.log('🚀 Starting simple merge process...'),
+// // console.log('🚀 Starting simple merge process...'),
 try {// Check git status,
-  // console.log('📊 Checking git status...'),
+  // // console.log('📊 Checking git status...'),
   const status = execSync('git status --porcelain', { encoding: 'utf8' }),
-  // console.log('Git status:', status |'Clean working directory'),
+  // // console.log('Git status:', status |'Clean working directory'),
   // Fetch latest changes,
   console.log ('📥 Fetching latest changes...');
   exec_sync ('git fetch --all --prune');
@@ -30,5 +30,4 @@ try {// Check git status,
           console.log (`Resolving conflicts in: ${file}`);
           try {
             exec_sync (`git checkout --ours "${file}"`)} catch (e) {
-            exec_sync (`git checkout --theirs "${file}"`),
-}}}}}}
+            exec_sync (`git checkout --theirs "${file}"`)}}}}}}

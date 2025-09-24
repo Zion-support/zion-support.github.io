@@ -16,8 +16,7 @@ export function useEducation() {
     education: Education): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to add education'),
-      return false,
-    }
+      return false}
 ,
     setIsLoading(true),
     setError(null),
@@ -48,8 +47,7 @@ export function useEducation() {
     education: Education): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to update education'),
-      return false,
-    }
+      return false}
 ,
     setIsLoading(true),
     setError(null),
@@ -80,8 +78,7 @@ export function useEducation() {
   const deleteEducation = async (eduId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to delete education'),
-      return false,
-    }
+      return false}
 ,
     setIsLoading(true),
     setError(null),

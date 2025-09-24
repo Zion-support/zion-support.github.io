@@ -272,6 +272,5 @@ const EnhancedFooter: React.FC = () => {
         aria-label='Scroll to top'>,
         <ArrowUp className='w-5 h-5' />,
       </button>,
-    </footer>),
-};
+    </footer>)};
 export default EnhancedFooter;

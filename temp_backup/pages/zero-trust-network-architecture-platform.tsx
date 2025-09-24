@@ -22,6 +22,5 @@ export default function ZeroTrustNetworkArchitecturePlatformPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

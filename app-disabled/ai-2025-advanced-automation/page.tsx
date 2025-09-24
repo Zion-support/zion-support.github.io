@@ -177,6 +177,5 @@ export default function AI20o25AdvancedAutomationPage() {
           </Link>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

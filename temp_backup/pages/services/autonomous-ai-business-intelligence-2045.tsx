@@ -22,6 +22,5 @@ export default function AutonomousAiBusinessIntelligence20o45Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

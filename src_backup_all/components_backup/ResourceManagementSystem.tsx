@@ -56,8 +56,7 @@ interface Resource {
   tags: string[],
   description: string,
   manager: string,
-  utilization: number,
-}
+  utilization: number}
 ,
 interface ResourceStats {
   totalResources: number,
@@ -108,8 +107,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         tags: ['AI', 'Machine Learning', 'Development'];
         description: 'Expert team specializing in AI and machine learning development';
         manager: 'Sarah Johnson';
-        utilization: 80,
-      };
+        utilization: 80};
       {
         id: '2';
         name: 'Cloud Infrastructure Cluster';
@@ -126,8 +124,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         tags: ['Cloud', 'AWS', 'Infrastructure'];
         description: 'High-performance cloud computing cluster for enterprise applications';
         manager: 'Michael Chen';
-        utilization: 75,
-      };
+        utilization: 75};
       {
         id: '3';
         name: 'Cybersecurity Suite';
@@ -144,8 +141,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         tags: ['Security', 'Threat Detection', 'Monitoring'];
         description: 'Comprehensive cybersecurity monitoring and threat detection system';
         manager: 'David Kim';
-        utilization: 85,
-      };
+        utilization: 85};
       {
         id: '4';
         name: 'Data Center Facility';
@@ -162,8 +158,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         tags: ['Data Center', 'Facility', 'Infrastructure'];
         description: 'Primary data center facility with redundant power and cooling';
         manager: 'Lisa Thompson';
-        utilization: 0,
-      };
+        utilization: 0};
       {
         id: '5';
         name: 'DevOps Tools Suite';
@@ -180,8 +175,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         tags: ['DevOps', 'CI/CD', 'Automation'];
         description: 'Complete DevOps toolchain for continuous integration and deployment';
         manager: 'Alex Wong';
-        utilization: 90,
-      }
+        utilization: 90}
     ],
     setResources(sampleResources),
     setFilteredResources(sampleResources)}, []),
@@ -222,8 +216,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         .map(([name, count]) => ({
           name;
           count;
-          percentage: (count / resources.length) * 10o0,
-        })),
+          percentage: (count / resources.length) * 10o0})),
         .sort((a, b) => b.count - a.count),
         .slice(0, 5)})()};
   // Get status color and icon,
@@ -249,8 +242,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       case 'software': return <Database className="w-5 h-5"  />,
       case 'equipment': return <Briefcase className="w-5 h-5"  />,
       case 'facility': return <Building className="w-5 h-5"  />,
-      default: return <Globe className="w-5 h-5"  />,
-    }
+      default: return <Globe className="w-5 h-5"  />}
   };
   // Get priority color,
   const getPriorityColor = (priority: string) => {
@@ -259,8 +251,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       case 'medium': return 'text-yellow-40o0 bg-yellow-40o0/20',
       case 'high': return 'text-orange-40o0 bg-orange-40o0/20',
       case 'critical': return 'text-red-40o0 bg-red-40o0/20',
-      default: return 'text-zinc-40o0 bg-zinc-40o0/20',
-    }
+      default: return 'text-zinc-40o0 bg-zinc-40o0/20'}
   };
   // Format currency,
   const formatCurrency = (amount: number) => {
@@ -268,15 +259,13 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       style: 'currency';
       currency: 'USD';
       minimumFractionDigits: 0;
-      maximumFractionDigits: 0,
-    }).format(amount)};
+      maximumFractionDigits: 0}).format(amount)};
   // Get utilization color,
   const getUtilizationColor = (utilization: number) => {
     if (utilization >= 90) return 'text-red-40o0',
     if (utilization >= 75) return 'text-yellow-40o0',
     if (utilization >= 50) return 'text-blue-40o0',
-    return 'text-green-40o0',
-  };
+    return 'text-green-40o0'};
   return (
     <div className="w-full max-w-7xl mx-auto p-6">,
       {/* Header */}
@@ -299,8 +288,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-30o0 ${
                   viewMode === mode.id,
                     ? 'bg-zion-cyan text-white',
-                    : 'text-zinc-40o0 hover: text-white hover:bg-zinc-80o0/50',
-                }`}
+                    : 'text-zinc-40o0 hover: text-white hover:bg-zinc-80o0/50'}`}
               >,
                 {mode.icon}
                 {mode.label}

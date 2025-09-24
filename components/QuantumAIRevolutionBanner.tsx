@@ -130,6 +130,5 @@ export default function QuantumAIRevolutionBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

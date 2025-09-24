@@ -20,16 +20,13 @@ export interface Dispute {
   resolution_type: ResolutionType,
   project?: {
     title?: string,
-    scope_summary?: string,
-  };
+    scope_summary?: string};
   client_profile?: {
     display_name: string,
-    avatar_url?: string,
-  };
+    avatar_url?: string};
   talent_profile?: {
     display_name: string,
-    avatar_url?: string,
-  };
+    avatar_url?: string};
 }
 ,
 export interface DisputeMessage {
@@ -41,8 +38,7 @@ export interface DisputeMessage {
   is_admin_note: boolean,
   user_profile?: {
     display_name: string,
-    avatar_url?: string,
-  };
+    avatar_url?: string};
 }
 ,
 export interface DisputeAttachment {
@@ -54,8 +50,7 @@ export interface DisputeAttachment {
   file_type: string,
   file_size: number,
   created_at: string,
-  url?: string,
-}
+  url?: string}
 ,
 export type DisputeReason =,
   | 'milestone_quality',

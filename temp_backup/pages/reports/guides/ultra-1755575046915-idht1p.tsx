@@ -57,6 +57,5 @@ export default function UltraGuidePage() {
           </a>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

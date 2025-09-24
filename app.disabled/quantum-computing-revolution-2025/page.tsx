@@ -236,6 +236,5 @@ export default function QuantumComputingRevolution20o25Page() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

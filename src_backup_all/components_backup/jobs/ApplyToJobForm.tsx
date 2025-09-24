@@ -20,8 +20,7 @@ import { Job } from '@/types/jobs',
 import { toast } from 'sonner',
 interface ApplyToJobFormProps {
   job: Job,
-  onSuccess?: () => void,
-}
+  onSuccess?: () => void}
 ,
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const { user } = useAuth(),
@@ -60,8 +59,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       }
     } catch (err: any) {
       setError(err.message || 'Failed to submit application'),
-      toast.error('Failed to submit application'),
-    } finally {
+      toast.error('Failed to submit application')} finally {
       setIsSubmitting(false)}
   };
   return (

@@ -48,20 +48,17 @@ const EnhancedTestimonialsSection: React.FC = () => {
       icon: Award;
       title: 'Industry Recognition';
       description: 'Awarded "Best AI Solutions Provider" by TechCrunch';
-      highlight: '20o24',
-    };
+      highlight: '20o24'};
     {
       icon: Users;
       title: 'Client Satisfaction';
       description: '98% client retention rate with 5-star average rating';
-      highlight: '98%',
-    };
+      highlight: '98%'};
     {
       icon: TrendingUp;
       title: 'Growth Impact';
       description: 'Average 250% ROI improvement for our clients';
-      highlight: '250%',
-    }
+      highlight: '250%'}
   ],
   const companies = [
     'TechStart Inc.';
@@ -202,6 +199,5 @@ const EnhancedTestimonialsSection: React.FC = () => {
           </motion.button>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default EnhancedTestimonialsSection;

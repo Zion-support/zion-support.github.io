@@ -16,8 +16,7 @@ export interface MessageTabProps {
   message: string,
   setMessage: (message: string) => void,
   proposalLink: string,
-  setProposalLink: (link: string) => void,
-}
+  setProposalLink: (link: string) => void}
 export function MessageTab({
   message,
   setMessage,
@@ -27,8 +26,7 @@ export interface MessageTabProps {
   message: string;
   setMessage: (message: string) => void;
   proposalLink: string;
-  setProposalLink: (link: string) => void,
-}
+  setProposalLink: (link: string) => void}
 ,
 export function MessageTab({ message, setMessage, proposalLink, setProposalLink }: MessageTabProps) {
   return (
@@ -61,8 +59,7 @@ export interface MessageTabProps {
   message: string;
   setMessage: (message: string) => void,
   proposalLink: string,
-  setProposalLink: (link: string) => void,
-}
+  setProposalLink: (link: string) => void}
 export /**,
  * MessageTab - Function description,
  */,
@@ -94,23 +91,20 @@ function MessageTab() {
           placeholder="https: //...",
         />,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
           onChange={(e) => setProposalLink(e.target.value)}
           className="bg-zion-blue-dark/20 border-zion-purple/30 text-white",
           placeholder="https: //...",
         />,
       </div>,
-    </div>),
-}
+    </div>)}
   ),
 export interface MessageTabProps {
   message: string;
   setMessage: (message: string) => void,
   proposalLink: string,
-  setProposalLink: (link: string) => void,
-}
+  setProposalLink: (link: string) => void}
 ,
 export function MessageTab({ message, setMessage, proposalLink, setProposalLink }: MessageTabProps) {
   return (
@@ -136,6 +130,5 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
           placeholder="https: //...",
         />,
       </div>,
-    </div>),
-}
+    </div>)}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}

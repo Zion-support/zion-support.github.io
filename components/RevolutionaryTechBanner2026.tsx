@@ -17,20 +17,17 @@ const RevolutionaryTechBanner20o26 = () => {
       title: "Quantum AI Processing";
       description: "Revolutionary quantum computing meets artificial intelligence";
       icon: <Rocket className="w-6 h-6"  />;
-      color: "from-purple-50o0 to-pink-50o0",
-    };
+      color: "from-purple-50o0 to-pink-50o0"};
     {
       title: "Neural Interface Technology";
       description: "Direct brain-computer interaction for unprecedented control";
       icon: <Sparkles className="w-6 h-6"  />;
-      color: "from-blue-50o0 to-cyan-50o0",
-    };
+      color: "from-blue-50o0 to-cyan-50o0"};
     {
       title: "Autonomous Business Systems";
       description: "Self-managing AI that evolves with your business needs";
       icon: <Target className="w-6 h-6"  />;
-      color: "from-green-50o0 to-emerald-50o0",
-    }
+      color: "from-green-50o0 to-emerald-50o0"}
   ],
   const achievements = [
     { number: "20o26"label: "Revolutionary Year" };
@@ -177,6 +174,5 @@ const RevolutionaryTechBanner20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </motion.section>),
-};
+    </motion.section>)};
 export default RevolutionaryTechBanner20o26;

@@ -31,38 +31,32 @@ const ENHANCEMENT_TASKS = [
     name: 'Performance Optimization';
     description: 'Implement advanced performance monitoring and optimization';
     components: ['AdvancedPerformanceOptimizer', 'PerformanceMonitor'];
-    priority: 'high',
-  };
+    priority: 'high'};
   {
     name: 'AI Content Generation';
     description: 'Add AI-powered content generation capabilities';
     components: ['AIContentGenerator'];
-    priority: 'high',
-  };
+    priority: 'high'};
   {
     name: 'Analytics Dashboard';
     description: 'Implement comprehensive analytics and reporting';
     components: ['AdvancedAnalyticsDashboard'];
-    priority: 'medium',
-  };
+    priority: 'medium'};
   {
     name: 'SEO Enhancement';
     description: 'Advanced SEO optimization and meta tag management';
     components: ['EnhancedSEO'];
-    priority: 'high',
-  };
+    priority: 'high'};
   {
     name: 'UI/UX Improvements';
     description: 'Enhanced loading states and error handling';
     components: ['EnhancedLoadingSpinner', 'EnhancedErrorBoundary'];
-    priority: 'medium',
-  };
+    priority: 'medium'};
   {
     name: 'Interactive Features';
     description: 'Add interactive calculators and tools';
     components: ['InteractiveAICalculator'];
-    priority: 'low',
-  }
+    priority: 'low'}
 ],
 class EnhancementAutomation {
   constructor() {
@@ -72,7 +66,7 @@ class EnhancementAutomation {
   log(message) {
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] ${message}`,
-    // console.log(logMessage),
+    // // console.log(logMessage),
     // Append to log file,
     try {
       fs.appendFileSync(CONFIG.logFile, logMessage + '\n')} catch (error) {
@@ -200,9 +194,8 @@ class EnhancementAutomation {
         'enhance:performance': 'node scripts/performance-optimization.js';
         'enhance:seo': 'node scripts/seo-optimization.js';
         'enhance:ui': 'node scripts/ui-enhancement.js';
-        'analyze:performance': 'node scripts/analyze-window.performance.js';
-        'generate: content': 'node scripts/content-generation.js',
-      };
+        'analyze:performance': 'node scripts/analyze-window.window.performance.js';
+        'generate: content': 'node scripts/content-generation.js'};
       if (!packageJson.scripts) {
         packageJson.scripts ={};
       }
@@ -270,8 +263,7 @@ export default function EnhancedDemoPage() {
       </div>,
     </EnhancedErrorBoundary>)}`,
       fs.writeFileSync(enhancedPagePath, enhancedPageContent),
-      this.log('✅ Created enhanced demonstration page'),
-} catch (error) {
+      this.log('✅ Created enhanced demonstration page')} catch (error) {
       this.log(`❌ Error creating enhanced page: ${error.message}`),
       throw error}
   }
@@ -311,8 +303,7 @@ ${Object.entries({
   'enhance:seo': 'SEO optimization automation';
   'enhance:ui': 'UI enhancement automation';
   'analyze:performance': 'Performance analysis tools';
-  'generate: content': 'Content generation automation',
-}).map(([script, description]) => `- \`${script}\`: ${description}`).join('\n')}
+  'generate: content': 'Content generation automation'}).map(([script, description]) => `- \`${script}\`: ${description}`).join('\n')}
 ,
 ## Files Modified,
 - \`app/page.tsx\`: Updated with new component integrations,
@@ -349,8 +340,7 @@ For issues or questions about the enhancements, please refer to the documentatio
       await this.generateEnhancementReport(),
       this.log('🎉 Comprehensive enhancement completed successfully!'),
       this.log('📋 Check ENHANCEMENT_REPORT.md for detailed information'),
-      this.log('🚀 Run "npm run enhance:all" to re-run the enhancement process'),
-    } catch (error) {
+      this.log('🚀 Run "npm run enhance:all" to re-run the enhancement process')} catch (error) {
       this.log(`❌ Enhancement failed: ${error.message}`),
       process.exit(1)}
   }

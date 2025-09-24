@@ -18,8 +18,7 @@ export interface AdditionalService {
   contactInfo?: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
 }
 ,
 export const ADDITIONAL_MICRO_SAAS_SERVICES_20o25: AdditionalService[] = [

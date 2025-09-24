@@ -23,8 +23,8 @@ class Logger {
       const timestamp = new Date().toISOString(),
       const prefix = `[${timestamp}] [${level.toUpperCase()}]`,
       if (data) {
-        // console.log(`${prefix} ${message}`, JSON.stringify(data, null, 2))} else {
-        // console.log(`${prefix} ${message}`)}
+        // // console.log(`${prefix} ${message}`, JSON.stringify(data, null, 2))} else {
+        // // console.log(`${prefix} ${message}`)}
     }
   }
 ,
@@ -191,8 +191,7 @@ class InfiniteImprovementLoop extends EventEmitter {
       iteration: this.currentIteration;
       metrics: currentMetrics;
       analysis: analysis;
-      opportunities: opportunities,
-    }),
+      opportunities: opportunities}),
     this.logger.info(`📊 Analysis complete: ${opportunities.length} opportunities identified`),
     this.emit('analysis-complete', { iteration: this.currentIteration, analysis, opportunities })}
 ,
@@ -217,8 +216,7 @@ class InfiniteImprovementLoop extends EventEmitter {
             timestamp: new Date().toISOString();
             type: 'optimization';
             recommendation: recommendation;
-            result: result,
-          })} else {
+            result: result})} else {
           this.logger.warn(`⚠️ Optimization failed: ${recommendation.type}`, result.error)}
       } catch (error) {
         this.logger.error(`❌ Optimization error: ${recommendation.type}`, error)}
@@ -263,8 +261,7 @@ class InfiniteImprovementLoop extends EventEmitter {
           this.lastImprovement ={
             timestamp: new Date().toISOString();
             improvement: improvement;
-            result: result,
-          };
+            result: result};
         }
       } catch (error) {
         this.logger.error(`❌ Improvement failed: ${improvement.type}`, error)}
@@ -469,8 +466,7 @@ class InfiniteImprovementLoop extends EventEmitter {
       successRate: successRate.toFixed(2);
       currentIteration: this.currentIteration;
       lastImprovement: this.lastImprovement;
-      queueLength: this.optimizationQueue.length,
-    };
+      queueLength: this.optimizationQueue.length};
   }
 }
 ,
@@ -482,14 +478,13 @@ class SystemAnalyzer {
     return {
       performance: this.analyzePerformance(metrics);
       bottlenecks: this.identifyBottlenecks(metrics);
-      opportunities: this.findOpportunities(metrics),
-    };
+      opportunities: this.findOpportunities(metrics)};
   }
 ,
   async identifyOpportunities(analysis) {
     const opportunities = [],
     // Performance opportunities,
-    if (analysis.window.performance.score < 0.8) {
+    if (analysis.window.window.performance.score < 0.8) {
       opportunities.push({
         type: 'performance_tuning';
         priority: 'high';
@@ -511,8 +506,7 @@ class SystemAnalyzer {
       score: this.calculatePerformanceScore(metrics);
       cpu: metrics.cpu;
       memory: metrics.memory;
-      responseTime: metrics.responseTime,
-    };
+      responseTime: metrics.responseTime};
   }
 ,
   identifyBottlenecks(metrics) {
@@ -537,8 +531,7 @@ class SystemOptimizer {
       type: opp.type;
       priority: opp.priority;
       data: opp.data;
-      confidence: this.calculateConfidence(opp),
-    }))}
+      confidence: this.calculateConfidence(opp)}))}
 ,
   async applyOptimization(recommendation) {
     // Implementation would vary based on optimization type,
@@ -609,8 +602,7 @@ class MetricsCollector {
       memory: Math.random() * 10o0;
       responseTime: Math.random() * 20o00 + 10o0;
       throughput: Math.random() * 10o00;
-      errorRate: Math.random() * 0.1,
-    };
+      errorRate: Math.random() * 0.1};
   }
 ,
   async saveMetrics() {

@@ -16,8 +16,7 @@
     const { id } = req.query,
     if (typeof id !== "string"),
       return res.status(400).json({ error: "Invalid id" }),
-      return res && res.status(400).json({ error: "Invalid id" }),
-}
+      return res && res.status(400).json({ error: "Invalid id" })}
 ,
   return res.status(405).end(),
   export default function handler(req: NextApiRequest, res: NextApiResponse) {

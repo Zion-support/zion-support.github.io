@@ -15,6 +15,5 @@ export default function AccessibilityScannerPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

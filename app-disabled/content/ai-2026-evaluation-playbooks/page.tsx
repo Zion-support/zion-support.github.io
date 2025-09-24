@@ -65,6 +65,5 @@ export default function EvaluationPlaybooks20o26() {
           </div>,
         </div>,
       </section>,
-    </main>),
-}
+    </main>)}
 ,

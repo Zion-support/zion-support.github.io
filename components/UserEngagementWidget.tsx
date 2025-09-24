@@ -10,8 +10,7 @@ interface EngagementMetrics {
   comments: number,
   likes: number,
   bookmarks: number,
-  downloads: number,
-}
+  downloads: number}
 ,
 export default function UserEngagementWidget() {
   const [metricsetMetrics] = useState<EngagementMetrics>({

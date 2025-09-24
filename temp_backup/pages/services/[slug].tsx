@@ -32,8 +32,7 @@ interface SimpleService {
   useCases: string[],
   integrations: string[],
   link: string,
-  category: string,
-}
+  category: string}
 ,
 // Mock service data for now to fix build issues,
 const mockService: SimpleService = {
@@ -46,8 +45,7 @@ const mockService: SimpleService = {
   useCases: ['Contact sales team'];
   integrations: ['Coming soon'];
   link: '/contact';
-  category: 'General',
-};
+  category: 'General'};
 		.concat(realEnterpriseServices2025 as unknown as Service[]),
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[]),
 		.concat(realMarketAugmentations2025 as unknown as Service[]),
@@ -96,8 +94,7 @@ export async function getStaticPaths() {
 ,
 	return {
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } }));
-		fallback: false,
-	};
+		fallback: false};
         <div className="text-center mb-10">,
           <h1 className="text-4xl md: text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">,
             {service.name}
@@ -218,8 +215,7 @@ export async function getStaticPaths() {
           </div>,
         </div>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 =======}
 ,
 export async function getStaticProps({ params }: { params: { slug: string } }) {
@@ -228,8 +224,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 	let service: Service | undefined = services.find((s) => {
 		if (!s.link) return false,
 		const fromLink = extractServiceSlugFromLink(s.link),
-		return fromLink === incomingSlug,
-	}),
+		return fromLink === incomingSlug}),
 	if (!service) {
 		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)}
 ,

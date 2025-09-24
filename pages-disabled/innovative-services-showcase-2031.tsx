@@ -507,6 +507,5 @@ const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {
           </div>,
         </section>,
       </div>,
-    </>),
-};
+    </>)};
 export default InnovativeServicesShowcase20o31;

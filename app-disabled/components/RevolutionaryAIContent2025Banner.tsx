@@ -191,6 +191,5 @@ const RevolutionaryAIContent20o25Banner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryAIContent20o25Banner;

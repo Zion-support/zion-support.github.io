@@ -110,8 +110,7 @@ export default function CloudMigrationPage() {
         </ul>,
       </div>,
       <Pricing  />,
-    </section>),
-}
+    </section>)}
 ,
 function Item({ title, details }: { title: string, details: string[] }) {
   return (
@@ -249,8 +248,7 @@ function Plan({
   features}: {
   name: string,
   price: string,
-  features: string[],
-}) {
+  features: string[]}) {
   return (
     <div
       style={{

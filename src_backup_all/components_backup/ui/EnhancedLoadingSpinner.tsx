@@ -16,14 +16,12 @@ export function EnhancedLoadingSpinner({
     sm: 'w-8 h-8';
     md: 'w-16 h-16';
     lg: 'w-32 h-32';
-    xl: 'w-48 h-48',
-  };
+    xl: 'w-48 h-48'};
   const textSizes ={
     sm: 'text-xs';
     md: 'text-sm';
     lg: 'text-lg';
-    xl: 'text-xl',
-  };
+    xl: 'text-xl'};
   if (variant === 'minimal') {
     return (
       <div className="flex items-center justify-center">,

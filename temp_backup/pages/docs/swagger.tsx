@@ -15,6 +15,5 @@ export default function SwaggerPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

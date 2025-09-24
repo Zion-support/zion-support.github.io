@@ -108,6 +108,5 @@ export default function NewContent20o25BreakthroughBanner() {
           </Link>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

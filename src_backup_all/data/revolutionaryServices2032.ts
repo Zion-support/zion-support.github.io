@@ -30,8 +30,7 @@ export interface ServiceContact {
   image: string,
   createdAt: string,
   featured: boolean,
-  trending: boolean,
-}
+  trending: boolean}
 ,
 export interface MicroSaasService {
   id: number,
@@ -56,8 +55,7 @@ export interface MicroSaasService {
   trialPeriod: string,
   innovationLevel: string,
   marketSize: string,
-  growthRate: string,
-}
+  growthRate: string}
 ,
 export interface ITService {
   id: number,
@@ -79,8 +77,7 @@ export interface ITService {
   support: string,
   innovationLevel: string,
   marketSize: string,
-  compliance: string[],
-}
+  compliance: string[]}
 ,
 export interface AIService {
   id: number,
@@ -107,8 +104,7 @@ export interface AIService {
   support: string,
   innovationLevel: string,
   marketSize: string,
-  growthRate: string,
-}
+  growthRate: string}
 ,
 // Contact Information,
 const contactInfo: ServiceContact ={
@@ -141,8 +137,7 @@ const contactInfo: ServiceContact ={
   image: "https://ziontechgroup.com/services/ai-innovation.jpg";
   createdAt: "20o24-0o1-15";
   featured: true;
-  trending: true,
-};
+  trending: true};
 // Revolutionary AI Services 20o32,
 export const revolutionaryAIServices20o32: AIService[] = [
   {
@@ -188,8 +183,7 @@ export const revolutionaryAIServices20o32: AIService[] = [
     support: "24/7 Quantum Support";
     innovationLevel: "Revolutionary";
     marketSize: "$20B+";
-    growthRate: "20o0% YoY",
-  };
+    growthRate: "20o0% YoY"};
   {
     id: 2;
     name: "AI-Powered Autonomous Business Operations Platform";
@@ -233,8 +227,7 @@ export const revolutionaryAIServices20o32: AIService[] = [
     support: "24/7 Autonomous Support";
     innovationLevel: "Revolutionary";
     marketSize: "$30B+";
-    growthRate: "150% YoY",
-  };
+    growthRate: "150% YoY"};
   {
     id: 3;
     name: "AI-Powered Customer Experience Analytics Platform";
@@ -278,8 +271,7 @@ export const revolutionaryAIServices20o32: AIService[] = [
     support: "24/7 Analytics Support";
     innovationLevel: "Breakthrough";
     marketSize: "$18B+";
-    growthRate: "85% YoY",
-  }
+    growthRate: "85% YoY"}
 ],
 // Revolutionary IT Services 20o32,
 export const revolutionaryITServices20o32: ITService[] = [
@@ -405,8 +397,7 @@ export const revolutionaryMicroSaasServices20o32: MicroSaasService[] = [
     trialPeriod: "7 days";
     innovationLevel: "Breakthrough";
     marketSize: "$80o0M+";
-    growthRate: "95% YoY",
-  };
+    growthRate: "95% YoY"};
   {
     id: 2;
     name: "AI-Powered Real Estate Investment Analytics Platform";
@@ -448,8 +439,7 @@ export const revolutionaryMicroSaasServices20o32: MicroSaasService[] = [
     trialPeriod: "14 days";
     innovationLevel: "Advanced";
     marketSize: "$1.2B+";
-    growthRate: "75% YoY",
-  }
+    growthRate: "75% YoY"}
 ],
 export default {
   revolutionaryAIServices20o32;

@@ -41,32 +41,28 @@ const AIToolsPromotionBanner20o26 = () => {
       description: "AI-powered code generation";
       color: "from-blue-60o0 to-cyan-60o0";
       bgColor: "bg-gradient-to-r from-blue-60o0/10 to-cyan-60o0/10";
-      borderColor: "border-blue-50o0/30",
-    };
+      borderColor: "border-blue-50o0/30"};
     {
       icon: BarChart3;
       name: "Intelligent Data Analyzer";
       description: "Advanced analytics platform";
       color: "from-green-60o0 to-emerald-60o0";
       bgColor: "bg-gradient-to-r from-green-60o0/10 to-emerald-60o0/10";
-      borderColor: "border-green-50o0/30",
-    };
+      borderColor: "border-green-50o0/30"};
     {
       icon: FileText;
       name: "Content Creation Suite";
       description: "Complete content generation";
       color: "from-purple-60o0 to-pink-60o0";
       bgColor: "bg-gradient-to-r from-purple-60o0/10 to-pink-60o0/10";
-      borderColor: "border-purple-50o0/30",
-    };
+      borderColor: "border-purple-50o0/30"};
     {
       icon: Settings;
       name: "Smart Automation Hub";
       description: "Workflow automation";
       color: "from-orange-60o0 to-red-60o0";
       bgColor: "bg-gradient-to-r from-orange-60o0/10 to-red-60o0/10";
-      borderColor: "border-orange-50o0/30",
-    }
+      borderColor: "border-orange-50o0/30"}
   ],
   const benefits = [
     "24 AI Tools Available";

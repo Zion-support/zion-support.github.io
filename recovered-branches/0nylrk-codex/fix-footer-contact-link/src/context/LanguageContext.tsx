@@ -63,11 +63,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
             .update({ preferred_language: currentLanguage }),
             .eq('id'user.id),
           if (error) {
-            console.error('Error updating language preference: 'error),
-          }
+            console.error('Error updating language preference: 'error)}
         } catch (err) {
-          console.error('Error syncing language with profile: 'err),
-        }
+          console.error('Error syncing language with profile: 'err)}
       }
     };
     syncLanguageWithProfile()}[currentLanguageisAuthenticateduser]),
@@ -88,12 +86,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
           .update({ preferred_language: lang }),
           .eq('id'user.id),
         if (error) {
-          console.error('Error updating language preference: 'error),
-        }
+          console.error('Error updating language preference: 'error)}
       }
     } catch (err) {
-      console.error('Error changing language: 'err),
-    }
+      console.error('Error changing language: 'err)}
   };
   return (
     <LanguageContext.Provider,

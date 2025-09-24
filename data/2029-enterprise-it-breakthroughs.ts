@@ -16,14 +16,12 @@ export interface EnterpriseITBreakthroughService2029 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
   category: string,
   technology: string[],
   benefits: string[],
   useCases: string[],
-  enterpriseCapabilities: string[],
-}
+  enterpriseCapabilities: string[]}
 export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughService2029[] =,
   [
     {

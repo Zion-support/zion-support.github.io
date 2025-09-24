@@ -504,6 +504,5 @@ export default function AIFinancialAdvisoryPlatform20o29() {
         </div>,
       </section>,
       <UltraFuturisticFooter20o29 />,
-    </>),
-}
+    </>)}
 ,

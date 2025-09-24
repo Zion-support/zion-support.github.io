@@ -18,12 +18,10 @@ export interface SpecializedITInfrastructureService20o25 {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   websiteUrl: string,
   demoUrl?: string,
-  documentationUrl?: string,
-}
+  documentationUrl?: string}
 ,
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o25: SpecializedITInfrastructureService20o25[] = [
   // Edge Computing Infrastructure Platform,
@@ -79,10 +77,8 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o25: SpecializedITInfrastr
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/edge-computing-infrastructure",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/edge-computing-infrastructure"};
   // Quantum Network Infrastructure,
   {
     id: "quantum-network-infrastructure";
@@ -127,10 +123,8 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o25: SpecializedITInfrastr
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/quantum-network-infrastructure",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/quantum-network-infrastructure"};
   // 5G Enterprise Infrastructure Solutions,
   {
     id: "5g-enterprise-infrastructure-solutions";
@@ -175,10 +169,8 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o25: SpecializedITInfrastr
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/5g-enterprise-infrastructure",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/5g-enterprise-infrastructure"};
   // Hybrid Cloud Infrastructure Platform,
   {
     id: "hybrid-cloud-infrastructure-platform";
@@ -223,10 +215,8 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o25: SpecializedITInfrastr
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/hybrid-cloud-infrastructure",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/hybrid-cloud-infrastructure"};
   // AI-Powered Infrastructure Management,
   {
     id: "ai-powered-infrastructure-management";
@@ -271,8 +261,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o25: SpecializedITInfrastr
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/ai-infrastructure-management",
-  }
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/ai-infrastructure-management"}
 ],

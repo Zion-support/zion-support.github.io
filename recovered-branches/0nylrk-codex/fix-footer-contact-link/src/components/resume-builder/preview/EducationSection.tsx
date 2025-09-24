@@ -2,8 +2,7 @@
 import { Education } from '@/types/resume',
 import { format } from 'date-fns',
 interface EducationSectionProps {
-  education: Education[],
-}
+  education: Education[]}
 ,
 export function EducationSection({ education }: EducationSectionProps) {
   // Sort education by date (newest first),
@@ -16,8 +15,7 @@ export function EducationSection({ education }: EducationSectionProps) {
   const formatDate = (date: Date | string | undefined) => {
     if (!date) return '',
     if (typeof date === 'string') {
-      return format(new Date(date)'MMM yyyy'),
-    }
+      return format(new Date(date)'MMM yyyy')}
     return format(date'MMM yyyy')};
   if (sortedEducation.length === 0) return null,
   return (

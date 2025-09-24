@@ -49,8 +49,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export default function QuantumDataCenter() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -345,7 +344,7 @@ export default function QuantumDataCenter() {
               </div>,
               <h3 className="text-xl font-semibold mb-3">AI Optimization</h3>,
               <p className="text-gray-40o0">,
-                AI algorithms optimize resource allocation and system window.performance.,
+                AI algorithms optimize resource allocation and system window.window.performance.,
               </p>,
             </div>,
             <div className="text-center">,
@@ -506,6 +505,5 @@ export default function QuantumDataCenter() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

@@ -106,8 +106,7 @@ reviews: number,export const enterpriseIT20o26ServicesV4: EnterpriseIT20o26Servi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Comprehensive zero-trust network architecture platform with continuous verification and micro-segmentation.';
@@ -184,8 +183,7 @@ reviews: number,export const enterpriseIT20o26ServicesV4: EnterpriseIT20o26Servi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered IT operations center with intelligent automation and predictive capabilities.';
@@ -259,8 +257,7 @@ reviews: number,export const enterpriseIT20o26ServicesV4: EnterpriseIT20o26Servi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced quantum-resistant cryptography platform with post-quantum algorithms and hybrid encryption.';
@@ -337,8 +334,7 @@ reviews: number,export const enterpriseIT20o26ServicesV4: EnterpriseIT20o26Servi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Autonomous cloud migration platform with AI automation and zero-downtime capabilities.';
@@ -413,8 +409,7 @@ reviews: number,export const enterpriseIT20o26ServicesV4: EnterpriseIT20o26Servi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced edge computing orchestration platform with global scale and real-time processing.';
@@ -490,8 +485,7 @@ reviews: number,export const enterpriseIT20o26ServicesV4: EnterpriseIT20o26Servi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered data governance platform with intelligent automation and comprehensive compliance.';
@@ -568,8 +562,7 @@ reviews: number,export const enterpriseIT20o26ServicesV4: EnterpriseIT20o26Servi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Fully autonomous DevOps platform with AI-powered automation and zero human intervention.';
@@ -643,8 +636,7 @@ reviews: number,export const enterpriseIT20o26ServicesV4: EnterpriseIT20o26Servi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.';

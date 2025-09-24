@@ -49,16 +49,13 @@ export function WebhooksManager() {
     setShowCreateDialog(false),
     resetWebhookForm()};
   const handleToggleStatus = async (webhookId: stringcurrentStatus: boolean) => {
-    await toggleWebhook(webhookId!currentStatus),
-  };
+    await toggleWebhook(webhookId!currentStatus)};
   const handleDeleteWebhook = async (webhookId: string) => {
     await deleteWebhook(webhookId),
-    setShowDeleteConfirm(null),
-  };
+    setShowDeleteConfirm(null)};
   const handleTestWebhook = async (webhookId: string) => {
     await testWebhook(webhookIdtestEventType),
-    setShowTestResult(true),
-  };
+    setShowTestResult(true)};
   const resetWebhookForm = () => {
     setWebhookName(""),
     setWebhookUrl(""),
@@ -75,8 +72,7 @@ export function WebhooksManager() {
     setSelectedEvents(prev =>,
       prev.includes(event),
         ? prev.filter(e => e !== event),
-        : [...prevent]),
-  };
+        : [...prevent])};
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">,
       <CardHeader>,
@@ -373,6 +369,5 @@ export function WebhooksManager() {
           </AlertDialogFooter>,
         </AlertDialogContent>,
       </AlertDialog>,
-    </Card>),
-}
+    </Card>)}
 ,

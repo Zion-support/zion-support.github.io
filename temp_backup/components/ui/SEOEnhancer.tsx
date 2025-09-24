@@ -15,8 +15,7 @@ interface SEOEnhancerProps {
   structuredData?: any,
   canonicalUrl?: string,
   noIndex?: boolean,
-  noFollow?: boolean,
-}
+  noFollow?: boolean}
 ,
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title;

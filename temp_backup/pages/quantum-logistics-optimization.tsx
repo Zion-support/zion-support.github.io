@@ -19,6 +19,5 @@ export default function QuantumLogisticsOptimization() {
       industries={['Logistics', 'Retail', 'Manufacturing', 'E-commerce']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/quantum-logistics-optimization',
-    />),
-}
+    />)}
 ,

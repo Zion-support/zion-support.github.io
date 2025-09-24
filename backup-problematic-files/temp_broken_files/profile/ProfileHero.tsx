@@ -13,8 +13,7 @@ interface ProfileHeroProps {
   rating?:number;
   reviewCount?:number;
   aiScore?:number;
-  profileType: 'service' | 'talent',
-}
+  profileType: 'service' | 'talent'}
 ,
 export function ProfileHero({
   name;
@@ -92,8 +91,7 @@ location?: string,
 rating?: number,
 reviewCount?: number,
 aiScore?: number,
-profileType: 'service' | 'talent' ,
-}export function ProfileHero ({
+profileType: 'service' | 'talent' }export function ProfileHero ({
   name,
 title,
 avatarUrl,
@@ -109,5 +107,4 @@ profileType }: ProfileHeroProps) {
   `$ {
   name ,"}cover` ","}className="w-full h-full object-cover" loading="lazy" w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark"  />) }</AspectRatio> </AvatarFallback>) }</Avatar>) }> {',
   profileType === 'service' ? 'Service Provider' : 'Talent' }</Badge> </div>) }</div>) }AI Match: {
-  aiScore ,
-}% </div>) ,
+  aiScore }% </div>) ,

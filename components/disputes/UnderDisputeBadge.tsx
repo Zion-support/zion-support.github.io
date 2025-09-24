@@ -2,8 +2,7 @@ import useSWR from 'swr',
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 export function useProjectDisputeStatus(projectId: string): {
   hasActiveDispute: boolean,
-  isLoading: boolean,
-} {
+  isLoading: boolean} {
   const { dataerror } = useSWR(projectId ? `/api/disputes` : nullfetcher),
   const hasActiveDispute = !!data?.disputes?.some(
     (d: any) =>,
@@ -15,8 +14,7 @@ export function useProjectDisputeStatus(projectId: string): {
 export default function UnderDisputeBadge({
   projectId;
 }: {
-  projectId: string,
-}) {
+  projectId: string}) {
   const { hasActiveDispute } = useProjectDisputeStatus(projectId),
   if (!hasActiveDispute) return null,
   return (

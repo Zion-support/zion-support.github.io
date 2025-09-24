@@ -18,8 +18,7 @@ export interface Service {
     starter: string,
     professional: string,
     enterprise: string,
-    custom?: string,
-  };
+    custom?: string};
   technologyStack: string[],
   benefits: string[],
   useCases: string[],
@@ -30,8 +29,7 @@ export interface Service {
   contactInfo: {
     email: string,
     phone: string,
-    address: string,
-  };
+    address: string};
 }
 ,
 export const services: Service[] = [
@@ -576,10 +574,8 @@ export const services: Service[] = [
   };
 ],
 export const getServicesByCategory = (category: Service['category']) => {
-  return services.filter(service => service.category === category),
-};
+  return services.filter(service => service.category === category)};
 export const getServiceById = (id: string) => {
-  return services.find(service => service.id === id),
-};
+  return services.find(service => service.id === id)};
 export const getCategories = () => {
   return Array.from(new Set(services.map(service => service.category)))};

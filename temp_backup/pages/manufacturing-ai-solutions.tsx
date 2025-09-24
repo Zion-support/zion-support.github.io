@@ -148,23 +148,19 @@ export default function ManufacturingAISolutions() {
                 {
                   title: 'Predictive Maintenance';
                   description: 'AI-powered equipment failure prediction';
-                  icon: <Brain className="w-12 h-12 text-cyan-40o0"  />,
-                };
+                  icon: <Brain className="w-12 h-12 text-cyan-40o0"  />};
                 {
                   title: 'Smart Automation';
                   description: 'Intelligent manufacturing process automation';
-                  icon: <Factory className="w-12 h-12 text-blue-40o0"  />,
-                };
+                  icon: <Factory className="w-12 h-12 text-blue-40o0"  />};
                 {
                   title: 'Quality Control';
                   description: 'Advanced AI quality assurance systems';
-                  icon: <Target className="w-12 h-12 text-purple-40o0"  />,
-                };
+                  icon: <Target className="w-12 h-12 text-purple-40o0"  />};
                 {
                   title: 'IoT Integration';
                   description: 'Connected manufacturing ecosystem';
-                  icon: <Cog className="w-12 h-12 text-orange-40o0"  />,
-                }
+                  icon: <Cog className="w-12 h-12 text-orange-40o0"  />}
               ].map((innovation, index) => (
                 <motion.div,
                   key={innovation.title}
@@ -217,6 +213,5 @@ export default function ManufacturingAISolutions() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

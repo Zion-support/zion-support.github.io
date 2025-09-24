@@ -1,6 +1,5 @@
 interface StructuredDataProps {
-  data: object,
-}
+  data: object}
 ,
 export default function StructuredData({ data }: StructuredDataProps) {
   return (

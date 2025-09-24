@@ -15,11 +15,9 @@ const AutonomousSystems20o25RevolutionBanner = () => {
         roi: '3,0o00%';
         savings: '$25.6M';
         efficiency: '80o0%';
-        autonomy: '95%',
-      };
+        autonomy: '95%'};
       badge: 'Revolution';
-      color: 'from-emerald-60o0 to-teal-60o0',
-    };
+      color: 'from-emerald-60o0 to-teal-60o0'};
     {
       id: 'enterprise-ai-transformation';
       title: 'AI 20o25: The Enterprise AI Transformation Ultimate Guide';
@@ -30,11 +28,9 @@ const AutonomousSystems20o25RevolutionBanner = () => {
         roi: '1,0o00%';
         savings: '$4.2M';
         timeframe: '18 months';
-        companies: '50o0+',
-      };
+        companies: '50o0+'};
       badge: 'Ultimate Guide';
-      color: 'from-purple-60o0 to-indigo-60o0',
-    };
+      color: 'from-purple-60o0 to-indigo-60o0'};
     {
       id: 'quantum-computing-breakthrough';
       title: 'AI 20o25: The Quantum Computing Business Breakthrough';
@@ -45,11 +41,9 @@ const AutonomousSystems20o25RevolutionBanner = () => {
         roi: '2,0o00%';
         savings: '$12.8M';
         speed: '1,0o00x faster';
-        market: '$65B',
-      };
+        market: '$65B'};
       badge: 'Breakthrough';
-      color: 'from-blue-60o0 to-cyan-60o0',
-    }
+      color: 'from-blue-60o0 to-cyan-60o0'}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -172,6 +166,5 @@ const AutonomousSystems20o25RevolutionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AutonomousSystems20o25RevolutionBanner;

@@ -15,6 +15,5 @@ export default function DebugPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

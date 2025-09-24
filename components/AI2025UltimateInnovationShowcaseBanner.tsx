@@ -113,6 +113,5 @@ const AI20o25UltimateInnovationShowcaseBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25UltimateInnovationShowcaseBanner;

@@ -22,8 +22,7 @@ const UltraFuturisticBackground20o29: React.FC = () => {
       opacity: number,
       type: 'quantum' | 'neon' | 'hologram',
       life: number,
-      maxLife: number,
-    }> = [],
+      maxLife: number}> = [],
     // Initialize particles with enhanced variety,
     const initParticles = () => {
       particles = [],
@@ -41,8 +40,7 @@ const UltraFuturisticBackground20o29: React.FC = () => {
           opacity: Math.random() * 0.9 + 0.1;
           type;
           life: Math.random() * 10o0;
-          maxLife: 10o0,
-        })}
+          maxLife: 10o0})}
     };
     // Enhanced animation loop,
     const animate = () => {
@@ -199,8 +197,7 @@ const UltraFuturisticBackground20o29: React.FC = () => {
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-pink-50o0 opacity-30",
@@ -211,8 +208,7 @@ const UltraFuturisticBackground20o29: React.FC = () => {
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-1/3 w-40 h-40 border border-yellow-40o0 opacity-25",
@@ -223,8 +219,7 @@ const UltraFuturisticBackground20o29: React.FC = () => {
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
       </div>,
       {/* Content overlay */}

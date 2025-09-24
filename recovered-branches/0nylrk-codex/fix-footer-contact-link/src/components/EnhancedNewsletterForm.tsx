@@ -14,8 +14,7 @@ export function EnhancedNewsletterForm() {
     setTimeout(() => {
       setIsSubmitting(false),
       setIsSubmitted(true),
-      setEmail(""),
-    }1000)};
+      setEmail("")}1000)};
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">,
       <div className="flex items-center mb-4">,

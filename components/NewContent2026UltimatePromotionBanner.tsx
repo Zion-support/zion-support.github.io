@@ -189,6 +189,5 @@ const NewContent20o26UltimatePromotionBanner: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NewContent20o26UltimatePromotionBanner;

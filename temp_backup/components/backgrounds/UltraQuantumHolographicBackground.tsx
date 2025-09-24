@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
 interface UltraQuantumHolographicBackgroundProps {
   children: React.ReactNode,
-  className?: string,
-}
+  className?: string}
 ,
 const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgroundProps> = ({
   children;
@@ -16,8 +15,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
     vy: number,
     size: number,
     color: string,
-    opacity: number,
-  }>>([]),
+    opacity: number}>>([]),
   useEffect(() => {
     const canvas = canvasRef.current,
     if (!canvas) return,
@@ -36,8 +34,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
       vy: (Math.random() - 0.5) * 0.5;
       size: Math.random() * 3 + 1;
       color: ['#0o0ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6'][Math.floor(Math.random() * 5)];
-      opacity: Math.random() * 0.5 + 0.2,
-    })),
+      opacity: Math.random() * 0.5 + 0.2})),
     particlesRef.current = particles,
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
@@ -110,8 +107,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
       const nodes = 20,
       const nodePositions = Array.from({ length: nodes }, () => ({
         x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height,
-      })),
+        y: Math.random() * canvas.height})),
       nodePositions.forEach((node, index) => {
         nodePositions.forEach((otherNode, otherIndex) => {
           if (index !== otherIndex && Math.random() > 0.8) {
@@ -165,8 +161,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
           transition={{
             duration: 4;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-3/4 right-1/4 w-24 h-24 border border-purple-40o0 rounded-full opacity-15",
@@ -176,8 +171,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         {/* Holographic Orbs */}
         <motion.div,
@@ -188,8 +182,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         {/* Neural Connections */}
         <motion.div,
@@ -200,8 +193,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
       </div>,
       {/* Particle Container */}
@@ -221,8 +213,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
               duration: Math.random() * 10 + 10;
               repeat: Infinity;
               ease: "linear";
-              delay: Math.random() * 5,
-            }}
+              delay: Math.random() * 5}}
            />))}
       </div>,
       {/* Content */}
@@ -245,8 +236,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
           transition={{
             duration: 15;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute inset-0 border border-purple-40o0/8 rounded-full",
@@ -256,8 +246,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
       </div>,
     </div>)};

@@ -15,6 +15,5 @@ export default function SpaceTechnologyPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

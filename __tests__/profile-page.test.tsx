@@ -10,5 +10,4 @@ describe('Profile Page', () => {
 module.exports ={};
 module.exports ={};
 module.exports ={};
-}),
-})
+})})

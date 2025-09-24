@@ -6,14 +6,12 @@ import CodeBlock from "./CodeBlock",
 interface Param {
   name: string,
   type: string,
-  required?: boolean,
-}
+  required?: boolean}
 ,
 interface ApiPlaygroundProps {
   method: string,
   path: string,
-  params?: Param[],
-}
+  params?: Param[]}
 ,
 export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {
   const [apiKey, setApiKey] = useState("demo_key_123"),
@@ -67,13 +65,11 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       setResponse(statusInfo + responseText)} catch (err: any) {
       let errorMessage = 'Request failed',
       if (err.name === 'AbortError') {
-        errorMessage = 'Request timed out (15s)',
-      } else if (err.message?.includes('Failed to fetch')) {
+        errorMessage = 'Request timed out (15s)'} else if (err.message?.includes('Failed to fetch')) {
         errorMessage = 'Network error - check CORS configuration or API endpoint'} else {
         errorMessage = err.message || 'Unknown error occurred'}
 ,
-      setResponse(`Error: ${errorMessage}\n\nAttempted URL: ${url}\n\nTroubleshooting: \n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`),
-    } finally {
+      setResponse(`Error: ${errorMessage}\n\nAttempted URL: ${url}\n\nTroubleshooting: \n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`)} finally {
       setLoading(false)}
   };
   return (

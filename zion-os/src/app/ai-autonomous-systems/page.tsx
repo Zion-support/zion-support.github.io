@@ -394,6 +394,5 @@ export default function AIAutonomousSystemsPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

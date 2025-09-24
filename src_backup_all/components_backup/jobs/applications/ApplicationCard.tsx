@@ -21,8 +21,7 @@ import { toast } from 'sonner',
   Download;
 } from 'lucide-react',
 interface ApplicationCardProps {
-  application: JobApplication,
-}
+  application: JobApplication}
 ,
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
@@ -55,8 +54,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
             <HelpCircle className='h-4 w-4 mr-1' /> View Feedback,
           </Button>),
       default:,
-        return null,
-    }
+        return null}
   };
   return (
     <Card className='overflow-hidden'>,

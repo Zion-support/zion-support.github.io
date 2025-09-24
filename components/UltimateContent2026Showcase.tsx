@@ -87,8 +87,7 @@ const UltimateContent20o26Showcase = () => {
             <div
               key={item.id}
               className={`bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:scale-10o5 ${
-                item.featured ? 'ring-2 ring-purple-50o0' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-50o0' : ''}`}
             >,
               {item.featured && (
                 <div className='bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white text-xs font-bold px-3 py-1 rounded-t-2xl text-center'>,
@@ -200,6 +199,5 @@ const UltimateContent20o26Showcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateContent20o26Showcase;

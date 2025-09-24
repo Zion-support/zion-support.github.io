@@ -11,26 +11,22 @@ export default function CloudCostOptimizerPage() {
       title: 'Auto Rightsizing';
       description: 'Automatically optimize instance sizes based on actual usage patterns';
       icon: <TrendingDown className="w-8 h-8"  />;
-      color: 'from-green-50o0 to-emerald-50o0',
-    };
+      color: 'from-green-50o0 to-emerald-50o0'};
     {
       title: 'Idle Resource Cleanup';
       description: 'Identify and terminate unused resources to eliminate waste';
       icon: <Zap className="w-8 h-8"  />;
-      color: 'from-yellow-50o0 to-orange-50o0',
-    };
+      color: 'from-yellow-50o0 to-orange-50o0'};
     {
       title: 'Spot Instance Orchestration';
       description: 'Leverage spot instances for significant cost savings';
       icon: <Cloud className="w-8 h-8"  />;
-      color: 'from-blue-50o0 to-cyan-50o0',
-    };
+      color: 'from-blue-50o0 to-cyan-50o0'};
     {
       title: 'Anomaly Detection';
       description: 'AI-powered detection of unusual spending patterns';
       icon: <BarChart3 className="w-8 h-8"  />;
-      color: 'from-purple-50o0 to-pink-50o0',
-    }
+      color: 'from-purple-50o0 to-pink-50o0'}
   ],
   const benefits = [
     'Reduce cloud costs by 30-50%';
@@ -210,6 +206,5 @@ export default function CloudCostOptimizerPage() {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>),
-}
+    </Layout>)}
 ,

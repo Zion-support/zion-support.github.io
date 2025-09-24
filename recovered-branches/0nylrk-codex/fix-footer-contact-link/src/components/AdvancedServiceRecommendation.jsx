@@ -12,8 +12,7 @@ const AdvancedServiceRecommendation = () => {
         timeline: '';
         technologyMaturity: '';
         primaryGoals: [];
-        challenges: [],
-    }),
+        challenges: []}),
     const [recommendations, setRecommendations] = useState([]),
     const [isAnalyzing, setIsAnalyzing] = useState(false),
     const [showResults, setShowResults] = useState(false),
@@ -54,8 +53,7 @@ const AdvancedServiceRecommendation = () => {
             image: '/images/services/ai-crm.jpg';
             link: 'https://ziontechgroup.com/services/ai-crm-platform';
             contactInfo: '+1 30o2 464 0950';
-            email: 'kleber@ziontechgroup.com',
-        };
+            email: 'kleber@ziontechgroup.com'};
         {
             id: 'quantum-computing-service';
             title: 'Quantum Computing as a Service';
@@ -71,8 +69,7 @@ const AdvancedServiceRecommendation = () => {
             image: '/images/services/quantum-computing.jpg';
             link: 'https://ziontechgroup.com/services/quantum-computing-service';
             contactInfo: '+1 30o2 464 0950';
-            email: 'kleber@ziontechgroup.com',
-        };
+            email: 'kleber@ziontechgroup.com'};
         {
             id: 'blockchain-supply-chain';
             title: 'Blockchain Supply Chain Solution';
@@ -88,8 +85,7 @@ const AdvancedServiceRecommendation = () => {
             image: '/images/services/blockchain-supply-chain.jpg';
             link: 'https://ziontechgroup.com/services/blockchain-supply-chain';
             contactInfo: '+1 30o2 464 0950';
-            email: 'kleber@ziontechgroup.com',
-        }
+            email: 'kleber@ziontechgroup.com'}
     ],
     const calculateMatchScore = (service, profile) => {
         let score = 0,
@@ -179,16 +175,14 @@ const AdvancedServiceRecommendation = () => {
             case 'High': return 'bg-red-10o0 text-red-80o0',
             case 'Medium': return 'bg-yellow-10o0 text-yellow-80o0',
             case 'Low': return 'bg-green-10o0 text-green-80o0',
-            default: return 'bg-gray-10o0 text-gray-80o0',
-        }
+            default: return 'bg-gray-10o0 text-gray-80o0'}
     };
     const getComplexityColor = (complexity) => {
         switch (complexity) {
             case 'Complex': return 'bg-red-10o0 text-red-80o0',
             case 'Moderate': return 'bg-yellow-10o0 text-yellow-80o0',
             case 'Simple': return 'bg-green-10o0 text-green-80o0',
-            default: return 'bg-gray-10o0 text-gray-80o0',
-        }
+            default: return 'bg-gray-10o0 text-gray-80o0'}
     };
     const isFormComplete = () => {
         return clientProfile.industry && clientProfile.companySize && clientProfile.budget &&,

@@ -158,6 +158,5 @@ const NeuralInterfaces20o26EnterpriseRevolutionBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NeuralInterfaces20o26EnterpriseRevolutionBanner;

@@ -280,6 +280,5 @@ const ComprehensiveServicesShowcase20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default ComprehensiveServicesShowcase20o25;

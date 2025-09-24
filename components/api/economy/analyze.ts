@@ -1,31 +1,26 @@
 import OpenAI from 'openai',
 const user = [ `Operator Prompt: $ {
-  operatorPrompt,
-}`,
+  operatorPrompt}`,
 context ? `Context: $ {
-  JSON.stringify (context),
-}` : undefined] .filter (Boolean) .join ('\n'),
+  JSON.stringify (context)}` : undefined] .filter (Boolean) .join ('\n'),
 const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
-  role: 'system', content: system,
-}
+  role: 'system', content: system}
 export type AnalyzeResponse = {
-  analysis: string,};import type { NextApiRequest, NextApiResponse } from 'next',
+  analysis: string};import type { NextApiRequest, NextApiResponse } from 'next',
 export type AnalyzeRequestBody = {
   operatorPrompt: string,
   context?: Record<string unknown>}
 export type AnalyzeResponse = {
   analysis: string,
-  role: 'system', content: system,
-};
+  role: 'system', content: system};
 export type AnalyzeResponse = {
-  analysis: string,};import type { NextApiRequest, NextApiResponse } from 'next',
+  analysis: string};import type { NextApiRequest, NextApiResponse } from 'next',
 export type AnalyzeRequestBody = {
   operatorPrompt: string;
   context?: Record<string unknown>};
 export type AnalyzeResponse = {
-  analysis: string,
-};
+  analysis: string};
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<AnalyzeResponse | { error: string }>) {
@@ -42,8 +37,7 @@ export default async function handler(
 ,
   const apiKey = process && process.env.OPENAI_API_KEY,
   if (!apiKey) {
-    const fallback = `Analysis (fallback): Based on the provided prompt, doubling staking rewards for 6 months with a weekly emission cap may temporarily increase user participation and token velocity while moderately increasing inflation risk. Monitor treasury inflows from taxes/burns to offset emissions and adjust the cap if net inflation exceeds target bands.`,
-}
+    const fallback = `Analysis (fallback): Based on the provided prompt, doubling staking rewards for 6 months with a weekly emission cap may temporarily increase user participation and token velocity while moderately increasing inflation risk. Monitor treasury inflows from taxes/burns to offset emissions and adjust the cap if net inflation exceeds target bands.`}
   try {
     const client = new OpenAI ({ api_key }),
     const system =,
@@ -66,8 +60,7 @@ export default async function handler(
       'No analysis generated.',
     return res && res.status(200).json({ analysis })} catch (error: any) {
     console.error('Analyze API error', error?.message |error),
-    return res.status(500).json({ error: 'Failed to generate analysis' }),
-}
+    return res.status(500).json({ error: 'Failed to generate analysis' })}
     const analysis = completion.choices?.[0]?.message?.content?.trim() |'No analysis generated.',
         { role: 'system', content: system };
         { role: 'user', content: user }],
@@ -96,8 +89,7 @@ export default async function handler(
     const analysis = completion.choices?.[0]?.message?.content?.trim () || 'No analysis generated.',
     return res.status (200).json ({ analysis })} catch (error: any) {
     console.error ('Analyze API error', error?.message || error),
-    return res.status (500).json ({ error: 'Failed to generate analysis' }),
-}
+    return res.status (500).json ({ error: 'Failed to generate analysis' })}
 ,
     const analysis = completion.choices?.[0]?.message?.content?.trim() || 'No analysis generated.',
     return res.status(200).json({ analysis })} catch (error: any) {

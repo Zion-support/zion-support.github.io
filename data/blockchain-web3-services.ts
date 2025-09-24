@@ -29,15 +29,13 @@ export interface BlockchainWeb3Service {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const blockchainWeb3Services: BlockchainWeb3Service[] = [
   {

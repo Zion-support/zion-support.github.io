@@ -20,6 +20,5 @@ export default function AiConsciousnessEvolution20o44Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -45,14 +45,12 @@ export function EnhancedSearchInput({
       debounce(async (query: string) => {
         if (!query.trim()) {
           setApiSuggestions([]),
-          return,
-        }
+          return}
 ,
         setLoading(true),
         try {
           const response = await fetch(`/api/search/suggest?q=${encodeURIComponent(query)}`, {
-            signal: AbortSignal.timeout(50o00) // 5 second timeout,
-          }),
+            signal: AbortSignal.timeout(50o00) // 5 second timeout}),
           if (response.ok) {
             const data = await response.json(),
             if (Array.isArray(data)) {
@@ -79,8 +77,7 @@ export function EnhancedSearchInput({
 ,
     const controller = new AbortController(),
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {
-      signal: controller.signal,
-    }),
+      signal: controller.signal}),
       .then(res => {
         if (!res.ok) throw new Error('Failed to fetch suggestions'),
         return res.json()}),
@@ -96,8 +93,7 @@ export function EnhancedSearchInput({
     function handleClickOutside(event: MouseEvent) {
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
         setIsFocused(false),
-        // setHighlightedIndex(-1), // Already handled in onBlur generally,
-      }
+        // setHighlightedIndex(-1), // Already handled in onBlur generally}
     }
 ,
     document.addEventListener("mousedown", handleClickOutside),
@@ -125,8 +121,7 @@ export function EnhancedSearchInput({
       case 'ArrowDown':,
         if (isFocused && filteredSuggestions.length > 0) {
           e.preventDefault(),
-          setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length),
-        }
+          setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length)}
         break,
       case 'ArrowUp':,
         if (isFocused && filteredSuggestions.length > 0) {

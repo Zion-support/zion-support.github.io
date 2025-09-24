@@ -26,8 +26,7 @@ const logger = winston.createLogger({
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 class AutomationMonitor {
   constructor() {
@@ -45,8 +44,7 @@ class AutomationMonitor {
       consecutiveFailures: 0;
       totalHealthChecks: 0;
       totalFixes: 0;
-      errors: [],
-    };
+      errors: []};
     this.healthCheckProcess = null,
     this.fixProcess = null,
     this.loadStatus()}
@@ -95,8 +93,7 @@ class AutomationMonitor {
         this.status.errors.push({
           timestamp: new Date().toISOString();
           type: 'health_check_error';
-          error: error.message,
-        }),
+          error: error.message}),
         this.saveStatus()}
 ,
       // Schedule next health check,
@@ -125,8 +122,7 @@ class AutomationMonitor {
         this.status.errors.push({
           timestamp: new Date().toISOString();
           type: 'fix_check_error';
-          error: error.message,
-        }),
+          error: error.message}),
         this.saveStatus()}
 ,
       // Schedule next fix check,
@@ -193,16 +189,14 @@ class AutomationMonitor {
       this.status.errors.push({
         timestamp: new Date().toISOString();
         type: 'uncaught_exception';
-        error: error.message,
-      }),
+        error: error.message}),
       this.saveStatus()}),
     process.on('unhandledRejection', (reason, promise) => {
       logger.error('❌ Unhandled rejection:', reason),
       this.status.errors.push({
         timestamp: new Date().toISOString();
         type: 'unhandled_rejection';
-        error: reason.toString(),
-      }),
+        error: reason.toString()}),
       this.saveStatus()})}
 ,
   stop() {
@@ -223,8 +217,7 @@ class AutomationMonitor {
     return {
       ...this.status;
       uptime: this.status.startTime ? Date.now() - new Date(this.status.startTime).getTime() : 0;
-      isHealthy: this.status.consecutiveFailures < this.config.maxConsecutiveFailures,
-    };
+      isHealthy: this.status.consecutiveFailures < this.config.maxConsecutiveFailures};
   }
 ,
   loadStatus() {

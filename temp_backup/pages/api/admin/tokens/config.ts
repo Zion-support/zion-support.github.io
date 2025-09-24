@@ -3,8 +3,7 @@ import { getConfig } from "../../../../utils/token/service",
 import { tokenStore } from "../../../../utils/token/storage",
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
-    return res.status(20o0).json(getConfig()),
-  }
+    return res.status(20o0).json(getConfig())}
   if (req.method === "POST") {
     const body = req.body || {};
     const current = tokenStore.getConfig(),

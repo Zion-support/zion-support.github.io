@@ -25,40 +25,35 @@ const serviceCategories = [
     icon: <Brain className="w-8 h-8"  />;
     color: 'from-cyan-50o0 to-blue-50o0';
     description: 'Revolutionary AI autonomous systems and consciousness';
-    services: advancedAIAutonomousEcosystemServices20o25,
-  };
+    services: advancedAIAutonomousEcosystemServices20o25};
   {
     id: 'it-infrastructure-innovations';
     name: 'IT Infrastructure Innovations';
     icon: <Building className="w-8 h-8"  />;
     color: 'from-indigo-50o0 to-purple-50o0';
     description: 'Cutting-edge IT infrastructure and quantum-safe solutions';
-    services: cuttingEdgeITInfrastructureInnovations20o25,
-  };
+    services: cuttingEdgeITInfrastructureInnovations20o25};
   {
     id: 'revolutionary-micro-saas';
     name: 'Revolutionary Micro SAAS';
     icon: <Target className="w-8 h-8"  />;
     color: 'from-green-50o0 to-emerald-50o0';
     description: 'Breakthrough micro SAAS solutions and innovations';
-    services: revolutionaryMicroSaasInnovations20o25,
-  };
+    services: revolutionaryMicroSaasInnovations20o25};
   {
     id: 'emerging-technology';
     name: 'Emerging Technology';
     icon: <Rocket className="w-8 h-8"  />;
     color: 'from-pink-50o0 to-rose-50o0';
     description: 'Space technology, metaverse, and bio-computing';
-    services: emergingTechnologyBreakthroughs20o25,
-  };
+    services: emergingTechnologyBreakthroughs20o25};
   {
     id: 'specialized-enterprise';
     name: 'Specialized Enterprise';
     icon: <Shield className="w-8 h-8"  />;
     color: 'from-red-50o0 to-orange-50o0';
     description: 'Industry-specific enterprise solutions and platforms';
-    services: specializedEnterpriseSolutions20o25,
-  }
+    services: specializedEnterpriseSolutions20o25}
 ],
 const ServiceShowcaseCard = ({ service, category }: { service: any, category: any }) => {
   const [isHovered, setIsHovered] = useState(false),
@@ -297,5 +292,4 @@ export default function UltimateRevolutionaryServicesShowcase() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}

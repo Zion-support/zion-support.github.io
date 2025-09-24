@@ -23,6 +23,5 @@ export default function QuantumEnergyPlatformPage() {
           systems. Contact: +1 30o2 464 0950 • kleber@ziontechgroup.com.,
         </p>,
       </div>,
-    </UltraFuturisticBackground>),
-}
+    </UltraFuturisticBackground>)}
 ,

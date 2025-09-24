@@ -15,6 +15,5 @@ export default function ConvenePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

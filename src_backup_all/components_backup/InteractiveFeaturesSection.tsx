@@ -28,8 +28,7 @@ const InteractiveFeaturesSection: React.FC = () => {
     projects: 0;
     clients: 0;
     satisfaction: 0;
-    uptime: 0,
-  }),
+    uptime: 0}),
   const ref = useRef(null),
   const isInView = useInView(ref, { once: true }),
   const controls = useAnimation(),
@@ -94,26 +93,22 @@ const InteractiveFeaturesSection: React.FC = () => {
       icon: Rocket;
       title: 'Faster Time to Market';
       description: 'Launch your products 3x faster with our streamlined development process';
-      metric: '3x Faster',
-    };
+      metric: '3x Faster'};
     {
       icon: Target;
       title: 'Higher ROI';
       description: 'Average 250% ROI within the first year of implementation';
-      metric: '250% ROI',
-    };
+      metric: '250% ROI'};
     {
       icon: Heart;
       title: 'Customer Satisfaction';
       description: '98% customer satisfaction rate with our solutions and support';
-      metric: '98% Happy',
-    };
+      metric: '98% Happy'};
     {
       icon: Award;
       title: 'Industry Recognition';
       description: 'Award-winning solutions recognized by leading industry publications';
-      metric: '15+ Awards',
-    }
+      metric: '15+ Awards'}
   ],
   const testimonials = [
     {
@@ -122,24 +117,21 @@ const InteractiveFeaturesSection: React.FC = () => {
       role: "CTO";
       company: "TechCorp Inc.";
       rating: 5;
-      avatar: "👩‍💼",
-    };
+      avatar: "👩‍💼"};
     {
       quote: "Their AI solutions helped us automate 80% of our customer support. Incredible team and results!";
       author: "Michael Chen";
       role: "Founder";
       company: "StartupXYZ";
       rating: 5;
-      avatar: "👨‍💻",
-    };
+      avatar: "👨‍💻"};
     {
       quote: "Professional, reliable, and innovative. They delivered our cloud migration flawlessly.";
       author: "Emily Rodriguez";
       role: "IT Director";
       company: "Enterprise Solutions";
       rating: 5;
-      avatar: "👩‍🔬",
-    }
+      avatar: "👩‍🔬"}
   ],
   useEffect(() => {
     if (isInView) {
@@ -166,8 +158,7 @@ const InteractiveFeaturesSection: React.FC = () => {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -276,8 +267,7 @@ const InteractiveFeaturesSection: React.FC = () => {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{
                         height: hoveredFeature === feature.id ? 'auto' : 0;
-                        opacity: hoveredFeature === feature.id ? 1 : 0,
-                      }}
+                        opacity: hoveredFeature === feature.id ? 1 : 0}}
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden">,
                       <div className="pt-4 border-t border-gray-20o0">,

@@ -3,8 +3,7 @@ import StarRating from './StarRating',
 import type { PublicReview } from '../../types/reviews',
 type Props = {
   review: PublicReview,
-  onReport?: (id: string) => void,
-};
+  onReport?: (id: string) => void};
 const ReviewCard: React.FC<Props> = ({ reviewonReport }) => {
   return (
     <div className='enhanced-card hover: shadow-lg transition-shadow'>,

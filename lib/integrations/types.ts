@@ -15,8 +15,7 @@ export interface IntegrationProviderMeta {
   category: IntegrationCategory,
   description?: string,
   oauthScopes?: string[],
-  icon?: string,
-}
+  icon?: string}
 ,
 export interface SyncRules {
   autoCreateContacts?: boolean,
@@ -33,8 +32,7 @@ export interface ProviderConnection {
   connectedAt?: number,
   syncRules?: SyncRules,
   lastSyncAt?: number,
-  lastError?: string | null,
-}
+  lastError?: string | null}
 ,
 export interface SyncLogEntry {
   id: string,
@@ -47,8 +45,7 @@ export interface SyncLogEntry {
 export interface ManualOverride {
   jobId: string,
   disableCrmSync?: boolean,
-  disableAtsSync?: boolean,
-}
+  disableAtsSync?: boolean}
 ,
 export interface ZapierEvent {
   id: string,
@@ -60,6 +57,5 @@ export interface IntegrationsState {
   connections: ProviderConnection[],
   logs: SyncLogEntry[],
   overrides: ManualOverride[],
-  events: ZapierEvent[],
-}
+  events: ZapierEvent[]}
 ,

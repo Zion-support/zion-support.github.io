@@ -499,6 +499,5 @@ export default function AIConsciousnessEvolution20o29() {
         </div>,
       </section>,
       <UltraFuturisticFooter20o29 />,
-    </>),
-}
+    </>)}
 ,

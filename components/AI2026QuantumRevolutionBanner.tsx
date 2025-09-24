@@ -13,6 +13,5 @@ const AI20o26QuantumRevolutionBanner = () => {
           <span className='text-sm font-medium'>Coming Soon</span>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o26QuantumRevolutionBanner;

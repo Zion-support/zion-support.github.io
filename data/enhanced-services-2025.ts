@@ -28,15 +28,13 @@ export interface EnhancedService20o25 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 const contact = {
   mobile: '+1 30o2 464 0950';
@@ -102,7 +100,7 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     price: '$159';
     period: '/month';
     description:,
-      'Intelligent DevOps platform that autonomously manages infrastructure, automates deployments, and optimizes window.performance.';
+      'Intelligent DevOps platform that autonomously manages infrastructure, automates deployments, and optimizes window.window.performance.';
     features: [
       'Self-healing infrastructure';
       'Intelligent deployment';
@@ -196,7 +194,7 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     price: '$89';
     period: '/month';
     description:,
-      'AI-powered content platform that creates, optimizes, and analyzes content for maximum engagement and SEO window.performance.';
+      'AI-powered content platform that creates, optimizes, and analyzes content for maximum engagement and SEO window.window.performance.';
     features: [
       'AI content generation';
       'SEO optimization';
@@ -336,7 +334,7 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     price: '$179';
     period: '/month';
     description:,
-      'Advanced cryptographic solutions designed to protect against quantum computing threats while maintaining high window.performance.';
+      'Advanced cryptographic solutions designed to protect against quantum computing threats while maintaining high window.window.performance.';
     features: [
       'Post-quantum cryptography';
       'Quantum key distribution';

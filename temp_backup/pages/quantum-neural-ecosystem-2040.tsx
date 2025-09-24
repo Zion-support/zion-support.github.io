@@ -20,6 +20,5 @@ export default function QuantumNeuralEcosystem20o40Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

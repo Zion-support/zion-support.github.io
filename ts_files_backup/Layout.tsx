@@ -2,8 +2,7 @@ import React from 'react';
 import EnhancedNavigation2025 from './layout/EnhancedNavigation2025',
 import EnhancedFooter from './layout/EnhancedFooter',
 interface LayoutProps {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 export default function Layout({ children }: LayoutProps) {
   return (

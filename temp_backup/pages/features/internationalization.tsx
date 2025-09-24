@@ -15,6 +15,5 @@ export default function InternationalizationPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

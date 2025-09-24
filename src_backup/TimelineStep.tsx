@@ -24,8 +24,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.timeline === 'fixed',
                   ? 'bg-zion-purple/20 border-zion-purple',
-                  : 'bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50',
-              }`}
+                  : 'bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50'}`}
               onClick={() => updateFormData({ timeline: 'fixed' })}            >,
               <h4 className='font-medium text-white'>Fixed Dates</h4>,
               <p className='text-sm text-zion-slate-light'>,
@@ -71,8 +70,7 @@ function TimelineStep() {
               className={`flex - 1 p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${
                 form_data.timeline === 'fixed',
                   ? 'bg - zion - purple / 20 border - zion - purple',
-                  : 'bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50',
-              }`}
+                  : 'bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50'}`}
               on_click={() => updateFormData ({ timeline: 'fixed' })}            >,
               <h4 className='font - medium text - white'>Fixed Dates</h4>,
               <p className='text - sm text - zion - slate - light'>,
@@ -83,8 +81,7 @@ function TimelineStep() {
               className={`flex - 1 p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${
                 form_data.timeline === 'flexible',
                   ? 'bg - zion - purple / 20 border - zion - purple',
-                  : 'bg - zion - blue - light / 20 border - zion - blue - light hover: border - zion - purple / 50',
-              }`}
+                  : 'bg - zion - blue - light / 20 border - zion - blue - light hover: border - zion - purple / 50'}`}
               on_click={() => updateFormData ({ timeline: 'flexible' })}
             >,
               <h4 className='font - medium text - white'>Flexible Timeline</h4>,
@@ -207,8 +204,7 @@ function TimelineStep() {
                       className="p-3 pointer-events-auto",
 interface TimelineStepProps {
   formData: QuoteFormData;
-  updateFormData: (data: Partial<QuoteFormData>) => void,
-}
+  updateFormData: (data: Partial<QuoteFormData>) => void}
 ,
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
@@ -221,8 +217,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.timeline === "fixed",
                   ? "bg-zion-purple/20 border-zion-purple",
-                  : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50",
-              }`}
+                  : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50"}`}
               onClick={() => updateFormData({ timeline: "fixed" })}
             >,
               <h4 className="font-medium text-white">Fixed Dates</h4>,
@@ -232,8 +227,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.timeline === "flexible",
                   ? "bg-zion-purple/20 border-zion-purple",
-                  : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50",
-              }`}
+                  : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50"}`}
               onClick={() => updateFormData({ timeline: "flexible" })}
             >,
               <h4 className="font-medium text-white">Flexible Timeline</h4>,
@@ -277,5 +271,4 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
         </div>,
       </div>,
     </div>)}
-,
 }}})

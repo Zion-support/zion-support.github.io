@@ -72,8 +72,7 @@ export default function SocialMediaSchedulerPage() {
           </a>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
 function FeatureCard({ title, details }: { title: string, details: string[] }) {
   return (
@@ -140,8 +139,7 @@ function PricingPlan({
   name: string,
   price: string,
   features: string[],
-  featured?: boolean,
-}) {
+  featured?: boolean}) {
   return (
     <div
       className={`border rounded-xl p-6 ${
@@ -162,8 +160,7 @@ function PricingPlan({
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
           featured,
             ? 'bg-fuchsia-60o0 text-white hover:bg-fuchsia-70o0',
-            : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0',
-        }`}
+            : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0'}`}
       >,
         Get Started,
       </a>,

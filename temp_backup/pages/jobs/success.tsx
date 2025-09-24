@@ -20,6 +20,5 @@ export default function JobSuccessPage() {
           <a className='px-4 py-2 rounded-md border'>Browse Talent</a>,
         </Link>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

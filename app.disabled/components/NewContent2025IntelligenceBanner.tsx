@@ -11,8 +11,7 @@ interface ContentItem {
     roi?: string,
     savings?: string,
     satisfaction?: string,
-    efficiency?: string,
-  };
+    efficiency?: string};
   readingTime?: string}
 ,
 const NewContent20o25IntelligenceBanner: React.FC = () => {
@@ -29,10 +28,8 @@ const NewContent20o25IntelligenceBanner: React.FC = () => {
         roi: '750%';
         savings: '$4.2M';
         satisfaction: '99.7%';
-        efficiency: '340%',
-      };
-      readingTime: '28 min read',
-    };
+        efficiency: '340%'};
+      readingTime: '28 min read'};
     {
       id: 'enterprise-intelligence-success';
       title: '$3.2B Company Achieves 750% ROI with AI-Powered Intelligence Systems';
@@ -42,10 +39,8 @@ const NewContent20o25IntelligenceBanner: React.FC = () => {
         roi: '750%';
         savings: '$240M';
         satisfaction: '99.8%';
-        efficiency: '67%',
-      };
-      readingTime: '22 min read',
-    };
+        efficiency: '67%'};
+      readingTime: '22 min read'};
     {
       id: 'customer-experience-revolution';
       title: 'AI 20o25: The Customer Experience Revolution - Ultimate Guide to 650% ROI';
@@ -55,10 +50,8 @@ const NewContent20o25IntelligenceBanner: React.FC = () => {
         roi: '650%';
         savings: '$4.2M';
         satisfaction: '99%';
-        efficiency: '89%',
-      };
-      readingTime: '32 min read',
-    };
+        efficiency: '89%'};
+      readingTime: '32 min read'};
     {
       id: 'customer-experience-implementation';
       title: 'AI 20o25 Customer Experience Implementation Master Guide: From Strategy to 650% ROI';
@@ -68,10 +61,8 @@ const NewContent20o25IntelligenceBanner: React.FC = () => {
         roi: '650%';
         savings: '$3.2M';
         satisfaction: '99%';
-        efficiency: '89%',
-      };
-      readingTime: '45 min read',
-    }
+        efficiency: '89%'};
+      readingTime: '45 min read'}
   ],
   useEffect(() => {
     // Check if banner was previously dismissed,
@@ -98,23 +89,20 @@ const NewContent20o25IntelligenceBanner: React.FC = () => {
     setIsAutoPlaying(false)};
   const handleDotClick = (index: number) => {
     setCurrentIndex(index),
-    setIsAutoPlaying(false),
-  };
+    setIsAutoPlaying(false)};
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'bg-blue-10o0 text-blue-80o0',
       case 'case-study': return 'bg-green-10o0 text-green-80o0',
       case 'resource': return 'bg-purple-10o0 text-purple-80o0',
-      default: return 'bg-gray-10o0 text-gray-80o0',
-    }
+      default: return 'bg-gray-10o0 text-gray-80o0'}
   };
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'blog': return <TrendingUp className="w-4 h-4"  />,
       case 'case-study': return <Users className="w-4 h-4"  />,
       case 'resource': return <ArrowRight className="w-4 h-4"  />,
-      default: return <Zap className="w-4 h-4"  />,
-    }
+      default: return <Zap className="w-4 h-4"  />}
   };
   if (!isVisible) return null,
   const currentItem = contentItems[currentIndex],
@@ -208,6 +196,5 @@ const NewContent20o25IntelligenceBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NewContent20o25IntelligenceBanner;

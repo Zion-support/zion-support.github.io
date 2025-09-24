@@ -252,8 +252,7 @@ const NewContentShowcase20o25Advanced = () => {
                       <ArrowRight className='w-4 h-4 ml-1' />,
                     </Link>,
                   </div>,
-                </div>),
-            })}
+                </div>)})}
           </div>,
         </div>,
         {/* Category Filter */}
@@ -265,8 +264,7 @@ const NewContentShowcase20o25Advanced = () => {
               className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-purple-50 hover:text-purple-60o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-purple-50 hover:text-purple-60o0'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -361,6 +359,5 @@ const NewContentShowcase20o25Advanced = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NewContentShowcase20o25Advanced;

@@ -168,6 +168,5 @@ export function GlobalPresenceSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

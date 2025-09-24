@@ -155,8 +155,7 @@ const InteractiveContentShowcase20o25 = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 activeTab === category.id,
                   ? 'bg-purple-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-purple-50 hover:text-purple-60o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-purple-50 hover:text-purple-60o0'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -245,6 +244,5 @@ const InteractiveContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default InteractiveContentShowcase20o25;

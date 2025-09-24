@@ -15,6 +15,5 @@ export default function TalentOnboardingPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -15,6 +15,5 @@ export default function MessagingPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

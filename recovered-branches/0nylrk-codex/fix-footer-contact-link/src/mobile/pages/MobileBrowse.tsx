@@ -24,7 +24,6 @@ import { use_auth } from '@/hooks / use_auth',
 // Mock data for demonstration,
 const jobsData = [
   {
-,
 // Mock data for demonstration,
 const jobsData = [
   {
@@ -36,8 +35,7 @@ const jobsData = [
     badges: ["React", "TypeScript", "GraphQL"],
     price: "$70-90/hr",
     timePosted: "2 days ago",
-    match: 92,
-  }
+    match: 92}
   {
     id: "2",
     title: "UX/UI Designer",
@@ -47,8 +45,7 @@ const jobsData = [
     badges: ["Figma", "Design System", "Mobile Apps"],
     price: "$60-80/hr",
     timePosted: "4 hours ago",
-    match: 87,
-  }
+    match: 87}
   {
     id: "3",
     title: "Full Stack Engineer",
@@ -58,8 +55,7 @@ const jobsData = [
     badges: ["React", "Node.js", "AWS"],
     price: "$75-100/hr",
     timePosted: "1 week ago",
-    match: 78,
-  }
+    match: 78}
 ],
 const talentsData = [
   {
@@ -71,8 +67,7 @@ const talentsData = [
     badges: ["UI/UX", "Figma", "User Testing"],
     price: "$75/hr",
     image: "",
-    match: 95,
-  }
+    match: 95}
   {
     id: "2",
     title: "Michael Chen",
@@ -82,8 +77,7 @@ const talentsData = [
     badges: ["React", "Node.js", "AWS"],
     price: "$90/hr",
     image: "",
-    match: 89,
-  }
+    match: 89}
   {
     id: "3",
     title: "Elena Rodriguez",
@@ -93,8 +87,7 @@ const talentsData = [
     badges: ["Agile", "Scrum", "JIRA"],
     price: "$85/hr",
     image: "",
-    match: 82,
-  }
+    match: 82}
 ],
 export function MobileBrowse() {
   const { user } = useAuth(),
@@ -108,8 +101,7 @@ export function MobileBrowse() {
     badges: ["React", "TypeScript", "GraphQL"];
     price: "$70-90/hr";
     timePosted: "2 days ago";
-    match: 92,
-  };
+    match: 92};
   {
     id: "2";
     title: "UX/UI Designer";
@@ -119,8 +111,7 @@ export function MobileBrowse() {
     badges: ["Figma", "Design System", "Mobile Apps"];
     price: "$60-80/hr";
     timePosted: "4 hours ago";
-    match: 87,
-  };
+    match: 87};
   {
     id: "3";
     title: "Full Stack Engineer";
@@ -130,8 +121,7 @@ export function MobileBrowse() {
     badges: ["React", "Node.js", "AWS"];
     price: "$75-100/hr";
     timePosted: "1 week ago";
-    match: 78,
-  }
+    match: 78}
 ];
 const talentsData = [
   {
@@ -143,8 +133,7 @@ const talentsData = [
     badges: ["UI/UX", "Figma", "User Testing"];
     price: "$75/hr";
     image: "";
-    match: 95,
-  };
+    match: 95};
   {
     id: "2";
     title: "Michael Chen";
@@ -154,8 +143,7 @@ const talentsData = [
     badges: ["React", "Node.js", "AWS"];
     price: "$90/hr";
     image: "";
-    match: 89,
-  };
+    match: 89};
   {
     id: "3";
     title: "Elena Rodriguez";
@@ -165,8 +153,7 @@ const talentsData = [
     badges: ["Agile", "Scrum", "JIRA"];
     price: "$85/hr";
     image: "";
-    match: 82,
-  }
+    match: 82}
 ];
 export function MobileBrowse() {
   const { user } = useAuth(),
@@ -177,7 +164,7 @@ export function MobileBrowse() {
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
   const handleViewDetails = (id: string) => {
-    // console.log(`View details for item ${id}`),
+    // // console.log(`View details for item ${id}`),
     // Navigate to details page}
 };
   return (
@@ -220,8 +207,7 @@ const jobsData = [
     badges: ["React", "TypeScript", "GraphQL"],
     price: "$70-90/hr";
     timePosted: "2 days ago";
-    match: 92,
-  };
+    match: 92};
   {
     id: "2";
     title: "UX/UI Designer";
@@ -231,8 +217,7 @@ const jobsData = [
     badges: ["Figma", "Design System", "Mobile Apps"],
     price: "$60-80/hr";
     timePosted: "4 hours ago";
-    match: 87,
-  };
+    match: 87};
   {
     id: "3";
     title: "Full Stack Engineer";
@@ -242,8 +227,7 @@ const jobsData = [
     badges: ["React", "Node && Node.js", "AWS"],
     price: "$75-100/hr";
     timePosted: "1 week ago";
-    match: 78,
-  }
+    match: 78}
 ],
 const talentsData = [
   {
@@ -255,8 +239,7 @@ const talentsData = [
     badges: ["UI/UX", "Figma", "User Testing"],
     price: "$75/hr";
     image: "";
-    match: 95,
-  };
+    match: 95};
   {
     id: "2";
     title: "Michael Chen";
@@ -266,8 +249,7 @@ const talentsData = [
     badges: ["React", "Node && Node.js", "AWS"],
     price: "$90/hr";
     image: "";
-    match: 89,
-  };
+    match: 89};
   {
     id: "3";
     title: "Elena Rodriguez";
@@ -277,15 +259,14 @@ const talentsData = [
     badges: ["Agile", "Scrum", "JIRA"],
     price: "$85/hr";
     image: "";
-    match: 82,
-  }
+    match: 82}
 ],
 export function MobileBrowse() {
   const { user } = useAuth(),
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer',
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs"),
   const handleViewDetails = (id: string) => {
-    console && // console.log(`View details for item ${id}`),
+    console && // // console.log(`View details for item ${id}`),
     // Navigate to details page};
   return (
     <div className="min-h-screen">,
@@ -318,8 +299,7 @@ const jobs_data = [
     badges: ["React", "TypeScript", "GraphQL"],
     price: "$70 - 90 / hr";
     time_posted: "2 days ago";
-    match: 92,
-  }
+    match: 92}
   {
     id: "2";
     title: "UX / UI Designer";
@@ -329,8 +309,7 @@ const jobs_data = [
     badges: ["Figma", "Design System", "Mobile Apps"],
     price: "$60 - 80 / hr";
     time_posted: "4 hours ago";
-    match: 87,
-  }
+    match: 87}
   {
     id: "3";
     title: "Full Stack Engineer";
@@ -340,8 +319,7 @@ const jobs_data = [
     badges: ["React", "Node.js", "AWS"],
     price: "$75 - 100 / hr";
     time_posted: "1 week ago";
-    match: 78,
-  }
+    match: 78}
 ],
 const talents_data = [
   {
@@ -353,8 +331,7 @@ const talents_data = [
     badges: ["UI / UX", "Figma", "User Testing"],
     price: "$75 / hr";
     image: "";
-    match: 95,
-  }
+    match: 95}
   {
     id: "2";
     title: "Michael Chen";
@@ -364,8 +341,7 @@ const talents_data = [
     badges: ["React", "Node.js", "AWS"],
     price: "$90 / hr";
     image: "";
-    match: 89,
-  }
+    match: 89}
   {
     id: "3";
     title: "Elena Rodriguez";
@@ -375,8 +351,7 @@ const talents_data = [
     badges: ["Agile", "Scrum", "JIRA"],
     price: "$85 / hr";
     image: "";
-    match: 82,
-  }
+    match: 82}
 ],
 export /**,
  * MobileBrowse - Function description,

@@ -1,12 +1,9 @@
 import React from react',import { render, screen, act } from @testing-library/react',import @testing-library/jest-dom',import Login from @/src/pages/Login', // Target the correct Login page'import { useAuth } from @/context/auth/AuthProvider', // Correct path to mock'import { useRouter } from next/router',
 // Mock next/router,
-jest.mock('next/router', () => ({'  useRouter: jest.fn(),
-})),
+jest.mock('next/router', () => ({'  useRouter: jest.fn()})),
 // Mock useAuth hook from AuthProvider,
-jest.mock('@/context/auth/AuthProvider', () => ({'  useAuth: jest.fn(),
-})),
-// Mock toast as it's used in handleSubmit, though not directly related to fallback UI'jest.mock('@/hooks/use-toast', () => ({'    toast: jest.fn(),
-})),
+jest.mock('@/context/auth/AuthProvider', () => ({'  useAuth: jest.fn()})),
+// Mock toast as it's used in handleSubmit, though not directly related to fallback UI'jest.mock('@/hooks/use-toast', () => ({'    toast: jest.fn()})),
 const mockedUseAuth = useAuth as jest.Mock,
 const mockedUseRouter = useRouter as jest.Mock,
 describe('Login Page Fallback UI for Long Loading', () => {'  beforeEach(() => {
@@ -40,8 +37,7 @@ describe('Login Page Fallback UI for Long Loading', () => {'  beforeEach(() => {
       isLoading: true;
       isAuthenticated: false;
       login: jest.fn();
-      user: null,
-    }),
+      user: null}),
     const { _rerender } = render(<Login  />),
     expect(screen.getByText('Loading...')).toBeInTheDocument(),    expect(screen.queryByText(/Login is taking longer than usual/i)).not.toBeInTheDocument(),
     // Advance timers by less than 25 seconds,
@@ -66,8 +62,7 @@ describe('Login Page Fallback UI for Long Loading', () => {'  beforeEach(() => {
       isLoading: true;
       isAuthenticated: false;
       login: jest.fn();
-      user: null,
-    }),
+      user: null}),
     const { _rerender } = render(<Login  />),
     // Show the fallback message,
     act(() => {
@@ -78,8 +73,7 @@ describe('Login Page Fallback UI for Long Loading', () => {'  beforeEach(() => {
       isLoading: false;
       isAuthenticated: false, // e.g. login failed, but loading is done,
       login: jest.fn();
-      user: null,
-    }),
+      user: null}),
     rerender(<Login  />),
     // Fallback message should disappear, and the login form should be visible,
     expect(screen.queryByText(/Login is taking longer than usual/i)).not.toBeInTheDocument(),

@@ -20,6 +20,5 @@ export default function Revolutionary20o45PricingShowcasePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

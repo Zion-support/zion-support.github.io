@@ -2,8 +2,7 @@ import React from 'react';
 type EnhancedCardProps = {
   title?: string,
   children: React.ReactNode,
-  footer?: React.ReactNode,
-};
+  footer?: React.ReactNode};
 export default function EnhancedCard({
   title;
   children;

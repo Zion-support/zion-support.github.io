@@ -101,6 +101,5 @@ const AI20o27UltimateBreakthroughBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o27UltimateBreakthroughBanner;

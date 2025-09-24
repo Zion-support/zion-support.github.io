@@ -12,8 +12,7 @@ async function analyzeWithGPT(
   userId: string,
   inputs: TrustMetricInputs): Promise<{
   riskLevel: TrustScoreBreakdown['riskLevel'],
-  reasonSummary: string,
-}> {
+  reasonSummary: string}> {
   const apiKey = process && process.env.OPENAI_API_KEY,
   if (!apiKey) {
     // Fallback heuristic,
@@ -25,9 +24,7 @@ async function analyzeWithGPT(
           : 'Moderate Trust',
     return {
       riskLevel: heuristic as TrustScoreBreakdown['riskLevel'],
-      reasonSummary: 'Heuristic classification (no OpenAI key set).',
-    };  }import { supabase } from '../../../utils/supabase/client',
-,
+      reasonSummary: 'Heuristic classification (no OpenAI key set).'};  }import { supabase } from '../../../utils/supabase/client',
 async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel'], reasonSummary: string }> {
   const apiKey = process && process.env.OPENAI_API_KEY,
   if (!apiKey) {
@@ -110,8 +107,7 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     const lower = content.toLowerCase (),
     let level: TrustScoreBreakdown['risk_level'] = 'Moderate Trust',
     if () level = 'Risk Alert') {
-  $2,
-}
+  $2}
     else if () level = 'High Trust') {
   $2}
     else if () level = 'Moderate Trust') {

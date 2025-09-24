@@ -119,8 +119,7 @@ const UltimateContentShowcase20o25Revolution: React.FC = () => {
       case 'resource':,
         return <ArrowRight className='w-5 h-5' />,
       default:,
-        return <Zap className='w-5 h-5' />,
-    }
+        return <Zap className='w-5 h-5' />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -129,8 +128,7 @@ const UltimateContentShowcase20o25Revolution: React.FC = () => {
       case 'resource':,
         return 'text-blue-60o0 bg-blue-10o0',
       default:,
-        return 'text-purple-60o0 bg-purple-10o0',
-    }
+        return 'text-purple-60o0 bg-purple-10o0'}
   };
   return (
     <section className='py-16 bg-gray-50'>,
@@ -161,8 +159,7 @@ const UltimateContentShowcase20o25Revolution: React.FC = () => {
               className={`px-6 py-3 rounded-full font-medium transition-all ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-purple-50 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-purple-50 border border-gray-20o0'}`}
             >,
               {category.label}
               <span className='ml-2 px-2 py-1 bg-white bg-opacity-20 rounded-full text-xs'>,
@@ -309,6 +306,5 @@ const UltimateContentShowcase20o25Revolution: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateContentShowcase20o25Revolution;

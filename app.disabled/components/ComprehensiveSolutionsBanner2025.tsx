@@ -15,6 +15,5 @@ const ComprehensiveSolutionsBanner20o25: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default ComprehensiveSolutionsBanner20o25;

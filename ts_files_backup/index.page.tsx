@@ -16,6 +16,5 @@ export default function Index.pagePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

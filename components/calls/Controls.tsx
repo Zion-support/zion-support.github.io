@@ -4,8 +4,7 @@ import type { Room } from 'livekit-client',
 type Props = {
   room: Room | null,
   onLeave: () => void,
-  accent?: 'blue' | 'cyan',
-};
+  accent?: 'blue' | 'cyan'};
 export default function Controls({ roomonLeaveaccent = 'cyan' }: Props) {
   const [micEnabledsetMicEnabled] = React.useState(true),
   const [camEnabledsetCamEnabled] = React.useState(true),

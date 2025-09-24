@@ -17,8 +17,7 @@ export function KanbanColumn({ id, title, description, applications, count }) {
       case 'rejected':,
         return 'destructive',
       default: ,
-        return 'outline',
-    }
+        return 'outline'}
   };
   const getColumnBgColor = columnId => {
     switch (columnId) {
@@ -27,8 +26,7 @@ export function KanbanColumn({ id, title, description, applications, count }) {
       case 'rejected':,
         return 'bg-red-50',
       default: ,
-        return 'bg-muted/30',
-    }
+        return 'bg-muted/30'}
   };
   return (
     <Card

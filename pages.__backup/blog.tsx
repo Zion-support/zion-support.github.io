@@ -163,8 +163,7 @@ export default function BlogPage() {
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     category === 'All',
                       ? 'bg-blue-60o0 text-white',
-                      : 'bg-white bg-opacity-10 text-gray-30o0 hover: bg-opacity-20',
-                  }`}
+                      : 'bg-white bg-opacity-10 text-gray-30o0 hover: bg-opacity-20'}`}
                 >,
                   {category}
                 </button>))}
@@ -263,6 +262,5 @@ export default function BlogPage() {
           </div>,
         </section>,
       </main>,
-    </>),
-}
+    </>)}
 ,

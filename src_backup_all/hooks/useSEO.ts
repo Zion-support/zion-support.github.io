@@ -8,15 +8,13 @@ interface SEOData {
   ogType?: string,
   twitterCard?: string,
   noindex?: boolean,
-  structuredData?: object,
-}
+  structuredData?: object}
 ,
 interface UseSEOOptions {
   enableAutoTitle?: boolean,
   enableStructuredData?: boolean,
   enablePerformanceTracking?: boolean,
-  enableAnalytics?: boolean,
-}
+  enableAnalytics?: boolean}
 ,
 export const useSEO = (seoData: SEOData, options: UseSEOOptions ={}) => {
   const {
@@ -32,13 +30,11 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions ={}) => {
   const canonicalUrl = useMemo(() => {
     if (seoData.canonical) {
       return seoData.canonical.startsWith('http') ? seoData.canonical : `https: //ziontechgroup.com${seoData.canonical}`}
-    return typeof window !== 'undefined' ? window.location.href : 'https: //ziontechgroup.com',
-  }, [seoData.canonical]),
+    return typeof window !== 'undefined' ? window.location.href : 'https: //ziontechgroup.com'}, [seoData.canonical]),
   // Update document title,
   const updateTitle = useCallback((title: anystring)  => {
     if (typeof document !== 'undefined') {
-      document.title = title,
-    }
+      document.title = title}
   }, []),
   // Update meta tags,
   const updateMetaTags = useCallback((data: anySEOData)  => {
@@ -118,8 +114,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions ={}) => {
     const existingScripts = document.querySelectorAll('script[type="application/ld+json"]'),
     existingScripts.forEach(script => {
       if (script.textContent && script.textContent.includes('"@type":"Organization"')) {
-        script.remove(),
-      }
+        script.remove()}
     }),
     // Add new structured data,
     const script = document.createElement('script'),
@@ -140,19 +135,16 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions ={}) => {
       addressLocality: 'Middletown';
       addressRegion: 'DE';
       postalCode: '19709';
-      addressCountry: 'US',
-    };
+      addressCountry: 'US'};
     contactPoint: {
       '@type': 'ContactPoint';
       telephone: '+1-30o2-464-0950';
       contactType: 'customer service';
-      email: 'kleber@ziontechgroup.com',
-    };
+      email: 'kleber@ziontechgroup.com'};
     sameAs: [
       'https://www.linkedin.com/company/zion-tech-group';
       'https://twitter.com/ziontechgroup';
-      'https: //www.facebook.com/ziontechgroup'],
-  }), []),
+      'https: //www.facebook.com/ziontechgroup']}), []),
   // Track page view,
   const trackPageView = useCallback((pageData: anySEOData)  => {
     if (!enableAnalytics || typeof window === 'undefined') return,
@@ -161,8 +153,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions ={}) => {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: pageData.title;
         page_location: canonicalUrl;
-        page_path: window.location.pathname,
-      })}
+        page_path: window.location.pathname})}
 ,
     // Custom analytics,
     if (window.dataLayer) {
@@ -170,8 +161,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions ={}) => {
         event: 'page_view';
         page_title: pageData.title;
         page_url: canonicalUrl;
-        page_type: pageData.ogType || 'website',
-      })}
+        page_type: pageData.ogType || 'website'})}
   }, [canonicalUrl, enableAnalytics]),
   // Track performance metrics,
   const trackPerformance = useCallback(() => {
@@ -187,27 +177,25 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions ={}) => {
     // Core Web Vitals,
     if ('web-vital' in window) {
       // This would require the web-vitals library,
-      // console.log('Web Vitals available')}
+      // // console.log('Web Vitals available')}
 ,
     // Navigation Timing API,
     if ('performance' in window) {
-      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+      const navigation = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
       if (navigation) {
         const metrics ={
           dns: anynavigation.domainLookupEnd - navigation.domainLookupStart;
           tcp: navigation.connectEnd - navigation.connectStart;
           ttfb: navigation.responseStart - navigation.requestStart;
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
-          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-        };
+          loadComplete: navigation.loadEventEnd - navigation.loadEventStart};
         // Track to analytics,
         if (window.gtag) {
           Object.entries(metrics).forEach(([key, value])  => {
             window.gtag('event', 'performance_metric', {
               event_category: any'performance';
               event_label: key;
-              value: Math.round(value),
-            })})}
+              value: Math.round(value)})})}
       }
     }
   }, []),
@@ -268,6 +256,5 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions ={}) => {
 declare global {
   interface Window {
     gtag?: (...args: anyany[])  => void,
-    dataLayer?: any[],
-}
+    dataLayer?: any[]}
 }

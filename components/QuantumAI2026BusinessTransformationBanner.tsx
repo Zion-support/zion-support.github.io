@@ -191,6 +191,5 @@ export default function QuantumAI20o26BusinessTransformationBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

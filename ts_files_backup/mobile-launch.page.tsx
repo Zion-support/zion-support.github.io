@@ -16,6 +16,5 @@ export default function MobileLaunch.pagePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

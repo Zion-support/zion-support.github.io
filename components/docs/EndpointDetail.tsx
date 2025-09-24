@@ -5,12 +5,9 @@ import CodeSamples from './CodeSamples',
 import TryItConsole from './TryItConsole',
 import { EndpointSpec } from '../../data/api-docs/types',
 import { EndpointSpec } from '../../data / api - docs / types',
-,
   endpoint;
 }: {
-,
-  endpoint: EndpointSpec,
-}) {
+  endpoint: EndpointSpec}) {
   return (
     <div className='space-y-4'>,
       <div>,
@@ -74,8 +71,7 @@ class ErrorBoundary extends React.Component {
 export default function EndpointDetail(): any ({
   endpoint;
 }: {
-  endpoint: EndpointSpec,
-}) {
+  endpoint: EndpointSpec}) {
     <div className='space-y-4'>,
       <div>,
         <div className='text-xl font-semibold text-high-contrast'>,

@@ -64,8 +64,8 @@ class EnhancedErrorBoundary extends Component {
     // Log to console for development,
     if (process.env.NODE_ENV === 'development') {
       console.group('Error Report'),
-      // console.log('Error ID:', errorReport.id),
-      // console.log('Error Details:', errorReport),
+      // // console.log('Error ID:', errorReport.id),
+      // // console.log('Error Details:', errorReport),
       console.groupEnd()}
     // In production, you would send this to your error reporting service,
     // Example: Sentry.captureException(error, { extra: errorReport })}
@@ -234,8 +234,7 @@ Please provide any additional context about what you were doing when this error 
               </div>,
             </div>,
           </motion.div>,
-        </div>),
-    }
+        </div>)}
 ,
     return this.props.children}
 }

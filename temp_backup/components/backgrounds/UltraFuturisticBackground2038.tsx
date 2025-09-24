@@ -88,8 +88,7 @@ export default function UltraFuturisticBackground20o38({
       frequency: number,
       entanglement: number[],
       consciousness: number,
-      quantumState: number,
-    }> = [],
+      quantumState: number}> = [],
     // Initialize particles with enhanced consciousness and quantum effects,
     const initParticles = () => {
       particles = [],
@@ -116,8 +115,7 @@ export default function UltraFuturisticBackground20o38({
           frequency: Math.random() * 0.0o2 + 0.0o1;
           entanglement: [Math.random(), Math.random()];
           consciousness: Math.random();
-          quantumState: Math.random(),
-        })}
+          quantumState: Math.random()})}
     };
     // Enhanced animation loop with consciousness and quantum effects,
     const animate = () => {
@@ -261,8 +259,7 @@ export default function UltraFuturisticBackground20o38({
                 transition={{
                   duration: 3 + i * 0.2;
                   repeat: Infinity;
-                  ease: "easeInOut",
-                }}
+                  ease: "easeInOut"}}
                />))}
           </div>)}
 ,
@@ -280,8 +277,7 @@ export default function UltraFuturisticBackground20o38({
                 transition={{
                   duration: 4 + i * 0.3;
                   repeat: Infinity;
-                  ease: "easeInOut",
-                }}
+                  ease: "easeInOut"}}
                />))}
           </div>)}
 ,
@@ -301,8 +297,7 @@ export default function UltraFuturisticBackground20o38({
                 transition={{
                   duration: 6 + i * 0.5;
                   repeat: Infinity;
-                  ease: "easeInOut",
-                }}
+                  ease: "easeInOut"}}
                />))}
           </div>)}
       </div>,

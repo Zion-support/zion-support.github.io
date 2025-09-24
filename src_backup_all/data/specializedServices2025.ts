@@ -17,8 +17,7 @@ export interface SpecializedService {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
 }
 ,
 export const SPECIALIZED_SERVICES_20o25: SpecializedService[] = [
@@ -67,8 +66,7 @@ export const SPECIALIZED_SERVICES_20o25: SpecializedService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    }
+      website: "https://ziontechgroup.com"}
   };
   // Quantum Cryptography Platform,
   {
@@ -115,8 +113,7 @@ export const SPECIALIZED_SERVICES_20o25: SpecializedService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    }
+      website: "https://ziontechgroup.com"}
   };
   // AI-Powered Manufacturing Platform,
   {
@@ -163,8 +160,7 @@ export const SPECIALIZED_SERVICES_20o25: SpecializedService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    }
+      website: "https://ziontechgroup.com"}
   };
   // Blockchain Identity Management,
   {
@@ -211,8 +207,7 @@ export const SPECIALIZED_SERVICES_20o25: SpecializedService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    }
+      website: "https://ziontechgroup.com"}
   };
   // AI-Powered Real Estate Platform,
   {
@@ -259,8 +254,7 @@ export const SPECIALIZED_SERVICES_20o25: SpecializedService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    }
+      website: "https://ziontechgroup.com"}
   };
   // Quantum Internet Infrastructure,
   {
@@ -307,8 +301,7 @@ export const SPECIALIZED_SERVICES_20o25: SpecializedService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    }
+      website: "https://ziontechgroup.com"}
   }
 ],
 export default SPECIALIZED_SERVICES_20o25;

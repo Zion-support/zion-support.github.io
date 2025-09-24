@@ -351,6 +351,5 @@ export default function AIGlossaryPage() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

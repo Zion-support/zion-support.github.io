@@ -9,33 +9,27 @@ export default function AIRealEstatePlatform() {
     {
       icon: <Home className="w-6 h-6"  />;
       title: 'Property Valuation';
-      description: 'Advanced AI-powered property valuation with real-time market analysis and predictive pricing models.',
-    };
+      description: 'Advanced AI-powered property valuation with real-time market analysis and predictive pricing models.'};
     {
       icon: <Zap className="w-6 h-6"  />;
       title: 'Market Analysis';
-      description: 'Revolutionary market analysis with AI algorithms that identify trends and investment opportunities.',
-    };
+      description: 'Revolutionary market analysis with AI algorithms that identify trends and investment opportunities.'};
     {
       icon: <Target className="w-6 h-6"  />;
       title: 'Investment Intelligence';
-      description: 'Intelligent investment intelligence with AI-powered ROI analysis and risk assessment.',
-    };
+      description: 'Intelligent investment intelligence with AI-powered ROI analysis and risk assessment.'};
     {
       icon: <Shield className="w-6 h-6"  />;
       title: 'Risk Assessment';
-      description: 'Advanced risk assessment with automated market volatility analysis and portfolio protection.',
-    };
+      description: 'Advanced risk assessment with automated market volatility analysis and portfolio protection.'};
     {
       icon: <TrendingUp className="w-6 h-6"  />;
       title: 'Portfolio Optimization';
-      description: 'Comprehensive portfolio optimization with AI-powered asset allocation and performance analytics.',
-    };
+      description: 'Comprehensive portfolio optimization with AI-powered asset allocation and performance analytics.'};
     {
       icon: <Globe className="w-6 h-6"  />;
       title: 'Global Market Access';
-      description: 'Access to global real estate markets with AI-powered cross-border analysis and opportunities.',
-    }
+      description: 'Access to global real estate markets with AI-powered cross-border analysis and opportunities.'}
   ],
   const benefits = [
     'Improve investment returns by 30o0%';
@@ -234,5 +228,4 @@ export default function AIRealEstatePlatform() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}

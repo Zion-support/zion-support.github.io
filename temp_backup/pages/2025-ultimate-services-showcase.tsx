@@ -38,8 +38,7 @@ const ServiceCard = ({ service, index }: { service: any, index: number }) => (
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
     className={`relative overflow-hidden rounded-2xl p-6 shadow-xl transition-all duration-30o0 hover: scale-10o5 ${
-      service.popular ? 'ring-2 ring-blue-50o0' : '',
-    }`}
+      service.popular ? 'ring-2 ring-blue-50o0' : ''}`}
     style={{
       background: `linear-gradient(135deg, ${service.color})`;
     }}
@@ -108,8 +107,7 @@ const ServiceCategory = ({
   title: string,
   services: any[],
   icon: any,
-  color: string,
-}) => (
+  color: string}) => (
   <div className='mb-16'>,
     <div className='text-center mb-12'>,
       <div

@@ -8,8 +8,7 @@ interface LazyImageProps {
   placeholder?: string,
   threshold?: number,
   width?: number,
-  height?: number,
-}
+  height?: number}
 ,
 export const LazyImage: React.FC<LazyImageProps> = ({
   src;

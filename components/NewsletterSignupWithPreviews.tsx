@@ -8,8 +8,7 @@ interface ContentPreview {
   badge: string,
   badgeColor: string,
   icon: string,
-  roi?: string,
-}
+  roi?: string}
 ,
 const contentPreviews: ContentPreview[] = [
   {
@@ -47,8 +46,7 @@ export default function NewsletterSignupWithPreviews() {
     // Simulate API call,
     await new Promise(resolve => setTimeout(resolve20o00)),
     setIsSubscribed(true),
-    setIsLoading(false),
-  };
+    setIsLoading(false)};
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-br from-green-90o0 via-emerald-90o0 to-teal-90o0 text-white py-16">,

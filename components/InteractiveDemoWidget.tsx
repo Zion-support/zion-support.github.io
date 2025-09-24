@@ -7,8 +7,7 @@ interface DemoStep {
   description: string,
   action: string,
   result: string,
-  icon: string,
-}
+  icon: string}
 ,
 const InteractiveDemoWidget: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(0),
@@ -21,40 +20,35 @@ const InteractiveDemoWidget: React.FC = () => {
       description: 'Upload your business data and requirements';
       action: 'Uploading data...';
       result: 'Data processed successfully!';
-      icon: '📊',
-    };
+      icon: '📊'};
     {
       id: '2';
       title: 'AI Analysis';
       description: 'AI analyzes patterns and identifies opportunities';
       action: 'Analyzing data patterns...';
       result: 'Found 15 optimization opportunities!';
-      icon: '🤖',
-    };
+      icon: '🤖'};
     {
       id: '3';
       title: 'Strategy Generation';
       description: 'AI generates personalized implementation strategy';
       action: 'Generating strategy...';
       result: 'Strategy created with 340% ROI projection!';
-      icon: '💡',
-    };
+      icon: '💡'};
     {
       id: '4';
       title: 'Implementation';
       description: 'Deploy AI solutions with guided setup';
       action: 'Deploying solutions...';
       result: 'AI solutions deployed successfully!';
-      icon: '🚀',
-    };
+      icon: '🚀'};
     {
       id: '5';
       title: 'Monitoring';
       description: 'Real-time monitoring and optimization';
-      action: 'Monitoring window.performance...';
+      action: 'Monitoring window.window.performance...';
       result: 'Achieved 45% efficiency gain!';
-      icon: '📈',
-    }
+      icon: '📈'}
   ],
   const handleStartDemo = () => {
     setIsPlaying(true),
@@ -275,6 +269,5 @@ const InteractiveDemoWidget: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default InteractiveDemoWidget;

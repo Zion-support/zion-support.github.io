@@ -67,7 +67,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json"),
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-,
   const started = Date.now(),
   const auth = await authenticateRequest(req),
   if (!auth) {
@@ -175,8 +174,7 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   const _match = talents.find(_(t: unknown) => t.email === email && (!programTrack || t.programTrack === programTrack)),
   const _verified = Boolean(match && match.certificationStatus === "completed"),
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 200),
-  return res.status(200).json({_verified}),
-}
+  return res.status(200).json({_verified})}
 }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}}}

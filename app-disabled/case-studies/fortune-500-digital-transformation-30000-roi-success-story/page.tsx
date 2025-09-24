@@ -480,6 +480,5 @@ export default function Fortune50o0DigitalTransformationSuccessPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

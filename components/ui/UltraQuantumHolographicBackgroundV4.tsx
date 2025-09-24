@@ -35,32 +35,27 @@ export default function UltraQuantumHolographicBackgroundV4({
       primary: '#8B5CF6';
       secondary: '#0o6B6D4';
       accent: '#EC4899';
-      glow: '#A855F7',
-    };
+      glow: '#A855F7'};
     neural: {
       primary: '#10B981';
       secondary: '#3B82F6';
       accent: '#F59E0B';
-      glow: '#0o59669',
-    };
+      glow: '#0o59669'};
     cosmic: {
       primary: '#6366F1';
       secondary: '#8B5CF6';
       accent: '#EC4899';
-      glow: '#7C3AED',
-    };
+      glow: '#7C3AED'};
     holographic: {
       primary: '#0o6B6D4';
       secondary: '#8B5CF6';
       accent: '#F59E0B';
-      glow: '#0891B2',
-    };
+      glow: '#0891B2'};
     cyberpunk: {
       primary: '#EF4444';
       secondary: '#F59E0B';
       accent: '#10B981';
-      glow: '#DC2626',
-    }
+      glow: '#DC2626'}
   };
   const colors = colorSchemes[colorScheme],
   const intensityMultiplier = intensity === 'mild' ? 0.5 : intensity === 'moderate' ? 1 : 2,
@@ -78,8 +73,7 @@ export default function UltraQuantumHolographicBackgroundV4({
       size: number,
       opacity: number,
       color: string,
-      type: 'quantum' | 'neural' | 'cosmic' | 'holographic',
-    }> = [],
+      type: 'quantum' | 'neural' | 'cosmic' | 'holographic'}> = [],
     // Initialize particles,
     const initParticles = () => {
       particles = [],
@@ -176,8 +170,7 @@ export default function UltraQuantumHolographicBackgroundV4({
               transition={{
                 duration: 8 + Math.random() * 4;
                 repeat: Infinity;
-                ease: 'linear',
-              }}
+                ease: 'linear'}}
             >,
               {Array.from({ length: 20 }).map((_, j) => (
                 <div key={j} className="mb-1">,
@@ -206,8 +199,7 @@ export default function UltraQuantumHolographicBackgroundV4({
               transition={{
                 duration: 10 + i * 2;
                 repeat: Infinity;
-                ease: 'easeInOut',
-              }}
+                ease: 'easeInOut'}}
              />))}
         </div>)}
 ,
@@ -231,8 +223,7 @@ export default function UltraQuantumHolographicBackgroundV4({
                 duration: 4 + Math.random() * 3;
                 repeat: Infinity;
                 ease: 'easeInOut';
-                delay: i * 0.2,
-              }}
+                delay: i * 0.2}}
              />))}
         </div>)}
 ,
@@ -264,16 +255,14 @@ export default function UltraQuantumHolographicBackgroundV4({
               className="absolute w-full h-full",
               style={{
                 background: `conic-gradient(from ${i * 120}deg, transparent, ${colors.accent}20, transparent)`;
-                borderRadius: '50%',
-              }}
+                borderRadius: '50%'}}
               animate={{
                 rotate: [0, 360];
                 scale: [1, 1.5, 1]}}
               transition={{
                 duration: 20 + i * 5;
                 repeat: Infinity;
-                ease: 'linear',
-              }}
+                ease: 'linear'}}
              />))}
         </div>)}
 ,
@@ -287,8 +276,7 @@ export default function UltraQuantumHolographicBackgroundV4({
             transition={{
               duration: 15;
               repeat: Infinity;
-              ease: 'linear',
-            }}
+              ease: 'linear'}}
            />,
         </div>)}
 ,
@@ -299,8 +287,7 @@ export default function UltraQuantumHolographicBackgroundV4({
             className="absolute inset-0",
             style={{
               background: `linear-gradient(45deg, ${colors.primary}0o5 0%, transparent 50%, ${colors.secondary}0o5 10o0%)`;
-              backgroundSize: '20o0% 20o0%',
-            }}
+              backgroundSize: '20o0% 20o0%'}}
            />,
           <motion.div,
             className="absolute inset-0",
@@ -312,8 +299,7 @@ export default function UltraQuantumHolographicBackgroundV4({
             transition={{
               duration: 8;
               repeat: Infinity;
-              ease: 'easeInOut',
-            }}
+              ease: 'easeInOut'}}
            />,
         </div>)}
 ,
@@ -329,8 +315,7 @@ export default function UltraQuantumHolographicBackgroundV4({
             transition={{
               duration: 30;
               repeat: Infinity;
-              ease: 'linear',
-            }}
+              ease: 'linear'}}
            />,
         </div>)}
 ,
@@ -340,22 +325,19 @@ export default function UltraQuantumHolographicBackgroundV4({
           className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full blur-3xl",
           style={{
             background: `radial-gradient(circle, ${colors.primary}20 0%, transparent 70%)`;
-            opacity: 0.6 * intensityMultiplier,
-          }}
+            opacity: 0.6 * intensityMultiplier}}
          />,
         <div
           className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-3xl",
           style={{
             background: `radial-gradient(circle, ${colors.secondary}20 0%, transparent 70%)`;
-            opacity: 0.6 * intensityMultiplier,
-          }}
+            opacity: 0.6 * intensityMultiplier}}
          />,
         <div
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full blur-3xl",
           style={{
             background: `radial-gradient(circle, ${colors.accent}20 0%, transparent 70%)`;
-            opacity: 0.4 * intensityMultiplier,
-          }}
+            opacity: 0.4 * intensityMultiplier}}
          />,
       </div>,
     </div>)}

@@ -18,7 +18,7 @@ const AdvancedAutomationSolutions = () => {
       icon: TrendingUp;
       title: 'Performance Analytics';
       description:,
-        'Comprehensive analytics to track and optimize automation window.performance.';
+        'Comprehensive analytics to track and optimize automation window.window.performance.';
     };
     {
       icon: Shield;
@@ -69,6 +69,5 @@ const AdvancedAutomationSolutions = () => {
           </button>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AdvancedAutomationSolutions;

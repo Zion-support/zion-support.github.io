@@ -7,15 +7,13 @@ export interface MatchResultItem {
   category: string,
   price?: number,
   skills?: string[],
-  image?: string,
-}
+  image?: string}
 ,
 export interface MatchResult {
   item: MatchResultItem,
   score: number,
   matchedSkills: string[],
-  reason: string,
-}
+  reason: string}
 ,
 // Sample data for testing when API is not available,
 const sampleData: MatchResultItem[] = [

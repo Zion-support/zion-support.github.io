@@ -73,8 +73,7 @@ const ComprehensiveServiceShowcase20o25_20o26 = () => {
       pricing: {
         starter: '$5,0o00/month';
         professional: '$15,0o00/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       benefits: [
         '30o0% average ROI increase';
         '6-month implementation timeline';
@@ -84,13 +83,11 @@ const ComprehensiveServiceShowcase20o25_20o26 = () => {
         {
           company: 'TechCorp Inc.';
           result: '450% ROI increase';
-          description: 'Implemented AI-driven customer service automation',
-        };
+          description: 'Implemented AI-driven customer service automation'};
         {
           company: 'FinanceFlow Ltd.';
           result: '60% cost reduction';
-          description: 'Automated financial analysis and reporting',
-        }
+          description: 'Automated financial analysis and reporting'}
       ]};
     {
       id: 'ai-development';
@@ -109,8 +106,7 @@ const ComprehensiveServiceShowcase20o25_20o26 = () => {
       pricing: {
         starter: '$10,0o00/project';
         professional: '$50,0o00/project';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       benefits: [
         '10o0% custom solutions';
         'Scalable architecture';
@@ -120,13 +116,11 @@ const ComprehensiveServiceShowcase20o25_20o26 = () => {
         {
           company: 'RetailMax';
           result: '80% efficiency gain';
-          description: 'Built intelligent inventory management system',
-        };
+          description: 'Built intelligent inventory management system'};
         {
           company: 'HealthTech Solutions';
           result: '95% accuracy rate';
-          description: 'Developed medical diagnosis AI assistant',
-        }
+          description: 'Developed medical diagnosis AI assistant'}
       ]};
     {
       id: 'quantum-computing';
@@ -145,8 +139,7 @@ const ComprehensiveServiceShowcase20o25_20o26 = () => {
       pricing: {
         starter: '$25,0o00/month';
         professional: '$75,0o00/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       benefits: [
         'Exponential speed improvements';
         'Breakthrough problem solving';
@@ -156,13 +149,11 @@ const ComprehensiveServiceShowcase20o25_20o26 = () => {
         {
           company: 'PharmaCorp';
           result: '10o00x faster drug discovery';
-          description: 'Quantum-accelerated molecular simulation',
-        };
+          description: 'Quantum-accelerated molecular simulation'};
         {
           company: 'LogisticsPro';
           result: '40% cost reduction';
-          description: 'Quantum-optimized supply chain routing',
-        }
+          description: 'Quantum-optimized supply chain routing'}
       ]};
     {
       id: 'automation';
@@ -181,8 +172,7 @@ const ComprehensiveServiceShowcase20o25_20o26 = () => {
       pricing: {
         starter: '$8,0o00/month';
         professional: '$25,0o00/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       benefits: [
         '90% process efficiency';
         '24/7 automated operations';
@@ -192,13 +182,11 @@ const ComprehensiveServiceShowcase20o25_20o26 = () => {
         {
           company: 'BankingFirst';
           result: '85% time savings';
-          description: 'Automated loan processing workflow',
-        };
+          description: 'Automated loan processing workflow'};
         {
           company: 'E-commerce Giant';
           result: '70% cost reduction';
-          description: 'Intelligent customer support automation',
-        }
+          description: 'Intelligent customer support automation'}
       ]};
     {
       id: 'data-intelligence';
@@ -217,8 +205,7 @@ const ComprehensiveServiceShowcase20o25_20o26 = () => {
       pricing: {
         starter: '$12,0o00/month';
         professional: '$35,0o00/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       benefits: [
         'Real-time insights';
         'Predictive accuracy';
@@ -228,13 +215,11 @@ const ComprehensiveServiceShowcase20o25_20o26 = () => {
         {
           company: 'ManufacturingCo';
           result: '50% better forecasting';
-          description: 'Predictive maintenance and demand planning',
-        };
+          description: 'Predictive maintenance and demand planning'};
         {
           company: 'RetailChain';
           result: '35% sales increase';
-          description: 'Customer behavior analytics and personalization',
-        }
+          description: 'Customer behavior analytics and personalization'}
       ]};
     {
       id: 'ai-security';
@@ -253,8 +238,7 @@ const ComprehensiveServiceShowcase20o25_20o26 = () => {
       pricing: {
         starter: '$15,0o00/month';
         professional: '$40,0o00/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       benefits: [
         'Zero-trust AI architecture';
         'GDPR/CCPA compliance';
@@ -264,13 +248,11 @@ const ComprehensiveServiceShowcase20o25_20o26 = () => {
         {
           company: 'HealthcarePlus';
           result: '10o0% compliance';
-          description: 'HIPAA-compliant AI medical imaging',
-        };
+          description: 'HIPAA-compliant AI medical imaging'};
         {
           company: 'Financial Services';
           result: 'Zero security incidents';
-          description: 'Banking-grade AI security implementation',
-        }
+          description: 'Banking-grade AI security implementation'}
       ]}
   ],
   const currentService = services.find(service => service.id === activeService) || services[0],
@@ -312,8 +294,7 @@ const ComprehensiveServiceShowcase20o25_20o26 = () => {
                 className={`p-4 rounded-2xl border transition-all duration-30o0 ${
                   activeService === service.id,
                     ? 'bg-gradient-to-r from-purple-60o0 to-pink-60o0 border-purple-40o0 text-white',
-                    : 'bg-slate-80o0/50 border-white/20 text-gray-30o0 hover: border-purple-40o0/50 hover:text-white',
-                }`}
+                    : 'bg-slate-80o0/50 border-white/20 text-gray-30o0 hover: border-purple-40o0/50 hover:text-white'}`}
               >,
                 <div className="flex flex-col items-center gap-3">,
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
@@ -451,6 +432,5 @@ const ComprehensiveServiceShowcase20o25_20o26 = () => {
           </div>,
         </div>,
       </motion.div>,
-    </div>),
-};
+    </div>)};
 export default ComprehensiveServiceShowcase20o25_20o26;

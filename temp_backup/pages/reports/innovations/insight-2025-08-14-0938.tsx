@@ -30,6 +30,5 @@ export default function InsightPage() {
           .,
         </p>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

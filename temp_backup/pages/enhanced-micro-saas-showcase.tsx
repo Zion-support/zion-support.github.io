@@ -20,8 +20,7 @@ export default function EnhancedMicroSaasShowcase() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const filteredServices = realMicroSaasServices20o25,
     .filter(service =>,
       (selectedCategory === 'all' || service.category === selectedCategory) &&,
@@ -39,8 +38,7 @@ export default function EnhancedMicroSaasShowcase() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -49,8 +47,7 @@ export default function EnhancedMicroSaasShowcase() {
       opacity: 1;
       y: 0;
       transition: {
-        duration: 0.6,
-      }
+        duration: 0.6}
     }
   };
   return (
@@ -392,5 +389,4 @@ export default function EnhancedMicroSaasShowcase() {
         </section>,
         <UltraFuturisticFooter20o34  />,
               </UltraFuturisticBackground20o35>,
-    </>),
-}
+    </>)}

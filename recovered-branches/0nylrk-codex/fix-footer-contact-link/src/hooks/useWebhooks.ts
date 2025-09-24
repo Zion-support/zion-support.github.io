@@ -14,14 +14,12 @@ export interface Webhook {
   event_types: WebhookEventType[],
   is_active: boolean,
   created_at: string,
-  last_triggered_at: string | null,
-}
+  last_triggered_at: string | null}
 ,
 export interface TestWebhookResult {
   status: number,
   statusText: string,
-  responseBody: string,
-}
+  responseBody: string}
 ,
 export function useWebhooks() {
   const { user } = useAuth(),

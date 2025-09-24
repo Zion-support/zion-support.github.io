@@ -29,15 +29,13 @@ export interface CuttingEdgeComprehensiveService20o27 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const cuttingEdgeComprehensiveServices20o27: CuttingEdgeComprehensiveService20o27[] =,
   [
@@ -910,12 +908,10 @@ export const cuttingEdgeComprehensiveServices20o27: CuttingEdgeComprehensiveServ
 // Helper functions for service management,
 export const getServiceById = (id: string) => {
   return cuttingEdgeComprehensiveServices20o27.find(
-    service => service.id === id),
-};
+    service => service.id === id)};
 export const getServicesByCategory = (category: string) => {
   return cuttingEdgeComprehensiveServices20o27.filter(
-    service => service.category === category),
-};
+    service => service.category === category)};
 export const getPopularServices = () => {
   return cuttingEdgeComprehensiveServices20o27.filter(
     service => service.popular)};
@@ -930,6 +926,5 @@ export const searchServices = (query: string) => {
       service.name.toLowerCase().includes(lowercaseQuery) ||,
       service.description.toLowerCase().includes(lowercaseQuery) ||,
       service.category.toLowerCase().includes(lowercaseQuery) ||,
-      service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))),
-};
+      service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery)))};
 export default cuttingEdgeComprehensiveServices20o27;

@@ -1,11 +1,9 @@
 import React from 'react';
 import React, { useEffect, useRef } from 'react',
 'use client',
-,
 interface ScrollRevealProps {
   children: React.ReactNode,
 "use client",
-,
 const ScrollReveal: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
 =======,
   origin?: 'top' | 'bottom' | 'left' | 'right',
@@ -15,7 +13,6 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({ children }) => {
   return <>{children}</>};
 export default ScrollReveal;
 'use client',
-,
 export default function ScrollReveal({ children }: { children: React.ReactNode }) {
   const ref = useRef<HTMLDivElement>(null),
   useEffect(() => {
@@ -26,8 +23,7 @@ export default function ScrollReveal({ children }: { children: React.ReactNode }
     const onIntersect: IntersectionObserverCallback = ([entry]) => {
       if (entry.isIntersecting) {
         el.style.opacity = '1',
-        observer.disconnect(),
-      }
+        observer.disconnect()}
     };
     const observer = new IntersectionObserver(onIntersect, { threshold: 0.1 }),
     observer.observe(el),

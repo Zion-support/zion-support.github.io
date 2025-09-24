@@ -12,8 +12,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const serviceCategories = [
   {
     id: 'ai-services';
@@ -22,8 +21,7 @@ const serviceCategories = [
     icon: Brain;
     color: 'from-violet-50o0 to-purple-50o0';
     services: aiEmergingTechServices.filter(s => s.category.includes('AI'));
-    gradient: 'from-violet-50o0/20 to-indigo-50o0/20',
-  };
+    gradient: 'from-violet-50o0/20 to-indigo-50o0/20'};
   {
     id: 'quantum-tech';
     title: '⚛️ Quantum & Emerging Tech';
@@ -31,8 +29,7 @@ const serviceCategories = [
     icon: Atom;
     color: 'from-indigo-50o0 to-blue-50o0';
     services: aiEmergingTechServices.filter(s => s.category.includes('Quantum') || s.category.includes('Blockchain'));
-    gradient: 'from-indigo-50o0/20 to-cyan-50o0/20',
-  };
+    gradient: 'from-indigo-50o0/20 to-cyan-50o0/20'};
   {
     id: 'enterprise-it';
     title: '🏙️ Enterprise IT Solutions';
@@ -40,8 +37,7 @@ const serviceCategories = [
     icon: Cpu;
     color: 'from-blue-50o0 to-cyan-50o0';
     services: realMarketServices.filter(s => s.category.includes('Security') || s.category.includes('HR') || s.category.includes('Project'));
-    gradient: 'from-blue-50o0/20 to-teal-50o0/20',
-  };
+    gradient: 'from-blue-50o0/20 to-teal-50o0/20'};
   {
     id: 'business-automation';
     title: '🛒 Business Automation';
@@ -49,8 +45,7 @@ const serviceCategories = [
     icon: ShoppingCart;
     color: 'from-teal-50o0 to-emerald-50o0';
     services: realMarketServices.filter(s => s.category.includes('E-commerce') || s.category.includes('Marketing') || s.category.includes('Finance'));
-    gradient: 'from-teal-50o0/20 to-green-50o0/20',
-  };
+    gradient: 'from-teal-50o0/20 to-green-50o0/20'};
   {
     id: 'robotics-automation';
     title: '🤖 Robotics & Automation';
@@ -58,8 +53,7 @@ const serviceCategories = [
     icon: Rocket;
     color: 'from-green-50o0 to-yellow-50o0';
     services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') || s.category.includes('Edge'));
-    gradient: 'from-green-50o0/20 to-orange-50o0/20',
-  };
+    gradient: 'from-green-50o0/20 to-orange-50o0/20'};
   {
     id: 'research-development';
     title: '🔬 Research & Development';
@@ -67,8 +61,7 @@ const serviceCategories = [
     icon: Globe;
     color: 'from-orange-50o0 to-red-50o0';
     services: aiEmergingTechServices.filter(s => s.category.includes('Drug') || s.category.includes('Climate'));
-    gradient: 'from-orange-50o0/20 to-pink-50o0/20',
-  }
+    gradient: 'from-orange-50o0/20 to-pink-50o0/20'}
 ],
 export default function UltraFuturisticServiceShowcase20o34() {
   const [selectedCategorysetSelectedCategory] = useState('all'),
@@ -86,8 +79,7 @@ export default function UltraFuturisticServiceShowcase20o34() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -188,8 +180,7 @@ export default function UltraFuturisticServiceShowcase20o34() {
                 className={`p-6 rounded-xl border transition-all duration-30o0 hover: scale-10o5 cursor-pointer ${
                   selectedCategory === category.id,
                     ? 'border-cyan-50o0 bg-cyan-50o0/10',
-                    : 'border-white/20 bg-white/5 hover:border-cyan-50o0/50 hover:bg-cyan-50o0/5',
-                }`}
+                    : 'border-white/20 bg-white/5 hover:border-cyan-50o0/50 hover:bg-cyan-50o0/5'}`}
                 onClick={() => setSelectedCategory(category.id === selectedCategory ? 'all' : category.id)}
               >,
                 <div className="flex items-center space-x-3 mb-4">,

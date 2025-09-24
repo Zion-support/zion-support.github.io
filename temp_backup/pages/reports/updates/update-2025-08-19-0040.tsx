@@ -47,6 +47,5 @@ export default function UpdatePage() {
           </p>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

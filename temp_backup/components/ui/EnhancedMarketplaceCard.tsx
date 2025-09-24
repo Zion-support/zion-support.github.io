@@ -9,12 +9,10 @@ export type ServiceItem ={
   priceFromUSD?: number,
   priceRangeUSD?: [number, number],
   categories: string[],
-  rating?: number, // 0-5,
-};
+  rating?: number, // 0-5};
 type Props ={
   service: ServiceItem,
-  onRequestQuote: (service: ServiceItem) => void,
-};
+  onRequestQuote: (service: ServiceItem) => void};
 export default function EnhancedMarketplaceCard({ service, onRequestQuote }: Props) {
   const minPrice = service.priceFromUSD ?? (service.priceRangeUSD ? service.priceRangeUSD[0] : undefined),
   return (

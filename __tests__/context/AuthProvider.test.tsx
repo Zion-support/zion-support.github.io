@@ -1,7 +1,6 @@
 import React from react',import { render, act, screen, waitFor } from @testing-library/react',import { AuthProvider, useAuth } from @/context/auth/AuthProvider',import * as authService from @/services/authService',import { toast as originalToast } from @/hooks/use-toast', // Import original toast'import { supabase } from @/integrations/supabase/client',
 // Mock services and hooks,
-jest.mock('@/services/authService'),jest.mock('@/hooks/use-toast', () => ({'  toast: jest.fn(),
-})),
+jest.mock('@/services/authService'),jest.mock('@/hooks/use-toast', () => ({'  toast: jest.fn()})),
 jest.mock('@/integrations/supabase/client', () => ({'  supabase: {
     auth: {
       onAuthStateChange: jest.fn().mockReturnValue({
@@ -78,8 +77,7 @@ describe('AuthProvider Login Timeout', () => {'  beforeEach(() => {
     // For this test, we need signInWithPassword to succeed for the Supabase path,
     // @ts-expect-error - Intentionally accessing mock methods for test setup,
     mockedSupabase.auth.signInWithPassword.mockResolvedValue({
-      data: { user: { id: supabase-user-id', email: success@example.com' }, session: {} },      error: null,
-    }),
+      data: { user: { id: supabase-user-id', email: success@example.com' }, session: {} },      error: null}),
     // Mock onAuthStateChange to simulate Supabase returning a user and profile,
     // @ts-expect-error - Intentionally accessing mock methods for test setup,
     mockedSupabase.auth.onAuthStateChange.mockImplementation((callback) => {

@@ -263,6 +263,5 @@ export default function Services() {
 					</div>,
 				</div>,
 			</section>,
-		</PageTransition>),
-}
+		</PageTransition>)}
 ,

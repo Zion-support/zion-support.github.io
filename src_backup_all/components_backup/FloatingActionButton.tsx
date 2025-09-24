@@ -20,8 +20,7 @@ interface FloatingAction {
   label: string,
   action: () => void,
   color: string,
-  priority: 'high' | 'medium' | 'low',
-}
+  priority: 'high' | 'medium' | 'low'}
 ,
 interface FloatingActionButtonProps {
   actions?: FloatingAction[],
@@ -47,8 +46,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)'),
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light'),
       const handleChange = (e: MediaQueryListEvent) => {
-        setCurrentTheme(e.matches ? 'dark' : 'light'),
-      };
+        setCurrentTheme(e.matches ? 'dark' : 'light')};
       mediaQuery.addEventListener('change', handleChange),
       return () => mediaQuery.removeEventListener('change', handleChange)} else {
       setCurrentTheme(theme)}
@@ -73,28 +71,23 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             contactSection.scrollIntoView({ behavior: 'smooth' })}
         };
         color: 'bg-blue-50o0 hover:bg-blue-60o0';
-        priority: 'high' as const,
-      };
+        priority: 'high' as const};
       {
         id: 'phone';
         icon: Phone;
         label: 'Call Now';
         action: () => {
-          window.location.href = 'tel:+1234567890',
-        };
+          window.location.href = 'tel:+1234567890'};
         color: 'bg-green-50o0 hover:bg-green-60o0';
-        priority: 'high' as const,
-      };
+        priority: 'high' as const};
       {
         id: 'email';
         icon: Mail;
         label: 'Send Email';
         action: () => {
-          window.location.href = 'mailto:info@ziontechgroup.com',
-        };
+          window.location.href = 'mailto:info@ziontechgroup.com'};
         color: 'bg-purple-50o0 hover:bg-purple-60o0';
-        priority: 'medium' as const,
-      };
+        priority: 'medium' as const};
       {
         id: 'location';
         icon: MapPin;
@@ -102,8 +95,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         action: () => {
           window.open('https://maps.google.com/?q=Zion+Tech+Group', '_blank')};
         color: 'bg-red-50o0 hover:bg-red-60o0';
-        priority: 'medium' as const,
-      }
+        priority: 'medium' as const}
     ] : []);
     // Utility actions,
     ...(showUtilityActions ? [
@@ -115,8 +107,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           if (navigator.share) {
             navigator.share({
               title: document.title;
-              url: window.location.href,
-            })} else {
+              url: window.location.href})} else {
             // Fallback for browsers without share API,
             const url = window.location.href,
             navigator.clipboard.writeText(url).then(() => {
@@ -124,8 +115,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
               showNotification('Page URL copied to clipboard!')})}
         };
         color: 'bg-yellow-50o0 hover:bg-yellow-60o0';
-        priority: 'low' as const,
-      };
+        priority: 'low' as const};
       {
         id: 'share';
         icon: Share2;
@@ -134,16 +124,14 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           if (navigator.share) {
             navigator.share({
               title: document.title;
-              url: window.location.href,
-            })} else {
+              url: window.location.href})} else {
             // Fallback for browsers without share API,
             const url = window.location.href,
             navigator.clipboard.writeText(url).then(() => {
               showNotification('Page URL copied to clipboard!')})}
         };
         color: 'bg-indigo-50o0 hover:bg-indigo-60o0';
-        priority: 'low' as const,
-      };
+        priority: 'low' as const};
       {
         id: 'download';
         icon: Download;
@@ -155,21 +143,17 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           link.download = 'Zion-Tech-Group-Brochure.pdf',
           document.body.appendChild(link),
           link.click(),
-          document.body.removeChild(link),
-        };
+          document.body.removeChild(link)};
         color: 'bg-teal-50o0 hover:bg-teal-60o0';
-        priority: 'low' as const,
-      };
+        priority: 'low' as const};
       {
         id: 'print';
         icon: Printer;
         label: 'Print Page';
         action: () => {
-          window.print(),
-        };
+          window.print()};
         color: 'bg-gray-50o0 hover:bg-gray-60o0';
-        priority: 'low' as const,
-      }
+        priority: 'low' as const}
     ] : []);
     // Custom actions,
     ...actions],
@@ -195,8 +179,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     document.body.appendChild(notification),
     // Animate in,
     setTimeout(() => {
-      notification.classList.remove('translate-x-full'),
-    }, 10o0),
+      notification.classList.remove('translate-x-full')}, 10o0),
     // Remove after 3 seconds,
     setTimeout(() => {
       notification.classList.add('translate-x-full'),
@@ -212,8 +195,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       case 'top-left':,
         return 'top-6 left-6',
       default: ,
-        return 'bottom-6 right-6',
-    }
+        return 'bottom-6 right-6'}
   };
   // Get theme classes,
   const getThemeClasses = () => {
@@ -238,8 +220,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
                   `}
                   style={{
                     animationDelay: `${index * 10o0}ms`;
-                    animation: 'slideInUp 0.3s ease-out forwards',
-                  }}
+                    animation: 'slideInUp 0.3s ease-out forwards'}}
                 >,
                   <action.icon size={20}  />,
                   <span className="whitespace-nowrap text-sm font-medium">,
@@ -283,12 +264,10 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         @keyframes slideInUp {
           from {
             opacity: 0,
-            transform: translateY(20px) scale(0.75),
-          }
+            transform: translateY(20px) scale(0.75)}
           to {
             opacity: 1,
-            transform: translateY(0) scale(1),
-          }
+            transform: translateY(0) scale(1)}
         }
 ,
         @keyframes bounce {
@@ -303,8 +282,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         }
 ,
         .animate-bounce {
-          animation: bounce 2s infinite,
-        }
+          animation: bounce 2s infinite}
       `}</style>,
     </>)};
 export default FloatingActionButton;

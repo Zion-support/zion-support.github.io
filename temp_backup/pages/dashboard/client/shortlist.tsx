@@ -188,5 +188,4 @@ export default function ClientShortlistPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

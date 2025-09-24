@@ -15,6 +15,5 @@ export default function Revolutionary20o38PricingPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

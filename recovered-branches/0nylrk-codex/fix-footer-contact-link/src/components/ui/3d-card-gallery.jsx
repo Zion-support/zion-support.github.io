@@ -11,8 +11,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
         status: [];
         complexity: [];
         verified: false;
-        featured: false,
-    }),
+        featured: false}),
     const [searchQuery, setSearchQuery] = useState(''),
     const [sortBy, setSortBy] = useState('rating'),
     const [sortOrder, setSortOrder] = useState('desc'),
@@ -51,8 +50,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 bValue = b.title.toLowerCase(),
                 break,
             default: ,
-                return 0,
-        }
+                return 0}
         if (sortOrder === 'asc') {
             return aValue > bValue ? 1 : -1}
         else {
@@ -84,8 +82,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             case 'deprecated':,
                 return 'border-red-50o0/50 bg-red-50o0/10 text-red-40o0',
             default: ,
-                return 'border-zinc-50o0/50 bg-zinc-50o0/10 text-zinc-40o0',
-        }
+                return 'border-zinc-50o0/50 bg-zinc-50o0/10 text-zinc-40o0'}
     };
     // Get complexity color,
     const getComplexityColor = (complexity) => {
@@ -99,8 +96,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             case 'expert':,
                 return 'border-red-50o0/50 bg-red-50o0/10 text-red-40o0',
             default: ,
-                return 'border-zinc-50o0/50 bg-zinc-50o0/10 text-zinc-40o0',
-        }
+                return 'border-zinc-50o0/50 bg-zinc-50o0/10 text-zinc-40o0'}
     };
     // Get category icon,
     const getCategoryIcon = (category) => {
@@ -353,8 +349,7 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
             transformStyle: 'preserve-3d';
             rotateX;
             rotateY;
-            transform: isHovered ? 'translateZ(20px)' : 'translateZ(0px)',
-        }} transition={{ duration: 0.3 }}>,
+            transform: isHovered ? 'translateZ(20px)' : 'translateZ(0px)'}} transition={{ duration: 0.3 }}>,
         {/* Background Image/Pattern */}
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-transparent to-zion-purple/20" />,
         {/* Content */}

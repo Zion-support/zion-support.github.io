@@ -5,8 +5,7 @@ import { Input } from "@/components/ui/input",
 interface MobileFilterBarProps {
   searchTerm: string,
   setSearchTerm: (value: string) => void,
-  setIsMobileFilterOpen: (isOpen: boolean) => void,
-}
+  setIsMobileFilterOpen: (isOpen: boolean) => void}
 ,
 export function MobileFilterBar({
   searchTerm,
@@ -30,6 +29,5 @@ export function MobileFilterBar({
           className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate",
         />,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

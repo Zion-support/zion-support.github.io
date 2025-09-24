@@ -3,8 +3,7 @@ import type { GetStaticPaths, GetStaticProps } from 'next',
 import { BLOG_POSTS } from '@/data/blog-posts',
 import type { BlogPost } from '@/types/blog',
 interface BlogProps {
-  post: BlogPost | null,
-}
+  post: BlogPost | null}
 ,
 const BlogPostPage: React.FC<BlogProps> = ({ post }) => {
   if (!post) {

@@ -1,13 +1,11 @@
 import { completeSitemap, SitemapItem } from '@/config/sitemap',
 // Find a route by path in the complete sitemap,
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
-  return completeSitemap.find(route => route.path === path),
-};
+  return completeSitemap.find(route => route.path === path)};
 // Check if a route requires authentication,
 export const isProtectedRoute = (path: string): boolean => {
   const route = findRouteByPath(path),
-  return route?.requiredAuth === true,
-};
+  return route?.requiredAuth === true};
 // Check if a route is accessible by a specific user type,
 export const canAccessRoute = (
   path: string;

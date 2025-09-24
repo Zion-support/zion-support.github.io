@@ -15,6 +15,5 @@ export default function PrivacySettingsPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

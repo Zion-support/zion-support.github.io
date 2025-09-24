@@ -108,8 +108,7 @@ export function MainNavigation() {
                       ? 'text-zion-cyan bg-zion-cyan/10',
                       : isScrolled,
                         ? 'text-zion-slate-dark hover: text-zion-cyan hover:bg-zion-cyan/10',
-                        : 'text-white hover:text-zion-cyan hover:bg-white/10',
-                  }`}
+                        : 'text-white hover:text-zion-cyan hover:bg-white/10'}`}
                 >,
                   <span>{item.name}</span>,
                   <ChevronDown className='w-4 h-4 transition-transform duration-30o0 group-hover: rotate-180' />,
@@ -136,8 +135,7 @@ export function MainNavigation() {
               className={`p-2 rounded-lg transition-all duration-30o0 ${
                 isScrolled,
                   ? 'text-zion-slate-dark hover: text-zion-cyan hover:bg-zion-cyan/10',
-                  : 'text-white hover:text-zion-cyan hover:bg-white/10',
-              }`}
+                  : 'text-white hover:text-zion-cyan hover:bg-white/10'}`}
             >,
               <Search className='w-5 h-5' />,
             </button>,
@@ -146,8 +144,7 @@ export function MainNavigation() {
               className={`p-2 rounded-lg transition-all duration-30o0 ${
                 isScrolled,
                   ? 'text-zion-slate-dark hover: text-zion-cyan hover:bg-zion-cyan/10',
-                  : 'text-white hover:text-zion-cyan hover:bg-white/10',
-              }`}
+                  : 'text-white hover:text-zion-cyan hover:bg-white/10'}`}
             >,
               <Bell className='w-5 h-5' />,
             </button>,
@@ -159,8 +156,7 @@ export function MainNavigation() {
                 className={`flex items-center space-x-2 p-2 rounded-lg transition-all duration-30o0 ${
                   isScrolled,
                     ? 'text-zion-slate-dark hover: text-zion-cyan hover:bg-zion-cyan/10',
-                    : 'text-white hover:text-zion-cyan hover:bg-white/10',
-                }`}
+                    : 'text-white hover:text-zion-cyan hover:bg-white/10'}`}
               >,
                 <User className='w-5 h-5' />,
               </button>,
@@ -196,8 +192,7 @@ export function MainNavigation() {
             className={`lg: hidden p-2 rounded-lg transition-all duration-30o0 ${
               isScrolled,
                 ? 'text-zion-slate-dark hover:text-zion-cyan hover:bg-zion-cyan/10',
-                : 'text-white hover:text-zion-cyan hover:bg-white/10',
-            }`}
+                : 'text-white hover:text-zion-cyan hover:bg-white/10'}`}
           >,
             {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
           </button>,
@@ -215,8 +210,7 @@ export function MainNavigation() {
                     className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-30o0 ${
                       isActive(item.href),
                         ? 'text-zion-cyan bg-zion-cyan/10',
-                        : 'text-zion-slate-dark hover: text-zion-cyan hover:bg-zion-cyan/10',
-                    }`}
+                        : 'text-zion-slate-dark hover: text-zion-cyan hover:bg-zion-cyan/10'}`}
                   >,
                     <div className='flex items-center justify-between'>,
                       <span>{item.name}</span>,
@@ -234,8 +228,7 @@ export function MainNavigation() {
                           className='block px-4 py-2 text-zion-slate-dark hover: text-zion-cyan hover:bg-zion-cyan/5 rounded-lg transition-colors duration-20o0',
                           onClick={() => {
                             setActiveDropdown(null),
-                            setIsOpen(false),
-                          }}
+                            setIsOpen(false)}}
                         >,
                           {subItem.name}
                         </Link>))}

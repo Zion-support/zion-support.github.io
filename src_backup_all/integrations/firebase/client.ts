@@ -20,8 +20,7 @@ const app = initializeApp(firebaseConfig),
 // an in-memory cache when storage access is denied.,
 let db: Firestore, // Explicitly typed db,
 try {
-  db = getFirestore(app),
-} catch (e) {
+  db = getFirestore(app)} catch (e) {
   console.warn('Firestore storage unavailable, using memory cache.', e),
   db = initializeFirestore(app, { localCache: memoryLocalCache() })}
 ,

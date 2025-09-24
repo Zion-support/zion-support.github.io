@@ -8,8 +8,7 @@ export type ZgpProposalVersion = {
   codeModuleAffected: string,
   votingOptions: string[],
   fundingNeeded: ZgpFunding,
-  createdAt: string,
-};
+  createdAt: string};
 export type ZgpProposal = {
   id: string, // uuid,
   templateId: string, // e.g., 'zgp-0o1',
@@ -19,8 +18,7 @@ export type ZgpProposal = {
   status: 'draft' | 'submitted' | 'archived',
   versions: ZgpProposalVersion[],
   latestVersion: number,
-  votingResultUrl?: string,
-};
+  votingResultUrl?: string};
 export type ZgpTemplate = {
   id: string,
   code: string,
@@ -33,8 +31,7 @@ export type ZgpTemplate = {
     specificationImpact: string,
     codeModuleAffected: string,
     votingOptions: string[],
-    fundingNeeded: ZgpFunding,
-  };
+    fundingNeeded: ZgpFunding};
 };
 const DATA_DIR = path.join(process.cwd(), 'data'),
 const PROPOSALS_FILE = path.join(DATA_DIR, 'zgp-proposals.json'),
@@ -83,8 +80,7 @@ export function createProposal(params: {
   specificationImpact: string,
   codeModuleAffected: string,
   votingOptions: string[],
-  fundingNeeded: ZgpFunding,
-}): ZgpProposal {
+  fundingNeeded: ZgpFunding}): ZgpProposal {
   const proposals = listProposals(),
   const templates = loadTemplates(),
   const template = templates.find(t => t.id === params.templateId),
@@ -117,8 +113,7 @@ export function createProposal(params: {
   return proposal}
 ,
 export function getProposalById(id: string): ZgpProposal | undefined {
-  return listProposals().find(p => p.id === id),
-}
+  return listProposals().find(p => p.id === id)}
 ,
 export function updateProposal(
   id: string;
@@ -131,8 +126,7 @@ export function updateProposal(
     votingOptions?: string[],
     fundingNeeded?: ZgpFunding,
     status?: ZgpProposal['status'],
-    votingResultUrl?: string,
-  }
+    votingResultUrl?: string}
 ): ZgpProposal {
   const proposals = listProposals(),
   const index = proposals.findIndex(p => p.id === id),

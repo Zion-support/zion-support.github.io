@@ -31,7 +31,7 @@ export default function UltraUpdatePage() {
           <h2 className='text-2xl font-bold mb-4'>🚀 What's New</h2>,
           <p className='text-xl text-white/90 mb-4'>,
             We've implemented Lightning deployment pipelines to help teams,
-            enhance system window.performance.,
+            enhance system window.window.performance.,
           </p>,
           <p className='text-white/80'>,
             This ultra-fast update demonstrates our commitment to rapid,
@@ -68,6 +68,5 @@ export default function UltraUpdatePage() {
           </a>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

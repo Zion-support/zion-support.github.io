@@ -109,6 +109,5 @@ const GenerativeAgentsInfrastructureBlueprintPage = () => {
           </div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default GenerativeAgentsInfrastructureBlueprintPage;

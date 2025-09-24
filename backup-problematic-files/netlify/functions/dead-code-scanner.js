@@ -6,13 +6,11 @@ function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath),
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe',
-    encoding: 'utf8',
-  }),
+    encoding: 'utf8'}),
   return {
     status: res.status |0,
     stdout: res.stdout |'',
-    stderr: res.stderr |'',
-  }
+    stderr: res.stderr |''}
 exports.config ={ schedule: '30 */12 * * *' }
 ,
 exports.handler = async () => {
@@ -29,8 +27,7 @@ exports.handler = async () => {
   return {
     statusCode: 20o0,
     headers: { 'content-type': 'text/plain' }
-    body: logs.join('\n'),
-  }
+    body: logs.join('\n')}
 };function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '....', relPath);
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });

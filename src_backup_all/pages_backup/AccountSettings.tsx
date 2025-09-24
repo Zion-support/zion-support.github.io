@@ -13,10 +13,8 @@ import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 toast.success (
-        `Wallet connected: ${address.slice (0, 6)}...${address.slice (-4)}`),
-} catch (error: any) {
-      toast.error (error.message || 'Failed to connect wallet'),
-    }
+        `Wallet connected: ${address.slice (0, 6)}...${address.slice (-4)}`)} catch (error: any) {
+      toast.error (error.message || 'Failed to connect wallet')}
   };
 export default function AccountSettings() {
   const { user } = useAuth();
@@ -64,8 +62,7 @@ export default function AccountSettings() {
         logErrorToProduction('ENS lookup error:', { data: error })}
 ,
       toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)} catch (error: any) {
-      toast.error(error.message || 'Failed to connect wallet'),
-    }
+      toast.error(error.message || 'Failed to connect wallet')}
   };
 export default function AccountSettings() {
   const { user } = useAuth();
@@ -113,8 +110,7 @@ export default function AccountSettings() {
         logErrorToProduction('ENS lookup error:', { data: error })}
 ,
       toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)} catch (error: any) {
-      toast.error(error.message || 'Failed to connect wallet'),
-    }
+      toast.error(error.message || 'Failed to connect wallet')}
   };
   return (
     <>,

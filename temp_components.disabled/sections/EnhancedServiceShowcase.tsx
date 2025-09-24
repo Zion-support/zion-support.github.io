@@ -48,22 +48,19 @@ interface Service {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 interface EnhancedServiceShowcaseProps {
   services: Service[],
   title?: string,
   subtitle?: string,
-  showStats?: boolean,
-}
+  showStats?: boolean}
 ,
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   services;
@@ -115,8 +112,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -126,8 +122,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
       y: 0;
       transition: {
         duration: 0.6;
-        ease: "easeOut",
-      }
+        ease: "easeOut"}
     }
   };
   const featuredServices = services.filter(service => service.popular).slice(0, 6),

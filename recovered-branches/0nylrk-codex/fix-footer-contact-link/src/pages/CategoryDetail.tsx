@@ -50,96 +50,80 @@ export default function CategoryDetail() {
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: "",
     description: "",
-    icon: <Bot className="w-6 h-6" />,
-  }),
+    icon: <Bot className="w-6 h-6" />}),
   // Map of category slugs to their display data,
   const categoryData = {
     'services': {
       title: "Services",
       description: "On-demand IT support, consulting, development, and more",
-      icon: <Briefcase className="w-6 h-6" />,
-    }
+      icon: <Briefcase className="w-6 h-6" />}
     'talents': {
       title: "Talents",
       description: "Connect with AI experts, developers, and tech specialists",
-      icon: <Brain className="w-6 h-6" />,
-    }
+      icon: <Brain className="w-6 h-6" />}
     'equipment': {
       title: "Equipment",
       description: "Rent or buy specialized hardware, servers, and devices",
-      icon: <Code className="w-6 h-6" />,
-    }
+      icon: <Code className="w-6 h-6" />}
   });
   // Map of category slugs to their display data,
   const categoryData = {
     'services': {
       title: "Services",
       description: "On-demand IT support, consulting, development, and more",
-      icon: <Briefcase className="w-6 h-6" />,
-    }
+      icon: <Briefcase className="w-6 h-6" />}
     'talents': {
       title: "Talents",
       description: "Connect with AI experts, developers, and tech specialists",
-      icon: <Brain className="w-6 h-6" />,
-    }
+      icon: <Brain className="w-6 h-6" />}
     'equipment': {
       title: "Equipment",
       description: "Rent or buy specialized hardware, servers, and devices",
-      icon: <Code className="w-6 h-6" />,
-    };
+      icon: <Code className="w-6 h-6" />};
     'innovation': {
       title: "Innovation",
       description: "Discover cutting-edge solutions and tech breakthroughs",
-      icon: <Bot className="w-6 h-6" />,
-    }
+      icon: <Bot className="w-6 h-6" />}
     };
     'ai-models-apis': {
       title: "AI Models & APIs",
       description: "Access cutting-edge AI models with easy integration",
-      icon: <Brain className="w-6 h-6" />,
-    }
+      icon: <Brain className="w-6 h-6" />}
     };
     'content-creation': {
       title: "Content Creation",
       description: "Generate high-quality content for your projects",
-      icon: <PenLine className="w-6 h-6" />,
-    }
+      icon: <PenLine className="w-6 h-6" />}
     };
     'data-analysis': {
       title: "Data Analysis",
       description: "Extract insights from complex datasets",
-      icon: <BarChart className="w-6 h-6" />,
-    }
+      icon: <BarChart className="w-6 h-6" />}
     };
     'computer-vision': {
       title: "Computer Vision",
       description: "Image and video processing solutions",
-      icon: <Eye className="w-6 h-6" />,
-    }
+      icon: <Eye className="w-6 h-6" />}
     };
     'virtual-assistants': {
       title: "Virtual Assistants",
       description: "Intelligent automation for your workflow",
-      icon: <Bot className="w-6 h-6" />,
-    }
+      icon: <Bot className="w-6 h-6" />}
     };
     'voice-speech': {
       title: "Voice & Speech",
       description: "Speech recognition and synthesis tools",
-      icon: <Mic className="w-6 h-6" />,
-    }
+      icon: <Mic className="w-6 h-6" />}
     };
     'developer-tools': {
       title: "Developer Tools",
       description: "AI-powered coding assistance and automation",
-      icon: <Code className="w-6 h-6" />,
-    }
+      icon: <Code className="w-6 h-6" />}
     };
     'business-solutions': {
       title: "Business Solutions",
       description: "Enterprise AI integrations and services",
-      icon: <Briefcase className="w-6 h-6" />,
-    }
+      icon: <Briefcase className="w-6 h-6" />}
 }
   useEffect(() => {
     setIsLoading(true)};
@@ -149,8 +133,7 @@ export default function CategoryDetail() {
     const currentCategory = categoryData[slug as keyof typeof categoryData] |{
       title: slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') |"Category",
       description: "Explore our collection in this category",
-      icon: <Bot className="w-6 h-6" />,
-    }
+      icon: <Bot className="w-6 h-6" />}
     setCategory(currentCategory),
     // Filter listings by category,
     const categoryTitle = currentCategory.title,
@@ -181,20 +164,17 @@ export default function CategoryDetail() {
         author: {
           name: `Provider ${index + 1}`,
           id: `author-${index + 1}`,
-          avatarUrl: undefined,
-        }
+          avatarUrl: undefined}
         images: [`/placeholder.svg`],
         createdAt: new Date().toISOString(),
         rating: Math.floor(Math.random() * 5) + 1,
-        reviewCount: Math.floor(Math.random() * 100),
-      })),
+        reviewCount: Math.floor(Math.random() * 100)})),
     setListings(listingsToShow),
     setIsLoading(false)}, [slug])};
         images: [`/placeholder.svg`];
         createdAt: new Date().toISOString();
         rating: Math.floor(Math.random() * 5) + 1;
-        reviewCount: Math.floor(Math.random() * 100),
-      }));
+        reviewCount: Math.floor(Math.random() * 100)}));
     setListings(listingsToShow);
     setIsLoading(false)}, [slug]);
   // Handle requesting a quote,
@@ -222,70 +202,57 @@ export default function CategoryDetail() {
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: "";
     description: "";
-    icon: <Bot className="w-6 h-6" />,
-  });
+    icon: <Bot className="w-6 h-6" />});
   // Map of category slugs to their display data,
   const categoryData = {
     'services': {
       title: "Services";
       description: "On-demand IT support, consulting, development, and more";
-      icon: <Briefcase className="w-6 h-6" />,
-    };
+      icon: <Briefcase className="w-6 h-6" />};
     'talents': {
       title: "Talents";
       description: "Connect with AI experts, developers, and tech specialists";
-      icon: <Brain className="w-6 h-6" />,
-    };
+      icon: <Brain className="w-6 h-6" />};
     'equipment': {
       title: "Equipment";
       description: "Rent or buy specialized hardware, servers, and devices";
-      icon: <Code className="w-6 h-6" />,
-    };
+      icon: <Code className="w-6 h-6" />};
     'innovation': {
       title: "Innovation";
       description: "Discover cutting-edge solutions and tech breakthroughs";
-      icon: <Bot className="w-6 h-6" />,
-    };
+      icon: <Bot className="w-6 h-6" />};
     'ai-models-apis': {
       title: "AI Models & APIs";
       description: "Access cutting-edge AI models with easy integration";
-      icon: <Brain className="w-6 h-6" />,
-    };
+      icon: <Brain className="w-6 h-6" />};
     'content-creation': {
       title: "Content Creation";
       description: "Generate high-quality content for your projects";
-      icon: <PenLine className="w-6 h-6" />,
-    };
+      icon: <PenLine className="w-6 h-6" />};
     'data-analysis': {
       title: "Data Analysis";
       description: "Extract insights from complex datasets";
-      icon: <BarChart className="w-6 h-6" />,
-    };
+      icon: <BarChart className="w-6 h-6" />};
     'computer-vision': {
       title: "Computer Vision";
       description: "Image and video processing solutions";
-      icon: <Eye className="w-6 h-6" />,
-    };
+      icon: <Eye className="w-6 h-6" />};
     'virtual-assistants': {
       title: "Virtual Assistants";
       description: "Intelligent automation for your workflow";
-      icon: <Bot className="w-6 h-6" />,
-    };
+      icon: <Bot className="w-6 h-6" />};
     'voice-speech': {
       title: "Voice & Speech";
       description: "Speech recognition and synthesis tools";
-      icon: <Mic className="w-6 h-6" />,
-    };
+      icon: <Mic className="w-6 h-6" />};
     'developer-tools': {
       title: "Developer Tools";
       description: "AI-powered coding assistance and automation";
-      icon: <Code className="w-6 h-6" />,
-    };
+      icon: <Code className="w-6 h-6" />};
     'business-solutions': {
       title: "Business Solutions";
       description: "Enterprise AI integrations and services";
-      icon: <Briefcase className="w-6 h-6" />,
-    }
+      icon: <Briefcase className="w-6 h-6" />}
   };
   useEffect(() => {
     setIsLoading(true);
@@ -293,8 +260,7 @@ export default function CategoryDetail() {
     const currentCategory = categoryData[slug as keyof typeof categoryData] || {
       title: slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') || "Category";
       description: "Explore our collection in this category";
-      icon: <Bot className="w-6 h-6" />,
-    };
+      icon: <Bot className="w-6 h-6" />};
     setCategory(currentCategory);
     // Filter listings by category,
     const categoryTitle = currentCategory.title;
@@ -313,13 +279,11 @@ export default function CategoryDetail() {
         author: {
           name: `Provider ${index + 1}`;
           id: `author-${index + 1}`;
-          avatarUrl: undefined,
-        };
+          avatarUrl: undefined};
         images: [`/placeholder.svg`];
         createdAt: new Date().toISOString();
         rating: Math.floor(Math.random() * 5) + 1;
-        reviewCount: Math.floor(Math.random() * 100),
-      }));
+        reviewCount: Math.floor(Math.random() * 100)}));
     setListings(listingsToShow);
     setIsLoading(false)}, [slug]);
   // Handle requesting a quote,
@@ -334,7 +298,6 @@ export default function CategoryDetail() {
         state: {
           serviceType: listing && listing.category;
           specificItem: {
-,
 export default /**,
  * CategoryDetail - Function description,
  */,
@@ -347,70 +310,57 @@ function CategoryDetail() {
   const [category, set_category] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: "";
     description: "";
-    icon: <Bot className="w - 6 h - 6" />,
-  }),
+    icon: <Bot className="w - 6 h - 6" />}),
   // Map of category slugs to their display data,
   const category_data = {
     'services': {
       title: "Services";
       description: "On - demand IT support, consulting, development, and more",
-      icon: <Briefcase className="w - 6 h - 6" />,
-    }
+      icon: <Briefcase className="w - 6 h - 6" />}
     'talents': {
       title: "Talents";
       description: "Connect with AI experts, developers, and tech specialists",
-      icon: <Brain className="w - 6 h - 6" />,
-    }
+      icon: <Brain className="w - 6 h - 6" />}
     'equipment': {
       title: "Equipment";
       description: "Rent or buy specialized hardware, servers, and devices",
-      icon: <Code className="w - 6 h - 6" />,
-    }
+      icon: <Code className="w - 6 h - 6" />}
     'innovation': {
       title: "Innovation";
       description: "Discover cutting - edge solutions and tech breakthroughs";
-      icon: <Bot className="w - 6 h - 6" />,
-    }
+      icon: <Bot className="w - 6 h - 6" />}
     'ai - models - apis': {
       title: "AI Models & APIs";
       description: "Access cutting - edge AI models with easy integration";
-      icon: <Brain className="w - 6 h - 6" />,
-    }
+      icon: <Brain className="w - 6 h - 6" />}
     'content - creation': {
       title: "Content Creation";
       description: "Generate high - quality content for your projects";
-      icon: <PenLine className="w - 6 h - 6" />,
-    }
+      icon: <PenLine className="w - 6 h - 6" />}
     'data - analysis': {
       title: "Data Analysis";
       description: "Extract insights from complex datasets";
-      icon: <BarChart className="w - 6 h - 6" />,
-    }
+      icon: <BarChart className="w - 6 h - 6" />}
     'computer - vision': {
       title: "Computer Vision";
       description: "Image and video processing solutions";
-      icon: <Eye className="w - 6 h - 6" />,
-    }
+      icon: <Eye className="w - 6 h - 6" />}
     'virtual - assistants': {
       title: "Virtual Assistants";
       description: "Intelligent automation for your workflow";
-      icon: <Bot className="w - 6 h - 6" />,
-    }
+      icon: <Bot className="w - 6 h - 6" />}
     'voice - speech': {
       title: "Voice & Speech";
       description: "Speech recognition and synthesis tools";
-      icon: <Mic className="w - 6 h - 6" />,
-    }
+      icon: <Mic className="w - 6 h - 6" />}
     'developer - tools': {
       title: "Developer Tools";
       description: "AI - powered coding assistance and automation";
-      icon: <Code className="w - 6 h - 6" />,
-    }
+      icon: <Code className="w - 6 h - 6" />}
     'business - solutions': {
       title: "Business Solutions";
       description: "Enterprise AI integrations and services";
-      icon: <Briefcase className="w - 6 h - 6" />,
-    }
+      icon: <Briefcase className="w - 6 h - 6" />}
   }
 ,
   useEffect (() => {
@@ -419,8 +369,7 @@ function CategoryDetail() {
     const current_category = category_data[slug as keyof typeof category_data] || {
       title: slug?.split ('-').map (word => word.char_at (0).toUpperCase () + word.slice (1)).join (' ') || "Category";
       description: "Explore our collection in this category";
-      icon: <Bot className="w - 6 h - 6" />,
-    }
+      icon: <Bot className="w - 6 h - 6" />}
 ,
     set_category (current_category),
     // Filter listings by category,
@@ -440,13 +389,11 @@ function CategoryDetail() {
         author: {
           name: `Provider ${index + 1}`;
           id: `author-${index + 1}`;
-          avatar_url: undefined,
-        }
+          avatar_url: undefined}
         images: [`/placeholder.svg`];
         created_at: new Date ().toISOString ();
         rating: Math.floor (Math.random () * 5) + 1;
-        review_count: Math.floor (Math.random () * 100),
-      })),
+        review_count: Math.floor (Math.random () * 100)})),
     set_listings (listingsToShow),
     setIsLoading (false)}, [slug]),
   // Handle requesting a quote,
@@ -470,8 +417,7 @@ if ( {) {
             id: listing.id;
             title: listing.title;
             category: listing.category,
-            image: listing.images?.[0],
-          }
+            image: listing.images?.[0]}
         }
       })}
 };

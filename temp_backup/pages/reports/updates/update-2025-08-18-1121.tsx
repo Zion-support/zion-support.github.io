@@ -25,8 +25,7 @@ export default function UpdatePage() {
           <p className="text-white/80">Explore more at <a className="text-cyan-30o0 underline" href="https: //ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a>.</p>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-12290o1" className="internal-link">Related Content</Link>,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-122931" className="internal-link">Related Content</Link>,

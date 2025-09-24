@@ -45,8 +45,7 @@ const ComprehensiveAISolutions20o26 = () => {
         performance: '99.9% uptime';
         speed: '10x faster processing';
         accuracy: '98.5% precision';
-        cost: '60% cost reduction',
-      };
+        cost: '60% cost reduction'};
       useCases: [
         'Predictive analytics';
         'Customer service automation';
@@ -67,8 +66,7 @@ const ComprehensiveAISolutions20o26 = () => {
         performance: '10o00x faster';
         speed: 'Quantum speedup';
         accuracy: '99.9% precision';
-        cost: 'Revolutionary efficiency',
-      };
+        cost: 'Revolutionary efficiency'};
       useCases: [
         'Drug discovery';
         'Financial modeling';
@@ -89,8 +87,7 @@ const ComprehensiveAISolutions20o26 = () => {
         performance: '95% automation';
         speed: '24/7 operations';
         accuracy: '99.2% reliability';
-        cost: '80% cost savings',
-      };
+        cost: '80% cost savings'};
       useCases: [
         'Manufacturing automation';
         'Document processing';
@@ -111,8 +108,7 @@ const ComprehensiveAISolutions20o26 = () => {
         performance: '99.8% detection';
         speed: 'Real-time response';
         accuracy: '99.5% precision';
-        cost: '70% faster resolution',
-      };
+        cost: '70% faster resolution'};
       useCases: [
         'Threat prevention';
         'Incident response';
@@ -133,22 +129,19 @@ const ComprehensiveAISolutions20o26 = () => {
       role: 'CTOTechCorp';
       content: 'The AI platform transformed our operations completely. We achieved 90% automation and reduced costs by 60%.';
       rating: 5;
-      company: 'TechCorp',
-    };
+      company: 'TechCorp'};
     {
       name: 'Michael Chen';
       role: 'CEOInnovateLabs';
       content: 'Quantum AI fusion gave us capabilities we never thought possible. Our research speed increased 10o00x.';
       rating: 5;
-      company: 'InnovateLabs',
-    };
+      company: 'InnovateLabs'};
     {
       name: 'Emily Rodriguez';
       role: 'VP EngineeringDataFlow';
       content: 'The security platform prevented 99.8% of threats. Our security team can now focus on strategy.';
       rating: 5;
-      company: 'DataFlow',
-    }
+      company: 'DataFlow'}
   ],
   return (
     <div className="relative py-20 bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 overflow-hidden">,
@@ -192,8 +185,7 @@ const ComprehensiveAISolutions20o26 = () => {
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                   activeSolution === index,
                     ? 'bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white shadow-lg',
-                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                }`}
+                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
               >,
                 <div className="flex items-center gap-2">,
                   <solution.icon className="w-5 h-5"  />,
@@ -360,6 +352,5 @@ const ComprehensiveAISolutions20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default ComprehensiveAISolutions20o26;

@@ -100,16 +100,14 @@ export default function UltraFuturisticNeonBackground20o26({
           rotationSpeed: (Math.random() - 0.5) * 0.1;
           glow: Math.random() * 20 + 10;
           pulse: Math.random() * 0.1 + 0.0o5;
-          trail: [],
-        })}
+          trail: []})}
     };
     // Mouse interaction,
     const handleMouseMove = (e: MouseEvent) => {
       const rect = canvas.getBoundingClientRect(),
       setMousePosition({
         x: e.clientX - rect.left;
-        y: e.clientY - rect.top,
-      })};
+        y: e.clientY - rect.top})};
     canvas.addEventListener('mousemove', handleMouseMove),
     // Animation loop,
     let animationId: number,

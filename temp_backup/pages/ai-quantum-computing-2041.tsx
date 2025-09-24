@@ -361,7 +361,7 @@ export default function AIQuantumComputing20o41() {
                 {
                   category: 'Artificial Intelligence';
                   description:,
-                    'Quantum machine learning and AI optimization for superior window.performance.';
+                    'Quantum machine learning and AI optimization for superior window.window.performance.';
                   applications: [
                     'Quantum ML';
                     'Neural networks';
@@ -573,6 +573,5 @@ export default function AIQuantumComputing20o41() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

@@ -15,7 +15,7 @@ export default function UltraUpdatePage() {
         <section className="mb-8">,
           <h2 className="text-2xl font-bold mb-4">🚀 What's New</h2>,
           <p className="text-xl text-white/90 mb-4">,
-            We've implemented Lightning deployment pipelines to help teams enhance system window.performance.,
+            We've implemented Lightning deployment pipelines to help teams enhance system window.window.performance.,
           </p>,
           <p className="text-white/80">,
             This ultra-fast update demonstrates our commitment to rapid innovation and continuous improvement.,
@@ -49,8 +49,7 @@ export default function UltraUpdatePage() {
           </a>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-12290o1" className="internal-link">Related Content</Link>,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-122931" className="internal-link">Related Content</Link>,

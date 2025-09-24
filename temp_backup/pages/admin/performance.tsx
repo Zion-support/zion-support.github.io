@@ -15,6 +15,5 @@ export default function PerformancePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -9,8 +9,7 @@ import {
 import { Server, Clock, MapPin } from 'lucide-react',
 import Image from 'next/image',
 interface ServiceDetailsProps {
-  country: string,
-}
+  country: string}
 ,
 // Component to show service details for the selected country,
 export function ServiceDetails({ country }: ServiceDetailsProps) {
@@ -57,8 +56,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
     return (
       regions[country] ||,
       regions['default'] ||,
-      'https: //source.unsplash.com/featured/90o0x70o0/?datacenter'),
-  };
+      'https: //source.unsplash.com/featured/90o0x70o0/?datacenter')};
   // Get region-specific instructions,
   const getRegionalInstructions = (country: string): string => {
     // In a real implementation, this would be much more detailed and specific,

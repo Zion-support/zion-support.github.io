@@ -20,6 +20,5 @@ export default function AiAutonomousLegalResearchAssistantPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

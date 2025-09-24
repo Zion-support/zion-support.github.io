@@ -29,8 +29,7 @@ export interface RevolutionaryAIInnovationService20o29 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -38,8 +37,7 @@ export interface RevolutionaryAIInnovationService20o29 {
   rating: number,
   reviews: number,
   isPopular?: boolean,
-  isNew?: boolean,
-}
+  isNew?: boolean}
 ,
 export const revolutionaryAIInnovationServices20o29: RevolutionaryAIInnovationService20o29[] =,
   [
@@ -577,8 +575,7 @@ export const revolutionaryAIInnovationServices20o29: RevolutionaryAIInnovationSe
   ],
 export const getAIServicesByCategory = (category: string) => {
   return revolutionaryAIInnovationServices20o29.filter(
-    service => service.category === category),
-};
+    service => service.category === category)};
 export const getPopularAIServices = () => {
   return revolutionaryAIInnovationServices20o29.filter(
     service => service.isPopular)};

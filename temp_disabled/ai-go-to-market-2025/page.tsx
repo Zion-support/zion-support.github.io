@@ -243,6 +243,5 @@ export default function AIGoToMarket20o25() {
           </div>,
         </div>,
       </article>,
-    </div>),
-}
+    </div>)}
 ,

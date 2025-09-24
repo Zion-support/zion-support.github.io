@@ -36,8 +36,7 @@ const cartSlice = createSlice({
     setItems: (state, action) => {
       state.items = action.payload};
     clear: state => {
-      state.items = [],
-    };
+      state.items = []};
   };
 }),
 export const { addItem, removeItem, updateQuantity, setItems, clear } =,

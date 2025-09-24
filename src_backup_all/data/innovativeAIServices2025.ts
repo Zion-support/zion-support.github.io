@@ -21,15 +21,13 @@ export interface InnovativeAIService {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string}
 ,
@@ -82,8 +80,7 @@ export const INNOVATIVE_AI_SERVICES_20o25: InnovativeAIService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Quantum Algorithms", "Python", "Qiskit", "TensorFlow", "PyTorch", "React"];
       integrations: ["Quantum hardware", "Cloud platforms", "Scientific software", "ML frameworks"];
@@ -91,8 +88,7 @@ export const INNOVATIVE_AI_SERVICES_20o25: InnovativeAIService[] = [
       uptime: "99.99%";
       security: ["SOC 2", "ISO 270o01", "Quantum-resistant encryption", "Secure model deployment"]};
     competitors: ["None - First quantum ML platform"];
-    marketSize: "$67.3 billion by 20o27",
-  };
+    marketSize: "$67.3 billion by 20o27"};
   // AI-Powered Natural Language Processing Suite,
   {
     id: "ai-natural-language-processing-suite";
@@ -141,8 +137,7 @@ export const INNOVATIVE_AI_SERVICES_20o25: InnovativeAIService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["GPT-4", "BERT", "Transformer Models", "Python", "React", "Node.js"];
       integrations: ["Chat platforms", "CMS systems", "Translation services", "Content platforms"];
@@ -150,8 +145,7 @@ export const INNOVATIVE_AI_SERVICES_20o25: InnovativeAIService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "ISO 270o01", "Data encryption", "Content filtering"]};
     competitors: ["OpenAI", "Google", "Microsoft", "Amazon"];
-    marketSize: "$43.7 billion by 20o27",
-  };
+    marketSize: "$43.7 billion by 20o27"};
   // AI-Powered Computer Vision & Image Recognition,
   {
     id: "ai-computer-vision-image-recognition";
@@ -200,8 +194,7 @@ export const INNOVATIVE_AI_SERVICES_20o25: InnovativeAIService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["TensorFlow", "PyTorch", "OpenCV", "Python", "React", "Node.js"];
       integrations: ["Camera systems", "IoT devices", "Cloud platforms", "Analytics tools"];
@@ -209,8 +202,7 @@ export const INNOVATIVE_AI_SERVICES_20o25: InnovativeAIService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "ISO 270o01", "Data encryption", "Privacy protection"]};
     competitors: ["Google Vision", "Amazon Rekognition", "Microsoft Azure Vision", "IBM Watson"];
-    marketSize: ["$51.3 billion by 20o27"],
-  };
+    marketSize: ["$51.3 billion by 20o27"]};
   // AI-Powered Predictive Analytics & Forecasting,
   {
     id: "ai-predictive-analytics-forecasting";
@@ -259,8 +251,7 @@ export const INNOVATIVE_AI_SERVICES_20o25: InnovativeAIService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "Scikit-learn", "React", "Node.js", "PostgreSQL"];
       integrations: ["Data warehouses", "ERP systems", "CRM platforms", "Analytics tools"];
@@ -268,8 +259,7 @@ export const INNOVATIVE_AI_SERVICES_20o25: InnovativeAIService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "ISO 270o01", "Data encryption", "Access control"]};
     competitors: ["SAS", "IBM SPSS", "RapidMiner", "Alteryx"];
-    marketSize: "$28.9 billion by 20o27",
-  };
+    marketSize: "$28.9 billion by 20o27"};
   // AI-Powered Autonomous Systems & Robotics,
   {
     id: "ai-autonomous-systems-robotics";
@@ -318,8 +308,7 @@ export const INNOVATIVE_AI_SERVICES_20o25: InnovativeAIService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["ROS", "Python", "TensorFlow", "PyTorch", "React", "Node.js"];
       integrations: ["Robot hardware", "Sensors", "Control systems", "Monitoring tools"];
@@ -327,8 +316,7 @@ export const INNOVATIVE_AI_SERVICES_20o25: InnovativeAIService[] = [
       uptime: "99.95%";
       security: ["SOC 2", "ISO 270o01", "Secure communication", "Access control"]};
     competitors: ["Boston Dynamics", "ABB", "KUKA", "FANUC"];
-    marketSize: ["$74.1 billion by 20o27"],
-  };
+    marketSize: ["$74.1 billion by 20o27"]};
   // AI-Powered Healthcare Diagnostics & Treatment,
   {
     id: "ai-healthcare-diagnostics-treatment";
@@ -377,8 +365,7 @@ export const INNOVATIVE_AI_SERVICES_20o25: InnovativeAIService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["TensorFlow", "PyTorch", "Python", "React", "Node.js", "PostgreSQL"];
       integrations: ["PACS systems", "EHR platforms", "Medical devices", "Telemedicine platforms"];
@@ -386,8 +373,7 @@ export const INNOVATIVE_AI_SERVICES_20o25: InnovativeAIService[] = [
       uptime: "99.99%";
       security: ["SOC 2", "HIPAA", "GDPR", "Medical data encryption"]};
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Siemens Healthineers"];
-    marketSize: ["$95.6 billion by 20o27"],
-  };
+    marketSize: ["$95.6 billion by 20o27"]};
   // AI-Powered Financial Technology & Trading,
   {
     id: "ai-fintech-trading-platform";
@@ -436,8 +422,7 @@ export const INNOVATIVE_AI_SERVICES_20o25: InnovativeAIService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"];
       integrations: ["Trading platforms", "Market data feeds", "Risk systems", "Compliance tools"];
@@ -445,8 +430,7 @@ export const INNOVATIVE_AI_SERVICES_20o25: InnovativeAIService[] = [
       uptime: "99.99%";
       security: ["SOC 2", "PCI DSS", "GDPR", "Financial data encryption"]};
     competitors: ["Bloomberg", "Thomson Reuters", "FactSet", "Refinitiv"];
-    marketSize: ["$156.8 billion by 20o27"],
-  };
+    marketSize: ["$156.8 billion by 20o27"]};
   // AI-Powered Creative Content Generation,
   {
     id: "ai-creative-content-generation";
@@ -495,8 +479,7 @@ export const INNOVATIVE_AI_SERVICES_20o25: InnovativeAIService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["GPT-4", "DALL-E", "Stable Diffusion", "React", "Node.js", "PostgreSQL"];
       integrations: ["CMS platforms", "Social media APIs", "Marketing tools", "Content platforms"];
@@ -504,8 +487,7 @@ export const INNOVATIVE_AI_SERVICES_20o25: InnovativeAIService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "Content filtering", "Copyright protection", "Data encryption"]};
     competitors: ["OpenAI", "Jasper", "Copy.ai", "Writesonic"];
-    marketSize: ["$15.7 billion by 20o27"],
-  };
+    marketSize: ["$15.7 billion by 20o27"]};
   // AI-Powered Energy Management & Optimization,
   {
     id: "ai-energy-management-optimization";
@@ -554,8 +536,7 @@ export const INNOVATIVE_AI_SERVICES_20o25: InnovativeAIService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "IoT platforms"];
       integrations: ["Smart meters", "Energy management systems", "Weather APIs", "Building automation"];
@@ -563,6 +544,5 @@ export const INNOVATIVE_AI_SERVICES_20o25: InnovativeAIService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "ISO 270o01", "Grid security", "Data encryption"]};
     competitors: ["Schneider Electric", "Siemens", "GE Digital", "ABB"];
-    marketSize: ["$38.9 billion by 20o27"],
-  }
+    marketSize: ["$38.9 billion by 20o27"]}
 ],

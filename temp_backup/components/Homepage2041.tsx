@@ -45,24 +45,21 @@ const Homepage20o41: React.FC = () => {
       company: "FutureTech Inc.";
       content: "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.";
       rating: 5;
-      avatar: "👩‍💼",
-    };
+      avatar: "👩‍💼"};
     {
       name: "Marcus Rodriguez";
       role: "VP Quantum Computing, QuantumCorp";
       company: "QuantumCorp";
       content: "Their quantum bio-computing platform accelerated our drug discovery by 10o00x. We're now leading the industry in pharmaceutical innovation.";
       rating: 5;
-      avatar: "👨‍💻",
-    };
+      avatar: "👨‍💻"};
     {
       name: "Dr. Emily Watson";
       role: "Research Director, SpaceLabs";
       company: "SpaceLabs";
       content: "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.";
       rating: 5;
-      avatar: "👩‍🔬",
-    }
+      avatar: "👩‍🔬"}
   ],
   const stats = [
     { number: "50o0+", label: "Revolutionary Services", icon: Rocket };
@@ -98,8 +95,7 @@ const Homepage20o41: React.FC = () => {
                     duration: 5 + i * 0.3;
                     repeat: Infinity;
                     delay: i * 0.2;
-                    ease: "easeInOut",
-                  }}
+                    ease: "easeInOut"}}
                   style={{
                     left: `${Math.random() * 10o0}%`;
                     top: `${Math.random() * 10o0}%`}}
@@ -335,6 +331,5 @@ const Homepage20o41: React.FC = () => {
           </div>,
         </section>,
       </main>,
-    </Layout>),
-};
+    </Layout>)};
 export default Homepage20o41;

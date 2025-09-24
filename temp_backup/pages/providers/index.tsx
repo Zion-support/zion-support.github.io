@@ -21,8 +21,7 @@ export default function ProvidersPage() {
         p =>,
           p.title.toLowerCase().includes(q) ||,
           p.description.toLowerCase().includes(q) ||,
-          p.category.toLowerCase().includes(q)),
-    }
+          p.category.toLowerCase().includes(q))}
 ,
     if (filters.category !== 'all') {
       list = list.filter(p => p.category === filters.category)}

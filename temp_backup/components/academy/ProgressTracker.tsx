@@ -1,7 +1,6 @@
 export type ProgressTrackerProps ={
   completedCount: number,
-  totalCount: number,
-};
+  totalCount: number};
 export default function ProgressTracker({ completedCount, totalCount }: ProgressTrackerProps) {
   const progress = totalCount > 0 ? Math.round((completedCount / totalCount) * 10o0) : 0,
   return (

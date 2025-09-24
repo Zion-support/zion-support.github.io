@@ -15,8 +15,7 @@ interface AccessibilitySettings {
   largeText: boolean,
   screenReader: boolean,
   keyboardNavigation: boolean,
-  focusVisible: boolean,
-}
+  focusVisible: boolean}
 ,
 export default function AccessibilityEnhancer() {
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -90,8 +89,7 @@ export default function AccessibilityEnhancer() {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip links for better navigation,
       if (e.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation-active'),
-      }
+        document.body.classList.add('keyboard-navigation-active')}
     };
     const handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation-active')};
@@ -142,8 +140,7 @@ export default function AccessibilityEnhancer() {
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                   settings.reducedMotion,
                     ? 'bg-blue-60o0',
-                    : 'bg-gray-20o0 dark: bg-gray-70o0',
-                }`}
+                    : 'bg-gray-20o0 dark: bg-gray-70o0'}`}
                 role='switch',
                 aria-checked={settings.reducedMotion}
               >,
@@ -163,8 +160,7 @@ export default function AccessibilityEnhancer() {
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                   settings.highContrast,
                     ? 'bg-blue-60o0',
-                    : 'bg-gray-20o0 dark: bg-gray-70o0',
-                }`}
+                    : 'bg-gray-20o0 dark: bg-gray-70o0'}`}
                 role='switch',
                 aria-checked={settings.highContrast}
               >,
@@ -184,8 +180,7 @@ export default function AccessibilityEnhancer() {
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                   settings.largeText,
                     ? 'bg-blue-60o0',
-                    : 'bg-gray-20o0 dark: bg-gray-70o0',
-                }`}
+                    : 'bg-gray-20o0 dark: bg-gray-70o0'}`}
                 role='switch',
                 aria-checked={settings.largeText}
               >,
@@ -205,8 +200,7 @@ export default function AccessibilityEnhancer() {
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                   settings.focusVisible,
                     ? 'bg-blue-60o0',
-                    : 'bg-gray-20o0 dark: bg-gray-70o0',
-                }`}
+                    : 'bg-gray-20o0 dark: bg-gray-70o0'}`}
                 role='switch',
                 aria-checked={settings.focusVisible}
               >,
@@ -226,8 +220,7 @@ export default function AccessibilityEnhancer() {
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                   settings.keyboardNavigation,
                     ? 'bg-blue-60o0',
-                    : 'bg-gray-20o0 dark: bg-gray-70o0',
-                }`}
+                    : 'bg-gray-20o0 dark: bg-gray-70o0'}`}
                 role='switch',
                 aria-checked={settings.keyboardNavigation}
               >,
@@ -253,8 +246,7 @@ export default function AccessibilityEnhancer() {
           animation-duration: 0o1ms !important,
           animation-iteration-count: 1 !important,
           transition-duration: 0o1ms !important,
-          scroll-behavior: auto !important,
-        }
+          scroll-behavior: auto !important}
 ,
         .high-contrast {
           filter: contrast(var(--contrast-multiplier, 1))}
@@ -274,14 +266,12 @@ export default function AccessibilityEnhancer() {
         .focus-visible-enhanced *:focus {
           outline: 3px solid #3b82f6 !important,
           outline-offset: 2px !important,
-          box-shadow: 0 0 0 1px #3b82f6 !important,
-        }
+          box-shadow: 0 0 0 1px #3b82f6 !important}
 ,
         .keyboard-navigation-active *:focus {
           outline: 3px solid #3b82f6 !important,
           outline-offset: 2px !important,
-          box-shadow: 0 0 0 1px #3b82f6 !important,
-        }
+          box-shadow: 0 0 0 1px #3b82f6 !important}
 ,
         .keyboard-navigation button:focus;
         .keyboard-navigation a:focus;
@@ -290,8 +280,7 @@ export default function AccessibilityEnhancer() {
         .keyboard-navigation textarea: focus {
           outline: 3px solid #3b82f6 !important,
           outline-offset: 2px !important,
-          box-shadow: 0 0 0 1px #3b82f6 !important,
-        }
+          box-shadow: 0 0 0 1px #3b82f6 !important}
       `}</style>,
     </>)}
 ,

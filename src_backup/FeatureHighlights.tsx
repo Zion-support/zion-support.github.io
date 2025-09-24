@@ -17,8 +17,7 @@ export function FeatureHighlights({
         'Transparent pricing and no hidden fees',
         'Direct communication with potential candidates',
         'Secure payment protection and dispute resolution',
-        'Post jobs and receive AI-matched applicants'],
-    }
+        'Post jobs and receive AI-matched applicants']}
     {
       title: 'For Talent & Service Providers',
       features: [
@@ -27,8 +26,7 @@ export function FeatureHighlights({
         'Secure payment processing with on-time disbursements',
         'Build your reputation through client reviews and ratings',
         'Access to enterprise clients and high-value projects',
-        'Professional development resources and community support'],
-    }
+        'Professional development resources and community support']}
     {
       title: 'For Enterprise Clients',
       features: [
@@ -37,8 +35,7 @@ export function FeatureHighlights({
         'Custom talent pools and preferred provider networks',
         'Advanced analytics and reporting capabilities',
         'API access for seamless integration with your HR systems',
-        'Customizable workflow and approval processes'],
-    }
+        'Customizable workflow and approval processes']}
   ],
 interface FeatureHighlightsProps {
   class_name?: string,
@@ -152,49 +149,41 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
   {
     icon: "⚡",
     title: "Lightning Fast Performance",
-    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs",
-}
+    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"}
   {
     icon: "🔒",
     title: "Enterprise Security",
-    description: "Bank-level security protocols and compliance standards to protect your valuable data",
-}
+    description: "Bank-level security protocols and compliance standards to protect your valuable data"}
   {
     icon: "🌐",
     title: "Global Scalability",
-    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions",
-}
+    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"}
   {
     icon: "🤖",
     title: "AI-Powered Intelligence",
-    description: "Smart automation and predictive analytics that adapt to your business requirements",
-}
+    description: "Smart automation and predictive analytics that adapt to your business requirements"}
   {
     icon: "📊",
     title: "Real-Time Analytics",
-    description: "Comprehensive insights and reporting to make data-driven decisions instantly",
-}
+    description: "Comprehensive insights and reporting to make data-driven decisions instantly"}
 ]}
 }
 }
   const itemVariants ={
   hidden: { opacity: 0, y: 30,
-  scale: 0.95,
-}
+  scale: 0.95}
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
-}
+        ease: "easeOut"}
 }
 }
   const achievementVariants ={
   hidden: { opacity: 0,
-  scale: 0.8,
-}
+  scale: 0.8}
     visible: {
       opacity: 1,
       scale: 1,
@@ -203,8 +192,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
 }
   const techVariants ={
   hidden: { opacity: 0,
-  x: -20,
-}
+  x: -20}
     visible: {
       opacity: 1,
       x: 0,
@@ -218,12 +206,10 @@ export function FeatureHighlights() {
         <motion.div          className="text-center mb-16",
           initial ={
   { opacity: 0,
-  y: 20,
-}}
+  y: 20}}
           whileInView ={
   { opacity: 1,
-  y: 0,
-}}
+  y: 0}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >",
@@ -279,8 +265,7 @@ export function FeatureHighlights() {
           viewport={{ once: true }}
           transition ={
   { duration: 0.6,
-  delay: 0.4,
-}}
+  delay: 0.4}}
         >",
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-full text-white font-semibold">,
             <span>Experience the difference</span>",
@@ -386,55 +371,46 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
             </Card>))}
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
   {
     icon: "⚡";
     title: "Lightning Fast Performance";
-    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs",
-};
+    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"};
   {
     icon: "🔒";
     title: "Enterprise Security";
-    description: "Bank - level security protocols and compliance standards to protect your valuable data",
-};
+    description: "Bank - level security protocols and compliance standards to protect your valuable data"};
   {
     icon: "🌐";
     title: "Global Scalability";
-    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions",
-};
+    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"};
   {
     icon: "🤖";
     title: "AI - Powered Intelligence";
-    description: "Smart automation and predictive analytics that adapt to your business requirements",
-};
+    description: "Smart automation and predictive analytics that adapt to your business requirements"};
   {
     icon: "📊";
     title: "Real - Time Analytics";
-    description: "Comprehensive insights and reporting to make data - driven decisions instantly",
-}
+    description: "Comprehensive insights and reporting to make data - driven decisions instantly"}
 ]}
 }
 }
 ,
   const item_variants ={
   hidden: { opacity: 0, coordinate_y: 30;
-  scale: 0.95,
-};
+  scale: 0.95};
     visible: {
       opacity: 1;
       coordinate_y: 0;
       scale: 1;
       transition: {
         duration: 0.6;
-        ease: "ease_out",
-}
+        ease: "ease_out"}
 }
 }
   const achievement_variants ={
   hidden: { opacity: 0;
-  scale: 0.8,
-};
+  scale: 0.8};
     visible: {
       opacity: 1,
       scale: 1,
@@ -444,8 +420,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
 ,
   const tech_variants ={
   hidden: { opacity: 0;
-  coordinate_x: -20,
-};
+  coordinate_x: -20};
     visible: {
       opacity: 1;
       coordinate_x: 0;
@@ -462,12 +437,10 @@ function FeatureHighlights() {
         <motion.div          className="text - center mb - 16",
           initial ={
   { opacity: 0;
-  coordinate_y: 20,
-}}
+  coordinate_y: 20}}
           whileInView ={
   { opacity: 1;
-  coordinate_y: 0,
-}}
+  coordinate_y: 0}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >",
@@ -522,49 +495,41 @@ function FeatureHighlights() {
   {
     icon: "⚡";
     title: "Lightning Fast Performance";
-    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs",
-};
+    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"};
   {
     icon: "🔒";
     title: "Enterprise Security";
-    description: "Bank-level security protocols and compliance standards to protect your valuable data",
-};
+    description: "Bank-level security protocols and compliance standards to protect your valuable data"};
   {
     icon: "🌐";
     title: "Global Scalability";
-    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions",
-};
+    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"};
   {
     icon: "🤖";
     title: "AI-Powered Intelligence";
-    description: "Smart automation and predictive analytics that adapt to your business requirements",
-};
+    description: "Smart automation and predictive analytics that adapt to your business requirements"};
   {
     icon: "📊";
     title: "Real-Time Analytics";
-    description: "Comprehensive insights and reporting to make data-driven decisions instantly",
-};
+    description: "Comprehensive insights and reporting to make data-driven decisions instantly"};
 ]};
 };
 };
   const itemVariants ={
   hidden: { opacity: 0, y: 30;
-  scale: 0 && 0.95,
-};
+  scale: 0 && 0.95};
     visible: {
       opacity: 1;
       y: 0;
       scale: 1;
       transition: {
         duration: 0 && 0.6;
-        ease: "easeOut",
-};
+        ease: "easeOut"};
 };
 };
   const achievementVariants ={
   hidden: { opacity: 0;
-  scale: 0 && 0.8,
-};
+  scale: 0 && 0.8};
     visible: {
       opacity: 1;
       scale: 1;
@@ -573,8 +538,7 @@ function FeatureHighlights() {
 };
   const techVariants ={
   hidden: { opacity: 0;
-  x: -20,
-};
+  x: -20};
     visible: {
       opacity: 1;
       x: 0;
@@ -588,12 +552,10 @@ export function FeatureHighlights() {
         <motion&& motion.div          className="text-center mb-16",
           initial ={
   { opacity: 0;
-  y: 20,
-}}
+  y: 20}}
           whileInView ={
   { opacity: 1;
-  y: 0,
-}}
+  y: 0}}
           viewport={{ once: true }}
           transition={{ duration: 0 && 0.6 }}>",
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">",
@@ -648,8 +610,7 @@ export function FeatureHighlights() {
           viewport={{ once: true }}
           transition ={
   { duration: 0 && 0.6;
-  delay: 0 && 0.4,
-}}>",
+  delay: 0 && 0.4}}>",
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-full text-white font-semibold">,
             <span>Experience the difference</span>",
             <span className="text-2xl">→</span>,
@@ -670,8 +631,7 @@ export function FeatureHighlights() {
           viewport={{ once: true }}
           transition ={
   { duration: 0.6;
-  delay: 0.4,
-}}
+  delay: 0.4}}
         >",
           <div className="inline - flex items - center gap - 4 px - 8 py - 4 bg - gradient - to - r from - blue - 60o0 to - purple - 60o0 rounded - full text - white font - semibold">,
             <span > Experience the difference</span>",
@@ -680,5 +640,4 @@ export function FeatureHighlights() {
         </motion.div>,
       </div>,
     </section>)}
-'"`),
-)))))
+'"`))))))

@@ -24,6 +24,5 @@ export default function AIEthicsGovernanceFramework() {
       ]}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/ai-ethics-governance-framework',
-    />),
-}
+    />)}
 ,

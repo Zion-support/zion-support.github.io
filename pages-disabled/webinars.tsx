@@ -12,8 +12,7 @@ const Webinars: NextPage = () => {
       description: "Learn how AI is revolutionizing business operations and discover practical implementation strategies.";
       speaker: "Dr. Sarah Chen";
       speakerTitle: "AI Solutions Architect";
-      status: "upcoming",
-    };
+      status: "upcoming"};
     {
       id: 2;
       title: "Cloud Cost Optimization: Reduce Spending by 50%";
@@ -24,8 +23,7 @@ const Webinars: NextPage = () => {
       description: "Discover proven strategies to optimize your cloud infrastructure and reduce costs significantly.";
       speaker: "Michael Rodriguez";
       speakerTitle: "Cloud Solutions Expert";
-      status: "upcoming",
-    };
+      status: "upcoming"};
     {
       id: 3;
       title: "Zero Trust Security: Implementation Best Practices";
@@ -36,8 +34,7 @@ const Webinars: NextPage = () => {
       description: "Comprehensive guide to implementing zero trust security architecture in your organization.";
       speaker: "Jennifer Liu";
       speakerTitle: "Cybersecurity Director";
-      status: "recorded",
-    }
+      status: "recorded"}
   ],
   return (
     <div className="min-h-screen bg-gray-50">,
@@ -72,8 +69,7 @@ const Webinars: NextPage = () => {
                         <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
                           webinar.status === 'upcoming',
                             ? 'bg-green-10o0 text-green-60o0',
-                            : 'bg-blue-10o0 text-blue-60o0',
-                        }`}>,
+                            : 'bg-blue-10o0 text-blue-60o0'}`}>,
                           {webinar.status === 'upcoming' ? 'Upcoming' : 'Recorded'}
                         </span>,
                       </div>,
@@ -121,8 +117,7 @@ const Webinars: NextPage = () => {
                         <button className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
                           webinar.status === 'upcoming',
                             ? 'bg-blue-60o0 hover: bg-blue-70o0 text-white',
-                            : 'bg-gray-60o0 hover:bg-gray-70o0 text-white',
-                        }`}>,
+                            : 'bg-gray-60o0 hover:bg-gray-70o0 text-white'}`}>,
                           {webinar.status === 'upcoming' ? 'Register Now' : 'Watch Recording'}
                         </button>,
                       </div>,
@@ -154,6 +149,5 @@ const Webinars: NextPage = () => {
           </div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default Webinars;

@@ -3,15 +3,13 @@ interface User {
   id: string,
   email: string,
   name: string,
-  avatar?: string,
-}
+  avatar?: string}
 ,
 interface AuthState {
   user: User | null,
   isAuthenticated: boolean,
   isLoading: boolean,
-  error: string | null,
-}
+  error: string | null}
 ,
 const initialState: AuthState = {
   user: null;
@@ -26,22 +24,17 @@ const authSlice = createSlice({
     setUser: (state, action: PayloadAction<User>) => {
       state.user = action.payload,
       state.isAuthenticated = true,
-      state.error = null,
-    };
+      state.error = null};
     clearUser: state => {
       state.user = null,
       state.isAuthenticated = false,
-      state.error = null,
-    };
+      state.error = null};
     setLoading: (state, action: PayloadAction<boolean>) => {
-      state.isLoading = action.payload,
-    };
+      state.isLoading = action.payload};
     setError: (state, action: PayloadAction<string>) => {
-      state.error = action.payload,
-    };
+      state.error = action.payload};
     clearError: state => {
-      state.error = null,
-    };
+      state.error = null};
   };
 }),
 export const { setUser, clearUser, setLoading, setError, clearError } =,

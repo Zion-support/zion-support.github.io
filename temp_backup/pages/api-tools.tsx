@@ -32,8 +32,7 @@ export default function ApiToolsPage() {
       pricing: {
         free: '10o0 requests/month';
         pro: '$49/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       category: 'Development';
       color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0';
       gradient: 'from-blue-40o0 to-cyan-50o0';
@@ -43,8 +42,7 @@ export default function ApiToolsPage() {
       status: 'Live';
       users: '15,0o00+';
       rating: 4.8;
-      responseTime: '<10o0ms',
-    };
+      responseTime: '<10o0ms'};
     {
       icon: <Database className="w-8 h-8 text-white"  />;
       title: 'DataSync API - Real-time Data Synchronization';
@@ -56,8 +54,7 @@ export default function ApiToolsPage() {
       pricing: {
         free: '1,0o00 syncs/month';
         pro: '$79/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       category: 'Data';
       color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0';
       gradient: 'from-green-40o0 to-emerald-50o0';
@@ -67,8 +64,7 @@ export default function ApiToolsPage() {
       status: 'Live';
       users: '8,50o0+';
       rating: 4.9;
-      responseTime: '<50ms',
-    };
+      responseTime: '<50ms'};
     {
       icon: <Globe className="w-8 h-8 text-white"  />;
       title: 'GeoAPI - Advanced Geospatial Services';
@@ -80,8 +76,7 @@ export default function ApiToolsPage() {
       pricing: {
         free: '10,0o00 requests/month';
         pro: '$99/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       category: 'Location';
       color: 'bg-gradient-to-br from-purple-50o0 to-pink-60o0';
       gradient: 'from-purple-40o0 to-pink-50o0';
@@ -91,8 +86,7 @@ export default function ApiToolsPage() {
       status: 'Live';
       users: '12,0o00+';
       rating: 4.7;
-      responseTime: '<75ms',
-    };
+      responseTime: '<75ms'};
     {
       icon: <Shield className="w-8 h-8 text-white"  />;
       title: 'AuthGuard API - Enterprise Authentication';
@@ -104,8 +98,7 @@ export default function ApiToolsPage() {
       pricing: {
         free: '1,0o00 users/month';
         pro: '$149/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       category: 'Security';
       color: 'bg-gradient-to-br from-red-50o0 to-orange-60o0';
       gradient: 'from-red-40o0 to-orange-50o0';
@@ -115,8 +108,7 @@ export default function ApiToolsPage() {
       status: 'Live';
       users: '6,80o0+';
       rating: 4.9;
-      responseTime: '<25ms',
-    };
+      responseTime: '<25ms'};
     {
       icon: <Zap className="w-8 h-8 text-white"  />;
       title: 'WebhookHub - Intelligent Webhook Management';
@@ -128,8 +120,7 @@ export default function ApiToolsPage() {
       pricing: {
         free: '5,0o00 webhooks/month';
         pro: '$39/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       category: 'Integration';
       color: 'bg-gradient-to-br from-yellow-50o0 to-orange-60o0';
       gradient: 'from-yellow-40o0 to-orange-50o0';
@@ -139,8 +130,7 @@ export default function ApiToolsPage() {
       status: 'Live';
       users: '9,20o0+';
       rating: 4.8;
-      responseTime: '<30ms',
-    };
+      responseTime: '<30ms'};
     {
       icon: <Bot className="w-8 h-8 text-white"  />;
       title: 'NLP API - Natural Language Processing';
@@ -152,8 +142,7 @@ export default function ApiToolsPage() {
       pricing: {
         free: '5,0o00 requests/month';
         pro: '$69/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       category: 'AI/ML';
       color: 'bg-gradient-to-br from-indigo-50o0 to-purple-60o0';
       gradient: 'from-indigo-40o0 to-purple-50o0';
@@ -163,8 +152,7 @@ export default function ApiToolsPage() {
       status: 'Live';
       users: '11,50o0+';
       rating: 4.7;
-      responseTime: '<20o0ms',
-    };
+      responseTime: '<20o0ms'};
     {
       icon: <BarChart3 className="w-8 h-8 text-white"  />;
       title: 'Analytics API - Business Intelligence';
@@ -176,8 +164,7 @@ export default function ApiToolsPage() {
       pricing: {
         free: '10,0o00 events/month';
         pro: '$89/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       category: 'Analytics';
       color: 'bg-gradient-to-br from-teal-50o0 to-cyan-60o0';
       gradient: 'from-teal-40o0 to-cyan-50o0';
@@ -187,8 +174,7 @@ export default function ApiToolsPage() {
       status: 'Live';
       users: '7,80o0+';
       rating: 4.8;
-      responseTime: '<150ms',
-    };
+      responseTime: '<150ms'};
     {
       icon: <Lock className="w-8 h-8 text-white"  />;
       title: 'EncryptAPI - Data Encryption Services';
@@ -200,8 +186,7 @@ export default function ApiToolsPage() {
       pricing: {
         free: '1,0o00 operations/month';
         pro: '$119/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       category: 'Security';
       color: 'bg-gradient-to-br from-gray-50o0 to-slate-60o0';
       gradient: 'from-gray-40o0 to-slate-50o0';
@@ -211,8 +196,7 @@ export default function ApiToolsPage() {
       status: 'Live';
       users: '4,20o0+';
       rating: 4.9;
-      responseTime: '<20ms',
-    }
+      responseTime: '<20ms'}
   ];
   const categories = ['AllDevelopment', 'DataLocation', 'SecurityIntegration', 'AI/MLAnalytics'];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
@@ -251,8 +235,7 @@ export default function ApiToolsPage() {
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                   selectedCategory === category,
                     ? 'bg-indigo-60o0 text-white shadow-lg',
-                    : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 hover:text-white',
-                }`}
+                    : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 hover:text-white'}`}
               >,
                 {category}
               </button>))}
@@ -438,5 +421,4 @@ export default function ApiToolsPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}

@@ -19,8 +19,7 @@ interface TemplateSaveFormProps {
   onCancel: () => void,
   onComplete: () => void,
   editTemplate?: ContractTemplate | null,
-  currentValues?: ContractFormValues,
-}
+  currentValues?: ContractFormValues}
 ,
 export function TemplateSaveForm({
   onCancel;
@@ -36,8 +35,7 @@ export function TemplateSaveForm({
       isDefault: editTemplate?.is_default || false}}),
   const onSubmit = async (values: FormValues) => {
     if (!currentValues && !editTemplate) {
-      return,
-    }
+      return}
 ,
     setSaving(true),
     try {

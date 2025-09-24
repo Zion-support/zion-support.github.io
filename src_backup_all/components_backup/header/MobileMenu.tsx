@@ -16,8 +16,7 @@ import { useTranslation } from 'react-i18next',
 export interface MobileMenuProps {
   unreadCount?: number,
   onClose: () => void,
-  openLoginModal: (returnToPath: string) => void, // Added from plan,
-}
+  openLoginModal: (returnToPath: string) => void, // Added from plan}
 ,
 // Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts,
 // These are routes that should trigger the login modal if accessed while unauthenticated.,
@@ -34,8 +33,7 @@ const protectedRoutes = [
   // Add any specific sub-routes if necessary],
 function isProtectedRoute(href: string): boolean {
   // Also check against the item's own authRequired flag if present,
-  return protectedRoutes.some(route => href.startsWith(route)),
-}
+  return protectedRoutes.some(route => href.startsWith(route))}
 ,
 export function MobileMenu({
   unreadCount = 0;

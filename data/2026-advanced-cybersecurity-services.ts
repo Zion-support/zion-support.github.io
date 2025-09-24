@@ -31,15 +31,13 @@ export interface AdvancedCybersecurityService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 const contact = {
   mobile: '+1 30o2 464 0950';

@@ -15,14 +15,12 @@ interface BrowseItem {
   price?: string,
   image?: string,
   match?: number,
-  timePosted?: string,
-}
+  timePosted?: string}
 ,
 interface BrowseCardsProps {
   items: BrowseItem[],
   type: "jobs" | "talents",
-  onViewDetails: (id: string) => void,
-}
+  onViewDetails: (id: string) => void}
 ,
 export function BrowseCards({ itemstypeonViewDetails }: BrowseCardsProps) {
   const [savedItemsetSavedItems] = useState<string[]>([]),
@@ -30,8 +28,7 @@ export function BrowseCards({ itemstypeonViewDetails }: BrowseCardsProps) {
     setSavedItems(prev =>,
       prev.includes(id),
         ? prev.filter(itemId => itemId !== id),
-        : [...previd]),
-  };
+        : [...previd])};
   return (
     <div className="space-y-4 pb-24">,
       {items.map((item) => (

@@ -21,8 +21,7 @@ export default function MarketResearchPage() {
         'Automated customer service';
         'Intelligent process automation'];
       color: 'from-fuchsia-500 to-purple-600';
-      icon: <Zap className="w-8 h-8 text-white" />,
-    };
+      icon: <Zap className="w-8 h-8 text-white" />};
     {
       name: 'Database & Analytics';
       marketSize: '$8.9B';
@@ -39,8 +38,7 @@ export default function MarketResearchPage() {
         'Data visualization tools';
         'Query optimization platforms'];
       color: 'from-cyan-500 to-blue-600';
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
-    };
+      icon: <BarChart3 className="w-8 h-8 text-white" />};
     {
       name: 'Security & Identity';
       marketSize: '$12.3B';
@@ -57,8 +55,7 @@ export default function MarketResearchPage() {
         'Compliance monitoring tools';
         'Threat detection systems'];
       color: 'from-green-500 to-emerald-600';
-      icon: <Target className="w-8 h-8 text-white" />,
-    };
+      icon: <Target className="w-8 h-8 text-white" />};
     {
       name: 'Business Intelligence';
       marketSize: '$22.1B';
@@ -75,8 +72,7 @@ export default function MarketResearchPage() {
         'Mobile analytics solutions';
         'Predictive modeling tools'];
       color: 'from-orange-500 to-red-600';
-      icon: <Activity className="w-8 h-8 text-white" />,
-    };
+      icon: <Activity className="w-8 h-8 text-white" />};
     {
       name: 'API Management';
       marketSize: '$6.8B';
@@ -93,8 +89,7 @@ export default function MarketResearchPage() {
         'API analytics tools';
         'Webhook management systems'];
       color: 'from-indigo-500 to-purple-600';
-      icon: <Globe className="w-8 h-8 text-white" />,
-    };
+      icon: <Globe className="w-8 h-8 text-white" />};
     {
       name: 'User Experience Analytics';
       marketSize: '$9.4B';
@@ -111,8 +106,7 @@ export default function MarketResearchPage() {
         'User journey mapping tools';
         'Conversion funnel analytics'];
       color: 'from-teal-500 to-cyan-600';
-      icon: <Users className="w-8 h-8 text-white" />,
-    }
+      icon: <Users className="w-8 h-8 text-white" />}
   ],
   const competitiveAnalysis = [
     {
@@ -129,8 +123,7 @@ export default function MarketResearchPage() {
         'Difficult customization';
         'Long implementation times'];
       marketShare: '45-60%';
-      pricing: 'High ($1000+/month)',
-    };
+      pricing: 'High ($1000+/month)'};
     {
       company: 'Mid-Market Leaders';
       examples: [', 'HubSpot', 'Atlassian', 'Slack', 'Zoom'];
@@ -145,8 +138,7 @@ export default function MarketResearchPage() {
         'Dependency on integrations';
         'Scalability challenges'];
       marketShare: '25-35%';
-      pricing: 'Medium ($100-500/month)',
-    };
+      pricing: 'Medium ($100-500/month)'};
     {
       company: 'Micro SaaS Innovators';
       examples: [', 'Zapier', 'Notion', 'Airtable', 'Linear'];
@@ -161,8 +153,7 @@ export default function MarketResearchPage() {
         'Integration dependencies';
         'Market volatility risk'];
       marketShare: '15-25%';
-      pricing: 'Low ($10-100/month)',
-    }
+      pricing: 'Low ($10-100/month)'}
   ],
   const marketTrends = [
     {
@@ -175,8 +166,7 @@ export default function MarketResearchPage() {
         'Intelligent automation';
         'Predictive analytics';
         'Natural language interfaces'];
-      opportunities: 'AI integration servicescustom AI modelsAI consulting',
-    };
+      opportunities: 'AI integration servicescustom AI modelsAI consulting'};
     {
       trend: 'Privacy-First Design';
       description: 'Growing focus on data privacy and compliance';
@@ -187,8 +177,7 @@ export default function MarketResearchPage() {
         'Privacy analytics platforms';
         'Data anonymization services';
         'Consent management systems'];
-      opportunities: 'Privacy compliance toolsdata governance platformsaudit services',
-    };
+      opportunities: 'Privacy compliance toolsdata governance platformsaudit services'};
     {
       trend: 'API-First Architecture';
       description: 'Shift towards API-centric application development';
@@ -199,8 +188,7 @@ export default function MarketResearchPage() {
         'Developer experience tools';
         'API analytics and monitoring';
         'Integration platforms'];
-      opportunities: 'API development toolsintegration servicesdeveloper portals',
-    };
+      opportunities: 'API development toolsintegration servicesdeveloper portals'};
     {
       trend: 'Real-Time Everything';
       description: 'Demand for real-time data and analytics';
@@ -211,8 +199,7 @@ export default function MarketResearchPage() {
         'Live collaboration tools';
         'Instant notifications';
         'Streaming analytics'];
-      opportunities: 'Real-time platformstreaming serviceslive collaboration tools',
-    }
+      opportunities: 'Real-time platformstreaming serviceslive collaboration tools'}
   ],
   const pricingStrategies = [
     {
@@ -228,8 +215,7 @@ export default function MarketResearchPage() {
         'Customer education required';
         'Value measurement challenges';
         'Pricing optimization needed'];
-      bestFor: 'Enterprise solutionshigh-value servicesROI-focused products',
-    };
+      bestFor: 'Enterprise solutionshigh-value servicesROI-focused products'};
     {
       strategy: 'Usage-Based Pricing';
       description: 'Pricing based on actual usage or consumption';
@@ -243,8 +229,7 @@ export default function MarketResearchPage() {
         'Complex billing systems';
         'Usage optimization needed';
         'Customer cost management'];
-      bestFor: 'API servicestorage platformscompute resources',
-    };
+      bestFor: 'API servicestorage platformscompute resources'};
     {
       strategy: 'Freemium Model';
       description: 'Free basic tier with paid premium features';
@@ -258,34 +243,29 @@ export default function MarketResearchPage() {
         'Revenue per user challenges';
         'Support cost management';
         'Feature differentiation needed'];
-      bestFor: 'Consumer toolsproductivity appscollaboration platforms',
-    }
+      bestFor: 'Consumer toolsproductivity appscollaboration platforms'}
   ],
   const investmentInsights = [
     {
       metric: 'Total VC Investment';
       value: '$45.2B';
       change: '+18.7% YoY';
-      description: 'Venture capital investment in SaaS companies in 2024',
-    };
+      description: 'Venture capital investment in SaaS companies in 2024'};
     {
       metric: 'Average Series A';
       value: '$12.8M';
       change: '+22.3% YoY';
-      description: 'Average Series A funding round for SaaS startups',
-    };
+      description: 'Average Series A funding round for SaaS startups'};
     {
       metric: 'Exit Valuations';
       value: '8.2x ARR';
       change: '+15.4% YoY';
-      description: 'Average exit valuation multiple based on annual recurring revenue',
-    };
+      description: 'Average exit valuation multiple based on annual recurring revenue'};
     {
       metric: 'Time to Profitability';
       value: '3.2 years';
       change: '-0.8 years YoY';
-      description: 'Average time for SaaS companies to reach profitability',
-    }
+      description: 'Average time for SaaS companies to reach profitability'}
   ],
   return (
     <>,
@@ -636,6 +616,5 @@ export default function MarketResearchPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,

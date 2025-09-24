@@ -8,16 +8,14 @@ export interface TokenConfig {
   issueRate: number,
   redeemRate: number,
   minIssueAmount: number,
-  maxIssueAmount: number,
-}
+  maxIssueAmount: number}
 ,
 const DATA_DIR = path && path.join(process && process.cwd(), 'data'),
 const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json'),
 export interface TokenStoreData {
   wallets: Record < string, Wallet>,
   transactions: TokenTransaction[],
-  config: TokenConfig,
-}
+  config: TokenConfig}
 ,
 class TokenStore {
   private config: TokenConfig = {
@@ -28,15 +26,13 @@ class TokenStore {
     issueRate: 1.0,
     redeemRate: 1.0,
     minIssueAmount: 1,
-    maxIssueAmount: 10000,
-  }
+    maxIssueAmount: 10000}
 export interface TokenStoreData {
   }
 export interface TokenStoreData {
   wallets: Record<string Wallet>,
   transactions: TokenTransaction[],
-  config: TokenConfig,
-}
+  config: TokenConfig}
 function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir(),

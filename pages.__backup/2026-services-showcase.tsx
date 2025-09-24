@@ -44,14 +44,12 @@ export default function Services20o26ShowcasePage() {
     if (serviceVariant.includes('api')) return 'quantum-advanced',
     if (serviceVariant.includes('integration')) return 'quantum-advanced',
     if (serviceVariant.includes('analytics')) return 'neural',
-    return 'default',
-  };
+    return 'default'};
   const contactInfo ={
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   // Combine all 20o26 services,
   const all20o26Services = [
     ...innovative20o26MicroSaasV2Services;
@@ -120,8 +118,7 @@ export default function Services20o26ShowcasePage() {
         case 'newest':,
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
         default: ,
-          return a.name.localeCompare(b.name),
-      }
+          return a.name.localeCompare(b.name)}
     }),
     return filtered}[searchTermselectedCategoryselectedPriceRangesortByall20o26Services]),
   return (

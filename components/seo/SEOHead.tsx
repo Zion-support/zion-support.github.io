@@ -8,8 +8,7 @@ interface SEOHeadProps {
   ogType?: 'website' | 'article' | 'service',
   structuredData?: object,
   noIndex?: boolean,
-  noFollow?: boolean,
-}
+  noFollow?: boolean}
 ,
 export default function SEOHead({
   title;

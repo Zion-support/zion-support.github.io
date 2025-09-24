@@ -13,8 +13,7 @@ export const QuoteRequestForm = () => {
     service: '';
     budget: '';
     timeline: '';
-    description: '',
-  }),
+    description: ''}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isSubmitted, setIsSubmitted] = useState(false),
   const handleChange = (e) => {

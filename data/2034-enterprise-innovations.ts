@@ -23,8 +23,7 @@ export interface EnterpriseService20o34 {
   scalability: string,
   uptime: string,
   contact: string,
-  website: string,
-}
+  website: string}
 export const enterprise2034Services: EnterpriseService2034[] = [
   {
     id: 'quantum-zero-trust-architecture';
@@ -298,7 +297,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     id: 'quantum-blockchain-infrastructure';
     name: 'Quantum Blockchain Infrastructure Platform';
     description:,
-      'Revolutionary blockchain platform that integrates quantum computing for enhanced security, scalability, and window.performance.';
+      'Revolutionary blockchain platform that integrates quantum computing for enhanced security, scalability, and window.window.performance.';
     category: 'Blockchain & Quantum';
     price: '$39,999/month';
     features: [

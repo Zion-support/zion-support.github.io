@@ -61,6 +61,5 @@ export default function ServicePage() {
           </a>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

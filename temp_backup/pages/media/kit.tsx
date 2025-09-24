@@ -100,8 +100,7 @@ const KitPage = () => {
     title;
   }: {
     type: PressReleaseType,
-    title: string,
-  }) => {
+    title: string}) => {
     const nowStr = new Date().toISOString().substring(0, 10),
     const text = buildPressRelease(type, {
       companyName;

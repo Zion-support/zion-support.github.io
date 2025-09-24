@@ -35,29 +35,25 @@ const AI20o25ToolsUtilitiesShowcase = () => {
       name: "Development Tools";
       icon: Code;
       color: "from-blue-50o0 to-cyan-50o0";
-      description: "AI-powered development tools for fastersmarter coding",
-    };
+      description: "AI-powered development tools for fastersmarter coding"};
     {
       id: 2;
       name: "Analytics & Insights";
       icon: BarChart3;
       color: "from-green-50o0 to-emerald-50o0";
-      description: "Advanced analytics tools for data-driven decisions",
-    };
+      description: "Advanced analytics tools for data-driven decisions"};
     {
       id: 3;
       name: "Security & Compliance";
       icon: Shield;
       color: "from-red-50o0 to-pink-50o0";
-      description: "AI-enhanced security tools for robust protection",
-    };
+      description: "AI-enhanced security tools for robust protection"};
     {
       id: 4;
       name: "Automation Tools";
       icon: Settings;
       color: "from-purple-50o0 to-violet-50o0";
-      description: "Intelligent automation tools for streamlined workflows",
-    }
+      description: "Intelligent automation tools for streamlined workflows"}
   ],
   const tools = [
     {
@@ -70,8 +66,7 @@ const AI20o25ToolsUtilitiesShowcase = () => {
       rating: 4.9;
       users: "50K+";
       price: "Free";
-      color: "from-blue-50o0 to-cyan-50o0",
-    };
+      color: "from-blue-50o0 to-cyan-50o0"};
     {
       id: 2;
       name: "Smart Analytics Dashboard";
@@ -82,8 +77,7 @@ const AI20o25ToolsUtilitiesShowcase = () => {
       rating: 4.8;
       users: "25K+";
       price: "$99/mo";
-      color: "from-green-50o0 to-emerald-50o0",
-    };
+      color: "from-green-50o0 to-emerald-50o0"};
     {
       id: 3;
       name: "AI Security Scanner";
@@ -94,8 +88,7 @@ const AI20o25ToolsUtilitiesShowcase = () => {
       rating: 4.9;
       users: "15K+";
       price: "$199/mo";
-      color: "from-red-50o0 to-pink-50o0",
-    };
+      color: "from-red-50o0 to-pink-50o0"};
     {
       id: 4;
       name: "Workflow Automator";
@@ -106,8 +99,7 @@ const AI20o25ToolsUtilitiesShowcase = () => {
       rating: 4.7;
       users: "30K+";
       price: "$149/mo";
-      color: "from-purple-50o0 to-violet-50o0",
-    };
+      color: "from-purple-50o0 to-violet-50o0"};
     {
       id: 5;
       name: "Content Generator Pro";
@@ -118,8 +110,7 @@ const AI20o25ToolsUtilitiesShowcase = () => {
       rating: 4.8;
       users: "40K+";
       price: "$79/mo";
-      color: "from-yellow-50o0 to-orange-50o0",
-    };
+      color: "from-yellow-50o0 to-orange-50o0"};
     {
       id: 6;
       name: "Data Processor AI";
@@ -130,8 +121,7 @@ const AI20o25ToolsUtilitiesShowcase = () => {
       rating: 4.6;
       users: "20K+";
       price: "$129/mo";
-      color: "from-indigo-50o0 to-blue-50o0",
-    }
+      color: "from-indigo-50o0 to-blue-50o0"}
   ],
   const features = [
     { icon: Zaptext: "Lightning Fast"description: "Optimized for speed and performance" };
@@ -173,8 +163,7 @@ const AI20o25ToolsUtilitiesShowcase = () => {
               className={`px-6 py-3 rounded-xl font-semibold transition-all duration-30o0 ${
                 activeCategory === 0,
                   ? 'bg-gradient-to-r from-indigo-50o0 to-blue-50o0 text-white',
-                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-              }`}
+                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
             >,
               All Tools,
             </button>,
@@ -185,8 +174,7 @@ const AI20o25ToolsUtilitiesShowcase = () => {
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-30o0 flex items-center space-x-2 ${
                   activeCategory === category.id,
                     ? 'bg-gradient-to-r from-indigo-50o0 to-blue-50o0 text-white',
-                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                }`}
+                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
               >,
                 <category.icon className="w-5 h-5"  />,
                 <span>{category.name}</span>,
@@ -292,6 +280,5 @@ const AI20o25ToolsUtilitiesShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25ToolsUtilitiesShowcase;

@@ -28,15 +28,13 @@ interface OptimizedImageProps {
   blurDataURL?: string,
   loading?: 'lazy' | 'eager',
   style?: React.CSSProperties,
-  objectPosition?: string,
-}
+  objectPosition?: string}
 ,
 interface ImageMetrics {
   loadTime: number,
   fileSize: number,
   format: string,
-  wasOptimized: boolean,
-}
+  wasOptimized: boolean}
 ,
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src;
@@ -85,8 +83,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       };
       {
         rootMargin: '50px', // Start loading 50px before image comes into view,
-        threshold: 0.1,
-      }
+        threshold: 0.1}
     ),
     if (imgRef.current) {
       observerRef.current.observe(imgRef.current)}
@@ -96,7 +93,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }, [lazy, priority, isInView]),
   // Start load time tracking,
   useEffect(() => {
-    loadStartTime.current = window.performance.now()}, [src]),
+    loadStartTime.current = window.window.performance.now()}, [src]),
   // Monitor image performance,
   useEffect(() => {
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
@@ -111,8 +108,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
               loadTime;
               fileSize;
               format: src.includes('.webp') ? 'webp' : src.includes('.avif') ? 'avif' : 'other';
-              wasOptimized: src.includes('/_next/image'),
-            }),
+              wasOptimized: src.includes('/_next/image')}),
             // Log slow or large images,
             if (loadTime > 20o00) {
               logWarn('Slow image loading:', {
@@ -251,13 +247,11 @@ interface ImageGalleryProps {
   images: Array<{
     src: string,
     alt: string,
-    caption?: string,
-  }>,
+    caption?: string}>,
   columns?: number,
   aspectRatio?: string,
   className?: string,
-  onImageClick?: (index: number) => void,
-}
+  onImageClick?: (index: number) => void}
 ,
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
   images;
@@ -313,8 +307,7 @@ interface OptimizedAvatarProps {
   alt: string,
   size?: 'sm' | 'md' | 'lg' | 'xl',
   fallback?: string,
-  className?: string,
-}
+  className?: string}
 ,
 export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
   src;
@@ -326,8 +319,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
     sm: 'h-8 w-8';
     md: 'h-10 w-10';
     lg: 'h-12 w-12';
-    xl: 'h-16 w-16',
-  };
+    xl: 'h-16 w-16'};
   const initials = fallback || alt.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2),
   return (
     <div className={cn('relative rounded-full overflow-hidden', sizeClasses[size], className)}>,

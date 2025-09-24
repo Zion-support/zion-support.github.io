@@ -46,6 +46,5 @@ export default function UltraPatternPage() {
           </a>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

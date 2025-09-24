@@ -481,6 +481,5 @@ export default function EnterpriseITPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

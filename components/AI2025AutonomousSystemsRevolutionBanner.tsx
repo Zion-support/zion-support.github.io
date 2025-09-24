@@ -90,6 +90,5 @@ const AI20o25AutonomousSystemsRevolutionBanner: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25AutonomousSystemsRevolutionBanner;

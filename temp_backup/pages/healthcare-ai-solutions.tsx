@@ -19,6 +19,5 @@ export default function HealthcareAISolutions() {
       industries={['Hospitals', 'Payers', 'Providers', 'Life Sciences']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/healthcare-ai-solutions',
-    />),
-}
+    />)}
 ,

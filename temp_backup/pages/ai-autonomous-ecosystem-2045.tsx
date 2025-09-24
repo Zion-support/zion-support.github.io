@@ -17,6 +17,5 @@ export default function AiAutonomousEcosystem20o45Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

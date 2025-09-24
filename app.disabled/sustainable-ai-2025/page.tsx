@@ -310,6 +310,5 @@ export default function SustainableAI20o25Page() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

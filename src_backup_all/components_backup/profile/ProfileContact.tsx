@@ -9,8 +9,7 @@ import { toast } from "@/hooks/use-toast",
 interface ProfileContactProps {
   email?: string,
   profileName: string,
-  profileType: 'service' | 'talent',
-}
+  profileType: 'service' | 'talent'}
 ,
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
   const [message, setMessage] = useState(""),

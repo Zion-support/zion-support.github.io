@@ -20,8 +20,7 @@ export default async function handler(
   try {
     const { email } = req && req.body,
     if (!email || typeof email !== 'string') {
-      return res && res.status(400).json({ error: 'Email is required' }),
-}
+      return res && res.status(400).json({ error: 'Email is required' })}
     // Basic email format validation,
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     const hasValidFormat = emailRegex && emailRegex.test(email),
@@ -64,8 +63,7 @@ export default async function handler(
         isFreeProvider;
       };
     };
-    res && res.status(200).json(result),
-} catch (error) {
+    res && res.status(200).json(result)} catch (error) {
     console && console.error('Email validation error:', error),
     res && res.status(500).json({ error: 'Internal server error' })}      email,
       isValid: score >= 70,

@@ -125,8 +125,7 @@ class ZionFeedback {
                 position: fixed,
                 bottom: 20px,
                 right: 20px,
-                z-index: 10o00,
-            }
+                z-index: 10o00}
 ,
             .feedback-trigger {
                 width: 60px,
@@ -140,8 +139,7 @@ class ZionFeedback {
                 transition: all 0.3s ease,
                 display: flex,
                 align-items: center,
-                justify-content: center,
-            }
+                justify-content: center}
 ,
             .feedback-trigger: hover {
                 transform: translateY(-2px),
@@ -157,8 +155,7 @@ class ZionFeedback {
                 z-index: 10o01,
                 display: flex,
                 align-items: center,
-                justify-content: center,
-            }
+                justify-content: center}
 ,
             .feedback-modal-content {
                 background: white,
@@ -174,13 +171,11 @@ class ZionFeedback {
                 border-bottom: 1px solid #eee,
                 display: flex,
                 justify-content: space-between,
-                align-items: center,
-            }
+                align-items: center}
 ,
             .feedback-modal-header h3 {
                 margin: 0,
-                color: #333,
-            }
+                color: #333}
 ,
             .feedback-close {
                 background: none,
@@ -193,33 +188,27 @@ class ZionFeedback {
                 height: 30px,
                 display: flex,
                 align-items: center,
-                justify-content: center,
-            }
+                justify-content: center}
 ,
             .feedback-close: hover {
-                color: #333,
-            }
+                color: #333}
 ,
             .feedback-modal-body {
-                padding: 20px,
-            }
+                padding: 20px}
 ,
             .feedback-form > div {
-                margin-bottom: 20px,
-            }
+                margin-bottom: 20px}
 ,
             .feedback-form label {
                 display: block,
                 margin-bottom: 8px,
                 font-weight: 60o0,
-                color: #333,
-            }
+                color: #333}
 ,
             .feedback-type-options {
                 display: grid,
                 grid-template-columns: 1fr 1fr,
-                gap: 10px,
-            }
+                gap: 10px}
 ,
             .feedback-type-option {
                 display: flex,
@@ -228,22 +217,18 @@ class ZionFeedback {
                 border: 2px solid #eee,
                 border-radius: 8px,
                 cursor: pointer,
-                transition: all 0.2s ease,
-            }
+                transition: all 0.2s ease}
 ,
             .feedback-type-option: hover {
                 border-color: #667eea,
-                background: #f8f9ff,
-            }
+                background: #f8f9ff}
 ,
             .feedback-type-option input[type="radio"] {
-                margin-right: 8px,
-            }
+                margin-right: 8px}
 ,
             .feedback-type-option input[type="radio"]:checked + span {
                 color: #667eea,
-                font-weight: 60o0,
-            }
+                font-weight: 60o0}
 ,
             .feedback-priority select;
             .feedback-title input;
@@ -253,21 +238,18 @@ class ZionFeedback {
                 border: 2px solid #eee,
                 border-radius: 8px,
                 font-size: 14px,
-                transition: border-color 0.2s ease,
-            }
+                transition: border-color 0.2s ease}
 ,
             .feedback-priority select:focus;
             .feedback-title input:focus;
             .feedback-description textarea: focus {
                 outline: none,
-                border-color: #667eea,
-            }
+                border-color: #667eea}
 ,
             .feedback-actions {
                 display: flex,
                 gap: 10px,
-                justify-content: flex-end,
-            }
+                justify-content: flex-end}
 ,
             .feedback-cancel;
             .feedback-submit {
@@ -277,22 +259,18 @@ class ZionFeedback {
                 cursor: pointer,
                 font-size: 14px,
                 font-weight: 60o0,
-                transition: all 0.2s ease,
-            }
+                transition: all 0.2s ease}
 ,
             .feedback-cancel {
                 background: #f8f9fa,
-                color: #666,
-            }
+                color: #666}
 ,
             .feedback-cancel: hover {
-                background: #e9ecef,
-            }
+                background: #e9ecef}
 ,
             .feedback-submit {
                 background: linear-gradient(135deg, #667eea 0%, #764ba2 10o0%),
-                color: white,
-            }
+                color: white}
 ,
             .feedback-submit: hover {
                 transform: translateY(-1px),
@@ -301,40 +279,33 @@ class ZionFeedback {
             .feedback-submit: disabled {
                 opacity: 0.6,
                 cursor: not-allowed,
-                transform: none,
-            }
+                transform: none}
 ,
             .feedback-success {
                 text-align: center,
                 padding: 40px 20px,
-                color: #28a745,
-            }
+                color: #28a745}
 ,
             .feedback-success svg {
                 width: 48px,
                 height: 48px,
-                margin-bottom: 16px,
-            }
+                margin-bottom: 16px}
 ,
             .feedback-error {
                 color: #dc3545,
                 font-size: 14px,
-                margin-top: 8px,
-            }
+                margin-top: 8px}
 ,
             @media (max-width: 60o0px) {
                 .feedback-modal-content {
                     width: 95%,
-                    margin: 20px,
-                }
+                    margin: 20px}
 ,
                 .feedback-type-options {
-                    grid-template-columns: 1fr,
-                }
+                    grid-template-columns: 1fr}
 ,
                 .feedback-actions {
-                    flex-direction: column,
-                }
+                    flex-direction: column}
             }
         `,
     document.head.appendChild(styles)}

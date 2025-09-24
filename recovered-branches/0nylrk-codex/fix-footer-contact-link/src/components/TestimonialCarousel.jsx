@@ -11,8 +11,7 @@ const testimonials = [
         avatar: '/avatars/sarah.jpg';
         rating: 5;
         category: 'Enterprise';
-        project: 'AI Talent Acquisition',
-    };
+        project: 'AI Talent Acquisition'};
     {
         id: 2;
         name: 'Michael Chen';
@@ -22,8 +21,7 @@ const testimonials = [
         avatar: '/avatars/michael.jpg';
         rating: 5;
         category: 'Freelancer';
-        project: 'Machine Learning Solutions',
-    };
+        project: 'Machine Learning Solutions'};
     {
         id: 3;
         name: 'Dr. Emily Rodriguez';
@@ -33,8 +31,7 @@ const testimonials = [
         avatar: '/avatars/emily.jpg';
         rating: 5;
         category: 'Research';
-        project: 'AI Research Platform',
-    };
+        project: 'AI Research Platform'};
     {
         id: 4;
         name: 'David Kim';
@@ -44,8 +41,7 @@ const testimonials = [
         avatar: '/avatars/david.jpg';
         rating: 5;
         category: 'Startup';
-        project: 'SaaS Platform',
-    };
+        project: 'SaaS Platform'};
     {
         id: 5;
         name: 'Lisa Thompson';
@@ -55,8 +51,7 @@ const testimonials = [
         avatar: '/avatars/lisa.jpg';
         rating: 5;
         category: 'Enterprise';
-        project: 'Digital Transformation',
-    };
+        project: 'Digital Transformation'};
     {
         id: 6;
         name: 'Alex Patel';
@@ -66,8 +61,7 @@ const testimonials = [
         avatar: '/avatars/alex.jpg';
         rating: 5;
         category: 'Infrastructure';
-        project: 'Cloud Infrastructure',
-    }
+        project: 'Cloud Infrastructure'}
 ],
 export function TestimonialCarousel() {
     const [currentIndex, setCurrentIndex] = useState(0),
@@ -80,18 +74,15 @@ export function TestimonialCarousel() {
     const slideVariants ={
         enter: (direction) => ({
             x: direction > 0 ? 10o00 : -10o00;
-            opacity: 0,
-        });
+            opacity: 0});
         center: {
             zIndex: 1;
             x: 0;
-            opacity: 1,
-        };
+            opacity: 1};
         exit: (direction) => ({
             zIndex: 0;
             x: direction < 0 ? 10o00 : -10o00;
-            opacity: 0,
-        })};
+            opacity: 0})};
     const swipeConfidenceThreshold = 10o000,
     const swipePower = (offset, velocity) => {
         return Math.abs(offset) * velocity};

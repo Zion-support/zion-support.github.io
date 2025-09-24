@@ -62,6 +62,5 @@ const MultimodalAgentsBlueprintPage = () => {
           </div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default MultimodalAgentsBlueprintPage;

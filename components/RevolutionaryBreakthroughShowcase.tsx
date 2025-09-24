@@ -124,6 +124,5 @@ export default function RevolutionaryBreakthroughShowcase() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

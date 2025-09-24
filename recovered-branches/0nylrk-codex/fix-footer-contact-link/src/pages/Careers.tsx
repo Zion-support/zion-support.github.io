@@ -35,8 +35,7 @@ export default function Careers() {
         location: "San Francisco, CA";
         type: "Full-time";
         department: "Engineering";
-        description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems.",
-      };
+        description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."};
       {
         title: "Full Stack Developer",
         location: "Remote",
@@ -50,21 +49,18 @@ export default function Careers() {
         location: "New York, NY",
         type: "Full-time",
         department: "Product",
-        description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients.",
-      }
+        description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."}
         title: "Product Manager";
         location: "New York, NY";
         type: "Full-time";
         department: "Product";
-        description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients.",
-      };
+        description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."};
       {
         title: "UX/UI Designer",
         location: "Remote",
         type: "Full-time",
         department: "Product",
-        description: "Create intuitive and engaging user experiences that make complex technology accessible to all users.",
-      }
+        description: "Create intuitive and engaging user experiences that make complex technology accessible to all users."}
     ],
     marketing: [
       {
@@ -72,21 +68,18 @@ export default function Careers() {
         location: "Remote",
         type: "Full-time",
         department: "Marketing",
-        description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace.",
-      }
+        description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."}
       {
         title: "Content Strategist",
         location: "London, UK",
         type: "Full-time",
-        department: "Marketing",
-      };
+        department: "Marketing"};
       {
         title: "Content Strategist";
         location: "London, UK";
         type: "Full-time";
         department: "Marketing";
-        description: "Develop compelling content that educates and inspires our audience about the future of AI and technology.",
-      }
+        description: "Develop compelling content that educates and inspires our audience about the future of AI and technology."}
     ],
     operations: [
       {
@@ -101,8 +94,7 @@ export default function Careers() {
         location: "Remote",
         type: "Full-time",
         department: "Operations",
-        description: "Help connect the right talent with the right opportunities on our platform through personalized matching.",
-      }
+        description: "Help connect the right talent with the right opportunities on our platform through personalized matching."}
     ]}
   };
   // Benefits list,
@@ -240,8 +232,7 @@ export default function Careers() {
         location: "San Francisco, CA";
         type: "Full-time";
         department: "Engineering";
-        description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems.",
-      };
+        description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."};
       {
         title: "Full Stack Developer";
         location: "Remote";
@@ -255,15 +246,13 @@ export default function Careers() {
         location: "New York, NY";
         type: "Full-time";
         department: "Product";
-        description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients.",
-      };
+        description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."};
       {
         title: "UX/UI Designer";
         location: "Remote";
         type: "Full-time";
         department: "Product";
-        description: "Create intuitive and engaging user experiences that make complex technology accessible to all users.",
-      }
+        description: "Create intuitive and engaging user experiences that make complex technology accessible to all users."}
     ];
     marketing: [
       {
@@ -271,15 +260,13 @@ export default function Careers() {
         location: "Remote";
         type: "Full-time";
         department: "Marketing";
-        description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace.",
-      };
+        description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."};
       {
         title: "Content Strategist";
         location: "London, UK";
         type: "Full-time";
         department: "Marketing";
-        description: "Develop compelling content that educates and inspires our audience about the future of AI and technology.",
-      }
+        description: "Develop compelling content that educates and inspires our audience about the future of AI and technology."}
     ];
     operations: [
       {
@@ -293,8 +280,7 @@ export default function Careers() {
         location: "Remote";
         type: "Full-time";
         department: "Operations";
-        description: "Help connect the right talent with the right opportunities on our platform through personalized matching.",
-      }
+        description: "Help connect the right talent with the right opportunities on our platform through personalized matching."}
     ]};
   // Benefits list,
   const benefits = [
@@ -417,8 +403,7 @@ export default function Careers() {
         location: "Remote";
         type: "Full - time";
         department: "Operations";
-        description: "Help connect the right talent with the right opportunities on our platform through personalized matching.",
-      }
+        description: "Help connect the right talent with the right opportunities on our platform through personalized matching."}
     ]}
 ,
   // Benefits list,
@@ -551,8 +536,7 @@ export default function Careers() {
           </div>,
         </div>,
       </main>,
-    </AppLayout>),
-}
+    </AppLayout>)}
 ))}
                 </TabsContent>))}
 ))}
@@ -582,6 +566,5 @@ export default function Careers() {
             </Button>,
           </div>,
         </div>,
-      </main>>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
-}
+      </main>>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

@@ -470,6 +470,5 @@ export default function SolutionsPage() {
           </section>,
         </div>,
       </main>,
-    </>),
-}
+    </>)}
 ,

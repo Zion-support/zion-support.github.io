@@ -16,6 +16,5 @@ export default function 5gTechnologyAndItsImpactOnIotChatPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -98,6 +98,5 @@ export default function SignInPage() {
           </p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

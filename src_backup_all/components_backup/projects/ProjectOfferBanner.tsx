@@ -20,8 +20,7 @@ export function ProjectOfferBanner() {
     setDismissed(prev => {
       const updated = new Set(prev),
       updated.add(projectId),
-      return updated,
-    })};
+      return updated})};
   const handleViewOffer = (projectId: string) => {
     router.push(`/project/${projectId}`)};
   if (

@@ -10,8 +10,7 @@ export interface FraudRecord {
   timestamp: string,
   status: 'pending' | 'investigating' | 'resolved' | 'false_positive',
   adminId?: string,
-  resolution?: string,
-}
+  resolution?: string}
 ,
   month: string,
   totalCases: number,
@@ -26,13 +25,11 @@ class FraudStore {
     const newRecord: FraudRecord ={
       ...record,
       id,
-      timestamp: new Date().toISOString(),
-    }
+      timestamp: new Date().toISOString()}
     this.records.set(id, newRecord),
     return newRecord}
   getRecord(id: string): FraudRecord | undefined {
-    return this.records.get(id),
-  }
+    return this.records.get(id)}
   updateRecord(id: string, updates: Partial<FraudRecord>): FraudRecord | undefined {
     const record = this.records.get(id),
     if (!record) return undefined,

@@ -184,6 +184,5 @@ const AI20o25NewContentRevolutionBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25NewContentRevolutionBanner;

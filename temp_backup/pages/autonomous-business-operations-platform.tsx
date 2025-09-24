@@ -363,6 +363,5 @@ const AutonomousBusinessOperationsPlatform = () => {
           </div>,
         </section>,
       </div>,
-    </>),
-};
+    </>)};
 export default AutonomousBusinessOperationsPlatform;

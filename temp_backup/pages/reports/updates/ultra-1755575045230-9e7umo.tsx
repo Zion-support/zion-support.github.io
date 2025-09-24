@@ -68,6 +68,5 @@ export default function UltraUpdatePage() {
           </a>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

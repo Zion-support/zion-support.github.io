@@ -28,8 +28,7 @@ interface ChatMessage {
     confidence?: number,
     suggestions?: string[],
     relatedServices?: string[],
-    estimatedResponseTime?: number,
-  };
+    estimatedResponseTime?: number};
 }
 ,
 interface AIChatbotSystemProps {
@@ -52,8 +51,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     autoResponse: true;
     language: 'en';
     theme: 'dark';
-    responseSpeed: 'normal',
-  }),
+    responseSpeed: 'normal'}),
   const [isListening, setIsListening] = useState(false),
   const messagesEndRef = useRef<HTMLDivElement>(null),
   // Sample welcome message,
@@ -70,8 +68,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
           confidence: 0.95;
           suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'];
           relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'];
-          estimatedResponseTime: 2,
-        }
+          estimatedResponseTime: 2}
       };
       setMessages([welcomeMessage])}
   }, [isOpen, messages.length]),
@@ -115,8 +112,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         confidence: 0.85 + Math.random() * 0.1;
         suggestions: randomResponse.suggestions;
         relatedServices: randomResponse.relatedServices;
-        estimatedResponseTime: 1 + Math.random() * 2,
-      }
+        estimatedResponseTime: 1 + Math.random() * 2}
     };
     setMessages(prev => [...prev, botMessage]),
     setIsTyping(false)};
@@ -130,8 +126,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       sender: 'user';
       timestamp: new Date();
       type: 'text';
-      status: 'sent',
-    };
+      status: 'sent'};
     setMessages(prev => [...prev, userMessage]),
     setInputValue(''),
     // Generate AI response,
@@ -150,14 +145,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         sender: 'user';
         timestamp: new Date();
         type: 'file';
-        status: 'sent',
-      };
+        status: 'sent'};
       setMessages(prev => [...prev, fileMessage])}
   };
   // Handle suggestion click,
   const handleSuggestionClick = (suggestion: string) => {
-    setInputValue(suggestion),
-  };
+    setInputValue(suggestion)};
   // Rate response,
   const rateResponse = (messageId: string, rating: 'positive' | 'negative') => {
     setMessages(prev => prev.map(msg =>,
@@ -238,8 +231,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                         className={`p-2 rounded-lg transition-colors ${
                           settings.voiceEnabled,
                             ? 'bg-zion-cyan text-white',
-                            : 'bg-zinc-70o0 text-zinc-40o0 hover: bg-zinc-60o0',
-                        }`}
+                            : 'bg-zinc-70o0 text-zinc-40o0 hover: bg-zinc-60o0'}`}
                       >,
                         {settings.voiceEnabled ? <Mic className="w-4 h-4"  /> : <MicOff className="w-4 h-4"  />}
                       </button>,
@@ -251,8 +243,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                         className={`p-2 rounded-lg transition-colors ${
                           settings.autoResponse,
                             ? 'bg-zion-cyan text-white',
-                            : 'bg-zinc-70o0 text-zinc-40o0 hover: bg-zinc-60o0',
-                        }`}
+                            : 'bg-zinc-70o0 text-zinc-40o0 hover: bg-zinc-60o0'}`}
                       >,
                         <CheckCircle className="w-4 h-4"  />,
                       </button>,
@@ -389,8 +380,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                     className={`p-3 rounded-lg transition-colors ${
                       isListening,
                         ? 'bg-red-50o0 text-white',
-                        : 'bg-zinc-70o0 text-zinc-40o0 hover: bg-zinc-60o0',
-                    }`}
+                        : 'bg-zinc-70o0 text-zinc-40o0 hover: bg-zinc-60o0'}`}
                     aria-label="Voice input">,
                     {isListening ? <MicOff className="w-4 h-4"  /> : <Mic className="w-4 h-4"  />}
                   </button>)}

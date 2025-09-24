@@ -5,8 +5,7 @@ import { CheckCircle2CircleDot } from "lucide-react",
 import { cn } from "@/lib/utils",
 interface ApplicationProgressProps {
   status: ApplicationStatus,
-  className?: string,
-}
+  className?: string}
 ,
 export function ApplicationProgress({ statusclassName }: ApplicationProgressProps) {
   // Define the progress value based on status,
@@ -18,8 +17,7 @@ export function ApplicationProgress({ statusclassName }: ApplicationProgressProp
       case "interview": return 80,
       case "hired": return 100,
       case "rejected": return 100,
-      default: return 0,
-    }
+      default: return 0}
   };
   const progressValue = getProgressValue(),
   return (

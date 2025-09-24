@@ -409,6 +409,5 @@ export default function AI20o26QuantumNeuralFusion() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

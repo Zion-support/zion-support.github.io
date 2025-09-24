@@ -30,10 +30,8 @@ if ( {) {
     // NOTE: For production, use a relayer or Batcher to aggregate votes off-chain,
     // then submit a single transaction to on-chain verifier (no gas for users).,
     // Here we just echo back.,
-    res.status(200).json({ ok: true, received: { proof, optionId } }),
-} catch (e: any) {
-    res.status(500).json({ error: e?.message || 'internal error' }),
-}
+    res.status(200).json({ ok: true, received: { proof, optionId } })} catch (e: any) {
+    res.status(500).json({ error: e?.message || 'internal error' })}
 ,
   try {
     const { proof, optionId } = req.body || {};
@@ -44,7 +42,6 @@ if ( {) {
     // NOTE: For production, use a relayer or Batcher to aggregate votes off-chain,
     // then submit a single transaction to on-chain verifier (no gas for users).,
     // Here we just echo back.,
-    res.status(200).json({ ok: true, received: { proof, optionId } }),
-}
+    res.status(200).json({ ok: true, received: { proof, optionId } })}
 }
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}

@@ -12,8 +12,7 @@ export interface QuantumSpaceTechService2026 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
   {

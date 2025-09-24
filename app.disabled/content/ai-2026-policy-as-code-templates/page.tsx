@@ -56,6 +56,5 @@ const PolicyAsCodeTemplates20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default PolicyAsCodeTemplates20o26;

@@ -17,8 +17,7 @@ const services = [
     icon: Brain;
     color: "from-blue-50o0 to-purple-60o0";
     popular: true;
-    category: "AI & Automation",
-  };
+    category: "AI & Automation"};
   {
     id: 2;
     title: "Enterprise AI Content Generation";
@@ -32,8 +31,7 @@ const services = [
     icon: Zap;
     color: "from-green-50o0 to-teal-60o0";
     popular: false;
-    category: "Content & Marketing",
-  };
+    category: "Content & Marketing"};
   {
     id: 3;
     title: "Advanced Cybersecurity Solutions";
@@ -47,8 +45,7 @@ const services = [
     icon: Shield;
     color: "from-red-50o0 to-pink-60o0";
     popular: false;
-    category: "Security",
-  };
+    category: "Security"};
   {
     id: 4;
     title: "Cloud Infrastructure Optimization";
@@ -62,8 +59,7 @@ const services = [
     icon: Cloud;
     color: "from-indigo-50o0 to-blue-60o0";
     popular: true;
-    category: "Cloud & DevOps",
-  };
+    category: "Cloud & DevOps"};
   {
     id: 5;
     title: "Customer Behavior Analytics";
@@ -77,8 +73,7 @@ const services = [
     icon: TrendingUp;
     color: "from-orange-50o0 to-red-60o0";
     popular: false;
-    category: "Analytics",
-  };
+    category: "Analytics"};
   {
     id: 6;
     title: "Global Digital Transformation";
@@ -92,8 +87,7 @@ const services = [
     icon: Globe;
     color: "from-purple-50o0 to-indigo-60o0";
     popular: false;
-    category: "Consulting",
-  }
+    category: "Consulting"}
 ],
 const categories = ["All"AI & Automation"Content & Marketing"Security"Cloud & DevOps"Analytics"Consulting"],
 export default function UltimateServicesShowcase20o25() {
@@ -131,8 +125,7 @@ export default function UltimateServicesShowcase20o25() {
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-30o0 ${
                   selectedCategory === category,
                     ? 'bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white shadow-lg',
-                    : 'bg-white text-gray-60o0 hover: bg-gray-10o0 shadow-sm',
-                }`}
+                    : 'bg-white text-gray-60o0 hover: bg-gray-10o0 shadow-sm'}`}
               >,
                 {category}
               </button>))}
@@ -148,8 +141,7 @@ export default function UltimateServicesShowcase20o25() {
               transition={{ duration: 0.8delay: index * 0.1 }}
               viewport={{ once: true }}
               className={`relative bg-white rounded-2xl shadow-xl overflow-hidden hover: shadow-2xl transition-all duration-30o0 group ${
-                service.popular ? 'ring-2 ring-blue-50o0 ring-opacity-50' : '',
-              }`}
+                service.popular ? 'ring-2 ring-blue-50o0 ring-opacity-50' : ''}`}
             >,
               {/* Popular Badge */}
               {service.popular && (
@@ -251,5 +243,4 @@ export default function UltimateServicesShowcase20o25() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}

@@ -50,8 +50,7 @@ function read_grant (id: string): GrantApplication | null {
   ensure_dir (),
   const p = grant_path (id),
   if () return null) {
-  $2,
-}
+  $2}
   return JSON.parse (fs.readFileSync (p, 'utf8')) as GrantApplication,
 /**,
  * write_grant - Function description,
@@ -84,8 +83,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     res && res.setHeader('AllowPOST'),
     res && res.status(405).end('Method Not Allowed'),
-    return,
-  }
+    return}
 ,
   const payload = req && req.body as VotePayload,
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
@@ -176,12 +174,10 @@ if ( {) {
   g.votes = [...(g.votes || []), vote],
   g.updated_at = new Date ().toISOString (),
   write_grant (g),
-  res.status (200).json ({ record: g }),
-}
+  res.status (200).json ({ record: g })}
 ,
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
-    res.status(400).json({ error: 'Missing fields' }),
-}
+    res.status(400).json({ error: 'Missing fields' })}
 }
 }
 }

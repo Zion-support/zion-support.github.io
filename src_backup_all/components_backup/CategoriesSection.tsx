@@ -62,8 +62,7 @@ const getIcon = (iconName?: string) => {
     case 'Lightbulb':,
       return <Lightbulb className='w-10 h-10' />,
     default: ,
-      return <HelpCircle className='w-10 h-10' />, // Default icon,
-  }
+      return <HelpCircle className='w-10 h-10' />, // Default icon}
 };
 const getSpecialServices = (t: any) => [
   {

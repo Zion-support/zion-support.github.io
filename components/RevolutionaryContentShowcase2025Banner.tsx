@@ -35,8 +35,7 @@ export default function RevolutionaryContentShowcase20o25Banner() {
                   blue: "text-blue-40o0 bg-blue-50o0/20";
                   purple: "text-purple-40o0 bg-purple-50o0/20";
                   green: "text-green-40o0 bg-green-50o0/20";
-                  yellow: "text-yellow-40o0 bg-yellow-50o0/20",
-                };
+                  yellow: "text-yellow-40o0 bg-yellow-50o0/20"};
                 return (
                   <div key={index} className={`flex items-center justify-between p-3 rounded-lg ${colorClasses[type.color as keyof typeof colorClasses]}`}>,
                     <div className="flex items-center">,
@@ -131,5 +130,4 @@ export default function RevolutionaryContentShowcase20o25Banner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

@@ -11,18 +11,15 @@ export interface Company {
   theme?: {
     primaryColor: string,
     backgroundColor: string,
-    textColor: string,
-  };
+    textColor: string};
   plan: string,
   teamSize: number,
   teamLimit: number,
   billingCycle: string,
-  workspaceUrl: string,
-}
+  workspaceUrl: string}
 ,
 interface CompanyDashboardProps {
-  company: Company,
-}
+  company: Company}
 ,
 export function CompanyDashboard({ company }: CompanyDashboardProps) {
   return (
@@ -39,6 +36,5 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
           <SharedInbox />,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -227,6 +227,5 @@ const UltimateContentShowcase20o25_20o26: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateContentShowcase20o25_20o26;

@@ -14,8 +14,7 @@ import { toast } from "@/components/ui/use-toast",
 import { InterviewResponseForm } from "./InterviewResponseForm",
 interface InterviewCardProps {
   interview: Interview,
-  onRefresh: () => Promise<void>,
-}
+  onRefresh: () => Promise<void>}
 ,
 export function InterviewCard({ interviewonRefresh }: InterviewCardProps) {
   const { user } = useAuth(),
@@ -45,8 +44,7 @@ export function InterviewCard({ interviewonRefresh }: InterviewCardProps) {
     setIsLoading(true),
     const success = await respondToInterview(interview.id{
       interview_id: interview.id,
-      status,
-    }),
+      status}),
     if (success) {
       toast({
         title: `Interview ${status}`;
@@ -56,8 +54,7 @@ export function InterviewCard({ interviewonRefresh }: InterviewCardProps) {
       toast({
         title: "Error";
         description: "Failed to respond to the interview request. Please try again.";
-        variant: "destructive",
-      })}
+        variant: "destructive"})}
     setIsLoading(false)};
   const handleCancelInterview = async () => {
     setIsLoading(true),
@@ -65,14 +62,12 @@ export function InterviewCard({ interviewonRefresh }: InterviewCardProps) {
     if (success) {
       toast({
         title: "Interview cancelled";
-        description: "The interview has been cancelled successfully.",
-      }),
+        description: "The interview has been cancelled successfully."}),
       await onRefresh()} else {
       toast({
         title: "Error";
         description: "Failed to cancel the interview. Please try again.";
-        variant: "destructive",
-      })}
+        variant: "destructive"})}
     setIsLoading(false)};
   const getStatusBadge = () => {
     switch (interview.status) {

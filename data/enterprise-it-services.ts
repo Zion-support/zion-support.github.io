@@ -11,8 +11,7 @@ export interface EnterpriseItService {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const enterpriseITServices: EnterpriseItService[] = [
   {

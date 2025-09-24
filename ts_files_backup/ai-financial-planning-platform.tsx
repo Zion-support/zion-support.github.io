@@ -9,33 +9,27 @@ export default function AIFinancialPlanningPlatform() {
     {
       icon: <DollarSign className="w-6 h-6" />;
       title: 'AI-Powered Financial Analysis';
-      description: 'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.',
-    };
+      description: 'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.'};
     {
       icon: <TrendingUp className="w-6 h-6" />;
       title: 'Predictive Financial Planning';
-      description: 'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.',
-    };
+      description: 'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.'};
     {
       icon: <Target className="w-6 h-6" />;
       title: 'Goal-Based Planning';
-      description: 'Personalized financial planning based on your specific goalstimelineand risk tolerance.',
-    };
+      description: 'Personalized financial planning based on your specific goalstimelineand risk tolerance.'};
     {
       icon: <Zap className="w-6 h-6" />;
       title: 'Automated Portfolio Management';
-      description: 'Intelligent portfolio optimization and rebalancing based on market conditions and your objectives.',
-    };
+      description: 'Intelligent portfolio optimization and rebalancing based on market conditions and your objectives.'};
     {
       icon: <Shield className="w-6 h-6" />;
       title: 'Risk Assessment & Management';
-      description: 'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.',
-    };
+      description: 'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.'};
     {
       icon: <BarChart3 className="w-6 h-6" />;
       title: 'Real-Time Financial Insights';
-      description: 'Live financial datamarket analysisand personalized recommendations updated in real-time.',
-    }
+      description: 'Live financial datamarket analysisand personalized recommendations updated in real-time.'}
   ],
   const benefits = [
     'Increase investment returns by 25%';
@@ -269,6 +263,5 @@ export default function AIFinancialPlanningPlatform() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

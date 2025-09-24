@@ -8,8 +8,7 @@ interface HireNowCTAProps {
     id: string,
     full_name?: string,
     professional_title?: string,
-    hourly_rate?: number,
-  };
+    hourly_rate?: number};
 }
 ,
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
@@ -61,8 +60,7 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
           skills: [];
           availability_type: 'full_time';
           timezone: '';
-          hourly_rate: talentProfile.hourly_rate,
-        } : null}
+          hourly_rate: talentProfile.hourly_rate} : null}
       />,
     </div>)}
 ,

@@ -36,8 +36,7 @@ const AI20o26UltimateServicesShowcase = () => {
         "Enhanced cognitive augmentation";
         "Seamless human-AI collaboration"];
       stats: "99.7% accuracy";
-      color: "from-purple-60o0 to-pink-60o0",
-    };
+      color: "from-purple-60o0 to-pink-60o0"};
     {
       id: 2;
       title: "Quantum AI Fusion";
@@ -49,8 +48,7 @@ const AI20o26UltimateServicesShowcase = () => {
         "Complex optimization solutions";
         "Next-gen cryptography"];
       stats: "10,0o00x faster";
-      color: "from-blue-60o0 to-cyan-60o0",
-    };
+      color: "from-blue-60o0 to-cyan-60o0"};
     {
       id: 3;
       title: "Autonomous Business Operations";
@@ -62,8 +60,7 @@ const AI20o26UltimateServicesShowcase = () => {
         "Dynamic resource allocation";
         "Intelligent decision making"];
       stats: "95% efficiency gain";
-      color: "from-green-60o0 to-emerald-60o0",
-    };
+      color: "from-green-60o0 to-emerald-60o0"};
     {
       id: 4;
       title: "Advanced Security AI";
@@ -75,8 +72,7 @@ const AI20o26UltimateServicesShowcase = () => {
         "Zero-trust architecture";
         "Real-time threat response"];
       stats: "99.9% threat detection";
-      color: "from-red-60o0 to-orange-60o0",
-    };
+      color: "from-red-60o0 to-orange-60o0"};
     {
       id: 5;
       title: "Global Analytics Intelligence";
@@ -88,8 +84,7 @@ const AI20o26UltimateServicesShowcase = () => {
         "Cross-platform integration";
         "Automated reporting"];
       stats: "50+ countries";
-      color: "from-indigo-60o0 to-purple-60o0",
-    };
+      color: "from-indigo-60o0 to-purple-60o0"};
     {
       id: 6;
       title: "Consciousness Evolution Platform";
@@ -101,8 +96,7 @@ const AI20o26UltimateServicesShowcase = () => {
         "Improved decision making";
         "Expanded awareness"];
       stats: "30o0% cognitive boost";
-      color: "from-yellow-60o0 to-orange-60o0",
-    }
+      color: "from-yellow-60o0 to-orange-60o0"}
   ],
   const containerVariants ={
     hidden: { opacity: 0, y: 50 };
@@ -111,8 +105,7 @@ const AI20o26UltimateServicesShowcase = () => {
       y: 0;
       transition: {
         duration: 0.8;
-        staggerChildren: 0.2,
-      }
+        staggerChildren: 0.2}
     }
   };
   const itemVariants ={
@@ -153,8 +146,7 @@ const AI20o26UltimateServicesShowcase = () => {
             <motion.div,
               key={service.id}
               className={`relative group cursor-pointer ${
-                activeService === index ? 'scale-10o5' : 'hover: scale-10o2',
-              } transition-all duration-30o0`}
+                activeService === index ? 'scale-10o5' : 'hover: scale-10o2'} transition-all duration-30o0`}
               onClick={() => setActiveService(index)}
               whileHover={{ y: -10 }}
               whileTap={{ scale: 0.95 }}
@@ -260,6 +252,5 @@ const AI20o26UltimateServicesShowcase = () => {
           </div>,
         </motion.div>,
       </motion.div>,
-    </div>),
-};
+    </div>)};
 export default AI20o26UltimateServicesShowcase;

@@ -54,6 +54,5 @@ const AgentSloHandbook20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default AgentSloHandbook20o26;

@@ -271,8 +271,7 @@ export default function ComprehensiveAdvancedServicesShowcase20o25() {
                   className={`p-2 rounded-lg transition-all duration-20o0 ${
                     viewMode === 'grid',
                       ? 'bg-blue-60o0 text-white',
-                      : 'text-blue-30o0 hover: text-white',
-                  }`}
+                      : 'text-blue-30o0 hover: text-white'}`}
                 >,
                   <Grid className='h-5 w-5' />,
                 </button>,
@@ -281,8 +280,7 @@ export default function ComprehensiveAdvancedServicesShowcase20o25() {
                   className={`p-2 rounded-lg transition-all duration-20o0 ${
                     viewMode === 'list',
                       ? 'bg-blue-60o0 text-white',
-                      : 'text-blue-30o0 hover: text-white',
-                  }`}
+                      : 'text-blue-30o0 hover: text-white'}`}
                 >,
                   <List className='h-5 w-5' />,
                 </button>,
@@ -300,16 +298,14 @@ export default function ComprehensiveAdvancedServicesShowcase20o25() {
           className={
             viewMode === 'grid',
               ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8',
-              : 'space-y-6',
-          }
+              : 'space-y-6'}
         >,
           {filteredServices.map((service, index) => (
             <motion.div,
               key={service.id}
               variants={itemVariants}
               className={`bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden hover: bg-white/20 transition-all duration-30o0 transform hover:scale-10o5 ${
-                viewMode === 'list' ? 'flex flex-col lg:flex-row' : '',
-              }`}
+                viewMode === 'list' ? 'flex flex-col lg:flex-row' : ''}`}
             >,
               {/* Service Header */}
               <div className={`p-6 ${viewMode === 'list' ? 'lg: w-1/3' : ''}`}>,
@@ -460,6 +456,5 @@ export default function ComprehensiveAdvancedServicesShowcase20o25() {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

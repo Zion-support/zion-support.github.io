@@ -5,16 +5,14 @@ export interface MilestoneInput {
   scope: string,
   startDate: string,
   endDate: string | null,
-  projectType: string,
-}
+  projectType: string}
 ,
 export interface GeneratedMilestone {
   title: string,
   description: string,
   dueDate: string,
   estimatedHours: number,
-  isAiGenerated: boolean,
-}
+  isAiGenerated: boolean}
 ,
 export function useMilestoneGenerator() {
   const [isGenerating, setIsGenerating] = useState(false),

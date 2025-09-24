@@ -20,5 +20,4 @@ export default function AiHrManagementPlatform() {
 			]}
 			industries={["SMB", "Mid-Market", "Enterprise"]}
 			url="https: //ziontechgroup.com/ai-hr-management-platform",
-		 />),
-}
+		 />)}

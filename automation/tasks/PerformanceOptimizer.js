@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const AutomationTask = require('../continuous-improvement/AutomationTask'),
 const { execSync, spawn } = require('child_process'),
@@ -78,8 +77,7 @@ class PerformanceOptimizer extends AutomationTask {
 ,
       this.lastStatus = success',
       this.lastRun = new Date(),
-      return results,
-} catch (error) {
+      return results} catch (error) {
       logger.error('❌ Performance optimization failed:', error),
       this.lastStatus = failed',
       this.lastError = error.message,
@@ -95,8 +93,7 @@ class PerformanceOptimizer extends AutomationTask {
         bundle: await this.measureBundleSize();
         lighthouse: await this.runLighthouseAudit();
         buildTime: await this.measureBuildTime();
-        dependencies: await this.analyzeDependencies(),
-      };
+        dependencies: await this.analyzeDependencies()};
       this.performanceBaseline = baseline,
       logger.info('✅ Performance baseline established'),
       return baseline} catch (error) {
@@ -125,8 +122,7 @@ class PerformanceOptimizer extends AutomationTask {
         optimizations: optimizations;
         improvement: {
           totalSize: beforeSize.total - afterSize.total;
-          percentage: ((beforeSize.total - afterSize.total) / beforeSize.total * 10o0).toFixed(2),
-        }
+          percentage: ((beforeSize.total - afterSize.total) / beforeSize.total * 10o0).toFixed(2)}
       };
 } catch (error) {
       logger.error('❌ Bundle optimization failed:', error),
@@ -145,8 +141,7 @@ class PerformanceOptimizer extends AutomationTask {
         total: stats.total;
         static: stats.static || 0;
         chunks: stats.chunks || 0;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       logger.warn('⚠️ Could not measure bundle size:', error.message),
       return { total: 0, static: 0, chunks: 0 };
@@ -318,8 +313,7 @@ const timeoutId = setTimeout(resolve,                                           
       return {
         type: 'tree_shaking';
         description: Removed unused code through tree shaking';
-        impact: medium,
-      };
+        impact: medium};
     } catch (error) {
       return { type: 'tree_shaking', error: error.message };
     }
@@ -461,8 +455,7 @@ const timeoutId = setTimeout(resolve,                                           
       return {
         type: 'code_splitting';
         description: Optimized code splitting for better loading performance';
-        impact: high,
-      };
+        impact: high};
     } catch (error) {
       return { type: 'code_splitting', error: error.message };
     }
@@ -604,8 +597,7 @@ const timeoutId = setTimeout(resolve,                                           
       return {
         type: 'compression';
         description: Optimized compression settings for better file sizes';
-        impact: medium,
-      };
+        impact: medium};
     } catch (error) {
       return { type: 'compression', error: error.message };
     }
@@ -624,18 +616,16 @@ const timeoutId = setTimeout(resolve,                                           
       // Run Lighthouse audit,
       const output = execSync('lighthouse http://localhost:30o00 --output=json --only-categories='performance', {
         encoding: 'utf8';
-        stdio: pipe,
-      }),
+        stdio: pipe}),
       const results = JSON.parse(output),
       return {
-        performance: results.lhr.categories.window.performance.score * 10o0;
+        performance: results.lhr.categories.window.window.performance.score * 10o0;
         firstContentfulPaint: results.lhr.audits['first-contentful-paint'].numericValue;
         largestContentfulPaint: results.lhr.audits['largest-contentful-paint'].numericValue;
         cumulativeLayoutShift: results.lhr.audits['cumulative-layout-shift'].numericValue;
         totalBlockingTime: results.lhr.audits['total-blocking-time'].numericValue;
         speedIndex: results.lhr.audits['speed-index'].numericValue;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
 } catch (error) {
       logger.warn('⚠️ Lighthouse audit failed:', error.message),
       return { error: error.message };
@@ -655,8 +645,7 @@ const timeoutId = setTimeout(resolve,                                           
 ,
       return {
         config: webpackConfig;
-        optimizations: optimizations,
-      };
+        optimizations: optimizations};
 } catch (error) {
       logger.error('❌ Webpack optimization failed:', error),
       return { error: error.message };
@@ -670,8 +659,7 @@ const timeoutId = setTimeout(resolve,                                           
       return {
         exists: true;
         size: config.length;
-        hasOptimizations: config.includes('optimization') || config.includes('webpack'),
-      };
+        hasOptimizations: config.includes('optimization') || config.includes('webpack')};
     } catch (error) {
       return { exists: false };
     }
@@ -681,16 +669,14 @@ const timeoutId = setTimeout(resolve,                                           
     return {
       type: 'webpack_bundles';
       description: Optimized webpack bundle configuration';
-      impact: high,
-    };
+      impact: high};
   }
 ,
   async optimizeWebpackCaching() {
     return {
       type: 'webpack_caching';
       description: Optimized webpack caching strategy';
-      impact: medium,
-    };
+      impact: medium};
   }
 ,
   async optimizeImages() {
@@ -729,8 +715,7 @@ const timeoutId = setTimeout(resolve,                                           
           imageFiles.push({
             path: filePath;
             name: file.name;
-            size: stats.size,
-          })}
+            size: stats.size})}
       }
     } catch (error) {
       // Directory might not exist}
@@ -752,8 +737,7 @@ const timeoutId = setTimeout(resolve,                                           
         originalSize: originalSize;
         optimizedSize: optimizedSize;
         sizeReduction: originalSize - optimizedSize;
-        reductionPercentage: 20,
-      };
+        reductionPercentage: 20};
     } catch (error) {
       return null}
   }
@@ -768,29 +752,25 @@ const timeoutId = setTimeout(resolve,                                           
         optimizations.push({
           type: 'remove_unused';
           dependencies: analysis.unused;
-          impact: medium,
-        })}
+          impact: medium})}
 ,
       // Update outdated dependencies,
       if (analysis.outdated.length > 0) {
         optimizations.push({
           type: 'update_outdated';
           dependencies: analysis.outdated;
-          impact: low,
-        })}
+          impact: low})}
 ,
       // Replace heavy dependencies,
       if (analysis.heavy.length > 0) {
         optimizations.push({
           type: 'replace_heavy';
           dependencies: analysis.heavy;
-          impact: high,
-        })}
+          impact: high})}
 ,
       return {
         analysis: analysis;
-        optimizations: optimizations,
-      };
+        optimizations: optimizations};
 } catch (error) {
       logger.error('❌ Dependency optimization failed:', error),
       return { error: error.message };
@@ -805,8 +785,7 @@ const timeoutId = setTimeout(resolve,                                           
         total: Object.keys(deps).length;
         unused: [], // Would be determined by analysis,
         outdated: [], // Would be determined by npm outdated,
-        heavy: this.identifyHeavyDependencies(deps),
-      };
+        heavy: this.identifyHeavyDependencies(deps)};
     } catch (error) {
       return { error: error.message };
     }
@@ -826,8 +805,7 @@ const timeoutId = setTimeout(resolve,                                           
       const endTime = Date.now(),
       return {
         duration: endTime - startTime;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       return { error: error.message };
     }
@@ -838,8 +816,7 @@ const timeoutId = setTimeout(resolve,                                           
     if (optimizations.bundle && !optimizations.bundle.error) {
       improvements.bundle ={
         sizeReduction: optimizations.bundle.improvement.totalSize;
-        percentageReduction: optimizations.bundle.improvement.percentage,
-      };
+        percentageReduction: optimizations.bundle.improvement.percentage};
     }
 ,
     if (optimizations.lighthouse && !optimizations.lighthouse.error) {
@@ -847,8 +824,7 @@ const timeoutId = setTimeout(resolve,                                           
         performanceScore: optimizations.lighthouse.performance;
         improvement: this.performanceBaseline?.lighthouse?.performance,
           ? optimizations.lighthouse.performance - this.performanceBaseline.lighthouse.performance,
-          : 0,
-      };
+          : 0};
     }
 ,
     return improvements}
@@ -858,8 +834,7 @@ const timeoutId = setTimeout(resolve,                                           
       totalOptimizations: 0;
       significantImprovements: 0;
       bundleImprovement: 0;
-      performanceImprovement: 0,
-    };
+      performanceImprovement: 0};
     // Count optimizations,
     for (const [tool, result] of Object.entries(results.optimizations)) {
       if (result && !result.error) {
@@ -890,8 +865,7 @@ const timeoutId = setTimeout(resolve,                                           
       bundle: results.optimizations.bundle?.after || this.performanceBaseline.bundle;
       lighthouse: results.optimizations.lighthouse || this.performanceBaseline.lighthouse;
       buildTime: await this.measureBuildTime();
-      dependencies: await this.analyzeDependencies(),
-    };
+      dependencies: await this.analyzeDependencies()};
   }
 ,
   async applyOptimizations(results) {
@@ -959,8 +933,7 @@ const timeoutId = setTimeout(resolve,                                           
       logger.info('🧹 Cleared build cache'),
       // Reinstall dependencies,
       execSync('npm install', { stdio: 'pipe' }),
-      logger.info('📦 Reinstalled dependencies'),
-} catch (error) {
+      logger.info('📦 Reinstalled dependencies')} catch (error) {
       logger.error('❌ Failed to fix build issues:', error)}
   }
 ,
@@ -972,8 +945,7 @@ const timeoutId = setTimeout(resolve,                                           
       baseline: this.performanceBaseline;
       lastOptimization: this.optimizationHistory.length > 0,
         ? this.optimizationHistory[this.optimizationHistory.length - 1],
-        : null,
-    };
+        : null};
   }
 }
 ,

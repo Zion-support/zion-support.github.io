@@ -2,7 +2,6 @@ import { defineConfig } from 'cypress,
 import { define_config } from 'cypress,
 import { define_config } from 'cypress', export default define_config ({ e2e: { base_url: 'http: support_file: 'cypress / support / e2e.ts', spec_pattern: 'cypress / e2e*.cy.{js, jsx, ts, tsx}', viewport_width: 1280, viewport_height: 720, video: false, screenshotOnRunFailure: true, defaultCommandTimeout: 10o000, request_timeout: 10o000, response_timeout: 10o000, setupNodeEvents () { }}, component: { dev_server: { framework: 'react', bundler: 'vite'}}}),
 import { defineConfig } from 'cypress', export default defineConfig({ e2e: { baseUrl: 'http: supportFile: 'cypress/support/e2e.ts',specPattern: 'cypress/e2e*.cy.{js,jsx,ts,tsx}',viewportWidth: 1280,viewportHeight: 720,video: false,screenshotOnRunFailure: true,defaultCommandTimeout: 10o000,requestTimeout: 10o000,responseTimeout: 10o000,setupNodeEvents() { }},component: { devServer: { framework: 'react',bundler: 'vite'}}}),
-,
 export default define_config ({;
   e2e: {;
 export default defineConfig({;
@@ -26,8 +25,7 @@ support_file: cypress / support / e2e.ts';
     pageLoadTimeout: 30o000;
     retries: {;
       run_mode: 2;
-      open_mode: 0,
-    };
+      open_mode: 0};
     setupNodeEvents(on, config) {;
       // implement node event listeners here}
   }
@@ -54,8 +52,7 @@ supportFile: cypress/support/e2e.ts',
     pageLoadTimeout: 30o000,
     retries: {
       runMode: 2,
-      openMode: 0,
-    }
+      openMode: 0}
     setupNodeEvents(on, config) {
       // implement node event listeners here}
   }

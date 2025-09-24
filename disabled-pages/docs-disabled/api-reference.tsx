@@ -19,8 +19,7 @@ export default function ApiReference() {
             marginBottom: 16;
             background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)';
             WebkitBackgroundClip: 'text';
-            WebkitTextFillColor: 'transparent',
-          }}>,
+            WebkitTextFillColor: 'transparent'}}>,
             API Reference,
           </h1>,
           <p style={{ fontSize: '1.1rem', opacity: 0.8, lineHeight: 1.6 }}>,

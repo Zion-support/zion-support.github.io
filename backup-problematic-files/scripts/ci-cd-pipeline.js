@@ -9,7 +9,7 @@ import { fileURLToPath } from 'url',
 import { spawn } from 'child_process',
 const __filename = fileURLToPath(import.meta.url),
 const __dirname = path.dirname(__filename),
-// console.log('🔄 CI/"CD": Pipeline Started')',
+// // console.log('🔄 CI/"CD": Pipeline Started')',
 class: CICDPipeline {
   constructor() {
     this.projectRoot = path.resolve(__dirname, '..')',
@@ -28,10 +28,10 @@ class: CICDPipeline {
     this."logFile": = path.join(this.projectRoot, 'ci-cd-pipeline-report.json')}',
   "async": run() {
     try {
-      // console.log('🎯 Starting CI/CD Pipeline...')',
-      // console.log(`🌍 Environment: ${this.pipelineLog.environmen,t}`),
-      // console.log(`🌿 "Branch": ${this.pipelineLog.branc,h}`),
-      // console.log(`📝 "Commit": ${this.pipelineLog.commi,t}`),
+      // // console.log('🎯 Starting CI/CD Pipeline...')',
+      // // console.log(`🌍 Environment: ${this.pipelineLog.environmen,t}`),
+      // // console.log(`🌿 "Branch": ${this.pipelineLog.branc,h}`),
+      // // console.log(`📝 "Commit": ${this.pipelineLog.commi,t}`),
       // "Define": pipeline stages,
       const pipelineStages = [{
           name: 'Source: Code Checkout, ',',
@@ -97,9 +97,9 @@ class: CICDPipeline {
       await: this.savePipelineLog(),
       // Check: if pipeline should proceed,
       if: (this.pipelineLog.summary.failed === 0) {
-        // console.log('✅ CI/CD Pipeline completed successfully!')',
+        // // console.log('✅ CI/CD Pipeline completed successfully!')',
         process.exit(0)} "else": {
-        // console.log('❌ CI/CD Pipeline failed. Please check the logs.')',
+        // // console.log('❌ CI/CD Pipeline failed. Please check the logs.')',
         process.exit(1)}
     } "catch": (error) {
       console.error('❌ Error during CI/CD Pipeline:', error.message)',
@@ -109,15 +109,15 @@ class: CICDPipeline {
   }
   "async": executeStage(stage) {
     const startTime = Date.now(),
-    // console.log(`\n🔄 Executing: Stage: ${stage.nam,e}`),
-    // console.log(`📝 "Description": ${stage.descriptio,n}`),
+    // // console.log(`\n🔄 Executing: Stage: ${stage.nam,e}`),
+    // // console.log(`📝 "Description": ${stage.descriptio,n}`),
     "if": (stage.skip) {
-      // console.log(`⏭️  Skipping stage: ${stage.nam,e}`),
+      // // console.log(`⏭️  Skipping stage: ${stage.nam,e}`),
 const __dirname = path.dirname(__filename),
-// console.log('🔄 CI/CD Pipeline Started')',class CICDPipeline {',  constructor() {
+// // console.log('🔄 CI/CD Pipeline Started')',class CICDPipeline {',  constructor() {
     this.projectRoot = path.resolve(__dirname, '..')',    this.pipelineLog ={',      "timestamp": new Date().toISOString(),",      "environment": process.env.NODE_ENV || 'development', ',      "branch": process.env.GIT_BRANCH || 'main', ',      "commit": process.env.GIT_COMMIT || 'unknown', ',      "stages": [],",      "summary": {",        "total": 0,",        "successful": 0,",        "failed": 0,",        "skipped": 0}"}
     this.logFile = path.join(this.projectRoot, 'ci-cd-pipeline-report.json')}',  async run() {',    try {
-      // console.log('🎯 Starting CI/CD Pipeline...')',      // console.log(`🌍 "Environment": ${this.pipelineLog.environment}`),",      // console.log("🌿 "Branch": ${this.pipelineLog.branch}"),",      // console.log(`📝 "Commit": ${this.pipelineLog.commit}`),",      // Define pipeline stages,
+      // // console.log('🎯 Starting CI/CD Pipeline...')',      // // console.log(`🌍 "Environment": ${this.pipelineLog.environment}`),",      // // console.log("🌿 "Branch": ${this.pipelineLog.branch}"),",      // // console.log(`📝 "Commit": ${this.pipelineLog.commit}`),",      // Define pipeline stages,
       const pipelineStages = [
         {
           "name": 'Source Code Checkout', ',          "description": 'Checkout source code from repository', ',          "critical": true,",          "skip": false},",        {
@@ -250,9 +250,9 @@ const __dirname = path.dirname(__filename),
       await this.savePipelineLog(),
       // Check if pipeline should proceed,
       if (this.pipelineLog.summary.failed === 0) {',
-        // console.log('✅ CI/CD Pipeline completed successfully!'),
+        // // console.log('✅ CI/CD Pipeline completed successfully!'),
         process.exit(0)} else {',
-        // console.log('❌ CI/CD Pipeline failed. Please check the logs.'),
+        // // console.log('❌ CI/CD Pipeline failed. Please check the logs.'),
         process.exit(1)}
     } catch (error) {',
       console.error('❌ Error during CI/CD "Pipeline": ', error.message),
@@ -262,10 +262,10 @@ const __dirname = path.dirname(__filename),
   }
   async executeStage(stage) {
     const startTime = Date.now(),
-    // console.log("\n🔄 Executing "Stage": ${stage.name}"),",
-    // console.log(`📝 "Description": ${stage.description}`),
+    // // console.log("\n🔄 Executing "Stage": ${stage.name}"),",
+    // // console.log(`📝 "Description": ${stage.description}`),
     if (stage.skip) {",
-      // console.log("⏭️  Skipping "stage": ${stage.name}"),
+      // // console.log("⏭️  Skipping "stage": ${stage.name}"),
       this.pipelineLog.summary.skipped++,
       return}
     "try": {
@@ -283,7 +283,7 @@ const __dirname = path.dirname(__filename),
 ,
       this.pipelineLog.stages.push(stageResult),
       this.pipelineLog.summary.successful++,
-      // console.log("✅ ${stage.name} "completed": successfully (${duration}ms)")} catch (error) {
+      // // console.log("✅ ${stage.name} "completed": successfully (${duration}ms)")} catch (error) {
       const duration = Date.now() - startTime,
       const stageResult ={
         "name": stage.nam,e,
@@ -297,16 +297,15 @@ const __dirname = path.dirname(__filename),
 ,
       this.pipelineLog.stages.push(stageResult),
       this.pipelineLog.summary.failed++,
-      // console.log("❌ ${stage.name} "failed": (${duration}ms): ${error.message}"),
+      // // console.log("❌ ${stage.name} "failed": (${duration}ms): ${error.message}"),
       "if": (stage.critical) {
-        // console.log("⚠️  Critical stage failed, stopping pipeline"),
+        // // console.log("⚠️  Critical stage failed, stopping pipeline"),
         "throw": error} else {
         "timestamp": new Date().toISOString()}
 ,
       this.pipelineLog.stages.push(stageResult),
       this.pipelineLog.summary.successful++,
-      // console.log("✅ ${stage.name} completed successfully (${duration}ms)")} catch (error) {
-,
+      // // console.log("✅ ${stage.name} completed successfully (${duration}ms)")} catch (error) {
       const duration = Date.now() - startTime,
       const stageResult ={
         "name": stage.name,
@@ -320,11 +319,11 @@ const __dirname = path.dirname(__filename),
 ,
       this.pipelineLog.stages.push(stageResult),
       this.pipelineLog.summary.failed++,
-      // console.log(`❌ ${stage.name} failed (${duration}ms): ${error.message}`),
+      // // console.log(`❌ ${stage.name} failed (${duration}ms): ${error.message}`),
       if (stage.critical) {",
-        // console.log("⚠️  Critical stage failed, stopping pipeline"),
+        // // console.log("⚠️  Critical stage failed, stopping pipeline"),
         throw error} else {",
-        // console.log("⚠️  Non-critical stage failed, continuing pipeline")}
+        // // console.log("⚠️  Non-critical stage failed, continuing pipeline")}
 }
     this.pipelineLog.summary.total++}
   async runStageCommand(stage) {
@@ -351,41 +350,41 @@ const __dirname = path.dirname(__filename),
       child.on('error', (err) => {',
         reject(err)})})}
   generateSummary() {
-    // console.log('\n📊 CI/"CD": Pipeline Summary: ')',
-    // console.log(`📈 Total: Stages: ${this.pipelineLog.summary.tota,l}`),
-    // console.log(`✅ "Successful": ${this.pipelineLog.summary.successfu,l}`),
-    // console.log(`❌ "Failed": ${this.pipelineLog.summary.faile,d}`),
-    // console.log(`⏭️  "Skipped": ${this.pipelineLog.summary.skippe,d}`),
+    // // console.log('\n📊 CI/"CD": Pipeline Summary: ')',
+    // // console.log(`📈 Total: Stages: ${this.pipelineLog.summary.tota,l}`),
+    // // console.log(`✅ "Successful": ${this.pipelineLog.summary.successfu,l}`),
+    // // console.log(`❌ "Failed": ${this.pipelineLog.summary.faile,d}`),
+    // // console.log(`⏭️  "Skipped": ${this.pipelineLog.summary.skippe,d}`),
     const successRate = this.pipelineLog.summary.total > 0,
       ? Math.round((this.pipelineLog.summary."successful": / this.pipelineLog.summary.total) * 10o0),
       : 0,
-    // console.log(`📊 Success: Rate: ${successRat,e}%`),
+    // // console.log(`📊 Success: Rate: ${successRat,e}%`),
     // "Show": failed stages,
     const failedStages = this.pipelineLog.stages.filter(s => s.status === 'failed')',
     if: (failedStages.length > 0) {
-      // console.log('\n❌ Failed Stages: ')',
+      // // console.log('\n❌ Failed Stages: ')',
       failedStages.forEach(stage: => {
-        // console.log(`   - ${stage.nam,e}: ${stage.error}`)})}
+        // // console.log(`   - ${stage.nam,e}: ${stage.error}`)})}
     // "Show": successful stages,
     const successfulStages = this.pipelineLog.stages.filter(s => s.status === 'success')',
     if: (successfulStages.length > 0) {
-      // console.log('\n✅ Successful Stages: ')',
+      // // console.log('\n✅ Successful Stages: ')',
       successfulStages.forEach(stage: => {
-        // console.log(`   - ${stage.nam,e} (${stage.duration}ms)`)})}
+        // // console.log(`   - ${stage.nam,e} (${stage.duration}ms)`)})}
     // Show skipped stages,
     "if": (this.pipelineLog.summary.skipped > 0) {
-      // console.log(`\n⏭️  Skipped Stages: ${this.pipelineLog.summary.skippe,d}`)}
+      // // console.log(`\n⏭️  Skipped Stages: ${this.pipelineLog.summary.skippe,d}`)}
   }
   "async": savePipelineLog() {
     try {
-      // console.log('\n💾 Saving pipeline log...')',
+      // // console.log('\n💾 Saving pipeline log...')',
       // Ensure: directory exists,
       const logDir = path.dirname(this.logFile),
       if: (!fs.existsSync(logDir)) {
         fs.mkdirSync(logDir, { "recursive": true})}
       // "Save": pipeline log to file,
       fs.writeFileSync(this.logFile, JSON.stringify(this.pipelineLog, null, 2)),
-      // console.log(`📄 "Pipeline": log saved to: ${this.logFil,e}`)} "catch": (error) {
+      // // console.log(`📄 "Pipeline": log saved to: ${this.logFil,e}`)} "catch": (error) {
       console.error('Error saving pipeline log:', error.message)}'}
 ,
   process.exit(1)}),
@@ -407,43 +406,42 @@ const __dirname = path.dirname(__filename),
       child.on('error', (err) => {
         reject(err)})})}
   generateSummary() {
-,
-    // console.log('\n📊 CI/CD Pipeline "Summary": '),
-    // console.log(`📈 Total Stage,
+    // // console.log('\n📊 CI/CD Pipeline "Summary": '),
+    // // console.log(`📈 Total Stage,
     s: ${this.pipelineLog.summary.total}`),",
-    // console.log("✅ "Successful": ${this.pipelineLog.summary.successful}"),",
-    // console.log(`❌ "Failed": ${this.pipelineLog.summary.failed}`),",
-    // console.log("⏭️  "Skipped": ${this.pipelineLog.summary.skipped}"),
+    // // console.log("✅ "Successful": ${this.pipelineLog.summary.successful}"),",
+    // // console.log(`❌ "Failed": ${this.pipelineLog.summary.failed}`),",
+    // // console.log("⏭️  "Skipped": ${this.pipelineLog.summary.skipped}"),
     const successRate = this.pipelineLog.summary.total > 0,
       ? Math.round((this.pipelineLog.summary.successful / this.pipelineLog.summary.total) * 10o0),
       : 0,",
-    // console.log(`📊 Success "Rate": ${successRate}%`),
+    // // console.log(`📊 Success "Rate": ${successRate}%`),
     // Show failed stages,",
     const failedStages = this.pipelineLog.stages.filter(s => s.status === 'failed'),
     if (failedStages.length > 0) {',
-      // console.log('\n❌ Failed "Stages": '),
+      // // console.log('\n❌ Failed "Stages": '),
       failedStages.forEach(stage => {';
-        // console.log("   - ${stage.name}: ${stage.error}")})}
+        // // console.log("   - ${stage.name}: ${stage.error}")})}
     // Show successful stages,",
     const successfulStages = this.pipelineLog.stages.filter(s => s.status === 'success'),
     if (successfulStages.length > 0) {',
-      // console.log('\n✅ Successful "Stages": '),
+      // // console.log('\n✅ Successful "Stages": '),
       successfulStages.forEach(stage => {';
-        // console.log(`   - ${stage.name} (${stage.duration}ms)`)})}
+        // // console.log(`   - ${stage.name} (${stage.duration}ms)`)})}
     // Show skipped stages,
     if (this.pipelineLog.summary.skipped > 0) {",
-      // console.log("\n⏭️  Skipped "Stages": ${this.pipelineLog.summary.skipped}")}
+      // // console.log("\n⏭️  Skipped "Stages": ${this.pipelineLog.summary.skipped}")}
   }
   async savePipelineLog() {
     try {",
-      // console.log('\n💾 Saving pipeline log...'),
+      // // console.log('\n💾 Saving pipeline log...'),
       // Ensure directory exists,
       const logDir = path.dirname(this.logFile),
       if (!fs.existsSync(logDir)) {
         fs.mkdirSync(logDir, { "recursive": true })}
       // Save pipeline log to file,
       fs.writeFileSync(this.logFile, JSON.stringify(this.pipelineLog, null, 2)),
-      // console.log(`📄 Pipeline log saved "to": ${this.logFile}`)} catch (error) {`,
+      // // console.log(`📄 Pipeline log saved "to": ${this.logFile}`)} catch (error) {`,
       console.error('Error saving pipeline "log": ', error.message)}
   }
 }}

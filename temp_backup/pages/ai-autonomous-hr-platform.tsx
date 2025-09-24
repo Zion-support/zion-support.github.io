@@ -79,8 +79,7 @@ const AIAutonomousHRPlatform: React.FC = () => {
                 {
                   icon: <Target className="w-8 h-8 text-red-40o0"  />;
                   title: "Performance Optimization";
-                  description: "Continuous performance monitoring and personalized development recommendations for each employee",
-                };
+                  description: "Continuous performance monitoring and personalized development recommendations for each employee"};
                 {
                   icon: <Calendar className="w-8 h-8 text-pink-40o0"  />;
                   title: "Workforce Planning";
@@ -92,8 +91,7 @@ const AIAutonomousHRPlatform: React.FC = () => {
                 {
                   icon: <Heart className="w-8 h-8 text-rose-40o0"  />;
                   title: "Well-being Management";
-                  description: "AI monitors employee well-being and proactively suggests interventions and support",
-                };
+                  description: "AI monitors employee well-being and proactively suggests interventions and support"};
                 {
                   icon: <Shield className="w-8 h-8 text-amber-40o0"  />;
                   title: "Compliance Automation";
@@ -192,8 +190,7 @@ const AIAutonomousHRPlatform: React.FC = () => {
                 {
                   step: "1";
                   title: "Job Analysis";
-                  description: "AI analyzes role requirements and creates optimized job descriptions and candidate profiles",
-                };
+                  description: "AI analyzes role requirements and creates optimized job descriptions and candidate profiles"};
                 {
                   step: "2";
                   title: "Candidate Sourcing";
@@ -244,23 +241,19 @@ const AIAutonomousHRPlatform: React.FC = () => {
                 {
                   metric: "75%";
                   label: "Faster Hiring";
-                  description: "Reduction in time-to-hire through AI automation",
-                };
+                  description: "Reduction in time-to-hire through AI automation"};
                 {
                   metric: "90%";
                   label: "Better Candidate Quality";
-                  description: "Improvement in candidate-role fit accuracy",
-                };
+                  description: "Improvement in candidate-role fit accuracy"};
                 {
                   metric: "85%";
                   label: "Employee Retention";
-                  description: "Higher retention rates through predictive analytics",
-                };
+                  description: "Higher retention rates through predictive analytics"};
                 {
                   metric: "60%";
                   label: "HR Cost Reduction";
-                  description: "Lower HR operational costs through automation",
-                }
+                  description: "Lower HR operational costs through automation"}
               ].map((stat, index) => (
                 <motion.div,
                   key={index}
@@ -319,8 +312,7 @@ const AIAutonomousHRPlatform: React.FC = () => {
                     "Predictive analytics";
                     "Priority support";
                     "Custom integrations"];
-                  popular: true,
-                };
+                  popular: true};
                 {
                   title: "Enterprise";
                   price: "$2,999";
@@ -343,8 +335,7 @@ const AIAutonomousHRPlatform: React.FC = () => {
                   className={`p-8 rounded-2xl border transition-all duration-30o0 ${
                     plan.popular,
                       ? 'bg-gradient-to-br from-orange-90o0/50 to-red-90o0/50 border-orange-50o0 scale-10o5',
-                      : 'bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 border-gray-70o0/50 hover: border-orange-50o0/50',
-                  }`}
+                      : 'bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 border-gray-70o0/50 hover: border-orange-50o0/50'}`}
                 >,
                   {plan.popular && (
                     <div className="text-center mb-4">,
@@ -371,8 +362,7 @@ const AIAutonomousHRPlatform: React.FC = () => {
                     className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                       plan.popular,
                         ? 'bg-gradient-to-r from-orange-50o0 to-red-60o0 text-white hover: from-orange-60o0 hover:to-red-70o0',
-                        : 'bg-gray-70o0 text-white hover:bg-gray-60o0',
-                    }`}
+                        : 'bg-gray-70o0 text-white hover:bg-gray-60o0'}`}
                   >,
                     Get Started,
                   </a>,
@@ -445,6 +435,5 @@ const AIAutonomousHRPlatform: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-};
+    </Layout>)};
 export default AIAutonomousHRPlatform;
