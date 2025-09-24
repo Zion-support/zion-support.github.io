@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build --no-lint",
+    "build": "npm run type-check && next build",
     "start": "next start",
     "lint": "next lint",
     "build:analyze": "ANALYZE=true npm run build",
