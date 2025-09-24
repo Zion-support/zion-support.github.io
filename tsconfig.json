@@ -47,6 +47,8 @@
     "src/**/*.tsx",
     "pages/**/*.ts",
     "pages/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
     "scripts/**/*.ts",
     "scripts/**/*.tsx"
   ],
