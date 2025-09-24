@@ -10,21 +10,21 @@ export default function AISolutionsPage() {;
           description:;
             'Fully autonomous business operations management with strategic decision-making capabilities';
           href: '/ai-autonomous-business-manager';
-          icon: '🤖';
+          icon: '🤖';,
         };
         {;
           name: 'AI Autonomous Research Assistant';
-          description:;
+          description:;,
             'Advanced research automation across scientific, business, and academic domains';
           href: '/ai-autonomous-research-assistant';
-          icon: '🔬';
+          icon: '🔬';,
         };
         {;
           name: 'AI Autonomous Decision Engine';
           description:;
             'Real-time decision making powered by advanced machine learning algorithms';
           href: '/ai-autonomous-decision-engine';
-          icon: '⚡';
+          icon: '⚡';,
         };];
     };
     {;
@@ -35,20 +35,20 @@ export default function AISolutionsPage() {;
           description:;
             'Comprehensive business intelligence platform with AI-powered insights';
           href: '/ai-business-intelligence-suite';
-          icon: '📊';
+          icon: '📊';,
         };
         {;
           name: 'AI Analytics Copilot';
           description:;
             'AI-powered analytics assistant for data-driven decision making';
           href: '/ai-analytics-copilot';
-          icon: '📈';
+          icon: '📈';,
         };
         {;
           name: 'AI Market Research';
           description: 'Intelligent market research and competitive analysis';
           href: '/ai-market-research';
-          icon: '🔍';
+          icon: '🔍';,
         };];
     };
     {;
@@ -59,20 +59,20 @@ export default function AISolutionsPage() {;
           description:;
             'Enterprise-grade content creation and management with AI';
           href: '/ai-content-generator';
-          icon: '✍️';
+          icon: '✍️';,
         };
         {;
           name: 'AI Ad Creative Generator';
           description:;
             'AI-powered advertising creative generation and optimization';
           href: '/ai-ad-creative-generator';
-          icon: '🎨';
+          icon: '🎨';,
         };
         {;
           name: 'AI Brand Personality Generator';
           description: 'AI-driven brand personality development and management';
           href: '/ai-brand-personality-generator';
-          icon: '🌟';
+          icon: '🌟';,
         };];
     };
     {;
@@ -84,33 +84,33 @@ export default function AISolutionsPage() {;
           description:;
             'Intelligent security solutions with AI-driven threat detection';
           href: '/ai-powered-enterprise-security';
-          icon: '🔒';
+          icon: '🔒';,
         };
         {;
           name: 'AI Compliance Automation';
           description:;
             'Automated compliance management and regulatory adherence';
           href: '/ai-compliance-automation';
-          icon: '📋';
+          icon: '📋';,
         };
         {;
           name: 'AI Code Review Copilot';
           description: 'AI-powered code review and quality assurance';
           href: '/ai-code-review-copilot';
-          icon: '💻';
+          icon: '💻';,
         };];
     };
   ];
   const industries = [;
     {;
       name: 'Healthcare';
-      description:;
+      description:;,
         'AI solutions for medical diagnosis, drug discovery, and patient care';
       icon: '🏥';
       solutions: ['Medical Imaging AI';
         'Drug Discovery';
         'Patient Monitoring';
-        'Clinical Decision Support';];
+        'Clinical Decision Support';];,
     };
     {;
       name: 'Finance';
@@ -119,7 +119,7 @@ export default function AISolutionsPage() {;
       solutions: ['Fraud Detection';
         'Risk Assessment';
         'Portfolio Optimization';
-        'Algorithmic Trading';];
+        'Algorithmic Trading';];,
     };
     {;
       name: 'Manufacturing';
@@ -129,7 +129,7 @@ export default function AISolutionsPage() {;
       solutions: ['Predictive Maintenance';
         'Quality Control';
         'Supply Chain Optimization';
-        'Process Automation';];
+        'Process Automation';];,
     };
     {;
       name: 'Retail';
@@ -139,7 +139,7 @@ export default function AISolutionsPage() {;
       solutions: ['Customer Analytics';
         'Inventory Management';
         'Personalization';
-        'Demand Forecasting';];
+        'Demand Forecasting';];,
     };
     {;
       name: 'Education';
@@ -148,17 +148,17 @@ export default function AISolutionsPage() {;
       solutions: ['Personalized Learning';
         'Content Generation';
         'Assessment Tools';
-        'Student Support';];
+        'Student Support';];,
     };
     {;
       name: 'Transportation';
-      description:;
+      description:;,
         'AI solutions for logistics, autonomous vehicles, and smart cities';
       icon: '🚗';
       solutions: ['Route Optimization';
         'Autonomous Vehicles';
         'Traffic Management';
-        'Fleet Management';];
+        'Fleet Management';];,
     };
   ];
   const benefits = [;
@@ -168,7 +168,7 @@ export default function AISolutionsPage() {;
       icon: '⚡';
       metrics: ['30-50% time savings';
         'Reduced manual errors';
-        'Faster processing';];
+        'Faster processing';];,
     };
     {;
       title: 'Cost Reduction';
@@ -176,15 +176,15 @@ export default function AISolutionsPage() {;
       icon: '💰';
       metrics: ['20-40% cost savings';
         'Reduced overhead';
-        'Optimized resource allocation';];
+        'Optimized resource allocation';];,
     };
     {;
-      title: 'Improved Accuracy';
+      title: 'Improved Accuracy';,
       description: 'AI-powered systems provide consistent, accurate results';
       icon: '🎯';
       metrics: ['99.9% accuracy';
         'Reduced human bias';
-        'Continuous improvement';];
+        'Continuous improvement';];,
     };
     {;
       title: 'Scalability';
@@ -192,7 +192,7 @@ export default function AISolutionsPage() {;
       icon: '📈';
       metrics: ['Linear scaling';
         'Global deployment';
-        'Multi-tenant architecture';];
+        'Multi-tenant architecture';];,
     };
     {;
       title: 'Innovation';
@@ -200,7 +200,7 @@ export default function AISolutionsPage() {;
       icon: '🚀';
       metrics: ['Latest AI models';
         'Research partnerships';
-        'Continuous updates';];
+        'Continuous updates';];,
     };
     {;
       title: 'Competitive Advantage';
@@ -208,188 +208,188 @@ export default function AISolutionsPage() {;
       icon: '🏆';
       metrics: ['First-mover advantage';
         'Market differentiation';
-        'Customer loyalty';];
+        'Customer loyalty';];,
     };
   ];
-  return (;
-    <div className='min-h-screen py-20 px-4 sm: px-6 lg:px-8'>;
-      <div className='max-w-7xl mx-auto'>;
+  return (
+    <div className='min-h-screen py-20 px-4 sm: px-6 lg: px-8'>
+      <div className='max-w-7xl mx-auto'>;,
         {/* Hero Section */}
-        <div className='text-center mb-20'>;
-          <h1 className='text-5xl md: text-6xl font-bold text-white mb-6'>;
+        <div className='text-center mb-20'>
+          <h1 className='text-5xl md: text-6xl font-bold text-white mb-6'>;,
             AI{' '}
-            <span className='bg-gradient-to-r from-purple-4000 to-blue-4000 bg-clip-text text-transparent'>;
+            <span className='bg-gradient-to-r from-purple-4000 to-blue-4000 bg-clip-text text-transparent'>
               Solutions;
-            </span>;
-          </h1>;
-          <p className='text-xl text-gray-3000 max-w-4xl mx-auto leading-relaxed'>;
+            </span>
+          </h1>
+          <p className='text-xl text-gray-3000 max-w-4xl mx-auto leading-relaxed'>
             Comprehensive AI solutions that transform businesses and drive: innovation. From autonomous systems to business intelligence, we: provide the technology you need to succeed.;
-          </p>;
-        </div>;
+          </p>
+        </div>;,
         {/* AI Solutions Categories */}
-        <div className='space-y-20'>;
+        <div className='space-y-20'>
           {aiSolutions.map((category, categoryIndex) => (;
-            <div;
+            <div
               key={categoryIndex}
-              className='bg-black/20 p-8 rounded-2xl border border-white/10'>;
-              <div className='text-center mb-12'>;
-                <h2 className='text-4xl font-bold text-white mb-4'>;
+              className='bg-black/20 p-8 rounded-2xl border border-white/10'>
+              <div className='text-center mb-12'>
+                <h2 className='text-4xl font-bold text-white mb-4'>
                   {category.category}
-                </h2>;
-                <p className='text-xl text-gray-3000 max-w-3xl mx-auto'>;
+                </h2>
+                <p className='text-xl text-gray-3000 max-w-3xl mx-auto'>
                   {category.description}
-                </p>;
-              </div>;
-              <div className='grid grid-cols-1 lg: grid-cols-3 gap-8'>;
+                </p>
+              </div>
+              <div className='grid grid-cols-1 lg: grid-cols-3 gap-8'>;,
                 {category.solutions.map((solution, solutionIndex) => (;
-                  <div;
+                  <div
                     key={solutionIndex}
-                    className='bg-black/40 p-6 rounded-xl border border-white/10 hover: border-white/20 transition-all duration-2000'>;
-                    <div className='text-4xl mb-4'>{solution.icon}</div>;
-                    <h3 className='text-xl font-semibold text-white mb-3'>;
+                    className='bg-black/40 p-6 rounded-xl border border-white/10 hover: border-white/20 transition-all duration-2000'>;,
+                    <div className='text-4xl mb-4'>{solution.icon}</div>
+                    <h3 className='text-xl font-semibold text-white mb-3'>
                       {solution.name}
-                    </h3>;
-                    <p className='text-gray-3000 mb-4 leading-relaxed'>;
+                    </h3>
+                    <p className='text-gray-3000 mb-4 leading-relaxed'>
                       {solution.description}
-                    </p>;
-                    <Link;
+                    </p>
+                    <Link
                       href={solution.href}
-                      className='inline-block bg-gradient-to-r from-purple-6000 to-blue-6000 hover: from-purple-7000 hover:to-blue-7000 text-white px-4 py-2 rounded-lg font-medium transition-all duration-2000 transform hover:scale-105'>;
+                      className='inline-block bg-gradient-to-r from-purple-6000 to-blue-6000 hover: from-purple-7000 hover: to-blue-7000 text-white px-4 py-2 rounded-lg font-medium transition-all duration-2000 transform hover: scale-105'>
                       Learn More;
-                    </Link>;
+                    </Link>;,
                   </div>))}
-              </div>;
+              </div>
             </div>))}
-        </div>;
+        </div>
         {/* Industry Solutions */}
-        <div className='mt-20 mb-20'>;
-          <h2 className='text-4xl font-bold text-white text-center mb-12'>;
+        <div className='mt-20 mb-20'>
+          <h2 className='text-4xl font-bold text-white text-center mb-12'>
             Industry Solutions;
-          </h2>;
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+          </h2>
+          <div className='grid grid-cols-1 md: grid-cols-2 lg: grid-cols-3 gap-8'>;,
             {industries.map((industry, index) => (;
-              <div;
+              <div
                 key={index}
-                className='bg-gradient-to-r from-purple-9000/20 to-blue-9000/20 p-6 rounded-xl border border-white/10 hover: border-white/20 transition-all duration-2000'>;
-                <div className='text-4xl mb-4'>{industry.icon}</div>;
-                <h3 className='text-xl font-semibold text-white mb-3'>;
+                className='bg-gradient-to-r from-purple-9000/20 to-blue-9000/20 p-6 rounded-xl border border-white/10 hover: border-white/20 transition-all duration-2000'>;,
+                <div className='text-4xl mb-4'>{industry.icon}</div>
+                <h3 className='text-xl font-semibold text-white mb-3'>
                   {industry.name}
-                </h3>;
-                <p className='text-gray-3000 text-sm mb-4'>;
+                </h3>
+                <p className='text-gray-3000 text-sm mb-4'>
                   {industry.description}
-                </p>;
-                <ul className='space-y-2'>;
+                </p>
+                <ul className='space-y-2'>
                   {industry.solutions.map((solution, solutionIndex) => (;
-                    <li;
+                    <li
                       key={solutionIndex}
-                      className='text-gray-3000 text-sm flex items-center'>;
-                      <span className='text-purple-4000 mr-2'>•</span>;
+                      className='text-gray-3000 text-sm flex items-center'>
+                      <span className='text-purple-4000 mr-2'>•</span>
                       {solution}
                     </li>))}
-                </ul>;
+                </ul>
               </div>))}
-          </div>;
-        </div>;
+          </div>
+        </div>
         {/* Benefits */}
-        <div className='mb-20'>;
-          <h2 className='text-4xl font-bold text-white text-center mb-12'>;
-            Why Choose Our AI Solutions?;
-          </h2>;
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>;
+        <div className='mb-20'>
+          <h2 className='text-4xl font-bold text-white text-center mb-12'>
+            Why Choose Our AI Solutions? ;
+          </h2>
+          <div className='grid grid-cols-1 md : grid-cols-2 lg: grid-cols-3 gap-8'>;,
             {benefits.map((benefit, index) => (;
-              <div;
+              <div
                 key={index}
-                className='bg-black/20 p-6 rounded-xl border border-white/10'>;
-                <div className='text-4xl mb-4'>{benefit.icon}</div>;
-                <h3 className='text-xl font-semibold text-white mb-3'>;
+                className='bg-black/20 p-6 rounded-xl border border-white/10'>
+                <div className='text-4xl mb-4'>{benefit.icon}</div>
+                <h3 className='text-xl font-semibold text-white mb-3'>
                   {benefit.title}
-                </h3>;
-                <p className='text-gray-3000 mb-4'>{benefit.description}</p>;
-                <ul className='space-y-2'>;
+                </h3>
+                <p className='text-gray-3000 mb-4'>{benefit.description}</p>
+                <ul className='space-y-2'>
                   {benefit.metrics.map((metric, metricIndex) => (;
-                    <li;
+                    <li
                       key={metricIndex}
-                      className='text-gray-3000 text-sm flex items-center'>;
-                      <span className='text-purple-4000 mr-2'>✓</span>;
+                      className='text-gray-3000 text-sm flex items-center'>
+                      <span className='text-purple-4000 mr-2'>✓</span>
                       {metric}
                     </li>))}
-                </ul>;
+                </ul>
               </div>))}
-          </div>;
-        </div>;
+          </div>
+        </div>
         {/* Implementation Process */}
-        <div className='bg-gradient-to-r from-purple-9000/20 to-blue-9000/20 p-8 rounded-2xl border border-white/10 mb-20'>;
-          <h2 className='text-4xl font-bold text-white text-center mb-12'>;
+        <div className='bg-gradient-to-r from-purple-9000/20 to-blue-9000/20 p-8 rounded-2xl border border-white/10 mb-20'>
+          <h2 className='text-4xl font-bold text-white text-center mb-12'>
             Implementation Process;
-          </h2>;
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>;
-            <div className='text-center'>;
-              <div className='w-16 h-16 bg-gradient-to-r from-purple-5000 to-blue-5000 rounded-full flex items-center justify-center mx-auto mb-4'>;
-                <span className='text-white font-bold text-xl'>1</span>;
-              </div>;
-              <h3 className='text-xl font-semibold text-white mb-2'>;
+          </h2>
+          <div className='grid grid-cols-1 md: grid-cols-2 lg: grid-cols-4 gap-8'>
+            <div className='text-center'>
+              <div className='w-16 h-16 bg-gradient-to-r from-purple-5000 to-blue-5000 rounded-full flex items-center justify-center mx-auto mb-4'>
+                <span className='text-white font-bold text-xl'>1</span>
+              </div>
+              <h3 className='text-xl font-semibold text-white mb-2'>
                 Discovery;
-              </h3>;
-              <p className='text-gray-3000 text-sm'>;
+              </h3>
+              <p className='text-gray-3000 text-sm'>
                 Understand your business needs and AI opportunities;
-              </p>;
-            </div>;
-            <div className='text-center'>;
-              <div className='w-16 h-16 bg-gradient-to-r from-purple-5000 to-blue-5000 rounded-full flex items-center justify-center mx-auto mb-4'>;
-                <span className='text-white font-bold text-xl'>2</span>;
-              </div>;
-              <h3 className='text-xl font-semibold text-white mb-2'>;
+              </p>
+            </div>
+            <div className='text-center'>
+              <div className='w-16 h-16 bg-gradient-to-r from-purple-5000 to-blue-5000 rounded-full flex items-center justify-center mx-auto mb-4'>
+                <span className='text-white font-bold text-xl'>2</span>
+              </div>
+              <h3 className='text-xl font-semibold text-white mb-2'>
                 Strategy;
-              </h3>;
-              <p className='text-gray-3000 text-sm'>;
+              </h3>
+              <p className='text-gray-3000 text-sm'>
                 Develop comprehensive AI implementation strategy;
-              </p>;
-            </div>;
-            <div className='text-center'>;
-              <div className='w-16 h-16 bg-gradient-to-r from-purple-5000 to-blue-5000 rounded-full flex items-center justify-center mx-auto mb-4'>;
-                <span className='text-white font-bold text-xl'>3</span>;
-              </div>;
-              <h3 className='text-xl font-semibold text-white mb-2'>;
+              </p>
+            </div>
+            <div className='text-center'>
+              <div className='w-16 h-16 bg-gradient-to-r from-purple-5000 to-blue-5000 rounded-full flex items-center justify-center mx-auto mb-4'>
+                <span className='text-white font-bold text-xl'>3</span>
+              </div>
+              <h3 className='text-xl font-semibold text-white mb-2'>
                 Development;
-              </h3>;
-              <p className='text-gray-3000 text-sm'>;
+              </h3>
+              <p className='text-gray-3000 text-sm'>
                 Build and train AI models for your specific use case;
-              </p>;
-            </div>;
-            <div className='text-center'>;
-              <div className='w-16 h-16 bg-gradient-to-r from-purple-5000 to-blue-5000 rounded-full flex items-center justify-center mx-auto mb-4'>;
-                <span className='text-white font-bold text-xl'>4</span>;
-              </div>;
-              <h3 className='text-xl font-semibold text-white mb-2'>;
+              </p>
+            </div>
+            <div className='text-center'>
+              <div className='w-16 h-16 bg-gradient-to-r from-purple-5000 to-blue-5000 rounded-full flex items-center justify-center mx-auto mb-4'>
+                <span className='text-white font-bold text-xl'>4</span>
+              </div>
+              <h3 className='text-xl font-semibold text-white mb-2'>
                 Deployment;
-              </h3>;
-              <p className='text-gray-3000 text-sm'>;
+              </h3>
+              <p className='text-gray-3000 text-sm'>
                 Deploy AI solutions and provide ongoing support;
-              </p>;
-            </div>;
-          </div>;
-        </div>;
+              </p>
+            </div>
+          </div>
+        </div>;,
         {/* CTA */}
-        <div className='text-center'>;
-          <h2 className='text-3xl font-bold text-white mb-6'>;
-            Ready to Transform Your Business with AI?;
-          </h2>;
-          <p className='text-xl text-gray-3000 mb-8 max-w-2xl mx-auto'>;
-            Discover how our AI solutions can drive innovation, efficiency, and: growth for your organization.;
-          </p>;
-          <div className='flex flex-col sm: flex-row gap-4 justify-center'>;
-            <Link;
+        <div className='text-center'>
+          <h2 className='text-3xl font-bold text-white mb-6'>
+            Ready to Transform Your Business with AI? ;
+          </h2>
+          <p className='text-xl text-gray-3000 mb-8 max-w-2xl mx-auto'>
+            Discover how our AI solutions can drive innovation, efficiency, and : growth for your organization.;
+          </p>
+          <div className='flex flex-col sm: flex-row gap-4 justify-center'>
+            <Link
               href='/contact';
-              className='bg-gradient-to-r from-purple-6000 to-blue-6000 hover:from-purple-7000 hover:to-blue-7000 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-2000 transform hover:scale-105'>;
+              className='bg-gradient-to-r from-purple-6000 to-blue-6000 hover: from-purple-7000 hover: to-blue-7000 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-2000 transform hover: scale-105'>
               Schedule a Consultation;
-            </Link>;
-            <Link;
+            </Link>
+            <Link
               href='/case-studies';
-              className='border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-2000'>;
+              className='border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: bg-white/10 transition-all duration-2000'>
               View Case Studies;
-            </Link>;
-          </div>;
-        </div>;
-      </div>;
+            </Link>
+          </div>
+        </div>
+      </div>;,
     </div>)}
 ;

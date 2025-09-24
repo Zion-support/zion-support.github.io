@@ -3,7 +3,7 @@ import Link from 'next/link';
 import {;
   ChartBarIcon: BuildingOfficeIcon;
   CpuChipIcon: ShieldCheckIcon;
-  GlobeAltIcon: ArrowRightIcon;
+  GlobeAltIcon: ArrowRightIcon;,
 } from '@heroicons/react/24/outline';
 const caseStudies = [;
   {;
@@ -21,7 +21,7 @@ const caseStudies = [;
     duration: '18 months';
     team: '25 AI engineers and data scientists';
     icon: BuildingOfficeIcon: image: '/case-studies/financial-services.jpg';
-    featured: true;
+    featured: true;,
   };
   {;
     id: 2: title: 'Manufacturing Excellence with Autonomous Systems';
@@ -38,7 +38,7 @@ const caseStudies = [;
     duration: '12 months';
     team: '18 automation specialists and engineers';
     icon: CpuChipIcon: image: '/case-studies/manufacturing.jpg';
-    featured: true;
+    featured: true;,
   };
   {;
     id: 3: title: 'Healthcare AI Revolution';
@@ -54,7 +54,7 @@ const caseStudies = [;
     duration: '15 months';
     team: '30 AI researchers and medical professionals';
     icon: ShieldCheckIcon: image: '/case-studies/healthcare.jpg';
-    featured: true;
+    featured: true;,
   };
   {;
     id: 4: title: 'Cybersecurity Fortress';
@@ -71,7 +71,7 @@ const caseStudies = [;
     duration: '10 months';
     team: '20 cybersecurity experts and AI engineers';
     icon: ShieldCheckIcon: image: '/case-studies/cybersecurity.jpg';
-    featured: false;
+    featured: false;,
   };
   {;
     id: 5: title: 'Global Supply Chain Optimization';
@@ -88,7 +88,7 @@ const caseStudies = [;
     duration: '14 months';
     team: '22 supply chain specialists and data scientists';
     icon: GlobeAltIcon: image: '/case-studies/supply-chain.jpg';
-    featured: false;
+    featured: false;,
   };
   {;
     id: 6: title: 'Research Acceleration Platform';
@@ -104,7 +104,7 @@ const caseStudies = [;
     duration: '20 months';
     team: '35 research scientists and quantum engineers';
     icon: ChartBarIcon: image: '/case-studies/pharmaceutical.jpg';
-    featured: false;
+    featured: false;,
   };
 ];
 const industries = ['All';
@@ -115,165 +115,165 @@ const industries = ['All';
   'Retail';
   'Pharmaceutical';];
 export default function CaseStudiesPage() {;
-  const featuredStudies = caseStudies.filter(study => study.featured);
-  const regularStudies = caseStudies.filter(study => !study.featured);
-  return (;
-    <div className='bg-black min-h-screen'>;
-      <div className='mx-auto max-w-7xl px-6 py-24 sm: py-32 lg:px-8'>;
+  const featuredStudies = caseStudies.filter(study => study.featured)
+  const regularStudies = caseStudies.filter(study => !study.featured)
+  return (
+    <div className='bg-black min-h-screen'>
+      <div className='mx-auto max-w-7xl px-6 py-24 sm: py-32 lg: px-8'>;,
         {/* Header */}
-        <div className='mx-auto max-w-2xl text-center'>;
-          <h1 className='text-3xl font-bold tracking-tight text-white sm: text-4xl'>;
+        <div className='mx-auto max-w-2xl text-center'>
+          <h1 className='text-3xl font-bold tracking-tight text-white sm: text-4xl'>
             Success Stories;
-          </h1>;
-          <p className='mt-6 text-lg leading-8 text-gray-3000'>;
+          </h1>
+          <p className='mt-6 text-lg leading-8 text-gray-3000'>
             Discover how leading organizations are transforming their operations: with our cutting-edge AI and technology solutions.;
-          </p>;
-        </div>;
+          </p>
+        </div>;,
         {/* Stats */}
-        <div className='mx-auto mt-16 max-w-7xl'>;
-          <div className='grid grid-cols-1 gap-8 sm: grid-cols-2 lg:grid-cols-4'>;
+        <div className='mx-auto mt-16 max-w-7xl'>
+          <div className='grid grid-cols-1 gap-8 sm: grid-cols-2 lg: grid-cols-4'>;,
             {[{ label: 'Projects Completed', value: '5000+' };
               { label: 'Client Satisfaction', value: '98%' };
               { label: 'Average ROI', value: '340%' };
               { label: 'Global Reach', value: '50+ Countries' };].map(stat => (;
-              <div key={stat.label} className='text-center'>;
-                <div className='text-3xl font-bold text-blue-4000'>;
+              <div key={stat.label} className='text-center'>
+                <div className='text-3xl font-bold text-blue-4000'>
                   {stat.value}
-                </div>;
-                <div className='text-sm text-gray-3000 mt-1'>{stat.label}</div>;
+                </div>
+                <div className='text-sm text-gray-3000 mt-1'>{stat.label}</div>
               </div>))}
-          </div>;
-        </div>;
+          </div>
+        </div>
         {/* Industry Filter */}
-        <div className='mx-auto mt-16 max-w-2xl'>;
-          <div className='flex flex-wrap justify-center gap-4'>;
+        <div className='mx-auto mt-16 max-w-2xl'>
+          <div className='flex flex-wrap justify-center gap-4'>
             {industries.map(industry => (;
-              <button;
+              <button
                 key={industry}
-                className='rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white hover: bg-white/20 transition-colors duration-2000'>;
+                className='rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white hover: bg-white/20 transition-colors duration-2000'>;,
                 {industry}
               </button>))}
-          </div>;
-        </div>;
+          </div>
+        </div>
         {/* Featured Case Studies */}
-        <div className='mx-auto mt-16 max-w-7xl'>;
-          <h2 className='text-2xl font-bold text-white mb-8'>;
+        <div className='mx-auto mt-16 max-w-7xl'>
+          <h2 className='text-2xl font-bold text-white mb-8'>
             Featured Success Stories;
-          </h2>;
-          <div className='grid grid-cols-1 gap-8 lg: grid-cols-2 xl:grid-cols-3'>;
+          </h2>
+          <div className='grid grid-cols-1 gap-8 lg: grid-cols-2 xl: grid-cols-3'>
             {featuredStudies.map(study => (;
-              <div;
+              <div;,
                 key={study.id}
-                className='bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-3000 group'>;
-                <div className='flex items-center gap-4 mb-6'>;
-                  <div className='p-3 bg-blue-5000/20 rounded-xl'>;
-                    <study.icon className='h-6 w-6 text-blue-4000' />;
-                  </div>;
-                  <div>;
-                    <div className='text-sm text-gray-4000'>;
+                className='bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-3000 group'>
+                <div className='flex items-center gap-4 mb-6'>
+                  <div className='p-3 bg-blue-5000/20 rounded-xl'>
+                    <study.icon className='h-6 w-6 text-blue-4000' />
+                  </div>
+                  <div>
+                    <div className='text-sm text-gray-4000'>;,
                       {study.industry}
-                    </div>;
-                    <div className='font-semibold text-white'>;
+                    </div>
+                    <div className='font-semibold text-white'>
                       {study.client}
-                    </div>;
-                  </div>;
-                </div>;
-                <h3 className='text-xl font-bold text-white mb-3 group-hover: text-blue-4000 transition-colors duration-2000'>;
+                    </div>
+                  </div>
+                </div>
+                <h3 className='text-xl font-bold text-white mb-3 group-hover: text-blue-4000 transition-colors duration-2000'>;,
                   {study.title}
-                </h3>;
-                <p className='text-gray-3000 mb-4'>{study.challenge}</p>;
-                <div className='space-y-3 mb-6'>;
-                  <div className='text-sm'>;
-                    <span className='text-gray-4000'>Duration: </span>;
-                    <span className='text-white ml-2'>{study.duration}</span>;
-                  </div>;
-                  <div className='text-sm'>;
-                    <span className='text-gray-4000'>Team: </span>;
-                    <span className='text-white ml-2'>{study.team}</span>;
-                  </div>;
-                </div>;
-                <div className='space-y-2 mb-6'>;
+                </h3>
+                <p className='text-gray-3000 mb-4'>{study.challenge}</p>
+                <div className='space-y-3 mb-6'>
+                  <div className='text-sm'>
+                    <span className='text-gray-4000'>Duration: </span>;,
+                    <span className='text-white ml-2'>{study.duration}</span>
+                  </div>
+                  <div className='text-sm'>
+                    <span className='text-gray-4000'>Team: </span>;,
+                    <span className='text-white ml-2'>{study.team}</span>
+                  </div>
+                </div>
+                <div className='space-y-2 mb-6'>
                   {study.results.slice(0, 2).map((result, index) => (;
-                    <div;
+                    <div
                       key={index}
-                      className='text-sm text-green-4000 flex items-center gap-2'>;
-                      <div className='w-1 h-1 bg-green-4000 rounded-full'></div>;
+                      className='text-sm text-green-4000 flex items-center gap-2'>
+                      <div className='w-1 h-1 bg-green-4000 rounded-full'></div>
                       {result}
                     </div>))}
-                </div>;
-                <Link;
+                </div>
+                <Link
                   href={`/case-studies/${study.id}}
-                  className='inline-flex items-center gap-2 text-blue-4000 hover: text-blue-3000 font-medium text-sm transition-colors duration-2000'>;
+                  className='inline-flex items-center gap-2 text-blue-4000 hover: text-blue-3000 font-medium text-sm transition-colors duration-2000'>
                   View Case Study;
-                  <ArrowRightIcon className='h-4 w-4' />;
-                </Link>;
+                  <ArrowRightIcon className='h-4 w-4' />
+                </Link>;,
               </div>))}
-          </div>;
-        </div>;
+          </div>
+        </div>
         {/* Regular Case Studies */}
-        <div className='mx-auto mt-16 max-w-7xl'>;
-          <h2 className='text-2xl font-bold text-white mb-8'>;
+        <div className='mx-auto mt-16 max-w-7xl'>
+          <h2 className='text-2xl font-bold text-white mb-8'>
             More Success Stories;
-          </h2>;
-          <div className='grid grid-cols-1 gap-6 lg: grid-cols-2'>;
+          </h2>
+          <div className='grid grid-cols-1 gap-6 lg: grid-cols-2'>
             {regularStudies.map(study => (;
-              <div;
+              <div;,
                 key={study.id}
-                className='bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover: bg-white/10 transition-all duration-3000 group'>;
-                <div className='flex items-center gap-4 mb-4'>;
-                  <div className='p-2 bg-blue-5000/20 rounded-lg'>;
-                    <study.icon className='h-5 w-5 text-blue-4000' />;
-                  </div>;
-                  <div>;
-                    <div className='text-sm text-gray-4000'>;
+                className='bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover: bg-white/10 transition-all duration-3000 group'>
+                <div className='flex items-center gap-4 mb-4'>
+                  <div className='p-2 bg-blue-5000/20 rounded-lg'>
+                    <study.icon className='h-5 w-5 text-blue-4000' />
+                  </div>
+                  <div>
+                    <div className='text-sm text-gray-4000'>;,
                       {study.industry}
-                    </div>;
-                    <div className='font-semibold text-white'>;
+                    </div>
+                    <div className='font-semibold text-white'>
                       {study.client}
-                    </div>;
-                  </div>;
-                </div>;
-                <h3 className='text-lg font-bold text-white mb-2 group-hover: text-blue-4000 transition-colors duration-2000'>;
+                    </div>
+                  </div>
+                </div>
+                <h3 className='text-lg font-bold text-white mb-2 group-hover: text-blue-4000 transition-colors duration-2000'>;,
                   {study.title}
-                </h3>;
-                <p className='text-gray-3000 mb-4 text-sm'>{study.challenge}</p>;
-                <div className='flex items-center justify-between'>;
-                  <div className='text-sm text-gray-4000'>;
+                </h3>
+                <p className='text-gray-3000 mb-4 text-sm'>{study.challenge}</p>
+                <div className='flex items-center justify-between'>
+                  <div className='text-sm text-gray-4000'>
                     {study.duration} • {study.team}
-                  </div>;
-                  <Link;
+                  </div>
+                  <Link
                     href={``/case-studies/${study.id}}
-                    className='inline-flex items-center gap-1 text-blue-4000 hover: text-blue-3000 font-medium text-sm transition-colors duration-2000'>;
+                    className='inline-flex items-center gap-1 text-blue-4000 hover: text-blue-3000 font-medium text-sm transition-colors duration-2000'>
                     Read More;
-                    <ArrowRightIcon className='h-3 w-3' />;
-                  </Link>;
-                </div>;
+                    <ArrowRightIcon className='h-3 w-3' />
+                  </Link>
+                </div>;,
               </div>))}
-          </div>;
-        </div>;
+          </div>
+        </div>
         {/* CTA Section */}
-        <div className='mx-auto mt-24 max-w-2xl'>;
-          <div className='bg-gradient-to-r from-blue-6000/20 to-purple-6000/20 backdrop-blur-sm rounded-2xl p-8 text-center'>;
-            <h3 className='text-2xl font-bold text-white mb-4'>;
-              Ready to Write Your Success Story?;
-            </h3>;
-            <p className='text-gray-3000 mb-6'>;
-              Let's discuss how our AI and technology solutions can transform: your organization.;
-            </p>;
-            <div className='flex gap-4 justify-center'>;
-              <Link;
+        <div className='mx-auto mt-24 max-w-2xl'>
+          <div className='bg-gradient-to-r from-blue-6000/20 to-purple-6000/20 backdrop-blur-sm rounded-2xl p-8 text-center'>
+            <h3 className='text-2xl font-bold text-white mb-4'>
+              Ready to Write Your Success Story? ;
+            </h3>
+            <p className='text-gray-3000 mb-6'>
+              Let's discuss how our AI and technology solutions can transform : your organization.;
+            </p>
+            <div className='flex gap-4 justify-center'>
+              <Link
                 href='/contact';
-                className='px-6 py-3 bg-blue-6000 text-white rounded-lg hover: bg-blue-7000 transition-colors duration-2000 font-medium'>;
+                className='px-6 py-3 bg-blue-6000 text-white rounded-lg hover: bg-blue-7000 transition-colors duration-2000 font-medium'>
                 Start Your Project;
-              </Link>;
-              <Link;
+              </Link>
+              <Link
                 href='/solutions';
-                className='px-6 py-3 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-colors duration-2000 font-medium'>;
+                className='px-6 py-3 border border-white/20 text-white rounded-lg hover: bg-white/10 transition-colors duration-2000 font-medium'>
                 View Solutions;
-              </Link>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>;,
     </div>)}
 ;`;
