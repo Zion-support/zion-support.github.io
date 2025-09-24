@@ -5,8 +5,8 @@ import { useState, useEffect, useRef } from 'react';
 interface AnimatedCounterProps {
   end: number;
   duration?: number;
-  prefix?: string;
-  suffix?: string;
+  prefix?: string | undefined;
+  suffix?: string | undefined;
   className?: string;
 }
 
@@ -23,8 +23,9 @@ export default function AnimatedCounter({
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !isVisible) {
+      (entries) => {
+        const entry = entries[0];
+        if (entry && entry.isIntersecting && !isVisible) {
           setIsVisible(true);
         }
       },

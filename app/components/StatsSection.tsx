@@ -5,8 +5,8 @@ import AnimatedCounter from './AnimatedCounter';
 interface StatItem {
   label: string;
   value: number;
-  prefix?: string;
-  suffix?: string;
+  prefix?: string | undefined;
+  suffix?: string | undefined;
   description?: string;
 }
 

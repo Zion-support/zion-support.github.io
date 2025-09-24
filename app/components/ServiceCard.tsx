@@ -27,6 +27,13 @@ export default function ServiceCard({
       className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer transform hover:-translate-y-1'
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if ((e.key === 'Enter' || e.key === ' ') && href !== '#') {
+          window.open(href, '_blank');
+        }
+      }}
       onClick={() => href !== '#' && window.open(href, '_blank')}
     >
       <div className='flex items-center mb-4'>

@@ -46,11 +46,12 @@ const ROICalculator = memo(function ROICalculator() {
       {/* Input Controls */}
       <div className='space-y-4'>
         <div>
-          <label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
+          <label htmlFor="investment" className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
             Initial Investment ($)
           </label>
           <input
             type='number'
+            id='investment'
             value={data.investment}
             onChange={e =>
               handleInputChange('investment', Number(e.target.value))
@@ -71,11 +72,12 @@ const ROICalculator = memo(function ROICalculator() {
         </div>
 
         <div>
-          <label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
+          <label htmlFor="monthlySavings" className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
             Monthly Savings ($)
           </label>
           <input
             type='number'
+            id='monthlySavings'
             value={data.monthlySavings}
             onChange={e =>
               handleInputChange('monthlySavings', Number(e.target.value))
@@ -96,11 +98,12 @@ const ROICalculator = memo(function ROICalculator() {
         </div>
 
         <div>
-          <label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
+          <label htmlFor="timeframe" className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
             Timeframe (months)
           </label>
           <input
             type='number'
+            id='timeframe'
             value={data.timeframe}
             onChange={e =>
               handleInputChange('timeframe', Number(e.target.value))

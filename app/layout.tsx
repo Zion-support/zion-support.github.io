@@ -1,5 +1,7 @@
 import './globals.css'
+
 import type { ReactNode } from 'react'
+
 import ErrorBoundary from './components/ErrorBoundary'
 import PerformanceOptimizer from './components/PerformanceOptimizer'
 

@@ -50,19 +50,24 @@ const testimonials: Testimonial[] = [
 export default function TestimonialCard({
   testimonial,
   isActive,
-}: TestimonialCardProps) {
+}: TestimonialCardProps): React.JSX.Element {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    let timer: ReturnType<typeof setTimeout> | undefined;
     if (isActive) {
       setIsVisible(true);
     } else {
-      const timer = setTimeout(() => setIsVisible(false), 300);
-      return () => clearTimeout(timer);
+      timer = setTimeout(() => setIsVisible(false), 300);
     }
+    return () => {
+      if (timer) {
+        clearTimeout(timer);
+      }
+    };
   }, [isActive]);
 
-  const renderStars = (rating: number) => {
+  const renderStars = (rating: number): React.JSX.Element[] => {
     return Array.from({ length: 5 }, (_, i) => (
       <span
         key={i}
