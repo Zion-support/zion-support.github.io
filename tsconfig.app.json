@@ -1,5 +1,9 @@
 {
   "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "allowJs": true
+  },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
@@ -24,19 +28,10 @@
     "zion-*/**",
     "src.broken/**",
     "temp_*/**",
-    "utils/**",
-    "types/**",
-    "data/**",
-    "providers/**",
-    "hooks/**",
     "lib/**",
-    "**/*.broken.*",
-    "lib.broken/**",
     "backup-merge-conflicts/**",
     "backup-problematic-files/**",
     "src/**",
-    "**/*conflict*",
-    "**/*temp*",
     "apps.backup/**",
     "e2e/**"
   ]
