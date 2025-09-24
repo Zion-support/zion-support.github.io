@@ -3,26 +3,22 @@ set -e
 
 echo "Testing build process locally..."
 
-# Set environment variables
-# Do not force NODE_ENV=production for install; we need devDependencies (tailwindcss/postcss)
-export NEXT_TELEMETRY_DISABLED=1
-export SWC_BINARY_PATH=""
-export NEXT_SWC_BINARY_PATH=""
-export NEXT_SWC_DISABLED=1
-export NEXT_MINIFY=terser
-
-# Clean previous builds
-echo "Cleaning previous builds..."
-rm -rf .next
-rm -rf dist
+# Clean everything
+echo "Cleaning previous installations..."
 rm -rf node_modules
+rm -rf .yarn-cache
+rm -rf dist
 
-# Install dependencies (include dev deps required for build tooling)
+# Clean yarn cache completely
+echo "Cleaning yarn cache..."
+yarn cache clean --all
+
+# Install dependencies
 echo "Installing dependencies..."
-npm install --legacy-peer-deps --no-optional --include=dev
+yarn install --frozen-lockfile --network-timeout 100000 --ignore-engines --ignore-platform --force
 
-# Test build
-echo "Testing build..."
-npm run build
+# Build the project
+echo "Building project..."
+yarn build
 
 echo "Build test completed successfully!"

@@ -2,9 +2,6 @@ import React from 'react';
 
 const AdvancedQuantumComputing2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
-=======
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900">
       <Header />
       
@@ -173,7 +170,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
       <Footer />
 =======
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
@@ -223,12 +219,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-          <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-blue-300">Advanced Technology</h3>
-            <p className="text-gray-300 mb-4">
-              Cutting-edge solutions that push the boundaries of what's possible
-=======
           <divdiv
             whileInView={{ opacity: 1, y: 0 }}
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
@@ -237,39 +227,12 @@ const AdvancedQuantumComputing2026: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Supremacy</h3>
             <p className="text-cyan-100 mb-6 text-center">
               Achieve computational tasks impossible for classical computers with our 1000+ qubit quantum processors
->>>>>>> cursor/create-and-deploy-new-content-79ca
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• AI-powered automation</li>
               <li>• Quantum computing breakthroughs</li>
               <li>• Neural interface technology</li>
             </ul>
-<<<<<<< HEAD
-          </div>
-          
-          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-purple-300">Innovation Hub</h3>
-            <p className="text-gray-300 mb-4">
-              Discover the latest developments in technology and innovation
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Research and development</li>
-              <li>• Industry partnerships</li>
-              <li>• Future technology trends</li>
-            </ul>
-          </div>
-          
-          <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-green-300">Solutions</h3>
-            <p className="text-gray-300 mb-4">
-              Comprehensive technology solutions for modern challenges
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Enterprise solutions</li>
-              <li>• Custom development</li>
-              <li>• Technology consulting</li>
-            </ul>
-=======
           </divdiv>
 
           <divdiv
@@ -417,7 +380,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
                 </div>
               </div>
             </divdiv>
->>>>>>> cursor/create-and-deploy-new-content-79ca
           </div>
         </div>
       </div>

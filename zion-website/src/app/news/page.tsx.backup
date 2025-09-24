@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react'
@@ -57,30 +55,12 @@ const articles: Article[] = [
     excerpt: 'Self-healing infrastructure automation reduces MTTR by up to 65% across hybrid clouds.',
     date: '2025-08-20',
     href: '/news/autonomous-it-suite',
->>>>>>> origin/feat/news-and-fixes
   },
 ]
 
 export default function NewsPage() {
   return (
     <div className="bg-black min-h-screen">
-<<<<<<< HEAD
-      <div className="mx-auto max-w-7xl px-6 pt-24">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">News & Updates</h1>
-          <p className="mt-4 text-lg leading-8 text-gray-300">Latest announcements, customer wins, and research highlights.</p>
-        </div>
-
-        <div className="mx-auto mt-12 max-w-2xl sm:mt-16 lg:mt-20 lg:max-w-none">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            {posts.map((post) => (
-              <a key={post.slug} href={`/news/${post.slug}`} className="group rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition-colors">
-                <p className="text-xs text-gray-400">{new Date(post.date).toLocaleDateString()}</p>
-                <h3 className="mt-1 text-white font-semibold group-hover:text-blue-400">{post.title}</h3>
-                <p className="mt-2 text-sm text-gray-300 line-clamp-3">{post.summary}</p>
-                <span className="mt-4 inline-block text-sm font-semibold text-blue-400 group-hover:text-blue-300">Read more →</span>
-              </a>
-=======
       <div className="mx-auto max-w-7xl px-6 pt-24 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h1 className="text-base font-semibold leading-7 text-blue-400">News</h1>
@@ -122,15 +102,11 @@ export default function NewsPage() {
                   </div>
                 </div>
               </article>
->>>>>>> origin/feat/news-and-fixes
             ))}
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 import Link from 'next/link'
 
@@ -176,9 +152,6 @@ export default function NewsIndexPage() {
         </div>
       </section>
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/feature/add-news-and-promo
 =======
 >>>>>>> origin/feat/news-and-fixes
 =======

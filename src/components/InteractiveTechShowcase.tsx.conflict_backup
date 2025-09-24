@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -228,25 +225,12 @@ const InteractiveTechShowcase: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-c963
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-c439
 
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTech, setActiveTech] = useState('ai');
   const [isAnimating, setIsAnimating] = useState(false);
 
-<<<<<<< HEAD
-  const technologies = {
-    ai: {
-      name: 'Artificial Intelligence',
-      icon: '🧠',
-      color: 'from-purple-500 to-pink-500',
-      description: 'Revolutionary AI that thinks, learns, and creates like humans',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      stats: { accuracy: '99.9%', speed: '1000x', efficiency: '95%' }
-=======
   const technologies = [
     {
       id: 0,
@@ -255,7 +239,6 @@ const InteractiveTechShowcase: React.FC = () => {
       icon: "🧠",
       color: "from-purple-600 to-pink-600",
       stats: { performance: "1000x", accuracy: "99.9%", speed: "Real-time" }
->>>>>>> cursor/create-and-deploy-new-content-c963
     },
     quantum: {
       name: 'Quantum Computing',
@@ -351,10 +334,6 @@ const InteractiveTechShowcase: React.FC = () => {
           ))}
         </div>
 
-<<<<<<< HEAD
-        {/* Active Technology Display */}
-        <AnimatePresence mode="wait">
-=======
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Technology Selector */}
           <div className="space-y-4">
@@ -363,7 +342,6 @@ const InteractiveTechShowcase: React.FC = () => {
 =======
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       link: "/pages/AdvancedAITransformation2026"
     },
     {
@@ -423,24 +401,6 @@ const InteractiveTechShowcase: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-3xl p-12 border border-blue-400/30"
           >
-<<<<<<< HEAD
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  className="text-8xl mb-6 text-center"
-                >
-                  {technologies[activeTech as keyof typeof technologies].icon}
-                </motion.div>
-                <h3 className="text-4xl font-bold mb-4 text-center">
-                  {technologies[activeTech as keyof typeof technologies].name}
-                </h3>
-                <p className="text-xl text-blue-100 mb-8 text-center">
-                  {technologies[activeTech as keyof typeof technologies].description}
-                </p>
-=======
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🚀 INTERACTIVE TECH SHOWCASE • 2026
             </div>
@@ -461,7 +421,6 @@ const InteractiveTechShowcase: React.FC = () => {
               <motion.div
                 key={tech.id}
 =======
->>>>>>> cursor/create-and-deploy-new-content-f977
             {technologies.map((tech, index) => (
               <motion.div
                 key={tech.id}
@@ -642,8 +601,6 @@ const InteractiveTechShowcase: React.FC = () => {
           </motion.div>
         </AnimatePresence>
 
-<<<<<<< HEAD
-=======
         {/* Technology Stats */}
         <div className="mt-20 grid md:grid-cols-4 gap-8">
           <motion.div
@@ -683,7 +640,6 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="text-gray-300">Future Technology</div>
           </motion.div>
 =======
->>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-c963
         {/* Interactive Demo Section */}
@@ -710,6 +666,5 @@ const InteractiveTechShowcase: React.FC = () => {
     </div>
   );
 };
-
 
 export default InteractiveTechShowcase;
