@@ -1,3 +1,5 @@
 describe('smoke: environment', () => {
   it('runs a minimal assertion', () => {
-    expect(true).toBe(true)})}),
+    expect(true).toBe(true);
+  });
+});
