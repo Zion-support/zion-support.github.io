@@ -1,72 +1,65 @@
-'use client'
+'use client';
 
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 
 export default function PerformanceOptimizer() {
 	useEffect(() => {
-		// Preload critical resources
 		const preloadCriticalResources = () => {
-			// Preload fonts
-			const fontLink = document.createElement('link')
-			fontLink.rel = 'preload'
-			fontLink.href = '/fonts/inter-var.woff2'
-			fontLink.as = 'font'
-			fontLink.type = 'font/woff2'
-			fontLink.crossOrigin = 'anonymous'
-			document.head.appendChild(fontLink)
+			const fontLink = document.createElement('link');
+			fontLink.rel = 'preload';
+			fontLink.href = '/fonts/inter-var.woff2';
+			fontLink.as = 'font';
+			fontLink.type = 'font/woff2';
+			fontLink.crossOrigin = 'anonymous';
+			document.head.appendChild(fontLink);
 
-			// Preload critical images
-			const imageLink = document.createElement('link')
-			imageLink.rel = 'preload'
-			imageLink.href = '/images/hero-bg.webp'
-			imageLink.as = 'image'
-			document.head.appendChild(imageLink)
-		}
+			const imageLink = document.createElement('link');
+			imageLink.rel = 'preload';
+			imageLink.href = '/images/hero-bg.webp';
+			imageLink.as = 'image';
+			document.head.appendChild(imageLink);
+		};
 
-		// Optimize images
 		const optimizeImages = () => {
-			const images = document.querySelectorAll('img')
+			const images = document.querySelectorAll('img');
 			images.forEach((img) => {
 				if (!img.loading) {
-					img.loading = 'lazy'
+					img.loading = 'lazy';
 				}
 				if (!img.decoding) {
-					img.decoding = 'async'
+					img.decoding = 'async';
 				}
-			})
-		}
+			});
+		};
 
-		// Add intersection observer for lazy loading
 		const setupLazyLoading = () => {
 			if ('IntersectionObserver' in window) {
 				const imageObserver = new IntersectionObserver((entries) => {
 					entries.forEach((entry) => {
 						if (entry.isIntersecting) {
-							const img = entry.target as HTMLImageElement
-							if ((img as HTMLImageElement).dataset.src) {
-								img.src = (img as HTMLImageElement).dataset.src as string
-								img.removeAttribute('data-src')
-								imageObserver.unobserve(img)
+							const img = entry.target as HTMLImageElement;
+							if ((img as any).dataset && (img as any).dataset.src) {
+								img.src = (img as any).dataset.src as string;
+								img.removeAttribute('data-src');
+								imageObserver.unobserve(img);
 							}
 						}
-					})
-				})
+					});
+				});
 
-				const lazyImages = document.querySelectorAll('img[data-src]')
-				lazyImages.forEach((img) => imageObserver.observe(img))
+				const lazyImages = document.querySelectorAll('img[data-src]');
+				lazyImages.forEach((img) => imageObserver.observe(img));
 			}
-		}
+		};
 
-		// Initialize performance optimizations
-		preloadCriticalResources()
-		optimizeImages()
-		setupLazyLoading()
+		preloadCriticalResources();
+		optimizeImages();
+		setupLazyLoading();
 
-		// Cleanup
 		return () => {
-			// No-op for now
-		}
-	}, [])
+			// cleanup if needed
+		};
+	}, []);
 
-	return null
+	return null;
 }
