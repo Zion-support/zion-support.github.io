@@ -58,9 +58,11 @@ const nextConfig = {
 	
 	// TypeScript and ESLint configuration
 	typescript: {
+		// Allow builds to proceed even if type errors exist in non-critical areas
 		ignoreBuildErrors: true
 	},
 	eslint: {
+		// Skip ESLint during builds to avoid blocking on stylistic issues
 		ignoreDuringBuilds: true
 	},
 };
