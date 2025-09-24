@@ -331,3 +331,6 @@
 2025-09-24 18:07:25 - Resolving conflicts in zion-os/src/data/services.ts.auto-resolve-backup.1758637412 for branch aggressive-merge-backup-20250924-085711
 2025-09-24 18:07:25 - Resolving conflicts in zion-os/src/data/services.ts.backup.1758637231246 for branch aggressive-merge-backup-20250924-085711
 2025-09-24 18:07:25 - Resolving conflicts in zion-os/tailwind.config.ts.backup.1756001180 for branch aggressive-merge-backup-20250924-085711
+2025-09-24 18:07:30 - Merge conflicts detected in backup-main-20250923-152339
+2025-09-24 18:07:30 - Resolving conflicts in eslint.config.js for branch backup-main-20250923-152339
+2025-09-24 18:07:31 - Resolving conflicts in package.json for branch backup-main-20250923-152339
