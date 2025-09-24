@@ -7,109 +7,24 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
-    summary:
-      'Unified command center with live evals, guardrails, and automated incident workflows for agent ops.',
-    href: '/updates/autonomous-ops-control-center-2-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
+  // Added 2025-09-15 (latest content)
   {
-    title: 'Launch: Compliance Auditor v1.0',
-    summary:
-      'Automated compliance checks for AI systems with policy-as-code and evidence collection.',
-    href: '/updates/compliance-auditor-1-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Launch: Autonomous Support Copilot v1.1',
-    summary:
-      'Upgraded support copilot with retrieval observability, safe tool use, and faster resolutions.',
-    href: '/updates/autonomous-support-copilot-1-1',
-    date: '2025-09-15',
-    tag: 'Product'
-  },
-  {
-    title: 'Guide: Real-Time Evals Starter Kit',
-    summary:
-      'Trends, metrics, and enterprise adoption patterns shaping the next wave of AI-led automation.',
-    href: '/insights/state-of-ai-automation-2025',
-    date: '2025-09-15',
-    tag: 'Report'
-  },
-  {
-    title: 'Case Study: Autonomous Retail Fulfillment at Scale',
-    summary:
-      'How autonomous agents improved OTIF by 11% and reduced costs across a global retailer.',
-    href: '/updates/autonomous-retail-fulfillment',
-    date: '2025-09-15',
-    tag: 'Case Study'
-  },
-  {
-    title: 'Launch: Autonomous Ops Playbook (2026 Preview)',
-    summary:
-      'Practical architecture to enforce executable policies across CI/CD and runtime with eval gates and evidence.',
-    href: '/blog/ai-2026-policy-as-code-production-blueprint',
-    date: '2025-09-15',
-    tag: 'Blueprint'
-  },
-  {
-    title: 'Launch: Autonomous Sales Copilot v1.0',
-    summary:
-      'Operational framework for running autonomous agents with SLOs, guardrails, and runbooks.',
-    href: '/updates/autonomous-ops-sre-for-agents',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Launch: AI Agent Safety Certification (Beta)',
-    summary:
-      'SLOs, incident response, and eval-driven change management to run agent platforms at scale.',
-    href: '/updates/agent-platform-operations',
-    date: '2025-09-15',
-    tag: 'Guide'
-  },
-  {
-    title: 'Launch: Production Guardrails Playbook',
-    summary:
-      'Operational guardrails, policy-as-code, and runtime protections for safe AI scale in production.',
-    href: '/updates/production-guardrails-playbook',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Guide: Enterprise Agent Observability',
-    summary:
-      'Traces, evals, and safety telemetry to operate autonomous agents in production environments.',
-    href: '/updates/enterprise-agent-observability',
-    date: '2025-09-15',
-    tag: 'Guide'
-  },
-  {
-    title: 'Launch: AI Governance Toolkit (v2)',
-    summary:
-      'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.',
-    href: '/blog/ai-2026-enterprise-agent-observability-deep-dive',
-    date: '2025-09-15',
-    tag: 'Deep Dive'
-  },
-  {
-    title: 'Complete Guide: Autonomous Business Operations (2026)',
-    summary:
-      'End-to-end guide to implementing autonomous business operations with AI agents, covering strategy, architecture, and rollout.',
-    href: '/blog/ai-2026-autonomous-business-operations-complete-guide',
-    date: '2025-09-15',
-    tag: 'Complete Guide'
-  },
-  {
-    title: 'Blueprint: Policy‑as‑Code in Production (2026)',
-    summary:
-      'Practical architecture to enforce executable policies across CI/CD and runtime with eval gates and evidence.',
-    href: '/blog/ai-2026-policy-as-code-production-blueprint',
-    date: '2025-09-15',
-    tag: 'Blueprint'
-  },
-  {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-2def
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-2def
     title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
     summary:
       'Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.',
@@ -132,6 +47,30 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-autonomous-testing-framework-1-0',
     date: '2025-09-15',
     tag: 'Launch'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-2def
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+    title: 'Launch: AI Autonomous Workflow Engine v1.0',
+    summary:
+      'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
+    href: '/updates/ai-autonomous-workflow-engine-1-0',
+>>>>>>> cursor/create-and-deploy-new-content-8472
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-2def
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {
@@ -170,36 +109,13 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Report'
   },
   {
-    title: 'Launch: AI Autonomous Workflow Engine v1.0',
+    title: 'Launch: AI Lab Open Benchmarks Portal',
     summary:
       'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
     href: '/updates/ai-lab-open-benchmarks-portal',
-  // Added 2025-09-15 (new content created now)
-  {
-    title: 'Launch: Autonomous Security Copilot v1.0',
-    summary: 'Advanced security automation with real-time threat detection and response capabilities.',
-    href: '/updates/autonomous-security-copilot-1-0',
     date: '2025-09-15',
     tag: 'Launch'
   },
-  {
-    title: 'Guide: Production Guardrails for Tool Use (2026)',
-    summary:
-      'Design runtime policies, sandboxing, and least-privilege adapters with live eval gates.',
-    href: '/updates/production-guardrails-tool-use-2026',
-    date: '2025-09-15',
-    tag: 'Guide'
-  },
-  // Added 2025-09-15 (brand new content)
-  {
-    title: 'Launch: AI Governance Dashboard v5',
-    summary:
-      'Cross-env policy posture, eval gates, exception workflows, and signed audit evidence with exportable trails. Faster, deeper integrations.',
-    href: '/updates/ai-governance-dashboard-v5',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  // Added 2025-09-15 (brand new content)
   {
     title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
     summary:
@@ -268,8 +184,17 @@ export const siteUpdates: SiteUpdate[] = [
   {
     title: 'Launch: Autonomous Strategy Copilot v1.0',
     summary:
-      'Exec-grade copilot for roadmaps, ROI modeling, and policy-aware program plans with live eval gates.',
+      'Exec-ready strategy copilot that drafts roadmaps, OKRs, and investment memos grounded in telemetry and benchmarks.',
     href: '/updates/autonomous-strategy-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  // Added 2025-09-15 (latest)
+  {
+    title: 'Launch: Autonomous Decision Engine v1.0',
+    summary:
+      'Policy-aware agent decisioning with eval gates, budgets, and signed evidence for every action.',
+    href: '/updates/autonomous-decision-engine-1-0',
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -371,6 +296,22 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/agent-ops-slo-dashboards-v2',
     date: '2025-09-15',
     tag: 'Feature'
+  },
+  {
+    title: 'Launch: Autonomous Marketing Copilot v1.0',
+    summary:
+      'Plan, draft, and schedule multi-channel campaigns with brand-safe guardrails and live evals.',
+    href: '/updates/autonomous-marketing-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production-Grade RAG Latency Budgets (2026)',
+    summary:
+      'Set, monitor, and enforce latency SLOs for RAG systems with streaming evals and rollbacks.',
+    href: '/updates/production-rag-latency-budgets-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
   },
   {
     title: 'Launch: Autonomous Marketing Copilot v1.0',
@@ -678,6 +619,22 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/secure-prompt-engineering-2025',
     date: '2025-09-15',
     tag: 'Guide'
+  },
+  {
+    title: 'Guide: Operationalizing Live Evals in Production (2026)',
+    summary:
+      'Blueprint to stand up live eval pipelines with canaries, abort switches, and audit evidence.',
+    href: '/blog/ai-2026-operationalizing-live-evals-in-production',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Playbook: Incident Response for Agentic Systems (2026)',
+    summary:
+      'Runbooks, drills, and telemetry to reduce MTTR and improve safety for autonomous agents.',
+    href: '/blog/ai-2026-incident-response-for-agentic-systems',
+    date: '2025-09-15',
+    tag: 'Playbook'
   },
   {
     title: 'Guide: Operationalizing Live Evals in Production (2026)',
@@ -1448,69 +1405,4 @@ export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
     .sort((a, b) => safeDate(b.date) - safeDate(a.date))
     .slice(0, limit)
 }
-
-}
-
-export const updates: UpdateItem[] = [
-  {
-    id: 'advanced-blockchain-course',
-    tag: 'Announcement',
-  },
-  {
-    id: 'advanced-blockchain-dev-course',
-    title: 'New Course: Advanced Blockchain Development',
-    summary:
-      'Best practices for securing AI systems in production: model, data, and pipeline.',
-    href: '/updates/ai-security-blueprint-2025',
-    date: '2025-09-14',
-    tag: 'Announcement',
-  },
-  {
-    id: 'genai-engineering-course',
-    title: 'New Course: GenAI Engineering Masterclass',
-    summary:
-      'Hands-on masterclass on RAG, agents, evals, safety, and productionization.',
-    href: '/updates/genai-engineering-masterclass',
-    date: '2025-09-13',
-    tag: 'Course',
-  },
-  {
-    id: 'ai-lab-research-update',
-    title: 'Research: Long-horizon Planning with Tool-using Agents',
-    summary:
-      'Our latest results show scalable planning via hierarchical tool-use and memory.',
-    href: '/updates/long-horizon-tool-agents',
-    date: '2025-09-12',
-    tag: 'Research',
-  },
-  {
-    id: 'advanced-blockchain-dev-course',
-    title: 'New Course: Advanced Blockchain Development',
-    summary:
-      'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
-    date: '2025-09-10',
-    href: '/updates/advanced-blockchain-course',
-  },
-  {
-    id: 'dapp-challenge',
-    title: 'Community Challenge: Build a DApp',
-    summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
-    date: '2025-09-08',
-    href: '/updates/dapp-challenge',
-  },
-  {
-    id: 'web3-learning-path',
-    title: 'New Learning Path: Web3 Fundamentals',
-    summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
-    date: '2025-09-05',
-    href: '/updates/web3-learning-path',
-  },
-  {
-    id: 'ai-research-lab',
-    title: 'AI Research Lab: September Highlights',
-    summary: 'Breakthroughs in autonomous research agents and multimodal retrieval.',
-    date: '2025-09-01',
-    href: '/updates/ai-research-lab-sept',
-  },
-]
 
