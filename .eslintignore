@@ -48,3 +48,11 @@ zion-film/
 # Misc top-level jsx/js playground files
 *.backup
 *.bak
+/*.js
+/*.ts
+/*.cjs
+/*.mjs
+!vite.config.*
+!tailwind.config.*
+!jest.config.*
+!vitest.config.*

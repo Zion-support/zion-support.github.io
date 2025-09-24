@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "build:netlify": "vite build",
-    "lint": "eslint --no-error-on-unmatched-pattern \"src/**/*.{ts,tsx,js,jsx}\" \"src-clean/**/*.{ts,tsx,js,jsx}\" \"*.{ts,tsx,js,jsx}\" --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint --no-error-on-unmatched-pattern \"src/**/*.{ts,tsx,js,jsx}\" \"src-clean/**/*.{ts,tsx,js,jsx}\" --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "jest",
     "test:watch": "jest --watch",
