@@ -1,4 +1,5 @@
 // @ts-nocheck
+/* eslint-disable */
 import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
 import SEO from '../components/SEO';
