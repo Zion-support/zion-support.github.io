@@ -356,3 +356,6 @@
 2025-09-24 18:08:11 - Merge conflicts detected in cursor/check-fix-push-and-merge-to-main-d542
 2025-09-24 18:08:11 - Resolving conflicts in package.json for branch cursor/check-fix-push-and-merge-to-main-d542
 2025-09-24 18:08:14 - Resolving conflicts in pnpm-lock.yaml for branch cursor/check-fix-push-and-merge-to-main-d542
+2025-09-24 18:08:20 - Merge conflicts detected in HEAD
+2025-09-24 18:08:20 - Resolving conflicts in .eslintignore for branch HEAD
+2025-09-24 18:08:22 - Resolving conflicts in pnpm-lock.yaml for branch HEAD

@@ -886,3 +886,16 @@ pnpm-lock.yaml
 [2025-09-24 18:08:14] 🔧 Resolving conflicts in pnpm-lock.yaml for branch cursor/check-fix-push-and-merge-to-main-d542...
 [2025-09-24 18:08:14] 📋 YAML: prefer main version
 [2025-09-24 18:08:16] ✅ Resolved conflicts in pnpm-lock.yaml
+[2025-09-24 18:08:18] ✅ Successfully resolved conflicts and merged cursor/check-fix-push-and-merge-to-main-d542
+[2025-09-24 18:08:18] ✅ Branch cursor/check-fix-push-and-merge-to-main-d542 processed successfully
+[2025-09-24 18:08:18] 📊 Batch progress: 10 successful, 0 failed
+[2025-09-24 18:08:18] 📊 Overall progress: 10 successful, 0 failed, 58 conflicts resolved
+[2025-09-24 18:08:18] 📋 Processing branch 11: HEAD
+[2025-09-24 18:08:19] 🔄 Attempting to merge HEAD...
+[2025-09-24 18:08:20] ⚠️  Merge conflicts detected in HEAD, resolving...
+[2025-09-24 18:08:20] 📋 Conflicted files: .eslintignore
+pnpm-lock.yaml
+[2025-09-24 18:08:20] 🔧 Resolving conflicts in .eslintignore for branch HEAD...
+[2025-09-24 18:08:20] 🧩 Generic file: prefer main version
+[2025-09-24 18:08:22] ✅ Resolved conflicts in .eslintignore
+[2025-09-24 18:08:22] 🔧 Resolving conflicts in pnpm-lock.yaml for branch HEAD...
