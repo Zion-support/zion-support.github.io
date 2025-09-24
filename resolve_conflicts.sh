@@ -1,65 +1,39 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-# Script to resolve merge conflicts in the repository
-echo "🔧 Starting merge conflict resolution..."
+# Script to resolve merge conflicts by keeping HEAD version
+# This will resolve conflicts by taking the current (HEAD) version of all conflicted files
 
-# Find all files with merge conflicts
-conflict_files=$(find ./src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | xargs grep -l "<<<<<<< HEAD\|=======\|>>>>>>> " 2>/dev/null)
+echo "Resolving merge conflicts by keeping HEAD version..."
 
-echo "Found conflict files:"
-echo "$conflict_files"
+# Get list of conflicted files
+conflicted_files=$(git diff --name-only --diff-filter=U)
 
-# For each file with conflicts, we'll need to manually resolve them
-# This script will help identify the files that need attention
-
-for file in $conflict_files; do
-    echo "📝 File with conflicts: $file"
-    conflict_count=$(grep -c "<<<<<<< HEAD" "$file" 2>/dev/null || echo "0")
-    echo "   Number of conflict blocks: $conflict_count"
+for file in $conflicted_files; do
+    echo "Resolving conflicts in: $file"
+    
+    # Check if file exists
+    if [ -f "$file" ]; then
+        # Extract HEAD version (between <<<<<<< HEAD and =======)
+        # Remove conflict markers and keep only the HEAD version
+        sed -n '/^<<<<<<< HEAD$/,/^=======$/p' "$file" | sed '1d;$d' > "${file}.head"
+        
+        # Check if we have a HEAD section
+        if [ -s "${file}.head" ]; then
+            # Replace the entire file with HEAD version
+            cp "${file}.head" "$file"
+            echo "  ✓ Resolved by keeping HEAD version"
+        else
+            echo "  ⚠ No HEAD section found, keeping original"
+        fi
+        
+        # Clean up temporary file
+        rm -f "${file}.head"
+        
+        # Mark as resolved
+        git add "$file"
+    else
+        echo "  ⚠ File not found: $file"
+    fi
 done
 
-echo "✅ Conflict detection complete. Manual resolution required for the above files."
-=======
-# Find all files with merge conflicts
-files_with_conflicts=$(grep -r "<<<<<<< HEAD" src/ --include="*.jsx" --include="*.tsx" --include="*.js" --include="*.ts" | cut -d: -f1 | sort | uniq)
-
-echo "Found $(echo "$files_with_conflicts" | wc -l) files with merge conflicts"
-
-for file in $files_with_conflicts; do
-    echo "Resolving conflicts in $file"
-    
-    # Create a temporary file
-    temp_file="${file}.tmp"
-    
-    # Process the file to resolve conflicts by keeping HEAD version
-    awk '
-    /^<<<<<<< HEAD/ { in_head = 1; next }
-    /^=======/ { in_head = 0; in_other = 1; next }
-    /^>>>>>>> / { in_other = 0; next }
-    in_other { next }
-    { print }
-    ' "$file" > "$temp_file"
-    
-    # Replace original file with resolved version
-    mv "$temp_file" "$file"
-    
-    echo "Resolved conflicts in $file"
-done
-
-echo "All merge conflicts resolved!"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-36c0
-=======
->>>>>>> cursor/create-and-deploy-new-content-d7eb
->>>>>>> origin/cursor/create-and-deploy-new-content-6eae
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-36c0
->>>>>>> cursor/create-and-deploy-new-content-df8e
-=======
->>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
+echo "All conflicts resolved. Files marked for commit."

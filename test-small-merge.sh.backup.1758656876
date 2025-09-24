@@ -1,0 +1,68 @@
+#!/bin/bash
+# Test script to merge a small batch of branches safely
+set -e
+echo "🧪 Starting test merge with small batch..."
+echo "⏰ Started at: $(date)"
+echo "---"
+# Configuration
+BATCH_SIZE=3
+MAX_CONFLICTS_PER_BRANCH=3
+BACKUP_BRANCH="test-backup-$(date +%Y%m%d-%H%M%S)"
+LOG_FILE="test-merge-log-$(date +%Y%m%d-%H%M%S).log"
+# Create a backup branch
+echo "🔒 Creating backup branch: $BACKUP_BRANCH"
+git checkout -b "$BACKUP_BRANCH"
+git push origin "$BACKUP_BRANCH"
+git checkout main
+# Initialize counters
+SUCCESSFUL_MERGES=0
+FAILED_MERGES=0
+CONFLICT_RESOLUTIONS=0
+SKIPPED_BRANCHES=0
+TOTAL_PROCESSED=0
+# Function to log messages
+log_message() {
+    local message="$1"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $message" | tee -a "$LOG_FILE"
+}
+# Function to check if a branch has meaningful changes
+has_meaningful_changes() {
+    local branch="$1"
+    # Get the number of commits ahead of main
+    local commits_ahead=$(git rev-list --count main..origin/$branch 2>/dev/null || echo "0")
+    # Get the number of files changed
+    local files_changed=$(git diff --name-only main..origin/$branch 2>/dev/null | wc -l)
+    # Only consider branches with actual changes
+    if [ "$commits_ahead" -gt 0 ] && [ "$files_changed" -gt 0 ]; then
+        return 0
+    fi
+    return 1
+}
+# Function to check if a branch can be merged
+can_merge_branch() {
+    local branch="$1"
+    # Skip if branch doesn't exist
+    if ! git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
+        return 1
+    fi
+    # Skip if branch is already merged
+    if git branch --merged main | grep -q "$branch"; then
+        return 1
+    fi
+    # Skip if branch has no meaningful changes
+    if ! has_meaningful_changes "$branch"; then
+        return 1
+    fi
+    return 0
+}
+# Function to resolve conflicts in a file
+resolve_conflicts() {
+    local file="$1"
+    local branch="$2"
+    log_message "🔧 Resolving conflicts in $file for branch $branch..."
+    # Check if file has merge conflicts
+        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
+            log_message "⚙️  Config file detected, keeping main version..."
+        else
+            log_message "📝 Regular file, attempting to merge both versions..."
+            # Remove conflict markers and try to keep both versions

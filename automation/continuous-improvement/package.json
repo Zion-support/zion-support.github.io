@@ -9,7 +9,7 @@
     "dev": "nodemon start.js",
     "test": "jest --passWithNoTests",
     "test-system": "node test-system.js",
-    "lint": "eslint .",
+    "lint": "eslint -c .eslintrc.cjs .",
     "monitor": "node monitor.js",
     "improve": "node improve.js",
     "status": "./scripts/status.sh"

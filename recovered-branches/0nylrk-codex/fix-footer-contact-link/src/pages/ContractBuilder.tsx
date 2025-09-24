@@ -1,23 +1,52 @@
-
-
-
-
-
-
-
-=======
 import React from 'react';
+import { SEO  } from '@/components/SEO',
+import { AppHeader  } from '@/layout/AppHeader',
+import { Footer  } from '@/components/Footer',
+import { ProtectedRoute  } from '@/components/ProtectedRoute',
+import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent',
+import {SEO} from '@/components/SEO',
+import {AppHeader} from '@/layout/AppHeader',
+import {Footer} from '@/components/Footer',
+import {ProtectedRoute} from '@/components/ProtectedRoute',
+import {ContractBuilderContent} from '@/components/contracts/page/ContractBuilderContent',
+import React from 'react';;
 import { SEO } from '@/components/SEO';
 import { AppHeader } from '@/layout/AppHeader';
 import { Footer } from '@/components/Footer';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent';
-
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
 function ContractBuilderPage() {
   return (
-    <ProtectedRoute>
-      <>
-  );
-}
-
+    <ProtectedRoute>,
+      <>,
+        <SEO
+          title="Smart Contract Builder | Zion AI Marketplace",
+          description="Create and deploy blockchain-backed smart contracts for your projects",
+        />,
+        <AppHeader />,
+        <main className="container mx-auto py-10 px-4">,
+          <ContractBuilderContent />,
+        </main>,
+        <Footer />,
+      </>,
+    </ProtectedRoute>),
+function ContractBuilderPage() {
+  return (
+    <ProtectedRoute>,
+      <>,
+        <SEO
+          title="Smart Contract Builder | Zion AI Marketplace",
+          description="Create and deploy blockchain-backed smart contracts for your projects",
+        />,
+        <AppHeader />,
+        <main className="container mx-auto py-10 px-4">,
+          <ContractBuilderContent />,
+        </main>,
+        <Footer />,
+      </>,
+    </ProtectedRoute>)}
+,
 export default ContractBuilderPage;
+export default ContractBuilderPage;
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

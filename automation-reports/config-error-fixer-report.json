@@ -4,7 +4,8 @@
     "totalIssues": 4,
     "fixedIssues": 2,
     "fixRate": "50.00"
-  },  "fixResults": [
+  },
+  "fixResults": [
     {
       "issue": {
         "file": "package.json",
@@ -15,7 +16,8 @@
       },
       "fixed": false,
       "timestamp": "2025-09-01T12:00:00.513Z"
-    },    {
+    },
+    {
       "issue": {
         "file": "package.json",
         "type": "merge-conflict",
@@ -24,7 +26,8 @@
       },
       "fixed": true,
       "timestamp": "2025-09-01T12:00:00.516Z"
-    },    {
+    },
+    {
       "issue": {
         "file": "tsconfig.json",
         "type": "syntax",
@@ -34,7 +37,8 @@
       },
       "fixed": false,
       "timestamp": "2025-09-01T12:00:00.516Z"
-    },    {
+    },
+    {
       "issue": {
         "file": "tsconfig.json",
         "type": "merge-conflict",
@@ -43,7 +47,8 @@
       },
       "fixed": true,
       "timestamp": "2025-09-01T12:00:00.516Z"
-    }  ],
+    }
+  ],
   "recommendations": [
     "Review fixed configuration files to ensure they meet your requirements",
     "Test the application after configuration changes",

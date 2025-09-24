@@ -8,12 +8,8 @@
   "bracketSpacing": true,
   "bracketSameLine": false,
   "arrowParens": "avoid",
-<<<<<<< HEAD
-  "endOfLine": "lf"
-=======
   "endOfLine": "lf",
   "quoteProps": "as-needed",
   "jsxSingleQuote": true,
   "proseWrap": "preserve"
->>>>>>> origin/auto/autonomy-17186719616
 }

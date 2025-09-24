@@ -1,198 +1,148 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts and merge all open PRs into main branch
-# This script handles the complete process of resolving conflicts and merging PRs
+# Resolve merge conflicts and merge PRs into main
+set -e
 
-set -e  # Exit on any error
+echo "=== Starting Merge Conflict Resolution and PR Merge Process ==="
 
-echo "🚀 Starting merge conflict resolution and PR merging process..."
-
-# Function to log with timestamp
-log() {
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1"
-}
-
-# Function to check if command exists
-command_exists() {
-    command -v "$1" >/dev/null 2>&1
-}
-
-# Check if git is available
-if ! command_exists git; then
-    log "❌ Git is not installed or not in PATH"
-    exit 1
-fi
-
-# Navigate to the repository directory
-cd /workspace
-
-log "📁 Current directory: $(pwd)"
+# Check git status
+echo "Current git status:"
+git status --porcelain
 
 # Check current branch
-log "🌿 Current branch: $(git branch --show-current)"
+echo "Current branch:"
+git branch --show-current
 
-# Fetch latest changes from remote
-log "📥 Fetching latest changes from remote..."
-git fetch origin --all
+# Fetch latest changes
+echo "Fetching latest changes from origin..."
+git fetch origin
 
-# Check for any existing merge conflicts
-log "🔍 Checking for existing merge conflicts..."
-if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-    log "⚠️  Found existing merge conflicts. Resolving..."
+# Update main branch
+echo "Updating main branch..."
+git checkout main
+git pull origin main
+
+# List recent branches that might need merging
+echo "Recent branches to check for merging:"
+git branch -r --sort=-committerdate | head -10
+
+# Check for merge conflicts in recent branches
+RECENT_BRANCHES=(
+    "origin/cursor/check-fix-push-and-merge-to-main-c42f"
+    "origin/cursor/check-fix-push-and-merge-to-main-155b"
+    "origin/cursor/check-fix-push-and-merge-to-main-11d2"
+    "origin/cursor/check-fix-push-and-merge-to-main-696d"
+    "origin/cursor/check-fix-push-and-merge-to-main-5d27"
+)
+
+echo "Checking for conflicts with recent branches..."
+
+for branch in "${RECENT_BRANCHES[@]}"; do
+    echo "=== Checking $branch ==="
     
-    # List conflicted files
-    conflicted_files=$(git status --porcelain | grep "^UU\|^AA\|^DD" | awk '{print $2}')
-    log "📄 Conflicted files: $conflicted_files"
-    
-    # For each conflicted file, try to resolve automatically
-    for file in $conflicted_files; do
-        log "🔧 Resolving conflicts in: $file"
+    # Check if branch exists
+    if git show-ref --verify --quiet "refs/remotes/$branch"; then
+        # Check for conflicts
+        CONFLICTS=$(git merge-tree $(git merge-base main "$branch") main "$branch" 2>/dev/null | grep -c "changed in both" || echo "0")
         
-        # Check if file exists
-        if [ -f "$file" ]; then
-            # Try to resolve conflicts automatically by keeping both versions
-            # This is a simple approach - in production, you might want more sophisticated conflict resolution
-            sed -i '/^            sed -i '/^            
-            # Add the resolved file
-            git add "$file"
-            log "✅ Resolved conflicts in: $file"
+        if [ "$CONFLICTS" -gt 0 ]; then
+            echo "Found $CONFLICTS conflicts in $branch"
+            
+            # Create local branch for merging
+            LOCAL_BRANCH="merge-$(basename "$branch")"
+            echo "Creating local branch $LOCAL_BRANCH"
+            git checkout -b "$LOCAL_BRANCH" "$branch"
+            
+            # Try to merge main into the branch
+            echo "Attempting to merge main into $LOCAL_BRANCH"
+            if git merge main --no-edit; then
+                echo "Successfully merged main into $LOCAL_BRANCH"
+                
+                # Switch back to main and merge
+                git checkout main
+                if git merge "$LOCAL_BRANCH" --no-edit; then
+                    echo "Successfully merged $LOCAL_BRANCH into main"
+                    echo "Pushing updated main to origin..."
+                    git push origin main
+                else
+                    echo "Failed to merge $LOCAL_BRANCH into main"
+                fi
+                
+                # Clean up local branch
+                git branch -D "$LOCAL_BRANCH"
+            else
+                echo "Merge conflict in $LOCAL_BRANCH, resolving..."
+                
+                # Check for conflict files
+                CONFLICT_FILES=$(git diff --name-only --diff-filter=U)
+                if [ -n "$CONFLICT_FILES" ]; then
+                    echo "Conflict files: $CONFLICT_FILES"
+                    
+                    # Resolve conflicts automatically where possible
+                    for file in $CONFLICT_FILES; do
+                        echo "Resolving conflicts in $file"
+                        
+                        # For package files, use main version
+                        if [[ "$file" == *"package"* ]] || [[ "$file" == *"yarn.lock"* ]] || [[ "$file" == *"package-lock.json"* ]]; then
+                            echo "Using main version for $file"
+                            git checkout --theirs "$file"
+                            git add "$file"
+                        fi
+                        
+                        # For markdown files, try to merge content
+                        if [[ "$file" == *".md" ]]; then
+                            echo "Merging markdown content for $file"
+                            # Use a simple merge strategy for markdown
+                            git checkout --ours "$file"
+                            git add "$file"
+                        fi
+                    done
+                    
+                    # Complete the merge
+                    if git commit --no-edit; then
+                        echo "Successfully resolved conflicts in $LOCAL_BRANCH"
+                        
+                        # Switch back to main and merge
+                        git checkout main
+                        if git merge "$LOCAL_BRANCH" --no-edit; then
+                            echo "Successfully merged $LOCAL_BRANCH into main"
+                            echo "Pushing updated main to origin..."
+                            git push origin main
+                        else
+                            echo "Failed to merge $LOCAL_BRANCH into main"
+                        fi
+                    else
+                        echo "Failed to resolve conflicts in $LOCAL_BRANCH"
+                        git merge --abort
+                    fi
+                fi
+                
+                # Clean up local branch
+                git branch -D "$LOCAL_BRANCH" 2>/dev/null || true
+            fi
         else
-            log "⚠️  File not found: $file"
-        fi
-    done
-    
-    # Commit the resolved conflicts
-    if git status --porcelain | grep -q "^A"; then
-        git commit -m "Resolve merge conflicts automatically"
-        log "✅ Committed resolved conflicts"
-    fi
-fi
-
-# Get list of all branches
-log "🌿 Getting list of all branches..."
-branches=$(git branch -r | grep -v HEAD | sed 's/origin\///' | sort -u)
-
-log "📋 Found branches: $branches"
-
-# Get current branch
-current_branch=$(git branch --show-current)
-log "📍 Current branch: $current_branch"
-
-# Switch to main branch
-log "🔄 Switching to main branch..."
-git checkout main || git checkout master
-
-main_branch=$(git branch --show-current)
-log "📍 Now on main branch: $main_branch"
-
-# Pull latest changes
-log "📥 Pulling latest changes from main..."
-git pull origin $main_branch
-
-# Merge each branch into main
-for branch in $branches; do
-    # Skip main/master branches
-    if [[ "$branch" == "main" || "$branch" == "master" ]]; then
-        continue
-    fi
-    
-    log "🔄 Processing branch: $branch"
-    
-    # Check if branch exists locally
-    if git show-ref --verify --quiet refs/heads/$branch; then
-        log "📁 Branch $branch exists locally"
-    else
-        log "📥 Creating local branch $branch from remote"
-        git checkout -b $branch origin/$branch
-    fi
-    
-    # Switch to the branch
-    git checkout $branch
-    
-    # Merge main into the branch to resolve conflicts
-    log "🔀 Merging main into $branch..."
-    if git merge $main_branch --no-edit; then
-        log "✅ Successfully merged main into $branch"
-    else
-        log "⚠️  Merge conflicts detected in $branch. Resolving..."
-        
-        # Resolve conflicts automatically
-        conflicted_files=$(git status --porcelain | grep "^UU\|^AA\|^DD" | awk '{print $2}')
-        
-        for file in $conflicted_files; do
-            if [ -f "$file" ]; then
-                log "🔧 Resolving conflicts in: $file"
-                # Simple conflict resolution - keep both versions
-                sed -i '/^                sed -i '/^                git add "$file"
+            echo "No conflicts found in $branch"
+            
+            # Try direct merge if no conflicts
+            echo "Attempting direct merge of $branch into main"
+            if git merge "$branch" --no-edit; then
+                echo "Successfully merged $branch into main"
+                echo "Pushing updated main to origin..."
+                git push origin main
+            else
+                echo "Failed to merge $branch into main"
+                git merge --abort
             fi
-        done
-        
-        # Commit the resolved conflicts
-        if git status --porcelain | grep -q "^A"; then
-            git commit -m "Resolve merge conflicts with main branch"
-            log "✅ Committed resolved conflicts for $branch"
         fi
-    fi
-    
-    # Push the updated branch
-    log "📤 Pushing updated $branch..."
-    git push origin $branch
-    
-    # Switch back to main
-    git checkout $main_branch
-    
-    # Merge the branch into main
-    log "🔀 Merging $branch into main..."
-    if git merge $branch --no-edit; then
-        log "✅ Successfully merged $branch into main"
     else
-        log "⚠️  Merge conflicts when merging $branch into main. Resolving..."
-        
-        # Resolve conflicts
-        conflicted_files=$(git status --porcelain | grep "^UU\|^AA\|^DD" | awk '{print $2}')
-        
-        for file in $conflicted_files; do
-            if [ -f "$file" ]; then
-                log "🔧 Resolving conflicts in: $file"
-                sed -i '/^                sed -i '/^                git add "$file"
-            fi
-        done
-        
-        # Commit the resolved conflicts
-        if git status --porcelain | grep -q "^A"; then
-            git commit -m "Resolve merge conflicts when merging $branch into main"
-            log "✅ Committed resolved conflicts for $branch merge into main"
-        fi
+        echo "Branch $branch does not exist"
     fi
-    
-    # Push the updated main branch
-    log "📤 Pushing updated main branch..."
-    git push origin $main_branch
-    
-    log "✅ Completed processing branch: $branch"
 done
 
 # Final status check
-log "📊 Final status check..."
-git status
+echo "=== Final Status ==="
+git status --porcelain
+echo "Current branch:"
+git branch --show-current
 
-# Show recent commits
-log "📝 Recent commits:"
-git log --oneline -10
-
-log "🎉 Merge conflict resolution and PR merging process completed!"
-
-# Clean up merged branches (optional)
-log "🧹 Cleaning up merged branches..."
-for branch in $branches; do
-    if [[ "$branch" != "main" && "$branch" != "master" ]]; then
-        # Check if branch is merged
-        if git branch --merged $main_branch | grep -q "$branch"; then
-            log "🗑️  Deleting merged branch: $branch"
-            git branch -d $branch 2>/dev/null || true
-            git push origin --delete $branch 2>/dev/null || true
-        fi
-    fi
-done
-
-log "✨ All done! All PRs have been merged into main branch."
+echo "=== Merge Conflict Resolution Complete ==="

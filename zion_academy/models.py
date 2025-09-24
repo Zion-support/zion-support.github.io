@@ -179,3 +179,64 @@ class UpdateComment(db.Model):
     
     def __repr__(self):
         return f'<UpdateComment {self.id} by User {self.user_id} on Update {self.update_id}>'
+
+# --- Analytics & Feedback Models (imported in app.py) ---
+
+class AnalyticsEvent(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True)
+    session_id = db.Column(db.String(64), nullable=False)
+    event_type = db.Column(db.String(50), nullable=False)
+    event_data = db.Column(db.JSON, nullable=True)
+    course_id = db.Column(db.Integer, db.ForeignKey('course.id'), nullable=True)
+    lesson_id = db.Column(db.Integer, db.ForeignKey('lesson.id'), nullable=True)
+    user_agent = db.Column(db.String(256), nullable=True)
+    ip_address = db.Column(db.String(64), nullable=True)
+    referrer = db.Column(db.String(256), nullable=True)
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def __repr__(self):
+        return f'<AnalyticsEvent {self.event_type} session {self.session_id}>'
+
+
+class ContentAnalytics(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    content_type = db.Column(db.String(50), nullable=False)  # 'course' | 'lesson'
+    content_id = db.Column(db.Integer, nullable=False)
+    date = db.Column(db.Date, default=datetime.utcnow)
+
+    views = db.Column(db.Integer, default=0)
+    clicks = db.Column(db.Integer, default=0)
+    unique_views = db.Column(db.Integer, default=0)
+    completion_rate = db.Column(db.Float, default=0.0)
+    time_spent_seconds = db.Column(db.Integer, default=0)
+    feedback_count = db.Column(db.Integer, default=0)
+
+    __table_args__ = (
+        db.UniqueConstraint('content_type', 'content_id', 'date'),
+    )
+
+    def __repr__(self):
+        return f'<ContentAnalytics {self.content_type}:{self.content_id} {self.date}>'
+
+
+class FeedbackSubmission(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True)
+    # Direct foreign keys to support relationships from Course and Lesson
+    course_id = db.Column(db.Integer, db.ForeignKey('course.id'), nullable=True)
+    lesson_id = db.Column(db.Integer, db.ForeignKey('lesson.id'), nullable=True)
+    feedback_type = db.Column(db.String(50), nullable=True)  # bug, idea, praise, etc.
+    content_type = db.Column(db.String(50), nullable=True)  # course | lesson | other
+    content_id = db.Column(db.Integer, nullable=True)
+    title = db.Column(db.String(200), nullable=True)
+    description = db.Column(db.Text, nullable=True)
+    priority = db.Column(db.String(20), default='medium')  # low | medium | high | urgent
+    status = db.Column(db.String(20), default='open')  # open | in_progress | resolved
+    admin_response = db.Column(db.Text, nullable=True)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    resolved_at = db.Column(db.DateTime, nullable=True)
+
+    def __repr__(self):
+        return f'<FeedbackSubmission {self.id} {self.status}>'

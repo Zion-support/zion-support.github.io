@@ -6,7 +6,6 @@ from sqlalchemy import desc, func
 
 # Import db instance from models.py FIRST
 from models import db, AnalyticsEvent, FeedbackSubmission, ContentAnalytics
-from seed_db import seed_data # Assuming seed_db.py is in the same directory
 
 app = Flask(__name__)
 
@@ -38,7 +37,15 @@ def index():
     """Homepage with hero, latest updates, and quick links."""
     with app.app_context():
         latest_updates = Update.query.filter_by(is_published=True).order_by(desc(Update.created_at)).limit(3).all()
-    return render_template('index.html', title='Welcome to Zion Academy', latest_updates=latest_updates)
+        latest_courses = Course.query.order_by(desc(Course.created_at)).limit(6).all()
+        featured_courses = Course.query.filter_by(is_premium_tier=False).order_by(desc(Course.created_at)).limit(3).all()
+    return render_template(
+        'index.html',
+        title='Welcome to Zion Academy',
+        latest_updates=latest_updates,
+        latest_courses=latest_courses,
+        featured_courses=featured_courses,
+    )
 
 @app.route('/academy/founder-course')
 @app.route('/learn/launch')
@@ -65,9 +72,14 @@ def course_list():
 @app.cli.command('seed-db')
 def seed_db_command():
     """Seeds the database with initial sample data."""
-    seed_data()
-    # No need to print here, seed_data() already prints messages.
-    print('Database seeding process initiated from CLI command.')
+    # Lazy import to avoid circular dependency during module import
+    try:
+        from seed_db import seed_data  # Assuming seed_db.py is in the same directory
+        seed_data()
+        # No need to print here, seed_data() already prints messages.
+        print('Database seeding process initiated from CLI command.')
+    except Exception as e:
+        print(f'Error seeding database: {e}')
 
 @app.cli.command('seed-updates')
 def seed_updates_command():
@@ -101,7 +113,6 @@ def course_detail(course_id):
         # or just rendering a simple not found message.
         return render_template('404.html', title="Course Not Found"), 404 # Assuming you have a 404.html
 
-
 # ----- Progress Tracking Endpoints -----
 
 @app.route('/api/enroll', methods=['POST'])
@@ -121,7 +132,6 @@ def api_enroll():
             db.session.commit()
 
     return jsonify({'message': 'enrolled'}), 201
-
 
 @app.route('/api/complete', methods=['POST'])
 def api_complete_lesson():
@@ -157,6 +167,7 @@ def api_complete_lesson():
             enrollment_course_id=course_id,
         ).count()
         enrollment.progress = int((completed / total_lessons) * 100) if total_lessons else 0
+        progress_value = enrollment.progress
 
         if enrollment.progress == 100:
             existing = Certificate.query.filter_by(user_id=user_id, course_id=course_id).first()
@@ -170,8 +181,7 @@ def api_complete_lesson():
 
         db.session.commit()
 
-    return jsonify({'progress': enrollment.progress})
-
+    return jsonify({'progress': progress_value})
 
 @app.route('/api/progress/<int:user_id>')
 def api_user_progress(user_id):
@@ -199,7 +209,6 @@ def api_user_progress(user_id):
 
     return jsonify({'enrollments': progress_data, 'achievements': achievements})
 
-
 @app.route('/api/generate-quiz', methods=['POST'])
 def api_generate_quiz():
     """Return a simple quiz for a topic."""
@@ -217,7 +226,6 @@ def api_generate_quiz():
     ]
     return jsonify({'quiz': quiz})
 
-
 @app.route('/api/summarize', methods=['POST'])
 def api_summarize():
     """Return a basic summary of provided text."""
@@ -225,7 +233,6 @@ def api_summarize():
     text = data.get('text', '')
     summary = '.'.join(text.split('.')[:2]).strip()
     return jsonify({'summary': summary})
-
 
 # ----- Analytics Endpoints -----
 
@@ -259,7 +266,6 @@ def api_track_event():
         'session_id': session_id,
         'event_id': event.id
     })
-
 
 @app.route('/api/analytics/content/<content_type>/<int:content_id>')
 def api_content_analytics(content_type, content_id):
@@ -303,7 +309,6 @@ def api_content_analytics(content_type, content_id):
                 'event_data': e.event_data
             } for e in events]
         })
-
 
 @app.route('/api/analytics/dashboard')
 def api_analytics_dashboard():
@@ -356,7 +361,6 @@ def api_analytics_dashboard():
             } for f in feedback_summary]
         })
 
-
 # ----- Feedback Endpoints -----
 
 @app.route('/api/feedback/submit', methods=['POST'])
@@ -384,7 +388,6 @@ def api_submit_feedback():
         'message': 'Feedback submitted successfully'
     })
 
-
 @app.route('/api/feedback/list')
 def api_feedback_list():
     """Get list of feedback submissions"""
@@ -405,7 +408,6 @@ def api_feedback_list():
                 'user_id': f.user_id
             } for f in feedbacks]
         })
-
 
 @app.route('/api/feedback/<int:feedback_id>', methods=['PUT'])
 def api_update_feedback(feedback_id):
@@ -435,7 +437,6 @@ def api_update_feedback(feedback_id):
         'success': True,
         'message': 'Feedback updated successfully'
     })
-
 
 # ----- Content Performance Tracking -----
 
@@ -504,14 +505,12 @@ def api_update_content_metrics():
         'message': 'Content metrics updated successfully'
     })
 
-
 # ----- Admin Dashboard -----
 
 @app.route('/admin/dashboard')
 def admin_dashboard():
     """Admin dashboard for analytics and feedback management"""
     return render_template('admin_dashboard.html', title='Admin Dashboard')
-
 
 @app.route('/user/<int:user_id>')
 def user_profile(user_id):
