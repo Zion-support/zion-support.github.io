@@ -12,10 +12,7 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
-<<<<<<< HEAD:zion-os/src/app/blog/[id]/page.tsx.backup.1758731932950
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-2def
   'ai-governance-framework-2025': {
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
@@ -38,24 +35,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     date: '2025-09-15',
     readTime: '9 min read',
     content: [
-<<<<<<< HEAD:zion-os/src/app/blog/[id]/page.tsx.backup.1758731932950
-      'As autonomous agents proliferate in production, organizations need reusable safety patterns beyond ad-hoc checks. We present a catalog including Budget Caps, Sensitive-Action Handshakes, Reputation-Gated Autonomy, and Deferred Execution Queues.',
-      'Each pattern includes preconditions, failure modes, and observability hooks. We also provide a rollout playbook to incrementally raise autonomy while preserving safety and accountability.'
-    ]
-  },
-  'multi-agent-supply-chains': {
-    id: 'multi-agent-supply-chains',
-    title: 'Multi‑Agent Supply Chains: Real‑Time Coordination and Resilience',
-    excerpt:
-      'How agent-based orchestration reduces latency and increases resilience across complex, multi-party supply chains.',
-    category: 'AI Solutions',
-    author: 'Dr. Sarah Chen',
-    date: '2025-09-12',
-    readTime: '8 min read',
-    content: [
-      'Traditional supply chains suffer from information lag and brittle handoffs. Multi-agent orchestration enables local decision-making with global constraints, improving throughput and reducing stockouts.',
-      'We cover agent roles (procurement, logistics, quality), shared state models, incentive design, and exception handling. Includes reference events, KPIs, and an adoption roadmap.'
-=======
 =======
   'ai-governance-framework-2025': {
     id: 'ai-governance-framework-2025',
@@ -73,7 +52,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Key components include AI ethics committees, risk assessment protocols, bias detection systems, and audit trails for AI decisions.',
       'The framework addresses regulatory requirements including EU AI Act, NIST AI Risk Management Framework, and industry-specific guidelines.',
       'Case studies demonstrate how organizations have successfully implemented AI governance, reducing risks by 60% and improving stakeholder trust.'
->>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> cursor/create-and-deploy-new-content-2def
 =======
       'Enterprises are moving beyond pilots to production-scale autonomous agents. Safety must progress from guidelines to executable controls.',
@@ -87,10 +65,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     id: 'agent-safety-red-teaming-2025',
     title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
     excerpt:
-<<<<<<< HEAD:zion-os/src/app/blog/[id]/page.tsx.backup.1758731932950
-      'Scenarios and mitigations to probe and harden multi-agent systems in production.',
-    category: 'AI Safety',
-=======
       'A pragmatic framework for dual-layer governance blending automated policy engines with human oversight for AI systems at scale.',
     category: 'AI Governance',
   'agent-safety-guardrails-2025': {
@@ -99,24 +73,10 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     excerpt:
       'Practical blueprints for policy engines, intervention strategies, and auditable controls that keep autonomous agents safe and aligned.',
     category: 'AI Solutions',
->>>>>>> origin/aggressive-merge-backup-20250924-085711:zion-os/src/app/blog/[id]/page.tsx.backup.1757922316.auto-resolve-backup.1758637413
     author: 'Dr. Emily Watson',
     date: '2025-09-15',
     readTime: '11 min read',
     content: [
-<<<<<<< HEAD:zion-os/src/app/blog/[id]/page.tsx.backup.1758731932950
-      'Red teaming for AI agents requires scenario-driven probes that chain tools, memory, and coordination under realistic constraints.',
-      'This playbook includes test harnesses for tool-use abuse, prompt-injection chains, identity spoofing, data exfiltration, and policy evasion.',
-      'Mitigations span capability bounding, typed tool adapters, output filters, allow/deny lists, and human approval for high-impact actions.'
-    ]
-  },
-  'ai-automation-case-studies-2025': {
-    id: 'ai-automation-case-studies-2025',
-    title: 'AI Automation Case Studies 2025: From MTTR to Margin Uplift',
-    excerpt:
-      'Five deployments with measurable KPIs and lessons learned across ops, CX, and finance.',
-    category: 'Case Studies',
-=======
       'As autonomous agents take on higher-stakes actions, safety guardrails must be first-class citizens in system design. Organizations need layered defenses that combine policy engines, runtime monitors, and human-in-the-loop approvals for sensitive operations.',
       'We present a reference architecture: (1) capability declarations and allowlists, (2) contextual policy checks with verifiable logs, (3) graded interventions from soft prompts to hard blocks, and (4) incident review loops to improve future behavior.',
       'This article includes example policies, red-team scenarios, and rollout guidance to incrementally raise autonomy while preserving control and accountability.'
@@ -128,22 +88,13 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     excerpt:
       'Deploy low-latency, bandwidth-efficient agents at the edge for on-site decisioning, resilience, and cost control.',
     category: 'IoT & Edge',
->>>>>>> origin/aggressive-merge-backup-20250924-085711:zion-os/src/app/blog/[id]/page.tsx.backup.1757922316.auto-resolve-backup.1758637413
     author: 'Michael Rodriguez',
     date: '2025-09-12',
     readTime: '9 min read',
     content: [
-<<<<<<< HEAD:zion-os/src/app/blog/[id]/page.tsx.backup.1758731932950
-      'We summarize five production deployments covering incident response, customer support, finance reconciliations, and supply chain routing.',
-      'Each case breaks down the business objective, design, controls, and the measurable outcome (MTTR, CSAT, margin, error rates).',
-      'A common thread: tight eval loops, policy guardrails, and incremental rollout with clear kill-switches.'
-    ]
-  },
-=======
       'Edge AI agents unlock sub-second inference and decision-making where data is produced. This reduces bandwidth costs, preserves privacy, and increases resilience when connectivity is limited.',
       'We outline deployment patterns using containerized runtimes, model compression, and event-driven synchronization with the cloud. Observability and policy propagation are covered to ensure safe, consistent behavior across fleets.',
       'Use cases include smart facilities, industrial inspection, retail analytics, and on-site incident response with autonomous remediation.'
->>>>>>> origin/aggressive-merge-backup-20250924-085711:zion-os/src/app/blog/[id]/page.tsx.backup.1757922316.auto-resolve-backup.1758637413
   'ai-foundation-models-2025': {
     id: 'ai-foundation-models-2025',
     title: 'Foundation Models in 2025: Practical Enterprise Patterns That Work',

@@ -4,13 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-<<<<<<< HEAD
-    "dev": "vite",
-    "build": "vite build",
-    "build:netlify": "vite build",
-    "lint": "eslint --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-=======
     "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" next dev",
     "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build",
     "start": "next start",
@@ -20,7 +13,6 @@
     "fix:all": "eslint . --fix || true",
     "build:heal": "npm run build || (npm run fix:all && npm run build)",
     "ci:heal": "npm run fix:all && (npm run type-check || true) && npm run build:heal",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-d542
     "test": "jest",
     "test:watch": "jest --watch",
     "test:ci": "jest --ci --coverage --watchAll=false",
@@ -97,17 +89,10 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "@babel/core": "^7.28.4",
-    "@babel/preset-env": "^7.28.3",
-    "@babel/preset-react": "^7.27.1",
-    "@babel/preset-typescript": "^7.27.1",
-=======
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
     "@eslint/js": "^8.57.1",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-d542
     "@types/jest": "^29.5.3",
     "@types/node": "^20.4.5",
     "@typescript-eslint/eslint-plugin": "^6.0.0",

@@ -3,11 +3,7 @@ import React, { useState, useEffect } from 'react';
 const RevolutionaryContentCarousel2027: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
@@ -128,11 +124,8 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
       link: "/pages/FutureTechBreakthrough2026",
       gradient: "from-rose-600 to-pink-600",
       features: ["Future Mapping", "Probability Control", "Timeline Manipulation"]
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
 =======
@@ -142,11 +135,7 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 
   useEffect(() => {
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
@@ -328,11 +317,8 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                               </li>
                             ))}
                           </ul>
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
 =======
@@ -343,11 +329,7 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                   </div>
                 </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
               </div>
             ))}
@@ -453,11 +435,8 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               <div className="text-sm font-semibold">{item.title.split(' ')[0]}</div>
             </a>
           ))}
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
 =======

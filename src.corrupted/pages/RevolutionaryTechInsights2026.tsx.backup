@@ -1,9 +1,5 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -48,10 +44,7 @@ import {
 } from 'lucide-react';
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
@@ -319,14 +312,9 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6"
               >
 <<<<<<< HEAD
-<<<<<<< HEAD
-            <div className="mb-8">
-=======
-<<<<<<< HEAD
 =======
 =======
             <div className="mb-8">
->>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
                 <Sparkles className="w-5 h-5 text-indigo-400" />
@@ -431,11 +419,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
         </section>
 
@@ -604,10 +588,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
         </section>
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e

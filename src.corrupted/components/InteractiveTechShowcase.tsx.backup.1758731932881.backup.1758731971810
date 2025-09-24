@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -224,8 +221,6 @@ const InteractiveTechShowcase: React.FC = () => {
                 ))}
               </tbody>
             </table>
-<<<<<<< HEAD
-=======
 =======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -444,11 +439,6 @@ const InteractiveTechShowcase: React.FC = () => {
                 View Analytics
               </button>
             </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-81d0
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
->>>>>>> cursor/create-and-deploy-new-content-7720
           </div>
         </div>
       </div>

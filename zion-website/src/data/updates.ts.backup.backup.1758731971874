@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-  // Fresh content added 2025-09-15
-  {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    title: 'Deep Dive: Enterprise Agent Observability (2026)',
-=======
     title: 'Guide: Agent Platform Operations (2026)',
 =======
     title: 'Launch: Autonomous Ops and SRE for Agents',
@@ -68,7 +57,6 @@
   },
   {
     title: 'Guide: Real-Time Evals Starter Kit',
->>>>>>> origin/feat/new-updates-and-home-ad
     summary:
       'Trends, metrics, and enterprise adoption patterns shaping the next wave of AI-led automation.',
     href: '/insights/state-of-ai-automation-2025',
@@ -156,9 +144,6 @@
     date: '2025-09-15',
     tag: 'Blueprint'
   },
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
   {
 =======
@@ -188,16 +173,11 @@
     date: '2025-09-15',
     tag: 'Launch'
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
     summary:
       'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
     href: '/updates/ai-autonomous-workflow-engine-1-0',
 =======
->>>>>>> cursor/create-and-deploy-new-content-3afb
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
@@ -233,18 +213,12 @@
     href: '/updates/ai-autonomous-workflow-engine-1-0',
     date: '2025-09-15',
     tag: 'Launch'
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-a12c
 >>>>>>> cursor/create-and-deploy-new-content-8069
   },
   {
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
     summary:
-<<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
   // Added 2025-09-15 (new content created now)
   {
     title: 'Launch: Autonomous Security Copilot v1.0',
@@ -1537,11 +1511,6 @@
   }
 ]
 
-<<<<<<< HEAD
-export function getLatestUpdates(count: number = 6): SiteUpdate[] {
-  return siteUpdates.slice(0, count)
-}
-=======
 export type UpdateItem = {
   id: string
   title: string
@@ -1608,7 +1577,6 @@ export const updates: UpdateItem[] = [
   {
     id: 'advanced-blockchain-dev-course',
     title: 'New Course: Advanced Blockchain Development',
->>>>>>> origin/feat/new-updates-ads
     summary:
       'Best practices for securing AI systems in production: model, data, and pipeline.',
     href: '/updates/ai-security-blueprint-2025',

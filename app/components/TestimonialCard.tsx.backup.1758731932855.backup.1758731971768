@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-'use client'
-
-import { useState, useEffect, ReactElement } from 'react'
-
-interface Testimonial {
-  id: number
-  name: string
-  role: string
-  company: string
-  content: string
-  avatar?: string
-  rating: number
-}
-
-interface TestimonialCardProps {
-  testimonial: Testimonial
-  isActive: boolean
-=======
 'use client';
 
 import { useState, useEffect, ReactElement } from 'react';
@@ -34,7 +15,6 @@ interface Testimonial {
 interface TestimonialCardProps {
   testimonial: Testimonial;
   isActive: boolean;
->>>>>>> 564351a1efb60f0138dfdeea53748eccb3c9bb47
 }
 
 const testimonials: Testimonial[] = [
@@ -45,11 +25,7 @@ const testimonials: Testimonial[] = [
     company: 'TechFlow Inc.',
     content:
       'Zion Tech Group transformed our AI infrastructure. The results exceeded our expectations with 60% improvement in processing speed and 40% cost reduction.',
-<<<<<<< HEAD
-    rating: 5
-=======
     rating: 5,
->>>>>>> 564351a1efb60f0138dfdeea53748eccb3c9bb47
   },
   {
     id: 2,
@@ -58,11 +34,7 @@ const testimonials: Testimonial[] = [
     company: 'CloudScale Solutions',
     content:
       'Their quantum computing expertise helped us solve complex optimization problems that were previously impossible. Game-changing technology implementation.',
-<<<<<<< HEAD
-    rating: 5
-=======
     rating: 5,
->>>>>>> 564351a1efb60f0138dfdeea53748eccb3c9bb47
   },
   {
     id: 3,
@@ -71,27 +43,6 @@ const testimonials: Testimonial[] = [
     company: 'DataDriven Corp',
     content:
       'The cybersecurity framework they implemented has given us complete peace of mind. Zero breaches since deployment and full compliance achieved.',
-<<<<<<< HEAD
-    rating: 5
-  }
-]
-
-export default function TestimonialCard({
-  testimonial,
-  isActive
-}: TestimonialCardProps) {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    if (isActive) {
-      setIsVisible(true)
-      return undefined
-    } else {
-      const timer = setTimeout(() => setIsVisible(false), 300)
-      return () => clearTimeout(timer)
-    }
-  }, [isActive])
-=======
     rating: 5,
   },
 ];
@@ -111,7 +62,6 @@ export default function TestimonialCard({
       return () => clearTimeout(timer);
     }
   }, [isActive]);
->>>>>>> 564351a1efb60f0138dfdeea53748eccb3c9bb47
 
   const renderStars = (rating: number): ReactElement => {
     return (
@@ -127,13 +77,8 @@ export default function TestimonialCard({
           </span>
         ))}
       </span>
-<<<<<<< HEAD
-    )
-  }
-=======
     );
   };
->>>>>>> 564351a1efb60f0138dfdeea53748eccb3c9bb47
 
   return (
     <div
@@ -165,14 +110,7 @@ export default function TestimonialCard({
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  )
-}
-
-export { testimonials }
-=======
   );
 }
 
 export { testimonials };
->>>>>>> 564351a1efb60f0138dfdeea53748eccb3c9bb47

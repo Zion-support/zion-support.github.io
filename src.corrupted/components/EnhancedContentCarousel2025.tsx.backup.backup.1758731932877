@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-<<<<<<< HEAD
-const EnhancedContentCarousel2025: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-=======
   const contentSlides = [
 =======
 import { motion } from 'framer-motion';
@@ -24,7 +18,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
   }, []);
 
   const slides = [
->>>>>>> cursor/create-and-deploy-new-content-ed0b
     {
       id: 1,
       title: "Conscious AI Revolution",

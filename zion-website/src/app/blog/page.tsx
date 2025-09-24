@@ -3,8 +3,6 @@ import Link from 'next/link'
 
 const posts = [
   {
-<<<<<<< HEAD
-=======
 =======
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
@@ -56,7 +54,6 @@ const posts = [
     summary:
       'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
 =======
->>>>>>> cursor/create-and-deploy-new-content-3afb
 >>>>>>> cursor/create-and-deploy-new-content-2def
   },
   {

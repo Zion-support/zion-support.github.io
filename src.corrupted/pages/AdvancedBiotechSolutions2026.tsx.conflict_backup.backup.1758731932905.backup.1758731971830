@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
             </p>
             <ul className="text-emerald-600 space-y-2 mb-6 text-sm">
               <li>• Precision gene targeting</li>
@@ -104,7 +102,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
                 </button>
               </div>
             </div>
->>>>>>> cursor/create-and-deploy-new-content-c963
           </div>
         </div>
 
@@ -217,6 +214,5 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
     </>
   );
 };
-
 
 export default AdvancedBiotechSolutions2026;
