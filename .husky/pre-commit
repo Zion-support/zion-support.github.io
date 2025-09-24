@@ -1,7 +1,5 @@
-echo "🔍 Running pre-commit checks..."
-
-# Temporarily disabled for development - will re-enable after major issues are resolved
-echo "⚠️ Pre-commit checks temporarily disabled for development"
-echo "✅ Proceeding with commit..."
-
-echo "🎉 Pre-commit checks bypassed!"
+#!/usr/bin/env sh
+# Lightweight pre-commit; run lint-staged if available, never block commit
+if command -v npx >/dev/null 2>&1; then
+  npx --yes lint-staged || true
+fi

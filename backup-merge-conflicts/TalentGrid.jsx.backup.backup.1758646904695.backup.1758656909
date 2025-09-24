@@ -1,0 +1,4 @@
+" export: function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { """";";'"'"
+" export: function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { """";";'"'"
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

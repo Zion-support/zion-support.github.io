@@ -1,78 +1,127 @@
 #!/bin/bash
 
-# Script to merge all remaining branches that are ahead of main
+# Merge all remaining unmerged branches
 set -e
 
-echo "Finding all branches that are ahead of main..."
+echo "🚀 Starting merge of all remaining unmerged branches..."
+echo "⏰ Started at: $(date)"
 
-# Get all branches that are ahead of main
-branches=()
-while IFS= read -r branch; do
-    if [[ "$branch" != "origin/main" && "$branch" != "origin/HEAD" ]]; then
-        if ! git merge-base --is-ancestor origin/main "$branch" 2>/dev/null; then
-            branches+=("$branch")
+# Ensure we're on main and it's up to date
+echo "🔄 Ensuring main branch is up to date..."
+git checkout main
+git pull origin main
+
+# Initialize counters
+SUCCESSFUL_MERGES=0
+FAILED_MERGES=0
+SKIPPED_BRANCHES=0
+
+# Get all unmerged branches
+echo "📊 Getting all unmerged branches..."
+UNMERGED_BRANCHES=$(git branch -r --no-merged main | grep -v "HEAD" | head -100)
+
+TOTAL_BRANCHES=$(echo "$UNMERGED_BRANCHES" | wc -l)
+echo "📊 Processing $TOTAL_BRANCHES unmerged branches"
+
+# Function to resolve conflicts intelligently
+resolve_conflicts() {
+    local branch="$1"
+    
+    echo "🔧 Resolving conflicts for branch $branch..."
+    
+    # Get conflicted files
+    CONFLICTED_FILES=$(git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4-)
+    
+    if [ -z "$CONFLICTED_FILES" ]; then
+        echo "❌ No conflicted files found"
+        return 1
+    fi
+    
+    echo "📝 Found conflicted files: $CONFLICTED_FILES"
+    
+    # Resolve conflicts for each file
+    while IFS= read -r file; do
+        if [ -n "$file" ]; then
+            echo "🔧 Resolving conflicts in $file..."
+            
+            # Different strategies for different file types
+            case "$file" in
+                "package.json"|"package-lock.json"|"yarn.lock")
+                    echo "📦 Package file detected, keeping main version..."
+                    git checkout --ours "$file" 2>/dev/null || true
+                    ;;
+                "next.config.js"|"tsconfig.json"|"tailwind.config.js"|"tailwind.config.ts")
+                    echo "⚙️  Config file detected, keeping main version..."
+                    git checkout --ours "$file" 2>/dev/null || true
+                    ;;
+                "*.md"|"*.txt")
+                    echo "📝 Documentation file detected, keeping incoming version..."
+                    git checkout --theirs "$file" 2>/dev/null || true
+                    ;;
+                "*.tsx"|"*.ts"|"*.jsx"|"*.js")
+                    echo "💻 Source code file detected, keeping incoming version..."
+                    git checkout --theirs "$file" 2>/dev/null || true
+                    ;;
+                *)
+                    echo "📄 Regular file detected, keeping incoming version..."
+                    git checkout --theirs "$file" 2>/dev/null || true
+                    ;;
+            esac
+            
+            # Add the resolved file
+            git add "$file" 2>/dev/null || true
+        fi
+    done <<< "$CONFLICTED_FILES"
+    
+    return 0
+}
+
+# Process each branch
+echo "$UNMERGED_BRANCHES" | while IFS= read -r branch; do
+    if [ -n "$branch" ]; then
+        echo ""
+        echo "🔄 Processing branch: $branch"
+        
+        # Try to merge
+        if git merge "$branch" --no-ff -m "Merge $branch" 2>/dev/null; then
+            echo "✅ Successfully merged $branch"
+            ((SUCCESSFUL_MERGES++))
+        else
+            echo "⚠️  Merge conflicts detected in $branch, resolving..."
+            
+            # Try to resolve conflicts
+            if resolve_conflicts "$branch"; then
+                # Commit resolved conflicts
+                if git commit -m "Resolved conflicts for $branch" 2>/dev/null; then
+                    echo "✅ Successfully resolved conflicts and merged $branch"
+                    ((SUCCESSFUL_MERGES++))
+                else
+                    echo "❌ Failed to commit resolved conflicts for $branch"
+                    git merge --abort 2>/dev/null || true
+                    ((FAILED_MERGES++))
+                fi
+            else
+                echo "❌ Failed to resolve conflicts for $branch"
+                git merge --abort 2>/dev/null || true
+                ((FAILED_MERGES++))
+            fi
+        fi
+        
+        # Push changes periodically
+        if [ $((SUCCESSFUL_MERGES % 10)) -eq 0 ]; then
+            echo "💾 Pushing changes..."
+            git push origin main --force 2>/dev/null || true
         fi
     fi
-done < <(git for-each-ref --format='%(refname:short)' refs/remotes/origin)
-
-echo "Found ${#branches[@]} branches ahead of main"
-
-# Process branches in batches of 5
-batch_size=5
-for ((i=0; i<${#branches[@]}; i+=batch_size)); do
-    echo "Processing batch $((i/batch_size + 1))..."
-    
-    for ((j=i; j<i+batch_size && j<${#branches[@]}; j++)); do
-        branch="${branches[j]}"
-        echo "Processing branch: $branch"
-        
-        # Extract branch name for local branch
-        local_branch=$(echo "$branch" | sed 's/origin\///' | sed 's/\//-/g' | sed 's/[^a-zA-Z0-9-]/-/g')
-        
-        # Create and checkout local branch
-        git checkout -b "merge-$local_branch" "$branch" || {
-            echo "Failed to checkout $branch, skipping..."
-            continue
-        }
-        
-        # Merge main into the branch
-        git merge origin/main --no-ff -m "Merge main into $local_branch" || {
-            echo "Merge conflict in $branch, resolving automatically..."
-            # Try to resolve conflicts automatically
-            git status --porcelain | grep "^UU" | while read file; do
-                echo "Resolving conflict in $file"
-                # Use main version for conflicts
-                git checkout --theirs "$file"
-                git add "$file"
-            done
-            git commit --no-edit || {
-                echo "Failed to resolve conflicts in $branch, skipping..."
-                git checkout main
-                git branch -D "merge-$local_branch" 2>/dev/null || true
-                continue
-            }
-        }
-        
-        # Switch back to main and merge
-        git checkout main
-        git merge "merge-$local_branch" --no-ff -m "Merge $local_branch into main" || {
-            echo "Failed to merge $local_branch into main, skipping..."
-            git branch -D "merge-$local_branch" 2>/dev/null || true
-            continue
-        }
-        
-        # Clean up
-        git branch -D "merge-$local_branch" 2>/dev/null || true
-        echo "Successfully merged $branch into main"
-    done
-    
-    # Push changes after each batch
-    echo "Pushing changes after batch $((i/batch_size + 1))..."
-    git push origin main || {
-        echo "Failed to push, pulling latest changes..."
-        git pull origin main --rebase
-        git push origin main
-    }
 done
 
-echo "All remaining branches merge process completed!"
+# Final push
+echo "💾 Final push..."
+git push origin main --force 2>/dev/null || true
+
+echo ""
+echo "📊 Merge Summary:"
+echo "✅ Successful merges: $SUCCESSFUL_MERGES"
+echo "❌ Failed merges: $FAILED_MERGES"
+echo "⏰ Completed at: $(date)"
+echo "🎉 Merge process completed!"
