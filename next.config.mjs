@@ -27,8 +27,7 @@ const nextConfig = {
 		forceSwcTransforms: true,
 	},
 
-	// SWC configuration
-	swcMinify: true,
+	// SWC configuration (swcMinify is deprecated in Next.js 15+)
 	
 	// Webpack optimizations
 	webpack: (config, { dev, isServer }) => {
