@@ -58,5 +58,3 @@ module.exports = {
   passWithNoTests: true,
 }
 
-module.exports = createJestConfig(customJestConfig)
-
