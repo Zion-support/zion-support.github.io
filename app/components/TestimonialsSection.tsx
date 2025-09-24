@@ -1,8 +1,8 @@
 'use client';
-
 import { useState, useEffect } from 'react';
-import TestimonialCard, { testimonials } from './TestimonialCard';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
+
+import TestimonialCard, { testimonials } from './TestimonialCard';
 
 export default function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);

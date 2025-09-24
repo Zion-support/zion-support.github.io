@@ -1,6 +1,8 @@
 import React from 'react';
-// import './globals.css';
 import type { ReactNode } from 'react';
+
+// import './globals.css';
+
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 
