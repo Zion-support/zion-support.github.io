@@ -4,7 +4,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import compression from 'compression';
-import rateLimit from 'express-rate-limit';
+import { rateLimit } from 'express-rate-limit';
 import { config } from 'dotenv';
 
 // Load environment variables
@@ -23,6 +23,7 @@ const limiter = rateLimit({
 
 // Security headers
 app.use(
+  '/',
   helmet({
     contentSecurityPolicy: {
       directives: {
@@ -32,25 +33,28 @@ app.use(
         imgSrc: ["'self'", 'data:', 'https:']
       }
     }
-  })
+  }) as any
 );
 
 // CORS
 app.use(
+  '/',
   cors({
     origin:
       NODE_ENV === 'development'
         ? ['http://localhost:3000', 'http://localhost:5000']
         : (process.env.FRONTEND_URL as string) || 'http://localhost:3000',
     credentials: true
-  })
+  }) as any
 );
 
-app.use(compression());
-app.use(morgan('combined'));
-app.use(limiter);
-app.use(express.json({ limit: '10mb' }));
-app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+app.use('/', compression() as any);
+app.use('/', morgan('combined') as any);
+// Wrap limiter to avoid type incompatibilities across @types/express versions
+const anyLimiter: any = limiter;
+app.use('/', anyLimiter);
+app.use('/', express.json({ limit: '10mb' }) as any);
+app.use('/', express.urlencoded({ extended: true, limit: '10mb' }) as any);
 
 // Import API routes
 import apiRoutes from './routes/api';
