@@ -30,11 +30,8 @@
     "analyze": "npm run build && npm run perf"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
-=======
->>>>>>> 76ac031ee1bd0638dab6f2aa5c6a46ca343d86e9
     "@heroicons/react": "^2.2.0",
     "@netlify/plugin-nextjs": "^5.13.3",
     "autoprefixer": "^10.4.21",
@@ -48,27 +45,6 @@
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
-<<<<<<< HEAD
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "framer-motion": "^12.23.12",
-    "lucide-react": "^0.536.0",
-    "axios": "^1.11.0",
-    "autoprefixer": "^10.4.21"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.32.0",
-    "@testing-library/jest-dom": "^6.6.4",
-    "@testing-library/react": "^16.3.0",
-    "@types/node": "^24.5.2",
-    "@types/node-cron": "^3.0.11",
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.24",
-    "@typescript-eslint/eslint-plugin": "^8.39.0",
-    "@typescript-eslint/parser": "^8.39.0",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^9.32.0",
-=======
     "react": "^19.1.1",
     "react-datepicker": "^8.4.0",
     "react-dom": "^19.1.1",
@@ -98,7 +74,6 @@
     "babel-jest": "^29.7.0",
     "critters": "^0.0.23",
     "eslint": "^9.36.0",
->>>>>>> 76ac031ee1bd0638dab6f2aa5c6a46ca343d86e9
     "eslint-config-next": "^14.0.0",
     "eslint-plugin-jest-dom": "^4.0.0",
     "eslint-plugin-react": "^7.37.5",
@@ -110,12 +85,6 @@
     "jest-environment-jsdom": "^29.0.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.0",
-<<<<<<< HEAD
-    "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
-  }
-}
-=======
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.44.1"
   },
@@ -232,4 +201,3 @@
   
   "packageManager": "npm@10.9.0"
 }
->>>>>>> 76ac031ee1bd0638dab6f2aa5c6a46ca343d86e9
