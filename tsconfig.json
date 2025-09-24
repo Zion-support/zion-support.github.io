@@ -1,23 +1,29 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
+    "target": "es2017",
     "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
+      "dom",
+      "dom.iterable",
+      "es6",
+      "es2017",
+      "es2018",
+      "es2019",
+      "es2020",
+      "es2021"
     ],
     "allowJs": true,
     "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": false,
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "bundler",
+    "module": "esnext",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "preserve",
+<<<<<<< HEAD
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -37,24 +43,37 @@
       "react",
       "react-dom"
     ],
+=======
+>>>>>>> 6ae6df4a84c41566ef0ec447b781bce8f661ffae
     "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
     "strictNullChecks": true
   },
   "include": [
+<<<<<<< HEAD
     "src-clean/src/**/*",
     "src-clean/src/types/offline-shims.d.ts",
     "*.d.ts",
     "tailwind.config.js",
     "postcss.config.js",
+=======
+    "next-env.d.ts",
+>>>>>>> 6ae6df4a84c41566ef0ec447b781bce8f661ffae
     ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
+<<<<<<< HEAD
     "dist",
     "build",
     "coverage",
@@ -72,5 +91,8 @@
     "services",
     "tests",
     "__tests__"
+=======
+    "**/*"
+>>>>>>> 6ae6df4a84c41566ef0ec447b781bce8f661ffae
   ]
 }
