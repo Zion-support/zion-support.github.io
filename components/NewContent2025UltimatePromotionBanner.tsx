@@ -14,7 +14,7 @@ export default function NewContent2025UltimatePromotionBanner() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🚀 ULTIMATE 2025 CONTENT LAUNCH</span>
+            <span className="text-sm font-medium">🚀 ULTIMATE CONTENT DROP</span>
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
@@ -22,45 +22,52 @@ export default function NewContent2025UltimatePromotionBanner() {
           </h2>
           
           <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto">
-            Discover our latest breakthrough content: Enterprise Automation Mastery, 1200% ROI Success Stories, 
-            and the Ultimate Implementation Toolkit. Everything you need for AI success in 2025.
+            Discover our latest breakthrough content: Enterprise Automation Mastery, 
+            Global Transformation Case Study, and Ultimate Implementation Toolkit. 
+            Everything you need for AI success in 2025.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             <Link
               href="/blog/ai-2025-enterprise-automation-mastery"
-              className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-4 hover:bg-opacity-30 transition-all"
+              className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-30 transition-all group"
             >
-              <div className="text-2xl mb-2">🏢</div>
-              <div className="font-semibold">Enterprise Automation Mastery</div>
-              <div className="text-sm opacity-80">Complete 2025 implementation guide with 40% cost reduction</div>
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏢</div>
+              <div className="font-semibold text-lg mb-2">Enterprise Automation Mastery</div>
+              <div className="text-sm opacity-80 mb-3">Complete implementation guide with 40% cost reduction and 300% productivity gains</div>
+              <div className="flex items-center text-xs opacity-75">
+                <span>20 min read</span>
+                <span className="mx-2">•</span>
+                <span className="bg-green-500 text-white px-2 py-1 rounded-full">NEW</span>
+              </div>
             </Link>
             
             <Link
               href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough"
-              className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-4 hover:bg-opacity-30 transition-all"
+              className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-30 transition-all group"
             >
-              <div className="text-2xl mb-2">🏆</div>
-              <div className="font-semibold">1200% ROI Success Story</div>
-              <div className="text-sm opacity-80">Fortune 500 transformation case study</div>
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
+              <div className="font-semibold text-lg mb-2">Global Transformation Success</div>
+              <div className="text-sm opacity-80 mb-3">Fortune 500 case study showing 1200% ROI and $2.4B cost savings</div>
+              <div className="flex items-center text-xs opacity-75">
+                <span>15 min read</span>
+                <span className="mx-2">•</span>
+                <span className="bg-red-500 text-white px-2 py-1 rounded-full">BREAKTHROUGH</span>
+              </div>
             </Link>
             
             <Link
               href="/resources/ai-2025-ultimate-implementation-toolkit"
-              className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-4 hover:bg-opacity-30 transition-all"
+              className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-30 transition-all group"
             >
-              <div className="text-2xl mb-2">🛠️</div>
-              <div className="font-semibold">Ultimate Implementation Toolkit</div>
-              <div className="text-sm opacity-80">200+ pages of templates, guides, and frameworks</div>
-            </Link>
-            
-            <Link
-              href="/blog"
-              className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-4 hover:bg-opacity-30 transition-all"
-            >
-              <div className="text-2xl mb-2">📚</div>
-              <div className="font-semibold">Complete Content Library</div>
-              <div className="text-sm opacity-80">Access all our AI insights and resources</div>
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📚</div>
+              <div className="font-semibold text-lg mb-2">Ultimate Implementation Toolkit</div>
+              <div className="text-sm opacity-80 mb-3">200+ pages of checklists, templates, and frameworks</div>
+              <div className="flex items-center text-xs opacity-75">
+                <span>Free Download</span>
+                <span className="mx-2">•</span>
+                <span className="bg-blue-500 text-white px-2 py-1 rounded-full">ESSENTIAL</span>
+              </div>
             </Link>
           </div>
           
@@ -69,13 +76,19 @@ export default function NewContent2025UltimatePromotionBanner() {
               href="/blog/ai-2025-enterprise-automation-mastery"
               className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
             >
-              🔥 Read Enterprise Guide
+              🚀 Read Enterprise Guide
+            </Link>
+            <Link
+              href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough"
+              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+            >
+              📊 View Success Story
             </Link>
             <Link
               href="/resources/ai-2025-ultimate-implementation-toolkit"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg"
             >
-              📥 Download Free Toolkit
+              📥 Download Toolkit
             </Link>
           </div>
         </div>
