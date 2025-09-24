@@ -39,6 +39,7 @@ global.IntersectionObserver = class IntersectionObserver {
   observe() {}
   unobserve() {}
 }
+
 global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
