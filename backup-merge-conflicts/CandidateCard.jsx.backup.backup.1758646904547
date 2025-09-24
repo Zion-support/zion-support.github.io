@@ -1,0 +1,18 @@
+=======
+=======
+import React from 'react';
+
+interface CandidateCardProps {
+  // Add props here as needed
+}
+
+export default function CandidateCard({ }: CandidateCardProps) {
+  return (
+    <div>
+      <h1>CandidateCard</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
