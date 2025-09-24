@@ -450,3 +450,5 @@ export default function App(): JSX.Element {
     </Router>
   );
 }
+
+export default App;

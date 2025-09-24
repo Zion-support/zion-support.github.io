@@ -1,16 +1,11 @@
 // Ensure jest-dom matchers are available when tests run
 try {
-  require('@testing-library/jest-dom'),
+  require('@testing-library/jest-dom');
 } catch (error) {
   // optional in minimal runs
 }
 
-// Mock Next.js Image to a simple function component without JSX here
-jest.mock('next/image', () => ({
-  __esModule: true,
-  default: function MockImage() {
-    return null
-  }})),
+// This is a Vite project, not Next.js, so no Next.js mocks needed
 
 // matchMedia mock
 Object.defineProperty(window, 'matchMedia', {
@@ -23,16 +18,19 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(),
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()}))}),
+    dispatchEvent: jest.fn()
+  }))
+});
 
 // Observers
 global.IntersectionObserver = class IntersectionObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-},
+};
+
 global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-},
+};
