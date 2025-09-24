@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import ServiceCard from './components/ServiceCard'
 import TestimonialsSection from './components/TestimonialsSection'
+import { CpuChipIcon, CloudIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -24,8 +25,6 @@ export const metadata = {
     ]
   }
 }
-
-import { CpuChipIcon, CloudIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
 
 const services = [
   {
