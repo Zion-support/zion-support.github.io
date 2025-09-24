@@ -1,0 +1,149 @@
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+import { 
+  Menu, X, Search, ChevronDown, Zap, Globe, Lock, 
+  Phone, Mail, MapPin, ArrowRight, Star, Users, Award,
+  Command, Filter, TrendingUp
+} from 'lucide-react';
+
+interface NavigationItem {
+  name: string;
+  href: string;
+  icon: React.ComponentType<{ className?: string }>;
+  description: string;
+  subItems?: NavigationItem[];
+}
+
+const navigationItems: NavigationItem[] = [
+  {
+    label: 'Home',
+    href: '/',
+    icon: <Zap className="w-4 h-4" />
+  },
+  {
+    label: 'Services',
+    children: [
+      {
+        label: 'AI & Machine Learning',
+        href: '/ai-services',
+        icon: <Star className="w-4 h-4" />,
+        description: 'Advanced AI solutions for enterprise'
+      },
+      {
+        label: 'Quantum Computing',
+        href: '/quantum-services',
+        icon: <Zap className="w-4 h-4" />,
+        description: 'Next-generation quantum solutions'
+      },
+      {
+        label: 'Space Technology',
+        href: '/space-tech',
+        icon: <Star className="w-4 h-4" />,
+        description: 'Innovative space solutions'
+>>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
+      },
+      {
+        label: 'Cybersecurity',
+        href: '/cybersecurity',
+        icon: <Lock className="w-4 h-4" />,
+        description: 'Enterprise security solutions'
+      },
+      {
+        label: 'Cloud Solutions',
+        href: '/cloud-platform',
+        icon: <Globe className="w-4 h-4" />,
+        description: 'Scalable cloud infrastructure'
+      },
+      {
+        label: 'Micro SaaS',
+        href: '/micro-saas',
+        icon: <Star className="w-4 h-4" />,
+        description: 'Rapid deployment SaaS solutions'
+      },
+      {
+        label: 'View All Services',
+        href: '/services',
+        icon: <ArrowRight className="w-4 h-4" />,
+        description: 'Complete service portfolio'
+      }
+    ]
+  },
+  {
+    label: 'Solutions',
+    children: [
+      {
+        label: 'Enterprise IT',
+        href: '/enterprise-solutions-showcase',
+        icon: <Globe className="w-4 h-4" />,
+        description: 'Complete enterprise IT solutions'
+      },
+      {
+        label: 'Healthcare',
+        href: '/healthcare-solutions',
+        icon: <Star className="w-4 h-4" />,
+        description: 'Healthcare technology solutions'
+      },
+      {
+        label: 'Financial Services',
+        href: '/financial-solutions',
+        icon: <Star className="w-4 h-4" />,
+        description: 'Fintech and banking solutions'
+      },
+      {
+        label: 'Manufacturing',
+        href: '/manufacturing-ai-solutions',
+        icon: <Star className="w-4 h-4" />,
+        description: 'Smart manufacturing solutions'
+      }
+    ]
+  },
+  {
+    label: 'Company',
+    children: [
+      {
+        label: 'About Us',
+        href: '/about',
+        icon: <Users className="w-4 h-4" />,
+        description: 'Learn about our mission and team'
+      },
+      {
+        label: 'Careers',
+        href: '/careers',
+        icon: <Award className="w-4 h-4" />,
+        description: 'Join our innovative team'
+      },
+      {
+        label: 'News',
+        href: '/news',
+        icon: <TrendingUp className="w-4 h-4" />,
+        description: 'Latest company updates'
+      },
+      {
+        label: 'Contact',
+        href: '/contact',
+        icon: <Mail className="w-4 h-4" />,
+        description: 'Get in touch with us'
+      }
+    ]
+>>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
+  }
+];
+
+const UltraFuturisticNavigation2040: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+                >
+                  Get Started
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
+    </>
+  );
+};
+
+export default UltraFuturisticNavigation2040;
