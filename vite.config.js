@@ -1,11 +1,12 @@
-import { defineConfig } from 'vite',
-import react from '@vitejs/plugin-react',
-import { visualizer } from 'rollup-plugin-visualizer',
-import { VitePWA } from 'vite-plugin-pwa',
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { visualizer } from 'rollup-plugin-visualizer';
+import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig({
   resolve: {
     alias: {
-      '@': '/workspace/src'}
+      '@': '/workspace/src'
+    }
   },
   plugins: [
     react({
@@ -13,18 +14,21 @@ export default defineConfig({
         plugins: [
           ['@babel/plugin-transform-react-jsx', { runtime: 'automatic' }],
           ['@babel/plugin-proposal-decorators', { legacy: true }],
-          ['@babel/plugin-transform-class-properties', { loose: true }]]}
+          ['@babel/plugin-transform-class-properties', { loose: true }]
+        ]
+      }
     }),
     visualizer({
       filename: 'dist/stats.html',
       open: true,
       gzipSize: true,
-      brotliSize: true}),
+      brotliSize: true
+    }),
     VitePWA({
       registerType: 'autoUpdate',
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,avif}'],
-        maximumFileSizeToCacheInBytes: 5 * 10o24 * 10o24, // 5MB,
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/api\./,
@@ -32,12 +36,14 @@ export default defineConfig({
             options: {
               cacheName: 'api-cache',
               expiration: {
-                maxEntries: 10o0,
-                maxAgeSeconds: 60 * 60 * 24 // 24 hours}
+                maxEntries: 100,
+                maxAgeSeconds: 60 * 60 * 24 // 24 hours
+              }
             }
           }
-        ]},
-      includeAssets: ['favicon.icoapple-touch-icon.png', 'masked-icon.svg'],
+        ]
+      },
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
         name: 'Zion Tech Group',
         short_name: 'Zion Tech',
@@ -49,44 +55,57 @@ export default defineConfig({
           {
             src: 'pwa-192x192.png',
             sizes: '192x192',
-            type: 'image/png'},
+            type: 'image/png'
+          },
           {
             src: 'pwa-512x512.png',
             sizes: '512x512',
-            type: 'image/png'}
-        ]}
-    })],
+            type: 'image/png'
+          }
+        ]
+      }
+    })
+  ],
   build: {
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['reactreact-dom'],
-          ui: ['@radix-ui/react-dialog@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs'],
-          utils: ['axiosframer-motion', 'clsxtailwind-merge'],
+          vendor: ['react', 'react-dom'],
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs'],
+          utils: ['axios', 'framer-motion', 'clsx', 'tailwind-merge'],
           charts: ['recharts'],
-          forms: ['react-hook-form@hookform/resolvers']}}},
-    chunkSizeWarningLimit: 10o00,
+          forms: ['react-hook-form', '@hookform/resolvers']
+        }
+      }
+    },
+    chunkSizeWarningLimit: 1000,
     minify: 'terser',
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.logconsole.info'],
-        passes: 2},
+        pure_funcs: ['console.log', 'console.info'],
+        passes: 2
+      },
       mangle: {
-        safari10: true}
+        safari10: true
+      }
     },
     sourcemap: false,
-    reportCompressedSize: true},
+    reportCompressedSize: true
+  },
   server: {
     hmr: true,
-    port: 30o00,
+    port: 3000,
     host: true,
-    open: true},
+    open: true
+  },
   preview: {
-    port: 30o00,
-    host: true},
+    port: 3000,
+    host: true
+  },
   optimizeDeps: {
-    include: ['reactreact-dom', 'framer-motion'],
-    exclude: ['@vite/client@vite/env']}
-}),
+    include: ['react', 'react-dom', 'framer-motion'],
+    exclude: ['@vite/client', '@vite/env']
+  }
+});
