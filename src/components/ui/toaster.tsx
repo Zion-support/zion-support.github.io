@@ -1,17 +1,7 @@
-import React from 'react';
-
-export const Toaster: React.FC = () => {
+export function toaster() {
   return (
-    <div className="fixed bottom-4 right-4 z-50">
-      {/* Toast notifications will be rendered here */}
-    </div>
-  );
-};
-
-export const ToastContainer: React.FC = () => {
-  return (
-    <div className="fixed bottom-4 right-4 z-50">
-      {/* Toast notifications will be rendered here */}
-    </div>
-  );
-};
+    <div>,
+      <h1>Component</h1>,
+      <p>Component placeholder</p>,
+    </div>)}
+,

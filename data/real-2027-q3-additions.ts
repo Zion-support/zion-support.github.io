@@ -1,244 +1,244 @@
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
   {
-    id: 'mdm-mobile-device-management',
-    name: 'MDM Mobile Device Management',
-    tagline: 'Securely manage iOS, Android, Windows devices at scale',
-    price: '$399',
-    period: '/month',
-    description:,
-      'Full lifecycle mobile device management with zero-touch enrollment, policy enforcement, app distribution, and compliance reporting.',
+    id: 'mdm-mobile-device-management';
+    name: 'MDM Mobile Device Management';
+    tagline: 'Securely manage iOS, Android, Windows devices at scale';
+    price: '$399';
+    period: '/month';
+    description:;
+      'Full lifecycle mobile device management with zero-touch enrollment, policy enforcement, app distribution, and compliance reporting.';
     features: [
-      'Zero-touch enrollment (ABM/ASM, Android Enterprise)Policy, VPN, Wi‑Fi, and certificate management',
-      'BYOD and COPE privacy controlsGeo-fencing, location, and remote wipe/lock',
-      'App distribution with version pinning and rollbackCompliance dashboard and automated remediation',
-    ],
-    popular: true,
-    icon: '📱',
-    color: 'from-cyan-500 to-blue-600',
-    textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/services/mdm-mobile-device-management',
-    marketPosition:,
-      'Comparable to Kandji ($399+), Jamf ($300+), and Intune ($6/user). We include multi-platform parity and simpler compliance.',
-    targetAudience: 'IT, Security, Managed Service Providers',
-    trialDays: 14,
-    setupTime: '1 day',
-    category: 'Cloud & FinOps',
-    realService: true,
-    technology: ['ABM/ASMAndroid Enterprise', 'Push MDMPKI'],
-    integrations: ['OktaEntra ID', 'Google WorkspaceSlack', 'Jira'],
+      'Zero-touch enrollment (ABM/ASM, Android Enterprise)Policy, VPN, Wi‑Fi, and certificate management';
+      'BYOD and COPE privacy controlsGeo-fencing, location, and remote wipe/lock';
+      'App distribution with version pinning and rollbackCompliance dashboard and automated remediation';
+    ];
+    popular: true;
+    icon: '📱';
+    color: 'from-cyan-500 to-blue-600';
+    textColor: 'text-cyan-400';
+    link: 'https://ziontechgroup.com/services/mdm-mobile-device-management';
+    marketPosition:;
+      'Comparable to Kandji ($399+), Jamf ($300+), and Intune ($6/user). We include multi-platform parity and simpler compliance.';
+    targetAudience: 'IT, Security, Managed Service Providers';
+    trialDays: 14;
+    setupTime: '1 day';
+    category: 'Cloud & FinOps';
+    realService: true;
+    technology: ['ABM/ASMAndroid Enterprise', 'Push MDMPKI'];
+    integrations: ['OktaEntra ID', 'Google WorkspaceSlack', 'Jira'];
     useCases: [
-      'Corporate fleetBYOD',
-      'Regulated industriesRetail kiosks',
-    ],
-    roi: 'Reduce device onboarding time by 80% and policy drift by 90%.',
-    competitors: ['KandjiJamf', 'Microsoft IntuneVMware Workspace ONE'],
-    marketSize: '$9B market',
-    growthRate: '15% CAGR',
-    variant: 'ai-futuristic',
+      'Corporate fleetBYOD';
+      'Regulated industriesRetail kiosks';
+    ];
+    roi: 'Reduce device onboarding time by 80% and policy drift by 90%.';
+    competitors: ['KandjiJamf', 'Microsoft IntuneVMware Workspace ONE'];
+    marketSize: '$9B market';
+    growthRate: '15% CAGR';
+    variant: 'ai-futuristic';
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails:,
-      'MDM server with DEP/AE enrollment, policy engine, reporting, and admin console.',
-    launchDate: '2027-07-01',
-    customers: 120,
-    rating: 4.7,
+    };
+    realImplementation: true;
+    implementationDetails:;
+      'MDM server with DEP/AE enrollment, policy engine, reporting, and admin console.';
+    launchDate: '2027-07-01';
+    customers: 120;
+    rating: 4.7;
     reviews: 210
-  },
+  };
   {
-    id: 'email-security-dmarc-bimi',
-    name: 'Email Security: DMARC, DKIM, SPF & BIMI',
-    tagline: 'Maximize email deliverability and brand trust',
-    price: '$249',
-    period: '/month',
-    description:,
-      'Automated DMARC rollout with DKIM/SPF auditing, forensic reporting, and BIMI brand indicators to protect your domain reputation.',
+    id: 'email-security-dmarc-bimi';
+    name: 'Email Security: DMARC, DKIM, SPF & BIMI';
+    tagline: 'Maximize email deliverability and brand trust';
+    price: '$249';
+    period: '/month';
+    description:;
+      'Automated DMARC rollout with DKIM/SPF auditing, forensic reporting, and BIMI brand indicators to protect your domain reputation.';
     features: [
-      'DMARC policy wizard (monitor → quarantine → reject)SPF flattening and alignment checks',
-      'DKIM key rotation and multi-ESP supportForensic reports and threat insights',
-      'BIMI SVG validation and hostingExecutive deliverability dashboard',
-    ],
-    popular: false,
-    icon: '✉️',
-    color: 'from-indigo-500 to-purple-600',
-    textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/services/email-security-dmarc-bimi',
-    marketPosition:,
-      'Comparable to Valimail ($350+), dmarcian ($228+), OnDMARC ($179+). We include BIMI and automation in base.',
-    targetAudience: 'Marketing Ops, IT, Security',
-    trialDays: 14,
-    setupTime: '1 week',
-    category: 'Quality & Monitoring',
-    realService: true,
-    technology: ['DNSDMARC', 'SPFDKIM', 'BIMI'],
-    integrations: ['Google WorkspaceMicrosoft 365', 'SendGridMailgun'],
-    useCases: ['Phishing mitigationDeliverability', 'Brand trust'],
-    roi: 'Reduce spoofing by 95% and increase inbox placement by 8–15%.',
-    competitors: ['Valimaildmarcian', 'OnDMARC'],
-    marketSize: '$1.2B market',
-    growthRate: '18% CAGR',
-    variant: 'ai-futuristic',
+      'DMARC policy wizard (monitor → quarantine → reject)SPF flattening and alignment checks';
+      'DKIM key rotation and multi-ESP supportForensic reports and threat insights';
+      'BIMI SVG validation and hostingExecutive deliverability dashboard';
+    ];
+    popular: false;
+    icon: '✉️';
+    color: 'from-indigo-500 to-purple-600';
+    textColor: 'text-indigo-400';
+    link: 'https://ziontechgroup.com/services/email-security-dmarc-bimi';
+    marketPosition:;
+      'Comparable to Valimail ($350+), dmarcian ($228+), OnDMARC ($179+). We include BIMI and automation in base.';
+    targetAudience: 'Marketing Ops, IT, Security';
+    trialDays: 14;
+    setupTime: '1 week';
+    category: 'Quality & Monitoring';
+    realService: true;
+    technology: ['DNSDMARC', 'SPFDKIM', 'BIMI'];
+    integrations: ['Google WorkspaceMicrosoft 365', 'SendGridMailgun'];
+    useCases: ['Phishing mitigationDeliverability', 'Brand trust'];
+    roi: 'Reduce spoofing by 95% and increase inbox placement by 8–15%.';
+    competitors: ['Valimaildmarcian', 'OnDMARC'];
+    marketSize: '$1.2B market';
+    growthRate: '18% CAGR';
+    variant: 'ai-futuristic';
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails:,
-      'Policy engine, DNS verifiers, report parser, exec dashboard.',
-    launchDate: '2027-07-10',
-    customers: 300,
-    rating: 4.8,
+    };
+    realImplementation: true;
+    implementationDetails:;
+      'Policy engine, DNS verifiers, report parser, exec dashboard.';
+    launchDate: '2027-07-10';
+    customers: 300;
+    rating: 4.8;
     reviews: 540
-  },
+  };
   {
-    id: 'ai-governance-risk-compliance-grc',
-    name: 'AI Governance, Risk & Compliance (GRC)',
-    tagline: 'Operationalize safe, compliant AI at scale',
-    price: '$1,500',
-    period: '/month',
-    description:,
-      'Policy catalogs, model cards, risk scoring, lineage, and approval workflows to meet AI Act and SOC2/GDPR obligations.',
+    id: 'ai-governance-risk-compliance-grc';
+    name: 'AI Governance, Risk & Compliance (GRC)';
+    tagline: 'Operationalize safe, compliant AI at scale';
+    price: '$1,500';
+    period: '/month';
+    description:;
+      'Policy catalogs, model cards, risk scoring, lineage, and approval workflows to meet AI Act and SOC2/GDPR obligations.';
     features: [
-      'Model registry and cardsPII/PHI detection & guardrails',
-      'Risk scoring and bias dashboardsHuman review and approvals',
-      'Audit logs and incident workflowPolicy-as-code with CI gates',
-    ],
-    popular: true,
-    icon: '🛡️',
-    color: 'from-purple-500 to-pink-600',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/services/ai-governance-risk-compliance-grc',
-    marketPosition:,
-      'Comparable to Lakera, Responsible AI suites. We bundle observability and CI integrations.',
-    targetAudience: 'CIO, CISO, Data/AI Leaders, Compliance',
-    trialDays: 14,
-    setupTime: '2 weeks',
-    category: 'AI & Data',
-    realService: true,
-    technology: ['OpenAIVector DB', 'KFP/Weights & Biases'],
-    integrations: ['GitHubGitLab', 'JiraServiceNow', 'Datadog'],
+      'Model registry and cardsPII/PHI detection & guardrails';
+      'Risk scoring and bias dashboardsHuman review and approvals';
+      'Audit logs and incident workflowPolicy-as-code with CI gates';
+    ];
+    popular: true;
+    icon: '🛡️';
+    color: 'from-purple-500 to-pink-600';
+    textColor: 'text-purple-400';
+    link: 'https://ziontechgroup.com/services/ai-governance-risk-compliance-grc';
+    marketPosition:;
+      'Comparable to Lakera, Responsible AI suites. We bundle observability and CI integrations.';
+    targetAudience: 'CIO, CISO, Data/AI Leaders, Compliance';
+    trialDays: 14;
+    setupTime: '2 weeks';
+    category: 'AI & Data';
+    realService: true;
+    technology: ['OpenAIVector DB', 'KFP/Weights & Biases'];
+    integrations: ['GitHubGitLab', 'JiraServiceNow', 'Datadog'];
     useCases: [
-      'Policy enforcementRisk & bias monitoring',
-      'Audit readiness',
-    ],
-    roi: 'Cut AI audit prep time by 70% and violations by 90%.',
-    competitors: ['LakeraCredo AI', 'Arthur AI'],
-    marketSize: '$3.4B market',
-    growthRate: '22% CAGR',
-    variant: 'ai-futuristic',
+      'Policy enforcementRisk & bias monitoring';
+      'Audit readiness';
+    ];
+    roi: 'Cut AI audit prep time by 70% and violations by 90%.';
+    competitors: ['LakeraCredo AI', 'Arthur AI'];
+    marketSize: '$3.4B market';
+    growthRate: '22% CAGR';
+    variant: 'ai-futuristic';
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails:,
-      'Registry, policy engine, lineage graph, dashboards, and approvals.',
-    launchDate: '2027-07-14',
-    customers: 45,
-    rating: 4.6,
+    };
+    realImplementation: true;
+    implementationDetails:;
+      'Registry, policy engine, lineage graph, dashboards, and approvals.';
+    launchDate: '2027-07-14';
+    customers: 45;
+    rating: 4.6;
     reviews: 88
-  },
+  };
   {
-    id: 'observability-slo-error-budget',
-    name: 'Observability SLO & Error Budget Platform',
-    tagline: 'Ship faster with SLOs, burn rates, and alerts',
-    price: '$299',
-    period: '/month',
-    description:,
-      'Define SLOs, track error budgets, alert on burn rates, and align engineering with product reliability goals.',
+    id: 'observability-slo-error-budget';
+    name: 'Observability SLO & Error Budget Platform';
+    tagline: 'Ship faster with SLOs, burn rates, and alerts';
+    price: '$299';
+    period: '/month';
+    description:;
+      'Define SLOs, track error budgets, alert on burn rates, and align engineering with product reliability goals.';
     features: [
-      'SLO templates (latency, availability, quality)Error budget policy and burn rate alerts',
-      'Golden signals dashboardsIncident integration with postmortems',
-      'Client & edge SLOsExecutive reliability scorecards',
-    ],
-    popular: false,
-    icon: '📈',
-    color: 'from-emerald-500 to-teal-600',
-    textColor: 'text-emerald-400',
-    link: 'https://ziontechgroup.com/services/observability-slo-error-budget',
-    marketPosition:,
-      'Comparable to Nobl9 ($799+), Datadog SLOs. We simplify setup and add exec scorecards.',
-    targetAudience: 'Platform, SRE, Product',
-    trialDays: 14,
-    setupTime: '3 days',
-    category: 'Observability',
-    realService: true,
-    technology: ['OpenTelemetryPrometheus', 'ClickHouse'],
-    integrations: ['DatadogGrafana', 'PagerDutyOpsgenie', 'Slack'],
-    useCases: ['Reliability targetsSLO reporting', 'Roadmap alignment'],
-    roi: 'Reduce incidents by 30% and wasted work by 20%.',
-    competitors: ['Nobl9Datadog', 'New Relic'],
-    marketSize: '$18B market',
-    growthRate: '12% CAGR',
-    variant: 'ai-futuristic',
+      'SLO templates (latency, availability, quality)Error budget policy and burn rate alerts';
+      'Golden signals dashboardsIncident integration with postmortems';
+      'Client & edge SLOsExecutive reliability scorecards';
+    ];
+    popular: false;
+    icon: '📈';
+    color: 'from-emerald-500 to-teal-600';
+    textColor: 'text-emerald-400';
+    link: 'https://ziontechgroup.com/services/observability-slo-error-budget';
+    marketPosition:;
+      'Comparable to Nobl9 ($799+), Datadog SLOs. We simplify setup and add exec scorecards.';
+    targetAudience: 'Platform, SRE, Product';
+    trialDays: 14;
+    setupTime: '3 days';
+    category: 'Observability';
+    realService: true;
+    technology: ['OpenTelemetryPrometheus', 'ClickHouse'];
+    integrations: ['DatadogGrafana', 'PagerDutyOpsgenie', 'Slack'];
+    useCases: ['Reliability targetsSLO reporting', 'Roadmap alignment'];
+    roi: 'Reduce incidents by 30% and wasted work by 20%.';
+    competitors: ['Nobl9Datadog', 'New Relic'];
+    marketSize: '$18B market';
+    growthRate: '12% CAGR';
+    variant: 'ai-futuristic';
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails:,
-      'SLO engine with OTel ingestion, burn calculations, and alerts.',
-    launchDate: '2027-07-18',
-    customers: 80,
-    rating: 4.7,
+    };
+    realImplementation: true;
+    implementationDetails:;
+      'SLO engine with OTel ingestion, burn calculations, and alerts.';
+    launchDate: '2027-07-18';
+    customers: 80;
+    rating: 4.7;
     reviews: 130
-  },
+  };
   {
-    id: 'ai-meeting-minutes-action-items',
-    name: 'AI Meeting Minutes & Action Items',
-    tagline: 'Accurate transcripts, decisions, and next steps to your tools',
-    price: '$79',
-    period: '/month',
-    description:,
-      'High-accuracy meeting capture with speaker diarization, decisions extraction, and action items synced to Jira/Asana/CRM.',
+    id: 'ai-meeting-minutes-action-items';
+    name: 'AI Meeting Minutes & Action Items';
+    tagline: 'Accurate transcripts, decisions, and next steps to your tools';
+    price: '$79';
+    period: '/month';
+    description:;
+      'High-accuracy meeting capture with speaker diarization, decisions extraction, and action items synced to Jira/Asana/CRM.';
     features: [
-      '99% speech-to-text with diarizationAction item and decision extraction',
-      'Auto-sync to Jira/Asana/HubSpotFollow-up emails and summaries',
-      'Templates for standups, QBRs, interviewsSecurity & privacy controls',
-    ],
-    popular: true,
-    icon: '🎙️',
-    color: 'from-pink-500 to-rose-600',
-    textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/services/ai-meeting-minutes-action-items',
-    marketPosition:,
-      'Comparable to Otter ($20–30), Fireflies ($10–19). We add structured actions and enterprise privacy.',
-    targetAudience: 'Sales, Success, Product, HR',
-    trialDays: 14,
-    setupTime: '30 minutes',
-    category: 'Developer Tools',
-    realService: true,
-    technology: ['WhisperLLM', 'OAuthWebhooks'],
-    integrations: ['Google MeetZoom', 'TeamsJira', 'AsanaHubSpot'],
-    useCases: ['Customer callsStandups', 'InterviewsBoard meetings'],
-    roi: 'Save 3–5 hours/week per user and reduce missed actions by 70%.',
-    competitors: ['OtterFireflies', 'Avoma'],
-    marketSize: '$2.2B market',
-    growthRate: '19% CAGR',
-    variant: 'ai-futuristic',
+      '99% speech-to-text with diarizationAction item and decision extraction';
+      'Auto-sync to Jira/Asana/HubSpotFollow-up emails and summaries';
+      'Templates for standups, QBRs, interviewsSecurity & privacy controls';
+    ];
+    popular: true;
+    icon: '🎙️';
+    color: 'from-pink-500 to-rose-600';
+    textColor: 'text-pink-400';
+    link: 'https://ziontechgroup.com/services/ai-meeting-minutes-action-items';
+    marketPosition:;
+      'Comparable to Otter ($20–30), Fireflies ($10–19). We add structured actions and enterprise privacy.';
+    targetAudience: 'Sales, Success, Product, HR';
+    trialDays: 14;
+    setupTime: '30 minutes';
+    category: 'Developer Tools';
+    realService: true;
+    technology: ['WhisperLLM', 'OAuthWebhooks'];
+    integrations: ['Google MeetZoom', 'TeamsJira', 'AsanaHubSpot'];
+    useCases: ['Customer callsStandups', 'InterviewsBoard meetings'];
+    roi: 'Save 3–5 hours/week per user and reduce missed actions by 70%.';
+    competitors: ['OtterFireflies', 'Avoma'];
+    marketSize: '$2.2B market';
+    growthRate: '19% CAGR';
+    variant: 'ai-futuristic';
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails:,
-      'Capture pipeline, diarization, extraction, and integrations.',
-    launchDate: '2027-07-22',
-    customers: 900,
-    rating: 4.9,
+    };
+    realImplementation: true;
+    implementationDetails:;
+      'Capture pipeline, diarization, extraction, and integrations.';
+    launchDate: '2027-07-22';
+    customers: 900;
+    rating: 4.9;
     reviews: 2100
-  },
-],
+  };
+];

@@ -1,12 +1,8 @@
-# Exclude broken, archived, and non-app code from linting
-node_modules/
-dist/
-build/
-out/
-.next/
-coverage/
-
-# Large or archived areas with known invalid code/tests
+scripts/**
+automation/**
+server/**
+apps/**
+netlify/**
 __tests__/**
 tests/**
 backups/**
@@ -16,59 +12,6 @@ corrupted_backup/**
 temp_exclude/**
 temp_*/**
 ts_files_backup/**
-src.broken/**
-src.corrupted/**
-components.disabled_full/**
-pages.disabled_full/**
-apps.backup/**
-app_backup/**
-
-# Additional directories not part of main app
-src.disabled/**
-src-disabled/**
-src_backup/**
-src_backup_all/**
-src_backup_temp/**
-apps/**
-automation/**
-backend/**
-server/**
 zion-os/**
 zion-website/**
 zion-ai-assistant/**
-
-# Standalone scripts
-*.config.js
-*.config.ts
-scripts/**
-*.out
-*.txt
-# Exclude problematic directories and files
-pages_backup/
-pages.broken/
-pages.corrupted*/
-pages.disabled/
-pages.old/
-*.backup.*
-*.cleanup-backup.*
-*.disabled.*
-*.corrupted*
-node_modules/
-.next/
-out/
-dist/
-build/
-*.min.js
-*.min.css
-src.broken/
-ts_files_backup/
-types.disabled/
-backup/
-backup-*/
-backup-problematic-files/
-recovered-branches/
-src_backup/
-pages_backup/
-pages.broken/
-pages._quarantine/
-pages-quarantine/

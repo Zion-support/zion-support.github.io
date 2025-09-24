@@ -1,466 +1,466 @@
 
-,
+;
 export const advancedMicroSaasExpansion2025V2 = [
   {
-    name: 'AI Content Factory Pro',
-    description: 'Advanced AI - powered content creation and management platform',
-    category: 'AI & Data',
-    pricing: '$299 / monthMulti - format content generation',
-      'Brand voice customizationContent calendar management',
-      'Performance analytics',
+    name: 'AI Content Factory Pro';
+    description: 'Advanced AI - powered content creation and management platform';
+    category: 'AI & Data';
+    pricing: '$299 / monthMulti - format content generation';
+      'Brand voice customizationContent calendar management';
+      'Performance analytics';
     ]
-  },
+  };
   {
-    name: 'AI Content Marketing Automation',
-    description: 'Intelligent content marketing workflow automation',
-    category: 'AI & Data',
-    pricing: '$199 / month',
+    name: 'AI Content Marketing Automation';
+    description: 'Intelligent content marketing workflow automation';
+    category: 'AI & Data';
+    pricing: '$199 / month';
     features: [
-      'Automated content schedulingSocial media integration',
-      'Lead nurturing workflowsROI tracking',
+      'Automated content schedulingSocial media integration';
+      'Lead nurturing workflowsROI tracking';
     ]
-  },
+  };
   {
-    name: 'AI Content Personalization',
-    description: 'Dynamic content personalization engine',
-    category: 'AI & Data',
-    pricing: '$249 / month',
+    name: 'AI Content Personalization';
+    description: 'Dynamic content personalization engine';
+    category: 'AI & Data';
+    pricing: '$249 / month';
     features: [
-      'User behavior analysisDynamic content rendering',
-      'A / B testing automationPersonalization insights',
+      'User behavior analysisDynamic content rendering';
+      'A / B testing automationPersonalization insights';
     ]
-  },
+  };
   {
-    name: 'AI Creativity Orchestrator',
-    description: 'AI - powered creative workflow management',
-    category: 'AI & Data',
-    pricing: '$399 / month',
+    name: 'AI Creativity Orchestrator';
+    description: 'AI - powered creative workflow management';
+    category: 'AI & Data';
+    pricing: '$399 / month';
     features: [
-      'Creative brief generationAsset management',
-      'Collaboration toolsCreative analytics',
+      'Creative brief generationAsset management';
+      'Collaboration toolsCreative analytics';
     ]
-  },
+  };
   {
-    name: 'AI Customer Intelligence Platform',
-    description: 'Comprehensive customer intelligence and analytics',
-    category: 'AI & Data',
-    pricing: '$349 / month',
+    name: 'AI Customer Intelligence Platform';
+    description: 'Comprehensive customer intelligence and analytics';
+    category: 'AI & Data';
+    pricing: '$349 / month';
     features: [
-      'Customer journey mappingPredictive analytics',
-      'Segmentation toolsBehavioral insights',
+      'Customer journey mappingPredictive analytics';
+      'Segmentation toolsBehavioral insights';
     ]
-  },
+  };
   {
-    name: 'AI Customer Success',
-    description: 'AI - driven customer success automation',
-    category: 'AI & Data',
-    pricing: '$179 / month',
+    name: 'AI Customer Success';
+    description: 'AI - driven customer success automation';
+    category: 'AI & Data';
+    pricing: '$179 / month';
     features: [
-      'Success milestone trackingAutomated check - ins',
-      'Churn predictionSuccess metrics',
+      'Success milestone trackingAutomated check - ins';
+      'Churn predictionSuccess metrics';
     ]
-  },
+  };
   {
-    name: 'AI Customer Success Automation',
-    description: 'Automated customer success workflows',
-    category: 'AI & Data',
-    pricing: '$229 / month',
+    name: 'AI Customer Success Automation';
+    description: 'Automated customer success workflows';
+    category: 'AI & Data';
+    pricing: '$229 / month';
     features: [
-      'Workflow automationTask prioritization',
-      'Performance monitoringSuccess optimization',
+      'Workflow automationTask prioritization';
+      'Performance monitoringSuccess optimization';
     ]
-  },
+  };
   {
-    name: 'AI Dream Interpreter Platform',
-    description: 'AI - powered dream analysis and interpretation',
-    category: 'AI & Data',
-    pricing: '$99 / month',
+    name: 'AI Dream Interpreter Platform';
+    description: 'AI - powered dream analysis and interpretation';
+    category: 'AI & Data';
+    pricing: '$99 / month';
     features: [
-      'Dream pattern analysisPsychological insights',
-      'Dream journalingInterpretation tools',
+      'Dream pattern analysisPsychological insights';
+      'Dream journalingInterpretation tools';
     ]
-  },
+  };
   {
-    name: 'AI Education Platform Pro',
-    description: 'Advanced AI - powered educational platform',
-    category: 'Education',
-    pricing: '$399 / month',
+    name: 'AI Education Platform Pro';
+    description: 'Advanced AI - powered educational platform';
+    category: 'Education';
+    pricing: '$399 / month';
     features: [
-      'Adaptive learning pathsContent personalization',
-      'Progress trackingAssessment tools',
+      'Adaptive learning pathsContent personalization';
+      'Progress trackingAssessment tools';
     ]
-  },
+  };
   {
-    name: 'AI Emotional Intelligence',
-    description: 'AI - powered emotional intelligence training',
-    category: 'AI & Data',
-    pricing: '$159 / month',
+    name: 'AI Emotional Intelligence';
+    description: 'AI - powered emotional intelligence training';
+    category: 'AI & Data';
+    pricing: '$159 / month';
     features: [
-      'Emotion recognitionEQ assessment',
-      'Training modulesProgress tracking',
+      'Emotion recognitionEQ assessment';
+      'Training modulesProgress tracking';
     ]
-  },
+  };
   {
-    name: 'AI Ethics & Governance',
-    description: 'AI ethics and governance framework',
-    category: 'AI & Data',
-    pricing: '$499 / month',
+    name: 'AI Ethics & Governance';
+    description: 'AI ethics and governance framework';
+    category: 'AI & Data';
+    pricing: '$499 / month';
     features: [
-      'Ethics guidelinesBias detection',
-      'Compliance monitoringGovernance tools',
+      'Ethics guidelinesBias detection';
+      'Compliance monitoringGovernance tools';
     ]
-  },
+  };
   {
-    name: 'AI Financial Fraud Detection',
-    description: 'Advanced AI - powered fraud detection',
-    category: 'Financial Services',
-    pricing: '$599 / month',
+    name: 'AI Financial Fraud Detection';
+    description: 'Advanced AI - powered fraud detection';
+    category: 'Financial Services';
+    pricing: '$599 / month';
     features: [
-      'Real - time monitoringPattern recognition',
-      'Risk scoringAlert management',
+      'Real - time monitoringPattern recognition';
+      'Risk scoringAlert management';
     ]
-  },
+  };
   {
-    name: 'AI Financial Intelligence Suite',
-    description: 'Comprehensive financial intelligence platform',
-    category: 'Financial Services',
-    pricing: '$449 / month',
+    name: 'AI Financial Intelligence Suite';
+    description: 'Comprehensive financial intelligence platform';
+    category: 'Financial Services';
+    pricing: '$449 / month';
     features: [
-      'Market analysisPortfolio optimization',
-      'Risk assessmentFinancial planning',
+      'Market analysisPortfolio optimization';
+      'Risk assessmentFinancial planning';
     ]
-  },
+  };
   {
-    name: 'AI Healthcare Diagnostics Pro',
-    description: 'AI - powered healthcare diagnostic tools',
-    category: 'Healthcare',
-    pricing: '$699 / month',
+    name: 'AI Healthcare Diagnostics Pro';
+    description: 'AI - powered healthcare diagnostic tools';
+    category: 'Healthcare';
+    pricing: '$699 / month';
     features: [
-      'Diagnostic algorithmsMedical imaging analysis',
-      'Patient data integrationClinical decision support',
+      'Diagnostic algorithmsMedical imaging analysis';
+      'Patient data integrationClinical decision support';
     ]
-  },
+  };
   {
-    name: 'AI Logistics Platform',
-    description: 'Intelligent logistics optimization platform',
-    category: 'Transportation',
-    pricing: '$379 / month',
+    name: 'AI Logistics Platform';
+    description: 'Intelligent logistics optimization platform';
+    category: 'Transportation';
+    pricing: '$379 / month';
     features: [
-      'Route optimizationInventory management',
-      'Demand forecastingPerformance analytics',
+      'Route optimizationInventory management';
+      'Demand forecastingPerformance analytics';
     ]
-  },
+  };
   {
-    name: 'AI - Powered Enterprise Security',
-    description: 'Advanced AI - powered enterprise security',
-    category: 'Cybersecurity',
-    pricing: '$799 / month',
+    name: 'AI - Powered Enterprise Security';
+    description: 'Advanced AI - powered enterprise security';
+    category: 'Cybersecurity';
+    pricing: '$799 / month';
     features: [
-      'Threat detectionBehavioral analysis',
-      'Incident responseSecurity analytics',
+      'Threat detectionBehavioral analysis';
+      'Incident responseSecurity analytics';
     ]
-  },
+  };
   {
-    name: 'AI Predictive Maintenance',
-    description: 'AI - powered predictive maintenance platform',
-    category: 'Manufacturing',
-    pricing: '$429 / month',
+    name: 'AI Predictive Maintenance';
+    description: 'AI - powered predictive maintenance platform';
+    category: 'Manufacturing';
+    pricing: '$429 / month';
     features: [
-      'Equipment monitoringFailure prediction',
-      'Maintenance schedulingCost optimization',
+      'Equipment monitoringFailure prediction';
+      'Maintenance schedulingCost optimization';
     ]
-  },
+  };
   {
-    name: 'AI Sales Intelligence',
-    description: 'AI - powered sales intelligence platform',
-    category: 'AI & Data',
-    pricing: '$279 / month',
+    name: 'AI Sales Intelligence';
+    description: 'AI - powered sales intelligence platform';
+    category: 'AI & Data';
+    pricing: '$279 / month';
     features: [
-      'Lead scoringOpportunity identification',
-      'Sales forecastingPerformance analytics',
+      'Lead scoringOpportunity identification';
+      'Sales forecastingPerformance analytics';
     ]
-  },
+  };
   {
-    name: 'AI Threat Detection',
-    description: 'Advanced AI threat detection system',
-    category: 'Cybersecurity',
-    pricing: '$549/month',
+    name: 'AI Threat Detection';
+    description: 'Advanced AI threat detection system';
+    category: 'Cybersecurity';
+    pricing: '$549/month';
     features: [
-      'Real-time monitoringThreat intelligence',
+      'Real-time monitoringThreat intelligence';
       'Automated responseIncident management']}
-      'Real-time monitoringThreat intelligence',
-      'Automated responseIncident management',
-    ],
-  },
+      'Real-time monitoringThreat intelligence';
+      'Automated responseIncident management';
+    ];
+  };
 ],      'Real-time monitoringThreat intelligenceAutomated responseIncident management']}
-],
+];
 export const advancedMicroSaasExpansion2025V2 = [
   {
-    name: 'AI Content Factory Pro',
-    description: 'Advanced AI-powered content creation and management platform',
-    category: 'AI & Data',
-    pricing: '$299/month',
+    name: 'AI Content Factory Pro';
+    description: 'Advanced AI-powered content creation and management platform';
+    category: 'AI & Data';
+    pricing: '$299/month';
     features: [
-      'Multi-format content generationBrand voice customizationContent calendar managementPerformance analytics']},
+      'Multi-format content generationBrand voice customizationContent calendar managementPerformance analytics']};
   {
-    name: 'AI Content Marketing Automation',
-    description: 'Intelligent content marketing workflow automation',
-    category: 'AI & Data',
-    pricing: '$199/month',
+    name: 'AI Content Marketing Automation';
+    description: 'Intelligent content marketing workflow automation';
+    category: 'AI & Data';
+    pricing: '$199/month';
     features: [
-      'Automated content schedulingSocial media integrationLead nurturing workflowsROI tracking']},
+      'Automated content schedulingSocial media integrationLead nurturing workflowsROI tracking']};
   {
-    name: 'AI Content Personalization',
-    description: 'Dynamic content personalization engine',
-    category: 'AI & Data',
-    pricing: '$249/month',
+    name: 'AI Content Personalization';
+    description: 'Dynamic content personalization engine';
+    category: 'AI & Data';
+    pricing: '$249/month';
     features: [
-      'User behavior analysisDynamic content renderingA/B testing automationPersonalization insights']},
+      'User behavior analysisDynamic content renderingA/B testing automationPersonalization insights']};
   {
-    name: 'AI Creativity Orchestrator',
-    description: 'AI-powered creative workflow management',
-    category: 'AI & Data',
-    pricing: '$399/month',
+    name: 'AI Creativity Orchestrator';
+    description: 'AI-powered creative workflow management';
+    category: 'AI & Data';
+    pricing: '$399/month';
     features: [
-      'Creative brief generationAsset managementCollaboration toolsCreative analytics']},
+      'Creative brief generationAsset managementCollaboration toolsCreative analytics']};
   {
-    name: 'AI Customer Intelligence Platform',
-    description: 'Comprehensive customer intelligence and analytics',
-    category: 'AI & Data',
-    pricing: '$349/month',
+    name: 'AI Customer Intelligence Platform';
+    description: 'Comprehensive customer intelligence and analytics';
+    category: 'AI & Data';
+    pricing: '$349/month';
     features: [
-      'Customer journey mappingPredictive analyticsSegmentation toolsBehavioral insights']},
+      'Customer journey mappingPredictive analyticsSegmentation toolsBehavioral insights']};
   {
-    name: 'AI Customer Success',
-    description: 'AI-driven customer success automation',
-    category: 'AI & Data',
-    pricing: '$179/month',
+    name: 'AI Customer Success';
+    description: 'AI-driven customer success automation';
+    category: 'AI & Data';
+    pricing: '$179/month';
     features: [
-      'Success milestone trackingAutomated check-insChurn predictionSuccess metrics']},
+      'Success milestone trackingAutomated check-insChurn predictionSuccess metrics']};
   {
-    name: 'AI Customer Success Automation',
-    description: 'Automated customer success workflows',
-    category: 'AI & Data',
-    pricing: '$229/month',
+    name: 'AI Customer Success Automation';
+    description: 'Automated customer success workflows';
+    category: 'AI & Data';
+    pricing: '$229/month';
     features: [
-      'Workflow automationTask prioritizationPerformance monitoringSuccess optimization']},
+      'Workflow automationTask prioritizationPerformance monitoringSuccess optimization']};
   {
-    name: 'AI Dream Interpreter Platform',
-    description: 'AI-powered dream analysis and interpretation',
-    category: 'AI & Data',
-    pricing: '$99/month',
+    name: 'AI Dream Interpreter Platform';
+    description: 'AI-powered dream analysis and interpretation';
+    category: 'AI & Data';
+    pricing: '$99/month';
     features: [
-      'Dream pattern analysisPsychological insightsDream journalingInterpretation tools']},
+      'Dream pattern analysisPsychological insightsDream journalingInterpretation tools']};
   {
-    name: 'AI Education Platform Pro',
-    description: 'Advanced AI-powered educational platform',
-    category: 'Education',
-    pricing: '$399/month',
+    name: 'AI Education Platform Pro';
+    description: 'Advanced AI-powered educational platform';
+    category: 'Education';
+    pricing: '$399/month';
     features: [
-      'Adaptive learning pathsContent personalizationProgress trackingAssessment tools']},
+      'Adaptive learning pathsContent personalizationProgress trackingAssessment tools']};
   {
-    name: 'AI Emotional Intelligence',
-    description: 'AI-powered emotional intelligence training',
-    category: 'AI & Data',
-    pricing: '$159/month',
+    name: 'AI Emotional Intelligence';
+    description: 'AI-powered emotional intelligence training';
+    category: 'AI & Data';
+    pricing: '$159/month';
     features: [
-      'Emotion recognitionEQ assessmentTraining modulesProgress tracking']},
+      'Emotion recognitionEQ assessmentTraining modulesProgress tracking']};
   {
-    name: 'AI Ethics & Governance',
-    description: 'AI ethics and governance framework',
-    category: 'AI & Data',
-    pricing: '$499/month',
+    name: 'AI Ethics & Governance';
+    description: 'AI ethics and governance framework';
+    category: 'AI & Data';
+    pricing: '$499/month';
     features: [
-      'Ethics guidelinesBias detectionCompliance monitoringGovernance tools']},
+      'Ethics guidelinesBias detectionCompliance monitoringGovernance tools']};
   {
-    name: 'AI Financial Fraud Detection',
-    description: 'Advanced AI-powered fraud detection',
-    category: 'Financial Services',
-    pricing: '$599/month',
+    name: 'AI Financial Fraud Detection';
+    description: 'Advanced AI-powered fraud detection';
+    category: 'Financial Services';
+    pricing: '$599/month';
     features: [
-      'Real-time monitoringPattern recognitionRisk scoringAlert management']},
+      'Real-time monitoringPattern recognitionRisk scoringAlert management']};
   {
-    name: 'AI Financial Intelligence Suite',
-    description: 'Comprehensive financial intelligence platform',
-    category: 'Financial Services',
-    pricing: '$449/month',
+    name: 'AI Financial Intelligence Suite';
+    description: 'Comprehensive financial intelligence platform';
+    category: 'Financial Services';
+    pricing: '$449/month';
     features: [
-      'Market analysisPortfolio optimizationRisk assessmentFinancial planning']},
+      'Market analysisPortfolio optimizationRisk assessmentFinancial planning']};
   {
-    name: 'AI Healthcare Diagnostics Pro',
-    description: 'AI-powered healthcare diagnostic tools',
-    category: 'Healthcare',
-    pricing: '$699/month',
+    name: 'AI Healthcare Diagnostics Pro';
+    description: 'AI-powered healthcare diagnostic tools';
+    category: 'Healthcare';
+    pricing: '$699/month';
     features: [
-      'Diagnostic algorithmsMedical imaging analysisPatient data integrationClinical decision support']},
+      'Diagnostic algorithmsMedical imaging analysisPatient data integrationClinical decision support']};
   {
-    name: 'AI Logistics Platform',
-    description: 'Intelligent logistics optimization platform',
-    category: 'Transportation',
-    pricing: '$379/month',
+    name: 'AI Logistics Platform';
+    description: 'Intelligent logistics optimization platform';
+    category: 'Transportation';
+    pricing: '$379/month';
     features: [
-      'Route optimizationInventory managementDemand forecastingPerformance analytics']},
+      'Route optimizationInventory managementDemand forecastingPerformance analytics']};
   {
-    name: 'AI-Powered Enterprise Security',
-    description: 'Advanced AI-powered enterprise security',
-    category: 'Cybersecurity',
-    pricing: '$799/month',
+    name: 'AI-Powered Enterprise Security';
+    description: 'Advanced AI-powered enterprise security';
+    category: 'Cybersecurity';
+    pricing: '$799/month';
     features: [
-      'Threat detectionBehavioral analysisIncident responseSecurity analytics']},
+      'Threat detectionBehavioral analysisIncident responseSecurity analytics']};
   {
-    name: 'AI Predictive Maintenance',
-    description: 'AI-powered predictive maintenance platform',
-    category: 'Manufacturing',
-    pricing: '$429/month',
+    name: 'AI Predictive Maintenance';
+    description: 'AI-powered predictive maintenance platform';
+    category: 'Manufacturing';
+    pricing: '$429/month';
     features: [
-      'Equipment monitoringFailure predictionMaintenance schedulingCost optimization']},
+      'Equipment monitoringFailure predictionMaintenance schedulingCost optimization']};
   {
-    name: 'AI Sales Intelligence',
-    description: 'AI-powered sales intelligence platform',
-    category: 'AI & Data',
-    pricing: '$279/month',
+    name: 'AI Sales Intelligence';
+    description: 'AI-powered sales intelligence platform';
+    category: 'AI & Data';
+    pricing: '$279/month';
     features: [
-      'Lead scoringOpportunity identificationSales forecastingPerformance analytics']},
+      'Lead scoringOpportunity identificationSales forecastingPerformance analytics']};
   {
-    name: 'AI Threat Detection',
-    description: 'Advanced AI threat detection system',
-    category: 'Cybersecurity',
-    pricing: '$549/month',
+    name: 'AI Threat Detection';
+    description: 'Advanced AI threat detection system';
+    category: 'Cybersecurity';
+    pricing: '$549/month';
     features: [
       'Real-time monitoringThreat intelligenceAutomated responseIncident management']}
-],
+];
 export const advancedMicroSaasExpansion2025V2 = [
   {
-    name: 'AI Content Factory Pro',
-    description: 'Advanced AI-powered content creation and management platform',
-    category: 'AI & Data',
-    pricing: '$299/month',
+    name: 'AI Content Factory Pro';
+    description: 'Advanced AI-powered content creation and management platform';
+    category: 'AI & Data';
+    pricing: '$299/month';
     features: [
-      'Multi-format content generationBrand voice customizationContent calendar managementPerformance analytics']},
+      'Multi-format content generationBrand voice customizationContent calendar managementPerformance analytics']};
   {
-    name: 'AI Content Marketing Automation',
-    description: 'Intelligent content marketing workflow automation',
-    category: 'AI & Data',
-    pricing: '$199/month',
+    name: 'AI Content Marketing Automation';
+    description: 'Intelligent content marketing workflow automation';
+    category: 'AI & Data';
+    pricing: '$199/month';
     features: [
-      'Automated content schedulingSocial media integrationLead nurturing workflowsROI tracking']},
+      'Automated content schedulingSocial media integrationLead nurturing workflowsROI tracking']};
   {
-    name: 'AI Content Personalization',
-    description: 'Dynamic content personalization engine',
-    category: 'AI & Data',
-    pricing: '$249/month',
+    name: 'AI Content Personalization';
+    description: 'Dynamic content personalization engine';
+    category: 'AI & Data';
+    pricing: '$249/month';
     features: [
-      'User behavior analysisDynamic content renderingA/B testing automationPersonalization insights']},
+      'User behavior analysisDynamic content renderingA/B testing automationPersonalization insights']};
   {
-    name: 'AI Creativity Orchestrator',
-    description: 'AI-powered creative workflow management',
-    category: 'AI & Data',
-    pricing: '$399/month',
+    name: 'AI Creativity Orchestrator';
+    description: 'AI-powered creative workflow management';
+    category: 'AI & Data';
+    pricing: '$399/month';
     features: [
-      'Creative brief generationAsset managementCollaboration toolsCreative analytics']},
+      'Creative brief generationAsset managementCollaboration toolsCreative analytics']};
   {
-    name: 'AI Customer Intelligence Platform',
-    description: 'Comprehensive customer intelligence and analytics',
-    category: 'AI & Data',
-    pricing: '$349/month',
+    name: 'AI Customer Intelligence Platform';
+    description: 'Comprehensive customer intelligence and analytics';
+    category: 'AI & Data';
+    pricing: '$349/month';
     features: [
-      'Customer journey mappingPredictive analyticsSegmentation toolsBehavioral insights']},
+      'Customer journey mappingPredictive analyticsSegmentation toolsBehavioral insights']};
   {
-    name: 'AI Customer Success',
-    description: 'AI-driven customer success automation',
-    category: 'AI & Data',
-    pricing: '$179/month',
+    name: 'AI Customer Success';
+    description: 'AI-driven customer success automation';
+    category: 'AI & Data';
+    pricing: '$179/month';
     features: [
-      'Success milestone trackingAutomated check-insChurn predictionSuccess metrics']},
+      'Success milestone trackingAutomated check-insChurn predictionSuccess metrics']};
   {
-    name: 'AI Customer Success Automation',
-    description: 'Automated customer success workflows',
-    category: 'AI & Data',
-    pricing: '$229/month',
+    name: 'AI Customer Success Automation';
+    description: 'Automated customer success workflows';
+    category: 'AI & Data';
+    pricing: '$229/month';
     features: [
-      'Workflow automationTask prioritizationPerformance monitoringSuccess optimization']},
+      'Workflow automationTask prioritizationPerformance monitoringSuccess optimization']};
   {
-    name: 'AI Dream Interpreter Platform',
-    description: 'AI-powered dream analysis and interpretation',
-    category: 'AI & Data',
-    pricing: '$99/month',
+    name: 'AI Dream Interpreter Platform';
+    description: 'AI-powered dream analysis and interpretation';
+    category: 'AI & Data';
+    pricing: '$99/month';
     features: [
-      'Dream pattern analysisPsychological insightsDream journalingInterpretation tools']},
+      'Dream pattern analysisPsychological insightsDream journalingInterpretation tools']};
   {
-    name: 'AI Education Platform Pro',
-    description: 'Advanced AI-powered educational platform',
-    category: 'Education',
-    pricing: '$399/month',
+    name: 'AI Education Platform Pro';
+    description: 'Advanced AI-powered educational platform';
+    category: 'Education';
+    pricing: '$399/month';
     features: [
-      'Adaptive learning pathsContent personalizationProgress trackingAssessment tools']},
+      'Adaptive learning pathsContent personalizationProgress trackingAssessment tools']};
   {
-    name: 'AI Emotional Intelligence',
-    description: 'AI-powered emotional intelligence training',
-    category: 'AI & Data',
-    pricing: '$159/month',
+    name: 'AI Emotional Intelligence';
+    description: 'AI-powered emotional intelligence training';
+    category: 'AI & Data';
+    pricing: '$159/month';
     features: [
-      'Emotion recognitionEQ assessmentTraining modulesProgress tracking']},
+      'Emotion recognitionEQ assessmentTraining modulesProgress tracking']};
   {
-    name: 'AI Ethics & Governance',
-    description: 'AI ethics and governance framework',
-    category: 'AI & Data',
-    pricing: '$499/month',
+    name: 'AI Ethics & Governance';
+    description: 'AI ethics and governance framework';
+    category: 'AI & Data';
+    pricing: '$499/month';
     features: [
-      'Ethics guidelinesBias detectionCompliance monitoringGovernance tools']},
+      'Ethics guidelinesBias detectionCompliance monitoringGovernance tools']};
   {
-    name: 'AI Financial Fraud Detection',
-    description: 'Advanced AI-powered fraud detection',
-    category: 'Financial Services',
-    pricing: '$599/month',
+    name: 'AI Financial Fraud Detection';
+    description: 'Advanced AI-powered fraud detection';
+    category: 'Financial Services';
+    pricing: '$599/month';
     features: [
-      'Real-time monitoringPattern recognitionRisk scoringAlert management']},
+      'Real-time monitoringPattern recognitionRisk scoringAlert management']};
   {
-    name: 'AI Financial Intelligence Suite',
-    description: 'Comprehensive financial intelligence platform',
-    category: 'Financial Services',
-    pricing: '$449/month',
+    name: 'AI Financial Intelligence Suite';
+    description: 'Comprehensive financial intelligence platform';
+    category: 'Financial Services';
+    pricing: '$449/month';
     features: [
-      'Market analysisPortfolio optimizationRisk assessmentFinancial planning']},
+      'Market analysisPortfolio optimizationRisk assessmentFinancial planning']};
   {
-    name: 'AI Healthcare Diagnostics Pro',
-    description: 'AI-powered healthcare diagnostic tools',
-    category: 'Healthcare',
-    pricing: '$699/month',
+    name: 'AI Healthcare Diagnostics Pro';
+    description: 'AI-powered healthcare diagnostic tools';
+    category: 'Healthcare';
+    pricing: '$699/month';
     features: [
-      'Diagnostic algorithmsMedical imaging analysisPatient data integrationClinical decision support']},
+      'Diagnostic algorithmsMedical imaging analysisPatient data integrationClinical decision support']};
   {
-    name: 'AI Logistics Platform',
-    description: 'Intelligent logistics optimization platform',
-    category: 'Transportation',
-    pricing: '$379/month',
+    name: 'AI Logistics Platform';
+    description: 'Intelligent logistics optimization platform';
+    category: 'Transportation';
+    pricing: '$379/month';
     features: [
-      'Route optimizationInventory managementDemand forecastingPerformance analytics']},
+      'Route optimizationInventory managementDemand forecastingPerformance analytics']};
   {
-    name: 'AI-Powered Enterprise Security',
-    description: 'Advanced AI-powered enterprise security',
-    category: 'Cybersecurity',
-    pricing: '$799/month',
+    name: 'AI-Powered Enterprise Security';
+    description: 'Advanced AI-powered enterprise security';
+    category: 'Cybersecurity';
+    pricing: '$799/month';
     features: [
-      'Threat detectionBehavioral analysisIncident responseSecurity analytics']},
+      'Threat detectionBehavioral analysisIncident responseSecurity analytics']};
   {
-    name: 'AI Predictive Maintenance',
-    description: 'AI-powered predictive maintenance platform',
-    category: 'Manufacturing',
-    pricing: '$429/month',
+    name: 'AI Predictive Maintenance';
+    description: 'AI-powered predictive maintenance platform';
+    category: 'Manufacturing';
+    pricing: '$429/month';
     features: [
-      'Equipment monitoringFailure predictionMaintenance schedulingCost optimization']},
+      'Equipment monitoringFailure predictionMaintenance schedulingCost optimization']};
   {
-    name: 'AI Sales Intelligence',
-    description: 'AI-powered sales intelligence platform',
-    category: 'AI & Data',
-    pricing: '$279/month',
+    name: 'AI Sales Intelligence';
+    description: 'AI-powered sales intelligence platform';
+    category: 'AI & Data';
+    pricing: '$279/month';
     features: [
-      'Lead scoringOpportunity identificationSales forecastingPerformance analytics']},
+      'Lead scoringOpportunity identificationSales forecastingPerformance analytics']};
   {
-    name: 'AI Threat Detection',
-    description: 'Advanced AI threat detection system',
-    category: 'Cybersecurity',
-    pricing: '$549/month',
+    name: 'AI Threat Detection';
+    description: 'Advanced AI threat detection system';
+    category: 'Cybersecurity';
+    pricing: '$549/month';
     features: [
       'Real-time monitoringThreat intelligenceAutomated responseIncident management']}
-],
+];
