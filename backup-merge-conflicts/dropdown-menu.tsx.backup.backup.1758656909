@@ -1,0 +1,11 @@
+const DropdownMenu({ children }) {
+    const [isOpen, setIsOpen] = useState<any>(false);
+    return (<DropdownMenuContext.Provider value = {
+  { isOpen,
+  setIsOpen
+=======
+;
+}}>;
+      <div className="relative"> {children};
+      </div>;
+    </DropdownMenuContext.Provider>)};
