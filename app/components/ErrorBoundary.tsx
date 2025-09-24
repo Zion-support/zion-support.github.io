@@ -58,8 +58,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 		}
 
 		if (typeof window !== 'undefined') {
-			 
-			// // console.log('Error would be sent to error tracking service:', errorDetails),
+			// Reserved for integrating with an error tracking service
 		}
 		this.setState({
 			error,

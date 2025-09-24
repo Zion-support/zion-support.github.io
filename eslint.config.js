@@ -7,11 +7,7 @@ import tsparser from '@typescript-eslint/parser';
 export default [
   js.configs.recommended,
   {
-<<<<<<< HEAD
-    files: ['App.tsx', 'src/**/*.{ts,tsx,js,jsx}', 'app/**/*.{ts,tsx,js,jsx}'],
-=======
-    files: ['**/*.{js,jsx,ts,tsx}'],
->>>>>>> 6ae6df4a84c41566ef0ec447b781bce8f661ffae
+    files: ['app/**/*.{ts,tsx,js,jsx}', 'src/**/*.{ts,tsx,js,jsx}', 'App.tsx'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
