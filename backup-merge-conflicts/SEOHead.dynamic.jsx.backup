@@ -1,0 +1,8 @@
+const SEOHead = dynamic(() => import(\"./SEOHead\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default SEOHead\' ,
+=======
+const SEOHead = dynamic(() => import("./SEOHead"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEOHead' ,'
+</p>'
+>>>>>>> main
+</p>'
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

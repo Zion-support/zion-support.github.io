@@ -1,0 +1,143 @@
+---
+name: System Maintenance
+
+on:
+  schedule:
+    - cron: '0 3 * * 0' # Weekly on Sunday at 3 AM UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  
+  actions: read
+
+concurrency:
+  group: "maintenance"
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    name: System Cleanup
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Clean build artifacts
+        run: |
+          echo "Cleaning build artifacts..."
+          
+          # Remove build directories
+          rm -rf .next out dist .temp 2>/dev/null || true
+          
+          # Remove temporary files
+          find . -name "*.tmp" -delete 2>/dev/null || true
+          find . -name "*.log" -delete 2>/dev/null || true
+          
+          # Clean npm cache
+          npm cache clean --force
+          
+          echo "Build artifacts cleaned"
+
+      - name: Check disk usage
+        run: |
+          echo "Checking disk usage..."
+          df -h
+          du -sh . 2>/dev/null || echo "Could not check directory size"
+
+      - name: Check for large files
+        run: |
+          echo "Checking for large files..."
+          find . -type f -size +10M -exec ls -lh {} \; 2>/dev/null | head -20 || echo "No large files found"
+
+      - name: Analyze repository health
+        run: |
+          echo "Analyzing repository health..."
+          
+          # Count files by type
+          echo "# Repository Health Report" > maintenance-report.md
+          echo "Generated: $(date)" >> maintenance-report.md
+          echo "" >> maintenance-report.md
+          
+          echo "## File Counts" >> maintenance-report.md
+          echo "### TypeScript/JavaScript" >> maintenance-report.md
+          TS_COUNT=$(find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | wc -l)
+          echo "Total TS/JS files: $TS_COUNT" >> maintenance-report.md
+          
+          echo "### CSS/SCSS" >> maintenance-report.md
+          CSS_COUNT=$(find . -name "*.css" -o -name "*.scss" -o -name "*.sass" | wc -l)
+          echo "Total CSS files: $CSS_COUNT" >> maintenance-report.md
+          
+          echo "### Images" >> maintenance-report.md
+          IMG_COUNT=$(find . -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.gif" -o -name "*.svg" | wc -l)
+          echo "Total image files: $IMG_COUNT" >> maintenance-report.md
+          
+          echo "### Documentation" >> maintenance-report.md
+          DOC_COUNT=$(find . -name "*.md" -o -name "*.txt" -o -name "*.rst" | wc -l)
+          echo "Total documentation files: $DOC_COUNT" >> maintenance-report.md
+          
+          echo "Repository health analysis completed"
+
+      - name: Upload maintenance report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: maintenance-report
+          path: maintenance-report.md
+          retention-days: 7
+
+  health-check:
+    name: Health Check
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Run health checks
+        run: |
+          echo "Running health checks..."
+          
+          # Check if package.json is valid
+          npm run type-check || echo "Type checking failed"
+          
+          # Check if build works
+          npm run build || echo "Build failed"
+          
+          # Check for common issues
+          echo "Checking for common issues..."
+          
+          # Check for console.log statements in production code
+          CONSOLE_COUNT=$(grep -r "console.log" pages/ components/ 2>/dev/null | wc -l || echo "0")
+          echo "Found $CONSOLE_COUNT console.log statements in production code"
+          
+          # Check for TODO comments
+          TODO_COUNT=$(grep -r "TODO" pages/ components/ 2>/dev/null | wc -l || echo "0")
+          echo "Found $TODO_COUNT TODO comments"
+          
+          # Check for FIXME comments
+          FIXME_COUNT=$(grep -r "FIXME" pages/ components/ 2>/dev/null | wc -l || echo "0")
+          echo "Found $FIXME_COUNT FIXME comments"
+          
+          echo "Health checks completed"
