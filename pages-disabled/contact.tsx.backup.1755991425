@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-export default function Contact() { return <div className="p-8">Contact</div>; }
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

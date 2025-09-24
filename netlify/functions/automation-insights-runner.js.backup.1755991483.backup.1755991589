@@ -32,8 +32,11 @@ exports.handler = async () => {
     logs.push(`Search index generation skipped: ${String(error)}`);
   }
 
+  // Commit and push
+
+  logStep('a11y:audit', () => runNode('automation/a11y-audit.cjs'));
+  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
   logStep('git:sync', () => runNode('automation/git-sync.cjs'));
-  // Commit and push  logStep('git:sync', () => runNode('automation/git-sync.cjs'));
 
   return { statusCode: 200, body: logs.join('\n') };
 };

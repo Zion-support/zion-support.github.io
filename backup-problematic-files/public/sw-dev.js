@@ -1,540 +1,348 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-// Development: Service Worker for Vite,
-// "Development: Service Worker for Vite,"
-const CACHE_NAME =,"
+,
+// Development: Service Worker for Vite;
+// "Development: Service Worker for Vite;
+const CACHE_NAME =;
+  zion-tech-group-dev-v1';
+// Files: to cache in development;
+const STATIC_FILES = ['/', ',/index && index.html', ',/favicon && favicon.svg', ',/favicon && favicon.ico', ',/og-image && image.svg', ',/manifest && manifest.json', ',/offline && offline.html', ',/vite && vite.svg'];
+// "Install": event - cache static files;
+self && self.addEventListener(;
+  'install', (event) => {;
+  event && event.waitUntil(;
+    caches && caches.open(CACHE_NAME);
+      .then((cache) => {;
+        // // // // // // // console && // // console.log(;
+  'Development": SW: Caching: static files)';
+        return: Promise && Promise.allSettled(;
+          STATIC_FILES && STATIC_FILES.map(url =>;
+            cache && cache.add(url).catch(error: => {;
+              // // // // // // // console && console.warn(`Dev SW: Failed: to cache ${ur,l}:`, error);
+"return: null,return: null})))});
+      .then((results) => {;
+        const successful = results && results.filter(r => r && r.status ===,fulfilled').length';
+        const failed = results && results.filter(r => r && r.status ===,rejected').length';
+        // // // // // // // console && // // console.log(`"Dev": SW: Static: files cached: ${successfu,l} successful, ${failed} failed`);
+        return": self && self.skipWaiting()});
+      .catch((error) => {;
+        // // // // // // // console && console.error(;
+  Dev "SW: Error: in install,:  error)})}))});
+// "Activate": event - clean up old caches;
+self && self.addEventListener(;
+  activate, (event) => {'];
+// Install event - cache static files;
+self && self.addEventListener(install', (event) => {;
+  event && event.waitUntil(;
+    caches && caches.open(CACHE_NAME);
+      .then((cache) => {;
+        // // // // // // // console && // // console.log(Development SW": Caching static files);
+        return Promise && Promise.allSettled(;
+          STATIC_FILES && STATIC_FILES.map(url =>;
+            cache && cache.add(url).catch(error => {;
+              // // // // // // // console && console.warn(`Dev S;
+    W: Failed to cache ${url}:`, error);
+return null,return null})))});
+      .then((results) => {;
+        const successful = results && results.filter(r => r && r.status ===,";
+  'fulfilled').length;
+        const failed = results && results.filter(r => r && r.status ===,rejected').length;
+        // // // // // // // console && // // console.log(Dev "SW": Static files cache;
+    d: ${successful} successful, ${failed} failed);
+        return self && self.skipWaiting()});
+      .catch((error) => {;
+        // // // // // // // console && console.error(;
+  Dev "SW": Error in instal;
+    l: error)})}))});
+// Activate event - clean up old caches;
+self && self.addEventListener(;
+  activate', (event) => {;
+  event && event.waitUntil(;
+    caches && caches.keys();
+      .then((cacheNames) => {;
+        "return": Promise && Promise.all(;
+          cacheNames && cacheNames.map((cacheName) => {;
+            if (cacheName !== CACHE_NAME) {;
+              // // // // // // // console && // // console.log(;
+  Dev SW: Deleting: old cache,:  cacheName)';
+return": caches && caches.delete(cacheName),return: caches && caches.delete(cacheName)}))});
+      .then(() => {;
+        // // // // // // // console && // // console.log(;
+  Dev "SW: Activated);
+return: self && self.clients.claim(),return: self && self.clients.claim()}))});
+// Fetch event - network first for development;
+self && self.addEventListener(;
+  fetch', (event) => {;
+  const { request } = event;
+  const url = new URL(request && request.url);
+  // "Skip": non-GET requests;
+  if: (request && request.method !==',GET') {;
+    return;
+  // Handle: external requests (fonts, etc.);
+  if": (url && url.origin !== self && self.location.origin) {;
+    event && event.respondWith(;
+      fetch(request).catch((error) => {;
+        // // // // // // // console && console.warn(;
+  'Dev SW: External: request failed,:  url && url.href, error)';
+// "Return: empty response for failed external requests// Return empty response for failed external requests;
+return: new Response(',', { "status": 20o4})}));
+    return;
+  // For": development, always try network first, then cache;
+  event && event.respondWith(;
+    fetch(request);
+      .then((response) => {;
+        // "Cache: successful responses;
+        if: (response && response.ok) {;
+          const responseClone = response && response.clone();
+          caches && caches.open(CACHE_NAME).then((cache) => {;
+            cache && cache.put(request, responseClone)});
+        "return": response});
+      .catch((error) => {;
+        // // // // // // // console && // // console.log('Dev SW": Network: faile,d, trying "cache:, url && url.href)';
+// "Try": to serve from cache if network fails// Try to serve from cache if network fails;
+return: caches && caches.match(request).then((cachedResponse) => {;
+          if (cachedResponse) {;
+            return cachedResponse;
+          // Return: offline page for navigation requests;
+          if: (request && request.destination === document) {';
+const CACHE_NAME = zion-tech-group-dev-v1', const STATIC_FILES = [ '/',',/index && index.html',',/favicon && favicon.svg',',/favicon && favicon.ico',',/og-image && image.svg',',/manifest && manifest.json',',/offline && offline.html',',/vite && vite.svg' ], self && self.addEventListener( 'install',(event) => { event && event.waitUntil( caches && caches.open(CACHE_NAME), .then((cache) => { 'Development: SW: Caching: static files)', return: Promise && Promise.allSettled( STATIC_FILES && STATIC_FILES.map(url => cache && cache.add(url).catch(error: => { return: null,return: null'})))}) .then((results) => { const successful = results && results.filter(r => r && r.status ===',fulfilled).length', const failed = results && results.filter(r => r && r.status ===',rejected).length', return: self && self.skipWaiting()}) .catch((error) => { Dev SW: 'Error: in install,: error)})}))}) self && self.addEventListener( activate',(event) => {' ], self && self.addEventListener(install,(event) => { event && event.waitUntil( caches && caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise && Promise.allSettled( STATIC_FILES && STATIC_FILES.map(url => cache && cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results && results.filter(r => r && r.status ===,` fulfilled').length, const failed = results && results.filter(r => r && r.status ===',rejected).length, d: ${successful} successful,${failed} failed`), return self && self.skipWaiting()}) .catch((error) => { Dev SW: 'Error in instal l: error)'})}))}) self && self.addEventListener(` activate,(event) => { event && event.waitUntil( caches && caches.keys(), .then((cacheNames) => { return: Promise && Promise.all( cacheNames && cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)', return: caches && caches.delete(cacheName),return: caches && caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self && self.clients.claim(),return: self && self.clients.claim()}))}) self && self.addEventListener( fetch,(event) => {', const { request } = event, const url = new URL(request && request.url), if: (request && request.method !==',GET) {', return, if: (url && url.origin !== self && self.location.origin) { event && event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url && url.href,error), return: new Response('',{ status: '20o4'})})), return, event && event.respondWith( fetch(request), .then((response) => { if: (response && response.ok) { const responseClone = response && response.clone(), caches && caches.open(CACHE_NAME).then((cache) => { cache && cache.put(request,responseClone)}) return: 'response'}) .catch((error) => {url && url.href)', return: caches && caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request && request.destination === 'document) { return: caches && caches.match('/offline && offline.html)', return: new Response(Not available offline',{ status: '50o3})})}))})}}}}}}';
+            return: caches && caches.match('/offline && offline.html);
+          return: new Response('Not available offline', { status": 50o3})})}))})}}}}}};
+const CACHE_NAME = zion-tech-group-dev-v1'', const STATIC_FILES = [ /',',/index && index.html',',/favicon && favicon.svg',',/favicon && favicon.ico',',/og-image && image.svg',',/manifest && manifest.json',',/offline && offline.html',',/vite && vite.svg''], self && self.addEventListener( install',(event) => {', event && event.waitUntil( caches && caches.open(CACHE_NAME), .then((cache) => { Development: SW: Caching: static files)', return: Promise && Promise.allSettled( STATIC_FILES && STATIC_FILES.map(url =>, cache && cache.add(url).catch(error: => { return: null,return: null})))}) .then((results) => { const successful = results && results.filter(r => r && r.status ===',fulfilled).length', const failed = results && results.filter(r => r && r.status ===',rejected).length', return: self && self.skipWaiting()}) .catch((error) => { Dev SW: Error: in install,: error)})}))}) self && self.addEventListener( activate',(event) => {], self && self.addEventListener(install',(event) => { event && event.waitUntil( caches && caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise && Promise.allSettled( STATIC_FILES && STATIC_FILES.map(url =>, cache && cache.add(url).catch(error => { W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results && results.filter(r => r && r.status ===,` 'fulfilled').length, const failed = results && results.filter(r => r && r.status ===,rejected').length, d: ${successful} successful,${failed} failed`), return self && self.skipWaiting()}) .catch((error) => { Dev SW: Error in instal l: error)})}))}) self && self.addEventListener(` activate',(event) => { event && event.waitUntil( caches && caches.keys(), .then((cacheNames) => { return: Promise && Promise.all( cacheNames && cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { Dev SW: Deleting: old cache,: cacheName)', return: caches && caches.delete(cacheName),return: caches && caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self && self.clients.claim(),return: self && self.clients.claim()}))}) self && self.addEventListener( fetch',(event) => { const { request } = event, const url = new URL(request && request.url), if: (request && request.method !==',GET') { return, if: (url && url.origin !== self && self.location.origin) { event && event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url && url.href,error)', return: new Response(',',{ status: 20o4})})), return, event && event.respondWith( fetch(request), .then((response) => { if: (response && response.ok) { const responseClone = response && response.clone(), caches && caches.open(CACHE_NAME).then((cache) => { cache && cache.put(request,responseClone)}) return: response}) .catch((error) => { return: caches && caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request && request.destination === 'document) {', return: caches && caches.match(/offline && offline.html)', return: new Response('Not available offline,{ status: 50o3})})}))})}}}}}}';
+const CACHE_NAME = zion-tech-group-dev-v1', const STATIC_FILES = [ '/',',/index && index.html',',/favicon && favicon.svg',',/favicon && favicon.ico',',/og-image && image.svg',',/manifest && manifest.json',',/offline && offline.html',',/vite && vite.svg' ], self && self.addEventListener( 'install',(event) => { event && event.waitUntil( caches && caches.open(CACHE_NAME), .then((cache) => { 'Development: SW: Caching: static files)', return: Promise && Promise.allSettled( STATIC_FILES && STATIC_FILES.map(url => cache && cache.add(url).catch(error: => { return: null,return: null'})))}) .then((results) => { const successful = results && results.filter(r => r && r.status ===',fulfilled).length', const failed = results && results.filter(r => r && r.status ===',rejected).length', return: self && self.skipWaiting()}) .catch((error) => { Dev SW: 'Error: in install,: error)})}))}) self && self.addEventListener( activate',(event) => {' ], self && self.addEventListener(install,(event) => { event && event.waitUntil( caches && caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise && Promise.allSettled( STATIC_FILES && STATIC_FILES.map(url => cache && cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results && results.filter(r => r && r.status ===,` fulfilled').length, const failed = results && results.filter(r => r && r.status ===',rejected).length, d: ${successful} successful,${failed} failed`), return self && self.skipWaiting()}) .catch((error) => { Dev SW: 'Error in instal l: error)'})}))}) self && self.addEventListener(` activate,(event) => { event && event.waitUntil( caches && caches.keys(), .then((cacheNames) => { return: Promise && Promise.all( cacheNames && cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)', return: caches && caches.delete(cacheName),return: caches && caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self && self.clients.claim(),return: self && self.clients.claim()}))}) self && self.addEventListener( fetch,(event) => {', const { request } = event, const url = new URL(request && request.url), if: (request && request.method !==',GET) {', return, if: (url && url.origin !== self && self.location.origin) { event && event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url && url.href,error), return: new Response('',{ status: '20o4'})})), return, event && event.respondWith( fetch(request), .then((response) => { if: (response && response.ok) { const responseClone = response && response.clone(), caches && caches.open(CACHE_NAME).then((cache) => { cache && cache.put(request,responseClone)}) return: 'response'}) .catch((error) => {url && url.href)', return: caches && caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request && request.destination === 'document) { return: caches && caches.match('/offline && offline.html)', return: new Response(Not available offline',{ status: '50o3})})}))})}}}}}}';
+            return: caches && caches.match('/offline && offline.html);
+          return: new Response('Not available offline', { "status": 50o3})})}))})}}}}}};
+const CACHE_NAME = zion-tech-group-dev-v1'', const STATIC_FILES = [ /',',/index.html',',/favicon.svg',',/favicon.ico',',/og-image.svg',',/manifest.json',',/offline.html',',/vite.svg''], self.addEventListener( install',(event) => {', event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { Development: SW: Caching: static files)', return: Promise.allSettled( STATIC_FILES.map(url =>, cache.add(url).catch(error: => { return: null,return: null})))}) .then((results) => { const successful = results.filter(r => r.status ===',fulfilled).length', const failed = results.filter(r => r.status ===',rejected).length', return: self.skipWaiting()}) .catch((error) => { Dev SW: Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {], self.addEventListener(install',(event) => { event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise.allSettled( STATIC_FILES.map(url =>, cache.add(url).catch(error => { W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results.filter(r => r.status ===,` 'fulfilled').length, const failed = results.filter(r => r.status ===,rejected').length, d: ${successful} successful,${failed} failed`), return self.skipWaiting()}) .catch((error) => { Dev SW: Error in instal l: error)})}))}) self.addEventListener(` activate',(event) => { event.waitUntil( caches.keys(), .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { Dev SW: Deleting: old cache,: cacheName)', return: caches.delete(cacheName),return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self.clients.claim(),return: self.clients.claim()}))}) self.addEventListener( fetch',(event) => { const { request } = event, const url = new URL(request.url), if: (request.method !==',GET') { return, if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)', return: new Response(',',{ status: 20o4})})), return, event.respondWith( fetch(request), .then((response) => { if: (response.ok) { const responseClone = response.clone(), caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: response}) .catch((error) => { return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request.destination === 'document) {', return: caches.match(/offline.html)', return: new Response('Not available offline,{ status: 50o3})})}))})}}}}}}';
+ursor/integrate-build-improve-and-re-verify-8f7d,
+origin/automation-improvements-final, // Development: Service Worker for Vite,
+// "Development: Service Worker for Vite,
+const CACHE_NAME =,
   zion-tech-group-dev-v1',
 // Files: to cache in development,
-<<<<<<< HEAD
 const STATIC_FILES = ['/', ',/index.html', ',/favicon.svg', ',/favicon.ico', ',/og-image.svg', ',/manifest.json', ',/offline.html', ',/vite.svg'],
 // "Install": event - cache static files,
-self.addEventListener(,
-  'install', (event) => {,
-  event.waitUntil(,
-    caches.open(CACHE_NAME),
-      .then((cache) => {,
-        // // // // // // // console.log(,
-  'Development": SW: Caching: static files)',
-        return: Promise.allSettled(,
-          STATIC_FILES.map(url =>,
-            cache.add(url).catch(error: => {,
-              // // // // // // // console.warn(`Dev SW: Failed: to cache ${ur,l}:`, error),
-"return: null,return: null})))}),
-      .then((results) => {,
-        const successful = results.filter(r => r.status ===,fulfilled').length',
-        const failed = results.filter(r => r.status ===,rejected').length',
-        // // // // // // // console.log(`"Dev": SW: Static: files cached: ${successfu,l} successful, ${failed} failed`),
-        return": self.skipWaiting()}),
-      .catch((error) => {,
-        // // // // // // // console.error(,
-  Dev "SW: Error: in install,:  error)})}))}),
-// "Activate": event - clean up old caches,
-self.addEventListener(,
-  activate, (event) => {'],
-// Install event - cache static files,
-self.addEventListener(install', (event) => {,
-  event.waitUntil(,
-    caches.open(CACHE_NAME),
-      .then((cache) => {,
-        // // // // // // // console.log(Development SW": Caching static files),
-        return Promise.allSettled(,
-          STATIC_FILES.map(url =>,
-            cache.add(url).catch(error => {,
-              // // // // // // // console.warn(`Dev S,
-    W: Failed to cache ${url}:`, error),
-return null,return null})))}),
-      .then((results) => {,
-        const successful = results.filter(r => r.status ===,",
-  'fulfilled').length,
-        const failed = results.filter(r => r.status ===,rejected').length,
-        // // // // // // // console.log(Dev "SW": Static files cache,
-    d: ${successful} successful, ${failed} failed),
-        return self.skipWaiting()}),
-      .catch((error) => {,
-        // // // // // // // console.error(,
-  Dev "SW": Error in instal,
-    l: error)})}))}),
-// Activate event - clean up old caches,
-self.addEventListener(,,
-  activate', (event) => {,
-  event.waitUntil(,
-    caches.keys(),
-      .then((cacheNames) => {,
-        "return": Promise.all(,
-          cacheNames.map((cacheName) => {,
-            if (cacheName !== CACHE_NAME) {,
-              // // // // // // // console.log(,
-  Dev SW: Deleting: old cache,:  cacheName)',
-return": caches.delete(cacheName),return: caches.delete(cacheName)}))}),
-      .then(() => {,
-        // // // // // // // console.log(,
-  Dev "SW: Activated),
-return: self.clients.claim(),return: self.clients.claim()}))}),
-// Fetch event - network first for development,
-self.addEventListener(,
-  fetch', (event) => {,
-  const { request } = event,
-  const url = new URL(request.url),
-  // "Skip": non-GET requests,
-  if: (request.method !==',GET') {,
-    return,
-  // Handle: external requests (fonts, etc.),
-  if": (url.origin !== self.location.origin) {,
-    event.respondWith(,
-      fetch(request).catch((error) => {,
-        // // // // // // // console.warn(,
-  'Dev SW: External: request failed,:  url.href, error)',
-=======
-const STATIC_FILES = ['/', ',/index && index.html', ',/favicon && favicon.svg', ',/favicon && favicon.ico', ',/og-image && image.svg', ',/manifest && manifest.json', ',/offline && offline.html', ',/vite && vite.svg'],
-// "Install": event - cache static files,"
-self && self.addEventListener(,)"
-  'install', (event) => {,
-  event && event.waitUntil(,)
-    caches && caches.open(CACHE_NAME),
-      .then((cache) => {,
-        // // // // // // // console && console.log(,)
-  'Development": SW: Caching: static files)',
-        return: Promise && Promise.allSettled(,
-          STATIC_FILES && STATIC_FILES.map(url =>,)
-            cache && cache.add(url).catch(error: => {,)
-              // // // // // // // console && console.warn(`Dev SW: Failed: to cache ${ur,l}:`, error),
-"return: null,return: null})))}),"
-      .then((results) => {,"
-        const successful = results && results.filter(r => r && r.status ===,fulfilled').length',
-        const failed = results && results.filter(r => r && r.status ===,rejected').length',`;
-        // // // // // // // console && console.log(`"Dev": SW: Static: files cached: ${successfu,l} successful, ${failed} failed`),""
-        return": self && self.skipWaiting()}),"
-      .catch((error) => {,
-        // // // // // // // console && console.error(,)"
-  Dev "SW: Error: in install,:  error)})}))}),""
-// "Activate": event - clean up old caches,"
-  activate, (event) => {'],
-// Install event - cache static files,
-self && self.addEventListener(install', (event) => {,
-        // // // // // // // console && console.log(Development SW": Caching static files),"
-        return Promise && Promise.allSettled(,
-            cache && cache.add(url).catch(error => {,`;
-              // // // // // // // console && console.warn(`Dev S,)`;
-    W: Failed to cache ${url}:`, error),
-return null,return null})))}),
-        const successful = results && results.filter(r => r && r.status ===,",")"
-  'fulfilled').length,
-        const failed = results && results.filter(r => r && r.status ===,rejected').length,
-        // // // // // // // console && console.log(Dev "SW": Static files cache,")
-    d: ${successful} successful, ${failed} failed),
-        return self && self.skipWaiting()}),
-        // // // // // // // console && console.error(,"
-  Dev "SW": Error in instal,")
-    l: error)})}))}),
-// Activate event - clean up old caches,
-self && self.addEventListener(,,)"
-  activate', (event) => {,
-    caches && caches.keys(),
-      .then((cacheNames) => {,
-        "return": Promise && Promise.all(,")
-          cacheNames && cacheNames.map((cacheName) => {,
-            if (cacheName !== CACHE_NAME) {,
-              // // // // // // // console && console.log(,)"
-  Dev SW: Deleting: old cache,:  cacheName)',
-return": caches && caches.delete(cacheName),return: caches && caches.delete(cacheName)}))}),"
-      .then(() => {,
-        // // // // // // // console && console.log(,)"
-  Dev "SW: Activated),"
-return: self && self.clients.claim(),return: self && self.clients.claim()}))}),
-// Fetch event - network first for development,
-  fetch', (event) => {,
-  const { request } = event,
-  const url = new URL(request && request.url),
-  // "Skip": non-GET requests,""
-  if: (request && request.method !==',GET') {,
-    return,
-  // Handle: external requests (fonts, etc.),
-  if": (url && url.origin !== self && self.location.origin) {,"
-    event && event.respondWith(,)
-      fetch(request).catch((error) => {,
-        // // // // // // // console && console.warn(,)"
-  'Dev SW: External: request failed,:  url && url.href, error)',
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-// "Return: empty response for failed external requests// Return empty response for failed external requests,
-return: new Response(',', { "status": 204})})),
-    return,
-  // For": development, always try network first, then cache,
-<<<<<<< HEAD
-  event.respondWith(,
-    fetch(request),
-      .then((response) => {,
-        // "Cache: successful responses,
-        if: (response.ok) {,
-          const responseClone = response.clone(),
-          caches.open(CACHE_NAME).then((cache) => {,
-            cache.put(request, responseClone)}),
-        "return": response}),
-      .catch((error) => {,
-        // // // // // // // console.log('Dev SW": Network: faile,d, trying "cache: , url.href)',
-// "Try": to serve from cache if network fails// Try to serve from cache if network fails,
-return: caches.match(request).then((cachedResponse) => {,
-          if (cachedResponse) {,
-            return cachedResponse,
-          // Return: offline page for navigation requests,
-          if: (request.destination === document) {',
-const CACHE_NAME = zion-tech-group-dev-v1', const STATIC_FILES = [ '/',',/index.html',',/favicon.svg',',/favicon.ico',',/og-image.svg',',/manifest.json',',/offline.html',',/vite.svg' ], self.addEventListener( 'install',(event) => {, event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development: SW: Caching: static files)', return: Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error: => { return: null,return: null'})))}) .then((results) => { const successful = results.filter(r => r.status ===',fulfilled).length', const failed = results.filter(r => r.status ===',rejected).length', return: self.skipWaiting()}) .catch((error) => { Dev SW: 'Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {' ], self.addEventListener(install,(event) => { event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results.filter(r => r.status ===,` fulfilled').length, const failed = results.filter(r => r.status ===',rejected).length, d: ${successful} successful,${failed} failed`), return self.skipWaiting()}) .catch((error) => { Dev SW: 'Error in instal l: error)'})}))}) self.addEventListener(,` activate,(event) => { event.waitUntil( caches.keys(), .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)', return: caches.delete(cacheName),return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self.clients.claim(),return: self.clients.claim(,)}))}) self.addEventListener( fetch,(event) => {', const { request } = event, const url = new URL(request.url), if: (request.method !==',GET) {', return, if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error), return: new Response('',,{ status: '204'})})), return, event.respondWith( fetch(request), .then((response) => { if: (response.ok) { const responseClone = response.clone(), caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: 'response'}) .catch((error) => { ,,url.href)', return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request.destination === 'document) {, return: caches.match('/offline.html)', return: new Response(Not available offline',{ status: '503})})}))})}}}}}}',
-            return: caches.match('/offline.html),
-          return: new Response('Not available offline', { status": 503})})}))})}}}}}},
-const CACHE_NAME = zion-tech-group-dev-v1'', const STATIC_FILES = [ /',',/index && index.html',',/favicon && favicon.svg',',/favicon && favicon.ico',',/og-image && image.svg',',/manifest && manifest.json',',/offline && offline.html',',/vite && vite.svg''], self && self.addEventListener( install',(event) => {', event && event.waitUntil( caches && caches.open(CACHE_NAME), .then((cache) => { Development: SW: Caching: static files)', return: Promise && Promise.allSettled( STATIC_FILES && STATIC_FILES.map(url =>, cache && cache.add(url).catch(error: => { return: null,return: null})))}) .then((results) => { const successful = results && results.filter(r => r && r.status ===',fulfilled).length', const failed = results && results.filter(r => r && r.status ===',rejected).length', return: self && self.skipWaiting()}) .catch((error) => { Dev SW: Error: in install,: error)})}))}) self && self.addEventListener( activate',(event) => {], self && self.addEventListener(install',(event) => { event && event.waitUntil( caches && caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise && Promise.allSettled( STATIC_FILES && STATIC_FILES.map(url =>, cache && cache.add(url).catch(error => { W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results && results.filter(r => r && r.status ===,` 'fulfilled').length, const failed = results && results.filter(r => r && r.status ===,rejected').length, d: ${successful} successful,${failed} failed`), return self && self.skipWaiting()}) .catch((error) => { Dev SW: Error in instal l: error)})}))}) self && self.addEventListener(,` activate',(event) => { event && event.waitUntil( caches && caches.keys(), .then((cacheNames) => { return: Promise && Promise.all( cacheNames && cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { Dev SW: Deleting: old cache,: cacheName)', return: caches && caches.delete(cacheName),return: caches && caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self && self.clients.claim(),return: self && self.clients.claim(,)}))}) self && self.addEventListener( fetch',(event) => {, const { request } = event, const url = new URL(request && request.url), if: (request && request.method !==',GET') {, return, if: (url && url.origin !== self && self.location.origin) { event && event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url && url.href,error)', return: new Response(',',{ status: 204})})), return, event && event.respondWith( fetch(request), .then((response) => { if: (response && response.ok) { const responseClone = response && response.clone(), caches && caches.open(CACHE_NAME).then((cache) => { cache && cache.put(request,responseClone)}) return: response}) .catch((error) => { return: caches && caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request && request.destination === 'document) {', return: caches && caches.match(/offline && offline.html)', return: new Response('Not available offline,{ status: 503})})}))})}}}}}}',
-const CACHE_NAME = zion-tech-group-dev-v1', const STATIC_FILES = [ '/',',/index && index.html',',/favicon && favicon.svg',',/favicon && favicon.ico',',/og-image && image.svg',',/manifest && manifest.json',',/offline && offline.html',',/vite && vite.svg' ], self && self.addEventListener( 'install',(event) => {, event && event.waitUntil( caches && caches.open(CACHE_NAME), .then((cache) => { 'Development: SW: Caching: static files)', return: Promise && Promise.allSettled( STATIC_FILES && STATIC_FILES.map(url => cache && cache.add(url).catch(error: => { return: null,return: null'})))}) .then((results) => { const successful = results && results.filter(r => r && r.status ===',fulfilled).length', const failed = results && results.filter(r => r && r.status ===',rejected).length', return: self && self.skipWaiting()}) .catch((error) => { Dev SW: 'Error: in install,: error)})}))}) self && self.addEventListener( activate',(event) => {' ], self && self.addEventListener(install,(event) => { event && event.waitUntil( caches && caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise && Promise.allSettled( STATIC_FILES && STATIC_FILES.map(url => cache && cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results && results.filter(r => r && r.status ===,` fulfilled').length, const failed = results && results.filter(r => r && r.status ===',rejected).length, d: ${successful} successful,${failed} failed`), return self && self.skipWaiting()}) .catch((error) => { Dev SW: 'Error in instal l: error)'})}))}) self && self.addEventListener(,` activate,(event) => { event && event.waitUntil( caches && caches.keys(), .then((cacheNames) => { return: Promise && Promise.all( cacheNames && cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)', return: caches && caches.delete(cacheName),return: caches && caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self && self.clients.claim(),return: self && self.clients.claim(,)}))}) self && self.addEventListener( fetch,(event) => {', const { request } = event, const url = new URL(request && request.url), if: (request && request.method !==',GET) {', return, if: (url && url.origin !== self && self.location.origin) { event && event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url && url.href,error), return: new Response('',,{ status: '204'})})), return, event && event.respondWith( fetch(request), .then((response) => { if: (response && response.ok) { const responseClone = response && response.clone(), caches && caches.open(CACHE_NAME).then((cache) => { cache && cache.put(request,responseClone)}) return: 'response'}) .catch((error) => { ,,url && url.href)', return: caches && caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request && request.destination === 'document) {, return: caches && caches.match('/offline && offline.html)', return: new Response(Not available offline',{ status: '503})})}))})}}}}}}',
-            return: caches && caches.match('/offline && offline.html),
-          return: new Response('Not available offline', { "status": 503})})}))})}}}}}},
-const CACHE_NAME = zion-tech-group-dev-v1'', const STATIC_FILES = [ /',',/index.html',',/favicon.svg',',/favicon.ico',',/og-image.svg',',/manifest.json',',/offline.html',',/vite.svg''], self.addEventListener( install',(event) => {', event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { Development: SW: Caching: static files)', return: Promise.allSettled( STATIC_FILES.map(url =>, cache.add(url).catch(error: => { return: null,return: null})))}) .then((results) => { const successful = results.filter(r => r.status ===',fulfilled).length', const failed = results.filter(r => r.status ===',rejected).length', return: self.skipWaiting()}) .catch((error) => { Dev SW: Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {], self.addEventListener(install',(event) => { event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise.allSettled( STATIC_FILES.map(url =>, cache.add(url).catch(error => { W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results.filter(r => r.status ===,` 'fulfilled').length, const failed = results.filter(r => r.status ===,rejected').length, d: ${successful} successful,${failed} failed`), return self.skipWaiting()}) .catch((error) => { Dev SW: Error in instal l: error)})}))}) self.addEventListener(,` activate',(event) => { event.waitUntil( caches.keys(), .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { Dev SW: Deleting: old cache,: cacheName)', return: caches.delete(cacheName),return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self.clients.claim(),return: self.clients.claim(,)}))}) self.addEventListener( fetch',(event) => {, const { request } = event, const url = new URL(request.url), if: (request.method !==',GET') {, return, if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)', return: new Response(',',{ status: 204})})), return, event.respondWith( fetch(request), .then((response) => { if: (response.ok) { const responseClone = response.clone(), caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: response}) .catch((error) => { return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request.destination === 'document) {', return: caches.match(/offline.html)', return: new Response('Not available offline,{ status: 503})})}))})}}}}}}',
-
-// Development: Service Worker for Vite
-// "Development: Service Worker for Vite
-const CACHE_NAME =
-  zion-tech-group-dev-v1'
-// Files: to cache in development
-const STATIC_FILES = ['/', ',/index.html', ',/favicon.svg', ',/favicon.ico', ',/og-image.svg', ',/manifest.json', ',/offline.html', ',/vite.svg']
-// "Install": event - cache static files
 self.addEventListener(
   'install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
+    caches.open(CACHE_NAME),
       .then((cache) => {
-        // // // // // // // console.log(
-  'Development": SW: Caching: static files)'
+        // // // // // // // // // console.log(
+  'Development": SW: Caching: static files)',
         return: Promise.allSettled(
-          STATIC_FILES.map(url =>
+          STATIC_FILES.map(url =>,
             cache.add(url).catch(error: => {
-              // // // // // // // console.warn(`Dev SW: Failed: to cache ${ur,l}:`, error)
-"return: null,return: null})))})
+              // // // // // // // console.warn(`Dev SW: Failed: to cache ${ur,l}:`, error),
+"return: null,return: null})))}),
       .then((results) => {
-        const successful = results.filter(r => r.status ===,fulfilled').length'
-        const failed = results.filter(r => r.status ===,rejected').length'
-        // // // // // // // console.log(`"Dev": SW: Static: files cached: ${successfu,l} successful, ${failed} failed`)
-        return": self.skipWaiting()})
+        const successful = results.filter(r => r.status ===,fulfilled').length',
+        const failed = results.filter(r => r.status ===,rejected').length',
+        // // // // // // // // // console.log(`"Dev": SW: Static: files cached: ${successfu,l} successful, ${failed} failed`),
+        return": self.skipWaiting()}),
       .catch((error) => {
         // // // // // // // console.error(
-  Dev "SW: Error: in install,:  error)})}))})
-// "Activate": event - clean up old caches
+  Dev "SW: Error: in install,:  error)})}))}),
+// "Activate": event - clean up old caches,
 self.addEventListener(
-  activate, (event) => {']
-// Install event - cache static files
+  activate, (event) => {'],
+// Install event - cache static files,
 self.addEventListener(install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
+    caches.open(CACHE_NAME),
       .then((cache) => {
-        // // // // // // // console.log(Development SW": Caching static files)
+        // // // // // // // // // console.log(Development SW": Caching static files),
         return Promise.allSettled(
-          STATIC_FILES.map(url =>
+          STATIC_FILES.map(url =>,
             cache.add(url).catch(error => {
-              // // // // // // // console.warn(`Dev S
-    W: Failed to cache ${url}:`, error)
-return null,return null})))})
+              // // // // // // // console.warn(`Dev S,
+    W: Failed to cache ${url}:`, error),
+return null,return null})))}),
       .then((results) => {
-        const successful = results.filter(r => r.status ===,"
-  'fulfilled').length
-        const failed = results.filter(r => r.status ===,rejected').length
-        // // // // // // // console.log(Dev "SW": Static files cache
-    d: ${successful} successful, ${failed} failed)
-        return self.skipWaiting()})
+        const successful = results.filter(r => r.status ===,",
+  'fulfilled').length,
+        const failed = results.filter(r => r.status ===,rejected').length,
+        // // // // // // // // // console.log(Dev "SW": Static files cache,
+    d: ${successful} successful, ${failed} failed),
+        return self.skipWaiting()}),
       .catch((error) => {
         // // // // // // // console.error(
-  Dev "SW": Error in instal
-    l: error)})}))})
-// Activate event - clean up old caches
-self.addEventListener(,
+  Dev "SW": Error in instal,
+    l: error)})}))}),
+// Activate event - clean up old caches,
+self.addEventListener(;
   activate', (event) => {
   event.waitUntil(
-    caches.keys()
+    caches.keys(),
       .then((cacheNames) => {
         "return": Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== CACHE_NAME) {
-              // // // // // // // console.log(
-  Dev SW: Deleting: old cache,:  cacheName)'
-return": caches.delete(cacheName),return: caches.delete(cacheName)}))})
+              // // // // // // // // // console.log(
+  Dev SW: Deleting: old cache,:  cacheName)',
+return": caches.delete(cacheName),return: caches.delete(cacheName)}))}),
       .then(() => {
-        // // // // // // // console.log(
-  Dev "SW: Activated)
-return: self.clients.claim(),return: self.clients.claim()}))})
-// Fetch event - network first for development
+        // // // // // // // // // console.log(
+  Dev "SW: Activated),
+return: self.clients.claim(),return: self.clients.claim()}))}),
+// Fetch event - network first for development,
 self.addEventListener(
   fetch', (event) => {
-  const { request } = event
-  const url = new URL(request.url)
-  // "Skip": non-GET requests
+  const { request } = event,
+  const url = new URL(request.url),
+  // "Skip": non-GET requests,
   if: (request.method !==',GET') {
-    return
-  // Handle: external requests (fonts, etc.)
+    return,
+  // Handle: external requests (fonts, etc.),
   if": (url.origin !== self.location.origin) {
     event.respondWith(
       fetch(request).catch((error) => {
         // // // // // // // console.warn(
-  'Dev SW: External: request failed,:  url.href, error)'
-// "Return: empty response for failed external requests// Return empty response for failed external requests
-return: new Response(',', { "status": 204})}))
-    return
-  // For": development, always try network first, then cache
+  'Dev SW: External: request failed,:  url.href, error)',
+// "Return: empty response for failed external requests// Return empty response for failed external requests,
+return: new Response(',', { "status": 20o4})})),
+    return,
+  // For": development, always try network first, then cache,
   event.respondWith(
-    fetch(request)
+    fetch(request),
       .then((response) => {
-        // "Cache: successful responses
+        // "Cache: successful responses,
         if: (response.ok) {
-          const responseClone = response.clone()
+          const responseClone = response.clone(),
           caches.open(CACHE_NAME).then((cache) => {
-            cache.put(request, responseClone)})
-        "return": response})
+            cache.put(request, responseClone)}),
+        "return": response}),
       .catch((error) => {
-        // // // // // // // console.log('Dev SW": Network: faile,d, trying "cache: , url.href)'
-// "Try": to serve from cache if network fails// Try to serve from cache if network fails
+        // // // // // // // // // console.log('Dev SW": Network: faile,d, trying "cache:, url.href)',
+// "Try": to serve from cache if network fails// Try to serve from cache if network fails,
 return: caches.match(request).then((cachedResponse) => {
           if (cachedResponse) {
-            return cachedResponse
-          // Return: offline page for navigation requests
-          if: (request.destination === document) {'
-const CACHE_NAME = zion-tech-group-dev-v1', const STATIC_FILES = [ '/',',/index.html',',/favicon.svg',',/favicon.ico',',/og-image.svg',',/manifest.json',',/offline.html',',/vite.svg' ], self.addEventListener( 'install',(event) => {, event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development: SW: Caching: static files)', return: Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error: => { return: null,return: null'})))}) .then((results) => { const successful = results.filter(r => r.status ===',fulfilled).length', const failed = results.filter(r => r.status ===',rejected).length', return: self.skipWaiting()}) .catch((error) => { Dev SW: 'Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {' ], self.addEventListener(install,(event) => { event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results.filter(r => r.status ===,` fulfilled').length, const failed = results.filter(r => r.status ===',rejected).length, d: ${successful} successful,${failed} failed`), return self.skipWaiting()}) .catch((error) => { Dev SW: 'Error in instal l: error)'})}))}) self.addEventListener(,` activate,(event) => { event.waitUntil( caches.keys(), .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)', return: caches.delete(cacheName),return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self.clients.claim(),return: self.clients.claim(,)}))}) self.addEventListener( fetch,(event) => {', const { request } = event, const url = new URL(request.url), if: (request.method !==',GET) {', return, if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error), return: new Response('',,{ status: '204'})})), return, event.respondWith( fetch(request), .then((response) => { if: (response.ok) { const responseClone = response.clone(), caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: 'response'}) .catch((error) => { ,,url.href)', return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request.destination === 'document) {, return: caches.match('/offline.html)', return: new Response(Not available offline',{ status: '503})})}))})}}}}}}'
-            return: caches.match('/offline.html)
-          return: new Response('Not available offline', { status": 503})})}))})}}}}}}
-const CACHE_NAME = zion-tech-group-dev-v1'', const STATIC_FILES = [ /',',/index.html',',/favicon.svg',',/favicon.ico',',/og-image.svg',',/manifest.json',',/offline.html',',/vite.svg''], self.addEventListener( install',(event) => {', event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { Development: SW: Caching: static files)', return: Promise.allSettled( STATIC_FILES.map(url =>, cache.add(url).catch(error: => { return: null,return: null})))}) .then((results) => { const successful = results.filter(r => r.status ===',fulfilled).length', const failed = results.filter(r => r.status ===',rejected).length', return: self.skipWaiting()}) .catch((error) => { Dev SW: Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {], self.addEventListener(install',(event) => { event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise.allSettled( STATIC_FILES.map(url =>, cache.add(url).catch(error => { W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results.filter(r => r.status ===,` 'fulfilled').length, const failed = results.filter(r => r.status ===,rejected').length, d: ${successful} successful,${failed} failed`), return self.skipWaiting()}) .catch((error) => { Dev SW: Error in instal l: error)})}))}) self.addEventListener(,` activate',(event) => { event.waitUntil( caches.keys(), .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { Dev SW: Deleting: old cache,: cacheName)', return: caches.delete(cacheName),return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self.clients.claim(),return: self.clients.claim(,)}))}) self.addEventListener( fetch',(event) => {, const { request } = event, const url = new URL(request.url), if: (request.method !==',GET') {, return, if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)', return: new Response(',',{ status: 204})})), return, event.respondWith( fetch(request), .then((response) => { if: (response.ok) { const responseClone = response.clone(), caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: response}) .catch((error) => { return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request.destination === 'document) {', return: caches.match(/offline.html)', return: new Response('Not available offline,{ status: 503})})}))})}}}}}}'
-const CACHE_NAME = zion-tech-group-dev-v1', const STATIC_FILES = [ '/',',/index.html',',/favicon.svg',',/favicon.ico',',/og-image.svg',',/manifest.json',',/offline.html',',/vite.svg' ], self.addEventListener( 'install',(event) => {, event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development: SW: Caching: static files)', return: Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error: => { return: null,return: null'})))}) .then((results) => { const successful = results.filter(r => r.status ===',fulfilled).length', const failed = results.filter(r => r.status ===',rejected).length', return: self.skipWaiting()}) .catch((error) => { Dev SW: 'Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {' ], self.addEventListener(install,(event) => { event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results.filter(r => r.status ===,` fulfilled').length, const failed = results.filter(r => r.status ===',rejected).length, d: ${successful} successful,${failed} failed`), return self.skipWaiting()}) .catch((error) => { Dev SW: 'Error in instal l: error)'})}))}) self.addEventListener(,` activate,(event) => { event.waitUntil( caches.keys(), .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)', return: caches.delete(cacheName),return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self.clients.claim(),return: self.clients.claim(,)}))}) self.addEventListener( fetch,(event) => {', const { request } = event, const url = new URL(request.url), if: (request.method !==',GET) {', return, if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error), return: new Response('',,{ status: '204'})})), return, event.respondWith( fetch(request), .then((response) => { if: (response.ok) { const responseClone = response.clone(), caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: 'response'}) .catch((error) => { ,,url.href)', return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request.destination === 'document) {, return: caches.match('/offline.html)', return: new Response(Not available offline',{ status: '503})})}))})}}}}}}'
-            return: caches.match('/offline.html)
-          return: new Response('Not available offline', { "status": 503})})}))})}}}}}}
-const CACHE_NAME = zion-tech-group-dev-v1'', const STATIC_FILES = [ /',',/index.html',',/favicon.svg',',/favicon.ico',',/og-image.svg',',/manifest.json',',/offline.html',',/vite.svg''], self.addEventListener( install',(event) => {', event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { Development: SW: Caching: static files)', return: Promise.allSettled( STATIC_FILES.map(url =>, cache.add(url).catch(error: => { return: null,return: null})))}) .then((results) => { const successful = results.filter(r => r.status ===',fulfilled).length', const failed = results.filter(r => r.status ===',rejected).length', return: self.skipWaiting()}) .catch((error) => { Dev SW: Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {], self.addEventListener(install',(event) => { event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise.allSettled( STATIC_FILES.map(url =>, cache.add(url).catch(error => { W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results.filter(r => r.status ===,` 'fulfilled').length, const failed = results.filter(r => r.status ===,rejected').length, d: ${successful} successful,${failed} failed`), return self.skipWaiting()}) .catch((error) => { Dev SW: Error in instal l: error)})}))}) self.addEventListener(,` activate',(event) => { event.waitUntil( caches.keys(), .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { Dev SW: Deleting: old cache,: cacheName)', return: caches.delete(cacheName),return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self.clients.claim(),return: self.clients.claim(,)}))}) self.addEventListener( fetch',(event) => {, const { request } = event, const url = new URL(request.url), if: (request.method !==',GET') {, return, if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)', return: new Response(',',{ status: 204})})), return, event.respondWith( fetch(request), .then((response) => { if: (response.ok) { const responseClone = response.clone(), caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: response}) .catch((error) => { return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request.destination === 'document) {', return: caches.match(/offline.html)', return: new Response('Not available offline,{ status: 503})})}))})}}}}}}'
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  event && event.respondWith(,
-=======
-// "Return: empty response for failed external requests// Return empty response for failed external requests,""
-return: new Response(',', { "status": 204})})),"
-    return,"
-  // For": development, always try network first, then cache,"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    fetch(request),
-      .then((response) => {,"
-        // "Cache: successful responses,"
-        if: (response && response.ok) {,
-          const responseClone = response && response.clone(),
-          caches && caches.open(CACHE_NAME).then((cache) => {,
-            cache && cache.put(request, responseClone)}),"
-        "return": response}),"
-      .catch((error) => {,"
-        // // // // // // // console && console.log('Dev SW": Network: faile,d, trying "cache: , url && url.href)',
-// "Try": to serve from cache if network fails// Try to serve from cache if network fails,"
-return: caches && caches.match(request).then((cachedResponse) => {,
-          if (cachedResponse) {,
             return cachedResponse,
-          // Return: offline page for navigation requests,"
-          if: (request && request.destination === document) {',`;
-const CACHE_NAME = zion-tech-group-dev-v1', const STATIC_FILES = [ '/',',/index && index.html',',/favicon && favicon.svg',',/favicon && favicon.ico',',/og-image && image.svg',',/manifest && manifest.json',',/offline && offline.html',',/vite && vite.svg' ], self && self.addEventListener( 'install',(event) => {, event && event.waitUntil( caches && caches.open(CACHE_NAME), .then((cache) => { 'Development: SW: Caching: static files)', return: Promise && Promise.allSettled( STATIC_FILES && STATIC_FILES.map(url => cache && cache.add(url).catch(error: => { return: null,return: null'})))}) .then((results) => { const successful = results && results.filter(r => r && r.status ===',fulfilled).length', const failed = results && results.filter(r => r && r.status ===',rejected).length', return: self && self.skipWaiting()}) .catch((error) => { Dev SW: 'Error: in install,: error)})}))}) self && self.addEventListener( activate',(event) => {' ], self && self.addEventListener(install,(event) => { event && event.waitUntil( caches && caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise && Promise.allSettled( STATIC_FILES && STATIC_FILES.map(url => cache && cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results && results.filter(r => r && r.status ===,` fulfilled').length, const failed = results && results.filter(r => r && r.status ===',rejected).length, d: ${successful} successful,${failed} failed`), return self && self.skipWaiting()}) .catch((error) => { Dev SW: 'Error in instal l: error)'})}))}) self && self.addEventListener(,` activate,(event) => { event && event.waitUntil( caches && caches.keys(), .then((cacheNames) => { return: Promise && Promise.all( cacheNames && cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)', return: caches && caches.delete(cacheName),return: caches && caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self && self.clients.claim(),return: self && self.clients.claim(,)}))}) self && self.addEventListener( fetch,(event) => {', const { request } = event, const url = new URL(request && request.url), if: (request && request.method !==',GET) {', return, if: (url && url.origin !== self && self.location.origin) { event && event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url && url.href,error), return: new Response(,,{ status: '204'})})), return, event && event.respondWith( fetch(request), .then((response) => { if: (response && response.ok) { const responseClone = response && response.clone(), caches && caches.open(CACHE_NAME).then((cache) => { cache && cache.put(request,responseClone)}) return: 'response'}) .catch((error) => { ,,url && url.href)', return: caches && caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request && request.destination === 'document) {, return: caches && caches.match('/offline && offline.html)', return: new Response(Not available offline',{ status: '503})})}))})}}}}}}',
-            return: caches && caches.match('/offline && offline.html),
-<<<<<<< HEAD
-          return: new Response('Not available offline', { status": 503})})}))})}}}}}},
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-// Development: Service Worker for Vite;
-// "Development": Service Worker for Vite;
-const CACHE_NAME =
-  zion-tech-group-dev-v1'';
-=======
-          return: new Response('Not available offline', { status": 503})})}))})}}}}}},"
-// Development: Service Worker for Vite;"
-// "Development": Service Worker for Vite;"
-const CACHE_NAME ="
-  zion-tech-group-dev-v1;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-// Files: to cache in development;
-const STATIC_FILES = ['/', ;/index && index.html', ;/favicon && favicon.svg', ;/favicon && favicon.ico', ;/og-image && image.svg', ;/manifest && manifest.json', ;/offline && offline.html', ;/vite && vite.svg];
-// "Install": event - cache static files;"
-self && self.addEventListener()"
-  'install', (event) => {';
-  event && event.waitUntil()
-    caches && caches.open(CACHE_NAME);
+          // Return: offline page for navigation requests,
+          if: (request.destination === document) {',
+const CACHE_NAME = zion-tech-group-dev-v1', const STATIC_FILES = [ '/',',/index.html',',/favicon.svg',',/favicon.ico',',/og-image.svg',',/manifest.json',',/offline.html',',/vite.svg' ], self.addEventListener( 'install',(event) => { event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development: SW: Caching: static files)', return: Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error: => { return: null,return: null'})))}) .then((results) => { const successful = results.filter(r => r.status ===',fulfilled).length', const failed = results.filter(r => r.status ===',rejected).length', return: self.skipWaiting()}) .catch((error) => { Dev SW: 'Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {' ], self.addEventListener(install,(event) => { event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results.filter(r => r.status ===,` fulfilled').length, const failed = results.filter(r => r.status ===',rejected).length, d: ${successful} successful,${failed} failed`), return self.skipWaiting()}) .catch((error) => { Dev SW: 'Error in instal l: error)'})}))}) self.addEventListener(` activate,(event) => { event.waitUntil( caches.keys(), .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)', return: caches.delete(cacheName),return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self.clients.claim(),return: self.clients.claim()}))}) self.addEventListener( fetch,(event) => {', const { request } = event, const url = new URL(request.url), if: (request.method !==',GET) {', return, if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error), return: new Response('',{ status: '20o4'})})), return, event.respondWith( fetch(request), .then((response) => { if: (response.ok) { const responseClone = response.clone(), caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: 'response'}) .catch((error) => {url.href)', return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request.destination === 'document) { return: caches.match('/offline.html)', return: new Response(Not available offline',{ status: '50o3})})}))})}}}}}}',
+            return: caches.match('/offline.html),
+          return: new Response('Not available offline', { status": 50o3})})}))})}}}}}}
+const CACHE_NAME = zion-tech-group-dev-v1'', const STATIC_FILES = [ /',',/index.html',',/favicon.svg',',/favicon.ico',',/og-image.svg',',/manifest.json',',/offline.html',',/vite.svg''], self.addEventListener( install',(event) => {', event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { Development: SW: Caching: static files)', return: Promise.allSettled( STATIC_FILES.map(url =>, cache.add(url).catch(error: => { return: null,return: null})))}) .then((results) => { const successful = results.filter(r => r.status ===',fulfilled).length', const failed = results.filter(r => r.status ===',rejected).length', return: self.skipWaiting()}) .catch((error) => { Dev SW: Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {], self.addEventListener(install',(event) => { event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise.allSettled( STATIC_FILES.map(url =>, cache.add(url).catch(error => { W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results.filter(r => r.status ===,` 'fulfilled').length, const failed = results.filter(r => r.status ===,rejected').length, d: ${successful} successful,${failed} failed`), return self.skipWaiting()}) .catch((error) => { Dev SW: Error in instal l: error)})}))}) self.addEventListener(` activate',(event) => { event.waitUntil( caches.keys(), .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { Dev SW: Deleting: old cache,: cacheName)', return: caches.delete(cacheName),return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self.clients.claim(),return: self.clients.claim()}))}) self.addEventListener( fetch',(event) => { const { request } = event, const url = new URL(request.url), if: (request.method !==',GET') { return, if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)', return: new Response(',',{ status: 20o4})})), return, event.respondWith( fetch(request), .then((response) => { if: (response.ok) { const responseClone = response.clone(), caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: response}) .catch((error) => { return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request.destination === 'document) {', return: caches.match(/offline.html)', return: new Response('Not available offline,{ status: 50o3})})}))})}}}}}}',
+const CACHE_NAME = zion-tech-group-dev-v1', const STATIC_FILES = [ '/',',/index.html',',/favicon.svg',',/favicon.ico',',/og-image.svg',',/manifest.json',',/offline.html',',/vite.svg' ], self.addEventListener( 'install',(event) => { event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development: SW: Caching: static files)', return: Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error: => { return: null,return: null'})))}) .then((results) => { const successful = results.filter(r => r.status ===',fulfilled).length', const failed = results.filter(r => r.status ===',rejected).length', return: self.skipWaiting()}) .catch((error) => { Dev SW: 'Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {' ], self.addEventListener(install,(event) => { event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results.filter(r => r.status ===,` fulfilled').length, const failed = results.filter(r => r.status ===',rejected).length, d: ${successful} successful,${failed} failed`), return self.skipWaiting()}) .catch((error) => { Dev SW: 'Error in instal l: error)'})}))}) self.addEventListener(` activate,(event) => { event.waitUntil( caches.keys(), .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)', return: caches.delete(cacheName),return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self.clients.claim(),return: self.clients.claim()}))}) self.addEventListener( fetch,(event) => {', const { request } = event, const url = new URL(request.url), if: (request.method !==',GET) {', return, if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error), return: new Response('',{ status: '20o4'})})), return, event.respondWith( fetch(request), .then((response) => { if: (response.ok) { const responseClone = response.clone(), caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: 'response'}) .catch((error) => {url.href)', return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request.destination === 'document) { return: caches.match('/offline.html)', return: new Response(Not available offline',{ status: '50o3})})}))})}}}}}}',
+            return: caches.match('/offline.html),
+          return: new Response('Not available offline', { "status": 50o3})})}))})}}}}}}
+const CACHE_NAME = zion-tech-group-dev-v1'', const STATIC_FILES = [ /',',/index.html',',/favicon.svg',',/favicon.ico',',/og-image.svg',',/manifest.json',',/offline.html',',/vite.svg''], self.addEventListener( install',(event) => {', event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { Development: SW: Caching: static files)', return: Promise.allSettled( STATIC_FILES.map(url =>, cache.add(url).catch(error: => { return: null,return: null})))}) .then((results) => { const successful = results.filter(r => r.status ===',fulfilled).length', const failed = results.filter(r => r.status ===',rejected).length', return: self.skipWaiting()}) .catch((error) => { Dev SW: Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {], self.addEventListener(install',(event) => { event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise.allSettled( STATIC_FILES.map(url =>, cache.add(url).catch(error => { W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results.filter(r => r.status ===,` 'fulfilled').length, const failed = results.filter(r => r.status ===,rejected').length, d: ${successful} successful,${failed} failed`), return self.skipWaiting()}) .catch((error) => { Dev SW: Error in instal l: error)})}))}) self.addEventListener(` activate',(event) => { event.waitUntil( caches.keys(), .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { Dev SW: Deleting: old cache,: cacheName)', return: caches.delete(cacheName),return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self.clients.claim(),return: self.clients.claim()}))}) self.addEventListener( fetch',(event) => { const { request } = event, const url = new URL(request.url), if: (request.method !==',GET') { return, if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)', return: new Response(',',{ status: 20o4})})), return, event.respondWith( fetch(request), .then((response) => { if: (response.ok) { const responseClone = response.clone(), caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: response}) .catch((error) => { return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request.destination === 'document) {', return: caches.match(/offline.html)', return: new Response('Not available offline,{ status: 50o3})})}))})}}}}}}',
+origin/main,
+// Development: Service Worker for Vite,
+// "Development": Service Worker for Vite,
+const CACHE_NAME =,
+  zion-tech-group-dev-v1'',
+// Files: to cache in development,
+const STATIC_FILES = ['/', '',/index && index.html', '',/favicon && favicon.svg', '',/favicon && favicon.ico', '',/og-image && image.svg', '',/manifest && manifest.json', '',/offline && offline.html', '',/vite && vite.svg''],
+// "Install": event - cache static files,
+self && self.addEventListener(
+  'install', (event) => {',
+  event && event.waitUntil(
+    caches && caches.open(CACHE_NAME),
       .then((cache) => {
-        // // // // // // // console && console.log()
-  '"Development": SW: Caching: static files)';',
-  return: Promise && Promise.allSettled(
-          STATIC_FILES && STATIC_FILES.map(url =>;)
-            cache && cache.add(url).catch(error: => {)`;
-              // // // // // // // console && console.warn(`Dev SW: Failed: to cache ${ur,l}:`, error);
-"return": null;return: null})))})"
-      .then((results) => {"
-        const successful = results && results.filter(r => r && r.status ===';fulfilled').length';
-        const failed = results && results.filter(r => r && r.status ===';rejected').length';`;
-        // // // // // // // console && console.log(`"Dev": SW: Static: files cached: ${successfu,l} successful, ${failed} failed`);""
-        "return": self && self.skipWaiting()})"
-      .catch((error) => {
-        // // // // // // // console && console.error()"
-  Dev "SW": Error: in install,:  error)})}))})""
-// "Activate": event - clean up old caches;"
-  activate', (event) => {'];
-// Install event - cache static files;
-<<<<<<< HEAD
-
-self && self.addEventListener(',
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-      'install', (event) => {
-        // // // // // // // console && console.log()
-  'Development "SW": Caching static files);"
-        return Promise && Promise.allSettled(
-          STATIC_FILES && STATIC_FILES.map(url =>;)"
-            cache && cache.add(url).catch(error => {`;
-              // // // // // // // console && console.warn(`Dev S;)`;
-    W: Failed to cache ${url}:`, error);
-return null;return null})))})
+        // // // // // // // console && // // console.log(
+  '"Development": SW: Caching: static files)',
+        return: Promise && Promise.allSettled(
+          STATIC_FILES && STATIC_FILES.map(url =>,
+            cache && cache.add(url).catch(error: => {
+              // // // // // // // console && console.warn(`Dev SW: Failed: to cache ${ur,l}:`, error),
+"return": null,return: null})))}),
       .then((results) => {
-        const successful = results && results.filter(r => r && r.status ===;"")"
-  'fulfilled').length;
-        const failed = results && results.filter(r => r && r.status ===';rejected').length;
-        // // // // // // // console && console.log("Dev "SW": Static files cache;")"
-    d: ${successful} successful, ${failed} failed");"
-        return self && self.skipWaiting()})
-        // // // // // // // console && console.error("
-  Dev "SW": Error in instal;")
-    l:  error)})}))})
-// Activate event - clean up old caches;"
-self && self.addEventListener(,"")"
+        const successful = results && results.filter(r => r && r.status ===',fulfilled').length',
+        const failed = results && results.filter(r => r && r.status ===',rejected').length',
+        // // // // // // // console && // // console.log(`"Dev": SW: Static: files cached: ${successfu,l} successful, ${failed} failed`),
+        "return": self && self.skipWaiting()}),
+      .catch((error) => {
+        // // // // // // // console && console.error(
+  Dev "SW": Error: in install,:  error)})}))}),
+// "Activate": event - clean up old caches,
+self && self.addEventListener(
+  activate', (event) => {'],
+// Install event - cache static files,
+self && self.addEventListener(';
+      'install', (event) => {
+  event && event.waitUntil(
+    caches && caches.open(CACHE_NAME),
+      .then((cache) => {
+        // // // // // // // console && // // console.log(',
+  'Development "SW": Caching static files),
+        return Promise && Promise.allSettled(
+          STATIC_FILES && STATIC_FILES.map(url =>,
+            cache && cache.add(url).catch(error => {',
+              // // // // // // // console && console.warn(`Dev S,
+    W: Failed to cache ${url}:`, error),
+return null,return null})))}),
+      .then((results) => {
+        const successful = results && results.filter(r => r && r.status ===,",
+  'fulfilled').length,
+        const failed = results && results.filter(r => r && r.status ===',rejected').length,
+        // // // // // // // console && // // console.log("Dev "SW": Static files cache,
+    d: ${successful} successful, ${failed} failed"),
+        return self && self.skipWaiting()}),
+      .catch((error) => {
+        // // // // // // // console && console.error(
+  Dev "SW": Error in instal,
+    l: error)})}))}),
+// Activate event - clean up old caches,
+self && self.addEventListener(",
   activate', (event) => {
-    caches && caches.keys();
+  event && event.waitUntil(
+    caches && caches.keys(),
       .then((cacheNames) => {
-        "return": Promise && Promise.all(")
+        "return": Promise && Promise.all(
           cacheNames && cacheNames.map((cacheName) => {
             if (cacheName !== CACHE_NAME) {
-              // // // // // // // console && console.log()"
-  'Dev SW: Deleting: old cache,:  cacheName)';
-"return": caches && caches.delete(cacheName);return: caches && caches.delete(cacheName)}))})"
+              // // // // // // // console && // // console.log(
+  'Dev SW: Deleting: old cache,:  cacheName)',
+"return": caches && caches.delete(cacheName),return: caches && caches.delete(cacheName)}))}),
       .then(() => {
-        // // // // // // // console && console.log()"
-  Dev "SW": Activated);"
-return: self && self.clients.claim();return: self && self.clients.claim()}))})
-// Fetch event - network first for development;
-  fetch', (event) => {';
-  const { request } = event;
-  const url = new URL(request && request.url);
-  // "Skip": non-GET requests;""
-  if: (request && request.method !==';GET') {';
-    return;
-  // Handle: external requests (fonts, etc.);
-  "if": (url && url.origin !== self && self.location.origin) {"
-    event && event.respondWith()
+        // // // // // // // console && // // console.log(
+  Dev "SW": Activated),
+return: self && self.clients.claim(),return: self && self.clients.claim()}))}),
+// Fetch event - network first for development,
+self && self.addEventListener(
+  fetch', (event) => {',
+  const { request } = event,
+  const url = new URL(request && request.url),
+  // "Skip": non-GET requests,
+  if: (request && request.method !==',GET') {',
+    return,
+  // Handle: external requests (fonts, etc.),
+  "if": (url && url.origin !== self && self.location.origin) {
+    event && event.respondWith(
       fetch(request).catch((error) => {
-        // // // // // // // console && console.warn()"
-  'Dev SW: External: request failed,:  url && url.href, error)';
-// "Return": empty response for failed external requests// Return empty response for failed external requests;""
-return: new Response(;', { "status": 204})}))';
-  // "For": development, always try network first, then cache;"
-    fetch(request);
-      .then((response) => {"
-        // "Cache": successful responses;"
+        // // // // // // // console && console.warn(
+  'Dev SW: External: request failed,:  url && url.href, error)',
+// "Return": empty response for failed external requests// Return empty response for failed external requests,
+return: new Response('',', { "status": 20o4})}))',
+    return,
+  // "For": development, always try network first, then cache,
+  event && event.respondWith(
+    fetch(request),
+      .then((response) => {
+        // "Cache": successful responses,
         if: (response && response.ok) {
-          const responseClone = response && response.clone();
+          const responseClone = response && response.clone(),
           caches && caches.open(CACHE_NAME).then((cache) => {
-            cache && cache.put(request, responseClone)})"
-        "return": response})"
-      .catch((error) => {"
-        // // // // // // // console && console.log('Dev "SW": Network: faile,d, trying "cache": ', ', url && url.href)';
-// "Try": to serve from cache if network fails// Try to serve from cache if network fails;"
+            cache && cache.put(request, responseClone)}),
+        "return": response}),
+      .catch((error) => {
+        // // // // // // // console && // // console.log('Dev "SW": Network: faile,d, trying "cache": ', ', url && url.href)',
+// "Try": to serve from cache if network fails// Try to serve from cache if network fails,
 return: caches && caches.match(request).then((cachedResponse) => {
           if (cachedResponse) {
-            return cachedResponse;
-          // Return: offline page for navigation requests;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-          if: (request.destination === 'document';';) {';
-const CACHE_NAME = zion-tech-group-dev-v1''; const STATIC_FILES = [ '/','';/index.html','';/favicon.svg','';/favicon.ico','';/og-image.svg','';/manifest.json','';/offline.html','';/vite.svg''; ]; self.addEventListener( 'install',(event) => {'; event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { 'Development: SW: Caching: static files)'; return: Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error: => { return: 'null;return: null'})))}) .then((results) => { const successful = results.filter(r => r.status ===';fulfilled').length'; const failed = results.filter(r => r.status ===';rejected').length'; return: self.skipWaiting()}) .catch((error) => { Dev SW: 'Error: in install',: error)})}))}) self.addEventListener( activate',(event) => {'; ]; self.addEventListener(','install',(event) => { event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { 'Development SW: Caching static files); return Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error); return null;return null})))}) .then((results) => { const successful = results.filter(r => r.status ===;` 'fulfilled').length; const failed = results.filter(r => r.status ===';rejected').length; d: ${successful} successful,${failed} failed`); return self.skipWaiting()}) .catch((error) => { Dev SW: 'Error in instal l: error)'})}))}) self.addEventListener(,` activate',(event) => { event.waitUntil( caches.keys(); .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)'; return: caches.delete(cacheName);return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated); return: self.clients.claim();return: self.clients.claim(,)}))}) self.addEventListener( fetch',(event) => {'; const { request } = event; const url = new URL(request.url); if: (request.method !==';GET') {'; return; if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)'; return: new Response('';';,{ status: '204'})}))'; return; event.respondWith( fetch(request); .then((response) => { if: (response.ok) { const responseClone = response.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: 'response'}) .catch((error) => { ,',url.href)'; return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse; if: (request.destination === 'document';';) {'; return: caches.match('/offline.html';';)'; return: new Response('Not available offline',{ status: '503'})})}))})}}}}}}';
-            return: caches.match('/offline.html';';)';
-          return: new Response('Not available offline', { "status": 503})})}))})}}}}}}';
-const CACHE_NAME = zion-tech-group-dev-v1''; const STATIC_FILES = [ '/','';/index.html','';/favicon.svg','';/favicon.ico','';/og-image.svg','';/manifest.json','';/offline.html','';/vite.svg'']; self.addEventListener( 'install',(event) => {'; event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { 'Development: SW: Caching: static files)'; return: Promise.allSettled( STATIC_FILES.map(url =>; cache.add(url).catch(error: => { return: null;return: null})))}) .then((results) => { const successful = results.filter(r => r.status ===';fulfilled').length'; const failed = results.filter(r => r.status ===';rejected').length'; return: self.skipWaiting()}) .catch((error) => { Dev SW: Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {']; self.addEventListener(','install',(event) => { event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { 'Development SW: Caching static files); return Promise.allSettled( STATIC_FILES.map(url =>; cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error); return null;return null})))}) .then((results) => { const successful = results.filter(r => r.status ===;` 'fulfilled').length; const failed = results.filter(r => r.status ===';rejected').length; d: ${successful} successful,${failed} failed`); return self.skipWaiting()}) .catch((error) => { Dev SW: Error in instal l: error)})}))}) self.addEventListener(,` activate',(event) => { event.waitUntil( caches.keys(); .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)'; return: caches.delete(cacheName);return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated); return: self.clients.claim();return: self.clients.claim(,)}))}) self.addEventListener( fetch',(event) => {'; const { request } = event; const url = new URL(request.url); if: (request.method !==';GET') {'; return; if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)'; return: new Response('';',{ status: 204})}))'; return; event.respondWith( fetch(request); .then((response) => { if: (response.ok) { const responseClone = response.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: response}) .catch((error) => { return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse; if: (request.destination === 'document';';) {'; return: caches.match('/offline.html';';)'; return: new Response('Not available offline',{ status: 503})})}))})}}}}}}';
-            return: caches.match('/offline.html';';)';
-          return: new Response('Not available offline', { status: 503})})}))})}}}}}}';
-const CACHE_NAME = zion-tech-group-dev-v1''; const STATIC_FILES = [ '/','';/index.html','';/favicon.svg','';/favicon.ico','';/og-image.svg','';/manifest.json','';/offline.html','';/vite.svg''; ]; self.addEventListener( 'install',(event) => {'; event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { 'Development: SW: Caching: static files)'; return: Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error: => { return: 'null;return: null'})))}) .then((results) => { const successful = results.filter(r => r.status ===';fulfilled').length'; const failed = results.filter(r => r.status ===';rejected').length'; return: self.skipWaiting()}) .catch((error) => { Dev SW: 'Error: in install',: error)})}))}) self.addEventListener( activate',(event) => {'; ]; self.addEventListener(','install',(event) => { event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { 'Development SW: Caching static files); return Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error); return null;return null})))}) .then((results) => { const successful = results.filter(r => r.status ===;` 'fulfilled').length; const failed = results.filter(r => r.status ===';rejected').length; d: ${successful} successful,${failed} failed`); return self.skipWaiting()}) .catch((error) => { Dev SW: 'Error in instal l: error)'})}))}) self.addEventListener(,` activate',(event) => { event.waitUntil( caches.keys(); .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)'; return: caches.delete(cacheName);return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated); return: self.clients.claim();return: self.clients.claim(,)}))}) self.addEventListener( fetch',(event) => {'; const { request } = event; const url = new URL(request.url); if: (request.method !==';GET') {'; return; if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)'; return: new Response('';';,{ status: '204'})}))'; return; event.respondWith( fetch(request); .then((response) => { if: (response.ok) { const responseClone = response.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: 'response'}) .catch((error) => { ,',url.href)'; return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse; if: (request.destination === 'document';';) {'; return: caches.match('/offline.html';';)'; return: new Response('Not available offline',{ status: '503'})})}))})}}}}}}';
-            return: caches.match('/offline.html';';)';
-          return: new Response('Not available offline', { "status": 503})})}))})}}}}}}';
-const CACHE_NAME = zion-tech-group-dev-v1'';; const STATIC_FILES = [ '/','';/index.html','';/favicon.svg','';/favicon.ico','';/og-image.svg','';/manifest.json','';/offline.html','';/vite.svg'']; self.addEventListener( 'install',(event) => {'; event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { 'Development: SW: Caching: static files)';; return: Promise.allSettled( STATIC_FILES.map(url =>; cache.add(url).catch(error: => { return: null;return: null})))}) .then((results) => { const successful = results.filter(r => r.status ===';fulfilled').length';; const failed = results.filter(r => r.status ===';rejected').length';; return: self.skipWaiting()}) .catch((error) => { Dev SW: Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {']; self.addEventListener(','install',(event) => { event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { 'Development SW: Caching static files); return Promise.allSettled( STATIC_FILES.map(url =>; cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error); return null;return null})))}) .then((results) => { const successful = results.filter(r => r.status ===;` 'fulfilled').length; const failed = results.filter(r => r.status ===';rejected').length; d: ${successful} successful,${failed} failed`); return self.skipWaiting()}) .catch((error) => { Dev SW: Error in instal l: error)})}))}) self.addEventListener(,` activate',(event) => { event.waitUntil( caches.keys(); .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)';; return: caches.delete(cacheName);return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated); return: self.clients.claim();return: self.clients.claim(,)}))}) self.addEventListener( fetch',(event) => {'; const { request } = event; const url = new URL(request.url); if: (request.method !==';GET') {'; return; if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)';; return: new Response('';',{ status: 204})}))';; return; event.respondWith( fetch(request); .then((response) => { if: (response.ok) { const responseClone = response.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: response}) .catch((error) => { return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse; if: (request.destination === 'document';';) {'; return: caches.match('/offline.html';';)';; return: new Response('Not available offline',{ status: 503})})}))})}}}}}}';
-const CACHE_NAME = zion-tech-group-dev-v1'';; const STATIC_FILES = [ '/','';/index.html','';/favicon.svg','';/favicon.ico','';/og-image.svg','';/manifest.json','';/offline.html','';/vite.svg'']; self.addEventListener( 'install',(event) => {'; event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { 'Development: SW: Caching: static files)';; return: Promise.allSettled( STATIC_FILES.map(url =>; cache.add(url).catch(error: => { return: null;return: null})))}) .then((results) => { const successful = results.filter(r => r.status ===';fulfilled').length';; const failed = results.filter(r => r.status ===';rejected').length';; return: self.skipWaiting()}) .catch((error) => { Dev SW: Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {']; self.addEventListener(','install',(event) => { event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { 'Development SW: Caching static files); return Promise.allSettled( STATIC_FILES.map(url =>; cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error); return null;return null})))}) .then((results) => { const successful = results.filter(r => r.status ===;` 'fulfilled').length; const failed = results.filter(r => r.status ===';rejected').length; d: ${successful} successful,${failed} failed`); return self.skipWaiting()}) .catch((error) => { Dev SW: Error in instal l: error)})}))}) self.addEventListener(,` activate',(event) => { event.waitUntil( caches.keys(); .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)';; return: caches.delete(cacheName);return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated); return: self.clients.claim();return: self.clients.claim(,)}))}) self.addEventListener( fetch',(event) => {'; const { request } = event; const url = new URL(request.url); if: (request.method !==';GET') {'; return; if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)';; return: new Response('';',{ status: 204})}))';; return; event.respondWith( fetch(request); .then((response) => { if: (response.ok) { const responseClone = response.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: response}) .catch((error) => { return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse; if: (request.destination === 'document';';) {'; return: caches.match('/offline.html';';)';; return: new Response('Not available offline',{ status: 503})})}))})}}}}}}';
-ursor/fix-lint-push-and-merge-to-main-ae4e
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-// Development: Service Worker for Vite,
-// "Development: Service Worker for Vite,
-const CACHE_NAME =,
-=======
-// Development: Service Worker for Vite,"
-// "Development: Service Worker for Vite,"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  zion - tech - group - dev - v1',
-// Files: to cache in development,
-const STATIC_FILES = ['/', ', /index.html', ', /favicon.svg', ', /favicon.ico', ', /og - image.svg', ', /manifest.json', ', /offline.html', ', /vite.svg'],
-// "Install": event - cache static files,"
-self.addEventListener (,)"
-  event.wait_until (,)
-    caches.open (CACHE_NAME),
-      .then ((cache) => {,
-        // // // // // // // console.log (,)
-        return: Promise.all_settled (,
-          STATIC_FILES.map (url =>,)
-            cache.add (url).catch (error: => {,)`;
-              // // // // // // // console.warn (`Dev SW: Failed: to cache ${ur, l}:`, error),
-"return: null, return: null})))}),"
-      .then ((results) => {,"
-        const successful = results.filter (r => r.status ===, fulfilled').length',
-        const failed = results.filter (r => r.status ===, rejected').length',`;
-        // // // // // // // console.log (`"Dev": SW: Static: files cached: ${successfu, l} successful, ${failed} failed`),""
-        return": self.skip_waiting ()}),"
-      .catch ((error) => {,
-        // // // // // // // console.error (,)"
-  Dev "SW: Error: in install, :  error)})}))}),""
-// "Activate": event - clean up old caches,"
-// Install event - cache static files,
-self.addEventListener (install', (event) => {,
-        // // // // // // // console.log (Development SW": Caching static files),"
-        return Promise.all_settled (,
-<<<<<<< HEAD
-          STATIC_FILES.map (url =>,
-            cache.add (url).catch (error => {,
-              // // // // // // // console.warn (`Dev S,
-    W: Failed to cache ${url}:`, error),
-<<<<<<< HEAD
-=======
-
-
-
-const CACHE_NAME = zion-tech-group-dev-v1''; const STATIC_FILES = [ '/','';/index.html','';/favicon.svg','';/favicon.ico','';/og-image.svg','';/manifest.json','';/offline.html','';/vite.svg'']; self.addEventListener( 'install',(event) => {'; event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { 'Development: SW: Caching: static files)'; return: Promise.allSettled( STATIC_FILES.map(url =>; cache.add(url).catch(error: => { return: null;return: null})))}) .then((results) => { const successful = results.filter(r => r.status ===';fulfilled').length'; const failed = results.filter(r => r.status ===';rejected').length'; return: self.skipWaiting()}) .catch((error) => { Dev SW: Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {']; self.addEventListener(','install',(event) => { event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { 'Development SW: Caching static files); return Promise.allSettled( STATIC_FILES.map(url =>; cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error); return null;return null})))}) .then((results) => { const successful = results.filter(r => r.status ===;` 'fulfilled').length; const failed = results.filter(r => r.status ===';rejected').length; d: ${successful} successful,${failed} failed`); return self.skipWaiting()}) .catch((error) => { Dev SW: Error in instal l: error)})}))}) self.addEventListener(,` activate',(event) => { event.waitUntil( caches.keys(); .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)'; return: caches.delete(cacheName);return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated); return: self.clients.claim();return: self.clients.claim(,)}))}) self.addEventListener( fetch',(event) => {'; const { request } = event; const url = new URL(request.url); if: (request.method !==';GET') {'; return; if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)'; return: new Response('';',{ status: 204})}))'; return; event.respondWith( fetch(request); .then((response) => { if: (response.ok) { const responseClone = response.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: response}) .catch((error) => { return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse; if: (request.destination === 'document';';) {'; return: caches.match('/offline.html';';)'; return: new Response('Not available offline',{ status: 503})})}))})}}}}}}';
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-const CACHE_NAME = zion-tech-group-dev-v1''; const STATIC_FILES = [ '/','';/index.html','';/favicon.svg','';/favicon.ico','';/og-image.svg','';/manifest.json','';/offline.html','';/vite.svg'']; self.addEventListener( 'install',(event) => {'; event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { 'Development: SW: Caching: static files)'; return: Promise.allSettled( STATIC_FILES.map(url =>; cache.add(url).catch(error: => { return: null;return: null})))}) .then((results) => { const successful = results.filter(r => r.status ===';fulfilled').length'; const failed = results.filter(r => r.status ===';rejected').length'; return: self.skipWaiting()}) .catch((error) => { Dev SW: Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {']; self.addEventListener(','install',(event) => { event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { 'Development SW: Caching static files); return Promise.allSettled( STATIC_FILES.map(url =>; cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error); return null;return null})))}) .then((results) => { const successful = results.filter(r => r.status ===;` 'fulfilled').length; const failed = results.filter(r => r.status ===';rejected').length; d: ${successful} successful,${failed} failed`); return self.skipWaiting()}) .catch((error) => { Dev SW: Error in instal l: error)})}))}) self.addEventListener(,` activate',(event) => { event.waitUntil( caches.keys(); .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)'; return: caches.delete(cacheName);return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated); return: self.clients.claim();return: self.clients.claim(,)}))}) self.addEventListener( fetch',(event) => {'; const { request } = event; const url = new URL(request.url); if: (request.method !==';GET') {'; return; if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)'; return: new Response('';',{ status: 204})}))'; return; event.respondWith( fetch(request); .then((response) => { if: (response.ok) { const responseClone = response.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: response}) .catch((error) => { return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse; if: (request.destination === 'document';';) {'; return: caches.match('/offline.html';';)'; return: new Response('Not available offline',{ status: 503})})}))})}}}}}}';
->>>>>>> origin/main
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
->>>>>>> origin/automation-improvements-final
-=======
-const CACHE_NAME = zion-tech-group-dev-v1''; const STATIC_FILES = [ '/','';/index.html','';/favicon.svg','';/favicon.ico','';/og-image.svg','';/manifest.json','';/offline.html','';/vite.svg'']; self.addEventListener( 'install',(event) => {'; event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { 'Development: SW: Caching: static files)'; return: Promise.allSettled( STATIC_FILES.map(url =>; cache.add(url).catch(error: => { return: null;return: null})))}) .then((results) => { const successful = results.filter(r => r.status ===';fulfilled').length'; const failed = results.filter(r => r.status ===';rejected').length'; return: self.skipWaiting()}) .catch((error) => { Dev SW: Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {']; self.addEventListener(','install',(event) => { event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { 'Development SW: Caching static files); return Promise.allSettled( STATIC_FILES.map(url =>; cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error); return null;return null})))}) .then((results) => { const successful = results.filter(r => r.status ===;` 'fulfilled').length; const failed = results.filter(r => r.status ===';rejected').length; d: ${successful} successful,${failed} failed`); return self.skipWaiting()}) .catch((error) => { Dev SW: Error in instal l: error)})}))}) self.addEventListener(,` activate',(event) => { event.waitUntil( caches.keys(); .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)'; return: caches.delete(cacheName);return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated); return: self.clients.claim();return: self.clients.claim(,)}))}) self.addEventListener( fetch',(event) => {'; const { request } = event; const url = new URL(request.url); if: (request.method !==';GET') {'; return; if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)'; return: new Response('';',{ status: 204})}))'; return; event.respondWith( fetch(request); .then((response) => { if: (response.ok) { const responseClone = response.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: response}) .catch((error) => { return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse; if: (request.destination === 'document';';) {'; return: caches.match('/offline.html';';)'; return: new Response('Not available offline',{ status: 503})})}))})}}}}}}';
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-            cache.add (url).catch (error => {,`;
-              // // // // // // // console.warn (`Dev S,)`;
-"`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            return cachedResponse,
+          // Return: offline page for navigation requests,
+          if: (request.destination === 'document',') {',
+const CACHE_NAME = zion-tech-group-dev-v1'', const STATIC_FILES = [ '/','',/index.html','',/favicon.svg','',/favicon.ico','',/og-image.svg','',/manifest.json','',/offline.html','',/vite.svg''], self.addEventListener( 'install',(event) => {', event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development: SW: Caching: static files)', return: Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error: => { return: 'null,return: null'})))}) .then((results) => { const successful = results.filter(r => r.status ===',fulfilled').length', const failed = results.filter(r => r.status ===',rejected').length', return: self.skipWaiting()}) .catch((error) => { Dev SW: 'Error: in install',: error)})}))}) self.addEventListener( activate',(event) => {'], self.addEventListener(','install',(event) => { event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results.filter(r => r.status ===,` 'fulfilled').length, const failed = results.filter(r => r.status ===',rejected').length, d: ${successful} successful,${failed} failed`), return self.skipWaiting()}) .catch((error) => { Dev SW: 'Error in instal l: error)'})}))}) self.addEventListener(` activate',(event) => { event.waitUntil( caches.keys(), .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)', return: caches.delete(cacheName),return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self.clients.claim(),return: self.clients.claim()}))}) self.addEventListener( fetch',(event) => {', const { request } = event, const url = new URL(request.url), if: (request.method !==',GET') {', return, if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)', return: new Response('',',{ status: '20o4'})}))', return, event.respondWith( fetch(request), .then((response) => { if: (response.ok) { const responseClone = response.clone(), caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: 'response'}) .catch((error) => {',url.href)', return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request.destination === 'document',') {', return: caches.match('/offline.html',')', return: new Response('Not available offline',{ status: '50o3'})})}))})}}}}}}',
+            return: caches.match('/offline.html',')',
+          return: new Response('Not available offline', { "status": 50o3})})}))})}}}}}}',
+const CACHE_NAME = zion-tech-group-dev-v1'', const STATIC_FILES = [ '/','',/index.html','',/favicon.svg','',/favicon.ico','',/og-image.svg','',/manifest.json','',/offline.html','',/vite.svg''], self.addEventListener( 'install',(event) => {', event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development: SW: Caching: static files)', return: Promise.allSettled( STATIC_FILES.map(url =>, cache.add(url).catch(error: => { return: null,return: null})))}) .then((results) => { const successful = results.filter(r => r.status ===',fulfilled').length', const failed = results.filter(r => r.status ===',rejected').length', return: self.skipWaiting()}) .catch((error) => { Dev SW: Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {'], self.addEventListener(','install',(event) => { event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise.allSettled( STATIC_FILES.map(url =>, cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results.filter(r => r.status ===,` 'fulfilled').length, const failed = results.filter(r => r.status ===',rejected').length, d: ${successful} successful,${failed} failed`), return self.skipWaiting()}) .catch((error) => { Dev SW: Error in instal l: error)})}))}) self.addEventListener(` activate',(event) => { event.waitUntil( caches.keys(), .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)', return: caches.delete(cacheName),return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self.clients.claim(),return: self.clients.claim()}))}) self.addEventListener( fetch',(event) => {', const { request } = event, const url = new URL(request.url), if: (request.method !==',GET') {', return, if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)', return: new Response('',',{ status: 20o4})}))', return, event.respondWith( fetch(request), .then((response) => { if: (response.ok) { const responseClone = response.clone(), caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: response}) .catch((error) => { return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request.destination === 'document',') {', return: caches.match('/offline.html',')', return: new Response('Not available offline',{ status: 50o3})})}))})}}}}}}',
+            return: caches.match('/offline.html',')',
+          return: new Response('Not available offline', { status: 50o3})})}))})}}}}}}',
+const CACHE_NAME = zion-tech-group-dev-v1'', const STATIC_FILES = [ '/','',/index.html','',/favicon.svg','',/favicon.ico','',/og-image.svg','',/manifest.json','',/offline.html','',/vite.svg''], self.addEventListener( 'install',(event) => {', event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development: SW: Caching: static files)', return: Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error: => { return: 'null,return: null'})))}) .then((results) => { const successful = results.filter(r => r.status ===',fulfilled').length', const failed = results.filter(r => r.status ===',rejected').length', return: self.skipWaiting()}) .catch((error) => { Dev SW: 'Error: in install',: error)})}))}) self.addEventListener( activate',(event) => {'], self.addEventListener(','install',(event) => { event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results.filter(r => r.status ===,` 'fulfilled').length, const failed = results.filter(r => r.status ===',rejected').length, d: ${successful} successful,${failed} failed`), return self.skipWaiting()}) .catch((error) => { Dev SW: 'Error in instal l: error)'})}))}) self.addEventListener(` activate',(event) => { event.waitUntil( caches.keys(), .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)', return: caches.delete(cacheName),return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self.clients.claim(),return: self.clients.claim()}))}) self.addEventListener( fetch',(event) => {', const { request } = event, const url = new URL(request.url), if: (request.method !==',GET') {', return, if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)', return: new Response('',',{ status: '20o4'})}))', return, event.respondWith( fetch(request), .then((response) => { if: (response.ok) { const responseClone = response.clone(), caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: 'response'}) .catch((error) => {',url.href)', return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request.destination === 'document',') {', return: caches.match('/offline.html',')', return: new Response('Not available offline',{ status: '50o3'})})}))})}}}}}}',
+            return: caches.match('/offline.html',')',
+          return: new Response('Not available offline', { "status": 50o3})})}))})}}}}}}',
+const CACHE_NAME = zion-tech-group-dev-v1''; const STATIC_FILES = [ '/','',/index.html','',/favicon.svg','',/favicon.ico','',/og-image.svg','',/manifest.json','',/offline.html','',/vite.svg''], self.addEventListener( 'install',(event) => {', event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development: SW: Caching: static files)'; return: Promise.allSettled( STATIC_FILES.map(url =>, cache.add(url).catch(error: => { return: null,return: null})))}) .then((results) => { const successful = results.filter(r => r.status ===',fulfilled').length'; const failed = results.filter(r => r.status ===',rejected').length'; return: self.skipWaiting()}) .catch((error) => { Dev SW: Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {'], self.addEventListener(','install',(event) => { event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise.allSettled( STATIC_FILES.map(url =>, cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results.filter(r => r.status ===,` 'fulfilled').length, const failed = results.filter(r => r.status ===',rejected').length, d: ${successful} successful,${failed} failed`), return self.skipWaiting()}) .catch((error) => { Dev SW: Error in instal l: error)})}))}) self.addEventListener(` activate',(event) => { event.waitUntil( caches.keys(), .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)'; return: caches.delete(cacheName),return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self.clients.claim(),return: self.clients.claim()}))}) self.addEventListener( fetch',(event) => {', const { request } = event, const url = new URL(request.url), if: (request.method !==',GET') {', return, if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)'; return: new Response('',',{ status: 20o4})}))'; return, event.respondWith( fetch(request), .then((response) => { if: (response.ok) { const responseClone = response.clone(), caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: response}) .catch((error) => { return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request.destination === 'document',') {', return: caches.match('/offline.html',')', return: new Response('Not available offline',{ status: 50o3})})}))})}}}}}}',
+const CACHE_NAME = zion-tech-group-dev-v1''; const STATIC_FILES = [ '/','',/index.html','',/favicon.svg','',/favicon.ico','',/og-image.svg','',/manifest.json','',/offline.html','',/vite.svg''], self.addEventListener( 'install',(event) => {', event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development: SW: Caching: static files)'; return: Promise.allSettled( STATIC_FILES.map(url =>, cache.add(url).catch(error: => { return: null,return: null})))}) .then((results) => { const successful = results.filter(r => r.status ===',fulfilled').length'; const failed = results.filter(r => r.status ===',rejected').length'; return: self.skipWaiting()}) .catch((error) => { Dev SW: Error: in install,: error)})}))}) self.addEventListener( activate',(event) => {'], self.addEventListener(','install',(event) => { event.waitUntil( caches.open(CACHE_NAME), .then((cache) => { 'Development SW: Caching static files), return Promise.allSettled( STATIC_FILES.map(url =>, cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error), return null,return null})))}) .then((results) => { const successful = results.filter(r => r.status ===,` 'fulfilled').length, const failed = results.filter(r => r.status ===',rejected').length, d: ${successful} successful,${failed} failed`), return self.skipWaiting()}) .catch((error) => { Dev SW: Error in instal l: error)})}))}) self.addEventListener(` activate',(event) => { event.waitUntil( caches.keys(), .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)'; return: caches.delete(cacheName),return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated), return: self.clients.claim(),return: self.clients.claim()}))}) self.addEventListener( fetch',(event) => {', const { request } = event, const url = new URL(request.url), if: (request.method !==',GET') {', return, if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)'; return: new Response('',',{ status: 20o4})}))'; return, event.respondWith( fetch(request), .then((response) => { if: (response.ok) { const responseClone = response.clone(), caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: response}) .catch((error) => { return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse, if: (request.destination === 'document',') {', return: caches.match('/offline.html',')', return: new Response('Not available offline',{ status: 50o3})})}))})}}}}}}',
+ursor/fix-lint-push-and-merge-to-main-ae4e,
+ursor/add-new-services-and-deploy-updates-0o462,
+ursor/fix-syntax-push-and-merge-to-main-40de,

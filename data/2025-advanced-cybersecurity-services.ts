@@ -1,3998 +1,520 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-
-<<<<<<< HEAD
-import { ServiceVariant } from '../types / service - variants';
-
+import { ServiceVariant } from '../types/service-variants',
 export interface AdvancedCybersecurityService {
-
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-;
-export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =;
-  [;
-    // Zero Trust Security Platform;
-    {
-      id: 'zero - trust - security - platform';,
-import { ServiceVariant } from '../types/service-variants';
-export interface AdvancedCybersecurityService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string[],
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  },
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
-
-export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [
-  // Zero Trust Security Platform
-  {
-    id: 'zero-trust-security-platform';
-    name: 'Zero Trust Security Platform';
-    tagline: 'Never trust;, always verify - Advanced zero trust security',
-    price: '$599';
-    period: '/month';
-    description: 'Comprehensive zero trust security platform that implements continuous verification;, micro-segmentation, and adaptive access controls to protect against modern cyber threats.',
-    features: [
-      'Continuous identity verification and authenticationMicro-segmentation and network isolationAdaptive access controls and policiesReal-time threat detection and responseMulti-factor authentication (MFA)Privileged access management (PAM)API security and monitoringCloud security posture management';
-      'Compliance reporting and auditingSecurity analytics and insights'
-    ];
-    popular: true;
-    icon: '🔒';
-    color: 'from-red-600 to-pink-600';
-    textColor: 'text-red-400';
-    link: 'https://ziontechgroup.com/zero-trust-security-platform';
-    marketPosition: 'Competes with Palo Alto ($50/month);, CrowdStrike ($8.99/month), Okta ($2/month). Our advantage: Comprehensive zero trust implementation;, real-time monitoring, and adaptive controls.',
-    targetAudience: 'Enterprise companies;, Government agencies, Financial institutions, Healthcare organizations, Critical infrastructure',
-    trialDays: 14;
-    setupTime: '1-2 weeks';
-    category: 'Cybersecurity & Zero Trust';
-    realService: true;
-    technology: ['Python;, Go, React, Node.js, Kubernetes, Docker, AWS, Azure'],
-    integrations: ['Active Directory;, LDAP, SAML, OAuth, SIEM systems, EDR platforms'],
-    useCases: ['Enterprise security;, Government compliance, Financial security, Healthcare protection, Critical infrastructure security'],
-    roi: 'Organizations report 450% ROI through reduced security incidents and compliance costs.';
-    competitors: ['Palo Alto;, CrowdStrike, Okta, Duo, Ping Identity'],
-    marketSize: '$31.2B zero trust security market';
-    growthRate: '28% annual growth';
-    variant: 'zero-trust-enterprise';
-    contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com';
-    },
-    realImplementation: true;
-    implementationDetails: 'Enterprise-grade zero trust security platform with continuous verification;, micro-segmentation, and adaptive access controls.',
-    launchDate: '2024-09-15';
-    customers: 34;
-    rating: 4.9;
-    reviews: 19;
-  },
-
-  // AI-Powered Threat Intelligence
-  {
-    id: 'ai-threat-intelligence';
-    name: 'AI-Powered Threat Intelligence Platform';
-    tagline: 'Predict and prevent cyber threats with AI intelligence';
-    price: '$399';
-    period: '/month';
-    description: 'Advanced AI-powered threat intelligence platform that provides real-time threat detection;, predictive analytics, and automated response capabilities to stay ahead of cyber attacks.',
-    features: [
-      'Real-time threat detection and analysisAI-powered threat prediction and modelingAutomated threat response and mitigationGlobal threat intelligence sharingVulnerability assessment and prioritizationThreat hunting and investigation toolsSecurity metrics and reportingIntegration with security tools';
-      'Custom threat feeds and alerts24/7 security monitoring'
-    ];
-    popular: true;
-    icon: '🛡️';
-    color: 'from-indigo-600 to-purple-600';
-    textColor: 'text-indigo-400';
-    link: 'https://ziontechgroup.com/ai-threat-intelligence';
-    marketPosition: 'Competes with Recorded Future ($50/month);, ThreatConnect ($50/month), Anomali ($50/month). Our advantage: AI-powered prediction;, automated response, and comprehensive coverage.',
-    targetAudience: 'Security operations centers (SOC);, Threat intelligence teams, Security analysts, Enterprise security teams',
-    trialDays: 21;
-    setupTime: '3-5 days';
-    category: 'Threat Intelligence & AI';
-    realService: true;
-    technology: ['Python;, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis'],
-    integrations: ['SIEM systems;, EDR platforms, Firewalls, IDS/IPS, Security orchestration tools'],
-    useCases: ['Threat detection;, Incident response, Vulnerability management, Security monitoring, Threat hunting'],
-    roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.';
-    competitors: ['Recorded Future;, ThreatConnect, Anomali, IBM X-Force, FireEye'],
-    marketSize: '$15.8B threat intelligence market';
-    growthRate: '26% annual growth';
-    variant: 'ai-threat-enterprise';
-    contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com';
-    },
-    realImplementation: true;
-    implementationDetails: 'AI-powered threat intelligence platform with real-time detection;, predictive analytics, and automated response capabilities.',
-    launchDate: '2024-10-20';
-    customers: 67;
-    rating: 4.8;
-    reviews: 31;
-  },
-
-  // Cloud Security Posture Management
-  {
-    id: 'cloud-security-posture';
-    name: 'Cloud Security Posture Management Platform';
-    tagline: 'Secure your cloud infrastructure with comprehensive posture management';
-    price: '$299';
-    period: '/month';
-    description: 'Comprehensive cloud security platform that continuously monitors;, assesses, and improves the security posture of multi-cloud environments with automated compliance and risk management.',
-    features: [
-      'Multi-cloud security monitoring (AWS, Azure, GCP)Continuous compliance assessment and reportingAutomated risk identification and remediationIdentity and access management (IAM)Data protection and encryptionNetwork security and segmentationSecurity configuration managementVulnerability scanning and assessment',
-      'Incident detection and responseSecurity metrics and dashboards'
-    ],
-    popular: true;
-    icon: '☁️';
-    color: 'from-blue-600 to-cyan-600';
-    textColor: 'text-blue-400';
-    link: 'https://ziontechgroup.com/cloud-security-posture';
-    marketPosition: 'Competes with Prisma Cloud ($25/month);, AWS Security Hub ($3/month), Azure Security Center ($15/month). Our advantage: Multi-cloud support;, automated remediation, and comprehensive compliance.',
-    targetAudience: 'Cloud architects;, DevOps teams, Security teams, IT operations, Cloud-native companies',
-    trialDays: 14;
-    setupTime: '2-4 days';
-    category: 'Cloud Security & Compliance';
-    realService: true;
-    technology: ['Python;, Go, React, Node.js, AWS SDK, Azure SDK, GCP SDK'],
-    integrations: ['AWS;, Azure, GCP, Kubernetes, Docker, Terraform, Ansible'],
-    useCases: ['Cloud security monitoring;, Compliance management, Risk assessment, Security automation, Multi-cloud governance'],
-    roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.';
-    competitors: ['Prisma Cloud;, AWS Security Hub, Azure Security Center, GCP Security Command Center'],
-    marketSize: '$22.4B cloud security market';
-    growthRate: '24% annual growth';
-    variant: 'cloud-security-enterprise';
-    contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com';
-    },
-    realImplementation: true;
-    implementationDetails: 'Multi-cloud security posture management platform with continuous monitoring;, automated compliance, and risk management.',
-    launchDate: '2024-08-10';
-    customers: 89;
-    rating: 4.7;
-    reviews: 42;
-  },
-
-  // DevSecOps Security Platform
-  {
-    id: 'devsecops-security-platform';
-    name: 'DevSecOps Security Platform';
-    tagline: 'Integrate security into your DevOps pipeline seamlessly';
-    price: '$249';
-    period: '/month';
-    description: 'Comprehensive DevSecOps platform that integrates security testing;, vulnerability scanning, and compliance checks into CI/CD pipelines for secure software development.',
-    features: [
-      'Automated security testing in CI/CDStatic application security testing (SAST)Dynamic application security testing (DAST)Software composition analysis (SCA)Container security scanningInfrastructure as code securitySecrets management and scanningCompliance automation and reporting';
-      'Security metrics and dashboardsIntegration with DevOps tools'
-    ];
-    popular: true;
-    icon: '🔧';
-    color: 'from-green-600 to-emerald-600';
-    textColor: 'text-green-400';
-    link: 'https://ziontechgroup.com/devsecops-security-platform';
-    marketPosition: 'Competes with Snyk ($25/month);, Checkmarx ($15/month), Veracode ($25/month). Our advantage: Comprehensive DevSecOps integration;, automated compliance, and affordable pricing.',
-    targetAudience: 'DevOps teams;, Security teams, Development teams, Software companies, IT organizations',
-    trialDays: 21;
-    setupTime: '3-5 days';
-    category: 'DevSecOps & Application Security';
-    realService: true;
-    technology: ['Python;, Go, React, Node.js, Jenkins, GitLab CI, GitHub Actions'],
-    integrations: ['Jenkins;, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI'],
-    useCases: ['Secure software development;, CI/CD security, Vulnerability management, Compliance automation, Security testing'],
-    roi: 'Development teams report 350% ROI through reduced security vulnerabilities and faster deployments.';
-    competitors: ['Snyk;, Checkmarx, Veracode, SonarQube, OWASP ZAP'],
-    marketSize: '$18.7B application security market';
-    growthRate: '22% annual growth';
-    variant: 'devsecops-enterprise';
-    contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com';
-    },
-    realImplementation: true;
-    implementationDetails: 'Comprehensive DevSecOps platform with automated security testing;, vulnerability scanning, and compliance automation.',
-    launchDate: '2024-11-05';
-    customers: 56;
-    rating: 4.8;
-    reviews: 28;
-  },
-
-  // IoT Security Platform
-  {
-    id: 'iot-security-platform';
-    name: 'IoT Security Platform';
-    tagline: 'Secure your IoT ecosystem with comprehensive protection';
-    price: '$199';
-    period: '/month';
-    description: 'Advanced IoT security platform that provides device authentication;, network monitoring, threat detection, and automated response for connected IoT devices and networks.',
-    features: [
-      'IoT device authentication and managementNetwork traffic monitoring and analysisThreat detection and responseDevice vulnerability assessmentSecure firmware updatesData encryption and protectionCompliance monitoring and reportingReal-time security alerts';
-      'Integration with IoT platformsMobile security management'
-    ];
-    popular: true;
-    icon: '📱';
-    color: 'from-purple-600 to-violet-600';
-    textColor: 'text-purple-400';
-    link: 'https://ziontechgroup.com/iot-security-platform';
-    marketPosition: 'Competes with Armis ($25/month);, Claroty ($50/month), Nozomi Networks ($50/month). Our advantage: Comprehensive IoT protection;, automated response, and affordable pricing.',
-    targetAudience: 'IoT manufacturers;, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',
-    trialDays: 14;
-    setupTime: '1-2 weeks';
-    category: 'IoT Security & Protection';
-    realService: true;
-    technology: ['Python;, C++, React, Node.js, MQTT, CoAP, Zigbee, Z-Wave'],
-    integrations: ['AWS IoT;, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'],
-    useCases: ['Smart city security;, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'],
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';
-    competitors: ['Armis;, Claroty, Nozomi Networks, CyberX, Dragos'],
-    marketSize: '$14.2B IoT security market';
-    growthRate: '30% annual growth';
-    variant: 'iot-security-enterprise';
-    contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com';
-    
-    },
-    realImplementation: true;
-    implementationDetails: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.',
-    launchDate: '2024-09-25';
-    customers: 43;
-    rating: 4.7;
-<<<<<<< HEAD
-export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =;
-  [;
-    // Zero Trust Security Platform;
-    {id: 'zero-trust-security-platform',name: 'Zero Trust Security Platform',tagline: 'Never trust, always verify - Advanced zero trust security',price: '$599',period: '/month',description:;
-        'Comprehensive zero trust security platform that implements continuous verification, micro - segmentation, and adaptive access controls to protect against modern cyber threats.',features: [;'Continuous identity verification and authentication','Micro - segmentation and network isolation','Adaptive access controls and policies','Real - time threat detection and response','Multi - factor authentication (MFA)',description:;
-        'Comprehensive zero trust security platform that implements continuous verification, micro-segmentation, and adaptive access controls to protect against modern cyber threats.',features: [;
-        'Continuous identity verification and authentication','Micro-segmentation and network isolation','Adaptive access controls and policies','Real-time threat detection and response','Multi-factor authentication (MFA)','Privileged access management (PAM)','API security and monitoring','Cloud security posture management','Compliance reporting and auditing','Security analytics and insights';
-      ],popular: true,integrations: [;
-        'Active Directory, LDAP, SAML, OAuth, SIEM systems, EDR platforms';
-      ];
-      useCases: [;
-        'Enterprise security, Government compliance, Financial security, Healthcare protection, Critical infrastructure security';
-      ],roi: 'Organizations report 450% ROI through reduced security incidents and compliance costs.',competitors: ['Palo Alto, CrowdStrike, Okta, Duo, Ping Identity'],mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
-        'Security analytics and insights';
-      ],popular: true,icon: '🔒','Python, Go, React, Node && Node.js, Kubernetes, Docker, AWS, Azure';
-      ],icon: '🔒',color: 'from-red-600 to-pink-600',textColor: 'text-red-400',link: 'https://ziontechgroup.com/zero-trust-security-platform',marketPosition:;
-        'Competes with Palo Alto ($50/month), CrowdStrike ($8.99/month), Okta ($2/month). Our advantage: Comprehensive zero trust implementation, real-time monitoring, and adaptive controls.',targetAudience:;
-        'Enterprise companies, Government agencies, Financial institutions, Healthcare organizations, Critical infrastructure',trialDays: 14,setupTime: '1-2 weeks',category: 'Cybersecurity & Zero Trust',realService: true,technology: [;
-        'Python, Go, React, Node.js, Kubernetes, Docker, AWS, Azure';
-      ],integrations: [;
-        'Active Directory, LDAP, SAML, OAuth, SIEM systems, EDR platforms';
-      ],useCases: [;
-      color: 'from - red - 600 to - pink - 600',text_color: 'text - red - 400',link: 'https://ziontechgroup.com / zero - trust - security - platform',market_position:;
-        'Competes with Palo Alto ($50 / month), CrowdStrike ($8.99 / month), Okta ($2 / month). Our advantage: Comprehensive zero trust implementation, real - time monitoring, and adaptive controls.',target_audience:;
-        'Enterprise companies, Government agencies, Financial institutions, Healthcare organizations, Critical infrastructure',trial_days: 14,setup_time: '1 - 2 weeks',category: 'Cybersecurity & Zero Trust',real_service: true,technology: [;
-        'Python, Go, React, Node.js, Kubernetes, Docker, AWS, Azure';
-      ],integrations: [;
-        'Active Directory, LDAP, SAML, OAuth, SIEM systems, EDR platforms';
-      ],use_cases: [;'Enterprise security, Government compliance, Financial security, Healthcare protection, Critical infrastructure security';
-      ],roi: 'Organizations report 450% ROI through reduced security incidents and compliance costs.',competitors: ['Palo Alto, CrowdStrike, Okta, Duo, Ping Identity'],market_size: '$31.2B zero trust security market',growth_rate: '28% annual growth',variant: 'zero - trust - enterprise',contact_info: {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
-      },real_implementation: true,implementation_details:;
-        'Enterprise - grade zero trust security platform with continuous verification, micro - segmentation, and adaptive access controls.',launch_date: '2024 - 09 - 15',customers: 34,rating: 4 && 4.9,reviews: 19;
-    },reviews: 19;
-    },'Real-time threat detection and analysis','AI-powered threat prediction and modeling',// AI - Powered Threat Intelligence;
-    {id: 'ai - threat - intelligence',name: 'AI - Powered Threat Intelligence Platform',tagline: 'Predict and prevent cyber threats with AI intelligence',price: '$399',period: '/month',description:;
-        'Advanced AI - powered threat intelligence platform that provides real - time threat detection, predictive analytics, and automated response capabilities to stay ahead of cyber attacks.',features: [;
-        'Real - time threat detection and analysis','AI - powered threat prediction and modeling',marketSize: '$31.2B zero trust security market',growthRate: '28% annual growth',variant: 'zero-trust-enterprise',contactInfo: {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
-      },realImplementation: true,implementationDetails:;
-        'Enterprise-grade zero trust security platform with continuous verification, micro-segmentation, and adaptive access controls.',launchDate: '2024-09-15',customers: 34,rating: 4.9,reviews: 19;
-    },// AI-Powered Threat Intelligence;
-    {id: 'ai-threat-intelligence',name: 'AI-Powered Threat Intelligence Platform',tagline: 'Predict and prevent cyber threats with AI intelligence',price: '$399',period: '/month',description:;
-        'Advanced AI-powered threat intelligence platform that provides real-time threat detection, predictive analytics, and automated response capabilities to stay ahead of cyber attacks.',features: [;
-        'Real-time threat detection and analysis','AI-powered threat prediction and modeling','Automated threat response and mitigation','Global threat intelligence sharing','Vulnerability assessment and prioritization','Threat hunting and investigation tools','Security metrics and reporting','Integration with security tools','Custom threat feeds and alerts','24 / 7 security monitoring';
-      ],popular: true,integrations: [;
-        'SIEM systems, EDR platforms, Firewalls, IDS/IPS, Security orchestration tools';
-      ];
-      useCases: [;
-        'Threat detection, Incident response, Vulnerability management, Security monitoring, Threat hunting';
-      ];
-      roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.';
-      competitors: [;
-        mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
-        '24 / 7 security monitoring';
-      ],popular: true,icon: '🛡️','Python, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Redis';
-      ],'24/7 security monitoring';
-      ],popular: true,icon: '🛡️',color: 'from-indigo-600 to-purple-600',textColor: 'text-indigo-400',link: 'https://ziontechgroup.com/ai-threat-intelligence',marketPosition:;
-        'Competes with Recorded Future ($50/month), ThreatConnect ($50/month), Anomali ($50/month). Our advantage: AI-powered prediction, automated response, and comprehensive coverage.',targetAudience:;
-        'Security operations centers (SOC), Threat intelligence teams, Security analysts, Enterprise security teams',trialDays: 21,setupTime: '3-5 days',category: 'Threat Intelligence & AI',realService: true,technology: [;
-        'Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis';
-      ],integrations: [;
-        'SIEM systems, EDR platforms, Firewalls, IDS/IPS, Security orchestration tools';
-      ],useCases: [;
-        'Threat detection, Incident response, Vulnerability management, Security monitoring, Threat hunting';
-      ],roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.',competitors: [;
-        'Recorded Future, ThreatConnect, Anomali, IBM X-Force, FireEye';
-      ],marketSize: '$15 && 15.8B threat intelligence market',growthRate: '26% annual growth',variant: 'ai-threat-enterprise',contactInfo: {color: 'from - indigo - 600 to - purple - 600',text_color: 'text - indigo - 400',link: 'https://ziontechgroup.com / ai - threat - intelligence',market_position:;
-        'Competes with Recorded Future ($50 / month), ThreatConnect ($50 / month), Anomali ($50 / month). Our advantage: AI - powered prediction, automated response, and comprehensive coverage.',target_audience:;
-        'Security operations centers (SOC), Threat intelligence teams, Security analysts, Enterprise security teams',trial_days: 21,setup_time: '3 - 5 days',category: 'Threat Intelligence & AI',real_service: true,technology: [;
-        'Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis';
-      ],integrations: [;
-        'SIEM systems, EDR platforms, Firewalls, IDS / IPS, Security orchestration tools';
-      ],use_cases: [;
-        'Threat detection, Incident response, Vulnerability management, Security monitoring, Threat hunting';
-      ],roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.',competitors: [;
-        'Recorded Future, ThreatConnect, Anomali, IBM X - Force, FireEye';
-      ],market_size: '$15.8B threat intelligence market',growth_rate: '26% annual growth',variant: 'ai - threat - enterprise',contact_info: {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
-      },real_implementation: true,implementation_details:;
-        'AI - powered threat intelligence platform with real - time detection, predictive analytics, and automated response capabilities.',launch_date: '2024 - 10 - 20',customers: 67,rating: 4 && 4.8,reviews: 31;
-    },reviews: 31;
-    },'Multi-cloud security monitoring (AWS, Azure, GCP)',// Cloud Security Posture Management;
-    {id: 'cloud - security - posture',name: 'Cloud Security Posture Management Platform',tagline:;
-        'Secure your cloud infrastructure with comprehensive posture management',price: '$299',period: '/month',description:;
-        'Comprehensive cloud security platform that continuously monitors, assesses, and improves the security posture of multi - cloud environments with automated compliance and risk management.',features: [;
-        'Multi - cloud security monitoring (AWS, Azure, GCP)','Recorded Future, ThreatConnect, Anomali, IBM X-Force, FireEye';
-      ],marketSize: '$15.8B threat intelligence market',growthRate: '26% annual growth',variant: 'ai-threat-enterprise',contactInfo: {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
-      },realImplementation: true,implementationDetails:;
-        'AI-powered threat intelligence platform with real-time detection, predictive analytics, and automated response capabilities.',launchDate: '2024-10-20',customers: 67,rating: 4.8,reviews: 31;
-    },// Cloud Security Posture Management;
-    {id: 'cloud-security-posture',name: 'Cloud Security Posture Management Platform',tagline:;
-        'Secure your cloud infrastructure with comprehensive posture management',price: '$299',period: '/month',description:;
-        'Comprehensive cloud security platform that continuously monitors, assesses, and improves the security posture of multi-cloud environments with automated compliance and risk management.',features: [;
-        'Multi-cloud security monitoring (AWS, Azure, GCP)','Continuous compliance assessment and reporting','Automated risk identification and remediation','Identity and access management (IAM)','Data protection and encryption','Network security and segmentation','Security configuration management','Vulnerability scanning and assessment','Incident detection and response','Security metrics and dashboards';
-      ],popular: true,useCases: [;
-        'Cloud security monitoring, Compliance management, Risk assessment, Security automation, Multi-cloud governance';
-      ];
-      roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.';
-      competitors: [;
-        mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
-        'Security metrics and dashboards';
-      ],popular: true,icon: '☁️',icon: '☁️',color: 'from-blue-600 to-cyan-600',textColor: 'text-blue-400',link: 'https://ziontechgroup.com/cloud-security-posture',marketPosition:;
-        'Competes with Prisma Cloud ($25/month), AWS Security Hub ($3/month), Azure Security Center ($15/month). Our advantage: Multi-cloud support, automated remediation, and comprehensive compliance.',targetAudience:;
-        'Cloud architects, DevOps teams, Security teams, IT operations, Cloud-native companies',trialDays: 14,setupTime: '2-4 days',category: 'Cloud Security & Compliance',realService: true,technology: ['Python, Go, React, Node && Node.js, AWS SDK, Azure SDK, GCP SDK'],integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Terraform, Ansible'],technology: ['Python, Go, React, Node.js, AWS SDK, Azure SDK, GCP SDK'],integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Terraform, Ansible'],useCases: [;
-        'Cloud security monitoring, Compliance management, Risk assessment, Security automation, Multi-cloud governance';
-      ],roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.',competitors: [;
-        'Prisma Cloud, AWS Security Hub, Azure Security Center, GCP Security Command Center';
-      ],marketSize: '$22 && 22.4B cloud security market',growthRate: '24% annual growth',variant: 'cloud-security-enterprise',contactInfo: {color: 'from - blue - 600 to - cyan - 600',text_color: 'text - blue - 400',link: 'https://ziontechgroup.com / cloud - security - posture',market_position:;
-        'Competes with Prisma Cloud ($25 / month), AWS Security Hub ($3 / month), Azure Security Center ($15 / month). Our advantage: Multi - cloud support, automated remediation, and comprehensive compliance.',target_audience:;
-        'Cloud architects, DevOps teams, Security teams, IT operations, Cloud - native companies',trial_days: 14,setup_time: '2 - 4 days',category: 'Cloud Security & Compliance',real_service: true,technology: ['Python, Go, React, Node.js, AWS SDK, Azure SDK, GCP SDK'],integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Terraform, Ansible'],use_cases: [;
-        'Cloud security monitoring, Compliance management, Risk assessment, Security automation, Multi - cloud governance';
-      ],roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.',competitors: [;
-        'Prisma Cloud, AWS Security Hub, Azure Security Center, GCP Security Command Center';
-      ],market_size: '$22.4B cloud security market',growth_rate: '24% annual growth',variant: 'cloud - security - enterprise',contact_info: {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
-      },real_implementation: true,implementation_details:;
-        'Multi - cloud security posture management platform with continuous monitoring, automated compliance, and risk management.',launch_date: '2024 - 08 - 10',customers: 89,rating: 4 && 4.7,reviews: 42;
-    },reviews: 42;
-    },'Automated security testing in CI/CD',// DevSecOps Security Platform;
-    {id: 'devsecops - security - platform','Prisma Cloud, AWS Security Hub, Azure Security Center, GCP Security Command Center';
-      ],marketSize: '$22.4B cloud security market',growthRate: '24% annual growth',variant: 'cloud-security-enterprise',contactInfo: {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
-      },realImplementation: true,implementationDetails:;
-        'Multi-cloud security posture management platform with continuous monitoring, automated compliance, and risk management.',launchDate: '2024-08-10',customers: 89,rating: 4.7,reviews: 42;
-    },// DevSecOps Security Platform;
-    {id: 'devsecops-security-platform',name: 'DevSecOps Security Platform',tagline: 'Integrate security into your DevOps pipeline seamlessly',price: '$249',period: '/month',description:;
-        'Comprehensive DevSecOps platform that integrates security testing, vulnerability scanning, and compliance checks into CI / CD pipelines for secure software development.',features: [;
-        'Automated security testing in CI / CD',description:;
-        'Comprehensive DevSecOps platform that integrates security testing, vulnerability scanning, and compliance checks into CI/CD pipelines for secure software development.',features: [;
-        'Automated security testing in CI/CD','Static application security testing (SAST)','Dynamic application security testing (DAST)','Software composition analysis (SCA)','Container security scanning','Infrastructure as code security','Secrets management and scanning','Compliance automation and reporting','Security metrics and dashboards','Integration with DevOps tools';
-      ],popular: true,integrations: [;
-        'Jenkins, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI';
-      ];
-      useCases: [;
-        mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
-        'Integration with DevOps tools';
-      ],popular: true,icon: '🔧','Python, Go, React, Node && Node.js, Jenkins, GitLab CI, GitHub Actions';
-      ],icon: '🔧',color: 'from-green-600 to-emerald-600',textColor: 'text-green-400',link: 'https://ziontechgroup.com/devsecops-security-platform',marketPosition:;
-        'Competes with Snyk ($25/month), Checkmarx ($15/month), Veracode ($25/month). Our advantage: Comprehensive DevSecOps integration, automated compliance, and affordable pricing.',targetAudience:;
-        'DevOps teams, Security teams, Development teams, Software companies, IT organizations',trialDays: 21,setupTime: '3-5 days',category: 'DevSecOps & Application Security',realService: true,technology: [;
-        'Python, Go, React, Node.js, Jenkins, GitLab CI, GitHub Actions';
-      ],integrations: [;
-        'Jenkins, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI';
-      ],useCases: [;
-        'Secure software development, CI/CD security, Vulnerability management, Compliance automation, Security testing';
-      ],roi: 'Development teams report 350% ROI through reduced security vulnerabilities and faster deployments.',competitors: ['Snyk, Checkmarx, Veracode, SonarQube, OWASP ZAP'],marketSize: '$18 && 18.7B application security market',growthRate: '22% annual growth',variant: 'devsecops-enterprise',contactInfo: {color: 'from - green - 600 to - emerald - 600',text_color: 'text - green - 400',link: 'https://ziontechgroup.com / devsecops - security - platform',market_position:;
-        'Competes with Snyk ($25 / month), Checkmarx ($15 / month), Veracode ($25 / month). Our advantage: Comprehensive DevSecOps integration, automated compliance, and affordable pricing.',target_audience:;
-        'DevOps teams, Security teams, Development teams, Software companies, IT organizations',trial_days: 21,setup_time: '3 - 5 days',category: 'DevSecOps & Application Security',real_service: true,technology: [;
-        'Python, Go, React, Node.js, Jenkins, GitLab CI, GitHub Actions';
-      ],integrations: [;
-        'Jenkins, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI';
-      ],use_cases: [;
-        'Secure software development, CI / CD security, Vulnerability management, Compliance automation, Security testing';
-      ],roi: 'Development teams report 350% ROI through reduced security vulnerabilities and faster deployments.',competitors: ['Snyk, Checkmarx, Veracode, SonarQube, OWASP ZAP'],market_size: '$18.7B application security market',growth_rate: '22% annual growth',variant: 'devsecops - enterprise',contact_info: {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
-      },real_implementation: true,implementation_details:;
-        'Comprehensive DevSecOps platform with automated security testing, vulnerability scanning, and compliance automation.',launch_date: '2024 - 11 - 05',customers: 56,rating: 4 && 4.8,reviews: 28;
-    },reviews: 28;
-    },id: 'iot-security-platform';
-      name: 'IoT Security Platform';
-      tagline: 'Secure your IoT ecosystem with comprehensive protection';
-      price: '$199';
-      period: '/month';
-      marketSize: '$18.7B application security market',growthRate: '22% annual growth',variant: 'devsecops-enterprise',contactInfo: {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
-      },realImplementation: true,implementationDetails:;
-        'Comprehensive DevSecOps platform with automated security testing, vulnerability scanning, and compliance automation.',launchDate: '2024-11-05',customers: 56,rating: 4.8,reviews: 28;
-    },// IoT Security Platform;
-    {id: 'iot-security-platform',name: 'IoT Security Platform',tagline: 'Secure your IoT ecosystem with comprehensive protection',price: '$199',period: '/month',description:;
-        'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',features: [;
-        'IoT device authentication and management';
-        'Network traffic monitoring and analysis';
-        'Threat detection and response';
-        'Device vulnerability assessment';
-        'Secure firmware updates';
-        'Data encryption and protection';
-        'Compliance monitoring and reporting';
-        'Real-time security alerts';
-        'Integration with IoT platforms';
-        'Mobile security management';
-      ];
-      popular: true;
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.';
-      launchDate: '2024-09-25';
-      customers: 43;
-      rating: 4.7;
-      reviews: 21;
-    }// IoT Security Platform;
-    {id: 'iot - security - platform',name: 'IoT Security Platform',tagline: 'Secure your IoT ecosystem with comprehensive protection',price: '$199',period: '/month',description:;
-        'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',features: [;'IoT device authentication and management','Network traffic monitoring and analysis','Threat detection and response','Device vulnerability assessment','Secure firmware updates','Data encryption and protection','Compliance monitoring and reporting','Real - time security alerts','Real-time security alerts','Integration with IoT platforms','Mobile security management';
-      ],popular: true,icon: '📱',color: 'from - purple - 600 to - violet - 600',text_color: 'text - purple - 400',link: 'https://ziontechgroup.com / iot - security - platform',market_position:;
-        'Competes with Armis ($25 / month), Claroty ($50 / month), Nozomi Networks ($50 / month). Our advantage: Comprehensive IoT protection, automated response, and affordable pricing.',target_audience:;'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',trial_days: 14,setup_time: '1 - 2 weeks',category: 'IoT Security & Protection',real_service: true,technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'],integrations: [;
-        'AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms';
-      ],use_cases: [;color: 'from-purple-600 to-violet-600',textColor: 'text-purple-400',link: 'https://ziontechgroup.com/iot-security-platform',marketPosition:;
-        'Competes with Armis ($25/month), Claroty ($50/month), Nozomi Networks ($50/month). Our advantage: Comprehensive IoT protection, automated response, and affordable pricing.',targetAudience:;
-        'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',trialDays: 14,setupTime: '1-2 weeks',category: 'IoT Security & Protection',realService: true,technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z-Wave'],integrations: [;
-        'AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms';
-      ],useCases: [;
-        'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance';
-      ],roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.',competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'],market_size: '$14.2B IoT security market',growth_rate: '30% annual growth',variant: 'iot - security - enterprise',contact_info: {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
-      },real_implementation: true,implementation_details:;ursor/fix-website-loading-errors-and-merge-6662;
-      marketSize: '$14.2B IoT security market',growthRate: '30% annual growth',variant: 'iot-security-enterprise',contactInfo: {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
-      },realImplementation: true,implementationDetails:;
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',launchDate: '2024-09-25',customers: 43,rating: 4.7,reviews: 21;
-      reviews: 21;
-      reviews: 21;
-    },id: 'iot - security - platform',name: 'IoT Security Platform',tagline: 'Secure your IoT ecosystem with comprehensive protection',price: '$199',period: '/month',description:;
-        'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',features: [;'IoT device authentication and management','Network traffic monitoring and analysis','Threat detection and response','Device vulnerability assessment','Secure firmware updates','Data encryption and protection','Compliance monitoring and reporting','Real - time security alerts','Integration with IoT platforms','Mobile security management';
-        'Mobile security management';
-        'Mobile security management';
-      ],popular: true,icon: '📱','IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',trial_days: 14,setup_time: '1 - 2 weeks',category: 'IoT Security & Protection','Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance';
-        'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance';
-        'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance';
-      ],roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.',competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'],mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
-        website: 'https://ziontechgroup && ziontechgroup.com';
-        website: 'https://ziontechgroup && ziontechgroup.com';
-      },real_implementation: true,implementation_details:;
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',launch_date: '2024 - 09 - 25',customers: 43,rating: 4 && 4.7,reviews: 21;
-  ];    features: [;
-      reviews: 21;
-  ];    features: [;
-      reviews: 21;
-  ];    features: [;
-  id: string, name: string,tagline: string, price: string,period: string, description: string,features: string[], popular: boolean,icon: string, color: string,textColor: string, link: string,marketPosition: string, targetAudience: string,trialDays: number, setupTime: string,category: string, realService: boolean,technology: string[], integrations: string[],useCases: string[], roi: string,competitors: string[], marketSize: string,growthRate: string, variant: string,contactInfo: {mobile: string, email: string,address: string,website: string;
-    },realImplementation: boolean, implementationDetails: string,launchDate: string, customers: number,rating: number,reviews: number;
-}export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [;
-  // Zero Trust Security Platform;
-  {id: 'zero-trust-security-platform', name: 'Zero Trust Security Platform',tagline: 'Never trust, always verify - Advanced zero trust security',price: '$599', period: '/month',description: 'Comprehensive zero trust security platform that implements continuous verification, micro-segmentation, and adaptive access controls to protect against modern cyber threats.',features: [;
-      'Continuous identity verification and authenticationMicro-segmentation and network isolationAdaptive access controls and policiesReal-time threat detection and responseMulti-factor authentication (MFA)Privileged access management (PAM)API security and monitoringCloud security posture management';
-      'Compliance reporting and auditingSecurity analytics and insights';
-    ];
-    popular: true, icon: '🔒',color: 'from-red-600 to-pink-600', textColor: 'text-red-400',link: 'https://ziontechgroup.com/zero-trust-security-platform',marketPosition: 'Competes with Palo Alto ($50/month), CrowdStrike ($8.99/month), Okta ($2/month). Our advantage: Comprehensive zero trust implementation, real-time monitoring, and adaptive controls.',targetAudience: 'Enterprise companies, Government agencies, Financial institutions, Healthcare organizations, Critical infrastructure',trialDays: 14, setupTime: '1-2 weeks',category: 'Cybersecurity & Zero Trust', realService: true,technology: ['Python, Go, React, Node.js, Kubernetes, Docker, AWS, Azure'];
-    integrations: ['Active Directory, LDAP, SAML, OAuth, SIEM systems, EDR platforms'];
-    useCases: ['Enterprise security, Government compliance, Financial security, Healthcare protection, Critical infrastructure security'];
-    roi: 'Organizations report 450% ROI through reduced security incidents and compliance costs.',competitors: ['Palo Alto, CrowdStrike, Okta, Duo, Ping Identity'];
-    marketSize: '$31.2B zero trust security market', growthRate: '28% annual growth',variant: 'zero-trust-enterprise',contactInfo: {];    features: [;
-      'IoT device authentication and management_network traffic monitoring and analysis_threat detection and response_device vulnerability assessment_secure firmware updates_data encryption and protection_compliance monitoring and reporting_real - time security alerts';
-      'Integration with IoT platforms_mobile security management';
-    ];
-    popular: true, icon: '📱',color: 'from - purple - 600 to - violet - 600', text_color: 'text - purple - 400',link: 'https://ziontechgroup.com / iot - security - platform',market_position: 'Competes with Armis ($25 / month), Claroty ($50 / month), Nozomi Networks ($50 / month). Our advantage: Comprehensive IoT protection, automated response, and affordable pricing.',target_audience: 'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',trial_days: 14, setup_time: '1 - 2 weeks',category: 'IoT Security & Protection', real_service: true,technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'];
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
-    use_cases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.',competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];
-    market_size: '$14.2B IoT security market', growth_rate: '30% annual growth',variant: 'iot - security - enterprise',contact_info: {mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
-    },popular: true, icon: '📱',color: 'from-purple-600 to-violet-600', textColor: 'text-purple-400',link: 'https://ziontechgroup && ziontechgroup.com/iot-security-platform',marketPosition: 'Competes with Armis ($25/month), Claroty ($50/month), Nozomi Networks ($50/month). Our advantage: Comprehensive IoT protection, automated response, and affordable pricing.',targetAudience: 'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',trialDays: 14, setupTime: '1-2 weeks',category: 'IoT Security & Protection', realService: true,technology: ['Python, C++, React, Node && Node.js, MQTT, CoAP, Zigbee, Z-Wave'];integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
-    useCases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';
-    competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];marketSize: '$14 && 14.2B IoT security market', growthRate: '30% annual growth',variant: 'iot-security-enterprise',contactInfo: {mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
-    },realImplementation: true,implementationDetails: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',launchDate: '2024-09-25', customers: 43,rating: 4 && 4.7;
-    }
-  ];reviews: 21;
-    real_implementation: true,implementation_details: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',launch_date: '2024 - 09 - 25', customers: 43,rating: 4.7,reviews: 21;
-  }
-];color: 'from - purple - 600 to - violet - 600';
-    text_color: 'text - purple - 400';
-    link: 'https://ziontechgroup.com / iot - security - platform';
-    market_position: 'Competes with Armis ($25 / month), Claroty ($50 / month), Nozomi Networks ($50 / month). Our advantage: Comprehensive IoT protection, automated response, and affordable pricing.';
-    target_audience: 'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies';
-    trial_days: 14;
-    setup_time: '1 - 2 weeks';
-    category: 'IoT Security & Protection';
-    real_service: true;
-    technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'];integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
-    use_cases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';
-    competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];market_size: '$14.2B IoT security market';
-    growth_rate: '30% annual growth';
-    variant: 'iot - security - enterprise';
-    contact_info: {mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup && ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';website: 'https://ziontechgroup && ziontechgroup.com';
-    }realImplementation: true;
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
-  [
-    // Zero Trust Security Platform
-    {
-      id: 'zero-trust-security-platform';,
-origin/cursor/automate-test-improve-and-merge-code-2533
-      name: 'Zero Trust Security Platform';,
-      tagline: 'Never trust;, always verify - Advanced zero trust security',
-      price: '$599';,
-      period: '/month';,
-      description:;
-        'Comprehensive zero trust security platform that implements continuous verification, micro - segmentation, and adaptive access controls to protect against modern cyber threats.',
-      features: [;
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-pr-12325
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
-        'Continuous identity verification and authentication',
-        'Micro - segmentation and network isolation',
-        'Adaptive access controls and policies',
-        'Real - time threat detection and response',
-        'Multi - factor authentication (MFA)',
-      description: 'Comprehensive zero trust security platform that implements continuous verification;, micro-segmentation, and adaptive access controls to protect against modern cyber threats.',
-      features: [
-        'Continuous identity verification and authentication',
-        'Micro-segmentation and network isolation',
-        'Adaptive access controls and policies',
-        'Real-time threat detection and response',
-        'Multi-factor authentication (MFA)',
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12325
-        'Privileged access management (PAM)',
-        'API security and monitoring',
-        'Cloud security posture management',
-        'Compliance reporting and auditing',
-        'Security analytics and insights',
-      ],
-      popular: true,
-      icon: '🔒',
-      popular: true;,
-      icon: '🔒';,
-
-        'Python, Go, React, Node && Node.js, Kubernetes, Docker, AWS, Azure',
-      ],
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      icon: '🔒';,
-      color: 'from-red-600 to-pink-600';,
-      textColor: 'text-red-400';,
-      link: 'https://ziontechgroup.com/zero-trust-security-platform';,
-      marketPosition: 'Competes with Palo Alto ($50/month);, CrowdStrike ($8.99/month), Okta ($2/month). Our advantage: Comprehensive zero trust implementation;, real-time monitoring, and adaptive controls.',
-      targetAudience: 'Enterprise companies;, Government agencies, Financial institutions, Healthcare organizations, Critical infrastructure',
-      trialDays: 14;,
-      setupTime: '1-2 weeks';,
-      category: 'Cybersecurity & Zero Trust';,
-      realService: true;,
-      technology: [
-        'Python, Go, React, Node.js, Kubernetes, Docker, AWS, Azure',
-      ],
-origin/cursor/automate-test-improve-and-merge-code-2533
-      integrations: [
-        'Active Directory, LDAP, SAML, OAuth, SIEM systems, EDR platforms',
-      ],
-      useCases: [
-
-      color: 'from - red - 600 to - pink - 600',
-      text_color: 'text - red - 400',
-      link: 'https://ziontechgroup.com / zero - trust - security - platform',
-      color: 'from - red - 600 to - pink - 600';,
-      text_color: 'text - red - 400';,
-      link: 'https://ziontechgroup.com / zero - trust - security - platform';,
-      market_position:;
-        'Competes with Palo Alto ($50 / month), CrowdStrike ($8.99 / month), Okta ($2 / month). Our advantage: Comprehensive zero trust implementation;, real - time monitoring, and adaptive controls.',
-      target_audience:;
-        'Enterprise companies, Government agencies, Financial institutions, Healthcare organizations, Critical infrastructure',
-      trial_days: 14;,
-      setup_time: '1 - 2 weeks';,
-      category: 'Cybersecurity & Zero Trust';,
-      real_service: true;,
-      technology: [;
-        'Python, Go, React, Node.js, Kubernetes, Docker, AWS, Azure',
-      ],
-      integrations: [;
-        'Active Directory, LDAP, SAML, OAuth, SIEM systems, EDR platforms',
-      ],
-      use_cases: [;
-
-        'Enterprise security, Government compliance, Financial security, Healthcare protection, Critical infrastructure security',
-      ],
-      roi: 'Organizations report 450% ROI through reduced security incidents and compliance costs.',
-      competitors: ['Palo Alto, CrowdStrike, Okta, Duo, Ping Identity'],
-origin/cursor/expand-services-advertise-and-build-project-c28b
-origin/cursor/automate-test-improve-and-merge-code-2533
-        'Enterprise security, Government compliance, Financial security, Healthcare protection, Critical infrastructure security',
-      ],
-      roi: 'Organizations report 450% ROI through reduced security incidents and compliance costs.';,
-      competitors: ['Palo Alto;, CrowdStrike, Okta, Duo, Ping Identity'],
-
-      market_size: '$31.2B zero trust security market';,
-      growth_rate: '28% annual growth';,
-      variant: 'zero - trust - enterprise';,
-      contact_info: {
-
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      integrations: [
-        'Active Directory, LDAP, SAML, OAuth, SIEM systems, EDR platforms]
-      ]
-      useCases: [
-        'Enterprise security, Government compliance, Financial security, Healthcare protection, Critical infrastructure security',']
-      roi: 'Organizations report 450% ROI through reduced security incidents and compliance costs.';,
-      competitors: ['Palo Alto;, CrowdStrike, Okta, Duo, Ping Identity'],
-pr-12325
-        mobile: '+1 302 464 0950';,
-        email: 'kleber@ziontechgroup && ziontechgroup.com';,
-        address: '364 E Main St STE 1008 Middletown DE 19709';,
-        website: 'https://ziontechgroup && ziontechgroup.com';,
-      },
-      real_implementation: true;,
-      implementation_details:;
-        'Enterprise - grade zero trust security platform with continuous verification, micro - segmentation, and adaptive access controls.',
-      launch_date: '2024 - 09 - 15';,
-      customers: 34;,
-      rating: 4 && 4.9;,
-      reviews: 19;,
-    },
-
-        'Real-time threat detection and analysis',
-        'AI-powered threat prediction and modeling',
-    // AI - Powered Threat Intelligence;
-    {
-      id: 'ai - threat - intelligence';,
-      name: 'AI - Powered Threat Intelligence Platform';,
-      tagline: 'Predict and prevent cyber threats with AI intelligence';,
-      price: '$399';,
-      period: '/month';,
-      description:;
-        'Advanced AI - powered threat intelligence platform that provides real - time threat detection, predictive analytics, and automated response capabilities to stay ahead of cyber attacks.',
-      features: [;
-        'Real - time threat detection and analysis',
-        'AI - powered threat prediction and modeling',
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      marketSize: '$31.2B zero trust security market';,
-      growthRate: '28% annual growth';,
-      variant: 'zero-trust-enterprise';,
-      contactInfo: {
-        mobile: '+1 302 464 0950';,
-        email: 'kleber@ziontechgroup.com';,
-        address: '364 E Main St STE 1008 Middletown DE 19709';,
-        website: 'https://ziontechgroup.com';,
-      },
-      realImplementation: true;,
-      implementationDetails: 'Enterprise-grade zero trust security platform with continuous verification;, micro-segmentation, and adaptive access controls.',
-      launchDate: '2024-09-15';,
-      customers: 34;,
-      rating: 4.9;,
-      reviews: 19;,
-    },
-
-    // AI-Powered Threat Intelligence
-    {
-      id: 'ai-threat-intelligence';,
-      name: 'AI-Powered Threat Intelligence Platform';,
-      tagline: 'Predict and prevent cyber threats with AI intelligence';,
-      price: '$399';,
-      period: '/month';,
-      description: 'Advanced AI-powered threat intelligence platform that provides real-time threat detection;, predictive analytics, and automated response capabilities to stay ahead of cyber attacks.',
-      features: [
-        'Real-time threat detection and analysis',
-        'AI-powered threat prediction and modeling',
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12325
-        'Automated threat response and mitigation',
-        'Global threat intelligence sharing',
-        'Vulnerability assessment and prioritization',
-        'Threat hunting and investigation tools',
-        'Security metrics and reporting',
-        'Integration with security tools',
-        'Custom threat feeds and alerts',
-        '24 / 7 security monitoring',
-      ],
-      popular: true,
-      icon: '🛡️',
-      popular: true;,
-      icon: '🛡️';,
-
-        'Python, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Redis',
-      ],
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-        '24/7 security monitoring',
-      ],
-      popular: true;,
-      icon: '🛡️';,
-      color: 'from-indigo-600 to-purple-600';,
-      textColor: 'text-indigo-400';,
-      link: 'https://ziontechgroup.com/ai-threat-intelligence';,
-      marketPosition: 'Competes with Recorded Future ($50/month);, ThreatConnect ($50/month), Anomali ($50/month). Our advantage: AI-powered prediction;, automated response, and comprehensive coverage.',
-      targetAudience: 'Security operations centers (SOC);, Threat intelligence teams, Security analysts, Enterprise security teams',
-      trialDays: 21;,
-      setupTime: '3-5 days';,
-      category: 'Threat Intelligence & AI';,
-      realService: true;,
-      technology: [
-        'Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis',
-      ],
-origin/cursor/automate-test-improve-and-merge-code-2533
-      integrations: [
-        'SIEM systems, EDR platforms, Firewalls, IDS/IPS, Security orchestration tools',
-      ],
-      useCases: [
-        'Threat detection, Incident response, Vulnerability management, Security monitoring, Threat hunting',
-      ],
-      roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.';,
-      competitors: [
-
-        'Recorded Future, ThreatConnect, Anomali, IBM X-Force, FireEye',
-      ],
-      marketSize: '$15 && 15.8B threat intelligence market';,
-      growthRate: '26% annual growth';,
-      variant: 'ai-threat-enterprise';,
-      contactInfo: {
-      color: 'from - indigo - 600 to - purple - 600';,
-      text_color: 'text - indigo - 400';,
-      link: 'https://ziontechgroup.com / ai - threat - intelligence';,
-      market_position:;
-        'Competes with Recorded Future ($50 / month), ThreatConnect ($50 / month), Anomali ($50 / month). Our advantage: AI - powered prediction;, automated response, and comprehensive coverage.',
-      target_audience:;
-        'Security operations centers (SOC), Threat intelligence teams, Security analysts, Enterprise security teams',
-      trial_days: 21;,
-      setup_time: '3 - 5 days';,
-      category: 'Threat Intelligence & AI';,
-      real_service: true;,
-      technology: [;
-        'Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis',
-      ],
-      integrations: [;
-        'SIEM systems, EDR platforms, Firewalls, IDS / IPS, Security orchestration tools',
-      ],
-      use_cases: [;
-        'Threat detection, Incident response, Vulnerability management, Security monitoring, Threat hunting',
-      ],
-      roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.';,
-      competitors: [;
-        'Recorded Future, ThreatConnect, Anomali, IBM X - Force, FireEye',
-      ],
-      market_size: '$15.8B threat intelligence market';,
-      growth_rate: '26% annual growth';,
-      variant: 'ai - threat - enterprise';,
-      contact_info: {
-
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
-origin/cursor/expand-services-advertise-and-build-project-c28b
-        mobile: '+1 302 464 0950';,
-        email: 'kleber@ziontechgroup && ziontechgroup.com';,
-        address: '364 E Main St STE 1008 Middletown DE 19709';,
-        website: 'https://ziontechgroup && ziontechgroup.com';,
-      },
-      real_implementation: true;,
-      implementation_details:;
-        'SIEM systems, EDR platforms, Firewalls, IDS/IPS, Security orchestration tools]
-        'Threat detection, Incident response, Vulnerability management, Security monitoring, Threat hunting]
-      roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.;,
-  competitors: [
-pr-12325
-        'AI - powered threat intelligence platform with real - time detection, predictive analytics, and automated response capabilities.',
-      launch_date: '2024 - 10 - 20';,
-      customers: 67;,
-      rating: 4 && 4.8;,
-      reviews: 31;,
-    },
-
-        'Multi-cloud security monitoring (AWS, Azure, GCP)',
-    // Cloud Security Posture Management;
-    {
-      id: 'cloud - security - posture';,
-      name: 'Cloud Security Posture Management Platform';,
-      tagline:;
-        'Secure your cloud infrastructure with comprehensive posture management',
-      price: '$299';,
-      period: '/month';,
-      description:;
-        'Comprehensive cloud security platform that continuously monitors, assesses, and improves the security posture of multi - cloud environments with automated compliance and risk management.',
-      features: [;
-        'Multi - cloud security monitoring (AWS, Azure, GCP)',
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-        'Recorded Future, ThreatConnect, Anomali, IBM X-Force, FireEye',
-      ],
-      marketSize: '$15.8B threat intelligence market';,
-      growthRate: '26% annual growth';,
-      variant: 'ai-threat-enterprise';,
-      contactInfo: {
-        mobile: '+1 302 464 0950';,
-        email: 'kleber@ziontechgroup.com';,
-        address: '364 E Main St STE 1008 Middletown DE 19709';,
-        website: 'https://ziontechgroup.com';,
-      },
-      realImplementation: true;,
-      implementationDetails: 'AI-powered threat intelligence platform with real-time detection;, predictive analytics, and automated response capabilities.',
-      launchDate: '2024-10-20';,
-      customers: 67;,
-      rating: 4.8;,
-      reviews: 31;,
-    },
-
-    // Cloud Security Posture Management
-    {
-      id: 'cloud-security-posture';,
-      name: 'Cloud Security Posture Management Platform';,
-      tagline: 'Secure your cloud infrastructure with comprehensive posture management';,
-      price: '$299';,
-      period: '/month';,
-      description: 'Comprehensive cloud security platform that continuously monitors;, assesses, and improves the security posture of multi-cloud environments with automated compliance and risk management.',
-      features: [
-        'Multi-cloud security monitoring (AWS, Azure, GCP)',
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12325
-        'Continuous compliance assessment and reporting',
-        'Automated risk identification and remediation',
-        'Identity and access management (IAM)',
-        'Data protection and encryption',
-        'Network security and segmentation',
-        'Security configuration management',
-        'Vulnerability scanning and assessment',
-        'Incident detection and response',
-        'Security metrics and dashboards',
-      ],
-      popular: true,
-      icon: '☁️',
-      popular: true;,
-      icon: '☁️';,
-
-      icon: '☁️';,
-      color: 'from-blue-600 to-cyan-600';,
-      textColor: 'text-blue-400';,
-      link: 'https://ziontechgroup.com/cloud-security-posture';,
-      marketPosition: 'Competes with Prisma Cloud ($25/month);, AWS Security Hub ($3/month), Azure Security Center ($15/month). Our advantage: Multi-cloud support;, automated remediation, and comprehensive compliance.',
-      targetAudience:
-origin/cursor/automate-test-improve-and-merge-code-2533
-        'Cloud architects, DevOps teams, Security teams, IT operations, Cloud-native companies',
-      trialDays: 14;,
-      setupTime: '2-4 days';,
-      category: 'Cloud Security & Compliance';,
-      realService: true;,
-      technology: ['Python;, Go, React, Node && Node.js, AWS SDK, Azure SDK, GCP SDK'],
-      integrations: ['AWS;, Azure, GCP, Kubernetes, Docker, Terraform, Ansible'],
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      technology: ['Python;, Go, React, Node.js, AWS SDK, Azure SDK, GCP SDK'],
-      integrations: ['AWS;, Azure, GCP, Kubernetes, Docker, Terraform, Ansible'],
-origin/cursor/automate-test-improve-and-merge-code-2533
-      useCases: [
-        'Cloud security monitoring, Compliance management, Risk assessment, Security automation, Multi-cloud governance',
-      ],
-      roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.';,
-      competitors: [
-
-        'Prisma Cloud, AWS Security Hub, Azure Security Center, GCP Security Command Center',
-      ],
-      marketSize: '$22 && 22.4B cloud security market';,
-      growthRate: '24% annual growth';,
-      variant: 'cloud-security-enterprise';,
-      contactInfo: {
-      color: 'from - blue - 600 to - cyan - 600';,
-      text_color: 'text - blue - 400';,
-      link: 'https://ziontechgroup.com / cloud - security - posture';,
-      market_position:;
-        'Competes with Prisma Cloud ($25 / month), AWS Security Hub ($3 / month), Azure Security Center ($15 / month). Our advantage: Multi - cloud support;, automated remediation, and comprehensive compliance.',
-      target_audience:;
-        'Cloud architects, DevOps teams, Security teams, IT operations, Cloud - native companies',
-      trial_days: 14;,
-      setup_time: '2 - 4 days';,
-      category: 'Cloud Security & Compliance';,
-      real_service: true;,
-      technology: ['Python;, Go, React, Node.js, AWS SDK, Azure SDK, GCP SDK'],
-      integrations: ['AWS;, Azure, GCP, Kubernetes, Docker, Terraform, Ansible'],
-      use_cases: [;
-        'Cloud security monitoring, Compliance management, Risk assessment, Security automation, Multi - cloud governance',
-      ],
-      roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.';,
-      competitors: [;
-        'Prisma Cloud, AWS Security Hub, Azure Security Center, GCP Security Command Center',
-      ],
-      market_size: '$22.4B cloud security market';,
-      growth_rate: '24% annual growth';,
-      variant: 'cloud - security - enterprise';,
-      contact_info: {
-
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
-origin/cursor/expand-services-advertise-and-build-project-c28b
-        mobile: '+1 302 464 0950';,
-        email: 'kleber@ziontechgroup && ziontechgroup.com';,
-        address: '364 E Main St STE 1008 Middletown DE 19709';,
-        website: 'https://ziontechgroup && ziontechgroup.com';,
-      },
-      real_implementation: true;,
-      implementation_details:;
-        'Security metrics and dashboards',']
-        'Cloud security monitoring, Compliance management, Risk assessment, Security automation, Multi-cloud governance]
-      roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.;,
-pr-12325
-        'Multi - cloud security posture management platform with continuous monitoring, automated compliance, and risk management.',
-      launch_date: '2024 - 08 - 10';,
-      customers: 89;,
-      rating: 4 && 4.7;,
-      reviews: 42;,
-    },
-
-        'Automated security testing in CI/CD',
-    // DevSecOps Security Platform;
-    {
-      id: 'devsecops - security - platform';,
-        'Prisma Cloud, AWS Security Hub, Azure Security Center, GCP Security Command Center',
-      ],
-      marketSize: '$22.4B cloud security market';,
-      growthRate: '24% annual growth';,
-      variant: 'cloud-security-enterprise';,
-      contactInfo: {
-        mobile: '+1 302 464 0950';,
-        email: 'kleber@ziontechgroup.com';,
-        address: '364 E Main St STE 1008 Middletown DE 19709';,
-        website: 'https://ziontechgroup.com';,
-      },
-      realImplementation: true;,
-      implementationDetails: 'Multi-cloud security posture management platform with continuous monitoring;, automated compliance, and risk management.',
-      launchDate: '2024-08-10';,
-      customers: 89;,
-      rating: 4.7;,
-      reviews: 42;,
-    },
-
-    // DevSecOps Security Platform
-    {
-      id: 'devsecops-security-platform';,
-origin/cursor/automate-test-improve-and-merge-code-2533
-      name: 'DevSecOps Security Platform';,
-      tagline: 'Integrate security into your DevOps pipeline seamlessly';,
-      price: '$249';,
-      period: '/month';,
-      description:;
-        'Comprehensive DevSecOps platform that integrates security testing, vulnerability scanning, and compliance checks into CI / CD pipelines for secure software development.',
-      features: [;
-        'Automated security testing in CI / CD',
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      description: 'Comprehensive DevSecOps platform that integrates security testing;, vulnerability scanning, and compliance checks into CI/CD pipelines for secure software development.',
-      features: [
-        'Automated security testing in CI/CD',
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12325
-        'Static application security testing (SAST)',
-        'Dynamic application security testing (DAST)',
-        'Software composition analysis (SCA)',
-        'Container security scanning',
-        'Infrastructure as code security',
-        'Secrets management and scanning',
-        'Compliance automation and reporting',
-        'Security metrics and dashboards',
-        'Integration with DevOps tools',
-      ],
-      popular: true,
-      icon: '🔧',
-      popular: true;,
-      icon: '🔧';,
-
-        'Python, Go, React, Node && Node.js, Jenkins, GitLab CI, GitHub Actions',
-      ],
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      icon: '🔧';,
-      color: 'from-green-600 to-emerald-600';,
-      textColor: 'text-green-400';,
-      link: 'https://ziontechgroup.com/devsecops-security-platform';,
-      marketPosition: 'Competes with Snyk ($25/month);, Checkmarx ($15/month), Veracode ($25/month). Our advantage: Comprehensive DevSecOps integration;, automated compliance, and affordable pricing.',
-      targetAudience: 'DevOps teams;, Security teams, Development teams, Software companies, IT organizations',
-      trialDays: 21;,
-      setupTime: '3-5 days';,
-      category: 'DevSecOps & Application Security';,
-      realService: true;,
-      technology: [
-        'Python, Go, React, Node.js, Jenkins, GitLab CI, GitHub Actions',
-      ],
-origin/cursor/automate-test-improve-and-merge-code-2533
-      integrations: [
-        'Jenkins, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI',
-      ],
-      useCases: [
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-        'Secure software development, CI/CD security, Vulnerability management, Compliance automation, Security testing',
-      ],
-      roi: 'Development teams report 350% ROI through reduced security vulnerabilities and faster deployments.';,
-      competitors: ['Snyk;, Checkmarx, Veracode, SonarQube, OWASP ZAP'],
-      marketSize: '$18 && 18.7B application security market';,
-      growthRate: '22% annual growth';,
-      variant: 'devsecops-enterprise';,
-      contactInfo: {
-      color: 'from - green - 600 to - emerald - 600';,
-      text_color: 'text - green - 400';,
-      link: 'https://ziontechgroup.com / devsecops - security - platform';,
-      market_position:;
-        'Competes with Snyk ($25 / month), Checkmarx ($15 / month), Veracode ($25 / month). Our advantage: Comprehensive DevSecOps integration;, automated compliance, and affordable pricing.',
-      target_audience:;
-        'DevOps teams, Security teams, Development teams, Software companies, IT organizations',
-      trial_days: 21;,
-      setup_time: '3 - 5 days';,
-      category: 'DevSecOps & Application Security';,
-      real_service: true;,
-      technology: [;
-        'Python, Go, React, Node.js, Jenkins, GitLab CI, GitHub Actions',
-      ],
-      integrations: [;
-        'Jenkins, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI',
-      ],
-      use_cases: [;
-        'Secure software development, CI / CD security, Vulnerability management, Compliance automation, Security testing',
-      ],
-      roi: 'Development teams report 350% ROI through reduced security vulnerabilities and faster deployments.';,
-      competitors: ['Snyk;, Checkmarx, Veracode, SonarQube, OWASP ZAP'],
-      market_size: '$18.7B application security market';,
-      growth_rate: '22% annual growth';,
-      variant: 'devsecops - enterprise';,
-      contact_info: {
-
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
-origin/cursor/expand-services-advertise-and-build-project-c28b
-        mobile: '+1 302 464 0950';,
-        email: 'kleber@ziontechgroup && ziontechgroup.com';,
-        address: '364 E Main St STE 1008 Middletown DE 19709';,
-        website: 'https://ziontechgroup && ziontechgroup.com';,
-      },
-      real_implementation: true;,
-      implementation_details:;
-        'Comprehensive DevSecOps platform with automated security testing, vulnerability scanning, and compliance automation.',
-      launch_date: '2024 - 11 - 05';,
-      customers: 56;,
-      rating: 4 && 4.8;,
-      reviews: 28;,
-    },
-      id: 'iot-security-platform'
-      name: 'IoT Security Platform'
-      tagline: 'Secure your IoT ecosystem with comprehensive protection'
-      price: '$199'
-      period: '/month'
-      marketSize: '$18.7B application security market';,
-      growthRate: '22% annual growth';,
-      variant: 'devsecops-enterprise';,
-      contactInfo: {
-        mobile: '+1 302 464 0950';,
-        email: 'kleber@ziontechgroup.com';,
-        address: '364 E Main St STE 1008 Middletown DE 19709';,
-        website: 'https://ziontechgroup.com';,
-      },
-      realImplementation: true;,
-      implementationDetails: 'Comprehensive DevSecOps platform with automated security testing;, vulnerability scanning, and compliance automation.',
-      launchDate: '2024-11-05';,
-      customers: 56;,
-      rating: 4.8;,
-      reviews: 28;,
-    },
-
-    // IoT Security Platform
-    {
-      id: 'iot-security-platform';,
-      name: 'IoT Security Platform';,
-      tagline: 'Secure your IoT ecosystem with comprehensive protection';,
-      price: '$199';,
-      period: '/month';,
-origin/cursor/automate-test-improve-and-merge-code-2533
-      description: 'Advanced IoT security platform that provides device authentication;, network monitoring, threat detection, and automated response for connected IoT devices and networks.',
-      features: [
-        'IoT device authentication and management'
-        'Network traffic monitoring and analysis'
-        'Threat detection and response'
-        'Device vulnerability assessment'
-        'Secure firmware updates'
-        'Data encryption and protection'
-        'Compliance monitoring and reporting'
-        'Real-time security alerts'
-        'Integration with IoT platforms'
-        'Mobile security management'
-      ]
-      popular: true
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.'
-      launchDate: '2024-09-25'
-      customers: 43
-      rating: 4.7
-      reviews: 21;
-    }
-<<<<<<< HEAD
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
-      launchDate: '2024-09-25',
-      customers: 43,
-      rating: 4.7,
-<<<<<<< HEAD
-<<<<<<< HEAD
-      reviews: 21
-=======
-      reviews: 21,
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
-
-    // IoT Security Platform;
-    {
-      id: 'iot - security - platform';,
-      name: 'IoT Security Platform';,
-      tagline: 'Secure your IoT ecosystem with comprehensive protection';,
-      price: '$199';,
-      period: '/month';,
-      description:;
-        'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',
-      features: [;
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-        'IoT device authentication and management',
-        'Network traffic monitoring and analysis',
-        'Threat detection and response',
-        'Device vulnerability assessment',
-        'Secure firmware updates',
-        'Data encryption and protection',
-        'Compliance monitoring and reporting',
-        'Real - time security alerts',
-        'Real-time security alerts',
-origin/cursor/automate-test-improve-and-merge-code-2533
-        'Integration with IoT platforms',
-        'Mobile security management',
-      ],
-      popular: true;,
-      icon: '📱';,
-
-      color: 'from - purple - 600 to - violet - 600',
-      text_color: 'text - purple - 400',
-      link: 'https://ziontechgroup.com / iot - security - platform',
-      color: 'from - purple - 600 to - violet - 600';,
-      text_color: 'text - purple - 400';,
-      link: 'https://ziontechgroup.com / iot - security - platform';,
-      market_position:;
-        'Competes with Armis ($25 / month), Claroty ($50 / month), Nozomi Networks ($50 / month). Our advantage: Comprehensive IoT protection;, automated response, and affordable pricing.',
-      target_audience:;
-
-        'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',
-      trial_days: 14;,
-      setup_time: '1 - 2 weeks';,
-      category: 'IoT Security & Protection';,
-
-      real_service: true,
-      technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'],
-      real_service: true;,
-      technology: ['Python;, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'],
-      integrations: [;
-        'AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms',
-      ],
-      use_cases: [;
-
-      color: 'from-purple-600 to-violet-600';,
-      textColor: 'text-purple-400';,
-      link: 'https://ziontechgroup.com/iot-security-platform';,
-      marketPosition: 'Competes with Armis ($25/month);, Claroty ($50/month), Nozomi Networks ($50/month). Our advantage: Comprehensive IoT protection;, automated response, and affordable pricing.',
-      targetAudience: 'IoT manufacturers;, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',
-      trialDays: 14;,
-      setupTime: '1-2 weeks';,
-      category: 'IoT Security & Protection';,
-      realService: true;,
-      technology: ['Python;, C++, React, Node.js, MQTT, CoAP, Zigbee, Z-Wave'],
-      integrations: [
-        'AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms',
-      ],
-      useCases: [
-origin/cursor/automate-test-improve-and-merge-code-2533
-        'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance',
-      ],
-      roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';,
-      competitors: ['Armis;, Claroty, Nozomi Networks, CyberX, Dragos'],
-
-      market_size: '$14.2B IoT security market';,
-      growth_rate: '30% annual growth';,
-      variant: 'iot - security - enterprise';,
-      contact_info: {
-
-        mobile: '+1 302 464 0950';,
-        email: 'kleber@ziontechgroup && ziontechgroup.com';,
-        address: '364 E Main St STE 1008 Middletown DE 19709';,
-        website: 'https://ziontechgroup && ziontechgroup.com';,
-      },
-      real_implementation: true;,
-      implementation_details:;
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      marketSize: '$14.2B IoT security market';,
-      growthRate: '30% annual growth';,
-      variant: 'iot-security-enterprise';,
-      contactInfo: {
-        mobile: '+1 302 464 0950';,
-        email: 'kleber@ziontechgroup.com';,
-        address: '364 E Main St STE 1008 Middletown DE 19709';,
-        website: 'https://ziontechgroup.com';,
-      },
-      realImplementation: true;,
-      implementationDetails:
-origin/cursor/automate-test-improve-and-merge-code-2533
-        'Integration with DevOps tools',']
-        'Jenkins, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI]
-      useCases: [;,
-        'Comprehensive DevSecOps platform with automated security testing, vulnerability scanning, and compliance automation.',
-      launch_date: '2024 - 11 - 05';,
-      customers: 56;,
-      reviews: 28;,
-      id: 'iot-security-platform;,
-  name: 'IoT Security Platform
-      tagline: 'Secure your IoT ecosystem with comprehensive protection;,
-  price: '$199
-      period: '/month;,
-  description: 'Advanced IoT security platform that provides device authentication;, network monitoring, threat detection, and automated response for connected IoT devices and networks.
-      features: [
-        'IoT device authentication and management
-        'Network traffic monitoring and analysis
-        'Threat detection and response
-        'Device vulnerability assessment
-        'Secure firmware updates
-        'Data encryption and protection
-        'Compliance monitoring and reporting
-        'Real-time security alerts
-        'Integration with IoT platforms
-        'Mobile security management]
-      popular: true;
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.
-      launchDate: '2024-09-25;,
-  customers: 43;
-      rating: 4.7;,
-  reviews: 21;
-    }
-pr-12325
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
-      launchDate: '2024-09-25';,
-      customers: 43;,
-      rating: 4.7;,
-        'Continuous identity verification and authentication',''
-        'Micro - segmentation and network isolation',''
-        'Adaptive access controls and policies',''
-        'Real - time threat detection and response',''
-        'Multi - factor authentication (MFA)',''
-        'Privileged access management (PAM)',''
-        'API security and monitoring',''
-        'Cloud security posture management',''
-        'Compliance reporting and auditing',''
-        'Security analytics and insights','
-
-      ],
-      popular: true;,
-      integrations: ['
-        'Active Directory, LDAP, SAML, OAuth, SIEM systems, EDR platforms'']
-      ]
-
-      useCases: ['
-        'Enterprise security, Government compliance, Financial security, Healthcare protection, Critical infrastructure security',']
-      ],'
-      roi: 'Organizations report 450% ROI through reduced security incidents and compliance costs.';,''
-      competitors: ['Palo Alto;, CrowdStrike, Okta, Duo, Ping Identity'],''
-        mobile: '+1 302 464 0950';,''
-        email: 'kleber@ziontechgroup && ziontechgroup.com';,''
-        address: '364 E Main St STE 1008 Middletown DE 19709';,''
-        website: 'https://ziontechgroup && ziontechgroup.com';,'
-      },
-      real_implementation: true;,
-      implementation_details:;'
-        'Enterprise - grade zero trust security platform with continuous verification, micro - segmentation, and adaptive access controls.',''
-      launch_date: '2024 - 09 - 15';,'
-      customers: 34;,
-      rating: 4 && 4.9;,
-      reviews: 19;,
-    },'
-        'Automated threat response and mitigation',''
-        'Global threat intelligence sharing',''
-        'Vulnerability assessment and prioritization',''
-        'Threat hunting and investigation tools',''
-        'Security metrics and reporting',''
-        'Integration with security tools',''
-        'Custom threat feeds and alerts',''
-        '24 / 7 security monitoring','
-
-      ],
-      popular: true;,
-      integrations: ['
-        'SIEM systems, EDR platforms, Firewalls, IDS/IPS, Security orchestration tools'']
-      ]
-
-      useCases: ['
-        'Threat detection, Incident response, Vulnerability management, Security monitoring, Threat hunting'']
-      ]'
-      roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.'';,
-  competitors: ['
-        mobile: '+1 302 464 0950';,''
-        email: 'kleber@ziontechgroup && ziontechgroup.com';,''
-        address: '364 E Main St STE 1008 Middletown DE 19709';,''
-        website: 'https://ziontechgroup && ziontechgroup.com';,'
-      },
-      real_implementation: true;,
-      implementation_details:;'
-        'AI - powered threat intelligence platform with real - time detection, predictive analytics, and automated response capabilities.',''
-      launch_date: '2024 - 10 - 20';,'
-      customers: 67;,
-      rating: 4 && 4.8;,
-      reviews: 31;,
-    },'
-        'Continuous compliance assessment and reporting',''
-        'Automated risk identification and remediation',''
-        'Identity and access management (IAM)',''
-        'Data protection and encryption',''
-        'Network security and segmentation',''
-        'Security configuration management',''
-        'Vulnerability scanning and assessment',''
-        'Incident detection and response',''
-        'Security metrics and dashboards',']
-      ],
-      popular: true;,
-      useCases: ['
-        'Cloud security monitoring, Compliance management, Risk assessment, Security automation, Multi-cloud governance'']
-      ]'
-      roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.'';,
-  competitors: ['
-        mobile: '+1 302 464 0950';,''
-        email: 'kleber@ziontechgroup && ziontechgroup.com';,''
-        address: '364 E Main St STE 1008 Middletown DE 19709';,''
-        website: 'https://ziontechgroup && ziontechgroup.com';,'
-      },
-      real_implementation: true;,
-      implementation_details:;'
-        'Multi - cloud security posture management platform with continuous monitoring, automated compliance, and risk management.',''
-      launch_date: '2024 - 08 - 10';,'
-      customers: 89;,
-      rating: 4 && 4.7;,
-      reviews: 42;,
-    },'
-        'Static application security testing (SAST)',''
-        'Dynamic application security testing (DAST)',''
-        'Software composition analysis (SCA)',''
-        'Container security scanning',''
-        'Infrastructure as code security',''
-        'Secrets management and scanning',''
-        'Compliance automation and reporting',''
-        'Security metrics and dashboards',''
-        'Integration with DevOps tools',']
-
-      ],
-      popular: true;,
-      integrations: ['
-        'Jenkins, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI'']
-      ]
-
-      useCases: [;,'
-  mobile: '+1 302 464 0950';,''
-        email: 'kleber@ziontechgroup && ziontechgroup.com';,''
-        address: '364 E Main St STE 1008 Middletown DE 19709';,''
-        website: 'https://ziontechgroup && ziontechgroup.com';,'
-      },
-      real_implementation: true;,
-      implementation_details:;'
-        'Comprehensive DevSecOps platform with automated security testing, vulnerability scanning, and compliance automation.',''
-      launch_date: '2024 - 11 - 05';,'
-      customers: 56;,
-      rating: 4 && 4.8;,
-      reviews: 28;,
-    },'
-      id: 'iot-security-platform'';,'
-  name: 'IoT Security Platform'''
-      tagline: 'Secure your IoT ecosystem with comprehensive protection'';,'
-  price: '$199'''
-      period: '/month'';,
-  description:'
-        'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.''
-      features: ['
-        'IoT device authentication and management'''
-        'Network traffic monitoring and analysis'''
-        'Threat detection and response'''
-        'Device vulnerability assessment'''
-        'Secure firmware updates'''
-        'Data encryption and protection'''
-        'Compliance monitoring and reporting'''
-        'Real-time security alerts'''
-        'Integration with IoT platforms'''
-        'Mobile security management'']
-      ]
-      popular: true;'
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.'''
-      launchDate: '2024-09-25'';,
-  customers: 43;
-      rating: 4.7;,
-  reviews: 21;
-    }'
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',''
-      launchDate: '2024-09-25';,'
-      customers: 43;,
-
-      rating: 4.7;,
-
-      reviews: 21;,
-
-    },;
-      id: 'iot - security - platform';,
-      name: 'IoT Security Platform';,
-      tagline: 'Secure your IoT ecosystem with comprehensive protection';,
-      price: '$199';,
-      period: '/month';,
-      description:;
-        'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',
-      features: [;
-
-  name: 'IoT Security Platform';,
-      tagline: 'Secure your IoT ecosystem with comprehensive protection';,
-  price: '$199';,
-      period: '/month';,
-  description:;
-        'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',
-      features: [;
-        'IoT device authentication and management',
-        'Network traffic monitoring and analysis',
-        'Threat detection and response',
-        'Device vulnerability assessment',
-        'Secure firmware updates',
-        'Data encryption and protection',
-        'Compliance monitoring and reporting',
-        'Real - time security alerts',
-        'Integration with IoT platforms',
-        'Mobile security management',
-      ],
-      popular: true;,
-        'Mobile security management',']
-pr-12325
-        'Mobile security management'
-      ],
-      popular: true;,
-      icon: '📱';,
-        'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',
-      trial_days: 14;,
-      setup_time: '1 - 2 weeks';,
-      category: 'IoT Security & Protection';,
-        'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance',
-      ],
-      roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';,
-      competitors: ['Armis;, Claroty, Nozomi Networks, CyberX, Dragos'],
-        mobile: '+1 302 464 0950';,
-        email: 'kleber@ziontechgroup && ziontechgroup.com';,
-        address: '364 E Main St STE 1008 Middletown DE 19709';,
-        website: 'https://ziontechgroup && ziontechgroup.com';,
-  category: 'IoT Security & Protection';,
-        'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'
-      ],
-      roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';,
-  competitors: ['Armis;, Claroty, Nozomi Networks, CyberX, Dragos'],
-        mobile: '+1 302 464 0950';,
-  email: 'kleber@ziontechgroup && ziontechgroup.com';,
-        address: '364 E Main St STE 1008 Middletown DE 19709';,
-  website: 'https://ziontechgroup && ziontechgroup.com';
-      },
-      real_implementation: true;,
-      implementation_details:;
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
-      launch_date: '2024 - 09 - 25';,
-      customers: 43;,
-      rating: 4 && 4.7;,
-      reviews: 21;,
-  ];    features: [
-
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: string,
-origin/cursor/expand-services-advertise-and-build-project-c28b
-  id: string;, name: string;,
-  tagline: string;, price: string;,
-  period: string;, description: string;,
-      roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';,
-      competitors: ['Armis;, Claroty, Nozomi Networks, CyberX, Dragos'],
-      launch_date: '2024 - 09 - 25';,
-  customers: 43;,
-      rating: 4 && 4.7;,
-      reviews: 21;
-  ];    features: [
-
-  email: 'kleber@ziontechgroup.com';,
-
-address: '364 E Main St STE 1008 Middletown DE 19709';,
-  website: 'https://ziontechgroup.com';
-    },
-    integrations: ['AWS IoT;, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
-    useCases: ['Smart city security;, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';,
-  competitors: ['Armis;, Claroty, Nozomi Networks, CyberX, Dragos'];
-    real_implementation: true;,
-    implementation_details: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.',
-  launch_date: '2024 - 09 - 25';, customers: 43;,
-    rating: 4.7;,
-    reviews: 21;
-  }
-];
-    integrations: ['AWS IoT;, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
-    use_cases: ['Smart city security;, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';
-    competitors: ['Armis;, Claroty, Nozomi Networks, CyberX, Dragos'];
-    realImplementation: true;
-    implementationDetails: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.';
-    launchDate: '2024-09-25';
-    customers: 43;
-<<<<<<< HEAD
-    rating: 4.7;
-export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
-  [
-    // Zero Trust Security Platform
-    {
-      id: 'zero-trust-security-platform',
-origin/cursor/automate-test-improve-and-merge-code-2533
-      name: 'Zero Trust Security Platform',
-      tagline: 'Never trust, always verify - Advanced zero trust security',
-      price: '$599',
-      period: '/month',
-      description:;
-        'Comprehensive zero trust security platform that implements continuous verification, micro - segmentation, and adaptive access controls to protect against modern cyber threats.',
-      features: [;
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-        'Continuous identity verification and authentication',
-        'Micro - segmentation and network isolation',
-        'Adaptive access controls and policies',
-        'Real - time threat detection and response',
-        'Multi - factor authentication (MFA)',
-      description:
-        'Comprehensive zero trust security platform that implements continuous verification, micro-segmentation, and adaptive access controls to protect against modern cyber threats.',
-      features: [
-        'Continuous identity verification and authentication',
-        'Micro-segmentation and network isolation',
-        'Adaptive access controls and policies',
-        'Real-time threat detection and response',
-        'Multi-factor authentication (MFA)',
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-        'Continuous identity verification and authentication',
-        'Micro - segmentation and network isolation',
-        'Adaptive access controls and policies',
-        'Real - time threat detection and response',
-        'Multi - factor authentication (MFA)',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-        'Privileged access management (PAM)',
-        'API security and monitoring',
-        'Cloud security posture management',
-        'Compliance reporting and auditing',
-        'Security analytics and insights',
-      ],
-      popular: true,
-<<<<<<< HEAD
-      icon: '🔒',
-
-        'Python, Go, React, Node && Node.js, Kubernetes, Docker, AWS, Azure',
-      ],
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      icon: '🔒',
-      color: 'from-red-600 to-pink-600',
-      textColor: 'text-red-400',
-      link: 'https://ziontechgroup.com/zero-trust-security-platform',
-      marketPosition:
-        'Competes with Palo Alto ($50/month), CrowdStrike ($8.99/month), Okta ($2/month). Our advantage: Comprehensive zero trust implementation, real-time monitoring, and adaptive controls.',
-      targetAudience:
-        'Enterprise companies, Government agencies, Financial institutions, Healthcare organizations, Critical infrastructure',
-      trialDays: 14,
-      setupTime: '1-2 weeks',
-      category: 'Cybersecurity & Zero Trust',
-      realService: true,
-      technology: [
-        'Python, Go, React, Node.js, Kubernetes, Docker, AWS, Azure',
-      ],
-origin/cursor/automate-test-improve-and-merge-code-2533
-      integrations: [
-        'Active Directory, LDAP, SAML, OAuth, SIEM systems, EDR platforms',
-      ],
-      useCases: [
-
-      color: 'from - red - 600 to - pink - 600',
-      text_color: 'text - red - 400',
-      link: 'https://ziontechgroup.com / zero - trust - security - platform',
-      market_position:;
-        'Competes with Palo Alto ($50 / month), CrowdStrike ($8.99 / month), Okta ($2 / month). Our advantage: Comprehensive zero trust implementation, real - time monitoring, and adaptive controls.',
-      target_audience:;
-        'Enterprise companies, Government agencies, Financial institutions, Healthcare organizations, Critical infrastructure',
-      trial_days: 14,
-      setup_time: '1 - 2 weeks',
-      category: 'Cybersecurity & Zero Trust',
-      real_service: true,
-      technology: [;
-        'Python, Go, React, Node.js, Kubernetes, Docker, AWS, Azure',
-      ],
-      integrations: [;
-        'Active Directory, LDAP, SAML, OAuth, SIEM systems, EDR platforms',
-      ],
-      use_cases: [;
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
-        'Continuous identity verification and authentication','
-        'Micro - segmentation and network isolation','
-        'Adaptive access controls and policies','
-        'Real - time threat detection and response','
-        'Multi - factor authentication (MFA)','
-        'Privileged access management (PAM)','
-        'API security and monitoring','
-        'Cloud security posture management','
-        'Compliance reporting and auditing','
-        'Security analytics and insights',
-=======
-      integrations: [
-        'Active Directory, LDAP, SAML, OAuth, SIEM systems, EDR platforms'
-      ]
-      useCases: [
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-        'Enterprise security, Government compliance, Financial security, Healthcare protection, Critical infrastructure security',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-      ],
-      popular: true,
-
-      integrations: ['
-        'Active Directory, LDAP, SAML, OAuth, SIEM systems, EDR platforms'
-      ]
-      useCases: []
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-        'Enterprise security, Government compliance, Financial security, Healthcare protection, Critical infrastructure security',
-      ],'
-      roi: 'Organizations report 450% ROI through reduced security incidents and compliance costs.','
-      competitors: ['Palo Alto, CrowdStrike, Okta, Duo, Ping Identity'],
-<<<<<<< HEAD
-
-      market_size: '$31.2B zero trust security market',
-      growth_rate: '28% annual growth',
-      variant: 'zero - trust - enterprise',
-      contact_info: {
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
-'
-        mobile: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup && ziontechgroup.com','
-        address: '364 E Main St STE 1008 Middletown DE 19709','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;'
-        'Enterprise - grade zero trust security platform with continuous verification, micro - segmentation, and adaptive access controls.','
-      launch_date: '2024 - 09 - 15',
-      customers: 34,
-      rating: 4 && 4.9,
-      reviews: 19,
-    },
-<<<<<<< HEAD
-
-        'Real-time threat detection and analysis',
-        'AI-powered threat prediction and modeling',
-    // AI - Powered Threat Intelligence;
-    {
-      id: 'ai - threat - intelligence',
-      name: 'AI - Powered Threat Intelligence Platform',
-      tagline: 'Predict and prevent cyber threats with AI intelligence',
-      price: '$399',
-      period: '/month',
-      description:;
-        'Advanced AI - powered threat intelligence platform that provides real - time threat detection, predictive analytics, and automated response capabilities to stay ahead of cyber attacks.',
-      features: [;
-        'Real - time threat detection and analysis',
-        'AI - powered threat prediction and modeling',
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      marketSize: '$31.2B zero trust security market',
-      growthRate: '28% annual growth',
-      variant: 'zero-trust-enterprise',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      },
-      realImplementation: true,
-      implementationDetails:
-        'Enterprise-grade zero trust security platform with continuous verification, micro-segmentation, and adaptive access controls.',
-      launchDate: '2024-09-15',
-      customers: 34,
-      rating: 4.9,
-      reviews: 19,
-    },
-
-    // AI-Powered Threat Intelligence
-    {
-      id: 'ai-threat-intelligence',
-      name: 'AI-Powered Threat Intelligence Platform',
-      tagline: 'Predict and prevent cyber threats with AI intelligence',
-      price: '$399',
-      period: '/month',
-      description:
-        'Advanced AI-powered threat intelligence platform that provides real-time threat detection, predictive analytics, and automated response capabilities to stay ahead of cyber attacks.',
-      features: [
-        'Real-time threat detection and analysis',
-        'AI-powered threat prediction and modeling',
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-        'Automated threat response and mitigation',
-        'Global threat intelligence sharing',
-        'Vulnerability assessment and prioritization',
-        'Threat hunting and investigation tools',
-        'Security metrics and reporting',
-        'Integration with security tools',
-        'Custom threat feeds and alerts',
-<<<<<<< HEAD
-        '24 / 7 security monitoring',
-      ],
-      popular: true,
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-      icon: '🛡️',
-
-        'Python, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Redis',
-      ],
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-        '24/7 security monitoring',
-      ],
-      popular: true,
-      icon: '🛡️',
-      color: 'from-indigo-600 to-purple-600',
-      textColor: 'text-indigo-400',
-      link: 'https://ziontechgroup.com/ai-threat-intelligence',
-      marketPosition:
-        'Competes with Recorded Future ($50/month), ThreatConnect ($50/month), Anomali ($50/month). Our advantage: AI-powered prediction, automated response, and comprehensive coverage.',
-      targetAudience:
-        'Security operations centers (SOC), Threat intelligence teams, Security analysts, Enterprise security teams',
-      trialDays: 21,
-      setupTime: '3-5 days',
-      category: 'Threat Intelligence & AI',
-      realService: true,
-      technology: [
-        'Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis',
-      ],
-origin/cursor/automate-test-improve-and-merge-code-2533
-      integrations: [
-        'SIEM systems, EDR platforms, Firewalls, IDS/IPS, Security orchestration tools',
-      ],
-      useCases: [
-        'Threat detection, Incident response, Vulnerability management, Security monitoring, Threat hunting',
-      ],
-      roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.',
-      competitors: [
-
-        'Recorded Future, ThreatConnect, Anomali, IBM X-Force, FireEye',
-      ],
-      marketSize: '$15 && 15.8B threat intelligence market',
-      growthRate: '26% annual growth',
-      variant: 'ai-threat-enterprise',
-      contactInfo: {
-      color: 'from - indigo - 600 to - purple - 600',
-      text_color: 'text - indigo - 400',
-      link: 'https://ziontechgroup.com / ai - threat - intelligence',
-      market_position:;
-        'Competes with Recorded Future ($50 / month), ThreatConnect ($50 / month), Anomali ($50 / month). Our advantage: AI - powered prediction, automated response, and comprehensive coverage.',
-      target_audience:;
-        'Security operations centers (SOC), Threat intelligence teams, Security analysts, Enterprise security teams',
-      trial_days: 21,
-      setup_time: '3 - 5 days',
-      category: 'Threat Intelligence & AI',
-      real_service: true,
-      technology: [;
-        'Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis',
-      ],
-      integrations: [;
-        'SIEM systems, EDR platforms, Firewalls, IDS / IPS, Security orchestration tools',
-      ],
-      use_cases: [;
-        'Threat detection, Incident response, Vulnerability management, Security monitoring, Threat hunting',
-      ],
-      roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.',
-      competitors: [;
-        'Recorded Future, ThreatConnect, Anomali, IBM X - Force, FireEye',
-      ],
-      market_size: '$15.8B threat intelligence market',
-      growth_rate: '26% annual growth',
-      variant: 'ai - threat - enterprise',
-      contact_info: {
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
-        '24 / 7 security monitoring',
-      ],
-      popular: true,
-      integrations: [
-        'SIEM systems, EDR platforms, Firewalls, IDS/IPS, Security orchestration tools'
-      ]
-      useCases: [
-        'Threat detection, Incident response, Vulnerability management, Security monitoring, Threat hunting'
-      ]
-      roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.'
-      competitors: [
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
-'
-        'Automated threat response and mitigation','
-        'Global threat intelligence sharing','
-        'Vulnerability assessment and prioritization','
-        'Threat hunting and investigation tools','
-        'Security metrics and reporting','
-        'Integration with security tools','
-        'Custom threat feeds and alerts','
-        '24 / 7 security monitoring',
-      ],
-      popular: true,
-
-      integrations: ['
-        'SIEM systems, EDR platforms, Firewalls, IDS/IPS, Security orchestration tools'
-      ]
-      useCases: ['
-        'Threat detection, Incident response, Vulnerability management, Security monitoring, Threat hunting'
-      ]'
-      roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.'
-      competitors: []
-'
-        mobile: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup && ziontechgroup.com','
-        address: '364 E Main St STE 1008 Middletown DE 19709','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;'
-        'AI - powered threat intelligence platform with real - time detection, predictive analytics, and automated response capabilities.','
-      launch_date: '2024 - 10 - 20',
-      customers: 67,
-      rating: 4 && 4.8,
-      reviews: 31,
-    },
-<<<<<<< HEAD
-
-        'Multi-cloud security monitoring (AWS, Azure, GCP)',
-    // Cloud Security Posture Management;
-    {
-      id: 'cloud - security - posture',
-      name: 'Cloud Security Posture Management Platform',
-      tagline:;
-        'Secure your cloud infrastructure with comprehensive posture management',
-      price: '$299',
-      period: '/month',
-      description:;
-        'Comprehensive cloud security platform that continuously monitors, assesses, and improves the security posture of multi - cloud environments with automated compliance and risk management.',
-      features: [;
-        'Multi - cloud security monitoring (AWS, Azure, GCP)',
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-        'Recorded Future, ThreatConnect, Anomali, IBM X-Force, FireEye',
-      ],
-      marketSize: '$15.8B threat intelligence market',
-      growthRate: '26% annual growth',
-      variant: 'ai-threat-enterprise',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      },
-      realImplementation: true,
-      implementationDetails:
-        'AI-powered threat intelligence platform with real-time detection, predictive analytics, and automated response capabilities.',
-      launchDate: '2024-10-20',
-      customers: 67,
-      rating: 4.8,
-      reviews: 31,
-    },
-
-    // Cloud Security Posture Management
-    {
-      id: 'cloud-security-posture',
-      name: 'Cloud Security Posture Management Platform',
-      tagline:
-        'Secure your cloud infrastructure with comprehensive posture management',
-      price: '$299',
-      period: '/month',
-      description:
-        'Comprehensive cloud security platform that continuously monitors, assesses, and improves the security posture of multi-cloud environments with automated compliance and risk management.',
-      features: [
-        'Multi-cloud security monitoring (AWS, Azure, GCP)',
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-        'Continuous compliance assessment and reporting',
-        'Automated risk identification and remediation',
-        'Identity and access management (IAM)',
-        'Data protection and encryption',
-        'Network security and segmentation',
-        'Security configuration management',
-        'Vulnerability scanning and assessment',
-        'Incident detection and response',
-        'Security metrics and dashboards',
-      ],
-      popular: true,
-<<<<<<< HEAD
-      icon: '☁️',
-
-      icon: '☁️',
-      color: 'from-blue-600 to-cyan-600',
-      textColor: 'text-blue-400',
-      link: 'https://ziontechgroup.com/cloud-security-posture',
-      marketPosition:
-        'Competes with Prisma Cloud ($25/month), AWS Security Hub ($3/month), Azure Security Center ($15/month). Our advantage: Multi-cloud support, automated remediation, and comprehensive compliance.',
-      targetAudience:
-origin/cursor/automate-test-improve-and-merge-code-2533
-        'Cloud architects, DevOps teams, Security teams, IT operations, Cloud-native companies',
-      trialDays: 14,
-      setupTime: '2-4 days',
-      category: 'Cloud Security & Compliance',
-      realService: true,
-      technology: ['Python, Go, React, Node && Node.js, AWS SDK, Azure SDK, GCP SDK'],
-      integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Terraform, Ansible'],
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      technology: ['Python, Go, React, Node.js, AWS SDK, Azure SDK, GCP SDK'],
-      integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Terraform, Ansible'],
-origin/cursor/automate-test-improve-and-merge-code-2533
-      useCases: [
-        'Cloud security monitoring, Compliance management, Risk assessment, Security automation, Multi-cloud governance',
-      ],
-      roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.',
-      competitors: [
-
-        'Prisma Cloud, AWS Security Hub, Azure Security Center, GCP Security Command Center',
-      ],
-      marketSize: '$22 && 22.4B cloud security market',
-      growthRate: '24% annual growth',
-      variant: 'cloud-security-enterprise',
-      contactInfo: {
-      color: 'from - blue - 600 to - cyan - 600',
-      text_color: 'text - blue - 400',
-      link: 'https://ziontechgroup.com / cloud - security - posture',
-      market_position:;
-        'Competes with Prisma Cloud ($25 / month), AWS Security Hub ($3 / month), Azure Security Center ($15 / month). Our advantage: Multi - cloud support, automated remediation, and comprehensive compliance.',
-      target_audience:;
-        'Cloud architects, DevOps teams, Security teams, IT operations, Cloud - native companies',
-      trial_days: 14,
-      setup_time: '2 - 4 days',
-      category: 'Cloud Security & Compliance',
-      real_service: true,
-      technology: ['Python, Go, React, Node.js, AWS SDK, Azure SDK, GCP SDK'],
-      integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Terraform, Ansible'],
-      use_cases: [;
-        'Cloud security monitoring, Compliance management, Risk assessment, Security automation, Multi - cloud governance',
-      ],
-      roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.',
-      competitors: [;
-        'Prisma Cloud, AWS Security Hub, Azure Security Center, GCP Security Command Center',
-      ],
-      market_size: '$22.4B cloud security market',
-      growth_rate: '24% annual growth',
-      variant: 'cloud - security - enterprise',
-      contact_info: {
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
-      useCases: [
-        'Cloud security monitoring, Compliance management, Risk assessment, Security automation, Multi-cloud governance'
-      ]
-      roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.'
-      competitors: [
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
-'
-        'Continuous compliance assessment and reporting','
-        'Automated risk identification and remediation','
-        'Identity and access management (IAM)','
-        'Data protection and encryption','
-        'Network security and segmentation','
-        'Security configuration management','
-        'Vulnerability scanning and assessment','
-        'Incident detection and response','
-        'Security metrics and dashboards',
-      ],
-      popular: true,
-
-      useCases: ['
-        'Cloud security monitoring, Compliance management, Risk assessment, Security automation, Multi-cloud governance'
-      ]'
-      roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.'
-      competitors: []
-'
-        mobile: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup && ziontechgroup.com','
-        address: '364 E Main St STE 1008 Middletown DE 19709','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;'
-        'Multi - cloud security posture management platform with continuous monitoring, automated compliance, and risk management.','
-      launch_date: '2024 - 08 - 10',
-      customers: 89,
-      rating: 4 && 4.7,
-      reviews: 42,
-    },
-<<<<<<< HEAD
-
-        'Automated security testing in CI/CD',
-    // DevSecOps Security Platform;
-    {
-      id: 'devsecops - security - platform',
-        'Prisma Cloud, AWS Security Hub, Azure Security Center, GCP Security Command Center',
-      ],
-      marketSize: '$22.4B cloud security market',
-      growthRate: '24% annual growth',
-      variant: 'cloud-security-enterprise',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      },
-      realImplementation: true,
-      implementationDetails:
-        'Multi-cloud security posture management platform with continuous monitoring, automated compliance, and risk management.',
-      launchDate: '2024-08-10',
-      customers: 89,
-      rating: 4.7,
-      reviews: 42,
-    },
-
-    // DevSecOps Security Platform
-    {
-      id: 'devsecops-security-platform',
-origin/cursor/automate-test-improve-and-merge-code-2533
-      name: 'DevSecOps Security Platform',
-      tagline: 'Integrate security into your DevOps pipeline seamlessly',
-      price: '$249',
-      period: '/month',
-      description:;
-        'Comprehensive DevSecOps platform that integrates security testing, vulnerability scanning, and compliance checks into CI / CD pipelines for secure software development.',
-      features: [;
-        'Automated security testing in CI / CD',
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      description:
-        'Comprehensive DevSecOps platform that integrates security testing, vulnerability scanning, and compliance checks into CI/CD pipelines for secure software development.',
-      features: [
-        'Automated security testing in CI/CD',
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-        'Static application security testing (SAST)',
-        'Dynamic application security testing (DAST)',
-        'Software composition analysis (SCA)',
-        'Container security scanning',
-        'Infrastructure as code security',
-        'Secrets management and scanning',
-        'Compliance automation and reporting',
-        'Security metrics and dashboards',
-        'Integration with DevOps tools',
-      ],
-      popular: true,
-<<<<<<< HEAD
-      icon: '🔧',
-
-        'Python, Go, React, Node && Node.js, Jenkins, GitLab CI, GitHub Actions',
-      ],
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      icon: '🔧',
-      color: 'from-green-600 to-emerald-600',
-      textColor: 'text-green-400',
-      link: 'https://ziontechgroup.com/devsecops-security-platform',
-      marketPosition:
-        'Competes with Snyk ($25/month), Checkmarx ($15/month), Veracode ($25/month). Our advantage: Comprehensive DevSecOps integration, automated compliance, and affordable pricing.',
-      targetAudience:
-        'DevOps teams, Security teams, Development teams, Software companies, IT organizations',
-      trialDays: 21,
-      setupTime: '3-5 days',
-      category: 'DevSecOps & Application Security',
-      realService: true,
-      technology: [
-        'Python, Go, React, Node.js, Jenkins, GitLab CI, GitHub Actions',
-      ],
-origin/cursor/automate-test-improve-and-merge-code-2533
-      integrations: [
-        'Jenkins, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI',
-      ],
-      useCases: [
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-        'Secure software development, CI/CD security, Vulnerability management, Compliance automation, Security testing',
-      ],
-      roi: 'Development teams report 350% ROI through reduced security vulnerabilities and faster deployments.',
-      competitors: ['Snyk, Checkmarx, Veracode, SonarQube, OWASP ZAP'],
-      marketSize: '$18 && 18.7B application security market',
-      growthRate: '22% annual growth',
-      variant: 'devsecops-enterprise',
-      contactInfo: {
-      color: 'from - green - 600 to - emerald - 600',
-      text_color: 'text - green - 400',
-      link: 'https://ziontechgroup.com / devsecops - security - platform',
-      market_position:;
-        'Competes with Snyk ($25 / month), Checkmarx ($15 / month), Veracode ($25 / month). Our advantage: Comprehensive DevSecOps integration, automated compliance, and affordable pricing.',
-      target_audience:;
-        'DevOps teams, Security teams, Development teams, Software companies, IT organizations',
-      trial_days: 21,
-      setup_time: '3 - 5 days',
-      category: 'DevSecOps & Application Security',
-      real_service: true,
-      technology: [;
-        'Python, Go, React, Node.js, Jenkins, GitLab CI, GitHub Actions',
-      ],
-      integrations: [;
-        'Jenkins, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI',
-      ],
-      use_cases: [;
-        'Secure software development, CI / CD security, Vulnerability management, Compliance automation, Security testing',
-      ],
-      roi: 'Development teams report 350% ROI through reduced security vulnerabilities and faster deployments.',
-      competitors: ['Snyk, Checkmarx, Veracode, SonarQube, OWASP ZAP'],
-      market_size: '$18.7B application security market',
-      growth_rate: '22% annual growth',
-      variant: 'devsecops - enterprise',
-      contact_info: {
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
-'
-        'Static application security testing (SAST)','
-        'Dynamic application security testing (DAST)','
-        'Software composition analysis (SCA)','
-        'Container security scanning','
-        'Infrastructure as code security','
-        'Secrets management and scanning','
-        'Compliance automation and reporting','
-        'Security metrics and dashboards','
-        'Integration with DevOps tools',
-      ],
-      popular: true,
-
-      integrations: ['
-        'Jenkins, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI'
-      ]
-      useCases: []
-'
-        mobile: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup && ziontechgroup.com','
-        address: '364 E Main St STE 1008 Middletown DE 19709','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;'
-        'Comprehensive DevSecOps platform with automated security testing, vulnerability scanning, and compliance automation.','
-      launch_date: '2024 - 11 - 05',
-      customers: 56,
-      rating: 4 && 4.8,
-      reviews: 28,
-    },
-<<<<<<< HEAD
-      id: 'iot-security-platform'
-      name: 'IoT Security Platform'
-      tagline: 'Secure your IoT ecosystem with comprehensive protection'
-      price: '$199'
-      period: '/month'
-      marketSize: '$18.7B application security market',
-      growthRate: '22% annual growth',
-      variant: 'devsecops-enterprise',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      },
-      realImplementation: true,
-      implementationDetails:
-        'Comprehensive DevSecOps platform with automated security testing, vulnerability scanning, and compliance automation.',
-      launchDate: '2024-11-05',
-      customers: 56,
-      rating: 4.8,
-      reviews: 28,
-    },
-
-    // IoT Security Platform
-    {
-      id: 'iot-security-platform',
-      name: 'IoT Security Platform',
-      tagline: 'Secure your IoT ecosystem with comprehensive protection',
-      price: '$199',
-      period: '/month',
-origin/cursor/automate-test-improve-and-merge-code-2533
-      description:
-        'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',
-      features: [
-        'IoT device authentication and management'
-        'Network traffic monitoring and analysis'
-        'Threat detection and response'
-        'Device vulnerability assessment'
-        'Secure firmware updates'
-        'Data encryption and protection'
-        'Compliance monitoring and reporting'
-        'Real-time security alerts'
-        'Integration with IoT platforms'
-        'Mobile security management'
-      ]
-      popular: true
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.'
-      launchDate: '2024-09-25'
-      customers: 43
-      rating: 4.7
-      reviews: 21
-    }
-
-    // IoT Security Platform;
-    {
-=======
-      integrations: [
-        'Jenkins, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI'
-      ]
-      useCases: [
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;
-        'Comprehensive DevSecOps platform with automated security testing, vulnerability scanning, and compliance automation.',
-      launch_date: '2024 - 11 - 05',
-      customers: 56,
-      rating: 4 && 4.8,
-      reviews: 28,
-    },
-      id: 'iot-security-platform'
-      name: 'IoT Security Platform'
-      tagline: 'Secure your IoT ecosystem with comprehensive protection'
-      price: '$199'
-      period: '/month'
-      description:
-        'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.'
-      features: [
-        'IoT device authentication and management'
-        'Network traffic monitoring and analysis'
-        'Threat detection and response'
-        'Device vulnerability assessment'
-        'Secure firmware updates'
-        'Data encryption and protection'
-        'Compliance monitoring and reporting'
-        'Real-time security alerts'
-        'Integration with IoT platforms'
-        'Mobile security management'
-      ]
-      popular: true
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.'
-      launchDate: '2024-09-25'
-      customers: 43
-      rating: 4.7
-      reviews: 21
-    }
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
-      launchDate: '2024-09-25',
-      customers: 43,
-      rating: 4.7,
-      reviews: 21,
-
-    },;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-      id: 'iot - security - platform',
-      name: 'IoT Security Platform',
-      tagline: 'Secure your IoT ecosystem with comprehensive protection',
-      price: '$199',
-      period: '/month',
-      description:;
-        'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',
-      features: [;
-
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-        'IoT device authentication and management',
-        'Network traffic monitoring and analysis',
-        'Threat detection and response',
-        'Device vulnerability assessment',
-        'Secure firmware updates',
-        'Data encryption and protection',
-        'Compliance monitoring and reporting',
-<<<<<<< HEAD
-        'Real - time security alerts',
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-        'Real-time security alerts',
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-        'Real - time security alerts',
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-        'Integration with IoT platforms',
-        'Mobile security management',
-      ],
-      popular: true,
-      icon: '📱',
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-      color: 'from - purple - 600 to - violet - 600',
-      text_color: 'text - purple - 400',
-      link: 'https://ziontechgroup.com / iot - security - platform',
-      market_position:;
-        'Competes with Armis ($25 / month), Claroty ($50 / month), Nozomi Networks ($50 / month). Our advantage: Comprehensive IoT protection, automated response, and affordable pricing.',
-      target_audience:;
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-        'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',
-      trial_days: 14,
-      setup_time: '1 - 2 weeks',
-      category: 'IoT Security & Protection',
-<<<<<<< HEAD
-
-      real_service: true,
-      technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'],
-      integrations: [;
-        'AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms',
-      ],
-      use_cases: [;
-
-      color: 'from-purple-600 to-violet-600',
-      textColor: 'text-purple-400',
-      link: 'https://ziontechgroup.com/iot-security-platform',
-      marketPosition:
-        'Competes with Armis ($25/month), Claroty ($50/month), Nozomi Networks ($50/month). Our advantage: Comprehensive IoT protection, automated response, and affordable pricing.',
-      targetAudience:
-        'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',
-      trialDays: 14,
-      setupTime: '1-2 weeks',
-      category: 'IoT Security & Protection',
-      realService: true,
-      technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z-Wave'],
-      integrations: [
-        'AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms',
-      ],
-      useCases: [
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-        'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance',
-      ],
-      roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.',
-      competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'],
-<<<<<<< HEAD
-
-      market_size: '$14.2B IoT security market',
-      growth_rate: '30% annual growth',
-      variant: 'iot - security - enterprise',
-      contact_info: {
-
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      marketSize: '$14.2B IoT security market',
-      growthRate: '30% annual growth',
-      variant: 'iot-security-enterprise',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      },
-      realImplementation: true,
-      implementationDetails:
-origin/cursor/automate-test-improve-and-merge-code-2533
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
-=======
-
-'
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      launchDate: '2024-09-25',
-      customers: 43,
-      rating: 4.7,
-      reviews: 21,
-
-    },;'
-      id: 'iot - security - platform','
-      name: 'IoT Security Platform','
-      tagline: 'Secure your IoT ecosystem with comprehensive protection','
-      price: '$199','
-      period: '/month',
-      description:;'
-        'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',
-      features: [;
-'
-        'IoT device authentication and management','
-        'Network traffic monitoring and analysis','
-        'Threat detection and response','
-        'Device vulnerability assessment','
-        'Secure firmware updates','
-        'Data encryption and protection','
-        'Compliance monitoring and reporting','
-        'Real - time security alerts','
-        'Integration with IoT platforms','
-        'Mobile security management',
-      ],
-      popular: true,'
-      icon: '📱','
-        'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',
-      trial_days: 14,'
-      setup_time: '1 - 2 weeks','
-      category: 'IoT Security & Protection','
-        'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance',
-      ],'
-      roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.','
-      competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'],'
-        mobile: '+1 302 464 0950','
-        email: 'kleber@ziontechgroup && ziontechgroup.com','
-        address: '364 E Main St STE 1008 Middletown DE 19709','
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;'
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.','
-      launch_date: '2024 - 09 - 25',
-      customers: 43,
-      rating: 4 && 4.7,
-      reviews: 21,
-<<<<<<< HEAD
-  ];    features: [
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-  ];    features: []
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
-      launch_date: '2024 - 09 - 25',
-      customers: 43,
-      rating: 4 && 4.7,
-      reviews: 21,
-  ];    features: [
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: string,
-  contactInfo: {}
-    mobile: string, email: string,
+    mobile: string,
+    email: string,
     address: string,
-    website: string;
-    },
-<<<<<<< HEAD
-=======
-    rating: 4 && 4.7;
-    reviews: 21;
-  }
-];;
-ursor/fix-website-loading-errors-and-merge-6662;
-    reviews: 21;
-
-    },;'
-      id: 'iot - security - platform';,''
-      name: 'IoT Security Platform';,''
-      tagline: 'Secure your IoT ecosystem with comprehensive protection';,''
-      price: '$199';,''
-      period: '/month';,'
-      description:;'
-        'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.','
-      features: [;
-'
-        'IoT device authentication and management',''
-        'Network traffic monitoring and analysis',''
-        'Threat detection and response',''
-        'Device vulnerability assessment',''
-        'Secure firmware updates',''
-        'Data encryption and protection',''
-        'Compliance monitoring and reporting',''
-        'Real - time security alerts',''
-        'Integration with IoT platforms',''
-        'Mobile security management',']
-      ],
-      popular: true;,'
-      icon: '📱';,''
-        'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies','
-      trial_days: 14;,'
-      setup_time: '1 - 2 weeks';,''
-      category: 'IoT Security & Protection';,''
-        'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance','
-      ],'
-      roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';,''
-      competitors: ['Armis;, Claroty, Nozomi Networks, CyberX, Dragos'],''
-        mobile: '+1 302 464 0950';,''
-        email: 'kleber@ziontechgroup && ziontechgroup.com';,''
-        address: '364 E Main St STE 1008 Middletown DE 19709';,''
-        website: 'https://ziontechgroup && ziontechgroup.com';,'
-      },
-      real_implementation: true;,
-      implementation_details:;'
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',''
-      launch_date: '2024 - 09 - 25';,'
-      customers: 43;,
-      rating: 4 && 4.7;,
-      reviews: 21;,
-  ];    features: [;,
-  id: string;, name: string;,
-  tagline: string;, price: string;,
-  period: string;, description: string;,]
-pr-12325
-  features: string[];, popular: boolean;,
-  icon: string;, color: string;,
-  textColor: string;, link: string;,
-  marketPosition: string;, targetAudience: string;,
-  trialDays: number;, setupTime: string;,
-  category: string;, realService: boolean;,
-  technology: string[];, integrations: string[];,
-  useCases: string[];, roi: string;,
-  competitors: string[];, marketSize: string;,
-  growthRate: string;, variant: string;,
-  contactInfo: {
-      
-    mobile: string;, email: string;,
-    address: string;,
-    website: string;
-  
-    },
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
+    website: string};
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
   rating: number,
-  reviews: number
-    realImplementation: boolean;, implementationDetails: string;,
-  launchDate: string;, customers: number;,
-  rating: number;,
-  reviews: number;
-}
-
-export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [
-  // Zero Trust Security Platform
-  {
-    id: 'zero-trust-security-platform';, name: 'Zero Trust Security Platform';,
-    tagline: 'Never trust;, always verify - Advanced zero trust security',
-    price: '$599';, period: '/month';,
-    description: 'Comprehensive zero trust security platform that implements continuous verification;, micro-segmentation, and adaptive access controls to protect against modern cyber threats.',
-    features: [
-      'Continuous identity verification and authenticationMicro-segmentation and network isolationAdaptive access controls and policiesReal-time threat detection and responseMulti-factor authentication (MFA)Privileged access management (PAM)API security and monitoringCloud security posture management';
-      'Compliance reporting and auditingSecurity analytics and insights'
-    ];
-    popular: true;, icon: '🔒';,
-    color: 'from-red-600 to-pink-600';, textColor: 'text-red-400';,
-    link: 'https://ziontechgroup.com/zero-trust-security-platform';,
-    marketPosition: 'Competes with Palo Alto ($50/month);, CrowdStrike ($8.99/month), Okta ($2/month). Our advantage: Comprehensive zero trust implementation;, real-time monitoring, and adaptive controls.',
-    targetAudience: 'Enterprise companies;, Government agencies, Financial institutions, Healthcare organizations, Critical infrastructure',
-    trialDays: 14;, setupTime: '1-2 weeks';,
-    category: 'Cybersecurity & Zero Trust';, realService: true;,
-    technology: ['Python;, Go, React, Node.js, Kubernetes, Docker, AWS, Azure'];
-    integrations: ['Active Directory;, LDAP, SAML, OAuth, SIEM systems, EDR platforms'];
-    useCases: ['Enterprise security;, Government compliance, Financial security, Healthcare protection, Critical infrastructure security'];
-    roi: 'Organizations report 450% ROI through reduced security incidents and compliance costs.';,
-    competitors: ['Palo Alto;, CrowdStrike, Okta, Duo, Ping Identity'];
-    marketSize: '$31.2B zero trust security market';, growthRate: '28% annual growth';,
-    variant: 'zero-trust-enterprise';,
-    contactInfo: {
-  ];    features: [;
-      'IoT device authentication and management_network traffic monitoring and analysis_threat detection and response_device vulnerability assessment_secure firmware updates_data encryption and protection_compliance monitoring and reporting_real - time security alerts';
-      'Integration with IoT platforms_mobile security management';
-    ];
-    popular: true;, icon: '📱';,
-    color: 'from - purple - 600 to - violet - 600';, text_color: 'text - purple - 400';,
-    link: 'https://ziontechgroup.com / iot - security - platform';,
-    market_position: 'Competes with Armis ($25 / month);, Claroty ($50 / month), Nozomi Networks ($50 / month). Our advantage: Comprehensive IoT protection;, automated response, and affordable pricing.',
-    target_audience: 'IoT manufacturers;, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',
-    trial_days: 14;, setup_time: '1 - 2 weeks';,
-    category: 'IoT Security & Protection';, real_service: true;,
-    technology: ['Python;, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'];
-    integrations: ['AWS IoT;, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
-    use_cases: ['Smart city security;, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';,
-    competitors: ['Armis;, Claroty, Nozomi Networks, CyberX, Dragos'];
-    market_size: '$14.2B IoT security market';, growth_rate: '30% annual growth';,
-    variant: 'iot - security - enterprise';,
-    contact_info: {
-
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
-      address: '364 E Main St STE 1008 Middletown DE 19709';,
-      website: 'https://ziontechgroup.com';
-    },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-    popular: true;, icon: '📱';,
-    color: 'from-purple-600 to-violet-600';, textColor: 'text-purple-400';,
-    link: 'https://ziontechgroup && ziontechgroup.com/iot-security-platform';,
-    marketPosition: 'Competes with Armis ($25/month);, Claroty ($50/month), Nozomi Networks ($50/month). Our advantage: Comprehensive IoT protection;, automated response, and affordable pricing.',
-    targetAudience: 'IoT manufacturers;, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',
-    trialDays: 14;, setupTime: '1-2 weeks';,
-    category: 'IoT Security & Protection';, realService: true;,
-    technology: ['Python;, C++, React, Node && Node.js, MQTT, CoAP, Zigbee, Z-Wave'];
-
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
-    useCases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.'
-    competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
-    integrations: ['AWS IoT;, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
-    useCases: ['Smart city security;, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.'
-    competitors: ['Armis;, Claroty, Nozomi Networks, CyberX, Dragos'];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-    marketSize: '$14 && 14.2B IoT security market';, growthRate: '30% annual growth';,
-    variant: 'iot-security-enterprise';,
-    contactInfo: {
-      mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup && ziontechgroup.com';,
-      address: '364 E Main St STE 1008 Middletown DE 19709';,
-      website: 'https://ziontechgroup && ziontechgroup.com';
-    },
-    realImplementation: true;,
-    implementationDetails: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.',
-    launchDate: '2024-09-25';, customers: 43;,
-    rating: 4 && 4.7;,
-
-    },
-  ];
-origin/cursor/automate-test-improve-and-merge-code-2533
-    reviews: 21
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    real_implementation: true,
-    implementation_details: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
-=======
-'
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709','
-      website: 'https://ziontechgroup.com';
-    },
-'
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];'
-    useCases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];'
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.''
-    competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];
-
-    real_implementation: true,'
-    implementation_details: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    launch_date: '2024 - 09 - 25', customers: 43,
-    rating: 4.7,
-origin/cursor/expand-services-advertise-and-build-project-c28b
-    real_implementation: true;,
-    implementation_details: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.',
-    launch_date: '2024 - 09 - 25';, customers: 43;,
-    rating: 4.7;,
-    reviews: 21;
-  }
-];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-    color: 'from - purple - 600 to - violet - 600';
-    text_color: 'text - purple - 400';
-    link: 'https://ziontechgroup.com / iot - security - platform';
-    market_position: 'Competes with Armis ($25 / month);, Claroty ($50 / month), Nozomi Networks ($50 / month). Our advantage: Comprehensive IoT protection;, automated response, and affordable pricing.';
-    target_audience: 'IoT manufacturers;, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies';
-    trial_days: 14;
-    setup_time: '1 - 2 weeks';
-    category: 'IoT Security & Protection';
-    real_service: true;
-    technology: ['Python;, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'];
-
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
-    use_cases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';
-    competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
-    integrations: ['AWS IoT;, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
-    use_cases: ['Smart city security;, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';
-    competitors: ['Armis;, Claroty, Nozomi Networks, CyberX, Dragos'];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-    market_size: '$14.2B IoT security market';
-    growth_rate: '30% annual growth';
-    variant: 'iot - security - enterprise';
-    contact_info: {
-
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup && ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-
-      website: 'https://ziontechgroup && ziontechgroup.com';
+  reviews: number}
+const contact = {
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
+};
+export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =,
+  [
+    {
+      id: 'ai-threat-hunting-platform';
+      name: 'AI Threat Hunting Platform';
+      tagline:,
+        'Proactively hunt and eliminate cyber threats before they strike';
+      price: '$1,299';
+      period: '/month';
+      description:,
+        'Advanced AI-powered threat hunting platform that proactively identifies, analyzes, and eliminates cyber threats before they can cause damage. Features behavioral analysis, threat intelligence, and automated response.';
+      features: [
+        'AI-powered threat detection';
+        'Behavioral analysis engine';
+        'Threat intelligence integration';
+        'Automated threat response';
+        'Real-time monitoring';
+        'Advanced analytics dashboard';
+        'Custom threat hunting rules';
+        'Integration with SIEM systems';
+        'Mobile threat detection';
+        '24/7 security operations';
+      ];
+      popular: true;
+      icon: '🕵️';
+      color: 'from-blue-600 to-indigo-700';
+      textColor: 'text-blue-400';
+      link: 'https://ziontechgroup.com/ai-threat-hunting-platform';
+      marketPosition:,
+        'Leading AI-powered threat hunting platform. Our advantage: Proactive threat detection with 99.9% accuracy and automated response capabilities.';
+      targetAudience: [
+        'Large enterprises';
+        'Financial institutions';
+        'Healthcare organizations';
+        'Government agencies';
+        'Critical infrastructure';
+      ];
+      trialDays: 30;
+      setupTime: '2-3 weeks';
+      category: 'AI Cybersecurity & Threat Intelligence';
+      realService: true;
+      technology: [
+        'Machine Learning';
+        'Behavioral Analysis';
+        'Threat Intelligence';
+        'SIEM Integration';
+        'AI Security';
+      ];
+      integrations: [
+        'Splunk';
+        'IBM QRadar';
+        'Microsoft Sentinel';
+        'Custom SIEM systems';
+        'EDR platforms';
+      ];
+      useCases: [
+        'Advanced threat detection';
+        'Incident response';
+        'Security operations';
+        'Compliance monitoring';
+        'Risk assessment';
+      ];
+      roi: 'Organizations achieve 500% ROI with 90% reduction in threat response time and 95% fewer successful attacks.';
+      competitors: [
+        'CrowdStrike';
+        'SentinelOne';
+        'Carbon Black';
+        'Microsoft Defender';
+      ];
+      marketSize: '$45.2B threat detection market';
+      growthRate: '42% annual growth';
+      contactInfo: contact;
+      realImplementation: true;
+      implementationDetails:,
+        'Advanced AI-powered threat hunting platform with proactive detection and automated response.';
+      launchDate: '2024-12-01';
+      customers: 28;
+      rating: 4.9;
+      reviews: 67;
     };
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    realImplementation: true;
-    implementationDetails: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.';
-    launchDate: '2024-09-25';
-    customers: 43;
-    rating: 4 && 4.7;
-    reviews: 21
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-];
-;
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  }
-];
-;
-
-    reviews: 21;
-  }
-];
-;
-  contactInfo: {;,
-  mobile: string;, email: string;,
-    address: string;,
-    website: string;
-      mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
-      website: 'https://ziontechgroup.com';
-    integrations: ['AWS IoT;, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
-    useCases: ['Smart city security;, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.;,
-  competitors: ['Armis;, Claroty, Nozomi Networks, CyberX, Dragos'];
-    implementation_details: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.',
-    launch_date: '2024 - 09 - 25';, customers: 43;,
-];
-    use_cases: ['Smart city security;, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';',
-    realImplementation: true;,
-  implementationDetails: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.';
-    launchDate: '2024-09-25';',
-    rating: 4 && 4.7;,
-;
-    real_implementation: true;,
-  implementation_details: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.';
-    launch_date: '2024 - 09 - 25';',
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
-
-
-ursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-'
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];'
-    use_cases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];'
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';'
-    competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];
-
-    realImplementation: true;'
-    implementationDetails: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.';'
-    launchDate: '2024-09-25';
-    customers: 43;
-    rating: 4 && 4.7;
-    reviews: 21;
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  }
-];
-;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-      website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true;'
-    implementation_details: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.';'
-=======
-      website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true;
-    implementation_details: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    launch_date: '2024 - 09 - 25';
-    customers: 43;
-    rating: 4.7;
-    reviews: 21;
-
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-  }
-];
-;
-origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-  }
-];
-;
-
-<<<<<<< HEAD
-
-
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-  }
-];
-;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  }
-];
-;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import { ServiceVariant } from '../types/service-variants',;
-
-
-
-ursor/fix-website-loading-errors-and-merge-6662
-  }
-];
-;
-origin/cursor/expand-services-advertise-and-build-project-c28b
-pr-12325
-    },'
-      mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,''
-      address: '364 E Main St STE 1008 Middletown DE 19709';,''
-      website: 'https://ziontechgroup.com';'
-    },'
-    integrations: ['AWS IoT;, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];''
-    useCases: ['Smart city security;, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];''
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.'';,'
-  competitors: ['Armis;, Claroty, Nozomi Networks, CyberX, Dragos'];'
-    real_implementation: true;,'
-    implementation_details: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.',''
-    launch_date: '2024 - 09 - 25';, customers: 43;,'
-    rating: 4.7;,
-    reviews: 21;
-  }
-];'
-    integrations: ['AWS IoT;, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];''
-    use_cases: ['Smart city security;, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];''
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';','
-  competitors: ['Armis;, Claroty, Nozomi Networks, CyberX, Dragos'];'
-    realImplementation: true;,'
-  implementationDetails: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.';''
-    launchDate: '2024-09-25';',
-  customers: 43;
-    rating: 4 && 4.7;,
-  reviews: 21;
-
-  }
-];
-;'
-      website: 'https://ziontechgroup.com';'
-    }
-
-    real_implementation: true;,'
-  implementation_details: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.';''
-    launch_date: '2024 - 09 - 25';',
-  customers: 43;
-    rating: 4.7;,
-  reviews: 21;
-
-
-}
-}
-  }
-];
-
-;'
-import { ServiceVariant } from '../types/service-variants';'
-
-export interface AdvancedCybersecurityService {;
-  id: string;,;
-  name: string;,;
-  tagline: string;,;
-  price: string;,;
-  period: string;,;
-  description: string;,;
-  features: string[];,;
-  popular: boolean;,;
-  icon: string;,;
-  color: string;,;
-  textColor: string;,;
-  link: string;,;
-  marketPosition: string;,;
-  targetAudience: string;,;
-  trialDays: number;,;
-  setupTime: string;,;
-  category: string;,;
-  realService: boolean;,;
-  technology: string[];,;
-  integrations: string[];,;
-  useCases: string[];,;
-  roi: string;,;
-  competitors: string[];,;
-  marketSize: string;,;
-  growthRate: string;,;
-  variant: string;,;
-  contactInfo: {;
-    mobile: string;,;
-  contactInfo: {;,
-  mobile: string;,;
-    email: string;,;
-    address: string;,;}
-    website: string;}
-  },;
-  contactInfo: {;,
-  mobile: string;,;
-    email: string;,;
-    address: string;,;
-pr-12325
-  realImplementation: boolean;,;
-  implementationDetails: string;,;
-  launchDate: string;,;
-  customers: number;,;
-  rating: number;,;
-  reviews: number;
-}
-;
-pr-12325
-export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [;
-  // Zero Trust Security Platform;
-<<<<<<< HEAD
-  {;'
-    id: 'zero-trust-security-platform',;'
-    name: 'Zero Trust Security Platform',;'
-    tagline: 'Never trust, always verify - Advanced zero trust security',;'
-    price: '$599',;'
-    period: '/month',;'
-    description: 'Comprehensive zero trust security platform that implements continuous verification, micro-segmentation, and adaptive access controls to protect against modern cyber threats.',;
-    features: [;'
-      'Continuous identity verification and authenticationMicro-segmentation and network isolationAdaptive access controls and policiesReal-time threat detection and responseMulti-factor authentication (MFA)Privileged access management (PAM)API security and monitoringCloud security posture management',;'
-=======
-  {;
-    id: 'zero-trust-security-platform';,;
-    name: 'Zero Trust Security Platform';,;
-    tagline: 'Never trust;, always verify - Advanced zero trust security',;
-    price: '$599';,;
-    period: '/month';,;
-    description: 'Comprehensive zero trust security platform that implements continuous verification;, micro-segmentation, and adaptive access controls to protect against modern cyber threats.',;
-    features: [;
-      'Continuous identity verification and authenticationMicro-segmentation and network isolationAdaptive access controls and policiesReal-time threat detection and responseMulti-factor authentication (MFA)Privileged access management (PAM)API security and monitoringCloud security posture management',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      'Compliance reporting and auditingSecurity analytics and insights';
-      'Continuous identity verification and authenticationMicro-segmentation and network isolationAdaptive access controls and policiesReal-time threat detection and responseMulti-factor authentication (MFA)Privileged access management (PAM)API security and monitoringCloud security posture management',;
-      'Compliance reporting and auditingSecurity analytics and insights';']
-pr-12325
-    ],;
-<<<<<<< HEAD
-    popular: true,;'
-    icon: '🔒',;'
-    color: 'from-red-600 to-pink-600',;'
-    textColor: 'text-red-400',;'
-    link: 'https://ziontechgroup.com/zero-trust-security-platform',;'
-    marketPosition: 'Competes with Palo Alto ($50/month), CrowdStrike ($8.99/month), Okta ($2/month). Our advantage: Comprehensive zero trust implementation, real-time monitoring, and adaptive controls.',;'
-    targetAudience: 'Enterprise companies, Government agencies, Financial institutions, Healthcare organizations, Critical infrastructure',;
-    trialDays: 14,;'
-    setupTime: '1-2 weeks',;'
-    category: 'Cybersecurity & Zero Trust',;
-    realService: true,;'
-    technology: ['Python, Go, React, Node.js, Kubernetes, Docker, AWS, Azure'],;'
-    integrations: ['Active Directory, LDAP, SAML, OAuth, SIEM systems, EDR platforms'],;'
-    useCases: ['Enterprise security, Government compliance, Financial security, Healthcare protection, Critical infrastructure security'],;'
-    roi: 'Organizations report 450% ROI through reduced security incidents and compliance costs.',;'
-    competitors: ['Palo Alto, CrowdStrike, Okta, Duo, Ping Identity'],;'
-    marketSize: '$31.2B zero trust security market',;'
-    growthRate: '28% annual growth',;'
-    variant: 'zero-trust-enterprise',;
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
-      website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true;'
-    implementation_details: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.';'
-=======
-    popular: true;,;
-    icon: '🔒';,;
-    color: 'from-red-600 to-pink-600';,;
-    textColor: 'text-red-400';,;
-    link: 'https://ziontechgroup.com/zero-trust-security-platform';,;
-    marketPosition: 'Competes with Palo Alto ($50/month);, CrowdStrike ($8.99/month), Okta ($2/month). Our advantage: Comprehensive zero trust implementation;, real-time monitoring, and adaptive controls.',;
-    targetAudience: 'Enterprise companies;, Government agencies, Financial institutions, Healthcare organizations, Critical infrastructure',;
-    trialDays: 14;,;
-    setupTime: '1-2 weeks';,;
-    category: 'Cybersecurity & Zero Trust';,;
-    realService: true;,;
-    technology: ['Python;, Go, React, Node.js, Kubernetes, Docker, AWS, Azure'],;
-    integrations: ['Active Directory;, LDAP, SAML, OAuth, SIEM systems, EDR platforms'],;
-    useCases: ['Enterprise security;, Government compliance, Financial security, Healthcare protection, Critical infrastructure security'],;
-    roi: 'Organizations report 450% ROI through reduced security incidents and compliance costs.';,;
-    competitors: ['Palo Alto;, CrowdStrike, Okta, Duo, Ping Identity'],;
-    marketSize: '$31.2B zero trust security market';,;
-    growthRate: '28% annual growth';,;
-    variant: 'zero-trust-enterprise';,;
-    contactInfo: {;
-      mobile: '+1 302 464 0950';,;
-      email: 'kleber@ziontechgroup.com';,;
-      address: '364 E Main St STE 1008 Middletown DE 19709';,;
-      website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true;
-    implementation_details: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    launch_date: '2024 - 09 - 25';
-    customers: 43;
-    rating: 4.7;
-    reviews: 21;
-  }
-];
-<<<<<<< HEAD
-;'
-import { ServiceVariant } from '../types/service-variants',;
-=======
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { ServiceVariant } from '../types/service-variants';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
-import { ServiceVariant } from '../types/service-variants',;
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-  {;'
-    id: 'zero-trust-security-platform';,;''
-    name: 'Zero Trust Security Platform';,;''
-    tagline: 'Never trust;, always verify - Advanced zero trust security',;''
-    price: '$599';,;''
-    period: '/month';,;''
-    description: 'Comprehensive zero trust security platform that implements continuous verification;, micro-segmentation, and adaptive access controls to protect against modern cyber threats.',;'
-    features: [;'
-      'Continuous identity verification and authenticationMicro-segmentation and network isolationAdaptive access controls and policiesReal-time threat detection and responseMulti-factor authentication (MFA)Privileged access management (PAM)API security and monitoringCloud security posture management',;''
-      'Compliance reporting and auditingSecurity analytics and insights';']
-    ],;
-
-    popular: true;,;'
-    icon: '🔒';,;''
-    color: 'from-red-600 to-pink-600';,;''
-    textColor: 'text-red-400';,;''
-    link: 'https://ziontechgroup.com/zero-trust-security-platform';,;''
-    marketPosition: 'Competes with Palo Alto ($50/month);, CrowdStrike ($8.99/month), Okta ($2/month). Our advantage: Comprehensive zero trust implementation;, real-time monitoring, and adaptive controls.',;''
-    targetAudience: 'Enterprise companies;, Government agencies, Financial institutions, Healthcare organizations, Critical infrastructure',;'
-    trialDays: 14;,;'
-    setupTime: '1-2 weeks';,;''
-    category: 'Cybersecurity & Zero Trust';,;'
-    realService: true;,;'
-    technology: ['Python;, Go, React, Node.js, Kubernetes, Docker, AWS, Azure'],;''
-    integrations: ['Active Directory;, LDAP, SAML, OAuth, SIEM systems, EDR platforms'],;''
-    useCases: ['Enterprise security;, Government compliance, Financial security, Healthcare protection, Critical infrastructure security'],;''
-    roi: 'Organizations report 450% ROI through reduced security incidents and compliance costs.';,;''
-    competitors: ['Palo Alto;, CrowdStrike, Okta, Duo, Ping Identity'],;''
-    marketSize: '$31.2B zero trust security market';,;''
-    growthRate: '28% annual growth';,;''
-    variant: 'zero-trust-enterprise';,;'
-    contactInfo: {;,'
-  mobile: '+1 302 464 0950';,;''
-      email: 'kleber@ziontechgroup.com';,;''
-      address: '364 E Main St STE 1008 Middletown DE 19709';,;''
-      website: 'https://ziontechgroup.com';'
-
-    }
-    real_implementation: true;,'
-  implementation_details: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.';''
-    launch_date: '2024 - 09 - 25';',
-  customers: 43;
-    rating: 4.7;,
-  reviews: 21;
-  }
-];export interface AdvancedCybersecurityService  {id: string;,name: string;,tagline: string;,price: string;,period: string;,description: string;,features: string[];,popular: boolean;,icon: string;,color: string;,textColor: string;,link: string;,marketPosition: string;,targetAudience: string;,trialDays: number;,setupTime: string;,category: string;,realService: boolean;,technology: string[];,integrations: string[];,useCases: string[];,roi: string;,competitors: string[];,marketSize: string;,growthRate: string;,variant: string;,contactInfo: {mobile: string;,email: string;,address: string;,website: string;}
-  },// AI-Powered Threat Intelligence;
-  {id: 'ai-threat-intelligence';,
-  name: 'AI-Powered Threat Intelligence Platform';,tagline: 'Predict and prevent cyber threats with AI intelligence';,
-  price: '$399';,period: '/month';,
-  description: 'Advanced AI-powered threat intelligence platform that provides real-time threat detection;, predictive analytics, and automated response capabilities to stay ahead of cyber attacks.',features: [;
-      'Real-time threat detection and analysisAI-powered threat prediction and modelingAutomated threat response and mitigationGlobal threat intelligence sharingVulnerability assessment and prioritizationThreat hunting and investigation toolsSecurity metrics and reportingIntegration with security tools','Custom threat feeds and alerts24/7 security monitoring';
-    ],popular: true;,icon: '🛡️';,
-  color: 'from-indigo-600 to-purple-600';,textColor: 'text-indigo-400';,
-  link: 'https://ziontechgroup.com/ai-threat-intelligence';,marketPosition: 'Competes with Recorded Future ($50/month);, ThreatConnect ($50/month), Anomali ($50/month). Our advantage: AI-powered prediction;, automated response, and comprehensive coverage.',
-  targetAudience: 'Security operations centers (SOC);, Threat intelligence teams, Security analysts, Enterprise security teams',trialDays: 21;,setupTime: '3-5 days';,
-  category: 'Threat Intelligence & AI';,realService: true;,technology: ['Python;, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis'],integrations: ['SIEM systems;, EDR platforms, Firewalls, IDS/IPS, Security orchestration tools'],useCases: ['Threat detection;, Incident response, Vulnerability management, Security monitoring, Threat hunting'],roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.';,
-  competitors: ['Recorded Future;, ThreatConnect, Anomali, IBM X-Force, FireEye'],marketSize: '$15.8B threat intelligence market';,
-  growthRate: '26% annual growth';,variant: 'ai-threat-enterprise';,
-  contactInfo: {mobile: '+1 302 464 0950';,
-  email: 'kleber@ziontechgroup.com';,address: '364 E Main St STE 1008 Middletown DE 19709';,}
-  website: 'https://ziontechgroup.com';}
-    },realImplementation: true;,implementationDetails: 'AI-powered threat intelligence platform with real-time detection;, predictive analytics, and automated response capabilities.',
-  launchDate: '2024-10-20';,customers: 67;,rating: 4.8;,reviews: 31;
-  },// Cloud Security Posture Management;
-  {id: 'cloud-security-posture';,
-  name: 'Cloud Security Posture Management Platform';,tagline: 'Secure your cloud infrastructure with comprehensive posture management';,
-  price: '$299';,period: '/month';,
-  description: 'Comprehensive cloud security platform that continuously monitors;, assesses, and improves the security posture of multi-cloud environments with automated compliance and risk management.',features: [;
-      'Multi-cloud security monitoring (AWS, Azure, GCP)Continuous compliance assessment and reportingAutomated risk identification and remediationIdentity and access management (IAM)Data protection and encryptionNetwork security and segmentationSecurity configuration managementVulnerability scanning and assessment','Incident detection and responseSecurity metrics and dashboards';
-    ],popular: true;,icon: '☁️';,
-  color: 'from-blue-600 to-cyan-600';,textColor: 'text-blue-400';,
-  link: 'https://ziontechgroup.com/cloud-security-posture';,marketPosition: 'Competes with Prisma Cloud ($25/month);, AWS Security Hub ($3/month), Azure Security Center ($15/month). Our advantage: Multi-cloud support;, automated remediation, and comprehensive compliance.',
-  targetAudience: 'Cloud architects;, DevOps teams, Security teams, IT operations, Cloud-native companies',trialDays: 14;,setupTime: '2-4 days';,
-  category: 'Cloud Security & Compliance';,realService: true;,technology: ['Python;, Go, React, Node.js, AWS SDK, Azure SDK, GCP SDK'],integrations: ['AWS;, Azure, GCP, Kubernetes, Docker, Terraform, Ansible'],useCases: ['Cloud security monitoring;, Compliance management, Risk assessment, Security automation, Multi-cloud governance'],roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.';,
-  competitors: ['Prisma Cloud;, AWS Security Hub, Azure Security Center, GCP Security Command Center'],marketSize: '$22.4B cloud security market';,
-  growthRate: '24% annual growth';,variant: 'cloud-security-enterprise';,
-  contactInfo: {mobile: '+1 302 464 0950';,
-  email: 'kleber@ziontechgroup.com';,address: '364 E Main St STE 1008 Middletown DE 19709';,}
-  website: 'https://ziontechgroup.com';}
-    },realImplementation: true;,implementationDetails: 'Multi-cloud security posture management platform with continuous monitoring;, automated compliance, and risk management.',
-  launchDate: '2024-08-10';,customers: 89;,rating: 4.7;,reviews: 42;
-  },// DevSecOps Security Platform;
-  {id: 'devsecops-security-platform';,
-  name: 'DevSecOps Security Platform';,tagline: 'Integrate security into your DevOps pipeline seamlessly';,
-  price: '$249';,period: '/month';,
-  description: 'Comprehensive DevSecOps platform that integrates security testing;, vulnerability scanning, and compliance checks into CI/CD pipelines for secure software development.',features: [;
-      'Automated security testing in CI/CDStatic application security testing (SAST)Dynamic application security testing (DAST)Software composition analysis (SCA)Container security scanningInfrastructure as code securitySecrets management and scanningCompliance automation and reporting','Security metrics and dashboardsIntegration with DevOps tools';
-    ],popular: true;,icon: '🔧';,
-  color: 'from-green-600 to-emerald-600';,textColor: 'text-green-400';,
-  link: 'https://ziontechgroup.com/devsecops-security-platform';,marketPosition: 'Competes with Snyk ($25/month);, Checkmarx ($15/month), Veracode ($25/month). Our advantage: Comprehensive DevSecOps integration;, automated compliance, and affordable pricing.',
-  targetAudience: 'DevOps teams;, Security teams, Development teams, Software companies, IT organizations',trialDays: 21;,setupTime: '3-5 days';,
-  category: 'DevSecOps & Application Security';,realService: true;,technology: ['Python;, Go, React, Node.js, Jenkins, GitLab CI, GitHub Actions'],integrations: ['Jenkins;, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI'],useCases: ['Secure software development;, CI/CD security, Vulnerability management, Compliance automation, Security testing'],roi: 'Development teams report 350% ROI through reduced security vulnerabilities and faster deployments.';,
-  competitors: ['Snyk;, Checkmarx, Veracode, SonarQube, OWASP ZAP'],marketSize: '$18.7B application security market';,
-  growthRate: '22% annual growth';,variant: 'devsecops-enterprise';,
-  contactInfo: {mobile: '+1 302 464 0950';,
-  email: 'kleber@ziontechgroup.com';,address: '364 E Main St STE 1008 Middletown DE 19709';,}
-  website: 'https://ziontechgroup.com';}
-    },realImplementation: true;,implementationDetails: 'Comprehensive DevSecOps platform with automated security testing;, vulnerability scanning, and compliance automation.',
-  launchDate: '2024-11-05';,customers: 56;,rating: 4.8;,reviews: 28;
-  },// IoT Security Platform;
-  {id: 'iot-security-platform';,
-  name: 'IoT Security Platform';,tagline: 'Secure your IoT ecosystem with comprehensive protection';,
-  price: '$199';,period: '/month';,
-  description: 'Advanced IoT security platform that provides device authentication;, network monitoring, threat detection, and automated response for connected IoT devices and networks.',features: [;
-      'IoT device authentication and managementNetwork traffic monitoring and analysisThreat detection and responseDevice vulnerability assessmentSecure firmware updatesData encryption and protectionCompliance monitoring and reportingReal-time security alerts','Integration with IoT platformsMobile security management';
-    ],popular: true;,icon: '📱';,
-  color: 'from-purple-600 to-violet-600';,textColor: 'text-purple-400';,
-  link: 'https://ziontechgroup.com/iot-security-platform';,marketPosition: 'Competes with Armis ($25/month);, Claroty ($50/month), Nozomi Networks ($50/month). Our advantage: Comprehensive IoT protection;, automated response, and affordable pricing.',
-  targetAudience: 'IoT manufacturers;, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',trialDays: 14;,setupTime: '1-2 weeks';,
-  category: 'IoT Security & Protection';,realService: true;,technology: ['Python;, C++, React, Node.js, MQTT, CoAP, Zigbee, Z-Wave'],integrations: ['AWS IoT;, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'],useCases: ['Smart city security;, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'],roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';,
-  competitors: ['Armis;, Claroty, Nozomi Networks, CyberX, Dragos'],marketSize: '$14.2B IoT security market';,
-  growthRate: '30% annual growth';,variant: 'iot-security-enterprise';,
-  contactInfo: {mobile: '+1 302 464 0950';,
-  email: 'kleber@ziontechgroup.com';,address: '364 E Main St STE 1008 Middletown DE 19709';,}
-  website: 'https://ziontechgroup.com';}
-    },realImplementation: true;,implementationDetails: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.',
-  launchDate: '2024-09-25';,customers: 43;,rating: 4.7;
-    reviews: 21;}
-];}
-];
-  }
-];
-];
-
-;'
-
-<<<<<<< HEAD
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-export interface AdvancedCybersecurityService {;
-  id: string;,;
-  name: string;,;
-  tagline: string;,;
-  price: string;,;
-  period: string;,;
-  description: string;,;
-  features: string[];,;
-  popular: boolean;,;
-  icon: string;,;
-  color: string;,;
-  textColor: string;,;
-  link: string;,;
-  marketPosition: string;,;
-  targetAudience: string;,;
-  trialDays: number;,;
-  setupTime: string;,;
-  category: string;,;
-  realService: boolean;,;
-  technology: string[];,;
-  integrations: string[];,;
-  useCases: string[];,;
-  roi: string;,;
-  competitors: string[];,;
-  marketSize: string;,;
-  growthRate: string;,;
-  variant: string;,;
-  contactInfo: {;
-    mobile: string;,;
-  contactInfo: {;,
-  mobile: string;,;
-    email: string;,;
-    address: string;,;}
-    website: string;}
-  },;
-  // AI-Powered Threat Intelligence;
-<<<<<<< HEAD
-  {;'
-    id: 'ai-threat-intelligence',;'
-    name: 'AI-Powered Threat Intelligence Platform',;'
-    tagline: 'Predict and prevent cyber threats with AI intelligence',;'
-    price: '$399',;'
-    period: '/month',;'
-    description: 'Advanced AI-powered threat intelligence platform that provides real-time threat detection, predictive analytics, and automated response capabilities to stay ahead of cyber attacks.',;
-    features: [;'
-      'Real-time threat detection and analysisAI-powered threat prediction and modelingAutomated threat response and mitigationGlobal threat intelligence sharingVulnerability assessment and prioritizationThreat hunting and investigation toolsSecurity metrics and reportingIntegration with security tools',;'
-      'Custom threat feeds and alerts24/7 security monitoring';
-    ],;
-    popular: true,;'
-    icon: '🛡️',;'
-    color: 'from-indigo-600 to-purple-600',;'
-    textColor: 'text-indigo-400',;'
-    link: 'https://ziontechgroup.com/ai-threat-intelligence',;'
-    marketPosition: 'Competes with Recorded Future ($50/month), ThreatConnect ($50/month), Anomali ($50/month). Our advantage: AI-powered prediction, automated response, and comprehensive coverage.',;'
-    targetAudience: 'Security operations centers (SOC), Threat intelligence teams, Security analysts, Enterprise security teams',;
-    trialDays: 21,;'
-    setupTime: '3-5 days',;'
-    category: 'Threat Intelligence & AI',;
-    realService: true,;'
-    technology: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis'],;'
-    integrations: ['SIEM systems, EDR platforms, Firewalls, IDS/IPS, Security orchestration tools'],;'
-    useCases: ['Threat detection, Incident response, Vulnerability management, Security monitoring, Threat hunting'],;'
-    roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.',;'
-    competitors: ['Recorded Future, ThreatConnect, Anomali, IBM X-Force, FireEye'],;'
-    marketSize: '$15.8B threat intelligence market',;'
-    growthRate: '26% annual growth',;'
-    variant: 'ai-threat-enterprise',;
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
-      website: 'https://ziontechgroup.com';
-    },;
-    realImplementation: true,;'
-    implementationDetails: 'AI-powered threat intelligence platform with real-time detection, predictive analytics, and automated response capabilities.',;'
-    launchDate: '2024-10-20',;
-    customers: 67,;
-    rating: 4.8,;
-    reviews: 31;
-  },;
-  // Cloud Security Posture Management;
-  {;'
-    id: 'cloud-security-posture',;'
-    name: 'Cloud Security Posture Management Platform',;'
-    tagline: 'Secure your cloud infrastructure with comprehensive posture management',;'
-    price: '$299',;'
-    period: '/month',;'
-    description: 'Comprehensive cloud security platform that continuously monitors, assesses, and improves the security posture of multi-cloud environments with automated compliance and risk management.',;
-    features: [;'
-      'Multi-cloud security monitoring (AWS, Azure, GCP)Continuous compliance assessment and reportingAutomated risk identification and remediationIdentity and access management (IAM)Data protection and encryptionNetwork security and segmentationSecurity configuration managementVulnerability scanning and assessment',;'
-      'Incident detection and responseSecurity metrics and dashboards';
-    ],;
-    popular: true,;'
-    icon: '☁️',;'
-    color: 'from-blue-600 to-cyan-600',;'
-    textColor: 'text-blue-400',;'
-    link: 'https://ziontechgroup.com/cloud-security-posture',;'
-    marketPosition: 'Competes with Prisma Cloud ($25/month), AWS Security Hub ($3/month), Azure Security Center ($15/month). Our advantage: Multi-cloud support, automated remediation, and comprehensive compliance.',;'
-    targetAudience: 'Cloud architects, DevOps teams, Security teams, IT operations, Cloud-native companies',;
-    trialDays: 14,;'
-    setupTime: '2-4 days',;'
-    category: 'Cloud Security & Compliance',;
-    realService: true,;'
-    technology: ['Python, Go, React, Node.js, AWS SDK, Azure SDK, GCP SDK'],;'
-    integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Terraform, Ansible'],;'
-    useCases: ['Cloud security monitoring, Compliance management, Risk assessment, Security automation, Multi-cloud governance'],;'
-    roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.',;'
-    competitors: ['Prisma Cloud, AWS Security Hub, Azure Security Center, GCP Security Command Center'],;'
-    marketSize: '$22.4B cloud security market',;'
-    growthRate: '24% annual growth',;'
-    variant: 'cloud-security-enterprise',;
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
-      website: 'https://ziontechgroup.com';
-    },;
-    realImplementation: true,;'
-    implementationDetails: 'Multi-cloud security posture management platform with continuous monitoring, automated compliance, and risk management.',;'
-    launchDate: '2024-08-10',;
-    customers: 89,;
-    rating: 4.7,;
-    reviews: 42;
-  },;
-  // DevSecOps Security Platform;
-  {;'
-    id: 'devsecops-security-platform',;'
-    name: 'DevSecOps Security Platform',;'
-    tagline: 'Integrate security into your DevOps pipeline seamlessly',;'
-    price: '$249',;'
-    period: '/month',;'
-    description: 'Comprehensive DevSecOps platform that integrates security testing, vulnerability scanning, and compliance checks into CI/CD pipelines for secure software development.',;
-    features: [;'
-      'Automated security testing in CI/CDStatic application security testing (SAST)Dynamic application security testing (DAST)Software composition analysis (SCA)Container security scanningInfrastructure as code securitySecrets management and scanningCompliance automation and reporting',;'
-      'Security metrics and dashboardsIntegration with DevOps tools';
-    ],;
-    popular: true,;'
-    icon: '🔧',;'
-    color: 'from-green-600 to-emerald-600',;'
-    textColor: 'text-green-400',;'
-    link: 'https://ziontechgroup.com/devsecops-security-platform',;'
-    marketPosition: 'Competes with Snyk ($25/month), Checkmarx ($15/month), Veracode ($25/month). Our advantage: Comprehensive DevSecOps integration, automated compliance, and affordable pricing.',;'
-    targetAudience: 'DevOps teams, Security teams, Development teams, Software companies, IT organizations',;
-    trialDays: 21,;'
-    setupTime: '3-5 days',;'
-    category: 'DevSecOps & Application Security',;
-    realService: true,;'
-    technology: ['Python, Go, React, Node.js, Jenkins, GitLab CI, GitHub Actions'],;'
-    integrations: ['Jenkins, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI'],;'
-    useCases: ['Secure software development, CI/CD security, Vulnerability management, Compliance automation, Security testing'],;'
-    roi: 'Development teams report 350% ROI through reduced security vulnerabilities and faster deployments.',;'
-    competitors: ['Snyk, Checkmarx, Veracode, SonarQube, OWASP ZAP'],;'
-    marketSize: '$18.7B application security market',;'
-    growthRate: '22% annual growth',;'
-    variant: 'devsecops-enterprise',;
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
-      website: 'https://ziontechgroup.com';
-    },;
-    realImplementation: true,;'
-    implementationDetails: 'Comprehensive DevSecOps platform with automated security testing, vulnerability scanning, and compliance automation.',;'
-    launchDate: '2024-11-05',;
-    customers: 56,;
-    rating: 4.8,;
-    reviews: 28;
-  },;
-  // IoT Security Platform;
-  {;'
-    id: 'iot-security-platform',;'
-    name: 'IoT Security Platform',;'
-    tagline: 'Secure your IoT ecosystem with comprehensive protection',;'
-    price: '$199',;'
-    period: '/month',;'
-    description: 'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',;
-    features: [;'
-      'IoT device authentication and managementNetwork traffic monitoring and analysisThreat detection and responseDevice vulnerability assessmentSecure firmware updatesData encryption and protectionCompliance monitoring and reportingReal-time security alerts',;'
-      'Integration with IoT platformsMobile security management';
-    ],;
-    popular: true,;'
-    icon: '📱',;'
-    color: 'from-purple-600 to-violet-600',;'
-    textColor: 'text-purple-400',;'
-    link: 'https://ziontechgroup.com/iot-security-platform',;'
-    marketPosition: 'Competes with Armis ($25/month), Claroty ($50/month), Nozomi Networks ($50/month). Our advantage: Comprehensive IoT protection, automated response, and affordable pricing.',;'
-    targetAudience: 'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',;
-    trialDays: 14,;'
-    setupTime: '1-2 weeks',;'
-    category: 'IoT Security & Protection',;
-    realService: true,;'
-    technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z-Wave'],;'
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'],;'
-    useCases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'],;'
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.',;'
-    competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'],;'
-    marketSize: '$14.2B IoT security market',;'
-    growthRate: '30% annual growth',;'
-    variant: 'iot-security-enterprise',;
-    contactInfo: {;'
-      mobile: '+1 302 464 0950',;'
-      email: 'kleber@ziontechgroup.com',;'
-      address: '364 E Main St STE 1008 Middletown DE 19709',;'
-      website: 'https://ziontechgroup.com';
-    },;
-    realImplementation: true,;'
-    implementationDetails: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',;'
-    launchDate: '2024-09-25',;
-    customers: 43,;
-    rating: 4.7;
-    reviews: 21;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-];
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-
-=======
-  {;
-  mobile: '+1 302 464 0950';,;
-      email: 'kleber@ziontechgroup.com';,;
-      address: '364 E Main St STE 1008 Middletown DE 19709';,;
-  // AI-Powered Threat Intelligence;
-pr-12325
-    id: 'ai-threat-intelligence';,;
-    name: 'AI-Powered Threat Intelligence Platform';,;
-    tagline: 'Predict and prevent cyber threats with AI intelligence';,;
-    price: '$399';,;
-    period: '/month';,;
-    description: 'Advanced AI-powered threat intelligence platform that provides real-time threat detection;, predictive analytics, and automated response capabilities to stay ahead of cyber attacks.',;
-    features: [;
-      'Real-time threat detection and analysisAI-powered threat prediction and modelingAutomated threat response and mitigationGlobal threat intelligence sharingVulnerability assessment and prioritizationThreat hunting and investigation toolsSecurity metrics and reportingIntegration with security tools',;
-      'Custom threat feeds and alerts24/7 security monitoring';
-    ],;
-    popular: true;,;
-    description: 'Advanced AI-powered threat intelligence platform that provides real-time threat detection;, predictive analytics, and automated response capabilities to stay ahead of cyber attacks.',;
-      'Real-time threat detection and analysisAI-powered threat prediction and modelingAutomated threat response and mitigationGlobal threat intelligence sharingVulnerability assessment and prioritizationThreat hunting and investigation toolsSecurity metrics and reportingIntegration with security tools',;
-      'Custom threat feeds and alerts24/7 security monitoring';']
-pr-12325
-    icon: '🛡️';,;
-    color: 'from-indigo-600 to-purple-600';,;
-    textColor: 'text-indigo-400';,;
-    link: 'https://ziontechgroup.com/ai-threat-intelligence';,;
-    marketPosition: 'Competes with Recorded Future ($50/month);, ThreatConnect ($50/month), Anomali ($50/month). Our advantage: AI-powered prediction;, automated response, and comprehensive coverage.',;
-    targetAudience: 'Security operations centers (SOC);, Threat intelligence teams, Security analysts, Enterprise security teams',;
-    trialDays: 21;,;
-    setupTime: '3-5 days';,;
-    category: 'Threat Intelligence & AI';,;
-    realService: true;,;
-pr-12325
-    technology: ['Python;, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis'],;
-    integrations: ['SIEM systems;, EDR platforms, Firewalls, IDS/IPS, Security orchestration tools'],;
-    useCases: ['Threat detection;, Incident response, Vulnerability management, Security monitoring, Threat hunting'],;
-    roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.';,;
-    competitors: ['Recorded Future;, ThreatConnect, Anomali, IBM X-Force, FireEye'],;
-    marketSize: '$15.8B threat intelligence market';,;
-    growthRate: '26% annual growth';,;
-    variant: 'ai-threat-enterprise';,;
-    contactInfo: {;
-      mobile: '+1 302 464 0950';,;
-      email: 'kleber@ziontechgroup.com';,;
-      address: '364 E Main St STE 1008 Middletown DE 19709';,;
-      website: 'https://ziontechgroup.com';
-    },;
-pr-12325
-    realImplementation: true;,;
-    implementationDetails: 'AI-powered threat intelligence platform with real-time detection;, predictive analytics, and automated response capabilities.',;
-    launchDate: '2024-10-20';,;
-  {;'
-    id: 'ai-threat-intelligence';,;''
-    name: 'AI-Powered Threat Intelligence Platform';,;''
-    tagline: 'Predict and prevent cyber threats with AI intelligence';,;''
-    price: '$399';,;''
-    period: '/month';,;''
-    description: 'Advanced AI-powered threat intelligence platform that provides real-time threat detection;, predictive analytics, and automated response capabilities to stay ahead of cyber attacks.',;'
-    features: [;'
-      'Real-time threat detection and analysisAI-powered threat prediction and modelingAutomated threat response and mitigationGlobal threat intelligence sharingVulnerability assessment and prioritizationThreat hunting and investigation toolsSecurity metrics and reportingIntegration with security tools',;''
-      'Custom threat feeds and alerts24/7 security monitoring';']
-    ],;
-
-    popular: true;,;'
-    icon: '🛡️';,;''
-    color: 'from-indigo-600 to-purple-600';,;''
-    textColor: 'text-indigo-400';,;''
-    link: 'https://ziontechgroup.com/ai-threat-intelligence';,;''
-    marketPosition: 'Competes with Recorded Future ($50/month);, ThreatConnect ($50/month), Anomali ($50/month). Our advantage: AI-powered prediction;, automated response, and comprehensive coverage.',;''
-    targetAudience: 'Security operations centers (SOC);, Threat intelligence teams, Security analysts, Enterprise security teams',;'
-    trialDays: 21;,;'
-    setupTime: '3-5 days';,;''
-    category: 'Threat Intelligence & AI';,;'
-    realService: true;,;'
-    technology: ['Python;, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis'],;''
-    integrations: ['SIEM systems;, EDR platforms, Firewalls, IDS/IPS, Security orchestration tools'],;''
-    useCases: ['Threat detection;, Incident response, Vulnerability management, Security monitoring, Threat hunting'],;''
-    roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.';,;''
-    competitors: ['Recorded Future;, ThreatConnect, Anomali, IBM X-Force, FireEye'],;''
-    marketSize: '$15.8B threat intelligence market';,;''
-    growthRate: '26% annual growth';,;''
-    variant: 'ai-threat-enterprise';,;'
-    contactInfo: {;,'
-  mobile: '+1 302 464 0950';,;''
-      email: 'kleber@ziontechgroup.com';,;''
-      address: '364 E Main St STE 1008 Middletown DE 19709';,;''
-      website: 'https://ziontechgroup.com';'
-
-    },;
-    realImplementation: true;,;'
-    implementationDetails: 'AI-powered threat intelligence platform with real-time detection;, predictive analytics, and automated response capabilities.',;''
-    launchDate: '2024-10-20';,;'
-    customers: 67;,;
-    rating: 4.8;,;
-    reviews: 31;
-  },;
-  // Cloud Security Posture Management;
-  {;
-  // Cloud Security Posture Management;
-pr-12325
-    id: 'cloud-security-posture';,;
-    name: 'Cloud Security Posture Management Platform';,;
-    tagline: 'Secure your cloud infrastructure with comprehensive posture management';,;
-    price: '$299';,;
-    period: '/month';,;
-    description: 'Comprehensive cloud security platform that continuously monitors;, assesses, and improves the security posture of multi-cloud environments with automated compliance and risk management.',;
-    features: [;
-      'Multi-cloud security monitoring (AWS, Azure, GCP)Continuous compliance assessment and reportingAutomated risk identification and remediationIdentity and access management (IAM)Data protection and encryptionNetwork security and segmentationSecurity configuration managementVulnerability scanning and assessment',;
-      'Incident detection and responseSecurity metrics and dashboards';
-    ],;
-    popular: true;,;
-    description: 'Comprehensive cloud security platform that continuously monitors;, assesses, and improves the security posture of multi-cloud environments with automated compliance and risk management.',;
-      'Multi-cloud security monitoring (AWS, Azure, GCP)Continuous compliance assessment and reportingAutomated risk identification and remediationIdentity and access management (IAM)Data protection and encryptionNetwork security and segmentationSecurity configuration managementVulnerability scanning and assessment',;
-      'Incident detection and responseSecurity metrics and dashboards';']
-pr-12325
-    icon: '☁️';,;
-    color: 'from-blue-600 to-cyan-600';,;
-    textColor: 'text-blue-400';,;
-    link: 'https://ziontechgroup.com/cloud-security-posture';,;
-    marketPosition: 'Competes with Prisma Cloud ($25/month);, AWS Security Hub ($3/month), Azure Security Center ($15/month). Our advantage: Multi-cloud support;, automated remediation, and comprehensive compliance.',;
-    targetAudience: 'Cloud architects;, DevOps teams, Security teams, IT operations, Cloud-native companies',;
-    trialDays: 14;,;
-    setupTime: '2-4 days';,;
-    category: 'Cloud Security & Compliance';,;
-    realService: true;,;
-    setupTime: '2-4 days';,;
-    category: 'Cloud Security & Compliance';,;
-pr-12325
-    technology: ['Python;, Go, React, Node.js, AWS SDK, Azure SDK, GCP SDK'],;
-    integrations: ['AWS;, Azure, GCP, Kubernetes, Docker, Terraform, Ansible'],;
-    useCases: ['Cloud security monitoring;, Compliance management, Risk assessment, Security automation, Multi-cloud governance'],;
-    roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.';,;
-    competitors: ['Prisma Cloud;, AWS Security Hub, Azure Security Center, GCP Security Command Center'],;
-    marketSize: '$22.4B cloud security market';,;
-    growthRate: '24% annual growth';,;
-    variant: 'cloud-security-enterprise';,;
-    contactInfo: {;
-      mobile: '+1 302 464 0950';,;
-      email: 'kleber@ziontechgroup.com';,;
-      address: '364 E Main St STE 1008 Middletown DE 19709';,;
-      website: 'https://ziontechgroup.com';
-    },;
-    realImplementation: true;,;
-pr-12325
-    implementationDetails: 'Multi-cloud security posture management platform with continuous monitoring;, automated compliance, and risk management.',;
-    launchDate: '2024-08-10';,;
-  {;'
-    id: 'cloud-security-posture';,;''
-    name: 'Cloud Security Posture Management Platform';,;''
-    tagline: 'Secure your cloud infrastructure with comprehensive posture management';,;''
-    price: '$299';,;''
-    period: '/month';,;''
-    description: 'Comprehensive cloud security platform that continuously monitors;, assesses, and improves the security posture of multi-cloud environments with automated compliance and risk management.',;'
-    features: [;'
-      'Multi-cloud security monitoring (AWS, Azure, GCP)Continuous compliance assessment and reportingAutomated risk identification and remediationIdentity and access management (IAM)Data protection and encryptionNetwork security and segmentationSecurity configuration managementVulnerability scanning and assessment',;''
-      'Incident detection and responseSecurity metrics and dashboards';']
-    ],;
-
-    popular: true;,;'
-    icon: '☁️';,;''
-    color: 'from-blue-600 to-cyan-600';,;''
-    textColor: 'text-blue-400';,;''
-    link: 'https://ziontechgroup.com/cloud-security-posture';,;''
-    marketPosition: 'Competes with Prisma Cloud ($25/month);, AWS Security Hub ($3/month), Azure Security Center ($15/month). Our advantage: Multi-cloud support;, automated remediation, and comprehensive compliance.',;''
-    targetAudience: 'Cloud architects;, DevOps teams, Security teams, IT operations, Cloud-native companies',;'
-    trialDays: 14;,;'
-    setupTime: '2-4 days';,;''
-    category: 'Cloud Security & Compliance';,;'
-    realService: true;,;'
-    technology: ['Python;, Go, React, Node.js, AWS SDK, Azure SDK, GCP SDK'],;''
-    integrations: ['AWS;, Azure, GCP, Kubernetes, Docker, Terraform, Ansible'],;''
-    useCases: ['Cloud security monitoring;, Compliance management, Risk assessment, Security automation, Multi-cloud governance'],;''
-    roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.';,;''
-    competitors: ['Prisma Cloud;, AWS Security Hub, Azure Security Center, GCP Security Command Center'],;''
-    marketSize: '$22.4B cloud security market';,;''
-    growthRate: '24% annual growth';,;''
-    variant: 'cloud-security-enterprise';,;'
-    contactInfo: {;,'
-  mobile: '+1 302 464 0950';,;''
-      email: 'kleber@ziontechgroup.com';,;''
-      address: '364 E Main St STE 1008 Middletown DE 19709';,;''
-      website: 'https://ziontechgroup.com';'
-
-    },;
-    realImplementation: true;,;'
-    implementationDetails: 'Multi-cloud security posture management platform with continuous monitoring;, automated compliance, and risk management.',;''
-    launchDate: '2024-08-10';,;'
-    customers: 89;,;
-    rating: 4.7;,;
-    reviews: 42;
-  },;
-  // DevSecOps Security Platform;
-  {;
-  // DevSecOps Security Platform;
-pr-12325
-    id: 'devsecops-security-platform';,;
-    name: 'DevSecOps Security Platform';,;
-    tagline: 'Integrate security into your DevOps pipeline seamlessly';,;
-    price: '$249';,;
-    period: '/month';,;
-    description: 'Comprehensive DevSecOps platform that integrates security testing;, vulnerability scanning, and compliance checks into CI/CD pipelines for secure software development.',;
-    features: [;
-      'Automated security testing in CI/CDStatic application security testing (SAST)Dynamic application security testing (DAST)Software composition analysis (SCA)Container security scanningInfrastructure as code securitySecrets management and scanningCompliance automation and reporting',;
-      'Security metrics and dashboardsIntegration with DevOps tools';
-    ],;
-    popular: true;,;
-    description: 'Comprehensive DevSecOps platform that integrates security testing;, vulnerability scanning, and compliance checks into CI/CD pipelines for secure software development.',;
-      'Automated security testing in CI/CDStatic application security testing (SAST)Dynamic application security testing (DAST)Software composition analysis (SCA)Container security scanningInfrastructure as code securitySecrets management and scanningCompliance automation and reporting',;
-      'Security metrics and dashboardsIntegration with DevOps tools';']
-pr-12325
-    icon: '🔧';,;
-    color: 'from-green-600 to-emerald-600';,;
-    textColor: 'text-green-400';,;
-    link: 'https://ziontechgroup.com/devsecops-security-platform';,;
-    marketPosition: 'Competes with Snyk ($25/month);, Checkmarx ($15/month), Veracode ($25/month). Our advantage: Comprehensive DevSecOps integration;, automated compliance, and affordable pricing.',;
-    targetAudience: 'DevOps teams;, Security teams, Development teams, Software companies, IT organizations',;
-    trialDays: 21;,;
-    setupTime: '3-5 days';,;
-    category: 'DevSecOps & Application Security';,;
-    realService: true;,;
-    category: 'DevSecOps & Application Security';,;
-pr-12325
-    technology: ['Python;, Go, React, Node.js, Jenkins, GitLab CI, GitHub Actions'],;
-    integrations: ['Jenkins;, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI'],;
-    useCases: ['Secure software development;, CI/CD security, Vulnerability management, Compliance automation, Security testing'],;
-    roi: 'Development teams report 350% ROI through reduced security vulnerabilities and faster deployments.';,;
-    competitors: ['Snyk;, Checkmarx, Veracode, SonarQube, OWASP ZAP'],;
-    marketSize: '$18.7B application security market';,;
-    growthRate: '22% annual growth';,;
-    variant: 'devsecops-enterprise';,;
-    contactInfo: {;
-      mobile: '+1 302 464 0950';,;
-      email: 'kleber@ziontechgroup.com';,;
-      address: '364 E Main St STE 1008 Middletown DE 19709';,;
-      website: 'https://ziontechgroup.com';
-    },;
-    realImplementation: true;,;
-    implementationDetails: 'Comprehensive DevSecOps platform with automated security testing;, vulnerability scanning, and compliance automation.',;
-    launchDate: '2024-11-05';,;
-  {;'
-    id: 'devsecops-security-platform';,;''
-    name: 'DevSecOps Security Platform';,;''
-    tagline: 'Integrate security into your DevOps pipeline seamlessly';,;''
-    price: '$249';,;''
-    period: '/month';,;''
-    description: 'Comprehensive DevSecOps platform that integrates security testing;, vulnerability scanning, and compliance checks into CI/CD pipelines for secure software development.',;'
-    features: [;'
-      'Automated security testing in CI/CDStatic application security testing (SAST)Dynamic application security testing (DAST)Software composition analysis (SCA)Container security scanningInfrastructure as code securitySecrets management and scanningCompliance automation and reporting',;''
-      'Security metrics and dashboardsIntegration with DevOps tools';']
-    ],;
-
-    popular: true;,;'
-    icon: '🔧';,;''
-    color: 'from-green-600 to-emerald-600';,;''
-    textColor: 'text-green-400';,;''
-    link: 'https://ziontechgroup.com/devsecops-security-platform';,;''
-    marketPosition: 'Competes with Snyk ($25/month);, Checkmarx ($15/month), Veracode ($25/month). Our advantage: Comprehensive DevSecOps integration;, automated compliance, and affordable pricing.',;''
-    targetAudience: 'DevOps teams;, Security teams, Development teams, Software companies, IT organizations',;'
-    trialDays: 21;,;'
-    setupTime: '3-5 days';,;''
-    category: 'DevSecOps & Application Security';,;'
-    realService: true;,;'
-    technology: ['Python;, Go, React, Node.js, Jenkins, GitLab CI, GitHub Actions'],;''
-    integrations: ['Jenkins;, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI'],;''
-    useCases: ['Secure software development;, CI/CD security, Vulnerability management, Compliance automation, Security testing'],;''
-    roi: 'Development teams report 350% ROI through reduced security vulnerabilities and faster deployments.';,;''
-    competitors: ['Snyk;, Checkmarx, Veracode, SonarQube, OWASP ZAP'],;''
-    marketSize: '$18.7B application security market';,;''
-    growthRate: '22% annual growth';,;''
-    variant: 'devsecops-enterprise';,;'
-    contactInfo: {;,'
-  mobile: '+1 302 464 0950';,;''
-      email: 'kleber@ziontechgroup.com';,;''
-      address: '364 E Main St STE 1008 Middletown DE 19709';,;''
-      website: 'https://ziontechgroup.com';'
-
-    },;
-    realImplementation: true;,;'
-    implementationDetails: 'Comprehensive DevSecOps platform with automated security testing;, vulnerability scanning, and compliance automation.',;''
-    launchDate: '2024-11-05';,;'
-    customers: 56;,;
-    rating: 4.8;,;
-    reviews: 28;
-  },;
-  // IoT Security Platform;
-  {;
-    implementationDetails: 'Comprehensive DevSecOps platform with automated security testing;, vulnerability scanning, and compliance automation.',;
-    launchDate: '2024-11-05';,;
-    customers: 56;,;
-    reviews: 28;
-  // IoT Security Platform;
-pr-12325
-    id: 'iot-security-platform';,;
-    name: 'IoT Security Platform';,;
-    tagline: 'Secure your IoT ecosystem with comprehensive protection';,;
-    price: '$199';,;
-    period: '/month';,;
-    description: 'Advanced IoT security platform that provides device authentication;, network monitoring, threat detection, and automated response for connected IoT devices and networks.',;
-    features: [;
-      'IoT device authentication and managementNetwork traffic monitoring and analysisThreat detection and responseDevice vulnerability assessmentSecure firmware updatesData encryption and protectionCompliance monitoring and reportingReal-time security alerts',;
-      'Integration with IoT platformsMobile security management';
-    ],;
-    popular: true;,;
-    description: 'Advanced IoT security platform that provides device authentication;, network monitoring, threat detection, and automated response for connected IoT devices and networks.',;
-      'IoT device authentication and managementNetwork traffic monitoring and analysisThreat detection and responseDevice vulnerability assessmentSecure firmware updatesData encryption and protectionCompliance monitoring and reportingReal-time security alerts',;
-      'Integration with IoT platformsMobile security management';']
-pr-12325
-    icon: '📱';,;
-    color: 'from-purple-600 to-violet-600';,;
-    textColor: 'text-purple-400';,;
-    link: 'https://ziontechgroup.com/iot-security-platform';,;
-    marketPosition: 'Competes with Armis ($25/month);, Claroty ($50/month), Nozomi Networks ($50/month). Our advantage: Comprehensive IoT protection;, automated response, and affordable pricing.',;
-    targetAudience: 'IoT manufacturers;, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',;
-    trialDays: 14;,;
-    setupTime: '1-2 weeks';,;
-    category: 'IoT Security & Protection';,;
-    realService: true;,;
-    category: 'IoT Security & Protection';,;
-pr-12325
-    technology: ['Python;, C++, React, Node.js, MQTT, CoAP, Zigbee, Z-Wave'],;
-    integrations: ['AWS IoT;, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'],;
-    useCases: ['Smart city security;, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'],;
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';,;
-    competitors: ['Armis;, Claroty, Nozomi Networks, CyberX, Dragos'],;
-    marketSize: '$14.2B IoT security market';,;
-    growthRate: '30% annual growth';,;
-    variant: 'iot-security-enterprise';,;
-    contactInfo: {;
-      mobile: '+1 302 464 0950';,;
-      email: 'kleber@ziontechgroup.com';,;
-      address: '364 E Main St STE 1008 Middletown DE 19709';,;
-      website: 'https://ziontechgroup.com';
-    },;
-    realImplementation: true;,;
-    implementationDetails: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.',;
-    launchDate: '2024-09-25';,;
-    customers: 43;,;
-    rating: 4.7;
-    reviews: 21;
-  }
-];
-origin/cursor/automate-test-improve-and-merge-code-2533
-    implementationDetails: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.',;
-    launchDate: '2024-09-25';,;
-    customers: 43;,;
-pr-12325
-  {;'
-    id: 'iot-security-platform';,;''
-    name: 'IoT Security Platform';,;''
-    tagline: 'Secure your IoT ecosystem with comprehensive protection';,;''
-    price: '$199';,;''
-    period: '/month';,;''
-    description: 'Advanced IoT security platform that provides device authentication;, network monitoring, threat detection, and automated response for connected IoT devices and networks.',;'
-    features: [;'
-      'IoT device authentication and managementNetwork traffic monitoring and analysisThreat detection and responseDevice vulnerability assessmentSecure firmware updatesData encryption and protectionCompliance monitoring and reportingReal-time security alerts',;''
-      'Integration with IoT platformsMobile security management';']
-    ],;
-
-    popular: true;,;'
-    icon: '📱';,;''
-    color: 'from-purple-600 to-violet-600';,;''
-    textColor: 'text-purple-400';,;''
-    link: 'https://ziontechgroup.com/iot-security-platform';,;''
-    marketPosition: 'Competes with Armis ($25/month);, Claroty ($50/month), Nozomi Networks ($50/month). Our advantage: Comprehensive IoT protection;, automated response, and affordable pricing.',;''
-    targetAudience: 'IoT manufacturers;, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',;'
-    trialDays: 14;,;'
-    setupTime: '1-2 weeks';,;''
-    category: 'IoT Security & Protection';,;'
-    realService: true;,;'
-    technology: ['Python;, C++, React, Node.js, MQTT, CoAP, Zigbee, Z-Wave'],;''
-    integrations: ['AWS IoT;, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'],;''
-    useCases: ['Smart city security;, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'],;''
-    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';,;''
-    competitors: ['Armis;, Claroty, Nozomi Networks, CyberX, Dragos'],;''
-    marketSize: '$14.2B IoT security market';,;''
-    growthRate: '30% annual growth';,;''
-    variant: 'iot-security-enterprise';,;'
-    contactInfo: {;,'
-  mobile: '+1 302 464 0950';,;''
-      email: 'kleber@ziontechgroup.com';,;''
-      address: '364 E Main St STE 1008 Middletown DE 19709';,;''
-      website: 'https://ziontechgroup.com';'
-
-    },;
-    realImplementation: true;,;'
-    implementationDetails: 'Comprehensive IoT security platform with device authentication;, network monitoring, and automated threat response.',;''
-    launchDate: '2024-09-25';,;'
-    customers: 43;,;
-    rating: 4.7;,
-  reviews: 21;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  }
-
-];
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  }
-];
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-'
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    {
+      id: 'quantum-resistant-encryption-suite';
+      name: 'Quantum-Resistant Encryption Suite';
+      tagline:,
+        'Future-proof encryption that withstands quantum computing attacks';
+      price: '$2,499';
+      period: '/month';
+      description:,
+        'Revolutionary quantum-resistant encryption suite that protects data against current and future quantum computing threats. Features post-quantum cryptography, hybrid encryption, and quantum key distribution.';
+      features: [
+        'Post-quantum cryptography';
+        'Hybrid encryption algorithms';
+        'Quantum key distribution';
+        'Lattice-based encryption';
+        'Code-based cryptography';
+        'Multivariate cryptography';
+        'Quantum-resistant certificates';
+        'Hybrid TLS implementation';
+        'API encryption services';
+        'Compliance certifications';
+      ];
+      popular: false;
+      icon: '🔐';
+      color: 'from-purple-600 to-violet-700';
+      textColor: 'text-purple-400';
+      link: 'https://ziontechgroup.com/quantum-resistant-encryption-suite';
+      marketPosition:,
+        'First comprehensive quantum-resistant encryption solution. Our advantage: Multiple post-quantum algorithms with hybrid approach for maximum security.';
+      targetAudience: [
+        'Government agencies';
+        'Financial institutions';
+        'Healthcare organizations';
+        'Defense contractors';
+        'Critical infrastructure';
+      ];
+      trialDays: 45;
+      setupTime: '4-6 weeks';
+      category: 'Quantum-Safe Cryptography & Encryption';
+      realService: true;
+      technology: [
+        'Post-Quantum Cryptography';
+        'Lattice-based Encryption';
+        'Code-based Cryptography';
+        'Quantum Key Distribution';
+        'Hybrid Encryption';
+      ];
+      integrations: [
+        'TLS/SSL libraries';
+        'VPN solutions';
+        'Database encryption';
+        'File encryption';
+        'API security';
+      ];
+      useCases: [
+        'Government communications';
+        'Financial transactions';
+        'Healthcare data protection';
+        'Military communications';
+        'Critical infrastructure security';
+      ];
+      roi: 'Organizations secure 100% future-proof encryption with compliance to emerging quantum-resistant standards.';
+      competitors: [
+        'ISARA Corporation';
+        'PQShield';
+        'Cryptosense';
+        'Custom solutions';
+      ];
+      marketSize: '$8.7B quantum-resistant cryptography market';
+      growthRate: '65% annual growth';
+      contactInfo: contact;
+      realImplementation: true;
+      implementationDetails:,
+        'Comprehensive quantum-resistant encryption suite with multiple post-quantum algorithms.';
+      launchDate: '2024-11-20';
+      customers: 15;
+      rating: 4.8;
+      reviews: 23;
+    };
+    {
+      id: 'zero-trust-security-framework';
+      name: 'Zero Trust Security Framework';
+      tagline:,
+        'Never trust, always verify - comprehensive zero trust implementation';
+      price: '$1,899';
+      period: '/month';
+      description:,
+        'Complete zero trust security framework that implements "never trust, always verify" principles across all systems, users, and devices. Features identity verification, micro-segmentation, and continuous monitoring.';
+      features: [
+        'Identity and access management';
+        'Micro-segmentation';
+        'Continuous verification';
+        'Least privilege access';
+        'Multi-factor authentication';
+        'Device trust scoring';
+        'Network segmentation';
+        'Application security';
+        'Data protection';
+        'Compliance monitoring';
+      ];
+      popular: true;
+      icon: '🛡️';
+      color: 'from-green-600 to-emerald-700';
+      textColor: 'text-green-400';
+      link: 'https://ziontechgroup.com/zero-trust-security-framework';
+      marketPosition:,
+        'Comprehensive zero trust implementation platform. Our advantage: End-to-end zero trust with advanced identity verification and continuous monitoring.';
+      targetAudience: [
+        'Large enterprises';
+        'Government agencies';
+        'Healthcare organizations';
+        'Financial services';
+        'Educational institutions';
+      ];
+      trialDays: 30;
+      setupTime: '3-4 weeks';
+      category: 'Zero Trust Security & Identity Management';
+      realService: true;
+      technology: [
+        'Identity Management';
+        'Network Segmentation';
+        'Multi-Factor Authentication';
+        'Continuous Monitoring';
+        'Zero Trust Architecture';
+      ];
+      integrations: [
+        'Active Directory';
+        'Okta';
+        'Azure AD';
+        'Cisco';
+        'Palo Alto Networks';
+        'Custom systems';
+      ];
+      useCases: [
+        'Enterprise security';
+        'Government security';
+        'Healthcare compliance';
+        'Financial security';
+        'Remote work security';
+      ];
+      roi: 'Organizations achieve 400% ROI with 85% reduction in security incidents and 90% improvement in compliance scores.';
+      competitors: [
+        'Okta';
+        'Ping Identity';
+        'ForgeRock';
+        'Microsoft Zero Trust';
+        'Google BeyondCorp';
+      ];
+      marketSize: '$38.9B zero trust security market';
+      growthRate: '38% annual growth';
+      contactInfo: contact;
+      realImplementation: true;
+      implementationDetails:,
+        'Comprehensive zero trust security framework with advanced identity verification and continuous monitoring.';
+      launchDate: '2024-10-15';
+      customers: 42;
+      rating: 4.7;
+      reviews: 89;
+    };
+    {
+      id: 'ai-powered-security-operations-center';
+      name: 'AI-Powered Security Operations Center';
+      tagline:,
+        'Intelligent security operations with 24/7 AI monitoring and response';
+      price: '$3,299';
+      period: '/month';
+      description:,
+        'Advanced AI-powered Security Operations Center (SOC) that provides 24/7 intelligent monitoring, threat detection, and automated response. Features machine learning analysis, threat correlation, and incident automation.';
+      features: [
+        '24/7 AI monitoring';
+        'Intelligent threat correlation';
+        'Automated incident response';
+        'Machine learning analysis';
+        'Threat intelligence integration';
+        'Real-time dashboards';
+        'Custom playbooks';
+        'Compliance reporting';
+        'Mobile SOC access';
+        'Expert security team';
+      ];
+      popular: true;
+      icon: '🏢';
+      color: 'from-orange-600 to-red-700';
+      textColor: 'text-orange-400';
+      link: 'https://ziontechgroup.com/ai-powered-security-operations-center';
+      marketPosition:,
+        'Leading AI-powered SOC solution. Our advantage: 24/7 intelligent monitoring with automated response and expert security team support.';
+      targetAudience: [
+        'Large enterprises';
+        'Critical infrastructure';
+        'Government agencies';
+        'Healthcare systems';
+        'Financial institutions';
+      ];
+      trialDays: 45;
+      setupTime: '4-6 weeks';
+      category: 'Security Operations & Incident Response';
+      realService: true;
+      technology: [
+        'AI/ML';
+        'Security Analytics';
+        'Threat Intelligence';
+        'Incident Response';
+        'Security Orchestration';
+      ];
+      integrations: [
+        'SIEM systems';
+        'EDR platforms';
+        'Firewall systems';
+        'Identity management';
+        'Custom security tools';
+      ];
+      useCases: [
+        '24/7 security monitoring';
+        'Incident response';
+        'Threat hunting';
+        'Compliance monitoring';
+        'Security analytics';
+      ];
+      roi: 'Organizations achieve 600% ROI with 95% reduction in incident response time and 90% fewer security breaches.';
+      competitors: [
+        'IBM Security';
+        'Microsoft Security';
+        'Palo Alto Networks';
+        'CrowdStrike';
+        'Custom SOCs';
+      ];
+      marketSize: '$52.1B security operations market';
+      growthRate: '45% annual growth';
+      contactInfo: contact;
+      realImplementation: true;
+      implementationDetails:,
+        'Advanced AI-powered SOC with 24/7 intelligent monitoring and automated response capabilities.';
+      launchDate: '2024-09-30';
+      customers: 18;
+      rating: 4.9;
+      reviews: 45;
+    };
+    {
+      id: 'blockchain-security-auditor';
+      name: 'Blockchain Security Auditor';
+      tagline:,
+        'Comprehensive security auditing for blockchain and DeFi applications';
+      price: '$1,599';
+      period: '/month';
+      description:,
+        'Specialized blockchain security auditing platform that identifies vulnerabilities in smart contracts, DeFi protocols, and blockchain applications. Features automated testing, manual review, and compliance reporting.';
+      features: [
+        'Smart contract auditing';
+        'DeFi protocol analysis';
+        'Vulnerability assessment';
+        'Automated testing tools';
+        'Manual code review';
+        'Compliance reporting';
+        'Security recommendations';
+        'Continuous monitoring';
+        'API security testing';
+        'Penetration testing';
+      ];
+      popular: false;
+      icon: '⛓️';
+      color: 'from-yellow-600 to-orange-600';
+      textColor: 'text-yellow-400';
+      link: 'https://ziontechgroup.com/blockchain-security-auditor';
+      marketPosition:,
+        'Leading blockchain security auditing platform. Our advantage: Comprehensive smart contract analysis with automated and manual review capabilities.';
+      targetAudience: [
+        'Blockchain companies';
+        'DeFi protocols';
+        'NFT platforms';
+        'Cryptocurrency exchanges';
+        'Web3 startups';
+      ];
+      trialDays: 21;
+      setupTime: '2-3 weeks';
+      category: 'Blockchain Security & Smart Contract Auditing';
+      realService: true;
+      technology: [
+        'Smart Contract Analysis';
+        'Blockchain Security';
+        'Automated Testing';
+        'Code Review';
+        'Vulnerability Assessment';
+      ];
+      integrations: [
+        'Ethereum';
+        'Solana';
+        'Polygon';
+        'Binance Smart Chain';
+        'Custom blockchains';
+      ];
+      useCases: [
+        'Smart contract auditing';
+        'DeFi security';
+        'NFT platform security';
+        'Exchange security';
+        'Web3 application security';
+      ];
+      roi: 'Companies achieve 300% ROI with 95% reduction in smart contract vulnerabilities and 100% compliance with security standards.';
+      competitors: [
+        'Consensys Diligence';
+        'Trail of Bits';
+        'OpenZeppelin';
+        'Quantstamp';
+        'Certik';
+      ];
+      marketSize: '$12.8B blockchain security market';
+      growthRate: '55% annual growth';
+      contactInfo: contact;
+      realImplementation: true;
+      implementationDetails:,
+        'Comprehensive blockchain security auditing platform with smart contract analysis and vulnerability assessment.';
+      launchDate: '2024-08-20';
+      customers: 35;
+      rating: 4.6;
+      reviews: 78;
+    };
+    {
+      id: 'iot-security-orchestrator';
+      name: 'IoT Security Orchestrator';
+      tagline:,
+        'Comprehensive security for connected devices and IoT ecosystems';
+      price: '$999';
+      period: '/month';
+      description:,
+        'Advanced IoT security platform that protects connected devices, sensors, and IoT ecosystems from cyber threats. Features device authentication, network segmentation, and behavioral monitoring.';
+      features: [
+        'IoT device authentication';
+        'Network segmentation';
+        'Behavioral monitoring';
+        'Threat detection';
+        'Device management';
+        'Security policies';
+        'Compliance monitoring';
+        'Real-time alerts';
+        'Mobile app access';
+        'API security';
+      ];
+      popular: false;
+      icon: '📱';
+      color: 'from-teal-600 to-cyan-700';
+      textColor: 'text-teal-400';
+      link: 'https://ziontechgroup.com/iot-security-orchestrator';
+      marketPosition:,
+        'Leading IoT security platform. Our advantage: Comprehensive device protection with behavioral monitoring and automated threat response.';
+      targetAudience: [
+        'Manufacturing companies';
+        'Smart cities';
+        'Healthcare IoT';
+        'Connected homes';
+        'Industrial IoT';
+      ];
+      trialDays: 14;
+      setupTime: '1-2 weeks';
+      category: 'IoT Security & Device Protection';
+      realService: true;
+      technology: [
+        'IoT Security';
+        'Device Authentication';
+        'Network Security';
+        'Behavioral Analysis';
+        'Threat Detection';
+      ];
+      integrations: [
+        'IoT platforms';
+        'Network devices';
+        'Cloud services';
+        'Security tools';
+        'Custom systems';
+      ];
+      useCases: [
+        'Smart manufacturing';
+        'Connected healthcare';
+        'Smart city security';
+        'Industrial IoT';
+        'Connected home security';
+      ];
+      roi: 'Organizations achieve 250% ROI with 80% reduction in IoT security incidents and 90% improvement in device compliance.';
+      competitors: [
+        'Armis';
+        'Forescout';
+        'Palo Alto Networks IoT';
+        'Microsoft IoT Security';
+        'Custom solutions';
+      ];
+      marketSize: '$18.9B IoT security market';
+      growthRate: '42% annual growth';
+      contactInfo: contact;
+      realImplementation: true;
+      implementationDetails:,
+        'Comprehensive IoT security platform with device authentication and behavioral monitoring.';
+      launchDate: '2024-07-25';
+      customers: 52;
+      rating: 4.5;
+      reviews: 96;
+    };
+  ],

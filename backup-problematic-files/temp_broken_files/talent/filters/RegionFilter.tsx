@@ -1,106 +1,45 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/RegionFilter.tsx
-=======
-import { ChevronDown, ChevronUp } from "lucide-react",;
-=======
-import { ChevronDown, ChevronUp } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-import { Checkbox } from "@/components/ui/checkbox",;
-import { RegionFilterProps } from "@/types/filters",;
-=======
-import { Checkbox } from "@/components/ui/checkbox";""
-import { RegionFilterProps } from "@/types/filters";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-;
-const REGION_OPTIONS = [;"
-  { id: "North America";, label: "North America" ;},;""
-  { id: "Europe";, label: "Europe" ;},;""
-  { id: "Asia";, label: "Asia" ;},;""
-  { id: "South America";, label: "South America" ;},;""
-  { id: "Australia";, label: "Australia" ;},;""
-  { id: "Africa";, label: "Africa" ;}"]
-],;
-export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen } RegionFilterProps) {;
-  return (;"
-    <div className="mb-6 border-b border-zion-blue-light pb-6">;"
-</div>
-      <button;
-        onClick={toggleSection}"
-        className="flex w-full items-center justify-between text-white font-medium";"
-      >;
-</button>
-        <span>Region</span>;"
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />;"
-"
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />;"
-
-      </button>;"
-        <div className="mt-4 space-y-2">;"
-</div>"
-            <div key={region.id} className="flex items-center">;"
-              <Checkbox;
-                id={`region-${region.id}`})
+import { ChevronDown, ChevronUp } from 'lucide-react',
+import { Checkbox } from "@/components/ui/checkbox";
+import { RegionFilterProps } from "@/types/filters";
+const REGION_OPTIONS = [
+  { id:"North America", label: "North America" };
+  { id:"Europe", label: "Europe" };
+  { id:"Asia", label: "Asia" };
+  { id:"South America", label: "South America" };
+  { id:"Australia", label: "Australia" };
+  { id:"Africa", label: "Africa" }
+];
+export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen } RegionFilterProps) {
+  return (
+    <div className="mb-6 border-b border-zion-blue-light pb-6">,
+      <button
+        onClick={toggleSection}
+        className="flex w-full items-center justify-between text-white font-medium">,
+        <span>Region</span>,
+        {expanded ? (
+          <ChevronUp className="h-4 w-4 text-zion-slate-light"  />) :(
+          <ChevronDown className="h-4 w-4 text-zion-slate-light"  />)}
+      </button>,
+      {expanded && (
+        <div className="mt-4 space-y-2">,
+          {REGION_OPTIONS.map(region => (
+            <div key={region.id} className="flex items-center">,
+              <Checkbox
+                id={`region-${region.id}`}
                 checked={selectedRegions.includes(region.id)}
                 onCheckedChange={() => toggleRegion(region.id)}
-
-              <label;`;
-                htmlFor={`region-${region.id}`}"
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer";"
-</label>
-              </label>;
-            </div>;          ))}
-        </div>;
-<<<<<<< HEAD
-      )}
-    </div>;
-  ),;}
- ];
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/RegionFilter.tsx
-  toggleSection 
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) 
-}</button> {
-  REGION OPTIONS.map (region => (<div key= {
-  region.id 
-}className="flex items-center" > <Checkbox > {
-  region.label 
-}</label> </div>) ) 
-}</div>) 
-}</div>) 
-}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-:temp_broken_files/talent/filters/RegionFilter.tsx
-
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/RegionFilter.tsx
-  toggleSection ;
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
-}</button> {;
-  REGION OPTIONS.map (region => (<div key= {;"  region.id ";"}className="flex items-center" > <Checkbox > {;
-  region.label ;
-}</label> </div>) ) ;
-}</div>) ;
-:temp_broken_files/talent/filters/RegionFilter.tsx
-}</div>) ;"}"
-}</div>) ;
-}"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/RegionFilter.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/talent/filters/RegionFilter.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    </div>;"
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;"
-}</button> {;"
-  REGION OPTIONS.map (region => (<div key= {;"  region.id ";"}className="flex items-center" > <Checkbox > {;"
-</div>)
-}</label> </div>) ) ;
-}</div>) ;"
-}</div>) ;"}""
-}</div>) ;"`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple",
+              />,
+              <label
+                htmlFor={`region-${region.id}`}
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer">,
+                {region.label}
+              </label>,
+            </div>))}
+        </div>)}
+    </div>);}
+ ],
+  toggleSection }className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light"  />) }</button> {
+  REGION OPTIONS.map (region => (<div key={"  region.id ","}className="flex items-center" > <Checkbox > {
+  region.label }</label> </div>) ) }</div>) ,

@@ -1,27 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/scripts/fix-all-final-syntax-issues.cjs
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/fix-all-final-syntax-issues.cjs
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-<<<<<<< HEAD
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -60,20 +43,8 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
             <p style={{ "fontSize": '1.125rem', "color": '#94a3b8', "marginBottom": '2rem', "maxWidth": '600px', "margin"}
             <div style={{ "display": 'flex', "gap": '1rem', "justifyContent": 'center', "flexWrap"}
               <Link href="/careers" style={{ "background": 'linear-gradient(135deg, #3b82f6, #8b5cf6)', "color": 'white', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "transition"}
-<<<<<<< HEAD
-=======
-              <Link href="/contact" style={{ "background": 'transparent', "color": '#3b82f6', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "border": '2px solid #3b82f6', "transition"}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-              <Link href="/contact" style={{ "background": 'transparent', "color": '#3b82f6', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "border": '2px solid #3b82f6', "transition"}
-<<<<<<< HEAD
-              <Link href="/contact" style={{ "background": 'transparent', "color": '#3b82f6', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "border": '2px solid #3b82f6', "transition"}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+

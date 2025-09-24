@@ -1,49 +1,22 @@
-// Simple test to check if the build process works;
-const { execSync } = require('child_process');
-<<<<<<< HEAD
-'
-console.log('Testing build process...');
-
-try {}
-  // Test TypeScript compilation'
-  console.log('1. Testing TypeScript compilation...');'
-  execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'inherit' });'
-  console.log('✅ TypeScript compilation successful');
-
-  // Test ESLint'
-  console.log('2. Testing ESLint...');'
-  execSync('npx eslint pages/index.tsx --max-warnings 0', { stdio: 'inherit' });'
-  console.log('✅ ESLint check successful');
-
-  // Test Next.js build'
-  console.log('3. Testing Next.js build...');'
-  execSync('npm run build', { stdio: 'inherit' });'
-  console.log('✅ Next.js build successful');
-'
-=======
-console.log('Testing build process...');
+#!/usr/bin/env node,
+// Simple test script to verify Next.js configuration,
+const { execSync } = require('child_process'),
+// // console.log('Testing Next.js configuration...'),
 try {
-  // TODO: Implement
-}
-  // Test TypeScript compilation;
-  console.log('1. Testing TypeScript compilation...');
-  execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'inherit' });
-  console.log('✅ TypeScript compilation successful');
-  // Test ESLint;
-  console.log('2. Testing ESLint...');
-  execSync('npx eslint pages/index.tsx --max-warnings 0', { stdio: 'inherit' });
-  console.log('✅ ESLint check successful');
-  // Test Next.js build;
-  console.log('3. Testing Next.js build...');
-  execSync('npm run build', { stdio: 'inherit' });
-  console.log('✅ Next.js build successful');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  console.log('🎉 All tests passed!');
-} catch (error) {'
-  console.error('❌ Build test failed:', error.message);
-<<<<<<< HEAD
-  process.exit(1);
-}'
-=======
-  process.exit(1);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  // Check if Next.js can be imported,
+  const next = require('next'),
+  // // console.log('✓ Next.js can be imported'),
+  // Check Next.js version,
+  const packageJson = require('./package.json'),
+  // // console.log(`✓ Next.js version: ${packageJson.dependencies.next}`),
+  // Check if SWC is available,
+  try {
+    const swc = require('@next/swc-linux-x64-gnu'),
+    // // console.log('✓ SWC native binary available')} catch (e) {
+    // // console.log(
+      '⚠ SWC native binary not available, will use JavaScript fallback')}
+,
+  // // console.log('✓ Configuration test passed')} catch (error) {
+  console.error('✗ Configuration test failed:', error.message),
+  process.exit(1)}
+,

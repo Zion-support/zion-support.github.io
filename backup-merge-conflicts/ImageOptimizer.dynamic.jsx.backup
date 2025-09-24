@@ -1,0 +1,8 @@
+const ImageOptimizer = dynamic(() => import(\"./ImageOptimizer\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default ImageOptimizer\' ,
+=======
+const ImageOptimizer = dynamic(() => import("./ImageOptimizer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ImageOptimizer' ,'
+</p>'
+>>>>>>> main
+</p>'
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

@@ -1,95 +1,206 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+#!/""usr/bin/env"" node;
+#!/"usr/bin/env" node;
+const { execSync } = require("child_process");
+const fs = require("fs").promises;
+const path = require("path");
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-#!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-    this.logFile = path.join(this.projectRoot, ""automation/logs/linting-error-fixer.log"")
-    console.log(")
-    await fs.appendFile(this.logFile, logMessage + "\n")
-  "cwd"
-        "encoding": "utf8"
-        "stdio": options.silent ? "pipe" : "inherit"
-      return { "success": true, "output"}
-  return { "success": false, "output"}
-  "cwd"
-        "encoding": "utf8"
-        "stdio": options.silent ? "pipe" : "inherit"
-      return { "success": true, "output"}
-  return { "success": false, "output"}
-  await this.log(" Fixing ESLint configuration...")
-  const eslintPath = path.join(this.projectRoot, ".eslintrc.js")
-  "extends": [""next/core-web-vitals"", ""next/typescript""]
-  "rules": {@typescript-"eslint/no-unused-vars"": "warn",@typescript-"eslint/no-explicit-any"": "warn","react/react-in-jsx-scope"": "off","react/prop-types"": "off",no-console": "warn",no-unused-vars": "warn",prefer-const": "warn",no-var": "error"}
-  "ignorePatterns": ["node_modules/", ".next/", "out/", "dist/", "automation/"]
-  const eslintPath = path.join(this.projectRoot, ".eslintrc.js");const fixedConfig = module.exports = {"}
-  "extends": ["""next/core-web-vitals""", """next/typescript"""],"
-  "rules": {@typescript-""eslint/no-unused-vars""": "warn",@typescript-""eslint/no-explicit-any""": "warn",""react/react-in-jsx-scope""": "off",""react/prop-types""": "off",no-console": "warn",no-unused-vars": "warn",prefer-const": "warn",no-var": "error"}
-  "ignorePatterns": ["node_modules/", ".next/", "out/", "dist/", "automation/"]};"
-      "
-      await fs.writeFile(eslintPath, fixedConfig")
-      await fs.writeFile(eslintPath, fixedConfig")
-await this.log(" ESLint configuration fixed")
-  "type": "eslint-config-fix"
-        "file": ".eslintrc.js"
-        "timestamp"
-  type: "eslint-config-fix"
-        "file": ".eslintrc.js"
-        "timestamp": new Date().toISOString()})} catch (error) {  await this.log(` Error fixing ESLint "config"`})
-  await this.log(" Auto-fixing linting issues...")
-    const fixResult = await this.runCommand("npm run lint -- --fix", { "silent"})
-  await this.log(" ESLint auto-fix completed")
-  "type": "eslint-auto-fix"
-        "action": "npm run lint -- --fix"
-        "timestamp"
-  await this.log("⚠  ESLint auto-fix had issues")
-  await this.log(" Fixing common linting issues...")
-    const jsFiles = require("glob").sync("src/**/*.{js,jsx,ts,tsx}", { "cwd"})
-  const filePath = path.join(this.projectRoot, ")
-        let content = await fs.readFile(filePath", "utf8")
-        const unusedVarPattern = /const\s+(\w+)\s*=\s*([^]+);\s*\/\/\s*""unused/g""
-        const unusedVarPattern = /const\s+(\w+)\s*=\s*([^]+);\s*\/\/\s*"unused/g"
-        if (content.includes("console.log("")
-  content = content.replace(/console\.log\(/g, "// console.log("")
-        if (content.includes("var ")
-  content = content.replace(/var\s+(\w+)/g, "const $1"
-  "type": "linting-fix"
-            "file"
-            "timestamp"
-      } catch (error) {  await this.log( Error fixing ${file  }: ${error.message}"")
-  await this.log(" Starting Linting Error Fixer")
-  "type": "linting-fix"
-            "file"
-            "timestamp"
-  "type": "linting-fix"
-            "file": file,"
-            "timestamp": new Date().toISOString()")}
-});")}")} catch (error) {await this.log( Error fixing ${file}: ${error.message}"")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  await this.log(")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-  await this.log(")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  await this.log(")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+class $1 {
+  constructor() {
+  this.projectRoot = process.cwd();
+    this.logFile = path.join(this.projectRoot, ``automation/logs/linting-error-fixer.log``);
+    this.fixesApplied = [];
+    this.startTime = new Date();,
+}
+;
+  async log(message) {
+  const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}`;
+    console.log(`logMessage);
+    await fs.appendFile(this.logFile, logMessage + `\n`);,
+}
+;
+  async runCommand(command, options = {}) {
+  try {
+  const result = execSync(command, {
+  cwd: this.projectRoot,;
+        encoding: `utf8`,;
+        stdio: options.silent ? "pipe" : "inherit",;
+        ...options;,
+});
+      return { success: true, output: result }
+    } catch (error) {
+  return { success: false, output: error.stdout || error.stderr || error.message   }
+;
+  async runCommand(command, options = {}) {
+  try {
+  const result = execSync(command, {
+  cwd: this.projectRoot,;
+        encoding: "utf8",;
+        stdio: options.silent ? "pipe" : "inherit",;
+        ...options;,
+});
+      return { success: true, output: result }
+    } catch (error) {
+  return { success: false, output: error.stdout || error.stderr || error.message }
+    }
+  }
+;
+  async fixESLintConfig() {
+  await this.log("🔧 Fixing ESLint configuration...");
+    ;
+    try {
+  const eslintPath = path.join(this.projectRoot, ".eslintrc.js");const fixedConfig = module.exports = {
+  extends: [""next/core-web-vitals"", ""next/typescript""],;
+  rules: {@typescript-"eslint/no-unused-vars"": "warn",@typescript-"eslint/no-explicit-any"": "warn","react/react-in-jsx-scope"": "off","react/prop-types"": "off",no-console": "warn",no-unused-vars": "warn",prefer-const": "warn",no-var": "error";,
+},;
+  ignorePatterns: ["node_modules/", ".next/", "out/", "dist/", "automation/"];,
+}
+      ;
+    try {
+  const eslintPath = path.join(this.projectRoot, ".eslintrc.js");const fixedConfig = module.exports = {`);
+  extends: ["""next/core-web-vitals""", """next/typescript"""],`);
+  rules: {@typescript-""eslint/no-unused-vars""": "warn",@typescript-""eslint/no-explicit-any""": "warn",""react/react-in-jsx-scope""": "off",""react/prop-types""": "off",no-console": "warn",no-unused-vars": "warn",prefer-const": "warn",no-var": "error`);,
+},;
+  ignorePatterns: ["node_modules/", ".next/", "out/", "dist/", "automation/"];,
+};`);
+      `);
+      await fs.writeFile(eslintPath, fixedConfig`);
+      await fs.writeFile(eslintPath, fixedConfig`);
+      await this.log("✅ ESLint configuration fixed");
+      this.fixesApplied.push({
+  type: `eslint-config-fix`,;
+        file: `.eslintrc.js`,;
+        timestamp: new Date().toISOString();
+      this.fixesApplied.push({
+  type: "eslint-config-fix",;
+        file: ".eslintrc.js",;
+        timestamp: new Date().toISOString();,
+});,
+} catch (error) {  await this.log(`❌ Error fixing ESLint config: ${error.message  }`);,
+}
+  }
+;
+  async autoFixLintingIssues() {
+  await this.log(`🔧 Auto-fixing linting issues...`);
+    // Run ESLint auto-fix;
+    const fixResult = await this.runCommand(`npm run lint -- --fix`, { silent: true });
+    if (fixResult.success) {
+  await this.log("✅ ESLint auto-fix completed");
+      this.fixesApplied.push({
+  type: "eslint-auto-fix",;
+        action: "npm run lint -- --fix",;
+        timestamp: new Date().toISOString();,
+});,
+} else {
+  await this.log("⚠️  ESLint auto-fix had issues");,
+}
+  }
+;
+  async fixCommonLintingIssues() {
+  await this.log("🔧 Fixing common linting issues...");
+    ;
+    const jsFiles = require("glob").sync("src/**/*.{js,jsx,ts,tsx}", { cwd: this.projectRoot });
+    ;
+    for (const file of jsFiles) {
+  try {
+  const filePath = path.join(this.projectRoot, "file);
+        let content = await fs.readFile(filePath", "utf8");
+        let modified = false;
+        // Fix unused variables;
+        const unusedVarPattern = /const\s+(\w+)\s*=\s*([^]+);\s*\/\/\s*``unused/g``;
+        if (unusedVarPattern.test(content)) {
+  // Fix unused variables;
+        const unusedVarPattern = /const\s+(\w+)\s*=\s*([^]+);\s*\/\/\s*"unused/g";
+        if (unusedVarPattern.test(content)) {
+  content = content.replace(unusedVarPattern, (match, varName, value) => {return `// const ${varName} = ${value}; // unused`;,
+});
+          modified = true;,
+}
+        ;
+        // Fix console.log statements;
+        if (content.includes("console.log(`")) {
+  content = content.replace(/console\.log\(/g, "// console.log(`");
+          modified = true;,
+}
+        ;
+        // Fix var declarations;
+        if (content.includes("var ")) {
+  content = content.replace(/var\s+(\w+)/g, "const $1");
+          modified = true;,
+}
+        ;
+        if (modified) {
+  await fs.writeFile(filePath, content);await this.log(✅ Fixed linting issues in ${file});
+          this.fixesApplied.push({
+  type: `linting-fix`,;
+            file: file,;
+            timestamp: new Date().toISOString();,
+});,
+}
+      } catch (error) {  await this.log(❌ Error fixing ${file  }: ${error.message}``);,
+}
+    }
+  }
+;
+  async run() {
+  try {
+  await this.log(`🚀 Starting Linting Error Fixer`);
+          this.fixesApplied.push({
+  type: "linting-fix",;
+            file: file,;
+            timestamp: new Date().toISOString();,
+});,
+}
+          this.fixesApplied.push({
+  type: "linting-fix",;
+            file: file,`);
+            timestamp: new Date().toISOString()`);,
+});`);,
+}`);,
+} catch (error) {await this.log(❌ Error fixing ${file}: ${error.message}``);,
+}
+    }
+  }
+;
+  async run() {
+  try {
+  await this.log("🚀 Starting Linting Error Fixer');
+      ;
+      await this.fixESLintConfig();
+      await this.autoFixLintingIssues();
+      await this.fixCommonLintingIssues();
+      ;
+      const endTime = new Date();
+      const duration = endTime - this.startTime;
+      await this.log(`✅ Linting Error Fixer completed in ${duration.getTime()}ms`);await this.log(`📈 Fixes applied: ${this.fixesApplied.length}`);
+      ;
+      return {
+  success: true,;
+        fixesApplied: this.fixesApplied.length,;
+        duration: duration.getTime();,
+}
+      ;,
+} catch (error) {  await this.log(`❌ Linting Error Fixer failed: ${error.message  }`);
+      ;,
+} catch (error) {await this.log(`❌ Linting Error Fixer failed: ${error.message}`);
+      throw error;,
+} catch (error) {  await this.log(`❌ Linting Error Fixer failed: ${error.message  }`);
+      throw error;
+}
+  }
+}
+;
+// Run the fixer if called directly;
+if (require.main === module) {
+  const fixer = new LintingErrorFixer();
+  fixer.run();
+    .then(result => {
+  console.log(`Linting error fixer completed successfully`);
+      process.exit(0);,
+});
+    .catch(error => {
+  console.error(`Linting error fixer failed: `, error);      process.exit(1);,
+});,
+}
+;
+module.exports = LintingErrorFixer

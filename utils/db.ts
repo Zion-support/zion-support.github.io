@@ -1,462 +1,85 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-const DATA_ROOT = path.join(process.cwd(), 'datamarketplace');
-function ensureDataDir(): void {;
-  if (!fs.existsSync(DATA_ROOT)) {;
-    fs.mkdirSync(DATA_ROOT, { recursive: true });
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  }
-=======
-  }
-  return default_value;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import fs from 'fs';
-import path from 'path';
+
+// Mock database utility,
+import fs from 'fs',
+import path from 'path',
 function getFilePath(fileName: string): string {
-  return path.join(process.cwd(), 'data', `${fileName}.json`);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-}
-<<<<<<< HEAD
-;
-function getFilePath(fileName: string): string {;
-  ensureDataDir();
-  return path.join(DATA_ROOT, fileName);
-}
-;
-export function readJsonFile<T>(fileName: string, defaultValue: T): T {;
-  try {;
-    const filePath = getFilePath(fileName);
-    if (!fs.existsSync(filePath)) {;
-      return defaultValue;
-    }
-    const raw = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(raw) as T;
-  } catch (error) {;
-    return defaultValue;
-  }
-}
-;
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-}
-
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-export function writeJsonFile<T>(fileName: string, data: T): void {;
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  const filePath = getFilePath(fileName);
-  const tmpPath = `${filePath}.tmp`;
-<<<<<<< HEAD
-  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
-  fs.renameSync(tmpPath, filePath);
-}
-;
-=======
-=======
-
-  fs && fs.writeFileSync(tmpPath, JSON && JSON.stringify(data, null, 2), 'utf-8');
-  fs && fs.renameSync(tmpPath, filePath);
-
-<<<<<<< HEAD
-
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
-=======
-  }
-  return default_value;
-}
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
-  const items = readJsonFile<T[]>(fileName, []);
-  items && items.push(item);
-  writeJsonFile<T[]>(fileName, items);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
-}
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-// Database utilities
-export interface DatabaseConfig {
-  host: string;
-  port: number;
-  database: string;
-  username: string;
-  password: string;
-  ssl?: boolean;
-<<<<<<< HEAD
-}export interface QueryResult<T = any> {
-=======
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-
-}
-// Database utilities
-export interface DatabaseConfig {
-  host: string;
-  port: number;
-  database: string;
-  username: string;
-  password: string;
-  ssl?: boolean;
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-export interface QueryResult<T = any> {
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-export function appendToJsonArrayFile<T>(fileName: string, item: T): void {};
-  const items = readJsonFile<T[]>(fileName, []);
-  items && items.push(item);
-  writeJsonFile<T[]>(fileName, items);
-
-export interface QueryResult<T = any> {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  rows: T[];
-  rowCount: number;
-  fields: any[];
-}
-<<<<<<< HEAD
-export class DatabaseManager {};
-  private config: DatabaseConfig;
-  constructor(config: DatabaseConfig) {}
-    this.config = config;
-  }
-  async connect(): Promise<void> {}
-    // Mock connection - in production, this would establish a real database connection;
-    console.log('Connected to database');
-  }
-  async disconnect(): Promise<void> {}
-    // Mock disconnection - in production, this would close the database connection'
-    console.log('Disconnected from database');
-  }
-  async query<T = any>(sql: string, params?: any[]): Promise<QueryResult<T>> {}
-    // Mock query execution - in production, this would execute real SQL'
-=======
-
-export class DatabaseManager {
-  private config: DatabaseConfig;
-
-  constructor(config: DatabaseConfig) {
-    this.config = config;
-  }
-
-  async connect(): Promise<void> {
-    // Mock connection - in production, this would establish a real database connection
-    console.log('Connected to database');
-  }
-
-  async disconnect(): Promise<void> {
-    // Mock disconnection - in production, this would close the database connection
-    console.log('Disconnected from database');
-  }
-
-  async query<T = any>(sql: string, params?: any[]): Promise<QueryResult<T>> {
-    // Mock query execution - in production, this would execute real SQL
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    console.log('Executing query:', sql, params);
-    return {}
-      rows: [],
-      rowCount: 0,
-      fields: []
-    };
-  }
-<<<<<<< HEAD
-  async transaction<T>(callback: (db: DatabaseManager) => Promise<T>): Promise<T> {}
-    // Mock transaction - in production, this would wrap the callback in a real transaction;
-    try {}
-=======
-
-  async transaction<T>(callback: (db: DatabaseManager) => Promise<T>): Promise<T> {
-    // Mock transaction - in production, this would wrap the callback in a real transaction
-    try {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      return await callback(this);
-    } catch (error) {}
-      throw error;
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======  }
-  return defaultValue;
-}
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-    if (fs.existsSync(filePath)) {;
-=======
-
-    if (fs.existsSync(filePath)) {;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    if (fs.existsSync(filePath)) {;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      const content = fs.readFileSync(filePath, 'utf8');
-      return JSON.parse(content);
-    }
-  } catch (error) {'
-    console.error('Error reading file:', error);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  }
-  return defaultValue;
-}
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
-=======
-  }
-  return defaultValue;
-=======
-  }
-  return defaultValue;
-}
-
+  return path.join(process.cwd(), 'data', fileName)}
+,
+export function readJsonFile<T>(filePath: string, defaultValue: T): T {
+  try {
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, 'utf8'),
+      return JSON.parse(content)}
+  } catch (error) {
+    console.error('Error reading file:', error)}
+  return default_value}
+,
 export function writeJsonFile<T>(fileName: string, data: T): void {
-  const filePath = getFilePath(fileName);
-  const tmpPath = `${filePath}.tmp`;
-  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf8');
-  fs.renameSync(tmpPath, filePath);
-}
-
+export function writeJsonFile<T>(fileName: string, data: T): void {
+  const filePath = getFilePath(fileName),
+  const tmpPath = `${filePath}.tmp`,
+  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8'),
+  fs.renameSync(tmpPath, filePath)}
+,
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
-  const items = readJsonFile<T[]>(fileName, []);
-  items.push(item);
-  writeJsonFile<T[]>(fileName, items);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-}
-
-// Default database configuration
-const defaultConfig: DatabaseConfig = {
-  host: process.env.DB_HOST || 'localhost',
-  port: parseInt(process.env.DB_PORT || '5432'),
-  database: process.env.DB_NAME || 'zion_tech_group',
-  username: process.env.DB_USER || 'postgres',
-  password: process.env.DB_PASSWORD || 'password',
-  ssl: process.env.DB_SSL === 'true'
-};
-
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-// Singleton database instance
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  const items = readJsonFile<T[]>(fileName, []),
+  items && items.push(item),
+  writeJsonFile<T[]>(fileName, items)}
+,
+// Database utilities,
+export interface DatabaseConfig {
+  host: string,
+  port: number,
+  database: string,
+  username: string,
+  password: string,
+  ssl?: boolean}
+export interface QueryResult<T = any> {
+  rows: T[],
+  rowCount: number,
+  fields: any[]}
+export class DatabaseManager {
+  private config: DatabaseConfig,
+  constructor(config: DatabaseConfig) {
+    this.config = config}
+  async connect(): Promise<void> {
+    // Mock connection - in production, this would establish a real database connection,
+    // // console.log('Connected to database')}
+  async disconnect(): Promise<void> {
+    // Mock disconnection - in production, this would close the database connection,
+    // // console.log('Disconnected from database')}
+  async query<T = any>(sql: string, params?: any[]): Promise<QueryResult<T>> {
+    // Mock query execution - in production, this would execute real SQL,
+    // // console.log('Executing query:', sql, params),
+    return {
+      rows: [];
+      rowCount: 0;
+      fields: []};
+  }
+  async transaction<T>(callback: (db: DatabaseManager) => Promise<T>): Promise<T> {
+    // Mock transaction - in production, this would wrap the callback in a real transaction,
+    try {
+      return await callback(this)} catch (error) {
+      throw error}
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, 'utf8'),
+      return JSON.parse(content)}
+  } catch (error) {
+    console.error('Error reading file:', error)}
+  return defaultValue}
 export function writeJsonFile < T>(file_name: string, data: T): void {
-=======
-
-export function writeJsonFile < T>(file_name: string, data: T): void {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  const file_path = getFilePath (file_name);
-  const tmp_path = `${file_path}.tmp`;'
-  fs.writeFileSync (tmp_path, JSON.stringify (data, null, 2), 'utf - 8');
-  fs.rename_sync (tmp_path, file_path);
-}
-export function appendToJsonArrayFile < T>(file_name: string, item: T): void {};
-  const items = readJsonFile < T[]>(file_name, []);
-  items.push (item);
-  writeJsonFile < T[]>(file_name, items);
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-}
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-20a4
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-import fs from 'fs';
-import path from 'path';
-const DATA_ROOT = path.join(process.cwd(), 'datamarketplace');
-function ensureDataDir(): void {;
-  if (!fs.existsSync(DATA_ROOT)) {;
-    fs.mkdirSync(DATA_ROOT, { recursive: true });
-  }
-}
-;
-function getFilePath(fileName: string): string {;
-  ensureDataDir();
-  return path.join(DATA_ROOT, fileName);
-}
-;
-export function readJsonFile<T>(fileName: string, defaultValue: T): T {;
-  try {;
-    const filePath = getFilePath(fileName);
-    if (!fs.existsSync(filePath)) {;
-      return defaultValue;
-    }
-    const raw = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(raw) as T;
-  } catch (error) {;
-    return defaultValue;
-  }
-}
-;
-export function writeJsonFile<T>(fileName: string, data: T): void {;
-  const filePath = getFilePath(fileName);
-  const tmpPath = `${filePath}.tmp`;
-  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
-  fs.renameSync(tmpPath, filePath);
-}
-;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
-  const items = readJsonFile<T[]>(fileName, []);
-  items.push(item);
-  writeJsonFile<T[]>(fileName, items);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import fs from 'fs';
-=======
-}import fs from 'fs';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-import path from 'path';
-
-}
-}
-<<<<<<< HEAD
-=======
-
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-import fs from 'fs';
-import path from 'path';
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-}
-import fs from 'fs';
-import path from 'path';
-
-}
-}
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-import fs from 'fs';
-import path from 'path';
-
-}
-
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  const file_path = getFilePath (file_name),
+  const tmp_path = `${file_path}.tmp`,
+  fs.writeFileSync (tmp_path, JSON.stringify (data, null, 2), 'utf - 8'),
+  fs.rename_sync (tmp_path, file_path)}
+export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
+  const items = readJsonFile < T[]>(file_name, []),
+  items.push (item),
+  writeJsonFile < T[]>(file_name, items)}
+,
+export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
+  const items = readJsonFile<T[]>(fileName, []),
+  items.push(item),
+  writeJsonFile<T[]>(fileName, items)}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
