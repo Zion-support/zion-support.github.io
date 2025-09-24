@@ -38,11 +38,13 @@
     "strictNullChecks": true
   },
   "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts"
+    "__safe_tests__/**/*.ts",
+    "__safe_tests__/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
-    "**/*"
+    "dist",
+    "build",
+    "coverage"
   ]
 }
