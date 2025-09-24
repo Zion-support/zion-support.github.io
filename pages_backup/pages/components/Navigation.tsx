@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
+import React, { useState } from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import {
   ArrowRight,
   Award,
   BarChart3,
@@ -42,9 +42,8 @@ import {
   Truck,
   Users,
   X,
-  Zap
-} from 'lucide-react';
-
+  Zap,
+} from 'lucide-react',
 const navigationItems = [
   {
     title: 'Services',
@@ -72,7 +71,6 @@ const navigationItems = [
         description: '40+ innovative micro SaaS solutions',
         popular: true
       },
-
       {
         title: 'Cybersecurity',
         href: '/cybersecurity',
@@ -93,8 +91,8 @@ const navigationItems = [
         icon: BarChart3,
         description: 'Advanced analytics platform',
         popular: false
-      }
-    ]
+      },
+    ],
   },
   {
     title: 'Solutions',
@@ -124,8 +122,8 @@ const navigationItems = [
         href: '/solutions/custom',
         icon: Settings,
         description: 'Tailored custom solutions'
-      }
-    ]
+      },
+    ],
   },
   {
     title: 'Industries',
@@ -167,8 +165,8 @@ const navigationItems = [
         href: '/industries/real-estate',
         icon: Home,
         description: 'PropTech innovations'
-      }
-    ]
+      },
+    ],
   },
   {
     title: 'Resources',
@@ -204,8 +202,8 @@ const navigationItems = [
         href: '/docs',
         icon: FileText,
         description: 'Technical documentation'
-      }
-    ]
+      },
+    ],
   },
   {
     title: 'Company',
@@ -247,35 +245,30 @@ const navigationItems = [
         href: '/press',
         icon: FileText,
         description: 'Press releases and media'
-      }
-    ]
-  }
-];
-
+      },
+    ],
+  },
+],
 const quickLinks = [
   { title: 'Pricing', href: '/pricing', icon: DollarSign },
   { title: 'Contact', href: '/contact', icon: Phone },
   { title: 'Support', href: '/support', icon: MessageSquare },
   { title: 'Status', href: '/status', icon: BarChart3 },
   { title: 'Quote', href: '/quote', icon: FileText },
-  { title: 'API Docs', href: '/api-docs', icon: Code }
-];
-
+  { title: 'API Docs', href: '/api-docs', icon: Code },
+],
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null),
   return (
-    <MainLayout 
-      title="Page - Zion Tech Group"
-      description="Zion Tech Group page"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
+    <MainLayout
+      title='Page - Zion Tech Group',
+      description='Zion Tech Group page'>,
+      <div className='min-h-screen bg-gray-50'>,
+        <div className='max-w-7xl mx-auto px-4 py-20'>,
+          <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>Page</h1>,
+          <p className='text-xl text-gray-60o0'>Coming soon...</p>,
+        </div>,
+      </div>,
+    </MainLayout>)}
+,

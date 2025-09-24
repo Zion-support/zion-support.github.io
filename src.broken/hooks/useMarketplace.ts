@@ -1,5 +1,5 @@
-// Hook for useMarketplace;
+// Hook for useMarketplace,
 export const useUseMarketplace: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
+  // TODO: Implement hook logic,
+  return {},
+},

@@ -1,64 +1,53 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Brain
-  Zap
-  Shield
-  Globe
-  Rocket
-  Star
-  TrendingUp
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import {
+  Brain,
+  Zap,
+  Shield,
+  Globe,
+  Rocket,
+  Star,
+  TrendingUp,
   Users,
   ChevronRight,
   ExternalLink,
   Clock,
-  Award
-} from 'lucide-react';
-
-const NewContentShowcase2026 = () => {
-  const [activeTabsetActiveTab] = useState('ai-breakthroughs');
-  const [isVisiblesetIsVisible] = useState(false);
-
+  Award} from 'lucide-react',
+const NewContentShowcase20o26 = () => {
+  const [activeTabsetActiveTab] = useState('ai-breakthroughs'),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const contentCategories = {
+    setIsVisible(true)}[]),
+  const contentCategories ={
     'ai-breakthroughs': {
-      title: 'AI Breakthroughs 2026',
+      title: 'AI Breakthroughs 20o26',
       icon: Brain,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-50o0 to-pink-50o0',
       bgColor: 'bg-purple-50',
-      borderColor: 'border-purple-200'
-    },
+      borderColor: 'border-purple-20o0'},
     'quantum-computing': {
       title: 'Quantum Computing Revolution',
       icon: Zap,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-50o0 to-cyan-50o0',
       bgColor: 'bg-blue-50',
-      borderColor: 'border-blue-200'
-    },
+      borderColor: 'border-blue-20o0'},
     'sustainability': {
       title: 'Green Tech & Sustainability',
       icon: Globe,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-green-50o0 to-emerald-50o0',
       bgColor: 'bg-green-50',
-      borderColor: 'border-green-200'
-    },
+      borderColor: 'border-green-20o0'},
     'automation': {
       title: 'Advanced Automation',
       icon: Rocket,
-      color: 'from-orange-500 to-red-500',
+      color: 'from-orange-50o0 to-red-50o0',
       bgColor: 'bg-orange-50',
-      borderColor: 'border-orange-200'
-    }
-  };
-
-  const featuredContent = {
+      borderColor: 'border-orange-20o0'}
+  },
+  const featuredContent ={
     'ai-breakthroughs': [
       {
         title: 'Multimodal AI Revolution: Beyond Text and Images',
@@ -66,8 +55,8 @@ const NewContentShowcase2026 = () => {
         readTime: '12 min read',
         category: 'AI Research',
         featured: true,
-        href: '/ai-2026-multimodal-revolution',
-        stats: { views: '2.3'k', 'likes: '187' }
+        href: '/ai-20o26-multimodal-revolution',
+        stats: { views: '2.3'klikes: '187' }
       },
       {
         title: 'Neural Architecture Search: Automating AI Design',
@@ -75,8 +64,8 @@ const NewContentShowcase2026 = () => {
         readTime: '8 min read',
         category: 'AI Engineering',
         featured: false,
-        href: '/ai-2026-neural-architecture-search',
-        stats: { views: '1.8'k', 'likes: '142' }
+        href: '/ai-20o26-neural-architecture-search',
+        stats: { views: '1.8'klikes: '142' }
       },
       {
         title: 'AI Consciousness: The Next Frontier',
@@ -84,8 +73,8 @@ const NewContentShowcase2026 = () => {
         readTime: '15 min read',
         category: 'AI Philosophy',
         featured: true,
-        href: '/ai-2026-consciousness-frontier',
-        stats: { views: '3.1'k', 'likes: '256' }
+        href: '/ai-20o26-consciousness-frontier',
+        stats: { views: '3.1'klikes: '256' }
       }
     ],
     'quantum-computing': [
@@ -95,8 +84,8 @@ const NewContentShowcase2026 = () => {
         readTime: '10 min read',
         category: 'Quantum AI',
         featured: true,
-        href: '/quantum-ai-2026-future',
-        stats: { views: '1.9'k', 'likes: '134' }
+        href: '/quantum-ai-20o26-future',
+        stats: { views: '1.9'klikes: '134' }
       },
       {
         title: 'Quantum Machine Learning Algorithms',
@@ -104,8 +93,8 @@ const NewContentShowcase2026 = () => {
         readTime: '14 min read',
         category: 'Quantum ML',
         featured: false,
-        href: '/quantum-ml-algorithms-2026',
-        stats: { views: '1.2'k', 'likes: '98' }
+        href: '/quantum-ml-algorithms-20o26',
+        stats: { views: '1.2'klikes: '98' }
       }
     ],
     'sustainability': [
@@ -115,8 +104,8 @@ const NewContentShowcase2026 = () => {
         readTime: '9 min read',
         category: 'Green Tech',
         featured: true,
-        href: '/green-ai-sustainability-2026',
-        stats: { views: '2.1'k', 'likes: '178' }
+        href: '/green-ai-sustainability-20o26',
+        stats: { views: '2.1'klikes: '178' }
       },
       {
         title: 'Carbon-Neutral AI Infrastructure',
@@ -125,18 +114,18 @@ const NewContentShowcase2026 = () => {
         category: 'Sustainability',
         featured: false,
         href: '/carbon-neutral-ai-infrastructure',
-        stats: { views: '1.5'k', 'likes: '123' }
+        stats: { views: '1.5'klikes: '123' }
       }
     ],
     'automation': [
       {
-        title: 'Autonomous Business Operations 2026',
+        title: 'Autonomous Business Operations 20o26',
         description: 'Explore how businesses are implementing fully autonomous operations using advanced AI and robotics.',
         readTime: '13 min read',
         category: 'Business Automation',
         featured: true,
-        href: '/autonomous-business-ops-2026',
-        stats: { views: '2.7'k', 'likes: '201' }
+        href: '/autonomous-business-ops-20o26',
+        stats: { views: '2.7'klikes: '20o1' }
       },
       {
         title: 'Intelligent Process Automation',
@@ -144,169 +133,144 @@ const NewContentShowcase2026 = () => {
         readTime: '7 min read',
         category: 'Process Automation',
         featured: false,
-        href: '/intelligent-process-automation-2026',
-        stats: { views: '1.6'k', 'likes: '145' }
+        href: '/intelligent-process-automation-20o26',
+        stats: { views: '1.6'klikes: '145' }
       }
-    ]
-  };
-
-  const containerVariants = {
+    ]},
+  const containerVariants ={
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        staggerChildren: 0.1
-      }
+        staggerChildren: 0.1}
     }
-  };
-
-  const itemVariants = {
+  },
+  const itemVariants ={
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
-  };
-
+  },
   return (
-    <motion.section
-      className="py-20 bg-gradient-to-br from-gray-50 to-white"
+    <motion.section,
+      className="py-20 bg-gradient-to-br from-gray-50 to-white",
       variants={containerVariants}
-      initial="hidden"
+      initial="hidden",
       animate={isVisible ? "visible" : "hidden"}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    >,
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         {/* Header */}
-        <motion.div className="text-center mb-16" variants={itemVariants}>
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-6">
-            <Star className="w-4 h-4 mr-2" />
-            NEW CONTENT 2026
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Revolutionary Content Just Dropped
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the latest breakthroughs in AIquantum computingsustainabilityand automation. 
-            Stay ahead with cutting-edge insights and practical implementations.
-          </p>
-        </motion.div>
-
+        <motion.div className="text-center mb-16" variants={itemVariants}>,
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-6 py-2 rounded-full text-sm font-medium mb-6">,
+            <Star className="w-4 h-4 mr-2"  />,
+            NEW CONTENT 20o26,
+          </div>,
+          <h2 className="text-4xl md: text-5xl font-bold text-gray-90o0 mb-6">,
+            Revolutionary Content Just Dropped,
+          </h2>,
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">,
+            Discover the latest breakthroughs in AIquantum computingsustainabilityand automation.,
+            Stay ahead with cutting-edge insights and practical implementations.,
+          </p>,
+        </motion.div>,
         {/* Category Tabs */}
-        <motion.div className="flex flex-wrap justify-center gap-4 mb-12" variants={itemVariants}>
+        <motion.div className="flex flex-wrap justify-center gap-4 mb-12" variants={itemVariants}>,
           {Object.entries(contentCategories).map(([keycategory]) => {
-            const Icon = category.icon;
+            const Icon = category.icon,
             return (
               <button
                 key={key}
                 onClick={() => setActiveTab(key)}
-                className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  activeTab === key
-                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                    : `bg-white text-gray-600 hover:bg-gray-50 border-2 ${category.borderColor}`
-                }`}
-              >
-                <Icon className="w-5 h-5 mr-2" />
+                className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
+                  activeTab === key,
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
+                    : `bg-white text-gray-60o0 hover: bg-gray-50 border-2 ${category.borderColor}`}`}
+              >,
+                <Icon className="w-5 h-5 mr-2"  />,
                 {category.title}
-              </button>
-            );
-          })}
-        </motion.div>
-
+              </button>)})}
+        </motion.div>,
         {/* Content Grid */}
-        <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        <motion.div,
+          className="grid md: grid-cols-2 lg:grid-cols-3 gap-8",
           variants={containerVariants}
-        >
+        >,
           {featuredContent[activeTab as keyof typeof featuredContent]?.map((contentindex) => {
-            const category = contentCategories[activeTab as keyof typeof contentCategories];
-            const Icon = category.icon;
-            
+            const category = contentCategories[activeTab as keyof typeof contentCategories],
+            const Icon = category.icon,
             return (
-              <motion.div
+              <motion.div,
                 key={index}
-                className={`relative group ${category.bgColor} rounded-2xl p-6 border-2 ${category.borderColor} hover:shadow-xl transition-all duration-300`}
+                className={`relative group ${category.bgColor} rounded-2xl p-6 border-2 ${category.borderColor} hover: shadow-xl transition-all duration-30o0`}
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
-              >
+              >,
                 {content.featured && (
-                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center">
-                    <Award className="w-3 h-3 mr-1" />
-                    FEATURED
-                  </div>
-                )}
-                
-                <div className="flex items-center mb-4">
-                  <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color} text-white`}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <span className="ml-3 text-sm font-medium text-gray-600">{content.category}</span>
-                </div>
-
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center">,
+                    <Award className="w-3 h-3 mr-1"  />,
+                    FEATURED,
+                  </div>)}
+,
+                <div className="flex items-center mb-4">,
+                  <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color} text-white`}>,
+                    <Icon className="w-5 h-5"  />,
+                  </div>,
+                  <span className="ml-3 text-sm font-medium text-gray-60o0">{content.category}</span>,
+                </div>,
+                <h3 className="text-xl font-bold text-gray-90o0 mb-3 group-hover: text-purple-60o0 transition-colors">,
                   {content.title}
-                </h3>
-                
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                </h3>,
+                <p className="text-gray-60o0 mb-4 line-clamp-3">,
                   {content.description}
-                </p>
-
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center text-sm text-gray-500">
-                    <Clock className="w-4 h-4 mr-1" />
+                </p>,
+                <div className="flex items-center justify-between mb-4">,
+                  <div className="flex items-center text-sm text-gray-50o0">,
+                    <Clock className="w-4 h-4 mr-1"  />,
                     {content.readTime}
-                  </div>
-                  <div className="flex items-center space-x-3 text-sm text-gray-500">
-                    <span className="flex items-center">
-                      <TrendingUp className="w-4 h-4 mr-1" />
+                  </div>,
+                  <div className="flex items-center space-x-3 text-sm text-gray-50o0">,
+                    <span className="flex items-center">,
+                      <TrendingUp className="w-4 h-4 mr-1"  />,
                       {content.stats.views}
-                    </span>
-                    <span className="flex items-center">
-                      <Users className="w-4 h-4 mr-1" />
+                    </span>,
+                    <span className="flex items-center">,
+                      <Users className="w-4 h-4 mr-1"  />,
                       {content.stats.likes}
-                    </span>
-                  </div>
-                </div>
-
+                    </span>,
+                  </div>,
+                </div>,
                 <Link
                   href={content.href}
-                  className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors group-hover:translate-x-1 transform duration-300"
-                >
-                  Read More
-                  <ChevronRight className="w-4 h-4 ml-1" />
-                </Link>
-              </motion.div>
-            );
-          })}
-        </motion.div>
-
+                  className="inline-flex items-center text-purple-60o0 font-semibold hover: text-purple-70o0 transition-colors group-hover:translate-x-1 transform duration-30o0">,
+                  Read More,
+                  <ChevronRight className="w-4 h-4 ml-1"  />,
+                </Link>,
+              </motion.div>)})}
+        </motion.div>,
         {/* Call to Action */}
-        <motion.div className="text-center mt-16" variants={itemVariants}>
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              Want More Revolutionary Content?
-            </h3>
-            <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-              Join thousands of innovators who are already transforming their businesses with our cutting-edge insights and implementations.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <motion.div className="text-center mt-16" variants={itemVariants}>,
+          <div className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-2xl p-8 text-white">,
+            <h3 className="text-2xl font-bold mb-4">,
+              Want More Revolutionary Content?,
+            </h3>,
+            <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">,
+              Join thousands of innovators who are already transforming their businesses with our cutting-edge insights and implementations.,
+            </p>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <Link
-                href="/content-showcase"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
-              >
-                Explore All Content
-                <ExternalLink className="w-4 h-4 ml-2" />
-              </Link>
+                href="/content-showcase",
+                className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors inline-flex items-center">,
+                Explore All Content,
+                <ExternalLink className="w-4 h-4 ml-2"  />,
+              </Link>,
               <Link
-                href="/newsletter"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-              >
-                Subscribe to Updates
-              </Link>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </motion.section>
-  );
-};
-
-export default NewContentShowcase2026;
+                href="/newsletter",
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors">,
+                Subscribe to Updates,
+              </Link>,
+            </div>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </motion.section>)},
+export default NewContentShowcase20o26,

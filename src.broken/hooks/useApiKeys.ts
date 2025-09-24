@@ -1,5 +1,5 @@
-// Hook for useApiKeys;
+// Hook for useApiKeys,
 export const useUseApiKeys: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
+  // TODO: Implement hook logic,
+  return {},
+},

@@ -1,5 +1,5 @@
-// Hook for useFilterTalents;
+// Hook for useFilterTalents,
 export const useUseFilterTalents: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
+  // TODO: Implement hook logic,
+  return {},
+},

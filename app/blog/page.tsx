@@ -1,327 +1,241 @@
-'use client'
+import Link from 'next/link';
+import type { FC } from 'react';
 
-import { useState } from 'react'
-import Link from 'next/link'
-import { Calendar, Clock, ArrowRight, Search, Filter, Mail, CheckCircle, AlertCircle } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Card } from '../components/Card'
-import { Button } from '../components/Button'
+const posts = [
+  {
+    id: 'ai-automation-2025-comprehensive-guide',
+    title: 'AI Automation 2025: Complete Implementation Guide',
+    description: 'Master AI automation with our comprehensive guide covering strategy, implementation, ROI measurement, and real-world case studies.',
+    href: '/blog/ai-automation-2025-comprehensive-guide',
+    date: '2025-01-28',
+    tags: ['AI', 'Automation', 'Strategy'],
+    category: 'AI & Automation',
+    readTime: '15 min read',
+    excerpt: 'Transform your business operations with intelligent automation. This comprehensive guide covers everything from strategy to implementation.',
+    featured: true,
+  },
+  {
+    id: 'ai-cost-optimization-advanced-2025',
+    title: 'Advanced AI Cost Optimization 2025',
+    description: 'Discover advanced strategies to reduce AI infrastructure costs by 40-60% while maintaining performance. Real-world techniques and tools.',
+    href: '/blog/ai-cost-optimization-advanced-2025',
+    date: '2025-01-28',
+    tags: ['AI', 'Cost Optimization', 'Engineering'],
+    category: 'AI Engineering',
+    readTime: '12 min read',
+    excerpt: 'Master AI cost optimization with advanced strategies, tools, and techniques. Reduce AI infrastructure costs by 40-60% while maintaining performance.',
+    featured: true,
+  },
+  {
+    id: 'ai-copilots-for-engineering',
+    title: 'AI Copilots for Engineering Teams',
+    description: 'How to deploy secure, repo-aware copilots that speed reviews and cut toil.',
+    href: '/blog/ai-copilots-for-engineering',
+    date: '2025-09-11',
+    tags: ['AI', 'DevEx', 'Productivity'],
+    category: 'AI & Development',
+    readTime: '9 min read',
+    excerpt: 'Deploy secure, repo-aware copilots that speed reviews and cut toil for engineering teams.',
+    featured: false,
+  },
+  {
+    id: 'ai-agents-for-smbs',
+    title: 'Practical AI Agents for Small Businesses',
+    description: 'How SMBs can deploy lightweight AI agents to automate support, sales outreach, and back-office tasks safely.',
+    href: '/blog/ai-agents-for-smbs',
+    date: '2025-09-11',
+    tags: ['AI', 'Automation', 'Agents'],
+    category: 'AI & Automation',
+    readTime: '11 min read',
+    excerpt: 'Deploy lightweight AI agents to automate support, sales outreach, and back-office tasks safely for small businesses.',
+    featured: false,
+  },
+  {
+    id: 'cloud-cost-optimization-2025',
+    title: 'Cloud Cost Optimization in 2025: Proven Playbook',
+    description: 'A tactical guide to cut 20–40% of cloud spend without sacrificing performance or velocity.',
+    href: '/blog/cloud-cost-optimization-2025',
+    date: '2025-09-11',
+    tags: ['Cloud', 'FinOps', 'DevOps'],
+    category: 'Cloud & DevOps',
+    readTime: '13 min read',
+    excerpt: 'A tactical guide to cut 20–40% of cloud spend without sacrificing performance or velocity.',
+    featured: false,
+  },
+  {
+    id: 'ai-customer-support-playbooks',
+    title: 'AI-Powered Customer Support Playbooks',
+    description: 'Production-ready patterns for self-serve assistants, case triage, agent copilots, and QA.',
+    href: '/blog/ai-customer-support-playbooks',
+    date: '2025-09-11',
+    tags: ['AI', 'CX', 'Automation'],
+    category: 'AI & Customer Experience',
+    readTime: '10 min read',
+    excerpt: 'Production-ready patterns for self-serve assistants, case triage, agent copilots, and QA.',
+    featured: false,
+  },
+];
 
 export default function BlogPage() {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('All')
-  const [newsletterEmail, setNewsletterEmail] = useState('')
-  const [newsletterStatus, setNewsletterStatus] = useState(null)
-  const [isSubscribing, setIsSubscribing] = useState(false)
-  const blogPosts = [
-    {
-      title: 'AI 2025: Multimodal Agents in the Enterprise',
-      slug: 'ai-2025-multimodal-agents-in-the-enterprise',
-      excerpt: 'Explore how multimodal AI agents are revolutionizing enterprise operations in 2025.',
-      date: '2025-01-15',
-      readTime: '8 min read',
-      category: 'AI & Machine Learning'
-    },
-    {
-      title: 'AI 2026: Agent Observability Blueprint',
-      slug: 'ai-2026-agent-observability-blueprint',
-      excerpt: 'A comprehensive guide to implementing observability for AI agents in production environments.',
-      date: '2025-01-10',
-      readTime: '12 min read',
-      category: 'AI Operations'
-    },
-    {
-      title: 'AI 2026: Agent Platform Operations',
-      slug: 'ai-2026-agent-platform-operations',
-      excerpt: 'Best practices for managing and operating AI agent platforms at scale.',
-      date: '2025-01-08',
-      readTime: '10 min read',
-      category: 'Platform Engineering'
-    },
-    {
-      title: 'AI 2026: Agent Platform SLOs Best Practices',
-      slug: 'ai-2026-agent-platform-slos-best-practices',
-      excerpt: 'How to define and implement Service Level Objectives for AI agent platforms.',
-      date: '2025-01-05',
-      readTime: '6 min read',
-      category: 'DevOps'
-    },
-    {
-      title: 'AI 2026: Agent Posture Management',
-      slug: 'ai-2026-agent-posture-management',
-      excerpt: 'Managing security posture and compliance for AI agents across your organization.',
-      date: '2025-01-03',
-      readTime: '9 min read',
-      category: 'Cybersecurity'
-    },
-    {
-      title: 'AI 2026: Agentic Risk and Safety Playbook',
-      slug: 'ai-2026-agentic-risk-and-safety-playbook',
-      excerpt: 'A comprehensive playbook for managing risks and ensuring safety in agentic AI systems.',
-      date: '2025-01-01',
-      readTime: '15 min read',
-      category: 'Risk Management'
-    }
-  ]
-
-  const categories = [
-    'All Posts',
-    'AI & Machine Learning',
-    'AI Operations',
-    'Platform Engineering',
-    'DevOps',
-    'Cybersecurity',
-    'Risk Management'
-  ]
-
-  // Filter posts based on search term and category
-  const filteredPosts = blogPosts.filter(post => {
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.category.toLowerCase().includes(searchTerm.toLowerCase())
-    
-    const matchesCategory = selectedCategory === 'All Posts' || post.category === selectedCategory
-    
-    return matchesSearch && matchesCategory
-  })
-
-  const handleNewsletterSubmit = async (e) => {
-    e.preventDefault()
-    
-    if (!newsletterEmail) {
-      setNewsletterStatus({ type: 'error', message: 'Please enter your email address' })
-      return
-    }
-
-    setIsSubscribing(true)
-    setNewsletterStatus(null)
-
-    try {
-      const response = await fetch('/api/newsletter', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email: newsletterEmail }),
-      })
-      
-      const result = await response.json()
-      
-      if (result.success) {
-        setNewsletterStatus({ type: 'success', message: result.message })
-        setNewsletterEmail('')
-        
-        // Reset status after 5 seconds
-        setTimeout(() => setNewsletterStatus(null), 5000)
-      } else {
-        setNewsletterStatus({ type: 'error', message: result.message })
-      }
-    } catch (error) {
-      console.error('Newsletter subscription error:', error)
-      setNewsletterStatus({ type: 'error', message: 'Network error. Please try again.' })
-    } finally {
-      setIsSubscribing(false)
-    }
-  }
+  const featuredPosts = posts.filter(post => post.featured);
+  const regularPosts = posts.filter(post => !post.featured);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main className="relative">
-        {/* Hero Section */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              AI & Technology{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Insights
-              </span>
+    <div className='min-h-screen bg-white'>
+      {/* Hero Section */}
+      <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center'>
+            <h1 className='text-4xl md:text-6xl font-bold text-gray-900 mb-6'>
+              Insights & Innovation
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Stay ahead of the curve with our latest insights on AI, cloud technology, cybersecurity, and digital transformation.
+            <p className='text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto'>
+              Stay ahead with the latest trends in AI, technology, and business
+              strategy. Expert insights from the Zion Tech Group team.
             </p>
-          </div>
-        </div>
-
-        {/* Search and Filter Section */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-12">
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-            {/* Search Bar */}
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input
-                type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Search articles..."
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-
-            {/* Category Filter */}
-            <div className="flex items-center gap-2">
-              <Filter className="w-5 h-5 text-gray-400" />
-              <select 
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="bg-white/10 border border-white/20 rounded-lg text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <a
+                href='#newsletter'
+                className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg'
               >
-                {categories.map((category) => (
-                  <option key={category} value={category} className="bg-gray-800">
-                    {category}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-        </div>
-
-        {/* Featured Post */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-12">
-          <Card variant="glass" className="p-8 border-white/20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div>
-                <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full mb-4">
-                  Featured Article
-                </span>
-                <h2 className="text-3xl font-bold text-white mb-4">
-                  {blogPosts[0].title}
-                </h2>
-                <p className="text-gray-300 mb-6 text-lg">
-                  {blogPosts[0].excerpt}
-                </p>
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="flex items-center text-gray-400">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    {new Date(blogPosts[0].date).toLocaleDateString()}
-                  </div>
-                  <div className="flex items-center text-gray-400">
-                    <Clock className="w-4 h-4 mr-2" />
-                    {blogPosts[0].readTime}
-                  </div>
-                </div>
-                <Link
-                  href={`/blog/${blogPosts[0].slug}`}
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
-                >
-                  Read Full Article
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </div>
-              <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">AI</span>
-                  </div>
-                  <p className="text-white font-semibold">Featured Content</p>
-                </div>
-              </div>
-            </div>
-          </Card>
-        </div>
-
-        {/* Blog Posts Grid */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredPosts.slice(1).length > 0 ? (
-              filteredPosts.slice(1).map((post, index) => (
-              <Card
-                key={index}
-                variant="glass"
-                hover
-                className="p-6 border-white/20 h-full flex flex-col"
+                Subscribe to Updates
+              </a>
+              <Link
+                href='/contact'
+                className='border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg'
               >
-                <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-300 text-sm rounded-full mb-4 w-fit">
-                  {post.category}
-                </span>
-                <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">
-                  {post.title}
-                </h3>
-                <p className="text-gray-300 text-sm mb-4 flex-grow">
-                  {post.excerpt}
-                </p>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3 text-gray-400 text-sm">
-                    <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      {new Date(post.date).toLocaleDateString()}
-                    </div>
-                    <div className="flex items-center">
-                      <Clock className="w-4 h-4 mr-1" />
-                      {post.readTime}
-                    </div>
-                  </div>
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="text-blue-400 hover:text-blue-300"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </Card>
-              ))
-            ) : (
-              <div className="col-span-full text-center py-12">
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-4">No articles found</h3>
-                <p className="text-gray-300 mb-6">Try adjusting your search terms or category filter.</p>
-                <Button 
-                  onClick={() => {
-                    setSearchTerm('')
-                    setSelectedCategory('All Posts')
-                  }}
-                  variant="outline"
-                >
-                  Clear Filters
-                </Button>
-              </div>
-            )}
+                Work With Us
+              </Link>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Newsletter Signup */}
-        <div className="relative z-10 max-w-4xl mx-auto px-6 pb-20">
-          <Card variant="glass" className="p-12 text-center border-white/20">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Stay Updated
+      {/* Featured Posts */}
+      <section className='py-16'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
+            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+              Featured Articles
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Subscribe to our newsletter for the latest AI and technology insights delivered to your inbox.
+            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+              Our most popular and impactful content
             </p>
-            {newsletterStatus && (
-              <div className={`mb-6 px-4 py-3 rounded-lg ${
-                newsletterStatus.type === 'success' 
-                  ? 'bg-green-600/20 border border-green-500/50 text-green-400' 
-                  : 'bg-red-600/20 border border-red-500/50 text-red-400'
-              }`}>
-                {newsletterStatus.message}
-              </div>
-            )}
-            
-            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
-                type="email"
-                value={newsletterEmail}
-                onChange={(e) => setNewsletterEmail(e.target.value)}
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <Button 
-                type="submit"
-                disabled={isSubscribing}
-                className="inline-flex items-center justify-center"
-              >
-                <Mail className="w-5 h-5 mr-2" />
-                {isSubscribing ? 'Subscribing...' : 'Subscribe'}
-              </Button>
-            </form>
-          </Card>
+          </div>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            {featuredPosts.map(post => (
+              <FeaturedPostCard key={post.id} post={post} />
+            ))}
+          </div>
         </div>
-      </main>
-      
-      <Footer />
+      </section>
+
+      {/* All Posts */}
+      <section className='py-16 bg-gray-50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-12'>
+            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+              All Articles
+            </h2>
+            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+              Explore our complete library of insights and guides
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {regularPosts.map(post => (
+              <PostCard key={post.id} post={post} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section id='newsletter' className='py-16'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center'>
+            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+              Stay Updated with Our Latest Insights
+            </h2>
+            <p className='text-lg text-gray-600 mb-6 max-w-2xl mx-auto'>
+              Get weekly updates on AI trends, technology insights, and business
+              strategies. Join 10,000+ professionals who trust our content.
+            </p>
+            <div className='max-w-md mx-auto flex gap-4'>
+              <input
+                type='email'
+                placeholder='Enter your email'
+                className='flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+              />
+              <button className='bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'>
+                Subscribe
+              </button>
+            </div>
+            <p className='text-sm text-gray-500 mt-4'>
+              No spam. Unsubscribe anytime. We respect your privacy.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
-  )
+  );
 }
+
+const FeaturedPostCard: FC<{ post: any }> = ({ post }) => {
+  return (
+    <Link href={`/blog/${post.id}`} className='group'>
+      <article className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
+        <div className='aspect-video bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center'>
+          <div className='text-6xl'>📊</div>
+        </div>
+        <div className='p-6'>
+          <div className='flex items-center gap-2 mb-3'>
+            <span className='bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full'>
+              {post.category}
+            </span>
+            <span className='text-gray-500 text-sm'>{post.readTime}</span>
+          </div>
+          <h3 className='text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors'>
+            {post.title}
+          </h3>
+          <p className='text-gray-600 mb-4'>{post.excerpt}</p>
+          <div className='flex items-center justify-between'>
+            <span className='text-sm text-gray-500'>{post.date}</span>
+            <span className='text-blue-600 font-medium group-hover:underline'>
+              Read More →
+            </span>
+          </div>
+        </div>
+      </article>
+    </Link>
+  );
+};
+
+const PostCard: FC<{ post: any }> = ({ post }) => {
+  return (
+    <Link href={`/blog/${post.id}`} className='group'>
+      <article className='bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow'>
+        <div className='aspect-video bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center'>
+          <div className='text-4xl'>💡</div>
+        </div>
+        <div className='p-6'>
+          <div className='flex items-center gap-2 mb-3'>
+            <span className='bg-gray-100 text-gray-800 text-xs font-medium px-2 py-1 rounded-full'>
+              {post.category}
+            </span>
+            <span className='text-gray-500 text-xs'>{post.readTime}</span>
+          </div>
+          <h3 className='text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors'>
+            {post.title}
+          </h3>
+          <p className='text-gray-600 text-sm mb-3'>{post.excerpt}</p>
+          <div className='flex items-center justify-between'>
+            <span className='text-xs text-gray-500'>{post.date}</span>
+            <span className='text-blue-600 text-sm font-medium group-hover:underline'>
+              Read →
+            </span>
+          </div>
+        </div>
+      </article>
+    </Link>
+  );
+};

@@ -1,32 +1,46 @@
 {
-  "timestamp": "2025-09-05T02:59:06.993Z",
+  "timestamp": "2025-09-23T21:50:21.312Z",
   "status": "unhealthy",
   "checks": {
-    "disk": {
-      "status": "ok",
-      "details": "Disk usage: 13%",
-      "message": "Disk space is healthy"
+    "buildHealth": {
+      "status": "fail",
+      "message": "Build directory not found",
+      "details": {
+        "error": "No .next directory found"
+      }
     },
-    "memory": {
-      "status": "ok",
-      "details": "Mem:            15Gi       1.4Gi       1.0Gi       7.5Mi        13Gi        14Gi",
-      "message": "Memory check completed"
+    "dependencies": {
+      "status": "pass",
+      "message": "Dependencies are properly configured",
+      "details": {
+        "dependencies": 21,
+        "devDependencies": 32,
+        "total": 53
+      }
     },
-    "build": {
-      "status": "error",
-      "message": "Build failed"
+    "fileStructure": {
+      "status": "pass",
+      "message": "All required files present",
+      "details": {
+        "checkedFiles": 4
+      }
     },
-    "lint": {
-      "status": "error",
-      "message": "Linting failed and could not be auto-fixed"
-    },
-    "typeCheck": {
-      "status": "error",
-      "message": "Type checking failed"
+    "performance": {
+      "status": "skip",
+      "message": "No build found, skipping performance check",
+      "details": {}
     },
     "security": {
-      "status": "ok",
-      "message": "No security vulnerabilities found"
+      "status": "warning",
+      "message": "Potentially insecure scripts found",
+      "details": {
+        "insecureScripts": [
+          "build:clean",
+          "dev:clean",
+          "clean"
+        ]
+      }
     }
-  }
+  },
+  "metrics": {}
 }

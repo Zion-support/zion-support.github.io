@@ -1,22 +1,5 @@
-<<<<<<< HEAD
+export type IntegrationCategory = 'crm' | 'ats',
 
-export type IntegrationCategory = 'crm' | 'ats';
-export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-export type IntegrationProviderId =;
-  | 'salesforce';
-  | 'hubspot';
-  | 'zoho';
-  | 'pipedrive';
-  | 'greenhouse';
-  | 'lever';
-
-export type IntegrationCategory = 'crm' | 'ats';
-export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-=======
-export type IntegrationCategory = 'crm' | 'ats';
-
->>>>>>> origin/auto/autonomy-17186719616
 export type IntegrationProviderId =
   | 'salesforce'
   | 'hubspot'
@@ -24,208 +7,64 @@ export type IntegrationProviderId =
   | 'pipedrive'
   | 'greenhouse'
   | 'lever'
-<<<<<<< HEAD
-
-  | 'workable';
-
-  | 'bamboohr';
-
-  | 'workable';
-  | 'bamboohr';
-export interface IntegrationProviderMeta {
-
-  id: IntegrationProviderId, name: string
-  id: IntegrationProviderId, name: string,;
-
-  category: IntegrationCategory, description?: string,  oauthScopes?: string[];
-  icon?: string
-
-
-
-
-;
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId, name: string,;
-  category: IntegrationCategory, description?: string,  oauthScopes?: string[];
-  icon?: string
-
-}
-export interface SyncRules {
-  // CRM rules;
-  autoCreateContacts?: boolean;
-  pushNotesMode?: 'auto' | 'manual';
-  // ATS rules;
-  autoSyncApplicants?: boolean;
-
-  autoUploadResumes?: boolean;
-
-export interface ProviderConnection {
-
-export interface ProviderConnection {;
-
-  providerId: IntegrationProviderId;
-  status: SyncStatus;  accessToken?: string;  refreshToken?: string;
-
-=======
   | 'workable'
-  | 'bamboohr';
+  | 'bamboohr',
+
+export type SyncStatus = 'connected' | 'warning' | 'disconnected',
 
 export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
-  name: string;
-  category: IntegrationCategory;
-  description?: string;
-  oauthScopes?: string[];
-  icon?: string;
+  id: IntegrationProviderId,
+  name: string,
+  category: IntegrationCategory,
+  description?: string,
+  oauthScopes?: string[],
+  icon?: string
 }
 
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
 export interface SyncRules {
-  // CRM rules
-  autoCreateContacts?: boolean;
-  pushNotesMode?: 'auto' | 'manual';
-  // ATS rules
-  autoSyncApplicants?: boolean;
-  autoUploadResumes?: boolean;
+  autoCreateContacts?: boolean,
+  pushNotesMode?: 'auto' | 'manual',
+  autoSyncApplicants?: boolean,
+  autoUploadResumes?: boolean,
 }
 
 export interface ProviderConnection {
-  providerId: IntegrationProviderId;
-  status: SyncStatus;
-  accessToken?: string;
-  refreshToken?: string;
->>>>>>> origin/auto/autonomy-17186719616
-  expiresAt?: number;
-  connectedAt?: number;
-  syncRules?: SyncRules;
-  lastSyncAt?: number;
-<<<<<<< HEAD
-
-
-export interface SyncLogEntry {
-
-  lastError?: string | null;
-export interface SyncLogEntry {;
-  id: string;
-  timestamp: number;
-  provider_id: IntegrationProviderId;
-  level: 'info' | 'warn' | 'error';
-  action: string;
-  details?: Record<string, any>;
-export interface ManualOverride {
-  job_id: string;
-  disableCrmSync?: boolean;
-  disableAtsSync?: boolean;
-
-
-
-
-export interface ZapierEvent {
-
-export interface ManualOverride {;
-  jobId: string;
-  disableCrmSync?: boolean;
-  disableAtsSync?: boolean;
-
-export interface ZapierEvent {;
-
-  id: string;
-  type: 'zion && zion.job.posted' | 'zion && zion.talent.matched';
-  timestamp: number;
-
-
-  payload: Record < string, any>;
-;
-
-export interface IntegrationsState {
-
-
-
-
-
-
-
-
-export interface ManualOverride {;
-  jobId: string;
-  disableCrmSync?: boolean;
-  disableAtsSync?: boolean;
-
-export interface ZapierEvent {;
-
-
-
-
-
-
-=======
-  lastError?: string | null;
+  providerId: IntegrationProviderId,
+  status: SyncStatus,
+  accessToken?: string,
+  refreshToken?: string,
+  expiresAt?: number,
+  connectedAt?: number,
+  syncRules?: SyncRules,
+  lastSyncAt?: number,
+  lastError?: string | null
 }
 
 export interface SyncLogEntry {
-  id: string;
-  timestamp: number;
-  providerId: IntegrationProviderId;
-  level: 'info' | 'warn' | 'error';
-  action: string;
-  details?: Record<string, any>;
-}
-
-export interface ManualOverride {
-  jobId: string;
-  disableCrmSync?: boolean;
-  disableAtsSync?: boolean;
-}
-
-export interface ZapierEvent {
->>>>>>> origin/auto/autonomy-17186719616
-  id: string;
-  type: 'zion.job.posted' | 'zion.talent.matched';
-  timestamp: number;
-  payload: Record<string, any>;
-<<<<<<< HEAD
-
-export interface IntegrationsState {
-
-export interface IntegrationsState {;
-  connections: ProviderConnection[];
-  logs: SyncLogEntry[];
-  overrides: ManualOverride[];
-  events: ZapierEvent[];  events: ZapierEvent[]
-}
-export interface SyncLogEntry {
-  id: string, timestamp: number,
-  providerId: IntegrationProviderId, level: 'info' | 'warn' | 'error',
+  id: string,
+  timestamp: number,
+  providerId: IntegrationProviderId,
+  level: 'info' | 'warn' | 'error',
   action: string,
-  details?: Record<string, any>
+  details?: Record<string, unknown>,
 }
 
 export interface ManualOverride {
-  jobId: string, disableCrmSync?: boolean,
+  jobId: string,
+  disableCrmSync?: boolean,
   disableAtsSync?: boolean
 }
 
 export interface ZapierEvent {
-  id: string, type: 'zion.job.posted' | 'zion.talent.matched',
+  id: string,
+  type: 'zion.job.posted' | 'zion.talent.matched',
   timestamp: number,
-  payload: Record<string, any>
+  payload: Record<string, unknown>,
 }
 
 export interface IntegrationsState {
-  connections: ProviderConnection[], logs: SyncLogEntry[],
+  connections: ProviderConnection[],
+  logs: SyncLogEntry[],
   overrides: ManualOverride[],
   events: ZapierEvent[]
 }
-}
-
-=======
-}
-
-export interface IntegrationsState {
-  connections: ProviderConnection[];
-  logs: SyncLogEntry[];
-  overrides: ManualOverride[];
-  events: ZapierEvent[];
-}
->>>>>>> origin/auto/autonomy-17186719616

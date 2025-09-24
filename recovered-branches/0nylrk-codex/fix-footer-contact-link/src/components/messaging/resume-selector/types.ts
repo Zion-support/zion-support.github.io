@@ -1,70 +1,25 @@
-
-<<<<<<< HEAD
-
-
-
-
-=======
-import { Resume } from "@/types/resume";
-
-export interface ResumeOption {
->>>>>>> origin/auto/autonomy-17186719616
-  id: string;
-  title: string;
-  type: 'ai_resume' | 'custom_upload';
-  resume?: Resume;
-<<<<<<< HEAD
-  file?: File
-}
-
-
-
-export interface ResumeSelectorProps {
-
-
-
-
-
-
 import { Resume } from "@/types/resume",
+  id: string,
+  title: string,
+  type: 'ai_resume' | 'custom_upload',
+  resume?: Resume,
+  file?: File}
+,
+export interface ResumeSelectorProps {
 export interface ResumeOption {
   id: string,
   title: string,
   type: 'ai_resume' | 'custom_upload',
   resume?: Resume,
-  file?: File
-import { Resume } from "@/types/resume",;
-export interface ResumeOption {;
-  id: string,;
-  title: string,;
-  type: 'ai_resume' | 'custom_upload';
-  resume?: Resume;
-  file?: File;
-}
-;
-
-export interface ResumeSelectorProps {;
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-  onResumeSelected: (resumeOption: ResumeOption) => void;
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-  onResumeSelected: (resumeOption: ResumeOption) => void;
-
-
-}
-=======
-  file?: File;
-}
-
+  file?: File,
+export interface ResumeOption {
+  id: string,
+  title: string,
+  type: 'ai_resume' | 'custom_upload',
+  resume?: Resume,
+  file?: File}
+,
 export interface ResumeSelectorProps {
-  onResumeSelected: (resumeOption: ResumeOption) => void;
-}
->>>>>>> origin/auto/autonomy-17186719616
+  onResumeSelected: (resumeOption: ResumeOption) => void>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
+  onResumeSelected: (resumeOption: ResumeOption) => void>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

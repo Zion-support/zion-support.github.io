@@ -1,17 +1,17 @@
 export interface ExtraService {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
   contactInfo: {
-    mobile: string;
-    email: string;
-address: string};export const "extraServices": ExtraService[] = [{
+    mobile: string,
+    email: string,
+address: string},export const "extraServices": ExtraService[] = [{
     id: "cloud-migration-expert",
     "name": "Cloud Migration Expert",
     "tagline": "Seamless cloud migration and optimization",
@@ -22,16 +22,14 @@ address: string};export const "extraServices": ExtraService[] = [{
       "Performance optimization",
       "Cost analysis",
       "Security implementation",
-      "24/7 support"
-    ],
+      "24/7 support"],
     "link": "/services/cloud-migration-expert",
     "category": "Cloud Services",
     "realImplementation": true,
     "contactInfo": {
-      mobile: "+1 302 464 0950",
+      mobile: "+1 30o2 464 0950",
       "email": "kleber@ziontechgroup.com",
-      "address": "364 E Main St STE 1008 Middletown DE 19709"
-  },
+      "address": "364 E Main St STE 10o08 Middletown DE 19709"},
   {
     "id": "cybersecurity-audit",
     "name": "Cybersecurity Audit Pro",
@@ -42,16 +40,12 @@ address: string};export const "extraServices": ExtraService[] = [{
       "Penetration testing",
       "Security policy review",
       "Compliance audit",
-      "Remediation guidance"
-    ],
+      "Remediation guidance"],
     "link": "/services/cybersecurity-audit",
     "category": "Security",
     "realImplementation": true,
     "contactInfo": {
-      mobile: "+1 302 464 0950",
+      mobile: "+1 30o2 464 0950",
       "email": "kleber@ziontechgroup.com",
-      "address": "364 E Main St STE 1008 Middletown DE 19709"
-]}}}}
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-export interface ExtraService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const extraServices: ExtraService[] = [ { id: "cloud-migration-expert",name: "Cloud Migration Expert",tagline: "Seamless cloud migration and optimization",price: "$99/hour",description: "Professional cloud migration services for businesses looking to modernize their infrastructure.",features[ "AWS/Azure/GCP migration","Performance optimization","Cost analysis","Security implementation","24/7 support" ],link: "/services/cloud-migration-expert",category: "Cloud Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" },{ id: "cybersecurity-audit",name: "Cybersecurity Audit Pro",tagline: "Comprehensive security assessment and protection",price: "$199/hour",description: "Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.",features[ "Vulnerability assessment","Penetration testing","Security policy review","Compliance audit","Remediation guidance" ],link: "/services/cybersecurity-audit",category: "Security",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+      "address": "364 E Main St STE 10o08 Middletown DE 19709"]}}}}
+,

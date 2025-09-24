@@ -2,50 +2,12 @@ name: CI
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main", "**"]
   pull_request:
-    branches:
-      - '**'
+    branches: ["main"]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Use Node.js 20.18.1
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20.18.1'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-
-      - name: Build
-        env:
-          NEXT_TELEMETRY_DISABLED: '1'
-          NODE_OPTIONS: '--max-old-space-size=4096'
-        run: npm run build
-
-      - name: Upload .next artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: next-build
-          path: .next
-name: CI
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -54,110 +16,220 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.18.1'
-          cache: 'npm'
+          node-version: '20'
+          cache: 'yarn'
 
-      - name: Install dependencies
-        run: npm ci --ignore-scripts
+      - name: Enable Corepack and Yarn 1
+        run: |
+          corepack enable
+          corepack prepare yarn@1.22.22 --activate
+          yarn -v
 
-      - name: Build
-        run: npm run build --no-audit --no-fund
+      - name: Install dependencies (root)
+        run: yarn install --frozen-lockfile --ignore-optional
 
-      - name: Upload build artifact
-        if: success()
-        uses: actions/upload-artifact@v4
-        with:
-          name: next-build
-          path: .next
+      - name: Lint (root)
+        run: yarn lint
+
+      - name: Type check (root)
+        run: yarn type-check
+
+      - name: Test (root)
+        run: |
+          yarn test --ci --reporters=default
+
+      - name: Build (root)
+        run: yarn build
+
+      - name: Install dependencies (server)
+        working-directory: server
+        run: yarn install --frozen-lockfile --ignore-optional
+
+      - name: Build (server)
+        working-directory: server
+        run: yarn build
+
 name: CI
 
 on:
   push:
-    branches: [main, develop]
+    branches:
+      - "**"
   pull_request:
-    branches: [main, develop]
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: |
+          corepack enable
+          yarn --version
+          yarn install --frozen-lockfile
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Type Check
+        run: yarn type-check
+
+      - name: Build
+        run: yarn build
+
+      - name: Test
+        run: yarn test --watchAll=false
+
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 permissions:
   contents: read
 
-concurrency:
-  group: ci-${{ github.ref }}
-  cancel-in-progress: true
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run -s lint
+
+      - name: Test
+        run: npm test --silent -- -w=1
+
+      - name: Build
+        run: npm run -s build
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  build:
-    name: Build and Test
+  build-and-test:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-    
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: '22'
+          cache: 'yarn'
 
       - name: Install dependencies
-        run: npm ci
-
-      - name: Lint code
-        run: npm run lint
-        continue-on-error: true
-
-      - name: Type check
-        run: npm run type-check
-
-      - name: Build project
-        run: npm run build
-
-      - name: Verify build output
         run: |
-          if [ ! -d dist ]; then
-            echo "Build failed: dist folder not found"
-            exit 1
-          fi
-          echo "Build completed successfully"
-          echo "Build artifacts:"
-          ls -la dist/
+          yarn install --frozen-lockfile
 
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: ci-build
-          path: dist/
-          retention-days: 30
+      - name: Lint
+        run: |
+          yarn lint
 
-  security:
-    name: Security Scan
+      - name: Test
+        run: |
+          yarn test
+
+      - name: Build
+        env:
+          NEXT_TELEMETRY_DISABLED: '1'
+        run: |
+          yarn build
+
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-    needs: build
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
     
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-          
-      - name: Install dependencies
-        run: npm ci
-        
-      - name: Run security audit
-        run: npm audit --audit-level=moderate
-        continue-on-error: true
-        
-      - name: Check for known vulnerabilities
-        run: |
-          echo "Checking for known vulnerabilities..."
-          npm audit --audit-level=moderate --json | jq -r '.metadata.vulnerabilities | to_entries[] | "- \(.key): \(.value)"' 2>/dev/null || echo "No vulnerabilities found"
+    - uses: actions/checkout@v4
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Run linter
+      run: npm run lint
+    
+    - name: Run type check
+      run: npm run type-check
+    
+    - name: Run tests
+      run: npm run test
+    
+    - name: Build application
+      run: npm run build
+    
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-files-${{ matrix.node-version }}
+        path: .next/
+        retention-days: 1
 
-
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Build application
+      run: npm run build
+    
+    - name: Deploy to production
+      run: echo "Deployment would happen here"

@@ -1,29 +1,45 @@
-import React from 'react';
-
+import React from "react",
+import { cn } from "../../lib/utils",
 interface CardProps {
-  children: React.ReactNode;
-  className?: string;
-  style?: React.CSSProperties;
-  onClick?: () => void;
-  hover?: boolean;
-}
-
-const Card: React.FC<CardProps> = ({
-  children,
-  className = '',
-  style,
-  onClick,
-  hover = true,
-}) => {
-  const baseClasses = 'bg-white border border-gray-200 rounded-xl p-6 transition-all duration-300 relative overflow-hidden';
-  const hoverClasses = hover ? 'hover:shadow-2xl hover:-translate-y-1' : '';
-  const clickableClasses = onClick ? 'cursor-pointer focus:outline-none' : '';
-  const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`;
+  children: React.ReactNode,
+  className?: string,
+  style?: React.CSSProperties}
+,
+interface CardHeaderProps {
+  children: React.ReactNode,
+  className?: string}
+,
+interface CardContentProps {
+  children: React.ReactNode,
+  className?: string}
+,
+interface CardFooterProps {
+  children: React.ReactNode,
+  className?: string}
+,
+const Card: React.FC<CardProps> = ({ children, className, style }) => {
   return (
-    <div className={classes} style={style} onClick={onClick}>
-      <div className="relative z-10">{children}</div>
-    </div>
-  );
-};
-
-export default Card;
+    <div
+      className={cn(
+        "rounded-xl border bg-white shadow-sm transition-all duration-200 hover: shadow-md",
+        className)}
+      style={style}
+    >,
+      {children}
+    </div>)},
+const CardHeader: React.FC<CardHeaderProps> = ({ children, className }) => {
+  return (
+    <div className={cn("flex flex-col space-y-1.5 p-6", className)}>,
+      {children}
+    </div>)},
+const CardContent: React.FC<CardContentProps> = ({ children, className }) => {
+  return (
+    <div className={cn("p-6 pt-0", className)}>,
+      {children}
+    </div>)},
+const CardFooter: React.FC<CardFooterProps> = ({ children, className }) => {
+  return (
+    <div className={cn("flex items-center p-6 pt-0", className)}>,
+      {children}
+    </div>)},
+export { Card, CardHeader, CardContent, CardFooter },

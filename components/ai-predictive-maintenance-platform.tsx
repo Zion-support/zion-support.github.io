@@ -1,15 +1,13 @@
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-
+import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIPredictiveMaintenancePlatform() {
 	return (
 		<ServiceLanding
-			title="AI Predictive Maintenance Platform"
-			description="Predict equipment failureschedule maintenance proactivelyand reduce downtime with sensor analytics and AI models."
-			subtitle="Reliability at lower cost"
+			title="AI Predictive Maintenance Platform",
+			description="Predict equipment failureschedule maintenance proactivelyand reduce downtime with sensor analytics and AI models.",
+			subtitle="Reliability at lower cost",
 			pricePerMonthUSD={499}
-			implementationWeeks="2-4 weeks"
-			roiNote="Cut unplanned downtime by 30–50% and maintenance costs by 10–20%"
+			implementationWeeks="2-4 weeks",
+			roiNote="Cut unplanned downtime by 30–50% and maintenance costs by 10–20%",
 			features={[
 				"Sensor ingestion and anomaly detection",
 				"Remaining useful life (RUL) predictions",
@@ -18,10 +16,7 @@ export default function AIPredictiveMaintenancePlatform() {
 				"Digital twin modeling",
 				"Edge and cloud deployment",
 				"Visualizations and alerting",
-				"APIs and event webhooks"
-			]}
+				"APIs and event webhooks"]}
 			industries={["Manufacturing"Utilities"Oil & Gas"Transportation"]}
-			canonical="https://ziontechgroup.com/ai-predictive-maintenance-platform"
-		/>
-	);
-}
+			canonical="https: //ziontechgroup.com/ai-predictive-maintenance-platform",
+		 />)}

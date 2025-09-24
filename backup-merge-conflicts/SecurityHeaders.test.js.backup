@@ -1,9 +1,0 @@
-<<<<<<< HEAD:backup-merge-conflicts/SecurityHeaders.test.js.backup
-<<<<<<< HEAD
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import SecurityHeaders from "./components/SecurityHeaders" describe("SecurityHeaders",() => {" test("renders without crashing",() => {" render(<SecurityHeaders / />) expect(screen.getByTestId("securityheaders")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<SecurityHeaders / />) }) test("handles user interactions",() => {" render(<SecurityHeaders / />) }) test("applies correct styling",() => {" render(<SecurityHeaders / />) }) })'"'"
-=======
-import _React from 'react"  import '@testing-library/jest-dom import SecurityHeaders from '../components/SecurityHeaders" describe('SecurityHeaders',() => {' test('renders without crashing',() => {' render(<SecurityHeaders / />) expect(screen.getByTestId("securityheaders")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SecurityHeaders / />) }) test('handles user interactions',() => {' render(<SecurityHeaders / />) }) test('applies correct styling',() => {' render(<SecurityHeaders / />) }) })
->>>>>>> main
-=======
-import _React from 'react"  import '@testing-library/jest-dom import SecurityHeaders from '../components/SecurityHeaders" describe('SecurityHeaders',() => {' test('renders without crashing',() => {' render(<SecurityHeaders / />) expect(screen.getByTestId("securityheaders")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SecurityHeaders / />) }) test('handles user interactions',() => {' render(<SecurityHeaders / />) }) test('applies correct styling',() => {' render(<SecurityHeaders / />) }) })
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/SecurityHeaders.test.js

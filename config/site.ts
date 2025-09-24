@@ -1,6 +1,7 @@
 export const siteConfig = {
   name: 'Zion Tech Group',
-  description: 'World\'s Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform',
+  description:,
+    "World's Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform",
   url: 'https://ziontechgroup.com',
   ogImage: 'https://ziontechgroup.com/og.jpg',
   links: {
@@ -13,7 +14,6 @@ export const siteConfig = {
     trialDays: 14,
     supportEmail: 'support@ziontechgroup.com',
     salesEmail: 'sales@ziontechgroup.com'
-  }
-} as const;
-
-export type SiteConfig = typeof siteConfig;
+  },
+} as const,
+export type SiteConfig = typeof siteConfig,
