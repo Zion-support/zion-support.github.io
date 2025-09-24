@@ -33,25 +33,21 @@ interface RevolutionaryServiceCardProps {
       mobile: string,
       email: string,
       address: string,
-      website: string,
-    };
+      website: string};
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,
     customers: number,
     rating: number,
-    reviews: number,
-  };
-  index: number,
-}
+    reviews: number};
+  index: number}
 ,
 const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ service, index }) => {
   const cardVariants ={
     hidden: {
       opacity: 0;
       y: 50;
-      scale: 0.9,
-    };
+      scale: 0.9};
     visible: {
       opacity: 1;
       y: 0;
@@ -59,16 +55,14 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
       transition: {
         duration: 0.6;
         delay: index * 0.1;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     };
     hover: {
       y: -10;
       scale: 1.0o2;
       transition: {
         duration: 0.3;
-        ease: "easeInOut" as const,
-      }
+        ease: "easeInOut" as const}
     }
   };
   const glowVariants ={
@@ -79,8 +73,7 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
       transition: {
         duration: 3;
         repeat: Infinity;
-        ease: "easeInOut" as const,
-      }
+        ease: "easeInOut" as const}
     }
   };
   const featureVariants ={
@@ -91,8 +84,7 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
       transition: {
         delay: i * 0.1;
         duration: 0.5;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     })};
   return (
     <motion.div,
@@ -247,8 +239,7 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
                 duration: 3 + i;
                 repeat: Infinity;
                 ease: "easeInOut";
-                delay: i * 0.5,
-              }}
+                delay: i * 0.5}}
              />))}
         </div>,
       </div>,

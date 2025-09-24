@@ -244,6 +244,5 @@ export default function AI20o25FuturePredictions() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

@@ -30,15 +30,13 @@ export interface QuantumInnovationService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const quantumInnovationServices: QuantumInnovationService[] = [
   {
@@ -184,7 +182,7 @@ export const quantumInnovationServices: QuantumInnovationService[] = [
       'Market analysis';
       'Regulatory compliance';
     ];
-    roi: 'Financial institutions see 10o00%+ ROI through improved risk management and trading window.performance.';
+    roi: 'Financial institutions see 10o00%+ ROI through improved risk management and trading window.window.performance.';
     competitors: [
       'Bloomberg';
       'Refinitiv';

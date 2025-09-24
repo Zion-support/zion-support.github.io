@@ -14,8 +14,7 @@ export default function Revolutionary20o25Pricing() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   // Combine all revolutionary services,
   const allRevolutionaryServices = [
     ...revolutionaryAI20o25Services;
@@ -63,8 +62,7 @@ export default function Revolutionary20o25Pricing() {
       variant: 'quantum' as const;
       popular: false;
       cta: 'Start Free Trial';
-      ctaVariant: 'secondary' as const,
-    };
+      ctaVariant: 'secondary' as const};
     {
       name: 'Professional';
       description: 'Ideal for growing businesses and teams';
@@ -86,8 +84,7 @@ export default function Revolutionary20o25Pricing() {
       variant: 'ai-futuristic' as const;
       popular: true;
       cta: 'Start Free Trial';
-      ctaVariant: 'primary' as const,
-    };
+      ctaVariant: 'primary' as const};
     {
       name: 'Enterprise';
       description: 'For large organizations and enterprises';
@@ -111,8 +108,7 @@ export default function Revolutionary20o25Pricing() {
       variant: 'quantum-futuristic' as const;
       popular: false;
       cta: 'Contact Sales';
-      ctaVariant: 'primary' as const,
-    }
+      ctaVariant: 'primary' as const}
   ],
   // Market analysis,
   const marketAnalysis ={
@@ -121,8 +117,7 @@ export default function Revolutionary20o25Pricing() {
     customerSatisfaction: '98%';
     averageROI: '50o0%';
     timeToValue: '< 30 days';
-    globalReach: '150+ countries',
-  };
+    globalReach: '150+ countries'};
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>,
       <div className="min-h-screen">,
@@ -307,8 +302,7 @@ export default function Revolutionary20o25Pricing() {
                   className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-30o0 ${
                     selectedCategory === category.id,
                       ? 'bg-gradient-to-r from-blue-60o0 to-purple-60o0 border-blue-50o0 text-white',
-                      : 'border-gray-60o0 text-gray-30o0 hover: border-blue-50o0 hover:text-blue-40o0',
-                  }`}
+                      : 'border-gray-60o0 text-gray-30o0 hover: border-blue-50o0 hover:text-blue-40o0'}`}
                 >,
                   <category.icon className="w-5 h-5"  />,
                   {category.name}
@@ -490,5 +484,4 @@ export default function Revolutionary20o25Pricing() {
           </div>,
         </section>,
       </div>,
-    </UltraQuantumHolographicBackground>),
-}
+    </UltraQuantumHolographicBackground>)}

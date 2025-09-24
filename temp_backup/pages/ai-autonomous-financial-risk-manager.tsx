@@ -20,6 +20,5 @@ export default function AiAutonomousFinancialRiskManagerPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -14,6 +14,5 @@ const EnhancedContentPromotionBanner = () => {
           Learn More,
         </Link>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default EnhancedContentPromotionBanner;

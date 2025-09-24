@@ -50,6 +50,5 @@ export default function Dashboard() {
           </div>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

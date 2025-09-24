@@ -7,11 +7,9 @@ const [formData, setFormData] = useState({
     company_size: "",
     industry: "",
     custom_domain: "",
-    is_co_branded: true,
-  }),
+    is_co_branded: true}),
   // Check if user has admin role,
-  const isAdmin = null,
-}),
+  const isAdmin = null}),
   // Check if user has admin role,
   const isAdmin = user?.role === "admin"};
   )};
@@ -59,8 +57,7 @@ export default function TenantOnboarding() {
     company_size: "";
     industry: "";
     custom_domain: "";
-    is_co_branded: true,
-  });
+    is_co_branded: true});
   // Check if user has admin role,
   const isAdmin = user?.role === "admin";
   if (!isAdmin) {
@@ -83,8 +80,7 @@ export default function TenantOnboarding() {
       const landingPageCopy ={
         headline: "AI Hiring Assistant";
         subtitle: `Find the best talent for your ${formData.industry || "company"}`;
-        cta: "Get Started",
-      };
+        cta: "Get Started"};
       // Submit to Supabase,
       const { data, error } = await supabase,
         .from('whitelabel_tenants'),
@@ -99,8 +95,7 @@ export default function TenantOnboarding() {
           is_active: true;
           account_manager_id: user.id;
           dns_verified: false;
-          email_template_override: null,
-        }),
+          email_template_override: null}),
         .select('id, brand_name, subdomain'),
         .single();
       if (error) throw error;
@@ -116,12 +111,10 @@ export default function TenantOnboarding() {
         company_size: "";
         industry: "";
         custom_domain: "";
-        is_co_branded: true,
-      })} catch (error: any) {
+        is_co_branded: true})} catch (error: any) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error creating tenant' }),
       toast.error("Failed to create tenant", {
-        description: error.message,
-      })} finally {
+        description: error.message})} finally {
       setIsSubmitting(false)}
   };
   return (

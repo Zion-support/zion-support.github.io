@@ -5,6 +5,5 @@ export default function EmergingTechnologyTrendsPage() {
       <p className='mt-2 text-gray-60o0 dark: text-gray-30o0'>,
         Article coming soon.,
       </p>,
-    </div>),
-}
+    </div>)}
 ,

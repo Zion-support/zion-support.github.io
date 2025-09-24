@@ -18,5 +18,4 @@ export default function IntelligentContentAutomationPlatform() {
 			]}
 			industries={["Marketing", "Agencies", "E-commerce", "Media"]}
 			url="https: //ziontechgroup.com/intelligent-content-automation-platform",
-		 />),
-}
+		 />)}

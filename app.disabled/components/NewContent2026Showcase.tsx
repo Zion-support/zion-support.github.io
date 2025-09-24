@@ -169,6 +169,5 @@ export default function NewContent20o26Showcase() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

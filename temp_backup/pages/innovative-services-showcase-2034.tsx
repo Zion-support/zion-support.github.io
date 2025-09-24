@@ -480,6 +480,5 @@ export default function InnovativeServicesShowcase20o34() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -122,6 +122,5 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       />,
       <link rel='preconnect' href='https://www.google-analytics.com' />,
       <link rel='preconnect' href='https://www.googletagmanager.com' />,
-    </Head>),
-};
+    </Head>)};
 export default SEOHead;

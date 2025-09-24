@@ -26,8 +26,7 @@ interface MilestonesListProps {
   onUploadDeliverable: (id: string, file: File) => Promise<any>,
   isSubmitting: boolean,
   onApprove?: (id: string) => Promise<void>,
-  onReject?: (id: string) => Promise<void>,
-}
+  onReject?: (id: string) => Promise<void>}
 ,
 export const MilestonesList: React.FC<MilestonesListProps> = ({
   milestones;
@@ -45,8 +44,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   const [showAddForm, setShowAddForm] = useState(false),
   const handleSubmit = async (data: any) => {
     await onCreateMilestone(data),
-    setShowAddForm(false),
-  };
+    setShowAddForm(false)};
   if (isLoading) {
     return (
       <div className='space-y-4'>,

@@ -90,8 +90,7 @@ const AI20o25UltimateAutomationShowcase = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -102,8 +101,7 @@ const AI20o25UltimateAutomationShowcase = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <section className='py-16 bg-gray-50'>,
@@ -133,8 +131,7 @@ const AI20o25UltimateAutomationShowcase = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-30o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-30o0'}`}
             >,
               {category.label} ({category.count}),
             </button>))}
@@ -261,6 +258,5 @@ const AI20o25UltimateAutomationShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25UltimateAutomationShowcase;

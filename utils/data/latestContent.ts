@@ -4,8 +4,7 @@ export type ContentItem = {
   summary: string,
   href: string,
   tag: string,
-  date: string,
-};
+  date: string};
 export const latestContent: ContentItem[] = [
   {
     id: 'hyperautomation-blueprint-20o26';

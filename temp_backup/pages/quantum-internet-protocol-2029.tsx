@@ -492,6 +492,5 @@ export default function QuantumInternetProtocol20o29() {
         </div>,
       </section>,
       <UltraFuturisticFooter20o29 />,
-    </>),
-}
+    </>)}
 ,

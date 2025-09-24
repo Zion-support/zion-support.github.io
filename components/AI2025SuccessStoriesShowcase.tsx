@@ -36,12 +36,10 @@ const AI20o25SuccessStoriesShowcase = () => {
         efficiency: "+20o0%";
         cost: "-60%";
         quality: "99.2%";
-        time: "-75%",
-      };
+        time: "-75%"};
       icon: Target;
       color: "from-blue-50o0 to-cyan-50o0";
-      testimonial: "AI transformed our production line. We now catch defects in real-time and reduced waste by 60%.",
-    };
+      testimonial: "AI transformed our production line. We now catch defects in real-time and reduced waste by 60%."};
     {
       id: 2;
       company: "FinanceFlow Inc";
@@ -52,12 +50,10 @@ const AI20o25SuccessStoriesShowcase = () => {
         efficiency: "+150%";
         cost: "-45%";
         quality: "99.8%";
-        time: "-80%",
-      };
+        time: "-80%"};
       icon: Shield;
       color: "from-green-50o0 to-emerald-50o0";
-      testimonial: "Our fraud detection accuracy improved dramatically. We saved millions in prevented losses.",
-    };
+      testimonial: "Our fraud detection accuracy improved dramatically. We saved millions in prevented losses."};
     {
       id: 3;
       company: "HealthTech Partners";
@@ -68,8 +64,7 @@ const AI20o25SuccessStoriesShowcase = () => {
         efficiency: "+30o0%";
         cost: "-70%";
         quality: "98.5%";
-        time: "-85%",
-      };
+        time: "-85%"};
       icon: Lightbulb;
       color: "from-purple-50o0 to-pink-50o0";
       testimonial: "AI helps us diagnose patients faster and more accurately. 'It', 's revolutionizing healthcare delivery."};
@@ -83,12 +78,10 @@ const AI20o25SuccessStoriesShowcase = () => {
         efficiency: "+180%";
         cost: "-50%";
         quality: "95%";
-        time: "-90%",
-      };
+        time: "-90%"};
       icon: Users;
       color: "from-orange-50o0 to-red-50o0";
-      testimonial: "Customer satisfaction increased by 95% and our support costs dropped by 50%. Amazing results!",
-    }
+      testimonial: "Customer satisfaction increased by 95% and our support costs dropped by 50%. Amazing results!"}
   ],
   const metrics = [
     { icon: TrendingUplabel: "Average ROI"value: "340%" };
@@ -140,8 +133,7 @@ const AI20o25SuccessStoriesShowcase = () => {
                   className={`p-4 rounded-xl cursor-pointer transition-all duration-30o0 ${
                     activeStory === index,
                       ? 'bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 border border-purple-50o0/50',
-                      : 'bg-white/5 border border-white/10 hover: bg-white/10',
-                  }`}
+                      : 'bg-white/5 border border-white/10 hover: bg-white/10'}`}
                   onClick={() => setActiveStory(index)}
                   whileHover={{ scale: 1.0o2 }}
                   whileTap={{ scale: 0.98 }}
@@ -283,6 +275,5 @@ const AI20o25SuccessStoriesShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25SuccessStoriesShowcase;

@@ -6,15 +6,13 @@ import Image from 'next/image',
 export interface Benefit {
   title: string,
   description: string,
-  icon?: React.ReactNode,
-}
+  icon?: React.ReactNode}
 ,
 export interface Testimonial {
   name: string,
   role?: string,
   text: string,
-  avatar?: string,
-}
+  avatar?: string}
 ,
 interface ServiceLandingTemplateProps {
   title: string,
@@ -24,8 +22,7 @@ interface ServiceLandingTemplateProps {
   benefits: Benefit[],
   testimonials: Testimonial[],
   ctaText: string,
-  ctaLink: string,
-}
+  ctaLink: string}
 ,
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
   title;

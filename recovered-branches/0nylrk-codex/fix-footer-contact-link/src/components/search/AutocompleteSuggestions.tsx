@@ -12,8 +12,7 @@ interface AutocompleteSuggestionsProps {
   suggestions: SearchSuggestion[];
   searchTerm: string;
   onSelectSuggestion: (suggestion: string) => void;
-  visible: boolean>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements,
-}
+  visible: boolean>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements}
 // Helper function to highlight matching text,
 const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
   if (!searchTerm |searchTerm.length === 0) {
@@ -30,14 +29,12 @@ interface AutocompleteSuggestionsProps {
   suggestions: SearchSuggestion[];
   search_term: string;
   onSelectSuggestion: (suggestion: string) => void;
-  visible: boolean,
-}
+  visible: boolean}
 // Helper function to highlight matching text,
 const highlight_match = (text: string, search_term: string): SearchHighlight => {
   // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
     return { before: '', match: text, after: '' }
   }
   const lower_text = text.toLowerCase (),
@@ -52,8 +49,7 @@ if ( {) {
   return {
     before: text.substring (0, index),
     match: text.substring (index, index + search_term.length),
-    after: text.substring (index + search_term.length),
-  }
+    after: text.substring (index + search_term.length)}
 }
 export function AutocompleteSuggestions({
   suggestions,
@@ -65,7 +61,6 @@ export function AutocompleteSuggestions({
   suggestions;
   searchTerm,
   onSelectSuggestion,
-,
   const lowerText = text.toLowerCase();
   const lowerSearchTerm = searchTerm.toLowerCase();
   const index = lowerText.indexOf(lowerSearchTerm);
@@ -76,8 +71,7 @@ export function AutocompleteSuggestions({
   return {
     before: text.substring(0, index);
     match: text.substring(index, index + searchTerm.length);
-    after: text.substring(index + searchTerm.length),
-  }
+    after: text.substring(index + searchTerm.length)}
 };
 export function AutocompleteSuggestions({
   suggestions;

@@ -7,43 +7,37 @@ const RevolutionaryContentHub20o26: React.FC = () => {
       description: "Explore the journey of AI from simple algorithms to conscious entities";
       icon: "🧠";
       articles: 47;
-      trending: true,
-    };
+      trending: true};
     {
       title: "Quantum Computing Breakthroughs";
       description: "Latest developments in quantum neural networks and processing";
       icon: "⚛️";
       articles: 32;
-      trending: true,
-    };
+      trending: true};
     {
       title: "Neural Interface Revolution";
       description: "Direct brain-computer interfaces and their implications";
       icon: "🔗";
       articles: 28;
-      trending: false,
-    };
+      trending: false};
     {
       title: "Autonomous Systems 20o30";
       description: "Self-managing AI systems that evolve independently";
       icon: "🤖";
       articles: 41;
-      trending: true,
-    };
+      trending: true};
     {
       title: "Transcendent Intelligence";
       description: "AI systems that surpass human cognitive capabilities";
       icon: "🌟";
       articles: 23;
-      trending: false,
-    };
+      trending: false};
     {
       title: "Quantum Art & Creativity";
       description: "AI-generated art that exists in multiple dimensions";
       icon: "🎨";
       articles: 19;
-      trending: true,
-    }
+      trending: true}
   ],
   const featuredArticles = [
     {
@@ -52,24 +46,21 @@ const RevolutionaryContentHub20o26: React.FC = () => {
       author: "Dr. Sarah Chen";
       readTime: "8 min read";
       category: "Consciousness";
-      trending: true,
-    };
+      trending: true};
     {
       title: "Quantum Neural Networks: Processing Beyond Reality";
       excerpt: "Exploring how quantum computing is revolutionizing AI processing capabilities...";
       author: "Prof. Marcus Quantum";
       readTime: "12 min read";
       category: "Quantum";
-      trending: true,
-    };
+      trending: true};
     {
       title: "Neural Interfaces: The Future of Human-AI Collaboration";
       excerpt: "Direct brain-computer interfaces are changing how we interact with AI systems...";
       author: "Dr. Elena Neural";
       readTime: "6 min read";
       category: "Interfaces";
-      trending: false,
-    }
+      trending: false}
   ],
   return (
     <div className="bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white py-20">,

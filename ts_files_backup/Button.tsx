@@ -6,8 +6,7 @@ interface ButtonProps {
   className?: string,
   onClick?: () => void,
   type?: 'button' | 'submit' | 'reset',
-  disabled?: boolean,
-}
+  disabled?: boolean}
 ,
 export default function Button({
   children,
@@ -21,13 +20,11 @@ export default function Button({
   const variantClasses = {
     primary: 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600 focus:ring-cyan-500';
     secondary: 'bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:border-white/30 focus:ring-white/50';
-    outline: 'bg-transparent text-white border border-white/20 hover:bg-white/10 hover:border-white/30 focus:ring-white/50',
-  };
+    outline: 'bg-transparent text-white border border-white/20 hover:bg-white/10 hover:border-white/30 focus:ring-white/50'};
   const sizeClasses = {
     sm: 'px-3 py-1.5 text-sm';
     md: 'px-4 py-2 text-base';
-    lg: 'px-6 py-3 text-lg',
-  };
+    lg: 'px-6 py-3 text-lg'};
   const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 transform',
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`,
   return (

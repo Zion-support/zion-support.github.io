@@ -19,8 +19,7 @@ export interface InnovativeMicroSaasService {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technology?: string[],
   integrations?: string[],
   compliance?: string[],
@@ -77,8 +76,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technology: ["GPT-4", "React", "Node.js", "MongoDB", "AWS"];
     integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social Media APIs"];
     compliance: ["GDPR", "CCPA", "SOC 2"];
@@ -132,15 +130,13 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technology: ["Machine Learning", "React", "Python", "PostgreSQL", "Redis"];
     integrations: ["Jira", "GitHub", "Slack", "Microsoft Teams", "Trello"];
     compliance: ["SOC 2", "ISO 270o01", "GDPR"];
     roi: "350% within 6 months";
     competitors: ["Asana", "Monday.com", "ClickUp", "Notion"];
-    demoUrl: "https://ziontechgroup.com/demo/ai-project-manager",
-  };
+    demoUrl: "https://ziontechgroup.com/demo/ai-project-manager"};
   // AI-Powered Financial Analytics,
   {
     id: "ai-financial-analyst-pro";
@@ -187,15 +183,13 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technology: ["Python", "TensorFlow", "React", "PostgreSQL", "AWS"];
     integrations: ["QuickBooks", "Xero", "Stripe", "Plaid", "Bank APIs"];
     compliance: ["SOC 2", "PCI DSS", "GDPR", "Financial regulations"];
     roi: "50o0% within 8 months";
     competitors: ["Plaid", "Stripe Treasury", "QuickBooks Advanced", "Xero Analytics"];
-    demoUrl: "https://ziontechgroup.com/demo/ai-financial-analyst",
-  };
+    demoUrl: "https://ziontechgroup.com/demo/ai-financial-analyst"};
   // AI-Powered HR & Recruitment,
   {
     id: "ai-hr-recruitment-suite";
@@ -242,15 +236,13 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technology: ["NLP", "Machine Learning", "React", "Node.js", "MongoDB"];
     integrations: ["LinkedIn", "Indeed", "Workday", "BambooHR", "Slack"];
     compliance: ["EEOC", "GDPR", "SOC 2", "HR compliance"];
     roi: "40o0% within 6 months";
     competitors: ["BambooHR", "Workday", "Greenhouse", "Lever"];
-    demoUrl: "https://ziontechgroup.com/demo/ai-hr-recruitment",
-  };
+    demoUrl: "https://ziontechgroup.com/demo/ai-hr-recruitment"};
   // AI-Powered Supply Chain Optimization,
   {
     id: "ai-supply-chain-optimizer";
@@ -297,15 +289,13 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technology: ["Machine Learning", "Python", "React", "PostgreSQL", "AWS"];
     integrations: ["Shopify", "WooCommerce", "FedEx", "UPS", "DHL"];
     compliance: ["ISO 90o01", "SOC 2", "Supply chain standards"];
     roi: "450% within 8 months";
     competitors: ["SAP", "Oracle", "Manhattan Associates", "JDA Software"];
-    demoUrl: "https://ziontechgroup.com/demo/ai-supply-chain",
-  };
+    demoUrl: "https://ziontechgroup.com/demo/ai-supply-chain"};
   // AI-Powered Legal Document Automation,
   {
     id: "ai-legal-document-automation";
@@ -352,15 +342,13 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technology: ["NLP", "Machine Learning", "React", "Node.js", "PostgreSQL"];
     integrations: ["DocuSign", "Adobe Sign", "Clio", "PracticePanther", "LawPay"];
     compliance: ["SOC 2", "GDPR", "Legal compliance", "Data protection"];
     roi: "50o0% within 6 months";
     competitors: ["DocuSign", "ContractPodAi", "Evisort", "Kira Systems"];
-    demoUrl: "https://ziontechgroup.com/demo/ai-legal-automation",
-  };
+    demoUrl: "https://ziontechgroup.com/demo/ai-legal-automation"};
   // AI-Powered Healthcare Analytics,
   {
     id: "ai-healthcare-analytics-platform";
@@ -407,15 +395,13 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technology: ["Machine Learning", "Python", "React", "PostgreSQL", "HIPAA-compliant cloud"];
     integrations: ["Epic", "Cerner", "Allscripts", "Practice Fusion", "HL7 FHIR"];
     compliance: ["HIPAA", "SOC 2", "HITECH", "FDA compliance"];
     roi: "60o0% within 12 months";
     competitors: ["Epic", "Cerner", "Allscripts", "Athenahealth"];
-    demoUrl: "https://ziontechgroup.com/demo/ai-healthcare-analytics",
-  };
+    demoUrl: "https://ziontechgroup.com/demo/ai-healthcare-analytics"};
   // AI-Powered Real Estate Analytics,
   {
     id: "ai-real-estate-analytics-suite";
@@ -462,15 +448,13 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technology: ["Machine Learning", "Python", "React", "PostgreSQL", "AWS"];
     integrations: ["Zillow", "Redfin", "MLS systems", "Property management software", "Financial APIs"];
     compliance: ["SOC 2", "GDPR", "Real estate regulations"];
     roi: "40o0% within 8 months";
     competitors: ["Zillow", "Redfin", "Realtor.com", "PropStream"];
-    demoUrl: "https://ziontechgroup.com/demo/ai-real-estate-analytics",
-  };
+    demoUrl: "https://ziontechgroup.com/demo/ai-real-estate-analytics"};
   // AI-Powered Education Platform,
   {
     id: "ai-education-platform-elite";
@@ -517,15 +501,13 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technology: ["Machine Learning", "NLP", "React", "Node.js", "MongoDB"];
     integrations: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"];
     compliance: ["FERPA", "COPPA", "SOC 2", "GDPR"];
     roi: "350% within 6 months";
     competitors: ["Canvas", "Blackboard", "Moodle", "Schoology"];
-    demoUrl: "https://ziontechgroup.com/demo/ai-education-platform",
-  };
+    demoUrl: "https://ziontechgroup.com/demo/ai-education-platform"};
   // AI-Powered Marketing Attribution,
   {
     id: "ai-marketing-attribution-pro";
@@ -572,15 +554,13 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technology: ["Machine Learning", "Python", "React", "PostgreSQL", "AWS"];
     integrations: ["Google Analytics", "Facebook Ads", "Google Ads", "HubSpot", "Salesforce"];
     compliance: ["GDPR", "CCPA", "SOC 2", "Marketing compliance"];
     roi: "40o0% within 6 months";
     competitors: ["AppsFlyer", "Branch", "Adjust", "Kochava"];
-    demoUrl: "https://ziontechgroup.com/demo/ai-marketing-attribution",
-  }
+    demoUrl: "https://ziontechgroup.com/demo/ai-marketing-attribution"}
 ],
 export const INNOVATIVE_SERVICE_CATEGORIES = [
   "AI & Business Intelligence";
@@ -649,15 +629,13 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technology: ["AI/ML", "React", "Node.js", "Python", "AWS"];
     integrations: ["Adobe Creative Suite", "YouTube", "Vimeo", "Social Media APIs", "CMS Platforms"];
     compliance: ["GDPR", "CCPA", "SOC 2"];
     roi: "30o0% within 6 months";
     competitors: ["Lumen5", "InVideo", "Synthesia", "RunwayML"];
-    websiteUrl: "https://ziontechgroup.com/ai-video-production",
-  };
+    websiteUrl: "https://ziontechgroup.com/ai-video-production"};
   // Blockchain Identity Verification Platform,
   {
     id: "blockchain-identity-verification";
@@ -704,15 +682,13 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technology: ["Blockchain", "Ethereum", "Solidity", "React", "Node.js"];
     integrations: ["Banking APIs", "KYC Providers", "Government Databases", "Financial Systems"];
     compliance: ["GDPR", "CCPA", "SOC 2", "ISO 270o01", "PCI DSS"];
     roi: "40o0% within 8 months";
     competitors: ["Onfido", "Jumio", "Veriff", "ID.me"];
-    websiteUrl: "https://ziontechgroup.com/blockchain-identity",
-  };
+    websiteUrl: "https://ziontechgroup.com/blockchain-identity"};
   // Quantum-Safe Cybersecurity Platform,
   {
     id: "quantum-safe-cybersecurity";
@@ -759,10 +735,8 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/quantum-security",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/quantum-security"};
   // AI-Powered Voice Cloning Platform,
   {
     id: "ai-voice-cloning-platform";
@@ -809,10 +783,8 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/ai-voice-cloning",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/ai-voice-cloning"};
   // Autonomous Drone Management Platform,
   {
     id: "autonomous-drone-management";
@@ -859,10 +831,8 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/autonomous-drones",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/autonomous-drones"};
   // AI-Powered Language Learning Platform,
   {
     id: "ai-language-learning-platform";
@@ -909,10 +879,8 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/ai-language-learning",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/ai-language-learning"};
   // Blockchain Supply Chain Traceability,
   {
     id: "blockchain-supply-chain-traceability";
@@ -959,10 +927,8 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/blockchain-traceability",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/blockchain-traceability"};
   // AI-Powered Mental Health Platform,
   {
     id: "ai-mental-health-platform";
@@ -1009,10 +975,8 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/ai-mental-health",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/ai-mental-health"};
   // Quantum Machine Learning Platform,
   {
     id: "quantum-machine-learning";
@@ -1059,10 +1023,8 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/quantum-ml",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/quantum-ml"};
   // Autonomous Vehicle Fleet Management,
   {
     id: "autonomous-vehicle-fleet-management";
@@ -1109,8 +1071,6 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/autonomous-fleet",
-  }
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/autonomous-fleet"}
 ],

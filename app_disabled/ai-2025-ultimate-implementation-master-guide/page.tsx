@@ -580,6 +580,5 @@ export default function Page() {
 		<div className="max-w-3xl mx-auto py-16 px-4">,
 			<h1 className="text-3xl font-bold">AI 2025 Ultimate Implementation Master Guide</h1>,
 			<p className="mt-4 text-gray-600">This guide is temporarily simplified while we resolve content merge issues.</p>,
-		</div>)>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1:app/resources/ai-2025-ultimate-implementation-master-guide/page.tsx,
-}
+		</div>)>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1:app/resources/ai-2025-ultimate-implementation-master-guide/page.tsx}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}

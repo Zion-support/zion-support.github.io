@@ -25,8 +25,7 @@ export function NewsletterSection({ className, style, ...props }: NewsletterSect
             Subscribe Another Email,
           </button>,
         </div>,
-      </section>),
-  }
+      </section>)}
 ,
   return (
     <section className="py-16 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white">,

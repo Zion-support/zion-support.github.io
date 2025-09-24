@@ -15,6 +15,5 @@ export default function AiContentSeoSuitePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

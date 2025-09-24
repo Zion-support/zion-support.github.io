@@ -10,8 +10,7 @@ interface AccessibilitySettings {
   screenReader: boolean,
   keyboardNavigation: boolean,
   focusIndicators: boolean,
-  colorBlindMode: boolean,
-}
+  colorBlindMode: boolean}
 ,
 interface AccessibilityIssue {
   id: string,
@@ -19,8 +18,7 @@ interface AccessibilityIssue {
   message: string,
   element?: string,
   fix: string,
-  priority: 'high' | 'medium' | 'low',
-}
+  priority: 'high' | 'medium' | 'low'}
 ,
 const EnhancedAccessibilityEnhancer: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
@@ -32,8 +30,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
     screenReader: false;
     keyboardNavigation: false;
     focusIndicators: true;
-    colorBlindMode: false,
-  }),
+    colorBlindMode: false}),
   const [issues, setIssues] = useState<AccessibilityIssue[]>([]),
   const [isScanning, setIsScanning] = useState(false),
   const [scanProgress, setScanProgress] = useState(0),
@@ -85,8 +82,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
           message: 'Image missing alt text';
           element: img.tagName.toLowerCase();
           fix: 'Add descriptive alt text or aria-label';
-          priority: 'high',
-        })}
+          priority: 'high'})}
     }),
     // Check for form labels,
     const inputs = document.querySelectorAll('input, select, textarea'),
@@ -100,8 +96,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
           message: 'Form control missing label';
           element: input.tagName.toLowerCase();
           fix: 'Add label or aria-label attribute';
-          priority: 'medium',
-        })}
+          priority: 'medium'})}
     }),
     // Check for heading structure,
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6'),
@@ -115,8 +110,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
           message: 'Heading level skipped';
           element: heading.tagName.toLowerCase();
           fix: 'Use proper heading hierarchy (h1 → h2 → h3)';
-          priority: 'medium',
-        })}
+          priority: 'medium'})}
       previousLevel = level}),
     // Check for color contrast (simplified),
     const textElements = document.querySelectorAll('p, span, div'),
@@ -132,8 +126,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
           message: 'Poor color contrast detected';
           element: element.tagName.toLowerCase();
           fix: 'Ensure sufficient contrast between text and background';
-          priority: 'high',
-        })}
+          priority: 'high'})}
     }),
     setIssues(newIssues),
     setIsScanning(false)}, []),
@@ -215,8 +208,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
   const handleKeyNavigation = useCallback((e: KeyboardEvent) => {
     if (e.key === 'Tab') {
       // Add visual focus indicators,
-      document.body.classList.add('keyboard-navigation'),
-    }
+      document.body.classList.add('keyboard-navigation')}
   }, []),
   useEffect(() => {
     document.addEventListener('keydown', handleKeyNavigation),
@@ -244,23 +236,19 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
     {
       label: 'Increase Font Size';
       action: () => updateSetting('fontSize', Math.min(settings.fontSize + 2, 24));
-      icon: <ZoomIn className="w-4 h-4"  />,
-    };
+      icon: <ZoomIn className="w-4 h-4"  />};
     {
       label: 'Decrease Font Size';
       action: () => updateSetting('fontSize', Math.max(settings.fontSize - 2, 12));
-      icon: <ZoomOut className="w-4 h-4"  />,
-    };
+      icon: <ZoomOut className="w-4 h-4"  />};
     {
       label: 'Toggle High Contrast';
       action: () => updateSetting('highContrast', !settings.highContrast);
-      icon: <Contrast className="w-4 h-4"  />,
-    };
+      icon: <Contrast className="w-4 h-4"  />};
     {
       label: 'Toggle Reduced Motion';
       action: () => updateSetting('reducedMotion', !settings.reducedMotion);
-      icon: <Settings className="w-4 h-4"  />,
-    }
+      icon: <Settings className="w-4 h-4"  />}
   ],
   if (!isVisible) return null,
   return (

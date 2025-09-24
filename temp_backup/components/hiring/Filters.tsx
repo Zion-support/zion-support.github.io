@@ -4,8 +4,7 @@ import type {
 } from '../../utils/types/hiring',
 type Props = {
   filters: ApplicationFilters,
-  onChange: (next: ApplicationFilters) => void,
-};
+  onChange: (next: ApplicationFilters) => void};
 const STATUSES: (CandidateStatus | 'all')[] = [
   'all';
   'applied';

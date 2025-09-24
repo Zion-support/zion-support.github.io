@@ -36,8 +36,7 @@ export interface InnovativeMicroSaasService20o29V2 {
     mobile: string,
     email: string,
     website: string,
-    address: string,
-  };
+    address: string};
 }
 export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] =,
   [

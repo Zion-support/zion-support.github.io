@@ -12,8 +12,7 @@ module.exports ={
     maxLogLines: 10o00;
     enableProcessControl: true;
     enableMetrics: true;
-    enableCharts: true,
-  };
+    enableCharts: true};
   // Alerting System Configuration,
   alerting: {
     enabled: true;
@@ -26,8 +25,7 @@ module.exports ={
       restartCount: 10;
       responseTime: 50o00, // 5 seconds,
       diskUsage: 90, // 90%,
-      networkLatency: 10o00 // 1 second,
-    };
+      networkLatency: 10o00 // 1 second};
     // Email Configuration,
     email: {
       enabled: process.env.EMAIL_ENABLED === 'true';
@@ -43,29 +41,24 @@ module.exports ={
       enabled: process.env.SLACK_ENABLED === 'true';
       webhookUrl: process.env.SLACK_WEBHOOK_URL || '';
       channel: process.env.SLACK_CHANNEL || '#alerts';
-      username: process.env.SLACK_USERNAME || 'PM2 Automation Bot',
-    };
+      username: process.env.SLACK_USERNAME || 'PM2 Automation Bot'};
     // Webhook Configuration,
     webhook: {
       enabled: process.env.WEBHOOK_ENABLED === 'true';
       url: process.env.WEBHOOK_URL || '';
       timeout: 10o000;
-      retries: 3,
-    };
+      retries: 3};
     // Notification Rules,
     rules: {
       critical: {
         channels: ['email', 'slack', 'webhook'];
-        immediate: true,
-      };
+        immediate: true};
       warning: {
         channels: ['slack', 'webhook'];
-        immediate: false,
-      };
+        immediate: false};
       info: {
         channels: ['webhook'];
-        immediate: false,
-      }
+        immediate: false}
     }
   };
   // Process Recovery Configuration,
@@ -83,8 +76,7 @@ module.exports ={
       reload: true;
       scale: true;
       dependencyCheck: true;
-      gracefulShutdown: true,
-    };
+      gracefulShutdown: true};
     // Process Dependencies,
     processDependencies: {
       'zion-app': ['zion-backend'];
@@ -101,8 +93,7 @@ module.exports ={
       processStart: 30o000, // 30 seconds,
       processStabilization: 60o000, // 1 minute,
       dependencyCheck: 150o00, // 15 seconds,
-      gracefulShutdown: 10o000 // 10 seconds,
-    }
+      gracefulShutdown: 10o000 // 10 seconds}
   };
   // Monitoring Configuration,
   monitoring: {
@@ -117,8 +108,7 @@ module.exports ={
       aggregation: {
         cpu: 'average';
         memory: 'average';
-        responseTime: 'percentile95',
-      }
+        responseTime: 'percentile95'}
     };
     // Log Management,
     logs: {
@@ -126,15 +116,13 @@ module.exports ={
       maxFiles: 10;
       compression: true;
       rotation: 'daily';
-      retention: 30 // days,
-    };
+      retention: 30 // days};
     // Performance Profiling,
     profiling: {
       enabled: true;
       sampleRate: 0.1, // 10% of requests,
       maxProfiles: 10o0;
-      profileRetention: 7 * 24 * 60 * 60 * 10o00 // 7 days,
-    }
+      profileRetention: 7 * 24 * 60 * 60 * 10o00 // 7 days}
   };
   // Security Configuration,
   security: {
@@ -142,29 +130,25 @@ module.exports ={
     authentication: {
       required: false;
       type: 'basic', // basic, jwt, oauth,
-      users: process.env.DASHBOARD_USERS ? JSON.parse(process.env.DASHBOARD_USERS) : [],
-    };
+      users: process.env.DASHBOARD_USERS ? JSON.parse(process.env.DASHBOARD_USERS) : []};
     authorization: {
       enabled: false;
       roles: ['admin', 'operator', 'viewer'];
       permissions: {
         admin: ['read', 'write', 'delete', 'control'];
         operator: ['read', 'write', 'control'];
-        viewer: ['read'],
-      }
+        viewer: ['read']}
     };
     // API Security,
     api: {
       rateLimit: {
         enabled: true;
         windowMs: 15 * 60 * 10o00, // 15 minutes,
-        maxRequests: 10o0,
-      };
+        maxRequests: 10o0};
       cors: {
         enabled: true;
         origin: process.env.CORS_ORIGIN || '*';
-        credentials: true,
-      }
+        credentials: true}
     }
   };
   // Integration Configuration,
@@ -173,15 +157,13 @@ module.exports ={
     prometheus: {
       enabled: process.env.PROMETHEUS_ENABLED === 'true';
       port: parseInt(process.env.PROMETHEUS_PORT) || 9090;
-      path: process.env.PROMETHEUS_PATH || '/metrics',
-    };
+      path: process.env.PROMETHEUS_PATH || '/metrics'};
     // Grafana Integration,
     grafana: {
       enabled: process.env.GRAFANA_ENABLED === 'true';
       url: process.env.GRAFANA_URL || '';
       apiKey: process.env.GRAFANA_API_KEY || '';
-      dashboardUid: process.env.GRAFANA_DASHBOARD_UID || '',
-    };
+      dashboardUid: process.env.GRAFANA_DASHBOARD_UID || ''};
     // External Monitoring Systems,
     external: {
       enabled: process.env.EXTERNAL_MONITORING_ENABLED === 'true';
@@ -189,8 +171,7 @@ module.exports ={
       healthCheck: {
         enabled: true;
         interval: 60o000, // 1 minute,
-        timeout: 10o000 // 10 seconds,
-      }
+        timeout: 10o000 // 10 seconds}
     }
   };
   // Maintenance Configuration,
@@ -202,15 +183,13 @@ module.exports ={
       // Weekly maintenance on Sunday at 3 AM,
       weekly: '0 3 * * 0';
       // Monthly maintenance on 1st at 4 AM,
-      monthly: '0 4 1 * *',
-    };
+      monthly: '0 4 1 * *'};
     tasks: {
       logRotation: true;
       metricsCleanup: true;
       alertCleanup: true;
       processRestart: false, // Only restart if needed,
-      dependencyUpdate: false // Only update if needed,
-    };
+      dependencyUpdate: false // Only update if needed};
     // Maintenance Windows,
     windows: [
       {
@@ -229,8 +208,7 @@ module.exports ={
     testing: {
       enabled: process.env.TESTING_ENABLED === 'true';
       mockPM2: process.env.MOCK_PM2 === 'true';
-      testData: process.env.TEST_DATA === 'true',
-    }
+      testData: process.env.TEST_DATA === 'true'}
   };
   // Environment-specific overrides,
   environments: {

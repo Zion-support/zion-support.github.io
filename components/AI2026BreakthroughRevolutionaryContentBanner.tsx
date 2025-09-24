@@ -99,6 +99,5 @@ export default function AI20o26BreakthroughRevolutionaryContentBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

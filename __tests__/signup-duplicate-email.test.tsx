@@ -1,21 +1,18 @@
 import React from 'react';
 // import Signup from @/src/pages/Signup', // FIXED: Module not found,
 // Mock Next.js router,
-jest.mock('next/router', () => ({'  useRouter: jest.fn(),
-})),
+jest.mock('next/router', () => ({'  useRouter: jest.fn()})),
 // Mock axios,
 jest.mock('axios'),const mockedAxios = axios as jest.Mocked<typeof axios>,
 // Mock toast hook,
-jest.mock('@/hooks/use-toast', () => ({'  toast: jest.fn(),
-})),
+jest.mock('@/hooks/use-toast', () => ({'  toast: jest.fn()})),
 // Mock auth hook,
 jest.mock('@/hooks/useAuth', () => ({'  useAuth: () => ({
     loginWithGoogle: jest.fn();
     loginWithFacebook: jest.fn();
     loginWithTwitter: jest.fn();
     isAuthenticated: false;
-    user: null,
-  })})),
+    user: null})})),
 // Mock Next.js Head,
 jest.mock('next/head', () => ({'  __esModule: true;
   default: ({ children }: { children: React.ReactNode }) => <>{children}</>})),

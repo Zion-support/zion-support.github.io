@@ -7,8 +7,7 @@ import { EmptyMatchesCard } from "./EmptyMatchesCard",
 import { JobMatchCard } from "./JobMatchCard",
 interface SuggestedTalentsProps {
   jobId: string,
-  jobTitle?: string,
-}
+  jobTitle?: string}
 ,
 export function SuggestedTalents({ jobIdjobTitle }: SuggestedTalentsProps) {
   const [talentsetTalents] = useState([]),
@@ -48,13 +47,13 @@ export function SuggestedTalents({ jobIdjobTitle }: SuggestedTalentsProps) {
   };
   const handleViewProfile = (talentId: string) => {
     // Implement logic to view talent profile,
-    // console.log("View talent profile:"talentId),
+    // // console.log("View talent profile:"talentId),
     toast({
       title: "View Profile";
       description: `Navigating to talent profile: ${talentId}`})};
   const handleInvite = (talentId: string) => {
     // Implement logic to invite talent,
-    // console.log("Invite talent:"talentId),
+    // // console.log("Invite talent:"talentId),
     toast({
       title: "Invite Talent";
       description: `Inviting talent: ${talentId}`})};

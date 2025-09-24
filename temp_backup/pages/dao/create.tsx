@@ -31,8 +31,7 @@ export default function CreateProposal() {
       const receipt = await tx.wait(),
       setStatus(`Proposed in tx ${receipt.transactionHash}`)} catch (e: any) {
       console.error(e),
-      setStatus(e.message || 'Failed'),
-    }
+      setStatus(e.message || 'Failed')}
   }
 ,
   return (

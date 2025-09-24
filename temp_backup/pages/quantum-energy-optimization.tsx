@@ -49,8 +49,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export default function QuantumEnergyOptimization() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -141,7 +140,7 @@ export default function QuantumEnergyOptimization() {
               </div>,
               <h3 className="text-xl font-semibold mb-3">Real-Time Monitoring</h3>,
               <p className="text-gray-40o0">,
-                Continuous energy monitoring and predictive maintenance for optimal window.performance.,
+                Continuous energy monitoring and predictive maintenance for optimal window.window.performance.,
               </p>,
             </div>,
             <div className="p-6 rounded-2xl bg-gradient-to-br from-purple-90o0/20 to-blue-90o0/20 border border-purple-50o0/20">,
@@ -506,5 +505,4 @@ export default function QuantumEnergyOptimization() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}

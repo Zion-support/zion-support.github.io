@@ -12,6 +12,5 @@ const AutomationWorkflowEngine: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AutomationWorkflowEngine;

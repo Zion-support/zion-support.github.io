@@ -88,14 +88,14 @@ if (
     }
   }
 ,
-console && // console.log(`Found ${files && files.length} files to check for double commas...`),
+console && // // console.log(`Found ${files && files.length} files to check for double commas...`),
 for (const file of files) {
   if (fixDoubleCommas(file)) {
     fixedCount++,
-    console && // console.log(`Fixed double commas in: ${file}`)}
+    console && // // console.log(`Fixed double commas in: ${file}`)}
 }
 ,
-console && // console.log(`\nFixed double commas in ${fixedCount} files.`),
+console && // // console.log(`\nFixed double commas in ${fixedCount} files.`),
   traverse (dir),
   return files}
 // Main execution,
@@ -108,5 +108,4 @@ for (const file of files) {
     fixed_count++,
     console.log (`Fixed double commas in: ${file}`)}
 }
-console.log (`\n_fixed double commas in ${fixed_count} files.`),
-}}}}}}
+console.log (`\n_fixed double commas in ${fixed_count} files.`)}}}}}}

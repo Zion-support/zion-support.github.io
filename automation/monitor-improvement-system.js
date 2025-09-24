@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const fs = require('fs'),
 const path = require('path'),
@@ -37,8 +36,7 @@ class ImprovementSystemMonitor {
         // Check for recent reports,
         await this.checkReports(),
         // Check git status,
-        await this.checkGitStatus(),
-} else {
+        await this.checkGitStatus()} else {
         logger.info(`🔴 System is not running - ${new Date().toISOString()}`)}
 } catch (error) {
       logger.info(`❌ Error checking status: ${error.message}`)}
@@ -105,8 +103,7 @@ if (require.main === module) {
     monitor.showSummary()} else {
     logger.info('Usage: '),
     logger.info('  node monitor-improvement-system.js monitor  - Start continuous monitoring'),
-    logger.info('  node monitor-improvement-system.js summary  - Show current summary'),
-  }
+    logger.info('  node monitor-improvement-system.js summary  - Show current summary')}
 }
 ,
 module.exports = ImprovementSystemMonitor,

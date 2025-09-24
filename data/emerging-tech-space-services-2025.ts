@@ -30,15 +30,13 @@ export interface EmergingTechSpaceService2025 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
   // Space Technology & Mining,
   {

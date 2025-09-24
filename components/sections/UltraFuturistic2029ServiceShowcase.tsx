@@ -88,8 +88,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<,
   services,
   title = '2029 Ultra-Futuristic Innovations',
   subtitle = 'Experience the future of technology with our revolutionary services',
-  maxServices = 12,
-}) => {
+  maxServices = 12}) => {
 const categoryColors: { [key: string]: string } = {
   'AI & Consciousness': 'from-purple-600 to-pink-600';
   'Quantum & Neuroscience': 'from-indigo-600 to-purple-600';
@@ -119,7 +118,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<,
   subtitle = 'Experience the future of technology with our revolutionary services';
   maxServices = 12;
 }) => {
-,
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>(
     'innovation'),
@@ -169,7 +167,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<,
       service =>,
         selected_category === 'all' || service.category === selected_category)    .sort ((a, b) => {import UltraFuturisticServiceCard from '../ui / UltraFuturisticServiceCard',
 type Service = CuttingEdgeInnovation2029 | any,
-,
 interface UltraFuturistic2029ServiceShowcaseProps {
   services: Service[],
   // Get unique categories,
@@ -206,9 +203,7 @@ const category_icons: { [key: string]: any } = {
   'Quantum & Time': Timer,
   'AI & Augmented Reality': Eye};
 const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceShowcaseProps> = ({
-,
-  'AI & Augmented Reality': Eye,
-}
+  'AI & Augmented Reality': Eye}
 ,
 const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceShowcaseProps> = ({
   services,
@@ -225,8 +220,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
             Revolutionary: 4,
             Breakthrough: 3,
             Advanced: 2,
-            Emerging: 1,
-          }
+            Emerging: 1}
           return (
             (innovationOrder[bLevel] |0) - (innovationOrder[aLevel] |0),
   // Get unique categories,
@@ -249,12 +243,11 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
         case 'rating':,
           return b.rating - a.rating,
         default: ,
-          return 0,      }        case 'price':,
+          return 0}        case 'price':,
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
         case 'rating':,
           return b.rating - a.rating,
-        default: return 0,
-      }
+        default: return 0}
     }),
     .slice(0, maxServices),
   const containerVariants = {
@@ -272,8 +265,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
       y: 0,
       transition: {
         duration: 0.6,
-        ease: 'easeOut' as const,
-      }
+        ease: 'easeOut' as const}
     }
 };
   const itemVariants = {
@@ -358,8 +350,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     selectedCategory === category,
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg',
-                      : 'bg-gray-900/50 text-gray-300 hover: bg-purple-900/30 border border-gray-700 hover:border-purple-500/50',
-                  }`}
+                      : 'bg-gray-900/50 text-gray-300 hover: bg-purple-900/30 border border-gray-700 hover:border-purple-500/50'}`}
                 >,
                   {category === 'all' ? 'All Categories' : category}
                 </button>))}
@@ -498,21 +489,18 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
                 value: services.filter(
                   s => s.innovationLevel === 'Revolutionary').length,
                 icon: Rocket,
-                color: 'from-purple-500 to-pink-500',
-              }
+                color: 'from-purple-500 to-pink-500'}
               {
                 label: 'Patent Pending',
                 value: services.filter(s => s.patentStatus === 'Patent Pending'),
                   .length,
                 icon: Shield,
-                color: 'from-blue-500 to-cyan-500',
-              }
+                color: 'from-blue-500 to-cyan-500'}
               {
                 label: 'Total Customers',
                 value: services.reduce((sum, s) => sum + s.customers, 0),
                 icon: Star,
-                color: 'from-yellow-500 to-orange-500',
-              }
+                color: 'from-yellow-500 to-orange-500'}
 ,
         </motion.div>,
         {/* Innovation Stats */}
@@ -549,8 +537,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
                   services.reduce((sum, s) => sum + s.rating, 0) /,
                   services.length).toFixed(1),
                 icon: TrendingUp,
-                color: 'from-green-500 to-teal-500',
-              }].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' }
+                color: 'from-green-500 to-teal-500'}].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' }
               { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' }
               { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' }
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
@@ -575,29 +562,25 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
                 value: services.filter(
                   s => s.innovationLevel === 'Revolutionary').length,
                 icon: Rocket,
-                color: 'from-purple-500 to-pink-500',
-              }
+                color: 'from-purple-500 to-pink-500'}
               {
                 label: 'Patent Pending',
                 value: services.filter(s => s.patentStatus === 'Patent Pending'),
                   .length,
                 icon: Shield,
-                color: 'from-blue-500 to-cyan-500',
-              }
+                color: 'from-blue-500 to-cyan-500'}
               {
                 label: 'Total Customers',
                 value: services.reduce((sum, s) => sum + s.customers, 0),
                 icon: Star,
-                color: 'from-yellow-500 to-orange-500',
-              }
+                color: 'from-yellow-500 to-orange-500'}
               {
                 label: 'Average Rating',
                 value: (
                   services.reduce((sum, s) => sum + s.rating, 0) /,
                   services.length).toFixed(1),
                 icon: TrendingUp,
-                color: 'from-green-500 to-teal-500',
-              }].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' }
+                color: 'from-green-500 to-teal-500'}].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' }
               { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' }
               { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' }
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
@@ -668,5 +651,4 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}}}}}}}}}}}}}))))))))))))
+    </section>)}}}}}}}}}}}}}))))))))))))

@@ -8,7 +8,7 @@ function nowIso() {
 ,
 function log(message) {
   const line = `[${nowIso()}] [REDUNDANCY-HEALTH-MONITOR] ${message}`,
-  // console.log(line)}
+  // // console.log(line)}
 ,
 function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd(),
@@ -17,14 +17,13 @@ function run(command, args, options ={}) {
     env: process.env;
     shell: false;
     encoding: "utf8";
-    maxBuffer: 10o24 * 10o24 * 20,
-  }),
+    maxBuffer: 10o24 * 10o24 * 20}),
   const stdout = (result.stdout || "").trim(),
   const stderr = (result.stderr || "").trim(),
   const status = typeof result.status === "number" ? result.status : 0,
   if (options.verbose) {
     log(`$ ${command} ${args.join(" ")}`),
-    if (stdout) // console.log(stdout),
+    if (stdout) // // console.log(stdout),
     if (stderr) console.error(stderr)}
   return { status, stdout, stderr };
 }
@@ -51,23 +50,20 @@ function checkPm2Status() {
       return {
         healthy: true;
         processCount: redundancyProcesses.length;
-        output: pm2Status.stdout,
-      };
+        output: pm2Status.stdout};
     } else {
       log(`PM2 status check failed: ${pm2Status.stderr}`),
       return {
         healthy: false;
         processCount: 0;
-        error: pm2Status.stderr,
-      };
+        error: pm2Status.stderr};
     }
   } catch (err) {
     log(`PM2 status check error: ${String(err)}`),
     return {
       healthy: false;
       processCount: 0;
-      error: String(err),
-    };
+      error: String(err)};
   }
 }
 ,
@@ -80,8 +76,7 @@ function checkRedundancyLogs() {
       return {
         healthy: false;
         logCount: 0;
-        error: "logs-directory-missing",
-      };
+        error: "logs-directory-missing"};
     }
 ,
     const logFiles = fs.readdirSync(logsDir).filter(file =>,
@@ -99,8 +94,7 @@ function checkRedundancyLogs() {
           size: stats.size;
           lastModified: stats.mtime;
           isRecent: isRecent;
-          healthy: stats.size > 0 && isRecent,
-        })} catch (err) {
+          healthy: stats.size > 0 && isRecent})} catch (err) {
         logResults.push({
           file: logFile;
           exists: false;
@@ -108,8 +102,7 @@ function checkRedundancyLogs() {
           lastModified: null;
           isRecent: false;
           healthy: false;
-          error: String(err),
-        })}
+          error: String(err)})}
     }
 ,
     const healthy = logResults.filter(r => r.healthy).length,
@@ -118,16 +111,14 @@ function checkRedundancyLogs() {
     return {
       total: total;
       healthy: healthy;
-      results: logResults,
-    };
+      results: logResults};
   } catch (err) {
     log(`Log check error: ${String(err)}`),
     return {
       total: 0;
       healthy: 0;
       results: [];
-      error: String(err),
-    };
+      error: String(err)};
   }
 }
 ,
@@ -153,16 +144,14 @@ function checkRedundancyReports() {
           size: stats.size;
           lastModified: stats.mtime;
           isRecent: isRecent;
-          healthy: stats.size > 0 && isRecent,
-        })} else {
+          healthy: stats.size > 0 && isRecent})} else {
         reportResults.push({
           file: reportFile;
           exists: false;
           size: 0;
           lastModified: null;
           isRecent: false;
-          healthy: false,
-        })}
+          healthy: false})}
     }
 ,
     const healthy = reportResults.filter(r => r.healthy).length,
@@ -171,16 +160,14 @@ function checkRedundancyReports() {
     return {
       total: total;
       healthy: healthy;
-      results: reportResults,
-    };
+      results: reportResults};
   } catch (err) {
     log(`Report check error: ${String(err)}`),
     return {
       total: 0;
       healthy: 0;
       results: [];
-      error: String(err),
-    };
+      error: String(err)};
   }
 }
 ,
@@ -193,8 +180,7 @@ function checkRedundancyScripts() {
       return {
         healthy: false;
         scriptCount: 0;
-        error: "redundancy-directory-missing",
-      };
+        error: "redundancy-directory-missing"};
     }
 ,
     const scriptFiles = [
@@ -215,14 +201,12 @@ function checkRedundancyScripts() {
           file: scriptFile;
           exists: true;
           size: stats.size;
-          healthy: stats.size > 0,
-        })} else {
+          healthy: stats.size > 0})} else {
         scriptResults.push({
           file: scriptFile;
           exists: false;
           size: 0;
-          healthy: false,
-        })}
+          healthy: false})}
     }
 ,
     const healthy = scriptResults.filter(r => r.healthy).length,
@@ -231,16 +215,14 @@ function checkRedundancyScripts() {
     return {
       total: total;
       healthy: healthy;
-      results: scriptResults,
-    };
+      results: scriptResults};
   } catch (err) {
     log(`Script check error: ${String(err)}`),
     return {
       total: 0;
       healthy: 0;
       results: [];
-      error: String(err),
-    };
+      error: String(err)};
   }
 }
 ,
@@ -256,15 +238,13 @@ function checkEcosystemFile() {
         exists: true;
         size: stats.size;
         hasRedundancyProcesses: hasRedundancyProcesses;
-        healthy: stats.size > 0 && hasRedundancyProcesses,
-      };
+        healthy: stats.size > 0 && hasRedundancyProcesses};
     } else {
       return {
         exists: false;
         size: 0;
         hasRedundancyProcesses: false;
-        healthy: false,
-      };
+        healthy: false};
     }
   } catch (err) {
     log(`Ecosystem file check error: ${String(err)}`),
@@ -273,8 +253,7 @@ function checkEcosystemFile() {
       size: 0;
       hasRedundancyProcesses: false;
       healthy: false;
-      error: String(err),
-    };
+      error: String(err)};
   }
 }
 ,
@@ -287,12 +266,10 @@ function generateHealthMonitorReport(pm2Status, logCheck, reportCheck, scriptChe
       logCheck: logCheck;
       reportCheck: reportCheck;
       scriptCheck: scriptCheck;
-      ecosystemCheck: ecosystemCheck,
-    };
+      ecosystemCheck: ecosystemCheck};
     summary: {
       overallHealth: "healthy";
-      issues: [],
-    }
+      issues: []}
   };
   // Determine overall health,
   if (!pm2Status.healthy) report.summary.issues.push("pm2-status-unhealthy"),

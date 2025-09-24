@@ -338,8 +338,7 @@ interface EnhancedSidebar2025Props {
   onClose: () => void,
   contactInfo?: {
     mobile: string,
-    email: string,
-  };
+    email: string};
 }
 ,
 export default function EnhancedSidebar2025({
@@ -358,15 +357,13 @@ export default function EnhancedSidebar2025({
   const toggleSection = (sectionTitle: string) => {
     const newExpanded = new Set(expandedSections),
     if (newExpanded.has(sectionTitle)) {
-      newExpanded.delete(sectionTitle),
-    } else {
+      newExpanded.delete(sectionTitle)} else {
       newExpanded.add(sectionTitle)}
     setExpandedSections(newExpanded)};
   const toggleItem = (itemName: string) => {
     const newExpanded = new Set(expandedItems),
     if (newExpanded.has(itemName)) {
-      newExpanded.delete(itemName),
-    } else {
+      newExpanded.delete(itemName)} else {
       newExpanded.add(itemName)}
     setExpandedItems(newExpanded)};
   useEffect(() => {
@@ -569,6 +566,5 @@ export default function EnhancedSidebar2025({
           </div>,
         </div>,
       </motion.div>,
-    </>),
-}
+    </>)}
 ,

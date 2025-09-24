@@ -5,6 +5,5 @@ export default function ForgotPasswordPage() {
       <p className='mt-2 text-gray-60o0 dark: text-gray-30o0'>,
         Enter your email to reset your password.,
       </p>,
-    </div>),
-}
+    </div>)}
 ,

@@ -503,8 +503,7 @@ export default function UltraFuturisticNavigation20o30() {
                         className={`p-3 rounded-lg text-center transition-all duration-20o0 transform hover: scale-10o5 ${
                           link.color.includes('from-'),
                             ? `bg-gradient-to-r ${link.color} text-white`,
-                            : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0',
-                        }`}
+                            : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0'}`}
                       >,
                         <link.icon className='w-6 h-6 mx-auto mb-2' />,
                         <span className='text-sm font-medium'>{link.name}</span>,

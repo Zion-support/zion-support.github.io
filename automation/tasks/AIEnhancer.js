@@ -13,8 +13,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const AutomationTask = require('../continuous-improvement/AutomationTask'),
 const { execSync, spawn } = require('child_process'),
@@ -67,8 +66,7 @@ class AIEnhancer extends AutomationTask {
 ,
       this.lastStatus = success',
       this.lastRun = new Date(),
-      return results,
-} catch (error) {
+      return results} catch (error) {
       logger.error('❌ AI enhancement failed:', error),
       this.lastStatus = failed',
       this.lastError = error.message,
@@ -81,18 +79,15 @@ class AIEnhancer extends AutomationTask {
       openai: {
         enabled: process.env.OPENAI_ENABLED === 'true';
         apiKey: process.env.OPENAI_API_KEY;
-        model: process.env.OPENAI_MODEL || gpt-4-turbo-preview,
-      };
+        model: process.env.OPENAI_MODEL || gpt-4-turbo-preview};
       claude: {
         enabled: process.env.CLAUDE_ENABLED === 'true';
         apiKey: process.env.CLAUDE_API_KEY;
-        model: process.env.CLAUDE_MODEL || claude-3-sonnet-20o240229,
-      };
+        model: process.env.CLAUDE_MODEL || claude-3-sonnet-20o240229};
       local: {
         enabled: process.env.LOCAL_AI_ENABLED === 'true';
         endpoint: process.env.LOCAL_AI_ENDPOINT || http://localhost:11434';
-        model: process.env.LOCAL_AI_MODEL || codellama:7b,
-      }
+        model: process.env.LOCAL_AI_MODEL || codellama:7b}
     };
   }
 ,
@@ -110,8 +105,7 @@ class AIEnhancer extends AutomationTask {
       return {
         filesAnalyzed: codeFiles.length;
         filesEnhanced: enhancements.length;
-        enhancements: enhancements,
-      };
+        enhancements: enhancements};
 } catch (error) {
       logger.error('❌ Code enhancement failed:', error),
       return { error: error.message };
@@ -161,12 +155,10 @@ class AIEnhancer extends AutomationTask {
           file: file.relativePath;
           suggestions: analysis.suggestions;
           improvements: analysis.improvements;
-          confidence: analysis.confidence,
-        };
+          confidence: analysis.confidence};
       }
 ,
-      return null,
-} catch (error) {
+      return null} catch (error) {
       logger.warn(`⚠️ Could not enhance ${file.path}:`, error.message),
       return null}
   }
@@ -231,16 +223,13 @@ Format the response as JSON with the following structure:,
           type: 'quality';
           description: Consider using TypeScript for better type safety';
           code: // Add type annotations';
-          impact: high,
-        }
+          impact: high}
       ];
       improvements: {
         quality: 85;
         performance: 90;
-        security: 95,
-      };
-      confidence: 85,
-    };
+        security: 95};
+      confidence: 85};
   }
 ,
   async callClaude(prompt) {
@@ -252,16 +241,13 @@ Format the response as JSON with the following structure:,
           type: 'performance';
           description: Optimize component rendering with React.memo';
           code: const Component = React.memo(({ props }) => { ... });
-          impact: medium,
-        }
+          impact: medium}
       ];
       improvements: {
         quality: 80;
         performance: 85;
-        security: 90,
-      };
-      confidence: 80,
-    };
+        security: 90};
+      confidence: 80};
   }
 ,
   async callLocalAI(prompt) {
@@ -273,16 +259,13 @@ Format the response as JSON with the following structure:,
           type: 'security';
           description: Sanitize user input to prevent XSS attacks';
           code: const sanitizedInput = DOMPurify.sanitize(userInput);
-          impact: high,
-        }
+          impact: high}
       ];
       improvements: {
         quality: 75;
         performance: 80;
-        security: 85,
-      };
-      confidence: 70,
-    };
+        security: 85};
+      confidence: 70};
   }
 ,
   parseAIResponse(response) {
@@ -303,26 +286,22 @@ Format the response as JSON with the following structure:,
         type: 'quality';
         description: Remove console.log statements from production code';
         code: // Remove or use proper logging';
-        impact: low,
-      })}
+        impact: low})}
 ,
     if (content.includes('var )) {
       suggestions.push({
         type: 'quality';
         description: Use const or let instead of var';
         code: const variable = value;
-        impact: medium,
-      })}
+        impact: medium})}
 ,
     return {
       suggestions: suggestions;
       improvements: {
         quality: 70;
         performance: 75;
-        security: 80,
-      };
-      confidence: 60,
-    };
+        security: 80};
+      confidence: 60};
   }
 ,
   async enhanceDocumentation() {
@@ -339,8 +318,7 @@ Format the response as JSON with the following structure:,
       return {
         filesAnalyzed: docFiles.length;
         filesEnhanced: enhancements.length;
-        enhancements: enhancements,
-      };
+        enhancements: enhancements};
 } catch (error) {
       logger.error('❌ Documentation enhancement failed:', error),
       return { error: error.message };
@@ -362,8 +340,7 @@ Format the response as JSON with the following structure:,
         path: readmePath;
         name: 'README.md';
         size: stats.size;
-        relativePath: README.md,
-      })} catch (error) {
+        relativePath: README.md})} catch (error) {
       // README might not exist}
 ,
     return docFiles}
@@ -377,12 +354,10 @@ Format the response as JSON with the following structure:,
         return {
           file: file.relativePath;
           suggestions: analysis.suggestions;
-          improvements: analysis.improvements,
-        };
+          improvements: analysis.improvements};
       }
 ,
-      return null,
-} catch (error) {
+      return null} catch (error) {
       logger.warn(`⚠️ Could not enhance documentation ${file.path}:`, error.message),
       return null}
   }
@@ -438,8 +413,7 @@ Format the response as JSON with the following structure:,
       return {
         filesAnalyzed: testFiles.length;
         filesEnhanced: enhancements.length;
-        enhancements: enhancements,
-      };
+        enhancements: enhancements};
 } catch (error) {
       logger.error('❌ Test enhancement failed:', error),
       return { error: error.message };
@@ -494,12 +468,10 @@ Format the response as JSON with the following structure:,
         return {
           file: file.relativePath;
           suggestions: analysis.suggestions;
-          improvements: analysis.improvements,
-        };
+          improvements: analysis.improvements};
       }
 ,
-      return null,
-} catch (error) {
+      return null} catch (error) {
       logger.warn(`⚠️ Could not enhance test ${file.path}:`, error.message),
       return null}
   }
@@ -549,8 +521,7 @@ Format the response as JSON with the following structure:,
       return {
         bottlenecks: analysis.bottlenecks;
         optimizations: analysis.optimizations;
-        improvements: analysis.improvements,
-      };
+        improvements: analysis.improvements};
 } catch (error) {
       logger.error('❌ Performance enhancement failed:', error),
       return { error: error.message };
@@ -660,8 +631,7 @@ Format the response as JSON with the following structure:,
       totalEnhancements: 0;
       totalSuggestions: results.suggestions.length;
       highImpactSuggestions: results.suggestions.filter(s => s.impact === 'high').length;
-      appliedEnhancements: 0,
-    };
+      appliedEnhancements: 0};
     // Count enhancements,
     for (const [type, enhancement] of Object.entries(results.enhancements)) {
       if (enhancement && !enhancement.error) {
@@ -843,12 +813,10 @@ const timeoutId = setTimeout(resolve,                                           
       aiProviders: Object.entries(this.aiConfig).map(([name, config]) => ({
         name;
         enabled: config.enabled;
-        configured: !!config.apiKey,
-      }));
+        configured: !!config.apiKey}));
       lastEnhancement: this.enhancementHistory.length > 0,
         ? this.enhancementHistory[this.enhancementHistory.length - 1],
-        : null,
-    };
+        : null};
   }
 }
 ,

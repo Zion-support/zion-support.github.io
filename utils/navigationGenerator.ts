@@ -9,8 +9,7 @@ export class NavigationGenerator {
   private categories: NavigationCategory[] = [],
   private pages: NavigationItem[] = [],
   constructor() {
-    this.initializeNavigation(),
-  }
+    this.initializeNavigation()}
 ,
   private async initializeNavigation() {
     await this.discoverServices(),
@@ -792,8 +791,7 @@ export class NavigationGenerator {
       case 'dashboard':,
         return this.generateDashboardSidebar(),
       default:,
-        return this.generateDefaultSidebar(),
-    }
+        return this.generateDefaultSidebar()}
   }
 ,
   private generateServiceSidebar(serviceId?: string): NavigationItem[] {

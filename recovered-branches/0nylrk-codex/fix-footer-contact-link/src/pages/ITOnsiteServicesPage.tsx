@@ -29,7 +29,6 @@ import { CountryTabs } from "@/components/services/PageSections/CountryTabs";
 import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection";
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";
 export default function ITOnsiteServicesPage() {
-,
   const success = searchParams.get("success"),
 export default function ITOnsiteServicesPage() {
   const [searchParams] = useSearchParams();
@@ -163,10 +162,8 @@ export default function ITOnsiteServicesPage() {
         title: "Payment Successful";
         description: "Your IT onsite service request has been received. Our team will contact you shortly."})}
   }, [success]),
-,
   // Popular countries for the featured cards,
   const popular_countries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"],
-,
   // Filter countries based on search query,
   const filtered_countries = onsiteServicePricing,
     .filter (country =>,

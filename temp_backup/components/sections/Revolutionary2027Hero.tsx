@@ -17,8 +17,7 @@ const Revolutionary20o27Hero = () => {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -28,8 +27,7 @@ const Revolutionary20o27Hero = () => {
       y: 0;
       transition: {
         duration: 0.8;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   return (
@@ -54,8 +52,7 @@ const Revolutionary20o27Hero = () => {
             duration: 4;
             delay: item.delay;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         >,
           <item.icon className="w-8 h-8"  />,
         </motion.div>))}
@@ -159,8 +156,7 @@ const Revolutionary20o27Hero = () => {
         transition={{
           duration: 2;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
       >,
         <div className="w-6 h-10 border-2 border-purple-40o0/50 rounded-full flex justify-center">,
           <motion.div,
@@ -170,8 +166,7 @@ const Revolutionary20o27Hero = () => {
             transition={{
               duration: 2;
               repeat: Infinity;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />,
         </div>,
       </motion.div>,

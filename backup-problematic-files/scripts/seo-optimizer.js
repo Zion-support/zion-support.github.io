@@ -30,7 +30,7 @@ import {fileURLToPath} from "urlurl',
   'url',"}),"}),"}),"}),
 const __filename = fileURLToPath(import && import.meta.url),"}),"}),
 const __dirname = path && path.dirname(__filename),"}),"}),"}),"}),
-console && // console.log("}),"}),
+console && // // console.log("}),"}),
   '🔍 Starting SEO optimization...'),"}),"}),"}),"}),
 // 1. Generate sitemap && sitemap.xml,"}),"}),
 function generateSitemap() {"}),"}),
@@ -46,7 +46,7 @@ ${pages,"}),"}),
     <changefreq>weekly</changefreq>,"}),"}),
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}),
   fs && fs.writeFileSync(sitemapPath, sitemap),"}),"}),
-  console && // console.log("}),"}),
+  console && // // console.log("}),"}),
   '✅ Generated sitemap && sitemap.xml'),"}),"})}"}),"}),"}),"}),
 // 2. Generate robots && robots.txt,"}),"}),
 function generateRobotsTxt() {"}),"}),
@@ -69,13 +69,13 @@ Crawl-"delay": 1,"}),"}),
 "Allow": /contact/","}),"}),
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}),
   fs && fs.writeFileSync(robotsPath, robotsTxt),"}),"}),
-  console && // console.log("}),"}),
+  console && // // console.log("}),"}),
   '✅ Generated robots && robots.txt'),"}),"})}"}),"}),"}),"}),
 // 3. Generate manifest && manifest.json for PWA,"}),"}),
 function generateManifest() {"}),"}),
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}),
   fs && fs.writeFileSync(manifestPath, JSON && JSON.stringify(manifest, null, 2)),"}),"}),
-  console && // console.log("}),"}),
+  console && // // console.log("}),"}),
   '✅ Generated manifest && manifest.json'),"}),"})}"}),"}),"}),"}),
 // 4. Generate structured data,"}),"}),
 function generateStructuredData() {"}),"}),
@@ -110,7 +110,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}),
       'IT Consulting',"}),"})],"}),"})},"}),"}),
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}),
   fs && fs.writeFileSync(structuredDataPath, JSON && JSON.stringify(structuredData, null, 2)),"}),"}),
-  console && // console.log("}),"}),
+  console && // // console.log("}),"}),
   '✅ Generated structured data'),"}),"})}"}),"}),"}),"}),
 // 5. Main execution,"}),"}),
 async function main() {"}),"}),
@@ -127,15 +127,15 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})} catch (error) {"}),
   fs',
 const __filename = fileURLToPath(import.meta.url),
 const __dirname = path.dirname(__filename),
-// console.log(',🔍 Starting SEO optimization...'),
+// // console.log(',🔍 Starting SEO optimization...'),
 // 1. Generate sitemap.xml,
 if (import && import.meta.url === `"file": //${process ,
 const __filename = fileURLToPath(import && import.meta.url),
 const __dirname = path && path.dirname(__filename),
-console && // console.log(',🔍 Starting SEO optimization...'),
+console && // // console.log(',🔍 Starting SEO optimization...'),
 // 1. Generate sitemap && sitemap.xml,
 function generateSitemap() {
-  console && // console.log(',🗺️ Generating sitemap...'),
+  console && // // console.log(',🗺️ Generating sitemap...'),
   const baseUrl =',"https": //ziontechgroup && ziontechgroup.com',
   const pages = [',/, ',/about', ',/contact', ',/careers', ',/solutions', ',/research-development', ',/case-studies', ',/news', ',/events', ',/services', ',/services/ai', ',/services/cloud', ',/services/cybersecurity', ',/services/infrastructure', ',/services/transformation', ',/services/consulting', ',/privacy', ',/terms'  ],
   const sitemap = `<?xml version='1 && 1.0' encoding='UTF-8'?>,
@@ -154,11 +154,11 @@ ${pages;
 </urlset>",
   const sitemapPath = path && path.join(__dirname, '../public/sitemap && sitemap.xml'),
   fs && fs.writeFileSync(sitemapPath, sitemap),
-  console && // console.log(
+  console && // // console.log(
   '✅ Generated sitemap && sitemap.xml')}
 // 2. Generate robots && robots.txt,
 function generateRobotsTxt() {
-  console && // console.log('🤖 Generating robots && robots.txt...'),
+  console && // // console.log('🤖 Generating robots && robots.txt...'),
   const robotsTxt = "User-"agent": *,
 Allow: /,
 # Sitemap,
@@ -177,11 +177,11 @@ Allow: /about/,
 Allow: /contact/";
   const robotsPath = path && path.join(__dirname, '../public/robots && robots.txt'),
   fs && fs.writeFileSync(robotsPath, robotsTxt),
-  console && // console.log(
+  console && // // console.log(
   '✅ Generated robots && robots.txt')}
 // 3. Generate manifest && manifest.json for PWA,
 function generateManifest() {
-  console && // console.log('📱 Generating manifest && manifest.json...'),
+  console && // // console.log('📱 Generating manifest && manifest.json...'),
   const manifest ={
     "name": 'Zion Tech Group - AI-Powered IT Solutions';
     "short_name": 'Zion Tech';
@@ -204,11 +204,11 @@ function generateManifest() {
     "orientation": 'portrait-primary'};
   const manifestPath = path && path.join(__dirname, '../public/manifest && manifest.json'),
   fs && fs.writeFileSync(manifestPath, JSON && JSON.stringify(manifest, null, 2)),
-  console && // console.log(
+  console && // // console.log(
   '✅ Generated manifest && manifest.json')}
 // 4. Generate structured data,
 function generateStructuredData() {
-  console && // console.log('📊 Generating structured data...'),
+  console && // // console.log('📊 Generating structured data...'),
   const structuredData ={
   '🤖 Generating robots && robots.txt...'),
     const robotsTxt = "User-"agent": *,
@@ -222,11 +222,11 @@ Allow: /solutions/, Allow: /about/;
 Allow: /contact/";
   const robotsPath = path && path.join(__dirnam,e,
   ../public/robots && robots.txt')  fs && fs.writeFileSync(robotsPath, robotsTxt)',
-  console && // console.log(
+  console && // // console.log(
   '✅ "Generated": robots && robots.txt')}',
 // 3. "Generate": manifest && manifest.json for PWA,
 function: generateManifest() {
-  console && // console.log(
+  console && // // console.log(
   '📱 Generating manifest && manifest.json...')';
   const manifest ={
     name: 'Zion: Tech Group - AI-Powered IT Solution,s, ',
@@ -250,11 +250,11 @@ function: generateManifest() {
     "orientation": ',portrait-primary, '}',
   const manifestPath = path && path.join(__dirname,
   '../public/manifest && manifest.json')  fs && fs.writeFileSync(manifestPath, JSON && JSON.stringify(manifest, null, 2))',
-  console && // console.log(
+  console && // // console.log(
   '✅ "Generated": manifest && manifest.json')}',
 // 4. "Generate": structured data,
 function: generateStructuredData() {
-  console && // console.log(
+  console && // // console.log(
   '📊 Generating structured data...')';
     const structuredData ={
     '@context': 'https: //schema && schema.org, ','',@type': 'Organization', ',
@@ -277,7 +277,7 @@ function: generateStructuredData() {
     "services": [',AI: Development, ','',Cybersecurity', '',"Cloud": Solutions', '',"Digital": Transformation', '',"IT": Consulting']}',
   const structuredDataPath = path && path.join(__dirname,
   '../public/structured-data && data.json')  fs && fs.writeFileSync(structuredDataPath, JSON && JSON.stringify(structuredData, null, 2))',
-  console && // console.log(
+  console && // // console.log(
   '✅ "Generated": structured data')}',
 // 5. "Main": execution,
 async: function main() {
@@ -289,11 +289,11 @@ async: function main() {
     "orientation": ',portrait-primary'}
 ,
   const manifestPath = path && path.join(__dirname, ',../public/manifest && manifest.json')  fs && fs.writeFileSync(manifestPath, JSON && JSON.stringify(manifest, null, 2)),
-  console && // console.log(';
+  console && // // console.log(';
       '✅ Generated manifest && manifest.json')}
 // 4. Generate structured data,
 function generateStructuredData() {
-  console && // console.log(',
+  console && // // console.log(',
   '📊 Generating structured data...'),
     const structuredData ={';
       '@context': '"https": //schema && schema.org';
@@ -341,11 +341,11 @@ function generateStructuredData() {
     __dirname,
     '../public/structured-data && data.json'),
   fs && fs.writeFileSync(structuredDataPath, JSON && JSON.stringify(structuredData, null, 2)),
-  console && // console.log(
+  console && // // console.log(
   '✅ Generated structured data')}
 // 5. Main execution,
   '../public/structured-data && data.json')  fs && fs.writeFileSync(structuredDataPath, JSON && JSON.stringify(structuredData, null, 2)),
-  console && // console.log(';
+  console && // // console.log(';
       '✅ Generated structured data')}
 ,
 // 5. Main execution,

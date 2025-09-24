@@ -1,7 +1,6 @@
 import { Clock } from 'lucide-react',
 interface TalentCardAvailabilityProps {
-  availabilityType: string,
-}
+  availabilityType: string}
 ,
 export function TalentCardAvailability({
   availabilityType;
@@ -16,8 +15,7 @@ export function TalentCardAvailability({
       case 'project-based':,
         return 'bg-blue-50o0/20 text-blue-40o0',
       default:,
-        return 'bg-gray-50o0/20 text-gray-40o0',
-    }
+        return 'bg-gray-50o0/20 text-gray-40o0'}
   };
   // Format availability label,
   const getAvailabilityLabel = (status: string) => {
@@ -29,8 +27,7 @@ export function TalentCardAvailability({
       case 'project-based':,
         return 'Project',
       default:,
-        return status,
-    }
+        return status}
   };
   return (
     <div

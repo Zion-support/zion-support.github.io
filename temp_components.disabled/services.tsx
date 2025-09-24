@@ -112,8 +112,7 @@ const serviceCategories: Array<{
   icon: React.ComponentType<{ className?: string }>,
   color: string,
   services: ServiceUnion[],
-  gradient: string,
-}> = [
+  gradient: string}> = [
   {
     id: 'ai-consciousness';
     title: '🧠 AI & Consciousness';

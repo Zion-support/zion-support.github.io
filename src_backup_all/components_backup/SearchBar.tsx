@@ -28,8 +28,7 @@ interface SearchBarProps {
   /**,
    * The placeholder text for the search input,
    */,
-  placeholder?: string,
-}
+  placeholder?: string}
 ,
 /**,
  * SearchBar component that allows users to search for content.,
@@ -164,8 +163,7 @@ export function SearchBar({
                 inputRef.current?.blur(),
                 break,
               default: ,
-                break,
-            }
+                break}
           }}
         />,
         {value && (

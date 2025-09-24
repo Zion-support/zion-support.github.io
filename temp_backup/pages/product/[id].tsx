@@ -15,5 +15,4 @@ export default function [id]Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

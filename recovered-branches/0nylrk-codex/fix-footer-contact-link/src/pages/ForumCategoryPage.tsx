@@ -31,7 +31,6 @@ import { ForumPost, ForumCategoryInfo } from '@/types / community',
 import { Badge } from '@/components / ui / badge',
 import { use_auth } from '@/hooks / use_auth',
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from '@/components / icons',
-,
 // Mock category data,
 const categoriesInfo: Record<string ForumCategoryInfo> = {
   "getting-hired": {
@@ -51,48 +50,41 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     name: "Getting Hired";
     description: "Tips, strategies, and questions about getting hired on the platform.";
     adminOnly: false;
-    icon: "Briefcase",
-  };
+    icon: "Briefcase"};
   "project-help": {
     id: "project-help",
     name: "Project Help",
     description: "Get help with your ongoing projects and collaboration.",
     adminOnly: false,
-    icon: "MessageSquare",
-  }
+    icon: "MessageSquare"}
   "ai-tools": {
-    icon: "Code",
-  }
+    icon: "Code"}
   };
   "ai-tools": {
     id: "ai-tools",
     name: "AI Tools Discussion",
     description: "Discuss AI tools, frameworks, and best practices.",
     adminOnly: false,
-    icon: "Code",
-  };
+    icon: "Code"};
   "feedback": {
     id: "feedback",
     name: "Feedback & Feature Requests",
     description: "Share your feedback and suggest new features.",
     adminOnly: false,
-    icon: "FileText",
-  }
+    icon: "FileText"}
   };
   "announcements": {
     id: "announcements",
     name: "Announcements",
     description: "Official announcements from the Zion team.",
     adminOnly: true,
-    icon: "Megaphone",
-  }
+    icon: "Megaphone"}
 }
 };
 // Mock data for posts by category,
 const postsByCategory: Record<string ForumPost[]> = {
   "getting-hired": [
     {
-,
 // Mock category data,
 const categories_info: Record < string, ForumCategoryInfo> = {
   "getting - hired": {
@@ -100,36 +92,31 @@ const categories_info: Record < string, ForumCategoryInfo> = {
     name: "Getting Hired";
     description: "Tips, strategies, and questions about getting hired on the platform.",
     admin_only: false;
-    icon: "Briefcase",
-  }
+    icon: "Briefcase"}
   "project - help": {
     id: "project - help";
     name: "Project Help";
     description: "Get help with your ongoing projects and collaboration.";
     admin_only: false;
-    icon: "MessageSquare",
-  }
+    icon: "MessageSquare"}
   "ai - tools": {
     id: "ai - tools";
     name: "AI Tools Discussion";
     description: "Discuss AI tools, frameworks, and best practices.",
     admin_only: false;
-    icon: "Code",
-  }
+    icon: "Code"}
   "feedback": {
     id: "feedback";
     name: "Feedback & Feature Requests";
     description: "Share your feedback and suggest new features.";
     admin_only: false;
-    icon: "FileText",
-  }
+    icon: "FileText"}
   "announcements": {
     id: "announcements";
     name: "Announcements";
     description: "Official announcements from the Zion team.";
     admin_only: true;
-    icon: "Megaphone",
-  }
+    icon: "Megaphone"}
 }
 ,
 // Mock data for posts by category,
@@ -150,8 +137,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
       downvotes: 0;
       reply_count: 8;
       is_pinned: true;
-      is_featured: true,
-    }
+      is_featured: true}
     {
       id: "6",
       title: "Portfolio pieces that clients actually care about",
@@ -178,8 +164,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
       downvotes: 0;
       replyCount: 8;
       isPinned: true;
-      isFeatured: true,
-    };
+      isFeatured: true};
     {
       id: "6";
       title: "Portfolio pieces that clients actually care about";
@@ -192,8 +177,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
       updatedAt: "2025-04-07T11:30:00Z";
       upvotes: 19;
       downvotes: 2;
-      replyCount: 6,
-    }
+      replyCount: 6}
   ],
   "project - help": [
     {
@@ -208,8 +192,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
       updatedAt: "2025-04-10T14:30:00Z",
       upvotes: 5,
       downvotes: 0,
-      replyCount: 2,
-    }
+      replyCount: 2}
     {
       id: "5",
       title: "How to handle client scope creep?",
@@ -234,8 +217,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
       updated_at: "2025 - 04 - 10T14:30:00Z";
       upvotes: 5;
       downvotes: 0;
-      reply_count: 2,
-    }
+      reply_count: 2}
     {
       id: "5";
       title: "How to handle client scope creep?";
@@ -249,8 +231,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
       upvotes: 24;
       downvotes: 0;
       replyCount: 7;
-      isAnswered: true,
-    }
+      isAnswered: true}
   ],
   "ai - tools": [
     {
@@ -269,8 +250,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
       downvotes: 2,
       replyCount: 12,
       isAnswered: true,
-      isFeatured: true,
-    }
+      isFeatured: true}
     {
       id: "7",
       title: "Comparing different vector embedding models",
@@ -298,8 +278,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
       downvotes: 2;
       reply_count: 12;
       is_answered: true;
-      is_featured: true,
-    }
+      is_featured: true}
     {
       id: "7";
       title: "Comparing different vector embedding models";
@@ -312,8 +291,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
       updated_at: "2025 - 04 - 05T16:40:00Z";
       upvotes: 31;
       downvotes: 0;
-      replyCount: 9,
-    }
+      replyCount: 9}
   ],
   "feedback": [
     {
@@ -328,8 +306,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
       updatedAt: "2025-04-09T18:45:00Z",
       upvotes: 12,
       downvotes: 1,
-      replyCount: 3,
-    }
+      replyCount: 3}
     {
       id: "8",
       title: "Suggestion for improving the jobs matching algorithm",
@@ -353,8 +330,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
       updated_at: "2025 - 04 - 09T18:45:00Z";
       upvotes: 12;
       downvotes: 1;
-      reply_count: 3,
-    }
+      reply_count: 3}
     {
       id: "8";
       title: "Suggestion for improving the jobs matching algorithm";
@@ -367,8 +343,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
       updated_at: "2025 - 04 - 04T08:10:00Z";
       upvotes: 17;
       downvotes: 3;
-      replyCount: 5,
-    }
+      replyCount: 5}
   ],
   "announcements": [
     {
@@ -385,8 +360,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
       upvotes: 42,
       downvotes: 0,
       replyCount: 11,
-      isPinned: true,
-    }
+      isPinned: true}
   ]}
       id: "9";
       title: "Platform Update: New AI Matching Algorithm";
@@ -401,8 +375,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
       upvotes: 42;
       downvotes: 0;
       reply_count: 11;
-      is_pinned: true,
-    }
+      is_pinned: true}
     {
       id: "10";
       title: "Maintenance Scheduled: April 15th";
@@ -417,8 +390,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
       upvotes: 8;
       downvotes: 0;
       reply_count: 2;
-      is_pinned: true,
-    }
+      is_pinned: true}
 ,
   "Megaphone": Megaphone};
 export default function ForumCategoryPage() {
@@ -513,36 +485,31 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     name: "Getting Hired";
     description: "Tips, strategies, and questions about getting hired on the platform.";
     adminOnly: false;
-    icon: "Briefcase",
-  };
+    icon: "Briefcase"};
   "project-help": {
     id: "project-help";
     name: "Project Help";
     description: "Get help with your ongoing projects and collaboration.";
     adminOnly: false;
-    icon: "MessageSquare",
-  };
+    icon: "MessageSquare"};
   "ai-tools": {
     id: "ai-tools";
     name: "AI Tools Discussion";
     description: "Discuss AI tools, frameworks, and best practices.";
     adminOnly: false;
-    icon: "Code",
-  };
+    icon: "Code"};
   "feedback": {
     id: "feedback";
     name: "Feedback & Feature Requests";
     description: "Share your feedback and suggest new features.";
     adminOnly: false;
-    icon: "FileText",
-  };
+    icon: "FileText"};
   "announcements": {
     id: "announcements";
     name: "Announcements";
     description: "Official announcements from the Zion team.";
     adminOnly: true;
-    icon: "Megaphone",
-  }
+    icon: "Megaphone"}
 };
 // Mock data for posts by category,
 const postsByCategory: Record<string ForumPost[]> = {
@@ -562,8 +529,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       downvotes: 0;
       replyCount: 8;
       isPinned: true;
-      isFeatured: true,
-    };
+      isFeatured: true};
     {
       id: "6";
       title: "Portfolio pieces that clients actually care about";
@@ -576,8 +542,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       updatedAt: "2025-04-07T11:30:00Z";
       upvotes: 19;
       downvotes: 2;
-      replyCount: 6,
-    }
+      replyCount: 6}
   ];
   "project-help": [
     {
@@ -592,8 +557,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       updatedAt: "2025-04-10T14:30:00Z";
       upvotes: 5;
       downvotes: 0;
-      replyCount: 2,
-    };
+      replyCount: 2};
     {
       id: "5";
       title: "How to handle client scope creep?";
@@ -607,8 +571,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       upvotes: 24;
       downvotes: 0;
       replyCount: 7;
-      isAnswered: true,
-    }
+      isAnswered: true}
   ];
   "ai-tools": [
     {
@@ -627,8 +590,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       downvotes: 2;
       replyCount: 12;
       isAnswered: true;
-      isFeatured: true,
-    };
+      isFeatured: true};
     {
       id: "7";
       title: "Comparing different vector embedding models";
@@ -641,8 +603,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       updatedAt: "2025-04-05T16:40:00Z";
       upvotes: 31;
       downvotes: 0;
-      replyCount: 9,
-    }
+      replyCount: 9}
   ];
   "feedback": [
     {
@@ -657,8 +618,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       updatedAt: "2025-04-09T18:45:00Z";
       upvotes: 12;
       downvotes: 1;
-      replyCount: 3,
-    };
+      replyCount: 3};
     {
       id: "8";
       title: "Suggestion for improving the jobs matching algorithm";
@@ -671,8 +631,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       updatedAt: "2025-04-04T08:10:00Z";
       upvotes: 17;
       downvotes: 3;
-      replyCount: 5,
-    }
+      replyCount: 5}
   ];
   "announcements": [
     {
@@ -689,8 +648,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       upvotes: 42;
       downvotes: 0;
       replyCount: 11;
-      isPinned: true,
-    };
+      isPinned: true};
     {
       id: "10";
       title: "Maintenance Scheduled: April 15th";
@@ -705,8 +663,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       upvotes: 8;
       downvotes: 0;
       replyCount: 2;
-      isPinned: true,
-    }
+      isPinned: true}
   ]};
 const iconMap = {
   "Briefcase": Briefcase;

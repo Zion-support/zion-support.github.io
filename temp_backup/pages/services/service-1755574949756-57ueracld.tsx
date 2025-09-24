@@ -90,6 +90,5 @@ export default function Service-1755574949756-57ueracldService() {
           </button>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

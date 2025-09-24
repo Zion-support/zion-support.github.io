@@ -7,7 +7,6 @@ import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
 import React from "react";
 import { Button } from "@/components/ui/button",
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react",
-,
 interface ActionButtonsProps {
   flag_id: string,
   status: string,
@@ -17,19 +16,15 @@ interface ActionButtonsProps {
 interface ActionButtonsProps {
   flagId: string;
   status: string;
-  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void,
-}
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void}
 export const ActionButtons: React.FC<ActionButtonsProps> = ({
   flagId,
   status,
-  onAction,
-}) => {
-,
+  onAction}) => {
 interface ActionButtonsProps {
   flagId: string;
   status: string;
-  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void,
-}
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void}
 ,
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
   return (
@@ -97,8 +92,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 interface ActionButtonsProps {
   flagId: string;
   status: string;
-  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void,
-}
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void}
 ,
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
   return (
@@ -202,6 +196,5 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
           Ignore,
         </Button>)}
     </div>)}
-,
 };
 }

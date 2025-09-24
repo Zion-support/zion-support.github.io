@@ -15,6 +15,5 @@ export default function OrderSuccessPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

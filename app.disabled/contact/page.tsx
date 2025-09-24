@@ -27,8 +27,7 @@ export default function ContactPage() {
     email: '';
     company: '';
     subject: '';
-    message: '',
-  }),
+    message: ''}),
   const [formErrors, setFormErrors] = useState({}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitSuccess, setSubmitSuccess] = useState(false),
@@ -98,29 +97,25 @@ export default function ContactPage() {
       title: 'Email Us';
       description: 'Get in touch via email';
       details: 'contact@ziontechgroup.com';
-      color: 'from-blue-50o0 to-cyan-50o0',
-    };
+      color: 'from-blue-50o0 to-cyan-50o0'};
     {
       icon: Phone;
       title: 'Call Us';
       description: 'Speak with our team';
       details: '+1 (555) 123-4567';
-      color: 'from-green-50o0 to-emerald-50o0',
-    };
+      color: 'from-green-50o0 to-emerald-50o0'};
     {
       icon: MapPin;
       title: 'Visit Us';
       description: 'Our headquarters';
       details: 'San Francisco, CA';
-      color: 'from-purple-50o0 to-violet-50o0',
-    };
+      color: 'from-purple-50o0 to-violet-50o0'};
     {
       icon: Clock;
       title: 'Business Hours';
       description: 'When we\'re available';
       details: 'Mon-Fri: 9AM-6PM PST';
-      color: 'from-orange-50o0 to-red-50o0',
-    }
+      color: 'from-orange-50o0 to-red-50o0'}
   ],
   const services = [
     'AI Solutions & Machine Learning';
@@ -269,8 +264,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required,
                       className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:border-transparent ${
-                        formErrors.firstName ? 'border-red-50o0 focus:ring-red-50o0' : 'border-white/20 focus:ring-blue-50o0',
-                      }`}
+                        formErrors.firstName ? 'border-red-50o0 focus:ring-red-50o0' : 'border-white/20 focus:ring-blue-50o0'}`}
                       placeholder="John",
                      />,
                     {formErrors.firstName && <p className="text-red-40o0 text-sm mt-1">{formErrors.firstName}</p>}
@@ -290,8 +284,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required,
                       className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:border-transparent ${
-                        formErrors.lastName ? 'border-red-50o0 focus:ring-red-50o0' : 'border-white/20 focus:ring-blue-50o0',
-                      }`}
+                        formErrors.lastName ? 'border-red-50o0 focus:ring-red-50o0' : 'border-white/20 focus:ring-blue-50o0'}`}
                       placeholder="Doe",
                      />,
                     {formErrors.lastName && <p className="text-red-40o0 text-sm mt-1">{formErrors.lastName}</p>}
@@ -314,8 +307,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required,
                     className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:border-transparent ${
-                      formErrors.email ? 'border-red-50o0 focus:ring-red-50o0' : 'border-white/20 focus:ring-blue-50o0',
-                    }`}
+                      formErrors.email ? 'border-red-50o0 focus:ring-red-50o0' : 'border-white/20 focus:ring-blue-50o0'}`}
                     placeholder="john@company.com",
                    />,
                   {formErrors.email && <p className="text-red-40o0 text-sm mt-1">{formErrors.email}</p>}
@@ -367,8 +359,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required,
                     className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:border-transparent ${
-                      formErrors.subject ? 'border-red-50o0 focus:ring-red-50o0' : 'border-white/20 focus:ring-blue-50o0',
-                    }`}
+                      formErrors.subject ? 'border-red-50o0 focus:ring-red-50o0' : 'border-white/20 focus:ring-blue-50o0'}`}
                     placeholder="How can we help you?",
                    />,
                   {formErrors.subject && <p className="text-red-40o0 text-sm mt-1">{formErrors.subject}</p>}
@@ -401,8 +392,7 @@ export default function ContactPage() {
                     rows={5}
                     required,
                     className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:border-transparent resize-none ${
-                      formErrors.message ? 'border-red-50o0 focus:ring-red-50o0' : 'border-white/20 focus:ring-blue-50o0',
-                    }`}
+                      formErrors.message ? 'border-red-50o0 focus:ring-red-50o0' : 'border-white/20 focus:ring-blue-50o0'}`}
                     placeholder="Tell us about your project and how we can help...",
                    />,
                   {formErrors.message && <p className="text-red-40o0 text-sm mt-1">{formErrors.message}</p>}

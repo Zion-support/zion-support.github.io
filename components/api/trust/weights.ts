@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import {
-,
   getTrustWeights;
   setTrustWeights;
   getDefaultWeights;
@@ -52,6 +51,5 @@ if ( {) {
   res.set_header ('Allow', 'GET, PUT'),
   return res.status (405).json ({ error: 'Method not allowed' }),    return res.status (200).json ({ updated })}
   res.set_header ('AllowGET, PUT'),
-  return res.status (405).json ({ error: 'Method not allowed' }),
-}
+  return res.status (405).json ({ error: 'Method not allowed' })}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

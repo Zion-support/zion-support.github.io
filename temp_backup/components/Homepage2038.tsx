@@ -302,38 +302,32 @@ const Homepage20o38: React.FC = () => {
                   icon: <Brain className="w-12 h-12"  />;
                   title: "AI Consciousness Evolution";
                   description: "Leading the development of artificial consciousness and emotional intelligence";
-                  color: "from-purple-50o0 to-pink-50o0",
-                };
+                  color: "from-purple-50o0 to-pink-50o0"};
                 {
                   icon: <Atom className="w-12 h-12"  />;
                   title: "Quantum Computing Power";
                   description: "Access to the most advanced quantum computing capabilities available";
-                  color: "from-blue-50o0 to-cyan-50o0",
-                };
+                  color: "from-blue-50o0 to-cyan-50o0"};
                 {
                   icon: <Shield className="w-12 h-12"  />;
                   title: "Future-Proof Security";
                   description: "Quantum-resistant encryption and zero-trust security frameworks";
-                  color: "from-red-50o0 to-orange-50o0",
-                };
+                  color: "from-red-50o0 to-orange-50o0"};
                 {
                   icon: <Rocket className="w-12 h-12"  />;
                   title: "Innovation First";
                   description: "Constantly pushing the boundaries of what's possible in technology";
-                  color: "from-green-50o0 to-emerald-50o0",
-                };
+                  color: "from-green-50o0 to-emerald-50o0"};
                 {
                   icon: <Users className="w-12 h-12"  />;
                   title: "Global Expertise";
                   description: "World-class team with experience across cutting-edge technologies";
-                  color: "from-indigo-50o0 to-purple-50o0",
-                };
+                  color: "from-indigo-50o0 to-purple-50o0"};
                 {
                   icon: <Award className="w-12 h-12"  />;
                   title: "Proven Results";
                   description: "Track record of delivering transformative solutions to leading organizations";
-                  color: "from-yellow-50o0 to-orange-50o0",
-                }
+                  color: "from-yellow-50o0 to-orange-50o0"}
               ].map((feature, index) => (
                 <motion.div,
                   key={index}

@@ -95,6 +95,5 @@ const AutonomousBusinessEcosystem20o26Banner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AutonomousBusinessEcosystem20o26Banner;

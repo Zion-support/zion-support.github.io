@@ -512,8 +512,7 @@ export default function UltraFuturisticFooter20o38() {
                     className={`flex items-center space-x-2 text-sm transition-colors ${
                       link.featured,
                         ? 'text-white hover: text-blue-40o0',
-                        : 'text-white/60 hover:text-white',
-                    }`}
+                        : 'text-white/60 hover:text-white'}`}
                   >,
                     {link.featured && (
                       <Star className='w-3 h-3 text-yellow-40o0' />)}
@@ -558,6 +557,5 @@ export default function UltraFuturisticFooter20o38() {
           </div>,
         </div>,
       </div>,
-    </footer>),
-}
+    </footer>)}
 ,

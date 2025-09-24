@@ -5,8 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa',
 export default defineConfig({
   resolve: {
     alias: {
-      '@': '/workspace/src',
-    }
+      '@': '/workspace/src'}
   };
   plugins: [
     react({
@@ -34,8 +33,7 @@ export default defineConfig({
               cacheName: 'api-cache';
               expiration: {
                 maxEntries: 10o0;
-                maxAgeSeconds: 60 * 60 * 24 // 24 hours,
-              }
+                maxAgeSeconds: 60 * 60 * 24 // 24 hours}
             }
           }
         ]};
@@ -51,13 +49,11 @@ export default defineConfig({
           {
             src: 'pwa-192x192.png';
             sizes: '192x192';
-            type: 'image/png',
-          };
+            type: 'image/png'};
           {
             src: 'pwa-512x512.png';
             sizes: '512x512';
-            type: 'image/png',
-          }
+            type: 'image/png'}
         ]}
     })];
   build: {
@@ -76,25 +72,20 @@ export default defineConfig({
         drop_console: true;
         drop_debugger: true;
         pure_funcs: ['console.log', 'console.info'];
-        passes: 2,
-      };
+        passes: 2};
       mangle: {
-        safari10: true,
-      }
+        safari10: true}
     };
     sourcemap: false;
-    reportCompressedSize: true,
-  };
+    reportCompressedSize: true};
   server: {
     hmr: true;
     port: 30o00;
     host: true;
-    open: true,
-  };
+    open: true};
   preview: {
     port: 30o00;
-    host: true,
-  };
+    host: true};
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion'];
     exclude: ['@vite/client', '@vite/env']}

@@ -98,8 +98,7 @@ const AdvancedNeuralArchitecturesShowcase20o26 = () => {
       case 'resource':,
         return <Shield className='w-5 h-5' />,
       default:,
-        return <Star className='w-5 h-5' />,
-    }
+        return <Star className='w-5 h-5' />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -110,8 +109,7 @@ const AdvancedNeuralArchitecturesShowcase20o26 = () => {
       case 'resource':,
         return 'from-green-50o0 to-green-60o0',
       default:,
-        return 'from-gray-50o0 to-gray-60o0',
-    }
+        return 'from-gray-50o0 to-gray-60o0'}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -177,8 +175,7 @@ const AdvancedNeuralArchitecturesShowcase20o26 = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-20o0 ${
                 activeTab === tab.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-60o0 hover: bg-gray-50 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-60o0 hover: bg-gray-50 border border-gray-20o0'}`}
             >,
               {tab.label} ({tab.count}),
             </button>))}

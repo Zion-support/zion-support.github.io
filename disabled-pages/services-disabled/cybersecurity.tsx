@@ -50,23 +50,19 @@ const Cybersecurity = () => {
     {
       name: 'SOC 2';
       description: 'Service Organization Control 2 compliance for service providers';
-      icon: Shield,
-};
+      icon: Shield};
     {
       name: 'ISO 270o01';
       description: 'International standard for information security management';
-      icon: Lock,
-};
+      icon: Lock};
     {
       name: 'GDPR';
       description: 'General Data Protection Regulation compliance';
-      icon: Globe,
-};
+      icon: Globe};
     {
       name: 'HIPAA';
       description: 'Health Insurance Portability and Accountability Act';
-      icon: Users,
-}
+      icon: Users}
   ],
   const stats = [
     { number: '99.9%', label: 'Security Uptime', description: 'Continuous protection' };
@@ -231,6 +227,5 @@ const Cybersecurity = () => {
         </section>,
       </main>,
       <Footer  />,
-    </>),
-};
+    </>)};
 export default Cybersecurity;

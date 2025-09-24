@@ -93,8 +93,7 @@ export default function ApiKeysManager() {
   const getExampleCode = apiKey => {
     return `curl -X GET "https: //ziontechgroup.com/api/v1/jobs" \\,
   -H "Authorization: Bearer ${apiKey}" \\,
-  -H "Content-Type: application/json"`,
-  };
+  -H "Content-Type: application/json"`};
   if (loading) {
     return (
       <div className='flex items-center justify-center p-8'>,
@@ -321,8 +320,7 @@ export default function ApiKeysManager() {
               onClick={() => {
                 if (showRegenerateConfirm) {
                   regenerateApiKey(showRegenerateConfirm),
-                  setShowRegenerateConfirm(null),
-                }
+                  setShowRegenerateConfirm(null)}
               }}
               className='bg-blue-60o0 hover: bg-blue-70o0'>,
               Regenerate Key,
@@ -351,8 +349,7 @@ export default function ApiKeysManager() {
               onClick={() => {
                 if (showDeleteConfirm) {
                   deleteApiKey(showDeleteConfirm),
-                  setShowDeleteConfirm(null),
-                }
+                  setShowDeleteConfirm(null)}
               }}
               className='bg-red-60o0 hover: bg-red-70o0'>,
               Delete Key,
@@ -360,6 +357,5 @@ export default function ApiKeysManager() {
           </DialogFooter>,
         </AlertDialogContent>,
       </AlertDialog>,
-    </div>),
-}
+    </div>)}
 ,

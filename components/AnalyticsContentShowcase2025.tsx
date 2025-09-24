@@ -92,6 +92,5 @@ const AnalyticsContentShowcase20o25 = () => {
           </Link>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AnalyticsContentShowcase20o25;

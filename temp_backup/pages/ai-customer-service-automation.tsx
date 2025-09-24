@@ -17,8 +17,7 @@ export default function AICustomerServiceAutomation() {
     {
       icon: <Zap className="w-6 h-6"  />;
       title: 'Instant Response';
-      description: 'Reduce response times from hours to seconds with AI-powered instant answers and automated workflows.',
-    };
+      description: 'Reduce response times from hours to seconds with AI-powered instant answers and automated workflows.'};
     {
       icon: <BarChart3 className="w-6 h-6"  />;
       title: 'Smart Analytics';
@@ -30,8 +29,7 @@ export default function AICustomerServiceAutomation() {
     {
       icon: <Users className="w-6 h-6"  />;
       title: 'Human Handoff';
-      description: 'Seamlessly transfer complex cases to human agents with full context and conversation history.',
-    }
+      description: 'Seamlessly transfer complex cases to human agents with full context and conversation history.'}
   ],
   const benefits = [
     'Reduce support costs by up to 70%';
@@ -230,5 +228,4 @@ export default function AICustomerServiceAutomation() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}

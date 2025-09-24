@@ -3,8 +3,7 @@ export interface ServiceCategory {
   name: string,
   description: string,
   icon: string,
-  color: string,
-}
+  color: string}
 ,
 export interface ServiceProvider {
   id: string,
@@ -14,8 +13,7 @@ export interface ServiceProvider {
   reviewCount: number,
   location: string,
   verified: boolean,
-  specialties: string[],
-}
+  specialties: string[]}
 ,
 export interface ServicePricing {
   basic: {
@@ -23,22 +21,19 @@ export interface ServicePricing {
     currency: string,
     period: string,
     features: string[],
-    popular?: boolean,
-  };
+    popular?: boolean};
   professional: {
     price: number,
     currency: string,
     period: string,
     features: string[],
-    popular?: boolean,
-  };
+    popular?: boolean};
   enterprise: {
     price: number,
     currency: string,
     period: string,
     features: string[],
-    popular?: boolean,
-  };
+    popular?: boolean};
 }
 ,
 export interface ServiceSolution {
@@ -65,16 +60,14 @@ export interface ServiceSolution {
   tags: string[],
   aiScore?: number,
   marketTrend: 'rising' | 'stable' | 'declining',
-  industryFocus: string[],
-}
+  industryFocus: string[]}
 ,
 export interface ITService extends ServiceSolution {
   serviceType: 'onsite' | 'remote' | 'hybrid',
   responseTime: string,
   coverage: string[],
   emergencySupport: boolean,
-  sla: string,
-}
+  sla: string}
 ,
 export interface AIService extends ServiceSolution {
   aiModel: string,
@@ -82,8 +75,7 @@ export interface AIService extends ServiceSolution {
   trainingData: string,
   customization: boolean,
   apiAccess: boolean,
-  realTimeProcessing: boolean,
-}
+  realTimeProcessing: boolean}
 ,
 export interface MicroSAAS extends ServiceSolution {
   userLimit: number,
@@ -91,6 +83,5 @@ export interface MicroSAAS extends ServiceSolution {
   apiRateLimit: string,
   dataRetention: string,
   backupFrequency: string,
-  uptime: number,
-}
+  uptime: number}
 ,

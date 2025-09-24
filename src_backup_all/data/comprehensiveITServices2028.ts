@@ -22,22 +22,19 @@ export interface ComprehensiveITService20o28 {
     phone: string,
     email: string,
     website: string,
-    address: string,
-  };
+    address: string};
   technicalSpecs: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors: string[],
   marketSize: string,
   growthRate: string,
   rating: number,
   reviews: number,
-  customers: number,
-}
+  customers: number}
 ,
 export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
   // Cloud Infrastructure & DevOps,
@@ -89,8 +86,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform", "Jenkins", "GitLab CI"];
       integrations: ["GitHub", "GitLab", "Jira", "Confluence", "Slack", "Teams", "PagerDuty"];
@@ -102,8 +98,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
     growthRate: "17.5% annually";
     rating: 4.9;
     reviews: 445;
-    customers: 298,
-  };
+    customers: 298};
   // Data Analytics & Business Intelligence,
   {
     id: "data-analytics-business-intelligence-20o28";
@@ -153,8 +148,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Python", "R", "SQL", "Apache Spark", "Hadoop", "Tableau", "Power BI", "Looker"];
       integrations: ["Salesforce", "HubSpot", "SAP", "Oracle", "Microsoft Dynamics", "Google Analytics"];
@@ -166,8 +160,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
     growthRate: "23.4% annually";
     rating: 4.8;
     reviews: 334;
-    customers: 223,
-  };
+    customers: 223};
   // Cybersecurity & Compliance,
   {
     id: "cybersecurity-compliance-20o28";
@@ -217,8 +210,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["SIEM", "EDR", "Firewalls", "IDS/IPS", "Vulnerability scanners", "Penetration testing tools"];
       integrations: ["Active Directory", "LDAP", "SSO", "MFA", "VPN", "Cloud security platforms"];
@@ -230,8 +222,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
     growthRate: "13.4% annually";
     rating: 4.9;
     reviews: 456;
-    customers: 312,
-  };
+    customers: 312};
   // Digital Transformation Consulting,
   {
     id: "digital-transformation-consulting-20o28";
@@ -281,8 +272,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Strategic frameworks", "Change management tools", "Project management", "Analytics platforms", "Collaboration tools"];
       integrations: ["ERP systems", "CRM platforms", "HR systems", "Financial systems", "Legacy applications"];
@@ -294,8 +284,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
     growthRate: "18.9% annually";
     rating: 4.8;
     reviews: 234;
-    customers: 156,
-  };
+    customers: 156};
   // Enterprise Software Development,
   {
     id: "enterprise-software-development-20o28";
@@ -345,8 +334,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["React", "Node.js", "Python", "Java", "C#", "PostgreSQL", "MongoDB", "Redis"];
       integrations: ["Third-party APIs", "Payment gateways", "Authentication services", "Cloud platforms", "Legacy systems"];
@@ -358,8 +346,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
     growthRate: "22.3% annually";
     rating: 4.9;
     reviews: 378;
-    customers: 245,
-  };
+    customers: 245};
   // IT Infrastructure Management,
   {
     id: "it-infrastructure-management-20o28";
@@ -409,8 +396,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Windows Server", "Linux", "VMware", "Hyper-V", "Cisco", "Juniper", "NetApp", "EMC"];
       integrations: ["Active Directory", "LDAP", "DNS", "DHCP", "Backup systems", "Monitoring tools"];
@@ -422,8 +408,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
     growthRate: "8.9% annually";
     rating: 4.7;
     reviews: 289;
-    customers: 198,
-  };
+    customers: 198};
   // Managed IT Services,
   {
     id: "managed-it-services-20o28";
@@ -473,8 +458,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["RMM tools", "PSA systems", "Monitoring platforms", "Backup solutions", "Security tools"];
       integrations: ["Cloud platforms", "Business applications", "Communication tools", "Accounting systems"];
@@ -486,8 +470,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
     growthRate: "12.4% annually";
     rating: 4.8;
     reviews: 445;
-    customers: 312,
-  };
+    customers: 312};
   // Cloud Migration Services,
   {
     id: "cloud-migration-services-20o28";
@@ -537,8 +520,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["AWS Migration Hub", "Azure Migrate", "Google Cloud Migrate", "VMware", "Docker", "Kubernetes"];
       integrations: ["Cloud platforms", "Monitoring tools", "Backup solutions", "Security platforms", "Management tools"];
@@ -550,8 +532,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
     growthRate: "28.7% annually";
     rating: 4.9;
     reviews: 234;
-    customers: 167,
-  };
+    customers: 167};
   // IT Project Management,
   {
     id: "it-project-management-20o28";
@@ -601,8 +582,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Project management tools", "Collaboration platforms", "Reporting systems", "Risk management tools", "Quality assurance tools"];
       integrations: ["Project management software", "Communication tools", "Documentation systems", "Time tracking", "Resource management"];
@@ -614,7 +594,6 @@ export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
     growthRate: "10.8% annually";
     rating: 4.8;
     reviews: 198;
-    customers: 134,
-  }
+    customers: 134}
 ],
 export default COMPREHENSIVE_IT_SERVICES_20o28;

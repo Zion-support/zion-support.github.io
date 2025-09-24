@@ -1,6 +1,6 @@
 #!/usr/bin/env node,
 import { execSync } from 'child_process',
-// console.log('🔧 Resolving merge conflicts comprehensively...'),
+// // console.log('🔧 Resolving merge conflicts comprehensively...'),
 // Get list of conflicted files,
 const getConflictedFiles = () => {
   try {
@@ -21,7 +21,7 @@ const resolveConflicts = (filePath) => {
         filePath.includes('.disabled') ||,
         filePath.includes('yarn.lock') ||,
         filePath.includes('package-lock.json')) {
-      // console.log(`Accepting HEAD version for: ${filePath}`),
+      // // console.log(`Accepting HEAD version for: ${filePath}`),
       execSync(`git checkout --ours "${filePath}"`, { stdio: 'inherit' }),
       return true}
 ,
@@ -30,7 +30,7 @@ const resolveConflicts = (filePath) => {
         filePath.includes('components/') ||,
         filePath.includes('utils/') ||,
         filePath.includes('types/')) {
-      // console.log(`Resolving conflicts for: ${filePath}`),
+      // // console.log(`Resolving conflicts for: ${filePath}`),
       let content = fs.readFileSync(filePath, 'utf8'),
       // Remove conflict markers and keep HEAD version,
       content = content.replace(/,
@@ -40,10 +40,9 @@ const resolveConflicts = (filePath) => {
       return true}
 ,
     // For other files, accept HEAD version,
-    // console.log(`Accepting HEAD version for: ${filePath}`),
+    // // console.log(`Accepting HEAD version for: ${filePath}`),
     execSync(`git checkout --ours "${filePath}"`, { stdio: 'inherit' }),
-    return true,
-} catch (error) {
+    return true} catch (error) {
     console.error(`Error resolving conflicts in ${filePath}:`, error.message),
     return false}
 };
@@ -51,10 +50,10 @@ const resolveConflicts = (filePath) => {
 const main = () => {
   const conflictedFiles = getConflictedFiles(),
   if (conflictedFiles.length === 0) {
-    // console.log('No conflicted files found.'),
+    // // console.log('No conflicted files found.'),
     return}
 ,
-  // console.log(`Found ${conflictedFiles.length} conflicted files.`),
+  // // console.log(`Found ${conflictedFiles.length} conflicted files.`),
   let resolvedCount = 0,
   let failedCount = 0,
   for (const file of conflictedFiles) {
@@ -63,13 +62,13 @@ const main = () => {
       failedCount++}
   }
 ,
-  // console.log(`\n✅ Resolved: ${resolvedCount} files`),
-  // console.log(`❌ Failed: ${failedCount} files`),
+  // // console.log(`\n✅ Resolved: ${resolvedCount} files`),
+  // // console.log(`❌ Failed: ${failedCount} files`),
   if (resolvedCount > 0) {
-    // console.log('\n📝 Adding resolved files...'),
+    // // console.log('\n📝 Adding resolved files...'),
     try {
       execSync('git add .', { stdio: 'inherit' }),
-      // console.log('✅ Files added to staging area')} catch (error) {
+      // // console.log('✅ Files added to staging area')} catch (error) {
       console.error('❌ Error adding files:', error.message)}
   }
 };

@@ -31,8 +31,7 @@ const RevolutionaryContentBanner20o25 = () => {
       description: "Experience the future of content creation with our revolutionary AI technology that generatesoptimizesand personalizes content at scale.";
       features: ["Automated content generation"Real-time optimization"Multi-platform distribution"Performance analytics"];
       color: "from-blue-60o0 via-purple-60o0 to-pink-60o0";
-      icon: Brain,
-    };
+      icon: Brain};
     {
       id: 2;
       title: "Quantum Content Intelligence";
@@ -40,8 +39,7 @@ const RevolutionaryContentBanner20o25 = () => {
       description: "Harness the power of quantum computing to process and analyze content with unprecedented speed and accuracy.";
       features: ["Quantum processing"Instant analysis"Predictive insights"Global scalability"];
       color: "from-purple-60o0 via-pink-60o0 to-red-60o0";
-      icon: Zap,
-    };
+      icon: Zap};
     {
       id: 3;
       title: "Autonomous Content Ecosystem";
@@ -49,8 +47,7 @@ const RevolutionaryContentBanner20o25 = () => {
       description: "Create a fully autonomous content ecosystem that managesupdatesand optimizes itself without human intervention.";
       features: ["Self-optimization"Automatic updates"Smart distribution"Continuous learning"];
       color: "from-green-60o0 via-teal-60o0 to-cyan-60o0";
-      icon: Globe,
-    }
+      icon: Globe}
   ],
   const stats = [
     { label: "Content Generated"value: "1M+"icon: Target };
@@ -64,8 +61,7 @@ const RevolutionaryContentBanner20o25 = () => {
       opacity: 1;
       transition: {
         duration: 0.8;
-        staggerChildren: 0.2,
-      }
+        staggerChildren: 0.2}
     }
   };
   const itemVariants ={
@@ -240,8 +236,7 @@ const RevolutionaryContentBanner20o25 = () => {
                   className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                     currentSlide === index,
                       ? 'bg-white scale-125',
-                      : 'bg-white/40 hover: bg-white/60',
-                  }`}
+                      : 'bg-white/40 hover: bg-white/60'}`}
                   onClick={() => setCurrentSlide(index)}
                 />))}
             </div>,
@@ -286,6 +281,5 @@ const RevolutionaryContentBanner20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </motion.div>),
-};
+    </motion.div>)};
 export default RevolutionaryContentBanner20o25;

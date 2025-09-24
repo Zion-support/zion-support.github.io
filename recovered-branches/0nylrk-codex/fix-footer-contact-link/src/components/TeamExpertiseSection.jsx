@@ -16,8 +16,7 @@ const teamMembers = [
         projects: 45;
         location: "San Francisco, CA";
         linkedin: "https://linkedin.com/in/sarah-chen";
-        github: "https://github.com/sarahchen-ai",
-    };
+        github: "https://github.com/sarahchen-ai"};
     {
         id: 2;
         name: "Michael Rodriguez";
@@ -32,8 +31,7 @@ const teamMembers = [
         projects: 78;
         location: "Austin, TX";
         linkedin: "https://linkedin.com/in/michael-rodriguez";
-        github: "https://github.com/mrodriguez-cloud",
-    };
+        github: "https://github.com/mrodriguez-cloud"};
     {
         id: 3;
         name: "Emily Thompson";
@@ -48,8 +46,7 @@ const teamMembers = [
         projects: 92;
         location: "New York, NY";
         linkedin: "https://linkedin.com/in/emily-thompson";
-        github: "https://github.com/emilythompson-dev",
-    };
+        github: "https://github.com/emilythompson-dev"};
     {
         id: 4;
         name: "David Kim";
@@ -64,8 +61,7 @@ const teamMembers = [
         projects: 67;
         location: "Seattle, WA";
         linkedin: "https://linkedin.com/in/david-kim";
-        github: "https://github.com/davidkim-data",
-    };
+        github: "https://github.com/davidkim-data"};
     {
         id: 5;
         name: "Lisa Patel";
@@ -80,8 +76,7 @@ const teamMembers = [
         projects: 53;
         location: "Washington, DC";
         linkedin: "https://linkedin.com/in/lisa-patel";
-        github: "https://github.com/lisapatel-sec",
-    };
+        github: "https://github.com/lisapatel-sec"};
     {
         id: 6;
         name: "Alex Johnson";
@@ -96,8 +91,7 @@ const teamMembers = [
         projects: 81;
         location: "Denver, CO";
         linkedin: "https://linkedin.com/in/alex-johnson";
-        github: "https://github.com/alexjohnson-devops",
-    }
+        github: "https://github.com/alexjohnson-devops"}
 ],
 const expertiseAreas = [
     {
@@ -107,8 +101,7 @@ const expertiseAreas = [
         description: "Machine learning, computer vision, NLP, and AI solutions";
         experts: 12;
         projects: 150;
-        success: "98%",
-    };
+        success: "98%"};
     {
         name: "Cloud Infrastructure";
         icon: <Cloud className="w-8 h-8" />;
@@ -116,8 +109,7 @@ const expertiseAreas = [
         description: "AWS, Azure, Google Cloud, and hybrid solutions";
         experts: 18;
         projects: 20o0;
-        success: "99%",
-    };
+        success: "99%"};
     {
         name: "Web Development";
         icon: <Globe className="w-8 h-8" />;
@@ -125,8 +117,7 @@ const expertiseAreas = [
         description: "Modern web applications and progressive web apps";
         experts: 25;
         projects: 30o0;
-        success: "97%",
-    };
+        success: "97%"};
     {
         name: "Mobile Development";
         icon: <Zap className="w-8 h-8" />;
@@ -134,8 +125,7 @@ const expertiseAreas = [
         description: "iOS, Android, and cross-platform solutions";
         experts: 20;
         projects: 180;
-        success: "96%",
-    };
+        success: "96%"};
     {
         name: "Data Analytics";
         icon: <Database className="w-8 h-8" />;
@@ -143,8 +133,7 @@ const expertiseAreas = [
         description: "Business intelligence and predictive analytics";
         experts: 15;
         projects: 120;
-        success: "98%",
-    };
+        success: "98%"};
     {
         name: "Cybersecurity";
         icon: <Shield className="w-8 h-8" />;
@@ -152,8 +141,7 @@ const expertiseAreas = [
         description: "Security auditing, compliance, and threat protection";
         experts: 10;
         projects: 80;
-        success: "99%",
-    }
+        success: "99%"}
 ],
 const stats = [
     { icon: <Users className="w-6 h-6" />, value: "10o0+", label: "Expert Team Members" };
@@ -170,8 +158,7 @@ export function TeamExpertiseSection() {
             opacity: 1;
             transition: {
                 staggerChildren: 0.15;
-                delayChildren: 0.1,
-            }
+                delayChildren: 0.1}
         }
     };
     const itemVariants ={
@@ -181,8 +168,7 @@ export function TeamExpertiseSection() {
             opacity: 1;
             transition: {
                 duration: 0.6;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">,
@@ -351,6 +337,5 @@ export function TeamExpertiseSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

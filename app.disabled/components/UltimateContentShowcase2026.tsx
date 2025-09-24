@@ -16,11 +16,9 @@ const UltimateContentShowcase20o26: React.FC = () => {
         roi: '50o0%';
         savings: '$2.8B';
         accuracy: '99.7%';
-        satisfaction: '98%',
-      };
+        satisfaction: '98%'};
       featured: true;
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'ai-transformation-10o00-roi';
       title: 'AI Transformation Success Story: $2.8B Company Achieves 1,0o00% ROI in 18 Months';
@@ -30,11 +28,9 @@ const UltimateContentShowcase20o26: React.FC = () => {
         roi: '1,0o00%';
         savings: '$280M';
         accuracy: '99.9%';
-        satisfaction: '99.2%',
-      };
+        satisfaction: '99.2%'};
       featured: true;
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'implementation-master-guide';
       title: 'AI 20o25 Implementation Master Guide: Ultimate Success Framework';
@@ -44,11 +40,9 @@ const UltimateContentShowcase20o26: React.FC = () => {
         roi: '50o0%+';
         savings: '$2.8B';
         accuracy: '94%';
-        satisfaction: '98%',
-      };
+        satisfaction: '98%'};
       featured: true;
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'quantum-computing-revolution';
       title: 'AI 20o25: The Quantum Computing Business Revolution - Ultimate Breakthrough Guide';
@@ -58,11 +52,9 @@ const UltimateContentShowcase20o26: React.FC = () => {
         roi: '1,20o0%';
         savings: '$10o0B';
         accuracy: '99.97%';
-        satisfaction: '99%',
-      };
+        satisfaction: '99%'};
       featured: true;
-      isNew: true,
-    }
+      isNew: true}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -77,8 +69,7 @@ const UltimateContentShowcase20o26: React.FC = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -89,8 +80,7 @@ const UltimateContentShowcase20o26: React.FC = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   if (!isVisible) return null,
   return (

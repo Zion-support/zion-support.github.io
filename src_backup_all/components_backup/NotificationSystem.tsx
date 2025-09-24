@@ -25,12 +25,10 @@ export interface Notification {
   read: boolean,
   action?: {
     label: string,
-    onClick: () => void,
-  };
+    onClick: () => void};
   priority: 'low' | 'medium' | 'high',
   category?: string,
-  icon?: React.ReactNode,
-}
+  icon?: React.ReactNode}
 ,
 interface NotificationSystemProps {
   maxNotifications?: number,
@@ -46,8 +44,7 @@ interface NotificationSettings {
   autoDismiss: boolean,
   position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left',
   maxNotifications: number,
-  defaultDuration: number,
-}
+  defaultDuration: number}
 ,
 export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   maxNotifications = 5;
@@ -84,8 +81,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
     notifications.forEach(notification => {
       if (notification.duration !== 0) {
         const timeout = setTimeout(() => {
-          dismissNotification(notification.id),
-        }, notification.duration || settings.defaultDuration),
+          dismissNotification(notification.id)}, notification.duration || settings.defaultDuration),
         timeouts.push(timeout)}
     }),
     return () => {
@@ -115,8 +111,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
       id: `notification-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
       timestamp: new Date();
       read: false;
-      duration: notification.duration ?? settings.defaultDuration,
-    };
+      duration: notification.duration ?? settings.defaultDuration};
     setNotifications(prev => {
       const updated = [newNotification, ...prev],
       return updated.slice(0, settings.maxNotifications)}),
@@ -125,8 +120,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
     triggerVibration()}, [settings.maxNotifications, settings.defaultDuration, playSound, triggerVibration]),
   // Dismiss notification,
   const dismissNotification = useCallback((id: string) => {
-    setNotifications(prev => prev.filter(n => n.id !== id)),
-  }, []),
+    setNotifications(prev => prev.filter(n => n.id !== id))}, []),
   // Mark notification as read,
   const markAsRead = useCallback((id: string) => {
     setNotifications(prev =>,
@@ -169,8 +163,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
       case 'achievement':,
         return baseStyles + (priority === 'high' ? 'border-purple-60o0 bg-purple-50' : 'border-purple-50o0 bg-purple-50/80'),
       default:,
-        return baseStyles + 'border-zion-slate bg-zion-slate/10',
-    }
+        return baseStyles + 'border-zion-slate bg-zion-slate/10'}
   };
   // Get position classes,
   const getPositionClasses = () => {
@@ -184,8 +177,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
       case 'bottom-right':,
         return 'bottom-4 right-4',
       default: ,
-        return 'top-4 right-4',
-    }
+        return 'top-4 right-4'}
   };
   // Update settings,
   const updateSettings = useCallback((newSettings: Partial<NotificationSettings>) => {
@@ -337,8 +329,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                             </button>,
                           </div>,
                           <p className={`text-sm mt-1 ${
-                            notification.read ? 'text-zion-slate/60' : 'text-zion-slate',
-                          }`}>,
+                            notification.read ? 'text-zion-slate/60' : 'text-zion-slate'}`}>,
                             {notification.message}
                           </p>,
                           <div className="flex items-center justify-between mt-3">,

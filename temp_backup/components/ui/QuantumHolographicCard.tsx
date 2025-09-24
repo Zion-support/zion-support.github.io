@@ -27,8 +27,7 @@ interface QuantumHolographicCardProps {
       mobile: string,
       email: string,
       address: string,
-      website: string,
-    };
+      website: string};
   };
   onClick?: () => void,
   className?: string}
@@ -289,6 +288,5 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
           ▼,
         </motion.div>,
       </button>,
-    </motion.div>),
-};
+    </motion.div>)};
 export default QuantumHolographicCard;

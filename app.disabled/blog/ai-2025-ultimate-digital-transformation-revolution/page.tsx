@@ -292,6 +292,5 @@ export default function UltimateDigitalTransformationRevolutionPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

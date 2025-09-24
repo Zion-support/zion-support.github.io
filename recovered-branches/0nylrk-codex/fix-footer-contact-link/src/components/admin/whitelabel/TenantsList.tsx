@@ -21,7 +21,6 @@ import { Badge  } from '@/components / ui / badge',
 import { toast  } from '@/hooks / use - toast',
 import { WhitelabelTenant  } from '@/hooks / useWhitelabelTenant',
 import { format  } from './date - fns',
-,
   Table;
   TableBody;
   TableCell;
@@ -51,8 +50,7 @@ export function TenantsList() {
       toast({
         variant: "destructive",
         title: "Failed to load tenants",
-        description: error.message,
-      })} finally {
+        description: error.message})} finally {
       setIsLoading(false)}
   }
   const toggleTenantStatus = async (tenant: WhitelabelTenant) => {
@@ -73,8 +71,7 @@ export function TenantsList() {
       toast({
         variant: "destructive",
         title: "Failed to update tenant",
-        description: error.message,
-      })}
+        description: error.message})}
   }
   const verifyDns = async (tenant: WhitelabelTenant) => {
     try {
@@ -96,8 +93,7 @@ export function TenantsList() {
       toast({
         variant: "destructive",
         title: "Failed to verify DNS",
-        description: error.message,
-      })}
+        description: error.message})}
   }
   Table;
   TableBody;
@@ -126,7 +122,6 @@ export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   useEffect(() => {
-,
     loadTenants()}, []),
   const loadTenants = async () => {
     try {
@@ -136,8 +131,7 @@ export function TenantsList() {
         .select("*"),
         .order("created_at", { ascending: false }),
       if (error) throw error,
-      setTenants(data as WhitelabelTenant[]),
-} catch (error: any) {
+      setTenants(data as WhitelabelTenant[])} catch (error: any) {
       console && console.error("Error loading tenants:", error),
       toast({
         variant: "destructive";
@@ -616,8 +610,7 @@ if (throw error) {
             </TableBody>,
           </Table>,
         </div>)}
-    </div>),
-}
+    </div>)}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
                     </TableCell>,
                     <TableCell>,

@@ -10,6 +10,5 @@ export default function AI20o26QuantumRevolutionUltimateBanner() {
           Ultimate quantum innovations for real outcomes.,
         </p>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

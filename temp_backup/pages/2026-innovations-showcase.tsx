@@ -12,8 +12,7 @@ export default function Innovations20o26Showcase() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const allNewServices = [
     ...innovative20o26MicroSaasServicesV2;
     ...emergingTech20o26ServicesV2;
@@ -158,8 +157,7 @@ export default function Innovations20o26Showcase() {
                         <ArrowRight className="w-4 h-4"  />,
                       </Link>,
                     </div>,
-                  </motion.div>),
-              })}
+                  </motion.div>)})}
             </div>,
           </div>,
         </section>,
@@ -318,5 +316,4 @@ export default function Innovations20o26Showcase() {
           </div>,
         </footer>,
       </div>,
-    </UltraAdvancedFuturisticBackground>),
-}
+    </UltraAdvancedFuturisticBackground>)}

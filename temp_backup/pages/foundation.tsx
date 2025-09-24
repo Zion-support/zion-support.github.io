@@ -16,6 +16,5 @@ export default function FoundationPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -351,6 +351,5 @@ export default function QuantumCybersecurityServices() {
           </motion.div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,

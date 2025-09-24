@@ -600,8 +600,7 @@ export const ZoomOut = LucideZoomOut,
 export type IconProps = SVGProps<SVGSVGElement> & {
   name: keyof typeof iconMap,
   size?: number | string,
-  className?: string,
-};
+  className?: string};
 // Create a map of icon names to component references,
 const iconMap = {
   home: LucideHome;

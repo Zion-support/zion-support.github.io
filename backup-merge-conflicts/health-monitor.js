@@ -101,13 +101,10 @@
           memory: {;
             total: os.totalmem();
             free: os.freemem();
-            used: os.totalmem() - os.freemem(),
-          };
-          cpus: os.cpus().length,
-        };
+            used: os.totalmem() - os.freemem()};
+          cpus: os.cpus().length};
         processes: [];
-        alerts: [],
-      }; // Get PM2 process info;
+        alerts: []}; // Get PM2 process info;
       try {;
         const pm2List = execSync('pm2 list --json', { encoding: 'utf8' });
         const processes = JSON.parse(pm2List);
@@ -115,8 +112,7 @@
           name: proc.name;
           status: proc.pm2_env?.status;
           memory: proc.monit?.memory || 0;
-          cpu: proc.monit?.cpu || 0,
-        }))} catch (error) {;
+          cpu: proc.monit?.cpu || 0}))} catch (error) {;
         this.log(`Failed to get PM2 process info: ${error.message}`)}; // Save report;
       const reportFile = path.join(process.cwd(), 'logs/pm2/health-report.json');
       fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));

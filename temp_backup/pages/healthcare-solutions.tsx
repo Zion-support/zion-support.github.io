@@ -148,23 +148,19 @@ export default function HealthcareSolutions() {
                 {
                   title: 'AI Diagnostics';
                   description: 'Advanced AI-powered medical diagnosis and analysis';
-                  icon: <Brain className="w-12 h-12 text-cyan-40o0"  />,
-                };
+                  icon: <Brain className="w-12 h-12 text-cyan-40o0"  />};
                 {
                   title: 'Telemedicine';
                   description: 'Remote healthcare delivery and virtual consultations';
-                  icon: <Users className="w-12 h-12 text-blue-40o0"  />,
-                };
+                  icon: <Users className="w-12 h-12 text-blue-40o0"  />};
                 {
                   title: 'Data Analytics';
                   description: 'Healthcare insights and predictive analytics';
-                  icon: <Activity className="w-12 h-12 text-green-40o0"  />,
-                };
+                  icon: <Activity className="w-12 h-12 text-green-40o0"  />};
                 {
                   title: 'Security & Compliance';
                   description: 'HIPAA-compliant healthcare data protection';
-                  icon: <Shield className="w-12 h-12 text-red-40o0"  />,
-                }
+                  icon: <Shield className="w-12 h-12 text-red-40o0"  />}
               ].map((innovation, index) => (
                 <motion.div,
                   key={innovation.title}
@@ -217,6 +213,5 @@ export default function HealthcareSolutions() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

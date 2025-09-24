@@ -28,30 +28,25 @@ interface Service {
   growthRate: string,
   launchDate: string,
   badge?: string,
-  icon?: React.ReactNode,
-}
+  icon?: React.ReactNode}
 ,
 const allServices: Service[] = [
   ...innovativeRealMicroSaasServices2025.map(service => ({
     ...service;
     category: 'Micro SAAS';
-    icon: <Rocket className="w-6 h-6" />,
-  }));
+    icon: <Rocket className="w-6 h-6" />}));
   ...innovativeAIServicesEnhanced2025.map(service => ({
     ...service;
     category: 'AI & Consciousness';
-    icon: <Brain className="w-6 h-6" />,
-  }));
+    icon: <Brain className="w-6 h-6" />}));
   ...innovativeITServicesEnhanced2025.map(service => ({
     ...service;
     category: 'Enterprise IT';
-    icon: <Shield className="w-6 h-6" />,
-  }));
+    icon: <Shield className="w-6 h-6" />}));
   ...emergingTechServicesEnhanced2025.map(service => ({
     ...service;
     category: 'Quantum & Emerging Tech';
-    icon: <Atom className="w-6 h-6" />,
-  }))],
+    icon: <Atom className="w-6 h-6" />}))],
 const categories = [
   { name: 'All 'Services', 'icon: <Globe className="w-5 h-5" />count: allServices.length };
   { name: 'Micro 'SAAS', 'icon: <Rocket className="w-5 h-5" />count: innovativeRealMicroSaasServices2025.length };
@@ -102,8 +97,7 @@ export default function ComprehensiveServicesShowcase2025() {
           case '50-200': return price >= 50 && price <= 200,
           case '200-500': return price > 200 && price <= 500,
           case 'over-500': return price > 500,
-          default: return true,
-        }
+          default: return true}
       })}
 ,
     // Sort services,
@@ -120,8 +114,7 @@ export default function ComprehensiveServicesShowcase2025() {
         case 'price-high':,
           return parseFloat(b.price.replace(/[^0-9.]/g', ')) - parseFloat(a.price.replace(/[^0-9.]/g', ')),
         default: ,
-          return 0,
-      }
+          return 0}
     }),
     setFilteredServices(filtered)}[searchTermselectedCategoryselectedPriceRangesortBy]),
   const getCategoryColor = (category: string) => {
@@ -130,8 +123,7 @@ export default function ComprehensiveServicesShowcase2025() {
       case 'AI & Consciousness': return 'from-purple-500 to-pink-500',
       case 'Enterprise IT': return 'from-green-500 to-emerald-500',
       case 'Quantum & Emerging Tech': return 'from-orange-500 to-red-500',
-      default: return 'from-gray-500 to-slate-500',
-    }
+      default: return 'from-gray-500 to-slate-500'}
   };
   return (
     <Layout>,
@@ -158,15 +150,13 @@ export default function ComprehensiveServicesShowcase2025() {
                 y: [0, -100, 0],
                 opacity: [0.2, 0.8, 0.2]}}
               transition={{
-,
     setFilteredServices (filtered)}, [search_term, selected_category, selectedPriceRange, sort_by]),
   const getCategoryColor = (category: string) =>: any {
     switch (category) {        case 'price - low':,
           return parse_float (a.price.replace (/[^0 - 9.]/g, '')) - parse_float (b.price.replace (/[^0 - 9.]/g, '')),
         case 'price - high':,
           return parse_float (b.price.replace (/[^0 - 9.]/g, '')) - parse_float (a.price.replace (/[^0 - 9.]/g, '')),
-        default: return 0,
-      }
+        default: return 0}
     }),
     setFilteredServices (filtered)}, [search_term, selected_category, selectedPriceRange, sort_by]),
   const getCategoryColor = (category: string) =>: any {
@@ -175,8 +165,7 @@ export default function ComprehensiveServicesShowcase2025() {
       case 'AI & Consciousness': return <Brain className="w-5 h-5" />,
       case 'Enterprise IT': return <Shield className="w-5 h-5" />,
       case 'Quantum & Emerging Tech': return <Atom className="w-5 h-5" />,
-      default: return <Globe className="w-5 h-5" />,
-    }
+      default: return <Globe className="w-5 h-5" />}
   };
   return (
     <Layout>,
@@ -277,8 +266,7 @@ export default function ComprehensiveServicesShowcase2025() {
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     selectedCategory === category.name,
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25',
-                      : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white',
-                  }`}
+                      : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white'}`}
                 >,
                   {category.icon}
                   <span>{category.name}</span>,
@@ -316,8 +304,7 @@ export default function ComprehensiveServicesShowcase2025() {
                   className={`p-2 rounded-md transition-all duration-200 ${
                     viewMode === 'grid',
                       ? 'bg-cyan-500 text-white',
-                      : 'text-gray-400 hover: text-white',
-                  }`}
+                      : 'text-gray-400 hover: text-white'}`}
                 >,
                   <Grid3X3 className="w-4 h-4" />,
                 </button>,
@@ -556,6 +543,5 @@ export default function ComprehensiveServicesShowcase2025() {
           </motion.div>,
         </div>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 }

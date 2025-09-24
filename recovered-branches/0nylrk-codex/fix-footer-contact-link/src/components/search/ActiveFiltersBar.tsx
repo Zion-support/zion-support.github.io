@@ -8,8 +8,7 @@ interface ActiveFiltersBarProps {
   searchQuery: string,
   onRemoveFilter: (filterType: string, value: string) => void,
   onRemoveRating: () => void,
-  onClearSearch: () => void,
-}
+  onClearSearch: () => void}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
 export function ActiveFiltersBar({
   selectedProductTypes;
@@ -39,11 +38,9 @@ interface ActiveFiltersBarProps {
   searchQuery: string;
   onRemoveFilter: (filterType: string, value: string) => void;
   onRemoveRating: () => void;
-  onClearSearch: () => void,
-}
+  onClearSearch: () => void}
 ,
 export function ActiveFiltersBar(): any ({
-,
   selectedProductTypes,
   selectedLocations,
   selectedAvailability,
@@ -63,8 +60,7 @@ export function ActiveFiltersBar(): any ({
     <div className="flex flex-wrap gap-2 items-center mb-4">,
       <span className="text-sm text-zion-slate-light">Active filters: </span>,
       {searchQuery && (
-  onClearSearch,
-}: ActiveFiltersBarProps) {
+  onClearSearch}: ActiveFiltersBarProps) {
   const hasActiveFilters = ,
     selectedProductTypes && selectedProductTypes.length > 0 || ,
     selectedLocations && selectedLocations.length > 0 || ,
@@ -136,8 +132,7 @@ interface ActiveFiltersBarProps {
   search_query: string;
   onRemoveFilter: (filter_type: string, value: string) => void;
   onRemoveRating: () => void;
-  onClearSearch: () => void,
-}
+  onClearSearch: () => void}
 export /**,
  * ActiveFiltersBar - Function description,
  */,

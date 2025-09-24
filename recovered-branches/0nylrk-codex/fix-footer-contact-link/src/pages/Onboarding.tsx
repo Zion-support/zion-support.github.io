@@ -12,7 +12,6 @@ import {Steps, Step} from "@/components/ui/steps",
 import {supabase} from "@/integrations/supabase/client",
 import {toast} from "@/hooks/use-toast",
 export default function Onboarding() {
-,
   const { user, updateProfile, isLoading } = useAuth(),
   const [currentStep, setCurrentStep] = useState(0),
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null),
@@ -33,12 +32,10 @@ export default function Onboarding() {
       case "client":,
         return "employer",
       default:,
-        return "buyer",
-    }
+        return "buyer"}
 }
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
-    setUserType(type),
-  };
+    setUserType(type)};
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
     setUserType(type);
     // Direct to specific registration page based on user type,
@@ -73,14 +70,12 @@ export default function Onboarding() {
         bio: data.bio, // This is now valid since we added bio to UserDetails,
         userType: dbUserType,
         headline: data.headline,
-        profileComplete: true,
-      })});
+        profileComplete: true})});
       // Update onboarding milestone,
       await supabase.rpc('update_onboarding_milestone', {
         _user_id: user.id,
         _milestone: 'profile_completed',
-        _status: true,
-      })});
+        _status: true})});
       toast({
         title: 'Profile completed!',
         description: 'Your profile has been set up successfully.'}),
@@ -115,14 +110,12 @@ export default function Onboarding() {
         bio: data && data.bio, // This is now valid since we added bio to UserDetails,
         userType: dbUserType;
         headline: data && data.headline;
-        profileComplete: true,
-      }),
+        profileComplete: true}),
       // Update onboarding milestone,
       await supabase && supabase.rpc('update_onboarding_milestone', {
         _user_id: user && user.id;
         _milestone: 'profile_completed';
-        _status: true,
-      }),
+        _status: true}),
       toast({
         title: 'Profile completed!';
         description: 'Your profile has been set up successfully.'});
@@ -131,8 +124,7 @@ export default function Onboarding() {
         ? "/client-dashboard" ,
         : "/talent-dashboard",
       // Redirect to dashboard,
-      navigate(dashboardRoute),
-} catch (error) {
+      navigate(dashboardRoute)} catch (error) {
       console && console.error('Error updating profile:', error),
       toast({
         title: 'Error';

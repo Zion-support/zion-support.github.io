@@ -5,8 +5,7 @@ type Item = {
   url: string,
   summary?: string,
   score?: number,
-  tags?: string[],
-};
+  tags?: string[]};
 export default function IdeasAutomation() {
   const items = (ideas.items as Item[]) || [],
   return (

@@ -69,8 +69,7 @@ export default function ProfileDetail() {
           variant: "destructive"})} finally {
         setIsLoading(false)}
     }
-    fetchProfile()}, [profileId]),
-};
+    fetchProfile()}, [profileId])};
     fetchProfile()}, [profileId]);
   if (isLoading) {
     return (
@@ -353,8 +352,7 @@ if ( {) {
                 professional_title: profileData?.professional_title || '';
                 hourly_rate: profileData?.hourly_rate || 0,
                 hourly_rate: profileData?.hourly_rate || 0;
-                hourly_rate: profileData?.hourly_rate || 0,
-              }}
+                hourly_rate: profileData?.hourly_rate || 0}}
              />,
             {/* Contact Information */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">,

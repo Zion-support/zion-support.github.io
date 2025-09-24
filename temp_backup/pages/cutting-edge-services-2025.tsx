@@ -11,8 +11,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const serviceCategories = [
   {
     title: 'AI & Consciousness';
@@ -21,8 +20,7 @@ const serviceCategories = [
     icon: Brain;
     color: 'from-violet-50o0 to-purple-60o0';
     bgColor: 'from-violet-90o0/20 to-purple-90o0/20';
-    borderColor: 'border-violet-50o0/30',
-  };
+    borderColor: 'border-violet-50o0/30'};
   {
     title: 'Quantum & Emerging Tech';
     description: 'Breakthrough quantum computing and space technology solutions';
@@ -30,8 +28,7 @@ const serviceCategories = [
     icon: Atom;
     color: 'from-indigo-50o0 to-blue-60o0';
     bgColor: 'from-indigo-90o0/20 to-blue-90o0/20';
-    borderColor: 'border-indigo-50o0/30',
-  };
+    borderColor: 'border-indigo-50o0/30'};
   {
     title: 'Enterprise IT';
     description: 'Advanced enterprise infrastructure and security solutions';
@@ -39,8 +36,7 @@ const serviceCategories = [
     icon: Shield;
     color: 'from-blue-50o0 to-cyan-60o0';
     bgColor: 'from-blue-90o0/20 to-cyan-90o0/20';
-    borderColor: 'border-blue-50o0/30',
-  };
+    borderColor: 'border-blue-50o0/30'};
   {
     title: 'Micro SAAS';
     description: 'Innovative business solutions for modern enterprises';
@@ -48,8 +44,7 @@ const serviceCategories = [
     icon: Rocket;
     color: 'from-teal-50o0 to-emerald-60o0';
     bgColor: 'from-teal-90o0/20 to-emerald-90o0/20';
-    borderColor: 'border-teal-50o0/30',
-  }
+    borderColor: 'border-teal-50o0/30'}
 ],
 export default function CuttingEdgeServices20o25() {
   return (
@@ -320,5 +315,4 @@ export default function CuttingEdgeServices20o25() {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>),
-}
+    </Layout>)}

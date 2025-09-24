@@ -78,7 +78,6 @@ import Link from 'next/link',import {
   Code;
 } from 'lucide-react',
 import Link from 'next/link',import {
-,
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package,
   Bot, Car, Building2, DollarSign, Monitor, Users,
@@ -94,8 +93,7 @@ import Link from 'next/link',
     {
       name: 'Home';
       href: '/';
-      icon: null,
-    };
+      icon: null};
     {
       name: 'AI Services',
       href: '#',
@@ -121,8 +119,7 @@ import Link from 'next / link',
       name: 'Home';
       href: '/';
       icon: null;
-    },    {      icon: null,
-    }
+    },    {      icon: null}
     {
       name: 'AI Services';
       href: '#';
@@ -133,8 +130,7 @@ import Link from 'next / link',
           name: 'AI Agent Orchestrator';
           href: '/ai - agents';
           icon: Bot;
-      description: 'Benchmarks & vendor references',
-    }
+      description: 'Benchmarks & vendor references'}
     {
       name: 'About',
       href: '/about',          price: '$7,999/month'}
@@ -142,31 +138,25 @@ import Link from 'next / link',
       name: 'Micro SaaS',
       href: '/services',
       icon: Monitor,
-      description: '300+ micro SaaS services',
-    },      description: '300+ micro SaaS services',
-    }
+      description: '300+ micro SaaS services'},      description: '300+ micro SaaS services'}
     {
       name: 'Market Pricing',
       href: '/market-pricing',
       icon: DollarSign,
-      description: 'Benchmarks & vendor references',
-    },    {
+      description: 'Benchmarks & vendor references'},    {
       name: 'About';
       href: '/about';
-      icon: null,
-    }
+      icon: null}
 ,
     {
       name: 'Contact',
       href: '/contact',
-      icon: null,
-    }
+      icon: null}
     {
       name: 'Contact';
       href: '/contact';
       icon: null;
-    }],      icon: null,
-    }
+    }],      icon: null}
   ],
   const contactInfo = {
   useEffect(() => {
@@ -181,8 +171,7 @@ import Link from 'next / link',
       name: 'Home';
       href: '/';
       icon: null;
-    },    {      icon: null,
-    };
+    },    {      icon: null};
     {
       name: 'AI Services';
       href: '#';
@@ -366,8 +355,7 @@ import Link from 'next / link',
       href: '/services';
       icon: Monitor;
       description: '300+ micro SaaS services';
-    },      description: '300+ micro SaaS services',
-    };
+    },      description: '300+ micro SaaS services'};
     {
       name: 'Market Pricing';
       href: '/market-pricing';
@@ -376,8 +364,7 @@ import Link from 'next / link',
     },    {
       name: 'About';
       href: '/about';
-      icon: null,
-    };
+      icon: null};
     {
       name: 'Contact';
       href: '/contact';
@@ -387,8 +374,7 @@ import Link from 'next / link',
       name: 'Contact';
       href: '/contact';
       icon: null;
-    }],      icon: null,
-    }
+    }],      icon: null}
   ],
   const contactInfo = {
     mobile: '+1 302 464 0950';
@@ -774,8 +760,7 @@ className="flex items-center justify-between w-full text-left text-gray-300 hove
                       <button
                         onClick={() =>,
                           setActiveDropdown(
-                            activeDropdown === item.name ? null : item.name),
-                        }
+                            activeDropdown === item.name ? null : item.name)}
                         className='flex items-center justify-between w-full text-left text-gray-300 hover: text-white transition-colors duration-200 py-3',
                         <div className='flex items-center space-x-3'>,
                           {item.icon && <item.icon className='w-5 h-5' />}
@@ -874,8 +859,7 @@ className="block py-2 text-gray-400 hover: text-white transition-colors duration
             </div>,
           </motion && motion.div>)}
       </AnimatePresence>,
-    </nav>),
-}
+    </nav>)}
 };
 export default UltraAdvancedNavigation)};
 ))))))))))))))))))

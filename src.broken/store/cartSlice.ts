@@ -2,8 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit',
 import { CartItem } from '@/types/cart',
 import { safeStorage } from '@/utils/safeStorage',
 interface CartState {
-  items: CartItem[],
-}
+  items: CartItem[]}
 ,
 const loadState = (): CartItem[] => {
   const stored = safeStorage.getItem('zion_cart'),
@@ -25,8 +24,7 @@ const cartSlice = createSlice({
         id: string,
         title: string,
         price: number,
-        image?: string,
-      }>) => {
+        image?: string}>) => {
       const existing = state.items.find(i => i.id === action.payload.id),
       if (existing) {
         existing.quantity += 1} else {
@@ -39,8 +37,7 @@ const cartSlice = createSlice({
         })}
     };
     removeItem: (state, action: PayloadAction<string>) => {
-      state.items = state.items.filter(i => i.id !== action.payload),
-    };
+      state.items = state.items.filter(i => i.id !== action.payload)};
     updateQuantity: (
       state;
       action: PayloadAction<{ id: string, quantity: number }>) => {
@@ -49,11 +46,9 @@ const cartSlice = createSlice({
         item.quantity = action.payload.quantity}
     };
     setItems: (state, action: PayloadAction<CartItem[]>) => {
-      state.items = action.payload,
-    };
+      state.items = action.payload};
     clear: state => {
-      state.items = [],
-    };
+      state.items = []};
   };
 }),
 export const { addItem, removeItem, updateQuantity, setItems, clear } =,

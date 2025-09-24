@@ -34,7 +34,7 @@ function processFile(filePath) {
 ,
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent, 'utf8'),
-      // console.log(`Fixed: ${filePath}`)}
+      // // console.log(`Fixed: ${filePath}`)}
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message)}
 }
@@ -58,6 +58,6 @@ function processDirectory(dirPath) {
 }
 ,
 // Start processing from current directory,
-// console.log('Starting lint fixes...'),
+// // console.log('Starting lint fixes...'),
 processDirectory('.'),
-// console.log('Lint fixes completed!'),
+// // console.log('Lint fixes completed!'),

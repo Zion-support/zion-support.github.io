@@ -20,11 +20,9 @@ export interface TokenTransaction {
   created_at: string, // ISO timestamp}
 export interface Wallet {
   user_id: string;
-  balance: number, // current token balance,
-}
+  balance: number, // current token balance}
 export interface TokenConfig {symbol: TokenSymbol,
-  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5,
-}
+  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5}
 ,
 export interface WalletSummary {
   wallet: Wallet;
@@ -64,8 +62,7 @@ export interface TokenConfig {
 export interface WalletSummary {
   wallet: Wallet;
   transactions: TokenTransaction[],
-  config: TokenConfig,
-  } catch (error) {
+  config: TokenConfig} catch (error) {
     console.error("Error:", error),
     return res.status(500).json({ error: "Internal server error" })}
 }

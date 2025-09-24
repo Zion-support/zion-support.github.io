@@ -309,6 +309,5 @@ export default function AutonomousBusinessOperations20o25() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

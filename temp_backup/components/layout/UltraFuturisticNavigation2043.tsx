@@ -61,8 +61,7 @@ interface NavigationItem {
   title?: string,
   featured?: boolean,
   category?: string,
-  color?: string,
-}
+  color?: string}
 ,
 function normalizeHref(href: string): string {
   if (!href) return href,
@@ -71,8 +70,7 @@ function normalizeHref(href: string): string {
     href.startsWith('https://') ||,
     href.startsWith('mailto:') ||,
     href.startsWith('tel:')) {
-    return href,
-  }
+    return href}
   if (!href.startsWith('/')) return href,
   const hasQueryOrHash = href.includes('?') || href.includes('#'),
   if (hasQueryOrHash) return href,
@@ -319,8 +317,7 @@ const UltraFuturisticNavigation20o43: React.FC = () => {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name),
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
   const closeDropdown = () => {
     setActiveDropdown(null)};
   const handleSearch = (e: React.FormEvent) => {

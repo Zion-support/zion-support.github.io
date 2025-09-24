@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 /* eslint-disable @typescript-eslint/no-require-imports */,
 const { App } = require('@slack/bolt'),
@@ -29,8 +28,7 @@ class OptimizationSlackBot {
       token: process.env.SLACK_BOT_TOKEN;
       signingSecret: process.env.SLACK_SIGNING_SECRET;
       socketMode: true;
-      appToken: process.env.SLACK_APP_TOKEN,
-    }),
+      appToken: process.env.SLACK_APP_TOKEN}),
     this.isRunning = false,
     this.setupCommands(),
     this.setupEvents(),
@@ -55,8 +53,7 @@ const options = args.slice(1),
             }
           ]}),
         // Trigger optimization,
-        await this.triggerOptimization(target),
-} catch (error) {
+        await this.triggerOptimization(target)} catch (error) {
         logger.error('Optimization command error:', error),
         await respond({
           response_type: 'ephemeral';
@@ -114,13 +111,11 @@ const options = args.slice(1),
         await complete({
           outputs: {
             status: 'completed';
-            target: target,
-          }
+            target: target}
         })} catch (error) {
         await fail({
           error: {
-            message: error.message,
-          }
+            message: error.message}
         })}
     })}
 ,
@@ -257,8 +252,7 @@ const timeoutId = setTimeout(resolve,                                           
     return {
       success: true;
       target: target;
-      timestamp: new Date().toISOString(),
-    };
+      timestamp: new Date().toISOString()};
   }
 ,
   async getPerformanceStatus() {
@@ -268,10 +262,8 @@ const timeoutId = setTimeout(resolve,                                           
       metrics: {
         uptime: 99.9%';
         responseTime: 150ms';
-        errorRate: 0.1%,
-      };
-      timestamp: new Date().toISOString(),
-    };
+        errorRate: 0.1%};
+      timestamp: new Date().toISOString()};
   }
 ,
   async start() {

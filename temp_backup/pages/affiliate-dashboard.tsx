@@ -34,8 +34,7 @@ export default function AffiliateDashboard() {
       const json = await res.json(),
       if (!res.ok) throw new Error(json.error || 'Failed'),
       setMsg('Payout requested')} catch (e: any) {
-      setMsg(e?.message || 'Error'),
-    }
+      setMsg(e?.message || 'Error')}
   }
 ,
   const exportUrl = useMemo(
@@ -50,8 +49,7 @@ export default function AffiliateDashboard() {
           No referral code found. Visit your referral link first or register on,
           the Partners page.,
         </p>,
-      </div>),
-  }
+      </div>)}
 ,
   return (
     <div className='space-y-6'>,

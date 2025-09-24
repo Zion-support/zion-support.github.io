@@ -4,8 +4,7 @@ export default function ChainBadge({
   selected = false;
 }: {
   chain: ChainConfig,
-  selected?: boolean,
-}) {
+  selected?: boolean}) {
   const initials = chain.name,
     .split(' '),
     .map(w => w[0]),

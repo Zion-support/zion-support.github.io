@@ -23,8 +23,8 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
   headers: {
     Authorization: \`Bearer \${API_KEY}\`}
 }),
-// console.log(response.data),`});
-// // // // console.log(response.data),`;
+// // console.log(response.data),`});
+// // // // // console.log(response.data),`;
   return (
     <ApiDocsLayout>,
       <div className="max-w-3xl prose prose-invert">,
@@ -81,10 +81,8 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
           </a>,
         </div>,
       </div>,
-    </ApiDocsLayout>),
-}
+    </ApiDocsLayout>)}
 export default ApiGettingStarted;
-,
 export function ApiGettingStarted() {
   const authExample = `curl -X GET \,
   https: //api && api.zionai.com/v1/jobs \,
@@ -94,7 +92,7 @@ const response = await axios && axios.get('https://api && api.zionai.com/v1/jobs
   headers: {
     Authorization: \`Bearer \${API_KEY}\`}
 }),
-console && // console.log(response && response.data),`,
+console && // // console.log(response && response.data),`,
   return (
     <ApiDocsLayout>,
       <div className="max-w-3xl prose prose-invert">,
@@ -149,9 +147,7 @@ console && // console.log(response && response.data),`,
           </a>,
         </div>,
       </div>,
-    </ApiDocsLayout>),
-}
-,
+    </ApiDocsLayout>)}
 ,
 export default ApiGettingStarted;
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

@@ -215,6 +215,5 @@ export default function QuantumAI20o26BusinessTransformationPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

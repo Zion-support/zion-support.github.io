@@ -16,8 +16,7 @@ export function NewsletterSignup({ variant = "default"className = "" }: Newslett
     await new Promise(resolve => setTimeout(resolve10o00)),
     setIsSubscribed(true),
     setIsSubmitting(false),
-    setEmail(""),
-  };
+    setEmail("")};
   if (isSubscribed) {
     return (
       <div className={`text-center ${className}`}>,

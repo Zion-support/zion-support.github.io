@@ -105,8 +105,7 @@ reviews: number,export const biotechAIServices: BiotechAIService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.';
@@ -181,8 +180,7 @@ reviews: number,export const biotechAIServices: BiotechAIService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete genetic engineering platform with AI algorithms, synthetic biology tools, and comprehensive safety features. Includes mobile app and lab integration.';
@@ -257,8 +255,7 @@ reviews: number,export const biotechAIServices: BiotechAIService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete protein design platform with AI algorithms, comprehensive tools, and collaboration features. Includes mobile app and lab integration.';
@@ -333,8 +330,7 @@ reviews: number,export const biotechAIServices: BiotechAIService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete clinical trial platform with AI optimization, comprehensive analytics, and regulatory tools. Includes mobile app and system integration.';
@@ -409,8 +405,7 @@ reviews: number,export const biotechAIServices: BiotechAIService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete biomarker discovery platform with AI algorithms, comprehensive analysis, and collaboration tools. Includes mobile app and research integration.';
@@ -485,8 +480,7 @@ reviews: number,export const biotechAIServices: BiotechAIService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete personalized medicine platform with AI genomics, clinical decision support, and healthcare integration. Includes mobile app and comprehensive analytics.';
@@ -561,8 +555,7 @@ reviews: number,export const biotechAIServices: BiotechAIService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete drug repurposing platform with AI discovery, comprehensive analysis, and collaboration tools. Includes mobile app and research integration.';
@@ -637,8 +630,7 @@ reviews: number,export const biotechAIServices: BiotechAIService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete bioinformatics platform with AI analysis, multi-omics tools, and comprehensive research features. Includes mobile app and cloud computing.';
@@ -713,8 +705,7 @@ reviews: number,export const biotechAIServices: BiotechAIService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete biomanufacturing platform with AI optimization, real-time monitoring, and automation tools. Includes mobile app and system integration.';

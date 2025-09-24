@@ -7,8 +7,7 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
     try {
 :backup-problematic-files/hooks/useLocalStorage.ts,
       const item = window.localStorage.getItem(key),
-      return item ? JSON.parse(item) : initialValue,
-    } catch (error) {
+      return item ? JSON.parse(item) : initialValue} catch (error) {
     }
   }),
   const setValue = (value: T | ((val: T) => T)) => {

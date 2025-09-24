@@ -35,8 +35,7 @@ export default function SaaSMarketplacePage() {
       website: 'https://zapier.com';
       useCase: 'Perfect for businesses looking to automate customer support, marketing, and sales processes.';
       pros: ['Easy to useExtensive integrations', 'ReliableGreat support'];
-      cons: ['Can get expensiveLimited customization'],
-    };
+      cons: ['Can get expensiveLimited customization']};
     {
       name: 'Notion';
       description: 'All-in-one workspace for notes, docs, projects, and team collaboration. Organize everything in one place.';
@@ -53,8 +52,7 @@ export default function SaaSMarketplacePage() {
       website: 'https://notion.so';
       useCase: 'Ideal for teams that need a flexible workspace for documentation, project management, and knowledge sharing.';
       pros: ['Highly flexibleBeautiful interface', 'Great templatesFree tier'];
-      cons: ['Learning curveLimited offline access'],
-    };
+      cons: ['Learning curveLimited offline access']};
     {
       name: 'Stripe';
       description: 'Complete payment processing platform for online businesses. Accept payments, manage subscriptions, and handle compliance.';
@@ -71,8 +69,7 @@ export default function SaaSMarketplacePage() {
       website: 'https://stripe.com';
       useCase: 'Essential for any online business that needs to accept payments, especially SaaS companies and e-commerce.';
       pros: ['Developer-friendlyGlobal reach', 'Excellent docsReliable'];
-      cons: ['Higher fees than some alternativesComplex for beginners'],
-    };
+      cons: ['Higher fees than some alternativesComplex for beginners']};
     {
       name: 'Intercom';
       description: 'Customer messaging platform that helps businesses build better customer relationships through personalized, messenger-based experiences.';
@@ -138,10 +135,9 @@ export default function SaaSMarketplacePage() {
         'Automatic scalingGit integration';
         'Preview deploymentsEdge functions'];
       website: 'https://vercel.com';
-      useCase: 'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent window.window.window.window.performance.';
+      useCase: 'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent window.window.window.window.window.performance.';
       pros: ['Zero configExcellent performance', 'Great DXFree tier'];
-      cons: ['Limited backend featuresCan be expensive for high traffic'],
-    };
+      cons: ['Limited backend featuresCan be expensive for high traffic']};
     {
       name: 'Linear';
       description: 'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.';
@@ -258,8 +254,7 @@ export default function SaaSMarketplacePage() {
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-30o0 ${
                   selectedCategory === category,
                     ? 'bg-blue-60o0 text-white shadow-lg',
-                    : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0 hover:text-white',
-                }`}
+                    : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0 hover:text-white'}`}
               >,
                 {category}
               </button>))}
@@ -370,5 +365,4 @@ export default function SaaSMarketplacePage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}

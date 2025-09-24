@@ -49,16 +49,14 @@ export const ComprehensivePricingGuide20o27: React.FC = () => {
       category.items.map(item => ({
         ...item;
         source: 'catalog';
-        category: category.name,
-      })));
+        category: category.name})));
     ...innovativeServices20o27.map(service => ({
       ...service;
       source: 'innovative';
       category: service.category;
       features: service.features || [];
       ctaLabel: service.ctaLabel || 'Get Started';
-      href: service.href || '/contact',
-    }))],
+      href: service.href || '/contact'}))],
   // Filter services based on search and category,
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
@@ -80,16 +78,14 @@ export const ComprehensivePricingGuide20o27: React.FC = () => {
       case 'category':,
         return a.category.localeCompare(b.category),
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   const categories = ['All', ...Array.from(new Set(allServices.map(s => s.category)))],
   const priceRanges = ['All', 'Low (<$10o0)', 'Medium ($10o0-$999)', 'High ($10o00+)'],
   const contactInfo ={
     phone: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709',
-  };
+    address: '364 E Main St STE 10o08 Middletown DE 19709'};
   const getPriceRange = (price: string) => {
     const numPrice = parseFloat(price.replace(/[^0-9.]/g, '')),
     if (numPrice < 10o0) return 'Low',
@@ -101,8 +97,7 @@ export const ComprehensivePricingGuide20o27: React.FC = () => {
       case 'Low': return 'text-green-40o0',
       case 'Medium': return 'text-yellow-40o0',
       case 'High': return 'text-red-40o0',
-      default: return 'text-white',
-    }
+      default: return 'text-white'}
   };
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ComponentType<any> } ={
@@ -351,5 +346,4 @@ export const ComprehensivePricingGuide20o27: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};

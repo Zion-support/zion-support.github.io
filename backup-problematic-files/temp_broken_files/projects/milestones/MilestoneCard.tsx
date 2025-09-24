@@ -9,8 +9,6 @@ import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
  import {
 import {
-
-,
 interface MilestoneCardProps {
   id:string;
   projectId:string;
@@ -20,8 +18,7 @@ interface MilestoneCardProps {
   status:string;
   dueDate?:string;
   onApprove?:(id:string) => Promise<void>;
-  onReject?:(id: string) => Promise<void>,
-}
+  onReject?:(id: string) => Promise<void>}
 ,
 export function MilestoneCard({
   id;
@@ -44,8 +41,7 @@ export function MilestoneCard({
         return 'bg-yellow-50o0';
       case 'rejected':,
         return 'bg-red-50o0';
-      default: return 'bg-gray-50o0',
-    }
+      default: return 'bg-gray-50o0'}
   }
   ,
   return (
@@ -124,8 +120,7 @@ amount: number,
 status: string,
 dueDate?: string,
 onApprove?: (id: string) => Promise<void>,
-onReject?: (id: string) => Promise<void> ,
-}export function MilestoneCard ({
+onReject?: (id: string) => Promise<void> }export function MilestoneCard ({
   id,
 projectId,
 title,
@@ -144,5 +139,4 @@ case 'pending': return 'bg-yellow-50o0',',
 case 'rejected': ,"}return (<Card> <CardHeader className="pb-2" > <div className="flex justify-between items-start" > <div> </p>) }</div> isUnderDispute && disputeStatus && (<DisputeStatusBadge status={
   disputeStatus ,"} />) ","}</div> </div> </CardHeader> </div> </CardContent> <CardFooter className="pt-2 flex justify-between" > <div> {',
   status !== 'completed' && status !== 'rejected' && (<RaiseDisputeButton projectId={
-  projectId } />) }</div> Actions frozen due to dispute </Button>) ,
-}}}}}}}
+  projectId } />) }</div> Actions frozen due to dispute </Button>) }}}}}}}

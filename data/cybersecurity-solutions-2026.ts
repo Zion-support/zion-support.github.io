@@ -30,15 +30,13 @@ export interface CybersecuritySolutions2026 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
   // Advanced Threat Intelligence Platform,
   {

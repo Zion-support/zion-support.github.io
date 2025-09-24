@@ -9,7 +9,7 @@ class ComprehensiveSourceFixer {
     this.reportFile = path.join(__dirname, 'source-fix-report.json')}
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString(),
-    // console.log(`[${timestamp}] [${level}] ${message}`)}
+    // // console.log(`[${timestamp}] [${level}] ${message}`)}
   async fixAllSourceFiles() {
     this.log('🔧 Starting comprehensive source file fixing...'),
     // Fix src directory,

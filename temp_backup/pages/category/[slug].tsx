@@ -15,5 +15,4 @@ export default function [slug]Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

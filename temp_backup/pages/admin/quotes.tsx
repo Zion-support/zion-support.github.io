@@ -21,8 +21,7 @@ import type {
 import { TALENT_PROFILES } from '../../data/talent',
 function formatDate(iso: string) {
   const d = new Date(iso),
-  return d.toLocaleDateString(),
-}
+  return d.toLocaleDateString()}
 ,
 const ADMIN_STATUSES: AdminQuoteStatus[] = [
   'New';
@@ -105,8 +104,7 @@ function exportToCsv(filename: string, rows: QuoteRequest[]) {
 ,
 type ServerProps = {
   role: 'admin' | 'talent' | 'guest',
-  userId?: string | null,
-};
+  userId?: string | null};
 export const getServerSideProps: GetServerSideProps<ServerProps> = async ({
   req;
 }) => {

@@ -3,8 +3,7 @@ export type HeatmapProps = {
   rows: number,
   cols: number,
   data: HeatmapCell[], // length rows*cols,
-  title?: string,
-};
+  title?: string};
 export default function Heatmap({ rows, cols, data, title }: HeatmapProps) {
   const max = Math.max(1, ...data.map(d => d.value)),
   return (

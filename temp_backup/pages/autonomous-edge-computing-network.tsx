@@ -20,6 +20,5 @@ export default function AutonomousEdgeComputingNetworkPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

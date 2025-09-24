@@ -282,8 +282,7 @@ const RevolutionaryContent20o25Showcase = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0'}`}
             >,
               {category.label} ({category.count}),
             </button>))}
@@ -431,6 +430,5 @@ const RevolutionaryContent20o25Showcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryContent20o25Showcase;

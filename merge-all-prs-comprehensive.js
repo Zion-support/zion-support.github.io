@@ -2,7 +2,7 @@
 const { execSync } = require('child_process'),
 const fs = require('fs'),
 const path = require('path'),
-// console.log('🚀 Comprehensive PR Merge Script - Handling 1000+ Branches'),
+// // console.log('🚀 Comprehensive PR Merge Script - Handling 1000+ Branches'),
 // Configuration,
 const BATCH_SIZE = 50, // Process branches in batches,
 const MAX_RETRIES = 3,
@@ -15,13 +15,12 @@ const stats = {
   conflictsResolved: 0;
   failed: 0;
   skipped: 0;
-  startTime: Date.now(),
-};
+  startTime: Date.now()};
 // Logging system,
 function log(message, level = 'INFO') {
   const timestamp = new Date().toISOString(),
   const logMessage = `[${timestamp}] [${level}] ${message}`,
-  // console.log(logMessage),
+  // // console.log(logMessage),
   // Write to log file,
   const logFile = path.join(__dirname, 'merge-all-prs.log'),
   fs.appendFileSync(logFile, logMessage + '\n')}
@@ -32,8 +31,7 @@ function safeGitCommand(command, description, options = {}) {
     const result = execSync(command, {
       encoding: 'utf8';
       stdio: options.stdio || 'pipe';
-      timeout: options.timeout || TIMEOUT,
-    }),
+      timeout: options.timeout || TIMEOUT}),
     return { success: true, output: result };
   } catch (error) {
     log(`⚠️  ${description} failed: ${error.message}`, 'WARN'),
@@ -277,15 +275,13 @@ async function main() {
     const allBranches = getAllBranches(),
     if (allBranches.length === 0) {
       log('ℹ️  No branches found to merge'),
-      return,
-    }
+      return}
     // Step 3: Process branches in batches,
     await processBranchesInBatches(allBranches),
     // Step 4: Finalize and push,
     finalizeMerges(),
     // Step 5: Generate report,
-    generateReport(),
-  } catch (error) {
+    generateReport()} catch (error) {
     log(`❌ Fatal error: ${error.message}`, 'ERROR'),
     process.exit(1)}
 }

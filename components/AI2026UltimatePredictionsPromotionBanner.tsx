@@ -116,6 +116,5 @@ export default function AI20o26UltimatePredictionsPromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

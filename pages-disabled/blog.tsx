@@ -25,8 +25,7 @@ export default function Blog() {
           Contact Us,
         </Link>,
       </main>,
-    </>),
-}
+    </>)}
 ,
 const Blog: NextPage = () => {
   const blogPosts = [
@@ -154,8 +153,7 @@ const Blog: NextPage = () => {
                           className={`block px-3 py-2 rounded-md text-sm transition-colors ${
                             index === 0,
                               ? 'bg-blue-10o0 text-blue-70o0 font-medium',
-                              : 'text-gray-60o0 hover: b g-gray-10o0 hover: tex t-gray-90o0',
-                          }`}
+                              : 'text-gray-60o0 hover: b g-gray-10o0 hover: tex t-gray-90o0'}`}
                         >,
                           {category}
                         </a>,
@@ -264,6 +262,5 @@ const Blog: NextPage = () => {
           </div>,
         </div>,
       </section>,
-    </Layout>),
-};
+    </Layout>)};
 export default Blog;

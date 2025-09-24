@@ -12,8 +12,7 @@ interface SEOProps {
   section?: string,
   tags?: string[],
   noindex?: boolean,
-  nofollow?: boolean,
-}
+  nofollow?: boolean}
 export function SEO({
   title;
   description;

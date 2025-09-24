@@ -444,6 +444,5 @@ export default function AutonomousBIRevolutionPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

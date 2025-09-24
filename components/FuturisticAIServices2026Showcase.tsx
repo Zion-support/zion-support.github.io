@@ -25,8 +25,7 @@ const FuturisticAIServices20o26Showcase = () => {
       icon: <Cpu className="w-8 h-8"  />;
       features: ["10,0o00x faster processing"Quantum error correction"Real-time optimization"];
       color: "from-purple-60o0 to-pink-60o0";
-      stats: "99.99% accuracy",
-    };
+      stats: "99.99% accuracy"};
     {
       id: 2;
       title: "Neural Interface Technology";
@@ -34,8 +33,7 @@ const FuturisticAIServices20o26Showcase = () => {
       icon: <Brain className="w-8 h-8"  />;
       features: ["Thought-to-action processing"Cognitive enhancement"Memory augmentation"];
       color: "from-blue-60o0 to-cyan-60o0";
-      stats: "1ms response time",
-    };
+      stats: "1ms response time"};
     {
       id: 3;
       title: "Autonomous Business Operations";
@@ -43,8 +41,7 @@ const FuturisticAIServices20o26Showcase = () => {
       icon: <Rocket className="w-8 h-8"  />;
       features: ["Self-optimizing workflows"Predictive decision making"24/7 operations"];
       color: "from-green-60o0 to-emerald-60o0";
-      stats: "50o0% ROI increase",
-    };
+      stats: "50o0% ROI increase"};
     {
       id: 4;
       title: "Global AI Network Mesh";
@@ -52,8 +49,7 @@ const FuturisticAIServices20o26Showcase = () => {
       icon: <Globe className="w-8 h-8"  />;
       features: ["Edge computing nodes"Real-time synchronization"Global intelligence"];
       color: "from-orange-60o0 to-red-60o0";
-      stats: "1B+ data points",
-    }
+      stats: "1B+ data points"}
   ],
   useEffect(() => {
     setIsVisible(true),
@@ -67,8 +63,7 @@ const FuturisticAIServices20o26Showcase = () => {
       y: 0;
       transition: {
         duration: 0.8;
-        staggerChildren: 0.2,
-      }
+        staggerChildren: 0.2}
     }
   };
   const itemVariants ={
@@ -169,8 +164,7 @@ const FuturisticAIServices20o26Showcase = () => {
                   className={`w-4 h-4 rounded-full transition-all duration-30o0 ${
                     currentService === index,
                       ? 'bg-white scale-125',
-                      : 'bg-white/50 hover: bg-white/70',
-                  }`}
+                      : 'bg-white/50 hover: bg-white/70'}`}
                   whileHover={{ scale: 1.2 }}
                 />))}
             </div>,
@@ -212,6 +206,5 @@ const FuturisticAIServices20o26Showcase = () => {
           </motion.button>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default FuturisticAIServices20o26Showcase;

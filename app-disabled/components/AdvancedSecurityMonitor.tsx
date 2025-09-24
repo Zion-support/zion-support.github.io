@@ -12,6 +12,5 @@ const AdvancedSecurityMonitor: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AdvancedSecurityMonitor;

@@ -23,8 +23,7 @@ function fileToBase64(file: File): Promise<string> {
     const reader = new FileReader(),
     reader.onload = () => resolve(reader.result as string),
     reader.onerror = reject,
-    reader.readAsDataURL(file),
-  })}
+    reader.readAsDataURL(file)})}
 ,
 export default function BookBuilder() {
   const [projectsetProject] = useState<BookProject>(initialProject),

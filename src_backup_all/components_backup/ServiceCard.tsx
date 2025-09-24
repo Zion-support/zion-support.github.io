@@ -4,8 +4,7 @@ interface ServiceCardProps {
   description: string,
   icon: string,
   features: string[],
-  className?: string,
-}
+  className?: string}
 ,
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title;

@@ -399,8 +399,7 @@ export function SecurityComplianceSection() {
                   className='h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover: border-zion-cyan/50 transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer',
                   onClick={() =>,
                     setSelectedStandard(
-                      selectedStandard === index ? null : index),
-                  }
+                      selectedStandard === index ? null : index)}
                 >,
                   {/* Header */}
                   <div className='flex items-center justify-between mb-4'>,
@@ -544,8 +543,7 @@ export function SecurityComplianceSection() {
                   className='h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover: border-zion-cyan/50 transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer',
                   onClick={() =>,
                     setSelectedFramework(
-                      selectedFramework === index ? null : index),
-                  }
+                      selectedFramework === index ? null : index)}
                 >,
                   {/* Header */}
                   <div className='flex items-center justify-between mb-4'>,
@@ -690,8 +688,7 @@ export function SecurityComplianceSection() {
                 <div
                   className='h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover: border-zion-cyan/50 transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer',
                   onClick={() =>,
-                    setSelectedFeature(selectedFeature === index ? null : index),
-                  }
+                    setSelectedFeature(selectedFeature === index ? null : index)}
                 >,
                   {/* Icon */}
                   <div className='text-zion-cyan mb-4 flex justify-center'>,
@@ -797,6 +794,5 @@ export function SecurityComplianceSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

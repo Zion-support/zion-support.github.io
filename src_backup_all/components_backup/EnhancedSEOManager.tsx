@@ -7,13 +7,11 @@ interface SEOData {
   ogImage?: string,
   ogType?: string,
   canonicalUrl?: string,
-  structuredData?: object,
-}
+  structuredData?: object}
 ,
 interface EnhancedSEOManagerProps {
   seoData: SEOData,
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({
   seoData;

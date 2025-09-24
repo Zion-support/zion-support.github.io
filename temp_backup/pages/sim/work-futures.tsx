@@ -15,6 +15,5 @@ export default function WorkFuturesPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

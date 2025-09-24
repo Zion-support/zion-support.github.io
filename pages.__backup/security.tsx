@@ -275,6 +275,5 @@ export default function SecurityPage() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

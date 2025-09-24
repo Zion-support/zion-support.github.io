@@ -54,6 +54,5 @@ export default function Page() {
           </li>,
         </ul>,
       </article>,
-    </main>),
-}
+    </main>)}
 ,

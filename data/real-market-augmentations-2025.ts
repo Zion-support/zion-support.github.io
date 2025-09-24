@@ -3,8 +3,7 @@ export interface RealMarketAugmentation20o25 {
   name: string,
   tagline: string,
   price: string,
-  features: string[],
-}
+  features: string[]}
 export const realMarketAugmentations20o25: RealMarketAugmentation20o25[] = [
   {
     id: 'market-augmentation-1';
@@ -17,8 +16,7 @@ export interface RealMarketAugmentation20o25 {
   name: string,
   tagline: string,
   price: string,
-  features: string[],
-}
+  features: string[]}
 export const realMarketAugmentations20o25: RealMarketAugmentation20o25[] = [
   {
     id: 'market-augmentation-1';

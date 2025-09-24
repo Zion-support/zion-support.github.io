@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 /**,
  * Zion App - Enhanced Continuous Improvement Startup Script,
@@ -67,8 +66,7 @@ class AutomationStartup {
       // Log initial status,
       this.logStatus(),
       // Start periodic status updates,
-      this.startStatusUpdates(),
-    } catch (error) {
+      this.startStatusUpdates()} catch (error) {
       logger.error('❌ Failed to start automation system:', error),      process.exit(1)}
   }
 ,
@@ -117,8 +115,7 @@ const optionalEnvVars = [
   async startMonitoring() {
     logger.info('📡 Starting monitoring system...'),
     // Start performance monitoring,
-    const monitorProcess = spawn('node', ['automation/performance/monitor.js'], {'      stdio: 'pipe',      detached: false,
-    }),
+    const monitorProcess = spawn('node', ['automation/performance/monitor.js'], {'      stdio: 'pipe',      detached: false}),
     monitorProcess.stdout.on('data', (data) => {'      logger.info(`📊 Monitor: ${data.toString().trim()}`)}),
     monitorProcess.stderr.on('data', (data) => {'      logger.error(`❌ Monitor Error: ${data.toString().trim()}`)}),
     monitorProcess.on('close', (code) => {'      logger.info(`📡 Monitor process exited with code ${code}`)}),
@@ -138,15 +135,13 @@ const optionalEnvVars = [
     app.get('/api/status', (req, res) => {'      res.json(this.automation.getStatus())}),
     app.get('/api/performance', (req, res) => {'      res.json({
         history: this.automation.performanceHistory.slice(-10o0);
-        current: this.automation.performanceHistory[this.automation.performanceHistory.length - 1],
-      })}),
+        current: this.automation.performanceHistory[this.automation.performanceHistory.length - 1]})}),
     app.get('/api/improvements', (req, res) => {'      res.json(this.automation.improvementHistory.slice(-50))}),
     app.get('/api/errors', (req, res) => {'      res.json(this.automation.errors.slice(-20))}),
     app.get('/health', (req, res) => {'      res.json({
         status: 'healthy',        uptime: process.uptime();
         automation: this.automation.getStatus();
-        timestamp: new Date().toISOString(),
-      })}),
+        timestamp: new Date().toISOString()})}),
     // Start dashboard server,
     app.listen(this.config.port, () => {
       logger.info(`📊 Dashboard running on port ${this.config.port}`)}),
@@ -187,8 +182,7 @@ const optionalEnvVars = [
       uptime: process.uptime();
       automation: this.automation?.getStatus();
       config: this.config;
-      timestamp: new Date().toISOString(),
-    };
+      timestamp: new Date().toISOString()};
     logger.info('📊 Initial Status:', JSON.stringify(status, null, 2)),
     // Save status to file,
     const statusPath = path.join(__dirname, ..', logs', 'automation-status.json'),    fs.writeFileSync(statusPath, JSON.stringify(status, null, 2))}
@@ -262,8 +256,7 @@ Examples:,
   node start.js --status           # Show status and exit,
   node start.js --stop             # Stop automation system,
     `),
-    process.exit(0),
-  }
+    process.exit(0)}
 ,
   if (args.includes('--report') || args.includes('-r')) {'    startup.start().then(() => {
       return startup.generateReport()}).then((report) => {

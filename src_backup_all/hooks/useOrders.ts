@@ -3,8 +3,7 @@ export interface OrderSummary {
   id: string,
   customerName: string,
   totalAmountUsd: number,
-  status: 'pending' | 'shipped' | 'delivered' | 'cancelled',
-}
+  status: 'pending' | 'shipped' | 'delivered' | 'cancelled'}
 ,
 async function fetchOrdersMock(): Promise<OrderSummary[]> {
   return [

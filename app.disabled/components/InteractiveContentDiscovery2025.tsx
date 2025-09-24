@@ -143,8 +143,7 @@ const InteractiveContentDiscovery20o25 = () => {
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                       selectedCategory === category.id,
                         ? 'bg-purple-60o0 text-white',
-                        : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-30o0',
-                    }`}
+                        : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-30o0'}`}
                   >,
                     <span className='mr-2'>{category.icon}</span>,
                     {category.name}
@@ -280,6 +279,5 @@ const InteractiveContentDiscovery20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default InteractiveContentDiscovery20o25;

@@ -14,8 +14,7 @@ const Revolutionary20o27ServicesShowcase = () => {
       category: 'Quantum AI & Neuroscience';
       features: ['Quantum consciousness simulation'Neural pattern recognition'Emotional intelligence modeling'Real-time brain-computer interface'];
       marketSize: '$15B research market';
-      growthRate: '30o0% annual growth',
-    };
+      growthRate: '30o0% annual growth'};
     {
       id: 'autonomous-space-mining-ai';
       name: 'Autonomous Space Mining AI';
@@ -27,8 +26,7 @@ const Revolutionary20o27ServicesShowcase = () => {
       category: 'Space Technology & AI';
       features: ['Autonomous mining operations'Resource detection algorithms'Risk assessment AI'Mission planning automation'];
       marketSize: '$3.8T space economy';
-      growthRate: '40o0% annual growth',
-    };
+      growthRate: '40o0% annual growth'};
     {
       id: 'dna-computing-platform';
       name: 'DNA Computing Platform';
@@ -40,8 +38,7 @@ const Revolutionary20o27ServicesShowcase = () => {
       category: 'Biotechnology & Computing';
       features: ['DNA-based computation'Molecular algorithm optimization'Real-time molecular analysis'Algorithm library (10o0+ algorithms)'];
       marketSize: '$2.1T biotechnology market';
-      growthRate: '250% annual growth',
-    };
+      growthRate: '250% annual growth'};
     {
       id: 'holographic-metaverse-platform';
       name: 'Holographic Metaverse Platform';
@@ -53,8 +50,7 @@ const Revolutionary20o27ServicesShowcase = () => {
       category: 'Metaverse & Holographics';
       features: ['3D holographic rendering'Real-time 3D modeling'Holographic projection systems'AI-powered content generation'];
       marketSize: '$80o0B metaverse market';
-      growthRate: '350% annual growth',
-    };
+      growthRate: '350% annual growth'};
     {
       id: 'autonomous-healthcare-ai';
       name: 'Autonomous Healthcare AI';
@@ -66,8 +62,7 @@ const Revolutionary20o27ServicesShowcase = () => {
       category: 'Healthcare & AI';
       features: ['Autonomous diagnosis'Treatment recommendation AI'Continuous learning algorithms'Predictive health analytics'];
       marketSize: '$4.1T healthcare market';
-      growthRate: '280% annual growth',
-    };
+      growthRate: '280% annual growth'};
     {
       id: 'quantum-internet-security-gateway';
       name: 'Quantum Internet Security Gateway';
@@ -79,8 +74,7 @@ const Revolutionary20o27ServicesShowcase = () => {
       category: 'Quantum Security';
       features: ['Quantum key distribution'Unbreakable encryption'Real-time threat detection'Zero-trust architecture'];
       marketSize: '$50o0B cybersecurity market';
-      growthRate: '50o0% annual growth',
-    }
+      growthRate: '50o0% annual growth'}
   ],
   const categories = [
     { name: 'Quantum AI Services'count: '25+'icon: Atomcolor: 'from-purple-50o0 to-indigo-60o0' };
@@ -93,8 +87,7 @@ const Revolutionary20o27ServicesShowcase = () => {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -104,8 +97,7 @@ const Revolutionary20o27ServicesShowcase = () => {
       y: 0;
       transition: {
         duration: 0.6;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   return (
@@ -243,6 +235,5 @@ const Revolutionary20o27ServicesShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default Revolutionary20o27ServicesShowcase;

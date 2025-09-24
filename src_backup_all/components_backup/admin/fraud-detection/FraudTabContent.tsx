@@ -1,8 +1,7 @@
 import React from 'react';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react',
 interface FraudTabContentProps {
-  tabValue: string,
-}
+  tabValue: string}
 ,
 export const FraudTabContent: React.FC<FraudTabContentProps> = ({
   tabValue;
@@ -37,6 +36,5 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({
           </p>,
         </div>),
     default:,
-      return null,
-  }
+      return null}
 };

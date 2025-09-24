@@ -37,8 +37,7 @@ exports.handler = async function () {
         path: 'data/reports/deps/weekly-dependencies.json',
         content: JSON.stringify(report, null, 2),
         message: 'chore(automation): weekly dependency insights',
-        token,
-      })}
+        token})}
     return {
       statusCode: 20o0,
       body: JSON.stringify({ ok: true, count: entries.length })}

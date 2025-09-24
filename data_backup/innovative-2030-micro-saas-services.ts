@@ -90,8 +90,7 @@ reviews: number,export const innovative20o30MicroSaasServices: Innovative20o30Mi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full-stack SaaS platform with real-time data processing, AI model training pipeline, and scalable cloud infrastructure. Includes enterprise-grade security and compliance features.';
@@ -151,8 +150,7 @@ reviews: number,export const innovative20o30MicroSaasServices: Innovative20o30Mi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise-grade security platform with quantum-resistant cryptography, AI-powered threat detection, and automated compliance management. Deployed on secure cloud infrastructure with 99.99% uptime.';
@@ -212,8 +210,7 @@ reviews: number,export const innovative20o30MicroSaasServices: Innovative20o30Mi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Scalable SaaS platform with real-time data processing, AI model training, and comprehensive analytics dashboard. Includes mobile app and API for seamless integration.';
@@ -273,8 +270,7 @@ reviews: number,export const innovative20o30MicroSaasServices: Innovative20o30Mi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise blockchain platform with permissioned networks, smart contract automation, and comprehensive supply chain management tools. Deployed on secure cloud infrastructure.';
@@ -334,8 +330,7 @@ reviews: number,export const innovative20o30MicroSaasServices: Innovative20o30Mi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full-featured HR platform with AI-powered automation, comprehensive employee management tools, and seamless third-party integrations. Includes mobile app and API access.';
@@ -395,8 +390,7 @@ reviews: number,export const innovative20o30MicroSaasServices: Innovative20o30Mi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced quantum computing platform with hybrid classical-quantum algorithms, comprehensive development tools, and cloud-based quantum simulators. Includes educational resources and community support.';
@@ -456,8 +450,7 @@ reviews: number,export const innovative20o30MicroSaasServices: Innovative20o30Mi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise-grade edge computing platform with Kubernetes-based orchestration, comprehensive monitoring tools, and seamless cloud integration. Deployed on secure infrastructure with global edge locations.';

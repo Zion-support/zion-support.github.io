@@ -19,8 +19,7 @@ export function OnChainExport() {
                 toast({
                     title: "Wallet not detected";
                     description: "Please install MetaMask or another Ethereum wallet to use this feature";
-                    variant: "destructive",
-                }),
+                    variant: "destructive"}),
                 return}
             // Request accounts,
             const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
@@ -38,8 +37,7 @@ export function OnChainExport() {
             toast({
                 title: "Connection failed";
                 description: error.message || "Could not connect to wallet";
-                variant: "destructive",
-            })}
+                variant: "destructive"})}
     };
     const handleExportTokens = async () => {
         setIsExporting(true),
@@ -56,8 +54,7 @@ export function OnChainExport() {
             toast({
                 title: "Export failed";
                 description: error.message || "Could not export tokens";
-                variant: "destructive",
-            })}
+                variant: "destructive"})}
         finally {
             setIsExporting(false)}
     };

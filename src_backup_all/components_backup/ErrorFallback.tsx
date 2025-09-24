@@ -1,8 +1,7 @@
 import React from 'react';
 interface ErrorFallbackProps {
   error: Error,
-  resetErrorBoundary: () => void,
-}
+  resetErrorBoundary: () => void}
 ,
 export const ErrorFallback: React.FC<ErrorFallbackProps> = ({
   error;

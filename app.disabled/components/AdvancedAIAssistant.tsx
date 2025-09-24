@@ -13,8 +13,7 @@ const AdvancedAIAssistant: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default function AdvancedAIAssistant() {
   return null}
 ,

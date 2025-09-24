@@ -140,7 +140,6 @@ export function FraudDetectionSettings() {
       </CardContent>,
     </Card>); export function FraudDetectionSettings () {
   const {
-,
   user } = useAuth (),
 const [messageScanningEnabled, setMessageScanningEnabled] = useState (true),
 const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState (true),
@@ -151,8 +150,7 @@ const handleSavePreferences = async () => {
 try {
   }catch (error) {
   logErrorToProduction ('Error saving preferences:', {
-  data: error ,
-}),
+  data: error }),
 toast ({
   }finally {
   setIsSaving (false) }

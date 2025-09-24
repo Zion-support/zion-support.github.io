@@ -1320,6 +1320,5 @@ export default function ServicesAdvertisingPage() {
 					<a href="/pricing" className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300">View Pricing</a>,
 				</div>,
 			</div>,
-		</div>),
-}
+		</div>)}
 ,

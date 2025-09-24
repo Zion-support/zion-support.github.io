@@ -72,8 +72,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 // Optimized spinner for inline use,
 export const InlineSpinner: React.FC<{
   size?: 'sm' | 'md',
-  className?: string,
-}> = ({ size = 'sm', className = '' }) => (
+  className?: string}> = ({ size = 'sm', className = '' }) => (
   <div
     className={`inline-flex items-center ${className}`}
     role='status',
@@ -93,8 +92,7 @@ export const InlineSpinner: React.FC<{
 export const FullScreenLoader: React.FC<{
   text?: string,
   showLogo?: boolean,
-  className?: string,
-}> = ({
+  className?: string}> = ({
   text = 'Loading amazing experiences...';
   showLogo = true;
   className = '';
@@ -118,8 +116,7 @@ export const FullScreenLoader: React.FC<{
 // Skeleton loading component,
 export const SkeletonLoader: React.FC<{
   className?: string,
-  lines?: number,
-}> = ({ className = '', lines = 3 }) => (
+  lines?: number}> = ({ className = '', lines = 3 }) => (
   <div className={`animate-pulse ${className}`}>,
     {Array.from({ length: lines }).map((_, index) => (
       <div

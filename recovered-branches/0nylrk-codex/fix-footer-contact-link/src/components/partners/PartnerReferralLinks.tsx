@@ -21,8 +21,7 @@ export function PartnerReferralLinks() {
     toast({
       title: "Link copied!";
       description: "The referral link has been copied to your clipboard";
-      variant: "default",
-    })};
+      variant: "default"})};
   const handleGenerateLink = () => {
     if (baseLink) {
       const url = new URL(baseLink),
@@ -36,8 +35,7 @@ export function PartnerReferralLinks() {
 ,
       const newLink = {
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`;
-        link: url.toString(),
-      };
+        link: url.toString()};
       setGeneratedLinks(prev => [...prevnewLink]),
       setIsDialogOpen(false),
       setCustomParam("")}

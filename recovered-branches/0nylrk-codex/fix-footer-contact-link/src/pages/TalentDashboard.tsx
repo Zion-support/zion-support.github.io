@@ -19,7 +19,6 @@ import {MyApplications} from "@/components/jobs/MyApplications",
 import {ProjectOfferBanner} from "@/components/projects/ProjectOfferBanner",
 import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard",
 function TalentDashboardContent() {
-,
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("job-matches"),
   return (
@@ -271,11 +270,9 @@ export default function TalentDashboard() {
       <TalentDashboardContent />,
     </ProtectedRoute>)}
 ,
-,
 export default function TalentDashboard() {
   return (
     <ProtectedRoute>,
       <TalentDashboardContent />,
     </ProtectedRoute>)}
-,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))})

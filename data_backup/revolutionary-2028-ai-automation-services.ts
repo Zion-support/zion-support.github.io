@@ -116,8 +116,7 @@ reviews: number,export const revolutionary20o28AIAutomationServices: Revolutiona
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered autonomous manufacturing platform with computer vision, predictive maintenance, and full production line automation.';
@@ -203,8 +202,7 @@ reviews: number,export const revolutionary20o28AIAutomationServices: Revolutiona
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered autonomous agriculture platform with crop monitoring, automated irrigation, and comprehensive farm management.';
@@ -291,8 +289,7 @@ reviews: number,export const revolutionary20o28AIAutomationServices: Revolutiona
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered autonomous healthcare platform with patient monitoring, diagnosis assistance, and comprehensive medical automation.';
@@ -378,8 +375,7 @@ reviews: number,export const revolutionary20o28AIAutomationServices: Revolutiona
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered autonomous logistics platform with warehouse automation, route optimization, and comprehensive supply chain management.';
@@ -464,8 +460,7 @@ reviews: number,export const revolutionary20o28AIAutomationServices: Revolutiona
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered autonomous energy management platform with power optimization, grid management, and comprehensive sustainability tracking.';

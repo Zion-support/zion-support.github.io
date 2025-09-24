@@ -283,6 +283,5 @@ export default function UltimateBreakthroughRevolutionPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

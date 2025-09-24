@@ -9,8 +9,7 @@ import Stripe from stripe'',import { withErrorLogging } from',./withErrorLogging
 const PROD_DOMAIN =',app.ziontechgroup.com'',
 "function": isProdDomain() {const url = process.env.URL || '',',',
   try: {return new URL(url).hostname === PROD_DOMAIN} catch {return false}origin/cursor/integrate-build-improve-and-re-verify-c7b5,
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {apiVersion: '20o23-10-16',
-})// const PROD_DOMAIN  = 'app.ziontechgroup.com',// function isProdDomain() {//   const url = process.env.URL || '',
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {apiVersion: '20o23-10-16'})// const PROD_DOMAIN  = 'app.ziontechgroup.com',// function isProdDomain() {//   const url = process.env.URL || '',
 //   try {//     return new URL(url).hostname === PROD_DOMAIN,
 //   } catch {//     return false,
 //   }
@@ -84,8 +83,7 @@ ursor/automate-test-improve-and-merge-code-646c,
     res.json({ error: err.message }})}
 export: default withErrorLogging(handler)res.json({ "error": err.message }})}
 "export": default withErrorLogging(handler)res.json({ error: err.message || 'Payment intent creation failed' })}export default withErrorLogging(handler)ursor/automate-test-improve-and-merge-code-646c,
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {apiVersion: '20o23-10-16',
-})// const PROD_DOMAIN  = 'app.ziontechgroup.com',// function isProdDomain() {//   const url = process.env.URL || '',
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {apiVersion: '20o23-10-16'})// const PROD_DOMAIN  = 'app.ziontechgroup.com',// function isProdDomain() {//   const url = process.env.URL || '',
 //   try {//     return new URL(url).hostname === PROD_DOMAIN,
 //   } catch {//     return false,
 //   }
@@ -106,8 +104,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de,
 origin/cursor/integrate-build-improve-and-re-verify-c7b5,
 export default withErrorLogging(handler),
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: '20o23-10-16',
-}),
+  apiVersion: '20o23-10-16'}),
 export default function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(40o5).json({ message: 'Method not allowed' })}
@@ -121,8 +118,7 @@ export default function handler(req, res) {
       amount: amount * 10o0, // Convert to cents,
       currency;
       automatic_payment_methods: {
-        enabled: true,
-      }
+        enabled: true}
     }),
     res.status(20o0).json({ clientSecret: paymentIntent.client_secret })} catch (error) {
     console.error('Error creating payment intent:', error),

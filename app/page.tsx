@@ -5,8 +5,7 @@ export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description:
     'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords: ['AI', 'Technology', 'Cloud', 'Cybersecurity', 'Micro SaaS', 'Consulting'],
-}
+  keywords: ['AI', 'Technology', 'Cloud', 'Cybersecurity', 'Micro SaaS', 'Consulting']}
 
 export default function HomePage() {
   return (

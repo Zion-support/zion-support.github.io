@@ -239,6 +239,5 @@ export default function AIEthicsAutomation() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

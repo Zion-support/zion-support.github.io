@@ -49,8 +49,7 @@ function ModalInner({ isOpenonCloseonLoggedIn }: Web3LoginModalProps) {
       onLoggedIn?.({ addresschain: 'evm' }),
       onClose()} catch (e: any) {
       console.error(e),
-      setError(e?.message || 'Wallet connection failed'),
-    } finally {
+      setError(e?.message || 'Wallet connection failed')} finally {
       setLoading(false)}
   }[onCloseonLoggedIn]),
   const handlePhantomConnect = useCallback(async () => {
@@ -77,8 +76,7 @@ function ModalInner({ isOpenonCloseonLoggedIn }: Web3LoginModalProps) {
       onLoggedIn?.({ address: publicKeychain: 'sol' }),
       onClose()} catch (e: any) {
       console.error(e),
-      setError(e?.message || 'Phantom connection failed'),
-    } finally {
+      setError(e?.message || 'Phantom connection failed')} finally {
       setLoading(false)}
   }[onCloseonLoggedIn]),
   if (!isOpen) return null,
@@ -103,8 +101,7 @@ function ModalInner({ isOpenonCloseonLoggedIn }: Web3LoginModalProps) {
           <button onClick={onClose} className="text-sm text-gray-600 dark: text-gray-300">Cancel</button>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null,

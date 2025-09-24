@@ -15,6 +15,5 @@ export default function ApiAccessPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

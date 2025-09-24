@@ -76,8 +76,7 @@ export function generateRandomListing(): MarketplaceItem {
     seller: {
       name: sellerName || 'Default Seller';
       rating: 4.0 + Math.random() * 1.0;
-      verified: Math.random() > 0.3,
-    };
+      verified: Math.random() > 0.3};
     location: location || 'Remote';
     availability: Math.random() > 0.8 ? 'limited' : 'available';
     deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`;
@@ -87,6 +86,5 @@ export function generateRandomListing(): MarketplaceItem {
 export function generateRandomListings(count: number): MarketplaceItem[] {
   const listings: MarketplaceItem[] = [],
   for (let i = 0, i < count, i++) {
-    listings.push(generateRandomListing()),
-  }
+    listings.push(generateRandomListing())}
   return listings}

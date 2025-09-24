@@ -129,7 +129,6 @@ const TalentCardComponent = ({
           </div>,
         </div>,
       </div>,
-    </Card>),
-};
+    </Card>)};
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',

@@ -15,26 +15,22 @@ const AI20o26ContentPromotionBanner = () => {
       icon: "🧠";
       title: "Neural Interface Revolution";
       description: "Direct brain-computer interfaces for unprecedented control";
-      link: "/ai-20o26-neural-interface-revolution",
-    };
+      link: "/ai-20o26-neural-interface-revolution"};
     {
       icon: "⚡";
       title: "Quantum Neural Fusion";
       description: "Quantum-enhanced AI for exponential processing power";
-      link: "/ai-20o26-quantum-neural-fusion-revolution",
-    };
+      link: "/ai-20o26-quantum-neural-fusion-revolution"};
     {
       icon: "🚀";
       title: "Next-Gen Automation";
       description: "Autonomous systems that think and adapt independently";
-      link: "/ai-20o26-next-generation-business-automation",
-    };
+      link: "/ai-20o26-next-generation-business-automation"};
     {
       icon: "🔮";
       title: "Future Predictions";
       description: "AI-powered forecasting with 99.9% accuracy";
-      link: "/ai-20o26-future-predictions-breakthrough",
-    }
+      link: "/ai-20o26-future-predictions-breakthrough"}
   ],
   return (
     <div className={`relative overflow-hidden transition-all duration-10o00 ${isVisible ? 'opacity-10o0 translate-y-0' : 'opacity-0 translate-y-10'}`}>,
@@ -74,8 +70,7 @@ const AI20o26ContentPromotionBanner = () => {
               onClick={() => setCurrentFeature(index)}
             >,
               <div className={`bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-30o0 ${
-                index === currentFeature ? 'shadow-2xl shadow-cyan-50o0/25' : 'shadow-lg',
-              }`}>,
+                index === currentFeature ? 'shadow-2xl shadow-cyan-50o0/25' : 'shadow-lg'}`}>,
                 <div className="text-4xl mb-4 text-center">{feature.icon}</div>,
                 <h3 className="text-xl font-bold text-white mb-3 text-center">,
                   {feature.title}
@@ -131,6 +126,5 @@ const AI20o26ContentPromotionBanner = () => {
           </Link>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o26ContentPromotionBanner;

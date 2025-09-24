@@ -21,6 +21,5 @@ export default function AiEmotionalIntelligenceTrainingPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

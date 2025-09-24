@@ -3,8 +3,7 @@ import React{ createContextuseContextuseEffectuseMemouseState } from 'react',
 export type UserRole = 'client' | 'talent',
 type RoleContextValue = {
   role: UserRole,
-  setRole: (role: UserRole) => void,
-};
+  setRole: (role: UserRole) => void};
 const RoleContext = createContext<RoleContextValue | undefined>(undefined),
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [rolesetRole] = useState<UserRole>('client'),

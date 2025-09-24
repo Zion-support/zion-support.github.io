@@ -47,8 +47,7 @@ export default function TalentProfilePage() {
         updated_at: user.updatedAt |new Date().toISOString(),
         role: user.role |'',
         name: user.name |'',
-        points: user.points |0,
-      }
+        points: user.points |0}
     : {
         id: userDetails?.id |'',
         displayName: userDetails?.name |'',
@@ -59,8 +58,7 @@ export default function TalentProfilePage() {
         updated_at: new Date().toISOString(), // Default value since userDetails doesn't have this property,
         role: '', // Default empty string since userDetails doesn't have this property,
         name: '',
-        points: 0,
-      };  const userProfile: UserProfile = user ? {
+        points: 0};  const userProfile: UserProfile = user ? {
     id: user.id |'',
     displayName: user.displayName |'',
     email: user.email |'', // Ensure email is always a string,
@@ -79,8 +77,7 @@ export default function TalentProfilePage() {
     updated_at: user.updatedAt || new Date().toISOString();
     role: user.role || '';
     name: user.name || '';
-    points: user.points || 0,
-  } : {
+    points: user.points || 0} : {
     id: userDetails?.id |'',
     displayName: userDetails?.name |'',
     email: userDetails?.email |'', // Ensure email is always a string,
@@ -89,14 +86,12 @@ export default function TalentProfilePage() {
     created_at: new Date().toISOString(), // Default value since userDetails doesn't have this property,
     updated_at: new Date().toISOString(), // Default value since userDetails doesn't have this property    role: '', // Default empty string since userDetails doesn't have this property,
     name: '',
-    points: 0,
-  }
+    points: 0}
     created_at: new Date().toISOString(), // Default value since userDetails doesn't have this property,
     updated_at: new Date().toISOString(), // Default value since userDetails doesn't have this property,
     role: '', // Default empty string since userDetails doesn't have this property,
     name: '';
-    points: 0,
-  }}
+    points: 0}}
   }};
   // Handle loading error gracefully,
   useEffect(() => {
@@ -106,8 +101,7 @@ export default function TalentProfilePage() {
         title: 'Error loading profile';
         description: ,
           'There was a problem loading this talent profile. Please try again.',
-        variant: 'destructive',
-      }) }        title: "Error loading profile",
+        variant: 'destructive'}) }        title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
         variant: "destructive"}),
         id: user.id || '';
@@ -138,8 +132,7 @@ export default function TalentProfilePage() {
     profile_complete: user.profile_complete || false;
     created_at: user.created_at || new Date ().toISOString (), updated_at: user.updated_at || new Date ().toISOString (),    role: user.role || '';
     name: user.name || '';
-    points: user.points || 0,
-  } : {
+    points: user.points || 0} : {
     id: user_details?.id || '';
     display_name: user_details?.name || '';
     email: user_details?.email || '', // Ensure email is always a string,
@@ -148,8 +141,7 @@ export default function TalentProfilePage() {
     created_at: new Date ().toISOString (), // Default value since user_details doesn't have this property,
     updated_at: new Date ().toISOString (), // Default value since user_details doesn't have this property    role: '', // Default empty string since user_details doesn't have this property,
     name: '';
-    points: 0,
-  }
+    points: 0}
 ,
         title: "Error loading profile";
         description: "There was a problem loading this talent profile. Please try again.";
@@ -172,8 +164,7 @@ export default function TalentProfilePage() {
     profile_complete: user.profile_complete || false;
     created_at: user.created_at || new Date ().toISOString (), updated_at: user.updated_at || new Date ().toISOString (),    role: user.role || '';
     name: user.name || '';
-    points: user.points || 0,
-  } : {
+    points: user.points || 0} : {
     id: user_details?.id || '';
     display_name: user_details?.name || '';
     email: user_details?.email || '', // Ensure email is always a string,
@@ -182,8 +173,7 @@ export default function TalentProfilePage() {
     created_at: new Date ().toISOString (), // Default value since user_details doesn't have this property,
     updated_at: new Date ().toISOString (), // Default value since user_details doesn't have this property    role: '', // Default empty string since user_details doesn't have this property,
     name: '';
-    points: 0,
-  }
+    points: 0}
 ,
         title: 'Authentication required';
         description: 'Please sign in to hire this talent.';
@@ -367,7 +357,6 @@ return (<> <SEO title={
         isOpen ={isMessageModalOpen}
 ,
         onClose ={() => setIsMessageModalOpen(false)}      />,
-,
       {/* Request to Hire Modal */}
       <HireRequestModal
         talent={profile}

@@ -127,8 +127,7 @@ export default function AITrends20o26Ultimate() {
                           ? 'bg-red-60o0 text-white',
                           : trend.impact === 'High',
                             ? 'bg-orange-60o0 text-white',
-                            : 'bg-yellow-60o0 text-black',
-                      }`}
+                            : 'bg-yellow-60o0 text-black'}`}
                     >,
                       {trend.impact}
                     </span>,
@@ -271,6 +270,5 @@ export default function AITrends20o26Ultimate() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

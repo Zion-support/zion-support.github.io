@@ -7,8 +7,7 @@ export default function ProposalDetail() {
   const [proposal, setProposal] = useState<any>(null),
   const [votesData, setVotesData] = useState<{
     tally: any,
-    votes: any[],
-  } | null>(null),
+    votes: any[]} | null>(null),
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
   useEffect(() => {
@@ -35,8 +34,7 @@ export default function ProposalDetail() {
         r.json()),
       setProposal(refreshed.proposal),
       setVotesData({ tally: refreshed.tally, votes: refreshed.votes })} catch (e: any) {
-      setError(e.message),
-    } finally {
+      setError(e.message)} finally {
       setLoading(false)}
   }
 ,

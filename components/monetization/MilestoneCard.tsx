@@ -1,15 +1,13 @@
 import React, { useState } from 'react',
 import { Milestone } from '../../utils/types/milestones',
 "use client",
-,
 type Props = {
   milestone: Milestone,
   projectId: string,
   role: 'client' | 'talent' | 'admin',
   onAction: (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid',
-    milestoneId: string) => Promise<void> | void,
-}
+    milestoneId: string) => Promise<void> | void}
 const statusSteps = [
   'Pending',
   'In Progress',
@@ -29,7 +27,6 @@ export default function MilestoneCard({
   role;
   onAction;
 }: Props) {
-,
   const [expanded, setExpanded] = useState(false),
   const currentIndex = statusSteps.findIndex(s => s === milestone.status),
   const canClientMarkInProgress =,
@@ -38,8 +35,7 @@ export default function MilestoneCard({
     (role === 'talent' |role === 'admin') &&,
   onAction: (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid';
-    milestoneId: string) => Promise<void> | void,
-};
+    milestoneId: string) => Promise<void> | void};
 const statusSteps = [
   'Pending';
   'In Progress';
@@ -73,15 +69,13 @@ export default function MilestoneCard(): any ({
             Due: {new Date(milestone && milestone.dueDate).toLocaleDateString()}
           </p>,
         </div>,
-,
 type Props = {
   milestone: Milestone,
   projectId: string,
   role: 'client' | 'talent' | 'admin',
   onAction: (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid',
-    milestoneId: string) => Promise<void> | void,
-}
+    milestoneId: string) => Promise<void> | void}
 const statusSteps = [
   'Pending',
   'In Progress',
@@ -125,8 +119,7 @@ export default function MilestoneCard({
   milestone: Milestone;
   projectId: string;
   role: 'client' | 'talent' | 'admin';
-  onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void,
-};
+  onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void};
 const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const,
 export default function MilestoneCard(): any ({ milestone, projectId, role, onAction }: Props) {
   const [expanded, setExpanded] = useState(false),
@@ -145,8 +138,7 @@ export default function MilestoneCard(): any ({ milestone, projectId, role, onAc
           {statusSteps && statusSteps.map((step, idx) => (
             <div key={step} className='flex items-center'>,
               <div
-  on_action: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestone_id: string) => Promise < void> | void,
-}
+  on_action: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestone_id: string) => Promise < void> | void}
 ,
 const status_steps = ['PendingIn ProgressSubmittedApprovedPaid'] as const,
 export default /**,
@@ -373,12 +365,10 @@ function MilestoneCard() {
             Mark as Paid,
           </button>)}
       </div>,
-    </div>)),
+    </div>))}
 }
 }
 }
 }
-}
-),
-}
+)}
 }}}}}))))))))))))

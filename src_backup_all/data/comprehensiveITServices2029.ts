@@ -22,15 +22,13 @@ export interface ComprehensiveITService20o29 {
     phone: string,
     email: string,
     website: string,
-    address: string,
-  };
+    address: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string,
   demoUrl?: string,
@@ -86,8 +84,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"];
       integrations: ["CI/CD pipelines", "Monitoring tools", "Security tools", "Backup solutions"];
@@ -97,8 +94,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [
     competitors: ["AWS Professional Services", "Azure Consulting", "Google Cloud Consulting"];
     marketSize: "$45.2B (Cloud Infrastructure Services)";
     demoUrl: "https://ziontechgroup.com/demo/cloud-infrastructure-optimization";
-    documentationUrl: "https://ziontechgroup.com/docs/cloud-infrastructure-optimization",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/cloud-infrastructure-optimization"};
   // Cybersecurity & Compliance,
   {
     id: "comprehensive-cybersecurity";
@@ -148,8 +144,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["SIEM", "EDR", "Firewalls", "IDS/IPS", "Vulnerability scanners"];
       integrations: ["Security tools", "Monitoring systems", "Compliance platforms"];
@@ -159,8 +154,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [
     competitors: ["Deloitte", "PwC", "EY", "KPMG", "Accenture"];
     marketSize: "$22.1B (Cybersecurity Services)";
     demoUrl: "https://ziontechgroup.com/demo/comprehensive-cybersecurity";
-    documentationUrl: "https://ziontechgroup.com/docs/comprehensive-cybersecurity",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/comprehensive-cybersecurity"};
   // Digital Transformation Consulting,
   {
     id: "digital-transformation-consulting";
@@ -210,8 +204,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Business Intelligence", "Process Mining", "RPA", "Cloud Platforms", "Analytics"];
       integrations: ["ERP systems", "CRM platforms", "Business tools", "Analytics platforms"];
@@ -221,8 +214,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [
     competitors: ["McKinsey", "BCG", "Bain", "Deloitte", "Accenture"];
     marketSize: "$28.5B (Digital Transformation Consulting)";
     demoUrl: "https://ziontechgroup.com/demo/digital-transformation-consulting";
-    documentationUrl: "https://ziontechgroup.com/docs/digital-transformation-consulting",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/digital-transformation-consulting"};
   // Data Analytics & Business Intelligence,
   {
     id: "data-analytics-business-intelligence";
@@ -272,8 +264,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Python", "R", "SQL", "Tableau", "Power BI", "Machine Learning"];
       integrations: ["Databases", "Cloud platforms", "Business applications", "Data sources"];
@@ -283,8 +274,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [
     competitors: ["Tableau", "Power BI", "Qlik", "Looker", "Sisense"];
     marketSize: "$18.7B (Business Intelligence)";
     demoUrl: "https://ziontechgroup.com/demo/data-analytics-business-intelligence";
-    documentationUrl: "https://ziontechgroup.com/docs/data-analytics-business-intelligence",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/data-analytics-business-intelligence"};
   // IT Infrastructure Management,
   {
     id: "it-infrastructure-management";
@@ -334,8 +324,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["VMware", "Hyper-V", "Windows Server", "Linux", "Storage systems"];
       integrations: ["Monitoring tools", "Backup solutions", "Security tools", "Management platforms"];
@@ -345,8 +334,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [
     competitors: ["Dell Technologies", "HPE", "IBM", "Cisco", "VMware"];
     marketSize: "$35.8B (IT Infrastructure Management)";
     demoUrl: "https://ziontechgroup.com/demo/it-infrastructure-management";
-    documentationUrl: "https://ziontechgroup.com/docs/it-infrastructure-management",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/it-infrastructure-management"};
   // Software Development & Custom Solutions,
   {
     id: "custom-software-development";
@@ -396,8 +384,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["React", "Node.js", "Python", "Java", "Mobile frameworks"];
       integrations: ["Databases", "APIs", "Third-party services", "Cloud platforms"];
@@ -407,8 +394,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [
     competitors: ["Accenture", "Infosys", "Tata Consultancy", "Wipro", "Cognizant"];
     marketSize: "$22.8B (Custom Software Development)";
     demoUrl: "https://ziontechgroup.com/demo/custom-software-development";
-    documentationUrl: "https://ziontechgroup.com/docs/custom-software-development",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/custom-software-development"};
   // Managed IT Services,
   {
     id: "managed-it-services";
@@ -458,8 +444,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Monitoring tools", "Management platforms", "Security tools", "Backup solutions"];
       integrations: ["IT systems", "Monitoring platforms", "Security tools", "Management tools"];
@@ -469,8 +454,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [
     competitors: ["Dell Technologies", "HPE", "IBM", "Cisco", "VMware"];
     marketSize: "$42.1B (Managed IT Services)";
     demoUrl: "https://ziontechgroup.com/demo/managed-it-services";
-    documentationUrl: "https://ziontechgroup.com/docs/managed-it-services",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/managed-it-services"};
   // Network Security & Firewall Management,
   {
     id: "network-security-firewall";
@@ -520,8 +504,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Firewalls", "IDS/IPS", "VPN solutions", "Network monitoring", "Security tools"];
       integrations: ["Security platforms", "Monitoring systems", "Management tools"];
@@ -531,8 +514,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [
     competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point", "Juniper"];
     marketSize: "$18.9B (Network Security)";
     demoUrl: "https://ziontechgroup.com/demo/network-security-firewall";
-    documentationUrl: "https://ziontechgroup.com/docs/network-security-firewall",
-  };
+    documentationUrl: "https://ziontechgroup.com/docs/network-security-firewall"};
   // Cloud Migration & Strategy,
   {
     id: "cloud-migration-strategy";
@@ -582,8 +564,7 @@ export const COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["AWS", "Azure", "GCP", "Migration tools", "Testing frameworks"];
       integrations: ["Cloud platforms", "Monitoring tools", "Security tools", "Backup solutions"];
@@ -593,7 +574,6 @@ export const COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [
     competitors: ["AWS Professional Services", "Azure Consulting", "Google Cloud Consulting"];
     marketSize: "$35.2B (Cloud Migration Services)";
     demoUrl: "https://ziontechgroup.com/demo/cloud-migration-strategy";
-    documentationUrl: "https://ziontechgroup.com/docs/cloud-migration-strategy",
-  }
+    documentationUrl: "https://ziontechgroup.com/docs/cloud-migration-strategy"}
 ],
 export default COMPREHENSIVE_IT_SERVICES_20o29;

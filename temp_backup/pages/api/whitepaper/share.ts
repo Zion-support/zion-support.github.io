@@ -12,5 +12,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(20o0).json({ id, url })}
 ,
 export function getShared(id: string) {
-  return store[id],
-}
+  return store[id]}

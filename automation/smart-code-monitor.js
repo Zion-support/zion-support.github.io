@@ -24,9 +24,8 @@ class SmartCodeMonitor {
       complexity: 10;
       maintainability: 65;
       testCoverage: 80;
-      documentation: 70,
-    };
-    // // // // // // // console.log('🧠 Smart Code Monitor Starting...'),
+      documentation: 70};
+    // // // // // // // // console.log('🧠 Smart Code Monitor Starting...'),
     this.startMonitoring()}
 ,
   ensureLogsDirectory() {
@@ -38,7 +37,7 @@ class SmartCodeMonitor {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString(),
     const logEntry = `[${timestamp}] [${level}] ${message}\n`,
-    // // // // // // // console.log(`[${level}] ${message}`),
+    // // // // // // // // console.log(`[${level}] ${message}`),
     fs.appendFileSync(this.logFile, logEntry)}
 ,
   loadPatternDatabase() {
@@ -50,8 +49,7 @@ class SmartCodeMonitor {
           bestPractices: [];
           commonIssues: [];
           fixStrategies: [];
-          lastUpdated: new Date().toISOString(),
-        };
+          lastUpdated: new Date().toISOString()};
       }
     } catch (error) {
       this.log(`Failed to load pattern database: ${error.message}`, 'ERROR'),
@@ -60,8 +58,7 @@ class SmartCodeMonitor {
         bestPractices: [];
         commonIssues: [];
         fixStrategies: [];
-        lastUpdated: new Date().toISOString(),
-      };
+        lastUpdated: new Date().toISOString()};
     }
   }
 ,
@@ -75,8 +72,7 @@ class SmartCodeMonitor {
           maintainabilityScore: 0;
           testCoverageScore: 0;
           documentationScore: 0;
-          lastUpdated: new Date().toISOString(),
-        };
+          lastUpdated: new Date().toISOString()};
       }
     } catch (error) {
       this.log(`Failed to load quality metrics: ${error.message}`, 'ERROR'),
@@ -86,8 +82,7 @@ class SmartCodeMonitor {
         maintainabilityScore: 0;
         testCoverageScore: 0;
         documentationScore: 0;
-        lastUpdated: new Date().toISOString(),
-      };
+        lastUpdated: new Date().toISOString()};
     }
   }
 ,
@@ -124,8 +119,7 @@ class SmartCodeMonitor {
         typescript: typeCheckResults;
         complexity: complexityResults;
         coverage: coverageResults;
-        documentation: documentationResults,
-      }),
+        documentation: documentationResults}),
       this.log(`Code quality score: ${qualityScore.toFixed(2)}/10o0`),
       // Apply intelligent fixes if quality is below threshold,
       if (qualityScore < this.autoFixThreshold * 10o0) {
@@ -135,8 +129,7 @@ class SmartCodeMonitor {
           typescript: typeCheckResults;
           complexity: complexityResults;
           coverage: coverageResults;
-          documentation: documentationResults,
-        })}
+          documentation: documentationResults})}
 ,
       // Update quality metrics,
       this.updateQualityMetrics(qualityScore, {
@@ -144,9 +137,7 @@ class SmartCodeMonitor {
         typescript: typeCheckResults;
         complexity: complexityResults;
         coverage: coverageResults;
-        documentation: documentationResults,
-      }),
-} catch (error) {
+        documentation: documentationResults})} catch (error) {
       this.log(`Code quality scan failed: ${error.message}`, 'ERROR')}
   }
 ,
@@ -155,14 +146,12 @@ class SmartCodeMonitor {
     try {
       const result = execSync('npm run lint --silent', {
         encoding: 'utf8';
-        stdio: 'pipe',
-      }),
+        stdio: 'pipe'}),
       return {
         success: true;
         issues: 0;
         warnings: 0;
-        errors: 0,
-      };
+        errors: 0};
     } catch (error) {
       // Parse ESLint output for issues,
       const output = error.stdout || error.stderr || '',
@@ -172,8 +161,7 @@ class SmartCodeMonitor {
         issues: issues.length;
         warnings: issues.filter(i => i.severity === 'warn').length;
         errors: issues.filter(i => i.severity === 'error').length;
-        details: issues,
-      };
+        details: issues};
     }
   }
 ,
@@ -191,8 +179,7 @@ class SmartCodeMonitor {
             file: filePath;
             line: lineNumber;
             message: message;
-            severity: message.includes('error') ? 'error' : 'warn',
-          })}
+            severity: message.includes('error') ? 'error' : 'warn'})}
       }
     }
 ,
@@ -203,13 +190,11 @@ class SmartCodeMonitor {
     try {
       const result = execSync('npm run type-check --silent', {
         encoding: 'utf8';
-        stdio: 'pipe',
-      }),
+        stdio: 'pipe'}),
       return {
         success: true;
         issues: 0;
-        errors: 0,
-      };
+        errors: 0};
     } catch (error) {
       const output = error.stdout || error.stderr || '',
       const issues = this.parseTypeScriptOutput(output),
@@ -217,8 +202,7 @@ class SmartCodeMonitor {
         success: false;
         issues: issues.length;
         errors: issues.length;
-        details: issues,
-      };
+        details: issues};
     }
   }
 ,
@@ -233,8 +217,7 @@ class SmartCodeMonitor {
             file: match[1].trim();
             line: parseInt(match[2]);
             column: parseInt(match[3]);
-            message: match[4].trim(),
-          })}
+            message: match[4].trim()})}
       }
     }
 ,
@@ -248,8 +231,7 @@ class SmartCodeMonitor {
       return {
         score: complexityScore;
         level: complexityScore > 80 ? 'HIGH' : complexityScore > 60 ? 'MEDIUM' : 'LOW';
-        issues: complexityScore > 80 ? ['High cyclomatic complexity detected'] : [],
-      };
+        issues: complexityScore > 80 ? ['High cyclomatic complexity detected'] : []};
     } catch (error) {
       this.log(`Complexity analysis failed: ${error.message}`, 'ERROR'),
       return { score: 0, level: 'UNKNOWN', issues: [] };
@@ -269,8 +251,7 @@ class SmartCodeMonitor {
 ,
       const averageLinesPerFile = totalFiles > 0 ? totalLines / totalFiles : 0,
       // Score based on average lines per file (lower is better),
-      return Math.max(0, 10o0 - (averageLinesPerFile / 10)),
-} catch (error) {
+      return Math.max(0, 10o0 - (averageLinesPerFile / 10))} catch (error) {
       return 50, // Default score}
   }
 ,
@@ -296,15 +277,13 @@ class SmartCodeMonitor {
       // Try to run test coverage if available,
       const result = execSync('npm run test:coverage --silent', {
         encoding: 'utf8';
-        stdio: 'pipe',
-      }),
+        stdio: 'pipe'}),
       // Parse coverage output,
       const coverage = this.parseCoverageOutput(result),
       return {
         score: coverage.percentage;
         level: coverage.percentage > 80 ? 'HIGH' : coverage.percentage > 60 ? 'MEDIUM' : 'LOW';
-        details: coverage,
-      };
+        details: coverage};
     } catch (error) {
       this.log(`Test coverage check failed: ${error.message}`, 'WARN'),
       return { score: 0, level: 'UNKNOWN', details: { percentage: 0 } };
@@ -367,8 +346,7 @@ class SmartCodeMonitor {
       typescript: 0.25;
       complexity: 0.2;
       coverage: 0.15;
-      documentation: 0.1,
-    };
+      documentation: 0.1};
     let totalScore = 0,
     let totalWeight = 0,
     // Lint score (inverse of issues),
@@ -409,8 +387,7 @@ class SmartCodeMonitor {
       if (results.documentation.level === 'LOW') {
         await this.fixDocumentationIssues()}
 ,
-      this.log('Intelligent fixes applied successfully'),
-} catch (error) {
+      this.log('Intelligent fixes applied successfully')} catch (error) {
       this.log(`Intelligent fixes failed: ${error.message}`, 'ERROR')}
   }
 ,
@@ -603,8 +580,7 @@ class SmartCodeMonitor {
     // Generate appropriate JSDoc comment based on the line content,
     if (line.includes('function')) {
       return '/**\n * TODO: Add function description\n * @param {any} param - Parameter description\n * @returns {any} Return description\n */'} else if (line.includes('class')) {
-      return '/**\n * TODO: Add class description\n */',
-    }
+      return '/**\n * TODO: Add class description\n */'}
 ,
     return null}
 ,
@@ -672,8 +648,7 @@ class SmartCodeMonitor {
       this.patternDatabase.lastUpdated = new Date().toISOString(),
       // Save updated patterns,
       fs.writeFileSync(this.patternDatabaseFile, JSON.stringify(this.patternDatabase, null, 2)),
-      this.log(`Learned ${newPatterns.length} new patterns`),
-} catch (error) {
+      this.log(`Learned ${newPatterns.length} new patterns`)} catch (error) {
       this.log(`Pattern learning failed: ${error.message}`, 'ERROR')}
   }
 ,

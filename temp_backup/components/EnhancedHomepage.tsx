@@ -87,8 +87,7 @@ const EnhancedHomepage: React.FC = () => {
       opacity: 1;
       transition: {
         duration: 0.8;
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -98,8 +97,7 @@ const EnhancedHomepage: React.FC = () => {
       y: 0;
       transition: {
         duration: 0.6;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   const heroVariants ={
@@ -109,8 +107,7 @@ const EnhancedHomepage: React.FC = () => {
       y: 0;
       transition: {
         duration: 1;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   const floatingVariants ={
@@ -118,16 +115,14 @@ const EnhancedHomepage: React.FC = () => {
       y: [-10-10];
       transition: {
         duration: 3;
-        ease: "easeInOut" as const,
-      }
+        ease: "easeInOut" as const}
     }
   };
   const handleCategoryChange = (categoryId: string) => {
     setSelectedCategory(categoryId),
     const category = categories.find(cat => cat.id === categoryId),
     if (category) {
-      setColorScheme(category.scheme),
-    }
+      setColorScheme(category.scheme)}
   };
   return (
     <>,
@@ -267,8 +262,7 @@ const EnhancedHomepage: React.FC = () => {
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-30o0 transform hover: scale-10o5 ${
                     selectedCategory === category.id,
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl',
-                      : 'bg-gray-80o0/50 text-gray-30o0 hover:bg-gray-70o0/50 border border-gray-60o0',
-                  }`}
+                      : 'bg-gray-80o0/50 text-gray-30o0 hover:bg-gray-70o0/50 border border-gray-60o0'}`}
                   whileHover={{ scale: 1.0o5 }}
                   whileTap={{ scale: 0.95 }}
                 >,

@@ -9,8 +9,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
   const toggleSection = (section: anystring)  => {
     const newExpanded = new Set(expandedSections),
     if (newExpanded.has(section)) {
-      newExpanded.delete(section),
-    } else {
+      newExpanded.delete(section)} else {
       newExpanded.add(section)}
     setExpandedSections(newExpanded)};
   const isActive = (path: anystring)  => location.pathname === path,
@@ -125,8 +124,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
                           className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-30o0 group ${
                             action.variant === 'primary',
                               ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover: from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25',
-                              : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40',
-                          }`}
+                              : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'}`}
                         >,
                           <action.icon className="w-4 h-4 group-hover: scale-110 transition-transform duration-30o0"  />,
                           <span className="font-medium">{action.name}</span>,
@@ -175,8 +173,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
                                   className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-30o0 group ${
                                     isActive(item.href),
                                       ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/30',
-                                      : 'text-zion-slate-light hover: text-white hover:bg-zion-cyan/5',
-                                  }`}
+                                      : 'text-zion-slate-light hover: text-white hover:bg-zion-cyan/5'}`}
                                 >,
                                   <item.icon className="w-3 h-3 group-hover: scale-110 transition-transform duration-30o0"  />,
                                   <span className="text-sm">{item.name}</span>,

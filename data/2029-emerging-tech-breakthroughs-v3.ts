@@ -30,15 +30,13 @@ export interface EmergingTechBreakthrough20o29V3 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const emergingTechBreakthroughs20o29V3: EmergingTechBreakthrough20o29V3[] =,
   [

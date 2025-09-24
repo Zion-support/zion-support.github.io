@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     // Handle form submission,
-    // console.log('Form submitted:', formData)};
+    // // console.log('Form submitted:', formData)};
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -104,6 +104,5 @@ const Contact: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default Contact;

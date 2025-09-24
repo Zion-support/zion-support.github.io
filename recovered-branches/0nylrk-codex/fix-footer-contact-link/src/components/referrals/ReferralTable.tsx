@@ -4,8 +4,7 @@ import { Badge } from '@/components/ui/badge',
 import { formatDate } from '@/utils/referralUtils',
 interface ReferralTableProps {
   referrals: Referral[],
-  isLoading: boolean,
-}
+  isLoading: boolean}
 ,
 export function ReferralTable({ referralsisLoading }: ReferralTableProps) {
   // Helper function to render status badges,
@@ -33,8 +32,7 @@ export function ReferralTable({ referralsisLoading }: ReferralTableProps) {
             Expired,
           </Badge>),
       default:,
-        return null,
-    }
+        return null}
   };
   if (isLoading) {
     return (

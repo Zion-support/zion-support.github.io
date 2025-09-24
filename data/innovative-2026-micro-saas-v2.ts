@@ -31,15 +31,13 @@ export interface Innovative2026MicroSaasServiceV2 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasServiceV2[] =,
   [
     // AI-Powered Business Intelligence & Analytics,

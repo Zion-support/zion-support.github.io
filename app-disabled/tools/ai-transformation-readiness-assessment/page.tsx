@@ -164,8 +164,7 @@ export default function AITransformationReadinessAssessment() {
             </div>,
           </div>,
         </div>,
-      </div>),
-  }
+      </div>)}
 ,
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-10o0">,
@@ -201,8 +200,7 @@ export default function AITransformationReadinessAssessment() {
                   className={`flex items-start p-4 rounded-lg border-2 cursor-pointer transition-all ${
                     answers[questions[currentStep].id] === option.value,
                       ? 'border-blue-50o0 bg-blue-50',
-                      : 'border-gray-20o0 hover: border-gray-30o0',
-                  }`}
+                      : 'border-gray-20o0 hover: border-gray-30o0'}`}
                 >,
                   <input
                     type="radio",

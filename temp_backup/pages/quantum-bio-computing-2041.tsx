@@ -15,6 +15,5 @@ export default function QuantumBioComputing20o41Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

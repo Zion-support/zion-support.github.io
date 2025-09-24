@@ -254,6 +254,5 @@ export default function PrivacyPage() {
         </section>,
       </main>,
       <Footer />,
-    </>),
-}
+    </>)}
 ,

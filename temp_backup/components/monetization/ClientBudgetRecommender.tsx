@@ -8,8 +8,7 @@ export type ClientBudgetRecommenderProps = {
   timelineWeeks?: number,
   scope?: string,
   experienceLevel?: 'junior' | 'mid' | 'senior',
-  onApplySuggestion?: (min: number, max: number) => void,
-};
+  onApplySuggestion?: (min: number, max: number) => void};
 export default function ClientBudgetRecommender(
   props: ClientBudgetRecommenderProps) {
   const [loading, setLoading] = useState(false),
@@ -18,8 +17,7 @@ export default function ClientBudgetRecommender(
     min: number,
     max: number,
     confidence: 'Low' | 'Medium' | 'High',
-    rationale: string,
-  } | null>(null),
+    rationale: string} | null>(null),
   async function fetchSuggestion() {
     setLoading(true),
     setError(null),

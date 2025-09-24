@@ -68,8 +68,7 @@ export function RecentActivity() {
             Comment,
           </Badge>),
       default:,
-        return <Badge variant='outline'>Activity</Badge>,
-    }
+        return <Badge variant='outline'>Activity</Badge>}
   };
   return (
     <Card>,
@@ -107,6 +106,5 @@ export function RecentActivity() {
           </button>,
         </div>,
       </CardContent>,
-    </Card>),
-}
+    </Card>)}
 ,

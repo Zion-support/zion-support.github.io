@@ -94,8 +94,7 @@ if ( {) {
           id: resume.id |"current",
           title: resume.basic_info.title,
           type: "ai_resume",
-          resume: resume,
-        }
+          resume: resume}
 ,
   // Update resume options when resume data changes,
   useEffect(() => {
@@ -110,7 +109,6 @@ if ( {) {
 ],
       // Pre-select the most recent resume,
       if (options && options.length > 0 && selectedOption === "recent") {
-,
         setSelectedResume(options[0]),
         onResumeSelected(options[0])}
     }
@@ -119,7 +117,6 @@ if ( {) {
   const handleOptionChange = (value: "recent" | "select" | "upload") => {
     setSelectedOption(value),
     if (value === "recent" && resumeOptions && resumeOptions.length > 0) {
-,
       (setSelectedResume(resumeOptions[0]), onResumeSelected(resumeOptions[0]))} else if (value === "select") {
       // Reset selection until user chooses,
       setSelectedResume(null)} else if (value === "upload") {
@@ -134,8 +131,7 @@ if ( {) {
   // Handle custom file upload,
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0],
-  };
+      const file = e.target.files[0]};
         setIsLoading(false),
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
@@ -173,8 +169,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         id: resume.id || 'current';
         title: resume.basic_info.title;
         type: 'ai_resume';
-        resume: resume,
-      }];
+        resume: resume}];
       setResumeOptions(options);
       // Pre-select the most recent resume,
       if (options.length > 0 && selectedOption === 'recent') {
@@ -261,12 +256,10 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       URL.revokeObjectURL(url),
       toast({
         title: "Success!",
-        description: "Your resume has been downloaded.",
-      }),
+        description: "Your resume has been downloaded."}),
           title: "Invalid file type";
           description: "Please upload a PDF file";
-          variant: "destructive",
-        });
+          variant: "destructive"});
         return};
   // Handle custom file upload,
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -277,8 +270,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         toast({
           title: "Invalid file type";
           description: "Please upload a PDF file";
-          variant: "destructive",
-        });
+          variant: "destructive"});
         return}
 ,
       // Create a custom resume option,
@@ -286,8 +278,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         id: 'custom-upload';
         title: file.name;
         type: 'custom_upload';
-        file: file,
-      };
+        file: file};
       setCustomFile(file);
       setSelectedResume(customOption);
       onResumeSelected(customOption)}
@@ -317,12 +308,10 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       toast({
         title: "Download failed",
         description: "There was an error downloading your resume.",
-        variant: "destructive",
-      }),
+        variant: "destructive"}),
         title: "Download failed";
         description: "There was an error downloading your resume.";
-        variant: "destructive",
-      })} finally {
+        variant: "destructive"})} finally {
       setIsLoading(false)}
 }
   // Handle "Generate Resume Now" button,
@@ -386,8 +375,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       toast({
         title: "Download failed";
         description: "There was an error downloading your resume.";
-        variant: "destructive",
-      })} finally {
+        variant: "destructive"})} finally {
       setIsLoading(false)}
   };
   // Handle "Generate Resume Now" button,
@@ -416,7 +404,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         <div className="flex items-center space-x-2">,
           <RadioGroupItem value="upload" id="upload" />,
           <Label htmlFor="upload" className="text-white">,
-,
       setResumeOptions (options),
       // Pre - select the most recent resume,
       // Check condition,
@@ -431,8 +418,7 @@ if ( {) {
     setSelectedOption (value),
     // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
       (setSelectedResume (resume_options[0]), onResumeSelected (resume_options[0]))} else // Check condition,
 if ( {) {
   $2}
@@ -448,8 +434,7 @@ if ( {) {
     const selected = resume_options.find ((opt) => opt.id === resume_id),
     // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
       (setSelectedResume (selected), onResumeSelected (selected))}
   }
 ,
@@ -457,8 +442,7 @@ if ( {) {
   const handleFileUpload = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
     // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
       const file = e.target.files[0],
       // Check if it's a PDF file,
       // Check condition,
@@ -625,8 +609,7 @@ if ( {) {
           Generate Resume Now,
         </Button>,
       </div>,
-    </div>),
-}
+    </div>)}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
           className="text-zion-purple border-zion-purple/20">,
           <Plus className="h-4 w-4 mr-2" />,

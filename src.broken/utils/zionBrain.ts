@@ -7,8 +7,7 @@ export type ZionChain =,
 export interface RouterResult {
   intent: ZionChain,
   confidence: number,
-  notes?: string,
-}
+  notes?: string}
 ,
 export interface ReflexMetrics {
   signupsLastHour?: number,
@@ -21,8 +20,7 @@ export interface ReflexMetrics {
 export interface ReflexTrigger {
   action: 'launchRewardPopup' | 'escalateSupport' | 'notifyAdmin',
   reason: string,
-  severity: 'low' | 'medium' | 'high',
-}
+  severity: 'low' | 'medium' | 'high'}
 ,
 export interface LogEntry {
   id: string,

@@ -8,20 +8,17 @@ interface SearchResult {
   type: 'service' | 'page' | 'article' | 'ai-suggestion',
   url: string,
   icon?: React.ComponentType<any>,
-  relevance: number,
-}
+  relevance: number}
 ,
 interface SearchSuggestion {
   text: string,
-  type: 'recent' | 'trending' | 'ai',
-}
+  type: 'recent' | 'trending' | 'ai'}
 ,
 interface EnhancedSearchProps {
   className?: string,
   placeholder?: string,
   onSearch?: (query: string) => void,
-  variant?: 'default' | 'futuristic' | 'minimal',
-}
+  variant?: 'default' | 'futuristic' | 'minimal'}
 ,
 export function EnhancedSearch({
   className = '';
@@ -45,8 +42,7 @@ export function EnhancedSearch({
       type: 'service';
       url: '/services/ai-business-intelligence';
       icon: Brain;
-      relevance: 0.95,
-    };
+      relevance: 0.95};
     {
       id: '2';
       title: 'Quantum Computing Solutions';
@@ -54,8 +50,7 @@ export function EnhancedSearch({
       type: 'service';
       url: '/services/quantum-computing';
       icon: Zap;
-      relevance: 0.92,
-    };
+      relevance: 0.92};
     {
       id: '3';
       title: 'Micro SaaS Platform';
@@ -63,8 +58,7 @@ export function EnhancedSearch({
       type: 'service';
       url: '/services/micro-saas';
       icon: TrendingUp;
-      relevance: 0.88,
-    }
+      relevance: 0.88}
   ],
   // Mock suggestions,
   const mockSuggestions: SearchSuggestion[] = [
@@ -78,8 +72,7 @@ export function EnhancedSearch({
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false),
-        setSelectedIndex(-1),
-      }
+        setSelectedIndex(-1)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
@@ -101,8 +94,7 @@ export function EnhancedSearch({
         case 'Enter':,
           event.preventDefault(),
           if (selectedIndex >= 0 && results[selectedIndex]) {
-            handleResultClick(results[selectedIndex]),
-          } else if (query.trim()) {
+            handleResultClick(results[selectedIndex])} else if (query.trim()) {
             handleSearch()}
           break,
         case 'Escape':,
@@ -131,12 +123,10 @@ export function EnhancedSearch({
   const handleResultClick = (result: SearchResult) => {
     window.location.href = result.url,
     setIsOpen(false),
-    setQuery(''),
-  };
+    setQuery('')};
   const handleSuggestionClick = (suggestion: SearchSuggestion) => {
     setQuery(suggestion.text),
-    handleSearch(),
-  };
+    handleSearch()};
   const clearSearch = () => {
     setQuery(''),
     setResults([]),
@@ -160,8 +150,7 @@ export function EnhancedSearch({
       case 'minimal':,
         return 'bg-gray-10o0 border border-gray-20o0 hover:border-gray-30o0 focus-within:border-blue-50o0 focus-within:ring-2 focus-within:ring-blue-50o0/20',
       default:,
-        return 'bg-white border border-gray-30o0 hover:border-gray-40o0 focus-within:border-blue-50o0 focus-within:ring-2 focus-within:ring-blue-50o0/20',
-    }
+        return 'bg-white border border-gray-30o0 hover:border-gray-40o0 focus-within:border-blue-50o0 focus-within:ring-2 focus-within:ring-blue-50o0/20'}
   };
   return (
     <div ref={searchRef} className={`relative ${className}`}>,
@@ -227,8 +216,7 @@ export function EnhancedSearch({
                       className={`p-3 rounded-lg cursor-pointer transition-all duration-20o0 ${
                         selectedIndex === index,
                           ? 'bg-blue-50 dark: bg-blue-90o0/20 border border-blue-20o0 dark:border-blue-70o0',
-                          : 'hover:bg-gray-50 dark:hover:bg-gray-70o0',
-                      }`}
+                          : 'hover:bg-gray-50 dark:hover:bg-gray-70o0'}`}
                       onClick={() => handleResultClick(result)}
                     >,
                       <div className="flex items-start space-x-3">,

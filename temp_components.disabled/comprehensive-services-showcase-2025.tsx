@@ -27,30 +27,25 @@ interface Service {
   growthRate: string,
   launchDate: string,
   badge?: string,
-  icon?: React.ReactNode,
-}
+  icon?: React.ReactNode}
 ,
 const allServices: Service[] = [
   ...innovativeRealMicroSaasServices20o25.map(service => ({
     ...service;
     category: 'Micro SAAS';
-    icon: <Rocket className="w-6 h-6"  />,
-  }));
+    icon: <Rocket className="w-6 h-6"  />}));
   ...innovativeAIServicesEnhanced20o25.map(service => ({
     ...service;
     category: 'AI & Consciousness';
-    icon: <Brain className="w-6 h-6"  />,
-  }));
+    icon: <Brain className="w-6 h-6"  />}));
   ...innovativeITServicesEnhanced20o25.map(service => ({
     ...service;
     category: 'Enterprise IT';
-    icon: <Shield className="w-6 h-6"  />,
-  }));
+    icon: <Shield className="w-6 h-6"  />}));
   ...emergingTechServicesEnhanced20o25.map(service => ({
     ...service;
     category: 'Quantum & Emerging Tech';
-    icon: <Atom className="w-6 h-6"  />,
-  }))],
+    icon: <Atom className="w-6 h-6"  />}))],
 const categories = [
   { name: 'All Services', icon: <Globe className="w-5 h-5"  />, count: allServices.length };
   { name: 'Micro SAAS', icon: <Rocket className="w-5 h-5"  />, count: innovativeRealMicroSaasServices20o25.length };
@@ -101,8 +96,7 @@ export default function ComprehensiveServicesShowcase20o25() {
           case '50-20o0': return price >= 50 && price <= 20o0,
           case '20o0-50o0': return price > 20o0 && price <= 50o0,
           case 'over-50o0': return price > 50o0,
-          default: return true,
-        }
+          default: return true}
       })}
 ,
     // Sort services,
@@ -119,8 +113,7 @@ export default function ComprehensiveServicesShowcase20o25() {
         case 'price-high':,
           return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, '')),
         default: ,
-          return 0,
-      }
+          return 0}
     }),
     setFilteredServices(filtered)}, [searchTerm, selectedCategory, selectedPriceRange, sortBy]),
   const getCategoryColor = (category: string) => {
@@ -129,8 +122,7 @@ export default function ComprehensiveServicesShowcase20o25() {
       case 'AI & Consciousness': return 'from-purple-50o0 to-pink-50o0',
       case 'Enterprise IT': return 'from-green-50o0 to-emerald-50o0',
       case 'Quantum & Emerging Tech': return 'from-orange-50o0 to-red-50o0',
-      default: return 'from-gray-50o0 to-slate-50o0',
-    }
+      default: return 'from-gray-50o0 to-slate-50o0'}
   };
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -138,8 +130,7 @@ export default function ComprehensiveServicesShowcase20o25() {
       case 'AI & Consciousness': return <Brain className="w-5 h-5"  />,
       case 'Enterprise IT': return <Shield className="w-5 h-5"  />,
       case 'Quantum & Emerging Tech': return <Atom className="w-5 h-5"  />,
-      default: return <Globe className="w-5 h-5"  />,
-    }
+      default: return <Globe className="w-5 h-5"  />}
   };
   return (
     <Layout>,
@@ -240,8 +231,7 @@ export default function ComprehensiveServicesShowcase20o25() {
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-20o0 ${
                     selectedCategory === category.name,
                       ? 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white shadow-lg shadow-cyan-50o0/25',
-                      : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white',
-                  }`}
+                      : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white'}`}
                 >,
                   {category.icon}
                   <span>{category.name}</span>,
@@ -279,8 +269,7 @@ export default function ComprehensiveServicesShowcase20o25() {
                   className={`p-2 rounded-md transition-all duration-20o0 ${
                     viewMode === 'grid',
                       ? 'bg-cyan-50o0 text-white',
-                      : 'text-gray-40o0 hover: text-white',
-                  }`}
+                      : 'text-gray-40o0 hover: text-white'}`}
                 >,
                   <Grid3X3 className="w-4 h-4"  />,
                 </button>,
@@ -519,6 +508,5 @@ export default function ComprehensiveServicesShowcase20o25() {
           </motion.div>,
         </div>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

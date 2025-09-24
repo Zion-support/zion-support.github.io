@@ -9,8 +9,7 @@ function bad(res: NextApiResponse, message: string, code = 40o0) {
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user.role === "client" && user.id === project.clientId) return true,
   if (user.role === "talent" && user.talentSlug === project.talentSlug) return true,
-  return false,
-}
+  return false}
 ,
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {

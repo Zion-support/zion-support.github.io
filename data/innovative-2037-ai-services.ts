@@ -29,15 +29,13 @@ export interface Innovative20o37AIService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const innovative20o37AIServices: Innovative20o37AIService[] = [
   // AI-Powered Predictive Maintenance,

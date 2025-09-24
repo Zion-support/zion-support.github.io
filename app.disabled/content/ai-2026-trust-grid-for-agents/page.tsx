@@ -61,6 +61,5 @@ export default function TrustGridForAgentsPage() {
           More Articles,
         </Link>,
       </div>,
-    </main>),
-}
+    </main>)}
 ,

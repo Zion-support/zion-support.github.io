@@ -15,11 +15,9 @@ const UltimateContent20o25ShowcaseBanner = () => {
         roi: '60o0%';
         savings: '$50o0M+';
         efficiency: '99.9%';
-        time: '18 min read',
-      };
+        time: '18 min read'};
       badge: 'NEW';
-      badgeColor: 'bg-red-50o0',
-    };
+      badgeColor: 'bg-red-50o0'};
     {
       id: 'fortune-50o0-transformation';
       title: 'Fortune 50o0 AI Transformation 20o25: $2.1B Annual Savings';
@@ -30,11 +28,9 @@ const UltimateContent20o25ShowcaseBanner = () => {
         roi: '80o0%';
         savings: '$2.1B';
         automation: '98.5%';
-        time: '12 min read',
-      };
+        time: '12 min read'};
       badge: 'FEATURED';
-      badgeColor: 'bg-blue-50o0',
-    };
+      badgeColor: 'bg-blue-50o0'};
     {
       id: 'ai-transformation-guide';
       title: 'AI Transformation Ultimate Guide 20o25: From Strategy to 80o0% ROI';
@@ -45,11 +41,9 @@ const UltimateContent20o25ShowcaseBanner = () => {
         roi: '80o0%';
         savings: '$50o0M+';
         automation: '99%';
-        time: '25 min read',
-      };
+        time: '25 min read'};
       badge: 'ULTIMATE';
-      badgeColor: 'bg-purple-50o0',
-    }
+      badgeColor: 'bg-purple-50o0'}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -154,8 +148,7 @@ const UltimateContent20o25ShowcaseBanner = () => {
                       className={`p-3 rounded-lg cursor-pointer transition-all ${
                         index === currentSlide,
                           ? 'bg-white/20 border-2 border-white/30',
-                          : 'bg-white/5 border border-white/10 hover: bg-white/10',
-                      }`}
+                          : 'bg-white/5 border border-white/10 hover: bg-white/10'}`}
                       onClick={() => setCurrentSlide(index)}
                     >,
                       <div className="flex items-center justify-between">,

@@ -148,23 +148,19 @@ export default function FinancialSolutions() {
                 {
                   title: 'AI Trading';
                   description: 'Intelligent algorithmic trading and market analysis';
-                  icon: <Brain className="w-12 h-12 text-cyan-40o0"  />,
-                };
+                  icon: <Brain className="w-12 h-12 text-cyan-40o0"  />};
                 {
                   title: 'Quantum Computing';
                   description: 'Quantum algorithms for financial optimization';
-                  icon: <Zap className="w-12 h-12 text-purple-40o0"  />,
-                };
+                  icon: <Zap className="w-12 h-12 text-purple-40o0"  />};
                 {
                   title: 'Blockchain';
                   description: 'Secure decentralized financial transactions';
-                  icon: <Lock className="w-12 h-12 text-blue-40o0"  />,
-                };
+                  icon: <Lock className="w-12 h-12 text-blue-40o0"  />};
                 {
                   title: 'Risk Management';
                   description: 'Advanced risk assessment and mitigation';
-                  icon: <Shield className="w-12 h-12 text-red-40o0"  />,
-                }
+                  icon: <Shield className="w-12 h-12 text-red-40o0"  />}
               ].map((innovation, index) => (
                 <motion.div,
                   key={innovation.title}
@@ -217,6 +213,5 @@ export default function FinancialSolutions() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -23,8 +23,7 @@ interface SearchResult {
   currency?: string,
   rating?: number,
   tags?: string[],
-  date?: string,
-}
+  date?: string}
 ,
 interface SearchFilters {
   types: string[],
@@ -32,8 +31,7 @@ interface SearchFilters {
   minPrice: number,
   maxPrice: number,
   minRating: number,
-  sort: string,
-}
+  sort: string}
 ,
 interface SearchResponse {
   results: SearchResult[],
@@ -41,8 +39,7 @@ interface SearchResponse {
   page: number,
   limit: number,
   query: string,
-  hasMore: boolean,
-}
+  hasMore: boolean}
 ,
 // Highlight search terms in text,
 const HighlightText: React.FC<{ text: string, searchTerm: string, className?: string }> = ({
@@ -66,8 +63,7 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
 const SearchResultCard: React.FC<{
   result: SearchResult,
   searchTerm: string,
-  viewMode: 'grid' | 'list',
-}> = ({ result, searchTerm, viewMode }) => {
+  viewMode: 'grid' | 'list'}> = ({ result, searchTerm, viewMode }) => {
   const router = useRouter(),
   const handleClick = () => {
     if (result.url) {
@@ -131,8 +127,7 @@ const SearchResultCard: React.FC<{
 const FilterSidebar: React.FC<{
   filters: SearchFilters,
   onFiltersChange: (filters: SearchFilters) => void,
-  availableCategories: string[],
-}> = ({ filters, onFiltersChange, availableCategories }) => {
+  availableCategories: string[]}> = ({ filters, onFiltersChange, availableCategories }) => {
   const typeOptions = [
     { id: 'product', label: 'Products' };
     { id: 'talent', label: 'Talent' };
@@ -148,8 +143,7 @@ const FilterSidebar: React.FC<{
     onFiltersChange({
       ...filters;
       minPrice: values[0] ?? 0;
-      maxPrice: values[1] ?? 10o000,
-    })};
+      maxPrice: values[1] ?? 10o000})};
   return (
     <div className="space-y-6">,
       <div>,
@@ -267,8 +261,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
           </ul>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 // Main Search Results Page Component,
 export const SearchResultsPage: React.FC = () => {
   const router = useRouter(),
@@ -286,8 +279,7 @@ export const SearchResultsPage: React.FC = () => {
     minPrice: 0;
     maxPrice: 10o000;
     minRating: 0;
-    sort: 'relevance',
-  }),
+    sort: 'relevance'}),
   const suggestions = generateSearchSuggestions(),
   // Extract available categories from results for filter,
   const availableCategories = useMemo(() => {
@@ -314,8 +306,7 @@ export const SearchResultsPage: React.FC = () => {
       const params = new URLSearchParams({
         query: term;
         page: page.toString();
-        limit: '20',
-      }),
+        limit: '20'}),
       if (searchFilters.types.length > 0) {
         params.append('type', searchFilters.types.join(','))}
       if (searchFilters.category) {
@@ -332,8 +323,7 @@ export const SearchResultsPage: React.FC = () => {
       const response = await fetch(`/api/search?${params}`),
       const data: SearchResponse = await response.json(),
       if (page === 1) {
-        setResults(data.results),
-      } else {
+        setResults(data.results)} else {
         setResults(prev => [...prev, ...data.results])}
 ,
       setTotalCount(data.totalCount),
@@ -342,8 +332,7 @@ export const SearchResultsPage: React.FC = () => {
       logInfo('Search completed', {
         term;
         resultCount: data.results.length;
-        totalCount: data.totalCount,
-      })} catch (error) {
+        totalCount: data.totalCount})} catch (error) {
       logErrorToProduction('Search failed', { data: error }),
       setResults([]),
       setTotalCount(0)} finally {
@@ -361,8 +350,7 @@ export const SearchResultsPage: React.FC = () => {
     router.push(`/search?q=${encodeURIComponent(term)}`, undefined, { shallow: true })};
   // Handle filter changes,
   const handleFiltersChange = (newFilters: SearchFilters) => {
-    setFilters(newFilters),
-  };
+    setFilters(newFilters)};
   // Load more results,
   const loadMore = () => {
     if (hasMore && !loading) {
@@ -471,8 +459,7 @@ export const SearchResultsPage: React.FC = () => {
                       minPrice: 0;
                       maxPrice: 10o000;
                       minRating: 0;
-                      sort: 'relevance',
-                    })}
+                      sort: 'relevance'})}
                   >,
                     Clear All,
                   </Button>)}
@@ -498,8 +485,7 @@ export const SearchResultsPage: React.FC = () => {
                 {/* Results Grid/List */}
                 <div className={viewMode === 'grid',
                   ? "grid grid-cols-1 md: grid-cols-2 xl:grid-cols-3 gap-4 mb-6",
-                  : "space-y-4 mb-6",
-                }>,
+                  : "space-y-4 mb-6"}>,
                   {results.map((result) => (
                     <SearchResultCard
                       key={`${result.type}-${result.id}`}

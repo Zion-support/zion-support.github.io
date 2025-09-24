@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
 interface UltraFuturisticNeonBackgroundProps {
   children: React.ReactNode,
-  className?: string,
-}
+  className?: string}
 ,
 const UltraFuturisticNeonBackground: React.FC<UltraFuturisticNeonBackgroundProps> = ({
   children;
@@ -24,8 +23,7 @@ const UltraFuturisticNeonBackground: React.FC<UltraFuturisticNeonBackgroundProps
       vy: number,
       size: number,
       opacity: number,
-      color: string,
-    }> = [],
+      color: string}> = [],
     // Create particles,
     for (let i = 0, i < 10o0, i++) {
       particles.push({

@@ -1,11 +1,9 @@
 
 import { useState, useEffect  } from './react',
-,
 interface User {
   id: string,
   email: string,
-  name: string,
-}
+  name: string}
 ,
   const [user, setUser] = useState<User | null>(null),
   const [loading, setLoading] = useState(true),
@@ -22,5 +20,4 @@ export const use_auth = () =>: any {
   const [loading, setLoading] = useState(true),
   useEffect(() => {
     // Simulate auth check,
-    setLoading(false),
-}}}))
+    setLoading(false)}}}))

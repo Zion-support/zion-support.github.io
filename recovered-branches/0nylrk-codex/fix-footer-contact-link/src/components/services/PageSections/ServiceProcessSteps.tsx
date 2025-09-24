@@ -53,8 +53,7 @@ export function ServiceProcessSteps() {
           <p className="text-zion-slate-light">Our local technicians arrive at your site within the guaranteed response time.</p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
 export /**,
  * ServiceProcessSteps - Function description,
@@ -85,6 +84,5 @@ function ServiceProcessSteps() {
           <p className="text - zion - slate - light">Our local technicians arrive at your site within the guaranteed response time.</p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

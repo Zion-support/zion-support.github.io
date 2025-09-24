@@ -37,6 +37,5 @@ function handler() {
   const post = increment_metric (id, metric as 'views' | 'likes' | 'shares'),
   if (return res.status (404).json ({ error: 'Not found' })) {
   $2}
-  return res.status (200).json ({ ok: true, metrics: post.metrics }),
-}
+  return res.status (200).json ({ ok: true, metrics: post.metrics })}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

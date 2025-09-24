@@ -29,8 +29,7 @@ export interface ZionEmergingTechService20o29 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   technology: string[],
   integrations: string[],
@@ -42,8 +41,7 @@ export interface ZionEmergingTechService20o29 {
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const zionEmergingTechServices20o29: ZionEmergingTechService20o29[] = [
   // Space Technology Solutions,
@@ -825,8 +823,7 @@ export const zionEmergingTechServices20o29: ZionEmergingTechService20o29[] = [
 export const getServicesByCategory = (
   category: ZionEmergingTechService20o29['category']) => {
   return zionEmergingTechServices20o29.filter(
-    service => service.category === category),
-};
+    service => service.category === category)};
 export const getPopularServices = () => {
   return zionEmergingTechServices20o29.filter(service => service.isPopular)};
 export const getNewServices = () => {

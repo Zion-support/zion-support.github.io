@@ -101,5 +101,4 @@ export default function AutomationPage() {
           </Link>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}

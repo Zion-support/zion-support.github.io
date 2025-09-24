@@ -6,8 +6,7 @@ interface LazySectionProps {
   className?: string,
   threshold?: number,
   delay?: number,
-  direction?: 'up' | 'down' | 'left' | 'right',
-}
+  direction?: 'up' | 'down' | 'left' | 'right'}
 ,
 export const LazySection: React.FC<LazySectionProps> = ({
   children;

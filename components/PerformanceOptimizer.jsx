@@ -6,8 +6,7 @@ export default function PerformanceOptimizer() {
     lcp: 0;
     fid: 0;
     cls: 0;
-    ttfb: 0,
-  }),
+    ttfb: 0}),
   useEffect(() => {
     if (typeof window === 'undefined') return,
     // Performance monitoring,
@@ -32,14 +31,14 @@ export default function PerformanceOptimizer() {
     }),
     observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] }),
     // Navigation timing,
-    const navTiming = window.performance.getEntriesByType('navigation')[0],
+    const navTiming = window.window.performance.getEntriesByType('navigation')[0],
     if (navTiming) {
       setMetrics(prev => ({ ...prev, ttfb: navTiming.responseStart - navTiming.requestStart }))}
 ,
     // Log metrics in development,
     if (process.env.NODE_ENV === 'development') {
       const logMetrics = () => {
-        // console.log('Performance Metrics:', {
+        // // console.log('Performance Metrics:', {
           FCP: `${metrics.fcp.toFixed(2)}ms`;
           LCP: `${metrics.lcp.toFixed(2)}ms`;
           FID: `${metrics.fid.toFixed(2)}ms`;
@@ -65,10 +64,10 @@ export default function PerformanceOptimizer() {
       document.head.appendChild(link)}),
     // Critical CSS inlining,
     const criticalCSS = `,
-      .hero-section { opacity: 0, animation: fadeIn 0.6s ease-in-out forwards, }
-      @keyframes fadeIn { to { opacity: 1, } }
-      .loading-spinner { animation: spin 1s linear infinite, }
-      @keyframes spin { to { transform: rotate(360deg), } }
+      .hero-section { opacity: 0, animation: fadeIn 0.6s ease-in-out forwards}
+      @keyframes fadeIn { to { opacity: 1} }
+      .loading-spinner { animation: spin 1s linear infinite}
+      @keyframes spin { to { transform: rotate(360deg)} }
     `,
     const style = document.createElement('style'),
     style.textContent = criticalCSS,

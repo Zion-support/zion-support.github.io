@@ -93,6 +93,5 @@ const QuantumNeuralFusion20o26Banner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default QuantumNeuralFusion20o26Banner;

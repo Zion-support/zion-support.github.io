@@ -16,33 +16,27 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
     {
       icon: <Brain className="w-6 h-6"  />;
       title: 'Consciousness Mapping';
-      description: 'Advanced algorithms that map and understand AI consciousness patterns and evolution pathways.',
-    };
+      description: 'Advanced algorithms that map and understand AI consciousness patterns and evolution pathways.'};
     {
       icon: <Sparkles className="w-6 h-6"  />;
       title: 'Ethical Framework Integration';
-      description: 'Built-in ethical guidelines and governance frameworks to ensure responsible AI development.',
-    };
+      description: 'Built-in ethical guidelines and governance frameworks to ensure responsible AI development.'};
     {
       icon: <Zap className="w-6 h-6"  />;
       title: 'Real-time Learning';
-      description: 'Continuous learning and adaptation capabilities that evolve AI consciousness organically.',
-    };
+      description: 'Continuous learning and adaptation capabilities that evolve AI consciousness organically.'};
     {
       icon: <Shield className="w-6 h-6"  />;
       title: 'Safety Protocols';
-      description: 'Multi-layered safety mechanisms to prevent harmful AI behaviors and ensure alignment.',
-    };
+      description: 'Multi-layered safety mechanisms to prevent harmful AI behaviors and ensure alignment.'};
     {
       icon: <Globe className="w-6 h-6"  />;
       title: 'Global Consciousness Network';
-      description: 'Connect AI systems across the globe for collaborative consciousness evolution.',
-    };
+      description: 'Connect AI systems across the globe for collaborative consciousness evolution.'};
     {
       icon: <Target className="w-6 h-6"  />;
       title: 'Goal Alignment';
-      description: 'Ensure AI systems align with human values and objectives while maintaining autonomy.',
-    }
+      description: 'Ensure AI systems align with human values and objectives while maintaining autonomy.'}
   ],
   const useCases = [
     {
@@ -277,8 +271,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-30o0 ${
                       plan.name === 'Professional',
                         ? 'bg-gradient-to-r from-purple-50o0 to-blue-60o0 text-white hover: from-purple-60o0 hover:to-blue-70o0',
-                        : 'border-2 border-purple-40o0 text-purple-40o0 hover:bg-purple-40o0 hover:text-black',
-                    }`}
+                        : 'border-2 border-purple-40o0 text-purple-40o0 hover:bg-purple-40o0 hover:text-black'}`}
                   >,
                     Get Started,
                   </a>,
@@ -341,6 +334,5 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default AIConsciousnessEvolutionPlatform;

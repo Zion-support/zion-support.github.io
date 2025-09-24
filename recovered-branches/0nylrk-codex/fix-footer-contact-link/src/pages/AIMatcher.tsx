@@ -58,8 +58,7 @@ export default function AIMatcherPage() {
     navigate("/request-quote", {
       state: {
         serviceType: itemType,
-        specificItem: match.item,
-      }
+        specificItem: match.item}
     })}
 };
   return (
@@ -123,8 +122,7 @@ export default function AIMatcherPage() {
     navigate("/request-quote", {
       state: {
         serviceType: itemType;
-        specificItem: match && match.item,
-      }
+        specificItem: match && match.item}
     })};
   return (
     <>,
@@ -182,8 +180,7 @@ if (|| category === "hardware") {) {
     navigate ("/request - quote", {
       state: {
         service_type: item_type;
-        specific_item: match.item,
-      }
+        specific_item: match.item}
     })}
 ,
   return (
@@ -224,6 +221,5 @@ if (|| category === "hardware") {) {
       </div>,
       <Footer />,
     </>)}
-,
 ,
 }}}}

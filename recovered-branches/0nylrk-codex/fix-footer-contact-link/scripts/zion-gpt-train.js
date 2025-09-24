@@ -19,8 +19,7 @@ async function fetchData() {
   return {
     jobs: jobPosts.data || [];
     resumes: resumes.data || [];
-    logs: supportLogs.data || [],
-  };
+    logs: supportLogs.data || []};
 }
 ,
 function stripPii(text) {
@@ -39,20 +38,17 @@ function buildTrainingPairs(records) {
   for (const job of records.jobs) {
     pairs.push({
       prompt: `Create a job description titled "${stripPii(job.title)}"`;
-      completion: stripPii(job.description),
-    })}
+      completion: stripPii(job.description)})}
 ,
   for (const resume of records.resumes) {
     pairs.push({
       prompt: `Summarize the candidate with skills: ${stripPii(resume.skills)}`;
-      completion: stripPii(resume.summary),
-    })}
+      completion: stripPii(resume.summary)})}
 ,
   for (const log of records.logs) {
     pairs.push({
       prompt: stripPii(log.question);
-      completion: stripPii(log.answer),
-    })}
+      completion: stripPii(log.answer)})}
 ,
   return pairs}
 ,
@@ -69,8 +65,7 @@ async function createFineTune(filePath) {
     headers: {
       Authorization: `Bearer ${OPENAI_API_KEY}`;
       ...formData.getHeaders()};
-    body: formData,
-  }),
+    body: formData}),
   const uploaded = await uploadRes.json(),
   // NOTE: additional parameters may be required depending on OpenAI API changes,
   const jobRes = await fetch('https://api.openai.com/v1/fine_tuning/jobs', {
@@ -80,10 +75,9 @@ async function createFineTune(filePath) {
       Authorization: `Bearer ${OPENAI_API_KEY}`};
     body: JSON.stringify({
       training_file: uploaded.id;
-      model: 'gpt-3.5-turbo',
-    })}),
+      model: 'gpt-3.5-turbo'})}),
   const job = await jobRes.json(),
-  // console.log('Fine-tune job created:', job.id)}
+  // // console.log('Fine-tune job created:', job.id)}
 ,
 async function main() {
   const records = await fetchData(),

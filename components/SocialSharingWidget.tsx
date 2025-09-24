@@ -2,8 +2,7 @@ interface SocialSharingWidgetProps {
   title: string,
   description: string,
   url: string,
-  hashtags?: string[],
-}
+  hashtags?: string[]}
 ,
 export default function SocialSharingWidget({
   titledescriptionurlhashtags = [];

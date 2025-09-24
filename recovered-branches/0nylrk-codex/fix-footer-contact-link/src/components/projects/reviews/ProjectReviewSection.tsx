@@ -8,8 +8,7 @@ import { useReviews } from '@/hooks/useReviews',
 import { Project } from '@/types/projects',
 import { useAuth } from '@/hooks/useAuth',
 interface ProjectReviewSectionProps {
-  project: Project,
-}
+  project: Project}
 ,
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth(),

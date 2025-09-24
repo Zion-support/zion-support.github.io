@@ -32,13 +32,11 @@ interface Service {
     mobile: string,
     email: string,
     website: string,
-    address: string,
-  };
+    address: string};
 }
 ,
 interface UltraFuturisticServiceShowcase20o29Props {
-  services: Service[],
-}
+  services: Service[]}
 ,
 export default function UltraFuturisticServiceShowcase20o29({
   services;
@@ -261,6 +259,5 @@ export default function UltraFuturisticServiceShowcase20o29({
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

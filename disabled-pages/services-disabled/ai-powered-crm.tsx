@@ -272,8 +272,7 @@ const AIPoweredCRMPage: NextPage = () => {
                       className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors cursor-pointer inline-block ${
                         index === 1,
                           ? 'bg-indigo-60o0 hover: bg-indigo-70o0 text-white',
-                          : 'bg-gray-20o0 hover:bg-gray-30o0 text-gray-90o0',
-                      }`}
+                          : 'bg-gray-20o0 hover:bg-gray-30o0 text-gray-90o0'}`}
                     >,
                       Get Started,
                     </span>,

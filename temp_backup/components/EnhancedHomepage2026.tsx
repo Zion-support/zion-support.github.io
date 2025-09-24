@@ -43,8 +43,7 @@ const EnhancedHomepage20o26: React.FC = () => {
     animate: {
       transition: {
         staggerChildren: 0.08, // Reduced from 0.1 for faster loading,
-        delayChildren: 0.1 // Reduced from 0.2,
-      }
+        delayChildren: 0.1 // Reduced from 0.2}
     }
   };
   const backgroundVariants ={
@@ -328,24 +327,21 @@ const EnhancedHomepage20o26: React.FC = () => {
                   features: ["Quantum AI", "Consciousness Technology", "Emotional Intelligence"];
                   icon: Brain;
                   color: "cyan";
-                  gradient: "from-cyan-50o0 to-blue-50o0",
-                };
+                  gradient: "from-cyan-50o0 to-blue-50o0"};
                 {
                   title: "Autonomous Systems";
                   description: "Self-managing intelligent systems that operate independently";
                   features: ["Autonomous AI", "Self-Healing Infrastructure", "Predictive Systems"];
                   icon: Atom;
                   color: "purple";
-                  gradient: "from-purple-50o0 to-pink-50o0",
-                };
+                  gradient: "from-purple-50o0 to-pink-50o0"};
                 {
                   title: "Micro SAAS Solutions";
                   description: "Innovative business solutions that scale from startup to enterprise";
                   features: ["Business Automation", "Customer Success", "Marketing AI"];
                   icon: Rocket;
                   color: "blue";
-                  gradient: "from-blue-50o0 to-cyan-50o0",
-                }
+                  gradient: "from-blue-50o0 to-cyan-50o0"}
               ].map((service, index) => (
                 <motion.div,
                   key={service.title}
@@ -405,48 +401,42 @@ const EnhancedHomepage20o26: React.FC = () => {
                   price: "$799/month";
                   features: ["AI ad creation", "Multi-platform management", "ROI optimization"];
                   icon: "📢";
-                  color: "from-blue-50o0 to-cyan-50o0",
-                };
+                  color: "from-blue-50o0 to-cyan-50o0"};
                 {
                   title: "Social Media Automation Suite";
                   description: "Complete social media automation for all major platforms";
                   price: "$599/month";
                   features: ["AI content generation", "Multi-platform scheduling", "Engagement automation"];
                   icon: "📱";
-                  color: "from-purple-50o0 to-pink-50o0",
-                };
+                  color: "from-purple-50o0 to-pink-50o0"};
                 {
                   title: "Content Marketing Automation";
                   description: "AI-powered content creation and distribution automation";
                   price: "$699/month";
                   features: ["AI content generation", "SEO optimization", "Multi-channel distribution"];
                   icon: "✍️";
-                  color: "from-green-50o0 to-emerald-50o0",
-                };
+                  color: "from-green-50o0 to-emerald-50o0"};
                 {
                   title: "Email Marketing Suite";
                   description: "Advanced email marketing with AI-powered personalization";
                   price: "$399/month";
                   features: ["AI personalization", "Automated workflows", "ROI tracking"];
                   icon: "📧";
-                  color: "from-orange-50o0 to-red-50o0",
-                };
+                  color: "from-orange-50o0 to-red-50o0"};
                 {
                   title: "Influencer Marketing Platform";
                   description: "Complete influencer marketing automation and management";
                   price: "$899/month";
                   features: ["AI influencer discovery", "Campaign management", "ROI analytics"];
                   icon: "🌟";
-                  color: "from-yellow-50o0 to-orange-50o0",
-                };
+                  color: "from-yellow-50o0 to-orange-50o0"};
                 {
                   title: "Marketing Analytics Platform";
                   description: "Advanced marketing analytics with AI-powered attribution";
                   price: "$999/month";
                   features: ["Multi-channel attribution", "Customer journey mapping", "Predictive modeling"];
                   icon: "📊";
-                  color: "from-cyan-50o0 to-blue-50o0",
-                }
+                  color: "from-cyan-50o0 to-blue-50o0"}
               ].map((service, index) => (
                 <motion.div,
                   key={service.title}
@@ -604,6 +594,5 @@ const EnhancedHomepage20o26: React.FC = () => {
           </svg>,
         </motion.a>,
       </div>,
-    </Layout>),
-};
+    </Layout>)};
 export default EnhancedHomepage20o26;

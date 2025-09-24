@@ -16,8 +16,7 @@ import { ShieldAlert } from 'lucide-react',
 import Link from 'next/link',
 type DisputesListProps = {
   disputes: Dispute[],
-  isLoading: boolean,
-};
+  isLoading: boolean};
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | 'all'>(
     'all'),
@@ -36,8 +35,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
       case 'closed':,
         return 'outline',
       default:,
-        return 'default',
-    }
+        return 'default'}
   };
   if (isLoading) {
     return (

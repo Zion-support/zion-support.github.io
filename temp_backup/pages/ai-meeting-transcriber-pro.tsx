@@ -121,6 +121,5 @@ export default function AIMeetingTranscriberPro() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

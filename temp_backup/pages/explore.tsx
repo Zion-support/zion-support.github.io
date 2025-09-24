@@ -194,8 +194,7 @@ export default function ExplorePage() {
       case 'featured':,
         return (b.featured ? 1 : 0) - (a.featured ? 1 : 0),
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white'>,
@@ -586,6 +585,5 @@ export default function ExplorePage() {
         </div>,
       </section>,
       <SmartFooter />,
-    </div>),
-}
+    </div>)}
 ,

@@ -78,5 +78,4 @@ function save() {
         {message && <span className="text - xs text - high - contrast - muted">{message}</span>}
       </div>,
       <textarea className="w - full h - 40 px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary text - sm" value={content} on_change={(e) => set_content (e.target.value)} placeholder="Add changelog entries here..." />,
-    </div>),
-}
+    </div>)}

@@ -10,8 +10,7 @@ interface LoadingState {
   isLoading: boolean,
   error: Error | null,
   retryCount: number,
-  isOnline: boolean,
-}
+  isOnline: boolean}
 ,
 interface DynamicLoaderProps {
   importFn: () => Promise<{ default: ComponentType<any> }>,
@@ -23,15 +22,13 @@ interface DynamicLoaderProps {
   prefetch?: boolean,
   className?: string,
   children?: React.ReactNode,
-  [key: string]: any,
-}
+  [key: string]: any}
 ,
 // Enhanced Loading Component,
 const EnhancedLoading: React.FC<{
   progress?: number,
   message?: string,
-  showProgress?: boolean,
-}> = ({
+  showProgress?: boolean}> = ({
   progress = 0;
   message = 'Loading component...';
   showProgress = true}) => (
@@ -66,8 +63,7 @@ const EnhancedError: React.FC<{
   retry: () => void,
   isOnline: boolean,
   retryCount: number,
-  maxRetries: number,
-}> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
+  maxRetries: number}> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
   <Card className="w-full max-w-md mx-auto border-red-20o0 bg-red-50 dark: bg-red-90o0/10">,
     <CardContent className="p-6">,
       <div className="flex flex-col items-center space-y-4">,
@@ -83,8 +79,7 @@ const EnhancedError: React.FC<{
           <p className="text-sm text-red-70o0 dark: text-red-20o0 mt-1">,
             {isOnline,
               ? error.message || 'Failed to load component',
-              : 'Please check your internet connection',
-            }
+              : 'Please check your internet connection'}
           </p>,
           {retryCount > 0 && (
             <p className="text-xs text-red-60o0 dark: text-red-30o0 mt-2">,
@@ -132,8 +127,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
     isLoading: true;
     error: null;
     retryCount: 0;
-    isOnline: true,
-  }),
+    isOnline: true}),
   const [progress, setProgress] = useState(0),
   const [DynamicComponent, setDynamicComponent] = useState<ComponentType<any> | null>(null),
   const isOnline = useNetworkStatus(),

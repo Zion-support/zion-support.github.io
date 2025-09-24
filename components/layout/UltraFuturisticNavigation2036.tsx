@@ -22,8 +22,7 @@ interface NavigationItem {
   badge?: string,
   title?: string,
   featured?: boolean,
-  category?: string,
-}
+  category?: string}
 ,
 interface UltraFuturisticNavigation20o36Props {
   onMenuToggle?: () => void,
@@ -33,13 +32,11 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 function normalizeHref(href: string): string {
   if (!href) return href,
   if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:')) {
-    return href,
-  }
+    return href}
   if (!href.startsWith('/')) return href,
   const hasQueryOrHash = href.includes('?') || href.includes('#'),
   if (hasQueryOrHash) return href,
@@ -59,38 +56,32 @@ const navigationItems: NavigationItem[] = [
         href: '/services';
         description: 'Complete services overview';
         icon: <Grid className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: 'AI & Machine Learning';
         href: '/ai-services';
         description: 'Advanced AI solutions';
-        icon: <Cpu className="w-4 h-4"  />,
-      };
+        icon: <Cpu className="w-4 h-4"  />};
       {
         name: 'Quantum Technology';
         href: '/quantum-services';
         description: 'Quantum computing solutions';
-        icon: <Cpu className="w-4 h-4"  />,
-      };
+        icon: <Cpu className="w-4 h-4"  />};
       {
         name: 'Space Technology';
         href: '/space-technology';
         description: 'Space exploration solutions';
-        icon: <Rocket className="w-4 h-4"  />,
-      };
+        icon: <Rocket className="w-4 h-4"  />};
       {
         name: 'IT Solutions';
         href: '/it-services';
         description: 'Enterprise IT infrastructure';
-        icon: <Shield className="w-4 h-4"  />,
-      };
+        icon: <Shield className="w-4 h-4"  />};
       {
         name: 'Specialized Solutions';
         href: '/solutions';
         description: 'Industry-specific solutions';
-        icon: <Star className="w-4 h-4"  />,
-      }
+        icon: <Star className="w-4 h-4"  />}
     ]};
   {
     name: 'Showcase & Pricing';
@@ -104,20 +95,17 @@ const navigationItems: NavigationItem[] = [
         href: '/comprehensive-services-showcase-20o25';
         description: 'Complete 20o25 services overview';
         icon: <Star className="w-4 h-4"  />;
-        featured: true,
-      };
+        featured: true};
       {
         name: 'Pricing Plans';
         href: '/revolutionary-20o25-pricing';
         description: 'Transparent pricing structure';
-        icon: <DollarSign className="w-4 h-4"  />,
-      };
+        icon: <DollarSign className="w-4 h-4"  />};
       {
         name: 'Market Pricing';
         href: '/market-pricing';
         description: 'Market price references';
-        icon: <BarChart3 className="w-4 h-4"  />,
-      }
+        icon: <BarChart3 className="w-4 h-4"  />}
     ]};
   {
     name: 'Company';
@@ -130,32 +118,27 @@ const navigationItems: NavigationItem[] = [
         name: 'About Us';
         href: '/about';
         description: 'Company information';
-        icon: <Star className="w-4 h-4"  />,
-      };
+        icon: <Star className="w-4 h-4"  />};
       {
         name: 'Contact';
         href: '/contact';
         description: 'Get in touch';
-        icon: <Mail className="w-4 h-4"  />,
-      };
+        icon: <Mail className="w-4 h-4"  />};
       {
         name: 'Partners';
         href: '/partners';
         description: 'Partnership opportunities';
-        icon: <Star className="w-4 h-4"  />,
-      };
+        icon: <Star className="w-4 h-4"  />};
       {
         name: 'Investors';
         href: '/investors';
         description: 'Investment information';
-        icon: <DollarSign className="w-4 h-4"  />,
-      };
+        icon: <DollarSign className="w-4 h-4"  />};
       {
         name: 'Careers';
         href: '/careers';
         description: 'Join our team';
-        icon: <Star className="w-4 h-4"  />,
-      }
+        icon: <Star className="w-4 h-4"  />}
     ]};
   {
     name: 'Resources';
@@ -167,20 +150,17 @@ const navigationItems: NavigationItem[] = [
         name: 'Documentation';
         href: '/docs';
         description: 'Technical documentation';
-        icon: <FileText className="w-4 h-4"  />,
-      };
+        icon: <FileText className="w-4 h-4"  />};
       {
         name: 'White Papers';
         href: '/white-papers';
         description: 'Industry insights';
-        icon: <FileText className="w-4 h-4"  />,
-      };
+        icon: <FileText className="w-4 h-4"  />};
       {
         name: 'Webinars';
         href: '/webinars';
         description: 'Educational content';
-        icon: <Video className="w-4 h-4"  />,
-      }
+        icon: <Video className="w-4 h-4"  />}
     ]}
 ],
 const UltraFuturisticNavigation20o36: React.FC = () => {
@@ -194,8 +174,7 @@ const UltraFuturisticNavigation20o36: React.FC = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as HTMLElement)) {
-        setIsOpen(false),
-      }
+        setIsOpen(false)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
@@ -203,8 +182,7 @@ const UltraFuturisticNavigation20o36: React.FC = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as HTMLElement)) {
-        setIsSearchOpen(false),
-      }
+        setIsSearchOpen(false)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
@@ -214,8 +192,7 @@ const UltraFuturisticNavigation20o36: React.FC = () => {
       if (event.key === 'Escape') {
         setIsOpen(false),
         setActiveDropdown(null),
-        setIsSearchOpen(false),
-      }
+        setIsSearchOpen(false)}
     };
     document.addEventListener('keydown', handleEscape),
     return () => document.removeEventListener('keydown', handleEscape)}, []),
@@ -474,8 +451,7 @@ const UltraFuturisticNavigation20o36: React.FC = () => {
                           className="block text-white hover: text-cyan-40o0 transition-colors",
                           onClick={() => {
                             setIsSearchOpen(false),
-                            setSearchQuery(''),
-                          }}
+                            setSearchQuery('')}}
                         >,
                           <div className="flex items-center space-x-3">,
                             {item.icon}

@@ -529,6 +529,5 @@ def quantum_supply_chain_optimizer(suppliers, products, facilities, constraints)
           </div>,
         </article>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

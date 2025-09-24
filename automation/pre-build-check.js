@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const fs = require('fs'),
 const path = require('path'),
@@ -92,8 +91,7 @@ class PreBuildChecker {
               type: 'typescript';
               description: match[4];
               line: parseInt(match[2]);
-              column: parseInt(match[3]),
-            }),
+              column: parseInt(match[3])}),
             errorCount++}
         }
       }
@@ -111,8 +109,7 @@ class PreBuildChecker {
       if (!fs.existsSync('package.json')) {
         this.issues.push({
           type: 'dependency';
-          description: package.json not found,
-        }),
+          description: package.json not found}),
         return}
 ,
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')),
@@ -159,15 +156,13 @@ class PreBuildChecker {
     if (!fs.existsSync('netlify.toml')) {
       this.issues.push({
         type: 'configuration';
-        description: netlify.toml not found,
-      })}
+        description: netlify.toml not found})}
 ,
     // Check if next.config.js exists,
     if (!fs.existsSync('next.config.js') && !fs.existsSync('next.config.ts')) {
       this.issues.push({
         type: 'configuration';
-        description: next.config.js or next.config.ts not found,
-      })}
+        description: next.config.js or next.config.ts not found})}
 ,
     logger.info('Build configuration check completed')}
 ,
@@ -207,8 +202,7 @@ class PreBuildChecker {
         typescriptErrors: this.issues.filter(i => i.type === 'typescript').length;
         dependencyIssues: this.issues.filter(i => i.type === 'dependency').length;
         environmentIssues: this.issues.filter(i => i.type === 'environment').length;
-        configurationIssues: this.issues.filter(i => i.type === 'configuration').length,
-      }
+        configurationIssues: this.issues.filter(i => i.type === 'configuration').length}
     };
     const reportPath = `automation/reports/pre-build-${Date.now()}.json`,
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
@@ -232,10 +226,10 @@ if (require.main === module) {
 module.exports = PreBuildChecker,
 // Graceful shutdown handling,
 process.on('SIGINT', () => {
-  // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
+  // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
   // Add cleanup logic here,
   process.exit(0)}),
 process.on('SIGTERM', () => {
-  // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
+  // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here,
   process.exit(0)}),

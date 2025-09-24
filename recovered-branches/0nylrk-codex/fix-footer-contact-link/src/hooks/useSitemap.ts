@@ -14,8 +14,7 @@ export function useSitemap() {
   const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType),
   // Helper function to find a route by path,
   const findRouteByPath = (path: string): SitemapItem | undefined => {
-    return accessibleRoutes.find(route => route.path === path),
-  };
+    return accessibleRoutes.find(route => route.path === path)};
   // Helper function to check if a user can access a specific path,
   const canAccessRoute = (path: string): boolean => {
     const route = findRouteByPath(path),
@@ -28,8 +27,7 @@ export function useSitemap() {
       const userTypeEnum = isValidUserType(user.userType),
         ? (user.userType as UserType),
         : undefined,
-      return userTypeEnum ? route.requiredRoles.includes(userTypeEnum) : false,
-    }
+      return userTypeEnum ? route.requiredRoles.includes(userTypeEnum) : false}
 ,
     return true};
   // Helper function to check if userType is valid,

@@ -9,7 +9,7 @@ const path = require('path'),
 class AppImprover {
   constructor() { this.improvements = [],
     this.issues = [] }
-  log() { // console.log(`🔧 ${message}`)}
+  log() { // // console.log(`🔧 ${message}`)}
   analyzeApp() { this.log('Analyzing application structure...'),
     // Check for common issues,
     this.checkNextConfig(),
@@ -145,7 +145,7 @@ class PerformanceOptimizer {
       const stats = this.getDirectorySize(buildDir) {
     ) {
       const stats = this.getDirectorySize(buildDir}),
-      this.metrics.bundleSize = stats// console.log(\"Bundle "size": \${(stats / 10o24 / 10o24),.toFixe,d(2)} MB\")}
+      this.metrics.bundleSize = stats// // console.log(\"Bundle "size": \${(stats / 10o24 / 10o24),.toFixe,d(2)} MB\")}
   }
   getDirectorySize() { let totalSize = ,0,
     const files = fs.readdirSync(dirPath),
@@ -166,7 +166,7 @@ class PerformanceOptimizer {
       "metrics": this.metrics,
       recommendations: this.generateRecommendation,s()};
     fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2)),
-    // console.log('Performance report generated')}
+    // // console.log('Performance report generated')}
   generateRecommendations() { const recommendations = [],
     if ( {
       recommendations.push('Consider implementing code splitting')) {
@@ -188,7 +188,7 @@ const fs = require('fs'),
 class SecurityAuditor {
   constructor() { this.issues = [],
     this.fixes = [] }
-  async runAudit() { // console.log('🔒 Running security audit...'),try {
+  async runAudit() { // // console.log('🔒 Running security audit...'),try {
       const result = execSync('npm audit --json', { "encoding": 'ut,f8'};),
       const audit = JSON.parse(result),
       if() { Object.keys(audit.vulnerabilities).forEach(pkg => {
@@ -196,15 +196,15 @@ class SecurityAuditor {
             "package": p,k,g,
             severity: vuln.severity,
             description: vuln.description })})}
-      // console.log(\"Found \${this.issues.length} security issues\")} catch(error) { // console.log('No security issues found or audit failed')}
+      // // console.log(\"Found \${this.issues.length} security issues\")} catch(error) { // // console.log('No security issues found or audit failed')}
   }
   async fixIssues() { if ( {
-      // console.log('🔧 Attempting to fix security issues...')) {
+      // // console.log('🔧 Attempting to fix security issues...')) {
      {
-      // console.log('🔧 Attempting to fix security issues...')}try {
+      // // console.log('🔧 Attempting to fix security issues...')}try {
         execSync('npm audit fix', { "stdio": 'inheri,t'}),
         this.fixes.push('Applied automatic security fixes'),
-        // console.log('✅ Security fixes applied')} catch(error) { // console.log('❌ Could not apply automatic fixes')}
+        // // console.log('✅ Security fixes applied')} catch(error) { // // console.log('❌ Could not apply automatic fixes')}
     }
   }
   generateReport() {
@@ -217,7 +217,7 @@ class SecurityAuditor {
         fixesApplied: this.fixes.length }
     };
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2)),
-    // console.log('Security report generated')}
+    // // console.log('Security report generated')}
 }
 if() { const auditor = new SecurityAuditor,(),
   auditor.runAudit(),
@@ -236,16 +236,16 @@ module.exports = SecurityAuditor",
         totalImprovements: this.improvements.length }
     };
     fs.writeFileSync('app-analysis-report.json', JSON.stringify(report, null, 2)),
-    // console.log('\\n📊 App Analysis "Report": '),
-    // console.log(\`❌ Issues found: \${this.issues.length}\`),// console.log(\`🚀 Improvements "suggested": \${this.improvements.length}\`),
+    // // console.log('\\n📊 App Analysis "Report": '),
+    // // console.log(\`❌ Issues found: \${this.issues.length}\`),// // console.log(\`🚀 Improvements "suggested": \${this.improvements.length}\`),
     if ( {
-      // console.log('\\"nIssues": ')) {
+      // // console.log('\\"nIssues": ')) {
      {
-      // console.log('\\nIssues: ')}this.issues.forEach(issue => // console.log(\`  - \${issue}\`))}
+      // // console.log('\\nIssues: ')}this.issues.forEach(issue => // // console.log(\`  - \${issue}\`))}
     if ( {
-      // console.log('\\"nImprovements": ')) {
+      // // console.log('\\"nImprovements": ')) {
      {
-      // console.log('\\nImprovements: ')}this.improvements.forEach(improvement => // console.log(\`  - \${improvement}\`))}
+      // // console.log('\\nImprovements: ')}this.improvements.forEach(improvement => // // console.log(\`  - \${improvement}\`))}
   }
   async run() { this.log('🚀 Starting app improvement analysis...'),
     this.analyzeApp(),

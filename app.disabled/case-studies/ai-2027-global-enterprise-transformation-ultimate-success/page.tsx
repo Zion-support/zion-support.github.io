@@ -407,6 +407,5 @@ export default function AI20o27GlobalEnterpriseTransformationPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

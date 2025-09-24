@@ -20,6 +20,5 @@ export default function QualityAssuranceTestingChatPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

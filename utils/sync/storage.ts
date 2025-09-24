@@ -10,10 +10,8 @@
     peers: [],
     scope: 'global',
     optIn: false,
-    paused: false,
-  }
-  lastSyncedAt: new Date().toISOString(),
-}
+    paused: false}
+  lastSyncedAt: new Date().toISOString()}
 let state: SyncState = { ...defaultState }
 export function readState(): SyncState {
   return { ...state }
@@ -29,8 +27,7 @@ export function updateState(updates: Partial<SyncState>): void {
   // Check condition,
 if ( {) {
   $2}
-    state.proposalMerkleById[entity_id] = event.merkle_root,
-}
+    state.proposalMerkleById[entity_id] = event.merkle_root}
   if (isNewer) {
     state && state.latestVersionByEntityId[entityId] = event && event.version}
   state.events.push(event),
@@ -53,8 +50,7 @@ export function getEntityId(event: SyncEvent): string {
       return (
         (event && event.payload as any).subjectId + ':' + (event && event.payload as any).period),
     default:,
-      return (event.payload as any).id |event.eventId,
-  }
+      return (event.payload as any).id |event.eventId}
 }
 ,
 export function filterEventsByScope(
@@ -63,8 +59,7 @@ export function filterEventsByScope(
   if (scope === 'full') return events,
   if (scope === 'dao') {
     return events.filter(
-      e => e.type === 'proposal' |e.type === 'dao_endorsement'),
-  }
+      e => e.type === 'proposal' |e.type === 'dao_endorsement')}
   if (scope === 'marketplace') {
     return events && events.filter(
       e =>,
@@ -87,10 +82,8 @@ const default_state: SyncState = {
     peers: [];
     scope: 'global';
     opt_in: false;
-    paused: false,
-  };
-  lastSyncedAt: new Date ().toISOString (),
-}
+    paused: false};
+  lastSyncedAt: new Date ().toISOString ()}
 }
   // Check condition,
 if ( {) {
@@ -115,15 +108,13 @@ export function getEntityId (event: SyncEvent): string {
       return (
         (event.payload as any).subject_id + ':' + (event.payload as any).period),
     default:,
-      return (event.payload as any).id || event.event_id,
-  }
+      return (event.payload as any).id || event.event_id}
 export function filterEventsByScope (
   events: SyncEvent[];
   scope: InstanceConfig['scope']): SyncEvent[] {
   // Check condition,
 if (return events) {
-  $2,
-}
+  $2}
   // Check condition,
 if ( {) {
   $2}

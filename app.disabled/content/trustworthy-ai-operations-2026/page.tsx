@@ -73,6 +73,5 @@ export default function TrustworthyAIOperations20o26() {
           </div>,
         </div>,
       </section>,
-    </main>),
-}
+    </main>)}
 ,

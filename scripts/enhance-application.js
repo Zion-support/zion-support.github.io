@@ -2,7 +2,7 @@
 const fs = require('fs'),
 const path = require('path'),
 const { execSync } = require('child_process'),
-// console.log('🚀 Starting Application Enhancement Process...\n'),
+// // console.log('🚀 Starting Application Enhancement Process...\n'),
 // Colors for console output,
 const colors ={
   green: '\x1b[32m';
@@ -10,10 +10,9 @@ const colors ={
   yellow: '\x1b[33m';
   red: '\x1b[31m';
   reset: '\x1b[0m';
-  bold: '\x1b[1m',
-};
+  bold: '\x1b[1m'};
 function log(message, color = 'reset') {
-  // console.log(`${colors[color]}${message}${colors.reset}`)}
+  // // console.log(`${colors[color]}${message}${colors.reset}`)}
 ,
 function logStep(step, message) {
   log(`\n${step}. ${message}`, 'blue')}
@@ -72,7 +71,7 @@ function updatePackageJson() {
   const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8')),
   const newScripts ={
     'enhance:all': 'node scripts/enhance-application.js';
-    'enhance:performance': 'node scripts/enhance-window.performance.js';
+    'enhance:performance': 'node scripts/enhance-window.window.performance.js';
     'enhance:seo': 'node scripts/enhance-seo.js';
     'enhance:ux': 'node scripts/enhance-ux.js';
     'enhance:security': 'node scripts/enhance-security.js';
@@ -83,8 +82,7 @@ function updatePackageJson() {
     'audit:security': 'npm audit && npm run security:scan';
     'optimize:images': 'node scripts/optimize-images.js';
     'generate:sitemap': 'node scripts/generate-sitemap.js';
-    'generate: manifest': 'node scripts/generate-manifest.js',
-  };
+    'generate: manifest': 'node scripts/generate-manifest.js'};
   packageJson.scripts ={ ...packageJson.scripts, ...newScripts };
   fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2)),
   logSuccess('Updated package.json with enhancement scripts')}
@@ -101,8 +99,7 @@ function createEnhancementConfig() {
       caching: {
         static: true;
         api: true;
-        images: true,
-      }
+        images: true}
     };
     seo: {
       metaTags: true;
@@ -110,30 +107,26 @@ function createEnhancementConfig() {
       sitemap: true;
       robots: true;
       openGraph: true;
-      twitter: true,
-    };
+      twitter: true};
     ux: {
       loadingStates: true;
       errorBoundaries: true;
       accessibility: true;
       darkMode: true;
       animations: true;
-      responsive: true,
-    };
+      responsive: true};
     security: {
       csp: true;
       inputValidation: true;
       sanitization: true;
       headers: true;
-      authentication: true,
-    };
+      authentication: true};
     analytics: {
       performance: true;
       errors: true;
       userBehavior: true;
       conversions: true;
-      realTime: true,
-    }
+      realTime: true}
   };
   fs.writeFileSync(
     path.join(process.cwd(), 'enhancement.config.json');
@@ -146,32 +139,32 @@ function createPerformanceScript() {
   const script = `#!/usr/bin/env node,
 const fs = require('fs'),
 const path = require('path'),
-// console.log('🚀 Enhancing Performance...'),
+// // console.log('🚀 Enhancing Performance...'),
 // Add lazy loading to components,
 function addLazyLoading() {
-  // console.log('Adding lazy loading...'),
+  // // console.log('Adding lazy loading...'),
   // Implementation would go here}
 ,
 // Optimize images,
 function optimizeImages() {
-  // console.log('Optimizing images...'),
+  // // console.log('Optimizing images...'),
   // Implementation would go here}
 ,
 // Add caching strategies,
 function addCaching() {
-  // console.log('Adding caching strategies...'),
+  // // console.log('Adding caching strategies...'),
   // Implementation would go here}
 ,
 // Run all performance enhancements,
 addLazyLoading(),
 optimizeImages(),
 addCaching(),
-// console.log('✅ Performance enhancement complete!'),
+// // console.log('✅ Performance enhancement complete!'),
 `,
   fs.writeFileSync(
-    path.join(process.cwd(), 'scripts', 'enhance-window.performance.js');
+    path.join(process.cwd(), 'scripts', 'enhance-window.window.performance.js');
     script),
-  fs.chmodSync(path.join(process.cwd(), 'scripts', 'enhance-window.performance.js'), '755'),
+  fs.chmodSync(path.join(process.cwd(), 'scripts', 'enhance-window.window.performance.js'), '755'),
   logSuccess('Created performance enhancement script')}
 ,
 // Function to create SEO enhancement script,
@@ -180,27 +173,27 @@ function createSEOScript() {
   const script = `#!/usr/bin/env node,
 const fs = require('fs'),
 const path = require('path'),
-// console.log('🚀 Enhancing SEO...'),
+// // console.log('🚀 Enhancing SEO...'),
 // Generate sitemap,
 function generateSitemap() {
-  // console.log('Generating sitemap...'),
+  // // console.log('Generating sitemap...'),
   // Implementation would go here}
 ,
 // Add structured data,
 function addStructuredData() {
-  // console.log('Adding structured data...'),
+  // // console.log('Adding structured data...'),
   // Implementation would go here}
 ,
 // Optimize meta tags,
 function optimizeMetaTags() {
-  // console.log('Optimizing meta tags...'),
+  // // console.log('Optimizing meta tags...'),
   // Implementation would go here}
 ,
 // Run all SEO enhancements,
 generateSitemap(),
 addStructuredData(),
 optimizeMetaTags(),
-// console.log('✅ SEO enhancement complete!'),
+// // console.log('✅ SEO enhancement complete!'),
 `,
   fs.writeFileSync(
     path.join(process.cwd(), 'scripts', 'enhance-seo.js');
@@ -214,27 +207,27 @@ function createUXScript() {
   const script = `#!/usr/bin/env node,
 const fs = require('fs'),
 const path = require('path'),
-// console.log('🚀 Enhancing User Experience...'),
+// // console.log('🚀 Enhancing User Experience...'),
 // Add loading states,
 function addLoadingStates() {
-  // console.log('Adding loading states...'),
+  // // console.log('Adding loading states...'),
   // Implementation would go here}
 ,
 // Implement error boundaries,
 function addErrorBoundaries() {
-  // console.log('Adding error boundaries...'),
+  // // console.log('Adding error boundaries...'),
   // Implementation would go here}
 ,
 // Enhance accessibility,
 function enhanceAccessibility() {
-  // console.log('Enhancing accessibility...'),
+  // // console.log('Enhancing accessibility...'),
   // Implementation would go here}
 ,
 // Run all UX enhancements,
 addLoadingStates(),
 addErrorBoundaries(),
 enhanceAccessibility(),
-// console.log('✅ UX enhancement complete!'),
+// // console.log('✅ UX enhancement complete!'),
 `,
   fs.writeFileSync(
     path.join(process.cwd(), 'scripts', 'enhance-ux.js');
@@ -248,27 +241,27 @@ function createSecurityScript() {
   const script = `#!/usr/bin/env node,
 const fs = require('fs'),
 const path = require('path'),
-// console.log('🚀 Enhancing Security...'),
+// // console.log('🚀 Enhancing Security...'),
 // Add CSP headers,
 function addCSPHeaders() {
-  // console.log('Adding CSP headers...'),
+  // // console.log('Adding CSP headers...'),
   // Implementation would go here}
 ,
 // Implement input validation,
 function addInputValidation() {
-  // console.log('Adding input validation...'),
+  // // console.log('Adding input validation...'),
   // Implementation would go here}
 ,
 // Add security headers,
 function addSecurityHeaders() {
-  // console.log('Adding security headers...'),
+  // // console.log('Adding security headers...'),
   // Implementation would go here}
 ,
 // Run all security enhancements,
 addCSPHeaders(),
 addInputValidation(),
 addSecurityHeaders(),
-// console.log('✅ Security enhancement complete!'),
+// // console.log('✅ Security enhancement complete!'),
 `,
   fs.writeFileSync(
     path.join(process.cwd(), 'scripts', 'enhance-security.js');
@@ -323,7 +316,7 @@ function setupPerformanceMonitoring() {
   logStep(8, 'Setting up performance monitoring'),
   const monitoringScript = `#!/usr/bin/env node,
 // Performance monitoring setup,
-// console.log('Setting up performance monitoring...'),
+// // console.log('Setting up performance monitoring...'),
 // Add web vitals tracking,
 const webVitalsScript = \`,
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals',
@@ -391,8 +384,7 @@ async function main() {
     log('5. Run "npm run build" to test all enhancements'),
     log('6. Run "npm run audit:performance" for performance audit'),
     log('7. Run "npm run audit:security" for security audit'),
-    log('\n✨ Your application is now enhanced with modern best practices!', 'green'),
-} catch (error) {
+    log('\n✨ Your application is now enhanced with modern best practices!', 'green')} catch (error) {
     logError(\`Enhancement failed: \${error.message}\`),
     process.exit(1)}
 }

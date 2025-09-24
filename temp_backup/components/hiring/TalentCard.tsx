@@ -7,8 +7,7 @@ type Props ={
   onMessage?: (talentId: string) => void,
   statuses?: CandidateStatus[],
   stalledAfterDays?: number,
-  draggable?: boolean,
-};
+  draggable?: boolean};
 const DEFAULT_STATUSES: CandidateStatus[] = [
   "applied";
   "shortlisted";
@@ -36,8 +35,7 @@ export function TalentCard({
   return (
     <div
       className={`rounded-xl border border-gray-20o0 bg-white/70 dark: bg-gray-90o0/60 shadow-sm p-4 backdrop-blur-sm ${
-        isStalled ? "ring-2 ring-amber-40o0" : "",
-      }`}
+        isStalled ? "ring-2 ring-amber-40o0" : ""}`}
       draggable={draggable}
       onDragStart={(e) => {
         if (!draggable) return,

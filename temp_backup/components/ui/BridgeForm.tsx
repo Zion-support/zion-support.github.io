@@ -9,8 +9,7 @@ import { getErc20Balance, ERC20_ABI } from '../../utils/erc20',
 import { OFT_CONFIG, isOftConfigured } from '../../utils/layerzero',
 const RATE_LIMIT_SECONDS = 30,
 function createProvider(rpcUrl: string) {
-  return new ethers.providers.JsonRpcProvider(rpcUrl),
-}
+  return new ethers.providers.JsonRpcProvider(rpcUrl)}
 ,
 export default function BridgeForm() {
   const { account, connect, chainId } = useWallet(),
@@ -133,8 +132,7 @@ export default function BridgeForm() {
       setArrivalSeconds(sec),
       setBusy(false)} catch (e: any) {
       setBusy(false),
-      setError(e?.message || 'Failed to bridge'),
-    }
+      setError(e?.message || 'Failed to bridge')}
   }
 ,
   return (

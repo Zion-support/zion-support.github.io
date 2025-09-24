@@ -2,8 +2,7 @@
 import React{ useEffectuseRef } from 'react',
 import { motion } from 'framer-motion',
 interface UltraFuturisticBackground2045Props {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props> = ({ children }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
@@ -24,8 +23,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
       size: number,
       color: string,
       alpha: number,
-      life: number,
-    }> = [],
+      life: number}> = [],
     // Create initial particles,
     for (let i = 0, i < 100, i++) {
       particles.push({
@@ -36,8 +34,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
         size: Math.random() * 3 + 1;
         color: `hsl(${Math.random() * 360}70%60%)`;
         alpha: Math.random() * 0.8 + 0.2;
-        life: Math.random() * 100 + 50,
-      })}
+        life: Math.random() * 100 + 50})}
 ,
     // Animation loop,
     const animate = () => {
@@ -74,8 +71,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             size: Math.random() * 3 + 1;
             color: `hsl(${Math.random() * 360}70%60%)`;
             alpha: Math.random() * 0.8 + 0.2;
-            life: Math.random() * 100 + 50,
-          };
+            life: Math.random() * 100 + 50};
         }
       }),
       // Draw connecting lines between nearby particles,
@@ -125,15 +121,13 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
               linear-gradient(rgba(02550.1) 1pxtransparent 1px);
               linear-gradient(90degrgba(02550.1) 1pxtransparent 1px),
             `;
-            backgroundSize: '50px 50px',
-          }}
+            backgroundSize: '50px 50px'}}
           animate={{
             backgroundPosition: ['0px 0px'50px 50px']}}
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: 'linear',
-          }}
+            ease: 'linear'}}
         />,
         {/* Floating Neon Shapes */}
         <motion.div,
@@ -145,8 +139,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
         />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full",
@@ -157,8 +150,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
         />,
         <motion.div,
           className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/30 transform rotate-45",
@@ -169,8 +161,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
         />,
         {/* Additional floating elements */}
         <motion.div,
@@ -181,8 +172,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           transition={{
             duration: 4;
             repeat: Infinity;
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
         />,
         <motion.div,
           className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 transform rotate-12",
@@ -192,8 +182,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: 'linear',
-          }}
+            ease: 'linear'}}
         />,
         {/* Energy Orbs */}
         <motion.div,
@@ -205,8 +194,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           transition={{
             duration: 3;
             repeat: Infinity;
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
         />,
         <motion.div,
           className="absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full shadow-lg shadow-purple-400/50",
@@ -217,8 +205,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           transition={{
             duration: 4;
             repeat: Infinity;
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
         />,
       </div>,
       {/* Gradient Overlays */}
@@ -236,15 +223,13 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           className="absolute inset-0 border border-transparent",
           style={{
             background: 'linear-gradient(90degtransparentrgba(02550.1)transparent)';
-            backgroundSize: '200% 100%',
-          }}
+            backgroundSize: '200% 100%'}}
           animate={{
             backgroundPosition: ['-200% 0'200% 0']}}
           transition={{
             duration: 15;
             repeat: Infinity;
-            ease: 'linear',
-          }}
+            ease: 'linear'}}
         />,
       </div>,
     </div>)};

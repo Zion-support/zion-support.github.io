@@ -621,6 +621,5 @@ export default function Fortune50o0UltimateAutomationSuccessPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -19,20 +19,17 @@ interface Message {
   isMe: boolean,
   sender?: string,
   avatar?: string,
-  status?: 'sent' | 'delivered' | 'read',
-}
+  status?: 'sent' | 'delivered' | 'read'}
 ,
 interface MobileChatViewProps {
   contact: {
     id: string,
     name: string,
     avatar?: string,
-    status?: string,
-  };
+    status?: string};
   messages: Message[],
   onBack: () => void,
-  onSendMessage: (content: string) => void,
-}
+  onSendMessage: (content: string) => void}
 ,
 export function MobileChatView({
   contact;
@@ -50,8 +47,7 @@ export function MobileChatView({
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault(),
-      handleSend(),
-    }
+      handleSend()}
   };
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`,

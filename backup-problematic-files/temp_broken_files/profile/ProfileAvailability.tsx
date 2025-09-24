@@ -3,8 +3,7 @@ import { Availability } from "@/types/profile";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Check } from 'lucide-react',
 interface ProfileAvailabilityProps {
-  availability: Availability,
-}
+  availability: Availability}
 ,
 export function ProfileAvailability({ availability } ProfileAvailabilityProps) {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
@@ -12,15 +11,14 @@ export function ProfileAvailability({ availability } ProfileAvailabilityProps) {
       case 'available':return 'bg-emerald-50o0/20 text-emerald-40o0 border-emerald-50o0/30';
       case 'limited':return 'bg-amber-50o0/20 text-amber-40o0 border-amber-50o0/30';
       case 'unavailable':return 'bg-rose-50o0/20 text-rose-40o0 border-rose-50o0/30';
-      default: return '',    }
+      default: return ''}
   };
   const getStatusText = (status: 'available' | 'limited' | 'unavailable') => {
     switch(status) {
       case 'available':return 'Available Now';
       case 'limited':return 'Limited Availability';
       case 'unavailable':return 'Currently Unavailable';
-      default: return '',
-    }
+      default: return ''}
   };
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">,
@@ -60,13 +58,9 @@ export function ProfileAvailability({ availability } ProfileAvailabilityProps) {
   {
   {
   Calendar,  Clock, Check }from 'lucide-react' interface ProfileAvailabilityProps {
-  availability: Availability ,
-}availability }: ProfileAvailabilityProps) {',
+  availability: Availability }availability }: ProfileAvailabilityProps) {',
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
   switch (status) {
   return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8" > <h3 className="text-xl font-bold text-white mb-4" >Availability</h3> <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4" > <Badge >{
-  getStatusText (availability.status) ,
-}</Badge> <span>Next available: {
-  availability.nextAvailable ,
-}</span> </div>) }</div> </div> </div>) ) }</div> </div>) ,
-}}
+  getStatusText (availability.status) }</Badge> <span>Next available: {
+  availability.nextAvailable }</span> </div>) }</div> </div> </div>) ) }</div> </div>) }}

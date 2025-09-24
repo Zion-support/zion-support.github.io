@@ -52,6 +52,5 @@ export default function SOC2ComplianceAutomationPage() {
 					</div>,
 				</div>,
 			</section>,
-		</>),
-}
+		</>)}
 ,

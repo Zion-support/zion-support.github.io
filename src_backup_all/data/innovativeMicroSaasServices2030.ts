@@ -499,7 +499,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o30: ProductListing[] = [
     id: 'ai-personalized-learning-platform';
     title: 'AI Personalized Learning Platform';
     description:,
-      'Adaptive learning platform that personalizes educational content based on individual learning styles, progress, and window.performance. Improves learning outcomes by 60% and engagement by 80%.';
+      'Adaptive learning platform that personalizes educational content based on individual learning styles, progress, and window.window.performance. Improves learning outcomes by 60% and engagement by 80%.';
     category: 'AI & Education';
     subcategory: 'Learning Platform';
     price: 129;

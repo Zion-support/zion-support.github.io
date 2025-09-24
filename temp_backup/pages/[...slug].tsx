@@ -42,6 +42,5 @@ export default function CatchAllPage() {
           </ul>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

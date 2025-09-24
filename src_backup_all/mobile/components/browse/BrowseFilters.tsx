@@ -21,8 +21,7 @@ import { Label } from '@/components/ui/label',
   SheetTrigger;
 } from '@/components/ui/sheet',
 interface BrowseFiltersProps {
-  type: 'jobs' | 'talents',
-}
+  type: 'jobs' | 'talents'}
 ,
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]),
@@ -31,8 +30,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
       setActiveFilters([...activeFilters, filter])}
   };
   const removeFilter = (filter: string) => {
-    setActiveFilters(activeFilters.filter(f => f !== filter)),
-  };
+    setActiveFilters(activeFilters.filter(f => f !== filter))};
   return (
     <div className='space-y-3'>,
       <div className='flex justify-between items-center px-4'>,

@@ -27,24 +27,20 @@ export function ContractBuilderContent() {
       client: 'Acme Corp';
       talent: 'Alex Chen';
       date: '2025-05-15';
-      isSmartContract: true,
-    };
+      isSmartContract: true};
     {
       id: 'contract-2',
       title: 'Mobile App Development';
       client: 'TechStart Inc';
       talent: 'Sarah Williams';
       date: '2025-05-10';
-      isSmartContract: false,
-    }
+      isSmartContract: false}
   ]),
   const handleContractGenerated = (content: string) => {
-    // console.log('Contract generated:'content.substring(0100) + '...'),
-  };
+    // // console.log('Contract generated:'content.substring(0100) + '...')};
   const handleViewContract = (contractId: string) => {
-    // console.log('Viewing contract:'contractId),
-    // Future implementation: View specific contract details,
-  };
+    // // console.log('Viewing contract:'contractId),
+    // Future implementation: View specific contract details};
   return (
     <>,
       <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />,

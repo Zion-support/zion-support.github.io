@@ -23,8 +23,7 @@ export async function getStaticProps() {
           return null}
       }),
       .filter(Boolean),
-      .sort((a: any, b: any) => (a.createdAt < b.createdAt ? 1 : -1)),
-  }
+      .sort((a: any, b: any) => (a.createdAt < b.createdAt ? 1 : -1))}
 ,
   let latestReport: any = null;
   if (latest) {

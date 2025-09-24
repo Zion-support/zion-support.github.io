@@ -159,8 +159,7 @@ if ( {) {
         milestones: [],
         fundsReleased: 0,
         updates: [],
-        votes: [],
-      }
+        votes: []}
       fs.writeFileSync(
         path.join(GRANTS_DIR, `${id}.json`),
         JSON.stringify(record, null, 2),

@@ -3,7 +3,6 @@ import React from 'react';
 import Card from '../ui/Card',
 import { Zap } from 'lucide-react',
 import Card from '../ui / Card',
-,
   icon: React.ReactNode,
 class ErrorBoundary extends React.Component {
   constructor(props) {

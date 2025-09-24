@@ -112,8 +112,7 @@ const UltimateAutonomousEnterpriseShowcase = () => {
       case 'resource':,
         return <FileText className='w-5 h-5' />,
       default:,
-        return <FileText className='w-5 h-5' />,
-    }
+        return <FileText className='w-5 h-5' />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -124,8 +123,7 @@ const UltimateAutonomousEnterpriseShowcase = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50'>,
@@ -185,8 +183,7 @@ const UltimateAutonomousEnterpriseShowcase = () => {
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-20o0 ${
                 activeTab === tab.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0',
-              }`}
+                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0'}`}
             >,
               {tab.label} ({tab.count}),
             </button>))}

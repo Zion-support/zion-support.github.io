@@ -12,8 +12,7 @@ import {
 interface GuestCheckoutModalProps {
   isOpen: boolean,
   onClose: () => void,
-  onCheckout: (email: string) => void,
-}
+  onCheckout: (email: string) => void}
 ,
 export function GuestCheckoutModal({
   isOpen;
@@ -25,8 +24,7 @@ export function GuestCheckoutModal({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     if (email) {
-      onCheckout(email),
-    }
+      onCheckout(email)}
   };
   return (
     <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>,

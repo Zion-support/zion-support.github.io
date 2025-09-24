@@ -399,6 +399,5 @@ export default function QuantumAIRevolution20o26Page() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

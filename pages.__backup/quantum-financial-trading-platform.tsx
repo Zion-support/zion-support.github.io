@@ -58,6 +58,5 @@ export default function SpaceTechnologyAIPlatformPage() {
           </div>,
         </div>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

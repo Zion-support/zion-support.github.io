@@ -263,6 +263,5 @@ export default function MultimodalAgentsEnterpriseGuide(): JSX.Element {
           </Link>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

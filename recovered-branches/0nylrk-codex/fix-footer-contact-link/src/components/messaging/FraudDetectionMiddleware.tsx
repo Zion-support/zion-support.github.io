@@ -6,8 +6,7 @@ import { toast  } from '@/hooks/use-toast',
 import { supabase } from '@/integrations/supabase/client',
 // Props for the middleware component,
 interface FraudDetectionMiddlewareProps {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 // Interface for the context,
 interface FraudDetectionContextType {
   scanMessageContent: (
@@ -17,8 +16,7 @@ import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 // Props for the middleware component,
 interface FraudDetectionMiddlewareProps {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 // Interface for the context,
 interface FraudDetectionContextType {
@@ -35,8 +33,7 @@ interface FraudDetectionContextType {
     content: string,
     userEmail?: string) => Promise<{
     isSafe: boolean,
-    explanation?: string,
-  }>}
+    explanation?: string}>}
 // Create the context. "createContext" can be untyped if React type definitions,
 // aren't available. Passing a generic argument to an untyped function causes,
 // TS2347, so we cast the default value instead of using a type parameter.,
@@ -65,8 +62,7 @@ import {toast} from '@/hooks/use-toast',
 import {supabase} from '@/integrations/supabase/client',
 // Props for the middleware component,
 interface FraudDetectionMiddlewareProps {
-  children: React && React.ReactNode,
-}
+  children: React && React.ReactNode}
 ,
 // Interface for the context,
 interface FraudDetectionContextType {
@@ -113,21 +109,18 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
             title: "Message Flagged",
             description: "Your message contains content that may violate our terms of service.",
             variant: "destructive",
-            duration: 5000,
-          }),
+            duration: 5000}),
           return {
-            isSafe: false,
-          });
+            isSafe: false});
           return {
             isSafe: false;
-            explanation: "Message contains prohibited content. Please review our communication guidelines.",
-          }
+            explanation: "Message contains prohibited content. Please review our communication guidelines."}
         }
       }
 ,
       // For suspicious but not dangerous content, log but let it pass through,
       if (quickCheck.severity === 'suspicious') {
-        // console.log('Suspicious content detected but allowed:', content)}
+        // // console.log('Suspicious content detected but allowed:', content)}
       // For more complex analysis (in a real app), we would call the edge function,
       // This is disabled in this example to avoid unnecessary API calls,
       /*,
@@ -142,12 +135,10 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         toast({
           title: "Message Blocked",
           description: data.explanation |"This message contains prohibited content.",
-          variant: "destructive",
-        }),
+          variant: "destructive"}),
         return {
           isSafe: false,
-          explanation: data.explanation,
-        });
+          explanation: data.explanation});
         return {
           isSafe: false;
           explanation: data.explanation,
@@ -155,12 +146,10 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         toast({
           title: "Message Blocked";
           description: data.explanation || "This message contains prohibited content.";
-          variant: "destructive",
-        });
+          variant: "destructive"});
         return {
           isSafe: false;
-          explanation: data.explanation,
-        }
+          explanation: data.explanation}
       }
       */,
       // Message is considered safe,

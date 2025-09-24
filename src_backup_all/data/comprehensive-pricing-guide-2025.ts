@@ -4,8 +4,7 @@ export interface PricingTier {
   billing: 'monthly' | 'yearly' | 'one-time',
   features: string[],
   popular?: boolean,
-  savings?: string,
-}
+  savings?: string}
 ,
 export interface ServicePricing {
   id: string,
@@ -24,8 +23,7 @@ export interface ServicePricing {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
 }
 ,
 const CONTACT = {

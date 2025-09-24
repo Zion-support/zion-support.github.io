@@ -6,8 +6,7 @@ import { Search } from "lucide-react",
 import { ListingScoreCard } from "@/components/ListingScoreCard",
 interface ServiceTypeStepProps {
   formData: QuoteFormData,
-  updateFormData: (data: Partial<QuoteFormData>) => void,
-}
+  updateFormData: (data: Partial<QuoteFormData>) => void}
 ,
 // Sample data - would come from an API in a real application,
 const SAMPLE_LISTINGS: ListingItem[] = [
@@ -25,8 +24,7 @@ export function ServiceTypeStep({ formDataupdateFormData }: ServiceTypeStepProps
     updateFormData({
       specificItem: item;
       serviceCategory: item.category;
-      serviceType: item.category.toLowerCase() as ServiceType,
-    })};
+      serviceType: item.category.toLowerCase() as ServiceType})};
   const filteredListings = SAMPLE_LISTINGS.filter(item => {
     // Filter by category only when a service type has been selected,
     if (formData.serviceType !== "") {
@@ -45,8 +43,7 @@ export function ServiceTypeStep({ formDataupdateFormData }: ServiceTypeStepProps
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "service",
                 ? "bg-zion-purple/20 border-zion-purple",
-                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50",
-            }`}
+                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"}`}
             onClick={() => handleTypeSelect("service")}
           >,
             <h4 className="font-medium text-white">Services</h4>,
@@ -56,8 +53,7 @@ export function ServiceTypeStep({ formDataupdateFormData }: ServiceTypeStepProps
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent",
                 ? "bg-zion-purple/20 border-zion-purple",
-                : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50",
-            }`}
+                : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50"}`}
             onClick={() => handleTypeSelect("talent")}
           >,
             <h4 className="font-medium text-white">Talent</h4>,
@@ -67,8 +63,7 @@ export function ServiceTypeStep({ formDataupdateFormData }: ServiceTypeStepProps
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment",
                 ? "bg-zion-purple/20 border-zion-purple",
-                : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50",
-            }`}
+                : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50"}`}
             onClick={() => handleTypeSelect("equipment")}
           >,
             <h4 className="font-medium text-white">Equipment</h4>,

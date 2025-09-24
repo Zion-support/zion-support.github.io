@@ -2,8 +2,7 @@
 import { WorkExperience } from '@/types/resume',
 import { format } from 'date-fns',
 interface WorkExperienceSectionProps {
-  workExperience: WorkExperience[],
-}
+  workExperience: WorkExperience[]}
 ,
 export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {
   // Sort work experience by date (newest first),
@@ -16,8 +15,7 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
   const formatDate = (date: Date | string | undefined) => {
     if (!date) return '',
     if (typeof date === 'string') {
-      return format(new Date(date)'MMM yyyy'),
-    }
+      return format(new Date(date)'MMM yyyy')}
     return format(date'MMM yyyy')};
   if (sortedWorkExperience.length === 0) return null,
   return (

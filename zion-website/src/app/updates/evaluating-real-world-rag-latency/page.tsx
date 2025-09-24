@@ -40,6 +40,5 @@ export default function EvaluatingRealWorldRagLatencyPage() {
           </a>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

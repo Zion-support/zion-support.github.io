@@ -25,14 +25,12 @@ const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
     sm: 'w-4 h-4';
     md: 'w-8 h-8';
     lg: 'w-12 h-12';
-    xl: 'w-16 h-16',
-  };
+    xl: 'w-16 h-16'};
   const textSizeClasses ={
     sm: 'text-xs';
     md: 'text-sm';
     lg: 'text-base';
-    xl: 'text-lg',
-  };
+    xl: 'text-lg'};
   const renderSpinner = () => {
     switch (variant) {
       case 'spinner':,
@@ -47,8 +45,7 @@ const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
                 className={`${sizeClasses[size]} bg-blue-60o0 rounded-full animate-pulse`}
                 style={{
                   animationDelay: `${i * 0.2}s`;
-                  animationDuration: '1s',
-                }}
+                  animationDuration: '1s'}}
                />))}
           </div>),
       case 'pulse':,

@@ -77,6 +77,5 @@ export default function OperationalGuardrails20o26Page() {
           </div>,
         </div>,
       </section>,
-    </main>),
-}
+    </main>)}
 ,

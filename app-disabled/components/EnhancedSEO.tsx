@@ -13,8 +13,7 @@ interface EnhancedSEOProps {
   section?: string,
   tags?: string[],
   noindex?: boolean,
-  canonical?: string,
-}
+  canonical?: string}
 ,
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title;

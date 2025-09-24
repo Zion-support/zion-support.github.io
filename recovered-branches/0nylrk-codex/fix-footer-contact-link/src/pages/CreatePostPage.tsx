@@ -28,8 +28,7 @@ interface PostFormValues {
   title: string,
   content: string,
   categoryId: ForumCategory,
-  tags: string,
-}
+  tags: string}
 ,
 export default function CreatePostPage() {
   const navigate = useNavigate(),
@@ -39,8 +38,7 @@ export default function CreatePostPage() {
   // Get category from URL query params if available,
   const initialCategory = searchParams.get("category") as ForumCategory | null;
   const initialValues: Partial<PostFormValues> = {
-    categoryId: initialCategory || "project-help",
-  };
+    categoryId: initialCategory || "project-help"};
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally save to the database,
@@ -50,21 +48,18 @@ export default function CreatePostPage() {
       const tagsArray = values.tags.split(",").map(tag => tag.trim());
       toast({
         title: "Post created",
-        description: "Your post has been published successfully",
-      })});
+        description: "Your post has been published successfully"})});
       // Redirect to the forum category,
       navigate(`/community/category/${values.categoryId}`)} catch (error) {
       toast({
         title: "Error",
         description: "There was a problem creating your post",
-        variant: "destructive",
-      }),
+        variant: "destructive"}),
 interface PostFormValues {
   title: string;
   content: string;
   categoryId: ForumCategory;
-  tags: string,
-}
+  tags: string}
 ,
 export default function CreatePostPage() {
   const navigate = useNavigate(),
@@ -73,8 +68,7 @@ export default function CreatePostPage() {
   // Get category from URL query params if available,
   const initialCategory = searchParams && searchParams.get("category") as ForumCategory | null,
   const initialValues: Partial<PostFormValues> = {
-    categoryId: initialCategory || "project-help",
-  };
+    categoryId: initialCategory || "project-help"};
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally save to the database,
@@ -83,16 +77,13 @@ export default function CreatePostPage() {
       const tagsArray = values && values.tags.split(",").map(tag => tag && tag.trim()),
       toast({
         title: "Post created";
-        description: "Your post has been published successfully",
-      }),
+        description: "Your post has been published successfully"}),
       // Redirect to the forum category,
       navigate(`/community/category/${values && values.categoryId}`)} catch (error) {
       toast({
         title: "Error";
         description: "There was a problem creating your post";
-        variant: "destructive",
-      }),
-}
+        variant: "destructive"})}
 }
   };
   return (
@@ -118,8 +109,7 @@ interface PostFormValues {
   title: string;
   content: string;
   categoryId: ForumCategory;
-  tags: string,
-}
+  tags: string}
 ,
 export default function CreatePostPage() {
   const navigate = useNavigate();
@@ -128,8 +118,7 @@ export default function CreatePostPage() {
   // Get category from URL query params if available,
   const initialCategory = searchParams.get("category") as ForumCategory | null;
   const initialValues: Partial<PostFormValues> = {
-    categoryId: initialCategory || "project-help",
-  };
+    categoryId: initialCategory || "project-help"};
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally save to the database,
@@ -138,15 +127,13 @@ export default function CreatePostPage() {
       const tagsArray = values.tags.split(",").map(tag => tag.trim());
       toast({
         title: "Post created";
-        description: "Your post has been published successfully",
-      });
+        description: "Your post has been published successfully"});
       // Redirect to the forum category,
       navigate(`/community/category/${values.categoryId}`)} catch (error) {
       toast({
         title: "Error";
         description: "There was a problem creating your post",
-        variant: "destructive",
-      })}
+        variant: "destructive"})}
   };
   return (
     <AppLayout>,
@@ -172,8 +159,7 @@ interface PostFormValues {
   title: string;
   content: string;
   category_id: ForumCategory;
-  tags: string,
-}
+  tags: string}
 export default /**,
  * CreatePostPage - Function description,
  */,
@@ -181,12 +167,10 @@ function CreatePostPage() {
   const navigate = use_navigate (),
   const { toast } = use_toast (),
   const [search_params] = useSearchParams (),
-,
   // Get category from URL query params if available,
   const initial_category = search_params.get ("category") as ForumCategory | null,
   const initial_values: Partial < PostFormValues> = {
-    category_id: initial_category || "project - help",
-  }
+    category_id: initial_category || "project - help"}
 ,
   const handle_submit = async (values: PostFormValues) => {
     try {
@@ -196,15 +180,13 @@ function CreatePostPage() {
       const tags_array = values.tags.split (", ").map (tag => tag.trim ()),
       toast ({
         title: "Post created";
-        description: "Your post has been published successfully",
-      }),
+        description: "Your post has been published successfully"}),
       // Redirect to the forum category,
       navigate (`/community / category/${values.category_id}`)} catch (error) {
       toast ({
         title: "Error";
         description: "There was a problem creating your post";
-        variant: "destructive",
-      })}
+        variant: "destructive"})}
   }
 ,
   return (

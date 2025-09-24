@@ -15,6 +15,5 @@ export default function MobileAppDevelopmentChatPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

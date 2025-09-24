@@ -30,15 +30,13 @@ export interface UltimateFuturisticAIService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
   // AI Consciousness Evolution Platform,
   {
@@ -461,7 +459,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     useCases: [
       'Digital advertising, Email marketing, Social media marketing, Content marketing, Lead generation';
     ];
-    roi: 'Marketing teams report 500% ROI through automated optimization and improved window.performance.';
+    roi: 'Marketing teams report 500% ROI through automated optimization and improved window.window.performance.';
     competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign'];
     marketSize: '$25B marketing automation market';
     growthRate: '35% annual growth';

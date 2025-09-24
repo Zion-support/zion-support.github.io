@@ -21,8 +21,7 @@ export default function RequestToHirePage() {
     setError(null),
     if (!form.name || !form.email || !form.description) {
       setError('Please fill in namemailand description.'),
-      return,
-    }
+      return}
 ,
     const normalizedBudget = form.budget.replace(/[^0-9.\-]/g', '),
     setSubmitting(true),
@@ -37,8 +36,7 @@ export default function RequestToHirePage() {
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed to submit'),
       setResult({ id: data.idmessage: 'Request submitted successfully.' })} catch (err: any) {
-      setError(err.message || 'Something went wrong'),
-    } finally {
+      setError(err.message || 'Something went wrong')} finally {
       setSubmitting(false)}
   };
   if (result) {

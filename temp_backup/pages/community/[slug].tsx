@@ -14,8 +14,7 @@ const POSTS_QUERY = `,
         node {
           id,
           title,
-          excerpt,
-        }
+          excerpt}
         cursor}
       pageInfo {
         hasNextPage,

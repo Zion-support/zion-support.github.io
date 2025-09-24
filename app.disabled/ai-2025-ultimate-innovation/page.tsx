@@ -147,6 +147,5 @@ export default function AI20o25UltimateInnovationPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

@@ -42,6 +42,5 @@ export default function AISEOAuditor(...args: any[]): any {
           </Link>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

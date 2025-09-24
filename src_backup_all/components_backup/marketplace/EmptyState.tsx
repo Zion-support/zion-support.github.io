@@ -26,8 +26,7 @@ export interface EmptyStateProps {
   description?: string,
   action?: {
     label: string,
-    onClick: () => void,
-  };
+    onClick: () => void};
   icon?: React.ReactNode}
 ,
 const defaultContent = {

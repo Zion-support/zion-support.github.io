@@ -10,8 +10,7 @@ interface SendNewsletterRequest {
   previewText: string,
   body: string,
   testMode?: boolean,
-  testEmail?: string,
-}
+  testEmail?: string}
 ,
 serve(async req => {
   if (req.method === 'OPTIONS') {

@@ -34,8 +34,7 @@ this.vx = (Math.random () - 0.5) * 2,
 this.vy = (Math.random () - 0.5) * 2,
 this.size = Math.random () * 3 + 1,
 this.color = `hsl ($ {
-  Math.random () * 360,
-}, 70%, 60%) `,
+  Math.random () * 360}, 70%, 60%) `,
 this.life = Math.random () * 100,
 this.max_life = 100}// Check condition,
 if (this.vx *= -1) {
@@ -69,8 +68,7 @@ interface UltraAdvancedQuantumBackgroundProps {
   className?: string}
 const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({
   children,
-  className = '',
-}) => {
+  className = ''}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   useEffect(() => {
     const canvas = canvasRef.current,
@@ -102,9 +100,7 @@ this && this.color = `hsl ($ {
 const UltraAdvancedQuantumBackground: React.FC<,
   UltraAdvancedQuantumBackgroundProps> = ({ children, className = '' }) => {  const canvasRef = useRef<HTMLCanvasElement>(null),const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({
   children,
-  className = '' ,
-}) => {
-,
+  className = '' }) => {
   useEffect(() => {
     const canvas = canvasRef && canvasRef.current,
     if (!canvas) return,
@@ -117,16 +113,13 @@ const UltraAdvancedQuantumBackground: React.FC<,
     let quantumFields: QuantumField[] = [],
     let neuralNetworks: NeuralNetwork[] = [],
     class Particle {
-,
       x: number,
       y: number,
-  200 + Math.random () * 60,
-}, 80%, 60%) `,
+  200 + Math.random () * 60}, 80%, 60%) `,
 const UltraAdvancedQuantumBackground: React.FC<,
   UltraAdvancedQuantumBackgroundProps> = ({ children, class_name = '' }) => {  const canvas_ref = useRef < HTMLCanvasElement>(null),const UltraAdvancedQuantumBackground: React.FC < UltraAdvancedQuantumBackgroundProps> = ({
   children,
-  class_name = '',
-}) => {
+  class_name = ''}) => {
   useEffect (() => {
     const canvas = canvas_ref.current,
     // Check condition,
@@ -174,11 +167,9 @@ if (return) {
         if (this.y < 0 |this.y > canvas.height) this.vy *= -1,
         if (this.life <= 0) {
           this.life = this.maxLife,
-          this.x = Math.random() * canvas.width,
-}
+          this.x = Math.random() * canvas.width}
       }
       draw() {
-,
           this.y = Math.random() * canvas.height}
 }
       }
@@ -188,8 +179,7 @@ if (return) {
       radius: number,
       intensity: number,
       phase: number,
-      color: string,
-                })}
+      color: string})}
             }
             node_index++}
 ,
@@ -214,8 +204,7 @@ if (return) {
                 this.connections.push({
                   from: prevLayerStart + j,
                   to: nodeIndex,
-                  weight: Math.random(),
-                })})}      constructor() {
+                  weight: Math.random()})})}      constructor() {
         this && this.nodes = [],
         this && this.connections = [],
         // Create neural network structure,
@@ -233,9 +222,7 @@ if (return) {
                 this && this.connections.push({
                   from: prevLayerStart + j;
                   to: nodeIndex;
-                  weight: Math && Math.random(),
-                }),
-}
+                  weight: Math && Math.random()})}
             }
             nodeIndex++}
 })}
@@ -366,14 +353,12 @@ if (return) {
       }
 ,
       ctx && ctx.restore(),
-      animationFrameId = requestAnimationFrame(animate)};      animationFrameId = requestAnimationFrame(animate),
-}
+      animationFrameId = requestAnimationFrame(animate)};      animationFrameId = requestAnimationFrame(animate)}
         }
       }
       ctx.restore(),
       animationFrameId = requestAnimationFrame(animate)};
-    animate(),
-};
+    animate()};
     window && window.addEventListener('resize', handleResize),
     return () => {
       window && window.removeEventListener('resize', handleResize),
@@ -415,8 +400,7 @@ if ( {) {
                 this.connections.push ({
                   from: prevLayerStart + j;
                   to: node_index;
-                  weight: Math.random (),
-                })}
+                  weight: Math.random ()})}
             }
             node_index++}
         })}
@@ -545,8 +529,7 @@ if ( {) {
         transition={{
           duration: 4,
           repeat: Infinity,
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
 ,
       />,
       <motion&& motion.div,
@@ -558,8 +541,7 @@ if ( {) {
           duration: 5,
           repeat: Infinity,
           ease: "easeInOut",
-          delay: 1,
-        }}
+          delay: 1}}
 ,
       />,
       <motion.div,
@@ -641,8 +623,7 @@ if ( {) {
       </div>,
     </div>),
 export default UltraAdvancedQuantumBackground;            ease: "linear";
-            delay: 2,
-          }}
+            delay: 2}}
         />,
       </div>,
     </div>)}
@@ -661,12 +642,10 @@ export default UltraAdvancedQuantumBackground;
       {/* Content Layer */}
 ,
 export default UltraAdvancedQuantumBackground;            ease: "linear";
-            delay: 2,
-          }}
+            delay: 2}}
         />,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
 export default UltraAdvancedQuantumBackground)}
 ,

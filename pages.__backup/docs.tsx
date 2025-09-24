@@ -73,8 +73,7 @@ jobs:,
     steps:,
       - uses: actions/checkout@v4,
       - name: Run Automation,
-        run: npm run automation:cloud`,
-    };
+        run: npm run automation:cloud`};
     {
       title: "AI Content Generation";
       language: "javascript";
@@ -95,8 +94,7 @@ const content = await generateContent(
   lighthouseScore: number,
   loadTime: number,
   seoScore: number,
-  accessibilityScore: number,
-}
+  accessibilityScore: number}
 ,
 const monitorPerformance = async (): Promise<PerformanceMetrics> => {
   const metrics = await fetch('/api/performance/lighthouse'),
@@ -104,8 +102,7 @@ const monitorPerformance = async (): Promise<PerformanceMetrics> => {
 // Real-time monitoring,
 setInterval(async () => {
   const metrics = await monitorPerformance(),
-  // console.log('Performance: 'metrics),
-}60o000), // Every minute`}
+  // // console.log('Performance: 'metrics)}60o000), // Every minute`}
   ],
   return (
     <>,
@@ -250,6 +247,5 @@ setInterval(async () => {
           </div>,
         </footer>,
       </div>,
-    </>),
-};
+    </>)};
 export default DocumentationPage;

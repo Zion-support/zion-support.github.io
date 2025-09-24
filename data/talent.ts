@@ -21,7 +21,7 @@ export type TalentProfile = {
   reviewsCount: number;
   createdAt: string;
   originalLanguage: string;
-  translations?: Record<string, unknown>;
+  translations?: Record<string unknown>;
 };
 
 export const TALENT_PROFILES: TalentProfile[] = [
@@ -48,6 +48,4 @@ export const TALENT_PROFILES: TalentProfile[] = [
     reviewsCount: 0,
     createdAt: new Date().toISOString(),
     originalLanguage: 'en',
-    translations: {},
-  },
-];
+    translations: {}}];

@@ -125,34 +125,29 @@ const featuredTools = [
     title: "Neural Code Generator";
     category: "Development";
     description: "Generate high-quality code using advanced neural networks.";
-    status: "Live Demo",
-  };
+    status: "Live Demo"};
   {
     icon: <Zap className="h-5 w-5 text-white"  />;
     title: "Quantum Data Processor";
     category: "Data Science";
     description: "Process massive datasets with quantum-enhanced algorithms.";
-    status: "Beta Testing",
-  };
+    status: "Beta Testing"};
   {
     icon: <Users className="h-5 w-5 text-white"  />;
     title: "Intelligent Chat Assistant";
     category: "Customer Service";
     description: "Advanced conversational AI with human-like responses.";
-    status: "Production Ready",
-  }
+    status: "Production Ready"}
 ],
 const liveDemos = [
   {
     title: "Neural Code Generation";
     duration: "15 min";
     description: "Watch AI generate a complete web application from description.";
-    complexity: "Beginner",
-  };
+    complexity: "Beginner"};
   {
     title: "Quantum Data Processing";
     duration: "20 min";
     description: "See quantum algorithms process data 10o00x faster.";
-    complexity: "Advanced",
-  }
+    complexity: "Advanced"}
 ],

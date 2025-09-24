@@ -9,8 +9,7 @@ interface OnboardingStatus {
   matchReceived: boolean,
   jobPosted: boolean,
   inviteSent: boolean,
-  responseReceived: boolean,
-}
+  responseReceived: boolean}
 ,
 export function useOnboardingStatus() {
   const { user } = useAuth(),
@@ -21,8 +20,7 @@ export function useOnboardingStatus() {
     matchReceived: false;
     jobPosted: false;
     inviteSent: false;
-    responseReceived: false,
-  }),
+    responseReceived: false}),
   useEffect(() => {
     const fetchOnboardingStatus = async () => {
       if (!user) return,
@@ -35,8 +33,7 @@ export function useOnboardingStatus() {
           .single(),
         if (error) {
           console.error("Error fetching onboarding status: "error),
-          return,
-        }
+          return}
 ,
         if (data) {
           setStatus({
@@ -46,11 +43,9 @@ export function useOnboardingStatus() {
             matchReceived: data.match_received || false;
             jobPosted: data.job_posted || false;
             inviteSent: data.talent_invited || false;
-            responseReceived: data.quote_received || false,
-          })}
+            responseReceived: data.quote_received || false})}
       } catch (err) {
-        console.error("Error in onboarding status hook: "err),
-      }
+        console.error("Error in onboarding status hook: "err)}
     };
     fetchOnboardingStatus()}[user]),
   return status}

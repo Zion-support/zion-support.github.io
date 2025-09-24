@@ -108,8 +108,7 @@ const AI20o25UltimateBusinessIntelligenceShowcase = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -120,8 +119,7 @@ const AI20o25UltimateBusinessIntelligenceShowcase = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -179,8 +177,7 @@ const AI20o25UltimateBusinessIntelligenceShowcase = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-20o0 ${
                 activeFilter === filter.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {filter.label} ({filter.count}),
             </button>))}
@@ -285,6 +282,5 @@ const AI20o25UltimateBusinessIntelligenceShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25UltimateBusinessIntelligenceShowcase;

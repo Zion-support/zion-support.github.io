@@ -251,8 +251,7 @@ const NewContent20o25FutureTrendsShowcase = () => {
                 className={`px-4 py-2 rounded-lg font-semibold transition-colors ${
                   activeCategory === category.id,
                     ? 'bg-purple-60o0 text-white',
-                    : 'bg-white text-gray-60o0 hover: bg-gray-10o0',
-                }`}
+                    : 'bg-white text-gray-60o0 hover: bg-gray-10o0'}`}
               >,
                 {category.label} ({category.count}),
               </button>))}
@@ -336,6 +335,5 @@ const NewContent20o25FutureTrendsShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NewContent20o25FutureTrendsShowcase;

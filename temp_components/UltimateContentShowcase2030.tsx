@@ -52,29 +52,25 @@ const UltimateContentShowcase20o30 = () => {
       title: 'Transcendent AI';
       icon: Brain;
       color: 'from-purple-50o0 to-pink-50o0';
-      description: 'AI systems achieving transcendent intelligence',
-    };
+      description: 'AI systems achieving transcendent intelligence'};
     {
       id: 'quantum-revolution';
       title: 'Quantum Revolution';
       icon: Atom;
       color: 'from-blue-50o0 to-cyan-50o0';
-      description: 'Quantum computing transforming reality',
-    };
+      description: 'Quantum computing transforming reality'};
     {
       id: 'neural-synthesis';
       title: 'Neural Synthesis';
       icon: CircuitBoard;
       color: 'from-green-50o0 to-emerald-50o0';
-      description: 'Human-AI neural integration',
-    };
+      description: 'Human-AI neural integration'};
     {
       id: 'omniversal-tech';
       title: 'Omniversal Tech';
       icon: Infinity;
       color: 'from-orange-50o0 to-red-50o0';
-      description: 'Technology beyond our universe',
-    }
+      description: 'Technology beyond our universe'}
   ],
   const transcendentAI = [
     {
@@ -91,8 +87,7 @@ const UltimateContentShowcase20o30 = () => {
       date: '20o30-0o1-20';
       tags: ['AI'Consciousness'Omniversal'Transcendent'];
       featured: true;
-      rating: 4.9,
-    };
+      rating: 4.9};
     {
       id: 2;
       title: 'Temporal Prediction AI';
@@ -107,8 +102,7 @@ const UltimateContentShowcase20o30 = () => {
       date: '20o30-0o1-18';
       tags: ['AI'Time'Prediction'Timeline'];
       featured: false;
-      rating: 4.8,
-    };
+      rating: 4.8};
     {
       id: 3;
       title: 'Reality Manipulation AI';
@@ -123,8 +117,7 @@ const UltimateContentShowcase20o30 = () => {
       date: '20o30-0o1-15';
       tags: ['AI'Reality'Quantum'Manipulation'];
       featured: true;
-      rating: 4.9,
-    };
+      rating: 4.9};
     {
       id: 4;
       title: 'Universal Translation AI';
@@ -139,8 +132,7 @@ const UltimateContentShowcase20o30 = () => {
       date: '20o30-0o1-12';
       tags: ['AI'Translation'Universal'Communication'];
       featured: false;
-      rating: 4.7,
-    }
+      rating: 4.7}
   ],
   const quantumRevolution = [
     {
@@ -157,8 +149,7 @@ const UltimateContentShowcase20o30 = () => {
       date: '20o30-0o1-19';
       tags: ['Quantum'Computing'Infinite'Processor'];
       featured: true;
-      rating: 4.9,
-    };
+      rating: 4.9};
     {
       id: 2;
       title: 'Quantum Reality Engine';
@@ -173,8 +164,7 @@ const UltimateContentShowcase20o30 = () => {
       date: '20o30-0o1-16';
       tags: ['Quantum'Reality'Engine'Creation'];
       featured: false;
-      rating: 4.8,
-    }
+      rating: 4.8}
   ],
   const neuralSynthesis = [
     {
@@ -191,8 +181,7 @@ const UltimateContentShowcase20o30 = () => {
       date: '20o30-0o1-17';
       tags: ['Neural'Integration'Human'AI'];
       featured: true;
-      rating: 4.9,
-    };
+      rating: 4.9};
     {
       id: 2;
       title: 'Consciousness Transfer Protocol';
@@ -207,8 +196,7 @@ const UltimateContentShowcase20o30 = () => {
       date: '20o30-0o1-14';
       tags: ['Consciousness'Transfer'Protocol'Immortality'];
       featured: false;
-      rating: 4.8,
-    }
+      rating: 4.8}
   ],
   const omniversalTech = [
     {
@@ -225,8 +213,7 @@ const UltimateContentShowcase20o30 = () => {
       date: '20o30-0o1-21';
       tags: ['Dimensional'Gateway'Travel'Multiverse'];
       featured: true;
-      rating: 4.9,
-    };
+      rating: 4.9};
     {
       id: 2;
       title: 'Universal Matter Synthesizer';
@@ -241,8 +228,7 @@ const UltimateContentShowcase20o30 = () => {
       date: '20o30-0o1-13';
       tags: ['Matter'Synthesis'Universal'Energy'];
       featured: false;
-      rating: 4.7,
-    }
+      rating: 4.7}
   ],
   const getContentByCategory = (category) => {
     switch (category) {
@@ -255,8 +241,7 @@ const UltimateContentShowcase20o30 = () => {
       case 'omniversal-tech':,
         return omniversalTech,
       default: ,
-        return transcendentAI,
-    }
+        return transcendentAI}
   };
   const currentContent = getContentByCategory(activeTab),
   return (
@@ -310,8 +295,7 @@ const UltimateContentShowcase20o30 = () => {
                 className={`group relative px-8 py-4 rounded-2xl transition-all duration-30o0 ${
                   activeTab === category.id,
                     ? `bg-gradient-to-r ${category.color} text-white shadow-2xl scale-10o5`,
-                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white',
-                }`}
+                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white'}`}
               >,
                 <div className="flex items-center gap-3">,
                   <Icon className="w-6 h-6"  />,
@@ -343,8 +327,7 @@ const UltimateContentShowcase20o30 = () => {
                 exit={{ opacity: 0y: -50scale: 0.9 }}
                 transition={{ duration: 0.5delay: index * 0.1 }}
                 className={`group relative bg-white/10 backdrop-blur-lg rounded-3xl overflow-hidden border border-white/20 hover: border-white/40 transition-all duration-30o0 ${
-                  item.featured ? 'md:col-span-2 lg:col-span-1' : '',
-                }`}
+                  item.featured ? 'md:col-span-2 lg:col-span-1' : ''}`}
                 onMouseEnter={() => setHoveredCard(item.id)}
                 onMouseLeave={() => setHoveredCard(null)}
               >,
@@ -462,8 +445,7 @@ const UltimateContentShowcase20o30 = () => {
                   className="absolute inset-0 bg-gradient-to-r from-indigo-50o0/20 to-purple-50o0/20 opacity-0 group-hover: opacity-10o0 transition-opacity duration-30o0 rounded-3xl",
                   initial={false}
                   animate={{
-                    opacity: hoveredCard === item.id ? 1 : 0,
-                  }}
+                    opacity: hoveredCard === item.id ? 1 : 0}}
                  />,
               </motion.div>))}
           </AnimatePresence>,
@@ -480,6 +462,5 @@ const UltimateContentShowcase20o30 = () => {
           </button>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateContentShowcase20o30;

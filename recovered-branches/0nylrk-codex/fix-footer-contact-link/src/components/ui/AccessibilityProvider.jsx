@@ -150,11 +150,9 @@ export const AccessibilityToolbar = () => {
           <p>Ctrl/Cmd + L: Large Text</p>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 // Skip to main content link,
 export const SkipToMainContent = () => {
     return (<a href="#main-content" className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark">,
       Skip to main content,
-    </a>),
-};
+    </a>)};

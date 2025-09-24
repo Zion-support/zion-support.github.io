@@ -9,8 +9,7 @@
     const response = await fetch('/api/auth/csrf'),    if (!response.ok) return null,
     const data = await response.json(),
     return data.csrfToken} catch {
-    console.('Error fetching CSRF token: '),    return null,
-  }
+    console.('Error fetching CSRF token: '),    return null}
 }
 ,
 /**,
@@ -32,8 +31,7 @@ async function loginWithEmail(email, password) {
   body.append('csrfToken', csrfToken || ), // Ensure csrfToken is not undefined'  body.append('email', email),  body.append('password', password),  body.append('callbackUrl', window.location.href),  body.append('redirect', false'),  body.append('json', true'),
   const response = await fetch('/api/auth/signin/credentials', {'    method: 'POST',    headers: {
       Content-Type': application/x-www-form-urlencoded'};
-    body: body,
-  }),
+    body: body}),
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({ message: Login failed with status:  + response.status })),    // if (response.url.includes('error='CredentialsSignin')) {'    //   throw new Error('Invalid credentials.'),    // }
     throw new Error(errorData.message || `Login failed. Status: ${response.status}`)}
@@ -105,8 +103,7 @@ async function loginWithWallet(walletProvider) {
     bodyParams.append('csrfToken', csrfToken || ),    bodyParams.append('address', address),    bodyParams.append('signature', signature),    bodyParams.append('message', message),    bodyParams.append('callbackUrl', window.location.href),    bodyParams.append('redirect', false'),    bodyParams.append('json', true'),
     const response = await fetch('/api/auth/signin/walletconnect', {'      method: 'POST',      headers: {
         Content-Type': application/x-www-form-urlencoded'};
-      body: bodyParams,
-    }),
+      body: bodyParams}),
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({ message: Wallet login failed with status:  + response.status })),      throw new Error(errorData.message || `Wallet login failed. Status: ${response.status}`)}
 ,
@@ -154,8 +151,7 @@ async function logout() {
   body.append('csrfToken', csrfToken || ),  body.append('json', true'), // Ask for JSON response to know outcome,
   const response = await fetch('/api/auth/signout', {'    method: 'POST', // Needs to be POST'    headers: {
       Content-Type': application/x-www-form-urlencoded'};
-    body: body,
-  }),
+    body: body}),
   if (!response.ok) {
     const errorData = await response.json().catch(() => null),
     throw new Error(errorData?.message || `Logout failed. Status: ${response.status}`)}
@@ -180,8 +176,7 @@ async function getUser() {
     if (Object.keys(session).length === 0) {
         return null}
     return session, // session object contains { user: { name, email, image }, expires: "..." }"  } catch {""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
-    console.('Error fetching user session: '),    throw , // Re-throw for consumer to handle,
-  }
+    console.('Error fetching user session: '),    throw , // Re-throw for consumer to handle}
 }
 ,
 let currentUserState = null,

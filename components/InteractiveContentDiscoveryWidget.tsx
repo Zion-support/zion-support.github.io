@@ -189,8 +189,7 @@ const InteractiveContentDiscoveryWidget = () => {
       case 'course':,
         return '🎓',
       default: ,
-        return '📄',
-    }
+        return '📄'}
   };
   return (
     <>,
@@ -263,8 +262,7 @@ const InteractiveContentDiscoveryWidget = () => {
                             className={`w-full flex items-center justify-between p-3 rounded-lg transition-all duration-20o0 ${
                               selectedCategory === category.id,
                                 ? 'bg-purple-10o0 dark: bg-purple-90o0 text-purple-70o0 dark:text-purple-30o0',
-                                : 'hover:bg-gray-10o0 dark:hover:bg-gray-70o0 text-gray-70o0 dark:text-gray-30o0',
-                            }`}
+                                : 'hover:bg-gray-10o0 dark:hover:bg-gray-70o0 text-gray-70o0 dark:text-gray-30o0'}`}
                           >,
                             <div className='flex items-center gap-3'>,
                               <Icon className='w-4 h-4' />,
@@ -317,8 +315,7 @@ const InteractiveContentDiscoveryWidget = () => {
                         className={`p-2 rounded-lg transition-colors ${
                           viewMode === 'grid',
                             ? 'bg-purple-10o0 dark: bg-purple-90o0 text-purple-70o0 dark:text-purple-30o0',
-                            : 'text-gray-50o0 dark:text-gray-40o0 hover:text-gray-70o0 dark:hover:text-gray-30o0',
-                        }`}
+                            : 'text-gray-50o0 dark:text-gray-40o0 hover:text-gray-70o0 dark:hover:text-gray-30o0'}`}
                       >,
                         <Grid className='w-5 h-5' />,
                       </button>,
@@ -327,8 +324,7 @@ const InteractiveContentDiscoveryWidget = () => {
                         className={`p-2 rounded-lg transition-colors ${
                           viewMode === 'list',
                             ? 'bg-purple-10o0 dark: bg-purple-90o0 text-purple-70o0 dark:text-purple-30o0',
-                            : 'text-gray-50o0 dark:text-gray-40o0 hover:text-gray-70o0 dark:hover:text-gray-30o0',
-                        }`}
+                            : 'text-gray-50o0 dark:text-gray-40o0 hover:text-gray-70o0 dark:hover:text-gray-30o0'}`}
                       >,
                         <List className='w-5 h-5' />,
                       </button>,
@@ -342,8 +338,7 @@ const InteractiveContentDiscoveryWidget = () => {
                     className={
                       viewMode === 'grid',
                         ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6',
-                        : 'space-y-4',
-                    }
+                        : 'space-y-4'}
                   >,
                     {filteredContent.map(item => (
                       <motion.div,
@@ -351,8 +346,7 @@ const InteractiveContentDiscoveryWidget = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         className={`bg-white dark: bg-gray-80o0 rounded-xl border border-gray-20o0 dark:border-gray-70o0 overflow-hidden hover:shadow-lg transition-all duration-30o0 cursor-pointer ${
-                          viewMode === 'list' ? 'flex' : '',
-                        }`}
+                          viewMode === 'list' ? 'flex' : ''}`}
                         onClick={() => addToRecentlyViewed(item)}
                       >,
                         <div
@@ -417,8 +411,7 @@ const InteractiveContentDiscoveryWidget = () => {
                               className={`p-1 rounded transition-colors ${
                                 favorites.has(item.id),
                                   ? 'text-red-50o0 hover: text-red-60o0',
-                                  : 'text-gray-40o0 hover:text-red-50o0',
-                              }`}
+                                  : 'text-gray-40o0 hover:text-red-50o0'}`}
                             >,
                               <Heart
                                 className={`w-4 h-4 ${favorites.has(item.id) ? 'fill-current' : ''}`}

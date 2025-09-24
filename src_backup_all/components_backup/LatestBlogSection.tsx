@@ -107,6 +107,5 @@ const LatestBlogSection: React.FC = () => {
           </a>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default LatestBlogSection;

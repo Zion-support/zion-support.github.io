@@ -11,8 +11,7 @@ export interface TalentCardProps {
   onRequestHire: (talent: TalentProfile) => void,
   isSaved: boolean,
   onToggleSave: (id: string, isSaved: boolean) => void,
-  isAuthenticated: boolean,
-}
+  isAuthenticated: boolean}
 ,
 export function TalentCard({
   talent;
@@ -31,8 +30,7 @@ export function TalentCard({
     e.preventDefault(),
     e.stopPropagation(),
     if (onRequestHire) {
-      onRequestHire(talent),
-    }
+      onRequestHire(talent)}
   };
   const handleToggleSave = (e: React.MouseEvent) => {
     e.preventDefault(),
@@ -150,6 +148,5 @@ export function TalentCard({
           </div>,
         </div>,
       </div>,
-    </Card>),
-}
+    </Card>)}
 ,

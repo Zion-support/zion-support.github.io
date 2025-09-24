@@ -28,8 +28,7 @@ export default function UltraAdvancedNeonEffects20o38({
     amplitude: number,
     frequency: number,
     neonIntensity: number,
-    glowRadius: number,
-  }>>([]),
+    glowRadius: number}>>([]),
   // Enhanced theme-based neon color schemes,
   const getNeonColors = useCallback(() => {
     switch (theme) {
@@ -96,8 +95,7 @@ export default function UltraAdvancedNeonEffects20o38({
         amplitude: Math.random() * 80 + 40;
         frequency: Math.random() * 0.0o3 + 0.0o15;
         neonIntensity: Math.random() * 0.8 + 0.6;
-        glowRadius: Math.random() * 20 + 15,
-      })}
+        glowRadius: Math.random() * 20 + 15})}
   }, [intensity, getNeonColors]),
   // Enhanced neon animation loop,
   const animateNeon = useCallback(() => {
@@ -254,8 +252,7 @@ export default function UltraAdvancedNeonEffects20o38({
         className="absolute inset-0 w-full h-full",
         style={{
           background: 'transparent';
-          filter: 'blur(0.3px)',
-        }}
+          filter: 'blur(0.3px)'}}
        />,
       {/* Additional Neon Visual Effects */}
       <div className="absolute inset-0">,
@@ -272,8 +269,7 @@ export default function UltraAdvancedNeonEffects20o38({
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-purple-40o0/20",
@@ -287,8 +283,7 @@ export default function UltraAdvancedNeonEffects20o38({
           transition={{
             duration: 15;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         {/* Neon Corner Effects */}
         <motion.div,
@@ -300,8 +295,7 @@ export default function UltraAdvancedNeonEffects20o38({
           transition={{
             duration: 3;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-0 right-0 w-32 h-32 border-r-2 border-t-2 border-purple-40o0/30",
@@ -312,8 +306,7 @@ export default function UltraAdvancedNeonEffects20o38({
           transition={{
             duration: 4;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-0 left-0 w-32 h-32 border-l-2 border-b-2 border-pink-40o0/30",
@@ -324,8 +317,7 @@ export default function UltraAdvancedNeonEffects20o38({
           transition={{
             duration: 5;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-green-40o0/30",
@@ -336,8 +328,7 @@ export default function UltraAdvancedNeonEffects20o38({
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         {/* Floating Neon Orbs */}
         <motion.div,
@@ -351,8 +342,7 @@ export default function UltraAdvancedNeonEffects20o38({
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-1/3 right-1/3 w-12 h-12 rounded-full bg-gradient-to-r from-purple-40o0 to-pink-50o0",
@@ -365,8 +355,7 @@ export default function UltraAdvancedNeonEffects20o38({
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
       </div>,
       {children}

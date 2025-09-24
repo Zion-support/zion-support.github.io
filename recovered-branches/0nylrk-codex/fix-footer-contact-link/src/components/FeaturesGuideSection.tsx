@@ -25,8 +25,7 @@ export function FeaturesGuideSection() {
         "Review the AI-recommended matches tailored to your needs";
         "Connect with matched talents or services directly"];
       link: "/match";
-      buttonText: "Try AI Matcher",
-    };
+      buttonText: "Try AI Matcher"};
     {
       id: "talent-directory";
       title: "Talent Directory";
@@ -38,8 +37,7 @@ export function FeaturesGuideSection() {
         "Save favorite profiles for future reference";
         "Contact talents directly or request quotes through their profiles"];
       link: "/talents";
-      buttonText: "Explore Talents",
-    };
+      buttonText: "Explore Talents"};
     {
       id: "services";
       title: "Services Marketplace";
@@ -51,8 +49,7 @@ export function FeaturesGuideSection() {
         "Request customized quotes for specific requirements";
         "Book and manage services through your dashboard"];
       link: "/services";
-      buttonText: "View Services",
-    };
+      buttonText: "View Services"};
     {
       id: "equipment";
       title: "Equipment Catalog";
@@ -64,8 +61,7 @@ export function FeaturesGuideSection() {
         "Request quotes for bulk orders or specialized equipment";
         "Schedule delivery or pickup through the platform"];
       link: "/equipment";
-      buttonText: "Browse Equipment",
-    };
+      buttonText: "Browse Equipment"};
     {
       id: "analytics";
       title: "Marketplace Analytics";
@@ -77,8 +73,7 @@ export function FeaturesGuideSection() {
         "Export reports for your business planning";
         "Set up alerts for changes in your areas of interest"];
       link: "/analytics";
-      buttonText: "View Analytics",
-    };
+      buttonText: "View Analytics"};
     {
       id: "ai-assistant";
       title: "Zion AI Assistant";
@@ -91,8 +86,7 @@ export function FeaturesGuideSection() {
         "Receive step-by-step guidance for using platform features"];
       link: "#";
       buttonText: "Chat with Assistant";
-      action: "openChat",
-    };
+      action: "openChat"};
     {
       id: "publishing";
       title: "List Your Services";
@@ -104,8 +98,7 @@ export function FeaturesGuideSection() {
         "Choose between talent profileserviceor equipment listing";
         "Complete the guided form and publish your listing"];
       link: "/create-profile";
-      buttonText: "Create Listing",
-    };
+      buttonText: "Create Listing"};
     {
       id: "help-center";
       title: "Help & Resources";
@@ -117,8 +110,7 @@ export function FeaturesGuideSection() {
         "Join community forums to connect with other users";
         "Contact our support team for personalized assistance"];
       link: "/help";
-      buttonText: "View Resources",
-    }
+      buttonText: "View Resources"}
   ],
   return (
     <section className="py-20 bg-zion-blue-dark">,
@@ -192,6 +184,5 @@ export function FeaturesGuideSection() {
           </Button>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

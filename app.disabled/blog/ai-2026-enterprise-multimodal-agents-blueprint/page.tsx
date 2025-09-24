@@ -142,6 +142,5 @@ export default function EnterpriseMultimodalAgentsBlueprint20o26() {
           </div>,
         </article>,
       </div>,
-    </ErrorBoundary>),
-}
+    </ErrorBoundary>)}
 ,

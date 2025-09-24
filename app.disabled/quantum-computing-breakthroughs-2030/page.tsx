@@ -460,6 +460,5 @@ export default function QuantumComputingPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

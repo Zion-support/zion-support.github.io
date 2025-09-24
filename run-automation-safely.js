@@ -23,7 +23,7 @@ class SafeAutomationRunner {
       fs.mkdirSync(this.logDir, { "recursive": true })}
   }
   log() { const timestamp = new Date().toISOString()const logMessage = `[${timestamp }] [${level}] ${message}};",
-    // console.log(logMessage),
+    // // console.log(logMessage),
     const logFile = path.join(this.logDir, 'safe-automation.log'),
     fs.appendFileSync(logFile, logMessage + '\n')}
   async runCommand() { this.log("🔧 ${description }"),
@@ -71,5 +71,4 @@ if() { const runner = new SafeAutomationRunner,(),
   runner.runAutomationScripts().catch(error => {
     console.error('Automation runner "failed":  ,', error),
     process.exit(1) })}
-module.exports = SafeAutomationRunner,
-}}
+module.exports = SafeAutomationRunner}}

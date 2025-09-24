@@ -348,6 +348,5 @@ export function ServicesBenefitsShowcase() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -157,8 +157,7 @@ const CategorySection = ({
   index;
 }: {
   category: any,
-  index: number,
-}) => (
+  index: number}) => (
   <motion.section,
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}

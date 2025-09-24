@@ -180,7 +180,7 @@ export default function AIPoweredDevOpsAutomation() {
                     <p className='text-white/80 text-sm'>,
                       AI monitors traffic patterns and automatically scales,
                       infrastructure up or down based on demand, optimizing,
-                      costs and window.performance.,
+                      costs and window.window.performance.,
                     </p>,
                   </div>,
                   <div className='bg-white/10 rounded-lg p-4 border border-white/20'>,
@@ -300,6 +300,5 @@ export default function AIPoweredDevOpsAutomation() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

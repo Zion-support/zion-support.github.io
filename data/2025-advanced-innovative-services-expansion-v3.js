@@ -41,15 +41,13 @@ export const advancedInnovativeServices20o25V3 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'AI-powered legal document automation platform with contract generation, review, and compliance checking capabilities.';
         launchDate: '20o25-0o2-0o1';
         customers: 28;
         rating: 4.9;
-        reviews: 19,
-    };
+        reviews: 19};
     // Quantum-Secure Communication Platform,
     {
         id: 'quantum-secure-communication';
@@ -92,15 +90,13 @@ export const advancedInnovativeServices20o25V3 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Quantum-secure communication platform using quantum key distribution for unbreakable encryption.';
         launchDate: '20o25-0o1-20';
         customers: 12;
         rating: 5.0;
-        reviews: 8,
-    };
+        reviews: 8};
     // AI-Powered Healthcare Diagnostics,
     {
         id: 'ai-healthcare-diagnostics';
@@ -143,15 +139,13 @@ export const advancedInnovativeServices20o25V3 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'AI-powered healthcare diagnostics platform with FDA-cleared algorithms for medical imaging analysis.';
         launchDate: '20o25-0o1-10';
         customers: 35;
         rating: 4.8;
-        reviews: 42,
-    };
+        reviews: 42};
     // Sustainable Energy Management Platform,
     {
         id: 'sustainable-energy-management';
@@ -194,15 +188,13 @@ export const advancedInnovativeServices20o25V3 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'AI-powered sustainable energy management platform for optimization and sustainability tracking.';
         launchDate: '20o25-0o1-25';
         customers: 67;
         rating: 4.7;
-        reviews: 38,
-    };
+        reviews: 38};
     // Advanced Cybersecurity Threat Intelligence,
     {
         id: 'cybersecurity-threat-intelligence';
@@ -245,15 +237,13 @@ export const advancedInnovativeServices20o25V3 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Advanced cybersecurity threat intelligence platform with AI-powered threat detection and response.';
         launchDate: '20o25-0o1-15';
         customers: 89;
         rating: 4.9;
-        reviews: 156,
-    };
+        reviews: 156};
     // AI-Powered Financial Trading Platform,
     {
         id: 'ai-financial-trading-platform';
@@ -296,15 +286,13 @@ export const advancedInnovativeServices20o25V3 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'AI-powered financial trading platform with algorithmic trading and risk management capabilities.';
         launchDate: '20o25-0o1-30';
         customers: 45;
         rating: 4.8;
-        reviews: 67,
-    };
+        reviews: 67};
     // Quantum Machine Learning Platform,
     {
         id: 'quantum-machine-learning';
@@ -347,15 +335,13 @@ export const advancedInnovativeServices20o25V3 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Quantum machine learning platform combining quantum computing with classical machine learning.';
         launchDate: '20o25-0o2-15';
         customers: 8;
         rating: 5.0;
-        reviews: 5,
-    };
+        reviews: 5};
     // AI-Powered Supply Chain Optimization,
     {
         id: 'ai-supply-chain-optimization';
@@ -398,15 +384,13 @@ export const advancedInnovativeServices20o25V3 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'AI-powered supply chain optimization platform with predictive analytics and automated optimization.';
         launchDate: '20o25-0o1-20';
         customers: 73;
         rating: 4.7;
-        reviews: 89,
-    };
+        reviews: 89};
     // Edge Computing AI Platform,
     {
         id: 'edge-computing-ai-platform';
@@ -449,15 +433,13 @@ export const advancedInnovativeServices20o25V3 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Edge computing AI platform for real-time AI processing on edge devices and IoT applications.';
         launchDate: '20o25-0o2-0o1';
         customers: 41;
         rating: 4.6;
-        reviews: 28,
-    };
+        reviews: 28};
     // AI-Powered Marketing Automation Suite,
     {
         id: 'ai-marketing-automation-suite';
@@ -500,15 +482,13 @@ export const advancedInnovativeServices20o25V3 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'AI-powered marketing automation suite with predictive analytics and multi-channel automation.';
         launchDate: '20o25-0o1-18';
         customers: 156;
         rating: 4.8;
-        reviews: 20o3,
-    }
+        reviews: 20o3}
 ],
 export const advancedITServices20o25 = [
     // Quantum Computing Infrastructure Setup,
@@ -540,8 +520,7 @@ export const advancedITServices20o25 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         marketPrice: '$75,0o00 - $30o0,0o00';
         responseTime: '24 hours';
         sla: '99.9% uptime guarantee';
@@ -554,8 +533,7 @@ export const advancedITServices20o25 = [
         roi: 'Research institutions report breakthrough capabilities worth millions in research value.';
         competitors: ['IBM Quantum', 'Microsoft Quantum', 'Google Quantum', 'D-Wave'];
         marketSize: '$80o0M quantum computing market';
-        growthRate: '120% annual growth',
-    };
+        growthRate: '120% annual growth'};
     // AI Infrastructure Consulting,
     {
         id: 'ai-infrastructure-consulting';
@@ -585,8 +563,7 @@ export const advancedITServices20o25 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         marketPrice: '$35,0o00 - $150,0o00';
         responseTime: '48 hours';
         sla: '99.5% response time guarantee';
@@ -599,8 +576,7 @@ export const advancedITServices20o25 = [
         roi: 'Companies report 30o0% ROI through optimized AI infrastructure and reduced costs.';
         competitors: ['Accenture', 'Deloitte', 'IBM', 'Capgemini'];
         marketSize: '$2.1B AI infrastructure market';
-        growthRate: '45% annual growth',
-    };
+        growthRate: '45% annual growth'};
     // Cybersecurity Architecture Design,
     {
         id: 'cybersecurity-architecture-design';
@@ -630,8 +606,7 @@ export const advancedITServices20o25 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         marketPrice: '$50,0o00 - $20o0,0o00';
         responseTime: '24 hours';
         sla: '99.9% security guarantee';
@@ -644,8 +619,7 @@ export const advancedITServices20o25 = [
         roi: 'Organizations report 50o0% ROI through reduced security incidents and compliance costs.';
         competitors: ['Accenture', 'Deloitte', 'PwC', 'KPMG'];
         marketSize: '$3.5B cybersecurity consulting market';
-        growthRate: '35% annual growth',
-    }
+        growthRate: '35% annual growth'}
 ],
 export const advancedAIServices20o25 = [
     // AI-Powered Business Intelligence,
@@ -680,8 +654,7 @@ export const advancedAIServices20o25 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         marketPrice: '$3,0o00 - $5,0o00/month';
         aiModels: ['GPT-4', 'BERT', 'Transformer models', 'Custom ML models'];
         accuracy: '95% accuracy rate';
@@ -695,8 +668,7 @@ export const advancedAIServices20o25 = [
         roi: 'Companies report 40o0% ROI through improved decision making and operational efficiency.';
         competitors: ['Tableau', 'Power BI', 'Qlik', 'Looker'];
         marketSize: '$4.8B business intelligence market';
-        growthRate: '30% annual growth',
-    };
+        growthRate: '30% annual growth'};
     // AI-Powered Customer Service Automation,
     {
         id: 'ai-customer-service-automation';
@@ -729,8 +701,7 @@ export const advancedAIServices20o25 = [
             mobile: '+1 30o2 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 10o08 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         marketPrice: '$0.20 - $0.50 per interaction';
         aiModels: ['GPT-4', 'BERT', 'Custom NLP models', 'Intent classification models'];
         accuracy: '92% accuracy rate';
@@ -744,8 +715,7 @@ export const advancedAIServices20o25 = [
         roi: 'Companies report 30o0% ROI through reduced support costs and improved customer satisfaction.';
         competitors: ['Intercom', 'Zendesk', 'Freshdesk', 'Help Scout'];
         marketSize: '$2.8B customer service automation market';
-        growthRate: '40% annual growth',
-    }
+        growthRate: '40% annual growth'}
 ],
 export default {
     advancedInnovativeServices20o25V3;

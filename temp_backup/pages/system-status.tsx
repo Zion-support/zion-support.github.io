@@ -15,6 +15,5 @@ export default function SystemStatusPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

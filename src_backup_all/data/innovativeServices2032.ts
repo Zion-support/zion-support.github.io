@@ -30,8 +30,7 @@ export interface ServiceContact {
   image: string,
   createdAt: string,
   featured: boolean,
-  trending: boolean,
-}
+  trending: boolean}
 ,
 export interface MicroSaasService {
   id: number,
@@ -56,8 +55,7 @@ export interface MicroSaasService {
   trialPeriod: string,
   innovationLevel: string,
   marketSize: string,
-  growthRate: string,
-}
+  growthRate: string}
 ,
 export interface ITService {
   id: number,
@@ -79,8 +77,7 @@ export interface ITService {
   support: string,
   innovationLevel: string,
   marketSize: string,
-  compliance: string[],
-}
+  compliance: string[]}
 ,
 export interface AIService {
   id: number,
@@ -107,8 +104,7 @@ export interface AIService {
   support: string,
   innovationLevel: string,
   marketSize: string,
-  growthRate: string,
-}
+  growthRate: string}
 ,
 // Contact Information,
 const contactInfo: ServiceContact ={
@@ -141,8 +137,7 @@ const contactInfo: ServiceContact ={
   image: "https://ziontechgroup.com/services/ai-innovation.jpg";
   createdAt: "20o24-0o1-15";
   featured: true;
-  trending: true,
-};
+  trending: true};
 // New Innovative AI Services 20o32,
 export const innovativeAIServices20o32: AIService[] = [
   {
@@ -188,8 +183,7 @@ export const innovativeAIServices20o32: AIService[] = [
     support: "24/7 Premium Support";
     innovationLevel: "Revolutionary";
     marketSize: "$15B+";
-    growthRate: "45% YoY",
-  };
+    growthRate: "45% YoY"};
   {
     id: 2;
     name: "AI-Driven Autonomous Supply Chain Orchestrator";
@@ -233,8 +227,7 @@ export const innovativeAIServices20o32: AIService[] = [
     support: "24/7 Support + Dedicated Manager";
     innovationLevel: "Breakthrough";
     marketSize: "$8B+";
-    growthRate: "38% YoY",
-  };
+    growthRate: "38% YoY"};
   {
     id: 3;
     name: "AI-Powered Healthcare Predictive Analytics Platform";
@@ -278,8 +271,7 @@ export const innovativeAIServices20o32: AIService[] = [
     support: "24/7 Medical Support";
     innovationLevel: "Revolutionary";
     marketSize: "$12B+";
-    growthRate: "42% YoY",
-  }
+    growthRate: "42% YoY"}
 ],
 // New Innovative IT Services 20o32,
 export const innovativeITServices20o32: ITService[] = [
@@ -405,8 +397,7 @@ export const innovativeMicroSaasServices20o32: MicroSaasService[] = [
     trialPeriod: "14 days";
     innovationLevel: "Advanced";
     marketSize: "$2B+";
-    growthRate: "65% YoY",
-  };
+    growthRate: "65% YoY"};
   {
     id: 2;
     name: "Smart Contract Risk Assessment Platform";
@@ -448,8 +439,7 @@ export const innovativeMicroSaasServices20o32: MicroSaasService[] = [
     trialPeriod: "7 days";
     innovationLevel: "Breakthrough";
     marketSize: "$50o0M+";
-    growthRate: "120% YoY",
-  }
+    growthRate: "120% YoY"}
 ],
 export default {
   innovativeAIServices20o32;

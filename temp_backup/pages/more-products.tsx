@@ -15,6 +15,5 @@ export default function MoreProductsPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

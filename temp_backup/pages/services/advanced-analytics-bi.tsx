@@ -15,6 +15,5 @@ export default function AdvancedAnalyticsBiPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

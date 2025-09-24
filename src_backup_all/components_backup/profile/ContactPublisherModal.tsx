@@ -29,13 +29,11 @@ interface ContactPublisherModalProps {
   onClose: () => void,
   publisherName: string,
   publisherEmail?: string,
-  productId?: string,
-}
+  productId?: string}
 ,
 type FormValues = {
   subject: string,
-  message: string,
-};
+  message: string};
 const schema: yup.ObjectSchema<FormValues> = yup,
   .object({
     subject: yup,
@@ -86,8 +84,7 @@ export function ContactPublisherModal({
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       e.stopPropagation(),
-      onClose(),
-    }
+      onClose()}
   };
   return (
     <>,

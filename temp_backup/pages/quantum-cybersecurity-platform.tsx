@@ -28,6 +28,5 @@ export default function QuantumCybersecurityPlatformPage() {
           <li>Threat detection with quantum-safe telemetry</li>,
         </ul>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

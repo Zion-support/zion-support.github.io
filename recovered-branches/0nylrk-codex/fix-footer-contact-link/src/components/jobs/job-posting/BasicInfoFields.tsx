@@ -10,16 +10,14 @@ import { Input } from "@/components/ui/input",
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",
 import { CardContent } from "@/components/ui/card",
 interface BasicInfoFieldsProps {
-  control: Control<any>,
-}
+  control: Control<any>}
 ,
 export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => {
   const [minBudgetsetMinBudget] = useState<string>(""),
   const [maxBudgetsetMaxBudget] = useState<string>(""),
   const handleSuggestionApplied = (min: numbermax: number) => {
     setMinBudget(min.toString()),
-    setMaxBudget(max.toString()),
-  };
+    setMaxBudget(max.toString())};
   return (
     <div className="space-y-4">,
       <FormField

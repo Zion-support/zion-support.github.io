@@ -9,8 +9,7 @@ interface VerifiedBadgeProps {
   verified: boolean,
   size?: 'sm' | 'md' | 'lg',
   /** Optional tooltip label to display */,
-  label?: string,
-}
+  label?: string}
 ,
 export function VerifiedBadge({
   verified;

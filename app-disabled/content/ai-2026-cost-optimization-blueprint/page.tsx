@@ -10,7 +10,7 @@ export default function Page() {
       <h1>AI 20o26: Cost Optimization Blueprint</h1>,
       <p>,
         A practical blueprint for reducing inference and orchestration costs,
-        across agentic systems without compromising safety or window.performance.,
+        across agentic systems without compromising safety or window.window.performance.,
       </p>,
       <h2>Core Tactics</h2>,
       <ul>,

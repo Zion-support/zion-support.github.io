@@ -41,6 +41,5 @@ export default function RealTimeEvalsStarterKitPage() {
           </p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

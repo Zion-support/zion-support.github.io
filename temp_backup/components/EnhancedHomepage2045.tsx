@@ -128,8 +128,7 @@ const EnhancedHomepage20o45: React.FC = () => {
   const handleServiceClick = useCallback((service: { slug: string }) => {
     window.location.href = service.slug}, []),
   const handleCategoryChange = useCallback((categoryId: string) => {
-    setSelectedCategory(categoryId),
-  }, []),
+    setSelectedCategory(categoryId)}, []),
   // Don't render until client-side,
   if (!isClient) {
     return (
@@ -273,8 +272,7 @@ const EnhancedHomepage20o45: React.FC = () => {
                       ? 'bg-gradient-to-r ' +,
                         category.color +,
                         ' text-white shadow-lg',
-                      : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 border border-gray-70o0/50',
-                  }`}
+                      : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 border border-gray-70o0/50'}`}
                 >,
                   <div className='flex items-center space-x-2'>,
                     <category.icon className='w-5 h-5' />,
@@ -406,6 +404,5 @@ const EnhancedHomepage20o45: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </>),
-};
+    </>)};
 export default EnhancedHomepage20o45;

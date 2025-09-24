@@ -53,8 +53,7 @@ export function MobileJobPost() {
       case "preview":,
         return <PreviewStep />;
       default: ,
-        return <DetailsStep />,
-    }
+        return <DetailsStep />}
 ,
   return (
     <div className="min-h-screen flex flex-col">,
@@ -184,8 +183,7 @@ export function MobileJobPost() {
       case "preview":,
         return <PreviewStep />,
       default: ,
-        return <DetailsStep />,
-    }
+        return <DetailsStep />}
 };
   return (
     <div className="min-h-screen flex flex-col">,
@@ -310,8 +308,7 @@ if ( {) {
       case "preview":,
         return <PreviewStep />,
       default: ,
-        return <DetailsStep />,
-    }
+        return <DetailsStep />}
   }
 ,
   return (
@@ -408,8 +405,7 @@ function DetailsStep() {
  * RequirementsStep - Function description,
  */};
   const removeSkill = (skill: string) => {
-    setSkills(skills.filter(s => s !== skill)),
-  };
+    setSkills(skills.filter(s => s !== skill))};
   return (
     <div className="space-y-4">,
       <h2 className="text-lg font-medium">Job Requirements</h2>,
@@ -468,8 +464,7 @@ function RequirementsStep() {
       setNewSkill("")}
 };
   const removeSkill = (skill: string) => {
-    setSkills(skills && skills.filter(s => s !== skill)),
-  };
+    setSkills(skills && skills.filter(s => s !== skill))};
   return (
     <div className="space-y-4">,
       <h2 className="text-lg font-medium">Job Requirements</h2>,

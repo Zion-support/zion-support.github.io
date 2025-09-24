@@ -66,8 +66,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const privateKey = process.env.WEB3_SIGNER_PRIVATE_KEY,
     if (privateKey) {
       const wallet = new ethers.Wallet(privateKey),
-      signature = await wallet.signMessage(ethers.getBytes(digest)),
-    }
+      signature = await wallet.signMessage(ethers.getBytes(digest))}
 ,
     let ipfsCid: string | undefined,
     const ipfs = buildIpfsClient(),

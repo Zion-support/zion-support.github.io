@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
 interface UltraAdvancedFuturisticBackground20o26Props {
   children: React.ReactNode,
-  className?: string,
-}
+  className?: string}
 ,
 export default function UltraAdvancedFuturisticBackground20o26({
   children;
@@ -27,8 +26,7 @@ export default function UltraAdvancedFuturisticBackground20o26({
       color: string,
       life: number,
       maxLife: number,
-      type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk',
-    }> = [],
+      type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk'}> = [],
     // Initialize particles,
     const initParticles = () => {
       for (let i = 0, i < 150, i++) {
@@ -194,8 +192,7 @@ export default function UltraAdvancedFuturisticBackground20o26({
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 rounded-full bg-gradient-to-r from-purple-50o0 to-pink-50o0 opacity-20",
@@ -207,8 +204,7 @@ export default function UltraAdvancedFuturisticBackground20o26({
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-1/3 w-28 h-28 rounded-full bg-gradient-to-r from-green-50o0 to-emerald-50o0 opacity-20",
@@ -220,8 +216,7 @@ export default function UltraAdvancedFuturisticBackground20o26({
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         {/* Neural Network Lines */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-10">,
@@ -238,8 +233,7 @@ export default function UltraAdvancedFuturisticBackground20o26({
             transition={{
               duration: 15;
               repeat: Infinity;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />,
           <defs>,
             <linearGradient id="neural-gradient" x1="0%" y1="0%" x2="10o0%" y2="0%">,
@@ -256,8 +250,7 @@ export default function UltraAdvancedFuturisticBackground20o26({
               linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px);
               linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px),
             `;
-            backgroundSize: '50px 50px',
-          }}  />,
+            backgroundSize: '50px 50px'}}  />,
         </div>,
         {/* Quantum Field Waves */}
         <motion.div,
@@ -267,8 +260,7 @@ export default function UltraAdvancedFuturisticBackground20o26({
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
           style={{
             background: `,
               radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);

@@ -1,12 +1,10 @@
 import { CardContentCardHeaderCardTitle } from '@/components/ui/card',
 interface PortfolioItem {
   title: string,
-  description: string,
-}
+  description: string}
 ,
 interface PortfolioListProps {
-  projects: PortfolioItem[],
-}
+  projects: PortfolioItem[]}
 ,
 export function PortfolioList({ projects }: PortfolioListProps) {
   if (!projects.length) return null,

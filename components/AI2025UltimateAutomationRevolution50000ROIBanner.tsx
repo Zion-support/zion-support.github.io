@@ -15,10 +15,8 @@ const AI20o25UltimateAutomationRevolution50o000ROIBanner = () => {
         roi: '50,0o00%';
         savings: '$2.8B+';
         efficiency: '2,50o0%';
-        accuracy: '99.97%',
-      };
-      description: 'Transform your business with revolutionary AI automation that delivers unprecedented returns',
-    };
+        accuracy: '99.97%'};
+      description: 'Transform your business with revolutionary AI automation that delivers unprecedented returns'};
     {
       id: 'fortune-50o0-success-story';
       title: 'Fortune 50o0 AI Automation Success: $2.8B Annual Savings - 50,0o00% ROI';
@@ -28,10 +26,8 @@ const AI20o25UltimateAutomationRevolution50o000ROIBanner = () => {
         roi: '50,0o00%';
         savings: '$2.8B';
         timeline: '18 months';
-        accuracy: '99.97%',
-      };
-      description: 'How TechGlobal Industries achieved unprecedented ROI through comprehensive AI automation',
-    };
+        accuracy: '99.97%'};
+      description: 'How TechGlobal Industries achieved unprecedented ROI through comprehensive AI automation'};
     {
       id: 'implementation-ultimate-guide';
       title: 'AI Automation Implementation Ultimate Guide: Complete Roadmap to 50,0o00% ROI';
@@ -41,10 +37,8 @@ const AI20o25UltimateAutomationRevolution50o000ROIBanner = () => {
         roi: '50,0o00%';
         success: '94%';
         timeline: '12-18 months';
-        guide: 'Complete',
-      };
-      description: 'The definitive guide to achieving unprecedented returns through revolutionary AI automation',
-    }
+        guide: 'Complete'};
+      description: 'The definitive guide to achieving unprecedented returns through revolutionary AI automation'}
   ],
   useEffect(() => {
     const interval = setInterval(() => {

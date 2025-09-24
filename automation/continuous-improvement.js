@@ -12,7 +12,7 @@ class ContinuousImprovementSystem {
   log(message, type = 'info') {
     const timestamp = new Date().toISOString(),
     const prefix = type === 'error' ? '❌' : type === 'success' ? '✅' : 'ℹ️',
-    // console.log(`${prefix} [${timestamp}] ${message}`)}
+    // // console.log(`${prefix} [${timestamp}] ${message}`)}
 ,
   async runCommand(command, options ={}) {
     try {

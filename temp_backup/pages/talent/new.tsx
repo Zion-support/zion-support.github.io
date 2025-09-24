@@ -36,8 +36,7 @@ export default function NewTalentPage() {
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Generation failed'),
       setGenerated(data)} catch (err: any) {
-      setError(err.message),
-    } finally {
+      setError(err.message)} finally {
       setLoading(false)}
   };
   const onSave = async () => {
@@ -69,8 +68,7 @@ export default function NewTalentPage() {
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Save failed'),
       window.location.href = `/talent/${data.slug}`} catch (err: any) {
-      setError(err.message),
-    } finally {
+      setError(err.message)} finally {
       setSaving(false)}
   };
   return (

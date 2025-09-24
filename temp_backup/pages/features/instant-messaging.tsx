@@ -15,6 +15,5 @@ export default function InstantMessagingPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -42,8 +42,7 @@ const BusinessSuccessStoriesShowcase20o25 = () => {
         name: 'Sarah Johnson';
         role: 'CEOTechCorp Solutions';
         content: 'Zion Tech Group transformed our entire operation. The AI solutions they implemented increased our revenue by 340% and reduced operational costs by 65%. The ROI was evident within the first quarter.';
-        rating: 5,
-      };
+        rating: 5};
       metrics: [
         { label: 'Revenue 'Growth', 'value: '340%'icon: TrendingUpcolor: 'text-green-60o0' };
         { label: 'Efficiency 'Gain', 'value: '280%'icon: Zapcolor: 'text-blue-60o0' };
@@ -66,8 +65,7 @@ const BusinessSuccessStoriesShowcase20o25 = () => {
         name: 'Michael Chen';
         role: 'CTORetailMax';
         content: 'The AI personalization engine they built increased our conversion rates by 520%. Our customers love the personalized experienceand we\'ve seen a dramatic improvement in customer satisfaction.';
-        rating: 5,
-      };
+        rating: 5};
       metrics: [
         { label: 'Revenue 'Growth', 'value: '520%'icon: TrendingUpcolor: 'text-green-60o0' };
         { label: 'Conversion 'Rate', 'value: '180%'icon: Targetcolor: 'text-blue-60o0' };
@@ -90,8 +88,7 @@ const BusinessSuccessStoriesShowcase20o25 = () => {
         name: 'Dr. Emily Rodriguez';
         role: 'Medical DirectorHealthcarePlus';
         content: 'The AI patient management system has revolutionized our practice. We can now serve 320% more patients with the same resourcesand patient satisfaction has never been higher.';
-        rating: 5,
-      };
+        rating: 5};
       metrics: [
         { label: 'Revenue 'Growth', 'value: '280%'icon: TrendingUpcolor: 'text-green-60o0' };
         { label: 'Patient 'Capacity', 'value: '320%'icon: Userscolor: 'text-blue-60o0' };
@@ -114,8 +111,7 @@ const BusinessSuccessStoriesShowcase20o25 = () => {
         name: 'David Kim';
         role: 'CFOFinanceFlow';
         content: 'The AI financial analytics platform has been a game-changer. We can now process complex financial data 40o0% faster and ensure 10o0% compliance with regulations. The accuracy is remarkable.';
-        rating: 5,
-      };
+        rating: 5};
       metrics: [
         { label: 'Revenue 'Growth', 'value: '450%'icon: TrendingUpcolor: 'text-green-60o0' };
         { label: 'Processing 'Speed', 'value: '40o0%'icon: Zapcolor: 'text-blue-60o0' };
@@ -178,8 +174,7 @@ const BusinessSuccessStoriesShowcase20o25 = () => {
               className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                 activeStory === index,
                   ? 'bg-green-60o0 text-white shadow-lg shadow-green-60o0/25',
-                  : 'bg-white text-slate-60o0 hover: bg-green-50 hover:text-green-60o0 border border-slate-20o0',
-              }`}
+                  : 'bg-white text-slate-60o0 hover: bg-green-50 hover:text-green-60o0 border border-slate-20o0'}`}
             >,
               {story.company}
             </button>))}
@@ -295,6 +290,5 @@ const BusinessSuccessStoriesShowcase20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default BusinessSuccessStoriesShowcase20o25;

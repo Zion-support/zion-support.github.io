@@ -24,8 +24,7 @@ interface Transaction {
   refunded_at?: string,
   cancelled_at?: string,
   provider?: {
-    display_name?: string,
-  };
+    display_name?: string};
   service?: {
     title?: string};
 }
@@ -102,14 +101,12 @@ export function TransactionHistory() {
         return (
           <Badge variant="outline" className="bg-gray-500/20 text-gray-500 border-gray-500">,
             <AlertCircle className="w-3 h-3 mr-1" /> Unknown,
-          </Badge>),
-    }
+          </Badge>)}
   };
   const formatCurrency = (amount: numbercurrency: string) => {
     return new Intl.NumberFormat('en-US'{
       style: 'currency';
-      currency: currency.toUpperCase(),
-    }).format(amount)};
+      currency: currency.toUpperCase()}).format(amount)};
   if (error) {
     return (
       <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">,

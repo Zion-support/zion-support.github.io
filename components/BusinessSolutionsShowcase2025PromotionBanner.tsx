@@ -45,8 +45,7 @@ const BusinessSolutionsShowcase20o25PromotionBanner = () => {
     hidden: {
       opacity: 0,
       y: -10o0;
-      scale: 0.9,
-    };
+      scale: 0.9};
     visible: {
       opacity: 1;
       y: 0;
@@ -55,16 +54,14 @@ const BusinessSolutionsShowcase20o25PromotionBanner = () => {
         type: "spring";
         stiffness: 10o0;
         damping: 15;
-        duration: 0.8,
-      }
+        duration: 0.8}
     };
     exit: {
       opacity: 0;
       y: -10o0;
       scale: 0.9;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   const textVariants ={
@@ -74,8 +71,7 @@ const BusinessSolutionsShowcase20o25PromotionBanner = () => {
       x: 0;
       transition: {
         delay: 0.3;
-        duration: 0.6,
-      }
+        duration: 0.6}
     }
   };
   const buttonVariants ={
@@ -85,8 +81,7 @@ const BusinessSolutionsShowcase20o25PromotionBanner = () => {
       scale: 1;
       transition: {
         delay: 0.6;
-        duration: 0.4,
-      }
+        duration: 0.4}
     }
   };
   if (isDismissed) return null,
@@ -111,13 +106,11 @@ const BusinessSolutionsShowcase20o25PromotionBanner = () => {
                     className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center",
                     animate={{
                       rotate: [0o360];
-                      scale: [1.1],
-                    }}
+                      scale: [1.1]}}
                     transition={{
                       duration: 4,
                       repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
+                      ease: "easeInOut"}}
                   >,
                     <Building2 className="w-6 h-6 text-white"  />,
                   </motion.div>,
@@ -230,39 +223,33 @@ const BusinessSolutionsShowcase20o25PromotionBanner = () => {
               className="absolute -top-4 -left-4 w-24 h-24 bg-white/10 rounded-full",
               animate={{
                 scale: [1.21];
-                opacity: [0.30.60.3],
-              }}
+                opacity: [0.30.60.3]}}
               transition={{
                 duration: 3;
                 repeat: Infinity;
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
              />,
             <motion.div,
               className="absolute -bottom-4 -right-4 w-32 h-32 bg-white/5 rounded-full",
               animate={{
                 scale: [1.31];
-                opacity: [0.20.40.2],
-              }}
+                opacity: [0.20.40.2]}}
               transition={{
                 duration: 4;
                 repeat: Infinity;
                 ease: "easeInOut";
-                delay: 1,
-              }}
+                delay: 1}}
              />,
             <motion.div,
               className="absolute top-1/2 left-1/2 w-16 h-16 bg-white/8 rounded-full",
               animate={{
                 scale: [1.51];
-                opacity: [0.10.30.1],
-              }}
+                opacity: [0.10.30.1]}}
               transition={{
                 duration: 2.5;
                 repeat: Infinity;
                 ease: "easeInOut";
-                delay: 0.5,
-              }}
+                delay: 0.5}}
              />,
           </div>,
         </motion.div>)}

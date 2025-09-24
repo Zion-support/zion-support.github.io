@@ -109,5 +109,4 @@ export default function AI20o25UltimateBreakthroughShowcasePromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}

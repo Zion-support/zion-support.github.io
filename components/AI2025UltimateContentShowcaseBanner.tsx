@@ -204,6 +204,5 @@ export default function AI20o25UltimateContentShowcaseBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

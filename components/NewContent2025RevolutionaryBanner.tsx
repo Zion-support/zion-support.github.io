@@ -100,6 +100,5 @@ export default function NewContent20o25RevolutionaryBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

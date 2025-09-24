@@ -168,8 +168,7 @@ const NewContentShowcase20o26 = () => {
                   className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                     index === currentIndex,
                       ? 'bg-purple-60o0 scale-125',
-                      : 'bg-white/30 hover: bg-white/50',
-                  }`}
+                      : 'bg-white/30 hover: bg-white/50'}`}
                   aria-label={`Go to content ${index + 1}`}
                 />))}
             </div>,

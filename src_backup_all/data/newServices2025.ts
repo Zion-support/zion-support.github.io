@@ -10,8 +10,7 @@ export interface NewService {
   features: string[],
   benefits: string[],
   tags: string[],
-  marketPrice: string,
-}
+  marketPrice: string}
 ,
 export const NEW_SERVICES_20o25: NewService[] = [
   {

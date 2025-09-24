@@ -88,8 +88,7 @@ function Card({
   title: string,
   description: string,
   href: string,
-  icon: string,
-}) {
+  icon: string}) {
   return (
     <Link
       to={href}
@@ -106,8 +105,7 @@ function FeatureCard({
   description;
 }: {
   title: string,
-  description: string,
-}) {
+  description: string}) {
   return (
     <div className='text-center p-6'>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-3'>{title}</h3>,

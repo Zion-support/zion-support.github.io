@@ -9,8 +9,7 @@ interface AnalyticsData {
   change: number,
   trend: 'up' | 'down' | 'stable',
   period: string,
-  category: 'traffic' | 'conversion' | 'engagement' | 'revenue' | 'performance',
-}
+  category: 'traffic' | 'conversion' | 'engagement' | 'revenue' | 'performance'}
 ,
 interface UserSegment {
   id: string,
@@ -20,16 +19,14 @@ interface UserSegment {
   behavior: string,
   conversionRate: number,
   avgValue: number,
-  growth: number,
-}
+  growth: number}
 ,
 interface ConversionFunnel {
   stage: string,
   visitors: number,
   conversion: number,
   dropoff: number,
-  optimization: string,
-}
+  optimization: string}
 ,
 const AdvancedAnalyticsEngine: React.FC = () => {
   const [analyticsDatasetAnalyticsData] = useState<AnalyticsData[]>([]),
@@ -39,8 +36,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
   const [selectedMetricsetSelectedMetric] = useState('all'),
   const [isLoadingsetIsLoading] = useState(true),
   useEffect(() => {
-    generateMockData(),
-  }[selectedPeriod]),
+    generateMockData()}[selectedPeriod]),
   const generateMockData = async () => {
     setIsLoading(true),
     await new Promise(resolve => setTimeout(resolve1200)),
@@ -53,8 +49,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         change: 12.3;
         trend: 'up';
         period: selectedPeriod;
-        category: 'traffic',
-      };
+        category: 'traffic'};
       {
         id: 'unique-visitors';
         metric: 'Unique Visitors';
@@ -63,8 +58,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         change: 8.7;
         trend: 'up';
         period: selectedPeriod;
-        category: 'traffic',
-      };
+        category: 'traffic'};
       {
         id: 'conversion-rate';
         metric: 'Conversion Rate';
@@ -73,8 +67,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         change: -0.8;
         trend: 'down';
         period: selectedPeriod;
-        category: 'conversion',
-      };
+        category: 'conversion'};
       {
         id: 'avg-session-duration';
         metric: 'Avg Session Duration';
@@ -83,8 +76,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         change: 15.2;
         trend: 'up';
         period: selectedPeriod;
-        category: 'engagement',
-      };
+        category: 'engagement'};
       {
         id: 'bounce-rate';
         metric: 'Bounce Rate';
@@ -93,8 +85,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         change: -5.1;
         trend: 'down';
         period: selectedPeriod;
-        category: 'engagement',
-      };
+        category: 'engagement'};
       {
         id: 'revenue';
         metric: 'Revenue';
@@ -103,8 +94,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         change: 18.9;
         trend: 'up';
         period: selectedPeriod;
-        category: 'revenue',
-      };
+        category: 'revenue'};
       {
         id: 'page-load-time';
         metric: 'Page Load Time';
@@ -113,8 +103,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         change: -12.5;
         trend: 'down';
         period: selectedPeriod;
-        category: 'performance',
-      };
+        category: 'performance'};
       {
         id: 'mobile-traffic';
         metric: 'Mobile Traffic';
@@ -123,8 +112,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         change: 4.2;
         trend: 'up';
         period: selectedPeriod;
-        category: 'traffic',
-      }
+        category: 'traffic'}
     ],
     const mockSegments: UserSegment[] = [
       {
@@ -135,8 +123,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         behavior: 'High bounce rateshort sessions';
         conversionRate: 1.2;
         avgValue: 45;
-        growth: 12.3,
-      };
+        growth: 12.3};
       {
         id: 'returning-visitors';
         name: 'Returning Visitors';
@@ -145,8 +132,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         behavior: 'Longer sessionshigher engagement';
         conversionRate: 6.8;
         avgValue: 125;
-        growth: 8.9,
-      };
+        growth: 8.9};
       {
         id: 'mobile-users';
         name: 'Mobile Users';
@@ -155,8 +141,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         behavior: 'Quick browsingmobile-optimized';
         conversionRate: 2.1;
         avgValue: 78;
-        growth: 15.7,
-      };
+        growth: 15.7};
       {
         id: 'desktop-users';
         name: 'Desktop Users';
@@ -165,8 +150,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         behavior: 'Detailed browsinghigher conversions';
         conversionRate: 5.4;
         avgValue: 156;
-        growth: 4.2,
-      };
+        growth: 4.2};
       {
         id: 'high-value-users';
         name: 'High Value Users';
@@ -175,8 +159,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         behavior: 'Multiple purchasesbrand loyal';
         conversionRate: 18.5;
         avgValue: 445;
-        growth: 22.1,
-      }
+        growth: 22.1}
     ],
     const mockFunnel: ConversionFunnel[] = [
       {
@@ -184,36 +167,31 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         visitors: 100000;
         conversion: 100;
         dropoff: 0;
-        optimization: 'Improve headline and CTA placement',
-      };
+        optimization: 'Improve headline and CTA placement'};
       {
         stage: 'Product Browse';
         visitors: 45000;
         conversion: 45;
         dropoff: 55;
-        optimization: 'Enhance product filtering and search',
-      };
+        optimization: 'Enhance product filtering and search'};
       {
         stage: 'Add to Cart';
         visitors: 12500;
         conversion: 12.5;
         dropoff: 72.2;
-        optimization: 'Simplify checkout process',
-      };
+        optimization: 'Simplify checkout process'};
       {
         stage: 'Checkout Start';
         visitors: 8750;
         conversion: 8.75;
         dropoff: 30;
-        optimization: 'Reduce form fields and add guest checkout',
-      };
+        optimization: 'Reduce form fields and add guest checkout'};
       {
         stage: 'Purchase Complete';
         visitors: 5250;
         conversion: 5.25;
         dropoff: 40;
-        optimization: 'Add trust signals and payment options',
-      }
+        optimization: 'Add trust signals and payment options'}
     ],
     setAnalyticsData(mockAnalytics),
     setUserSegments(mockSegments),
@@ -226,21 +204,18 @@ const AdvancedAnalyticsEngine: React.FC = () => {
       case 'engagement': return 'bg-purple-100 text-purple-800',
       case 'revenue': return 'bg-yellow-100 text-yellow-800',
       case 'performance': return 'bg-red-100 text-red-800',
-      default: return 'bg-gray-100 text-gray-800',
-    }
+      default: return 'bg-gray-100 text-gray-800'}
   };
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return '📈',
       case 'down': return '📉',
       case 'stable': return '➡️',
-      default: return '➡️',
-    }
+      default: return '➡️'}
   };
   const getTrendColor = (trend: stringmetric: string) => {
     if (metric.includes('bounce') || metric.includes('load time')) {
-      return trend === 'down' ? 'text-green-600' : 'text-red-600',
-    }
+      return trend === 'down' ? 'text-green-600' : 'text-red-600'}
     return trend === 'up' ? 'text-green-600' : 'text-red-600'};
   const formatValue = (value: numberunit: string) => {
     if (unit === '$') {
@@ -440,6 +415,5 @@ const AdvancedAnalyticsEngine: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AdvancedAnalyticsEngine;

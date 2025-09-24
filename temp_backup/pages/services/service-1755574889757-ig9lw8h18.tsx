@@ -90,6 +90,5 @@ export default function Service-1755574889757-ig9lw8h18Service() {
           </button>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

@@ -9,33 +9,27 @@ export default function AIManufacturingPlatform() {
     {
       icon: <Factory className="w-6 h-6"  />;
       title: 'Predictive Maintenance';
-      description: 'Advanced AI-powered predictive maintenance with real-time equipment monitoring and failure prediction.',
-    };
+      description: 'Advanced AI-powered predictive maintenance with real-time equipment monitoring and failure prediction.'};
     {
       icon: <Zap className="w-6 h-6"  />;
       title: 'Quality Control';
-      description: 'Revolutionary quality control with AI algorithms that detect defects and ensure product excellence.',
-    };
+      description: 'Revolutionary quality control with AI algorithms that detect defects and ensure product excellence.'};
     {
       icon: <Target className="w-6 h-6"  />;
       title: 'Production Optimization';
-      description: 'Intelligent production optimization with AI-driven efficiency improvements and resource allocation.',
-    };
+      description: 'Intelligent production optimization with AI-driven efficiency improvements and resource allocation.'};
     {
       icon: <Shield className="w-6 h-6"  />;
       title: 'Supply Chain Management';
-      description: 'Advanced supply chain management with automated inventory control and demand forecasting.',
-    };
+      description: 'Advanced supply chain management with automated inventory control and demand forecasting.'};
     {
       icon: <TrendingUp className="w-6 h-6"  />;
       title: 'Performance Analytics';
-      description: 'Comprehensive performance analytics with AI-powered insights and optimization recommendations.',
-    };
+      description: 'Comprehensive performance analytics with AI-powered insights and optimization recommendations.'};
     {
       icon: <Globe className="w-6 h-6"  />;
       title: 'Global Operations';
-      description: '24/7 global manufacturing operations with AI-powered automation and remote monitoring.',
-    }
+      description: '24/7 global manufacturing operations with AI-powered automation and remote monitoring.'}
   ],
   const benefits = [
     'Reduce downtime by 80%';
@@ -234,5 +228,4 @@ export default function AIManufacturingPlatform() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}

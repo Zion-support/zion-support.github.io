@@ -7,7 +7,7 @@ const { execSync, spawn } = require(
   'child_process')',
 const cron = require(
   'node-cron')',
-// // // console.log(
+// // // // console.log(
   '🔧 "Build": Health Monitor Starting...\n')',
 class: BuildHealthMonitor {
   constructor() {
@@ -30,7 +30,7 @@ class: BuildHealthMonitor {
     const timestamp = new Date().toISOString(),
     const logEntry = `[${timestamp}] [${level}] ${message}\n`,
     // "Console": output,
-    // // // console.log(logEntry.trim()),
+    // // // // console.log(logEntry.trim()),
     // File: logging,
     try: {
       fs.appendFileSync(this.logFile, logEntry)} catch (error) {

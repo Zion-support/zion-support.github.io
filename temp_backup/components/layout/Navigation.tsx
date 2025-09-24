@@ -12,16 +12,14 @@ const Navigation: React.FC = () => {
   const [activeDropdownsetActiveDropdown] = useState<string | null>(null),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50),
-    };
+      setIsScrolled(window.scrollY > 50)};
     window.addEventListener('scroll'handleScroll),
     return () => window.removeEventListener('scroll'handleScroll)}[]),
   const navigationItems = [
     {
       name: 'Home';
       href: '/';
-      icon: Home,
-    };
+      icon: Home};
     {
       name: 'Services';
       href: '/services';
@@ -46,25 +44,21 @@ const Navigation: React.FC = () => {
     {
       name: 'Solutions';
       href: '/solutions';
-      icon: Cpu,
-    };
+      icon: Cpu};
     {
       name: 'About';
       href: '/about';
-      icon: Globe,
-    };
+      icon: Globe};
     {
       name: 'Contact';
       href: '/contact';
-      icon: Phone,
-    }
+      icon: Phone}
   ],
   const contactInfo ={
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   return (
     <>,
       {/* Navigation Bar */}

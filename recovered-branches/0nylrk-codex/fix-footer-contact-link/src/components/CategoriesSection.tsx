@@ -96,6 +96,5 @@ export function CategoriesSection({
           </Link>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

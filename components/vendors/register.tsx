@@ -32,8 +32,7 @@ export default function VendorRegisterPage() {
       if (!res.ok) throw new Error(data?.error || 'Failed to submit'),
       setMessage('Application submitted. Await approval.'),
       form.reset()} catch (err: any) {
-      setMessage(err.message),
-    } finally {
+      setMessage(err.message)} finally {
       setLoading(false)}
   }
 ,

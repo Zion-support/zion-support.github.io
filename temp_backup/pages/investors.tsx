@@ -18,6 +18,5 @@ export default function InvestorsPage() {
 				</div>,
 				<div className="pt-4 text-slate-30o0">Contact IR: <a className="text-cyan-40o0" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>,
 			</div>,
-		</div>),
-}
+		</div>)}
 ,

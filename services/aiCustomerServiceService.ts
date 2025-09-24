@@ -1,7 +1,6 @@
 
 export interface CustomerTicket {
 export interface CustomerTicket {
-,
   id: string,
   customerId: string,
   subject: string,
@@ -16,8 +15,7 @@ export interface CustomerTicket {
   customerSatisfaction?: number,
   tags: string[],
   attachments: string[];
-  conversation_history: CustomerMessage[],
-}
+  conversation_history: CustomerMessage[]}
 ,
   id: string,
   ticket_id: string,
@@ -28,8 +26,7 @@ export interface CustomerTicket {
   attachments?: string[],
   sentiment: 'positive' | 'neutral' | 'negative',
   intent: string;
-  confidence: number,
-}
+  confidence: number}
 ,
   id: string,
   email: string,
@@ -45,11 +42,9 @@ export interface CustomerTicket {
   preferences: {
     communication_channel: 'email' | 'chat' | 'phone',
     language: string;
-    timezone: string,
-  }
+    timezone: string}
 ,
-  tags: string[],
-}
+  tags: string[]}
 ,
   id: string,
   ticket_id: string,
@@ -58,8 +53,7 @@ export interface CustomerTicket {
   suggested_actions: string[],
   next_steps: string[],
   requiresHumanReview: boolean;
-  generated_at: Date,
-}
+  generated_at: Date}
 ,
   totalTickets: number,
   openTickets: number,
@@ -67,20 +61,17 @@ export interface CustomerTicket {
   averageResolutionTime: number,
     ticketsResolved: number,
     averageResolutionTime: number;
-    customerSatisfaction: number,
-  }>}
+    customerSatisfaction: number}>}
 ,
 export interface CustomerServiceRequest {
 export interface CustomerServiceRequest {
-,
   customerId: string,
   subject: string,
   description: string,
   priority: 'low' | 'medium' | 'high' | 'urgent',
   category: string,
   attachments?: string[];
-  preferred_channel?: 'email' | 'chat' | 'phone',
-}
+  preferred_channel?: 'email' | 'chat' | 'phone'}
 ,
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated',
   ai_response?: AIResponse,
@@ -92,9 +83,7 @@ export interface CustomerServiceRequest {
 ,
 export class AICustomerServiceService {
 export class AICustomerServiceService {
-,
-  private apiKey: string,
-  }
+  private apiKey: string}
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets`, {
@@ -284,8 +273,7 @@ export const aiCustomerServiceService = new AICustomerServiceService(process.env
   customerSatisfaction?: number;
   tags: string[];
   attachments: string[];
-  conversationHistory: CustomerMessage[],
-}
+  conversationHistory: CustomerMessage[]}
 ,
 export interface CustomerMessage {
   id: string;
@@ -297,8 +285,7 @@ export interface CustomerMessage {
   attachments?: string[];
   sentiment: 'positive' | 'neutral' | 'negative';
   intent: string;
-  confidence: number,
-}
+  confidence: number}
 ,
 export interface CustomerProfile {
   id: string;
@@ -315,10 +302,8 @@ export interface CustomerProfile {
   preferences: {
     communicationChannel: 'email' | 'chat' | 'phone';
     language: string;
-    timezone: string,
-  };
-  tags: string[],
-}
+    timezone: string};
+  tags: string[]}
 ,
 export interface AIResponse {
   id: string;
@@ -328,8 +313,7 @@ export interface AIResponse {
   suggestedActions: string[];
   nextSteps: string[];
   requiresHumanReview: boolean;
-  generatedAt: Date,
-}
+  generatedAt: Date}
 ,
 export interface CustomerServiceMetrics {
   totalTickets: number;
@@ -342,8 +326,7 @@ export interface CustomerServiceMetrics {
   agentPerformance: Record<string {
     ticketsResolved: number;
     averageResolutionTime: number;
-    customerSatisfaction: number,
-  }>}
+    customerSatisfaction: number}>}
 ,
 export interface CustomerServiceRequest {
   customerId: string;

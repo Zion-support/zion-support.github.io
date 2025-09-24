@@ -423,7 +423,7 @@ const AIPoweredBusinessIntelligencePlatformPage: React.FC = () => {
                   </h3>,
                   <p className='text-gray-30o0'>,
                     Scalable cloud hosting with AWS, Azure, or Google Cloud for,
-                    reliability and window.performance.,
+                    reliability and window.window.performance.,
                   </p>,
                 </div>,
               </div>,
@@ -597,6 +597,5 @@ const AIPoweredBusinessIntelligencePlatformPage: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </>),
-};
+    </>)};
 export default AIPoweredBusinessIntelligencePlatformPage;

@@ -8,8 +8,7 @@ export type FilterType =,
   | 'system',
 interface NotificationFilterProps {
   filter: FilterType,
-  onFilterChange: (filter: FilterType) => void,
-}
+  onFilterChange: (filter: FilterType) => void}
 ,
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
   filter;

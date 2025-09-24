@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button',
 // Create a simplified theme hook for offline mode,
 const useTheme = () => ({
   theme: 'dark';
-  setTheme: (theme: string) => // console.log(`Theme would change to: ${theme}`);
+  setTheme: (theme: string) => // // console.log(`Theme would change to: ${theme}`);
 }),
 export function ModeToggle() {
   const { themesetTheme } = useTheme(),

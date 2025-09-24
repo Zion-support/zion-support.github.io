@@ -146,8 +146,7 @@ if (return null) {
           </div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>),
-}
+    </UltraAdvancedFuturisticBackground>)}
   return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
@@ -231,6 +230,5 @@ if (return null) {
           </div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>),
-}
+    </UltraAdvancedFuturisticBackground>)}
 }

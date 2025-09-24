@@ -19,8 +19,7 @@ interface NavigationItem {
   href: string,
   icon?: React.ReactNode,
   description?: string,
-  children?: NavigationItem[],
-}
+  children?: NavigationItem[]}
 ,
 const navigationItems: NavigationItem[] = [
   {
@@ -92,8 +91,7 @@ export default function FuturisticNavigation() {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const handleDropdownToggle = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name),
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
   const closeMobileMenu = () => {
     setIsOpen(false),
     setActiveDropdown(null)};
@@ -143,8 +141,7 @@ export default function FuturisticNavigation() {
                     className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-20o0 ${
                       router.pathname === item.href,
                         ? 'text-white bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 border border-cyan-50o0/30',
-                        : 'text-gray-30o0 hover: text-white hover:bg-gray-80o0/50',
-                    }`}
+                        : 'text-gray-30o0 hover: text-white hover:bg-gray-80o0/50'}`}
                   >,
                     {item.icon}
                     <span>{item.name}</span>,
@@ -232,8 +229,7 @@ export default function FuturisticNavigation() {
                     className={`flex items-center space-x-2 px-4 py-3 rounded-lg transition-all duration-20o0 ${
                       router.pathname === item.href,
                         ? 'text-white bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 border border-cyan-50o0/30',
-                        : 'text-gray-30o0 hover: text-white hover:bg-gray-80o0/50',
-                    }`}
+                        : 'text-gray-30o0 hover: text-white hover:bg-gray-80o0/50'}`}
                   >,
                     {item.icon}
                     <span>{item.name}</span>,

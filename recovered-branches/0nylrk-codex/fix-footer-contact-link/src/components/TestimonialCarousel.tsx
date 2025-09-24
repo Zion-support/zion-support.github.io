@@ -100,6 +100,5 @@ export function TestimonialCarousel() {
           </Carousel>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

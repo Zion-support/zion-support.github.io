@@ -108,6 +108,5 @@ export default function ServiceDetailPage() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -35,8 +35,7 @@ interface AddMilestoneFormProps {
   projectScope?: string,
   projectStartDate?: string,
   projectEndDate?: string,
-  projectType?: string,
-}
+  projectType?: string}
 ,
 export function AddMilestoneForm({
   onSubmit;
@@ -57,8 +56,7 @@ export function AddMilestoneForm({
   }),
   const handleSubmit = (values: MilestoneFormValues) => {
     onSubmit(values),
-    form.reset(),
-  };
+    form.reset()};
   const handleAddMilestones = (milestones: GeneratedMilestone[]) => {
     // If there's only one milestone, submit it directly,
     if (milestones.length === 1) {

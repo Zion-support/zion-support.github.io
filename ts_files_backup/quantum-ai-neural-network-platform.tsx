@@ -23,8 +23,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
   const pricing = {
     starter: "$999/month";
     professional: "$1,999/month";
-    enterprise: "Custom pricing",
-  };
+    enterprise: "Custom pricing"};
   return (
     <div className="min-h-screen bg-black text-white">,
       <SEO
@@ -199,6 +198,5 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default QuantumAINeuralNetworkPlatform;

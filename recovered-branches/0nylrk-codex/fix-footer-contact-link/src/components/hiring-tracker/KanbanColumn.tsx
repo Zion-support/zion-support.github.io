@@ -8,8 +8,7 @@ interface KanbanColumnProps {
   title: string,
   description: string,
   applications: JobApplication[],
-  count: number,
-}
+  count: number}
 ,
 export function KanbanColumn({
   id;
@@ -32,8 +31,7 @@ export function KanbanColumn({
       case 'rejected':,
         return 'destructive',
       default:,
-        return 'outline',
-    }
+        return 'outline'}
   };
   const getColumnBgColor = (columnId: string) => {
     switch (columnId) {
@@ -42,8 +40,7 @@ export function KanbanColumn({
       case 'rejected':,
         return 'bg-red-50',
       default:,
-        return 'bg-muted/30',
-    }
+        return 'bg-muted/30'}
   };
   return (
     <Card

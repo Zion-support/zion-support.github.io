@@ -100,8 +100,7 @@ reviews: number,export const specializedAIServices: SpecializedAIService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete legal AI platform with contract analysis, risk assessment, and compliance checking capabilities.';
@@ -173,8 +172,7 @@ reviews: number,export const specializedAIServices: SpecializedAIService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete HR AI platform with recruitment automation, predictive analytics, and performance optimization.';
@@ -245,8 +243,7 @@ reviews: number,export const specializedAIServices: SpecializedAIService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete market research AI platform with real-time monitoring, competitive intelligence, and predictive analytics.';
@@ -318,8 +315,7 @@ reviews: number,export const specializedAIServices: SpecializedAIService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete sales AI platform with lead scoring, predictive analytics, and process automation capabilities.';
@@ -390,8 +386,7 @@ reviews: number,export const specializedAIServices: SpecializedAIService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete video AI platform with automated editing, content creation, and optimization capabilities.';
@@ -463,8 +458,7 @@ reviews: number,export const specializedAIServices: SpecializedAIService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete personalization AI platform with real-time optimization, A/B testing, and conversion optimization capabilities.';
@@ -536,8 +530,7 @@ reviews: number,export const specializedAIServices: SpecializedAIService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete customer service AI platform with chatbot automation, intelligent routing, and satisfaction optimization.';
@@ -609,8 +602,7 @@ reviews: number,export const specializedAIServices: SpecializedAIService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete analytics AI platform with predictive modeling, automated reporting, and intelligent insights.';
@@ -626,7 +618,7 @@ reviews: number,export const specializedAIServices: SpecializedAIService[] = [{
   Intelligent search engine optimization and content optimization';
     "price": $1,999;
     "period": '/month;
-    "description": 'Advanced AI-powered SEO platform that automatically optimizes content, improves search rankings, and provides intelligent recommendations for better search engine window.performance.';
+    "description": 'Advanced AI-powered SEO platform that automatically optimizes content, improves search rankings, and provides intelligent recommendations for better search engine window.window.performance.';
     features['AI content optimization';
   'Search ranking analysis';
   'Keyword research';
@@ -682,8 +674,7 @@ reviews: number,export const specializedAIServices: SpecializedAIService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete SEO AI platform with content optimization, search analysis, and performance tracking capabilities.';

@@ -4,8 +4,7 @@ interface UltraAdvancedFuturisticMatrixBackgroundProps {
   children: React.ReactNode,
   className?: string,
   intensity?: 'low' | 'medium' | 'high',
-  colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural',
-}
+  colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural'}
 ,
 const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticMatrixBackgroundProps> = ({
   children;
@@ -64,8 +63,7 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
       const columns = canvas.width / fontSize,
       const drops: number[] = [],
       for (let i = 0, i < columns, i++) {
-        drops[i] = 1,
-      }
+        drops[i] = 1}
 ,
       const draw = () => {
         ctx.fillStyle = 'rgba(0, 0, 0, 0.0o5)',
@@ -99,8 +97,7 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
         this.size = Math.random() * settings.size + 1,
         this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)],
         this.life = Math.random() * 10o0,
-        this.maxLife = 10o0,
-      }
+        this.maxLife = 10o0}
 ,
       update() {
         this.x += this.vx,
@@ -122,8 +119,7 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
 ,
     const particles: Particle[] = [],
     for (let i = 0, i < settings.particleCount, i++) {
-      particles.push(new Particle()),
-    }
+      particles.push(new Particle())}
 ,
     const animate = () => {
       ctx.fillStyle = colors.background,
@@ -197,8 +193,7 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
           transition={{
             duration: 4;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
       </div>,
       {/* Content */}
@@ -220,8 +215,7 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
               duration: 8 + i * 2;
               repeat: Infinity;
               ease: "easeInOut";
-              delay: i * 0.5,
-            }}
+              delay: i * 0.5}}
             style={{
               left: `${20 + i * 15}%`;
               top: `${30 + i * 10}%`}}
@@ -239,8 +233,7 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
       </div>,
     </div>)};

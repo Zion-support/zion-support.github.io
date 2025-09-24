@@ -112,8 +112,7 @@ reviews: number,export const revolutionary20o26HealthcareBiotechServices: Revolu
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete AI drug discovery platform with molecular analysis, drug prediction, and clinical trial optimization.';
@@ -195,8 +194,7 @@ reviews: number,export const revolutionary20o26HealthcareBiotechServices: Revolu
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete autonomous healthcare AI platform with self-learning capabilities, continuous improvement, and comprehensive healthcare support.';
@@ -279,8 +277,7 @@ reviews: number,export const revolutionary20o26HealthcareBiotechServices: Revolu
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete quantum machine learning platform with quantum AI integration, research acceleration, and breakthrough capabilities.';
@@ -363,8 +360,7 @@ reviews: number,export const revolutionary20o26HealthcareBiotechServices: Revolu
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete AI legal research platform with case analysis, outcome prediction, and comprehensive legal insights.';
@@ -446,8 +442,7 @@ reviews: number,export const revolutionary20o26HealthcareBiotechServices: Revolu
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete biotech AI research platform with genetic analysis, protein prediction, and personalized medicine capabilities.';

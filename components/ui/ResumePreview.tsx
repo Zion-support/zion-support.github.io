@@ -11,26 +11,22 @@ export type ResumeData = {
     start?: string,
     end?: string,
     location?: string,
-    bullets?: string[],
-  }>,
+    bullets?: string[]}>,
   education?: Array<{
     institution: string,
     degree?: string,
     start?: string,
-    end?: string,
-  }>,
+    end?: string}>,
   certifications?: string[],
   portfolio?: Array<{
     title: string,
     description?: string,
     link?: string,
-    technologies?: string[],
-  }>};
+    technologies?: string[]}>};
 export type ResumePreviewProps = {
   data: ResumeData,
   theme?: 'light' | 'dark',
-  maxPortfolioItems?: number,
-};
+  maxPortfolioItems?: number};
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <h2 className="text-lg font-semibold tracking-wide text-gray-800 dark: text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1">,
     {children}

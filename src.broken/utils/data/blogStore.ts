@@ -21,19 +21,16 @@ export function writePosts(posts: BlogPost[]): void {
   fs.writeFileSync(POSTS_PATH, JSON.stringify(posts, null, 2), 'utf8')}
 ,
 export function findPostBySlug(slug: string): BlogPost | undefined {
-  return readPosts().find(p => p.slug === slug),
-}
+  return readPosts().find(p => p.slug === slug)}
 ,
 export function findPostById(id: string): BlogPost | undefined {
-  return readPosts().find(p => p.id === id),
-}
+  return readPosts().find(p => p.id === id)}
 ,
 export function upsertPost(post: BlogPost): BlogPost {
   const posts = readPosts(),
   const idx = posts.findIndex(p => p.id === post.id),
   if (idx >= 0) {
-    posts[idx] = post,
-  } else {
+    posts[idx] = post} else {
     posts.unshift(post)}
   writePosts(posts),
   return post}
@@ -66,6 +63,5 @@ export function incrementMetric(
   if (idx < 0) return undefined,
   posts[idx].metrics[metric] += 1,
   writePosts(posts),
-  return posts[idx],
-}
+  return posts[idx]}
 ,

@@ -14,8 +14,7 @@ interface ListingScoreCardProps {
   aiScore?: number,
   rating?: number,
   reviewCount?: number,
-  className?: string,
-}
+  className?: string}
 ,
 export function ListingScoreCard({
   title,

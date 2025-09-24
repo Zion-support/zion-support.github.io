@@ -140,6 +140,5 @@ export default function NewContent20o26TrendsBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

@@ -40,15 +40,13 @@ const EnhancedNavigation: React.FC = () => {
       if (
         dropdownRef.current &&,
         !dropdownRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null),
-      }
+        setActiveDropdown(null)}
     };
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setActiveDropdown(null),
         setIsOpen(false),
-        setShowSearch(false),
-      }
+        setShowSearch(false)}
     };
     window.addEventListener('scroll', handleScroll),
     document.addEventListener('mousedown', handleClickOutside),
@@ -132,8 +130,7 @@ const EnhancedNavigation: React.FC = () => {
     };
   ],
   const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown),
-  };
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
   const closeAllDropdowns = () => {
     setActiveDropdown(null),
     setIsOpen(false),
@@ -145,7 +142,7 @@ const EnhancedNavigation: React.FC = () => {
     e.preventDefault(),
     if (searchQuery.trim()) {
       // Implement search functionality,
-      // console.log('Searching for:', searchQuery),
+      // // console.log('Searching for:', searchQuery),
       setSearchQuery(''),
       setShowSearch(false)}
   };

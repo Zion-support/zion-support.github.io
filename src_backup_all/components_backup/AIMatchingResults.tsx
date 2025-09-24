@@ -12,8 +12,7 @@ interface AIMatchingResultsProps {
   onSelectMatch?: (match: MatchResultItem) => void,
   isLoading?: boolean,
   projectDescription?: string,
-  serviceType?: string,
-}
+  serviceType?: string}
 ,
 export function AIMatchingResults({
   matches;
@@ -38,8 +37,7 @@ export function AIMatchingResults({
     const lowerCategory = category.toLowerCase(),
     if (lowerCategory.includes('talent')) return User,
     if (lowerCategory.includes('equipment')) return Monitor,
-    return BriefcaseIcon,
-  };
+    return BriefcaseIcon};
   if (isLoading) {
     return (
       <div className='space-y-4'>,

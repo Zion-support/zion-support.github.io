@@ -190,6 +190,5 @@ export default function AI20o25EnterpriseTransformationPage() {
           </Link>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

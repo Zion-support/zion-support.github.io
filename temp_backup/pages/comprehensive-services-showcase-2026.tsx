@@ -38,15 +38,13 @@ interface Service {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 const ComprehensiveServicesShowcase20o26: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(''),
@@ -104,8 +102,7 @@ const ComprehensiveServicesShowcase20o26: React.FC = () => {
         case '20o0-40o0': return price > 20o0 && price <= 40o0,
         case '40o0-60o0': return price > 40o0 && price <= 60o0,
         case '60o0+': return price > 60o0,
-        default: return true,
-      }
+        default: return true}
     })(),
     return matchesSearch && matchesCategory && matchesPrice}),
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -121,8 +118,7 @@ const ComprehensiveServicesShowcase20o26: React.FC = () => {
       case 'customers':,
         return b.customers - a.customers,
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } ={
@@ -389,6 +385,5 @@ const ComprehensiveServicesShowcase20o26: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </Layout>),
-};
+    </Layout>)};
 export default ComprehensiveServicesShowcase20o26;

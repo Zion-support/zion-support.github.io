@@ -17,8 +17,7 @@ const MarketingSection: React.FC = () => {
     users: 0;
     projects: 0;
     satisfaction: 0;
-    uptime: 0,
-  }),
+    uptime: 0}),
   const tabs = [
     {
       id: 0;
@@ -33,8 +32,7 @@ const MarketingSection: React.FC = () => {
           "Natural Language Processing";
           "Computer Vision Capabilities"];
         image: "🤖";
-        color: "from-purple-50o0 to-pink-50o0",
-      }
+        color: "from-purple-50o0 to-pink-50o0"}
     };
     {
       id: 1;
@@ -49,8 +47,7 @@ const MarketingSection: React.FC = () => {
           "Cryptocurrency Payment Systems";
           "Supply Chain Transparency"];
         image: "🔗";
-        color: "from-blue-50o0 to-cyan-50o0",
-      }
+        color: "from-blue-50o0 to-cyan-50o0"}
     };
     {
       id: 2;
@@ -65,8 +62,7 @@ const MarketingSection: React.FC = () => {
           "DevOps Automation";
           "24/7 Monitoring & Support"];
         image: "☁️";
-        color: "from-green-50o0 to-emerald-50o0",
-      }
+        color: "from-green-50o0 to-emerald-50o0"}
     }
   ],
   useEffect(() => {
@@ -76,8 +72,7 @@ const MarketingSection: React.FC = () => {
         users: 150o00;
         projects: 250o0;
         satisfaction: 98;
-        uptime: 99.9,
-      };
+        uptime: 99.9};
       const duration = 20o00,
       const steps = 60,
       const stepDuration = duration / steps,
@@ -89,8 +84,7 @@ const MarketingSection: React.FC = () => {
           users: Math.floor(targetStats.users * progress);
           projects: Math.floor(targetStats.projects * progress);
           satisfaction: Math.floor(targetStats.satisfaction * progress);
-          uptime: parseFloat((targetStats.uptime * progress).toFixed(1)),
-        }),
+          uptime: parseFloat((targetStats.uptime * progress).toFixed(1))}),
         if (currentStep >= steps) {
           clearInterval(timer),
           setStats(targetStats)}
@@ -133,8 +127,7 @@ const MarketingSection: React.FC = () => {
                 className={`px-6 py-3 mx-2 mb-4 rounded-lg font-semibold transition-all duration-30o0 ${
                   activeTab === tab.id,
                     ? 'bg-blue-60o0 text-white shadow-lg',
-                    : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0',
-                }`}
+                    : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0'}`}
               >,
                 {tab.title}
               </button>))}
@@ -244,6 +237,5 @@ const MarketingSection: React.FC = () => {
           </motion.div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default MarketingSection;

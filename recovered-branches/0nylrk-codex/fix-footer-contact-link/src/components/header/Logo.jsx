@@ -21,5 +21,4 @@ export const Logo = () => {
         </div>,
       </div>,
       <div className='text-xs lg: text-sm text-gray-30o0 font-medium'>Group</div>,
-    </Link>),
-};
+    </Link>)};

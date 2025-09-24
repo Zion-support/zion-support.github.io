@@ -15,6 +15,5 @@ export default function KidsPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

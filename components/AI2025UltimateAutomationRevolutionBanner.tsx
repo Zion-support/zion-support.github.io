@@ -10,8 +10,7 @@ interface ContentItem {
   metrics: {
     roi: string,
     savings: string,
-    efficiency: string,
-  };
+    efficiency: string};
 }
 ,
 const AI20o25UltimateAutomationRevolutionBanner: React.FC = () => {
@@ -36,8 +35,7 @@ const AI20o25UltimateAutomationRevolutionBanner: React.FC = () => {
       metrics: {
         roi: '25,0o00%';
         savings: '$50o0B';
-        efficiency: '99%',
-      }
+        efficiency: '99%'}
     };
     {
       id: 'implementation-guide';

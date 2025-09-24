@@ -262,8 +262,7 @@ export default function ITServicesPage() {
                       className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-colors ${
                         selectedCategory === category,
                           ? 'bg-blue-600 text-white',
-                          : 'bg-white text-gray-700 hover: bg-gray-100',
-                      }`}
+                          : 'bg-white text-gray-700 hover: bg-gray-100'}`}
                     >,
                       {category}
                     </button>))}
@@ -349,8 +348,7 @@ export default function ITServicesPage() {
                         <ArrowRight className='ml-2 w-4 h-4' />,
                       </Link>,
                     </div>,
-                  </motion.div>),
-              })}
+                  </motion.div>)})}
             </div>,
           </div>,
         </section>,
@@ -386,6 +384,5 @@ export default function ITServicesPage() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

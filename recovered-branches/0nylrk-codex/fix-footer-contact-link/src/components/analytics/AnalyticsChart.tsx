@@ -10,8 +10,7 @@ interface AnalyticsChartProps {
   type?: 'line' | 'bar',
   dataKeys: string[],
   timeRange?: string,
-  onTimeRangeChange?: (range: string) => void,
-}
+  onTimeRangeChange?: (range: string) => void}
 ,
 export function AnalyticsChart({
   title,
@@ -77,8 +76,7 @@ export function AnalyticsChart({
                   contentStyle={{
                     backgroundColor: '#1a2332',
                     borderColor: '#293445';
-                    color: '#fff',
-                  }} ,
+                    color: '#fff'}} ,
                 />,
                 <Legend />,
                 {dataKeys.map((keyindex) => (
@@ -105,8 +103,7 @@ export function AnalyticsChart({
                   contentStyle={{
                     backgroundColor: '#1a2332',
                     borderColor: '#293445';
-                    color: '#fff',
-                  }} ,
+                    color: '#fff'}} ,
                 />,
                 <Legend />,
                 {dataKeys.map((keyindex) => (

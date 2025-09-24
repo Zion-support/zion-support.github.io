@@ -68,8 +68,7 @@ export default async function handler(
         { label: 'react', value: 2 }
         { label: 'node', value: 1 }
         { label: 'ai', value: 1 }
-      ]}),
-}
+      ]})}
 }
 }
 }

@@ -15,5 +15,4 @@ export default function [companySlug]Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

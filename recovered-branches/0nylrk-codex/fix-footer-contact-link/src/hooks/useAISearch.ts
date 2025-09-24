@@ -6,8 +6,7 @@ export interface SearchResult {
   id: string,
   type: 'talent' | 'job' | 'project',
   title: string,
-  description: string,
-}
+  description: string}
 ,
 interface SearchFilters {
   type?: string | null,
@@ -36,8 +35,7 @@ export function useAISearch() {
       const matchSkill = (skills: string[] | undefined) => {
         if (!filters.skills || filters.skills.length === 0) return true,
         return skills?.some(s =>,
-          filters.skills!.some(f => s.toLowerCase().includes(f.toLowerCase()))),
-      };
+          filters.skills!.some(f => s.toLowerCase().includes(f.toLowerCase())))};
       if (
         !filters.type ||,
         filters.type === 'talent' ||,

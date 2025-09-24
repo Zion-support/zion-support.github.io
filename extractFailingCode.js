@@ -4,8 +4,7 @@ const fs = require('fs'),
 // Check if the file path is provided,
 if (process.argv.length < 3) {
   console.error('Usage: node extractFailingCode.js <path_to_eslint_report.json>),
-  process.exit(1),
-}
+  process.exit(1)}
 const reportPath = process.argv[2],
 try {
   const reportContent = fs.readFileSync(reportPath, 'utf8'),
@@ -20,8 +19,7 @@ try {
 // ${firstErrorMessage};
 function bug() {
   // Placeholder for the actual failing code snippet,
-  console.warn("This is a placeholder for the failing code."),"}`),
-} catch (error) {
+  console.warn("This is a placeholder for the failing code."),"}`)} catch (error) {
   console.error(`Error processing ESLint report: ${error.message}`),
   process.exit(1)}
 ,

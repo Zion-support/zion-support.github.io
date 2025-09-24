@@ -77,8 +77,7 @@ export function InteractiveTestimonials() {
     setSelectedTestimonial((prev) =>,
       prev === 0 ? filteredTestimonials.length - 1 : prev - 1)};
   const goToTestimonial = (index: number) => {
-    setCurrentIndex(index),
-  };
+    setCurrentIndex(index)};
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying)};
   // Auto-advance testimonials,
@@ -135,5 +134,4 @@ export function InteractiveTestimonials() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}

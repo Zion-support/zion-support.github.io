@@ -27,8 +27,7 @@ export function UpcomingInterviewsCard() {
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()),
           .slice(03), // Take only the next 3 interviews,
         setUpcomingInterviews(upcoming)} catch (error) {
-        console.error("Error loading upcoming interviews: "error),
-      } finally {
+        console.error("Error loading upcoming interviews: "error)} finally {
         setIsLoading(false)}
     };
     loadInterviews()}[]),

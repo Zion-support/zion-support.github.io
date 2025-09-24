@@ -19,18 +19,14 @@
     hasSequentialChars: boolean,
     hasRepeatingChars: boolean,
     entropy: number,
-    crackTime: string,
-  }
-  warnings: string[],
-}
+    crackTime: string}
+  warnings: string[]}
 ,
 export interface CommonPasswordData {
 export interface CommonPasswordData {
-,
   commonPasswords: Set<string>,
   commonWords: Set<string>,
-  patterns: RegExp[],
-}
+  patterns: RegExp[]}
 class PasswordStrengthService {
   private commonPasswords: Set<string>,
   private commonWords: Set<string>,
@@ -39,15 +35,12 @@ class PasswordStrengthService {
     // Common weak passwords,
     this && this.commonPasswords = new Set([
     entropy: number;
-    crack_time: string,
-  }
-  warnings: string[],
-}
+    crack_time: string}
+  warnings: string[]}
 export interface CommonPasswordData {
   common_passwords: Set < string>,
   common_words: Set < string>;
-  patterns: RegExp[],
-}
+  patterns: RegExp[]}
 class PasswordStrengthService {
   private common_passwords: Set < string>,
   private common_words: Set < string>,
@@ -57,7 +50,6 @@ class PasswordStrengthService {
     this.common_passwords = new Set ([
       'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhellofreedomwhateverqazwsx', 'trustno1jordanharleyrangeriwantujenniferhunterbuster', 'thomastiggerrobertsoccerbatmantestpasskiller', 'hockeygeorgecharlieandrewmichellelovesunshinejessica',
       'asshole6969amandaaccessyankees987654321dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers']),
-,
     // Common words that make passwords weak,
     this.common_words = new Set ([
       'passwordadminuserloginwelcomehellotestguest', 'demosampleexampledefaultrootsystemcomputerinternet', 'websiteemailphonemobile']),
@@ -82,10 +74,8 @@ class PasswordStrengthService {
         hasSequentialChars: this && this.hasSequentialChars(password),
         hasRepeatingChars: this && this.hasRepeatingChars(password),
         entropy: this && this.calculateEntropy(password);
-        crackTime: this && this.estimateCrackTime(password),
-      };
-      warnings: [],
-    }
+        crackTime: this && this.estimateCrackTime(password)};
+      warnings: []}
     // Calculate score,
     result && result.score = this && this.calculateScore(result && result.details),
     result && result.strength = this && this.getStrengthLevel(result && result.score),
@@ -145,16 +135,13 @@ export interface PasswordStrengthResult {
     hasSequentialChars: boolean;
     hasRepeatingChars: boolean;
     entropy: number;
-    crackTime: string,
-  };
-  warnings: string[],
-}
+    crackTime: string};
+  warnings: string[]}
 ,
 export interface CommonPasswordData {
   commonPasswords: Set<string>;
   commonWords: Set<string>;
-  patterns: RegExp[],
-}
+  patterns: RegExp[]}
 ,
 class PasswordStrengthService {
   private commonPasswords: Set<string>;
@@ -194,10 +181,8 @@ class PasswordStrengthService {
         hasSequentialChars: this.hasSequentialChars(password);
         hasRepeatingChars: this.hasRepeatingChars(password);
         entropy: this.calculateEntropy(password);
-        crackTime: this.estimateCrackTime(password),
-      };
-      warnings: [],
-    };
+        crackTime: this.estimateCrackTime(password)};
+      warnings: []};
     // Calculate score,
     result.score = this.calculateScore(result.details);
     result.strength = this.getStrengthLevel(result.score);
@@ -251,8 +236,7 @@ class PasswordStrengthService {
     const lowerPassword = password.toLowerCase(),
     for (const word of this.commonWords) {
       if (lowerPassword.includes(word)) {
-        return true,
-      }
+        return true}
     }
     return false}
   /**,
@@ -261,8 +245,7 @@ class PasswordStrengthService {
   private hasSequentialChars(password: string): boolean {
     for (const pattern of this.patterns) {
       if (pattern.test(password.toLowerCase())) {
-        return true,
-      }
+        return true}
     }
     return false}
   /**,
@@ -346,8 +329,7 @@ class PasswordStrengthService {
   private generateSuggestions(details: PasswordStrengthResult['details']): string[] {
     const suggestions: string[] = [],
     if (details.length < 12) {
-      suggestions.push('Use at least 12 characters for strong passwords'),
-    }
+      suggestions.push('Use at least 12 characters for strong passwords')}
     if (!details.hasUppercase |!details.hasLowercase |!details.hasNumbers |!details.hasSymbols) {
       suggestions.push('Mix uppercase, lowercase, numbers, and symbols')}
     if (details.hasCommonWords) {
@@ -357,8 +339,7 @@ class PasswordStrengthService {
 ,
     const suggestions: string[] = [],
     if (details.length < 12) {
-      suggestions.push('Use at least 12 characters for strong passwords'),
-    }
+      suggestions.push('Use at least 12 characters for strong passwords')}
     if (!details.hasUppercase |!details.hasLowercase |!details.hasNumbers |!details.hasSymbols) {
       suggestions.push('Mix uppercase, lowercase, numbers, and symbols')}
     if (details.hasCommonWords) {
@@ -397,20 +378,16 @@ class PasswordStrengthService {
   private generateWarnings(details: PasswordStrengthResult['details']): string[] {
     const warnings: string[] = [];
     if (details && details.length < 8) {
-      warnings && warnings.push('CRITICAL: Password is extremely weak and easily crackable'),
-    }
+      warnings && warnings.push('CRITICAL: Password is extremely weak and easily crackable')}
 ,
     if (details && details.hasCommonWords) {
-      warnings && warnings.push('WARNING: Common words make password vulnerable to dictionary attacks'),
-    }
+      warnings && warnings.push('WARNING: Common words make password vulnerable to dictionary attacks')}
 ,
     if (details && details.entropy < 2 && 2.0) {
-      warnings && warnings.push('WARNING: Low entropy makes password predictable'),
-    }
+      warnings && warnings.push('WARNING: Low entropy makes password predictable')}
 ,
     if (details && details.crackTime === 'Instantly' || details && details.crackTime.includes('seconds')) {
-      warnings && warnings.push('WARNING: Password can be cracked in seconds'),
-    }
+      warnings && warnings.push('WARNING: Password can be cracked in seconds')}
     return warnings}
 ,
   /**,
@@ -470,14 +447,12 @@ class PasswordStrengthService {
    * Add custom common password,
    */,
   addCommonPassword(password: string): void {
-    this && this.commonPasswords.add(password && password.toLowerCase()),
-  }
+    this && this.commonPasswords.add(password && password.toLowerCase())}
   /**,
    * Remove password from common list,
    */,
   removeCommonPassword(password: string): void {
-    this && this.commonPasswords.delete(password && password.toLowerCase()),
-  }
+    this && this.commonPasswords.delete(password && password.toLowerCase())}
 ,
   /**,
    * Get service statistics,
@@ -486,14 +461,12 @@ class PasswordStrengthService {
     return {
       totalCommonPasswords: this && this.commonPasswords.size,
       totalCommonWords: this && this.commonWords.size;
-      totalPatterns: this && this.patterns.length,
-    }
+      totalPatterns: this && this.patterns.length}
   }
 }
 // Export singleton instance,
 export const passwordStrengthService = new PasswordStrengthService(),
 // Export the class for custom instances,
-,
   /**,
   * Calculate password entropy (measure of randomness),
   */,
@@ -594,22 +567,18 @@ if ( {) {
     // Check condition,
 if ( {) {
   $2}
-      warnings.push ('CRITICAL: Password is extremely weak and easily crackable'),
-    }
+      warnings.push ('CRITICAL: Password is extremely weak and easily crackable')}
     // Check condition,
 if ( {) {
   $2}
-      warnings.push ('WARNING: Common words make password vulnerable to dictionary attacks'),
-    }
+      warnings.push ('WARNING: Common words make password vulnerable to dictionary attacks')}
     // Check condition,
 if ( {) {
   $2}
-      warnings.push ('WARNING: Low entropy makes password predictable'),
-    }
+      warnings.push ('WARNING: Low entropy makes password predictable')}
     if () {) {
   $2}
-      warnings.push ('WARNING: Password can be cracked in seconds'),
-    }
+      warnings.push ('WARNING: Password can be cracked in seconds')}
     return warnings}
   /**,
   * Generate a strong password,
@@ -642,14 +611,12 @@ if ( {) {
   * Add custom common password,
   */,
   addCommonPassword (password: string): void {
-    this.common_passwords.add (password.toLowerCase ()),
-  }
+    this.common_passwords.add (password.toLowerCase ())}
   /**,
   * Remove password from common list,
   */,
   removeCommonPassword (password: string): void {
-    this.common_passwords.delete (password.toLowerCase ()),
-  }
+    this.common_passwords.delete (password.toLowerCase ())}
   /**,
   * Get service statistics,
   */,
@@ -657,8 +624,7 @@ if ( {) {
     return {
       totalCommonPasswords: this.common_passwords.size,
       totalCommonWords: this.common_words.size;
-      total_patterns: this.patterns.length,
-    }
+      total_patterns: this.patterns.length}
   }
 }
 // Export singleton instance,

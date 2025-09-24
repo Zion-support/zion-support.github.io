@@ -599,6 +599,5 @@ export default function CaseStudy() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

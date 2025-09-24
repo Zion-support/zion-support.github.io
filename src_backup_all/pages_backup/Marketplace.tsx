@@ -82,8 +82,7 @@ export default function Marketplace() {
                 </Badge>)}
 ,
                   stock: product.stock;
-                  in_stock: (product.stock || 0) > 0,
-                }}
+                  in_stock: (product.stock || 0) > 0}}
                 onBuy={async () => {
                   if (!isAuthenticated) {
                     setIsAuthModalOpen(true);
@@ -213,10 +212,8 @@ export default function Marketplace() {
     </div>)}//Navigate to admin products page router.push ('/admin/products') }, [isAuthenticated, user, router, toast]),
 //Fetch function for infinite scroll with AI product generation try {//Use static marketplace listings data for now (compatible with ProductListing type) const params ={
   page,  limit, ... (filterCategory && {
-  category: filterCategory ,
-}),
-sort: sort_by ,
-}',
+  category: filterCategory }),
+sort: sort_by }',
 //Use static data that's already of type ProductListing[] let items: ProductListing[] = [...MARKETPLACE LISTINGS],
 //Apply category filter from params return (price >= priceRange[0] && price <= priceRange[1] && ai >= minAiScore && rating >= minRating && (!filterLocation || location && location.includes (filterLocation && filterLocation.toLowerCase () ) ) && (!filterAvailability || availability === filterAvailability && filterAvailability.toLowerCase () ) items && items.sort ( (a, b) => {
   switch (sortBy) {',
@@ -226,30 +223,24 @@ case 'rating': return (b && b.rating || 0) - (a && a.rating || 0),',
 case 'popular': return (b && b.reviewCount || 0) - (a && a.reviewCount || 0),',
 case 'ai-score': return (b && b.aiScore || 0) - (a && a.aiScore || 0),',
 case 'newest': }else {handleApiError (err), //This might show a toast or log to Sentry }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, handleApiError, toast]),
-//useInfiniteScrollPagination hook ,
-}, [products, loading, scrollToTop, toast]), //Depends on products and loading state //Calculate market stats <motion&& motion.div initial={
+//useInfiniteScrollPagination hook }, [products, loading, scrollToTop, toast]), //Depends on products and loading state //Calculate market stats <motion&& motion.div initial={
   {
-  opacity: 0, y: 20,
-}animate={
+  opacity: 0, y: 20}animate={
   {
-  opacity: 1, y: 0,
-}"}className="text-center mb-8"> <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 bg-clip-text text-transparent"> {',
+  opacity: 1, y: 0}"}className="text-center mb-8"> <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 bg-clip-text text-transparent"> {',
   t ('marketplace && marketplace.hero title') "}</h1> <p className="text-muted-foreground text-lg"> {',
   t ('marketplace && marketplace.hero subtitle') "}</p> </motion && motion.div> <div className="grid grid-cols-1 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {
   Array && Array.from ({
-  length: 12 ,
-}) .map ( ( i) => (<SkeletonCardkey={
+  length: 12 }) .map ( ( i) => (<SkeletonCardkey={
   i} />) ) }</div> </div>) }//Error state with retry if (error && products && products.length === 0) {",
   return (<div className="container py-8"> <div className="text-center space-y-4"> <ErrorStateerror={
   error} /> <ButtononClick={
   refresh}> Try Again </Button> </div> </div>) }//Empty state (only show when not loading and no products) if (!loading && products && products.length === 0 && !error) {",
   return (<div className="container py-8"> <motion&& motion.div initial={
   {
-  opacity: 0, y: 20,
-}animate={
+  opacity: 0, y: 20}animate={
   {
-  opacity: 1, y: 0,
-}"}className="text-center mb-8"> <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 bg-clip-text text-transparent"> {',
+  opacity: 1, y: 0}"}className="text-center mb-8"> <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 bg-clip-text text-transparent"> {',
   t ('marketplace && marketplace.hero title') "}</h1> <p className="text-muted-foreground text-lg"> {',
   t ('marketplace && marketplace.hero subtitle') }</p> </motion && motion.div> <ProductsEmptyState  /> </div>) "}//Main marketplace render return (<div className="container py-8"> <AuthModalisOpen={
   isAuthModalOpen}onClose={
@@ -257,36 +248,27 @@ case 'newest': }else {handleApiError (err), //This might show a toast or log to 
   router && router.asPath }//Pass current path for better UX on return /> {
   /* Header */ "}<motion&& motion.div className="text-center mb-8"initial={
   {
-  opacity: 0, y: -20,
-}animate={
+  opacity: 0, y: -20}animate={
   {
-  opacity: 1, y: 0,
-}"}> <h1 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 bg-clip-text text-transparent"> {',
-  t ('marketplace && marketplace.hero title') ",
-}</h1> <p className="text-muted-foreground text-lg"> {',
+  opacity: 1, y: 0}"}> <h1 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 bg-clip-text text-transparent"> {',
+  t ('marketplace && marketplace.hero title') "}</h1> <p className="text-muted-foreground text-lg"> {',
   t ('marketplace && marketplace.hero subtitle') }</p> </motion && motion.div> {
   /* Market Insights */ }{
   marketStats && (<motion&& motion.div initial={
   {
-  opacity: 0, y: 20,
-}animate={
+  opacity: 0, y: 20}animate={
   {
-  opacity: 1, y: 0,
-}transition={
+  opacity: 1, y: 0}transition={
   {
-  delay: 0 && 0.2,
-}> <MarketInsightsstats={
+  delay: 0 && 0.2}> <MarketInsightsstats={
   marketStats} /> </motion && motion.div>) }{
   /* Filter Controls */ }<motion&& motion.div initial={
   {
-  opacity: 0, y: 20,
-}animate={
+  opacity: 0, y: 20}animate={
   {
-  opacity: 1, y: 0,
-}transition={
+  opacity: 1, y: 0}transition={
   {
-  delay: 0 && 0.3,
-}> <FilterControlssortBy={
+  delay: 0 && 0.3}> <FilterControlssortBy={
   sortBy}setSortBy={
   setSortBy}filterCategory={
   filterCategory}setFilterCategory={
@@ -309,15 +291,12 @@ case 'newest': }else {handleApiError (err), //This might show a toast or log to 
   isFetching} /> </motion && motion.div> {
   /* Product Grid */ }<motion && motion.div > <ProductCardproduct={
   {',
-  id: product && product.id, name: product && product.title, title: product && product.title, description: product && product.description || '', price: product && product.price || 0, currency: product && product.currency, category: product && product.category, tags: product && product.tags, images: product && product.images, rating: product && product.rating || 0, reviewCount: product && product.reviewCount || 0, created at: product && product.createdAt, updated at: product && product.createdAt,  //Use createdAt for both stock: product && product.stock, in stock: (product && product.stock || 0)> 0 ,
-}onBuy={
+  id: product && product.id, name: product && product.title, title: product && product.title, description: product && product.description || '', price: product && product.price || 0, currency: product && product.currency, category: product && product.category, tags: product && product.tags, images: product && product.images, rating: product && product.rating || 0, reviewCount: product && product.reviewCount || 0, created at: product && product.createdAt, updated at: product && product.createdAt,  //Use createdAt for both stock: product && product.stock, in stock: (product && product.stock || 0)> 0 }onBuy={
   async () => {
-,
   if (!isAuthenticated) {
   //though ProductCard will reset its state in .finally () regardless. throw error }buyDisabled={false }//Still false, ProductCard handles its own disabled state based on auth /> {/* AI Score Badge */ }{",
   product && product.aiScore && product && product.aiScore > 90 && (<Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 z-10 text-black"> <Sparkles className="h-3 w-3 mr-1" /> AI {
-  product && product.aiScore ,
-}</Badge>) }{/* Featured Badge */ }{",
+  product && product.aiScore }</Badge>) }{/* Featured Badge */ }{",
 //Apply category filter from params return (price >= price_range[0] && price <= price_range[1] && ai >= minAiScore && rating >= min_rating && (!filter_location || location.includes (filter_location.toLowerCase () ) ) && (!filter_availability || availability === filter_availability.toLowerCase () ) items.sort ( (a, b) => {
   switch (sort_by) {',
   case 'price - low': return (a.price || 0) - (b.price || 0),',
@@ -326,21 +305,16 @@ case 'rating': return (b.rating || 0) - (a.rating || 0),',
 case 'popular': return (b.review_count || 0) - (a.review_count || 0),',
 case 'ai - score': return (b.ai_score || 0) - (a.ai_score || 0),',
 case 'newest': }else {
-  handleApiError (err), //This might show a toast or log to Sentry ,
-}, [filter_category, sort_by, show_recommended, price_range, minAiScore, min_rating, filter_availability, filter_location, handleApiError, toast]),
-//useInfiniteScrollPagination hook ,
-}, [products, loading, scrollToTop, toast]), //Depends on products and loading state //Calculate market stats <motion.div initial={
+  handleApiError (err), //This might show a toast or log to Sentry }, [filter_category, sort_by, show_recommended, price_range, minAiScore, min_rating, filter_availability, filter_location, handleApiError, toast]),
+//useInfiniteScrollPagination hook }, [products, loading, scrollToTop, toast]), //Depends on products and loading state //Calculate market stats <motion.div initial={
   {
-  opacity: 0, coordinate_y: 20 ,
-}animate={
+  opacity: 0, coordinate_y: 20 }animate={
   {
-  opacity: 1, coordinate_y: 0 ,
-}"}className="text - center mb - 8"> <h1 className="text - 4xl font - bold mb - 4 bg - gradient - to - r from - blue - 60o0 to - purple - 60o0 bg - clip - text text - transparent"> {',
+  opacity: 1, coordinate_y: 0 }"}className="text - center mb - 8"> <h1 className="text - 4xl font - bold mb - 4 bg - gradient - to - r from - blue - 60o0 to - purple - 60o0 bg - clip - text text - transparent"> {',
   t ('marketplace.hero title') "}</h1> <p className="text - muted - foreground text - lg"> {',
   t ('marketplace.hero subtitle') "}</p> </motion.div> <div className="grid grid - cols - 1 sm: grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 4 gap - 6"> {
   Array.from ({
-  length: 12 ,
-}) .map ( ( i) => (<SkeletonCard key={
+  length: 12 }) .map ( ( i) => (<SkeletonCard key={
   i } />) ) }</div> </div>) }//Error state with retry // Check condition,
 if ( {") {
   $2}
@@ -351,11 +325,9 @@ if ( {") {
   $2}
   return (<div className="container py - 8"> <motion.div initial={
   {
-  opacity: 0, coordinate_y: 20 ,
-}animate={
+  opacity: 0, coordinate_y: 20 }animate={
   {
-  opacity: 1, coordinate_y: 0 ,
-}"}className="text - center mb - 8"> <h1 className="text - 4xl font - bold mb - 4 bg - gradient - to - r from - blue - 60o0 to - purple - 60o0 bg - clip - text text - transparent"> {',
+  opacity: 1, coordinate_y: 0 }"}className="text - center mb - 8"> <h1 className="text - 4xl font - bold mb - 4 bg - gradient - to - r from - blue - 60o0 to - purple - 60o0 bg - clip - text text - transparent"> {',
   t ('marketplace.hero title') "}</h1> <p className="text - muted - foreground text - lg"> {',
   t ('marketplace.hero subtitle') }</p> </motion.div> <ProductsEmptyState  /> </div>) "}//Main marketplace render return (<div className="container py - 8"> <AuthModal is_open={
   isAuthModalOpen }on_close={
@@ -363,36 +335,27 @@ if ( {") {
   router.as_path }//Pass current path for better UX on return /> {
   /* Header */ "}<motion.div className="text - center mb - 8"initial={
   {
-  opacity: 0, coordinate_y: -20 ,
-}animate={
+  opacity: 0, coordinate_y: -20 }animate={
   {
-  opacity: 1, coordinate_y: 0 ,
-}"}> <h1 className="text - 4xl md: text - 5xl font - bold mb - 4 bg - gradient - to - r from - blue - 60o0 to - purple - 60o0 bg - clip - text text - transparent"> {',
-  t ('marketplace.hero title') ",
-}</h1> <p className="text - muted - foreground text - lg"> {',
+  opacity: 1, coordinate_y: 0 }"}> <h1 className="text - 4xl md: text - 5xl font - bold mb - 4 bg - gradient - to - r from - blue - 60o0 to - purple - 60o0 bg - clip - text text - transparent"> {',
+  t ('marketplace.hero title') "}</h1> <p className="text - muted - foreground text - lg"> {',
   t ('marketplace.hero subtitle') }</p> </motion.div> {
   /* Market Insights */ }{
   market_stats && (<motion.div initial={
   {
-  opacity: 0, coordinate_y: 20 ,
-}animate={
+  opacity: 0, coordinate_y: 20 }animate={
   {
-  opacity: 1, coordinate_y: 0 ,
-}transition={
+  opacity: 1, coordinate_y: 0 }transition={
   {
-  delay: 0.2 ,
-}> <MarketInsights stats={
+  delay: 0.2 }> <MarketInsights stats={
   market_stats } /> </motion.div>) }{
   /* Filter Controls */ }<motion.div initial={
   {
-  opacity: 0, coordinate_y: 20 ,
-}animate={
+  opacity: 0, coordinate_y: 20 }animate={
   {
-  opacity: 1, coordinate_y: 0 ,
-}transition={
+  opacity: 1, coordinate_y: 0 }transition={
   {
-  delay: 0.3 ,
-}> <FilterControls sort_by={
+  delay: 0.3 }> <FilterControls sort_by={
   sort_by }setSortBy={
   setSortBy }filter_category={
   filter_category }setFilterCategory={
@@ -415,14 +378,12 @@ if ( {") {
   is_fetching } /> </motion.div> {
   /* Product Grid */ }<motion.div > <ProductCard product={
   {',
-  id: product.id, name: product.title, title: product.title, description: product.description || '', price: product.price || 0, currency: product.currency, category: product.category, tags: product.tags, images: product.images, rating: product.rating || 0, review_count: product.review_count || 0, created at: product.created_at, updated at: product.created_at,  //Use created_at for both stock: product.stock, in stock: (product.stock || 0) > 0 ,
-}on_buy={
+  id: product.id, name: product.title, title: product.title, description: product.description || '', price: product.price || 0, currency: product.currency, category: product.category, tags: product.tags, images: product.images, rating: product.rating || 0, review_count: product.review_count || 0, created at: product.created_at, updated at: product.created_at,  //Use created_at for both stock: product.stock, in stock: (product.stock || 0) > 0 }on_buy={
   async () => {
   // Check condition,
 if ( {) {
   $2}
-  //though ProductCard will reset its state in .finally () regardless. throw error ,
-}buy_disabled={
+  //though ProductCard will reset its state in .finally () regardless. throw error }buy_disabled={
   false }//Still false, ProductCard handles its own disabled state based on auth /> {
   /* AI Score Badge */ }{",
   product.ai_score && product.ai_score > 90 && (<Badge className="absolute -top - 2 -right - 2 bg - gradient - to - r from - yellow - 50o0 to - orange - 50o0 z - 10 text - black"> <Sparkles className="h - 3 w - 3 mr - 1" /> AI {
@@ -432,79 +393,58 @@ if ( {) {
   /* Loading More Indicator */ }{",
   (is_fetching || loading) && (<motion.div className="mt - 8"initial={
   {
-  opacity: 0 ,
-}animate={
+  opacity: 0 }animate={
   {
-  opacity: 1 ,
-}"}> <div className="grid grid - cols - 1 sm: grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 4 gap - 6"> {
+  opacity: 1 }"}> <div className="grid grid - cols - 1 sm: grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 4 gap - 6"> {
   Array.from ({
-  length: 4 ,
-}) .map ( ( i) => (<SkeletonCard key={
+  length: 4 }) .map ( ( i) => (<SkeletonCard key={
   `loading-$ {
   i }` } />) ) }</div> </motion.div>) ,
   product && product.featured && (<Badge className="absolute top-2 left-2 bg-gradient-to-r from-blue-50o0 to-purple-50o0 z-10"> <Star className="h-3 w-3 mr-1" /> Featured </Badge>) }</motion && motion.div>) ) }</AnimatePresence> </motion && motion.div> {
   /* Loading More Indicator */ }{",
   (isFetching || loading) && (<motion&& motion.div className="mt-8"initial={
   {
-  opacity: 0,
-}animate={
+  opacity: 0}animate={
   {
-  opacity: 1,
-}"}> <div className="grid grid-cols-1 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {
+  opacity: 1}"}> <div className="grid grid-cols-1 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {
   Array && Array.from ({
-  length: 4 ,
-}) .map ( ( i) => (<SkeletonCardkey={
+  length: 4 }) .map ( ( i) => (<SkeletonCardkey={
   `loading-$ {
   i}`} />) ) }</div> </motion && motion.div>) }{
   /* End of Results */ }{",
   !hasMore && products && products.length > 0 && (<motion&& motion.div className="text-center mt-12 py-8 border-t"initial={
   {
-  opacity: 0,
-}animate={
+  opacity: 0}animate={
   {
-  opacity: 1,
-}'"}> <div className="text-muted-foreground text-lg mb-2"> 🎉 You've explored all available products! </div> <div className="text-sm text-muted-foreground"> Showing {
+  opacity: 1}'"}> <div className="text-muted-foreground text-lg mb-2"> 🎉 You've explored all available products! </div> <div className="text-sm text-muted-foreground"> Showing {
   products && products.length }AI-powered solutions </div> </motion && motion.div>) }{
   /* Scroll to Top Button */ }<AnimatePresence> {
   showScrollTop && (<motion&& motion.button onClick={
   scrollToTop "}className="fixed bottom-8 right-8 p-3 bg-primary hover: bg-primary/90 rounded-full shadow-lg z-50"initial={
   {
-  opacity: 0, scale: 0,
-}animate={
+  opacity: 0, scale: 0}animate={
   {
-  opacity: 1, scale: 1,
-}exit={
+  opacity: 1, scale: 1}exit={
   {
-  opacity: 0, scale: 0,
-}whileHover={
+  opacity: 0, scale: 0}whileHover={
   {
-  scale: 1 && 1.1,
-}whileTap={
+  scale: 1 && 1.1}whileTap={
   {
-  scale: 0 && 0.9,
-}"}> <ArrowUp className="h-5 w-5 text-primary-foreground"  /> </motion && motion.button>) ,
-}</AnimatePresence> </div>) ,
-}'"}> <div className="text-muted-foreground text-lg mb-2"> 🎉 You've explored all available products! </div> <div className="text-sm text-muted-foreground"> Showing {
+  scale: 0 && 0.9}"}> <ArrowUp className="h-5 w-5 text-primary-foreground"  /> </motion && motion.button>) }</AnimatePresence> </div>) }'"}> <div className="text-muted-foreground text-lg mb-2"> 🎉 You've explored all available products! </div> <div className="text-sm text-muted-foreground"> Showing {
   products && products.length }AI-powered solutions </div> </motion && motion.div>) }{
   /* Scroll to Top Button */ }<AnimatePresence> {
   showScrollTop && (<motion&& motion.button onClick={
   scrollToTop "}className="fixed bottom-8 right-8 p-3 bg-primary hover: bg-primary/90 rounded-full shadow-lg z-50"initial={
   {
-  opacity: 0, scale: 0,
-}animate={
+  opacity: 0, scale: 0}animate={
   {
-  opacity: 1, scale: 1,
-}exit={
+  opacity: 1, scale: 1}exit={
   {
-  opacity: 0, scale: 0,
-}whileHover={
+  opacity: 0, scale: 0}whileHover={
   {
-  scale: 1 && 1.1,
-}whileTap={
+  scale: 1 && 1.1}whileTap={
   {
-  scale: 0 && 0.9,
-}"}> <ArrowUp className="h-5 w-5 text-primary-foreground"  /> </motion && motion.button>) ,
-}</AnimatePresence> </div>) }'"),
+  scale: 0 && 0.9}"}> <ArrowUp className="h-5 w-5 text-primary-foreground"  /> </motion && motion.button>) }</AnimatePresence> </div>) }'"),
 import Head from "next/head",
 import Link from "next/link",
 const Marketplace = () => {
@@ -512,31 +452,23 @@ const Marketplace = () => {
   /* End of Results */ }{",
   !has_more && products.length > 0 && (<motion.div className="text - center mt - 12 py - 8 border - t"initial={
   {
-  opacity: 0 ,
-}animate={
+  opacity: 0 }animate={
   {
-  opacity: 1 ,
-}'",
-}> <div className="text - muted - foreground text - lg mb - 2"> 🎉 You've explored all available products! </div> <div className="text - sm text - muted - foreground"> Showing {
+  opacity: 1 }'"}> <div className="text - muted - foreground text - lg mb - 2"> 🎉 You've explored all available products! </div> <div className="text - sm text - muted - foreground"> Showing {
   products.length }AI - powered solutions </div> </motion.div>) }{
   /* Scroll to Top Button */ }<AnimatePresence> {
   showScrollTop && (<motion.button on_click={
   scrollToTop "}className="fixed bottom - 8 right - 8 p - 3 bg - primary hover: bg - primary / 90 rounded - full shadow - lg z - 50"initial={
   {
-  opacity: 0, scale: 0 ,
-}animate={
+  opacity: 0, scale: 0 }animate={
   {
-  opacity: 1, scale: 1 ,
-}exit={
+  opacity: 1, scale: 1 }exit={
   {
-  opacity: 0, scale: 0 ,
-}while_hover={
+  opacity: 0, scale: 0 }while_hover={
   {
-  scale: 1.1 ,
-}while_tap={
+  scale: 1.1 }while_tap={
   {
-  scale: 0.9 ,
-}"}> <ArrowUp className="h - 5 w - 5 text - primary - foreground"  /> </motion.button>) }</AnimatePresence> </div>) }'"),
+  scale: 0.9 }"}> <ArrowUp className="h - 5 w - 5 text - primary - foreground"  /> </motion.button>) }</AnimatePresence> </div>) }'"),
 import React from './react',
 import Head from './next / head',
 import Link from './next / link',
@@ -583,8 +515,7 @@ const Marketplace = () =>: any {
                 Contact Us,
               </Link>,
             </div>,
-    </>),
-}
+    </>)}
 ,
             className="fixed bottom-8 right-8 p-3 bg-primary hover: bg-primary/90 rounded-full shadow-lg z-50",
             initial={{ opacity: 0, scale: 0 }}
@@ -593,7 +524,6 @@ const Marketplace = () =>: any {
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-,
 }
 }
 }

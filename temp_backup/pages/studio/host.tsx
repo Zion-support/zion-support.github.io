@@ -3,8 +3,7 @@ import React{ useState } from 'react',
 type PersonaConfig ={
   voice: 'Visionary' | 'Grounded' | 'Technical',
   language: string,
-  cloneStyleText?: string,
-};
+  cloneStyleText?: string};
 export default function StudioHostPage() {
   const [personasetPersona] = useState<PersonaConfig>({ voice: 'Visionary'language: 'English' }),
   const [inviteeNamesetInviteeName] = useState(''),

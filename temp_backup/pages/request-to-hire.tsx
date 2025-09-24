@@ -40,8 +40,7 @@ export default function RequestToHirePage() {
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed to submit'),
       setResult({ id: data.id, message: 'Request submitted successfully.' })} catch (err: any) {
-      setError(err.message || 'Something went wrong'),
-    } finally {
+      setError(err.message || 'Something went wrong')} finally {
       setSubmitting(false)}
   };
   if (result) {

@@ -130,7 +130,7 @@ const heroFeatures = [
   {
     title: 'Predictive Analytics';
     description:,
-      'AI-powered insights that predict issues before they occur and optimize window.performance.';
+      'AI-powered insights that predict issues before they occur and optimize window.window.performance.';
     icon: BarChart3;
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600';
   };

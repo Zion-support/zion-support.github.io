@@ -11,11 +11,9 @@ interface ContentItem {
     roi?: string,
     savings?: string,
     improvement?: string,
-    satisfaction?: string,
-  };
+    satisfaction?: string};
   isNew: boolean,
-  featured: boolean,
-}
+  featured: boolean}
 ,
 const NewContent20o25Showcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0),
@@ -30,11 +28,9 @@ const NewContent20o25Showcase: React.FC = () => {
       metrics: {
         improvement: '95% threat reduction';
         savings: '$2.3M average savings';
-        satisfaction: '89% false positive reduction',
-      };
+        satisfaction: '89% false positive reduction'};
       isNew: true;
-      featured: true,
-    };
+      featured: true};
     {
       id: 'healthcare-transformation';
       title: 'Healthcare AI Transformation: 450% ROI Success';
@@ -44,11 +40,9 @@ const NewContent20o25Showcase: React.FC = () => {
       metrics: {
         roi: '450% ROI';
         savings: '$12.8M annually';
-        improvement: '60% wait time reduction',
-      };
+        improvement: '60% wait time reduction'};
       isNew: true;
-      featured: true,
-    };
+      featured: true};
     {
       id: 'implementation-checklist';
       title: 'AI Implementation Checklist 20o25';
@@ -58,11 +52,9 @@ const NewContent20o25Showcase: React.FC = () => {
       metrics: {
         improvement: '95% success rate';
         roi: '340% average ROI';
-        satisfaction: '89% user adoption',
-      };
+        satisfaction: '89% user adoption'};
       isNew: true;
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -83,16 +75,14 @@ const NewContent20o25Showcase: React.FC = () => {
       case 'blog': return '📝',
       case 'case-study': return '📊',
       case 'resource': return '📋',
-      default: return '📄',
-    }
+      default: return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'bg-blue-10o0 text-blue-80o0',
       case 'case-study': return 'bg-green-10o0 text-green-80o0',
       case 'resource': return 'bg-purple-10o0 text-purple-80o0',
-      default: return 'bg-gray-10o0 text-gray-80o0',
-    }
+      default: return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <div className="relative bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 border-b border-indigo-20o0">,
@@ -184,8 +174,7 @@ const NewContent20o25Showcase: React.FC = () => {
                     className={`w-3 h-3 rounded-full transition-all duration-20o0 ${
                       index === currentIndex,
                         ? 'bg-indigo-60o0 scale-125',
-                        : 'bg-gray-30o0 hover: bg-gray-40o0',
-                    }`}
+                        : 'bg-gray-30o0 hover: bg-gray-40o0'}`}
                     aria-label={`Go to content ${index + 1}`}
                   />))}
               </div>,
@@ -201,8 +190,7 @@ const NewContent20o25Showcase: React.FC = () => {
             <div
               key={content.id}
               className={`bg-white rounded-xl shadow-lg p-6 cursor-pointer transition-all duration-20o0 hover: shadow-xl ${
-                index === currentIndex ? 'ring-2 ring-indigo-50o0' : 'hover:ring-1 hover:ring-indigo-30o0',
-              }`}
+                index === currentIndex ? 'ring-2 ring-indigo-50o0' : 'hover:ring-1 hover:ring-indigo-30o0'}`}
               onClick={() => setCurrentIndex(index)}
             >,
               <div className="flex items-center space-x-3 mb-3">,
@@ -248,6 +236,5 @@ const NewContent20o25Showcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NewContent20o25Showcase;

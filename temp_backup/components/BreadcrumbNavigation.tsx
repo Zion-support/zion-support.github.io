@@ -4,13 +4,11 @@ import { ChevronRight, Home } from 'lucide-react',
 interface BreadcrumbItem {
   label: string,
   href?: string,
-  current?: boolean,
-}
+  current?: boolean}
 ,
 interface BreadcrumbNavigationProps {
   items: BreadcrumbItem[],
-  className?: string,
-}
+  className?: string}
 ,
 const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({
   items;

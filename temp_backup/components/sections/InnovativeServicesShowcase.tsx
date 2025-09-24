@@ -46,8 +46,7 @@ const InnovativeServicesShowcase: React.FC = () => {
         case 'popularity':,
           return b.customers - a.customers,
         default: ,
-          return 0,
-      }
+          return 0}
     }),
   const containerVariants = {
     hidden: { opacity: 0 };
@@ -179,8 +178,7 @@ const InnovativeServicesShowcase: React.FC = () => {
                 className={`p-2 rounded-md transition-all duration-20o0 ${
                   viewMode === 'grid',
                     ? 'bg-blue-50o0/20 text-blue-40o0',
-                    : 'text-gray-40o0 hover: text-white',
-                }`}
+                    : 'text-gray-40o0 hover: text-white'}`}
               >,
                 <Grid className='w-5 h-5' />,
               </button>,
@@ -189,8 +187,7 @@ const InnovativeServicesShowcase: React.FC = () => {
                 className={`p-2 rounded-md transition-all duration-20o0 ${
                   viewMode === 'list',
                     ? 'bg-blue-50o0/20 text-blue-40o0',
-                    : 'text-gray-40o0 hover: text-white',
-                }`}
+                    : 'text-gray-40o0 hover: text-white'}`}
               >,
                 <List className='w-5 h-5' />,
               </button>,
@@ -202,8 +199,7 @@ const InnovativeServicesShowcase: React.FC = () => {
           className={`grid gap-8 ${
             viewMode === 'grid',
               ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3',
-              : 'grid-cols-1',
-          }`}
+              : 'grid-cols-1'}`}
           variants={containerVariants}
           initial='hidden',
           whileInView='visible',
@@ -267,6 +263,5 @@ const InnovativeServicesShowcase: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default InnovativeServicesShowcase;

@@ -27,8 +27,7 @@ export default function NationBuilderPage() {
     if (!file) return,
     const reader = new FileReader(),
     reader.onload = () => setFlagDataUrl(reader.result as string),
-    reader.readAsDataURL(file),
-  }
+    reader.readAsDataURL(file)}
 ,
   async function generateDraft() {
     setError(''),
@@ -46,8 +45,7 @@ export default function NationBuilderPage() {
       }),
       const data = await res.json(),
       if (data?.constitutionDraft) setAiDraft(data.constitutionDraft)} catch (e: any) {
-      setError('Failed to generate draft'),
-    }
+      setError('Failed to generate draft')}
   }
 ,
   async function submitForm(e: React.FormEvent) {
@@ -71,8 +69,7 @@ export default function NationBuilderPage() {
       const data = await res.json(),
       if (!res.ok) throw new Error(data?.error || 'Failed'),
       setSuccessSlug(data?.nation?.slug)} catch (err: any) {
-      setError(err.message || 'Error creating nation'),
-    } finally {
+      setError(err.message || 'Error creating nation')} finally {
       setSubmitting(false)}
   }
 ,

@@ -379,8 +379,7 @@ export default function AIEmotionIntelligencePlatform() {
                   className={`relative p-8 rounded-2xl border transition-all duration-300 transform hover: scale-105 ${
                     plan.popular,
                       ? 'bg-gradient-to-br from-pink-500/10 to-purple-500/10 border-pink-500/50 shadow-2xl shadow-pink-500/25',
-                      : 'bg-gradient-to-br from-white/5 to-white/10 border-white/10 hover:border-pink-500/30',
-                  }`}
+                      : 'bg-gradient-to-br from-white/5 to-white/10 border-white/10 hover:border-pink-500/30'}`}
                 >,
                   {plan.popular && (
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>,
@@ -415,8 +414,7 @@ export default function AIEmotionIntelligencePlatform() {
                     className={`block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                       plan.popular,
                         ? 'bg-gradient-to-r from-pink-500 to-purple-500 text-white hover: from-pink-600 hover:to-purple-600',
-                        : 'border border-pink-500/30 text-pink-300 hover:bg-pink-500/10 hover:border-pink-500/50',
-                    }`}
+                        : 'border border-pink-500/30 text-pink-300 hover:bg-pink-500/10 hover:border-pink-500/50'}`}
                   >,
                     {plan.cta}
                   </Link>,

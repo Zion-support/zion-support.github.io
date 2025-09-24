@@ -11,8 +11,7 @@ export interface PricingTier {
   recommended?: boolean,
   savings?: string,
   setupFee?: number,
-  contractLength?: string,
-}
+  contractLength?: string}
 ,
 export interface ServicePricing {
   serviceId: string,
@@ -23,24 +22,20 @@ export interface ServicePricing {
   marketComparison: {
     averagePrice: string,
     competitors: string[],
-    valueProposition: string,
-  };
+    valueProposition: string};
   roi: {
     timeframe: string,
     percentage: string,
-    savings: string,
-  };
+    savings: string};
   features: {
     core: string[],
     advanced: string[],
-    enterprise: string[],
-  };
+    enterprise: string[]};
   integrations: string[],
   support: {
     responseTime: string,
     channels: string[],
-    sla: string,
-  };
+    sla: string};
 }
 ,
 export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
@@ -65,8 +60,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
           "Monthly reports";
           "Up to 1,0o00 customers"];
         setupFee: 0;
-        contractLength: "Month-to-month",
-      };
+        contractLength: "Month-to-month"};
       {
         id: "professional";
         name: "Professional";
@@ -86,8 +80,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
         popular: true;
         recommended: true;
         setupFee: 50o0;
-        contractLength: "12 months",
-      };
+        contractLength: "12 months"};
       {
         id: "enterprise";
         name: "Enterprise";
@@ -106,14 +99,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
           "API access";
           "SLA guarantees"];
         setupFee: 20o00;
-        contractLength: "24 months",
-      }
+        contractLength: "24 months"}
     ];
     marketComparison: {
       averagePrice: "$2,50o0-8,0o00/month";
       competitors: ["Gainsight", "ProfitWell", "ChartMogul"];
-      valueProposition: "40% better ROI than competitors with AI-powered insights and faster implementation",
-    };
+      valueProposition: "40% better ROI than competitors with AI-powered insights and faster implementation"};
     roi: {
       timeframe: "4 months";
       percentage: "40o0%";
@@ -138,8 +129,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
     support: {
       responseTime: "2 hours";
       channels: ["Email", "Phone", "Chat", "Video"];
-      sla: "99.9% uptime",
-    }
+      sla: "99.9% uptime"}
   };
   {
     serviceId: "ai-customer-journey-orchestrator";
@@ -161,8 +151,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
           "Standard support";
           "Up to 5,0o00 contacts"];
         setupFee: 0;
-        contractLength: "Month-to-month",
-      };
+        contractLength: "Month-to-month"};
       {
         id: "professional";
         name: "Professional";
@@ -181,8 +170,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
         popular: true;
         recommended: true;
         setupFee: 750;
-        contractLength: "12 months",
-      };
+        contractLength: "12 months"};
       {
         id: "enterprise";
         name: "Enterprise";
@@ -200,14 +188,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
           "Custom integrations";
           "SLA guarantees"];
         setupFee: 30o00;
-        contractLength: "24 months",
-      }
+        contractLength: "24 months"}
     ];
     marketComparison: {
       averagePrice: "$3,0o00-12,0o00/month";
       competitors: ["Segment", "Amplitude", "Mixpanel"];
-      valueProposition: "30% better customer engagement with AI-powered journey optimization",
-    };
+      valueProposition: "30% better customer engagement with AI-powered journey optimization"};
     roi: {
       timeframe: "5 months";
       percentage: "350%";
@@ -232,8 +218,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
     support: {
       responseTime: "4 hours";
       channels: ["Email", "Phone", "Chat", "Video"];
-      sla: "99.8% uptime",
-    }
+      sla: "99.8% uptime"}
   };
   {
     serviceId: "ai-marketing-attribution-engine";
@@ -255,8 +240,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
           "Up to 3 marketing channels";
           "Monthly data updates"];
         setupFee: 0;
-        contractLength: "Month-to-month",
-      };
+        contractLength: "Month-to-month"};
       {
         id: "professional";
         name: "Professional";
@@ -275,8 +259,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
         popular: true;
         recommended: true;
         setupFee: 50o0;
-        contractLength: "12 months",
-      };
+        contractLength: "12 months"};
       {
         id: "enterprise";
         name: "Enterprise";
@@ -293,14 +276,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
           "White-label options";
           "SLA guarantees"];
         setupFee: 150o0;
-        contractLength: "24 months",
-      }
+        contractLength: "24 months"}
     ];
     marketComparison: {
       averagePrice: "$2,0o00-6,0o00/month";
       competitors: ["AppsFlyer", "Branch", "Adjust"];
-      valueProposition: "25% more accurate attribution with AI-powered machine learning models",
-    };
+      valueProposition: "25% more accurate attribution with AI-powered machine learning models"};
     roi: {
       timeframe: "3 months";
       percentage: "30o0%";
@@ -325,8 +306,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
     support: {
       responseTime: "6 hours";
       channels: ["Email", "Phone", "Chat"];
-      sla: "99.7% uptime",
-    }
+      sla: "99.7% uptime"}
   };
   {
     serviceId: "ai-content-performance-optimizer";
@@ -348,8 +328,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
           "Up to 10o0 content pieces";
           "Monthly reports"];
         setupFee: 0;
-        contractLength: "Month-to-month",
-      };
+        contractLength: "Month-to-month"};
       {
         id: "professional";
         name: "Professional";
@@ -368,8 +347,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
         popular: true;
         recommended: true;
         setupFee: 30o0;
-        contractLength: "12 months",
-      };
+        contractLength: "12 months"};
       {
         id: "enterprise";
         name: "Enterprise";
@@ -386,14 +364,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
           "White-label options";
           "SLA guarantees"];
         setupFee: 10o00;
-        contractLength: "24 months",
-      }
+        contractLength: "24 months"}
     ];
     marketComparison: {
       averagePrice: "$1,50o0-4,50o0/month";
       competitors: ["Clearscope", "Frase", "MarketMuse"];
-      valueProposition: "35% better content performance with AI-powered optimization",
-    };
+      valueProposition: "35% better content performance with AI-powered optimization"};
     roi: {
       timeframe: "2 months";
       percentage: "250%";
@@ -418,8 +394,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
     support: {
       responseTime: "8 hours";
       channels: ["Email", "Chat", "Video"];
-      sla: "99.5% uptime",
-    }
+      sla: "99.5% uptime"}
   };
   {
     serviceId: "ai-talent-acquisition-platform";
@@ -441,8 +416,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
           "Up to 50 job postings";
           "Monthly reports"];
         setupFee: 0;
-        contractLength: "Month-to-month",
-      };
+        contractLength: "Month-to-month"};
       {
         id: "professional";
         name: "Professional";
@@ -461,8 +435,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
         popular: true;
         recommended: true;
         setupFee: 750;
-        contractLength: "12 months",
-      };
+        contractLength: "12 months"};
       {
         id: "enterprise";
         name: "Enterprise";
@@ -479,14 +452,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
           "White-label options";
           "SLA guarantees"];
         setupFee: 20o00;
-        contractLength: "24 months",
-      }
+        contractLength: "24 months"}
     ];
     marketComparison: {
       averagePrice: "$2,80o0-8,0o00/month";
       competitors: ["HireVue", "Pymetrics", "HiredScore"];
-      valueProposition: "50% faster hiring with 40% better candidate quality using AI",
-    };
+      valueProposition: "50% faster hiring with 40% better candidate quality using AI"};
     roi: {
       timeframe: "4 months";
       percentage: "40o0%";
@@ -511,8 +482,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
     support: {
       responseTime: "4 hours";
       channels: ["Email", "Phone", "Chat", "Video"];
-      sla: "99.8% uptime",
-    }
+      sla: "99.8% uptime"}
   };
   {
     serviceId: "ai-financial-fraud-detection";
@@ -534,8 +504,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
           "Up to 10,0o00 transactions/month";
           "Monthly reports"];
         setupFee: 0;
-        contractLength: "Month-to-month",
-      };
+        contractLength: "Month-to-month"};
       {
         id: "professional";
         name: "Professional";
@@ -554,8 +523,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
         popular: true;
         recommended: true;
         setupFee: 150o0;
-        contractLength: "12 months",
-      };
+        contractLength: "12 months"};
       {
         id: "enterprise";
         name: "Enterprise";
@@ -572,14 +540,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
           "White-label options";
           "SLA guarantees"];
         setupFee: 50o00;
-        contractLength: "24 months",
-      }
+        contractLength: "24 months"}
     ];
     marketComparison: {
       averagePrice: "$4,50o0-15,0o00/month";
       competitors: ["Sift", "Signifyd", "Forter"];
-      valueProposition: "99.9% fraud detection accuracy with 80% fewer false positives",
-    };
+      valueProposition: "99.9% fraud detection accuracy with 80% fewer false positives"};
     roi: {
       timeframe: "6 months";
       percentage: "50o0%";
@@ -604,8 +570,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o25: ServicePricing[] = [
     support: {
       responseTime: "2 hours";
       channels: ["Email", "Phone", "Chat", "Video"];
-      sla: "99.99% uptime",
-    }
+      sla: "99.99% uptime"}
   }
 ],
 export default COMPREHENSIVE_PRICING_GUIDE_20o25;

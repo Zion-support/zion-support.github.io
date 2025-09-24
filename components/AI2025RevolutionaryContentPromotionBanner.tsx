@@ -169,6 +169,5 @@ export default function AI20o25RevolutionaryContentPromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

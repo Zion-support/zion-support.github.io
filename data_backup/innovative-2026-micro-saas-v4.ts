@@ -104,8 +104,7 @@ export const integration,
       address:;
   364 E Main St STE 10o08 Middletown DE 19709,
   ';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Blockchain-based customer loyalty platform with smart contracts and cross-business partnerships.,
@@ -207,8 +206,7 @@ export const integration,
       address:;
   364 E Main St STE 10o08 Middletown DE 19709,
   ';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered video SEO optimization platform with automatic analysis and optimization.,
@@ -310,8 +308,7 @@ export const integration,
       address:;
   364 E Main St STE 10o08 Middletown DE 19709,
   ';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quantum-enhanced supply chain analytics platform with real-time optimization and predictive capabilities.,
@@ -415,8 +412,7 @@ export const integration,
       address:;
   364 E Main St STE 10o08 Middletown DE 19709,
   ';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Fully autonomous social media management platform with AI content creation and 24/7 operation.,
@@ -519,8 +515,7 @@ export const integration,
       address:;
   364 E Main St STE 10o08 Middletown DE 19709,
   ';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Comprehensive metaverse business development platform with 3D creation tools and NFT integration.,
@@ -622,8 +617,7 @@ export const integration,
       address:;
   364 E Main St STE 10o08 Middletown DE 19709,
   ';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered legal document generation platform with compliance checking and legal support.,

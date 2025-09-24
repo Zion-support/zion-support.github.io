@@ -15,6 +15,5 @@ export default function ServicesPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

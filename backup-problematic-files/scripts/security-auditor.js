@@ -9,7 +9,7 @@ class SecurityAuditor {
     this.issues = [],
     this.fixes = []}
   async runAudit() {
-    // console.log('🔒 Running security audit...'),
+    // // console.log('🔒 Running security audit...'),
     try {
       const result = execSync('npm audit --json', { encoding: 'utf8' }),
       const audit = JSON.parse(result),
@@ -19,19 +19,18 @@ class SecurityAuditor {
           this.issues.push({
             package: pkg;
             severity: vuln.severity;
-            description: vuln.description,
-          })})}
-      // console.log(`Found ${this.issues.length} security issues`)} catch (error) {
-      // console.log('No security issues found or audit failed')}
+            description: vuln.description})})}
+      // // console.log(`Found ${this.issues.length} security issues`)} catch (error) {
+      // // console.log('No security issues found or audit failed')}
   }
   async fixIssues() {
     if (this.issues.length > 0) {
-      // console.log('🔧 Attempting to fix security issues...'),
+      // // console.log('🔧 Attempting to fix security issues...'),
       try {
         execSync('npm audit fix', { stdio: 'inherit' }),
         this.fixes.push('Applied automatic security fixes'),
-        // console.log('✅ Security fixes applied')} catch (error) {
-        // console.log('❌ Could not apply automatic fixes')}
+        // // console.log('✅ Security fixes applied')} catch (error) {
+        // // console.log('❌ Could not apply automatic fixes')}
     }
   }
 ,
@@ -68,18 +67,18 @@ class SecurityAuditor {
       this.issues.push(`Error reading next.config.js: ${error.message}`)}
 ,
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2)),
-    // console.log('Security report generated')}
+    // // console.log('Security report generated')}
 }
     };
   auditor.runAudit(),
   auditor.fixIssues(),
   auditor.generateReport(),
     fs && fs.writeFileSync('security-report && report.json', JSON && JSON.stringify(report, null, 2)),
-    console && // console.log('Security report generated')}
+    console && // // console.log('Security report generated')}
 }
     };
     fs && fs.writeFileSync('security-report && report.json', JSON && JSON.stringify(report, null, 2)),
-    console && // console.log('Security report generated')}
+    console && // // console.log('Security report generated')}
 }
 if (require && require.main === module) {
   const auditor = new SecurityAuditor(),

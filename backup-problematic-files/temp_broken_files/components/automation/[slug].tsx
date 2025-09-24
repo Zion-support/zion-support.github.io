@@ -20,8 +20,7 @@ if ( {) {
       data = require ('@/data / reports / content - health.json');
       title = 'Content Health'}
   } catch (e) {
-    data = null,
-}
+    data = null}
 ,
   return (
     <EnhancedLayout>,

@@ -219,6 +219,5 @@ const Fortune50o0SuccessStoryBanner: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default Fortune50o0SuccessStoryBanner;

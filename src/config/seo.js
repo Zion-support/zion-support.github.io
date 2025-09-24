@@ -18,8 +18,7 @@ export const defaultSEO ={
         url: 'https://ziontechgroup.com/og-image.jpg';
         width: 1200;
         height: 630;
-        alt: 'Zion Tech Group - AI-Powered Business Solutions',
-      };
+        alt: 'Zion Tech Group - AI-Powered Business Solutions'};
     ]};
   twitter: {
     handle: '@ziontechgroup';

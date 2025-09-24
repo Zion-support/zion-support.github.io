@@ -15,7 +15,7 @@ export default function UltraGuidePage() {
         <section className="mb-8">,
           <h2 className="text-2xl font-bold mb-4">📚 Overview</h2>,
           <p className="text-xl text-white/90">,
-            This guide will walk you through implementing Rapid prototyping systems to enhance system window.performance.,
+            This guide will walk you through implementing Rapid prototyping systems to enhance system window.window.performance.,
           </p>,
         </section>,
         <section className="mb-8">,
@@ -36,8 +36,7 @@ export default function UltraGuidePage() {
           </a>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-12290o1" className="internal-link">Related Content</Link>,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-122931" className="internal-link">Related Content</Link>,

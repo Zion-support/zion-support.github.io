@@ -474,6 +474,5 @@ export default function NewsPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

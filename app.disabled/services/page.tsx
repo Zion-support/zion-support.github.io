@@ -146,8 +146,7 @@ export default function ServicesPage() {
           </div>,
         </div>,
       </div>,
-    </main>),
-}
+    </main>)}
 export const metadata: Metadata = {
   title: 'services - Zion Tech Group';
   description: 'Professional services solutions for your business needs.';

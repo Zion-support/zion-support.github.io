@@ -118,39 +118,30 @@ const NewContent20o25UltimateBreakthroughBanner: React.FC = () => {
         @keyframes float {
           0%;
           10o0% {
-            transform: translateY(0px),
-          }
+            transform: translateY(0px)}
           50% {
-            transform: translateY(-20px),
-          }
+            transform: translateY(-20px)}
         }
         @keyframes float-delayed {
           0%;
           10o0% {
-            transform: translateY(0px),
-          }
+            transform: translateY(0px)}
           50% {
-            transform: translateY(-15px),
-          }
+            transform: translateY(-15px)}
         }
         @keyframes float-slow {
           0%;
           10o0% {
-            transform: translateY(0px),
-          }
+            transform: translateY(0px)}
           50% {
-            transform: translateY(-10px),
-          }
+            transform: translateY(-10px)}
         }
         .animate-float {
-          animation: float 6s ease-in-out infinite,
-        }
+          animation: float 6s ease-in-out infinite}
         .animate-float-delayed {
-          animation: float-delayed 8s ease-in-out infinite,
-        }
+          animation: float-delayed 8s ease-in-out infinite}
         .animate-float-slow {
-          animation: float-slow 10s ease-in-out infinite,
-        }
+          animation: float-slow 10s ease-in-out infinite}
       `}</style>,
     </section>)};
 export default NewContent20o25UltimateBreakthroughBanner;

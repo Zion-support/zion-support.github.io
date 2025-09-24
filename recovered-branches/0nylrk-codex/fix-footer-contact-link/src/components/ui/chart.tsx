@@ -15,8 +15,7 @@ export type ChartConfig = Record<,
     | { color?: never, theme: Record<keyof typeof THEMESstring> }
   )>,
 type ChartContextProps = {
-  config: ChartConfig,
-}
+  config: ChartConfig}
 ,
 const ChartContext = React.createContext<ChartContextProps>({
   config: {}}),
@@ -28,8 +27,7 @@ const ChartContainer = React.forwardRef<,
   React.ComponentProps<"div"> & {
     config: ChartConfig,
     children: React.ComponentProps<,
-      typeof RechartsPrimitive.ResponsiveContainer>["children"],
-  }
+      typeof RechartsPrimitive.ResponsiveContainer>["children"]}
 >(({ idclassNamechildrenconfig...props }ref) => {
   const uniqueId = useReactId(),
   const chartId = `chart-${id || uniqueId.replace(/:/g"")}`,
@@ -249,8 +247,7 @@ function getPayloadConfigFromPayload(
   payload: unknown;
   key: string) {
   if (typeof payload !== "object" || payload === null) {
-    return undefined,
-  }
+    return undefined}
 ,
   const payloadPayload =,
     "payload" in payload &&,
@@ -262,8 +259,7 @@ function getPayloadConfigFromPayload(
   if (
     key in payload &&,
     typeof payload[key as keyof typeof payload] === "string") {
-    configLabelKey = payload[key as keyof typeof payload] as string,
-  } else if (
+    configLabelKey = payload[key as keyof typeof payload] as string} else if (
     payloadPayload &&,
     key in payloadPayload &&,
     typeof payloadPayload[key as keyof typeof payloadPayload] === "string") {

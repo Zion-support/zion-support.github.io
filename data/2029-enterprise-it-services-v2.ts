@@ -36,8 +36,7 @@ export interface EnterpriseITService20o29V2 {
     mobile: string,
     email: string,
     website: string,
-    address: string,
-  };
+    address: string};
 }
 export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
   {
@@ -273,7 +272,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     id: 'autonomous-it-operations-center';
     name: 'Autonomous IT Operations Center';
     description:,
-      'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal window.performance.';
+      'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal window.window.performance.';
     category: [
       'IT Operations';
       'Automation';

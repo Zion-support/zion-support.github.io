@@ -355,8 +355,7 @@ export default function Comprehensive2026ServicesShowcase() {
                   className={`p-2 rounded-lg transition-colors ${
                     viewMode === 'grid',
                       ? 'bg-blue-600 text-white',
-                      : 'bg-white/20 text-gray-300 hover: bg-white/30',
-                  }`}
+                      : 'bg-white/20 text-gray-300 hover: bg-white/30'}`}
                 >,
                   <Grid className='w-5 h-5' />,
                 </button>,
@@ -365,8 +364,7 @@ export default function Comprehensive2026ServicesShowcase() {
                   className={`p-2 rounded-lg transition-colors ${
                     viewMode === 'list',
                       ? 'bg-blue-600 text-white',
-                      : 'bg-white/20 text-gray-300 hover: bg-white/30',
-                  }`}
+                      : 'bg-white/20 text-gray-300 hover: bg-white/30'}`}
                 >,
                   <List className='w-5 h-5' />,
                 </button>,
@@ -445,16 +443,14 @@ export default function Comprehensive2026ServicesShowcase() {
             className={
               viewMode === 'grid',
                 ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8',
-                : 'space-y-6',
-            }
+                : 'space-y-6'}
           >,
             {filteredServices.map(service => (
               <motion.div,
                 key={service.id}
                 variants={itemVariants}
                 className={`bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 transform hover:scale-105 ${
-                  viewMode === 'list' ? 'flex items-center space-x-6' : '',
-                }`}
+                  viewMode === 'list' ? 'flex items-center space-x-6' : ''}`}
               >,
                 {viewMode === 'list' ? (
                   // List View,
@@ -624,6 +620,5 @@ export default function Comprehensive2026ServicesShowcase() {
           </div>,
         </motion.div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

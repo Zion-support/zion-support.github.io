@@ -71,6 +71,5 @@ export default function AgenticSalesPlaybooksPage() {
           Deploy Agentic Sales,
         </a>,
       </footer>,
-    </div>),
-}
+    </div>)}
 ,

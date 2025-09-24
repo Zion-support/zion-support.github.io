@@ -11,8 +11,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const serviceCategories = [
   {
     title: 'AI & Machine Learning';
@@ -105,8 +104,7 @@ export default function UltraAdvancedNavigationV2() {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category),
-  };
+    setActiveDropdown(activeDropdown === category ? null : category)};
   const closeDropdown = () => {
     setActiveDropdown(null)};
   return (
@@ -139,8 +137,7 @@ export default function UltraAdvancedNavigationV2() {
                 <Sparkles className="w-5 h-5"  />,
                 <span>Services</span>,
                 <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
-                  activeDropdown === 'services' ? 'rotate-180' : '',
-                }`}  />,
+                  activeDropdown === 'services' ? 'rotate-180' : ''}`}  />,
               </button>,
               <AnimatePresence>,
                 {activeDropdown === 'services' && (
@@ -214,8 +211,7 @@ export default function UltraAdvancedNavigationV2() {
                 <Building2 className="w-5 h-5"  />,
                 <span>Company</span>,
                 <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
-                  activeDropdown === 'company' ? 'rotate-180' : '',
-                }`}  />,
+                  activeDropdown === 'company' ? 'rotate-180' : ''}`}  />,
               </button>,
               <AnimatePresence>,
                 {activeDropdown === 'company' && (

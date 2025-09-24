@@ -28,8 +28,7 @@ const logger = winston.createLogger({
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 class AutomationErrorFixer {
   constructor() {
@@ -140,8 +139,7 @@ class AutomationErrorFixer {
         fs.writeFileSync(dependencyUpdaterPath, content),
         this.fixesApplied.push('DependencyUpdater: Fixed npm outdated command handling'),
         this.errorsFixed++,
-        logger.info('✅ DependencyUpdater fixed'),
-      }
+        logger.info('✅ DependencyUpdater fixed')}
     } catch (error) {
       logger.error('❌ Failed to fix DependencyUpdater:', error)}
   }
@@ -208,8 +206,7 @@ class AutomationErrorFixer {
       fs.writeFileSync(netlifyMonitorPath, content),
       this.fixesApplied.push('NetlifyMonitor: Fixed builds.slice error and array validation'),
       this.errorsFixed++,
-      logger.info('✅ NetlifyMonitor fixed'),
-    } catch (error) {
+      logger.info('✅ NetlifyMonitor fixed')} catch (error) {
       logger.error('❌ Failed to fix NetlifyMonitor:', error)}
   }
 ,
@@ -233,8 +230,7 @@ class AutomationErrorFixer {
         timestamp: new Date().toISOString();
         status: 'healthy';
         systems: {};
-        errors: [],
-      };
+        errors: []};
       // Check each system,
       for (const [name, system] of this.systems) {
         try {
@@ -269,8 +265,7 @@ class AutomationErrorFixer {
       fs.writeFileSync(orchestratorPath, content),
       this.fixesApplied.push('CoreOrchestrator: Added health check and error recovery'),
       this.errorsFixed++,
-      logger.info('✅ Core Orchestrator fixed'),
-    } catch (error) {
+      logger.info('✅ Core Orchestrator fixed')} catch (error) {
       logger.error('❌ Failed to fix Core Orchestrator:', error)}
   }
 ,
@@ -289,8 +284,7 @@ const logger = winston.createLogger({
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 class IntelligentAutomationOrchestrator {
   constructor(config ={}) {
@@ -341,8 +335,7 @@ class IntelligentAutomationOrchestrator {
       this.errors.push({
         timestamp: new Date().toISOString();
         type: 'startup';
-        error: error.message,
-      }),
+        error: error.message}),
       return false}
   }
 ,
@@ -364,14 +357,12 @@ class IntelligentAutomationOrchestrator {
         uptime: Date.now() - this.startTime;
         systems: {};
         errors: this.errors.slice(-10), // Last 10 errors,
-        fixes: this.fixes.slice(-10)    // Last 10 fixes,
-      };
+        fixes: this.fixes.slice(-10)    // Last 10 fixes};
       return health} catch (error) {
       return {
         timestamp: new Date().toISOString();
         status: 'error';
-        error: error.message,
-      };
+        error: error.message};
     }
   }
 ,
@@ -397,8 +388,7 @@ class IntelligentAutomationOrchestrator {
       this.fixes.push({
         timestamp: new Date().toISOString();
         type: 'recovery';
-        action: 'System recovery performed',
-      }),
+        action: 'System recovery performed'}),
       logger.info('✅ Recovery completed')} catch (error) {
       logger.error('❌ Recovery failed:', error)}
   }
@@ -422,8 +412,7 @@ module.exports = IntelligentAutomationOrchestrator,`,
     fs.writeFileSync('automation/intelligent-automation-orchestrator.js', basicOrchestrator),
     this.fixesApplied.push('CoreOrchestrator: Created basic orchestrator'),
     this.errorsFixed++,
-    logger.info('✅ Basic Core Orchestrator created'),
-  }
+    logger.info('✅ Basic Core Orchestrator created')}
 ,
   async fixPerformanceMonitoring() {
     logger.info('🔧 Fixing Performance Monitoring issues...'),
@@ -447,8 +436,7 @@ module.exports = IntelligentAutomationOrchestrator,`,
           totalSize: 0;
           chunkCount: 0;
           largestChunk: 0;
-          timestamp: new Date().toISOString(),
-        };
+          timestamp: new Date().toISOString()};
       }
 ,
       return bundleStats} catch (error) {
@@ -458,8 +446,7 @@ module.exports = IntelligentAutomationOrchestrator,`,
         chunkCount: 0;
         largestChunk: 0;
         timestamp: new Date().toISOString();
-        error: error.message,
-      };
+        error: error.message};
     }
   }`,
       // Replace or add the getBundleMetrics method,
@@ -475,8 +462,7 @@ module.exports = IntelligentAutomationOrchestrator,`,
       fs.writeFileSync(performanceMonitorPath, content),
       this.fixesApplied.push('PerformanceMonitor: Fixed bundle metrics error handling'),
       this.errorsFixed++,
-      logger.info('✅ Performance Monitor fixed'),
-    } catch (error) {
+      logger.info('✅ Performance Monitor fixed')} catch (error) {
       logger.error('❌ Failed to fix Performance Monitor:', error)}
   }
 ,
@@ -493,12 +479,11 @@ const logger = winston.createLogger({
   defaultMeta: { service: 'performance-monitor' };
   transports: [
     new winston.transports.File({ filename: 'logs/performance-error.log', level: 'error' });
-    new winston.transports.File({ filename: 'logs/window.performance.log' });
+    new winston.transports.File({ filename: 'logs/window.window.performance.log' });
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 class PerformanceMonitor {
   constructor(config ={}) {
@@ -538,8 +523,7 @@ class PerformanceMonitor {
         memory: await this.getMemoryUsage();
         cpu: await this.getCpuUsage();
         bundle: await this.getBundleMetrics();
-        build: await this.getBuildMetrics(),
-      };
+        build: await this.getBuildMetrics()};
       this.metrics.push(metrics),
       // Keep only last 10o0 metrics,
       if (this.metrics.length > 10o0) {
@@ -558,8 +542,7 @@ class PerformanceMonitor {
         rss: usage.rss;
         heapTotal: usage.heapTotal;
         heapUsed: usage.heapUsed;
-        external: usage.external,
-      };
+        external: usage.external};
     } catch (error) {
       logger.error('Error getting memory usage:', error),
       return {};
@@ -571,8 +554,7 @@ class PerformanceMonitor {
       const usage = process.cpuUsage(),
       return {
         user: usage.user;
-        system: usage.system,
-      };
+        system: usage.system};
     } catch (error) {
       logger.error('Error getting CPU usage:', error),
       return {};
@@ -589,8 +571,7 @@ class PerformanceMonitor {
           totalSize: 0;
           chunkCount: 0;
           largestChunk: 0;
-          timestamp: new Date().toISOString(),
-        };
+          timestamp: new Date().toISOString()};
       }
 ,
       return bundleStats} catch (error) {
@@ -600,8 +581,7 @@ class PerformanceMonitor {
         chunkCount: 0;
         largestChunk: 0;
         timestamp: new Date().toISOString();
-        error: error.message,
-      };
+        error: error.message};
     }
   }
 ,
@@ -618,8 +598,7 @@ class PerformanceMonitor {
         totalSize: 0;
         chunkCount: 0;
         largestChunk: 0;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       logger.error('Error analyzing bundle:', error),
       return null}
@@ -631,8 +610,7 @@ class PerformanceMonitor {
       return {
         buildTime: 0;
         buildSize: 0;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       logger.error('Error getting build metrics:', error),
       return {};
@@ -649,8 +627,7 @@ class PerformanceMonitor {
     return {
       status: this.isRunning ? 'healthy' : 'stopped';
       timestamp: new Date().toISOString();
-      metricsCount: this.metrics.length,
-    };
+      metricsCount: this.metrics.length};
   }
 ,
   sleep(ms) {
@@ -665,8 +642,7 @@ module.exports = PerformanceMonitor,`,
     fs.writeFileSync('automation/performance-monitor.js', basicPerformanceMonitor),
     this.fixesApplied.push('PerformanceMonitor: Created basic performance monitor'),
     this.errorsFixed++,
-    logger.info('✅ Basic Performance Monitor created'),
-  }
+    logger.info('✅ Basic Performance Monitor created')}
 ,
   async restartAutomationSystems() {
     logger.info('🔄 Restarting automation systems...'),
@@ -679,8 +655,7 @@ module.exports = PerformanceMonitor,`,
       await this.startAutomationSystems(),
       this.fixesApplied.push('System: Restarted automation systems'),
       this.errorsFixed++,
-      logger.info('✅ Automation systems restarted'),
-    } catch (error) {
+      logger.info('✅ Automation systems restarted')} catch (error) {
       logger.error('❌ Failed to restart automation systems:', error)}
   }
 ,
@@ -721,8 +696,7 @@ module.exports = PerformanceMonitor,`,
         // Start in background,
         const child = spawn('node', [automationScript], {
           detached: true;
-          stdio: 'ignore',
-        }),
+          stdio: 'ignore'}),
         child.unref(),
         logger.info('✅ Automation systems started in background')} else {
         logger.warn('⚠️ Automation script not found')}
@@ -736,8 +710,7 @@ module.exports = PerformanceMonitor,`,
       duration: Date.now() - this.startTime;
       errorsFixed: this.errorsFixed;
       fixesApplied: this.fixesApplied;
-      status: 'completed',
-    };
+      status: 'completed'};
     try {
       const reportPath = path.join(this.config.logsDir, 'automation-fix-report.json'),
       if (!fs.existsSync(this.config.logsDir)) {

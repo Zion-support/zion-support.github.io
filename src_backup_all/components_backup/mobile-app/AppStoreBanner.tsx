@@ -41,5 +41,4 @@ export const AppStoreBanner: React.FC = () => {
           </button>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};

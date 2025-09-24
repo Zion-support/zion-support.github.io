@@ -108,8 +108,7 @@ reviews: number,export const advancedCybersecurityServices: AdvancedCybersecurit
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced threat intelligence platform with AI-powered detection, predictive analytics, and automated response capabilities. Includes comprehensive threat hunting and risk assessment tools.';
@@ -187,8 +186,7 @@ reviews: number,export const advancedCybersecurityServices: AdvancedCybersecurit
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Comprehensive zero trust architecture with identity verification, device trust scoring, and continuous monitoring. Includes compliance frameworks and security automation.';
@@ -266,8 +264,7 @@ reviews: number,export const advancedCybersecurityServices: AdvancedCybersecurit
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced AI-powered SOC with 24/7 monitoring, automated response, and comprehensive security tools. Includes compliance reporting and security consulting.';
@@ -344,8 +341,7 @@ reviews: number,export const advancedCybersecurityServices: AdvancedCybersecurit
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced quantum-resistant cryptography platform with post-quantum algorithms, key management, and comprehensive security tools. Includes compliance frameworks and performance optimization.';
@@ -423,8 +419,7 @@ reviews: number,export const advancedCybersecurityServices: AdvancedCybersecurit
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced vulnerability management platform with AI-powered assessment, intelligent prioritization, and automated remediation. Includes compliance reporting and performance monitoring.';
@@ -503,8 +498,7 @@ reviews: number,export const advancedCybersecurityServices: AdvancedCybersecurit
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced cloud security platform with multi-cloud monitoring, compliance management, and risk assessment. Includes security automation and incident response.';
@@ -581,8 +575,7 @@ reviews: number,export const advancedCybersecurityServices: AdvancedCybersecurit
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced penetration testing platform with AI-powered testing, automated vulnerability discovery, and intelligent attack simulation. Includes compliance reporting and security consulting.';
@@ -659,8 +652,7 @@ reviews: number,export const advancedCybersecurityServices: AdvancedCybersecurit
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced blockchain security platform with smart contract auditing, security monitoring, and compliance management. Includes security automation and incident response.';
@@ -737,8 +729,7 @@ reviews: number,export const advancedCybersecurityServices: AdvancedCybersecurit
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced IoT security platform with device discovery, security monitoring, and threat detection. Includes device management and compliance management.';

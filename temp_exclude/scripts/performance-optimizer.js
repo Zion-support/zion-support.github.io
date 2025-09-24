@@ -15,7 +15,7 @@ class PerformanceOptimizer {
   }
   log(message) {
     const timestamp = new Date().toISOString(),
-    // console.log(`[${timestamp}] ${message}`)}
+    // // console.log(`[${timestamp}] ${message}`)}
   async optimizePerformance() {
     this.log('⚡ Starting performance optimization'),
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
@@ -111,5 +111,5 @@ class PerformanceMonitor {
     if (typeof window !== 'undefined') {
       // Monitor page load time,
       window.addEventListener('load', () => {
-    this.metrics.pageLoadTime = window.performance.now();
+    this.metrics.pageLoadTime = window.window.performance.now();
 }}}}}))))

@@ -58,8 +58,7 @@ const UltimateTechShowcase20o25Banner = () => {
                 className={`p-4 rounded-xl transition-all duration-30o0 cursor-pointer ${
                   index === currentTech,
                     ? `bg-gradient-to-br ${tech.color} transform scale-110 shadow-lg`,
-                    : 'bg-gray-80o0 hover: bg-gray-70o0',
-                }`}
+                    : 'bg-gray-80o0 hover: bg-gray-70o0'}`}
                 onClick={() => setCurrentTech(index)}
               >,
                 <div className="text-3xl mb-2">{tech.icon}</div>,
@@ -97,6 +96,5 @@ const UltimateTechShowcase20o25Banner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateTechShowcase20o25Banner;

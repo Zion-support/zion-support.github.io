@@ -20,6 +20,5 @@ export default function AutonomousContentCreationSuitePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

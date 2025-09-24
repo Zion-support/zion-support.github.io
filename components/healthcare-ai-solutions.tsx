@@ -18,5 +18,4 @@ export default function HealthcareAISolutions() {
 				"EHR integrations: HL7/FHIREpicCerner"]}
 			industries={["Hospitals"Clinics"Payers"HealthTech"]}
 			canonical="https: //ziontechgroup.com/healthcare-ai-solutions",
-		 />),
-}
+		 />)}

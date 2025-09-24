@@ -22,7 +22,7 @@ declare global {
   var __assign:any;
   var __rest:any;
   var __decorate:any;
-  var __awaiter: any,}
+  var __awaiter: any}
 ,
 // CRITICAL: Self polyfill - must be first,
 if (typeof self === 'undefined') {
@@ -47,8 +47,7 @@ const selfRef: any = typeof self !== 'undefined' ? self :,
                     typeof window !== 'undefined' ? window :{};
 // CRITICAL: Webpack chunk array polyfill,
 if (!selfRef.webpackChunk_N_E) {
-  selfRef.webpackChunk_N_E = [],
-}
+  selfRef.webpackChunk_N_E = []}
 ,
 // Ensure webpack chunk array is properly initialized,
 if (typeof webpackChunk_N_E === 'undefined') {
@@ -83,7 +82,7 @@ const tsHelpers ={
         const symbol = symbols[i];
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol)),
           t[symbol] = s[symbol];      }
-    function __extends_helper(_this: unknown) { this.constructor = d,}
+    function __extends_helper(_this: unknown) { this.constructor = d}
     d.prototype = b === null ? Object.create(b) : (__extends_helper.prototype = b.prototype, new (__extends_helper as any)())};
   __assign: function() {_return Object.assign || function (_t: unknown) {
       for (var s, _i = 1, _n = arguments.length, i < n, i++) {
@@ -209,9 +208,8 @@ export const verifyPolyfills = () => {
     selfDefined:typeof self !== 'undefined';
     webpackChunkDefined:typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined');
     tsHelpersDefined:typeof __extends !== 'undefined' && typeof __assign !== 'undefined';
-    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null,
-  };
-  // // // // console.log('Serverless polyfill verification:', checks);
+    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null};
+  // // // // // console.log('Serverless polyfill verification:', checks);
   return Object.values(checks).every(Boolean);
 };
 // Auto-verify in development,
@@ -221,19 +219,15 @@ if (process.env.NODE_ENV === 'development') {
 ,export default {}, // Ensure this can be imported as a module,
 /* eslint-disable @typescript-eslint/no-explicit-any */ /* eslint-disable @typescript-eslint/no-unused-vars */ /* eslint-disable @typescript-eslint/no-this-alias */ /* eslint-disable prefer-const */ /** * Serverless Environment Polyfill * * - Missing global objects * - Webpack chunk loading issues * - TypeScript helper function issues * * This runs as the VERY FIRST script before any other code loads. */ //Type declarations for global augmentation }
 }//Ensure self is properly referenced const selfRef: unknown = typeof self !== 'undefined' ? self : typeof global !== 'undefined' ? global : typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : {
-  ,
 };
-//CRITICAL: Webpack chunk array polyfill if (typeof b !== "function" && b !== null) throw new TypeError ("Class extends value " + String (b) + "is not a constructor or null"),
-}
+//CRITICAL: Webpack chunk array polyfill if (typeof b !== "function" && b !== null) throw new TypeError ("Class extends value " + String (b) + "is not a constructor or null")}
 }return t};
 };
 awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {
   function adopt (value: any) {
   return value instanceof P ? value : new P (function (resolve: any) {
-  resolve (value) ,
-}) }return new (P || (P = Promise) ) (function (resolve: any, reject: any) {
-  step ( (generator = generator.apply (thisArg, arguments || []) ) .next () )}),
-}
+  resolve (value) }) }return new (P || (P = Promise) ) (function (resolve: any, reject: any) {
+  step ( (generator = generator.apply (thisArg, arguments || []) ) .next () )})}
 };
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {',
   //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {

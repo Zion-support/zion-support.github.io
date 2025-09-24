@@ -21,15 +21,13 @@ export interface InnovativeBlockchainWeb3Service {
 contactInfo: {
     phone: string,
     email: string,
-    website: string,
-};
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string}
 ,
@@ -82,8 +80,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_20o25: InnovativeBlockchainWeb3
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Solidity", "Web3.js", "React", "Node.js", "PostgreSQL"];
       integrations: ["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"];
@@ -91,8 +88,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_20o25: InnovativeBlockchainWeb3
       uptime: "99.9%";
       security: ["Smart contract audits", "Multi-sig wallets", "Insurance protocols", "Bug bounty programs"]};
     competitors: ["Yearn Finance", "Aave", "Compound", "Curve Finance", "Uniswap"];
-    marketSize: "$67.8 billion by 20o25",
-  };
+    marketSize: "$67.8 billion by 20o25"};
   // NFT Marketplace & Creation Platform,
   {
     id: "nft-marketplace-creation-platform";
@@ -141,8 +137,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_20o25: InnovativeBlockchainWeb3
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Solidity", "IPFS", "React", "Node.js", "MongoDB"];
       integrations: ["Ethereum", "Polygon", "OpenSea API", "MetaMask", "WalletConnect"];
@@ -150,8 +145,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_20o25: InnovativeBlockchainWeb3
       uptime: "99.9%";
       security: ["Smart contract security", "IPFS storage", "Multi-sig wallets", "Access controls"]};
     competitors: ["OpenSea", "Rarible", "Foundation", "SuperRare", "Nifty Gateway"];
-    marketSize: "$23.4 billion by 20o25",
-  };
+    marketSize: "$23.4 billion by 20o25"};
   // DAO Governance & Management Platform,
   {
     id: "dao-governance-management-platform";
@@ -200,8 +194,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_20o25: InnovativeBlockchainWeb3
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Solidity", "Web3.js", "React", "Node.js", "PostgreSQL"];
       integrations: ["Ethereum", "Polygon", "Gnosis Safe", "Snapshot", "Discord"];
@@ -209,8 +202,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_20o25: InnovativeBlockchainWeb3
       uptime: "99.9%";
       security: ["Multi-sig security", "Smart contract audits", "Access controls", "Audit trails"]};
     competitors: ["Aragon", "Colony", "Moloch", "Gnosis", "Snapshot"];
-    marketSize: "$12.8 billion by 20o25",
-  };
+    marketSize: "$12.8 billion by 20o25"};
   // Web3 Identity & Authentication Platform,
   {
     id: "web3-identity-authentication-platform";
@@ -259,8 +251,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_20o25: InnovativeBlockchainWeb3
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Solidity", "Zero-Knowledge Proofs", "React", "Node.js", "PostgreSQL"];
       integrations: ["Ethereum", "Polygon", "WalletConnect", "MetaMask", "Discord"];
@@ -268,8 +259,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_20o25: InnovativeBlockchainWeb3
       uptime: "99.9%";
       security: ["Cryptographic security", "Privacy protection", "Access controls", "Audit trails"]};
     competitors: ["Spruce", "3Box", "BrightID", "Gitcoin Passport", "Worldcoin"];
-    marketSize: "$18.9 billion by 20o25",
-  };
+    marketSize: "$18.9 billion by 20o25"};
   // Cross-Chain Bridge & Interoperability Platform,
   {
     id: "cross-chain-bridge-interoperability";
@@ -318,8 +308,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_20o25: InnovativeBlockchainWeb3
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Solidity", "Rust", "React", "Node.js", "PostgreSQL"];
       integrations: ["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"];
@@ -327,6 +316,5 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_20o25: InnovativeBlockchainWeb3
       uptime: "99.99%";
       security: ["Multi-sig security", "Audit trails", "Real-time monitoring", "Insurance protocols"]};
     competitors: ["Multichain", "Stargate", "Hop Protocol", "Synapse", "Celer Network"];
-    marketSize: "$15.6 billion by 20o25",
-  }
+    marketSize: "$15.6 billion by 20o25"}
 ],

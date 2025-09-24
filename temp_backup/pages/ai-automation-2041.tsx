@@ -401,7 +401,7 @@ export default function AIAutomation20o41() {
                 {
                   title: '24/7 Operation';
                   description:,
-                    'Enable round-the-clock operations with AI systems that never sleep and maintain consistent window.performance.';
+                    'Enable round-the-clock operations with AI systems that never sleep and maintain consistent window.window.performance.';
                   icon: <Clock className='w-8 h-8' />;
                   color: 'from-blue-50o0 to-cyan-50o0';
                 };
@@ -453,6 +453,5 @@ export default function AIAutomation20o41() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

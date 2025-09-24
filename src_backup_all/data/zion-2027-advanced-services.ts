@@ -18,8 +18,7 @@ export interface Zion20o27AdvancedService {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
   marketPosition: string,
   targetAudience: string[],
   roi: string,
@@ -34,8 +33,7 @@ export interface Zion20o27AdvancedService {
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const zion20o27AdvancedServices: Zion20o27AdvancedService[] = [
   {

@@ -8,8 +8,7 @@ interface InternalLinkProps {
   size?: 'sm' | 'md' | 'lg',
   icon?: React.ReactNode,
   showArrow?: boolean,
-  onClick?: () => void,
-}
+  onClick?: () => void}
 ,
 export default function InternalLink({
   href;

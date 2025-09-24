@@ -28,24 +28,21 @@ const EmergingTechServices: NextPage = () => {
       case 'roi':,
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]),
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   const getInnovationColor = (level: anystring)  => {
     switch (level) {
       case 'Revolutionary': return 'from-red-50o0 to-pink-60o0',
       case 'Breakthrough': return 'from-purple-50o0 to-indigo-60o0',
       case 'Advanced': return 'from-blue-50o0 to-cyan-60o0',
-      default: return 'from-gray-50o0 to-gray-60o0',
-    }
+      default: return 'from-gray-50o0 to-gray-60o0'}
   };
   const getBadgeColor = (badge: anystring)  => {
     switch (badge) {
       case 'Revolutionary': return 'bg-gradient-to-r from-red-50o0 to-pink-60o0',
       case 'Breakthrough': return 'bg-gradient-to-r from-purple-50o0 to-indigo-60o0',
       case 'Advanced': return 'bg-gradient-to-r from-blue-50o0 to-cyan-60o0',
-      default: return 'bg-gradient-to-r from-gray-50o0 to-gray-60o0',
-    }
+      default: return 'bg-gradient-to-r from-gray-50o0 to-gray-60o0'}
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-70o0 relative overflow-hidden">,
@@ -143,8 +140,7 @@ const EmergingTechServices: NextPage = () => {
               className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                 selectedCategory === category.id,
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
-                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20 border border-white/20',
-              }`}
+                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20 border border-white/20'}`}
             >,
               {category.name}
             </button>))}
@@ -247,6 +243,5 @@ const EmergingTechServices: NextPage = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default EmergingTechServices;

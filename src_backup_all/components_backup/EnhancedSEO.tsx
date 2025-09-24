@@ -7,8 +7,7 @@ interface SEOProps {
   ogImage?: string,
   ogUrl?: string,
   canonicalUrl?: string,
-  structuredData?: object,
-}
+  structuredData?: object}
 ,
 export const EnhancedSEO: React.FC<SEOProps> = ({
   title;
@@ -60,5 +59,4 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
         href='https://fonts.gstatic.com',
         crossOrigin='anonymous',
       />,
-    </Helmet>),
-};
+    </Helmet>)};

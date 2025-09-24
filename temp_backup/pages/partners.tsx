@@ -31,6 +31,5 @@ export default function PartnersPage() {
           </a>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

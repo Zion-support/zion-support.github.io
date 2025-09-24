@@ -39,7 +39,7 @@ function findBestBackup(pagePath) {
           content.length > 10o0) {
         return backupPath}
     } catch (error) {
-      // console.log(`Error reading backup ${backupPath}:`, error.message)}
+      // // console.log(`Error reading backup ${backupPath}:`, error.message)}
   }
 ,
   return null}

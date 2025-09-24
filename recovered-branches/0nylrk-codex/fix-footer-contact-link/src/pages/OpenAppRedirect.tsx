@@ -76,7 +76,6 @@ const OpenAppRedirect: React.FC = () => {
       if (isAndroid || isiOS) {
         // Set a timeout to redirect to app store if the app doesn't open,
         timeout = window && window.setTimeout(() => {
-,
           setStatus('timeout'),
           if (isAndroid) {
             window && window.location.href = androidAppUrl} else if (isiOS) {

@@ -15,8 +15,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const heroStats = [
   { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5"  /> };
   { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5"  /> };
@@ -31,8 +30,7 @@ const serviceCategories = [
     icon: Brain;
     color: 'from-violet-50o0 to-purple-60o0';
     gradient: 'bg-gradient-to-r from-violet-50o0 to-purple-60o0';
-    count: cuttingEdgeAIServices20o25.length,
-  };
+    count: cuttingEdgeAIServices20o25.length};
   {
     title: 'Quantum & Emerging Tech';
     description: 'Breakthrough quantum computing and space technology solutions';
@@ -40,8 +38,7 @@ const serviceCategories = [
     icon: Atom;
     color: 'from-indigo-50o0 to-blue-60o0';
     gradient: 'bg-gradient-to-r from-indigo-50o0 to-blue-60o0';
-    count: cuttingEdgeQuantumServices20o25.length,
-  };
+    count: cuttingEdgeQuantumServices20o25.length};
   {
     title: 'Enterprise IT';
     description: 'Advanced enterprise infrastructure and security solutions';
@@ -49,8 +46,7 @@ const serviceCategories = [
     icon: Shield;
     color: 'from-blue-50o0 to-cyan-60o0';
     gradient: 'bg-gradient-to-r from-blue-50o0 to-cyan-60o0';
-    count: cuttingEdgeEnterpriseITServices20o25.length,
-  };
+    count: cuttingEdgeEnterpriseITServices20o25.length};
   {
     title: 'Micro SAAS';
     description: 'Innovative business solutions for modern enterprises';
@@ -58,8 +54,7 @@ const serviceCategories = [
     icon: Rocket;
     color: 'from-teal-50o0 to-emerald-60o0';
     gradient: 'bg-gradient-to-r from-teal-50o0 to-emerald-60o0';
-    count: cuttingEdgeMicroSaasServices20o25.length,
-  }
+    count: cuttingEdgeMicroSaasServices20o25.length}
 ];
 export default function CuttingEdgeServicesShowcase20o25() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -81,8 +76,7 @@ export default function CuttingEdgeServicesShowcase20o25() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -91,8 +85,7 @@ export default function CuttingEdgeServicesShowcase20o25() {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -202,8 +195,7 @@ export default function CuttingEdgeServicesShowcase20o25() {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-30o0 ${
                     selectedCategory === 'all',
                       ? 'bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white',
-                      : 'bg-black/50 border border-cyan-50o0/30 text-cyan-40o0 hover: bg-cyan-50o0/10',
-                  }`}
+                      : 'bg-black/50 border border-cyan-50o0/30 text-cyan-40o0 hover: bg-cyan-50o0/10'}`}
                 >,
                   All ({allServices.length}),
                 </button>,
@@ -214,8 +206,7 @@ export default function CuttingEdgeServicesShowcase20o25() {
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-30o0 ${
                       selectedCategory === category.title,
                         ? 'bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white',
-                        : 'bg-black/50 border border-cyan-50o0/30 text-cyan-40o0 hover: bg-cyan-50o0/10',
-                    }`}
+                        : 'bg-black/50 border border-cyan-50o0/30 text-cyan-40o0 hover: bg-cyan-50o0/10'}`}
                   >,
                     {category.title} ({category.count}),
                   </button>))}
@@ -227,8 +218,7 @@ export default function CuttingEdgeServicesShowcase20o25() {
                   className={`p-2 rounded-lg transition-all duration-30o0 ${
                     viewMode === 'grid',
                       ? 'bg-cyan-50o0/20 text-cyan-40o0 border border-cyan-50o0/50',
-                      : 'bg-black/50 text-white/70 hover: text-white hover:bg-black/70',
-                  }`}
+                      : 'bg-black/50 text-white/70 hover: text-white hover:bg-black/70'}`}
                 >,
                   <Grid className="w-5 h-5"  />,
                 </button>,
@@ -237,8 +227,7 @@ export default function CuttingEdgeServicesShowcase20o25() {
                   className={`p-2 rounded-lg transition-all duration-30o0 ${
                     viewMode === 'list',
                       ? 'bg-cyan-50o0/20 text-cyan-40o0 border border-cyan-50o0/50',
-                      : 'bg-black/50 text-white/70 hover: text-white hover:bg-black/70',
-                  }`}
+                      : 'bg-black/50 text-white/70 hover: text-white hover:bg-black/70'}`}
                 >,
                   <List className="w-5 h-5"  />,
                 </button>,
@@ -261,8 +250,7 @@ export default function CuttingEdgeServicesShowcase20o25() {
                   key={service.id}
                   variants={itemVariants}
                   className={`group relative overflow-hidden rounded-2xl border border-cyan-50o0/20 bg-gradient-to-br from-black/80 via-purple-90o0/10 to-black/80 backdrop-blur-sm hover: border-cyan-50o0/50 transition-all duration-50o0 transform hover:scale-10o5 hover:shadow-2xl hover:shadow-cyan-50o0/20 ${
-                    viewMode === 'list' ? 'flex flex-col lg:flex-row' : '',
-                  }`}
+                    viewMode === 'list' ? 'flex flex-col lg:flex-row' : ''}`}
                 >,
                   {/* Service Header */}
                   <div className={`p-6 ${viewMode === 'list' ? 'lg: w-1/3' : ''}`}>,

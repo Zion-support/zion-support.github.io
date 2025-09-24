@@ -15,6 +15,5 @@ export default function StaticPropsExamplePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

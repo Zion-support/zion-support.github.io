@@ -7,8 +7,7 @@ interface StateAction {
   meta?: {
     timestamp?: number,
     source?: string,
-    optimistic?: boolean,
-  };
+    optimistic?: boolean};
 }
 ,
 interface StateManagerConfig {
@@ -16,16 +15,14 @@ interface StateManagerConfig {
   enableDevTools: boolean,
   enableOptimisticUpdates: boolean,
   enableUndoRedo: boolean,
-  maxHistorySize: number,
-}
+  maxHistorySize: number}
 ,
 interface StateManagerState {
   data: Record<stringany>,
   loading: Record<stringboolean>,
   errors: Record<string | null>,
   history: StateAction[],
-  historyIndex: number,
-}
+  historyIndex: number}
 ,
 const initialState: StateManagerState ={
   data: {};
@@ -108,8 +105,7 @@ const stateManagerReducer = (state: StateManagerStateaction: StateAction): State
       }
       return state,
     default: ,
-      return state,
-  }
+      return state}
 };
 const AdvancedStateManager: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [statedispatch] = useReducer(stateManagerReducerinitialState),
@@ -127,8 +123,7 @@ const AdvancedStateManager: React.FC<{ children: React.ReactNode }> = ({ childre
       try {
         const parsedState = JSON.parse(savedState),
         dispatch({ type: ''BATCH_UPDATE', 'payload: parsedState })} catch (error) {
-        console.error('Failed to load saved state: 'error),
-      }
+        console.error('Failed to load saved state: 'error)}
     }
   }[config.enablePersistence]),
   useEffect(() => {
@@ -201,17 +196,13 @@ const AdvancedStateManager: React.FC<{ children: React.ReactNode }> = ({ childre
       dispatch({ type: 'REDO' })}
   }[config.enableUndoRedo]),
   const getData = useCallback((key: string) => {
-    return state.data[key],
-  }[state.data]),
+    return state.data[key]}[state.data]),
   const getLoading = useCallback((key: string) => {
-    return state.loading[key] || false,
-  }[state.loading]),
+    return state.loading[key] || false}[state.loading]),
   const getError = useCallback((key: string) => {
-    return state.errors[key],
-  }[state.errors]),
+    return state.errors[key]}[state.errors]),
   const hasData = useCallback((key: string) => {
-    return key in state.data,
-  }[state.data]),
+    return key in state.data}[state.data]),
   const isUndoAvailable = state.historyIndex > 0,
   const isRedoAvailable = state.historyIndex < state.history.length - 1,
   return {

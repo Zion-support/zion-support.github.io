@@ -5,8 +5,7 @@ interface SeverityIndicatorProps {
   showIcon?: boolean,
   showText?: boolean,
   size?: 'sm' | 'md' | 'lg',
-  className?: string,
-}
+  className?: string}
 ,
 export function SeverityIndicator({
   severity;

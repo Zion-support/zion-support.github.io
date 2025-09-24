@@ -113,8 +113,7 @@ reviews: number,export const innovative20o26Services: Innovative20o26Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full-stack quantum AI platform with real-time data processing, predictive modeling, and enterprise-grade security. Includes mobile app and advanced visualization tools.';
@@ -195,8 +194,7 @@ reviews: number,export const innovative20o26Services: Innovative20o26Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production-ready quantum communication platform with hardware security modules, quantum random number generators, and enterprise deployment tools.';
@@ -279,8 +277,7 @@ reviews: number,export const innovative20o26Services: Innovative20o26Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full-featured legal AI platform with natural language processing, machine learning models, and comprehensive legal database integration.';
@@ -363,8 +360,7 @@ reviews: number,export const innovative20o26Services: Innovative20o26Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production quantum trading platform with real-time market data, advanced risk management, and regulatory compliance features.';
@@ -446,8 +442,7 @@ reviews: number,export const innovative20o26Services: Innovative20o26Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   FDA-compliant AI healthcare platform with advanced medical imaging analysis, natural language processing, and comprehensive EHR integration.';
@@ -530,8 +525,7 @@ reviews: number,export const innovative20o26Services: Innovative20o26Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production quantum security platform with hardware security modules, quantum random number generators, and comprehensive threat intelligence.';
@@ -614,8 +608,7 @@ reviews: number,export const innovative20o26Services: Innovative20o26Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full-featured marketing automation platform with AI-powered analytics, multi-channel integration, and comprehensive reporting tools.';
@@ -698,8 +691,7 @@ reviews: number,export const innovative20o26Services: Innovative20o26Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production quantum blockchain platform with advanced consensus mechanisms, smart contract capabilities, and enterprise deployment tools.';
@@ -782,8 +774,7 @@ reviews: number,export const innovative20o26Services: Innovative20o26Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full-featured AI education platform with adaptive learning algorithms, comprehensive analytics, and multi-platform support.';
@@ -820,7 +811,7 @@ reviews: number,export const innovative20o26Services: Innovative20o26Service[] =
   text-violet-40o0';
     "link": 'https://ziontechgroup.com/quantum-iot-platform-pro;
     marketPosition:;
-  Premium IoT solution above AWS IoT ($0.08-5.0o0), Microsoft Azure IoT ($0.50-15.0o0), and Google Cloud IoT ($0.50-10.0o0). Quantum technology provides superior window.performance.';
+  Premium IoT solution above AWS IoT ($0.08-5.0o0), Microsoft Azure IoT ($0.50-15.0o0), and Google Cloud IoT ($0.50-10.0o0). Quantum technology provides superior window.window.performance.';
     "targetAudience": Manufacturing companies, Smart cities, Energy companies, Transportation companies, Healthcare organizations, Agricultural companies';
     "trialDays": 30;
     setupTime:;
@@ -866,8 +857,7 @@ reviews: number,export const innovative20o26Services: Innovative20o26Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production quantum IoT platform with edge computing capabilities, real-time data processing, and comprehensive security features.';

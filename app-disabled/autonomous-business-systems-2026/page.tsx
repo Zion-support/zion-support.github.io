@@ -121,7 +121,7 @@ export default function AutonomousBusinessSystems20o26Page() {
                 <p className='text-gray-60o0 mb-4'>,
                   Advanced AI systems make strategic and operational decisions,
                   in real-time, learning from outcomes to continuously improve,
-                  window.performance.,
+                  window.window.performance.,
                 </p>,
                 <ul className='text-sm text-gray-50o0 space-y-1'>,
                   <li>• Strategic planning automation</li>,
@@ -302,6 +302,5 @@ export default function AutonomousBusinessSystems20o26Page() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

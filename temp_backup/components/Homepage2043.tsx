@@ -36,48 +36,42 @@ const Homepage20o43: React.FC = () => {
       description: "Next-generation AI consciousness with human-level understanding";
       href: "/quantum-neural-consciousness-platform";
       color: "from-purple-50o0 to-pink-50o0";
-      gradient: "bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20",
-    };
+      gradient: "bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20"};
     {
       icon: AtomIcon;
       title: "Quantum Computing";
       description: "Revolutionary quantum computing with consciousness integration";
       href: "/quantum-bio-computing-platform";
       color: "from-blue-50o0 to-cyan-50o0";
-      gradient: "bg-gradient-to-br from-blue-50o0/20 to-cyan-50o0/20",
-    };
+      gradient: "bg-gradient-to-br from-blue-50o0/20 to-cyan-50o0/20"};
     {
       icon: Shield;
       title: "Future Cybersecurity";
       description: "Quantum-resistant security with consciousness-based protection";
       href: "/quantum-internet-security-gateway";
       color: "from-red-50o0 to-orange-50o0";
-      gradient: "bg-gradient-to-br from-red-50o0/20 to-orange-50o0/20",
-    };
+      gradient: "bg-gradient-to-br from-red-50o0/20 to-orange-50o0/20"};
     {
       icon: Rocket;
       title: "Space Technology";
       description: "AI-powered space resource intelligence and autonomous mining";
       href: "/autonomous-space-mining-ai";
       color: "from-indigo-50o0 to-purple-50o0";
-      gradient: "bg-gradient-to-br from-indigo-50o0/20 to-purple-50o0/20",
-    };
+      gradient: "bg-gradient-to-br from-indigo-50o0/20 to-purple-50o0/20"};
     {
       icon: Cpu;
       title: "Autonomous Systems";
       description: "Fully autonomous AI systems with consciousness";
       href: "/autonomous-business-ecosystem-ai";
       color: "from-emerald-50o0 to-teal-50o0";
-      gradient: "bg-gradient-to-br from-emerald-50o0/20 to-teal-50o0/20",
-    };
+      gradient: "bg-gradient-to-br from-emerald-50o0/20 to-teal-50o0/20"};
     {
       icon: Database;
       title: "Business Intelligence";
       description: "Autonomous business intelligence with consciousness insights";
       href: "/autonomous-healthcare-ai-ecosystem";
       color: "from-yellow-50o0 to-orange-50o0";
-      gradient: "bg-gradient-to-br from-yellow-50o0/20 to-orange-50o0/20",
-    }
+      gradient: "bg-gradient-to-br from-yellow-50o0/20 to-orange-50o0/20"}
   ],
   const stats = [
     { number: "20o00+", label: "Revolutionary Services", icon: Star, color: "from-yellow-40o0 to-orange-50o0" };
@@ -92,24 +86,21 @@ const Homepage20o43: React.FC = () => {
       company: "QuantumTech Industries";
       content: "Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods.";
       rating: 5;
-      avatar: "👩‍🔬",
-    };
+      avatar: "👩‍🔬"};
     {
       name: "Marcus Rodriguez";
       role: "CTO";
       company: "SpaceMining Corp";
       content: "The autonomous space mining AI has increased our resource extraction efficiency by 50o0%. It's like having a team of expert miners working 24/7 without breaks.";
       rating: 5;
-      avatar: "👨‍🚀",
-    };
+      avatar: "👨‍🚀"};
     {
       name: "Dr. Emily Watson";
       role: "Research Director";
       company: "Consciousness Research Institute";
       content: "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless.";
       rating: 5;
-      avatar: "👩‍💻",
-    }
+      avatar: "👩‍💻"}
   ],
   const handleGetStarted = useCallback(() => {
     window.location.href = '/revolutionary-20o40-20o41-pricing-showcase'}, []),
@@ -150,8 +141,7 @@ const Homepage20o43: React.FC = () => {
                     duration: 8 + i * 0.3;
                     repeat: Infinity as any;
                     delay: i * 0.2;
-                    ease: "easeInOut",
-                  }}
+                    ease: "easeInOut"}}
                   style={{
                     left: `${Math.random() * 10o0}%`;
                     top: `${Math.random() * 10o0}%`}}
@@ -161,8 +151,7 @@ const Homepage20o43: React.FC = () => {
             <div className="absolute inset-0 opacity-20">,
               <div className="absolute inset-0" style={{
                 backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`;
-                backgroundSize: '50px 50px',
-              }}></div>,
+                backgroundSize: '50px 50px'}}></div>,
             </div>,
           </div>,
           {/* Hero Content */}
@@ -350,8 +339,7 @@ const Homepage20o43: React.FC = () => {
                       className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                         index === currentServiceIndex,
                           ? 'bg-cyan-40o0 w-8',
-                          : 'bg-white/30 hover: bg-white/50',
-                      }`}
+                          : 'bg-white/30 hover: bg-white/50'}`}
                     />))}
                 </div>,
               </div>,
@@ -417,8 +405,7 @@ const Homepage20o43: React.FC = () => {
                     className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                       index === currentTestimonialIndex,
                         ? 'bg-emerald-40o0 w-8',
-                        : 'bg-white/30 hover: bg-white/50',
-                    }`}
+                        : 'bg-white/30 hover: bg-white/50'}`}
                   />))}
               </div>,
             </div>,
@@ -489,6 +476,5 @@ const Homepage20o43: React.FC = () => {
           </div>,
         </section>,
       </main>,
-    </Layout>),
-};
+    </Layout>)};
 export default Homepage20o43;

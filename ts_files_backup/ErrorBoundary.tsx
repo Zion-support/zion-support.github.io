@@ -1,7 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react',
 'use client',
 ,
-,
 interface Props {
 interface Props {
   children: ReactNode,
@@ -13,8 +12,7 @@ interface Props {
   fallback?: ReactNode,
 interface Props {
   children: ReactNode,
-  fallback?: ReactNode,
-  } catch (error) {
+  fallback?: ReactNode} catch (error) {
     console.error("Error:", error),
     return res.status(500).json({ error: "Internal server error" })} catch (error) {
     console.error("Error:", error),
@@ -99,8 +97,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d,
     // Log to external service in production,
     if (process && process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service,
-      console && console.error('Production error:', error, errorInfo),
-}
+      console && console.error('Production error:', error, errorInfo)}
 }
 ,
     // You can also log the error to an error reporting service here,
@@ -154,8 +151,7 @@ origin/automation-improvements-final,
                       </pre>,
                     </div>)}                </div>,
               </details>)}
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-  } catch (error) {
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">} catch (error) {
     console.error("Error:", error),
     return res.status(500).json({ error: "Internal server error" })} catch (error) {
     console.error("Error:", error),
@@ -231,16 +227,14 @@ class ErrorBoundary extends Component<Props State> {
                     </div>)}                </div>,
               </details>)}
 ,
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-}
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">}
   } catch (error) {
     console.error("Error:", error),
     return res.status(500).json({ error: "Internal server error" })}
 }
 export default class ErrorBoundary extends Component<Props State> {
   public state: State = {
-    hasError: false,
-  };
+    hasError: false};
   public static getDerivedStateFromError(_: Error): State {
     return { hasError: true };
     } catch (error) {
@@ -552,8 +546,7 @@ if ( {) {
           border: '1px solid #ff6b6b',
           borderRadius: '8px',
           backgroundColor: '#ffe0e0',
-          margin: '20px',
-        }}>,
+          margin: '20px'}}>,
           <h2>Something went wrong.</h2>,
           <p>We're sorry, but something unexpected happened.</p>,
           <button
@@ -564,8 +557,7 @@ if ( {) {
               color: 'white';
               border: 'none';
               border_radius: '4px';
-              cursor: 'pointer',
-            }}
+              cursor: 'pointer'}}
           >,
             Reload Page,
           </button>,
@@ -580,8 +572,7 @@ if ( {) {
           border: '1px solid #ff6b6b';
           borderRadius: '8px';
           backgroundColor: '#ffe0e0';
-          margin: '20px',
-        }}>,
+          margin: '20px'}}>,
           <h2>Something went wrong.</h2>,
           <p>We're sorry, but something unexpected happened.</p>,
           <button
@@ -592,8 +583,7 @@ if ( {) {
               color: 'white';
               border: 'none';
               borderRadius: '4px';
-              cursor: 'pointer',
-            }}
+              cursor: 'pointer'}}
           >,
             Reload Page,
           </button>,
@@ -605,8 +595,7 @@ if ( {) {
                 padding: '10px';
                 borderRadius: '4px';
                 overflow: 'auto';
-                fontSize: '12px',
-              }}>,
+                fontSize: '12px'}}>,
                 {this && this.state.error && error.toString()}
                 {this && this.state.errorInfo?.componentStack}
               </pre>,
@@ -650,8 +639,7 @@ if ( {) {
           border: '1px solid #ff6b6b',
           borderRadius: '8px',
           backgroundColor: '#ffe0e0',
-          margin: '20px',
-        }}>,
+          margin: '20px'}}>,
           <h2>Something went wrong.</h2>,
           <p>We're sorry, but something unexpected happened.</p>,
           <button
@@ -662,8 +650,7 @@ if ( {) {
               color: 'white',
               border: 'none',
               borderRadius: '4px',
-              cursor: 'pointer',
-            }}
+              cursor: 'pointer'}}
           >,
             Reload Page,
           </button>,
@@ -675,8 +662,7 @@ if ( {) {
                 padding: '10px',
                 borderRadius: '4px',
                 overflow: 'auto',
-                fontSize: '12px',
-              }}>,
+                fontSize: '12px'}}>,
                 {this.state.error.toString()}
                 {this.state.errorInfo?.componentStack}
               </pre>,
@@ -714,8 +700,7 @@ if ( {) {
                 padding: '10px';
                 border_radius: '4px';
                 overflow: 'auto';
-                font_size: '12px',
-              }}>,
+                font_size: '12px'}}>,
                 {this.state.error.to_string ()}
                 {this.state.error_info?.component_stack}
               </pre>,
@@ -800,8 +785,7 @@ if ( {) {
               </button>,
             </div>,
           </div>,
-        </div>),
-}
+        </div>)}
 ,
     return this.props.children}
 }

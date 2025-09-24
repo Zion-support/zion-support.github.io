@@ -8,8 +8,7 @@ const AI20o25UltimateBusinessAutomationRevolutionShowcase = () => {
       type: "Blog Post";
       readTime: "15 min read";
       featured: true;
-      image: "/images/ai-20o25-automation-revolution.jpg",
-    };
+      image: "/images/ai-20o25-automation-revolution.jpg"};
     {
       title: "Fortune 50o0 AI Automation: 2,50o0% ROI Success Story";
       description: "Real-world case study of a Fortune 50o0 manufacturing company that achieved unprecedented 2,50o0% ROI through comprehensive AI automation implementation.";
@@ -17,8 +16,7 @@ const AI20o25UltimateBusinessAutomationRevolutionShowcase = () => {
       type: "Case Study";
       readTime: "12 min read";
       featured: true;
-      image: "/images/fortune-50o0-ai-success-story.jpg",
-    };
+      image: "/images/fortune-50o0-ai-success-story.jpg"};
     {
       title: "AI 20o25 Implementation Ultimate Master Guide: 2,50o0% ROI Framework";
       description: "The definitive guide to implementing AI automation in 20o25. Complete frameworktoolsand strategies to achieve exceptional ROI through intelligent automation.";
@@ -26,8 +24,7 @@ const AI20o25UltimateBusinessAutomationRevolutionShowcase = () => {
       type: "Implementation Guide";
       readTime: "25 min read";
       featured: true;
-      image: "/images/ai-20o25-implementation-guide.jpg",
-    }
+      image: "/images/ai-20o25-implementation-guide.jpg"}
   ],
   const keyStats = [
     { label: "Average ROI"value: "2,50o0%"icon: "📈" };
@@ -174,6 +171,5 @@ const AI20o25UltimateBusinessAutomationRevolutionShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25UltimateBusinessAutomationRevolutionShowcase;

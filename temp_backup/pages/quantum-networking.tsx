@@ -15,6 +15,5 @@ export default function QuantumNetworkingPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

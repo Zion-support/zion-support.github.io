@@ -32,6 +32,5 @@ export default function GenAIExecutiveCoursePage() {
           </a>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

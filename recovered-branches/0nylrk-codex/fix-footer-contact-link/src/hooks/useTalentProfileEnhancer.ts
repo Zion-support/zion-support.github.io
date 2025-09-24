@@ -5,21 +5,18 @@ export interface TalentProfileData {
   title: string,
   bio: string,
   skills: string[],
-  location?: string,
-}
+  location?: string}
 ,
 export interface CategorizedSkills {
   programming: string[],
   devops: string[],
   platforms: string[],
   softSkills: string[],
-  other: string[],
-}
+  other: string[]}
 ,
 export interface EnhancedProfile {
   summary: string,
-  categorizedSkills: CategorizedSkills,
-}
+  categorizedSkills: CategorizedSkills}
 ,
 export function useTalentProfileEnhancer() {
   const [isGenerating, setIsGenerating] = useState(false),
@@ -41,8 +38,7 @@ export function useTalentProfileEnhancer() {
 ,
       return data as EnhancedProfile} catch (err: any) {
       setError(err.message || 'Failed to enhance profile'),
-      return null,
-    } finally {
+      return null} finally {
       setIsGenerating(false)}
   };
   return {

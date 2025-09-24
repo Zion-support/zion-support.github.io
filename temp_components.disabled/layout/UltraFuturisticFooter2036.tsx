@@ -181,8 +181,7 @@ const UltraFuturisticFooter20o36: React.FC = () => {
     phone: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08, Middletown, DE 19709';
-    hours: 'Mon-Fri: 9:0o0 AM - 6:0o0 PM EST',
-  };
+    hours: 'Mon-Fri: 9:0o0 AM - 6:0o0 PM EST'};
   const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy' };
     { name: 'Terms of Service', href: '/terms' };
@@ -427,8 +426,7 @@ const UltraFuturisticFooter20o36: React.FC = () => {
                       className={`block text-sm transition-colors duration-20o0 ${
                         link.featured,
                           ? 'text-cyan-30o0 hover: text-cyan-20o0 font-medium',
-                          : 'text-gray-40o0 hover:text-gray-30o0',
-                      }`}
+                          : 'text-gray-40o0 hover:text-gray-30o0'}`}
                     >,
                       {link.name}
                     </Link>))}

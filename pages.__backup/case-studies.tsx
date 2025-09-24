@@ -16,8 +16,7 @@ export default function CaseStudiesPage() {
       technologies: ['AI/ML'Natural Language Processing'Cloud Infrastructure'API Integration'];
       duration: '3 months';
       roi: '340%';
-      featured: true,
-    };
+      featured: true};
     {
       title: 'Quantum Computing for Financial Risk Management';
       company: 'International Investment Bank';
@@ -32,8 +31,7 @@ export default function CaseStudiesPage() {
       technologies: ['Quantum Computing'Financial Algorithms'Risk Modeling'High-Performance Computing'];
       duration: '6 months';
       roi: '280%';
-      featured: false,
-    };
+      featured: false};
     {
       title: 'Cybersecurity Overhaul for Healthcare Provider';
       company: 'Regional Hospital Network';
@@ -48,8 +46,7 @@ export default function CaseStudiesPage() {
       technologies: ['Zero Trust Security'AI Threat Detection'Compliance Management'Data Encryption'];
       duration: '4 months';
       roi: '420%';
-      featured: false,
-    };
+      featured: false};
     {
       title: 'Cloud Migration and DevOps Transformation';
       company: 'Manufacturing Technology Company';
@@ -64,8 +61,7 @@ export default function CaseStudiesPage() {
       technologies: ['Cloud Migration'DevOps'Containerization'Infrastructure as Code'];
       duration: '5 months';
       roi: '310%';
-      featured: false,
-    };
+      featured: false};
     {
       title: 'AI-Powered Supply Chain Optimization';
       company: 'Global Logistics Provider';
@@ -80,8 +76,7 @@ export default function CaseStudiesPage() {
       technologies: ['AI/ML'Predictive Analytics'Supply Chain Management'Real-time Tracking'];
       duration: '4 months';
       roi: '380%';
-      featured: false,
-    };
+      featured: false};
     {
       title: 'Quantum-Safe Cybersecurity Implementation';
       company: 'Government Defense Contractor';
@@ -96,8 +91,7 @@ export default function CaseStudiesPage() {
       technologies: ['Quantum Cryptography'Post-Quantum Algorithms'Security Protocols'Compliance Management'];
       duration: '7 months';
       roi: '250%';
-      featured: false,
-    }
+      featured: false}
   ],
   const industries = [
     'All Industries';
@@ -192,8 +186,7 @@ export default function CaseStudiesPage() {
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     industry === 'All Industries',
                       ? 'bg-blue-60o0 text-white',
-                      : 'bg-white bg-opacity-10 text-gray-30o0 hover: bg-opacity-20',
-                  }`}
+                      : 'bg-white bg-opacity-10 text-gray-30o0 hover: bg-opacity-20'}`}
                 >,
                   {industry}
                 </button>))}
@@ -302,5 +295,4 @@ export default function CaseStudiesPage() {
           </div>,
         </section>,
       </main>,
-    </>),
-}
+    </>)}

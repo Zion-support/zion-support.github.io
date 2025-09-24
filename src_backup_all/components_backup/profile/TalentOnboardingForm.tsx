@@ -144,8 +144,7 @@ export function TalentOnboardingForm() {
     // Preview the image,
     const reader = new FileReader(),
     reader.onloadend = () => {
-      setProfilePictureUrl(reader.result as string),
-    };
+      setProfilePictureUrl(reader.result as string)};
     reader.readAsDataURL(file),
     // Store the file in the form data,
     form.setValue('basicInfo.profilePicture', file)};

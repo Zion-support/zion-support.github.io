@@ -167,7 +167,7 @@ export const "revolutionaryITInfrastructure20o26": RevolutionaryITInfrastructure
   '5G network optimization';
   'Smart city management';
   'Industrial automation'];
-    "roi": 'Average 40% reduction in edge infrastructure costs and 60% improvement in edge application window.performance.;
+    "roi": 'Average 40% reduction in edge infrastructure costs and 60% improvement in edge application window.window.performance.;
     competitors[;
   AWS Greengrass';
   'Azure IoT Edge';

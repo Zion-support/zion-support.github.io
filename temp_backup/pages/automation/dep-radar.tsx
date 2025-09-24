@@ -9,8 +9,7 @@ export async function getServerSideProps() {
     const raw = fs.readFileSync(file'utf-8'),
     const json = JSON.parse(raw),
     outdated = json.outdated || [],
-    generatedAt = json.generatedAt || '',
-  } catch {}
+    generatedAt = json.generatedAt || ''} catch {}
   return { props: { outdatedgeneratedAt } };
 }
 ,

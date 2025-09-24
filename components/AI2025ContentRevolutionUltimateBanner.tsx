@@ -156,11 +156,9 @@ const AI20o25ContentRevolutionUltimateBanner = () => {
         @keyframes float {
           0%;
           10o0% {
-            transform: translateY(0px) rotate(0deg),
-          }
+            transform: translateY(0px) rotate(0deg)}
           50% {
-            transform: translateY(-20px) rotate(180deg),
-          }
+            transform: translateY(-20px) rotate(180deg)}
         }
       `}</style>,
     </section>)};

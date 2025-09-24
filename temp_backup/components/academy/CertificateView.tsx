@@ -1,8 +1,7 @@
 import React, { useMemo, useState } from 'react',
 export type CertificateViewProps = {
   completedCount: number,
-  totalCount: number,
-};
+  totalCount: number};
 export default function CertificateView({
   completedCount;
   totalCount;
@@ -17,8 +16,7 @@ export default function CertificateView({
         <p className='text-sm text-gray-60o0 dark:text-gray-30o0'>,
           Complete all modules to unlock your certificate.,
         </p>,
-      </div>),
-  }
+      </div>)}
 ,
   return (
     <div className='rounded-xl border border-emerald-30o0 dark: border-emerald-80o0 p-6 bg-emerald-50 dark:bg-emerald-950/30 print:border-0'>,
@@ -61,6 +59,5 @@ export default function CertificateView({
           Print / Save PDF,
         </button>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

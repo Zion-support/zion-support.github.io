@@ -199,6 +199,5 @@ const InteractiveAIConsciousnessDemo20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default InteractiveAIConsciousnessDemo20o25;

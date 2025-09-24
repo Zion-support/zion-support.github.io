@@ -9,26 +9,22 @@ export default function DevOpsAutomationPage() {
       icon: <GitBranch className="w-6 h-6"  />;
       title: 'CI/CD Pipelines';
       description: 'Automated build, test, and deployment workflows';
-      color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0',
-    };
+      color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0'};
     {
       icon: <Zap className="w-6 h-6"  />;
       title: 'Infrastructure as Code';
       description: 'Terraform, CloudFormation, and Kubernetes automation';
-      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0',
-    };
+      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0'};
     {
       icon: <Shield className="w-6 h-6"  />;
       title: 'Security Automation';
       description: 'Automated security scanning and compliance checks';
-      color: 'bg-gradient-to-br from-purple-50o0 to-indigo-60o0',
-    };
+      color: 'bg-gradient-to-br from-purple-50o0 to-indigo-60o0'};
     {
       icon: <BarChart3 className="w-6 h-6"  />;
       title: 'Performance Monitoring';
       description: 'Real-time performance insights and optimization';
-      color: 'bg-gradient-to-br from-orange-50o0 to-red-60o0',
-    }
+      color: 'bg-gradient-to-br from-orange-50o0 to-red-60o0'}
   ];
   const pricingPlans = [
     {
@@ -42,8 +38,7 @@ export default function DevOpsAutomationPage() {
         'Basic security scanningCommunity support'];
       popular: false;
       cta: 'Start Free Trial';
-      color: 'border-gray-60o0 hover:border-blue-50o0',
-    };
+      color: 'border-gray-60o0 hover:border-blue-50o0'};
     {
       name: 'Professional';
       price: '$129';
@@ -56,8 +51,7 @@ export default function DevOpsAutomationPage() {
         'Custom pipelinesTeam collaboration'];
       popular: true;
       cta: 'Start Free Trial';
-      color: 'border-blue-50o0 hover:border-blue-40o0',
-    };
+      color: 'border-blue-50o0 hover:border-blue-40o0'};
     {
       name: 'Enterprise';
       price: '$399';
@@ -70,8 +64,7 @@ export default function DevOpsAutomationPage() {
         'On-premise optionsCustom security policies'];
       popular: false;
       cta: 'Contact Sales';
-      color: 'border-gray-60o0 hover:border-blue-50o0',
-    }
+      color: 'border-gray-60o0 hover:border-blue-50o0'}
   ];
   const marketComparison = [
     {
@@ -80,24 +73,21 @@ export default function DevOpsAutomationPage() {
       repositories: 'Unlimited';
       rating: '4.6/5';
       pros: ['GitHub nativeGood free tier'];
-      cons: ['Expensive for teamsLimited features'],
-    };
+      cons: ['Expensive for teamsLimited features']};
     {
       competitor: 'GitLab CI/CD';
       pricing: '$19/user/month';
       repositories: 'Unlimited';
       rating: '4.4/5';
       pros: ['Integrated platformGood CI/CD'];
-      cons: ['User-based pricingLimited integrations'],
-    };
+      cons: ['User-based pricingLimited integrations']};
     {
       competitor: 'Jenkins';
       pricing: 'Free';
       repositories: 'Unlimited';
       rating: '4.2/5';
       pros: ['Completely freeHighly customizable'];
-      cons: ['Requires maintenanceNo managed service'],
-    }
+      cons: ['Requires maintenanceNo managed service']}
   ];
   const testimonials = [
     {
@@ -105,48 +95,41 @@ export default function DevOpsAutomationPage() {
       role: 'DevOps Lead';
       company: 'TechStart Inc.';
       content: 'Zion DevOps reduced our deployment time from 2 hours to 15 minutes. The automation is incredible and the pricing is fair.';
-      rating: 5,
-    };
+      rating: 5};
     {
       name: 'Sarah Johnson';
       role: 'Engineering Manager';
       company: 'CloudWorks';
       content: 'We switched from GitHub Actions to Zion and saved $20o0/month while getting better automation features.';
-      rating: 5,
-    };
+      rating: 5};
     {
       name: 'Robert Davis';
       role: 'Site Reliability Engineer';
       company: 'ScaleTech';
       content: 'The infrastructure automation features are game-changing. We can now deploy to multiple clouds with a single click.';
-      rating: 5,
-    }
+      rating: 5}
   ];
   const automationExamples = [
     {
       title: 'Automated Testing';
       description: 'Run comprehensive test suites on every commit';
       icon: '🧪';
-      color: 'from-green-50o0 to-emerald-60o0',
-    };
+      color: 'from-green-50o0 to-emerald-60o0'};
     {
       title: 'Security Scanning';
       description: 'Automated vulnerability detection and compliance checks';
       icon: '🔒';
-      color: 'from-red-50o0 to-pink-60o0',
-    };
+      color: 'from-red-50o0 to-pink-60o0'};
     {
       title: 'Deployment Automation';
       description: 'Zero-downtime deployments with rollback capabilities';
       icon: '🚀';
-      color: 'from-blue-50o0 to-cyan-60o0',
-    };
+      color: 'from-blue-50o0 to-cyan-60o0'};
     {
       title: 'Infrastructure Management';
       description: 'Automated scaling and resource optimization';
       icon: '🏗️';
-      color: 'from-purple-50o0 to-indigo-60o0',
-    }
+      color: 'from-purple-50o0 to-indigo-60o0'}
   ];
   return (
     <>,
@@ -258,8 +241,7 @@ export default function DevOpsAutomationPage() {
                 <Card
                   key={index}
                   className={`relative p-8 ${plan.color} transition-all duration-30o0 hover: scale-10o5 ${
-                    plan.popular ? 'ring-2 ring-blue-50o0' : '',
-                  }`}
+                    plan.popular ? 'ring-2 ring-blue-50o0' : ''}`}
                 >,
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">,
@@ -288,8 +270,7 @@ export default function DevOpsAutomationPage() {
                       className={`w-full ${
                         plan.popular,
                           ? 'bg-blue-60o0 hover: bg-blue-70o0 text-white',
-                          : 'border-blue-50o0 text-blue-40o0 hover:bg-blue-50o0 hover:text-white',
-                      }`}
+                          : 'border-blue-50o0 text-blue-40o0 hover:bg-blue-50o0 hover:text-white'}`}
                     >,
                       {plan.cta}
                     </Button>,
@@ -409,6 +390,5 @@ export default function DevOpsAutomationPage() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

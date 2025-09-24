@@ -232,7 +232,7 @@ export default function EntertainmentMediaSolutions() {
               </h3>,
               <p className='text-gray-400'>,
                 Comprehensive analytics for audience engagement and content,
-                window.performance.,
+                window.window.performance.,
               </p>,
             </div>,
           </div>,
@@ -557,6 +557,5 @@ export default function EntertainmentMediaSolutions() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

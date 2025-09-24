@@ -14,8 +14,7 @@ export interface AdditionalQ420o25Service {
   useCases?: string[],
   integrations?: string[],
   trialDays?: number,
-  setupTime?: string,
-}
+  setupTime?: string}
 export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
   {
     id: 'devsecops-copilot';

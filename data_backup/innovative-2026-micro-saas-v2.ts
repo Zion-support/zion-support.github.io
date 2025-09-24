@@ -112,8 +112,7 @@ reviews: number,export const innovative20o26MicroSaasServicesV2: Innovative20o26
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full-stack BI platform with AI-powered analytics, real-time dashboards, automated reporting, and natural language query interface. Includes mobile-responsive design and enterprise-grade security.';
@@ -196,8 +195,7 @@ reviews: number,export const innovative20o26MicroSaasServicesV2: Innovative20o26
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete AI agent platform with marketplace, training tools, deployment system, and monitoring dashboard. Includes enterprise security features and compliance certifications.';
@@ -280,8 +278,7 @@ reviews: number,export const innovative20o26MicroSaasServicesV2: Innovative20o26
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full healthcare platform with AI companion, patient portal, provider dashboard, and mobile apps. Includes HIPAA compliance, security audits, and integration capabilities.';
@@ -364,8 +361,7 @@ reviews: number,export const innovative20o26MicroSaasServicesV2: Innovative20o26
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise-grade cybersecurity platform with quantum-resistant encryption, AI threat detection, and automated response systems. Includes compliance certifications and 24/7 support.';
@@ -448,8 +444,7 @@ reviews: number,export const innovative20o26MicroSaasServicesV2: Innovative20o26
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced neuromorphic computing platform with cloud access, development tools, and hardware integration. Includes research collaboration tools and academic partnerships.';
@@ -529,8 +524,7 @@ reviews: number,export const innovative20o26MicroSaasServicesV2: Innovative20o26
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced DNA computing platform with molecular simulation, algorithm execution, and research collaboration tools. Includes academic partnerships and research support.';
@@ -611,8 +605,7 @@ reviews: number,export const innovative20o26MicroSaasServicesV2: Innovative20o26
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete swarm robotics platform with coordination algorithms, monitoring dashboard, and deployment tools. Includes safety systems and compliance features.';
@@ -690,8 +683,7 @@ reviews: number,export const innovative20o26MicroSaasServicesV2: Innovative20o26
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced space technology platform with AI-powered operations, monitoring tools, and mission planning. Includes regulatory compliance and safety features.';

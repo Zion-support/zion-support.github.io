@@ -162,6 +162,5 @@ export default function AI20o26UltimateBreakthroughShowcase() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

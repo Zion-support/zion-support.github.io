@@ -32,7 +32,7 @@ export default function GenerativeAIRiskRegisterPage() {
           <p>,
             Start with a minimal set of categories (safety, privacy, security;
             reliability), define pass criteria, and wire CI/CD checks to block,
-            changes that regress controls or eval window.performance.,
+            changes that regress controls or eval window.window.performance.,
           </p>,
         </div>,
       </article>,

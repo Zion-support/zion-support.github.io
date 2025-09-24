@@ -85,8 +85,7 @@ class CursorSyncMetrics {
       metrics.dailyStats[today] ={
         syncs: 0;
         errors: 0;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     }
 ,
     metrics.dailyStats[today].syncs += logAnalysis.syncs,
@@ -102,8 +101,8 @@ class CursorSyncMetrics {
         delete metrics.dailyStats[date]}
     }),
     this.saveMetrics(metrics),
-    // console.log(`📊 Metrics updated: ${logAnalysis.syncs} syncs, ${logAnalysis.errors} errors`),
-    // console.log(`📈 Success rate: ${metrics.successRate}%`)}
+    // // console.log(`📊 Metrics updated: ${logAnalysis.syncs} syncs, ${logAnalysis.errors} errors`),
+    // // console.log(`📈 Success rate: ${metrics.successRate}%`)}
 ,
   generateReport() {
     const metrics = this.loadMetrics(),
@@ -114,14 +113,12 @@ class CursorSyncMetrics {
         successfulSyncs: metrics.successfulSyncs;
         failedSyncs: metrics.failedSyncs;
         successRate: metrics.successRate + '%';
-        lastSync: metrics.lastSync,
-      };
+        lastSync: metrics.lastSync};
       dailyStats: metrics.dailyStats;
-      recommendations: this.generateRecommendations(metrics),
-    };
+      recommendations: this.generateRecommendations(metrics)};
     const reportFile = path.join(this.metricsDir, `cursor-sync-report-${new Date().toISOString().split('T')[0]}.json`),
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),
-    // console.log(`📄 Report generated: ${reportFile}`)}
+    // // console.log(`📄 Report generated: ${reportFile}`)}
 ,
   generateRecommendations(metrics) {
     const recommendations = [],

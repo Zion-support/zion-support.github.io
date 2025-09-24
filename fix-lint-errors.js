@@ -89,8 +89,8 @@ function processFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
   return processedCount}
 ,
 // Main execution,
-// console.log('Starting lint error cleanup...'),
+// // console.log('Starting lint error cleanup...'),
 const workspaceDir = __dirname,
 const processedCount = processFiles(workspaceDir),
-// console.log(`Processed ${processedCount} files for lint error cleanup`),
-// console.log('Lint error cleanup completed!'),
+// // console.log(`Processed ${processedCount} files for lint error cleanup`),
+// // console.log('Lint error cleanup completed!'),

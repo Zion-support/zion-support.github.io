@@ -87,8 +87,7 @@ export default function DocsPage() {
       case 'Advanced':,
         return 'bg-red-500/20 text-red-400',
       default:,
-        return 'bg-gray-500/20 text-gray-400',
-    }
+        return 'bg-gray-500/20 text-gray-400'}
   };
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {

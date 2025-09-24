@@ -32,6 +32,5 @@ export default function APIPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

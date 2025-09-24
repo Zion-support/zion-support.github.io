@@ -36,9 +36,9 @@ class CodeQualityChecker {
       ? path.resolve(process.argv[2]),
       : process.cwd(),
     this.scanDirectory(startDir),
-    // console.log(`Found ${this.issues.length} code quality issues`),
+    // // console.log(`Found ${this.issues.length} code quality issues`),
     for (const issue of this.issues) {
-      // console.log(issue)}
+      // // console.log(issue)}
     process.exit(0)}
 }
 ,

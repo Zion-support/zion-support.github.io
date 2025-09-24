@@ -8,8 +8,7 @@ export interface ProtectedRouteProps {
   children: React.ReactNode,
   adminOnly?: boolean,
   tenantAdminAllowed?: boolean,
-  requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin",
-}
+  requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"}
 ,
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   children,

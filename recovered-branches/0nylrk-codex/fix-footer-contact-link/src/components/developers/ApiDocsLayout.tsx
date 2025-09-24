@@ -5,8 +5,7 @@ import { Search } from "lucide-react",
 import { Input } from "@/components/ui/input",
 import { cn } from "@/lib/utils",
 interface ApiDocsLayoutProps {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   const location = useLocation(),

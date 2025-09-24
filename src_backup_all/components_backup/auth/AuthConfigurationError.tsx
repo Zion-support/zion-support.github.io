@@ -203,7 +203,6 @@ export function AuthConfigurationError({
           </p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
 export default AuthConfigurationError;

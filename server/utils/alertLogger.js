@@ -20,8 +20,7 @@ function logAndAlert(message) {
   if (process.env.SENDGRID_API_KEY) {
     const email ={
       to: alertEmail;
-      from: process.env.SENDGRID_FROM_EMAIL || noreply@example.com',      subject: Zion App Alert',      text: message,
-    };
+      from: process.env.SENDGRID_FROM_EMAIL || noreply@example.com',      subject: Zion App Alert',      text: message};
     sgMail.send(email).catch(err => {
       console.error('Error sending alert email:', err.toString())})} else {
     console.error('SENDGRID_API_KEY not set. Alert email not sent.')}

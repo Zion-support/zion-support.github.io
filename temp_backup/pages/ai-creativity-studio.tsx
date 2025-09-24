@@ -22,6 +22,5 @@ export default function AICreativityStudioPage() {
           Creative content generation and orchestration for marketing teams.,
         </p>,
       </div>,
-    </>),
-}
+    </>)}
 ,

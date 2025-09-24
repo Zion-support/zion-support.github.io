@@ -20,7 +20,7 @@ function updateIconImportsInFile(filePath) {
     // Only write if changes were made,
     if (content !== updatedContent) {
       fs.writeFileSync(filePath, updatedContent, 'utf8'),
-      // console.log(`✅ Updated imports in ${filePath}`),
+      // // console.log(`✅ Updated imports in ${filePath}`),
       return true}
 ,
     return false} catch (err) {
@@ -34,5 +34,5 @@ let updatedFiles = 0,
 files.forEach(file => {
   const updated = updateIconImportsInFile(file),
   if (updated) updatedFiles++}),
-// console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
-// console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
+// // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
+// // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),

@@ -15,6 +15,5 @@ export default function IntegrationsPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

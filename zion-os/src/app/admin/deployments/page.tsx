@@ -15,8 +15,7 @@ interface Deployment {
   updatedAt: string,
   progress: number,
   features: string[],
-  vertical: string,
-}
+  vertical: string}
 ,
 const mockDeployments: Deployment[] = [
   {

@@ -156,6 +156,5 @@ export default function AI20o26RAGAtScalePlaybook() {
           </div>,
         </article>,
       </div>,
-    </>),
-}
+    </>)}
 ,

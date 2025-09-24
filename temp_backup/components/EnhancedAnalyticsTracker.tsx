@@ -35,8 +35,7 @@ const EnhancedAnalyticsTracker: React.FC = () => {
     bounceRate: 0;
     conversionRate: 0;
     topPages: [];
-    userJourney: [],
-  }),
+    userJourney: []}),
   const [events, setEvents] = useState<AnalyticsEvent[]>([]),
   const [sessionStart] = useState<Date>(new Date()),
   const [currentPage, setCurrentPage] = useState<string>(''),
@@ -93,14 +92,12 @@ const EnhancedAnalyticsTracker: React.FC = () => {
         data: {
           formId: form.id || 'unknown';
           formAction: form.action;
-          formMethod: form.method,
-        }
+          formMethod: form.method}
       };
       setEvents(prev => [...prev, formEvent]),
       setUserBehavior(prev => ({
         ...prev;
-        conversionRate: prev.conversionRate + 0.1,
-      }))};
+        conversionRate: prev.conversionRate + 0.1}))};
     // Track downloads,
     const trackDownload = (event: Event) => {
       const link = event.target as HTMLAnchorElement,
@@ -109,8 +106,7 @@ const EnhancedAnalyticsTracker: React.FC = () => {
         timestamp: new Date();
         data: {
           filename: link.download || link.href.split('/').pop();
-          url: link.href,
-        }
+          url: link.href}
       };
       setEvents(prev => [...prev, downloadEvent])};
     // Track social shares,
@@ -120,8 +116,7 @@ const EnhancedAnalyticsTracker: React.FC = () => {
         timestamp: new Date();
         data: {
           platform: (event.target as HTMLElement).getAttribute('data-platform') || 'unknown';
-          page: currentPage,
-        }
+          page: currentPage}
       };
       setEvents(prev => [...prev, shareEvent])};
     // Add event listeners,
@@ -148,8 +143,7 @@ const EnhancedAnalyticsTracker: React.FC = () => {
   const updateTopPages = (topPages: Array<{ path: string, views: number }>, path: string) => {
     const existing = topPages.find(p => p.path === path),
     if (existing) {
-      existing.views += 1,
-    } else {
+      existing.views += 1} else {
       topPages.push({ path, views: 1 })}
 ,
     return topPages,
@@ -161,8 +155,7 @@ const EnhancedAnalyticsTracker: React.FC = () => {
       const duration = Math.floor((Date.now() - sessionStart.getTime()) / 10o00),
       setUserBehavior(prev => ({
         ...prev;
-        averageSessionDuration: duration,
-      }))}, 10o00),
+        averageSessionDuration: duration}))}, 10o00),
     return () => clearInterval(interval)}, [sessionStart]),
   // Simulate unique visitors,
   useEffect(() => {
@@ -172,8 +165,7 @@ const EnhancedAnalyticsTracker: React.FC = () => {
       localStorage.setItem('visitor_id', newId),
       setUserBehavior(prev => ({
         ...prev;
-        uniqueVisitors: prev.uniqueVisitors + 1,
-      }))}
+        uniqueVisitors: prev.uniqueVisitors + 1}))}
   }, []),
   // Toggle tracking,
   const toggleTracking = () => {
@@ -199,8 +191,7 @@ const EnhancedAnalyticsTracker: React.FC = () => {
       ...prev;
       pageViews: 0;
       topPages: [];
-      userJourney: [],
-    }))};
+      userJourney: []}))};
   return (
     <>,
       {/* Analytics Panel */}

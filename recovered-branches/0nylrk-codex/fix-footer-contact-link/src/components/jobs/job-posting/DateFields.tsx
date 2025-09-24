@@ -10,8 +10,7 @@ interface DateFieldsProps {
   startDate: Date | undefined,
   setStartDate: (date: Date | undefined) => void,
   endDate: Date | undefined,
-  setEndDate: (date: Date | undefined) => void,
-}
+  setEndDate: (date: Date | undefined) => void}
 ,
 export function DateFields({ startDatesetStartDatendDatesetEndDate }: DateFieldsProps) {
   return (

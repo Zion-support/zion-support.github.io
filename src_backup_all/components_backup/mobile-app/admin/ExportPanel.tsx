@@ -7,8 +7,7 @@ import { toast } from 'sonner',
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 interface ExportPanelProps {
   platform: AppPlatform,
-  metadata: AppMetadataValues,
-}
+  metadata: AppMetadataValues}
 ,
 export const ExportPanel: React.FC<ExportPanelProps> = ({
   platform;

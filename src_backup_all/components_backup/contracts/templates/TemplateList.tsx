@@ -26,8 +26,7 @@ interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
   onSelect: (template: ContractTemplate) => void,
-  onEdit: (template: ContractTemplate) => void,
-}
+  onEdit: (template: ContractTemplate) => void}
 ,
 export function TemplateList({
   templates;
@@ -40,8 +39,7 @@ export function TemplateList({
   const { user } = useAuth(),
   const router = useRouter(),
   const handleDeleteClick = (templateId: string) => {
-    setTemplateToDelete(templateId),
-  };
+    setTemplateToDelete(templateId)};
   const handleDeleteConfirm = async () => {
     if (templateToDelete) {
       await deleteTemplate.mutateAsync(templateToDelete),

@@ -58,6 +58,5 @@ export default function AutonomousOpsPlatform20o26() {
           </div>,
         </div>,
       </section>,
-    </main>),
-}
+    </main>)}
 ,

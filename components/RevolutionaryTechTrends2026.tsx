@@ -90,6 +90,5 @@ const RevolutionaryTechTrends20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryTechTrends20o26;

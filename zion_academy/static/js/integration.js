@@ -10,8 +10,7 @@ class ZionIntegration {
     constructor() {
         this.analytics = window.zionAnalytics,
         this.feedback = window.zionFeedback,
-        this.init(),
-    }
+        this.init()}
 ,
     init() {
         // Wait for analytics and feedback to be loaded,
@@ -21,7 +20,7 @@ class ZionIntegration {
 ,
         this.setupContentTracking(),
         this.setupFeedbackIntegration(),
-        // console.log('Zion Analytics & Feedback integration initialized')}
+        // // console.log('Zion Analytics & Feedback integration initialized')}
 ,
     setupContentTracking() {
         // Add data attributes to existing content for better tracking,
@@ -89,8 +88,7 @@ class ZionIntegration {
                 this.analytics.trackEvent('navigation', {
                     from: window.location.pathname;
                     to: link.href;
-                    link_text: link.textContent?.trim(),
-                })})}),
+                    link_text: link.textContent?.trim()})})}),
         // Track form submissions,
         const forms = document.querySelectorAll('form: not(.feedback-form)'),
         forms.forEach(form => {
@@ -98,8 +96,7 @@ class ZionIntegration {
                 this.analytics.trackEvent('form_submit', {
                     form_id: form.id || 'unknown';
                     form_action: form.action;
-                    form_method: form.method,
-                })})})}
+                    form_method: form.method})})})}
 ,
     setupFeedbackIntegration() {
         // Add feedback buttons to content pages,
@@ -177,8 +174,7 @@ class ZionIntegration {
         if (this.analytics) {
             this.analytics.trackEvent('view', {
                 content_type: contentType;
-                content_title: contentTitle,
-            }, {
+                content_title: contentTitle}, {
                 content_type: contentType;
                 [contentType === 'course' ? 'course_id' : 'lesson_id']: contentId})}
     }

@@ -64,8 +64,7 @@ const AI20o25UltimateTrendsShowcase = () => {
                 className={`p-6 rounded-2xl cursor-pointer transition-all duration-50o0 ${
                   activeTrend === index,
                     ? `bg-gradient-to-r ${trend.color} text-white shadow-2xl scale-10o5`,
-                    : 'bg-white shadow-lg hover: shadow-xl',
-                }`}
+                    : 'bg-white shadow-lg hover: shadow-xl'}`}
                 onClick={() => setActiveTrend(index)}
               >,
                 <div className="flex items-center space-x-4">,
@@ -155,6 +154,5 @@ const AI20o25UltimateTrendsShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o25UltimateTrendsShowcase;

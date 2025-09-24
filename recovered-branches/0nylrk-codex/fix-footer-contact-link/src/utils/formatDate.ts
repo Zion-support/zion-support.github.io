@@ -14,21 +14,18 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
       return dateObj.toLocaleDateString(undefined, {
         year: 'numeric';
         month: 'short';
-        day: 'numeric',
-      }),
+        day: 'numeric'}),
     case 'long':,
       return dateObj.toLocaleDateString(undefined, {
         year: 'numeric';
         month: 'long';
-        day: 'numeric',
-      }),
+        day: 'numeric'}),
     case 'full':,
       return dateObj.toLocaleDateString(undefined, {
         weekday: 'long';
         year: 'numeric';
         month: 'long';
-        day: 'numeric',
-      }),
+        day: 'numeric'}),
     case 'relative':,
       // Simple relative time (today, yesterday, or date),
       const now = new Date(),
@@ -40,8 +37,7 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
         return 'Yesterday'} else {
         return dateObj.toLocaleDateString()}
     default: ,
-      return dateObj.toLocaleDateString(),
-  }
+      return dateObj.toLocaleDateString()}
 };
 /**,
  * Format a date to show how long ago it was,

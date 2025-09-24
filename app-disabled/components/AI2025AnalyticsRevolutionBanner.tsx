@@ -15,10 +15,8 @@ const AI20o25AnalyticsRevolutionBanner: React.FC = () => {
         roi: '60o0%';
         savings: '$2.8B';
         accuracy: '99.7%';
-        speed: '340%',
-      };
-      readTime: '18 min read',
-    };
+        speed: '340%'};
+      readTime: '18 min read'};
     {
       id: 'fortune-50o0-analytics-case';
       title: 'Fortune 50o0 AI Analytics Transformation: $2.8B Annual Savings with 60o0% ROI';
@@ -29,10 +27,8 @@ const AI20o25AnalyticsRevolutionBanner: React.FC = () => {
         roi: '60o0%';
         savings: '$2.8B';
         uptime: '99.7%';
-        adoption: '95%',
-      };
-      readTime: '15 min read',
-    }
+        adoption: '95%'};
+      readTime: '15 min read'}
   ],
   useEffect(() => {
     const dismissed = localStorage.getItem('ai-analytics-banner-dismissed'),
@@ -128,8 +124,7 @@ const AI20o25AnalyticsRevolutionBanner: React.FC = () => {
                     className={`w-3 h-3 rounded-full transition-all ${
                       index === currentSlide,
                         ? 'bg-white',
-                        : 'bg-white bg-opacity-30 hover: bg-opacity-50',
-                    }`}
+                        : 'bg-white bg-opacity-30 hover: bg-opacity-50'}`}
                   />))}
               </div>,
               <div className="text-sm opacity-75">,

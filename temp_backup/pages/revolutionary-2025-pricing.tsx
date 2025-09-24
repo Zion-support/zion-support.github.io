@@ -409,8 +409,7 @@ export default function Revolutionary2025Pricing() {
                     className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${
                       selectedCategory === category.id,
                         ? 'bg-gradient-to-r from-blue-600 to-purple-600 border-blue-500 text-white',
-                        : 'border-gray-600 text-gray-300 hover: border-blue-500 hover:text-blue-400',
-                    }`}
+                        : 'border-gray-600 text-gray-300 hover: border-blue-500 hover:text-blue-400'}`}
                   >,
                     <category.icon className='w-5 h-5' />,
                     {category.name}
@@ -583,6 +582,5 @@ export default function Revolutionary2025Pricing() {
           </section>,
         </div>,
       </UltraQuantumHolographicBackground>,
-    </Layout>),
-}
+    </Layout>)}
 ,

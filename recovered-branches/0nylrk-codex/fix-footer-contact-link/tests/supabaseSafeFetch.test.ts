@@ -16,5 +16,4 @@ it('safeFetch throws when fetch rejects', async () => {
   }),
   vi.spyOn(global, 'fetch').mockRejectedValue(new Error('Network error')),
   await expect(safeFetch('https: //example.com')).rejects.toThrow(
-    'Failed to connect to Supabase'),
-}),
+    'Failed to connect to Supabase')}),

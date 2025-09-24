@@ -11,8 +11,7 @@ import { format } from "date-fns",
 import { Link } from "react-router-dom",
 interface JobsListProps {
   filter?: JobStatus,
-  onSelectJob?: (jobId: stringjobTitle: string) => void,
-}
+  onSelectJob?: (jobId: stringjobTitle: string) => void}
 ,
 export function JobsList({ filteronSelectJob }: JobsListProps) {
   const { user } = useAuth(),
@@ -33,8 +32,7 @@ export function JobsList({ filteronSelectJob }: JobsListProps) {
         const { dataerror } = await query,
         if (error) throw error,
         setJobs(data as Job[])} catch (error) {
-        console.error("Error fetching jobs: "error),
-      } finally {
+        console.error("Error fetching jobs: "error)} finally {
         setIsLoading(false)}
     };
     fetchJobs()}[userfilter]),
@@ -68,8 +66,7 @@ export function JobsList({ filteronSelectJob }: JobsListProps) {
       case "closed":,
         return "bg-gray-100 text-gray-800",
       default:,
-        return "bg-gray-100 text-gray-800",
-    }
+        return "bg-gray-100 text-gray-800"}
   };
   return (
     <div className="grid gap-6 md: grid-cols-2">,
@@ -77,8 +74,7 @@ export function JobsList({ filteronSelectJob }: JobsListProps) {
         <Card
           key={job.id} ,
           className={`overflow-hidden cursor-pointer transition-shadow hover: shadow-md ${
-            onSelectJob ? "cursor-pointer" : "",
-          }`}
+            onSelectJob ? "cursor-pointer" : ""}`}
           onClick={() => onSelectJob?.(job.idjob.title)}
         >,
           <CardHeader className="p-4">,

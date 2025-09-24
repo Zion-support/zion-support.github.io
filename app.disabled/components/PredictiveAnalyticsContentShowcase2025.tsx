@@ -170,8 +170,7 @@ const PredictiveAnalyticsContentShowcase20o25 = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-30o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-30o0'}`}
             >,
               {category.label} ({category.count}),
             </button>))}
@@ -258,8 +257,7 @@ const PredictiveAnalyticsContentShowcase20o25 = () => {
                           ? 'bg-blue-10o0 text-blue-80o0',
                           : item.category === 'case-study',
                             ? 'bg-green-10o0 text-green-80o0',
-                            : 'bg-purple-10o0 text-purple-80o0',
-                      }`}
+                            : 'bg-purple-10o0 text-purple-80o0'}`}
                     >,
                       {item.type}
                     </span>,
@@ -329,6 +327,5 @@ const PredictiveAnalyticsContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default PredictiveAnalyticsContentShowcase20o25;

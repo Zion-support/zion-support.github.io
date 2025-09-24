@@ -255,7 +255,7 @@ export const "specializedITInfrastructureServices20o25": SpecializedITInfrastruc
   AI-powered data center optimization for maximum efficiency and cost savings';
     "price": $2,899;
     "period": '/month;
-    "description": 'Advanced data center management platform that uses AI to optimize power consumption, cooling systems, server utilization, and overall efficiency for maximum cost savings and window.performance.';
+    "description": 'Advanced data center management platform that uses AI to optimize power consumption, cooling systems, server utilization, and overall efficiency for maximum cost savings and window.window.performance.';
     features['Power optimization';
   'Cooling management';
   'Server utilization';

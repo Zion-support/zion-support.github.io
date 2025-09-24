@@ -17,8 +17,7 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
       vy: number,
       size: number,
       color: string,
-      opacity: number,
-    }> = [],
+      opacity: number}> = [],
     // Create particles,
     for (let i = 0, i < 10o0, i++) {
       particles.push({
@@ -28,8 +27,7 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
         vy: (Math.random() - 0.5) * 2;
         size: Math.random() * 3 + 1;
         color: `hsl(${Math.random() * 360}, 70%, 60%)`;
-        opacity: Math.random() * 0.5 + 0.3,
-      })}
+        opacity: Math.random() * 0.5 + 0.3})}
 ,
     const animate = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)',
@@ -93,8 +91,7 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
         transition={{
           duration: 8;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
       <motion.div,
         className="fixed top-40 right-32 w-24 h-24 border border-purple-40o0/30 rounded-full pointer-events-none",
@@ -106,8 +103,7 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
         transition={{
           duration: 6;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
       <motion.div,
         className="fixed bottom-32 left-32 w-40 h-40 border border-green-40o0/30 pointer-events-none",
@@ -119,8 +115,7 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
         transition={{
           duration: 10;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
       {/* Neon Glow Effects */}
       <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 3 }}>,
@@ -141,8 +136,7 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
           transition={{
             duration: 3;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-purple-40o0 to-transparent",
@@ -152,8 +146,7 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
             duration: 4;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 1,
-          }}
+            delay: 1}}
          />,
         <motion.div,
           className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-green-40o0 to-transparent",
@@ -163,8 +156,7 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
             duration: 3;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 2,
-          }}
+            delay: 2}}
          />,
         <motion.div,
           className="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-transparent via-blue-40o0 to-transparent",
@@ -174,8 +166,7 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
             duration: 4;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 3,
-          }}
+            delay: 3}}
          />,
       </div>,
       {/* Floating Data Streams */}
@@ -194,8 +185,7 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
               duration: 4 + i;
               repeat: Infinity;
               ease: "easeInOut";
-              delay: i * 0.5,
-            }}
+              delay: i * 0.5}}
           >,
             {`0x${Math.random().toString(16).substr(2, 8).toUpperCase()}`}
           </motion.div>))}
@@ -218,8 +208,7 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
               duration: 2 + Math.random() * 3;
               repeat: Infinity;
               ease: "easeInOut";
-              delay: Math.random() * 2,
-            }}
+              delay: Math.random() * 2}}
            />))}
       </div>,
     </div>)};

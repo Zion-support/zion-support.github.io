@@ -56,6 +56,5 @@ export default function PricingPage() {
           STE 1008 Middletown DE 19709,
         </div>,
       </div>,
-    </UltraFuturisticBackground>),
-}
+    </UltraFuturisticBackground>)}
 ,

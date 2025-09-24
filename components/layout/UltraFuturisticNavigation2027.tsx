@@ -4,7 +4,6 @@ import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
 "use client",
-,
   Menu,
   X,
   Zap,
@@ -77,7 +76,6 @@ import {
   Menu, X, Zap, Sparkles, ChevronDown, ChevronRight;
   Brain, Atom, Globe, Shield, Cpu, Database;
   Cloud, Smartphone, Palette, Search, MessageSquare,
-,
   FileText, Calendar, CreditCard, BarChart3, Settings,
   Rocket, Star, TrendingUp, Users, Target, Award,
   Phone, Mail, MapPin, ExternalLink, Building,
@@ -85,8 +83,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'};  website: 'https://ziontechgroup.com',
-}
+  website: 'https://ziontechgroup.com'};  website: 'https://ziontechgroup.com'}
 ,
   Menu, X, Zap, Sparkles, ChevronDown, ChevronRight;
   Brain, Atom, Globe, Shield, Cpu, Database;
@@ -98,8 +95,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const serviceCategories = [
   {
     title: '🚀 2028 Cutting-Edge Innovations',
@@ -165,8 +161,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup && ziontechgroup.com'};  website: 'https://ziontechgroup && ziontechgroup.com',
-};
+  website: 'https://ziontechgroup && ziontechgroup.com'};  website: 'https://ziontechgroup && ziontechgroup.com'};
 const serviceCategories = [
   {
     title: '🚀 2028 Cutting-Edge Innovations';
@@ -217,26 +212,22 @@ const serviceCategories = [
         name: 'Zero Trust Architecture 2028',
         href: '/zero-trust-network-architecture-2028',
         description: 'Next-gen security architecture',
-        price: 'Custom pricing',
-      }
+        price: 'Custom pricing'}
       {
         name: 'Edge Computing Orchestration',
         href: '/edge-computing-orchestration-2028',
         description: 'Intelligent edge computing',
-        price: 'Custom pricing',
-      }
+        price: 'Custom pricing'}
       {
         name: '5G Private Networks',
         href: '/5g-private-network-solutions-2028',
         description: 'Enterprise 5G solutions',
-        price: 'Custom pricing',
-      }
+        price: 'Custom pricing'}
       {
         name: 'Blockchain Infrastructure',
         href: '/blockchain-infrastructure-platform-2028',
         description: 'Enterprise blockchain',
-        price: 'Custom pricing',
-      }
+        price: 'Custom pricing'}
     ]},  {      { name: 'Zero Trust Architecture 2028', href: '/zero-trust-network-architecture-2028', description: 'Next-gen security architecture', price: 'Custom pricing' }
       { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-2028', description: 'Intelligent edge computing', price: 'Custom pricing' }
       { name: '5G Private Networks', href: '/5g-private-network-solutions-2028', description: 'Enterprise 5G solutions', price: 'Custom pricing' }
@@ -279,26 +270,22 @@ const companyLinks = [
         name: 'Zero Trust Architecture 2028',
         href: '/zero-trust-network-architecture-2028',
         description: 'Next-gen security architecture',
-        price: 'Custom pricing',
-      }
+        price: 'Custom pricing'}
       {
         name: 'Edge Computing Orchestration',
         href: '/edge-computing-orchestration-2028',
         description: 'Intelligent edge computing',
-        price: 'Custom pricing',
-      }
+        price: 'Custom pricing'}
       {
         name: '5G Private Networks',
         href: '/5g-private-network-solutions-2028',
         description: 'Enterprise 5G solutions',
-        price: 'Custom pricing',
-      }
+        price: 'Custom pricing'}
       {
         name: 'Blockchain Infrastructure',
         href: '/blockchain-infrastructure-platform-2028',
         description: 'Enterprise blockchain',
-        price: 'Custom pricing',
-      }
+        price: 'Custom pricing'}
     ]},  {      { name: 'Zero Trust Architecture 2028', href: '/zero-trust-network-architecture-2028', description: 'Next-gen security architecture', price: 'Custom pricing' }
       { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-2028', description: 'Intelligent edge computing', price: 'Custom pricing' }
       { name: '5G Private Networks', href: '/5g-private-network-solutions-2028', description: 'Enterprise 5G solutions', price: 'Custom pricing' }
@@ -342,18 +329,15 @@ const companyLinks = [
   {
     name: '🚀 2028 Services',
     href: '/ultimate-2028-services-showcase',
-    icon: Rocket,
-  }
+    icon: Rocket}
   {
     name: '⭐ Ultimate 2028',
     href: '/ultimate-2028-services-showcase',
-    icon: Star,
-  }
+    icon: Star}
   {
     name: '💰 2028 Pricing',
     href: '/revolutionary-2028-pricing',
-    icon: DollarSign,
-  },  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },  { name: '🚀 2028 Services', href: '/ultimate-2028-services-showcase', icon: Rocket }
+    icon: DollarSign},  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },  { name: '🚀 2028 Services', href: '/ultimate-2028-services-showcase', icon: Rocket }
   { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star }
   { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign }
   { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase }
@@ -534,20 +518,17 @@ if (return) {
           href: '/services/ai-consciousness-platform',
           description: 'Advanced AI consciousness simulation',
           price: '$5,999/month',
-          icon: '🧠',
-        }
+          icon: '🧠'}
         {          name: 'Quantum Machine Learning',
           href: '/services/quantum-machine-learning',
           description: 'Quantum-powered ML platform',
           price: '$12,999/month',
-          icon: '⚛️',
-        }
+          icon: '⚛️'}
         {          name: 'Autonomous AI Agents',
           href: '/services/autonomous-ai-agents',
           description: 'Self-operating AI systems',
           price: '$4,999/month',
-          icon: '🤖',
-        }
+          icon: '🤖'}
         {          name: 'AI Content Factory',
           href: '/services/ai-content-factory',
           description: 'Automated content creation',
@@ -559,22 +540,19 @@ if (return) {
           href: '/services / ai - consciousness - platform';
           description: 'Advanced AI consciousness simulation';
           price: '$5, 999 / month',
-          icon: '🧠',
-        }
+          icon: '🧠'}
         {
           name: 'Quantum Machine Learning';
           href: '/services / quantum - machine - learning';
           description: 'Quantum - powered ML platform';
           price: '$12, 999 / month',
-          icon: '⚛️',
-        }
+          icon: '⚛️'}
         {
           name: 'Autonomous AI Agents';
           href: '/services / autonomous - ai - agents';
           description: 'Self - operating AI systems';
           price: '$4, 999 / month',
-          icon: '🤖',
-        }
+          icon: '🤖'}
         {
           name: 'AI Content Factory';
           href: '/services / ai - content - factory';
@@ -664,22 +642,19 @@ export default function UltraFuturisticNavigation2027() {
           href: '/services/ai-consciousness-platform';
           description: 'Advanced AI consciousness simulation';
           price: '$5,999/month',
-          icon: '🧠',
-        };
+          icon: '🧠'};
         {
           name: 'Quantum Machine Learning';
           href: '/services/quantum-machine-learning';
           description: 'Quantum-powered ML platform';
           price: '$12,999/month',
-          icon: '⚛️',
-        };
+          icon: '⚛️'};
         {
           name: 'Autonomous AI Agents';
           href: '/services/autonomous-ai-agents';
           description: 'Self-operating AI systems';
           price: '$4,999/month',
-          icon: '🤖',
-        };
+          icon: '🤖'};
         {
           name: 'AI Content Factory';
           href: '/services/ai-content-factory';
@@ -697,8 +672,7 @@ export default function UltraFuturisticNavigation2027() {
     },    {
       name: 'Quantum Technology';
       href: '/services?category=Quantum%20Computing';
-      description: '50+ Quantum Solutions',          icon: '🚀',
-        }
+      description: '50+ Quantum Solutions',          icon: '🚀'}
       ]};
       name: 'Quantum Technology';
       href: '/services?category=Quantum%20Computing';
@@ -740,8 +714,7 @@ export default function UltraFuturisticNavigation2027() {
     },    {
       name: 'Emerging Tech';
       href: '/services?category=Emerging%20Technology';
-      description: '100+ Future Solutions',          icon: '🚀',
-        }
+      description: '100+ Future Solutions',          icon: '🚀'}
       ]};
       name: 'Emerging Tech';
       href: '/services?category=Emerging%20Technology';
@@ -808,8 +781,7 @@ export default function UltraFuturisticNavigation2027() {
         {          name: 'Smart HR Assistant';
           href: '/services/smart-hr-assistant';
           description: 'AI-powered HR automation';
-          price: '$349/month',          icon: '🚀',
-        }
+          price: '$349/month',          icon: '🚀'}
       ]};
       name: 'Business Solutions';
       href: '/services?category=Business%20Operations';
@@ -826,8 +798,7 @@ export default function UltraFuturisticNavigation2027() {
           price: '$199/month';
           icon: '📦';
         };
-        {          icon: '📦',
-        };
+        {          icon: '📦'};
         {
           name: 'Customer Success Automation';
           href: '/services/customer-success-automation';
@@ -835,8 +806,7 @@ export default function UltraFuturisticNavigation2027() {
           price: '$399/month';
           icon: '🎯';
         };
-        {          icon: '🎯',
-        };
+        {          icon: '🎯'};
         {
           name: 'AI Sales Coach';
           href: '/services/ai-sales-coach';
@@ -844,8 +814,7 @@ export default function UltraFuturisticNavigation2027() {
           price: '$249/month';
           icon: '📞';
         };
-        {          icon: '📞',
-        };
+        {          icon: '📞'};
         {
           name: 'Smart HR Assistant';
           href: '/services/smart-hr-assistant';
@@ -863,8 +832,7 @@ export default function UltraFuturisticNavigation2027() {
     },    {
       name: 'Cybersecurity';
       href: '/services?category=Cybersecurity';
-      description: '75+ Security Solutions',          icon: '🚀',
-        }
+      description: '75+ Security Solutions',          icon: '🚀'}
       ]};
       name: 'Cybersecurity';
       href: '/services?category=Cybersecurity';
@@ -913,8 +881,7 @@ export default function UltraFuturisticNavigation2027() {
         {          name: 'Cloud Platform';
           href: '/cloud-platform';
           description: 'Scalable cloud infrastructure';
-          price: 'Custom',          icon: '🚀',
-        }
+          price: 'Custom',          icon: '🚀'}
       ]};
       name: 'Enterprise IT';
       href: '/services?category=Enterprise%20IT';
@@ -956,8 +923,7 @@ export default function UltraFuturisticNavigation2027() {
           icon: '🚀';
         };
       ];
-    }],          icon: '🚀',
-        }
+    }],          icon: '🚀'}
       ]}
 ,
   const contactInfo = {
@@ -993,8 +959,7 @@ export default function UltraFuturisticNavigation2027() {
             href='/',
             className='flex items-center space-x-3 group relative z-10'>,
             <motion&& motion.div,
-              className='w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover: scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30',
-    };
+              className='w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover: scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30'};
     {
       name: 'Quantum Technology';
       href: '/services?category=Quantum%20Computing';
@@ -1007,35 +972,30 @@ icon: <Atom className="w-5 h-5" />;
           href: '/services/quantum-neural-interface';
           description: 'Quantum + Neural Networks';
           price: '$8,999/month';
-    icon: '⚛️',
-        };
+    icon: '⚛️'};
         {
           name: 'Quantum Financial Trading';
           href: '/services/quantum-financial-trading';
           description: 'Quantum-powered trading';
           price: '$9,999/month';
-    icon: '💰',
-        };
+    icon: '💰'};
         {
           name: 'Quantum Internet Protocol';
           href: '/services/quantum-internet-protocol';
           description: 'Quantum communication network';
           price: '$7,999/month';
-    icon: '🌐',
-        };
+    icon: '🌐'};
         {
           name: 'Quantum Sensors Network';
           href: '/services/quantum-sensors-network';
           description: 'Ultra-precise quantum sensors';
           price: '$9,999/month';
-    icon: '📡',
-        };
+    icon: '📡'};
         {
           name: 'View All Quantum Services';
           href: '/services?category=Quantum%20Computing';
           description: 'Explore quantum solutions';
-          icon: '🚀',
-        }
+          icon: '🚀'}
       ]};
     {
       name: 'Emerging Tech';
@@ -1049,35 +1009,30 @@ icon: <Rocket className="w-5 h-5" />;
           href: '/services/holographic-metaverse-platform';
           description: '3D immersive experiences';
           price: '$3,999/month';
-    icon: '🎭',
-        };
+    icon: '🎭'};
         {
           name: 'Neuromorphic Computing';
           href: '/services/neuromorphic-computing';
           description: 'Brain-inspired computing';
           price: '$8,999/month';
-    icon: '🧠',
-        };
+    icon: '🧠'};
         {
           name: 'Synthetic Biology';
           href: '/services/synthetic-biology-platform';
           description: 'AI-powered bioengineering';
           price: '$15,999/month';
-    icon: '🧬',
-        };
+    icon: '🧬'};
         {
           name: 'Brain-Computer Interface';
           href: '/services/brain-computer-interface';
           description: 'Direct brain communication';
           price: '$19,999/month';
-    icon: '💻',
-        };
+    icon: '💻'};
         {
           name: 'View All Emerging Tech';
           href: '/services?category=Emerging%20Technology';
           description: 'Explore future solutions';
-          icon: '🚀',
-        }
+          icon: '🚀'}
       ]};
     {
       name: 'Business Solutions';
@@ -1117,35 +1072,30 @@ icon: <Target className="w-5 h-5" />;
           href: '/services/smart-inventory-manager';
           description: 'AI-powered inventory optimization';
           price: '$199/month';
-          icon: '📦',
-        };
+          icon: '📦'};
         {
           name: 'Customer Success Automation';
           href: '/services/customer-success-automation';
           description: 'Automated customer retention';
           price: '$399/month';
-          icon: '🎯',
-        };
+          icon: '🎯'};
         {
           name: 'AI Sales Coach';
           href: '/services/ai-sales-coach';
           description: 'Intelligent sales training';
           price: '$249/month';
-          icon: '📞',
-        };
+          icon: '📞'};
         {
           name: 'Smart HR Assistant';
           href: '/services/smart-hr-assistant';
           description: 'AI-powered HR automation';
           price: '$349/month';
-          icon: '👥',
-        };
+          icon: '👥'};
         {
           name: 'View All Business Solutions';
           href: '/services?category=Business%20Operations';
           description: 'Explore business tools';
-          icon: '🚀',
-        }
+          icon: '🚀'}
       ]};
     {
       name: 'Cybersecurity';
@@ -1159,35 +1109,30 @@ icon: <Shield className="w-5 h-5" />;
           href: '/services/cyber-physical-security';
           description: 'Digital + Physical protection';
           price: '$6,999/month';
-    icon: '🛡️',
-        };
+    icon: '🛡️'};
         {
           name: 'Quantum Internet Security';
           href: '/services/quantum-internet-security';
           description: 'Unhackable quantum security';
           price: '$7,999/month';
-    icon: '🔐',
-        };
+    icon: '🔐'};
         {
           name: 'Zero Trust Architecture';
           href: '/services/zero-trust-network-architecture';
           description: 'Continuous verification';
           price: '$4,999/month';
-    icon: '✅',
-        };
+    icon: '✅'};
         {
           name: 'AI Threat Detection';
           href: '/services/ai-threat-detection';
           description: 'Intelligent security monitoring';
           price: '$3,999/month';
-    icon: '👁️',
-        };
+    icon: '👁️'};
         {
           name: 'View All Security Solutions';
           href: '/services?category=Cybersecurity';
           description: 'Explore security tools';
-          icon: '🚀',
-        }
+          icon: '🚀'}
       ]};
     {
       name: 'Enterprise IT';
@@ -1206,8 +1151,7 @@ icon: <Building className="w-5 h-5" />;
     mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-};
+    website: 'https://ziontechgroup.com'};
   const quickLinks = [
     { name: 'Pricing', href: '/pricing', icon: <CreditCard className="w-4 h-4" /> }
     { name: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4" /> }
@@ -1284,8 +1228,7 @@ icon: <Building className="w-5 h-5" />;
     },    {
       name: 'Quantum Technology';
       href: '/services?category = Quantum%20Computing';
-      description: '50+ Quantum Solutions',          icon: '🚀',
-        }
+      description: '50+ Quantum Solutions',          icon: '🚀'}
       ]}
       name: 'Quantum Technology';
       href: '/services?category = Quantum%20Computing';
@@ -1327,8 +1270,7 @@ icon: <Building className="w-5 h-5" />;
     },    {
       name: 'Emerging Tech';
       href: '/services?category = Emerging%20Technology';
-      description: '100+ Future Solutions',          icon: '🚀',
-        }
+      description: '100+ Future Solutions',          icon: '🚀'}
       ]}
       name: 'Emerging Tech';
       href: '/services?category = Emerging%20Technology';
@@ -1395,8 +1337,7 @@ icon: <Building className="w-5 h-5" />;
         {          name: 'Smart HR Assistant';
           href: '/services / smart - hr - assistant';
           description: 'AI - powered HR automation';
-          price: '$349 / month',          icon: '🚀',
-        }
+          price: '$349 / month',          icon: '🚀'}
       ]}
       name: 'Business Solutions';
       href: '/services?category = Business%20Operations';
@@ -1413,8 +1354,7 @@ icon: <Building className="w-5 h-5" />;
           price: '$199 / month';
           icon: '📦';
         };
-        {          icon: '📦',
-        }
+        {          icon: '📦'}
         {
           name: 'Customer Success Automation';
           href: '/services / customer - success - automation';
@@ -1422,8 +1362,7 @@ icon: <Building className="w-5 h-5" />;
           price: '$399 / month';
           icon: '🎯';
         };
-        {          icon: '🎯',
-        }
+        {          icon: '🎯'}
         {
           name: 'AI Sales Coach';
           href: '/services / ai - sales - coach';
@@ -1431,8 +1370,7 @@ icon: <Building className="w-5 h-5" />;
           price: '$249 / month';
           icon: '📞';
         };
-        {          icon: '📞',
-        }
+        {          icon: '📞'}
         {
           name: 'Smart HR Assistant';
           href: '/services / smart - hr - assistant';
@@ -1450,8 +1388,7 @@ icon: <Building className="w-5 h-5" />;
     },    {
       name: 'Cybersecurity';
       href: '/services?category = Cybersecurity';
-      description: '75+ Security Solutions',          icon: '🚀',
-        }
+      description: '75+ Security Solutions',          icon: '🚀'}
       ]}
       name: 'Cybersecurity';
       href: '/services?category = Cybersecurity';
@@ -1500,8 +1437,7 @@ icon: <Building className="w-5 h-5" />;
         {          name: 'Cloud Platform';
           href: '/cloud - platform';
           description: 'Scalable cloud infrastructure';
-          price: 'Custom',          icon: '🚀',
-        }
+          price: 'Custom',          icon: '🚀'}
       ]}
       name: 'Enterprise IT';
       href: '/services?category = Enterprise%20IT';
@@ -1543,8 +1479,7 @@ icon: <Building className="w-5 h-5" />;
           icon: '🚀';
         };
       ];
-    }],          icon: '🚀',
-        }
+    }],          icon: '🚀'}
       ]}
   const contact_info = {
     mobile: '+1 302 464 0950';
@@ -2175,24 +2110,19 @@ icon: <Building className="w-5 h-5" />;
   `fixed top-0 left-0 right-0 z-50 transition-all duration-500 $ {
   isScrolled ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' > <Zap className="w-7 h-7 text-white" /> </motion && motion.div> <div className="hidden sm: block" > <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300" > Zion Tech Group </div> <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors" > Revolutionary Technology Solutions </div> </div> </a> > <divclassName= {
   `p-2 rounded-lg bg-gradient-to-br $ {
-  item && item.color,
-}shadow-lg`}> {
+  item && item.color}shadow-lg`}> {
   item && item.icon }</div> </motion && motion.button> {
   /* Dropdown Menu */ }<AnimatePresence> </div> </a>) ) }</div> </div> </motion && motion.div>) }</AnimatePresence> </div>) ) }</nav> </a> </div> {
   /* CTA Button */ }<motion&& motion.div whileHover= {
   {
-  scale: 1 && 1.05,
-}whileTap= {
+  scale: 1 && 1.05}whileTap= {
   {
-  scale: 0 && 0.95,
-}> <Link href="/contact" className="hidden lg: inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300" > <Rocket className="w-4 h-4" /> <span>Get Started</span> </a> </motion && motion.div> {
-  /* Mobile Menu Button */ ,
-}<button </button> </div> </div> </div> {
+  scale: 0 && 0.95}> <Link href="/contact" className="hidden lg: inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300" > <Rocket className="w-4 h-4" /> <span>Get Started</span> </a> </motion && motion.div> {
+  /* Mobile Menu Button */ }<button </button> </div> </div> </div> {
   /* Mobile Menu */ }<AnimatePresence> > <divclassName= {
   `p-2 rounded-lg bg-gradient-to-br $ {
   item && item.color}`}> {
-  item && item.icon }</div> <div> </div> </a> </div>) ) }</div> </div>) ) }</div> </div> <div> <h3 className="text-lg font-semibold text-white mb-4" >Contact Info</h3> <div className="space-y-3" > <a </div> </div> </div> </div> </div> <Link href="/contact" className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300" > <Rocket className="w-4 h-4 mr-2" /> Get Started Today </a> </div> </div> </motion && motion.div>) }</AnimatePresence> </header>) };export default UltraFuturisticNavigation2027),
-};
+  item && item.icon }</div> <div> </div> </a> </div>) ) }</div> </div>) ) }</div> </div> <div> <h3 className="text-lg font-semibold text-white mb-4" >Contact Info</h3> <div className="space-y-3" > <a </div> </div> </div> </div> </div> <Link href="/contact" className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300" > <Rocket className="w-4 h-4 mr-2" /> Get Started Today </a> </div> </div> </motion && motion.div>) }</AnimatePresence> </header>) };export default UltraFuturisticNavigation2027)};
 export default UltraFuturisticNavigation2027;
 export default UltraFuturisticNavigation2027;
 export default UltraFuturisticNavigation2027)))

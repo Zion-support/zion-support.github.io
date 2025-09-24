@@ -16,14 +16,11 @@ export default function AnimatedBackground() {
         @keyframes bgflow {
           0% {
           0% {
-            transform: translateY(0px) rotate(0deg),
-          }
+            transform: translateY(0px) rotate(0deg)}
           50% {
-            transform: translateY(-20px) rotate(10deg),
-          }
+            transform: translateY(-20px) rotate(10deg)}
           100% {
-            transform: translateY(0px) rotate(0deg),
-          }
+            transform: translateY(0px) rotate(0deg)}
         }
       `}</style>,
     </div>),  return (
@@ -56,14 +53,11 @@ function AnimatedBackground() {
       <style jsx global>{`,
         @keyframes bgflow {
           0% {
-            transform: translate_y (0px) rotate (0deg),
-          }
+            transform: translate_y (0px) rotate (0deg)}
           50% {
-            transform: translate_y (-20px) rotate (10deg),
-          }
+            transform: translate_y (-20px) rotate (10deg)}
           100% {
-            transform: translate_y (0px) rotate (0deg),
-          }
+            transform: translate_y (0px) rotate (0deg)}
         }
       `}</style>,
     </div>),  return (
@@ -80,8 +74,7 @@ function AnimatedBackground() {
         transition={{
           duration: 20,
           repeat: Infinity,
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
 ,
       />,
       <motion&& motion.div,
@@ -100,8 +93,7 @@ function AnimatedBackground() {
         transition={{
           duration: 25,
           repeat: Infinity,
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
 ,
       />,
       <motion&& motion.div,
@@ -120,8 +112,7 @@ function AnimatedBackground() {
         transition={{
           duration: 30,
           repeat: Infinity,
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
 ,
       />,
       {/* Grid Pattern */}
@@ -135,8 +126,7 @@ function AnimatedBackground() {
           backgroundSize: '50px 50px';
         }}
       />,
-    </div>),
-}
+    </div>)}
 export default AnimatedBackground};
 export default AnimatedBackground;
 }}}}}}}})))

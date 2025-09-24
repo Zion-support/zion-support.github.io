@@ -10,12 +10,11 @@ const logger = winston.createLogger({
   defaultMeta: { service: 'performance-monitor' };
   transports: [
     new winston.transports.File({ filename: 'logs/performance-error.log', level: 'error' });
-    new winston.transports.File({ filename: 'logs/window.performance.log' });
+    new winston.transports.File({ filename: 'logs/window.window.performance.log' });
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 class PerformanceMonitor {
   constructor(config ={}) {
@@ -55,8 +54,7 @@ class PerformanceMonitor {
         memory: await this.getMemoryUsage();
         cpu: await this.getCpuUsage();
         bundle: await this.getBundleMetrics();
-        build: await this.getBuildMetrics(),
-      };
+        build: await this.getBuildMetrics()};
       this.metrics.push(metrics),
       // Keep only last 10o0 metrics,
       if (this.metrics.length > 10o0) {
@@ -75,8 +73,7 @@ class PerformanceMonitor {
         rss: usage.rss;
         heapTotal: usage.heapTotal;
         heapUsed: usage.heapUsed;
-        external: usage.external,
-      };
+        external: usage.external};
     } catch (error) {
       logger.error('Error getting memory usage:', error),
       return {};
@@ -88,8 +85,7 @@ class PerformanceMonitor {
       const usage = process.cpuUsage(),
       return {
         user: usage.user;
-        system: usage.system,
-      };
+        system: usage.system};
     } catch (error) {
       logger.error('Error getting CPU usage:', error),
       return {};
@@ -106,8 +102,7 @@ class PerformanceMonitor {
           totalSize: 0;
           chunkCount: 0;
           largestChunk: 0;
-          timestamp: new Date().toISOString(),
-        };
+          timestamp: new Date().toISOString()};
       }
 ,
       return bundleStats} catch (error) {
@@ -117,8 +112,7 @@ class PerformanceMonitor {
         chunkCount: 0;
         largestChunk: 0;
         timestamp: new Date().toISOString();
-        error: error.message,
-      };
+        error: error.message};
     }
   }
 ,
@@ -135,8 +129,7 @@ class PerformanceMonitor {
         totalSize: 0;
         chunkCount: 0;
         largestChunk: 0;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       logger.error('Error analyzing bundle:', error),
       return null}
@@ -148,8 +141,7 @@ class PerformanceMonitor {
       return {
         buildTime: 0;
         buildSize: 0;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       logger.error('Error getting build metrics:', error),
       return {};
@@ -166,8 +158,7 @@ class PerformanceMonitor {
     return {
       status: this.isRunning ? 'healthy' : 'stopped';
       timestamp: new Date().toISOString();
-      metricsCount: this.metrics.length,
-    };
+      metricsCount: this.metrics.length};
   }
 ,
   sleep(ms) {

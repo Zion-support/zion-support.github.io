@@ -12,10 +12,8 @@ interface GeneratedContent {
   tags: string[],
   suggestedPrice: {
     min: number,
-    max: number,
-  };
-  keyPoints: string[],
-}
+    max: number};
+  keyPoints: string[]}
 ,
 interface AIListingGeneratorProps {
   onApplyGenerated?: (content: GeneratedContent) => void,
@@ -23,8 +21,7 @@ interface AIListingGeneratorProps {
     title?: string,
     category?: string,
     keyFeatures?: string,
-    targetAudience?: string,
-  };
+    targetAudience?: string};
 }
 ,
 export function AIListingGenerator({
@@ -44,8 +41,7 @@ export function AIListingGenerator({
     title: string,
     category: string,
     keyFeatures: string,
-    targetAudience: string,
-  }) => {
+    targetAudience: string}) => {
     setIsLoading(true),
     try {
       const { data, error } = await supabase.functions.invoke(

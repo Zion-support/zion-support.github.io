@@ -9,8 +9,7 @@ function ensureStorage() {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST'),
     return res && res.status(405).json({ error: 'Method not allowed' }),
-  ensureStorage(),
-}
+  ensureStorage()}
 ,
   const highlights = segments.map((t: string, i: number) => ({
     label: `Highlight ${i + 1}`,

@@ -50,10 +50,8 @@ export function EducationFormFields({
     setIsLoading(true),
     setError(null),
     try {
-      await onSubmit(data),
-    } catch (err: any) {
-      setError(err.message || 'An error occurred'),
-    } finally {
+      await onSubmit(data)} catch (err: any) {
+      setError(err.message || 'An error occurred')} finally {
       setIsLoading(false)}
   };
   return (

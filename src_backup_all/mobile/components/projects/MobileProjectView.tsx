@@ -18,8 +18,7 @@ interface Milestone {
   dueDate: string,
   status: 'completed' | 'in_progress' | 'pending',
   paymentStatus: 'paid' | 'pending' | 'overdue',
-  amount: string,
-}
+  amount: string}
 ,
 interface ProjectViewProps {
   project: {
@@ -27,17 +26,14 @@ interface ProjectViewProps {
     title: string,
     client: {
       name: string,
-      avatar?: string,
-    };
+      avatar?: string};
     startDate: string,
     endDate?: string,
     status: string,
     totalAmount: string,
     progress: number,
-    description: string,
-  };
-  milestones: Milestone[],
-}
+    description: string};
+  milestones: Milestone[]}
 ,
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   const router = useRouter(),

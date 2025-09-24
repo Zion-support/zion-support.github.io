@@ -15,6 +15,5 @@ export default function ServicesShowcase20o40Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

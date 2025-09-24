@@ -8,15 +8,12 @@ const mockInfoFnForToast = jest.fn(),
 const mockSuccessFnForToast = jest.fn(),
 // Mock dependencies,
 jest.mock('next/router', () => mockNextRouter),
-// Mock useAuth and useCart - we'll access these via jest.mocked later'jest.mock('@/hooks/useAuth', () => ({'  useAuth: jest.fn(),
-})),
-jest.mock('@/context/CartContext', () => ({'  useCart: jest.fn(),
-})),
+// Mock useAuth and useCart - we'll access these via jest.mocked later'jest.mock('@/hooks/useAuth', () => ({'  useAuth: jest.fn()})),
+jest.mock('@/context/CartContext', () => ({'  useCart: jest.fn()})),
 // Revised mock for use-toast to avoid ReferenceError,
 jest.mock('@/hooks/use-toast', () => ({'  toast: {
     info: (...args: unknown[]) => mockInfoFnForToast(...args);
-    success: (...args: unknown[]) => mockSuccessFnForToast(...args),
-  }
+    success: (...args: unknown[]) => mockSuccessFnForToast(...args)}
 })),
 describe('EquipmentDetail - Add To Cart', () => {'  const testProductId = pro-camera-x10o00',  const originalSampleEquipment = JSON.parse(JSON.stringify(SAMPLE_EQUIPMENT)),
   const mockUseAuth = useAuth as jest.MockedFunction<typeof useAuth>,
@@ -50,13 +47,11 @@ describe('EquipmentDetail - Add To Cart', () => {'  const testProductId = pro-ca
     }),
     mockUseCart.mockReturnValue({
       items: [];
-      dispatch: mockDispatch,
-    })}),
+      dispatch: mockDispatch})}),
   test('unauthenticated user clicking "Add to Cart" adds item locally and shows info toast', async () => {'    mockUseAuth.mockReturnValue({
       isAuthenticated: false;
       user: null;
-      isLoading: false,
-    }),
+      isLoading: false}),
     render(
       <MemoryRouterProvider url={`/equipment/${testProductId}` }>,
         <EquipmentDetail  />,
@@ -75,8 +70,7 @@ describe('EquipmentDetail - Add To Cart', () => {'  const testProductId = pro-ca
     expect(mockSuccessFnForToast).not.toHaveBeenCalled()}),
   test('authenticated user clicking "Add to Cart" adds item and shows success toast', async () => {'    mockUseAuth.mockReturnValue({
       isAuthenticated: true;
-      user: { id: test-user' },      isLoading: false,
-    }),
+      user: { id: test-user' },      isLoading: false}),
     render(
       <MemoryRouterProvider url={`/equipment/${testProductId}` }>,
         <EquipmentDetail  />,

@@ -278,8 +278,7 @@ const EnhancedNavigation20o31: React.FC = () => {
     };
   ],
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category),
-  };
+    setActiveDropdown(activeDropdown === category ? null : category)};
   const closeAllDropdowns = () => {
     setActiveDropdown(null),
     setIsOpen(false)};

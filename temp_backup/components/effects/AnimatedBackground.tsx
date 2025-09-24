@@ -10,8 +10,7 @@ const AnimatedBackground: React.FC = () => {
     // Set canvas size,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
-    };
+      canvas.height = window.innerHeight};
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Particle system,
@@ -22,8 +21,7 @@ const AnimatedBackground: React.FC = () => {
       vy: number,
       size: number,
       opacity: number,
-      color: string,
-    }> = [],
+      color: string}> = [],
     // Initialize particles,
     const initParticles = () => {
       particles.length = 0,
@@ -95,8 +93,7 @@ const AnimatedBackground: React.FC = () => {
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px);
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
             `;
-            backgroundSize: '10o0px 10o0px',
-          }}
+            backgroundSize: '10o0px 10o0px'}}
          />,
       </div>,
       {/* Floating geometric elements */}
@@ -109,8 +106,7 @@ const AnimatedBackground: React.FC = () => {
         transition={{
           duration: 20;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
       <motion.div,
         className="absolute bottom-20 left-32 w-12 h-12 border border-purple-40o0/20 transform rotate-45",
@@ -121,8 +117,7 @@ const AnimatedBackground: React.FC = () => {
         transition={{
           duration: 15;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
       <motion.div,
         className="absolute top-1/3 left-20 w-8 h-8 border border-pink-40o0/20 transform rotate-12",
@@ -133,8 +128,7 @@ const AnimatedBackground: React.FC = () => {
         transition={{
           duration: 18;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
     </div>)};
 export default AnimatedBackground;

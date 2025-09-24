@@ -30,8 +30,7 @@ const SyntheticIntelligence20o25UltimateBreakthroughBanner = () => {
       url: '/blog/ai-20o25-synthetic-intelligence-revolution-ultimate-breakthrough';
       type: 'blog';
       badge: 'Ultimate Breakthrough';
-      readingTime: '30 min read',
-    };
+      readingTime: '30 min read'};
     {
       id: 'fortune-50o0-synthetic-success';
       title: 'Fortune 50o0 Synthetic Intelligence Success';
@@ -40,8 +39,7 @@ const SyntheticIntelligence20o25UltimateBreakthroughBanner = () => {
       url: '/case-studies/synthetic-intelligence-fortune-50o0-250o0-roi-success-story';
       type: 'case-study';
       badge: 'Success Story';
-      readingTime: '18 min read',
-    };
+      readingTime: '18 min read'};
     {
       id: 'implementation-ultimate-guide';
       title: 'Synthetic Intelligence Implementation Ultimate Guide';
@@ -50,8 +48,7 @@ const SyntheticIntelligence20o25UltimateBreakthroughBanner = () => {
       url: '/resources/synthetic-intelligence-implementation-ultimate-guide-20o25';
       type: 'resource';
       badge: 'Implementation Guide';
-      readingTime: '35 min read',
-    }
+      readingTime: '35 min read'}
   ],
   if (dismissed || !isVisible) {
     return null}
@@ -113,8 +110,7 @@ const SyntheticIntelligence20o25UltimateBreakthroughBanner = () => {
                 className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                   index === currentContent,
                     ? 'bg-white scale-125',
-                    : 'bg-white/30 hover: bg-white/50',
-                }`}
+                    : 'bg-white/30 hover: bg-white/50'}`}
                />))}
           </div>,
         </div>,

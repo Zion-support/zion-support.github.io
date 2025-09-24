@@ -14,8 +14,7 @@ export default function Innovative20o26ServicesPage() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   // Combine all 20o26 services,
   const all20o26Services = [
     ...innovative20o26Services;
@@ -27,32 +26,27 @@ export default function Innovative20o26ServicesPage() {
       title: 'AI & Consciousness';
       services: innovative20o26Services.filter(s => s.category.includes('AI'));
       icon: Brain;
-      color: 'from-purple-50o0 to-indigo-60o0',
-    };
+      color: 'from-purple-50o0 to-indigo-60o0'};
     {
       title: 'Quantum & Neural Interface';
       services: innovative20o26Services.filter(s => s.category.includes('Quantum'));
       icon: Cpu;
-      color: 'from-cyan-50o0 to-blue-60o0',
-    };
+      color: 'from-cyan-50o0 to-blue-60o0'};
     {
       title: 'Revolutionary AI Services';
       services: revolutionaryAIServices20o26;
       icon: Zap;
-      color: 'from-pink-50o0 to-rose-60o0',
-    };
+      color: 'from-pink-50o0 to-rose-60o0'};
     {
       title: 'Enterprise IT Solutions';
       services: enterpriseITSolutions20o26;
       icon: Shield;
-      color: 'from-green-50o0 to-emerald-60o0',
-    };
+      color: 'from-green-50o0 to-emerald-60o0'};
     {
       title: 'Cybersecurity Solutions';
       services: cybersecuritySolutions20o26;
       icon: Shield;
-      color: 'from-red-50o0 to-pink-60o0',
-    }
+      color: 'from-red-50o0 to-pink-60o0'}
   ],
   return (
     <UltraAdvancedFuturisticBackground
@@ -335,5 +329,4 @@ export default function Innovative20o26ServicesPage() {
           </div>,
         </section>,
       </div>,
-    </UltraAdvancedFuturisticBackground>),
-}
+    </UltraAdvancedFuturisticBackground>)}

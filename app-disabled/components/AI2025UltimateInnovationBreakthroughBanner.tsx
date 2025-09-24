@@ -13,8 +13,7 @@ const AI20o25UltimateInnovationBreakthroughBanner = () => {
       url: '/blog/ai-20o25-ultimate-innovation-breakthrough-ultimate-guide';
       type: 'blog';
       readingTime: '30 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-innovation-success';
       title: 'Fortune 50o0 AI Innovation Success Story';
@@ -23,8 +22,7 @@ const AI20o25UltimateInnovationBreakthroughBanner = () => {
       url: '/case-studies/fortune-50o0-ai-innovation-50o00-roi-success-story';
       type: 'case-study';
       readingTime: '20 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'ai-innovation-implementation-guide';
       title: 'AI Innovation Implementation Ultimate Guide';
@@ -33,8 +31,7 @@ const AI20o25UltimateInnovationBreakthroughBanner = () => {
       url: '/resources/ai-innovation-implementation-ultimate-guide-20o25';
       type: 'resource';
       readingTime: '45 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     if (isDismissed) return,
@@ -135,8 +132,7 @@ const AI20o25UltimateInnovationBreakthroughBanner = () => {
               className={`w-3 h-3 rounded-full transition-all duration-20o0 ${
                 index === currentSlide,
                   ? 'bg-white',
-                  : 'bg-white/30 hover: bg-white/50',
-              }`}
+                  : 'bg-white/30 hover: bg-white/50'}`}
             />))}
         </div>,
       </div>,

@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const NetlifyBuildMonitor = require('./netlify-monitor'),
 const NetlifyErrorFixer = require('./netlify-error-fixer'),
@@ -47,8 +46,7 @@ class AutomationTester {
       await this.testFileOperations(),
       // Generate test report,
       await this.generateTestReport(),
-      this.log('All tests completed'),
-    } catch (error) {
+      this.log('All tests completed')} catch (error) {
       this.log(`Test suite failed: ${error.message}`, error'),
       process.exit(1)}
   }
@@ -168,8 +166,7 @@ const missingFiles = requiredFiles.filter((file) => !fs.existsSync(file)),
       const mockBuild ={
         state: 'error';
         error_message: Build failed due to memory constraints';
-        logs: Error: JavaScript heap out of memory,
-      }
+        logs: Error: JavaScript heap out of memory}
 const errors = monitor.analyzeBuildError(mockBuild),
       if (!Array.isArray(errors)) {
         throw new Error('Error analysis should return an array')}
@@ -237,8 +234,7 @@ const testData ={ test: true, timestamp: new Date().toISOString() };
       test: testName;
       passed;
       message;
-      timestamp: new Date().toISOString(),
-    }),
+      timestamp: new Date().toISOString()}),
 const status = passed ? PASS' : FAIL',
     this.log(`${status}: ${testName} - ${message}`, passed ? info' : error')}
 ,
@@ -254,10 +250,8 @@ const report ={
           (
             (this.testResults.filter((r) => r.passed).length /,
               this.testResults.length) *,
-            10o0).toFixed(2) + %,
-      };
-      results: this.testResults,
-    };
+            10o0).toFixed(2) + %};
+      results: this.testResults};
     // Save report,
     fs.writeFileSync(
       path.join(__dirname, 'test-report.json');
@@ -295,17 +289,16 @@ const command = process.argv[2],
       logger.info(JSON.stringify(report, null, 2)),
       break,
     default: ,
-      logger.info('Usage: node test-automation.js [test|report]),
-  }
+      logger.info('Usage: node test-automation.js [test|report])}
 }
 ,
 module.exports = AutomationTester,
 // Graceful shutdown handling,
 process.on('SIGINT', () => {
-  // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
+  // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
   // Add cleanup logic here,
   process.exit(0)}),
 process.on('SIGTERM', () => {
-  // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
+  // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here,
   process.exit(0)}),

@@ -16,11 +16,9 @@ const UltimateBusinessAutomation20o25Banner = () => {
         roi: '15,0o00%';
         savings: '$85.2B';
         accuracy: '99.97%';
-        automation: '98.7%',
-      };
+        automation: '98.7%'};
       readingTime: '25 min read';
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'fortune-50o0-ultimate-automation-success';
       title: 'Fortune 50o0 Ultimate Business Automation Success';
@@ -31,11 +29,9 @@ const UltimateBusinessAutomation20o25Banner = () => {
         roi: '15,0o00%';
         savings: '$85.2B';
         timeline: '18 months';
-        satisfaction: '99.8%',
-      };
+        satisfaction: '99.8%'};
       readingTime: '18 min read';
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'ultimate-automation-implementation-guide';
       title: 'AI 20o25 Ultimate Business Automation Implementation Guide';
@@ -48,8 +44,7 @@ const UltimateBusinessAutomation20o25Banner = () => {
         success: '99.7%';
         projects: '1,0o00+'};
       readingTime: '35 min read';
-      isNew: true,
-    }
+      isNew: true}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -245,8 +240,7 @@ const UltimateBusinessAutomation20o25Banner = () => {
                 className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                   index === currentSlide,
                     ? 'bg-yellow-40o0 scale-125',
-                    : 'bg-white/30 hover: bg-white/50',
-                }`}
+                    : 'bg-white/30 hover: bg-white/50'}`}
               />))}
           </div>,
         </div>,

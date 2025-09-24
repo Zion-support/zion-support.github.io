@@ -9,12 +9,10 @@ interface ContentItem {
   metrics: {
     roi: string,
     savings: string,
-    efficiency: string,
-  };
+    efficiency: string};
   readingTime: string,
   description: string,
-  category: string,
-}
+  category: string}
 ,
 const contentItems: ContentItem[] = [
   {
@@ -209,6 +207,5 @@ const RevolutionaryAI20o25Showcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryAI20o25Showcase;

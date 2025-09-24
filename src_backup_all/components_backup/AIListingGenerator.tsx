@@ -20,10 +20,8 @@ interface GeneratedContent {
   tags: string[],
   suggestedPrice: {
     min: number,
-    max: number,
-  };
-  keyPoints: string[],
-}
+    max: number};
+  keyPoints: string[]}
 ,
 interface AIListingGeneratorProps {
   onApplyGenerated?: (content: GeneratedContent) => void,
@@ -31,8 +29,7 @@ interface AIListingGeneratorProps {
     title?: string,
     category?: string,
     keyFeatures?: string,
-    targetAudience?: string,
-  };
+    targetAudience?: string};
 }
 ,
 export function AIListingGenerator({
@@ -64,8 +61,7 @@ export function AIListingGenerator({
         break,
       case 'targetAudience':,
         setTargetAudience(e.target.value),
-        break,
-    }
+        break}
   };
   const handleGenerate = async () => {
     if (!title || !category) {
@@ -75,8 +71,7 @@ export function AIListingGenerator({
       // }),
       alert(
         'Missing required fields: Please provide at least a title and category.'),
-      return,
-    }
+      return}
 ,
     setIsLoading(true),
     try {
@@ -104,8 +99,7 @@ export function AIListingGenerator({
       //   description: "AI has created optimized listing content for you.",
       // }),
       alert(
-        'Content Generated: AI has created optimized listing content for you.'),
-    } catch (error) {
+        'Content Generated: AI has created optimized listing content for you.')} catch (error) {
       // logErrorToProduction('Error generating content:', { data: error }),
       // toast({
       //   title: "Generation Failed";
@@ -116,8 +110,7 @@ export function AIListingGenerator({
         'Generation Failed: ' +,
           (error instanceof Error,
             ? error.message,
-            : 'Failed to generate content. Please try again.')),
-    } finally {
+            : 'Failed to generate content. Please try again.'))} finally {
       setIsLoading(false)}
   };
   const handleApply = () => {
@@ -128,8 +121,7 @@ export function AIListingGenerator({
       //   description: "The generated content has been applied to your listing.",
       // }),
       alert(
-        'Content Applied: The generated content has been applied to your listing.'),
-    }
+        'Content Applied: The generated content has been applied to your listing.')}
   };
   return (
     <div className='space-y-6'>,

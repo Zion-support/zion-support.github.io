@@ -13,11 +13,9 @@ const AI20o25UltimateSuccessFrameworkBanner = () => {
         roi: "1,0o00%+";
         successRate: "94%";
         timeline: "18 months";
-        companies: "50o0+",
-      };
+        companies: "50o0+"};
       cta: "Get the Framework";
-      link: "/resources/ai-20o25-implementation-ultimate-success-framework",
-    };
+      link: "/resources/ai-20o25-implementation-ultimate-success-framework"};
     {
       title: "Fortune 50o0 AI Transformation";
       subtitle: "1,20o0% ROI Success Story";
@@ -26,11 +24,9 @@ const AI20o25UltimateSuccessFrameworkBanner = () => {
         roi: "1,20o0%";
         savings: "$2.8B";
         timeline: "12 months";
-        efficiency: "340%",
-      };
+        efficiency: "340%"};
       cta: "Read Case Study";
-      link: "/case-studies/fortune-50o0-ai-transformation-ultimate-success-story",
-    };
+      link: "/case-studies/fortune-50o0-ai-transformation-ultimate-success-story"};
     {
       title: "Enterprise AI Transformation";
       subtitle: "Complete Roadmap to 50o0% ROI";
@@ -39,11 +35,9 @@ const AI20o25UltimateSuccessFrameworkBanner = () => {
         roi: "50o0%+";
         savings: "$2.8B";
         timeline: "12-18 months";
-        satisfaction: "98%",
-      };
+        satisfaction: "98%"};
       cta: "Start Transformation";
-      link: "/blog/ai-20o25-enterprise-ai-transformation-ultimate-guide",
-    }
+      link: "/blog/ai-20o25-enterprise-ai-transformation-ultimate-guide"}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -131,8 +125,7 @@ const AI20o25UltimateSuccessFrameworkBanner = () => {
                   className={`p-4 rounded-lg border-2 transition-all duration-30o0 cursor-pointer ${
                     index === currentSlide,
                       ? 'border-purple-40o0 bg-purple-50o0/20',
-                      : 'border-white/20 bg-white/5 hover: border-white/40',
-                  }`}
+                      : 'border-white/20 bg-white/5 hover: border-white/40'}`}
                   onClick={() => setCurrentSlide(index)}
                 >,
                   <h4 className="font-semibold text-sm mb-1">{item.title}</h4>,

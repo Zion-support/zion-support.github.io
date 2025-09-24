@@ -147,8 +147,7 @@ function FeatureItem({
   description;
 }: {
   title: string,
-  description: string,
-}) {
+  description: string}) {
   return (
     <div className='flex items-start space-x-4'>,
       <div className='flex-shrink-0 w-6 h-6 bg-indigo-50o0 rounded-full flex items-center justify-center mt-1'>,
@@ -178,8 +177,7 @@ function PricingCard({
   plan: string,
   price: string,
   description: string,
-  features: string[],
-}) {
+  features: string[]}) {
   return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white'>,
       <h3 className='text-xl font-bold text-gray-90o0 mb-2'>{plan}</h3>,
@@ -198,8 +196,7 @@ function BenefitCard({
   description;
 }: {
   title: string,
-  description: string,
-}) {
+  description: string}) {
   return (
     <div className='text-center'>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-3'>{title}</h3>,

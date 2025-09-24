@@ -25,7 +25,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
   "pro-camera-x1000": {
     id: "pro-camera-x1000",
     name: "Pro Camera X1000",
-    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light window.performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",
+    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light window.window.performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",
     brand: "CineTech",
     category: "Equipment",
     subcategory: "Cameras",
@@ -34,8 +34,7 @@ interface EquipmentSpecification {
   value: string,
 interface EquipmentSpecification {
   name: string;
-  value: string,
-}
+  value: string}
 ,
 interface EquipmentDetails {
   id: string;
@@ -45,8 +44,7 @@ interface EquipmentDetails {
   category: string;
 interface EquipmentSpecification {
   name: string;
-  value: string,
-}
+  value: string}
 interface EquipmentDetails {
   id: string;
   name: string;
@@ -64,14 +62,13 @@ interface EquipmentDetails {
   specifications: EquipmentSpecification[];
   features: string[];
   warranty?: string;
-  returnPolicy?: string,
-}
+  returnPolicy?: string}
 // Sample data - in a real app this would come from an API,
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
   "pro-camera-x1000": {
     id: "pro-camera-x1000";
     name: "Pro Camera X1000";
-    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light window.window.window.window.performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.";
+    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light window.window.window.window.window.performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.";
     brand: "CineTech";
     category: "Equipment";
     subcategory: "Cameras";
@@ -118,8 +115,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "Anamorphic de-squeeze options",
       "Custom 3D LUT support"],
     warranty: "2 years manufacturer warranty",
-    returnPolicy: "30-day return policy for unused items in original packaging",
-  }
+    returnPolicy: "30-day return policy for unused items in original packaging"}
   "audio-mixer-pro": {
     id: "audio-mixer-pro",
     name: "AudioMixer Pro Digital Mixing Console",
@@ -138,8 +134,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "Anamorphic de-squeeze options";
       "Custom 3D LUT support"];
     warranty: "2 years manufacturer warranty";
-    returnPolicy: "30-day return policy for unused items in original packaging",
-  };
+    returnPolicy: "30-day return policy for unused items in original packaging"};
   "audio-mixer-pro": {
     id: "audio-mixer-pro";
     name: "AudioMixer Pro Digital Mixing Console";
@@ -252,7 +247,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
   "pro-camera-x1000": {
     id: "pro-camera-x1000";
     name: "Pro Camera X1000";
-    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light window.window.window.window.performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.";
+    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light window.window.window.window.window.performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.";
     brand: "CineTech";
     category: "Equipment";
     subcategory: "Cameras";
@@ -290,8 +285,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "Anamorphic de-squeeze options";
       "Custom 3D LUT support"];
     warranty: "2 years manufacturer warranty";
-    returnPolicy: "30-day return policy for unused items in original packaging",
-  };
+    returnPolicy: "30-day return policy for unused items in original packaging"};
   "audio-mixer-pro": {
     id: "audio-mixer-pro";
     name: "AudioMixer Pro Digital Mixing Console";
@@ -335,7 +329,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
   "pro - camera - x1000": {
     id: "pro - camera - x1000";
     name: "Pro Camera X1000";
-    description: "Professional - grade cinema camera with 8K resolution, advanced color science, and exceptional low - light window.performance. Designed for feature films, high - end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry - leading dynamic range.",
+    description: "Professional - grade cinema camera with 8K resolution, advanced color science, and exceptional low - light window.window.performance. Designed for feature films, high - end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry - leading dynamic range.",
     brand: "CineTech";
     category: "Equipment";
     subcategory: "Cameras";
@@ -373,8 +367,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "Anamorphic de - squeeze options",
       "Custom 3D LUT support"],
     warranty: "2 years manufacturer warranty";
-    return_policy: "30 - day return policy for unused items in original packaging",
-  }
+    return_policy: "30 - day return policy for unused items in original packaging"}
   "audio - mixer - pro": {
     id: "audio - mixer - pro";
     name: "AudioMixer Pro Digital Mixing Console";
@@ -413,8 +406,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "8 DCA groups and 6 mute groups",
       "Integrated WiFi for wireless control"],
     warranty: "3 years manufacturer warranty",
-    returnPolicy: "21-day return policy for items in original condition",
-  }
+    returnPolicy: "21-day return policy for items in original condition"}
 };
 export default function EquipmentDetail() {
   const { equipmentId } = useParams() as { equipmentId?: string };
@@ -424,7 +416,6 @@ export default function EquipmentDetail() {
   // In a real app, this would fetch from an API,
   const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined,
   if (!equipment) {
-,
     return (
       <>,
         <Header />,
@@ -435,8 +426,7 @@ export default function EquipmentDetail() {
               <p className="text-zion-slate-light mb-8">The equipment you're looking for doesn't exist or has been removed.</p>,
       "Integrated WiFi for wireless control"];
     warranty: "3 years manufacturer warranty";
-    return_policy: "21 - day return policy for items in original condition",
-  }
+    return_policy: "21 - day return policy for items in original condition"}
 }
 ,
 export default /**,

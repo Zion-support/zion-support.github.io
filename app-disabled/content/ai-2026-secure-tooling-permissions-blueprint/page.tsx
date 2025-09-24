@@ -60,6 +60,5 @@ export default function SecureToolingPermissionsBlueprint20o26() {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-}
+    </div>)}
 ,

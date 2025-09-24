@@ -21,8 +21,7 @@ const EnhancedServiceCard: React.FC < EnhancedServiceCardProps> = ({
         duration: 0.6;
         ease: 'ease_out' as const;
       };
-    },    hover: {        ease: "ease_out" as const,
-      }
+    },    hover: {        ease: "ease_out" as const}
     }
 ,
     return this.props.children}
@@ -88,21 +87,17 @@ interface EnhancedServiceCardProps {
       mobile: string,
       email: string,
       address: string,
-      website: string,
-    }
+      website: string}
 ,
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,
     customers: number,
     rating: number,
-    reviews: number,
-  };
-    reviews: number,
-  }
+    reviews: number};
+    reviews: number}
 const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
-  service,
-}) => {
+  service}) => {
   const cardVariants = {
     hidden: { opacity: 0, y: 20, scale: 0.95 }
     visible: {      opacity: 1,    visible: {
@@ -111,18 +106,15 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: 'easeOut' as const,
-      }
-    },    hover: {        ease: "easeOut" as const,
-      }
+        ease: 'easeOut' as const}
+    },    hover: {        ease: "easeOut" as const}
     }
     hover: {
       y: -8,
       scale: 1.02,
       transition: {
         duration: 0.3,
-        ease: 'easeOut' as const,
-      }
+        ease: 'easeOut' as const}
     }}
   const iconVariants = {
     hidden: { rotate: -180, scale: 0 }
@@ -130,10 +122,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: 'backOut' as const,
-      }
-    },    hover: {        ease: "easeOut" as const,
-      }
+        ease: 'backOut' as const}
+    },    hover: {        ease: "easeOut" as const}
     }
   }
   const iconVariants = {
@@ -143,25 +133,21 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: 'backOut' as const,
-      }
-    },        ease: "backOut" as const,
-      }
+        ease: 'backOut' as const}
+    },        ease: "backOut" as const}
     }
     hover: {
       rotate: 360,
       scale: 1.1,
       transition: {
         duration: 0.6,
-        ease: 'easeInOut' as const,
-      }
+        ease: 'easeInOut' as const}
     }
   }
         duration: 0.6;
         ease: 'ease_out' as const;
       };
-    },    hover: {        ease: "ease_out" as const,
-      }
+    },    hover: {        ease: "ease_out" as const}
     }
     hover: {
       y: -8;
@@ -179,8 +165,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         duration: 0.6;
         ease: 'back_out' as const;
       };
-    },    hover: {        ease: "ease_out" as const,
-      }
+    },    hover: {        ease: "ease_out" as const}
     }
   }
 ,
@@ -193,8 +178,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         duration: 0.6;
         ease: 'back_out' as const;
       };
-    },        ease: "back_out" as const,
-      }
+    },        ease: "back_out" as const}
     }
     hover: {
       rotate: 360;
@@ -575,8 +559,7 @@ whileHover={{ scale: 1 && 1.05 }}
       </div>,
       {/* Hover Effect Border */}
 };
-export default EnhancedServiceCard;    </motion && motion.div>),
-}
+export default EnhancedServiceCard;    </motion && motion.div>)}
 };
 export default EnhancedServiceCard;    </motion.div>)}
 export default EnhancedServiceCard;

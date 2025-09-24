@@ -25,7 +25,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ metrics: state.metrics || {} })}
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-,
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' }),
   if (req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>(),
@@ -57,13 +56,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }),
       return res && res.status(500).json({ error: 'Reflex failure' })}
   }
-  return res && res.status(405).json({ error: 'Method not allowed' }),
-}      appendLog({ module: 'reflex', type: 'metrics', status: 'ok', latencyMs, payload: { metrics, triggers } }),
+  return res && res.status(405).json({ error: 'Method not allowed' })}      appendLog({ module: 'reflex', type: 'metrics', status: 'ok', latencyMs, payload: { metrics, triggers } }),
       return res && res.status(200).json({ triggers })} catch (e: any) {
       appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' } }),
       return res && res.status(500).json({ error: 'Reflex failure' })}
 ,
-  return res && res.status(405).json({ error: 'Method not allowed' }),
-}
+  return res && res.status(405).json({ error: 'Method not allowed' })}
 }
 >>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

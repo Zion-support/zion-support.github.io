@@ -15,16 +15,14 @@ export type AppMetadataValues = {
   longDescription: string,
   keywords: string[],
   version: string,
-  platform: AppPlatform,
-};
+  platform: AppPlatform};
 const defaultValues: AppMetadataValues = {
   appTitle: "Zion AI Marketplace";
   shortDescription: "Hire top AI talent or find global IT jobs on the go.";
   longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunityour app simplifies the process with AI-powered matchingsecure messagingand streamlined hiring.";
   keywords: ["AI freelancer"tech jobs"hire developers"IT marketplace"artificial intelligence jobs"];
   version: "1.0.0";
-  platform: "ios",
-};
+  platform: "ios"};
 export const MetadataManager: React.FC = () => {
   const [currentPlatformsetCurrentPlatform] = useState<AppPlatform>("ios"),
   const [isSavingsetIsSaving] = useState(false),
@@ -36,7 +34,7 @@ export const MetadataManager: React.FC = () => {
     setIsSaving(true),
     try {
       // This would be implemented with actual API calls in production,
-      // console.log("Saving metadata for"currentPlatformdata),
+      // // console.log("Saving metadata for"currentPlatformdata),
       // Simulate API call,
       await new Promise(resolve => setTimeout(resolve1000)),
       toast.success(`${currentPlatform === "ios" ? "iOS" : "Android"} metadata saved successfully!`)} catch (error) {

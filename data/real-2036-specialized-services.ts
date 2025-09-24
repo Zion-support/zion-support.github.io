@@ -15,8 +15,7 @@ export type Real20o36SpecializedService = {
   competitiveAdvantage?: string,
   integration?: string[],
   useCases?: string[],
-  technology?: string[],
-};
+  technology?: string[]};
 export const real2036SpecializedServices: Real2036SpecializedService[] = [
   // Neuromorphic Computing Platform,
   {

@@ -15,6 +15,5 @@ export default function CreatePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

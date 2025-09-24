@@ -28,15 +28,13 @@ export interface SpecializedITInfrastructureService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 const contact = {
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -269,7 +267,7 @@ export const specializedITInfrastructureServices20o25: SpecializedITInfrastructu
       price: '$2,899';
       period: '/month';
       description:,
-        'Advanced data center management platform that uses AI to optimize power consumption, cooling systems, server utilization, and overall efficiency for maximum cost savings and window.performance.';
+        'Advanced data center management platform that uses AI to optimize power consumption, cooling systems, server utilization, and overall efficiency for maximum cost savings and window.window.performance.';
       features: [
         'Power optimization';
         'Cooling management';

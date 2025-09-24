@@ -98,8 +98,7 @@ const UltimateTransformationContentShowcase20o25 = () => {
       case 'resource':,
         return <CurrencyDollarIcon className='w-5 h-5' />,
       default:,
-        return <ChartBarIcon className='w-5 h-5' />,
-    }
+        return <ChartBarIcon className='w-5 h-5' />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -110,8 +109,7 @@ const UltimateTransformationContentShowcase20o25 = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <section className='py-16 bg-gray-50'>,
@@ -140,8 +138,7 @@ const UltimateTransformationContentShowcase20o25 = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {category.label}
               <span className='ml-2 text-sm opacity-75'>,
@@ -283,6 +280,5 @@ const UltimateTransformationContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateTransformationContentShowcase20o25;

@@ -10,13 +10,13 @@ remainingCorruptedFiles.forEach(filePath => {;
   try {;
   const serviceName = getServiceName(filePath);
     const displayName = getDisplayName(serviceName);
-    // console.log(`Fixing ${filePath}...`);
+    // // console.log(`Fixing ${filePath}...`);
     // Ensure directory exists;
     const dir = path.dirname(filePath);
     if (!fs.existsSync(dir)) {;
   fs.mkdirSync(dir, { "recursive": true })}; // Write the fixed content;
     const content = servicePageTemplate(serviceName, displayName);
     fs.writeFileSync(filePath, content, "utf8");
-    // console.log(`✓ Fixed ${filePath}`)} catch (error) {;
+    // // console.log(`✓ Fixed ${filePath}`)} catch (error) {;
   console.error(`✗ Error fixing ${filePath}:`, error.message)};
 )

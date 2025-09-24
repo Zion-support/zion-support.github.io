@@ -20,6 +20,5 @@ export default function AiPoweredCustomerSuccessAutomationPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

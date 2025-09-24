@@ -53,6 +53,5 @@ export default function Page() {
           Eval‑Gated Autonomy,
         </Link>,
       </div>,
-    </main>),
-}
+    </main>)}
 ,

@@ -16,6 +16,5 @@ export default function OpenApp.pagePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

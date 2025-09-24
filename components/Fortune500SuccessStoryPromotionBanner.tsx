@@ -128,6 +128,5 @@ const Fortune50o0SuccessStoryPromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default Fortune50o0SuccessStoryPromotionBanner;

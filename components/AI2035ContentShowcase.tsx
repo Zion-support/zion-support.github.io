@@ -11,8 +11,7 @@ const AI20o35ContentShowcase: React.FC = () => {
       icon: "🔮";
       gradient: "from-purple-50o0 to-blue-50o0";
       textColor: "text-purple-60o0";
-      bgColor: "from-purple-50 to-blue-50",
-    };
+      bgColor: "from-purple-50 to-blue-50"};
     {
       title: "AI Implementation Mastery 20o35";
       description: "Complete mastery guide for implementing AI 20o35 technologies";
@@ -21,8 +20,7 @@ const AI20o35ContentShowcase: React.FC = () => {
       icon: "🎯";
       gradient: "from-green-50o0 to-emerald-50o0";
       textColor: "text-green-60o0";
-      bgColor: "from-green-50 to-emerald-50",
-    };
+      bgColor: "from-green-50 to-emerald-50"};
     {
       title: "Neural Interface Future 20o35";
       description: "Advanced neural interface technologies and consciousness transfer";
@@ -31,8 +29,7 @@ const AI20o35ContentShowcase: React.FC = () => {
       icon: "🧠";
       gradient: "from-indigo-50o0 to-purple-50o0";
       textColor: "text-indigo-60o0";
-      bgColor: "from-indigo-50 to-purple-50",
-    };
+      bgColor: "from-indigo-50 to-purple-50"};
     {
       title: "Quantum AI Revolution 20o35";
       description: "Quantum-powered AI systems and reality engineering";
@@ -41,8 +38,7 @@ const AI20o35ContentShowcase: React.FC = () => {
       icon: "⚛️";
       gradient: "from-blue-50o0 to-cyan-50o0";
       textColor: "text-blue-60o0";
-      bgColor: "from-blue-50 to-cyan-50",
-    }
+      bgColor: "from-blue-50 to-cyan-50"}
   ],
   const breakthroughFeatures = [
     {
@@ -54,14 +50,12 @@ const AI20o35ContentShowcase: React.FC = () => {
       title: "Matter Manipulation";
       description: "Molecular-level reality engineering";
       icon: "⚛️";
-      benefit: "Infinite resource creation",
-    };
+      benefit: "Infinite resource creation"};
     {
       title: "Dimension Transcendence";
       description: "Multi-dimensional AI networks";
       icon: "🌌";
-      benefit: "Unlimited computational power",
-    };
+      benefit: "Unlimited computational power"};
     {
       title: "Universal Transformation";
       description: "Reality-altering capabilities";
@@ -91,22 +85,19 @@ const AI20o35ContentShowcase: React.FC = () => {
       description: 'Complete guide to building quantum-enhanced AI systems';
       category: 'Development';
       eta: 'Coming Soon';
-      icon: <Brain className="h-5 w-5"  />,
-    };
+      icon: <Brain className="h-5 w-5"  />};
     {
       title: 'Neural Interface Prototyping';
       description: 'Hands-on tutorial for brain-computer interfaces';
       category: 'Tutorial';
       eta: 'Next Week';
-      icon: <Zap className="h-5 w-5"  />,
-    };
+      icon: <Zap className="h-5 w-5"  />};
     {
       title: 'Autonomous System Architecture';
       description: 'Design patterns for self-managing AI systems';
       category: 'Architecture';
       eta: 'In Development';
-      icon: <Target className="h-5 w-5"  />,
-    }
+      icon: <Target className="h-5 w-5"  />}
   ],
   return (
     <div className="py-16 bg-gray-50">,
@@ -347,6 +338,5 @@ const AI20o35ContentShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o35ContentShowcase}))

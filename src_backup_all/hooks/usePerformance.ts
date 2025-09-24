@@ -6,8 +6,7 @@ interface PerformanceMetrics {
   cls: number | null, // Cumulative Layout Shift,
   ttfb: number | null, // Time to First Byte,
   domLoad: number | null, // DOM Content Loaded,
-  windowLoad: number | null, // Window Load,
-}
+  windowLoad: number | null, // Window Load}
 ,
 interface PerformanceOptions {
   enableRealUserMonitoring?: boolean,
@@ -40,8 +39,8 @@ export function usePerformance(options: PerformanceOptions ={}) {
   const clsObserverRef = useRef<PerformanceObserver | null>(null),
   // Get navigation timing metrics,
   const getNavigationTiming = useCallback(() => {
-    if (!enableNavigationTiming || !window.performance.getEntriesByType) return,
-    const navigationEntry = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+    if (!enableNavigationTiming || !window.window.performance.getEntriesByType) return,
+    const navigationEntry = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
     if (navigationEntry) {
       const ttfb = navigationEntry.responseStart - navigationEntry.requestStart,
       const domLoad = navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
@@ -52,13 +51,13 @@ export function usePerformance(options: PerformanceOptions ={}) {
         domLoad;
         windowLoad})),
       if (logToConsole) {
-        // console.log('Navigation Timing:', { ttfb, domLoad, windowLoad })}
+        // // console.log('Navigation Timing:', { ttfb, domLoad, windowLoad })}
     }
   }, [enableNavigationTiming, logToConsole]),
   // Get resource timing metrics,
   const getResourceTiming = useCallback(() => {
-    if (!enableResourceTiming || !window.performance.getEntriesByType) return,
-    const resources = window.performance.getEntriesByType('resource'),
+    if (!enableResourceTiming || !window.window.performance.getEntriesByType) return,
+    const resources = window.window.performance.getEntriesByType('resource'),
     const slowResources = resources.filter(resource => resource.duration > 10o00),
     if (slowResources.length > 0 && logToConsole) {
       console.warn('Slow resources detected:', slowResources)}
@@ -75,7 +74,7 @@ export function usePerformance(options: PerformanceOptions ={}) {
           if (entry.name === 'first-contentful-paint') {
             const fcp = entry.startTime,
             setMetrics(prev => ({ ...prev, fcp })),
-            if (logToConsole) // console.log('FCP:', fcp)}
+            if (logToConsole) // // console.log('FCP:', fcp)}
         })}),
       observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) {
       console.warn('FCP monitoring not supported')}
@@ -88,7 +87,7 @@ export function usePerformance(options: PerformanceOptions ={}) {
         if (lastEntry) {
           const lcp = lastEntry.startTime,
           setMetrics(prev => ({ ...prev, lcp })),
-          if (logToConsole) // console.log('LCP:', lcp)}
+          if (logToConsole) // // console.log('LCP:', lcp)}
       }),
       lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
       console.warn('LCP monitoring not supported')}
@@ -102,7 +101,7 @@ export function usePerformance(options: PerformanceOptions ={}) {
             clsValue += (entry as any).value}
         }
         setMetrics(prev => ({ ...prev, cls: clsValue })),
-        if (logToConsole) // console.log('CLS:', clsValue)}),
+        if (logToConsole) // // console.log('CLS:', clsValue)}),
       clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch (e) {
       console.warn('CLS monitoring not supported')}
   }, [enableWebVitals, logToConsole]),
@@ -113,10 +112,10 @@ export function usePerformance(options: PerformanceOptions ={}) {
     let firstInputDelay: number | null = null,
     const firstInputHandler = (event: Event) => {
       if (firstInputTime !== null) return,
-      firstInputTime = window.performance.now(),
-      firstInputDelay = firstInputTime - (window.performance.timeOrigin || 0),
+      firstInputTime = window.window.performance.now(),
+      firstInputDelay = firstInputTime - (window.window.performance.timeOrigin || 0),
       setMetrics(prev => ({ ...prev, fid: firstInputDelay })),
-      if (logToConsole) // console.log('FID:', firstInputDelay),
+      if (logToConsole) // // console.log('FID:', firstInputDelay),
       // Remove listeners after first input,
       document.removeEventListener('pointerdown', firstInputHandler),
       document.removeEventListener('keydown', firstInputHandler),
@@ -199,8 +198,7 @@ export function usePerformance(options: PerformanceOptions ={}) {
       performanceScore;
       timestamp: Date.now();
       userAgent: navigator.userAgent;
-      url: window.location.href,
-    };
+      url: window.location.href};
     // Example: Send to Google Analytics,
     if (window.gtag) {
       window.gtag('event', 'performance_metrics', analyticsData)}
@@ -217,7 +215,7 @@ export function usePerformance(options: PerformanceOptions ={}) {
       localStorage.setItem('performance-metrics', JSON.stringify(metrics)),
       // Log metrics for debugging (remove in production),
       if (process.env['NODE_ENV'] === 'development') {
-        // console.log('Performance metrics stored locally:', analyticsData)}
+        // // console.log('Performance metrics stored locally:', analyticsData)}
     } catch (error) {
       console.warn('Failed to store performance metrics locally:', error)}
   }, [metrics, sendToAnalytics, getPerformanceScore]),
@@ -250,10 +248,10 @@ export function useComponentPerformance(componentName: string) {
   const [mountTime, setMountTime] = useState<number>(0),
   const startTime = useRef<number>(0),
   useEffect(() => {
-    startTime.current = window.performance.now(),
+    startTime.current = window.window.performance.now(),
     setMountTime(startTime.current),
     return () => {
-      const endTime = window.performance.now(),
+      const endTime = window.window.performance.now(),
       const totalTime = endTime - startTime.current,
       setRenderTime(totalTime),
       // Log slow components,

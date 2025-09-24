@@ -2,13 +2,11 @@ import React from 'react.ts',
 interface Stat {
   label: string,
   value: string,
-  description: string,
-}
+  description: string}
 ,
 interface InteractiveStatsProps extends React.PropsWithChildren<{}> {
   stats: Stat[],
-  className?: string,
-}
+  className?: string}
 ,
 const InteractiveStats: React.FC<InteractiveStatsProps> = ({
   stats;

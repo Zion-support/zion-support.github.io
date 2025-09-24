@@ -18,12 +18,10 @@ export interface EmergingTechService {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   websiteUrl: string,
   demoUrl?: string,
-  documentationUrl?: string,
-}
+  documentationUrl?: string}
 ,
 export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
   // AI-Powered Edge Computing Platform,
@@ -70,10 +68,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/ai-edge-computing",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/ai-edge-computing"};
   // Quantum Internet Infrastructure,
   {
     id: "quantum-internet-infrastructure";
@@ -118,10 +114,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/quantum-internet-infrastructure",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/quantum-internet-infrastructure"};
   // Neuromorphic AI Chips,
   {
     id: "neuromorphic-ai-chips";
@@ -166,10 +160,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/neuromorphic-ai-chips",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/neuromorphic-ai-chips"};
   // Synthetic Biology Platform,
   {
     id: "synthetic-biology-platform";
@@ -214,10 +206,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/synthetic-biology",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/synthetic-biology"};
   // Quantum Sensing Platform,
   {
     id: "quantum-sensing-platform";
@@ -262,10 +252,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/quantum-sensing",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/quantum-sensing"};
   // AI-Powered Space Technology,
   {
     id: "ai-space-technology";
@@ -310,10 +298,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/ai-space-technology",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/ai-space-technology"};
   // Quantum Machine Learning Hardware,
   {
     id: "quantum-ml-hardware";
@@ -358,10 +344,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/quantum-ml-hardware",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/quantum-ml-hardware"};
   // Autonomous Robotics Platform,
   {
     id: "autonomous-robotics-platform";
@@ -406,10 +390,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/autonomous-robotics",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/autonomous-robotics"};
   // Quantum Cryptography Platform,
   {
     id: "quantum-cryptography-platform";
@@ -454,10 +436,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/quantum-cryptography",
-  };
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/quantum-cryptography"};
   // AI-Powered Climate Technology,
   {
     id: "ai-climate-technology";
@@ -502,21 +482,16 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
-    websiteUrl: "https://ziontechgroup.com/ai-climate-technology",
-  }
+      website: "https://ziontechgroup.com"};
+    websiteUrl: "https://ziontechgroup.com/ai-climate-technology"}
 ],
 export const getEmergingTechServiceByCategory = (category: string) => {
-  return EMERGING_TECH_SERVICES.filter(service => service.category === category),
-};
+  return EMERGING_TECH_SERVICES.filter(service => service.category === category)};
 export const getEmergingTechServiceBySubcategory = (subcategory: string) => {
-  return EMERGING_TECH_SERVICES.filter(service => service.subcategory === subcategory),
-};
+  return EMERGING_TECH_SERVICES.filter(service => service.subcategory === subcategory)};
 export const getFeaturedEmergingTechServices = () => {
   // Return first 8 services as featured (since rating property doesn't exist),
   return EMERGING_TECH_SERVICES.slice(0, 8)};
 export const getServicesByInnovationScore = (minScore: number) => {
   // Return all services since innovationScore property doesn't exist,
-  return EMERGING_TECH_SERVICES,
-};
+  return EMERGING_TECH_SERVICES};

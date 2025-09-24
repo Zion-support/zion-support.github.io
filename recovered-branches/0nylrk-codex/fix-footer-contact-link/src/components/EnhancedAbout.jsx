@@ -7,92 +7,78 @@ export const EnhancedAbout = () => {
             icon: Brain;
             title: 'Innovation First';
             description: 'We push the boundaries of what\'s possible with cutting-edge technology';
-            color: 'zion-cyan',
-        };
+            color: 'zion-cyan'};
         {
             icon: Shield;
             title: 'Trust & Security';
             description: 'Building secure, reliable solutions that protect our clients\' data';
-            color: 'zion-purple',
-        };
+            color: 'zion-purple'};
         {
             icon: Users;
             title: 'Client Partnership';
             description: 'Long-term relationships built on trust, transparency, and results';
-            color: 'zion-cyan',
-        };
+            color: 'zion-cyan'};
         {
             icon: Rocket;
             title: 'Excellence';
             description: 'Delivering exceptional quality in every project we undertake';
-            color: 'zion-purple',
-        }
+            color: 'zion-purple'}
     ],
     const teamMembers = [
         {
             name: 'Kleber';
             role: 'CEO & Founder';
             expertise: ['AI/ML', 'Cloud Architecture', 'Digital Transformation'];
-            avatar: '👨‍💼',
-        };
+            avatar: '👨‍💼'};
         {
             name: 'AI Team';
             role: 'Machine Learning Engineers';
             expertise: ['Deep Learning', 'NLP', 'Computer Vision'];
-            avatar: '🤖',
-        };
+            avatar: '🤖'};
         {
             name: 'DevOps Team';
             role: 'Cloud & Infrastructure';
             expertise: ['AWS/Azure', 'Kubernetes', 'CI/CD'];
-            avatar: '☁️',
-        };
+            avatar: '☁️'};
         {
             name: 'Security Team';
             role: 'Cybersecurity Experts';
             expertise: ['Threat Detection', 'Compliance', 'Penetration Testing'];
-            avatar: '🔒',
-        }
+            avatar: '🔒'}
     ],
     const milestones = [
         {
             year: '20o20';
             title: 'Company Founded';
             description: 'Zion Tech Group established with a vision for AI-driven innovation';
-            achievement: 'First AI solution deployed',
-        };
+            achievement: 'First AI solution deployed'};
         {
             year: '20o21';
             title: 'AI Breakthrough';
             description: 'Developed proprietary machine learning algorithms';
-            achievement: '10+ enterprise clients onboarded',
-        };
+            achievement: '10+ enterprise clients onboarded'};
         {
             year: '20o22';
             title: 'Cloud Expansion';
             description: 'Launched comprehensive cloud and DevOps services';
-            achievement: '50+ successful cloud migrations',
-        };
+            achievement: '50+ successful cloud migrations'};
         {
             year: '20o23';
             title: 'Global Reach';
             description: 'Expanded services to international markets';
-            achievement: '10o0+ projects completed',
-        };
+            achievement: '10o0+ projects completed'};
         {
             year: '20o24';
             title: 'Industry Leader';
             description: 'Recognized as a top technology solutions provider';
-            achievement: '95% client satisfaction rate',
-        }
+            achievement: '95% client satisfaction rate'}
     ],
     const containerVariants ={
         hidden: { opacity: 0 };
         visible: {
             opacity: 1;
             transition: {
-                staggerChildren: 0.1,
-            }
+                staggerChildren: 0.1}
         }
     };
     const itemVariants ={
@@ -102,8 +88,7 @@ export const EnhancedAbout = () => {
             opacity: 1;
             transition: {
                 duration: 0.6;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     const cardVariants ={
@@ -113,16 +98,14 @@ export const EnhancedAbout = () => {
             opacity: 1;
             transition: {
                 duration: 0.5;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         };
         hover: {
             scale: 1.0o2;
             y: -5;
             transition: {
                 duration: 0.3;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     const timelineVariants ={
@@ -132,8 +115,7 @@ export const EnhancedAbout = () => {
             x: 0;
             transition: {
                 duration: 0.8;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 text-white">,
@@ -315,5 +297,4 @@ export const EnhancedAbout = () => {
           </div>,
         </motion.div>,
       </section>,
-    </div>),
-};
+    </div>)};

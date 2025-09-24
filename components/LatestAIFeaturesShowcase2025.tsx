@@ -226,6 +226,5 @@ export default function LatestAIFeaturesShowcase20o25() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

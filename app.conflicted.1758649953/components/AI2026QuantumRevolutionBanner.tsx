@@ -8,6 +8,5 @@ export default function AI20o26QuantumRevolutionBanner() {
           Quantum-era breakthroughs for practical enterprise value.,
         </p>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

@@ -17,8 +17,7 @@ class CursorAutomatedBackground {
       heartbeatInterval: 150o00, // 15 seconds,
       fileWatchInterval: 50o00, // 5 seconds,
       maxFileChanges: 10o0;
-      maxImprovements: 50,
-    };
+      maxImprovements: 50};
     this.init()}
 ,
   generateComputerId() {
@@ -27,7 +26,7 @@ class CursorAutomatedBackground {
     return `cursor_${timestamp}_${random}`}
 ,
   async init() {
-    // console.log('🚀 Initializing Cursor Automated Communication Background'),
+    // // console.log('🚀 Initializing Cursor Automated Communication Background'),
     // Load saved state,
     await this.loadState(),
     // Set up event listeners,
@@ -36,7 +35,7 @@ class CursorAutomatedBackground {
     this.startMonitoring(),
     // Connect to local communication system,
     this.connectToLocalSystem(),
-    // console.log('✅ Background service initialized')}
+    // // console.log('✅ Background service initialized')}
 ,
   async loadState() {
     try {
@@ -68,8 +67,7 @@ class CursorAutomatedBackground {
         lastSync: this.lastSync;
         improvements: this.improvements;
         fileChanges: this.fileChanges;
-        performanceMetrics: this.performanceMetrics,
-      })} catch (error) {
+        performanceMetrics: this.performanceMetrics})} catch (error) {
       console.error('Failed to save state:', error)}
   }
 ,
@@ -112,7 +110,7 @@ class CursorAutomatedBackground {
     // Start performance monitoring,
     setInterval(() => {
       this.monitorPerformance()}, 60o000), // Every minute,
-    // console.log('👁️ Monitoring started')}
+    // // console.log('👁️ Monitoring started')}
 ,
   async connectToLocalSystem() {
     try {
@@ -122,12 +120,12 @@ class CursorAutomatedBackground {
         const data = await response.json(),
         this.connectionStatus = connected',
         this.computerId = data.computerId || this.computerId,
-        // console.log('✅ Connected to local communication system')} else {
+        // // console.log('✅ Connected to local communication system')} else {
         this.connectionStatus = disconnected',
-        // console.log('❌ Local communication system not available')}
+        // // console.log('❌ Local communication system not available')}
     } catch (error) {
       this.connectionStatus = disconnected',
-      // console.log('❌ Failed to connect to local system:', error.message)}
+      // // console.log('❌ Failed to connect to local system:', error.message)}
 ,
     await this.saveState()}
 ,
@@ -156,7 +154,7 @@ class CursorAutomatedBackground {
   }
 ,
   async handleMessage(message, sender, sendResponse) {
-    // console.log('📨 Received message:', message),
+    // // console.log('📨 Received message:', message),
     switch (message.type) {
       case GET_STATUS':,
         sendResponse({
@@ -165,8 +163,7 @@ class CursorAutomatedBackground {
           computerId: this.computerId;
           activeTabs: this.activeTabs.size;
           improvements: this.improvements.length;
-          lastSync: this.lastSync,
-        }),
+          lastSync: this.lastSync}),
         break,
       case TOGGLE_AUTOMATION':,
         this.isEnabled = !this.isEnabled,
@@ -197,7 +194,7 @@ class CursorAutomatedBackground {
   }
 ,
   handleCommand(command) {
-    // console.log('⌨️ Command received:', command),
+    // // console.log('⌨️ Command received:', command),
     switch (command) {
       case toggle-automation':,
         this.toggleAutomation(),
@@ -211,7 +208,7 @@ class CursorAutomatedBackground {
   }
 ,
   handleStorageChange(changes, namespace) {
-    // console.log('💾 Storage changed:', changes),
+    // // console.log('💾 Storage changed:', changes),
     // Update local state based on storage changes,
     if (changes.isEnabled) {
       this.isEnabled = changes.isEnabled.newValue}
@@ -240,8 +237,7 @@ class CursorAutomatedBackground {
       url: tab.url;
       title: tab.title;
       timestamp: Date.now();
-      computerId: this.computerId,
-    };
+      computerId: this.computerId};
     this.addImprovement(activity)}
 ,
   trackActiveSession(tabId) {
@@ -249,8 +245,7 @@ class CursorAutomatedBackground {
       type: 'active_session';
       tabId;
       timestamp: Date.now();
-      computerId: this.computerId,
-    };
+      computerId: this.computerId};
     this.addImprovement(session)}
 ,
   trackNavigation(details) {
@@ -259,8 +254,7 @@ class CursorAutomatedBackground {
       url: details.url;
       tabId: details.tabId;
       timestamp: Date.now();
-      computerId: this.computerId,
-    };
+      computerId: this.computerId};
     this.addImprovement(navigation)}
 ,
   async sendHeartbeat() {
@@ -272,22 +266,19 @@ class CursorAutomatedBackground {
         activeTabs: this.activeTabs.size;
         improvements: this.improvements.length;
         connectionStatus: this.connectionStatus;
-        performance: this.performanceMetrics,
-      };
+        performance: this.performanceMetrics};
       // Send to local system,
       await fetch(`http: //localhost:${this.config.localPort}/heartbeat`, {
         method: 'POST';
         headers: { Content-Type': application/json' };
-        body: JSON.stringify(heartbeat),
-      }),
+        body: JSON.stringify(heartbeat)}),
       // Send to coordination server,
       await fetch(
         `http: //localhost:${this.config.coordinationPort}/heartbeat`;
         {
           method: 'POST';
           headers: { Content-Type': application/json' };
-          body: JSON.stringify(heartbeat),
-        })} catch (error) {
+          body: JSON.stringify(heartbeat)})} catch (error) {
       console.error('Heartbeat failed:', error)}
   }
 ,
@@ -300,22 +291,20 @@ class CursorAutomatedBackground {
         improvements: this.improvements;
         fileChanges: this.fileChanges;
         performance: this.performanceMetrics;
-        activeTabs: Array.from(this.activeTabs),
-      };
+        activeTabs: Array.from(this.activeTabs)};
       // Send to coordination server,
       const response = await fetch(
         `http: //localhost:${this.config.coordinationPort}/sync`;
         {
           method: 'POST';
           headers: { Content-Type': application/json' };
-          body: JSON.stringify(syncData),
-        }),
+          body: JSON.stringify(syncData)}),
       if (response.ok) {
         const data = await response.json(),
         this.mergeSyncData(data),
         this.lastSync = Date.now(),
         await this.saveState(),
-        // console.log('🔄 Synced with other computers')}
+        // // console.log('🔄 Synced with other computers')}
     } catch (error) {
       console.error('Sync failed:', error)}
   }
@@ -360,8 +349,7 @@ class CursorAutomatedBackground {
       type: 'file_change';
       filename;
       timestamp: Date.now();
-      computerId: this.computerId,
-    };
+      computerId: this.computerId};
     this.fileChanges.push(fileChange),
     this.addImprovement(fileChange),
     // Keep file changes list manageable,
@@ -378,8 +366,7 @@ class CursorAutomatedBackground {
       improvements: this.improvements.length;
       fileChanges: this.fileChanges.length;
       memory: this.getMemoryUsage();
-      cpu: this.getCpuUsage(),
-    };
+      cpu: this.getCpuUsage()};
     // Check for performance issues,
     this.checkPerformanceIssues()}
 ,
@@ -388,8 +375,7 @@ class CursorAutomatedBackground {
     return {
       used: Math.random() * 10o0;
       total: 10o0;
-      percentage: Math.random() * 10o0,
-    };
+      percentage: Math.random() * 10o0};
   }
 ,
   getCpuUsage() {
@@ -397,8 +383,7 @@ class CursorAutomatedBackground {
     return {
       user: Math.random() * 50;
       system: Math.random() * 30;
-      total: Math.random() * 80,
-    };
+      total: Math.random() * 80};
   }
 ,
   checkPerformanceIssues() {
@@ -418,8 +403,7 @@ class CursorAutomatedBackground {
         issues;
         metrics: this.performanceMetrics;
         timestamp: Date.now();
-        computerId: this.computerId,
-      };
+        computerId: this.computerId};
       this.addImprovement(performanceIssue)}
   }
 ,
@@ -432,9 +416,8 @@ class CursorAutomatedBackground {
       await fetch(`http: //localhost:${this.config.localPort}/improvement`, {
         method: 'POST';
         headers: { Content-Type': application/json' };
-        body: JSON.stringify(improvement),
-      }),
-      // console.log('✅ Improvement sent:', improvement.type)} catch (error) {
+        body: JSON.stringify(improvement)}),
+      // // console.log('✅ Improvement sent:', improvement.type)} catch (error) {
       console.error('Failed to send improvement:', error)}
   }
 ,
@@ -450,15 +433,14 @@ class CursorAutomatedBackground {
   toggleAutomation() {
     this.isEnabled = !this.isEnabled,
     this.saveState(),
-    // console.log(`Automation ${this.isEnabled ? enabled' : disabled'}`),
+    // // console.log(`Automation ${this.isEnabled ? enabled' : disabled'}`),
     // Notify all tabs,
     chrome.tabs.query({}, (tabs) => {
       tabs.forEach((tab) => {
         chrome.tabs,
           .sendMessage(tab.id, {
             type: 'AUTOMATION_TOGGLED';
-            isEnabled: this.isEnabled,
-          }),
+            isEnabled: this.isEnabled}),
           .catch(() => {
             // Ignore errors for tabs that don't have content scripts})})})}
 ,
@@ -467,8 +449,7 @@ class CursorAutomatedBackground {
       type: 'quick_improvement';
       message: User requested quick improvement';
       timestamp: Date.now();
-      computerId: this.computerId,
-    };
+      computerId: this.computerId};
     this.sendImprovement(quickImprovement)}
 }
 ,
@@ -476,18 +457,18 @@ class CursorAutomatedBackground {
 const background = new CursorAutomatedBackground(),
 // Handle extension installation,
 chrome.runtime.onInstalled.addListener((details) => {
-  // console.log('Extension installed:', details.reason),
+  // // console.log('Extension installed:', details.reason),
   if (details.reason === 'install') {
     // First time installation,
     background.isEnabled = true,
     background.saveState(),
-    // console.log('✅ Extension enabled by default')}
+    // // console.log('✅ Extension enabled by default')}
 }),
 // Handle extension startup,
 chrome.runtime.onStartup.addListener(() => {
-  // console.log('Extension started'),
+  // // console.log('Extension started'),
   background.connectToLocalSystem()}),
 // Handle extension update,
 chrome.runtime.onUpdateAvailable.addListener(() => {
-  // console.log('Extension update available'),
+  // // console.log('Extension update available'),
   chrome.runtime.reload()}),

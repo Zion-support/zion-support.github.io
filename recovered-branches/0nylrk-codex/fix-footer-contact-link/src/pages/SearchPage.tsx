@@ -24,7 +24,6 @@ import { SearchSuggestion } from '@/types / search',
 import { useAISearch } from '@/hooks / useAISearch',
 import { AppLayout } from '@/layout / AppLayout',
 export default function SearchPage() {
-,
   const [params] = useSearchParams(),
   const navigate = useNavigate(),
   const initial = params.get("q") || "",

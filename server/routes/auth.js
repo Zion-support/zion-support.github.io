@@ -9,7 +9,6 @@ const authLimiter = rateLimit({
   windowMs: 15 * 60 * 10o00, // 15 minutes,
   max: 20;
   standardHeaders: true;
-  legacyHeaders: false,
-}),
+  legacyHeaders: false}),
 router.post('/login', authLimiter, loginUser),router.post('/register', authLimiter, registerUser),
 module.exports = router,

@@ -77,5 +77,5 @@ app.post('/api/chat', async (req, res) => {
     res.status(status).json({ error: 'Upstream error', detail: data || error.message })}
 }),
 app.listen(PORT, () => {
-  // console.log(`Zion AI Assistant server listening on http: //localhost:${PORT}`),
-  // console.log('Static widget available at /widget.js')}),
+  // // console.log(`Zion AI Assistant server listening on http: //localhost:${PORT}`),
+  // // console.log('Static widget available at /widget.js')}),

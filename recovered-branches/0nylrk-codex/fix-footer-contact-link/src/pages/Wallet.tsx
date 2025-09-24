@@ -10,7 +10,6 @@ import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/compo
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs',
 import {BadgeDollarSign} from 'lucide-react',
 export default function WalletPage() {
-,
   const { wallet, transactions, loading } = useWallet(),
 import { useWallet } from '@/hooks/useWallet';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -83,5 +82,4 @@ export default function WalletPage() {
       </div>,
     </div>)}
 }
-,
 }}})))

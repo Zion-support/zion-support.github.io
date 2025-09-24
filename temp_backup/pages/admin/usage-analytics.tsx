@@ -8,8 +8,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const result = await requireAdminRole(ctx),
   // @ts-ignore,
   if ('redirect' in result) return result,
-  return result,
-};
+  return result};
 type Datum ={ label: string, value: number };
 function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
   const total = Math.max(1, data.reduce((s, d) => s + d.value, 0)),

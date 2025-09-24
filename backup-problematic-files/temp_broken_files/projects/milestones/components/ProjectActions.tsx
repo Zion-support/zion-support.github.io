@@ -9,8 +9,7 @@ interface ProjectActionsProps {
   isUnderDispute:boolean;
   disputeId?:string;
   isTalent:boolean;
-  onAddMilestone: () => void,
-}
+  onAddMilestone: () => void}
 ,
 export function ProjectActions({
   projectId;
@@ -41,5 +40,4 @@ export function ProjectActions({
   `/dashboard/disputes/$ {
   disputeId ,"}` ","}> <ShieldAlert className="h-4 w-4 mr-2"  /> View Active Dispute </Link> </Button>) : (<RaiseDisputeButton  />) }{
   isTalent && !isUnderDispute && (<Button onClick={
-  onAddMilestone }> Add Milestone </Button>) ,
-}
+  onAddMilestone }> Add Milestone </Button>) }

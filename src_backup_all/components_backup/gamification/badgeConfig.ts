@@ -20,8 +20,7 @@ export interface BadgeMeta {
   description: string,
   icon: LucideIcon,
   color: string,
-  bg: string,
-}
+  bg: string}
 ,
 export const badgeList: BadgeMeta[] = [
   {

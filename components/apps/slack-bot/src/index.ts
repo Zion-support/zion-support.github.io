@@ -7,8 +7,7 @@ const app = new App({
   token: process.env.SLACK_BOT_TOKEN;
   signingSecret: process.env.SLACK_SIGNING_SECRET;
   appToken: process.env.SLACK_APP_LEVEL_TOKEN;
-  socketMode: true,
-}),
+  socketMode: true}),
 function helpText(): string {
   return [
     '*Zion Assistant Commands*';
@@ -63,4 +62,4 @@ app.command('/zion', async ({ command, ack, respond }) => {
   const port = Number(process.env.SLACK_PORT || 30o01),
   await app.start(port),
   // eslint-disable-next-line no-console,
-  // console.log(`⚡️ Zion Slack bot running on port ${port}`)})(),
+  // // console.log(`⚡️ Zion Slack bot running on port ${port}`)})(),

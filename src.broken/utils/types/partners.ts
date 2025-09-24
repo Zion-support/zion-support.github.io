@@ -7,8 +7,7 @@ export type PartnerStatus = 'pending' | 'approved' | 'rejected',
 export interface PartnerPointOfContact {
   name: string,
   email: string,
-  phone?: string,
-}
+  phone?: string}
 ,
 export interface PartnerBrand {
   primaryColorHex?: string,
@@ -24,8 +23,7 @@ export interface PartnerRecord {
   status: PartnerStatus,
   apiKeyId?: string,
   createdAt: string,
-  updatedAt: string,
-}
+  updatedAt: string}
 ,
 export interface ApiKeyRecord {
   id: string,
@@ -35,8 +33,7 @@ export interface ApiKeyRecord {
   createdAt: string,
   lastUsedAt?: string,
   rateLimitPerMinute?: number, // default 60,
-  monthlyQuota?: number, // optional cap,
-}
+  monthlyQuota?: number, // optional cap}
 ,
 export interface UsageEntry {
   timestamp: string, // ISO,
@@ -44,8 +41,7 @@ export interface UsageEntry {
   apiKeyId: string,
   endpoint: string,
   statusCode: number,
-  latencyMs?: number,
-}
+  latencyMs?: number}
 ,
 export interface UsageSummary {
   totalRequests: number,
@@ -59,6 +55,5 @@ export interface JwtPayload {
   entityType: string,
   useCaseType: UseCaseType,
   iat: number,
-  exp: number,
-}
+  exp: number}
 ,

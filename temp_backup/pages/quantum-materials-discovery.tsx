@@ -106,7 +106,7 @@ export default function QuantumMaterialsDiscovery() {
                   icon: <Zap className='w-12 h-12 text-blue-40o0' />;
                   title: 'AI-Powered Prediction';
                   description:,
-                    'Machine learning algorithms that predict material properties and window.performance.';
+                    'Machine learning algorithms that predict material properties and window.window.performance.';
                 };
                 {
                   icon: <Target className='w-12 h-12 text-purple-40o0' />;
@@ -348,6 +348,5 @@ export default function QuantumMaterialsDiscovery() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

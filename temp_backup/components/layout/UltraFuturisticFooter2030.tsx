@@ -387,6 +387,5 @@ export default function UltraFuturisticFooter20o30() {
           </div>,
         </div>,
       </div>,
-    </footer>),
-}
+    </footer>)}
 ,

@@ -15,6 +15,5 @@ export default function AdminPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -142,6 +142,5 @@ const AI20o25ContentRevolutionPromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o25ContentRevolutionPromotionBanner;

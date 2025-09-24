@@ -22,11 +22,9 @@ interface ServiceCardProps {
     icon?: string,
     href?: string,
     isPopular?: boolean,
-    isNew?: boolean,
-  };
+    isNew?: boolean};
   index: number,
-  isReducedMotion?: boolean,
-}
+  isReducedMotion?: boolean}
 ,
 const ServiceCard: React.FC<ServiceCardProps> = ({
   service;

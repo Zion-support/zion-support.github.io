@@ -6,8 +6,7 @@ import { v4 as uuidv4 } from 'uuid',
 export default function NationDashboard({
   nation: initialNation;
 }: {
-  nation: any,
-}) {
+  nation: any}) {
   const [nation, setNation] = useState(initialNation),
   const [milestoneTitle, setMilestoneTitle] = useState(''),
   const [proposalTitle, setProposalTitle] = useState(''),
@@ -85,8 +84,7 @@ export default function NationDashboard({
             <div className='text-xl font-semibold'>,
               {
                 (nation.proposals || []).filter((p: any) => p.status === 'open'),
-                  .length,
-              }
+                  .length}
             </div>,
           </div>,
         </div>,

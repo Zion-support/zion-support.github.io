@@ -92,8 +92,7 @@ export default function CustomerSupportPlatform() {
         'Email support';
         'Knowledge base';
         'Basic reporting'];
-      popular: false,
-};
+      popular: false};
     {
       name: 'Professional';
       price: '$149';
@@ -107,8 +106,7 @@ export default function CustomerSupportPlatform() {
         'Advanced reporting';
         'API access';
         'Custom branding'];
-      popular: true,
-};
+      popular: true};
     {
       name: 'Enterprise';
       price: '$399';
@@ -122,8 +120,7 @@ export default function CustomerSupportPlatform() {
         'Custom integrations';
         'White-label options';
         'SLA guarantee'];
-      popular: false,
-}
+      popular: false}
   ],
   const benefits = [
     {
@@ -133,18 +130,15 @@ export default function CustomerSupportPlatform() {
     {
       icon: Users;
       title: 'Improve Customer Satisfaction';
-      description: 'Comprehensive support tools help resolve issues faster and more effectively',
-};
+      description: 'Comprehensive support tools help resolve issues faster and more effectively'};
     {
       icon: BarChart3;
       title: 'Gain Actionable Insights';
-      description: 'Detailed analytics help you understand customer needs and optimize support processes',
-};
+      description: 'Detailed analytics help you understand customer needs and optimize support processes'};
     {
       icon: Target;
       title: 'Scale Efficiently';
-      description: 'Automation and AI help you handle more customers without proportionally increasing staff',
-}
+      description: 'Automation and AI help you handle more customers without proportionally increasing staff'}
   ],
   return (
     <>,

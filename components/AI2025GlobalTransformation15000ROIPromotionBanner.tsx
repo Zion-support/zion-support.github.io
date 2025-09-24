@@ -99,6 +99,5 @@ export default function AI20o25GlobalTransformation150o00ROIPromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

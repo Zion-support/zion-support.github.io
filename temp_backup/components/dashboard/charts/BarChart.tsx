@@ -12,8 +12,7 @@ export type BarChartProps = {
   labels: string[],
   data: number[],
   color?: string,
-  height?: number,
-};
+  height?: number};
 export default function BarChart({
   labels;
   data;

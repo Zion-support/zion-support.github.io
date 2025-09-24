@@ -44,7 +44,6 @@ import {
   Network,
   Cpu} from 'lucide-react',import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react',
 export default function UltraAdvancedNavigation2026V2() {
-,
   const [isOpen, setIsOpen] = useState(false),
   const [isScrolled, setIsScrolled] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
@@ -166,14 +165,12 @@ export default function UltraAdvancedNavigation2026V2() {
       name: 'Contact';
       href: '/contact';
       icon: <Mail className='w-4 h-4' />;
-    }],      icon: <Mail className="w-4 h-4" />,
-    }
+    }],      icon: <Mail className="w-4 h-4" />}
   ],
   const contactInfo = {
     mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup && ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709'};    address: '364 E Main St STE 1008 Middletown DE 19709',
-    }
+    address: '364 E Main St STE 1008 Middletown DE 19709'};    address: '364 E Main St STE 1008 Middletown DE 19709'}
 ,
     window.addEventListener ('scroll', handle_scroll),
     return () => window.removeEventListener ('scroll', handle_scroll)}, []),      setIsScrolled (window.scroll_y > 20)}
@@ -274,24 +271,19 @@ export default function UltraAdvancedNavigation2026V2() {
     },    {
       name: 'Showcase',
       href: '/enhanced-services-showcase-2026-v2',
-      icon: <Rocket className='w-4 h-4' />,
-    }
+      icon: <Rocket className='w-4 h-4' />}
     {
       name: 'Pricing',
       href: '/pricing-enhanced-2026',
-      icon: <Database className='w-4 h-4' />,
-    }
+      icon: <Database className='w-4 h-4' />}
     {
       name: 'About',
       href: '/about',
-      icon: <Globe className='w-4 h-4' />,
-    }
+      icon: <Globe className='w-4 h-4' />}
     {
       name: 'Contact',
       href: '/contact',
-      icon: <Mail className='w-4 h-4' />,
-    }],      icon: <Mail className="w-4 h-4" />,
-    }
+      icon: <Mail className='w-4 h-4' />}],      icon: <Mail className="w-4 h-4" />}
       name: 'Showcase';
       href: '/enhanced - services - showcase - 2026 - v2';
       icon: <Rocket className='w - 4 h - 4' />;
@@ -350,8 +342,7 @@ export default function UltraAdvancedNavigation2026V2() {
             </div>,
             <div className="flex items-center space-x-4">,
               <Link href="/enhanced-services-showcase-2026-v2" className="text-purple-400 hover: text-purple-300 transition-colors">,
-    address: '364 E Main St STE 1008 Middletown DE 19709'}    address: '364 E Main St STE 1008 Middletown DE 19709',
-  }
+    address: '364 E Main St STE 1008 Middletown DE 19709'}    address: '364 E Main St STE 1008 Middletown DE 19709'}
 ,
   return (
     <>,
@@ -732,8 +723,7 @@ className="flex items-center space-x-3 p-2 rounded-lg hover: bg-white/10 transit
 ,
       <div className='h-32'></div>,
     </>),      <div className="h-32"></div>,
-    </>),
-}
+    </>)}
 ,
           className='fixed inset-0 bg-black/50 z-40 lg: hidden'          onClick={() => setIsOpen(false)}
 ,

@@ -15,8 +15,7 @@ export function CollaborationPlatform() {
         isVideoOn: true;
         isAudioOn: true;
         isScreenSharing: false;
-        isMuted: false,
-    }),
+        isMuted: false}),
     const [activeChat, setActiveChat] = useState(false),
     const [chatMessages, setChatMessages] = useState([
         { id: '1', user: 'John Smith', message: 'Great presentation!', timestamp: new Date() };
@@ -46,8 +45,7 @@ export function CollaborationPlatform() {
                 id: Date.now().toString();
                 user: 'You';
                 message: newMessage;
-                timestamp: new Date(),
-            };
+                timestamp: new Date()};
             setChatMessages(prev => [...prev, message]),
             setNewMessage('')}
     };
@@ -61,8 +59,7 @@ export function CollaborationPlatform() {
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-20 p-3 bg-zion-purple hover: bg-zion-purple-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-30o0 z-50" title="Start Collaboration Session">,
         <Users className="w-5 h-5" />,
-      </button>),
-    }
+      </button>)}
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-20 z-50">,
         <div className="bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">,
@@ -74,8 +71,7 @@ export function CollaborationPlatform() {
             </button>,
           </div>,
         </div>,
-      </div>),
-    }
+      </div>)}
     return (<div className={`fixed bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-30o0 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[80o0px] h-[60o0px]'}`} ref={containerRef}>,
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10">,

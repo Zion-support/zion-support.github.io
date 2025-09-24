@@ -89,6 +89,5 @@ export default function AI20o25RevolutionaryBanner() {
           </Link>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

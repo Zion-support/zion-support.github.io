@@ -133,8 +133,7 @@ const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> 
         transition={{
           duration: 20;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
       <motion.div,
         className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/30 rounded-full",
@@ -144,8 +143,7 @@ const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> 
         transition={{
           duration: 8;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
        />,
       <motion.div,
         className="absolute bottom-32 left-1/4 w-16 h-16 border border-pink-40o0/30 transform rotate-45",
@@ -155,8 +153,7 @@ const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> 
         transition={{
           duration: 15;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
       {/* Neon pulse effects */}
       <motion.div,
@@ -167,8 +164,7 @@ const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> 
         transition={{
           duration: 4;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
        />,
       <motion.div,
         className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-purple-40o0/20",
@@ -178,8 +174,7 @@ const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> 
         transition={{
           duration: 6;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
        />,
       {/* Canvas for particle system */}
       <canvas
@@ -195,8 +190,7 @@ const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> 
         transition={{
           duration: 8;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
     </div>)};
 export default FuturisticAnimatedBackground;

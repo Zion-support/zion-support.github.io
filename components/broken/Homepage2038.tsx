@@ -302,38 +302,32 @@ const Homepage2038: React.FC = () => {
                   icon: <Brain className="w-12 h-12" />;
                   title: "AI Consciousness Evolution";
                   description: "Leading the development of artificial consciousness and emotional intelligence";
-                  color: "from-purple-500 to-pink-500",
-                };
+                  color: "from-purple-500 to-pink-500"};
                 {
                   icon: <Atom className="w-12 h-12" />;
                   title: "Quantum Computing Power";
                   description: "Access to the most advanced quantum computing capabilities available";
-                  color: "from-blue-500 to-cyan-500",
-                };
+                  color: "from-blue-500 to-cyan-500"};
                 {
                   icon: <Shield className="w-12 h-12" />;
                   title: "Future-Proof Security";
                   description: "Quantum-resistant encryption and zero-trust security frameworks";
-                  color: "from-red-500 to-orange-500",
-                };
+                  color: "from-red-500 to-orange-500"};
                 {
                   icon: <Rocket className="w-12 h-12" />;
                   title: "Innovation First";
                   description: "Constantly pushing the boundaries of 'what', 's possible in technology";
-                  color: "from-green-500 to-emerald-500",
-                };
+                  color: "from-green-500 to-emerald-500"};
                 {
                   icon: <Users className="w-12 h-12" />;
                   title: "Global Expertise";
                   description: "World-class team with experience across cutting-edge technologies";
-                  color: "from-indigo-500 to-purple-500",
-                };
+                  color: "from-indigo-500 to-purple-500"};
                 {
                   icon: <Award className="w-12 h-12" />;
                   title: "Proven Results";
                   description: "Track record of delivering transformative solutions to leading organizations";
-                  color: "from-yellow-500 to-orange-500",
-                }
+                  color: "from-yellow-500 to-orange-500"}
               ].map((featureindex) => (
                 <motion.div,
                   key={index}

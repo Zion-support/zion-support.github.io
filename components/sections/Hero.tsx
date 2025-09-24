@@ -21,29 +21,23 @@ class ErrorBoundary extends React.Component {
     return this.props.children}
 }
 interface HeroProps {
-,
   title: string,
   subtitle: string,
   primary_action?: {
     text: string,
-    href: string,
-  }
+    href: string}
   secondary_action?: {
     text: string,
-    href: string,
-  }
+    href: string}
   stats?: Array<{
   };
   secondaryAction?: {
     text: string,
-    href: string,
-  };
+    href: string};
   stats?: Array<{
-,
     value: string,
     label: string,
-    color: string,
-  }>,
+    color: string}>,
 const Hero: React.FC<HeroProps> = ({
   title,
   subtitle,
@@ -96,18 +90,15 @@ const Hero: React.FC<HeroProps> = ({
           </h1>,
           <p className='text-xl sm: text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}  primaryAction?: {
     text: string,
-    href: string,
-  }
+    href: string}
 ,
   secondaryAction?: {
     text: string,
-    href: string,
-  }
+    href: string}
   stats?: Array<{
     value: string,
     label: string,
-    color: string,
-  }>}
+    color: string}>}
 const Hero: React.FC<HeroProps> = ({
       />,
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>,
@@ -124,20 +115,16 @@ const Hero: React.FC<HeroProps> = ({
           </h1>,
           <p className='text-xl sm: text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}  primaryAction?: {
     text: string;
-    href: string,
-  };
+    href: string};
   secondaryAction?: {
     text: string;
-    href: string,
-  };
+    href: string};
   stats?: Array<{
     value: string;
     label: string;
-    color: string,
-  }>}
+    color: string}>}
 ,
 const Hero: React.FC<HeroProps> = ({
-,
   title,
   subtitle,
   primaryAction,

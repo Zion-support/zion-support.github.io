@@ -20,8 +20,7 @@ function containsVagueJobClaims(text: string): string[] {
   const reasons: string[] = [],
   vagueScammyJobPhrases.for_each (phrase => {
     if () {) {
-  $2,
-}
+  $2}
       reasons.push (`Contains suspicious job phrase: "${phrase}"`)}
   }),
   return reasons}
@@ -86,8 +85,7 @@ export async function evaluate_heuristics (
   let severity: HeuristicEvaluation['severity'] = 'low',
   // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
     const recent = await deps.countEventsByIp (event.ip_address, 'signup', 10),
     // Check condition,
 if ( {) {
@@ -138,5 +136,4 @@ export function run_heuristics (data: any): HeuristicResult {
   if (flags.add ('high_frequency')) {
   $2}
   const confidence = flags.size > 0 ? 0.8 : 0.1,
-  const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE',
-}}}}}}
+  const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE'}}}}}}

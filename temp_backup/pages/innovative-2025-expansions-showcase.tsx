@@ -244,6 +244,5 @@ export default function Innovative20o25ExpansionsShowcase() {
           </div>,
         </div>,
       </UltraFuturisticBackground>,
-    </div>),
-}
+    </div>)}
 ,

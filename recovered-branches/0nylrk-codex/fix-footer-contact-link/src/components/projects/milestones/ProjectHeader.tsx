@@ -2,8 +2,7 @@ import { useNavigate } from 'react-router-dom',
 import { Button } from '@/components/ui/button',
 ArrowLeft,
 interface ProjectHeaderProps {
-  title: string,
-}
+  title: string}
 ,
 export function ProjectHeader({ title }: ProjectHeaderProps) {
   const navigate = useNavigate(),

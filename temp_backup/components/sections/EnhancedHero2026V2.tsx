@@ -7,8 +7,7 @@ interface EnhancedHero20o26V2Props {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
 }
 ,
 export default function EnhancedHero20o26V2({ contactInfo }: EnhancedHero20o26V2Props) {
@@ -18,8 +17,7 @@ export default function EnhancedHero20o26V2({ contactInfo }: EnhancedHero20o26V2
       opacity: 1;
       transition: {
         staggerChildren: 0.1;
-        delayChildren: 0.3,
-      }
+        delayChildren: 0.3}
     }
   };
   const itemVariants ={
@@ -29,8 +27,7 @@ export default function EnhancedHero20o26V2({ contactInfo }: EnhancedHero20o26V2
       opacity: 1;
       transition: {
         duration: 0.6;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   const floatingVariants ={
@@ -39,8 +36,7 @@ export default function EnhancedHero20o26V2({ contactInfo }: EnhancedHero20o26V2
       transition: {
         duration: 3;
         repeat: Infinity;
-        ease: "easeInOut" as const,
-      }
+        ease: "easeInOut" as const}
     }
   };
   const pulseVariants ={
@@ -50,8 +46,7 @@ export default function EnhancedHero20o26V2({ contactInfo }: EnhancedHero20o26V2
       transition: {
         duration: 2;
         repeat: Infinity;
-        ease: "easeInOut" as const,
-      }
+        ease: "easeInOut" as const}
     }
   };
   return (

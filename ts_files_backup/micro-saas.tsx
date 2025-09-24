@@ -30,8 +30,7 @@ export default function MicroSaasPage() {
       marketPosition: 'Competitive with Jasper ($39-99)Copy.ai ($36-186)and Writesonic ($12.67-100)';
       targetAudience: 'Content marketersagenciese-commerce businessesand content creators';
       marketSize: '$15.8B content marketing industry';
-      growthRate: '16.1% CAGR expected through 2030',
-    };
+      growthRate: '16.1% CAGR expected through 2030'};
     {
       name: 'Design System Builder';
       tagline: 'Automated design system management';
@@ -55,8 +54,7 @@ export default function MicroSaasPage() {
       marketPosition: 'Competitive with Zeroheight ($0-200)Frontify ($0-200)and InVision DSM ($0-100)';
       targetAudience: 'Design teamsproduct managersand design system architects';
       marketSize: '$8.2B design tools market';
-      growthRate: '12.3% CAGR expected through 2030',
-    };
+      growthRate: '12.3% CAGR expected through 2030'};
     {
       name: 'App Performance Monitor';
       tagline: 'Real-time performance monitoring';
@@ -81,8 +79,7 @@ export default function MicroSaasPage() {
       targetAudience: 'DevelopersDevOps teamsand product managers';
       trialDays: 14;
       setupTime: '10 minutes';
-      category: 'Development & DevOps',
-    };
+      category: 'Development & DevOps'};
     {
       name: 'AI Knowledge Base';
       tagline: 'Organize company knowledge';
@@ -107,8 +104,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Businesses of all sizesknowledge workersand documentation teams';
       trialDays: 14;
       setupTime: '20 minutes';
-      category: 'Productivity & Collaboration',
-    };
+      category: 'Productivity & Collaboration'};
     {
       name: 'AI Email Marketing Pro';
       tagline: 'Advanced email automation';
@@ -133,8 +129,7 @@ export default function MicroSaasPage() {
       targetAudience: 'E-commerce businessesmarketersand growth teams';
       trialDays: 14;
       setupTime: '15 minutes';
-      category: 'Marketing & Automation',
-    };
+      category: 'Marketing & Automation'};
     {
       name: 'AI SEO Suite';
       tagline: 'Comprehensive SEO optimization';
@@ -159,8 +154,7 @@ export default function MicroSaasPage() {
       targetAudience: 'SEO professionalsdigital marketersand website owners';
       trialDays: 14;
       setupTime: '20 minutes';
-      category: 'Marketing & SEO',
-    };
+      category: 'Marketing & SEO'};
     {
       name: 'AI Social Media Manager';
       tagline: 'Intelligent social media automation';
@@ -185,8 +179,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Social media managersmall businessesand influencers';
       trialDays: 14;
       setupTime: '10 minutes';
-      category: 'Marketing & Social Media',
-    };
+      category: 'Marketing & Social Media'};
     {
       name: 'AI E-commerce Analytics';
       tagline: 'Data-driven e-commerce insights';
@@ -211,8 +204,7 @@ export default function MicroSaasPage() {
       targetAudience: 'E-commerce businessesonline retailersand digital marketers';
       trialDays: 14;
       setupTime: '25 minutes';
-      category: 'Analytics & E-commerce',
-    };
+      category: 'Analytics & E-commerce'};
     {
       name: 'AI Customer Support Bot';
       tagline: '24/7 intelligent support';
@@ -237,8 +229,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Customer support teamsSaaS companiesand e-commerce businesses';
       trialDays: 14;
       setupTime: '20 minutes';
-      category: 'Customer Experience',
-    };
+      category: 'Customer Experience'};
     {
       name: 'AI Project Management';
       tagline: 'Intelligent project coordination';
@@ -263,8 +254,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Project managersdevelopment teamsand creative agencies';
       trialDays: 14;
       setupTime: '25 minutes';
-      category: 'Productivity & Collaboration',
-    };
+      category: 'Productivity & Collaboration'};
     {
       name: 'AI Financial Planning';
       tagline: 'Smart financial management';
@@ -289,8 +279,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Small businessesfinancial advisorsand individuals';
       trialDays: 14;
       setupTime: '30 minutes';
-      category: 'Finance & Planning',
-    };
+      category: 'Finance & Planning'};
     {
       name: 'AI Content Calendar';
       tagline: 'Strategic content planning';
@@ -315,8 +304,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Content marketersocial media managersand marketing teams';
       trialDays: 14;
       setupTime: '15 minutes';
-      category: 'Content & Marketing',
-    };
+      category: 'Content & Marketing'};
     {
       name: 'AI Performance Monitoring';
       tagline: 'Real-time system monitoring';
@@ -341,8 +329,7 @@ export default function MicroSaasPage() {
       targetAudience: 'DevOps teamsystem administratorsand developers';
       trialDays: 14;
       setupTime: '20 minutes';
-      category: 'Development & DevOps',
-    };
+      category: 'Development & DevOps'};
     {
       name: 'AI Data Visualization';
       tagline: 'Beautiful data insights';
@@ -367,8 +354,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Data analystsbusiness intelligence teamsand executives';
       trialDays: 14;
       setupTime: '25 minutes';
-      category: 'Analytics & Data',
-    };
+      category: 'Analytics & Data'};
     {
       name: 'AI Customer Onboarding';
       tagline: 'Streamlined customer success';
@@ -393,8 +379,7 @@ export default function MicroSaasPage() {
       targetAudience: 'SaaS companiesproduct managersand customer success teams';
       trialDays: 14;
       setupTime: '20 minutes';
-      category: 'Customer Experience',
-    };
+      category: 'Customer Experience'};
     {
       name: 'AI A/B Testing Platform';
       tagline: 'Data-driven optimization';
@@ -419,8 +404,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Product managersmarketersand UX researchers';
       trialDays: 14;
       setupTime: '15 minutes';
-      category: 'Analytics & Optimization',
-    };
+      category: 'Analytics & Optimization'};
     {
       name: 'AI Customer Feedback Hub';
       tagline: 'Centralized feedback management';
@@ -445,8 +429,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Product managerscustomer success teamsand UX researchers';
       trialDays: 14;
       setupTime: '20 minutes';
-      category: 'Customer Experience',
-    };
+      category: 'Customer Experience'};
     {
       name: 'AI Inventory Forecasting';
       tagline: 'Predictive inventory management';
@@ -471,8 +454,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Retail businessese-commerce storesand warehouse managers';
       trialDays: 14;
       setupTime: '30 minutes';
-      category: 'Operations & Logistics',
-    };
+      category: 'Operations & Logistics'};
     {
       name: 'AI Lead Generation';
       tagline: 'Automated lead discovery';
@@ -497,8 +479,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Sales teamsB2B companiesand marketing agencies';
       trialDays: 14;
       setupTime: '25 minutes';
-      category: 'Sales & Marketing',
-    };
+      category: 'Sales & Marketing'};
     {
       name: 'AI Customer Churn Prediction';
       tagline: 'Prevent customer churn';
@@ -520,8 +501,7 @@ export default function MicroSaasPage() {
       textColor: 'text-red-400';
       link: 'https://ziontechgroup.com/ai-churn-prediction';
       marketPosition: 'Competitive with Gainsight ($0-1000+)Totango ($0-1000+)and ChurnZero ($0-1000+)';
-      targetAudience: 'Customer success teamsproduct managersand subscription businesses',
-    };
+      targetAudience: 'Customer success teamsproduct managersand subscription businesses'};
     {
       name: 'AI-Powered Inventory Management';
       tagline: 'Intelligent inventory optimization';
@@ -543,8 +523,7 @@ export default function MicroSaasPage() {
       textColor: 'text-indigo-400';
       link: 'https://ziontechgroup.com/ai-inventory-management';
       marketPosition: 'Competitive with TradeGecko ($0-1000+)Zoho Inventory ($0-1000+)and Fishbowl ($0-1000+)';
-      targetAudience: 'E-commerce businessesretailersand inventory managers',
-    };
+      targetAudience: 'E-commerce businessesretailersand inventory managers'};
     {
       name: 'AI-Powered Social Media Analytics';
       tagline: 'Intelligent social media insights';
@@ -566,8 +545,7 @@ export default function MicroSaasPage() {
       textColor: 'text-teal-400';
       link: 'https://ziontechgroup.com/ai-social-media-analytics';
       marketPosition: 'Competitive with Sprout Social ($99-249)Brandwatch ($0-1000+)and Mention ($29-99)';
-      targetAudience: 'Social media managersdigital marketersand brand managers',
-    };
+      targetAudience: 'Social media managersdigital marketersand brand managers'};
     {
       name: 'AI-Powered Customer Support Analytics';
       tagline: 'Intelligent support optimization';
@@ -589,8 +567,7 @@ export default function MicroSaasPage() {
       textColor: 'text-blue-400';
       link: 'https://ziontechgroup.com/ai-support-analytics';
       marketPosition: 'Competitive with Zendesk ($49-215)Freshdesk ($15-79)and Help Scout ($20-65)';
-      targetAudience: 'Customer support managersupport teamsand customer experience professionals',
-    };
+      targetAudience: 'Customer support managersupport teamsand customer experience professionals'};
     {
       name: 'AI-Powered Website Performance Optimizer';
       tagline: 'Intelligent website optimization';
@@ -612,8 +589,7 @@ export default function MicroSaasPage() {
       textColor: 'text-yellow-400';
       link: 'https://ziontechgroup.com/ai-website-optimizer';
       marketPosition: 'Competitive with GTmetrix (Free-$15)PageSpeed Insights (Free)and WebPageTest (Free-$99)';
-      targetAudience: 'Web developersdigital marketersand website owners',
-    };
+      targetAudience: 'Web developersdigital marketersand website owners'};
     {
       name: 'AI-Powered Customer Feedback Sentiment Analysis';
       tagline: 'Intelligent feedback insights';
@@ -635,8 +611,7 @@ export default function MicroSaasPage() {
       textColor: 'text-purple-400';
       link: 'https://ziontechgroup.com/ai-feedback-sentiment';
       marketPosition: 'Competitive with MonkeyLearn ($299-999)Lexalytics ($0-1000+)and MeaningCloud ($0-1000+)';
-      targetAudience: 'Product managerscustomer success teamsand UX researchers',
-    };
+      targetAudience: 'Product managerscustomer success teamsand UX researchers'};
     {
       name: 'AI-Powered Email Marketing Automation';
       tagline: 'Intelligent email campaigns';
@@ -658,8 +633,7 @@ export default function MicroSaasPage() {
       textColor: 'text-green-400';
       link: 'https://ziontechgroup.com/ai-email-automation';
       marketPosition: 'Competitive with Mailchimp ($13-350)ConvertKit ($29-59)and ActiveCampaign ($29-259)';
-      targetAudience: 'Email marketersdigital marketersand e-commerce businesses',
-    };
+      targetAudience: 'Email marketersdigital marketersand e-commerce businesses'};
     {
       name: 'AI-Powered Customer Journey Mapping';
       tagline: 'Intelligent customer experience optimization';
@@ -681,8 +655,7 @@ export default function MicroSaasPage() {
       textColor: 'text-teal-400';
       link: 'https://ziontechgroup.com/ai-customer-journey';
       marketPosition: 'Competitive with UXPressia ($0-1000+)Smaply ($0-1000+)and Touchpoint Dashboard ($0-1000+)';
-      targetAudience: 'Customer experience professionalsUX designersand product managers',
-    };
+      targetAudience: 'Customer experience professionalsUX designersand product managers'};
     {
       name: 'AI-Powered Competitive Intelligence';
       tagline: 'Intelligent market monitoring';
@@ -704,8 +677,7 @@ export default function MicroSaasPage() {
       textColor: 'text-blue-400';
       link: 'https://ziontechgroup.com/ai-competitive-intelligence';
       marketPosition: 'Competitive with Crayon ($0-1000+)Kompyte ($0-1000+)and Brandwatch ($0-1000+)';
-      targetAudience: 'Business strategistsmarketing teamsand product managers',
-    };
+      targetAudience: 'Business strategistsmarketing teamsand product managers'};
     {
       name: 'AI-Powered Customer Lifetime Value Optimization';
       tagline: 'Maximize customer value';
@@ -727,8 +699,7 @@ export default function MicroSaasPage() {
       textColor: 'text-green-400';
       link: 'https://ziontechgroup.com/ai-clv-optimization';
       marketPosition: 'Competitive with Optimove ($0-1000+)Retention Science ($0-1000+)and Custora ($0-1000+)';
-      targetAudience: 'Customer success managersmarketing teamsand business analysts',
-    };
+      targetAudience: 'Customer success managersmarketing teamsand business analysts'};
     // NEW REAL MICRO SAAS SERVICES,
     {
       name: 'AI-Powered Contract Analysis';
@@ -751,8 +722,7 @@ export default function MicroSaasPage() {
       textColor: 'text-indigo-400';
       link: 'https://ziontechgroup.com/ai-contract-analysis';
       marketPosition: 'Competitive with Evisort ($0-1000+)ContractPodAi ($0-1000+)and DocuSign ($10-25)';
-      targetAudience: 'Legal teamscontract managersand compliance officers',
-    };
+      targetAudience: 'Legal teamscontract managersand compliance officers'};
     {
       name: 'AI-Powered Sales Forecasting';
       tagline: 'Predictive sales intelligence';
@@ -774,8 +744,7 @@ export default function MicroSaasPage() {
       textColor: 'text-blue-400';
       link: 'https://ziontechgroup.com/ai-sales-forecasting';
       marketPosition: 'Competitive with Clari ($0-1000+)Gong ($0-1000+)and Chorus ($0-1000+)';
-      targetAudience: 'Sales managersrevenue operationsand business analysts',
-    };
+      targetAudience: 'Sales managersrevenue operationsand business analysts'};
     {
       name: 'AI-Powered Customer Service Analytics';
       tagline: 'Intelligent support optimization';
@@ -797,8 +766,7 @@ export default function MicroSaasPage() {
       textColor: 'text-teal-400';
       link: 'https://ziontechgroup.com/ai-customer-service-analytics';
       marketPosition: 'Competitive with Zendesk ($49-215)Freshdesk ($15-79)and Help Scout ($20-65)';
-      targetAudience: 'Customer service managersupport teamsand CX professionals',
-    };
+      targetAudience: 'Customer service managersupport teamsand CX professionals'};
     {
       name: 'AI-Powered Product Recommendation Engine';
       tagline: 'Intelligent product suggestions';
@@ -820,8 +788,7 @@ export default function MicroSaasPage() {
       textColor: 'text-purple-400';
       link: 'https://ziontechgroup.com/ai-product-recommendations';
       marketPosition: 'Competitive with Algolia ($1-1000+)Elasticsearch ($0-1000+)and Amazon Personalize ($0-1000+)';
-      targetAudience: 'E-commerce businessesonline retailersand product managers',
-    };
+      targetAudience: 'E-commerce businessesonline retailersand product managers'};
     {
       name: 'AI-Powered Fraud Detection';
       tagline: 'Advanced security monitoring';
@@ -843,8 +810,7 @@ export default function MicroSaasPage() {
       textColor: 'text-red-400';
       link: 'https://ziontechgroup.com/ai-fraud-detection';
       marketPosition: 'Competitive with Sift ($0-1000+)Signifyd ($0-1000+)and Forter ($0-1000+)';
-      targetAudience: 'Financial institutionse-commerce businessesand security teams',
-    };
+      targetAudience: 'Financial institutionse-commerce businessesand security teams'};
     {
       name: 'AI-Powered Inventory Forecasting';
       tagline: 'Predictive inventory management';
@@ -866,8 +832,7 @@ export default function MicroSaasPage() {
       textColor: 'text-green-400';
       link: 'https://ziontechgroup.com/ai-inventory-forecasting';
       marketPosition: 'Competitive with TradeGecko ($0-1000+)Zoho Inventory ($0-1000+)and Fishbowl ($0-1000+)';
-      targetAudience: 'Manufacturing companiesretailersand supply chain managers',
-    };
+      targetAudience: 'Manufacturing companiesretailersand supply chain managers'};
     {
       name: 'AI-Powered Customer Onboarding';
       tagline: 'Intelligent user activation';
@@ -889,8 +854,7 @@ export default function MicroSaasPage() {
       textColor: 'text-orange-400';
       link: 'https://ziontechgroup.com/ai-customer-onboarding';
       marketPosition: 'Competitive with Appcues ($0-1000+)Userflow ($0-1000+)and Pendo ($0-1000+)';
-      targetAudience: 'Product managerscustomer success teamsand growth marketers',
-    };
+      targetAudience: 'Product managerscustomer success teamsand growth marketers'};
     {
       name: 'AI-Powered Email Deliverability';
       tagline: 'Maximize inbox placement';
@@ -912,8 +876,7 @@ export default function MicroSaasPage() {
       textColor: 'text-blue-400';
       link: 'https://ziontechgroup.com/ai-email-deliverability';
       marketPosition: 'Competitive with Mailgun ($35-675)SendGrid ($14.95-449)and Amazon SES ($0.10 per 1000 emails)';
-      targetAudience: 'Email marketersmarketing agenciesand businesses with large email lists',
-    };
+      targetAudience: 'Email marketersmarketing agenciesand businesses with large email lists'};
     {
       name: 'AI-Powered Social Media Management';
       tagline: 'Intelligent social media automation';
@@ -935,8 +898,7 @@ export default function MicroSaasPage() {
       textColor: 'text-pink-400';
       link: 'https://ziontechgroup.com/ai-social-media-management';
       marketPosition: 'Competitive with Buffer ($15-99)Hootsuite ($29-599)and Later ($18-40)';
-      targetAudience: 'Social media managersdigital marketersand brand managers',
-    };
+      targetAudience: 'Social media managersdigital marketersand brand managers'};
     {
       name: 'AI-Powered Customer Feedback Analysis';
       tagline: 'Intelligent feedback insights';
@@ -958,8 +920,7 @@ export default function MicroSaasPage() {
       textColor: 'text-purple-400';
       link: 'https://ziontechgroup.com/ai-customer-feedback-analysis';
       marketPosition: 'Competitive with MonkeyLearn ($299-999)Lexalytics ($0-1000+)and MeaningCloud ($0-1000+)';
-      targetAudience: 'Product managerscustomer success teamsand UX researchers',
-    };
+      targetAudience: 'Product managerscustomer success teamsand UX researchers'};
     {
       name: 'AI Email Signature Manager';
       tagline: 'Professional email branding';
@@ -984,8 +945,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Sales teamsmarketing teamsand professional services';
       trialDays: 14;
       setupTime: '5 minutes';
-      category: 'Marketing & Sales',
-    };
+      category: 'Marketing & Sales'};
     {
       name: 'AI Meeting Assistant';
       tagline: 'Smart meeting productivity';
@@ -1010,8 +970,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Remote teamsconsultantsand meeting-heavy professionals';
       trialDays: 14;
       setupTime: '10 minutes';
-      category: 'Productivity & Collaboration',
-    };
+      category: 'Productivity & Collaboration'};
     {
       name: 'AI Password Manager';
       tagline: 'Secure password management';
@@ -1036,8 +995,7 @@ export default function MicroSaasPage() {
       targetAudience: 'BusinessesIT teamsand security-conscious organizations';
       trialDays: 14;
       setupTime: '10 minutes';
-      category: 'Security & Compliance',
-    };
+      category: 'Security & Compliance'};
     {
       name: 'AI Time Tracking';
       tagline: 'Intelligent time management';
@@ -1062,8 +1020,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Freelancersconsultantsand project-based teams';
       trialDays: 14;
       setupTime: '10 minutes';
-      category: 'Productivity & Collaboration',
-    };
+      category: 'Productivity & Collaboration'};
     {
       name: 'AI Form Builder';
       tagline: 'Smart form creation';
@@ -1088,8 +1045,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Businessesmarketersand data collection teams';
       trialDays: 14;
       setupTime: '15 minutes';
-      category: 'Marketing & Sales',
-    };
+      category: 'Marketing & Sales'};
     {
       name: 'AI Calendar Optimization';
       tagline: 'Smart scheduling assistant';
@@ -1114,8 +1070,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Professionalsconsultantsand busy executives';
       trialDays: 14;
       setupTime: '10 minutes';
-      category: 'Productivity & Collaboration',
-    };
+      category: 'Productivity & Collaboration'};
     {
       name: 'AI Social Media Analytics';
       tagline: 'Comprehensive social insights';
@@ -1140,8 +1095,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Social media managersmarketersand brands';
       trialDays: 14;
       setupTime: '20 minutes';
-      category: 'Marketing & Sales',
-    };
+      category: 'Marketing & Sales'};
     {
       name: 'AI Website Builder';
       tagline: 'Intelligent website creation';
@@ -1166,8 +1120,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Small businessesentrepreneursand creative professionals';
       trialDays: 14;
       setupTime: '30 minutes';
-      category: 'Web Development',
-    };
+      category: 'Web Development'};
     {
       name: 'AI Customer Support Chatbot';
       tagline: '24/7 intelligent support';
@@ -1192,8 +1145,7 @@ export default function MicroSaasPage() {
       targetAudience: 'E-commerce businessesSaaS companiesand customer support teams';
       trialDays: 14;
       setupTime: '25 minutes';
-      category: 'Customer Experience',
-    };
+      category: 'Customer Experience'};
     {
       name: 'AI Invoice Processing';
       tagline: 'Automated invoice management';
@@ -1218,8 +1170,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Accounting teamsfinance departmentsand small businesses';
       trialDays: 14;
       setupTime: '20 minutes';
-      category: 'Finance & Operations',
-    };
+      category: 'Finance & Operations'};
     {
       name: 'AI Project Risk Management';
       tagline: 'Predict and prevent project risks';
@@ -1244,8 +1195,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Project managersrisk managersand enterprise teams';
       trialDays: 14;
       setupTime: '30 minutes';
-      category: 'Project Management',
-    };
+      category: 'Project Management'};
     {
       name: 'AI Employee Onboarding';
       tagline: 'Streamlined onboarding experience';
@@ -1270,8 +1220,7 @@ export default function MicroSaasPage() {
       targetAudience: 'HR teamsgrowing companiesand remote-first organizations';
       trialDays: 14;
       setupTime: '20 minutes';
-      category: 'HR & Operations',
-    };
+      category: 'HR & Operations'};
     {
       name: 'AI Customer Segmentation';
       tagline: 'Intelligent customer targeting';
@@ -1296,8 +1245,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Marketing teamse-commerce businessesand customer success teams';
       trialDays: 14;
       setupTime: '25 minutes';
-      category: 'Marketing & Sales',
-    };
+      category: 'Marketing & Sales'};
     {
       name: 'AI Supply Chain Optimization';
       tagline: 'Intelligent supply chain management';
@@ -1322,8 +1270,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Manufacturersretailersand logistics companies';
       trialDays: 14;
       setupTime: '45 minutes';
-      category: 'Operations & Logistics',
-    };
+      category: 'Operations & Logistics'};
     {
       name: 'AI Compliance Monitoring';
       tagline: 'Automated compliance management';
@@ -1348,8 +1295,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Compliance officerslegal teamsand regulated industries';
       trialDays: 14;
       setupTime: '30 minutes';
-      category: 'Legal & Compliance',
-    };
+      category: 'Legal & Compliance'};
     {
       name: 'AI Performance Management';
       tagline: 'Data-driven performance insights';
@@ -1369,13 +1315,12 @@ export default function MicroSaasPage() {
       icon: '📊';
       color: 'from-orange-500 to-red-600';
       textColor: 'text-orange-400';
-      link: 'https://window.performance.ziontechgroup.com';
+      link: 'https://window.window.performance.ziontechgroup.com';
       marketPosition: 'Competitive with 15Five ($4-14)Lattice ($4-11)and Culture Amp ($3-11)';
       targetAudience: 'HR teamsmanagersand performance-focused organizations';
       trialDays: 14;
       setupTime: '20 minutes';
-      category: 'HR & Operations',
-    };
+      category: 'HR & Operations'};
     {
       name: 'AI Customer Lifetime Value';
       tagline: 'Maximize customer value';
@@ -1400,8 +1345,7 @@ export default function MicroSaasPage() {
       targetAudience: 'Marketing teamse-commerce businessesand subscription companies';
       trialDays: 14;
       setupTime: '25 minutes';
-      category: 'Analytics & Data',
-    };
+      category: 'Analytics & Data'};
     {
       name: 'AI Workflow Automation';
       tagline: 'Intelligent process automation';
@@ -1423,8 +1367,7 @@ export default function MicroSaasPage() {
       textColor: 'text-teal-400';
       link: 'https://ziontechgroup.com/ai-powered-customer-segmentation';
       marketPosition: 'Competitive with Segment ($0-1000+)Amplitude ($0-1000+)and Mixpanel ($0-1000+)';
-      targetAudience: 'Marketing teamsdata analystsand customer experience professionals',
-    };
+      targetAudience: 'Marketing teamsdata analystsand customer experience professionals'};
     // New enhanced services,
     {
       name: 'AI Landing Page Builder';
@@ -1447,8 +1390,7 @@ export default function MicroSaasPage() {
       textColor: 'text-blue-400';
       link: 'https://ziontechgroup.com/ai-landing-page-builder';
       marketPosition: 'Competitive with Unbounce ($80-160)Leadpages ($37-199)and Instapage ($199-999)';
-      targetAudience: 'Marketersagenciesand e-commerce businesses',
-    };
+      targetAudience: 'Marketersagenciesand e-commerce businesses'};
     {
       name: 'AI Website Optimizer';
       tagline: 'Boost your website performance';
@@ -1470,8 +1412,7 @@ export default function MicroSaasPage() {
       textColor: 'text-yellow-400';
       link: 'https://ziontechgroup.com/ai-website-optimizer';
       marketPosition: 'Competitive with GTmetrix (Free-$15)PageSpeed Insights (Free)and WebPageTest (Free)';
-      targetAudience: 'Web developersdigital marketersand business owners',
-    };
+      targetAudience: 'Web developersdigital marketersand business owners'};
     {
       name: 'AI Churn Prediction Pro';
       tagline: 'Predict and prevent customer churn';
@@ -1493,8 +1434,7 @@ export default function MicroSaasPage() {
       textColor: 'text-red-400';
       link: 'https://ziontechgroup.com/ai-churn-prediction-pro';
       marketPosition: 'Competitive with Gainsight ($0-500)ChurnZero ($0-500)and Totango ($0-500)';
-      targetAudience: 'SaaS companiesubscription businessesand customer success teams',
-    };
+      targetAudience: 'SaaS companiesubscription businessesand customer success teams'};
     {
       name: 'AI Email Deliverability Monitor';
       tagline: 'Ensure your emails reach inboxes';
@@ -1516,8 +1456,7 @@ export default function MicroSaasPage() {
       textColor: 'text-green-400';
       link: 'https://ziontechgroup.com/ai-email-deliverability';
       marketPosition: 'Competitive with 250ok ($0-500)GlockApps ($0-100)and Sender Score (Free)';
-      targetAudience: 'Email marketersales teamsand marketing agencies',
-    };
+      targetAudience: 'Email marketersales teamsand marketing agencies'};
     {
       name: 'AI Customer Journey Mapper';
       tagline: 'Map and optimize customer experiences';
@@ -1539,8 +1478,7 @@ export default function MicroSaasPage() {
       textColor: 'text-purple-400';
       link: 'https://ziontechgroup.com/ai-customer-journey';
       marketPosition: 'Competitive with FullStory ($0-1000+)Hotjar ($0-99)and Crazy Egg ($24-99)';
-      targetAudience: 'UX designersproduct managersand customer experience teams',
-    };
+      targetAudience: 'UX designersproduct managersand customer experience teams'};
     {
       name: 'AI Contract Analysis Platform';
       tagline: 'Intelligent contract review and analysis';
@@ -1562,8 +1500,7 @@ export default function MicroSaasPage() {
       textColor: 'text-indigo-400';
       link: 'https://ziontechgroup.com/ai-contract-analysis';
       marketPosition: 'Competitive with DocuSign ($10-25)ContractPodAi ($0-1000+)and Evisort ($0-1000+)';
-      targetAudience: 'Legal professionalscontract managersand compliance officers',
-    };
+      targetAudience: 'Legal professionalscontract managersand compliance officers'};
     {
       name: 'AI Sales Forecasting Engine';
       tagline: 'Predict sales with AI accuracy';
@@ -1585,8 +1522,7 @@ export default function MicroSaasPage() {
       textColor: 'text-blue-400';
       link: 'https://ziontechgroup.com/ai-sales-forecasting';
       marketPosition: 'Competitive with Clari ($0-1000+)Gong ($0-1000+)and Chorus ($0-1000+)';
-      targetAudience: 'Sales managersrevenue operations teamsand business analysts',
-    };
+      targetAudience: 'Sales managersrevenue operations teamsand business analysts'};
     {
       name: 'AI Customer Service Analytics';
       tagline: 'Optimize customer service performance';
@@ -1608,8 +1544,7 @@ export default function MicroSaasPage() {
       textColor: 'text-teal-400';
       link: 'https://ziontechgroup.com/ai-customer-service-analytics';
       marketPosition: 'Competitive with Zendesk ($49-215)Freshdesk ($15-79)and Intercom ($39-499)';
-      targetAudience: 'Customer service managersupport teamsand operations managers',
-    };
+      targetAudience: 'Customer service managersupport teamsand operations managers'};
     {
       name: 'AI Product Recommendation Engine';
       tagline: 'Boost sales with intelligent recommendations';
@@ -1631,8 +1566,7 @@ export default function MicroSaasPage() {
       textColor: 'text-orange-400';
       link: 'https://ziontechgroup.com/ai-product-recommendations';
       marketPosition: 'Competitive with Algolia ($1-1000+)Elasticsearch ($0-1000+)and Amazon Personalize ($0-1000+)';
-      targetAudience: 'E-commerce businessescontent platformsand digital marketers',
-    };
+      targetAudience: 'E-commerce businessescontent platformsand digital marketers'};
     {
       name: 'AI Fraud Detection System';
       tagline: 'Protect your business from fraud';
@@ -1654,8 +1588,7 @@ export default function MicroSaasPage() {
       textColor: 'text-red-400';
       link: 'https://ziontechgroup.com/ai-fraud-detection';
       marketPosition: 'Competitive with Sift ($0-1000+)Signifyd ($0-1000+)and Riskified ($0-1000+)';
-      targetAudience: 'E-commerce businessesfinancial institutionsand online platforms',
-    };
+      targetAudience: 'E-commerce businessesfinancial institutionsand online platforms'};
     {
       name: 'AI Inventory Forecasting';
       tagline: 'Optimize inventory with AI predictions';
@@ -1677,8 +1610,7 @@ export default function MicroSaasPage() {
       textColor: 'text-green-400';
       link: 'https://ziontechgroup.com/ai-inventory-forecasting';
       marketPosition: 'Competitive with TradeGecko ($0-1000+)Zoho Inventory ($0-1000+)and Fishbowl ($0-1000+)';
-      targetAudience: 'Retail businessesmanufacturersand supply chain managers',
-    };
+      targetAudience: 'Retail businessesmanufacturersand supply chain managers'};
     {
       name: 'AI Social Media Automation';
       tagline: 'Automate your social media presence';
@@ -1700,63 +1632,52 @@ export default function MicroSaasPage() {
       textColor: 'text-blue-400';
       link: 'https://ziontechgroup.com/ai-social-media-automation';
       marketPosition: 'Competitive with Buffer ($15-99)Hootsuite ($29-599)and Later ($18-40)';
-      targetAudience: 'Social media managersmarketersand content creators',
-    }
+      targetAudience: 'Social media managersmarketersand content creators'}
   ],
   const industryTrends = [
     {
       trend: 'AI Integration';
       description: 'Every service includes AI-powered features for enhanced automation and intelligence.';
-      impact: 'High',
-    };
+      impact: 'High'};
     {
       trend: 'API-First Design';
       description: 'All services provide robust APIs for seamless integration with existing workflows.';
-      impact: 'High',
-    };
+      impact: 'High'};
     {
       trend: 'Mobile Optimization';
       description: 'Responsive design and mobile apps for all services ensure accessibility anywhere.';
-      impact: 'Medium',
-    };
+      impact: 'Medium'};
     {
       trend: 'Security Focus';
       description: 'Enterprise-grade security and compliance built into every service.';
-      impact: 'High',
-    }
+      impact: 'High'}
   ],
   const categories = [...new Set(microSaasServices.map(service => service.category))],
   const competitiveAdvantages = [
     {
       title: "Specialized Focus";
       description: "Each of our 65+ services is designed for a specific business needensuring deep functionality and expertise without feature bloat.";
-      icon: "🎯",
-    };
+      icon: "🎯"};
     {
       icon: '💰';
       title: 'Transparent Pricing';
-      description: 'No hidden feesno enterprise sales calls. Simple monthly pricing that scales with your business needs and growth.',
-    };
+      description: 'No hidden feesno enterprise sales calls. Simple monthly pricing that scales with your business needs and growth.'};
     {
       icon: '🔒';
       title: 'Enterprise Security';
-      description: 'Bank-level securitySOC 2 complianceand 99.9% uptime guarantee for all services. Built for production use.',
-    };
+      description: 'Bank-level securitySOC 2 complianceand 99.9% uptime guarantee for all services. Built for production use.'};
     {
       icon: '🎯';
       title: 'Focused Solutions';
-      description: 'Each service solves a specific business problem without the complexity of enterprise platforms. Do one thing exceptionally well.',
-    };
+      description: 'Each service solves a specific business problem without the complexity of enterprise platforms. Do one thing exceptionally well.'};
     {
       icon: '📱';
       title: 'Mobile First';
-      description: 'All services are optimized for mobile devicesensuring your team can work efficiently from anywhereanytime.',
-    };
+      description: 'All services are optimized for mobile devicesensuring your team can work efficiently from anywhereanytime.'};
     {
       icon: '🔄';
       title: 'Seamless Integration';
-      description: 'Connect with your existing tools and workflows. Our services integrate with popular platforms and provide comprehensive APIs.',
-    }
+      description: 'Connect with your existing tools and workflows. Our services integrate with popular platforms and provide comprehensive APIs.'}
   ],
   return (
     <>,
@@ -2140,6 +2061,5 @@ export default function MicroSaasPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,

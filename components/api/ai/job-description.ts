@@ -57,6 +57,5 @@ export default async function handler(
     `- Responsibilities: ${(responsibilities || []).join ()}\n` +,
     `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`,
   const text = await generate_text (prompt, 'You are an expert technical recruiter and compensation analyst.'),
-  return res.status (200).json ({ job_description: text }),
-}
+  return res.status (200).json ({ job_description: text })}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

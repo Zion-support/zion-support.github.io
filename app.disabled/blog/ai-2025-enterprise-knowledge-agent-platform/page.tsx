@@ -82,6 +82,5 @@ const EnterpriseKnowledgeAgentPlatform20o25 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default EnterpriseKnowledgeAgentPlatform20o25;

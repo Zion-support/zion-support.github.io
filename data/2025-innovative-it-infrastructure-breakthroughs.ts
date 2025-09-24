@@ -30,15 +30,13 @@ export interface InnovativeITInfrastructureBreakthroughService20o25 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const innovativeITInfrastructureBreakthroughServices20o25: InnovativeITInfrastructureBreakthroughService20o25[] =,
   [

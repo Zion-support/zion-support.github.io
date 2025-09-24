@@ -4,8 +4,7 @@ export interface ServiceContact {
   phone: string,
   email: string,
   website: string,
-  address: string,
-}
+  address: string}
 ,
 export interface MicroSaasService {
   id: number,
@@ -30,8 +29,7 @@ export interface MicroSaasService {
   trialPeriod: string,
   innovationLevel: string,
   marketSize: string,
-  growthRate: string,
-}
+  growthRate: string}
 ,
 export interface ITService {
   id: number,
@@ -53,8 +51,7 @@ export interface ITService {
   support: string,
   innovationLevel: string,
   marketSize: string,
-  compliance: string[],
-}
+  compliance: string[]}
 ,
 export interface AIService {
   id: number,
@@ -77,16 +74,14 @@ export interface AIService {
   useCases: string[],
   innovationLevel: string,
   marketSize: string,
-  ethicalAI: string[],
-}
+  ethicalAI: string[]}
 ,
 // Zion Tech Group Contact Information,
 const zionContact: ServiceContact ={
   phone: "+1 30o2 464 0950";
   email: "kleber@ziontechgroup.com";
   website: "https://ziontechgroup.com";
-  address: "364 E Main St STE 10o08 Middletown DE 19709",
-};
+  address: "364 E Main St STE 10o08 Middletown DE 19709"};
 // Innovative Micro SAAS Services 20o31,
 export const innovativeMicroSaasServices20o31: MicroSaasService[] = [
   {
@@ -130,8 +125,7 @@ export const innovativeMicroSaasServices20o31: MicroSaasService[] = [
     trialPeriod: "30 days";
     innovationLevel: "Breakthrough";
     marketSize: "$1.2B by 20o25";
-    growthRate: "45% annually",
-  };
+    growthRate: "45% annually"};
   {
     id: 2;
     name: "NeuroSync Hub";
@@ -173,8 +167,7 @@ export const innovativeMicroSaasServices20o31: MicroSaasService[] = [
     trialPeriod: "21 days";
     innovationLevel: "Advanced";
     marketSize: "$2.8B by 20o26";
-    growthRate: "52% annually",
-  };
+    growthRate: "52% annually"};
   {
     id: 3;
     name: "BlockchainFlow Enterprise";
@@ -216,8 +209,7 @@ export const innovativeMicroSaasServices20o31: MicroSaasService[] = [
     trialPeriod: "14 days";
     innovationLevel: "Advanced";
     marketSize: "$19.9B by 20o25";
-    growthRate: "87% annually",
-  };
+    growthRate: "87% annually"};
   {
     id: 4;
     name: "CyberShield Pro";
@@ -259,8 +251,7 @@ export const innovativeMicroSaasServices20o31: MicroSaasService[] = [
     trialPeriod: "30 days";
     innovationLevel: "Advanced";
     marketSize: "$376B by 20o29";
-    growthRate: "13.4% annually",
-  };
+    growthRate: "13.4% annually"};
   {
     id: 5;
     name: "DataFusion Nexus";
@@ -302,8 +293,7 @@ export const innovativeMicroSaasServices20o31: MicroSaasService[] = [
     trialPeriod: "21 days";
     innovationLevel: "Advanced";
     marketSize: "$12.5B by 20o25";
-    growthRate: "23% annually",
-  }
+    growthRate: "23% annually"}
 ],
 // Innovative IT Infrastructure Services 20o31,
 export const innovativeITInfrastructureServices20o31: ITService[] = [
@@ -735,5 +725,4 @@ export const innovativeAIServices20o31: AIService[] = [
 export const allInnovativeServices20o31 ={
   microSaas: innovativeMicroSaasServices20o31;
   itInfrastructure: innovativeITInfrastructureServices20o31;
-  ai: innovativeAIServices20o31,
-};
+  ai: innovativeAIServices20o31};

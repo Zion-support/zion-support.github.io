@@ -22,16 +22,14 @@ const getServiceCategory = (service: { category?: string, type?: string }) => {
 // Helper function to get service features,
 const getServiceFeatures = (service: {
   features?: string[],
-  keyFeatures?: string[],
-}) => {
+  keyFeatures?: string[]}) => {
   if (service.features) return service.features,
   if (service.keyFeatures) return service.keyFeatures,
   return []};
 // Helper function to get service description,
 const getServiceDescription = (service: {
   description?: string,
-  tagline?: string,
-}) => {
+  tagline?: string}) => {
   if (service.description) return service.description,
   if (service.tagline) return service.tagline,
   return 'No description available'};
@@ -72,8 +70,7 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
           return (b.rating || 0) - (a.rating || 0),
         case 'popularity':,
         default: ,
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
-      }
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)}
     }),
   const containerVariants = {
     hidden: { opacity: 0 };
@@ -173,8 +170,7 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-20o0 ${
                       selectedCategory === category,
                         ? 'bg-purple-60o0 text-white shadow-lg',
-                        : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                    }`}
+                        : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
                   >,
                     {category}
                   </button>))}
@@ -198,8 +194,7 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
                   className={`p-2 rounded-lg transition-all duration-20o0 ${
                     viewMode === 'grid',
                       ? 'bg-purple-60o0 text-white',
-                      : 'bg-white/10 text-gray-40o0 hover: bg-white/20',
-                  }`}
+                      : 'bg-white/10 text-gray-40o0 hover: bg-white/20'}`}
                 >,
                   <Grid className='w-5 h-5' />,
                 </button>,
@@ -208,8 +203,7 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
                   className={`p-2 rounded-lg transition-all duration-20o0 ${
                     viewMode === 'list',
                       ? 'bg-purple-60o0 text-white',
-                      : 'bg-white/10 text-gray-40o0 hover: bg-white/20',
-                  }`}
+                      : 'bg-white/10 text-gray-40o0 hover: bg-white/20'}`}
                 >,
                   <List className='w-5 h-5' />,
                 </button>,
@@ -228,8 +222,7 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
             className={
               viewMode === 'grid',
                 ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8',
-                : 'space-y-6',
-            }
+                : 'space-y-6'}
           >,
             {filteredServices.map(service => (
               <motion.div,
@@ -238,8 +231,7 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
                 className={`group ${
                   viewMode === 'grid',
                     ? 'bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-purple-50o0/50 transition-all duration-30o0 hover:transform hover:scale-10o5',
-                    : 'bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-50o0/50 transition-all duration-30o0',
-                }`}
+                    : 'bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-50o0/50 transition-all duration-30o0'}`}
               >,
                 {/* Service Header */}
                 <div className='flex items-start justify-between mb-4'>,
@@ -339,8 +331,7 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
                             ? 'bg-orange-50o0/20 text-orange-40o0',
                             : service.innovationLevel === 'Advanced',
                               ? 'bg-blue-50o0/20 text-blue-40o0',
-                              : 'bg-green-50o0/20 text-green-40o0',
-                      }`}
+                              : 'bg-green-50o0/20 text-green-40o0'}`}
                     >,
                       {service.innovationLevel}
                     </span>,
@@ -424,6 +415,5 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default CuttingEdgeFuturisticServicesShowcase;

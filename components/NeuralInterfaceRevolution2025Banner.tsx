@@ -24,8 +24,7 @@ const NeuralInterfaceRevolution20o25Banner = () => {
                 className={`${i === activeNeuron ? 'animate-ping' : 'animate-pulse'}`}
                 style={{
                   animationDelay: `${i * 0.2}s`;
-                  animationDuration: '2s',
-                }}
+                  animationDuration: '2s'}}
                />,
               <line
                 x1={Math.random() * 10o0}
@@ -119,6 +118,5 @@ const NeuralInterfaceRevolution20o25Banner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NeuralInterfaceRevolution20o25Banner;

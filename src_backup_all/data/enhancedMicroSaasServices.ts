@@ -1,8 +1,7 @@
   marketPosition: string,
   competitors: string[],
   roi: string,
-  implementationTime: string,
-}
+  implementationTime: string}
 ,
 export const ENHANCED_MICRO_SAAS_SERVICES: MicroSaasService[] = [
   // Productivity & Collaboration,

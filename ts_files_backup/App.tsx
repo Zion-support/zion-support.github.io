@@ -411,7 +411,7 @@ export default function App(): JSX.Element {
                         </h3>,
                         <p className='text-gray-60o0 mb-4'>,
                           Migrated legacy systems to cloud infrastructure,
-                          achieving 99.9% uptime and 60% faster window.performance.,
+                          achieving 99.9% uptime and 60% faster window.window.performance.,
                         </p>,
                         <a
                           href='/case-studies/cloud-migration',
@@ -524,8 +524,7 @@ export default function App(): JSX.Element {
                     </div>,
                   </div>,
                 </main>,
-              </div>,
-            }
+              </div>}
           />,
           <Route
             path='/pages/InnovationLanding20o25',

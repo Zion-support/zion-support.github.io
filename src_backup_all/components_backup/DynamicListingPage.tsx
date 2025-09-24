@@ -21,8 +21,7 @@ import { toast } from "@/hooks/use-toast",
 import { captureException } from "@/utils/sentry",
 interface PriceRange {
   min: number,
-  max: number,
-}
+  max: number}
 ,
 interface DynamicListingPageProps {
   title: string,
@@ -126,8 +125,7 @@ export function DynamicListingPage({
         matchesRating &&,
         matchesBrand &&,
         matchesSpecs &&,
-        matchesAvailability),
-    }),
+        matchesAvailability)}),
     filteredListings.sort((a, b) => {
       switch (sortOption) {
         case "price-asc":,
@@ -140,8 +138,7 @@ export function DynamicListingPage({
         default: ,
           return (
             new Date(b.createdAt).getTime() -,
-            new Date(a.createdAt).getTime()),
-      }
+            new Date(a.createdAt).getTime())}
     })} catch (error) {
     captureException(error),
     logErrorToProduction('Listing filter error:', { data: error })}
@@ -237,8 +234,7 @@ export function DynamicListingPage({
                   placeholder="Search specifications...",
                   value={specQuery}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>,
-                    setSpecQuery(e.target.value),
-                  }
+                    setSpecQuery(e.target.value)}
                   className="bg-zion-blue border border-zion-blue-light text-white",
                 />,
               </div>,
@@ -250,8 +246,7 @@ export function DynamicListingPage({
                   <Select
                     value={selectedAvailability}
                     onValueChange={(value: string) =>,
-                      setSelectedAvailability(value),
-                    }
+                      setSelectedAvailability(value)}
                   >,
                     <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">,
                       <SelectValue placeholder="Select Availability"  />,
@@ -393,8 +388,7 @@ export function DynamicListingPage({
                 className={
                   view === "grid",
                     ? "grid grid-cols-1 md: grid-cols-2 gap-6",
-                    : "flex flex-col gap-6",
-                }
+                    : "flex flex-col gap-6"}
               >,
                 {[1, 2, 3, 4].map((i) => (
                   <div
@@ -417,8 +411,7 @@ export function DynamicListingPage({
                 className={
                   view === "grid",
                     ? "grid grid-cols-1 md: grid-cols-2 gap-6",
-                    : "flex flex-col gap-6",
-                }
+                    : "flex flex-col gap-6"}
               >,
                 {filteredListings.map((listing) => (
                   <ProductListingCard

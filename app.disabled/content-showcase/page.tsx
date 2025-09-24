@@ -88,8 +88,7 @@ export default function ContentShowcasePage() {
               <div
                 key={index}
                 className={`bg-white rounded-xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 ${
-                  item.featured ? 'ring-2 ring-purple-50o0' : '',
-                }`}
+                  item.featured ? 'ring-2 ring-purple-50o0' : ''}`}
               >,
                 {item.featured && (
                   <div className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-4 py-2 rounded-t-xl'>,
@@ -154,6 +153,5 @@ export default function ContentShowcasePage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

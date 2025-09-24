@@ -167,6 +167,5 @@ const ClientTestimonials = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default ClientTestimonials;

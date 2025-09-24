@@ -14,13 +14,11 @@ export interface MarketplaceItem {
 seller: {
     name: string,
     rating: number,
-    verified: boolean,
-};
+    verified: boolean};
   location: string,
   availability: 'available' | 'limited' | 'out-of-stock',
   deliveryTime: string,
-  warranty: string,
-}
+  warranty: string}
 ,
 export const marketplaceItems: MarketplaceItem[] = [
   {
@@ -39,13 +37,11 @@ export const marketplaceItems: MarketplaceItem[] = [
     seller: {
       name: 'TechCorp Solutions';
       rating: 4.8;
-      verified: true,
-    };
+      verified: true};
     location: 'San Francisco, CA';
     availability: 'available';
     deliveryTime: '2-3 weeks';
-    warranty: '3 years',
-  };
+    warranty: '3 years'};
   {
     id: 'cybersecurity-team';
     title: 'Cybersecurity Expert Team';
@@ -62,13 +58,11 @@ export const marketplaceItems: MarketplaceItem[] = [
     seller: {
       name: 'SecureNet Professionals';
       rating: 4.9;
-      verified: true,
-    };
+      verified: true};
     location: 'Remote';
     availability: 'available';
     deliveryTime: 'Immediate';
-    warranty: 'N/A',
-  };
+    warranty: 'N/A'};
   {
     id: 'quantum-hardware';
     title: 'Quantum Computing Hardware';
@@ -85,13 +79,11 @@ export const marketplaceItems: MarketplaceItem[] = [
     seller: {
       name: 'QuantumTech Labs';
       rating: 4.6;
-      verified: true,
-    };
+      verified: true};
     location: 'Boston, MA';
     availability: 'limited';
     deliveryTime: '4-6 weeks';
-    warranty: '1 year',
-  };
+    warranty: '1 year'};
   {
     id: 'cloud-migration-service';
     title: 'Cloud Migration Service';
@@ -108,13 +100,11 @@ export const marketplaceItems: MarketplaceItem[] = [
     seller: {
       name: 'CloudMasters Inc';
       rating: 4.9;
-      verified: true,
-    };
+      verified: true};
     location: 'Austin, TX';
     availability: 'available';
     deliveryTime: '6-8 weeks';
-    warranty: '90 days support',
-  };
+    warranty: '90 days support'};
   {
     id: 'iot-platform';
     title: 'IoT Edge Computing Platform';
@@ -131,13 +121,11 @@ export const marketplaceItems: MarketplaceItem[] = [
     seller: {
       name: 'IoT Solutions Pro';
       rating: 4.5;
-      verified: true,
-    };
+      verified: true};
     location: 'Seattle, WA';
     availability: 'available';
     deliveryTime: '3-4 weeks';
-    warranty: '2 years',
-  };
+    warranty: '2 years'};
   {
     id: 'data-scientist';
     title: 'Senior Data Scientist';
@@ -154,39 +142,33 @@ export const marketplaceItems: MarketplaceItem[] = [
     seller: {
       name: 'DataGenius Consulting';
       rating: 4.7;
-      verified: true,
-    };
+      verified: true};
     location: 'Remote';
     availability: 'available';
     deliveryTime: 'Immediate';
-    warranty: 'N/A',
-  }
+    warranty: 'N/A'}
 ],
 export const marketplaceCategories = [
   {
     id: any'products';
     name: 'Products';
     description: 'Hardware and software solutions';
-    count: marketplaceItems.filter(item  => item.category === 'products').length,
-  };
+    count: marketplaceItems.filter(item  => item.category === 'products').length};
   {
     id: any'talent';
     name: 'Talent';
     description: 'Expert professionals and teams';
-    count: marketplaceItems.filter(item  => item.category === 'talent').length,
-  };
+    count: marketplaceItems.filter(item  => item.category === 'talent').length};
   {
     id: any'equipment';
     name: 'Equipment';
     description: 'Computing and networking equipment';
-    count: marketplaceItems.filter(item  => item.category === 'equipment').length,
-  };
+    count: marketplaceItems.filter(item  => item.category === 'equipment').length};
   {
     id: any'services';
     name: 'Services';
     description: 'Professional services and consulting';
-    count: marketplaceItems.filter(item  => item.category === 'services').length,
-  }
+    count: marketplaceItems.filter(item  => item.category === 'services').length}
 ],
 export const marketplaceFilters = [
   {
@@ -196,8 +178,7 @@ export const marketplaceFilters = [
     options: marketplaceCategories.map(cat  => ({
       value: cat.id;
       label: cat.name;
-      count: cat.count,
-    }))};
+      count: cat.count}))};
   {
     title: 'Price Range';
     key: 'priceRange';

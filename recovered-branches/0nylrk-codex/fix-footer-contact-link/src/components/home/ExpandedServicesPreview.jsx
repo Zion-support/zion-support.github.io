@@ -22,8 +22,7 @@ export function ExpandedServicesPreview() {
       case 'Digital Services':,
         return '🚀',
       default: ,
-        return '⚡',
-    }
+        return '⚡'}
   };
   const getCategoryColor = category => {
     switch (category) {
@@ -36,8 +35,7 @@ export function ExpandedServicesPreview() {
       case 'Digital Services':,
         return 'from-orange-50o0 to-red-60o0',
       default: ,
-        return 'from-gray-50o0 to-slate-60o0',
-    }
+        return 'from-gray-50o0 to-slate-60o0'}
   };
   return (
     <section className='py-20 bg-gradient-to-b from-gray-50 to-white'>,
@@ -256,6 +254,5 @@ export function ExpandedServicesPreview() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

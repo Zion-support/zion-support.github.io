@@ -41,8 +41,7 @@ export interface UserProfile {
   permissions?: string[],
   companyId?: string,
   points?: number,
-  emailVerified?: boolean, // Added emailVerified,
-}
+  emailVerified?: boolean, // Added emailVerified}
 ,
 // Update AuthContextType definition to match implementation,
 export interface AuthContextType {
@@ -87,6 +86,5 @@ export interface AuthContextType {
   setUser?: React.Dispatch<React.SetStateAction<UserProfile | null>>, // Changed from UserDetails,
   tokens?: { accessToken: string, refreshToken?: string } | null,
   avatarUrl?: string | null,
-  setAvatarUrl?: (url: string | null) => void,
-}
+  setAvatarUrl?: (url: string | null) => void}
 ,

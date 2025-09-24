@@ -31,8 +31,7 @@ export interface SpecializedIndustrySolution {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -43,8 +42,7 @@ export interface SpecializedIndustrySolution {
   capabilities: string[],
   marketAdvantage: string,
   averageMarketPrice: string,
-  featuresCapabilities: string[],
-}
+  featuresCapabilities: string[]}
 ,
 =======}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f,
@@ -52,8 +50,7 @@ const contact = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   {
     id: 'healthcare-ai-diagnostic-platform';

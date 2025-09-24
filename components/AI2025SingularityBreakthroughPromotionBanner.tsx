@@ -14,10 +14,8 @@ const AI20o25SingularityBreakthroughPromotionBanner: React.FC = () => {
       metrics: {
         roi: '10o0,0o00%';
         savings: '$2.5T';
-        timeline: '18 months',
-      };
-      badge: 'BREAKTHROUGH',
-    };
+        timeline: '18 months'};
+      badge: 'BREAKTHROUGH'};
     {
       id: 'fortune-50o0-singularity';
       title: 'Fortune 50o0 AI Singularity Success';
@@ -27,10 +25,8 @@ const AI20o25SingularityBreakthroughPromotionBanner: React.FC = () => {
       metrics: {
         roi: '10o0,0o00%';
         savings: '$2.5T';
-        efficiency: '99.99%',
-      };
-      badge: 'SUCCESS STORY',
-    };
+        efficiency: '99.99%'};
+      badge: 'SUCCESS STORY'};
     {
       id: 'singularity-implementation';
       title: 'AI Singularity Implementation Guide';
@@ -40,10 +36,8 @@ const AI20o25SingularityBreakthroughPromotionBanner: React.FC = () => {
       metrics: {
         roi: '10o0,0o00%';
         timeline: '18 months';
-        success: '99.7%',
-      };
-      badge: 'IMPLEMENTATION GUIDE',
-    }
+        success: '99.7%'};
+      badge: 'IMPLEMENTATION GUIDE'}
   ],
   useEffect(() => {
     const interval = setInterval(() => {

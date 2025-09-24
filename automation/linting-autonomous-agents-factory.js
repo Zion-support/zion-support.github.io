@@ -7,7 +7,7 @@ if (!fs.existsSync(path.dirname(logFile))) {
 ,
 function log(message) {
   const line = `[${new Date().toISOString()}] ${message}\n`,
-  // console.log(message),
+  // // console.log(message),
   fs.appendFileSync(logFile, line)}
 ,
 log('🏭 Linting autonomous agents factory started (placeholder)'),

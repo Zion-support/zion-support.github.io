@@ -547,6 +547,5 @@ export default function TeamPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

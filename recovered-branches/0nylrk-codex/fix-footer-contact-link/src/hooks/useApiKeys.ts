@@ -16,8 +16,7 @@ export interface ApiKey {
   created_at: string,
   last_used_at: string | null,
   expires_at: string | null,
-  is_active: boolean,
-}
+  is_active: boolean}
 ,
 export interface ApiLog {
   id: string,
@@ -26,8 +25,7 @@ export interface ApiLog {
   status_code: number,
   created_at: string,
   ip_address?: string,
-  response_time_ms?: number,
-}
+  response_time_ms?: number}
 ,
 export function useApiKeys() {
   const { user } = useAuth(),

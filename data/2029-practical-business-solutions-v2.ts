@@ -30,15 +30,13 @@ export interface PracticalBusinessSolution2029 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
   // AI-Powered Business Intelligence,
   {
@@ -547,8 +545,7 @@ export const getPopularPracticalBusinessSolutions2029 = () => {
 export const getPracticalBusinessSolutions2029ByCategory = (
   category: string) => {
   return practicalBusinessSolutions2029.filter(
-    service => service.category === category),
-};
+    service => service.category === category)};
 export const getPracticalBusinessSolutions2029ByPriceRange = (
   minPrice: number;
   maxPrice: number) => {

@@ -10,13 +10,11 @@ interface EmptyStateProps {
   action?: {
     text: string,
     href?: string,
-    onClick?: () => void,
-  };
+    onClick?: () => void};
   secondaryAction?: {
     text: string,
     href?: string,
-    onClick?: () => void,
-  }
+    onClick?: () => void}
     text: string;
     href?: string;
     onClick?: () => void};

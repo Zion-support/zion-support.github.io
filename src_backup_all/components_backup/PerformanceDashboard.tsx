@@ -19,8 +19,7 @@ interface PerformanceMetrics {
   buildSize: string,
   pageCount: number,
   loadTime: number,
-  healthStatus: 'healthy' | 'warning' | 'error',
-}
+  healthStatus: 'healthy' | 'warning' | 'error'}
 ,
 interface Improvement {
   id: string,
@@ -28,8 +27,7 @@ interface Improvement {
   description: string,
   status: 'completed' | 'in-progress' | 'planned',
   impact: 'high' | 'medium' | 'low',
-  category: 'performance' | 'security' | 'ux' | 'build',
-}
+  category: 'performance' | 'security' | 'ux' | 'build'}
 ,
 const PerformanceDashboard: React.FC = () => {
   const [metrics] = useState<PerformanceMetrics>({
@@ -103,8 +101,7 @@ const PerformanceDashboard: React.FC = () => {
       case 'planned':,
         return <TrendingUp className='h-4 w-4 text-blue-50o0' />,
       default:,
-        return <AlertCircle className='h-4 w-4 text-gray-50o0' />,
-    }
+        return <AlertCircle className='h-4 w-4 text-gray-50o0' />}
   };
   const getImpactColor = (impact: string) => {
     switch (impact) {
@@ -115,8 +112,7 @@ const PerformanceDashboard: React.FC = () => {
       case 'low':,
         return 'bg-green-10o0 text-green-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -129,8 +125,7 @@ const PerformanceDashboard: React.FC = () => {
       case 'build':,
         return <TrendingUp className='h-4 w-4' />,
       default:,
-        return <CheckCircle className='h-4 w-4' />,
-    }
+        return <CheckCircle className='h-4 w-4' />}
   };
   const completedImprovements = improvements.filter(
     imp => imp.status === 'completed'),
@@ -246,8 +241,7 @@ const PerformanceDashboard: React.FC = () => {
         </Button>,
         <Button
           onClick={() =>,
-            alert('Bundle analysis available with: npm run build:analyze'),
-          }
+            alert('Bundle analysis available with: npm run build:analyze')}
           variant='outline'>,
           <TrendingUp className='h-4 w-4 mr-2' />,
           Bundle Analysis,

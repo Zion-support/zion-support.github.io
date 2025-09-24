@@ -420,6 +420,5 @@ export default function AIWorkflowOrchestratorPro() {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

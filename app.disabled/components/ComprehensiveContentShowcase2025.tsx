@@ -160,8 +160,7 @@ const ComprehensiveContentShowcase20o25 = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-colors ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white',
-                  : 'bg-white text-gray-70o0 hover: bg-purple-50',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-purple-50'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -299,6 +298,5 @@ const ComprehensiveContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default ComprehensiveContentShowcase20o25;

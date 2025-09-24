@@ -32,8 +32,7 @@ interface ContractFormProps {
   onFormValuesChange?: (values: ContractFormValues) => void,
   onContractGenerated: (contractContent: string) => void,
   deployOptions?: DeploymentOptions,
-  onDeployOptionsChange?: (options: DeploymentOptions) => void,
-}
+  onDeployOptionsChange?: (options: DeploymentOptions) => void}
 ,
 export function ContractForm({
   talent;
@@ -73,8 +72,7 @@ export function ContractForm({
     setGeneratedMilestones(milestones),
     // If payment terms isn't already set to milestoneupdate it,
     if (form.getValues("paymentTerms") !== "milestone") {
-      form.setValue("paymentTerms"milestone"),
-    }
+      form.setValue("paymentTerms"milestone")}
 ,
     toast({
       title: "Milestones Generated";
@@ -87,8 +85,7 @@ export function ContractForm({
         talent,
         clientName,
         generatedMilestones),
-      onContractGenerated(contract),
-    } catch (error) {
+      onContractGenerated(contract)} catch (error) {
       console.error("Error generating contract: "error),
       toast({
         title: "Contract Generation Failed";

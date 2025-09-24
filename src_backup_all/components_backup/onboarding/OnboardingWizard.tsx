@@ -23,16 +23,14 @@ interface WizardStep {
   icon: React.ReactNode,
   action: {
     text: string,
-    url: string,
-  };
+    url: string};
   skipText?: string}
 ,
 interface OnboardingWizardProps {
   type: 'client' | 'talent',
   onComplete: () => void,
   onSkip: () => void,
-  className?: string,
-}
+  className?: string}
 ,
 export function OnboardingWizard({
   type;

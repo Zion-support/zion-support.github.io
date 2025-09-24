@@ -117,6 +117,5 @@ export default function AgentRiskManagementFramework20o26Page() {
           </div>,
         </div>,
       </section>,
-    </main>),
-}
+    </main>)}
 ,

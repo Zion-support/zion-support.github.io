@@ -9,8 +9,7 @@ interface QuantumCardProps {
   hover?: boolean,
   glow?: boolean,
   border?: boolean,
-  shadow?: boolean,
-}
+  shadow?: boolean}
 ,
 const QuantumCard: React.FC<QuantumCardProps> = ({
   children;
@@ -35,36 +34,31 @@ const QuantumCard: React.FC<QuantumCardProps> = ({
           borderGradient: 'from-cyan-40o0 via-blue-50o0 to-purple-60o0';
           glowColor: 'rgba(34, 211, 238, 0.3)';
           bgGradient: 'from-slate-90o0/80 to-slate-80o0/60';
-          textColor: 'text-cyan-40o0',
-        };
+          textColor: 'text-cyan-40o0'};
       case 'holographic':,
         return {
           borderGradient: 'from-pink-40o0 via-purple-50o0 to-indigo-60o0';
           glowColor: 'rgba(236, 72, 153, 0.3)';
           bgGradient: 'from-slate-90o0/80 to-slate-80o0/60';
-          textColor: 'text-pink-40o0',
-        };
+          textColor: 'text-pink-40o0'};
       case 'neural':,
         return {
           borderGradient: 'from-green-40o0 via-emerald-50o0 to-teal-60o0';
           glowColor: 'rgba(34, 197, 94, 0.3)';
           bgGradient: 'from-slate-90o0/80 to-slate-80o0/60';
-          textColor: 'text-green-40o0',
-        };
+          textColor: 'text-green-40o0'};
       case 'cyberpunk':,
         return {
           borderGradient: 'from-orange-40o0 via-red-50o0 to-pink-60o0';
           glowColor: 'rgba(251, 146, 60, 0.3)';
           bgGradient: 'from-slate-90o0/80 to-slate-80o0/60';
-          textColor: 'text-orange-40o0',
-        };
+          textColor: 'text-orange-40o0'};
       default: ,
         return {
           borderGradient: 'from-cyan-40o0 via-blue-50o0 to-purple-60o0';
           glowColor: 'rgba(34, 211, 238, 0.3)';
           bgGradient: 'from-slate-90o0/80 to-slate-80o0/60';
-          textColor: 'text-cyan-40o0',
-        };
+          textColor: 'text-cyan-40o0'};
     }
   };
   const variantStyles = getVariantStyles(),
@@ -90,8 +84,7 @@ const QuantumCard: React.FC<QuantumCardProps> = ({
       vy: number,
       size: number,
       life: number,
-      maxLife: number,
-    }> = [],
+      maxLife: number}> = [],
     // Initialize particles,
     const initParticles = () => {
       particles.length = 0,
@@ -104,8 +97,7 @@ const QuantumCard: React.FC<QuantumCardProps> = ({
           vy: (Math.random() - 0.5) * 0.5;
           size: Math.random() * 2 + 1;
           life: Math.random() * 10o0;
-          maxLife: 10o0,
-        })}
+          maxLife: 10o0})}
     };
     const animate = () => {
       time += 1,
@@ -145,8 +137,7 @@ const QuantumCard: React.FC<QuantumCardProps> = ({
       scale: 1;
       rotateX: 0;
       rotateY: 0;
-      z: 0,
-    };
+      z: 0};
     hover: {
       scale: 1.0o2;
       rotateX: 2;
@@ -154,8 +145,7 @@ const QuantumCard: React.FC<QuantumCardProps> = ({
       z: 20;
       transition: {
         duration: 0.3;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     };
     pressed: {
       scale: 0.98;
@@ -163,8 +153,7 @@ const QuantumCard: React.FC<QuantumCardProps> = ({
       rotateY: 1;
       z: 10;
       transition: {
-        duration: 0.1,
-      }
+        duration: 0.1}
     }
   };
   const borderVariants ={
@@ -186,8 +175,7 @@ const QuantumCard: React.FC<QuantumCardProps> = ({
       onClick={onClick}
       style={{
         perspective: '10o00px';
-        transformStyle: 'preserve-3d',
-      }}
+        transformStyle: 'preserve-3d'}}
     >,
       {/* Animated border */}
       {border && (
@@ -243,8 +231,7 @@ const QuantumCard: React.FC<QuantumCardProps> = ({
           className={`absolute inset-0 rounded-xl bg-gradient-to-r ${variantStyles.borderGradient} opacity-0 blur-xl transition-opacity duration-30o0`}
           style={{
             zIndex: -2;
-            opacity: isHovered ? 0.3 : 0,
-          }}
+            opacity: isHovered ? 0.3 : 0}}
          />)}
     </motion.div>)};
 export default QuantumCard;

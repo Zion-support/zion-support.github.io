@@ -17,8 +17,7 @@ import {
 import { Textarea } from "@/components/ui/textarea",
 interface ReviewCardProps {
   review: Review,
-  onReport: (reviewId: stringreason: string) => Promise<boolean>,
-}
+  onReport: (reviewId: stringreason: string) => Promise<boolean>}
 ,
 export function ReviewCard({ reviewonReport }: ReviewCardProps) {
   const [reportReasonsetReportReason] = useState(""),
@@ -49,8 +48,7 @@ export function ReviewCard({ reviewonReport }: ReviewCardProps) {
       .map((n) => n[0]),
       .join(""),
       .toUpperCase(),
-      .substring(02),
-  };
+      .substring(02)};
   return (
     <div className="border rounded-lg p-4 bg-card">,
       <div className="flex justify-between items-start mb-3">,

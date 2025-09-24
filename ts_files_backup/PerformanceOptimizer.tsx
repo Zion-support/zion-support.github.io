@@ -40,16 +40,14 @@ interface PerformanceMetrics {
   Cpu;
   Database;
   Network;
-} from 'lucide-react',
-} from 'lucide-react',
+} from 'lucide-react'} from 'lucide-react',
 interface PerformanceMetrics {
   load_time: number,
   firstContentfulPaint: number,
   largestContentfulPaint: number,
   cumulativeLayoutShift: number,
   firstInputDelay: number,
-  timeToInteractive: number,
-}, []),
+  timeToInteractive: number}, []),
 import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react',
 interface PerformanceMetrics {
   loadTime: number,
@@ -60,8 +58,7 @@ interface PerformanceMetrics {
   timeToInteractive: number,
 //Add responsive sizes if not present // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
   optimized_count++,
 const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
   class_name = '';
@@ -72,8 +69,7 @@ interface PerformanceMetrics {
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
-  timeToInteractive: number,
-}
+  timeToInteractive: number}
 interface PerformanceOptimizerProps {
   class_name?: string}
 ,
@@ -91,8 +87,7 @@ interface PerformanceMetrics {
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
-  timeToInteractive: number,
-}
+  timeToInteractive: number}
 interface PerformanceOptimizerProps {
   className?: string}
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {
@@ -107,18 +102,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
     largestContentfulPaint: 0;
     cumulativeLayoutShift: 0;
     firstInputDelay: 0;
-      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
-      const paintEntries = window.performance.getEntriesByType('paint'),
+      const navigation = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+      const paintEntries = window.window.performance.getEntriesByType('paint'),
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint'),
-      const lcp = window.performance.getEntriesByType('largest-contentful-paint')[0],
+      const lcp = window.window.performance.getEntriesByType('largest-contentful-paint')[0],
       const newMetrics: PerformanceMetrics = {
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
         firstContentfulPaint: fcp ? fcp.startTime : 0,
         largestContentfulPaint: lcp ? lcp.startTime : 0,
         cumulativeLayoutShift: 0, // Would need to be measured with CLS API,
         firstInputDelay: 0, // Would need to be measured with FID API,
-        timeToInteractive: navigation.domContentLoadedEventEnd - navigation.navigationStart,
-      };
+        timeToInteractive: navigation.domContentLoadedEventEnd - navigation.navigationStart};
       setMetrics(newMetrics)}
 }, []),
   // Optimize images,
@@ -135,14 +129,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
   // Measure performance metrics,
   const measurePerformance = useCallback(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const navigation = performance && window.performance.getEntriesByType(
+      const navigation = performance && window.window.performance.getEntriesByType(
         'navigation')[0] as PerformanceNavigationTiming,
-      const paintEntries = performance && window.performance.getEntriesByType('paint'),      const paintEntries = performance && window.performance.getEntriesByType('paint'),
+      const paintEntries = performance && window.window.performance.getEntriesByType('paint'),      const paintEntries = performance && window.window.performance.getEntriesByType('paint'),
       const fcp = paintEntries && paintEntries.find(entry => entry && entry.name === 'first-contentful-paint'),
-      const lcp = performance && window.performance.getEntriesByType('largest-contentful-paint')[0],
+      const lcp = performance && window.window.performance.getEntriesByType('largest-contentful-paint')[0],
       const fcp = paintEntries && paintEntries.find(
         entry => entry && entry.name === 'first-contentful-paint'),
-      const lcp = performance && window.performance.getEntriesByType('largest-contentful-paint')[0],
+      const lcp = performance && window.window.performance.getEntriesByType('largest-contentful-paint')[0],
       const newMetrics: PerformanceMetrics = {
         loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart;
         firstContentfulPaint: fcp ? fcp && fcp.startTime : 0;
@@ -152,10 +146,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
         timeToInteractive:,
           navigation && navigation.domContentLoadedEventEnd - navigation && navigation.navigationStart;
       };
-      setMetrics(newMetrics)}        timeToInteractive: navigation && navigation.domContentLoadedEventEnd - navigation && navigation.navigationStart,
-      };
-      setMetrics(newMetrics),
-}
+      setMetrics(newMetrics)}        timeToInteractive: navigation && navigation.domContentLoadedEventEnd - navigation && navigation.navigationStart};
+      setMetrics(newMetrics)}
           optimized_count++}
       }
       setOptimizationStatus (`Optimized ${optimized_count} images`),
@@ -175,14 +167,12 @@ if ( {) {
       console.error ('Image optimization error:', error)} finally {
       setIsOptimizing (false)}      // Simulate optimization delay,
       await new Promise (resolve => set_timeout (resolve, 1000)),
-      setOptimizationStatus ('Image optimization complete'),
-} catch (error) {
+      setOptimizationStatus ('Image optimization complete')} catch (error) {
       setOptimizationStatus ('Image optimization failed'),
       console.error ('Image optimization error:', error)} finally {
       setIsOptimizing (false)}
   }, []),
-          optimizedCount++,
-}
+          optimizedCount++}
       }
       setOptimizationStatus(`Optimized ${optimizedCount} images`),
       await new Promise(resolve => setTimeout(resolve, 1000)),
@@ -192,7 +182,6 @@ if ( {) {
       setIsOptimizing(false)}      // Simulate optimization delay,
       await new Promise(resolve => setTimeout(resolve, 1000)),
       setOptimizationStatus('Image optimization complete')} catch (error) {
-,
       setOptimizationStatus('Image optimization failed'),
       console && console.error('Image optimization error:', error)} finally {
       setIsOptimizing(false)}
@@ -206,26 +195,21 @@ if ( {) {
       const style = document && document.createElement('style');
       style && style.textContent = `,
         @font-face {
-,
           font-family: 'Inter',
-          font-display: swap,
-        }
+          font-display: swap}
         @font-face {
-          font-family: 'JetBrains Mono',        }
+          font-family: 'JetBrains Mono'}
 ,
         @font-face {
           font-family: 'JetBrains Mono';
-          font-display: swap,
-        }
+          font-display: swap}
         @font-face {
           font-family: 'Orbitron',
           font-display: swap,
           font-family: 'Inter';
-          font-display: swap,
-        }
+          font-display: swap}
         @font-face {
           font-family: 'Orbitron',
-,
   // Optimize fonts,
   const optimize_fonts = useCallback (async () => {
     setIsOptimizing (true),
@@ -236,33 +220,27 @@ if ( {) {
       style.text_content = `,
         @font - face {
           font - family: 'Inter',
-          font - display: swap,
-        }
+          font - display: swap}
         @font - face {
-          font - family: 'JetBrains Mono',        }
+          font - family: 'JetBrains Mono'}
         @font - face {
           font - family: 'JetBrains Mono';
-          font - display: swap,
-        }
+          font - display: swap}
         @font - face {
           font - family: 'Orbitron',
-          font - display: swap,
-        }
+          font - display: swap}
         @font - face {
           font - family: 'Orbitron',
-          font - display: swap,        }          font - family: 'Orbitron';
-          font - display: swap,
-        }
+          font - display: swap}          font - family: 'Orbitron';
+          font - display: swap}
 ,
         @font-face {
           font-family: 'Orbitron';
-          font-display: swap,
-        }
+          font-display: swap}
 ,
       `,
-          font-display: swap,        }          font-family: 'Orbitron';
-          font-display: swap,
-        }
+          font-display: swap}          font-family: 'Orbitron';
+          font-display: swap}
       `,
       document && document.head.appendChild(style),
       setOptimizationStatus('Font optimization complete'),
@@ -284,8 +262,7 @@ if ( {) {
       setOptimizationStatus ('Font optimization failed'),
       console.error ('Font optimization error:', error)} finally {
       setIsOptimizing (false)}      // Simulate optimization delay,
-      await new Promise (resolve => set_timeout (resolve, 800)),
-} catch (error) {
+      await new Promise (resolve => set_timeout (resolve, 800))} catch (error) {
       setOptimizationStatus ('Font optimization failed'),
       console.error ('Font optimization error:', error)} finally {
   // Optimize CSS and JavaScript,
@@ -300,15 +277,13 @@ if ( {) {
           href: '/fonts/inter-var.woff2',
           as: 'font',
           type: 'font/woff2',
-          crossorigin: 'anonymous',
-        }
+          crossorigin: 'anonymous'}
         {
           rel: 'preload',
           href: '/fonts/jetbrains-mono-var.woff2',
           as: 'font',
           type: 'font/woff2',
-          crossorigin: 'anonymous',
-        }],        { rel: 'preload', href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
+          crossorigin: 'anonymous'}],        { rel: 'preload', href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
         { rel: 'preload', href: '/fonts/jetbrains-mono-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
 ],
       preloadLinks.forEach(linkAttrs => {
@@ -350,17 +325,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 preloadImages = [], preloadFonts = [
     'https: //fonts && fonts.googleapis.com/css2?family=Inter:wght@300,400,500,600,700,800,900&display=swap], criticalCSS'}) => {
   useEffect(() => {
-,
     // Performance monitoring,
     if (typeof window !== 'undefined' && 'performance' in window) {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver((list) => {
         for (const entry of list && list.getEntries()) {
-if (entry && entry.entryType === 'largest-contentful-paint') {'            console && // console.log('LCP: ', entry && entry.startTime),
-'          }'          if (entry && entry.entryType === 'first-input') {'            console && // console.log('FID: ', entry && entry.processingStart - entry && entry.startTime),'          }'          if (entry && entry.entryType === 'layout-shift') {'            if (!(entry as any).hadRecentInput) {'              console && // console.log('CLS: ', (entry as any).value),'            }'          }}
+if (entry && entry.entryType === 'largest-contentful-paint') {'            console && // // console.log('LCP: ', entry && entry.startTime),
+'          }'          if (entry && entry.entryType === 'first-input') {'            console && // // console.log('FID: ', entry && entry.processingStart - entry && entry.startTime),'          }'          if (entry && entry.entryType === 'layout-shift') {'            if (!(entry as any).hadRecentInput) {'              console && // // console.log('CLS: ', (entry as any).value),'            }'          }}
       }),
       try {
         observer && observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] }),
 '      } catch (e) {'        // Fallback for browsers that don&apos,t support all entry types,
-        console && // console.log('Performance monitoring not fully supported'),
+        console && // // console.log('Performance monitoring not fully supported'),
 '      }',
       // Resource hints for better performance,
 const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
@@ -389,8 +363,7 @@ if ( {'            console.log ('LCP: ', entry.start_time)) {
           // Check condition,
 if ( {) {
   $2}
-            link.set_attribute (key, value as string),
-} else {
+            link.set_attribute (key, value as string)} else {
       const addResourceHint = (href: string, as: string, type?: string) => {
         const link = document && document.createElement('link'),
         Object && Object.entries(linkAttrs).forEach(([key, value]) => {
@@ -408,7 +381,6 @@ if ( {) {
     setIsOptimizing(true),
     setOptimizationStatus('Starting comprehensive optimization...'),
     try {
-,
       await optimizeImages(),
       await optimizeFonts(),
       await optimizeCode(),
@@ -522,8 +494,7 @@ if ( {) {
             // Check condition,
 if ( { // LCP should be under 2.5s) {
   $2}
-              console.warn ('LCP is too slow:', lcp),
-}
+              console.warn ('LCP is too slow:', lcp)}
           }
         }
       }),
@@ -558,18 +529,15 @@ if ( { // LCP should be under 2.5s) {
     if (metrics && metrics.loadTime > 3000) score -= 15,
     if (metrics && metrics.timeToInteractive > 3500) score -= 20,
     return Math && Math.max(0, score)};
-    return Math && Math.max(0, score),
-};
+    return Math && Math.max(0, score)};
   const getPerformanceGrade = (score: number): string => {
-,
     return Math.max(0, score)}
     return Math.max(0, score)}
   const getPerformanceGrade = (score: number): string => {
     if (score >= 90) return 'A',
     if (score >= 80) return 'B',
     if (score >= 70) return 'C',
-    if (score >= 60) return 'D',
-  };
+    if (score >= 60) return 'D'};
   const performanceScore = getPerformanceScore(),
   const performanceGrade = getPerformanceGrade(performanceScore)>,
       <div className='flex items-center justify-between mb-6'>,
@@ -801,12 +769,11 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
 ,
       <script
         dangerouslySetInnerHTML={{
-          __html:             if ('serviceWorker' in navigator) {'              window && window.addEventListener('load', function() {'                navigator && navigator.serviceWorker.register('/sw && sw.js')'                  .then(function(registration) {'                    console && // console.log('SW registered: ', registration),
+          __html:             if ('serviceWorker' in navigator) {'              window && window.addEventListener('load', function() {'                navigator && navigator.serviceWorker.register('/sw && sw.js')'                  .then(function(registration) {'                    console && // // console.log('SW registered: ', registration),
 '                  })'                  .catch(function(registrationError) {
-                    console && // console.log('SW registration failed: ', registrationError)'                  })'              })}
+                    console && // // console.log('SW registration failed: ', registrationError)'                  })'              })}
           ``        }}/>,
-    </Head>),
-};
+    </Head>)};
       {/* Performance Tips */}
       <div className="mt-6 pt-4 border-t border-white/10">,
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>,
@@ -853,8 +820,7 @@ if (score -= 20) {
   const getPerformanceGrade = (score: number): string => {
     // Check condition,
 if (return 'A') {
-  $2,
-}
+  $2}
     // Check condition,
 if (return 'B') {
   $2}
@@ -977,8 +943,7 @@ if (return 'D') {
           className={`w - full px - 4 py - 3 rounded - lg font - semibold text - white transition - all duration - 300 ${
             is_optimizing,
               ? 'bg - gray - 600 cursor - not - allowed',
-              : 'bg - gradient - to - r from - cyan - 600 to - blue - 600 hover: from - cyan - 700 hover:to - blue - 700 hover:scale - 105',
-          } flex items - center justify - center gap - 2`}
+              : 'bg - gradient - to - r from - cyan - 600 to - blue - 600 hover: from - cyan - 700 hover:to - blue - 700 hover:scale - 105'} flex items - center justify - center gap - 2`}
         >,
           {is_optimizing ? (
             <>,
@@ -1050,37 +1015,33 @@ interface PerformanceMetrics {
   memory?: {
     used: number,
     total: number,
-    limit: number,
-  }
+    limit: number}
 }
 ,
 interface PerformanceOptimizerProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void,
-  enable_reporting?: boolean,
-}
+  enable_reporting?: boolean}
 ,
 interface PerformanceOptimizerProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void,
-  enableReporting?: boolean,
-}
+  enableReporting?: boolean}
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   onMetricsUpdate;
   enableReporting = false}) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
   const measureWebVitals = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return,
-    const navigation = performance && window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
-    const paint = performance && window.performance.getEntriesByType('paint'),
+    const navigation = performance && window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+    const paint = performance && window.window.performance.getEntriesByType('paint'),
     // Core Web Vitals,
     const fcp = paint && paint.find(entry => entry && entry.name === 'first-contentful-paint')?.startTime || 0,
-    const lcp = performance && window.performance.getEntriesByType('largest-contentful-paint')[0]?.startTime || 0,
+    const lcp = performance && window.window.performance.getEntriesByType('largest-contentful-paint')[0]?.startTime || 0,
     const ttfb = navigation && navigation.responseStart - navigation && navigation.requestStart,
     // Memory usage (if available),
     const memory = (performance as any).memory ? {
       used: (performance as any).memory && memory.usedJSHeapSize;
       total: (performance as any).memory && memory.totalJSHeapSize;
-      limit: (performance as any).memory && memory.jsHeapSizeLimit,
-    } : undefined,
+      limit: (performance as any).memory && memory.jsHeapSizeLimit} : undefined,
     const newMetrics: PerformanceMetrics = {
       fcp;
       lcp;
@@ -1092,11 +1053,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if (onMetricsUpdate) {
       onMetricsUpdate(newMetrics)}
     if (enableReporting && process && process.env.NODE_ENV === 'development') {
-      console && // console.log('Performance Metrics:', newMetrics)}
+      console && // // console.log('Performance Metrics:', newMetrics)}
   }, [onMetricsUpdate, enableReporting]),
   useEffect(() => {
     if (document && document.readyState === 'complete') {
-,
       measureWebVitals()} else {
       window && window.addEventListener('load', measureWebVitals)}
 ,
@@ -1105,7 +1065,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [measureWebVitals]),
   // Monitor for performance issues,
   useEffect(() => {
-,
     if (!metrics) return,
     const warnings: string[] = [],
     if (metrics && metrics.fcp > 1800) warnings && warnings.push('First Contentful Paint is slow (>1 && 1.8s)'),
@@ -1113,14 +1072,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if (metrics && metrics.ttfb > 600) warnings && warnings.push('Time to First Byte is slow (>600ms)'),
     if (metrics && metrics.memory) {
       const memoryUsage = (metrics && metrics.memory.used / metrics && metrics.memory.limit) * 100,
-      if (memoryUsage > 80) warnings && warnings.push('High memory usage detected'),
-    }
+      if (memoryUsage > 80) warnings && warnings.push('High memory usage detected')}
     if (warnings && warnings.length > 0 && enableReporting) {
-      console && console.warn('Performance Issues Detected:', warnings),
-}
+      console && console.warn('Performance Issues Detected:', warnings)}
   }, [metrics, enableReporting]),
-  return null,
-}
+  return null}
 ,
 export default PerformanceOptimizer;
 };export default PerformanceOptimizer;

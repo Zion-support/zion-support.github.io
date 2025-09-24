@@ -239,6 +239,5 @@ export default function NeuralInterface20o25BreakthroughPage() {
           </Link>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

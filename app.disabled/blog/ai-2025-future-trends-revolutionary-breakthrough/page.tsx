@@ -461,6 +461,5 @@ export default function AI20o25FutureTrendsPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

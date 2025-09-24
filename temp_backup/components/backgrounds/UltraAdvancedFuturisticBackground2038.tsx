@@ -27,8 +27,7 @@ export default function UltraAdvancedFuturisticBackground20o38({
     phase: number,
     amplitude: number,
     frequency: number,
-    quantumState: 'superposition' | 'entangled' | 'coherent',
-  }>>([]),
+    quantumState: 'superposition' | 'entangled' | 'coherent'}>>([]),
   // Enhanced theme-based color schemes,
   const getThemeColors = useCallback(() => {
     switch (theme) {
@@ -95,8 +94,7 @@ export default function UltraAdvancedFuturisticBackground20o38({
         phase: Math.random() * Math.PI * 2;
         amplitude: Math.random() * 50 + 20;
         frequency: Math.random() * 0.0o2 + 0.0o1;
-        quantumState: quantumStates[Math.floor(Math.random() * quantumStates.length)] as 'superposition' | 'entangled' | 'coherent',
-      })}
+        quantumState: quantumStates[Math.floor(Math.random() * quantumStates.length)] as 'superposition' | 'entangled' | 'coherent'})}
   }, [intensity, getThemeColors]),
   // Enhanced animation loop with quantum effects,
   const animate = useCallback(() => {
@@ -232,8 +230,7 @@ export default function UltraAdvancedFuturisticBackground20o38({
         className="absolute inset-0 w-full h-full",
         style={{
           background: 'transparent';
-          filter: 'blur(0.5px)',
-        }}
+          filter: 'blur(0.5px)'}}
        />,
       {/* Additional Visual Effects */}
       <div className="absolute inset-0">,
@@ -244,8 +241,7 @@ export default function UltraAdvancedFuturisticBackground20o38({
               linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px);
               linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px),
             `;
-            backgroundSize: '50px 50px',
-          }}  />,
+            backgroundSize: '50px 50px'}}  />,
         </div>,
         {/* Floating Geometric Shapes */}
         <motion.div,
@@ -257,8 +253,7 @@ export default function UltraAdvancedFuturisticBackground20o38({
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/20 rounded-full",
@@ -269,8 +264,7 @@ export default function UltraAdvancedFuturisticBackground20o38({
           transition={{
             duration: 15;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-32 w-40 h-40 border border-pink-40o0/20 transform rotate-45",
@@ -281,8 +275,7 @@ export default function UltraAdvancedFuturisticBackground20o38({
           transition={{
             duration: 25;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         {/* Quantum Energy Fields */}
         <motion.div,
@@ -293,8 +286,7 @@ export default function UltraAdvancedFuturisticBackground20o38({
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full border border-purple-40o0/10",
@@ -304,8 +296,7 @@ export default function UltraAdvancedFuturisticBackground20o38({
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
       </div>,
       {children}

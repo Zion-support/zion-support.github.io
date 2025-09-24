@@ -539,6 +539,5 @@ export default function AutomatedFinancialAnalyticsPlatform() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

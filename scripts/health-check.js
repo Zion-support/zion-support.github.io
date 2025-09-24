@@ -20,7 +20,7 @@ class HealthChecker {
   }
 ,
   async runAllChecks() {
-    // console.log('🔍 Running health checks...\n'),
+    // // console.log('🔍 Running health checks...\n'),
     await this.checkBuildHealth(),
     await this.checkDependencies(),
     await this.checkFileStructure(),
@@ -30,7 +30,7 @@ class HealthChecker {
     return this.results}
 ,
   async checkBuildHealth() {
-    // console.log('📦 Checking build health...'),
+    // // console.log('📦 Checking build health...'),
     try {
       // Check if .next directory exists and is not empty,
       const nextDir = path.join(process.cwd(), '.next'),
@@ -58,7 +58,7 @@ class HealthChecker {
   }
 ,
   async checkDependencies() {
-    // console.log('📚 Checking dependencies...'),
+    // // console.log('📚 Checking dependencies...'),
     try {
       const packageJsonPath = path.join(process.cwd(), 'package.json'),
       if (fs.existsSync(packageJsonPath)) {
@@ -71,8 +71,7 @@ class HealthChecker {
           details: {
             dependencies: depCount;
             devDependencies: devDepCount;
-            total: depCount + devDepCount,
-          }
+            total: depCount + devDepCount}
         };
       }
     } catch (error) {
@@ -85,7 +84,7 @@ class HealthChecker {
   }
 ,
   async checkFileStructure() {
-    // console.log('📁 Checking file structure...'),
+    // // console.log('📁 Checking file structure...'),
     const requiredFiles = [
       'package.json';
       'next.config.js';
@@ -113,7 +112,7 @@ class HealthChecker {
   }
 ,
   async checkPerformance() {
-    // console.log('⚡ Checking window.performance...'),
+    // // console.log('⚡ Checking window.window.performance...'),
     try {
       // Check bundle size if build exists,
       const buildDir = path.join(process.cwd(), '.next'),
@@ -150,7 +149,7 @@ class HealthChecker {
   }
 ,
   async checkSecurity() {
-    // console.log('🔒 Checking security...'),
+    // // console.log('🔒 Checking security...'),
     try {
       // Check for common security issues,
       const packageJsonPath = path.join(process.cwd(), 'package.json'),
@@ -212,20 +211,20 @@ class HealthChecker {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}
 ,
   generateReport() {
-    // console.log('\n📊 Health Check Report'),
-    // console.log('===================='),
-    // console.log(`Status: ${this.results.status.toUpperCase()}`),
-    // console.log(`Timestamp: ${this.results.timestamp}\n`),
+    // // console.log('\n📊 Health Check Report'),
+    // // console.log('===================='),
+    // // console.log(`Status: ${this.results.status.toUpperCase()}`),
+    // // console.log(`Timestamp: ${this.results.timestamp}\n`),
     for (const [checkName, result] of Object.entries(this.results.checks)) {
       const status = result.status === 'pass' ? '✅' :,
                     result.status === 'fail' ? '❌' :,
                     result.status === 'warning' ? '⚠️' : '⏭️',
-      // console.log(`${status} ${checkName}: ${result.message}`)}
+      // // console.log(`${status} ${checkName}: ${result.message}`)}
 ,
     // Save report to file,
     const reportPath = path.join(process.cwd(), 'health-report.json'),
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2)),
-    // console.log(`\n📄 Report saved to: ${reportPath}`)}
+    // // console.log(`\n📄 Report saved to: ${reportPath}`)}
 }
 ,
 // Run health check if called directly,

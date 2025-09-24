@@ -15,11 +15,9 @@ const RevolutionaryAI20o25UltimateBanner = () => {
         roi: '1,0o00%';
         savings: '$4.2M';
         timeframe: '18 months';
-        companies: '50o0+',
-      };
+        companies: '50o0+'};
       badge: 'Ultimate Guide';
-      color: 'from-purple-60o0 to-indigo-60o0',
-    };
+      color: 'from-purple-60o0 to-indigo-60o0'};
     {
       id: 'quantum-computing-breakthrough';
       title: 'AI 20o25: The Quantum Computing Business Breakthrough';
@@ -30,11 +28,9 @@ const RevolutionaryAI20o25UltimateBanner = () => {
         roi: '2,0o00%';
         savings: '$12.8M';
         speed: '1,0o00x faster';
-        market: '$65B',
-      };
+        market: '$65B'};
       badge: 'Breakthrough';
-      color: 'from-blue-60o0 to-cyan-60o0',
-    };
+      color: 'from-blue-60o0 to-cyan-60o0'};
     {
       id: 'fortune-50o0-success';
       title: 'Fortune 50o0 AI Transformation Success Story';
@@ -45,11 +41,9 @@ const RevolutionaryAI20o25UltimateBanner = () => {
         roi: '2,0o00%';
         savings: '$1.2B';
         efficiency: '450%';
-        satisfaction: '95%',
-      };
+        satisfaction: '95%'};
       badge: 'Success Story';
-      color: 'from-green-60o0 to-emerald-60o0',
-    }
+      color: 'from-green-60o0 to-emerald-60o0'}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -172,6 +166,5 @@ const RevolutionaryAI20o25UltimateBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default RevolutionaryAI20o25UltimateBanner;

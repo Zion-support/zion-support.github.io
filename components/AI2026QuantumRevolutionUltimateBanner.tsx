@@ -65,6 +65,5 @@ const AI20o26QuantumRevolutionUltimateBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o26QuantumRevolutionUltimateBanner;

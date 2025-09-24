@@ -152,8 +152,7 @@ const RevolutionaryAIContentShowcase20o25: React.FC = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -164,8 +163,7 @@ const RevolutionaryAIContentShowcase20o25: React.FC = () => {
       case 'resource':,
         return 'bg-purple-50o0',
       default:,
-        return 'bg-gray-50o0',
-    }
+        return 'bg-gray-50o0'}
   };
   return (
     <section className='py-16 bg-gradient-to-b from-gray-50 to-white'>,
@@ -249,8 +247,7 @@ const RevolutionaryAIContentShowcase20o25: React.FC = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                 activeFilter === filter.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 border border-gray-30o0 hover: border-purple-30o0 hover:text-purple-60o0',
-              }`}
+                  : 'bg-white text-gray-70o0 border border-gray-30o0 hover: border-purple-30o0 hover:text-purple-60o0'}`}
             >,
               {filter.label} ({filter.count}),
             </button>))}
@@ -350,6 +347,5 @@ const RevolutionaryAIContentShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryAIContentShowcase20o25;

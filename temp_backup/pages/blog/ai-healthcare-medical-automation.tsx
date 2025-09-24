@@ -453,6 +453,5 @@ export default function AIHealthcareMedicalAutomation() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

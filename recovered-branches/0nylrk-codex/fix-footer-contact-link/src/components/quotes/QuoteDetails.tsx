@@ -15,8 +15,7 @@ import { format } from "date-fns",
 interface QuoteDetailsProps {
   quote: QuoteRequest | null,
   isOpen: boolean,
-  onClose: () => void,
-}
+  onClose: () => void}
 ,
 export const QuoteDetails = ({ quoteisOpenonClose }: QuoteDetailsProps) => {
   if (!quote) return null,

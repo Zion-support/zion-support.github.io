@@ -34,24 +34,21 @@ const AITrends20o26PredictionsPromotionBanner = () => {
       timeline: 'Q3 20o26';
       impact: 'Revolutionary';
       icon: Brain;
-      color: 'from-purple-50o0 to-blue-50o0',
-    };
+      color: 'from-purple-50o0 to-blue-50o0'};
     {
       title: 'Quantum Supremacy 2.0';
       probability: 95;
       timeline: 'Q1 20o26';
       impact: 'Revolutionary';
       icon: Zap;
-      color: 'from-cyan-50o0 to-teal-50o0',
-    };
+      color: 'from-cyan-50o0 to-teal-50o0'};
     {
       title: 'Neural Interfaces';
       probability: 90;
       timeline: 'Q2 20o26';
       impact: 'Transformative';
       icon: Rocket;
-      color: 'from-pink-50o0 to-rose-50o0',
-    }
+      color: 'from-pink-50o0 to-rose-50o0'}
   ],
   const stats = [
     { label: ''Predictions', 'value: '50+'icon: Target };
@@ -187,8 +184,7 @@ const AITrends20o26PredictionsPromotionBanner = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6delay: 0.6 + index * 0.1 }}
                       className={`p-4 rounded-xl bg-gradient-to-r ${prediction.color} bg-opacity-20 backdrop-blur-lg border border-white/20 hover: border-white/40 transition-all duration-30o0 ${
-                        currentPrediction === index ? 'ring-2 ring-indigo-40o0 ring-opacity-50' : '',
-                      }`}
+                        currentPrediction === index ? 'ring-2 ring-indigo-40o0 ring-opacity-50' : ''}`}
                     >,
                       <div className="flex items-center justify-between mb-3">,
                         <div className="flex items-center">,

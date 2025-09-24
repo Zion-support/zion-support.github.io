@@ -15,5 +15,4 @@ export default function [projectId]Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

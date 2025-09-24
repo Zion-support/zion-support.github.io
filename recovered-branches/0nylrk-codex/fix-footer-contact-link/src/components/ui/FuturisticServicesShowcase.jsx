@@ -177,8 +177,7 @@ export default function FuturisticServicesShowcase() {
               className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-30o0 ${
                 selectedCategory === category.id,
                   ? 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white shadow-lg shadow-cyan-50o0/25',
-                  : 'bg-white/5 border border-cyan-50o0/20 text-gray-30o0 hover: bg-cyan-50o0/10 hover:border-cyan-50o0/40',
-              }`}
+                  : 'bg-white/5 border border-cyan-50o0/20 text-gray-30o0 hover: bg-cyan-50o0/10 hover:border-cyan-50o0/40'}`}
             >,
               {category.icon}
               <span>{category.name}</span>,
@@ -289,6 +288,5 @@ export default function FuturisticServicesShowcase() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

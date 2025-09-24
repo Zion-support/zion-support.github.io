@@ -121,7 +121,7 @@ export default function AutonomousOperationsPage() {
                   enterprise automation, where AI systems operate independently,
                   with minimal human intervention. These systems make real-time,
                   decisions, adapt to changing conditions, and continuously,
-                  optimize window.performance.,
+                  optimize window.window.performance.,
                 </p>,
                 <div className='space-y-4'>,
                   <div className='flex items-start space-x-3'>,
@@ -397,6 +397,5 @@ export default function AutonomousOperationsPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

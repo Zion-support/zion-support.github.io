@@ -25,8 +25,7 @@ function getUserId(req: any): string | null {
   return (
     (req.headers['x-user-id'] as string) ||,
     (req.query as any)['user_id'] ||,
-    null),
-}
+    null)}
 ,
 app.post('/ai/ask', async (req: any, reply: any) => {
   const body = (req.body as any) || {};
@@ -93,5 +92,4 @@ app.get('/notifications', async (req: any, reply: any) => {
 const port = Number(process.env.API_PORT || 4000),
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
   app.log.error(err),
-  (process as any).exit(1),
-}),
+  (process as any).exit(1)}),

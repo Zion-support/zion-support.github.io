@@ -6,8 +6,7 @@ interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
   description?: string,
-  className?: string,
-}
+  className?: string}
 ,
 export function Step({
   status;
@@ -56,8 +55,7 @@ export function Step({
 interface StepsProps {
   currentStep: number,
   className?: string,
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 export function Steps({ currentStepclassNamechildren }: StepsProps) {
   const childrenArray = React.Children.toArray(children),

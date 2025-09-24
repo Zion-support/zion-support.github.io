@@ -1,7 +1,6 @@
 
 export interface MarketTrend {
 export interface MarketTrend {
-,
   id: string,
   keyword: string,
   searchVolume: number,
@@ -13,8 +12,7 @@ export interface MarketTrend {
   growth_rate: number,
   related_keywords: string[],
   market_opportunity: 'high' | 'medium' | 'low';
-  timestamp: Date,
-}
+  timestamp: Date}
 ,
   id: string,
   competitor_name: string,
@@ -27,8 +25,7 @@ export interface MarketTrend {
   pricing_strategy: string;
   feature_comparison: Record < string, boolean>,
   socialMediaPresence: Record < string, number>,
-  last_updated: Date,
-}
+  last_updated: Date}
 ,
   id: string,
   name: string,
@@ -38,8 +35,7 @@ export interface MarketTrend {
   psychographics: Record < string, any>,
   buying_behavior: Record < string, any>,
   pain_points: string[];
-  solutions: string[],
-}
+  solutions: string[]}
 ,
   id: string,
   title: string,
@@ -51,16 +47,14 @@ export interface MarketTrend {
   recommendations: string[],
   data_sources: string[],
   generated_at: Date;
-  expires_at: Date,
-}
+  expires_at: Date}
 ,
   industry: string,
   target_market: string,
   research_type: 'trends' | 'competitors' | 'segments' | 'comprehensive',
   timeframe: '7d' | '30d' | '90d' | '1y',
   includeHistoricalData: boolean;
-  custom_metrics?: string[],
-}
+  custom_metrics?: string[]}
 ,
   success: boolean,
   data: {
@@ -69,14 +63,11 @@ export interface MarketTrend {
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
     this && this.apiKey = apiKey;
     this && this.baseUrl = baseUrl,
-  estimatedROI: number,
-}
+  estimatedROI: number}
 ,
 export class AIMarketResearchService {
 export class AIMarketResearchService {
-,
-  private apiKey: string,
-  }
+  private apiKey: string}
   async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/trends`, {
@@ -195,8 +186,7 @@ export const aiMarketResearchService = new AIMarketResearchService(process.env.M
   growthRate: number;
   relatedKeywords: string[];
   marketOpportunity: 'high' | 'medium' | 'low';
-  timestamp: Date,
-}
+  timestamp: Date}
 ,
 export interface CompetitorAnalysis {
   id: string;
@@ -210,8 +200,7 @@ export interface CompetitorAnalysis {
   pricingStrategy: string;
   featureComparison: Record<string boolean>;
   socialMediaPresence: Record<string number>;
-  lastUpdated: Date,
-}
+  lastUpdated: Date}
 ,
 export interface MarketSegment {
   id: string;
@@ -222,8 +211,7 @@ export interface MarketSegment {
   psychographics: Record<string any>;
   buyingBehavior: Record<string any>;
   painPoints: string[];
-  solutions: string[],
-}
+  solutions: string[]}
 ,
 export interface MarketReport {
   id: string;
@@ -236,8 +224,7 @@ export interface MarketReport {
   recommendations: string[];
   dataSources: string[];
   generatedAt: Date;
-  expiresAt: Date,
-}
+  expiresAt: Date}
 ,
 export interface MarketResearchRequest {
   industry: string;
@@ -257,8 +244,7 @@ export interface MarketResearchResponse {
   insights: string[],
   recommendations: string[],
   next_steps: string[];
-  estimatedROI: number,
-}
+  estimatedROI: number}
 export class AIMarketResearchService {
   private api_key: string,
   private base_url: string;
@@ -383,5 +369,4 @@ if ( {) {
   }
 }
 export const aiMarketResearchService = new AIMarketResearchService (process.env.MARKET_RESEARCH_API_KEY || 'demo - key'),
-,
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key')>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

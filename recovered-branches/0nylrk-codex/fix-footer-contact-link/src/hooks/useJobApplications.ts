@@ -63,8 +63,7 @@ export const useJobApplications = (jobId?: string) => {
       setError(null)} catch (err: any) {
       console.error('Error fetching applications:', err),
       setError('Failed to fetch applications: ' + err.message),
-      toast.error('Failed to fetch applications'),
-    } finally {
+      toast.error('Failed to fetch applications')} finally {
       setIsLoading(false)}
   };
   const applyToJob = async (
@@ -101,8 +100,7 @@ export const useJobApplications = (jobId?: string) => {
       return true} catch (err: any) {
       console.error('Error applying to job:', err),
       toast.error('Failed to submit application: ' + err.message),
-      return false,
-    }
+      return false}
   };
   const updateApplicationStatus = async (
     applicationId: string;
@@ -120,8 +118,7 @@ export const useJobApplications = (jobId?: string) => {
       return true} catch (err: any) {
       console.error('Error updating application status:', err),
       toast.error('Failed to update application status: ' + err.message),
-      return false,
-    }
+      return false}
   };
   const markApplicationAsViewed = async (applicationId: string) => {
     try {

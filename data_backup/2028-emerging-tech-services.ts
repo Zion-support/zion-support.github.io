@@ -111,8 +111,7 @@ reviews: number,export const emergingTech20o28Services: EmergingTech20o28Service
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete biometric authentication platform with multi-modal verification, liveness detection, and compliance tools. Includes mobile SDKs and web APIs.';
@@ -193,8 +192,7 @@ reviews: number,export const emergingTech20o28Services: EmergingTech20o28Service
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete edge computing orchestration platform with intelligent workload distribution, resource optimization, and comprehensive monitoring. Includes mobile management and analytics.';
@@ -275,8 +273,7 @@ reviews: number,export const emergingTech20o28Services: EmergingTech20o28Service
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete 5G network optimization platform with AI-powered monitoring, optimization, and analytics. Includes mobile management and comprehensive reporting.';
@@ -357,8 +354,7 @@ reviews: number,export const emergingTech20o28Services: EmergingTech20o28Service
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete blockchain supply chain platform with end-to-end tracking, smart contracts, and comprehensive analytics. Includes mobile apps and API access.';
@@ -439,8 +435,7 @@ reviews: number,export const emergingTech20o28Services: EmergingTech20o28Service
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete AI content creation suite with text, video, and image generation capabilities. Includes social media automation and analytics tools.';
@@ -521,8 +516,7 @@ reviews: number,export const emergingTech20o28Services: EmergingTech20o28Service
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete quantum machine learning platform with quantum algorithms, neural networks, and classical ML integration. Includes comprehensive documentation and expert support.';
@@ -603,8 +597,7 @@ reviews: number,export const emergingTech20o28Services: EmergingTech20o28Service
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete autonomous vehicle fleet management platform with AI optimization, safety monitoring, and comprehensive analytics. Includes mobile management and API access.';
@@ -685,8 +678,7 @@ reviews: number,export const emergingTech20o28Services: EmergingTech20o28Service
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete digital twin platform with 3D modeling, real-time monitoring, and predictive analytics. Includes mobile monitoring and comprehensive reporting.';

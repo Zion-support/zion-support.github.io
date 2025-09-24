@@ -20,6 +20,5 @@ export default function AiEmotionalIntelligence20o40Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

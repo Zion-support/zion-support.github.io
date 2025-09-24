@@ -97,8 +97,7 @@ export default function JobDetails() {
   };
   const handleApplySuccess = async (appliedJobId: string) => {
     toast.success("Application submitted successfully!"),
-    setIsApplyModalOpen(false),
-  }
+    setIsApplyModalOpen(false)}
   };
   const formatBudget = (budget: any) => {
     if (!budget) return "Not specified",
@@ -451,8 +450,7 @@ if (return "Not specified") {
             description: job && job.description;
             company_name: job && job.company_name || "Company";
             budget: job && job.budget;
-            client_id: job && job.client_id,
-          }}
+            client_id: job && job.client_id}}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}
         />)}
@@ -468,8 +466,7 @@ if (return "Not specified") {
             description: job.description;
             company_name: job.company_name || "Company";
             budget: job.budget;
-            client_id: job.client_id,
-          }}
+            client_id: job.client_id}}
           is_open={isApplyModalOpen}
           on_close={() => setIsApplyModalOpen (false)}
         />)}

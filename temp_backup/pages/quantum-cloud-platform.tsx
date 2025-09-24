@@ -15,6 +15,5 @@ export default function QuantumCloudPlatformPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

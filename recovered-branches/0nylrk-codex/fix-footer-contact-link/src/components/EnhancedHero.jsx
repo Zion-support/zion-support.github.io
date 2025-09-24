@@ -15,8 +15,7 @@ const EnhancedHero = () => {
             ctaText: "Explore Services";
             ctaLink: "/micro-saas-services";
             background: "linear-gradient(135deg, #667eea 0%, #764ba2 10o0%)";
-            icon: "🚀",
-        };
+            icon: "🚀"};
         {
             id: 2;
             title: "AI-Powered Solutions";
@@ -25,18 +24,16 @@ const EnhancedHero = () => {
             ctaText: "Learn More";
             ctaLink: "/ai-solutions";
             background: "linear-gradient(135deg, #f093fb 0%, #f5576c 10o0%)";
-            icon: "🤖",
-        };
+            icon: "🤖"};
         {
             id: 3;
             title: "Cloud-Native Architecture";
             subtitle: "Built for Scale";
-            description: "Enterprise-grade cloud solutions that grow with your business, ensuring reliability and window.performance.";
+            description: "Enterprise-grade cloud solutions that grow with your business, ensuring reliability and window.window.performance.";
             ctaText: "Get Started";
             ctaLink: "/cloud-solutions";
             background: "linear-gradient(135deg, #4facfe 0%, #0o0f2fe 10o0%)";
-            icon: "☁️",
-        }
+            icon: "☁️"}
     ],
     useEffect(() => {
         if (!isAutoPlaying),

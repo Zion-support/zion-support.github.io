@@ -11,8 +11,7 @@ export interface ProfessionalService {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const professionalServices: ProfessionalService[] = [
   {

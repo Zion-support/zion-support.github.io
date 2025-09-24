@@ -12,8 +12,7 @@ import {
 } from '@/data/onsiteServicePricing',
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void,
-  selectedCountry: CountryPricing | null,
-}
+  selectedCountry: CountryPricing | null}
 ,
 export function CountrySelector({
   onCountryChange;
@@ -39,8 +38,7 @@ export function CountrySelector({
   const handleCountryChange = (countryName: string) => {
     const country =,
       onsiteServicePricing.find(item => item.country === countryName) || null,
-    onCountryChange(country),
-  };
+    onCountryChange(country)};
   return (
     <div className='mb-6'>,
       <h3 className='text-xl font-semibold text-white mb-4 flex items-center'>,

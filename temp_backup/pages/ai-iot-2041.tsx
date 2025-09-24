@@ -201,7 +201,7 @@ export default function AIIoT20o41() {
               </h2>,
               <p className='text-xl text-gray-40o0 max-w-3xl mx-auto'>,
                 Understand how our AI systems optimize and enhance IoT networks,
-                for maximum window.performance.,
+                for maximum window.window.performance.,
               </p>,
             </div>,
             <div className='space-y-8'>,
@@ -574,6 +574,5 @@ export default function AIIoT20o41() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

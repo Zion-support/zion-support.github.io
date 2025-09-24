@@ -12,8 +12,7 @@ export interface PricingTier {
   roi: string,
   setupTime: string,
   supportLevel: string,
-  innovationLevel: string,
-}
+  innovationLevel: string}
 ,
 export interface ServicePricing {
   id: string,
@@ -30,19 +29,16 @@ export interface ServicePricing {
     phone: string,
     email: string,
     website: string,
-    address: string,
-  };
+    address: string};
   technicalSpecs: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   aiCapabilities: string[],
   complianceFeatures: string[],
-  scalabilityFeatures: string[],
-}
+  scalabilityFeatures: string[]}
 ,
 export const COMPREHENSIVE_PRICING_GUIDE_20o26: ServicePricing[] = [
   {
@@ -82,8 +78,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o26: ServicePricing[] = [
         roi: "30o0-50o0%";
         setupTime: "4-6 weeks";
         supportLevel: "enterprise";
-        innovationLevel: "Revolutionary",
-      };
+        innovationLevel: "Revolutionary"};
       {
         name: "Enterprise";
         price: 8999;
@@ -114,8 +109,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o26: ServicePricing[] = [
         roi: "40o0-60o0%";
         setupTime: "6-8 weeks";
         supportLevel: "enterprise";
-        innovationLevel: "Revolutionary",
-      };
+        innovationLevel: "Revolutionary"};
       {
         name: "Ultimate";
         price: 12999;
@@ -146,8 +140,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o26: ServicePricing[] = [
         roi: "50o0-80o0%";
         setupTime: "8-10 weeks";
         supportLevel: "enterprise";
-        innovationLevel: "Revolutionary",
-      }
+        innovationLevel: "Revolutionary"}
     ];
     marketPrice: "$3,999 - $12,999/month";
     competitors: ["Tableau", "Power BI", "Looker", "Qlik", "Domo"];
@@ -204,8 +197,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o26: ServicePricing[] = [
         roi: "40o0-80o0%";
         setupTime: "8-12 weeks";
         supportLevel: "enterprise";
-        innovationLevel: "Revolutionary",
-      };
+        innovationLevel: "Revolutionary"};
       {
         name: "Enterprise";
         price: 15999;
@@ -236,8 +228,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o26: ServicePricing[] = [
         roi: "50o0-90o0%";
         setupTime: "12-16 weeks";
         supportLevel: "enterprise";
-        innovationLevel: "Revolutionary",
-      };
+        innovationLevel: "Revolutionary"};
       {
         name: "Government";
         price: 250o00;
@@ -268,8 +259,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o26: ServicePricing[] = [
         roi: "60o0-10o00%";
         setupTime: "16-20 weeks";
         supportLevel: "enterprise";
-        innovationLevel: "Revolutionary",
-      }
+        innovationLevel: "Revolutionary"}
     ];
     marketPrice: "$8,999 - $25,0o00/month";
     competitors: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "Darktrace", "Cylance"];
@@ -326,8 +316,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o26: ServicePricing[] = [
         roi: "30o0-60o0%";
         setupTime: "10-14 weeks";
         supportLevel: "enterprise";
-        innovationLevel: "Cutting-Edge",
-      };
+        innovationLevel: "Cutting-Edge"};
       {
         name: "Enterprise";
         price: 12999;
@@ -358,8 +347,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o26: ServicePricing[] = [
         roi: "40o0-70o0%";
         setupTime: "14-18 weeks";
         supportLevel: "enterprise";
-        innovationLevel: "Cutting-Edge",
-      };
+        innovationLevel: "Cutting-Edge"};
       {
         name: "Global";
         price: 180o00;
@@ -390,8 +378,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o26: ServicePricing[] = [
         roi: "50o0-80o0%";
         setupTime: "18-24 weeks";
         supportLevel: "enterprise";
-        innovationLevel: "Cutting-Edge",
-      }
+        innovationLevel: "Cutting-Edge"}
     ];
     marketPrice: "$5,999 - $18,0o00/month";
     competitors: ["SAP Ariba", "Oracle SCM", "Kinaxis", "Blue Yonder", "E2open"];
@@ -448,8 +435,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o26: ServicePricing[] = [
         roi: "50o0-10o00%";
         setupTime: "16-20 weeks";
         supportLevel: "enterprise";
-        innovationLevel: "Revolutionary",
-      };
+        innovationLevel: "Revolutionary"};
       {
         name: "Institutional";
         price: 350o00;
@@ -480,8 +466,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o26: ServicePricing[] = [
         roi: "60o0-120o0%";
         setupTime: "20-24 weeks";
         supportLevel: "enterprise";
-        innovationLevel: "Revolutionary",
-      };
+        innovationLevel: "Revolutionary"};
       {
         name: "Ultimate";
         price: 50o000;
@@ -512,8 +497,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o26: ServicePricing[] = [
         roi: "80o0-150o0%";
         setupTime: "24-28 weeks";
         supportLevel: "enterprise";
-        innovationLevel: "Revolutionary",
-      }
+        innovationLevel: "Revolutionary"}
     ];
     marketPrice: "$15,999 - $50,0o00/month";
     competitors: ["Bloomberg Terminal", "Thomson Reuters", "Interactive Brokers", "Alpaca", "QuantConnect"];
@@ -570,8 +554,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o26: ServicePricing[] = [
         roi: "40o0-80o0%";
         setupTime: "12-16 weeks";
         supportLevel: "enterprise";
-        innovationLevel: "Cutting-Edge",
-      };
+        innovationLevel: "Cutting-Edge"};
       {
         name: "Enterprise";
         price: 15999;
@@ -602,8 +585,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o26: ServicePricing[] = [
         roi: "50o0-90o0%";
         setupTime: "16-20 weeks";
         supportLevel: "enterprise";
-        innovationLevel: "Cutting-Edge",
-      };
+        innovationLevel: "Cutting-Edge"};
       {
         name: "Research";
         price: 220o00;
@@ -634,8 +616,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o26: ServicePricing[] = [
         roi: "60o0-10o00%";
         setupTime: "20-24 weeks";
         supportLevel: "enterprise";
-        innovationLevel: "Cutting-Edge",
-      }
+        innovationLevel: "Cutting-Edge"}
     ];
     marketPrice: "$7,999 - $22,0o00/month";
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips Healthcare", "GE Healthcare"];

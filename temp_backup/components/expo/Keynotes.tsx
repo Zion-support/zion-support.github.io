@@ -2,8 +2,7 @@ type Speaker = {
   name: string,
   role: string,
   org: string,
-  type: 'Founder' | 'Nation' | 'DAO',
-};
+  type: 'Founder' | 'Nation' | 'DAO'};
 export default function Keynotes({ speakers }: { speakers: Speaker[] }) {
   return (
     <div className='grid sm: grid-cols-2 lg:grid-cols-3 gap-4'>,

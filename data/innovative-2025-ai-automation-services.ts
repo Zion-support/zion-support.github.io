@@ -2,7 +2,6 @@ import React from 'react';
 
 export interface InnovativeAIAutomationService {
 export interface InnovativeAIAutomationService {
-,
   id: string,
   name: string,
   tagline: string,
@@ -33,8 +32,7 @@ export interface InnovativeAIAutomationService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  }
+    website: string}
 ,
   realImplementation: boolean,
   implementationDetails: string,
@@ -94,16 +92,14 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
         'Full enterprise platform with autonomous decision-making engine, advanced ML models, comprehensive monitoring, and zero-touch operations.',
       launchDate: '2025-01-15',
       customers: 75,
       rating: 4.9,
-      reviews: 45,
-    }
+      reviews: 45}
     // AI-Powered Predictive Customer Intelligence Platform,
     {
       id: 'ai-predictive-customer-intelligence',
@@ -152,16 +148,14 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
         'Full ML platform with real-time data processing, advanced predictive models, comprehensive analytics, and enterprise-grade security.',
       launchDate: '2025-02-01',
       customers: 120,
       rating: 4.8,
-      reviews: 78,
-    }
+      reviews: 78}
     // AI-Powered Autonomous Code Generation & Deployment,
     {
       id: 'ai-autonomous-code-generation',
@@ -210,16 +204,14 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
         'Full autonomous development platform with AI code generation, automated testing, security scanning, and deployment automation.',
       launchDate: '2025-01-20',
       customers: 95,
       rating: 4.9,
-      reviews: 62,
-    }
+      reviews: 62}
     // AI-Powered Autonomous Financial Trading Platform,
     {
       id: 'ai-autonomous-financial-trading',
@@ -269,16 +261,14 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
         'Full autonomous trading platform with advanced AI algorithms, real-time market data, risk management, and compliance tools.',
       launchDate: '2025-02-15',
       customers: 45,
       rating: 4.9,
-      reviews: 38,
-    }
+      reviews: 38}
     // AI-Powered Autonomous Healthcare Diagnosis Platform,
     {
       id: 'ai-autonomous-healthcare-diagnosis',
@@ -329,8 +319,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
         'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.';
@@ -358,8 +347,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails: 'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.',
     launchDate: '2025-03-01', customers: 35,
@@ -395,15 +383,13 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     mobile: string;
     email: string;
     address: string;
-    website: string,
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number,
-}
+  reviews: number}
 ,
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] = [
   // AI-Powered Autonomous Business Process Orchestrator,
@@ -440,15 +426,13 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Full enterprise platform with autonomous decision-making engine, advanced ML models, comprehensive monitoring, and zero-touch operations.';
     launchDate: '2025-01-15';
     customers: 75;
     rating: 4.9;
-    reviews: 45,
-  };
+    reviews: 45};
   // AI-Powered Predictive Customer Intelligence Platform,
   {
     id: 'ai-predictive-customer-intelligence';
@@ -483,15 +467,13 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Full ML platform with real-time data processing, advanced predictive models, comprehensive analytics, and enterprise-grade security.';
     launchDate: '2025-02-01';
     customers: 120;
     rating: 4.8;
-    reviews: 78,
-  };
+    reviews: 78};
   // AI-Powered Autonomous Code Generation & Deployment,
   {
     id: 'ai-autonomous-code-generation';
@@ -526,15 +508,13 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Full autonomous development platform with AI code generation, automated testing, security scanning, and deployment automation.';
     launchDate: '2025-01-20';
     customers: 95;
     rating: 4.9;
-    reviews: 62,
-  };
+    reviews: 62};
   // AI-Powered Autonomous Financial Trading Platform,
   {
     id: 'ai-autonomous-financial-trading';
@@ -569,15 +549,13 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Full autonomous trading platform with advanced AI algorithms, real-time market data, risk management, and compliance tools.';
     launchDate: '2025-02-15';
     customers: 45;
     rating: 4.9;
-    reviews: 38,
-  };
+    reviews: 38};
   // AI-Powered Autonomous Healthcare Diagnosis Platform,
   {
     id: 'ai-autonomous-healthcare-diagnosis';
@@ -612,14 +590,11 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.';
     launchDate: '2025-03-01';
     customers: 35;
     rating: 4.9;
-    reviews: 28,
-  }
-],
-}
+    reviews: 28}
+]}

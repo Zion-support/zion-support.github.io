@@ -120,6 +120,5 @@ const AdvancedAutomationContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AdvancedAutomationContentShowcase20o25;

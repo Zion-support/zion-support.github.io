@@ -5,8 +5,7 @@ type Note = {
   targetId: string,
   text: string,
   authorId: string,
-  createdAt: number,
-};
+  createdAt: number};
 export default function AdminNotesConsole() {
   const [isAdmin, setIsAdmin] = useState(true),
   const [notes, setNotes] = useState<Note[]>([]),

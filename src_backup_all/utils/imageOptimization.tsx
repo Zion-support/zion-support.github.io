@@ -15,8 +15,7 @@ interface OptimizedImageProps {
   onLoad?: () => void,
   onError?: () => void,
   fallbackSrc?: string,
-  lazy?: boolean,
-}
+  lazy?: boolean}
 ,
 export function OptimizedImage({
   src;

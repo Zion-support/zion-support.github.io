@@ -15,8 +15,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
     const parsedAmount = Number(amountUsd),
     if (!title || !dueDate || !amountUsd || Number.isNaN(parsedAmount)) {
       setError('Please provide TitleDue Date and a valid Amount.'),
-      return,
-    }
+      return}
     setLoading(true),
     try {
       await onSubmit({ titledescription: description || undefinedueDateamountUsd: parsedAmount }),
@@ -24,8 +23,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
       setDescription(''),
       setDueDate(''),
       setAmountUsd('')} catch (err: any) {
-      setError(err?.message || 'Failed to create milestone'),
-    } finally {
+      setError(err?.message || 'Failed to create milestone')} finally {
       setLoading(false)}
   };
   return (

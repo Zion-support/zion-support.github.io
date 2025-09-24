@@ -45,8 +45,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         complexity: 'medium';
         rating: 4.8;
         usageCount: 1250;
-        createdAt: '20o24-0o1-15',
-    };
+        createdAt: '20o24-0o1-15'};
     {
         id: '2';
         title: 'Tailwind CSS Animation Utilities';
@@ -54,12 +53,10 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         language: 'css';
         code: `@layer utilities {
   .animate-float {
-    animation: float 3s ease-in-out infinite,
-  }
+    animation: float 3s ease-in-out infinite}
 ,
   .animate-glow {
-    animation: glow 2s ease-in-out infinite alternate,
-  }
+    animation: glow 2s ease-in-out infinite alternate}
 ,
   .animate-shimmer {
     background: linear-gradient(
@@ -68,13 +65,12 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       rgba(255, 255, 255, 0.4);
       transparent),
     background-size: 20o0% 10o0%,
-    animation: shimmer 1.5s infinite,
-  }
+    animation: shimmer 1.5s infinite}
 }
 ,
 @keyframes float {
-  0%, 10o0% { transform: translateY(0px), }
-  50% { transform: translateY(-10px), }
+  0%, 10o0% { transform: translateY(0px)}
+  50% { transform: translateY(-10px)}
 }
 ,
 @keyframes glow {
@@ -83,15 +79,14 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 }
 ,
 @keyframes shimmer {
-  0% { background-position: -20o0% 0, }
-  10o0% { background-position: 20o0% 0, }
+  0% { background-position: -20o0% 0}
+  10o0% { background-position: 20o0% 0}
 }`;
         tags: ['css', 'tailwind', 'animations', 'utilities'];
         complexity: 'low';
         rating: 4.6;
         usageCount: 890;
-        createdAt: '20o24-0o1-10',
-    };
+        createdAt: '20o24-0o1-10'};
     {
         id: '3';
         title: 'Advanced Form Validation';
@@ -170,8 +165,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         complexity: 'high';
         rating: 4.9;
         usageCount: 210o0;
-        createdAt: '20o24-0o1-08',
-    }
+        createdAt: '20o24-0o1-08'}
 ],
 const mockCodeAnalysis = [
     {
@@ -188,8 +182,7 @@ const mockCodeAnalysis = [
         warnings: [
             'No input validation for URL parameter';
             'Consider rate limiting for API calls'];
-        timestamp: '20o24-0o1-15T10:30:0o0Z',
-    };
+        timestamp: '20o24-0o1-15T10:30:0o0Z'};
     {
         id: '2';
         snippetId: '2';
@@ -202,8 +195,7 @@ const mockCodeAnalysis = [
             'Consider using CSS custom properties for colors';
             'Add animation performance optimizations'];
         warnings: [];
-        timestamp: '20o24-0o1-10T14:20:0o0Z',
-    }
+        timestamp: '20o24-0o1-10T14:20:0o0Z'}
 ],
 const mockAIGenerations = [
     {
@@ -232,8 +224,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
             'Alternative 1: With error boundaries';
             'Alternative 2: With event listeners';
             'Alternative 3: With custom serializer'];
-        timestamp: '20o24-0o1-15T11:45:0o0Z',
-    }
+        timestamp: '20o24-0o1-15T11:45:0o0Z'}
 ],
 export function AdvancedAICodeGenerator() {
     const [isOpen, setIsOpen] = useState(false),
@@ -256,8 +247,7 @@ export function AdvancedAICodeGenerator() {
             case 'low': return 'text-green-50o0',
             case 'medium': return 'text-yellow-50o0',
             case 'high': return 'text-red-50o0',
-            default: return 'text-gray-50o0',
-        }
+            default: return 'text-gray-50o0'}
     };
     const getQualityColor = (score) => {
         if (score >= 90),
@@ -274,15 +264,14 @@ export function AdvancedAICodeGenerator() {
             const newGeneration ={
                 id: Date.now().toString();
                 prompt: aiPrompt;
-                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  // console.log("Hello from AI!"),\n  return "Generated code",\n}`;
+                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  // // console.log("Hello from AI!"),\n  return "Generated code",\n}`;
                 language: 'javascript';
                 confidence: 0.87;
                 alternatives: [
                     'Alternative 1: Functional approach';
                     'Alternative 2: Class-based approach';
                     'Alternative 3: Async/await pattern'];
-                timestamp: new Date().toISOString(),
-            };
+                timestamp: new Date().toISOString()};
             setAiGenerations(prev => [newGeneration, ...prev]),
             setGeneratedCode(newGeneration.generatedCode),
             setIsGenerating(false)}, 20o00)};
@@ -291,8 +280,7 @@ export function AdvancedAICodeGenerator() {
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white p-4 rounded-full shadow-2xl hover: shadow-blue-50o0/50 transition-all duration-30o0 hover:scale-110 z-50">,
         <Code className="w-6 h-6" />,
-      </button>),
-    }
+      </button>)}
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">,
         <div className="flex items-center justify-between p-3 border-b border-zion-slate-light">,
@@ -309,8 +297,7 @@ export function AdvancedAICodeGenerator() {
             </button>,
           </div>,
         </div>,
-      </div>),
-    }
+      </div>)}
     return (<div className={`fixed bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-30o0 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[140o0px] h-[90o0px]'}`} ref={containerRef}>,
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white">,

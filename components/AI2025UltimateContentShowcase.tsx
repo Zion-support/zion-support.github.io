@@ -31,14 +31,12 @@ const AI20o25UltimateContentShowcase = () => {
         roi: '50o0%';
         savings: '$2.8B';
         efficiency: '340%';
-        satisfaction: '98%',
-      };
+        satisfaction: '98%'};
       readingTime: '25 min read';
       featured: true;
       tags: ['AI 'Automation', 'Enterprise', 'ROI', 'Digital 'Transformation', 'Mastery Guide'];
       publishDate: '20o25-0o1-17';
-      author: 'Zion Tech Group AI Team',
-    };
+      author: 'Zion Tech Group AI Team'};
     {
       id: 'fortune-50o0-transformation';
       title: 'Fortune 50o0 AI Transformation: $3.2B Company Achieves 650% ROI with Intelligent Automation';
@@ -50,14 +48,12 @@ const AI20o25UltimateContentShowcase = () => {
         roi: '650%';
         savings: '$2.8B';
         accuracy: '99.7%';
-        efficiency: '78%',
-      };
+        efficiency: '78%'};
       readingTime: '22 min read';
       featured: true;
       tags: ['Fortune 50o0'AI 'Transformation', 'ROI'Case 'Study', 'Success Story'];
       publishDate: '20o25-0o1-17';
-      author: 'Zion Tech Group Research Team',
-    };
+      author: 'Zion Tech Group Research Team'};
     {
       id: 'implementation-roadmap';
       title: 'AI Implementation Ultimate Roadmap 20o25: From Strategy to 80o0% ROI in 18 Months';
@@ -69,14 +65,12 @@ const AI20o25UltimateContentShowcase = () => {
         roi: '80o0%';
         savings: '$173.7M';
         success: '99%';
-        timeline: '18 months',
-      };
+        timeline: '18 months'};
       readingTime: '35 min read';
       featured: true;
       tags: ['AI 'Implementation', 'Strategy', 'ROI', 'Roadmap'Best Practices'];
       publishDate: '20o25-0o1-17';
-      author: 'Zion Tech Group Strategy Team',
-    };
+      author: 'Zion Tech Group Strategy Team'};
     {
       id: 'neural-architecture-revolution';
       title: 'AI 20o25: The Neural Architecture Revolution - Enterprise Breakthrough Guide';
@@ -88,14 +82,12 @@ const AI20o25UltimateContentShowcase = () => {
         roi: '60o0%';
         accuracy: '99.9%';
         savings: '$2.8B';
-        efficiency: '156%',
-      };
+        efficiency: '156%'};
       readingTime: '22 min read';
       featured: false;
       tags: ['Neural 'Architecture', 'Enterprise 'AI', 'Deep 'Learning', 'ROI'Breakthrough'];
       publishDate: '20o25-0o1-17';
-      author: 'Zion Tech Group AI Research',
-    };
+      author: 'Zion Tech Group AI Research'};
     {
       id: 'autonomous-enterprise-systems';
       title: 'AI 20o25: The Autonomous Enterprise Systems Revolution - Complete Business Transformation';
@@ -107,14 +99,12 @@ const AI20o25UltimateContentShowcase = () => {
         roi: '70o0%';
         accuracy: '99.8%';
         savings: '$2.8B';
-        efficiency: '20o0%',
-      };
+        efficiency: '20o0%'};
       readingTime: '25 min read';
       featured: false;
       tags: ['Autonomous 'Systems', 'Enterprise 'Automation', 'AI 'Revolution', 'ROI'Business Transformation'];
       publishDate: '20o25-0o1-17';
-      author: 'Zion Tech Group Innovation Team',
-    };
+      author: 'Zion Tech Group Innovation Team'};
     {
       id: 'manufacturing-transformation-ultimate';
       title: 'AI 20o25 Manufacturing Transformation: $3.2B Company Achieves 650% ROI with Intelligent Automation';
@@ -126,14 +116,12 @@ const AI20o25UltimateContentShowcase = () => {
         roi: '650%';
         savings: '$2.8B';
         accuracy: '99.7%';
-        efficiency: '78%',
-      };
+        efficiency: '78%'};
       readingTime: '18 min read';
       featured: false;
       tags: [', 'Manufacturing', 'AI 'Transformation', 'ROI'Case 'Study', 'Intelligent Automation'];
       publishDate: '20o25-0o1-17';
-      author: 'Zion Tech Group Manufacturing Team',
-    }
+      author: 'Zion Tech Group Manufacturing Team'}
   ],
   const categories = [
     { id: ''all', 'name: 'All 'Content', 'count: content.length };
@@ -157,8 +145,7 @@ const AI20o25UltimateContentShowcase = () => {
       case 'resource':,
         return <Users className="h-5 w-5"  />,
       default:,
-        return <BookOpen className="h-5 w-5"  />,
-    }
+        return <BookOpen className="h-5 w-5"  />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -169,8 +156,7 @@ const AI20o25UltimateContentShowcase = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <div className="bg-white py-16">,
@@ -207,8 +193,7 @@ const AI20o25UltimateContentShowcase = () => {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-20o0 ${
                     selectedCategory === category.id,
                       ? 'bg-blue-60o0 text-white',
-                      : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-                  }`}
+                      : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
                 >,
                   {category.name} ({category.count}),
                 </button>))}
@@ -221,8 +206,7 @@ const AI20o25UltimateContentShowcase = () => {
             <div
               key={item.id}
               className={`bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-30o0 transform hover:-translate-y-1 ${
-                item.featured ? 'ring-2 ring-blue-50o0' : '',
-              }`}
+                item.featured ? 'ring-2 ring-blue-50o0' : ''}`}
             >,
               {/* Featured Badge */}
               {item.featured && (
@@ -340,6 +324,5 @@ const AI20o25UltimateContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o25UltimateContentShowcase;

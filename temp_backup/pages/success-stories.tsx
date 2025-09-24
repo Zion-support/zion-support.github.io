@@ -15,6 +15,5 @@ export default function SuccessStoriesPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

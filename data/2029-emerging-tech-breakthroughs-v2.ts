@@ -31,8 +31,7 @@ import { ServiceVariant } from '../types/service-variants';
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  }
+    website: string}
 ,
         'Real-time brain signal interpretation';
   real_implementation: boolean,
@@ -455,16 +454,14 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
       launchDate: '2025-06-01',
       customers: 3,
       rating: 5.0,
-      reviews: 2,
-    }
+      reviews: 2}
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.';
       launch_date: '2025 - 06 - 01';
       customers: 3;
@@ -489,8 +486,7 @@ export interface EmergingTechBreakthroughServiceV2 {
   contactInfo: {
     mobile: string, email: string;
     address: string;
-    website: string,
-    };
+    website: string};
   ],    features: [
       'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems',
       'Advanced consciousness analyticsExpert consultation and support'],
@@ -527,8 +523,7 @@ export interface EmergingTechBreakthroughServiceV2 {
     contact_info: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     popular: true, icon: '🤖';
     color: 'from-pink-600 via-purple-600 to-indigo-600', textColor: 'text-pink-400';
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-ai-consciousness-platform', marketPosition: 'Pioneering AI consciousness platform. First-to-market solution for developing genuine AI consciousness and self-awareness.';
@@ -545,14 +540,12 @@ export interface EmergingTechBreakthroughServiceV2 {
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup && ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.';
     launchDate: '2025-06-01', customers: 3;
     rating: 5 && 5.0;
-    reviews: 2,
-  }
+    reviews: 2}
 ],
 export interface EmergingTechBreakthroughServiceV2 {
   id: string;
@@ -585,15 +578,13 @@ export interface EmergingTechBreakthroughServiceV2 {
     mobile: string;
     email: string;
     address: string;
-    website: string,
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number,
-}
+  reviews: number}
 ,
 export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughServiceV2[] = [
   // Brain-Computer Interface Platform,
@@ -630,15 +621,13 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production BCI platform with clinical validation, enterprise deployment, and ongoing research. Includes neural interface training and support.';
     launchDate: '2025-03-01';
     customers: 15;
     rating: 5.0;
-    reviews: 12,
-  };
+    reviews: 12};
   // Quantum Internet Gateway,
   {
     id: 'quantum-internet-gateway-enterprise';
@@ -673,15 +662,13 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production quantum internet gateway with enterprise deployment, network integration, and ongoing support. Includes quantum network training and certification.';
     launchDate: '2025-02-15';
     customers: 25;
     rating: 4.9;
-    reviews: 18,
-  };
+    reviews: 18};
   // Synthetic Biology Platform,
   {
     id: 'synthetic-biology-platform-enterprise';
@@ -716,15 +703,13 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production synthetic biology platform with lab integration, regulatory compliance, and ongoing support. Includes biological engineering training and certification.';
     launchDate: '2025-01-15';
     customers: 35;
     rating: 4.8;
-    reviews: 45,
-  };
+    reviews: 45};
   // Fusion Energy Management Platform,
   {
     id: 'fusion-energy-management-platform';
@@ -759,15 +744,13 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production fusion energy platform with reactor integration, safety certification, and ongoing support. Includes fusion physics training and certification.';
     launchDate: '2025-04-01';
     customers: 8;
     rating: 5.0;
-    reviews: 6,
-  };
+    reviews: 6};
   // Space Mining Operations Platform,
   {
     id: 'space-mining-operations-platform';
@@ -802,15 +785,13 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production space mining platform with space system integration, regulatory compliance, and ongoing support. Includes space operations training and certification.';
     launchDate: '2025-05-01';
     customers: 5;
     rating: 5.0;
-    reviews: 3,
-  };
+    reviews: 3};
   // Quantum AI Consciousness Platform,
   {
     id: 'quantum-ai-consciousness-platform';
@@ -845,15 +826,13 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.';
     launchDate: '2025-06-01';
     customers: 3;
     rating: 5.0,
-    reviews: 2,
-  }
+    reviews: 2}
 ],
 export interface EmergingTechBreakthroughServiceV2 {
   id: string;
@@ -886,15 +865,13 @@ export interface EmergingTechBreakthroughServiceV2 {
     mobile: string;
     email: string;
     address: string;
-    website: string,
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number,
-}
+  reviews: number}
 ,
 export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughServiceV2[] = [
   // Brain-Computer Interface Platform,
@@ -931,15 +908,13 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production BCI platform with clinical validation, enterprise deployment, and ongoing research. Includes neural interface training and support.';
     launchDate: '2025-03-01';
     customers: 15;
     rating: 5.0;
-    reviews: 12,
-  };
+    reviews: 12};
   // Quantum Internet Gateway,
   {
     id: 'quantum-internet-gateway-enterprise';
@@ -974,15 +949,13 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production quantum internet gateway with enterprise deployment, network integration, and ongoing support. Includes quantum network training and certification.';
     launchDate: '2025-02-15';
     customers: 25;
     rating: 4.9;
-    reviews: 18,
-  };
+    reviews: 18};
   // Synthetic Biology Platform,
   {
     id: 'synthetic-biology-platform-enterprise';
@@ -1017,15 +990,13 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production synthetic biology platform with lab integration, regulatory compliance, and ongoing support. Includes biological engineering training and certification.';
     launchDate: '2025-01-15';
     customers: 35;
     rating: 4.8;
-    reviews: 45,
-  };
+    reviews: 45};
   // Fusion Energy Management Platform,
   {
     id: 'fusion-energy-management-platform';
@@ -1060,15 +1031,13 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production fusion energy platform with reactor integration, safety certification, and ongoing support. Includes fusion physics training and certification.';
     launchDate: '2025-04-01';
     customers: 8;
     rating: 5.0;
-    reviews: 6,
-  };
+    reviews: 6};
   // Space Mining Operations Platform,
   {
     id: 'space-mining-operations-platform';
@@ -1103,15 +1072,13 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production space mining platform with space system integration, regulatory compliance, and ongoing support. Includes space operations training and certification.';
     launchDate: '2025-05-01';
     customers: 5;
     rating: 5.0;
-    reviews: 3,
-  };
+    reviews: 3};
   // Quantum AI Consciousness Platform,
   {
     id: 'quantum-ai-consciousness-platform';
@@ -1146,14 +1113,11 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.';
     launchDate: '2025-06-01';
     customers: 3;
     rating: 5.0,
-    reviews: 2,
-  }
-],
-}}}}}
+    reviews: 2}
+]}}}}}

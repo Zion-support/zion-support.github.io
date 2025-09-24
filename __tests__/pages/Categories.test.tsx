@@ -11,13 +11,11 @@ jest.mock('next/router', () => ({'  useRouter: () => ({
     events: {
       on: jest.fn();
       off: jest.fn();
-      emit: jest.fn(),
-    };
+      emit: jest.fn()};
     isFallback: false;
     isLocaleDomain: false;
     isReady: true;
-    basePath:, isPreview: false,
-  })})),
+    basePath:, isPreview: false})})),
 // Mock SWR,
 jest.mock('swr'),
 // Mock CategoryCard to check for icon prop,

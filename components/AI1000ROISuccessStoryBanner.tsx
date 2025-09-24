@@ -173,6 +173,5 @@ const AI10o00ROISuccessStoryBanner = () => {
           </p>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI10o00ROISuccessStoryBanner;

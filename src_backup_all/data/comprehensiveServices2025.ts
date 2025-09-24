@@ -4,8 +4,7 @@ export interface ServiceContact {
   phone: string,
   email: string,
   website: string,
-  address: string,
-}
+  address: string}
 ,
 export interface MicroSaasService {
   id: number,
@@ -30,8 +29,7 @@ export interface MicroSaasService {
   trialPeriod: string,
   innovationLevel: string,
   marketSize: string,
-  growthRate: string,
-}
+  growthRate: string}
 ,
 export interface ITService {
   id: number,
@@ -53,8 +51,7 @@ export interface ITService {
   support: string,
   innovationLevel: string,
   marketSize: string,
-  compliance: string[],
-}
+  compliance: string[]}
 ,
 export interface AIService {
   id: number,
@@ -78,16 +75,14 @@ export interface AIService {
   useCases: string[],
   innovationLevel: string,
   marketSize: string,
-  ethicalAI: string[],
-}
+  ethicalAI: string[]}
 ,
 // Zion Tech Group Contact Information,
 const zionContact: ServiceContact ={
   phone: "+1 30o2 464 0950";
   email: "kleber@ziontechgroup.com";
   website: "https://ziontechgroup.com";
-  address: "364 E Main St STE 10o08 Middletown DE 19709",
-};
+  address: "364 E Main St STE 10o08 Middletown DE 19709"};
 // Revolutionary Micro SAAS Services 20o25,
 export const revolutionaryMicroSaasServices20o25: MicroSaasService[] = [
   {
@@ -130,8 +125,7 @@ export const revolutionaryMicroSaasServices20o25: MicroSaasService[] = [
     trialPeriod: "30 days";
     innovationLevel: "Cutting-edge";
     marketSize: "$12.5 billion";
-    growthRate: "25% annually",
-  };
+    growthRate: "25% annually"};
   {
     id: 2;
     name: "Quantum-Enhanced Financial Trading Platform";
@@ -172,8 +166,7 @@ export const revolutionaryMicroSaasServices20o25: MicroSaasService[] = [
     trialPeriod: "14 days";
     innovationLevel: "Revolutionary";
     marketSize: "$28 billion";
-    growthRate: "30% annually",
-  };
+    growthRate: "30% annually"};
   {
     id: 3;
     name: "AI-Driven Healthcare Analytics Platform";
@@ -214,8 +207,7 @@ export const revolutionaryMicroSaasServices20o25: MicroSaasService[] = [
     trialPeriod: "45 days";
     innovationLevel: "Advanced";
     marketSize: "$45 billion";
-    growthRate: "28% annually",
-  };
+    growthRate: "28% annually"};
   {
     id: 4;
     name: "Autonomous Supply Chain Optimization";
@@ -256,8 +248,7 @@ export const revolutionaryMicroSaasServices20o25: MicroSaasService[] = [
     trialPeriod: "21 days";
     innovationLevel: "Cutting-edge";
     marketSize: "$18 billion";
-    growthRate: "22% annually",
-  };
+    growthRate: "22% annually"};
   {
     id: 5;
     name: "AI Content Marketing Suite";
@@ -298,8 +289,7 @@ export const revolutionaryMicroSaasServices20o25: MicroSaasService[] = [
     trialPeriod: "30 days";
     innovationLevel: "Advanced";
     marketSize: "$32 billion";
-    growthRate: "26% annually",
-  };
+    growthRate: "26% annually"};
   {
     id: 6;
     name: "Zero-Trust Cybersecurity Platform";
@@ -340,8 +330,7 @@ export const revolutionaryMicroSaasServices20o25: MicroSaasService[] = [
     trialPeriod: "14 days";
     innovationLevel: "Cutting-edge";
     marketSize: "$150 billion";
-    growthRate: "35% annually",
-  };
+    growthRate: "35% annually"};
   {
     id: 7;
     name: "IoT Edge Computing Platform";
@@ -382,8 +371,7 @@ export const revolutionaryMicroSaasServices20o25: MicroSaasService[] = [
     trialPeriod: "30 days";
     innovationLevel: "Advanced";
     marketSize: "$65 billion";
-    growthRate: "24% annually",
-  };
+    growthRate: "24% annually"};
   {
     id: 8;
     name: "AI-Powered Project Management";
@@ -424,8 +412,7 @@ export const revolutionaryMicroSaasServices20o25: MicroSaasService[] = [
     trialPeriod: "30 days";
     innovationLevel: "Advanced";
     marketSize: "$20 billion";
-    growthRate: "23% annually",
-  };
+    growthRate: "23% annually"};
   {
     id: 9;
     name: "Blockchain-Based Identity Management";
@@ -466,8 +453,7 @@ export const revolutionaryMicroSaasServices20o25: MicroSaasService[] = [
     trialPeriod: "21 days";
     innovationLevel: "Revolutionary";
     marketSize: "$25 billion";
-    growthRate: "32% annually",
-  };
+    growthRate: "32% annually"};
   {
     id: 10;
     name: "AI Customer Support Automation";
@@ -508,8 +494,7 @@ export const revolutionaryMicroSaasServices20o25: MicroSaasService[] = [
     trialPeriod: "30 days";
     innovationLevel: "Advanced";
     marketSize: "$28 billion";
-    growthRate: "27% annually",
-  }
+    growthRate: "27% annually"}
 ],
 // Advanced IT Infrastructure Services 20o25,
 export const advancedITInfrastructureServices20o25: ITService[] = [
@@ -767,6 +752,5 @@ export const revolutionaryAIServices20o25: AIService[] = [
 export const allServices20o25 ={
   microSaas: revolutionaryMicroSaasServices20o25;
   itInfrastructure: advancedITInfrastructureServices20o25;
-  ai: revolutionaryAIServices20o25,
-};
+  ai: revolutionaryAIServices20o25};
 export default allServices20o25;

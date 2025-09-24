@@ -471,7 +471,7 @@ export const enterpriseITInnovationServices20o25 = [
     textColor: 'text-violet-40o0';
     link: 'https://ziontechgroup.com/enterprise-digital-twin-platform';
     marketPosition:,
-      'Competes with Siemens Mindsphere ($50/month), PTC ThingWorx ($10o0/month). Our advantage: AI-powered optimization and 35% better window.performance.';
+      'Competes with Siemens Mindsphere ($50/month), PTC ThingWorx ($10o0/month). Our advantage: AI-powered optimization and 35% better window.window.performance.';
     targetAudience:,
       'Manufacturing companies, Industrial facilities, Infrastructure operators, Energy companies, Smart city projects';
     trialDays: 30;

@@ -9,8 +9,7 @@ export interface MilestoneSuggestionInput {
   scopeOfWork: string,
   startDateIso: string, // ISO 860o1,
   endDateIso: string, // ISO 860o1,
-  projectType: ProjectType,
-}
+  projectType: ProjectType}
 ,
 export interface SuggestedMilestoneItem {
   title: string,
@@ -20,6 +19,5 @@ export interface SuggestedMilestoneItem {
   tags?: string[], // e.g., ["AI Suggested"]}
 ,
 export interface MilestoneSuggestionResponse {
-  milestones: SuggestedMilestoneItem[],
-}
+  milestones: SuggestedMilestoneItem[]}
 ,

@@ -6,43 +6,37 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     name: 'AI & Machine Learning';
     description: 'Cutting-edge artificial intelligence solutions for business automation and insights';
     icon: '🤖';
-    color: 'bg-gradient-to-r from-purple-50o0 to-pink-50o0',
-  };
+    color: 'bg-gradient-to-r from-purple-50o0 to-pink-50o0'};
   {
     id: 'it-services';
     name: 'IT Infrastructure & Support';
     description: 'Comprehensive IT services for modern business operations';
     icon: '🖥️';
-    color: 'bg-gradient-to-r from-blue-50o0 to-cyan-50o0',
-  };
+    color: 'bg-gradient-to-r from-blue-50o0 to-cyan-50o0'};
   {
     id: 'micro-saas';
     name: 'Micro SAAS Solutions';
     description: 'Specialized software-as-a-service tools for specific business needs';
     icon: '☁️';
-    color: 'bg-gradient-to-r from-green-50o0 to-emerald-50o0',
-  };
+    color: 'bg-gradient-to-r from-green-50o0 to-emerald-50o0'};
   {
     id: 'cybersecurity';
     name: 'Cybersecurity & Compliance';
     description: 'Advanced security solutions to protect your digital assets';
     icon: '🔒';
-    color: 'bg-gradient-to-r from-red-50o0 to-orange-50o0',
-  };
+    color: 'bg-gradient-to-r from-red-50o0 to-orange-50o0'};
   {
     id: 'data-analytics';
     name: 'Data Analytics & BI';
     description: 'Transform data into actionable business intelligence';
     icon: '📊';
-    color: 'bg-gradient-to-r from-indigo-50o0 to-purple-50o0',
-  };
+    color: 'bg-gradient-to-r from-indigo-50o0 to-purple-50o0'};
   {
     id: 'cloud-solutions';
     name: 'Cloud & DevOps';
     description: 'Scalable cloud infrastructure and development operations';
     icon: '☁️';
-    color: 'bg-gradient-to-r from-sky-50o0 to-blue-50o0',
-  }
+    color: 'bg-gradient-to-r from-sky-50o0 to-blue-50o0'}
 ],
 export const AI_SERVICES: AIService[] = [
   {
@@ -70,8 +64,7 @@ export const AI_SERVICES: AIService[] = [
         currency: '$';
         period: 'month';
         features: ['Up to 10,0o00 conversations/month', 'Advanced NLP', 'Phone support', 'Custom branding', 'Analytics dashboard'];
-        popular: true,
-      };
+        popular: true};
       enterprise: {
         price: 2499;
         currency: '$';
@@ -101,8 +94,7 @@ export const AI_SERVICES: AIService[] = [
     trainingData: '10M+ customer interactions';
     customization: true;
     apiAccess: true;
-    realTimeProcessing: true,
-  };
+    realTimeProcessing: true};
   {
     id: 'ai-content-generation';
     title: 'AI Content Generation Suite';
@@ -128,8 +120,7 @@ export const AI_SERVICES: AIService[] = [
         currency: '$';
         period: 'month';
         features: ['Up to 20o0 articles/month', 'Custom templates', 'Advanced SEO', 'Priority support', 'Analytics'];
-        popular: true,
-      };
+        popular: true};
       enterprise: {
         price: 1499;
         currency: '$';
@@ -159,8 +150,7 @@ export const AI_SERVICES: AIService[] = [
     trainingData: '5M+ articles and content pieces';
     customization: true;
     apiAccess: true;
-    realTimeProcessing: true,
-  };
+    realTimeProcessing: true};
   {
     id: 'ai-data-analytics';
     title: 'AI-Powered Business Intelligence';
@@ -186,8 +176,7 @@ export const AI_SERVICES: AIService[] = [
         currency: '$';
         period: 'month';
         features: ['Up to 10o0GB data', 'Advanced dashboards', 'Predictive analytics', 'Priority support', 'Custom reports'];
-        popular: true,
-      };
+        popular: true};
       enterprise: {
         price: 2999;
         currency: '$';
@@ -217,8 +206,7 @@ export const AI_SERVICES: AIService[] = [
     trainingData: '10o0M+ data points across industries';
     customization: true;
     apiAccess: true;
-    realTimeProcessing: true,
-  }
+    realTimeProcessing: true}
 ],
 export const IT_SERVICES: ITService[] = [
   {
@@ -246,8 +234,7 @@ export const IT_SERVICES: ITService[] = [
         currency: '$';
         period: 'hour';
         features: ['Advanced troubleshooting', 'Network configuration', 'Security setup', 'Phone support', 'Remote assistance'];
-        popular: true,
-      };
+        popular: true};
       enterprise: {
         price: 10o0;
         currency: '$';
@@ -276,8 +263,7 @@ export const IT_SERVICES: ITService[] = [
     responseTime: '4 hours';
     coverage: ['Delaware', 'Maryland', 'Pennsylvania', 'New Jersey'];
     emergencySupport: true;
-    sla: '99.9% uptime guarantee',
-  };
+    sla: '99.9% uptime guarantee'};
   {
     id: 'cloud-migration';
     title: 'Cloud Migration & Optimization';
@@ -303,8 +289,7 @@ export const IT_SERVICES: ITService[] = [
         currency: '$';
         period: 'project';
         features: ['Comprehensive migration', 'Multiple applications', 'Performance optimization', 'Phone support', 'Training'];
-        popular: true,
-      };
+        popular: true};
       enterprise: {
         price: 50o000;
         currency: '$';
@@ -333,8 +318,7 @@ export const IT_SERVICES: ITService[] = [
     responseTime: '24 hours';
     coverage: ['Global'];
     emergencySupport: true;
-    sla: '99.95% uptime guarantee',
-  }
+    sla: '99.95% uptime guarantee'}
 ],
 export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
   {
@@ -362,8 +346,7 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
         currency: '$';
         period: 'month';
         features: ['Up to 50 users', 'Advanced templates', 'AI automation', 'Priority support', 'Analytics'];
-        popular: true,
-      };
+        popular: true};
       enterprise: {
         price: 199;
         currency: '$';
@@ -393,8 +376,7 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
     apiRateLimit: '10o00 requests/hour';
     dataRetention: '7 years';
     backupFrequency: 'Daily';
-    uptime: 99.9,
-  };
+    uptime: 99.9};
   {
     id: 'crm-saas';
     title: 'AI-Powered CRM System';
@@ -420,8 +402,7 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
         currency: '$';
         period: 'month';
         features: ['Up to 25 users', 'Advanced automation', 'AI insights', 'Priority support', 'Analytics'];
-        popular: true,
-      };
+        popular: true};
       enterprise: {
         price: 249;
         currency: '$';
@@ -451,8 +432,7 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
     apiRateLimit: '20o00 requests/hour';
     dataRetention: '10 years';
     backupFrequency: 'Real-time';
-    uptime: 99.95,
-  };
+    uptime: 99.95};
   {
     id: 'hr-management-saas';
     title: 'HR Management & Talent Platform';
@@ -478,8 +458,7 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
         currency: '$';
         period: 'month';
         features: ['Up to 10o0 employees', 'AI recruitment', 'Performance tracking', 'Priority support', 'Analytics'];
-        popular: true,
-      };
+        popular: true};
       enterprise: {
         price: 199;
         currency: '$';
@@ -509,8 +488,7 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
     apiRateLimit: '150o0 requests/hour';
     dataRetention: '7 years';
     backupFrequency: 'Daily';
-    uptime: 99.9,
-  }
+    uptime: 99.9}
 ],
 export const CYBERSECURITY_SERVICES: ITService[] = [
   {
@@ -538,8 +516,7 @@ export const CYBERSECURITY_SERVICES: ITService[] = [
         currency: '$';
         period: 'audit';
         features: ['Full penetration testing', 'Compliance assessment', 'Detailed report', 'Phone support', 'Follow-up consultation'];
-        popular: true,
-      };
+        popular: true};
       enterprise: {
         price: 250o00;
         currency: '$';
@@ -568,8 +545,7 @@ export const CYBERSECURITY_SERVICES: ITService[] = [
     responseTime: '24 hours';
     coverage: ['Global'];
     emergencySupport: true;
-    sla: '99.99% security guarantee',
-  }
+    sla: '99.99% security guarantee'}
 ],
 export const DATA_ANALYTICS_SERVICES: AIService[] = [
   {
@@ -597,8 +573,7 @@ export const DATA_ANALYTICS_SERVICES: AIService[] = [
         currency: '$';
         period: 'month';
         features: ['Up to 50o0GB data', 'Advanced dashboards', 'Predictive analytics', 'Priority support', 'Custom reports'];
-        popular: true,
-      };
+        popular: true};
       enterprise: {
         price: 3999;
         currency: '$';
@@ -628,8 +603,7 @@ export const DATA_ANALYTICS_SERVICES: AIService[] = [
     trainingData: '50o0M+ data points across industries';
     customization: true;
     apiAccess: true;
-    realTimeProcessing: true,
-  }
+    realTimeProcessing: true}
 ],
 export const CLOUD_SOLUTIONS: ITService[] = [
   {
@@ -657,8 +631,7 @@ export const CLOUD_SOLUTIONS: ITService[] = [
         currency: '$';
         period: 'month';
         features: ['Advanced automation', 'Full monitoring', 'Infrastructure as code', 'Priority support', 'Training'];
-        popular: true,
-      };
+        popular: true};
       enterprise: {
         price: 2499;
         currency: '$';
@@ -687,8 +660,7 @@ export const CLOUD_SOLUTIONS: ITService[] = [
     responseTime: '4 hours';
     coverage: ['Global'];
     emergencySupport: true;
-    sla: '99.9% uptime guarantee',
-  }
+    sla: '99.9% uptime guarantee'}
 ],
 export const ALL_SERVICES = [
   ...AI_SERVICES;

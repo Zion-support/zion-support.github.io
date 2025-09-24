@@ -11,8 +11,7 @@ export default function GPTAssistant() {
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed to summarize'),
       setSummary(data.summary)} catch (e: any) {
-      setError(e.message),
-    } finally {
+      setError(e.message)} finally {
       setLoading(false)}
   }
 ,

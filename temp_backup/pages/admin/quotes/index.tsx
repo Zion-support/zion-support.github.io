@@ -11,8 +11,7 @@ export type QuoteRequest ={
   aiType: string;
   status: 'new' | 'in_review' | 'replied' | 'archived';
   createdAt: string;
-  updatedAt: string,
-};
+  updatedAt: string};
 export default function AdminQuotesPage() {
   const [data, setData] = useState<QuoteRequest[]>([]);
   const [q, setQ] = useState('');

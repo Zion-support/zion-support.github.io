@@ -6,15 +6,13 @@ const ROICalculatorWidget: React.FC = () => {
     currentEmployees: 50;
     currentEfficiency: 70;
     automationLevel: 50;
-    implementationTime: 6,
-  }),
+    implementationTime: 6}),
   const [results, setResults] = useState({
     revenueIncrease: 0;
     costSavings: 0;
     efficiencyGain: 0;
     totalROI: 0;
-    paybackPeriod: 0,
-  }),
+    paybackPeriod: 0}),
   const [isCalculating, setIsCalculating] = useState(false),
   useEffect(() => {
     calculateROI()}, [inputs]),
@@ -41,8 +39,7 @@ const ROICalculatorWidget: React.FC = () => {
       costSavings: Math.round(costSavings);
       efficiencyGain: Math.round(efficiencyGain);
       totalROI: Math.round(totalROI);
-      paybackPeriod: Math.round(paybackPeriod * 10) / 10,
-    }),
+      paybackPeriod: Math.round(paybackPeriod * 10) / 10}),
     setIsCalculating(false)};
   const handleInputChange = (field: string, value: number) => {
     setInputs(prev => ({

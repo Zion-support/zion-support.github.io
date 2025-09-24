@@ -13,8 +13,7 @@ interface EmptyStateProps {
   subtitle: string,
   cta: string,
   href: string,
-  hasSession: boolean,
-}
+  hasSession: boolean}
 ,
 const EmptyState: React.FC<EmptyStateProps> = ({
   title;

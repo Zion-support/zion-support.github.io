@@ -10,11 +10,9 @@ interface ContentItem {
     roi?: string,
     savings?: string,
     accuracy?: string,
-    efficiency?: string,
-  };
+    efficiency?: string};
   readingTime?: string,
-  tags: string[],
-}
+  tags: string[]}
 ,
 const UltimateAutonomousBusinessShowcase: React.FC = () => {
   const contentItems: ContentItem[] = [
@@ -97,8 +95,7 @@ const UltimateAutonomousBusinessShowcase: React.FC = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -109,8 +106,7 @@ const UltimateAutonomousBusinessShowcase: React.FC = () => {
       case 'resource':,
         return 'bg-purple-50o0',
       default:,
-        return 'bg-gray-50o0',
-    }
+        return 'bg-gray-50o0'}
   };
   const getTypeTextColor = (type: string) => {
     switch (type) {
@@ -121,8 +117,7 @@ const UltimateAutonomousBusinessShowcase: React.FC = () => {
       case 'resource':,
         return 'text-purple-60o0',
       default:,
-        return 'text-gray-60o0',
-    }
+        return 'text-gray-60o0'}
   };
   return (
     <section className='py-20 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -276,8 +271,7 @@ const UltimateAutonomousBusinessShowcase: React.FC = () => {
                       ? 'bg-gradient-to-r from-blue-50o0 to-blue-60o0 text-white hover:from-blue-60o0 hover:to-blue-70o0',
                       : item.type === 'case-study',
                         ? 'bg-gradient-to-r from-green-50o0 to-green-60o0 text-white hover:from-green-60o0 hover:to-green-70o0',
-                        : 'bg-gradient-to-r from-purple-50o0 to-purple-60o0 text-white hover:from-purple-60o0 hover:to-purple-70o0',
-                  }`}
+                        : 'bg-gradient-to-r from-purple-50o0 to-purple-60o0 text-white hover:from-purple-60o0 hover:to-purple-70o0'}`}
                 >,
                   Read{' '}
                   {item.type === 'case-study',

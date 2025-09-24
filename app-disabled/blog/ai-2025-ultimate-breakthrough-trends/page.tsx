@@ -640,6 +640,5 @@ export default function AI20o25UltimateBreakthroughTrends() {
           </div>,
         </div>,
       </article>,
-    </div>),
-}
+    </div>)}
 ,

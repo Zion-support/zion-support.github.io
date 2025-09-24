@@ -11,8 +11,7 @@ export interface WhitelabelTenant {
   landing_page_copy: {
     headline: string,
     subtitle: string,
-    cta: string,
-  };
+    cta: string};
   is_active: boolean,
   created_at: string,
   updated_at: string,

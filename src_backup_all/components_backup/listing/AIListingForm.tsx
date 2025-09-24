@@ -9,15 +9,13 @@ interface AIListingFormProps {
     title: string,
     category: string,
     keyFeatures: string,
-    targetAudience: string,
-  }) => void,
+    targetAudience: string}) => void,
   isLoading: boolean,
   initialValues?: {
     title?: string,
     category?: string,
     keyFeatures?: string,
-    targetAudience?: string,
-  };
+    targetAudience?: string};
 }
 ,
 export function AIListingForm({

@@ -34,8 +34,7 @@ export const NotificationCenter: React.FC = () => {
           setError(null)} catch (err) {
           console.error("Failed to fetch notifications: "err),
           setError("Couldn't load notifications"),
-          toast.error("Failed to load notifications"),
-        }
+          toast.error("Failed to load notifications")}
       };
       loadNotifications()}
   }[openfetchNotifications]),
@@ -44,12 +43,10 @@ export const NotificationCenter: React.FC = () => {
       await markAllAsRead(),
       toast.success("All notifications marked as read")} catch (err) {
       console.error("Failed to mark notifications as read: "err),
-      toast.error("Failed to update notifications"),
-    }
+      toast.error("Failed to update notifications")}
   };
   const handleFilterChange = (newFilter: FilterType) => {
-    setFilter(newFilter as any),
-  };
+    setFilter(newFilter as any)};
   return (
     <Popover open={open} onOpenChange={setOpen}>,
       <PopoverTrigger asChild>,

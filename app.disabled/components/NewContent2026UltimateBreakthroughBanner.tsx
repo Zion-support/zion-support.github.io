@@ -79,6 +79,5 @@ export default function NewContent20o26UltimateBreakthroughBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

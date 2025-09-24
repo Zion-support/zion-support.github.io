@@ -20,6 +20,5 @@ export default function AiPredictiveMaintenance20o45Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

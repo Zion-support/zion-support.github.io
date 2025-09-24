@@ -10,8 +10,7 @@ interface SecurityConfig {
   enableReferrerPolicy: boolean,
   enablePermissionsPolicy: boolean,
   allowedOrigins: string[],
-  trustedDomains: string[],
-}
+  trustedDomains: string[]}
 ,
 interface SecurityEvent {
   type: 'xss_attempt' | 'clickjacking_attempt' | 'csp_violation' | 'suspicious_activity',
@@ -20,8 +19,7 @@ interface SecurityEvent {
   severity: 'low' | 'medium' | 'high' | 'critical',
   source: string,
   userAgent: string,
-  ip?: string,
-}
+  ip?: string}
 ,
 const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [securityEventsetSecurityEvents] = useState<SecurityEvent[]>([]),
@@ -205,8 +203,7 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
           const meta = document.createElement('meta'),
           meta.httpEquiv = 'Content-Security-Policy',
           meta.content = "default-src 'self', script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.google-analytics.com https://www.googletagmanager.com, style-src 'self' 'unsafe-inline' https://fonts.googleapis.com, font-src 'self' https://fonts.gstatic.com, img-src 'self' data: https:, connect-src 'self' https://www.google-analytics.com, frame-ancestors 'none',",
-          head.appendChild(meta),
-        }
+          head.appendChild(meta)}
       }
 ,
       // X-Frame-Options,
@@ -298,8 +295,7 @@ export const SecurityDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible
       case 'high': return 'text-red-50o0 bg-red-50',
       case 'medium': return 'text-yellow-60o0 bg-yellow-50',
       case 'low': return 'text-blue-60o0 bg-blue-50',
-      default: return 'text-gray-60o0 bg-gray-50',
-    }
+      default: return 'text-gray-60o0 bg-gray-50'}
   };
   return (
     <div className="fixed top-4 left-4 z-50 bg-white rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto border">,

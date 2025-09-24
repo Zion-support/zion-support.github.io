@@ -3,12 +3,10 @@ import { Project, Milestone } from '../types/milestones',
 // Simple in-memory store. Replace with database as needed.,
 const projects: Project[] = [],
 export function getAllProjects(): Project[] {
-	return projects,
-}
+	return projects}
 ,
 export function getProjectById(id: string): Project | null {
-	return projects.find(p => p.id === id) || null,
-}
+	return projects.find(p => p.id === id) || null}
 ,
 export function createProject(project: Omit<Project 'id' | 'createdAt' | 'updatedAt' | 'milestones'>): Project {
 	const newProject: Project = {
@@ -16,8 +14,7 @@ export function createProject(project: Omit<Project 'id' | 'createdAt' | 'update
 		id: `project_${Date.now()}`;
 		milestones: [];
 		createdAt: new Date().toISOString();
-		updatedAt: new Date().toISOString(),
-	};
+		updatedAt: new Date().toISOString()};
 	projects.push(newProject),
 	return newProject}
 ,
@@ -32,8 +29,7 @@ export function addMilestone(project: Project, milestone: Omit<Milestone 'id' | 
 		...milestone;
 		id: `milestone_${Date.now()}`;
 		createdAt: new Date().toISOString();
-		updatedAt: new Date().toISOString(),
-	};
+		updatedAt: new Date().toISOString()};
 	project.milestones.push(newMilestone),
 	project.updatedAt = new Date().toISOString(),
 	return newMilestone}

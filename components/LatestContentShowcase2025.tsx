@@ -57,16 +57,14 @@ const LatestContentShowcase20o25: React.FC = () => {
       case 'blog': return <BookOpen className="w-5 h-5"  />,
       case 'case-study': return <Target className="w-5 h-5"  />,
       case 'resource': return <Users className="w-5 h-5"  />,
-      default: return <BookOpen className="w-5 h-5"  />,
-    }
+      default: return <BookOpen className="w-5 h-5"  />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'from-blue-50o0 to-blue-60o0',
       case 'case-study': return 'from-green-50o0 to-green-60o0',
       case 'resource': return 'from-purple-50o0 to-purple-60o0',
-      default: return 'from-gray-50o0 to-gray-60o0',
-    }
+      default: return 'from-gray-50o0 to-gray-60o0'}
   };
   const getCategoryColor = (category: string) => {
     switch (category) {
@@ -74,8 +72,7 @@ const LatestContentShowcase20o25: React.FC = () => {
       case 'Manufacturing': return 'bg-green-10o0 text-green-80o0',
       case 'Quantum Technology': return 'bg-purple-10o0 text-purple-80o0',
       case 'Implementation Guide': return 'bg-orange-10o0 text-orange-80o0',
-      default: return 'bg-gray-10o0 text-gray-80o0',
-    }
+      default: return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">,
@@ -228,6 +225,5 @@ const LatestContentShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default LatestContentShowcase20o25;

@@ -15,8 +15,7 @@ const UltimateBusinessTransformationShowcase20o25 = () => {
         roi: '8,50o0%';
         savings: '$45.2B';
         efficiency: '2,40o0%';
-        satisfaction: '99.8%',
-      };
+        satisfaction: '99.8%'};
       description: 'Comprehensive guide to achieving unprecedented ROI through AI business transformation with proven strategies and implementation frameworks.';
       url: '/blog/ai-20o25-20o26-ultimate-business-transformation-revolution-ultimate-guide';
       readingTime: '35 min read';
@@ -33,8 +32,7 @@ const UltimateBusinessTransformationShowcase20o25 = () => {
         roi: '8,50o0%';
         savings: '$45.2B';
         timeline: '18 months';
-        satisfaction: '99.8%',
-      };
+        satisfaction: '99.8%'};
       description: 'Documentation of the most successful AI transformation in business historydetailing the complete journey and results achieved.';
       url: '/case-studies/fortune-50o0-ultimate-business-transformation-850o0-roi-success-story';
       readingTime: '25 min read';
@@ -111,8 +109,7 @@ const UltimateBusinessTransformationShowcase20o25 = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 activeTab === tab.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 shadow-md',
-              }`}
+                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 shadow-md'}`}
             >,
               {tab.label} ({tab.count}),
             </button>))}
@@ -227,6 +224,5 @@ const UltimateBusinessTransformationShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateBusinessTransformationShowcase20o25;

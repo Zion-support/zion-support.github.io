@@ -62,15 +62,13 @@ export default function RevolutionaryServicesPage() {
         const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0'),
         return bRoi - aRoi,
       default: ,
-        return a.name.localeCompare(b.name),
-    }
+        return a.name.localeCompare(b.name)}
   }),
   const contactInfo = {
     mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const popularServices = getPopularRevolutionaryServices(),
   // Enhanced service categories with better descriptions,
   const enhancedCategories = [
@@ -79,79 +77,68 @@ export default function RevolutionaryServicesPage() {
       description: 'Revolutionary quantum AI solutions with human-level reasoning capabilities';
       icon: <Brain className="w-6 h-6" />;
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum AI & Cognitive Computing').length;
-      color: 'from-purple-500 to-indigo-600',
-    };
+      color: 'from-purple-500 to-indigo-600'};
     {
       name: 'Autonomous Manufacturing & Industry 4.0';
       description: 'Next-generation autonomous manufacturing with zero human intervention';
       icon: <Factory className="w-6 h-6" />;
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Manufacturing & Industry 4.0').length;
-      color: 'from-orange-500 to-red-600',
-    };
+      color: 'from-orange-500 to-red-600'};
     {
       name: 'Quantum Blockchain & DeFi';
       description: 'Quantum-secured blockchain platforms with infinite scalability';
       icon: <Globe className="w-6 h-6" />;
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Blockchain & DeFi').length;
-      color: 'from-green-500 to-emerald-600',
-    };
+      color: 'from-green-500 to-emerald-600'};
     {
       name: 'AI Biomedical Research & Drug Discovery';
       description: 'AI-powered platforms for accelerated drug discovery and medical research';
       icon: <FlaskIcon className="w-6 h-6" />;
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Biomedical Research & Drug Discovery').length;
-      color: 'from-blue-500 to-indigo-600',
-    };
+      color: 'from-blue-500 to-indigo-600'};
     {
       name: 'Quantum Cybersecurity & Threat Detection';
       description: 'Quantum-resistant cybersecurity with AI-powered threat detection';
       icon: <ShieldCheck className="w-6 h-6" />;
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Cybersecurity & Threat Detection').length;
-      color: 'from-red-500 to-pink-600',
-    };
+      color: 'from-red-500 to-pink-600'};
     {
       name: 'Space Technology & Satellite Optimization';
       description: 'Revolutionary platforms for space exploration and satellite optimization';
       icon: <Rocket className="w-6 h-6" />;
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Space Technology & Satellite Optimization').length;
-      color: 'from-indigo-500 to-purple-600',
-    };
+      color: 'from-indigo-500 to-purple-600'};
     {
       name: 'AI Content Creation & Marketing';
       description: 'Quantum-powered content creation at infinite scale';
       icon: <FileText className="w-6 h-6" />;
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Content Creation & Marketing').length;
-      color: 'from-teal-500 to-cyan-600',
-    };
+      color: 'from-teal-500 to-cyan-600'};
     {
       name: 'Quantum Computing as a Service';
       description: 'Enterprise quantum computing with real quantum processors';
       icon: <Cpu className="w-6 h-6" />;
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Computing as a Service').length;
-      color: 'from-violet-500 to-purple-600',
-    };
+      color: 'from-violet-500 to-purple-600'};
     {
       name: 'Autonomous Vehicles & Smart Transportation';
       description: 'AI platforms for autonomous vehicles and smart transportation';
       icon: <CarIcon className="w-6 h-6" />;
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Vehicles & Smart Transportation').length;
-      color: 'from-emerald-500 to-green-600',
-    };
+      color: 'from-emerald-500 to-green-600'};
     {
       name: 'Smart Energy & Renewable Energy';
       description: 'AI platforms for smart energy grids and renewable energy optimization';
       icon: <LeafIcon className="w-6 h-6" />;
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length;
-      color: 'from-yellow-500 to-orange-600',
-    }
+      color: 'from-yellow-500 to-orange-600'}
   ],
   const containerVariants = {
     hidden: { opacity: 0 };
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants = {
@@ -160,8 +147,7 @@ export default function RevolutionaryServicesPage() {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -446,8 +432,7 @@ export default function RevolutionaryServicesPage() {
             <motion.div,
               className={viewMode === 'grid',
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8",
-                : "space-y-6",
-              }
+                : "space-y-6"}
               variants={containerVariants}
               initial="hidden",
               whileInView="visible",

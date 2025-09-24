@@ -10,8 +10,7 @@ export const ThemeProvider = ({ children }) => {
         .matches,
         ? 'dark',
         : 'light',
-      root.classList.add(systemTheme),
-    } else {
+      root.classList.add(systemTheme)} else {
       root.classList.add(theme)}
   }, [theme]),
   return (

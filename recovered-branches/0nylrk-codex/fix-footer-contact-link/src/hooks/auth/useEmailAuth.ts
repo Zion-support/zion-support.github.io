@@ -11,8 +11,7 @@ export const useEmailAuth = (
     password;
   }: {
     email: string,
-    password: string,
-  }) => {
+    password: string}) => {
     try {
       setIsLoading(true),
       // Clean up any stale auth state before login,
@@ -51,7 +50,7 @@ export const useEmailAuth = (
       try {
         await supabase.auth.signOut({ scope: 'global' })} catch (err) {
         // Continue even if signout fails,
-        // console.log('Sign out before signup failed:', err)}
+        // // console.log('Sign out before signup failed:', err)}
 ,
       // Create a proper options object,
       const { data, error } = await supabase.auth.signUp({

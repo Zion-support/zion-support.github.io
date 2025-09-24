@@ -18,5 +18,4 @@ export default function AiSupplyChainOptimization() {
 			]}
 			industries={["Retail", "Manufacturing", "CPG", "Logistics"]}
 			url="https: //ziontechgroup.com/ai-supply-chain-optimization",
-		 />),
-}
+		 />)}

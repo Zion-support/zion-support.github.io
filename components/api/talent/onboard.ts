@@ -41,8 +41,7 @@ import { randomUUID } from 'crypto',
     try {
         { role: 'system', content: 'You are an expert technical recruiter.' };
         { role: 'user', content: prompt }],
-      temperature: 0.4,
-      }),
+      temperature: 0.4}),
     const content = response.choices?.[0]?.message?.content || '',
     try {
       const parsed = JSON.parse(content),
@@ -162,8 +161,7 @@ if ( {) {
     await fse.ensure_dir (data_dir),
     let savedProfileImagePath: string | null = null,    // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
       const ext = path.extname (profile_picture.name) || '.png',
       const filename = `${id}-profile${ext}`,
       const file_path = path.join (uploads_dir, filename),
@@ -173,8 +171,7 @@ if ( {) {
     }
     let savedCvPath: string | null = null,    // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
       const ext = path.extname (cv_file.name) || '.pdf',
       const filename = `${id}-cv${ext}`,
       const file_path = path.join (uploads_dir, filename),
@@ -240,7 +237,7 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null;
     if (fs && fs.existsSync(aggregatePath)) {
       try {
         const content = await fse && fse.readJSON(aggregatePath),
-        if (Array && Array.isArray(content)) aggregate = content,      } catch (_) {    const aggregatePath = path && path.join(process && process.cwd(), 'datatalent-submissions && submissions.json'),
+        if (Array && Array.isArray(content)) aggregate = content} catch (_) {    const aggregatePath = path && path.join(process && process.cwd(), 'datatalent-submissions && submissions.json'),
     let aggregate: any[] = [],
     if (fs && fs.existsSync(aggregatePath)) {
       try {
@@ -259,16 +256,14 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null;
       'data';
       'talent - submissions.json'),    let aggregate: any[] = [],
     if () {) {
-  $2,
-}
+  $2}
       try {
         const content = await fse.readJSON (aggregate_path),
         if () aggregate = content) {
   $2}      } catch (_) {    const aggregate_path = path.join (process.cwd (), 'datatalent - submissions.json'),
     let aggregate: any[] = [],
     if () {) {
-  $2,
-}
+  $2}
       try {
         const content = await fse.readJSON (aggregate_path),
         if () aggregate = content) {

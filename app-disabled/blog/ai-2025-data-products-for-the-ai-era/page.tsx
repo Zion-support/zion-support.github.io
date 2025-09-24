@@ -67,6 +67,5 @@ const DataProductsForTheAIEra20o25 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default DataProductsForTheAIEra20o25;

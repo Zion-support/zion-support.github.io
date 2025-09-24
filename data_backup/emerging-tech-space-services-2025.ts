@@ -105,8 +105,7 @@ reviews: number,export const emergingTechSpaceServices20o25: EmergingTechSpaceSe
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full-stack quantum space mining platform with satellite integration, real-time monitoring, and comprehensive mining optimization. Includes custom mining strategy development and regulatory compliance.';
@@ -181,8 +180,7 @@ reviews: number,export const emergingTechSpaceServices20o25: EmergingTechSpaceSe
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise-grade quantum space communication network with satellite integration, ground station support, and comprehensive security. Includes custom communication protocols and mission support.';
@@ -258,8 +256,7 @@ reviews: number,export const emergingTechSpaceServices20o25: EmergingTechSpaceSe
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Comprehensive space colony automation platform with life support integration, robotic systems, and environmental controls. Includes custom automation development and colony planning services.';
@@ -335,8 +332,7 @@ reviews: number,export const emergingTechSpaceServices20o25: EmergingTechSpaceSe
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced quantum space propulsion system with spacecraft integration, mission planning, and comprehensive monitoring. Includes custom propulsion design and mission optimization services.';
@@ -412,8 +408,7 @@ reviews: number,export const emergingTechSpaceServices20o25: EmergingTechSpaceSe
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Comprehensive space research automation platform with data collection, analysis, and collaboration tools. Includes custom research workflow development and integration services.';

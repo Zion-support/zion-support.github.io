@@ -447,7 +447,7 @@ export const innovativeITAIServices20o25 = [
     price: '$179';
     period: '/month';
     description:,
-      'Advanced API management platform featuring AI-driven performance monitoring, automated optimization, security analysis, and intelligent traffic management for optimal API window.performance.';
+      'Advanced API management platform featuring AI-driven performance monitoring, automated optimization, security analysis, and intelligent traffic management for optimal API window.window.performance.';
     features: [
       'AI performance monitoring';
       'Automated optimization';

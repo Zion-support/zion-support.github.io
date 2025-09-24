@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const fs = require('fs'),
 const path = require('path'),
@@ -28,8 +27,7 @@ class NetlifyBuildMonitor {
       checkInterval: 30o000, // 30 seconds,
       buildTimeout: 60o0000, // 10 minutes,
       autoFix: true;
-      notifyOnFailure: true,
-    };
+      notifyOnFailure: true};
   }
 ,
   // Monitor build status,
@@ -75,28 +73,23 @@ class NetlifyBuildMonitor {
       {
         pattern: /Unterminated string constant/;
         fix: this.fixStringConstants.bind(this);
-        description: Fix unterminated string constants,
-      };
+        description: Fix unterminated string constants};
       {
         pattern: /Unexpected token.*Expected a string literal/;
         fix: this.fixImportStatements.bind(this);
-        description: Fix import statement syntax,
-      };
+        description: Fix import statement syntax};
       {
         pattern: /Type.*is not assignable to type/;
         fix: this.fixTypeErrors.bind(this);
-        description: Fix TypeScript type errors,
-      };
+        description: Fix TypeScript type errors};
       {
         pattern: /Module not found/;
         fix: this.fixModuleErrors.bind(this);
-        description: Fix module import errors,
-      };
+        description: Fix module import errors};
       {
         pattern: /Cannot find module/;
         fix: this.fixMissingDependencies.bind(this);
-        description: Install missing dependencies,
-      }
+        description: Install missing dependencies}
     ],
     for (const errorPattern of errorPatterns) {
       if (this.errors.some(error => errorPattern.pattern.test(error))) {
@@ -264,8 +257,7 @@ class NetlifyBuildMonitor {
       summary: {
         totalErrors: this.errors.length;
         totalFixes: this.fixes.length;
-        success: this.fixes.length > 0,
-      }
+        success: this.fixes.length > 0}
     };
     const reportPath = `automation/reports/build-fix-${Date.now()}.json`,
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
@@ -433,10 +425,10 @@ if (require.main === module) {
 module.exports = NetlifyBuildMonitor,
 // Graceful shutdown handling,
 process.on('SIGINT', () => {
-  // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
+  // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
   // Add cleanup logic here,
   process.exit(0)}),
 process.on('SIGTERM', () => {
-  // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
+  // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here,
   process.exit(0)}),

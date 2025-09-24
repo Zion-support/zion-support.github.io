@@ -31,15 +31,13 @@ export interface AdditionalMarketService20o25 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const additionalMarketServices20o25: AdditionalMarketService20o25[] = [
   {

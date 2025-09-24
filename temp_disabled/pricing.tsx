@@ -16,8 +16,7 @@ export default function PricingPage() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const popularServices = getPopularServices(),
   // Combine all services for comprehensive pricing,
   const allServices = [
@@ -32,36 +31,31 @@ export default function PricingPage() {
       description: 'Revolutionary AI platforms';
       services: ['AI Multimodal Fusion'AI Autonomous Decision Engine'AI Emotional Intelligence'];
       avgPrice: '$3,199/month';
-      savings: 'Save 60-80% vs. competitors',
-    };
+      savings: 'Save 60-80% vs. competitors'};
     {
       name: 'Cutting-Edge IT Infrastructure';
       description: 'Advanced infrastructure solutions';
       services: ['Zero Trust Architecture'Edge Computing Orchestration'5G Private Networks'];
       avgPrice: '$4,999/month';
-      savings: 'Save 50-70% vs. competitors',
-    };
+      savings: 'Save 50-70% vs. competitors'};
     {
       name: 'Innovative Micro SaaS';
       description: 'Creative and practical SaaS tools';
       services: ['AI Brand Personality'Virtual Event Holograms'AI Meeting Transcriber'];
       avgPrice: '$199/month';
-      savings: 'Save 40-60% vs. competitors',
-    };
+      savings: 'Save 40-60% vs. competitors'};
     {
       name: 'Quantum & Space Technology';
       description: 'Quantum computing and space solutions';
       services: ['Quantum AI Hybrid'Space Technology Platform'Quantum Cybersecurity'];
       avgPrice: '$5,999/month';
-      savings: 'Save 70-85% vs. competitors',
-    };
+      savings: 'Save 70-85% vs. competitors'};
     {
       name: 'Enterprise IT Services';
       description: 'Comprehensive enterprise solutions';
       services: ['Cloud Migration'DevOps Automation'Security Hardening'];
       avgPrice: '$2,999/month';
-      savings: 'Save 45-65% vs. competitors',
-    }
+      savings: 'Save 45-65% vs. competitors'}
   ],
   // Enhanced pricing tiers with more realistic and comprehensive offerings,
   const pricingTiers = [
@@ -84,8 +78,7 @@ export default function PricingPage() {
       variant: 'quantum' as const;
       popular: false;
       cta: 'Start Free Trial';
-      ctaVariant: 'secondary' as const,
-    };
+      ctaVariant: 'secondary' as const};
     {
       name: 'Professional';
       description: 'Ideal for growing businesses and teams';
@@ -109,8 +102,7 @@ export default function PricingPage() {
       variant: 'holographic' as const;
       popular: true;
       cta: 'Start Free Trial';
-      ctaVariant: 'primary' as const,
-    };
+      ctaVariant: 'primary' as const};
     {
       name: 'Enterprise';
       description: 'For large organizations and enterprises';
@@ -138,8 +130,7 @@ export default function PricingPage() {
       variant: 'neural' as const;
       popular: false;
       cta: 'Contact Sales';
-      ctaVariant: 'primary' as const,
-    }
+      ctaVariant: 'primary' as const}
   ],
   // Service category pricing examples,
   const serviceCategoryPricing = [
@@ -147,38 +138,32 @@ export default function PricingPage() {
       category: 'Quantum AI & Computing';
       services: ['Quantum AI Platform'Neural Network Training'Quantum Optimization'];
       startingPrice: '$99/month';
-      icon: <Brain className="w-6 h-6"  />,
-    };
+      icon: <Brain className="w-6 h-6"  />};
     {
       category: 'Autonomous Systems';
       services: ['AI Factory Management'Robotic Process Automation'Smart Manufacturing'];
       startingPrice: '$149/month';
-      icon: <Factory className="w-6 h-6"  />,
-    };
+      icon: <Factory className="w-6 h-6"  />};
     {
       category: 'Healthcare & Biotech';
       services: ['Drug Discovery AI'Medical Imaging Analysis'Genomic Research Platform'];
       startingPrice: '$199/month';
-      icon: <FlaskConical className="w-6 h-6"  />,
-    };
+      icon: <FlaskConical className="w-6 h-6"  />};
     {
       category: 'Cybersecurity';
       services: ['Quantum Encryption'Threat Intelligence'Zero-Trust Security'];
       startingPrice: '$129/month';
-      icon: <Shield className="w-6 h-6"  />,
-    };
+      icon: <Shield className="w-6 h-6"  />};
     {
       category: 'Financial Technology';
       services: ['AI Trading Platform'Risk Management'Portfolio Optimization'];
       startingPrice: '$179/month';
-      icon: <DollarSign className="w-6 h-6"  />,
-    };
+      icon: <DollarSign className="w-6 h-6"  />};
     {
       category: 'Space Technology';
       services: ['Satellite Management'Space Data Analytics'Mission Planning AI'];
       startingPrice: '$299/month';
-      icon: <Rocket className="w-6 h-6"  />,
-    }
+      icon: <Rocket className="w-6 h-6"  />}
   ],
   // Value propositions,
   const valuePropositions = [
@@ -187,29 +172,25 @@ export default function PricingPage() {
       description: 'Average 30o0% ROI within 6 months';
       icon: <TrendingUp className="w-8 h-8"  />;
       metric: '30o0%';
-      detail: 'Average ROI',
-    };
+      detail: 'Average ROI'};
     {
       title: 'Time to Value';
       description: 'Get up and running in under 24 hours';
       icon: <Clock className="w-8 h-8"  />;
       metric: '<24h';
-      detail: 'Setup Time',
-    };
+      detail: 'Setup Time'};
     {
       title: 'Global Reach';
       description: 'Available in 150+ countries worldwide';
       icon: <Globe className="w-8 h-8"  />;
       metric: '150+';
-      detail: 'Countries',
-    };
+      detail: 'Countries'};
     {
       title: 'Enterprise Security';
       description: 'Bank-level security with 99.99% uptime';
       icon: <Shield className="w-8 h-8"  />;
       metric: '99.99%';
-      detail: 'Uptime SLA',
-    }
+      detail: 'Uptime SLA'}
   ],
   return (
     <UltraFuturisticBackground variant="quantum" intensity="high">,
@@ -269,8 +250,7 @@ export default function PricingPage() {
               className="relative inline-flex h-12 w-24 items-center rounded-full bg-slate-70o0/50 p-1 transition-colors focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50">,
               <span
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-50o0 to-purple-50o0 transition-transform ${
-                  billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0',
-                }`}
+                  billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'}`}
                />,
             </button>,
             <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-40o0'}`}>,
@@ -478,6 +458,5 @@ export default function PricingPage() {
           </UltraFuturisticCard>,
         </div>,
       </div>,
-    </UltraFuturisticBackground>),
-}
+    </UltraFuturisticBackground>)}
 ,

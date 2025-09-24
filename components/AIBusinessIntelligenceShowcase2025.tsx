@@ -68,8 +68,7 @@ const AIBusinessIntelligenceShowcase20o25 = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -80,8 +79,7 @@ const AIBusinessIntelligenceShowcase20o25 = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <section className='py-16 bg-gray-50'>,
@@ -214,6 +212,5 @@ const AIBusinessIntelligenceShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AIBusinessIntelligenceShowcase20o25;

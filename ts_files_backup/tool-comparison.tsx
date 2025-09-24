@@ -35,8 +35,7 @@ export default function ToolComparisonPage() {
       cons: ['Sometimes 'inaccurate', 'Limited 'context', 'Privacy concerns'];
       website: 'https://chat.openai.com';
       icon: <Brain className="w-6 h-6" />;
-      color: 'text-green-400',
-    };
+      color: 'text-green-400'};
     {
       name: 'Midjourney';
       category: 'AI Art';
@@ -48,8 +47,7 @@ export default function ToolComparisonPage() {
       cons: ['Discord-only 'interface', 'Limited 'customization', 'Monthly subscription'];
       website: 'https://midjourney.com';
       icon: <Zap className="w-6 h-6" />;
-      color: 'text-purple-400',
-    };
+      color: 'text-purple-400'};
     {
       name: 'Jasper';
       category: 'AI Writing';
@@ -61,8 +59,7 @@ export default function ToolComparisonPage() {
       cons: [', 'Expensive', 'Limited free 'trial', 'Can be repetitive'];
       website: 'https://jasper.ai';
       icon: <Brain className="w-6 h-6" />;
-      color: 'text-blue-400',
-    };
+      color: 'text-blue-400'};
     // SaaS Tools,
     {
       name: 'Zapier';
@@ -75,8 +72,7 @@ export default function ToolComparisonPage() {
       cons: ['Can get 'expensive', 'Limited customization'];
       website: 'https://zapier.com';
       icon: <Zap className="w-6 h-6" />;
-      color: 'text-orange-400',
-    };
+      color: 'text-orange-400'};
     {
       name: 'Notion';
       category: 'Productivity';
@@ -88,8 +84,7 @@ export default function ToolComparisonPage() {
       cons: ['Learning 'curve', 'Limited offline 'access', 'Can be overwhelming'];
       website: 'https://notion.so';
       icon: <Globe className="w-6 h-6" />;
-      color: 'text-gray-400',
-    };
+      color: 'text-gray-400'};
     {
       name: 'Stripe';
       category: 'Payments';
@@ -101,8 +96,7 @@ export default function ToolComparisonPage() {
       cons: ['Higher fees than some 'alternatives', 'Complex for 'beginners', 'Strict requirements'];
       website: 'https://stripe.com';
       icon: <DollarSign className="w-6 h-6" />;
-      color: 'text-blue-400',
-    };
+      color: 'text-blue-400'};
     // Startup Tools,
     {
       name: 'HubSpot';
@@ -115,8 +109,7 @@ export default function ToolComparisonPage() {
       cons: ['Can get 'expensive', 'Complex for small 'teams', 'Limited customization'];
       website: 'https://hubspot.com';
       icon: <TrendingUp className="w-6 h-6" />;
-      color: 'text-orange-400',
-    };
+      color: 'text-orange-400'};
     {
       name: 'Mailchimp';
       category: 'Email Marketing';
@@ -128,8 +121,7 @@ export default function ToolComparisonPage() {
       cons: ['Limited free 'features', 'Basic 'automation', 'Can be expensive'];
       website: 'https://mailchimp.com';
       icon: <Users className="w-6 h-6" />;
-      color: 'text-yellow-400',
-    };
+      color: 'text-yellow-400'};
     {
       name: 'Calendly';
       category: 'Productivity';
@@ -141,8 +133,7 @@ export default function ToolComparisonPage() {
       cons: ['Limited free 'features', 'Basic 'customization', 'Can be expensive'];
       website: 'https://calendly.com';
       icon: <Globe className="w-6 h-6" />;
-      color: 'text-blue-400',
-    }
+      color: 'text-blue-400'}
   ],
   const categories = [', 'All', 'AI 'Assistant', 'AI 'Art', 'AI 'Writing', 'Automation', 'Productivity', 'Payments'Marketing & 'Sales', 'Email Marketing'],
   const filteredTools = allTools.filter(tool => {
@@ -160,14 +151,12 @@ export default function ToolComparisonPage() {
       case 'name':,
         return a.name.localeCompare(b.name),
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   const getPricingColor = (pricing: string) => {
     if (pricing.includes('Free')) return 'text-green-400',
     if (pricing.includes('$')) return 'text-blue-400',
-    return 'text-gray-400',
-  };
+    return 'text-gray-400'};
   return (
     <>,
       <Head>,
@@ -274,8 +263,7 @@ export default function ToolComparisonPage() {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category,
                       ? 'bg-purple-600 text-white shadow-lg',
-                      : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white',
-                  }`}
+                      : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white'}`}
                 >,
                   {category}
                 </button>))}
@@ -496,6 +484,5 @@ export default function ToolComparisonPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,

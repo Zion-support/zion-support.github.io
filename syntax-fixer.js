@@ -1,6 +1,6 @@
 #!/usr/bin/env node,
 import { execSync } from 'child_process',
-// console.log('🔧 Running comprehensive syntax fixer...'),
+// // console.log('🔧 Running comprehensive syntax fixer...'),
 function fixSyntaxErrors() {
   const files = execSync(
     'find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" | head -50';
@@ -38,11 +38,11 @@ function fixSyntaxErrors() {
       if (content !== originalContent) {
         fs.writeFileSync(file, content),
         fixedCount++,
-        // console.log(`✅ Fixed ${file}`)}
+        // // console.log(`✅ Fixed ${file}`)}
     } catch (error) {
-      // console.log(`❌ Error fixing ${file}: ${error.message}`)}
+      // // console.log(`❌ Error fixing ${file}: ${error.message}`)}
   }
 ,
-  // console.log(`\n📊 Fixed ${fixedCount} files`)}
+  // // console.log(`\n📊 Fixed ${fixedCount} files`)}
 ,
 fixSyntaxErrors(),

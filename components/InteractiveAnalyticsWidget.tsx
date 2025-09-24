@@ -6,8 +6,7 @@ const InteractiveAnalyticsWidget: React.FC = () => {
     uniqueVisitors: 0;
     bounceRate: 0;
     avgSessionDuration: 0;
-    conversionRate: 0,
-  }),
+    conversionRate: 0}),
   useEffect(() => {
     // Simulate real-time analytics updates,
     const interval = setInterval(() => {
@@ -16,12 +15,10 @@ const InteractiveAnalyticsWidget: React.FC = () => {
         uniqueVisitors: Math.floor(Math.random() * 50o00) + 250o00;
         bounceRate: Math.random() * 20 + 30;
         avgSessionDuration: Math.random() * 30o0 + 120;
-        conversionRate: Math.random() * 5 + 2,
-      })}40o00),
+        conversionRate: Math.random() * 5 + 2})}40o00),
     return () => clearInterval(interval)}[]),
   const formatNumber = (num: number) => {
-    return num.toLocaleString(),
-  };
+    return num.toLocaleString()};
   const formatDuration = (seconds: number) => {
     const mins = Math.floor(seconds / 60),
     const secs = Math.floor(seconds % 60),

@@ -395,6 +395,5 @@ export default function Fortune50o0AIAutomationRevolutionaryBreakthroughPage() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -39,15 +39,13 @@ export function SignUpForm() {
 ,
         navigate("/mobile")}
     } catch (err: any) {
-      setError(err.message),
-    } finally {
+      setError(err.message)} finally {
       setIsLoading(false)}
   };
   const handleGoogleLogin = async () => {
     try {
       await loginWithGoogle()} catch (err: any) {
-      setError(err.message),
-    }
+      setError(err.message)}
   };
   return (
     <div className="space-y-4 px-4">,

@@ -9,13 +9,11 @@ interface ErrorContextType {
   showRetryableError: (error: Error, retryAction?: () => void) => void,
   showNetworkError: (retryAction?: () => void) => void,
   showAuthError: (loginAction?: () => void) => void,
-  clearAllErrors: () => void,
-}
+  clearAllErrors: () => void}
 ,
 const ErrorContext = createContext<ErrorContextType | null>(null),
 interface GlobalErrorHandlerProps {
-  children: ReactNode,
-}
+  children: ReactNode}
 ,
 export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
   const [retryCount, setRetryCount] = useState<Record<string number>>({}),
@@ -59,8 +57,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
       variant: "destructive";
       action: retryAction ? {
         label: "Retry";
-        onClick: retryAction,
-      } : undefined})}, []),
+        onClick: retryAction} : undefined})}, []),
   const showAuthError = useCallback((loginAction?: () => void) => {
     toast({
       title: "Authentication Required";
@@ -68,8 +65,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
       variant: "destructive";
       action: loginAction ? {
         label: "Log In";
-        onClick: loginAction,
-      } : undefined})}, []),
+        onClick: loginAction} : undefined})}, []),
   const clearAllErrors = useCallback(() => {
     setRetryCount({}),
     // Clear any active toasts would go here if the toast system supports it}, []),
@@ -94,8 +90,7 @@ export function useGlobalErrorHandler(): ErrorContextType {
 function getErrorMessage(error: Error): string {
   const message = error.message.toLowerCase(),
   if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
-    return "Unable to connect to our servers. Please check your internet connection.",
-  }
+    return "Unable to connect to our servers. Please check your internet connection."}
 ,
   if (message.includes('auth') || message.includes('unauthorized') || message.includes('40o1')) {
     return "Your session has expired. Please log in again."}
@@ -132,8 +127,7 @@ export function useErrorHandler() {
     options?: {
       onError?: (error: Error) => void,
       retryAction?: () => void,
-      successMessage?: string,
-    }
+      successMessage?: string}
   ): Promise<T | null> => {
     try {
       const result = await operation(),
@@ -145,8 +139,7 @@ export function useErrorHandler() {
       return result} catch (error: any) {
       reportError(error),
       if (options?.onError) {
-        options.onError(error),
-      } else {
+        options.onError(error)} else {
         handleApiError(error, options?.retryAction)}
 ,
       return null}

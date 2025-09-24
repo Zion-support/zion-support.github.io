@@ -24,8 +24,7 @@ interface PerformanceMetric {
   status: 'excellent' | 'good' | 'warning' | 'critical',
   trend: 'up' | 'down' | 'stable',
   icon: React.ComponentType<any>,
-  color: string,
-}
+  color: string}
 ,
 const EnhancedPerformanceMonitor20o26 = () => {
   const [metricsetMetrics] = useState<PerformanceMetric[]>([]),
@@ -41,8 +40,7 @@ const EnhancedPerformanceMonitor20o26 = () => {
         status: 'excellent';
         trend: 'down';
         icon: Cpu;
-        color: 'from-green-50o0 to-emerald-50o0',
-      };
+        color: 'from-green-50o0 to-emerald-50o0'};
       {
         id: 'memory';
         name: 'Memory Usage';
@@ -51,8 +49,7 @@ const EnhancedPerformanceMonitor20o26 = () => {
         status: 'good';
         trend: 'stable';
         icon: Database;
-        color: 'from-blue-50o0 to-cyan-50o0',
-      };
+        color: 'from-blue-50o0 to-cyan-50o0'};
       {
         id: 'storage';
         name: 'Storage Usage';
@@ -61,8 +58,7 @@ const EnhancedPerformanceMonitor20o26 = () => {
         status: 'good';
         trend: 'up';
         icon: HardDrive;
-        color: 'from-purple-50o0 to-pink-50o0',
-      };
+        color: 'from-purple-50o0 to-pink-50o0'};
       {
         id: 'network';
         name: 'Network Speed';
@@ -71,8 +67,7 @@ const EnhancedPerformanceMonitor20o26 = () => {
         status: 'excellent';
         trend: 'up';
         icon: Wifi;
-        color: 'from-orange-50o0 to-red-50o0',
-      };
+        color: 'from-orange-50o0 to-red-50o0'};
       {
         id: 'response';
         name: 'Response Time';
@@ -81,8 +76,7 @@ const EnhancedPerformanceMonitor20o26 = () => {
         status: 'excellent';
         trend: 'down';
         icon: Clock;
-        color: 'from-teal-50o0 to-cyan-50o0',
-      };
+        color: 'from-teal-50o0 to-cyan-50o0'};
       {
         id: 'throughput';
         name: 'Throughput';
@@ -91,8 +85,7 @@ const EnhancedPerformanceMonitor20o26 = () => {
         status: 'excellent';
         trend: 'up';
         icon: Activity;
-        color: 'from-indigo-50o0 to-purple-50o0',
-      }
+        color: 'from-indigo-50o0 to-purple-50o0'}
     ],
     setMetrics(initialMetrics),
     if (isMonitoring) {
@@ -101,8 +94,7 @@ const EnhancedPerformanceMonitor20o26 = () => {
           prevMetrics.map(metric => ({
             ...metric;
             value: Math.max(0Math.min(10o0metric.value + (Math.random() - 0.5) * 5));
-            trend: Math.random() > 0.5 ? 'up' : 'down' as 'up' | 'down' | 'stable',
-          }))),
+            trend: Math.random() > 0.5 ? 'up' : 'down' as 'up' | 'down' | 'stable'}))),
         setLastUpdate(new Date())}20o00),
       return () => clearInterval(interval)}
   }[isMonitoring]),
@@ -112,8 +104,7 @@ const EnhancedPerformanceMonitor20o26 = () => {
       case 'good': return 'text-blue-40o0',
       case 'warning': return 'text-yellow-40o0',
       case 'critical': return 'text-red-40o0',
-      default: return 'text-gray-40o0',
-    }
+      default: return 'text-gray-40o0'}
   };
   const getStatusIcon = (status: string) => {
     switch (status) {
@@ -121,16 +112,14 @@ const EnhancedPerformanceMonitor20o26 = () => {
       case 'good': return <CheckCircle className="w-4 h-4"  />,
       case 'warning': return <AlertTriangle className="w-4 h-4"  />,
       case 'critical': return <AlertTriangle className="w-4 h-4"  />,
-      default: return <Activity className="w-4 h-4"  />,
-    }
+      default: return <Activity className="w-4 h-4"  />}
   };
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return <TrendingUp className="w-4 h-4 text-green-40o0"  />,
       case 'down': return <TrendingUp className="w-4 h-4 text-red-40o0 rotate-180"  />,
       case 'stable': return <BarChart3 className="w-4 h-4 text-gray-40o0"  />,
-      default: return <BarChart3 className="w-4 h-4 text-gray-40o0"  />,
-    }
+      default: return <BarChart3 className="w-4 h-4 text-gray-40o0"  />}
   };
   return (
     <div className="bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white p-6 rounded-2xl border border-white/10">,
@@ -154,8 +143,7 @@ const EnhancedPerformanceMonitor20o26 = () => {
             className={`p-2 rounded-lg transition-colors ${
               isMonitoring,
                 ? 'bg-green-50o0/20 text-green-40o0 hover: bg-green-50o0/30',
-                : 'bg-gray-50o0/20 text-gray-40o0 hover:bg-gray-50o0/30',
-            }`}
+                : 'bg-gray-50o0/20 text-gray-40o0 hover:bg-gray-50o0/30'}`}
           >,
             <RefreshCw className={`w-4 h-4 ${isMonitoring ? 'animate-spin' : ''}`}  />,
           </button>,

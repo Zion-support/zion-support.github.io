@@ -15,8 +15,7 @@ let lastKey = '',
 let lastShown = 0,
 interface ToastActionProps {
   label: string,
-  onClick: () => void,
-}
+  onClick: () => void}
 ,
 interface ToastProps {
   title?: string,
@@ -32,8 +31,7 @@ interface ToastProps {
 const shouldShow = (key: string): boolean => {
   const now = Date.now(),
   if (key === lastKey && now - lastShown < DEDUPE_DELAY) {
-    return false,
-  }
+    return false}
   lastKey = key,
   lastShown = now,
   return true};
@@ -68,8 +66,7 @@ const toastAdapter = (props: ToastProps | string) => {
       break,
     default:,
       type = ToastType.INFO,
-      break,
-  }
+      break}
 ,
   // Use title as message if no description, otherwise use description,
   const message = description || title || '',
@@ -111,8 +108,7 @@ export const useToast = () => ({
   toast: toastAdapter;
   dismiss: (toastId?: string) => {
     if (toastId) {
-      globalToastManager.dismissToast(toastId),
-    } else {
+      globalToastManager.dismissToast(toastId)} else {
       globalToastManager.dismissAll()}
   };
   // Additional methods from global toast manager,

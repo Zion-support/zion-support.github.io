@@ -41,8 +41,7 @@ function FuturisticHero() {
               Explore Services,
             </a>,
           </Link>,
-        </div>),
-}
+        </div>)}
 ,
 export default function FuturisticHero() {
   return (
@@ -93,8 +92,7 @@ function FuturisticHero() {
           </p>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 }
     </section>)}
 }

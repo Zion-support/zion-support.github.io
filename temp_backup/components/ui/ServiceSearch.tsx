@@ -10,16 +10,14 @@ interface Service {
   price?: string,
   period?: string,
   icon?: string,
-  popular?: boolean,
-}
+  popular?: boolean}
 ,
 interface ServiceSearchProps {
   services: Service[],
   onServiceSelect?: (service: Service) => void,
   placeholder?: string,
   showFilters?: boolean,
-  maxResults?: number,
-}
+  maxResults?: number}
 ,
 const ServiceSearch: React.FC<ServiceSearchProps> = ({
   services;
@@ -83,8 +81,7 @@ const ServiceSearch: React.FC<ServiceSearchProps> = ({
           const priceB = parseFloat(b.price?.replace(/[^0-9.]/g, '') || '0'),
           return priceA - priceB}
         default: ,
-          return 0,
-      }
+          return 0}
     }),
     return filtered.slice(0, maxResults)}, [
     services;
@@ -143,8 +140,7 @@ const ServiceSearch: React.FC<ServiceSearchProps> = ({
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-30o0 ${
                   selectedCategory === 'all',
                     ? 'bg-cyan-40o0 text-black',
-                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                }`}
+                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
               >,
                 All Categories,
               </button>,
@@ -155,8 +151,7 @@ const ServiceSearch: React.FC<ServiceSearchProps> = ({
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-30o0 ${
                     selectedCategory === category,
                       ? 'bg-cyan-40o0 text-black',
-                      : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                  }`}
+                      : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
                 >,
                   {category}
                 </button>))}
@@ -173,8 +168,7 @@ const ServiceSearch: React.FC<ServiceSearchProps> = ({
                   className={`px-3 py-1 rounded-full text-xs font-medium transition-all duration-30o0 ${
                     selectedTags.includes(tag),
                       ? 'bg-purple-40o0 text-black',
-                      : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                  }`}
+                      : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
                 >,
                   {tag}
                 </button>))}

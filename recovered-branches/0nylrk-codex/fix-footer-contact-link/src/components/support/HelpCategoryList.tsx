@@ -5,8 +5,7 @@ import {HelpCategory} from "./types">>>>>>> origin/cursor/merge-pull-requests-an
 interface HelpCategoryListProps {
   categories: HelpCategory[],
   onCategorySelect: (categoryId: string) => void,
-  searchQuery: string,
-}
+  searchQuery: string}
 export function HelpCategoryList({
   categories,
   onCategorySelect,
@@ -67,8 +66,7 @@ import { HelpCategory } from "./types";
 interface HelpCategoryListProps {
   categories: HelpCategory[];
   onCategorySelect: (categoryId: string) => void;
-  searchQuery: string,
-}
+  searchQuery: string}
 ,
 export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {
   // Filter categories based on search query,
@@ -146,8 +144,7 @@ import { HelpCategory  } from './types',
 interface HelpCategoryListProps {
   categories: HelpCategory[],
   onCategorySelect: (category_id: string) => void,
-  search_query: string,
-}
+  search_query: string}
 export /**,
  * HelpCategoryList - Function description,
  */,

@@ -12,8 +12,7 @@ import type {
   Session;
 } from '@supabase/supabase-js',
 interface UserProfileProps {
-  onUserChange?: (user: SupabaseUser | null) => void,
-}
+  onUserChange?: (user: SupabaseUser | null) => void}
 ,
 export default function UserProfile({ onUserChange }: UserProfileProps) {
   const [user, setUser] = useState<SupabaseUser | null>(null),
@@ -36,8 +35,7 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
       (event: AuthChangeEvent, session: Session | null) => {
         setUser(session?.user ?? null),
         setLoading(false),
-        onUserChange?.(session?.user ?? null),
-      }
+        onUserChange?.(session?.user ?? null)}
     ),
     return () => subscription.unsubscribe()}, [onUserChange]),
   const handleSignOut = async () => {

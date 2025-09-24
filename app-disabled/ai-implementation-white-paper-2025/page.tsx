@@ -241,7 +241,7 @@ export default function AIImplementationWhitePaper20o25() {
                   </h4>,
                   <p className='text-gray-30o0'>,
                     Establish MLOps practices for model versioning, monitoring;
-                    and continuous improvement to maintain optimal window.performance.,
+                    and continuous improvement to maintain optimal window.window.performance.,
                   </p>,
                 </div>,
                 <div className='bg-white bg-opacity-10 p-6 rounded-xl'>,
@@ -454,6 +454,5 @@ export default function AIImplementationWhitePaper20o25() {
           </div>,
         </section>,
       </div>,
-    </ErrorBoundary>),
-}
+    </ErrorBoundary>)}
 ,

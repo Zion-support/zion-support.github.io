@@ -9,15 +9,13 @@ import { toast } from "@/hooks/use-toast",
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { toast } from "@/hooks/use-toast";
 interface PaymentSectionProps {
-  selected_country: CountryPricing,
-}
+  selected_country: CountryPricing}
 ,
   const handlePaymentInitiated = () => {
     toast({
       title: "Processing your request",
       description:,
-        "You'll be redirected to our secure payment portal momentarily.",
-    })}
+        "You'll be redirected to our secure payment portal momentarily."})}
 ,
       title: "Processing your request";
       description: "You'll be redirected to our secure payment portal momentarily."})};
@@ -31,8 +29,7 @@ interface PaymentSectionProps {
       </h4>,
       <p className="text-2xl font-bold text-zion-cyan mb-6">,
 interface PaymentSectionProps {
-  selectedCountry: CountryPricing,
-}
+  selectedCountry: CountryPricing}
 ,
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment,
@@ -54,8 +51,7 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
         amount={selectedCountry.pricePerIncident}
 ,
 interface PaymentSectionProps {
-  selectedCountry: CountryPricing,
-}
+  selectedCountry: CountryPricing}
 ,
 export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment,

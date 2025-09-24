@@ -8,12 +8,10 @@ import {
 import { Trophy } from 'lucide-react',
 export interface LeaderboardEntry {
   name: string,
-  points: number,
-}
+  points: number}
 ,
 interface UserLeaderboardProps {
-  entries: LeaderboardEntry[],
-}
+  entries: LeaderboardEntry[]}
 ,
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
   return (

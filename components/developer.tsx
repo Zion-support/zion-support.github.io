@@ -32,6 +32,5 @@ export default function DeveloperPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

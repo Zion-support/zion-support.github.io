@@ -15,6 +15,5 @@ export default function PhilosophyPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

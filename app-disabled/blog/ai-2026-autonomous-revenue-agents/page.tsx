@@ -116,6 +116,5 @@ export default function Page() {
           </Link>,
         </div>,
       </footer>,
-    </article>),
-}
+    </article>)}
 ,

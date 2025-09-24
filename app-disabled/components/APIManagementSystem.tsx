@@ -12,6 +12,5 @@ const APIManagementSystem: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default APIManagementSystem;

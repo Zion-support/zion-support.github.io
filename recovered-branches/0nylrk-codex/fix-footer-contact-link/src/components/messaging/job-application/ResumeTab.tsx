@@ -10,8 +10,7 @@ export interface ResumeTabProps {
   onSelectResume?: (resume_id: string) => void,
   onResumeSelected?: (resume: ResumeOption) => void,
   onApply?: () => Promise<void>,
-  isSubmitting?: boolean,
-}
+  isSubmitting?: boolean}
 ,
 export function ResumeTab({
   selectedResumeId,
@@ -21,8 +20,7 @@ export function ResumeTab({
   isSubmitting = false}: ResumeTabProps) {
   const handleResumeSelected = (resume: ResumeOption) => {
     if (onResumeSelected) {
-      onResumeSelected(resume),
-    }
+      onResumeSelected(resume)}
     if (onSelectResume) {
       onSelectResume(resume.id)}
   }
@@ -49,12 +47,10 @@ export function ResumeTab(): any ({
 }: ResumeTabProps) {
   const handleResumeSelected = (resume: ResumeOption) => {
     if (onResumeSelected) {
-      onResumeSelected(resume),
-    }
+      onResumeSelected(resume)}
 ,
     if (onSelectResume) {
-      onSelectResume(resume && resume.id),
-}
+      onSelectResume(resume && resume.id)}
   }
 ,
   return (
@@ -76,8 +72,7 @@ export interface ResumeTabProps {
 export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting = false }: ResumeTabProps) {
   const handleResumeSelected = (resume: ResumeOption) => {
     if (onResumeSelected) {
-      onResumeSelected(resume),
-    }
+      onResumeSelected(resume)}
 ,
     if (onSelectResume) {
       onSelectResume(resume.id)}
@@ -125,8 +120,7 @@ function ResumeTab() {
   const handleResumeSelected = (resume: ResumeOption) =>: any {
     // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
       onResumeSelected (resume)}
     // Check condition,
 if ( {) {
@@ -150,6 +144,5 @@ if ( {) {
               Please select a resume to continue,
             </p>)}
         </div>)}
-    </div>),
-}
+    </div>)}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}}}})))))

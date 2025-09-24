@@ -12,8 +12,7 @@ export default function UltraFuturistic20o29InnovationsPage() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const all20o29Services = [...cuttingEdgeInnovations20o29...spaceColonization20o29Services],
   return (
     <>,
@@ -101,43 +100,37 @@ export default function UltraFuturistic20o29InnovationsPage() {
                   description: 'Revolutionary AI systems with human-like consciousness and reasoning capabilities';
                   icon: Brain;
                   color: 'from-purple-60o0 to-pink-60o0';
-                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Consciousness') || s.category.includes('Business')),
-                };
+                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Consciousness') || s.category.includes('Business'))};
                 {
                   title: '⚛️ Quantum & Neuroscience';
                   description: 'Quantum computing meets brain-computer interfaces for unprecedented capabilities';
                   icon: Atom;
                   color: 'from-indigo-60o0 to-purple-60o0';
-                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Neuroscience') || s.category.includes('Time')),
-                };
+                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Neuroscience') || s.category.includes('Time'))};
                 {
                   title: '🚀 Space Colonization & Mining';
                   description: 'Automated space explorationcolonizationand resource extraction systems';
                   icon: Rocket;
                   color: 'from-red-60o0 to-orange-60o0';
-                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Space') || s.category.includes('Time')),
-                };
+                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Space') || s.category.includes('Time'))};
                 {
                   title: '🏠 Space Architecture & Energy';
                   description: 'Advanced habitat design and space-based energy harvesting platforms';
                   icon: Globe;
                   color: 'from-green-60o0 to-teal-60o0';
-                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Architecture') || s.category.includes('Energy')),
-                };
+                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Architecture') || s.category.includes('Energy'))};
                 {
                   title: '👁️ AI Reality Augmentation';
                   description: 'Real-time AI-powered reality enhancement and content generation';
                   icon: Eye;
                   color: 'from-orange-60o0 to-red-60o0';
-                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Augmented Reality')),
-                };
+                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Augmented Reality'))};
                 {
                   title: '⏰ Quantum Time Manipulation';
                   description: 'Quantum-based time perception manipulation and optimization';
                   icon: Timer;
                   color: 'from-green-60o0 to-emerald-60o0';
-                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Time')),
-                }
+                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Time'))}
               ].map((categoryindex) => (
                 <motion.div,
                   key={index}

@@ -68,6 +68,5 @@ const ReliabilityEngineeringForAgents20o26: React.FC = () => {
           </Link>,
         </div>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default ReliabilityEngineeringForAgents20o26;

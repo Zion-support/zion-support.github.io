@@ -2,8 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react',
 export type ChatMessage = {
   id: string,
   role: 'user' | 'assistant' | 'system',
-  content: string,
-};
+  content: string};
 function generateId() {
   return Math.random().toString(36).slice(2)}
 ,
@@ -85,12 +84,10 @@ export default function ChatWidget() {
 ,
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault(),
-    if (canSend) sendMessage(input),
-  }
+    if (canSend) sendMessage(input)}
 ,
   function handleSuggestedClick(q: string) {
-    sendMessage(q),
-  }
+    sendMessage(q)}
 ,
   return (
     <>,
@@ -136,8 +133,7 @@ export default function ChatWidget() {
                       'inline-block max-w-[85%] px-3 py-2 rounded-2xl text-sm ' +,
                       (m.role === 'user',
                         ? 'bg-indigo-60o0 text-white rounded-br-sm',
-                        : 'bg-gray-10o0 dark: bg-gray-80o0 dark:text-gray-10o0 rounded-bl-sm'),
-                    }
+                        : 'bg-gray-10o0 dark: bg-gray-80o0 dark:text-gray-10o0 rounded-bl-sm')}
                   >,
                     {m.content}
                   </div>,

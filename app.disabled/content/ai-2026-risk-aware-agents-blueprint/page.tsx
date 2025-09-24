@@ -57,6 +57,5 @@ export default function RiskAwareAgentsBlueprintPage() {
           More content,
         </Link>,
       </div>,
-    </main>),
-}
+    </main>)}
 ,

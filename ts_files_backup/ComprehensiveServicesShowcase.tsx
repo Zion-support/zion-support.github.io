@@ -53,13 +53,11 @@ export default function ComprehensiveServicesShowcase() {
         case 'newest':,
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
         default: ,
-          return 0,
-      }
+          return 0}
     }),
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category),
-    return categoryData?.icon || '🚀',
-  };
+    return categoryData?.icon || '🚀'};
   const formatPrice = (price: string) => {
     return price.replace('$', ').replace(',', ')};
   return (
@@ -147,16 +145,14 @@ export default function ComprehensiveServicesShowcase() {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all ${
-                    viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-white/60 hover: text-white',
-                  }`}
+                    viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-white/60 hover: text-white'}`}
                 >,
                   <Grid className="w-5 h-5" />,
                 </button>,
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all ${
-                    viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-white/60 hover: text-white',
-                  }`}
+                    viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-white/60 hover: text-white'}`}
                 >,
                   <List className="w-5 h-5" />,
                 </button>,
@@ -179,8 +175,7 @@ export default function ComprehensiveServicesShowcase() {
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
                   selectedCategory === category.id,
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg',
-                    : 'bg-white/10 text-white/70 hover: bg-white/20 hover:text-white',
-                }`}
+                    : 'bg-white/10 text-white/70 hover: bg-white/20 hover:text-white'}`}
               >,
                 <span>{category.icon}</span>,
                 {category.name}
@@ -374,6 +369,5 @@ export default function ComprehensiveServicesShowcase() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

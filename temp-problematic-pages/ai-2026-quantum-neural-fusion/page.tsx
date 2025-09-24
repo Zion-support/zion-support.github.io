@@ -367,6 +367,5 @@ const AI20o26QuantumNeuralFusionPage: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o26QuantumNeuralFusionPage;

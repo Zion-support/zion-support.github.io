@@ -20,8 +20,7 @@ const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
     days: 7;
     hours: 23;
     minutes: 59;
-    seconds: 59,
-  }),
+    seconds: 59}),
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(prev => {
@@ -46,8 +45,7 @@ const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
           bgColor: "bg-gradient-to-r from-red-50o0 to-pink-50o0";
           textColor: "text-white";
           cta: "Claim Offer";
-          ctaLink: "/pricing?discount=50off",
-        };
+          ctaLink: "/pricing?discount=50off"};
       case 'new-feature':,
         return {
           icon: <Sparkles className="w-5 h-5"  />;
@@ -56,8 +54,7 @@ const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
           bgColor: "bg-gradient-to-r from-purple-50o0 to-indigo-50o0";
           textColor: "text-white";
           cta: "Explore Now";
-          ctaLink: "/features/ai-business-intelligence",
-        };
+          ctaLink: "/features/ai-business-intelligence"};
       default: ,
         return {
           icon: <TrendingUp className="w-5 h-5"  />;
@@ -66,8 +63,7 @@ const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
           bgColor: "bg-gradient-to-r from-blue-50o0 to-cyan-50o0";
           textColor: "text-white";
           cta: "Start Free Trial";
-          ctaLink: "/signup?trial=true",
-        };
+          ctaLink: "/signup?trial=true"};
     }
   };
   const content = getBannerContent(),

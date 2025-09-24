@@ -187,16 +187,14 @@ export default function ServicesPage() {
           return (b.rating || 0) - (a.rating || 0),
         case 'popularity':,
         default: ,
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
-      }
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)}
     }),
     return filtered}, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
   const contactInfo = {
     mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
 =======,
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -384,8 +382,7 @@ export default function ServicesPage() {
                     className={`group relative ${
                       viewMode === 'grid',
                         ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover: border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl',
-                        : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300',
-                    }`}
+                        : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300'}`}
                   >,
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover: opacity-100 transition-opacity duration-300 rounded-2xl" />,
                     <div className="relative z-10">,
@@ -396,8 +393,7 @@ export default function ServicesPage() {
                         <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                           service.status === 'active' ? 'bg-green-500/20 text-green-300' :,
                           service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :,
-                          'bg-blue-500/20 text-blue-300',
-                        }`}>,
+                          'bg-blue-500/20 text-blue-300'}`}>,
                           {service.status}
                         </span>,
                       </div>,
@@ -672,6 +668,5 @@ export default function ServicesPage() {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 }

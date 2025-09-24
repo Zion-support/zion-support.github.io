@@ -15,12 +15,10 @@ const AI20o25UltimateBreakthrough10o0000ROIBanner = () => {
         roi: '10o0,0o00%';
         savings: '$2.5T+';
         efficiency: '99.99%';
-        timeline: '18 months',
-      };
+        timeline: '18 months'};
       description: 'The most significant technological advancement in human history, delivering unprecedented returns that exceed 10o0,0o00% for forward-thinking enterprises.';
       url: '/blog/ai-20o25-ultimate-breakthrough-revolution-10o0000-roi';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-success-story';
       title: 'Fortune 50o0 AI Breakthrough Success';
@@ -30,12 +28,10 @@ const AI20o25UltimateBreakthrough10o0000ROIBanner = () => {
         roi: '10o0,0o00%';
         savings: '$2.5T';
         company: 'TechGlobal Industries';
-        timeline: '18 months',
-      };
+        timeline: '18 months'};
       description: 'TechGlobal Industries achieved unprecedented success through AI 20o25 Ultimate Breakthrough Revolution technologies, resulting in 10o0,0o00% ROI and $2.5 trillion in annual savings.';
       url: '/case-studies/fortune-50o0-ai-breakthrough-10o0000-roi-success-story';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'implementation-guide';
       title: 'Ultimate Breakthrough Implementation Guide';
@@ -45,12 +41,10 @@ const AI20o25UltimateBreakthrough10o0000ROIBanner = () => {
         roi: '10o0,0o00%';
         guide: 'Complete';
         timeline: '18 months';
-        success: '99.7%',
-      };
+        success: '99.7%'};
       description: 'Comprehensive implementation guide providing a complete roadmap for achieving 10o0,0o00% ROI through the AI 20o25 Ultimate Breakthrough Revolution.';
       url: '/resources/ai-20o25-ultimate-breakthrough-implementation-guide-10o0000-roi';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -174,6 +168,5 @@ const AI20o25UltimateBreakthrough10o0000ROIBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o25UltimateBreakthrough10o0000ROIBanner;

@@ -12,8 +12,7 @@ export interface SpecializedIndustryService {
     professional: number,
     enterprise: number,
     currency: string,
-    period: string,
-  };
+    period: string};
   link: string,
   icon: string,
   isPopular?: boolean,
@@ -32,8 +31,7 @@ export interface SpecializedIndustryService {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 ,
 export const specializedIndustryServices: SpecializedIndustryService[] = [
@@ -66,8 +64,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       professional: 280o0;
       enterprise: 70o00;
       currency: 'USD';
-      period: 'month',
-    };
+      period: 'month'};
     link: 'https://ziontechgroup.com/services/ai-legal-research-platform';
     icon: '⚖️';
     isNew: true;
@@ -85,8 +82,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     contactInfo: {
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 10o08 Middletown DE 19709'}
   };
   // Real Estate Services,
   {
@@ -117,8 +113,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       professional: 180o0;
       enterprise: 450o0;
       currency: 'USD';
-      period: 'month',
-    };
+      period: 'month'};
     link: 'https://ziontechgroup.com/services/ai-real-estate-analytics';
     icon: '🏠';
     marketPosition: 'Leading AI-powered real estate analytics platform';
@@ -135,8 +130,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     contactInfo: {
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 10o08 Middletown DE 19709'}
   };
   // Manufacturing & Industry 4.0,
   {
@@ -167,8 +161,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       professional: 70o00;
       enterprise: 180o00;
       currency: 'USD';
-      period: 'month',
-    };
+      period: 'month'};
     link: 'https://ziontechgroup.com/services/smart-manufacturing-platform';
     icon: '🏭';
     isPopular: true;
@@ -186,8 +179,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     contactInfo: {
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 10o08 Middletown DE 19709'}
   };
   // Agriculture & AgTech,
   {
@@ -218,8 +210,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       professional: 120o0;
       enterprise: 30o00;
       currency: 'USD';
-      period: 'month',
-    };
+      period: 'month'};
     link: 'https://ziontechgroup.com/services/precision-agriculture-platform';
     icon: '🌾';
     marketPosition: 'Leading AI-powered precision agriculture platform';
@@ -236,8 +227,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     contactInfo: {
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 10o08 Middletown DE 19709'}
   };
   // Energy & Sustainability,
   {
@@ -268,8 +258,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       professional: 350o0;
       enterprise: 80o00;
       currency: 'USD';
-      period: 'month',
-    };
+      period: 'month'};
     link: 'https://ziontechgroup.com/services/smart-energy-management';
     icon: '⚡';
     marketPosition: 'Leading AI-powered energy management platform';
@@ -286,8 +275,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     contactInfo: {
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 10o08 Middletown DE 19709'}
   };
   // Transportation & Logistics,
   {
@@ -318,8 +306,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       professional: 450o0;
       enterprise: 120o00;
       currency: 'USD';
-      period: 'month',
-    };
+      period: 'month'};
     link: 'https://ziontechgroup.com/services/intelligent-logistics-platform';
     icon: '🚚';
     marketPosition: 'Leading AI-powered logistics optimization platform';
@@ -336,8 +323,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     contactInfo: {
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 10o08 Middletown DE 19709'}
   };
   // Retail & E-commerce,
   {
@@ -368,8 +354,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       professional: 250o0;
       enterprise: 60o00;
       currency: 'USD';
-      period: 'month',
-    };
+      period: 'month'};
     link: 'https://ziontechgroup.com/services/ai-retail-optimization';
     icon: '🛍️';
     marketPosition: 'Leading AI-powered retail optimization platform';
@@ -386,8 +371,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     contactInfo: {
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 10o08 Middletown DE 19709'}
   };
   // Hospitality & Tourism,
   {
@@ -418,8 +402,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       professional: 180o0;
       enterprise: 450o0;
       currency: 'USD';
-      period: 'month',
-    };
+      period: 'month'};
     link: 'https://ziontechgroup.com/services/smart-hospitality-platform';
     icon: '🏨';
     marketPosition: 'Leading AI-powered hospitality management platform';
@@ -436,16 +419,13 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     contactInfo: {
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 10o08 Middletown DE 19709'}
   }
 ],
 export const getServicesByIndustry = (industry: string) => {
-  return specializedIndustryServices.filter(service => service.industry === industry),
-};
+  return specializedIndustryServices.filter(service => service.industry === industry)};
 export const getServicesByCategory = (category: string) => {
-  return specializedIndustryServices.filter(service => service.category === category),
-};
+  return specializedIndustryServices.filter(service => service.category === category)};
 export const getPopularServices = () => {
   return specializedIndustryServices.filter(service => service.isPopular)};
 export const getNewServices = () => {

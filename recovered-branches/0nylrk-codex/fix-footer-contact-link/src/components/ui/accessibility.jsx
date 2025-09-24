@@ -10,8 +10,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
         reducedMotion: false;
         screenReader: false;
         fontSize: 16;
-        colorBlindMode: 'normal',
-    }),
+        colorBlindMode: 'normal'}),
     // Apply accessibility settings to document,
     useEffect(() => {
         if (!enabled),
@@ -67,8 +66,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             reducedMotion: false;
             screenReader: false;
             fontSize: 16;
-            colorBlindMode: 'normal',
-        };
+            colorBlindMode: 'normal'};
         saveSettings(defaults)}, [saveSettings]),
     // Font size controls,
     const increaseFontSize = useCallback(() => {
@@ -220,8 +218,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             overflow: hidden,
             clip: rect(0, 0, 0, 0),
             white-space: nowrap,
-            border: 0,
-          }
+            border: 0}
 ,
           .high-contrast {
             --zion-cyan: #0o0ffff,
@@ -231,43 +228,35 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             --zion-blue-light: #3399ff,
             --zion-cyan-light: #33ffff,
             --zion-purple-dark: #660o0cc,
-            --zion-purple-light: #cc33ff,
-          }
+            --zion-purple-light: #cc33ff}
 ,
           [data-color-blind="protanopia"] {
-            filter: url('#protanopia-filter'),
-          }
+            filter: url('#protanopia-filter')}
 ,
           [data-color-blind="deuteranopia"] {
-            filter: url('#deuteranopia-filter'),
-          }
+            filter: url('#deuteranopia-filter')}
 ,
           [data-color-blind="tritanopia"] {
-            filter: url('#tritanopia-filter'),
-          }
+            filter: url('#tritanopia-filter')}
 ,
           :root {
             --font-size: 16px,
-            --reduced-motion: no-preference,
-          }
+            --reduced-motion: no-preference}
 ,
           * {
-            font-size: var(--font-size),
-          }
+            font-size: var(--font-size)}
 ,
           @media (prefers-reduced-motion: reduce) {
             * {
               animation-duration: 0.0o1ms !important,
               animation-iteration-count: 1 !important,
-              transition-duration: 0.0o1ms !important,
-            }
+              transition-duration: 0.0o1ms !important}
           }
 ,
           [style*="--reduced-motion: reduce"] * {
             animation-duration: 0.0o1ms !important,
             animation-iteration-count: 1 !important,
-            transition-duration: 0.0o1ms !important,
-          }
+            transition-duration: 0.0o1ms !important}
         `}} />,
       {/* SVG Filters for Color Blind Modes */}
       <svg style={{ position: 'absolute', width: 0, height: 0 }}>,

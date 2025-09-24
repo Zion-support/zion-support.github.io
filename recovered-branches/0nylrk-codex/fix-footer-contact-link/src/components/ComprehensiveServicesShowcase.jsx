@@ -178,8 +178,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'AI Automation'];
       benefits: ['40% efficiency gains', 'Intelligent decision making', 'Scalable AI infrastructure'];
       color: 'from-purple-50o0 to-pink-50o0';
-      href: '/services/ai-solutions',
-    };
+      href: '/services/ai-solutions'};
     {id}: 'quantum-computing';
       title: 'Quantum Computing';
       category: 'quantum';
@@ -188,8 +187,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation'];
       benefits: ['Exponential speedup', 'Complex problem solving', 'Future-proof technology'];
       color: 'from-indigo-50o0 to-purple-50o0';
-      href: '/services/quantum-computing',
-    };
+      href: '/services/quantum-computing'};
     {id}: 'cybersecurity';
       title: 'Cybersecurity';
       category: 'security';
@@ -198,8 +196,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       features: ['Threat Detection', 'Incident Response', 'Compliance Management', 'Security Audits'];
       benefits: ['Real-time protection', 'Proactive defense', 'Compliance assurance'];
       color: 'from-red-50o0 to-orange-50o0';
-      href: '/services/cybersecurity',
-    };
+      href: '/services/cybersecurity'};
     {id}: 'cloud-devops';
       title: 'Cloud & DevOps';
       category: 'cloud';
@@ -208,8 +205,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       features: ['Cloud Migration', 'DevOps Automation', 'Container Orchestration', 'Infrastructure as Code'];
       benefits: ['Scalable infrastructure', 'Faster deployment', 'Cost optimization'];
       color: 'from-blue-50o0 to-cyan-50o0';
-      href: '/services/cloud-devops',
-    };
+      href: '/services/cloud-devops'};
     {id}: 'blockchain-web3';
       title: 'Blockchain & Web3';
       category: 'blockchain';
@@ -218,8 +214,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       features: ['Smart Contracts', 'DeFi Solutions', 'NFT Platforms', 'Supply Chain'];
       benefits: ['Transparency', 'Security', 'Innovation'];
       color: 'from-green-50o0 to-emerald-50o0';
-      href: '/services/blockchain-web3',
-    };
+      href: '/services/blockchain-web3'};
     {id}: 'enterprise-it';
       title: 'Enterprise IT';
       category: 'enterprise';
@@ -228,8 +223,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       features: ['IT Infrastructure', 'Data Management', 'System Integration', 'Digital Transformation'];
       benefits: ['Enterprise-grade solutions', 'Scalable architecture', '24/7 support'];
       color: 'from-slate-50o0 to-gray-50o0';
-      href: '/services/enterprise-it',
-    };
+      href: '/services/enterprise-it'};
     {id}: 'green-it';
       title: 'Green IT';
       category: 'green';
@@ -238,8 +232,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       features: ['Energy Efficiency', 'Sustainable Infrastructure', 'Carbon Reduction', 'Green Computing'];
       benefits: ['Environmental impact', 'Cost savings', 'Sustainability compliance'];
       color: 'from-green-50o0 to-teal-50o0';
-      href: '/services/green-it',
-    };
+      href: '/services/green-it'};
     {id}: 'space-tech';
       title: 'Space Technology';
       category: 'space';
@@ -248,8 +241,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       features: ['Satellite Systems', 'Space Data Analytics', 'Space Cybersecurity', 'Orbital Solutions'];
       benefits: ['Innovation leadership', 'Advanced technology', 'Space expertise'];
       color: 'from-violet-50o0 to-purple-50o0';
-      href: '/services/space-tech',
-    };
+      href: '/services/space-tech'};
     {id}: 'microsaas';
       title: 'MicroSAAS Development';
       category: 'saas';
@@ -258,8 +250,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       features: ['Custom Development', 'Scalable Architecture', 'API Integration', 'User Management'];
       benefits: ['Custom solutions', 'Scalable business model', 'Recurring revenue'];
       color: 'from-orange-50o0 to-red-50o0';
-      href: '/services/microsaas',
-    }
+      href: '/services/microsaas'}
   ],
   const solutions = [
     {id}: 'ai-autonomous-business';
@@ -267,57 +258,49 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       description: 'AI-powered autonomous systems for business operations and decision making.';
       icon: Brain;
       category: 'ai';
-      href: '/solutions/ai-autonomous-business',
-    };
+      href: '/solutions/ai-autonomous-business'};
     {id}: 'ai-autonomous-research';
       title: 'AI Autonomous Research';
       description: 'AI systems for accelerating scientific research and discovery processes.';
       icon: Brain;
       category: 'ai';
-      href: '/solutions/ai-autonomous-research',
-    };
+      href: '/solutions/ai-autonomous-research'};
     {id}: 'ai-autonomous-ecosystem';
       title: 'AI Autonomous Ecosystem';
       description: 'Integrated AI ecosystem for unified business intelligence and automation.';
       icon: Brain;
       category: 'ai';
-      href: '/solutions/ai-autonomous-ecosystem',
-    };
+      href: '/solutions/ai-autonomous-ecosystem'};
     {id}: 'quantum-neural-networks';
       title: 'Quantum Neural Networks';
       description: 'Quantum-enhanced neural networks for advanced AI applications.';
       icon: Atom;
       category: 'quantum';
-      href: '/solutions/quantum-neural-networks',
-    };
+      href: '/solutions/quantum-neural-networks'};
     {id}: 'quantum-edge-computing';
       title: 'Quantum Edge Computing';
       description: 'Quantum computing power at the edge for real-time applications.';
       icon: Atom;
       category: 'quantum';
-      href: '/solutions/quantum-edge-computing',
-    };
+      href: '/solutions/quantum-edge-computing'};
     {id}: 'ai-powered-security';
       title: 'AI Powered Security';
       description: 'Intelligent security systems with AI-driven threat detection.';
       icon: Shield;
       category: 'security';
-      href: '/solutions/ai-powered-security',
-    };
+      href: '/solutions/ai-powered-security'};
     {id}: 'ai-content-generation';
       title: 'AI Content Generation';
       description: 'AI-powered content creation and management solutions.';
       icon: Brain;
       category: 'ai';
-      href: '/solutions/ai-content-generation',
-    };
+      href: '/solutions/ai-content-generation'};
     {id}: 'ai-business-intelligence';
       title: 'AI Business Intelligence';
       description: 'Advanced analytics and insights powered by artificial intelligence.';
       icon: Brain;
       category: 'ai';
-      href: '/solutions/ai-business-intelligence',
-    }
+      href: '/solutions/ai-business-intelligence'}
   ],
   const filteredServices = activeCategory === 'all',
     ? services,
@@ -558,8 +541,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
 }
 ,
 interface ServiceCardProps {service}: any,
-  getCategoryIcon: (category: string) => React.ReactNode,
-}
+  getCategoryIcon: (category: string) => React.ReactNode}
 ,
 function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
   return (
@@ -633,8 +615,7 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
           </Button>,
         </div>,
       </CardContent>,
-    </Card>),
-}
+    </Card>)}
                 </div>,
                 <div className="mb-4">,
                   <h5 className="text-sm font-semibold text-green-40o0 mb-2">Benefits: </h5>,
@@ -687,8 +668,7 @@ import {INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SERVICE_CATEGORIES, Innovativ
 interface ServiceCardProps {service}: InnovativeMicroSaasService,
   index: number,
   viewMode: 'grid' | 'list',
-  onServiceClick: (service: InnovativeMicroSaasService) => void,
-}
+  onServiceClick: (service: InnovativeMicroSaasService) => void}
 ,
 const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onServiceClick}) => {}
   const [isHovered, setIsHovered] = useState(false),
@@ -727,8 +707,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
     if (navigator.share) {navigator.share({
             title: service.title;
             text: service.description;
-            url: service.websiteUrl,
-        })};
+            url: service.websiteUrl})};
     } else {navigator.clipboard.writeText(service.websiteUrl)};
     }
   }, [service]),
@@ -894,8 +873,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
           </div>,
         </div>,
       </div>,
-    </motion.div>),
-};
+    </motion.div>)};
 const ComprehensiveServicesShowcase: React.FC = () => {}
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
@@ -930,13 +908,12 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
         case 'name':,
           return a.title.localeCompare(b.title),
         default: ,
-          return 0,
-      }
+          return 0}
     }),
     return filtered}, [searchTerm, selectedCategory, sortBy]),
   const handleServiceClick = useCallback((service: InnovativeMicroSaasService) => {setSelectedService(service)};
     // You can add navigation logic here,
-    // console.log('Service clicked:', service)}, []),
+    // // console.log('Service clicked:', service)}, []),
   const clearFilters = useCallback(() => {setSearchTerm('')};
     setSelectedCategory('all'),
     setSortBy('rating')}, []),
@@ -1055,8 +1032,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default ComprehensiveServicesShowcase;
     </></></></></></></></>)};
 )

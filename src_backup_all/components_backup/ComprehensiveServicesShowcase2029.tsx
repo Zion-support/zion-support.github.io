@@ -116,17 +116,14 @@ export const ComprehensiveServicesShowcase20o29: React.FC = (): JSX.Element => {
       case 'over-30o00':,
         return price >= 30o00,
       default: ,
-        return true,
-    }
+        return true}
   }),
   const toggleServiceExpansion = (serviceId: string) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId),
-  };
+    setExpandedService(expandedService === serviceId ? null : serviceId)};
   const contactInfo ={
     phone: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709',
-  };
+    address: '364 E Main St STE 10o08 Middletown DE 19709'};
   const getPriceColor = (price: string) => {
     const priceNum = parseInt(price.replace(/[^0-9]/g, '')),
     if (priceNum < 50o0) return 'text-green-60o0',
@@ -242,8 +239,7 @@ export const ComprehensiveServicesShowcase20o29: React.FC = (): JSX.Element => {
                   className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-30o0 ${
                     isSelected,
                       ? `bg-gradient-to-r ${categoryColors[category]} text-white shadow-lg scale-10o5`,
-                      : 'bg-white/10 backdrop-blur-sm text-zion-gray-light hover: bg-white/20 hover:text-white',
-                  }`}
+                      : 'bg-white/10 backdrop-blur-sm text-zion-gray-light hover: bg-white/20 hover:text-white'}`}
                 >,
                   <Icon className="w-5 h-5"  />,
                   {category}
@@ -478,6 +474,5 @@ export const ComprehensiveServicesShowcase20o29: React.FC = (): JSX.Element => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default ComprehensiveServicesShowcase20o29;

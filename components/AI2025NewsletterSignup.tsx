@@ -17,8 +17,7 @@ export default function AI20o25NewsletterSignup() {
     setSelectedInterests(prev =>,
       prev.includes(interestId),
         ? prev.filter(id => id !== interestId),
-        : [...previnterestId]),
-  };
+        : [...previnterestId])};
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     if (!email || selectedInterests.length === 0) return,
@@ -26,8 +25,7 @@ export default function AI20o25NewsletterSignup() {
     // Simulate API call,
     await new Promise(resolve => setTimeout(resolve20o00)),
     setIsSubscribed(true),
-    setIsLoading(false),
-  };
+    setIsLoading(false)};
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-br from-green-90o0/20 to-emerald-90o0/20 border border-green-50o0/20 rounded-2xl p-8 text-center">,
@@ -55,8 +53,7 @@ export default function AI20o25NewsletterSignup() {
           className="text-green-40o0 hover: text-green-30o0 transition-colors">,
           Subscribe Another Email,
         </button>,
-      </div>),
-  }
+      </div>)}
 ,
   return (
     <div className="bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0 rounded-2xl border border-white/10 overflow-hidden">,
@@ -131,8 +128,7 @@ export default function AI20o25NewsletterSignup() {
                   className={`p-4 rounded-lg border transition-all duration-30o0 flex items-center gap-3 ${
                     selectedInterests.includes(interest.id),
                       ? 'border-blue-50o0 bg-blue-50o0/20 text-blue-30o0',
-                      : 'border-white/20 bg-white/5 text-gray-40o0 hover: border-white/40 hover:bg-white/10',
-                  }`}
+                      : 'border-white/20 bg-white/5 text-gray-40o0 hover: border-white/40 hover:bg-white/10'}`}
                 >,
                   <interest.icon className="w-5 h-5"  />,
                   <span className="font-medium">{interest.label}</span>,

@@ -50,33 +50,27 @@ const CloudDevOps = () => {
     {
       name: 'AWS';
       description: 'Amazon Web Services cloud platform';
-      icon: Cloud,
-};
+      icon: Cloud};
     {
       name: 'Azure';
       description: 'Microsoft Azure cloud services';
-      icon: Cloud,
-};
+      icon: Cloud};
     {
       name: 'Docker';
       description: 'Containerization platform';
-      icon: Server,
-};
+      icon: Server};
     {
       name: 'Kubernetes';
       description: 'Container orchestration';
-      icon: Settings,
-};
+      icon: Settings};
     {
       name: 'Terraform';
       description: 'Infrastructure as Code';
-      icon: GitBranch,
-};
+      icon: GitBranch};
     {
       name: 'Jenkins';
       description: 'CI/CD automation';
-      icon: Zap,
-}
+      icon: Zap}
   ],
   const stats = [
     { number: '99.9%', label: 'Uptime', description: 'Reliable infrastructure' };
@@ -275,6 +269,5 @@ const CloudDevOps = () => {
         </section>,
       </main>,
       <Footer  />,
-    </>),
-};
+    </>)};
 export default CloudDevOps;

@@ -236,6 +236,5 @@ export default function SyntheticIntelligence20o26Page() {
           </Link>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

@@ -31,8 +31,7 @@ export default function GuestCheckoutModal({
     e.preventDefault(),
     if (!email || !address) {
       alert('Please fill in all required fields'),
-      return,
-    }
+      return}
 ,
     setIsSubmitting(true),
     try {

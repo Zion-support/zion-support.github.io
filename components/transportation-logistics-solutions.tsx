@@ -24,6 +24,5 @@ export default function TransportationLogisticsSolutions() {
           </p>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

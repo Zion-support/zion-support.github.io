@@ -44,7 +44,7 @@ function fixFunctionName(filePath) {
       `content="${fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}`),
     if (fixedContent !== content) {
       fs.writeFileSync(filePath, fixedContent, 'utf8'),
-      // console.log(
+      // // console.log(
         `Fixed function name in: ${filePath} (${currentFunctionName} -> ${functionName})`),
       return true}
     return false} catch (error) {
@@ -60,6 +60,5 @@ async function fixAllFiles() {
     if (fixFunctionName(file)) {
       fixedCount++}
   }
-  // console.log(`Fixed ${fixedCount} files.`)}
-fixAllFiles(),
-}}}
+  // // console.log(`Fixed ${fixedCount} files.`)}
+fixAllFiles()}}}

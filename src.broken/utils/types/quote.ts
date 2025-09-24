@@ -18,8 +18,7 @@ export type QuoteRequest = {
   talentStatus: TalentQuoteStatus,
   unread: boolean,
   archived?: boolean,
-  details?: string,
-};
+  details?: string};
 export type QuoteFilters = {
   status?: AdminQuoteStatus | 'All',
   startDate?: string | null, // ISO,

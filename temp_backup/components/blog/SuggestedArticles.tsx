@@ -3,16 +3,14 @@ import { BlogPost } from '@/utils/types/blog',
 function overlapScore(a: BlogPost, b: BlogPost): number {
   const topics = a.topics.filter(t => b.topics.includes(t)).length,
   const tags = a.tags.filter(t => b.tags.includes(t)).length,
-  return topics * 2 + tags,
-}
+  return topics * 2 + tags}
 ,
 export default function SuggestedArticles({
   current;
   all;
 }: {
   current: BlogPost,
-  all: BlogPost[],
-}) {
+  all: BlogPost[]}) {
   const suggestions = all,
     .filter(p => p.id !== current.id && p.status === 'published'),
     .map(p => ({ post: p, score: overlapScore(current, p) })),

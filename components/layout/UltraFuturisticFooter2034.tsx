@@ -110,7 +110,6 @@ import {
   GlobeIcon;
   CpuIcon;} from 'lucide-react',import {
   Rocket, Brain, Atom, Zap, Sparkles, Shield,
-,
   Phone, Mail, MapPin, Globe, ArrowRight,
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github,
   CheckCircle, Award, Star, Crown, Gem, Infinity,
@@ -122,18 +121,15 @@ import {
       {
         name: 'AI Business Intelligence Pro',
         href: '/ai-business-intelligence-pro',
-        price: '$299/month',
-      }
+        price: '$299/month'}
       {
         name: 'AI Video Generation Platform',
         href: '/ai-video-generation-platform',
-        price: '$499/month',
-      }
+        price: '$499/month'}
       {
         name: 'AI-Powered Cybersecurity',
         href: '/ai-cybersecurity-platform',
-        price: '$799/month',
-      }
+        price: '$799/month'}
       {
         name: 'AI Drug Discovery Platform',
         href: '/ai-drug-discovery-platform',
@@ -156,13 +152,11 @@ import {
       {
         name: 'Blockchain AI Platform',
         href: '/blockchain-ai-platform',
-        price: '$899/month',
-      }
+        price: '$899/month'}
       {
         name: 'Edge AI Computing',
         href: '/edge-ai-computing-platform',
-        price: '$599/month',
-      }
+        price: '$599/month'}
       {
         name: 'AI Climate Modeling',
         href: '/ai-climate-modeling-platform',
@@ -181,23 +175,19 @@ import {
       {
         name: 'API Security & Monitoring',
         href: '/api-security-monitoring-suite',
-        price: '$399/month',
-      }
+        price: '$399/month'}
       {
         name: 'Customer Success Automation',
         href: '/customer-success-automation',
-        price: '$199/month',
-      }
+        price: '$199/month'}
       {
         name: 'HR Automation Suite',
         href: '/hr-automation-suite',
-        price: '$179/month',
-      }
+        price: '$179/month'}
       {
         name: 'Project Management AI',
         href: '/project-management-ai-platform',
-        price: '$199/month',
-      }
+        price: '$199/month'}
     ]},  {
     title: '🛒 Business Automation',
     icon: ShoppingCart,
@@ -212,23 +202,19 @@ import {
       {
         name: 'E-commerce Automation',
         href: '/ecommerce-automation-platform',
-        price: '$249/month',
-      }
+        price: '$249/month'}
       {
         name: 'Marketing Automation Suite',
         href: '/marketing-automation-suite',
-        price: '$279/month',
-      }
+        price: '$279/month'}
       {
         name: 'Financial Analytics Platform',
         href: '/financial-analytics-platform',
-        price: '$349/month',
-      }
+        price: '$349/month'}
       {
         name: 'Legal Document Automation',
         href: '/legal-document-automation',
-        price: '$399/month',
-      }
+        price: '$399/month'}
     ]}],      { name: 'E-commerce Automation', href: '/ecommerce-automation-platform', price: '$249/month' }
       { name: 'Marketing Automation Suite', href: '/marketing-automation-suite', price: '$279/month' }
       { name: 'Financial Analytics Platform', href: '/financial-analytics-platform', price: '$349/month' }
@@ -700,8 +686,7 @@ export default function UltraFuturisticFooter2034() {
           </div>,
         </div>,
       </div>,
-    </footer>),
-}
+    </footer>)}
 import React from "react"; export default function UltraFuturisticFooter2034() { return ( <footer className="py-8 text-center text-sm text-gray-400">", <span>© {new: Date().getFullYear()} Zion Tech Group</span> </footer> )}
 export default function UltraFuturisticFooter2034() {return (",
 export default function UltraFuturisticFooter2034() {

@@ -80,6 +80,5 @@ export function ServiceIncludes() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

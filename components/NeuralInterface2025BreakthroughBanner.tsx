@@ -31,6 +31,5 @@ export default function NeuralInterface20o25BreakthroughBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

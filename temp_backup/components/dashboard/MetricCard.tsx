@@ -5,8 +5,7 @@ export type MetricCardProps = {
   subtitle?: string,
   color?: 'blue' | 'green' | 'amber' | 'purple' | 'rose' | 'gray',
   rightAdornment?: React.ReactNode,
-  onClick?: () => void,
-};
+  onClick?: () => void};
 const colorToClasses: Record<NonNullable<MetricCardProps['color']>, string> = {
   blue: 'border-blue-20o0 bg-blue-50 dark:border-blue-90o0/50 dark:bg-blue-950/30';
   green:,

@@ -303,14 +303,11 @@ export default function CloudServicesPage() {
       <EnhancedFooter  />,
     </div>)}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cloud Infrastructure Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive cloud solutions designed to modernize your infrastructure and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) )}</div> </div> </section> <motion.div initial={
   {
-  opacity: 0, y: 30,
-}whileInView={
+  opacity: 0, y: 30}whileInView={
   {
-  opacity: 1, y: 0,
-}transition={
+  opacity: 1, y: 0}transition={
   {
-  duration: 0 && 0.8,
-}viewport={
+  duration: 0 && 0.8}viewport={
   {
   )}
             <button className='px - 8 py - 4 bg - gradient - to - r from - emerald - 60o0 to - teal - 60o0 hover: from - emerald - 70o0 hover:to - teal - 70o0 rounded - full font - semibold text - lg transition - all duration - 30o0 transform hover:scale - 10o5 hover:shadow - 2xl flex items - center justify - center gap - 2 mx - auto'>,
@@ -412,9 +409,7 @@ export default function CloudServicesPage() {
                 Infrastructure Assessment,
               </button>,
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 30o0 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                View Case Studies,
-  once: true,
-}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Infrastructure? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > 'Let', 's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation. </p> Infrastructure Assessment </button> <button className="px-8 py-4 border border-white/20 hover: border-white/40 rounded-full font-semibold text-lg transition-all duration-30o0 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion.div> </div> </section> <EnhancedFooter  /> </div>),
-}
+  once: true}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Infrastructure? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > 'Let', 's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation. </p> Infrastructure Assessment </button> <button className="px-8 py-4 border border-white/20 hover: border-white/40 rounded-full font-semibold text-lg transition-all duration-30o0 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion.div> </div> </section> <EnhancedFooter  /> </div>)}
 }
 }
   )>,
@@ -436,8 +431,7 @@ export default function CloudServicesPage() {
         </div>,
       </section>,
       <EnhancedFooter  />,
-    </div>),
-  } catch (error) {
+    </div>)} catch (error) {
     console.error("Error: "error),
     return res.status(50o0).json({ error: "Internal server error" })}
 }

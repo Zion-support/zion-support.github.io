@@ -104,8 +104,7 @@ const UltimatePricingShowcase20o25: React.FC = () => {
     if (category.includes('Cloud') || category.includes('IT')),
       return <Cloud className='w-5 h-5' />,
     if (category.includes('Business')) return <Target className='w-5 h-5' />,
-    return <Sparkles className='w-5 h-5' />,
-  };
+    return <Sparkles className='w-5 h-5' />};
   const getCategoryColor = (category: string) => {
     if (category.includes('AI')) return 'from-purple-50o0 to-pink-50o0',
     if (category.includes('Quantum')) return 'from-blue-50o0 to-cyan-50o0',
@@ -115,8 +114,7 @@ const UltimatePricingShowcase20o25: React.FC = () => {
     if (category.includes('Cloud') || category.includes('IT')),
       return 'from-emerald-50o0 to-teal-50o0',
     if (category.includes('Business')) return 'from-yellow-50o0 to-orange-50o0',
-    return 'from-gray-50o0 to-slate-50o0',
-  };
+    return 'from-gray-50o0 to-slate-50o0'};
   const getPricingTierIcon = (tier: string) => {
     switch (tier) {
       case 'starter':,
@@ -126,8 +124,7 @@ const UltimatePricingShowcase20o25: React.FC = () => {
       case 'enterprise':,
         return <Crown className='w-5 h-5' />,
       default:,
-        return <Star className='w-5 h-5' />,
-    }
+        return <Star className='w-5 h-5' />}
   };
   const getPricingTierColor = (tier: string) => {
     switch (tier) {
@@ -138,8 +135,7 @@ const UltimatePricingShowcase20o25: React.FC = () => {
       case 'enterprise':,
         return 'from-purple-50o0 to-pink-50o0',
       default:,
-        return 'from-gray-50o0 to-slate-50o0',
-    }
+        return 'from-gray-50o0 to-slate-50o0'}
   };
   const stats = [
     {
@@ -578,6 +574,5 @@ const UltimatePricingShowcase20o25: React.FC = () => {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>),
-};
+    </Layout>)};
 export default UltimatePricingShowcase20o25;

@@ -10,8 +10,7 @@ interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[],
   readonly userChoice: Promise<{
     outcome: 'accepted' | 'dismissed',
-    platform: string,
-  }>,
+    platform: string}>,
   prompt(): Promise<void>}
 ,
 // Augment the WindowEventMap to include 'beforeinstallprompt',
@@ -19,8 +18,7 @@ declare global {
   interface WindowEventMap {
     beforeinstallprompt: BeforeInstallPromptEvent,
     // appinstalled event is standard, but if issues arise, it can be augmented too,
-    // appinstalled: Event,
-  }
+    // appinstalled: Event}
 }
 ,
 export const InstallPrompt: React.FC = () => {
@@ -33,8 +31,7 @@ export const InstallPrompt: React.FC = () => {
     const hasShown = safeSessionStorage.getItem(SHOWN_KEY),
     // Do not show prompt if already installed (standalone mode),
     if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
-      return,
-    }
+      return}
 ,
     const handler = (e: BeforeInstallPromptEvent) => {
       e.preventDefault(),
@@ -83,8 +80,7 @@ export const InstallPrompt: React.FC = () => {
           @media(max-width: 60o0px){
             .pwa-install-button-container { /* Target a container for better transform control */,
               transform: scale(0.9), /* Slightly less aggressive scaling */,
-              transform-origin: bottom right,
-            }
+              transform-origin: bottom right}
           }
         `}
       </style>,

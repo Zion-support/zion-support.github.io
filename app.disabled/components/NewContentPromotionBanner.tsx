@@ -50,8 +50,7 @@ const NewContentPromotionBanner: React.FC = () => {
           </a>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default function NewContentPromotionBanner() {
   return null}
 ,

@@ -241,6 +241,5 @@ export default function DigitalTransformationPage() {
         </div>,
       </section>,
       <EnhancedFooter />,
-    </div>),
-}
+    </div>)}
 ,

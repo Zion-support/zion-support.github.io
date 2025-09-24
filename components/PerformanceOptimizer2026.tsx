@@ -37,12 +37,10 @@ export default function PerformanceOptimizer20o26() {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
-            // console.log('LCP: 'entry.startTime),
-          }
+            // // console.log('LCP: 'entry.startTime)}
           if (entry.entryType === 'first-input') {
             const fidEntry = entry as PerformanceEventTiming,
-            // console.log('FID: 'fidEntry.processingStart - fidEntry.startTime),
-          }
+            // // console.log('FID: 'fidEntry.processingStart - fidEntry.startTime)}
         })}),
       observer.observe({ entryTypes: ['largest-contentful-'paint', 'first-input'] })}
 ,

@@ -505,6 +505,5 @@ export default function CybersecurityServices() {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>),
-}
+    </Layout>)}
 ,

@@ -295,6 +295,5 @@ export default function AISupportTriageRouter() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

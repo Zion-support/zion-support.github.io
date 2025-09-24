@@ -292,6 +292,5 @@ export default function AI20o26QuantumMLBreakthrough() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

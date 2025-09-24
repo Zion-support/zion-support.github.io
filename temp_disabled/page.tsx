@@ -878,8 +878,7 @@ export default function HomePage() {
               logo: "https://zion.app/images/zion-tech-group-logo.png";
               sameAs: [
                 "https://twitter.com/ZionTechGroup";
-                "https: //linkedin.com/company/zion-tech-group"],
-            }} ,
+                "https: //linkedin.com/company/zion-tech-group"]}} ,
            />,
           <StructuredData
             type="WebSite",
@@ -949,18 +948,15 @@ export default function HomePage() {
           {
             title: "Monthly Readers";
             value: "50o0K+";
-            description: "Growing audience of professionals",
-          };
+            description: "Growing audience of professionals"};
           {
             title: "Content Downloads";
             value: "50K+";
-            description: "Resources downloaded monthly",
-          };
+            description: "Resources downloaded monthly"};
           {
             title: "Case Study Views";
             value: "10o0K+";
-            description: "Real-world success stories",
-          }
+            description: "Real-world success stories"}
         ]}
        />,
       {/* New Content Promotion Banner */}

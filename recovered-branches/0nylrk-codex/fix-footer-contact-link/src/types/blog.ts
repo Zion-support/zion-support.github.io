@@ -1,8 +1,7 @@
 export interface BlogAuthor {
   name: string,
   title: string,
-  avatarUrl: string,
-}
+  avatarUrl: string}
 ,
 export interface BlogPost {
   id: string,
@@ -19,8 +18,7 @@ export interface BlogPost {
   isFeatured?: boolean,
   isPublished?: boolean,
   createdBy?: string,
-  updatedAt?: string,
-}
+  updatedAt?: string}
 ,
 // Type for generated blog content,
 export interface GeneratedBlogContent {
@@ -29,14 +27,12 @@ export interface GeneratedBlogContent {
   body: string,
   tags: string[],
   tweetSummary?: string,
-  imagePrompt?: string,
-}
+  imagePrompt?: string}
 ,
 // Type for generated newsletter content,
 export interface GeneratedNewsletterContent {
   subject: string,
   previewText: string,
   body: string,
-  cta: string,
-}
+  cta: string}
 ,

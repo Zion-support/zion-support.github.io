@@ -130,6 +130,5 @@ const LlmEvaluationBestPractices20o25: React.FC = () => {
           </div>,
         </div>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default LlmEvaluationBestPractices20o25;

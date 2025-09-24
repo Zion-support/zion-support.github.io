@@ -20,8 +20,7 @@ export interface Service {
     monthly: string,
     yearly: string,
     enterprise: string,
-    setup: string,
-  };
+    setup: string};
   targetMarket: string,
   useCases: string[],
   technologies: string[],
@@ -35,8 +34,7 @@ export interface Service {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
 }
 ,
 export const innovativeServices20o29: Service[] = [

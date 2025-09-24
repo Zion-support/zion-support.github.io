@@ -145,8 +145,7 @@ const UltimateContentRevolution20o26PromotionBanner = () => {
               transition={{
                 duration: 2;
                 repeat: Infinity;
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
              />,
             <motion.div,
               className="absolute top-3 right-8 w-1 h-1 bg-pink-40o0 rounded-full",
@@ -157,8 +156,7 @@ const UltimateContentRevolution20o26PromotionBanner = () => {
                 duration: 1.5;
                 repeat: Infinity;
                 ease: "easeInOut";
-                delay: 0.5,
-              }}
+                delay: 0.5}}
              />,
             <motion.div,
               className="absolute bottom-2 left-1/4 w-1.5 h-1.5 bg-purple-40o0 rounded-full",
@@ -169,8 +167,7 @@ const UltimateContentRevolution20o26PromotionBanner = () => {
                 duration: 2.5;
                 repeat: Infinity;
                 ease: "easeInOut";
-                delay: 1,
-              }}
+                delay: 1}}
              />,
           </div>,
         </motion.div>)}

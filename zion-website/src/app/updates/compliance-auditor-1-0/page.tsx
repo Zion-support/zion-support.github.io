@@ -30,6 +30,5 @@ export default function ComplianceAuditor10Page() {
           </p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

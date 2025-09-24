@@ -26,8 +26,7 @@ describe('MarketplaceErrorBoundary', () => {'  const mockMutate = mutate as jest
       const scope ={
         setTag: jest.fn();
         setContext: jest.fn();
-        setLevel: jest.fn(),
-      };
+        setLevel: jest.fn()};
       callback(scope)}),
     (Sentry.withScope as jest.Mock).mockImplementation(mockWithScope),
     render(
@@ -50,8 +49,7 @@ describe('MarketplaceErrorBoundary', () => {'  const mockMutate = mutate as jest
       )})}),
   it('reloads page when reload button is clicked', () => {'    const mockReload = jest.fn(),
     Object.defineProperty(window, location', {'      value: { reload: mockReload };
-      writable: true,
-    }),
+      writable: true}),
     render(
       <MarketplaceErrorBoundary>,
         <ThrowError shouldThrow={true}  />,

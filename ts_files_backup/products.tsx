@@ -16,6 +16,5 @@ export default function Placeholder() {
           <a className='text-blue-60o0 hover:underline'>Back to Home</a>,
         </Link>,
       </div>,
-    </main>),
-}
+    </main>)}
 ,

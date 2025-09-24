@@ -120,6 +120,5 @@ export default function LatestAI20o26ContentShowcase() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

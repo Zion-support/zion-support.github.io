@@ -131,6 +131,5 @@ export default function PricingDemoPage() {
       <p className='text-xs text-gray-50o0'>,
         Disclaimer: Based on market data & trends. Do not auto-submit changes.,
       </p>,
-    </div>),
-}
+    </div>)}
 ,

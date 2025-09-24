@@ -15,6 +15,5 @@ export default function FounderBotPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

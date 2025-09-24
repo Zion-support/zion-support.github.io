@@ -103,8 +103,7 @@ const AI20o25UltimateContentShowcase = () => {
       case 'resource':,
         return 'bg-purple-50o0',
       default:,
-        return 'bg-gray-50o0',
-    }
+        return 'bg-gray-50o0'}
   };
   const getTypeLabel = (type: string) => {
     switch (type) {
@@ -115,8 +114,7 @@ const AI20o25UltimateContentShowcase = () => {
       case 'resource':,
         return 'Resource',
       default:,
-        return 'Content',
-    }
+        return 'Content'}
   };
   return (
     <div className='bg-gradient-to-br from-gray-50 to-blue-50 py-16'>,
@@ -173,8 +171,7 @@ const AI20o25UltimateContentShowcase = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-purple-50 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-purple-50 border border-gray-20o0'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -240,8 +237,7 @@ const AI20o25UltimateContentShowcase = () => {
                     <ChevronRightIcon className='h-5 w-5 group-hover:translate-x-1 transition-transform' />,
                   </Link>,
                 </div>,
-              </div>),
-          })}
+              </div>)})}
         </div>,
         {/* Call to Action Section */}
         <div className='bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 rounded-2xl p-12 text-white text-center'>,
@@ -292,6 +288,5 @@ const AI20o25UltimateContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o25UltimateContentShowcase;

@@ -111,6 +111,5 @@ export default function ContentShowcasePromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

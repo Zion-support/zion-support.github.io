@@ -29,8 +29,7 @@ interface ReviewFormProps {
   revieweeName: string,
   onSubmit: (data: any) => Promise<boolean>,
   defaultValues?: Review,
-  isSubmitting: boolean,
-}
+  isSubmitting: boolean}
 ,
 export function ReviewForm({
   projectId;

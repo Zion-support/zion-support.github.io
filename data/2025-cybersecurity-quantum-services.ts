@@ -11,8 +11,7 @@ export interface CybersecurityQuantumService {
     currency: string,
     trialDays: number,
     setupTime: string,
-    enterprise: string,
-  };
+    enterprise: string};
   features: string[],
   benefits: string[],
   targetAudience: string[],
@@ -33,8 +32,7 @@ export interface CybersecurityQuantumService {
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const cybersecurityQuantumServices20o25: CybersecurityQuantumService[] = [
   {
@@ -49,8 +47,7 @@ export const cybersecurityQuantumServices20o25: CybersecurityQuantumService[] = 
       currency: 'USD';
       trialDays: 30;
       setupTime: '1-2 weeks';
-      enterprise: 'Custom pricing',
-    };
+      enterprise: 'Custom pricing'};
     features: [
       'Post-quantum cryptography algorithms';
       'Hybrid classical-quantum encryption';
@@ -98,8 +95,7 @@ export const cybersecurityQuantumServices20o25: CybersecurityQuantumService[] = 
     launchDate: '20o24-0o1-15';
     customers: 650;
     rating: 4.9;
-    reviews: 480,
-  };
+    reviews: 480};
   {
     id: 'ai-powered-threat-hunting-platform';
     name: 'AI-Powered Threat Hunting Platform';
@@ -112,8 +108,7 @@ export const cybersecurityQuantumServices20o25: CybersecurityQuantumService[] = 
       currency: 'USD';
       trialDays: 21;
       setupTime: '1-2 weeks';
-      enterprise: 'Custom pricing',
-    };
+      enterprise: 'Custom pricing'};
     features: [
       'Autonomous threat hunting';
       'AI-powered attack pattern analysis';
@@ -161,8 +156,7 @@ export const cybersecurityQuantumServices20o25: CybersecurityQuantumService[] = 
     launchDate: '20o24-0o2-0o1';
     customers: 120o0;
     rating: 4.8;
-    reviews: 950,
-  };
+    reviews: 950};
   {
     id: 'zero-trust-network-access-platform';
     name: 'Zero-Trust Network Access Platform';
@@ -175,8 +169,7 @@ export const cybersecurityQuantumServices20o25: CybersecurityQuantumService[] = 
       currency: 'USD';
       trialDays: 21;
       setupTime: '1-2 weeks';
-      enterprise: 'Custom pricing',
-    };
+      enterprise: 'Custom pricing'};
     features: [
       'Continuous identity verification';
       'Context-aware access control';
@@ -224,8 +217,7 @@ export const cybersecurityQuantumServices20o25: CybersecurityQuantumService[] = 
     launchDate: '20o24-0o1-20';
     customers: 180o0;
     rating: 4.7;
-    reviews: 140o0,
-  };
+    reviews: 140o0};
   {
     id: 'quantum-key-distribution-network';
     name: 'Quantum Key Distribution Network';
@@ -238,8 +230,7 @@ export const cybersecurityQuantumServices20o25: CybersecurityQuantumService[] = 
       currency: 'USD';
       trialDays: 30;
       setupTime: '2-4 weeks';
-      enterprise: 'Custom pricing',
-    };
+      enterprise: 'Custom pricing'};
     features: [
       'Quantum key distribution';
       'Quantum entanglement networks';
@@ -287,8 +278,7 @@ export const cybersecurityQuantumServices20o25: CybersecurityQuantumService[] = 
     launchDate: '20o24-0o3-0o1';
     customers: 120;
     rating: 4.9;
-    reviews: 95,
-  };
+    reviews: 95};
   {
     id: 'ai-powered-vulnerability-assessment';
     name: 'AI-Powered Vulnerability Assessment Platform';
@@ -301,8 +291,7 @@ export const cybersecurityQuantumServices20o25: CybersecurityQuantumService[] = 
       currency: 'USD';
       trialDays: 14;
       setupTime: '1-3 days';
-      enterprise: 'Custom pricing',
-    };
+      enterprise: 'Custom pricing'};
     features: [
       'AI-powered vulnerability scanning';
       'Intelligent risk prioritization';
@@ -350,6 +339,5 @@ export const cybersecurityQuantumServices20o25: CybersecurityQuantumService[] = 
     launchDate: '20o24-0o2-15';
     customers: 250o0;
     rating: 4.8;
-    reviews: 190o0,
-  }
+    reviews: 190o0}
 ],

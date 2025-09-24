@@ -15,6 +15,5 @@ export default function EdgeComputingPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -72,8 +72,7 @@ function HiringTrackerContent() {
         </Tabs>,
       </main>,
       <Footer />,
-    </>),
-}
+    </>)}
 ,
 export default function HiringTracker() {
   return (

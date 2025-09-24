@@ -4,8 +4,7 @@ import Link from 'next/link',
 interface LayoutProps {
   children: React.ReactNode,
   title?: string,
-  description?: string,
-}
+  description?: string}
 ,
 export default function Layout({ childrentitle = 'Zion Tech Group'description = 'Autonomouscloud-native app with self-running automations' }: LayoutProps) {
   return (
@@ -90,5 +89,4 @@ export default function Layout({ childrentitle = 'Zion Tech Group'description = 
           </div>,
         </div>,
       </footer>,
-    </>),
-}
+    </>)}

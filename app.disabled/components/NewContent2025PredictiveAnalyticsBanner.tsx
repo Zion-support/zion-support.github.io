@@ -14,11 +14,9 @@ const NewContent20o25PredictiveAnalyticsBanner = () => {
         roi: '90o0%';
         savings: '$4.2B';
         accuracy: '95%';
-        timeline: '18 months',
-      };
+        timeline: '18 months'};
       type: 'blog';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-predictive-success';
       title: 'Fortune 50o0 Predictive Analytics Success: $4.2B Company Achieves 90o0% ROI';
@@ -28,11 +26,9 @@ const NewContent20o25PredictiveAnalyticsBanner = () => {
         roi: '90o0%';
         savings: '$2.8B';
         efficiency: '95%';
-        satisfaction: '99.2%',
-      };
+        satisfaction: '99.2%'};
       type: 'case-study';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'predictive-analytics-implementation';
       title: 'AI 20o25 Predictive Analytics Implementation Master Guide';
@@ -42,11 +38,9 @@ const NewContent20o25PredictiveAnalyticsBanner = () => {
         roi: '90o0%';
         success: '50o0+';
         timeline: '18 months';
-        savings: '$4.2B',
-      };
+        savings: '$4.2B'};
       type: 'resource';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -131,8 +125,7 @@ const NewContent20o25PredictiveAnalyticsBanner = () => {
                   className={`p-4 rounded-lg cursor-pointer transition-all ${
                     index === currentSlide,
                       ? 'bg-white/20 border-2 border-white',
-                      : 'bg-white/5 hover: bg-white/10',
-                  }`}
+                      : 'bg-white/5 hover: bg-white/10'}`}
                   onClick={() => setCurrentSlide(index)}
                 >,
                   <div className="flex items-center justify-between mb-2">,

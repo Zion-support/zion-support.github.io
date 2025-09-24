@@ -15,8 +15,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const PricingCard = ({ service, index }: { service: any, index: number }) => {
   const [isHovered, setIsHovered] = useState(false),
   return (
@@ -93,15 +92,13 @@ const PricingCard = ({ service, index }: { service: any, index: number }) => {
           </a>,
         </div>,
       </div>,
-    </motion.div>),
-};
+    </motion.div>)};
 const ServiceCategory = ({ title, services, icon: Icon, color, description }: {
   title: string,
   services: any[],
   icon: any,
   color: string,
-  description: string,
-}) => (
+  description: string}) => (
   <div className="mb-20">,
     <div className="text-center mb-12">,
       <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full mb-6 ${color}`}>,

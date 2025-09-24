@@ -10,8 +10,7 @@ type EpisodeListItem ={
   audio?: {
     mp3Url?: string,
     wavUrl?: string,
-    mp4Url?: string,
-  };
+    mp4Url?: string};
 };
 export default function PodcastIndexPage() {
   const [episodesetEpisodes] = useState<EpisodeListItem[]>([]),

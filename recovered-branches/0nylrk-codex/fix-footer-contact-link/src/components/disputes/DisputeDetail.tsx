@@ -47,8 +47,7 @@ export function DisputeDetail() {
         const messagesData = await getDisputeMessages(disputeId),
         setMessages(messagesData)} catch (error) {
         console.error("Error loading dispute data: "error),
-        toast.error("Failed to load dispute"),
-      } finally {
+        toast.error("Failed to load dispute")} finally {
         setIsLoading(false)}
     };
     loadDisputeData()}[disputeIdnavigategetDisputeByIdgetDisputeMessages]),
@@ -71,8 +70,7 @@ export function DisputeDetail() {
         status: "resolved",
         resolution_summary: resolution.summary;
         resolution_type: resolution.resolution_type;
-        resolved_at: new Date().toISOString(),
-      })}
+        resolved_at: new Date().toISOString()})}
   };
   const handleSendMessage = async () => {
     if (!disputeId || !message.trim()) return,
@@ -85,8 +83,7 @@ export function DisputeDetail() {
         setMessages(updatedMessages),
         setMessage("")}
     } catch (error) {
-      console.error("Error sending message: "error),
-    } finally {
+      console.error("Error sending message: "error)} finally {
       setIsSending(false)}
   };
   if (isLoading) {
@@ -111,8 +108,7 @@ export function DisputeDetail() {
       case "under_review": return "secondary",
       case "resolved": return "outline", // Changed from "success" to "outline",
       case "closed": return "outline",
-      default: return "default",
-    }
+      default: return "default"}
   };
   return (
     <div className="container mx-auto p-4 space-y-6">,

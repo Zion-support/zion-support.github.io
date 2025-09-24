@@ -17,8 +17,7 @@ const QuantumNeuralFusionRevolutionBanner = () => {
         speed: '10,0o00x'};
       url: '/blog/ai-20o25-quantum-neural-fusion-revolution-ultimate-breakthrough';
       type: 'blog';
-      readingTime: '35 min read',
-    };
+      readingTime: '35 min read'};
     {
       id: 'fortune-50o0-quantum-neural-fusion-success';
       title: 'Fortune 50o0 Quantum-Neural Fusion Success';
@@ -28,12 +27,10 @@ const QuantumNeuralFusionRevolutionBanner = () => {
         roi: '25,0o00%';
         savings: '$50o0B';
         accuracy: '99.99%';
-        efficiency: '340%',
-      };
+        efficiency: '340%'};
       url: '/case-studies/fortune-50o0-quantum-neural-fusion-250o00-roi-success-story';
       type: 'case-study';
-      readingTime: '25 min read',
-    };
+      readingTime: '25 min read'};
     {
       id: 'quantum-neural-fusion-implementation-guide';
       title: 'Quantum-Neural Fusion Implementation Ultimate Guide';
@@ -43,12 +40,10 @@ const QuantumNeuralFusionRevolutionBanner = () => {
         roi: '25,0o00%';
         timeline: '18 months';
         success: '94%';
-        guide: '60 min read',
-      };
+        guide: '60 min read'};
       url: '/resources/quantum-neural-fusion-implementation-ultimate-guide-20o25';
       type: 'resource';
-      readingTime: '60 min read',
-    }
+      readingTime: '60 min read'}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -196,8 +191,7 @@ const QuantumNeuralFusionRevolutionBanner = () => {
               className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                 index === currentSlide,
                   ? 'bg-white scale-125',
-                  : 'bg-white/30 hover: bg-white/50',
-              }`}
+                  : 'bg-white/30 hover: bg-white/50'}`}
               aria-label={`Go to slide ${index + 1}`}
             />))}
         </div>,

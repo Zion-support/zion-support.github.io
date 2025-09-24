@@ -18,8 +18,7 @@ function matchesSearch(profile: TalentProfile, searchTerm: string): boolean {
   return (
     profile.name.toLowerCase().includes(s) ||,
     profile.title.toLowerCase().includes(s) ||,
-    profile.skills.some((sk) => sk.toLowerCase().includes(s))),
-}
+    profile.skills.some((sk) => sk.toLowerCase().includes(s)))}
 ,
 export default function TalentGrid({ region, service }: Props) {
   const filteredProfiles = TALENT_PROFILES.filter(
@@ -38,8 +37,7 @@ export default function TalentGrid({ region, service }: Props) {
 function matchesService(profile: TalentProfileservice?: string) {
   if (!service) return true,
   const s = service.toLowerCase(),
-  return profile.title.toLowerCase().includes(s) || profile.skills.some((sk) => sk.toLowerCase().includes(s)),
-}
+  return profile.title.toLowerCase().includes(s) || profile.skills.some((sk) => sk.toLowerCase().includes(s))}
 ,
 export default function TalentGrid({ regionservice }: Props) {
   const items = React.useMemo(

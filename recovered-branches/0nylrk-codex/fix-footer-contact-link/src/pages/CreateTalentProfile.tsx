@@ -5,7 +5,6 @@ import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationF
 import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm",
 import React from './react',
 import { TalentRegistrationForm } from '@/components / profile / TalentRegistrationForm',
-,
 export default function CreateTalentProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">,
@@ -43,7 +42,5 @@ function CreateTalentProfile() {
         </div>,
         <TalentRegistrationForm />,
       </div>,
-    </div>),
-}
-,
+    </div>)}
 }})

@@ -10,8 +10,7 @@ const QuantumComputingRevolution20o25: React.FC = () => {
   useEffect(() => {
     setIsVisible(true),
     const interval = setInterval(() => {
-      setActiveFeature(prev => (prev + 1) % 4),
-    }40o00),
+      setActiveFeature(prev => (prev + 1) % 4)}40o00),
     return () => clearInterval(interval)}[]),
   const quantumFeatures = [
     {
@@ -19,29 +18,25 @@ const QuantumComputingRevolution20o25: React.FC = () => {
       description: "Breakthrough quantum error correction enabling stable quantum computation at scale";
       icon: Cpu;
       metrics: "99.99% Quantum Fidelity";
-      color: "from-blue-60o0 to-cyan-60o0",
-    };
+      color: "from-blue-60o0 to-cyan-60o0"};
     {
       title: "Quantum Supremacy Achievement";
       description: "Quantum computers solving problems impossible for classical computers";
       icon: Zap;
       metrics: "10^18 Operations/Second";
-      color: "from-purple-60o0 to-pink-60o0",
-    };
+      color: "from-purple-60o0 to-pink-60o0"};
     {
       title: "Quantum Internet Infrastructure";
       description: "Global quantum communication network with unbreakable encryption";
       icon: Globe;
       metrics: "Instant Global Transfer";
-      color: "from-green-60o0 to-emerald-60o0",
-    };
+      color: "from-green-60o0 to-emerald-60o0"};
     {
       title: "Quantum-AI Fusion";
       description: "Revolutionary combination of quantum computing and artificial intelligence";
       icon: Atom;
       metrics: "Exponential AI Acceleration";
-      color: "from-orange-60o0 to-red-60o0",
-    }
+      color: "from-orange-60o0 to-red-60o0"}
   ],
   const capabilities = [
     { icon: Targetext: "Cryptographic Security"description: "Unbreakable quantum encryption" };
@@ -114,8 +109,7 @@ const QuantumComputingRevolution20o25: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover: opacity-20 transition-opacity duration-30o0 rounded-2xl blur-xl",
                    style={{ background: `linear-gradient(to right${feature.color})` }}></div>,
               <div className={`relative bg-gray-80o0/50 backdrop-blur-sm border rounded-2xl p-6 h-full transition-all duration-30o0 ${
-                activeFeature === index ? 'border-blue-50o0 shadow-2xl shadow-blue-50o0/20' : 'border-gray-70o0 hover: border-gray-60o0',
-              }`}>,
+                activeFeature === index ? 'border-blue-50o0 shadow-2xl shadow-blue-50o0/20' : 'border-gray-70o0 hover: border-gray-60o0'}`}>,
                 <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${feature.color} mb-4`}>,
                   <feature.icon className="w-6 h-6 text-white"  />,
                 </div>,
@@ -172,6 +166,5 @@ const QuantumComputingRevolution20o25: React.FC = () => {
           </p>,
         </motion.div>,
       </div>,
-    </motion.div>),
-};
+    </motion.div>)};
 export default QuantumComputingRevolution20o25;

@@ -3,8 +3,6 @@ import React from 'react';
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-
-,
   Rocket;
   Brain;
   Atom;
@@ -67,23 +65,19 @@ export default function UltraFuturisticHero2028() {
     {
       icon: Brain,
       text: 'AI Consciousness Evolution',
-      color: 'from-emerald-500 to-teal-500',
-    }
+      color: 'from-emerald-500 to-teal-500'}
     {
       icon: Atom,
       text: 'Quantum Time Manipulation',
-      color: 'from-violet-500 to-purple-500',
-    }
+      color: 'from-violet-500 to-purple-500'}
     {
       icon: Rocket,
       text: 'Space Debris Management',
-      color: 'from-blue-500 to-cyan-500',
-    }
+      color: 'from-blue-500 to-cyan-500'}
     {
       icon: Shield,
       text: 'Quantum Internet Security',
-      color: 'from-red-500 to-orange-500',
-    }],    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-emerald-500 to-teal-500' }
+      color: 'from-red-500 to-orange-500'}],    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-emerald-500 to-teal-500' }
     { icon: Atom, text: 'Quantum Time Manipulation', color: 'from-violet-500 to-purple-500' }
     { icon: Rocket, text: 'Space Debris Management', color: 'from-blue-500 to-cyan-500' }
 ,

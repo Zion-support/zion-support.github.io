@@ -525,6 +525,5 @@ export default function MarketPricing20o27Page() {
           </div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>),
-}
+    </UltraAdvancedFuturisticBackground>)}
 ,

@@ -5,7 +5,7 @@ class  {
 ,
   async start() {
     this.isRunning = true,
-    // console.log('Starting ...'),
+    // // console.log('Starting ...'),
     try {
       const winston = require('winston'),
 const logger = winston.createLogger({
@@ -20,8 +20,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const path = require('path'),
 const fs = require('fs'),
@@ -40,8 +39,7 @@ const StaleCleaner = require('./tasks/StaleCleaner'),
   const results ={
     passed: 0;
     failed: 0;
-    tests: [],
-  };
+    tests: []};
   try {
     // Test 1: Core Components Instantiation,
     logger.info('\n1️⃣ Testing core components instantiation...'),
@@ -161,8 +159,7 @@ const StaleCleaner = require('./tasks/StaleCleaner'),
       results.tests.push({ name: Orchestrator Integration', status: 'PASS' }),
       results.passed++,
       logger.info('✅ Orchestrator integration works'),
-      await orchestrator.stop(),
-} catch (error) {
+      await orchestrator.stop()} catch (error) {
       results.tests.push({ name: Orchestrator Integration', status: 'FAIL' }),
       results.failed++,
       logger.info('❌ Orchestrator integration failed:', error.message)}
@@ -219,11 +216,11 @@ if (require.main === module) {
 module.exports ={ testComponents };
 // Graceful shutdown handling,
 process.on('SIGINT', () => {
-  // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
+  // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
   // Add cleanup logic here,
   process.exit(0)}),
 process.on('SIGTERM', () => {
-  // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
+  // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here,
   process.exit(0)})} catch (error) {
       console.error('Error in :', error),
@@ -232,7 +229,7 @@ process.on('SIGTERM', () => {
 ,
   stop() {
     this.isRunning = false,
-    // console.log('Stopping ...')}
+    // // console.log('Stopping ...')}
 }
 ,
 // Start the script,

@@ -15,6 +15,5 @@ export default function SignupPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

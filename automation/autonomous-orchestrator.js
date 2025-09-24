@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const fs = require('fs'),
 const path = require('path'),
@@ -30,22 +29,19 @@ class AutonomousOrchestrator {
         path: 'automation/efficient-improvement-system.js';
         args: [];
         autoRestart: true;
-        memoryLimit: 512,
-      };
+        memoryLimit: 512};
       {
         name: 'syntax-fixer';
         path: 'automation/syntax-fixer.js';
         args: [];
         autoRestart: true;
-        memoryLimit: 256,
-      };
+        memoryLimit: 256};
       {
         name: 'monitor-system';
         path: 'automation/monitor-improvement-system.js';
         args: ['monitor'];
         autoRestart: true;
-        memoryLimit: 128,
-      }
+        memoryLimit: 128}
     ],
     this.projectRoot = process.cwd(),
     this.logDir = path.join(this.projectRoot, 'logs'),
@@ -98,8 +94,7 @@ class AutonomousOrchestrator {
       this.processes.set(script.name, {
         process: proc;
         script;
-        restartCount: 0,
-      }),
+        restartCount: 0}),
       logger.info(`✅ ${script.name} started (PID: ${proc.pid})`)} catch (error) {
       logger.error(`❌ Failed to start ${script.name}:`, error.message)}
   }
@@ -144,14 +139,12 @@ class AutonomousOrchestrator {
     const status ={
       isRunning: this.isRunning;
       processes: {};
-      totalProcesses: this.processes.size,
-    };
+      totalProcesses: this.processes.size};
     for (const [name, procInfo] of this.processes) {
       status.processes[name] ={
         pid: procInfo.process.pid;
         restartCount: procInfo.restartCount;
-        isAlive: !procInfo.process.killed,
-      };
+        isAlive: !procInfo.process.killed};
     }
     return status}
 }
@@ -172,6 +165,5 @@ if (require.main === module) {
     logger.info('Usage: '),
     logger.info('  node automation/autonomous-orchestrator.js start   - Start all automation scripts'),
     logger.info('  node automation/autonomous-orchestrator.js stop    - Stop all automation scripts'),
-    logger.info('  node automation/autonomous-orchestrator.js status  - Show status of all scripts'),
-  }
+    logger.info('  node automation/autonomous-orchestrator.js status  - Show status of all scripts')}
 } ,

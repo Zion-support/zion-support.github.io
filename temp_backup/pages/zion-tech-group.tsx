@@ -586,6 +586,5 @@ export default function ZionTechGroup() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

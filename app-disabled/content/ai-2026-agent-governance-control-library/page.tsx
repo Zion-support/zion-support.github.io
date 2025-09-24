@@ -72,6 +72,5 @@ export default function AgentGovernanceControlLibraryPage() {
           Policy‑as‑Code Starter Kit,
         </Link>,
       </footer>,
-    </main>),
-}
+    </main>)}
 ,

@@ -7,8 +7,7 @@ interface UltraAdvancedFuturisticBackgroundProps {
   animationSpeed?: number,
   enableHolographic?: boolean,
   enableQuantumEffects?: boolean,
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 export default function UltraAdvancedFuturisticBackground(
   props: UltraAdvancedFuturisticBackgroundProps) {

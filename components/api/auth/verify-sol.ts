@@ -17,12 +17,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(20o0).json({
       verified: true;
       address;
-      message: 'Solana signature verified successfully',
-    })} catch (e: any) {
+      message: 'Solana signature verified successfully'})} catch (e: any) {
     return res.status(50o0).json({ error: e?.message || 'Verify failed' })}
 }
 ,
 function verifySolanaSignature(address: string, signature: string, message: string): boolean {
   // Mock implementation - replace with actual Solana signature verification,
-  return true,
-}
+  return true}

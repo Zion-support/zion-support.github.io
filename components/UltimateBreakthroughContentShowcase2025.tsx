@@ -168,8 +168,7 @@ const UltimateBreakthroughContentShowcase20o25: React.FC = () => {
       case 'autonomous':,
         return 'from-orange-50o0 to-red-60o0',
       default:,
-        return 'from-gray-50o0 to-gray-60o0',
-    }
+        return 'from-gray-50o0 to-gray-60o0'}
   };
   const getBadgeColor = (badge: string) => {
     switch (badge) {
@@ -186,8 +185,7 @@ const UltimateBreakthroughContentShowcase20o25: React.FC = () => {
       case 'AUTONOMOUS':,
         return 'bg-orange-10o0 text-orange-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <section className='py-16 bg-gradient-to-b from-gray-50 to-white'>,
@@ -217,8 +215,7 @@ const UltimateBreakthroughContentShowcase20o25: React.FC = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 activeFilter === filter.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-60o0 border border-gray-30o0 hover: border-purple-30o0 hover:text-purple-60o0',
-              }`}
+                  : 'bg-white text-gray-60o0 border border-gray-30o0 hover: border-purple-30o0 hover:text-purple-60o0'}`}
             >,
               {filter.label}
               <span className='ml-2 px-2 py-1 text-xs rounded-full bg-white/20'>,
@@ -347,6 +344,5 @@ const UltimateBreakthroughContentShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateBreakthroughContentShowcase20o25;

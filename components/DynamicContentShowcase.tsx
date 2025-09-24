@@ -15,8 +15,7 @@ export default function DynamicContentShowcase() {
       category: 'AI 20o25';
       roi: '10,0o00%';
       badge: 'BREAKTHROUGH';
-      gradient: 'from-red-90o0 via-purple-90o0 to-pink-90o0',
-    };
+      gradient: 'from-red-90o0 via-purple-90o0 to-pink-90o0'};
     {
       id: 2;
       title: 'Quantum Computing Solutions 20o25 Ultimate';
@@ -27,8 +26,7 @@ export default function DynamicContentShowcase() {
       category: 'Quantum Computing';
       roi: '∞';
       badge: 'REVOLUTIONARY';
-      gradient: 'from-indigo-90o0 via-purple-90o0 to-pink-90o0',
-    };
+      gradient: 'from-indigo-90o0 via-purple-90o0 to-pink-90o0'};
     {
       id: 3;
       title: 'Advanced Automation Solutions 20o25 Ultimate';
@@ -39,8 +37,7 @@ export default function DynamicContentShowcase() {
       category: 'Automation';
       roi: '15,0o00%';
       badge: 'ULTIMATE';
-      gradient: 'from-green-90o0 via-blue-90o0 to-purple-90o0',
-    };
+      gradient: 'from-green-90o0 via-blue-90o0 to-purple-90o0'};
     {
       id: 4;
       title: 'AI 20o26 Quantum-Neural Fusion';
@@ -51,8 +48,7 @@ export default function DynamicContentShowcase() {
       category: 'AI 20o26';
       roi: '15,0o00%';
       badge: 'BREAKTHROUGH';
-      gradient: 'from-cyan-90o0 via-blue-90o0 to-purple-90o0',
-    };
+      gradient: 'from-cyan-90o0 via-blue-90o0 to-purple-90o0'};
     {
       id: 5;
       title: 'AI 20o27 Future Predictions Revolutionary';
@@ -63,8 +59,7 @@ export default function DynamicContentShowcase() {
       category: 'AI 20o27';
       roi: '8,0o00%';
       badge: 'FUTURE';
-      gradient: 'from-purple-90o0 via-pink-90o0 to-red-90o0',
-    };
+      gradient: 'from-purple-90o0 via-pink-90o0 to-red-90o0'};
     {
       id: 6;
       title: 'AI 20o28 Future Predictions Breakthrough';
@@ -75,8 +70,7 @@ export default function DynamicContentShowcase() {
       category: 'AI 20o28';
       roi: '3,0o00%';
       badge: 'REVOLUTIONARY';
-      gradient: 'from-blue-90o0 via-indigo-90o0 to-purple-90o0',
-    }
+      gradient: 'from-blue-90o0 via-indigo-90o0 to-purple-90o0'}
   ],
   useEffect(() => {
     if (isAutoPlaying) {
@@ -89,16 +83,14 @@ export default function DynamicContentShowcase() {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length)};
   const goToSlide = (index: number) => {
-    setCurrentSlide(index),
-  };
+    setCurrentSlide(index)};
   const getBadgeColor = (badge: string) => {
     switch (badge) {
       case 'BREAKTHROUGH': return 'bg-gradient-to-r from-red-50o0 to-pink-50o0',
       case 'REVOLUTIONARY': return 'bg-gradient-to-r from-purple-50o0 to-indigo-50o0',
       case 'ULTIMATE': return 'bg-gradient-to-r from-green-50o0 to-blue-50o0',
       case 'FUTURE': return 'bg-gradient-to-r from-cyan-50o0 to-blue-50o0',
-      default: return 'bg-gradient-to-r from-gray-50o0 to-gray-60o0',
-    }
+      default: return 'bg-gradient-to-r from-gray-50o0 to-gray-60o0'}
   };
   const currentItem = showcaseItems[currentSlide],
   return (
@@ -213,8 +205,7 @@ export default function DynamicContentShowcase() {
               className={`p-4 rounded-lg text-center transition-all ${
                 index === currentSlide,
                   ? 'bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black',
-                  : 'bg-white/10 hover: bg-white/20 text-white',
-              }`}
+                  : 'bg-white/10 hover: bg-white/20 text-white'}`}
             >,
               <div className="text-2xl mb-2">{item.image}</div>,
               <div className="text-xs font-bold mb-1">{item.category}</div>,
@@ -243,5 +234,4 @@ export default function DynamicContentShowcase() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

@@ -21,8 +21,7 @@ export default function VendorProfilePage({ vendor }: Props) {
       if (!res.ok) throw new Error('Failed to submit'),
       setMessage('Thanks! We will contact you soon.'),
       form.reset()} catch (e: any) {
-      setMessage(e.message),
-    } finally {
+      setMessage(e.message)} finally {
       setLoading(false)}
   }
 ,

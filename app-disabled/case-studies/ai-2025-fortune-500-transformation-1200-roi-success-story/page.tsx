@@ -669,6 +669,5 @@ export default function Fortune50o0AITransformationPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

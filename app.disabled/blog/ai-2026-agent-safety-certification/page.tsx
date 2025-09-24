@@ -138,6 +138,5 @@ export default function AgentSafetyCertification20o26() {
           </div>,
         </article>,
       </div>,
-    </ErrorBoundary>),
-}
+    </ErrorBoundary>)}
 ,

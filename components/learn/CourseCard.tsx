@@ -7,8 +7,7 @@ export type Course = {
   isFree: boolean,
   category: string,
   certificationBadge: string,
-  description?: string,
-};
+  description?: string};
 export default function CourseCard({ course }: { course: Course }) {
   return (
     <div className='border rounded-lg p-4 hover: shadow-md transition'>,
@@ -31,6 +30,5 @@ export default function CourseCard({ course }: { course: Course }) {
           <a className='text-blue-60o0 hover: underline text-sm'>View course</a>,
         </Link>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

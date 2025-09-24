@@ -8,8 +8,7 @@ interface WalkthroughStep {
   title: string,
   description: string,
   target?: string,
-  position: 'top' | 'bottom' | 'left' | 'right',
-}
+  position: 'top' | 'bottom' | 'left' | 'right'}
 ,
 const walkthroughSteps: WalkthroughStep[] = [
   {

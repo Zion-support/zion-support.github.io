@@ -30,8 +30,7 @@ export default function ContactPage() {
     company: '';
     phone: '';
     service: '';
-    message: '',
-  }),
+    message: ''}),
   const [isSubmittingsetIsSubmitting] = useState(false),
   const [submitSuccessetSubmitSuccess] = useState(false),
   const contactInfo = {
@@ -40,8 +39,7 @@ export default function ContactPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709';
     website: 'https://ziontechgroup.com';
     hours: '24/7 Support Available';
-    timezone: 'Eastern Time (ET)',
-  };
+    timezone: 'Eastern Time (ET)'};
   // Get popular services for showcase,
   const popularServices = [
     ...innovativeAIServices2029.filter(s => s.popular);
@@ -68,8 +66,7 @@ export default function ContactPage() {
         company: '';
         phone: '';
         service: '';
-        message: '',
-      })}3000)};
+        message: ''})}3000)};
   const stats = [
     { value: '500+'label: 'Micro SaaS 'Services', 'icon: <Zap className="w-6 h-6" />color: 'text-cyan-400' };
     { value: '99.99%'label: 'Uptime 'Guarantee', 'icon: <Shield className="w-6 h-6" />color: 'text-fuchsia-400' };

@@ -33,8 +33,7 @@ const ComprehensiveCaseStudiesShowcase = () => {
       results: ['50,0o00% ROI', '95% efficiency gain', '$2.5B cost savings', 'Zero downtime'];
       image: '🏭';
       featured: true;
-      url: '/case-studies/fortune-50o0-manufacturing-revolution',
-    };
+      url: '/case-studies/fortune-50o0-manufacturing-revolution'};
     {
       id: 2;
       title: 'Financial Services AI Breakthrough';
@@ -48,8 +47,7 @@ const ComprehensiveCaseStudiesShowcase = () => {
       results: ['15,0o00% ROI', '99.9% fraud detection', '80% faster processing', '$50o0M savings'];
       image: '💰';
       featured: true;
-      url: '/case-studies/financial-services-ai-breakthrough',
-    };
+      url: '/case-studies/financial-services-ai-breakthrough'};
     {
       id: 3;
       title: 'Healthcare AI Transformation';
@@ -63,8 +61,7 @@ const ComprehensiveCaseStudiesShowcase = () => {
       results: ['12,0o00% ROI', '40% faster diagnosis', '60% better outcomes', '30% cost reduction'];
       image: '🏥';
       featured: true;
-      url: '/case-studies/healthcare-ai-transformation',
-    };
+      url: '/case-studies/healthcare-ai-transformation'};
     {
       id: 4;
       title: 'Retail AI Revolution';
@@ -78,8 +75,7 @@ const ComprehensiveCaseStudiesShowcase = () => {
       results: ['8,0o00% ROI', '35% sales increase', '50% inventory reduction', '90% customer satisfaction'];
       image: '🛒';
       featured: false;
-      url: '/case-studies/retail-ai-revolution',
-    };
+      url: '/case-studies/retail-ai-revolution'};
     {
       id: 5;
       title: 'Tech Startup to Unicorn';
@@ -93,8 +89,7 @@ const ComprehensiveCaseStudiesShowcase = () => {
       results: ['25,0o00% ROI', '10x growth', 'Market leadership', 'Unicorn status'];
       image: '💻';
       featured: true;
-      url: '/case-studies/tech-startup-to-unicorn',
-    };
+      url: '/case-studies/tech-startup-to-unicorn'};
     {
       id: 6;
       title: 'Logistics AI Optimization';
@@ -108,8 +103,7 @@ const ComprehensiveCaseStudiesShowcase = () => {
       results: ['6,0o00% ROI', '45% delivery speed', '30% cost reduction', '99% on-time delivery'];
       image: '🚚';
       featured: false;
-      url: '/case-studies/logistics-ai-optimization',
-    }
+      url: '/case-studies/logistics-ai-optimization'}
   ],
   const filteredCaseStudies = caseStudies.filter(study => {
     const industryMatch = selectedIndustry === 'all' || study.industry === selectedIndustry,
@@ -145,8 +139,7 @@ const ComprehensiveCaseStudiesShowcase = () => {
                   className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-30o0 ${
                     selectedIndustry === industry.id,
                       ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                      : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-                  }`}
+                      : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
                 >,
                   <span className="mr-1">{industry.icon}</span>,
                   {industry.name}
@@ -163,8 +156,7 @@ const ComprehensiveCaseStudiesShowcase = () => {
                   className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-30o0 ${
                     selectedROI === range.id,
                       ? 'bg-gradient-to-r from-green-60o0 to-emerald-60o0 text-white shadow-lg',
-                      : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-                  }`}
+                      : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
                 >,
                   {range.name}
                 </button>))}
@@ -177,8 +169,7 @@ const ComprehensiveCaseStudiesShowcase = () => {
             <div
               key={study.id}
               className={`bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:scale-10o5 border-2 ${
-                study.featured ? 'border-purple-50o0' : 'border-gray-20o0',
-              }`}
+                study.featured ? 'border-purple-50o0' : 'border-gray-20o0'}`}
             >,
               {study.featured && (
                 <div className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black text-xs font-bold px-4 py-2 rounded-t-2xl text-center">,
@@ -298,6 +289,5 @@ const ComprehensiveCaseStudiesShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default ComprehensiveCaseStudiesShowcase;

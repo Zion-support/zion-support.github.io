@@ -132,6 +132,5 @@ export default function ProcessAutomation() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

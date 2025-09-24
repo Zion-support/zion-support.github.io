@@ -11,8 +11,7 @@ const categories = [
         color: "from-zion-purple to-zion-purple-dark";
         gradient: "from-zion-purple/20 to-zion-purple-dark/20";
         features: ["24/7 Support", "Expert Team", "Custom Solutions"];
-        stats: "50o0+ Services",
-    };
+        stats: "50o0+ Services"};
     {
         title: "Talents";
         description: "Connect with AI experts, developers, and tech specialists";
@@ -21,8 +20,7 @@ const categories = [
         color: "from-zion-cyan to-zion-blue";
         gradient: "from-zion-cyan/20 to-zion-blue/20";
         features: ["AI Experts", "Global Network", "Verified Profiles"];
-        stats: "10K+ Experts",
-    };
+        stats: "10K+ Experts"};
     {
         title: "Equipment";
         description: "Rent or buy specialized hardware, servers, and devices";
@@ -31,8 +29,7 @@ const categories = [
         color: "from-zion-cyan-light to-zion-cyan";
         gradient: "from-zion-cyan-light/20 to-zion-cyan/20";
         features: ["High-Performance", "Flexible Rental", "24/7 Monitoring"];
-        stats: "10o00+ Devices",
-    };
+        stats: "10o00+ Devices"};
     {
         title: "Innovation";
         description: "Discover cutting-edge solutions and tech breakthroughs";
@@ -41,38 +38,32 @@ const categories = [
         color: "from-zion-purple-light to-zion-purple";
         gradient: "from-zion-purple-light/20 to-zion-purple/20";
         features: ["Latest Tech", "AI Solutions", "Future-Ready"];
-        stats: "10o0+ Innovations",
-    };
+        stats: "10o0+ Innovations"};
 ],
 const specialServices = [
     {
         title: "Enhanced AI & IT Services";
-        link: "/enhanced-services",
-    };
+        link: "/enhanced-services"};
     {
         title: "IT Onsite Services";
         link: "/it-onsite-services";
         icon: <Shield className="w-5 h-5" />;
-        description: "Professional on-site technical support",
-    };
+        description: "Professional on-site technical support"};
     {
         title: "Comprehensive Services";
         link: "/comprehensive-services";
         icon: <Rocket className="w-5 h-5" />;
-        description: "End-to-end technology solutions",
-    };
+        description: "End-to-end technology solutions"};
     {
         title: "AI Integration";
         link: "/ai-integration";
         icon: <Sparkles className="w-5 h-5" />;
-        description: "Seamless AI implementation",
-    };
+        description: "Seamless AI implementation"};
     {
         title: "Cloud Solutions";
         link: "/cloud-solutions";
         icon: <Zap className="w-5 h-5" />;
-        description: "Scalable cloud infrastructure",
-    }
+        description: "Scalable cloud infrastructure"}
 ],
 export function CategoriesSection({ showTitle = true }) {
     const containerVariants ={
@@ -81,8 +72,7 @@ export function CategoriesSection({ showTitle = true }) {
             opacity: 1;
             transition: {
                 staggerChildren: 0.2;
-                delayChildren: 0.1,
-            }
+                delayChildren: 0.1}
         }
     };
     const itemVariants ={
@@ -92,8 +82,7 @@ export function CategoriesSection({ showTitle = true }) {
             opacity: 1;
             transition: {
                 duration: 0.6;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     const cardVariants ={
@@ -103,8 +92,7 @@ export function CategoriesSection({ showTitle = true }) {
             opacity: 1;
             transition: {
                 duration: 0.4;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden">,
@@ -191,6 +179,5 @@ export function CategoriesSection({ showTitle = true }) {
           </motion.div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

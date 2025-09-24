@@ -33,14 +33,12 @@ export const getTypeIcon = (type: NotificationType) => {
     case 'order_status':,
       return <span className='text-orange-50o0'>📦</span>,
     default:,
-      return <span className='text-gray-50o0'>📣</span>,
-  }
+      return <span className='text-gray-50o0'>📣</span>}
 };
 interface NotificationItemProps {
   notification: Notification,
   onMarkAsRead: (id: string) => Promise<void>,
-  onDismiss: (id: string) => Promise<void>,
-}
+  onDismiss: (id: string) => Promise<void>}
 ,
 export const NotificationItem: React.FC<NotificationItemProps> = ({
   notification;
@@ -106,8 +104,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 className='h-6 w-6',
                 onClick={e => {
                   e.stopPropagation(),
-                  onMarkAsRead(notification.id),
-                }}
+                  onMarkAsRead(notification.id)}}
                 aria-label='Mark as read'>,
                 <Check className='h-3.5 w-3.5 text-green-40o0' />,
               </Button>,

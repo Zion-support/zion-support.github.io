@@ -7,8 +7,7 @@ interface UltraAdvancedFuturisticBackgroundProps {
   animationSpeed?: number,
   enableHolographic?: boolean,
   enableQuantumEffects?: boolean,
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgroundProps> = ({
   intensity = 'high';
@@ -34,8 +33,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       size: number,
       opacity: number,
       color: string,
-      type: 'quantum' | 'holographic' | 'neon' | 'fusion',
-    }> = [],
+      type: 'quantum' | 'holographic' | 'neon' | 'fusion'}> = [],
     // Set canvas size,
     const resizeCanvas = () => {
       if (containerRef.current) {
@@ -52,29 +50,25 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         secondary: '#ff0o0ff';
         accent: '#ffff0o0';
         quantum: '#0o0ff88';
-        holographic: '#ff0o088',
-      };
+        holographic: '#ff0o088'};
       'neon-cyber': {
         primary: '#0o0ff41';
         secondary: '#ff0o080';
         accent: '#0o0d4ff';
         quantum: '#ff6b35';
-        holographic: '#9d4edd',
-      };
+        holographic: '#9d4edd'};
       'holographic': {
         primary: '#ff0o0ff';
         secondary: '#0o0ffff';
         accent: '#ffff0o0';
         quantum: '#0o0ff88';
-        holographic: '#ff0o088',
-      };
+        holographic: '#ff0o088'};
       'quantum-ai': {
         primary: '#0o0d4ff';
         secondary: '#ff6b35';
         accent: '#9d4edd';
         quantum: '#0o0ff88';
-        holographic: '#ff0o088',
-      }
+        holographic: '#ff0o088'}
     };
     const colors = colorSchemes[colorScheme],
     // Initialize particles,

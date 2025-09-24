@@ -62,6 +62,5 @@ export default function NewContent20o25EnterpriseSuccessBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

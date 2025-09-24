@@ -15,6 +15,5 @@ export default function ProductManagementChatPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

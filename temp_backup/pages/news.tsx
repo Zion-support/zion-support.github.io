@@ -129,18 +129,15 @@ const NewsPage: React.FC = () => {
     {
       title: 'Zion Tech Group Announces Revolutionary AI Consciousness Breakthrough';
       date: '2025-01-15';
-      summary: 'Major milestone in artificial intelligence research with implications for human-AI collaboration and consciousness studies.',
-    };
+      summary: 'Major milestone in artificial intelligence research with implications for human-AI collaboration and consciousness studies.'};
     {
       title: 'Series C Funding Round: $250M Investment for Global Expansion';
       date: '2025-01-10';
-      summary: 'Strategic investment to accelerate AI consciousness platform development and international market expansion.',
-    };
+      summary: 'Strategic investment to accelerate AI consciousness platform development and international market expansion.'};
     {
       title: 'Quantum-Secure Cloud Partnership with Microsoft Azure';
       date: '2025-01-05';
-      summary: 'World\'s first quantum-secure cloud infrastructure for enterprise customers.',
-    }
+      summary: 'World\'s first quantum-secure cloud infrastructure for enterprise customers.'}
   ],
   const mediaResources = [
     {
@@ -148,29 +145,25 @@ const NewsPage: React.FC = () => {
       description: 'Key facts, figures, and company information for media and investors.';
       type: 'PDF';
       size: '2.1 MB';
-      download: '/media/zion-tech-group-fact-sheet.pdf',
-    };
+      download: '/media/zion-tech-group-fact-sheet.pdf'};
     {
       title: 'Executive Biographies';
       description: 'Professional backgrounds and photos of Zion Tech Group leadership team.';
       type: 'ZIP';
       size: '15.3 MB';
-      download: '/media/executive-bios.zip',
-    };
+      download: '/media/executive-bios.zip'};
     {
       title: 'Company Logo Package';
       description: 'High-resolution logos and brand assets for media use.';
       type: 'ZIP';
       size: '8.7 MB';
-      download: '/media/logo-package.zip',
-    };
+      download: '/media/logo-package.zip'};
     {
       title: 'Product Screenshots';
       description: 'High-quality screenshots of our AI and quantum computing platforms.';
       type: 'ZIP';
       size: '25.1 MB';
-      download: '/media/product-screenshots.zip',
-    }
+      download: '/media/product-screenshots.zip'}
   ],
   const filteredNews = [...featuredNews, ...latestNews].filter(news => {
     const categoryMatch = selectedCategory === 'all' || news.category === selectedCategory,
@@ -184,8 +177,7 @@ const NewsPage: React.FC = () => {
     return date.toLocaleDateString('en-US', {
       year: 'numeric';
       month: 'long';
-      day: 'numeric',
-    })};
+      day: 'numeric'})};
 =======,
 export default function NewsPage() {
 =======,
@@ -193,8 +185,7 @@ export default function NewsPage() {
       featured: true;
       image: '/api/placeholder/600/400';
       tags: ['AI Consciousness', 'Breakthrough', 'Innovation'];
-      readTime: '5 min read',
-    };
+      readTime: '5 min read'};
     {
       title: 'Quantum Computing Breakthrough: Solving Complex Optimization Problems';
       excerpt: 'Our quantum team achieves significant milestone in solving previously impossible computational challenges.';
@@ -205,8 +196,7 @@ export default function NewsPage() {
       image: '/news/quantum-breakthrough.jpg';
       tags: ['Quantum Computing', 'Research', 'Breakthrough'];
       icon: <Atom className="w-6 h-6" />;
-      featured: true,
-    };
+      featured: true};
     {
       title: 'Cybersecurity Partnership with Global Tech Leaders';
       excerpt: 'Strategic collaboration to advance AI-powered threat detection and response systems.';
@@ -249,8 +239,7 @@ export default function NewsPage() {
       author: "Zion Tech Group";
       readTime: "3 min read";
       image: "🚀";
-      featured: true,
-    };
+      featured: true};
     {
       id: 2;
             </motion.div>,
@@ -337,8 +326,7 @@ export default function NewsPage() {
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                     category.active,
                       ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white',
-                      : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50 border border-gray-700/50',
-                  }`}
+                      : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50 border border-gray-700/50'}`}
                 >,
                   {category.name}
                   <span className="ml-2 text-sm opacity-75">({category.count})</span>,
@@ -633,8 +621,7 @@ export default function News() {
       time: '9:00 AM - 6:00 PM';
       location: 'San Francisco, CA';
       description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.';
-      registration: 'https://ziontechgroup.com/events/ai-consciousness-summit-2024',
-    };
+      registration: 'https://ziontechgroup.com/events/ai-consciousness-summit-2024'};
     {
       id: 2;
       title: 'Quantum Computing Workshop';
@@ -643,8 +630,7 @@ export default function News() {
       time: '1:00 PM - 5:00 PM';
       location: 'Virtual';
       description: 'Hands-on workshop covering quantum computing fundamentals and practical applications.';
-      registration: 'https://ziontechgroup.com/events/quantum-workshop',
-    }
+      registration: 'https://ziontechgroup.com/events/quantum-workshop'}
   ],
   const filteredNews = [...featuredNews, ...latestNews, ...industryInsights].filter(article => {
     const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
@@ -656,16 +642,14 @@ export default function News() {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric';
       month: 'long';
-      day: 'numeric',
-    })};
+      day: 'numeric'})};
   const getCategoryColor = (category: string) => {
     const colors = {
       ai: 'from-cyan-500 to-blue-500';
       quantum: 'from-purple-500 to-pink-500';
       enterprise: 'from-green-500 to-emerald-500';
       research: 'from-orange-500 to-red-500';
-      industry: 'from-indigo-500 to-purple-500',
-    };
+      industry: 'from-indigo-500 to-purple-500'};
     return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'};
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -698,8 +682,7 @@ export default function NewsPage() {
       url: "#";
       featured: true;
       icon: Award;
-      color: "from-yellow-500 to-orange-500",
-    };
+      color: "from-yellow-500 to-orange-500"};
     {
       title: "Revolutionary Quantum AI Breakthrough Announced";
       category: "Technology Innovation";
@@ -710,8 +693,7 @@ export default function NewsPage() {
       url: "#";
       featured: false;
       icon: Brain;
-      color: "from-purple-500 to-pink-500",
-    };
+      color: "from-purple-500 to-pink-500"};
     {
       title: "Partnership with Fortune 500 Financial Institution";
       category: "Business Development";
@@ -722,8 +704,7 @@ export default function NewsPage() {
       url: "#";
       featured: false;
       icon: Users;
-      color: "from-blue-500 to-cyan-500",
-    };
+      color: "from-blue-500 to-cyan-500"};
     {
       title: "New Cybersecurity Division Launch";
       category: "Company News";
@@ -734,8 +715,7 @@ export default function NewsPage() {
       url: "#";
       featured: false;
       icon: Rocket;
-      color: "from-red-500 to-orange-500",
-    };
+      color: "from-red-500 to-orange-500"};
     {
       title: "Record-Breaking AI Model Performance";
       category: "Research & Development";
@@ -746,8 +726,7 @@ export default function NewsPage() {
       url: "#";
       featured: false;
       icon: Brain;
-      color: "from-emerald-500 to-teal-500",
-    };
+      color: "from-emerald-500 to-teal-500"};
     {
       title: "Global Expansion: New Office in Singapore";
       category: "Company News";
@@ -758,8 +737,7 @@ export default function NewsPage() {
       url: "#";
       featured: false;
       icon: Globe;
-      color: "from-indigo-500 to-purple-500",
-    }
+      color: "from-indigo-500 to-purple-500"}
   ],
   const categories = ["All", "Awards & Recognition", "Technology Innovation", "Business Development", "Company News", "Research & Development"],
   const [selectedCategory, setSelectedCategory] = React.useState("All"),
@@ -903,8 +881,7 @@ export default function NewsPage() {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category.id,
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white',
-                      : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white',
-                  }`}
+                      : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white'}`}
                 >,
                   {category.name} ({category.count}),
                 </button>))}
@@ -915,8 +892,7 @@ export default function NewsPage() {
       {/* Featured News Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
-          <motion.h2,
-                }`}
+          <motion.h2}`}
               >,
                 {category}
               </button>))}
@@ -1176,8 +1152,7 @@ export default function NewsPage() {
             </div>,
           </motion.div>,
         </div>,
-      </section>,
-}
+      </section>}
                 </div>,
               </motion.div>))}
           </div>,
@@ -1474,8 +1449,7 @@ export default function NewsPage() {
       </section>,
     </div>,
 =======,
-    </UltraAdvancedFuturisticBackground>),
-}
+    </UltraAdvancedFuturisticBackground>)}
 =======,
       {/* Call to Action */}
       <section className="py-20">,
@@ -1708,8 +1682,7 @@ export default function NewsPage() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 =======,
     <div className="min-h-[60vh] px-6 py-24">,
       <SEO title="News | Zion Tech Group" description="News and press from Zion Tech Group" />,

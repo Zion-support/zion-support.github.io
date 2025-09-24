@@ -11,8 +11,7 @@ export interface Revolutionary20o27MicroSaas {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =,
   [

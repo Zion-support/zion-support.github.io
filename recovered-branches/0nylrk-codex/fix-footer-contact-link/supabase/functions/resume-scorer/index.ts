@@ -91,8 +91,7 @@ serve(async req => {
           Skills:,
           ${resume.resume_skills.map((skill: any) => skill.name).join(', ')}
         `,
-        resumeSkills = resume.resume_skills.map((skill: any) => skill.name),
-      }
+        resumeSkills = resume.resume_skills.map((skill: any) => skill.name)}
     }
 ,
     // 3. If no resume content, use talent profile and cover letter,

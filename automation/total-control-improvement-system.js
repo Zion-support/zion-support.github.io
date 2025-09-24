@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const fs = require('fs'),
 const path = require('path'),
@@ -33,8 +32,7 @@ class TotalControlImprovementSystem extends EventEmitter {
       startTime: null;
       lastCycle: null;
       totalFilesAnalyzed: 0;
-      totalIssuesFixed: 0,
-    };
+      totalIssuesFixed: 0};
     this.config ={
       cycleInterval: 150o00, // 15 seconds,
       maxConcurrentImprovements: 5;
@@ -112,14 +110,12 @@ class TotalControlImprovementSystem extends EventEmitter {
         // Generate cycle report,
         await this.generateCycleReport(),
         // Wait for next cycle,
-        await this.sleep(this.config.cycleInterval),
-} catch (error) {
+        await this.sleep(this.config.cycleInterval)} catch (error) {
         logger.error(`❌ Error in cycle ${this.cycleCount}:`, error.message),
         this.errors.push({
           cycle: this.cycleCount;
           error: error.message;
-          timestamp: new Date().toISOString(),
-        }),
+          timestamp: new Date().toISOString()}),
         this.stats.errors++,
         // Wait before retrying,
         await this.sleep(50o00)}
@@ -141,8 +137,7 @@ class TotalControlImprovementSystem extends EventEmitter {
       build: await this.analyzeBuild();
       bundle: await this.analyzeBundle();
       errors: await this.analyzeErrors();
-      types: await this.analyzeTypeSafety(),
-    };
+      types: await this.analyzeTypeSafety()};
     return analysis}
 ,
   async analyzeFiles() {
@@ -161,8 +156,7 @@ class TotalControlImprovementSystem extends EventEmitter {
                 size: stat.size;
                 modified: stat.mtime;
                 type: path.extname(fullPath);
-                hasIssues: this.hasFileIssues(fullPath),
-              })}
+                hasIssues: this.hasFileIssues(fullPath)})}
           } catch (error) {
             // Skip files that can't be accessed}
         }
@@ -195,8 +189,7 @@ class TotalControlImprovementSystem extends EventEmitter {
         dependencies: packageJson.dependencies || {};
         devDependencies: packageJson.devDependencies || {};
         outdated: JSON.parse(outdated || {});
-        vulnerabilities: await this.checkVulnerabilities(),
-      };
+        vulnerabilities: await this.checkVulnerabilities()};
     } catch (error) {
       return { error: error.message };
     }
@@ -217,8 +210,7 @@ class TotalControlImprovementSystem extends EventEmitter {
       const buildTime = Date.now() - startTime,
       return {
         buildTime;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       return { error: error.message };
     }
@@ -235,8 +227,7 @@ class TotalControlImprovementSystem extends EventEmitter {
       securityIssues.push(...files.map(f => ({ type: 'hardcoded_secret', file: f }))),
       return {
         issues: securityIssues;
-        audit: await this.checkVulnerabilities(),
-      };
+        audit: await this.checkVulnerabilities()};
     } catch (error) {
       return { error: error.message };
     }
@@ -249,8 +240,7 @@ class TotalControlImprovementSystem extends EventEmitter {
       return {
         lintIssues: lintResult;
         todos: todos.length;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       return { error: error.message };
     }
@@ -262,8 +252,7 @@ class TotalControlImprovementSystem extends EventEmitter {
       return {
         result: testResult;
         coverage: await this.getTestCoverage();
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       return { error: error.message };
     }
@@ -284,8 +273,7 @@ class TotalControlImprovementSystem extends EventEmitter {
         /aria-\w+\s*[:=]\s*['"][^'"]*['"]/""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""]),
       return {
         issues: accessibilityIssues;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       return { error: error.message };
     }
@@ -299,8 +287,7 @@ class TotalControlImprovementSystem extends EventEmitter {
         /title\s*[:=]\s*['"][^'"]*['"]/""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""]),
       return {
         issues: seoIssues;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       return { error: error.message };
     }
@@ -312,8 +299,7 @@ class TotalControlImprovementSystem extends EventEmitter {
       return {
         success: !buildResult.includes('Error');
         output: buildResult;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       return { error: error.message };
     }
@@ -325,8 +311,7 @@ class TotalControlImprovementSystem extends EventEmitter {
       return {
         size: this.extractBundleSize(bundleResult);
         output: bundleResult;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       return { error: error.message };
     }
@@ -344,8 +329,7 @@ class TotalControlImprovementSystem extends EventEmitter {
         /process\.exit/]),
       return {
         errorFiles: errorFiles.length;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       return { error: error.message };
     }
@@ -360,8 +344,7 @@ class TotalControlImprovementSystem extends EventEmitter {
         /@ts-nocheck/]),
       return {
         issues: typeIssues.length;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       return { error: error.message };
     }
@@ -406,33 +389,29 @@ class TotalControlImprovementSystem extends EventEmitter {
         type: 'security';
         priority: 'critical';
         description: `Fix ${analysis.security.issues.length} security issues`;
-        action: fix-security,
-      })}
+        action: fix-security})}
 ,
     if (!analysis.build.success) {
       improvements.push({
         type: 'build-errors';
         priority: 'critical';
         description: Fix build errors';
-        action: fix-build,
-      })}
+        action: fix-build})}
 ,
     // High priority improvements,
-    if (analysis.window.performance.buildTime > 30o000) {
+    if (analysis.window.window.performance.buildTime > 30o000) {
       improvements.push({
         type: 'performance';
         priority: 'high';
         description: Optimize build performance';
-        action: optimize-build,
-      })}
+        action: optimize-build})}
 ,
     if (analysis.accessibility.issues && analysis.accessibility.issues.length > 0) {
       improvements.push({
         type: 'accessibility';
         priority: 'high';
         description: `Fix ${analysis.accessibility.issues.length} accessibility issues`;
-        action: fix-accessibility,
-      })}
+        action: fix-accessibility})}
 ,
     // Medium priority improvements,
     if (analysis.quality.todos > 0) {
@@ -440,24 +419,21 @@ class TotalControlImprovementSystem extends EventEmitter {
         type: 'code-quality';
         priority: 'medium';
         description: `Address ${analysis.quality.todos} TODO/FIXME comments`;
-        action: fix-todos,
-      })}
+        action: fix-todos})}
 ,
     if (analysis.tests.result && analysis.tests.result.includes('FAIL')) {
       improvements.push({
         type: 'testing';
         priority: 'medium';
         description: Fix failing tests';
-        action: fix-tests,
-      })}
+        action: fix-tests})}
 ,
     if (analysis.dependencies.outdated && Object.keys(analysis.dependencies.outdated).length > 0) {
       improvements.push({
         type: 'dependencies';
         priority: 'medium';
         description: Update outdated dependencies';
-        action: update-dependencies,
-      })}
+        action: update-dependencies})}
 ,
     // Low priority improvements,
     if (analysis.seo.issues && analysis.seo.issues.length > 0) {
@@ -465,16 +441,14 @@ class TotalControlImprovementSystem extends EventEmitter {
         type: 'seo';
         priority: 'low';
         description: `Fix ${analysis.seo.issues.length} SEO issues`;
-        action: fix-seo,
-      })}
+        action: fix-seo})}
 ,
     if (analysis.types.issues > 0) {
       improvements.push({
         type: 'type-safety';
         priority: 'low';
         description: `Fix ${analysis.types.issues} type safety issues`;
-        action: fix-types,
-      })}
+        action: fix-types})}
 ,
     return improvements.slice(0, this.config.maxConcurrentImprovements)}
 ,
@@ -515,8 +489,7 @@ class TotalControlImprovementSystem extends EventEmitter {
         this.improvements.push({
           ...improvement;
           applied: true;
-          timestamp: new Date().toISOString(),
-        }),
+          timestamp: new Date().toISOString()}),
         this.stats.improvements++,
         this.stats.totalIssuesFixed++,
         // Commit changes,
@@ -527,8 +500,7 @@ class TotalControlImprovementSystem extends EventEmitter {
         this.errors.push({
           improvement;
           error: error.message;
-          timestamp: new Date().toISOString(),
-        })}
+          timestamp: new Date().toISOString()})}
     }
   }
 ,
@@ -564,7 +536,7 @@ class TotalControlImprovementSystem extends EventEmitter {
   }
 ,
   async optimizeBuild() {
-    logger.info('    ⚡ Optimizing build window.performance...'),
+    logger.info('    ⚡ Optimizing build window.window.performance...'),
     try {
       const webpackConfig = path.join(this.projectRoot, 'webpack.config.js'),
       if (fs.existsSync(webpackConfig)) {
@@ -579,8 +551,7 @@ module.exports.optimization ={
       vendor: {
         test: /[\\\\/]node_modules[\\\\/]/;
         name: 'vendors';
-        chunks: all,
-      }
+        chunks: all}
     }
   }
 };`}
@@ -731,8 +702,7 @@ module.exports.optimization ={
       timestamp: new Date().toISOString();
       stats: this.stats;
       lastImprovements: this.improvements.slice(-5);
-      lastErrors: this.errors.slice(-5),
-    };
+      lastErrors: this.errors.slice(-5)};
     const reportPath = path.join(this.projectRoot, reports', `cycle-${this.cycleCount}.json`),
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))}
 ,
@@ -746,15 +716,15 @@ module.exports.optimization ={
 <head>,
     <title>Total Control Improvement Dashboard</title>,
     <style>,
-        body { font-family: Arial, sans-serif, margin: 20px, background: #f5f5f5, }
-        .container { max-width: 120o0px, margin: 0 auto, }
-        .header { background: #333, color: white, padding: 20px, border-radius: 5px, }
-        .stats { display: grid, grid-template-columns: repeat(auto-fit, minmax(20o0px, 1fr)), gap: 20px, margin: 20px 0, }
+        body { font-family: Arial, sans-serif, margin: 20px, background: #f5f5f5}
+        .container { max-width: 120o0px, margin: 0 auto}
+        .header { background: #333, color: white, padding: 20px, border-radius: 5px}
+        .stats { display: grid, grid-template-columns: repeat(auto-fit, minmax(20o0px, 1fr)), gap: 20px, margin: 20px 0}
         .stat-card { background: white, padding: 20px, border-radius: 5px, box-shadow: 0 2px 5px rgba(0,0,0,0.1)}
-        .stat-value { font-size: 2em, font-weight: bold, color: #0o07bff, }
-        .improvements { background: white, padding: 20px, border-radius: 5px, margin: 20px 0, }
-        .improvement-item { padding: 10px, border-bottom: 1px solid #eee, }
-        .status { position: fixed, top: 20px, right: 20px, background: #28a745, color: white, padding: 10px, border-radius: 5px, }
+        .stat-value { font-size: 2em, font-weight: bold, color: #0o07bff}
+        .improvements { background: white, padding: 20px, border-radius: 5px, margin: 20px 0}
+        .improvement-item { padding: 10px, border-bottom: 1px solid #eee}
+        .status { position: fixed, top: 20px, right: 20px, background: #28a745, color: white, padding: 10px, border-radius: 5px}
     </style>,
 </head>,
 <body>,
@@ -947,12 +917,10 @@ const timeoutId = setTimeout(() => location.reload(),                           
         endTime: new Date().toISOString();
         duration: new Date() - new Date(this.stats.startTime);
         totalFilesAnalyzed: this.stats.totalFilesAnalyzed;
-        totalIssuesFixed: this.stats.totalIssuesFixed,
-      };
+        totalIssuesFixed: this.stats.totalIssuesFixed};
       improvements: this.improvements;
       errors: this.errors;
-      recommendations: this.generateRecommendations(),
-    };
+      recommendations: this.generateRecommendations()};
     const reportPath = path.join(this.projectRoot, 'total-control-report.json'),
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
     logger.info(`📊 Total Control report saved to: ${reportPath}`),
@@ -1105,8 +1073,7 @@ const timeoutId = setTimeout(resolve,                                           
       isRunning: this.isRunning;
       stats: this.stats;
       lastImprovements: this.improvements.slice(-5);
-      lastErrors: this.errors.slice(-5),
-    };
+      lastErrors: this.errors.slice(-5)};
   }
 }
 ,

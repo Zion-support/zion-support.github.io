@@ -6,21 +6,17 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 interface QuickReplyButtonProps {
   text: string,
-  onClick: () => void,
-}
+  onClick: () => void}
 export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 interface QuickReplyButtonProps {
   text: string;
-  onClick: () => void,
-}
+  onClick: () => void}
 export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 interface QuickReplyButtonProps {
   text: string;
-  onClick: () => void,
-}
+  onClick: () => void}
 ,
 export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProps) {
-,
   return (
     <Button
       variant="outline",
@@ -33,8 +29,7 @@ export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProp
         "transition-colors duration-200",
 interface QuickReplyButtonProps {
   text: string;
-  onClick: () => void,
-}
+  onClick: () => void}
 ,
 export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
   return (
@@ -52,5 +47,4 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 ,
     </Button>)}
 )}
-,
 }}

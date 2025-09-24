@@ -21,8 +21,7 @@ export default function CareersPage() {
         "Strong background in machine learning algorithms"];
       benefits: ["Competitive salary"Equity options"Health insurance"Flexible work arrangements"];
       icon: Brain;
-      color: "from-purple-500 to-pink-500",
-    };
+      color: "from-purple-500 to-pink-500"};
     {
       title: "Quantum Computing Researcher";
       department: "Quantum Computing";
@@ -38,8 +37,7 @@ export default function CareersPage() {
         "Strong mathematical and analytical skills"];
       benefits: ["Competitive salary"Research funding"Conference attendance"Health insurance"];
       icon: Atom;
-      color: "from-blue-500 to-cyan-500",
-    };
+      color: "from-blue-500 to-cyan-500"};
     {
       title: "Cybersecurity Architect";
       department: "Cybersecurity";
@@ -55,8 +53,7 @@ export default function CareersPage() {
         "Strong knowledge of threat detection and response"];
       benefits: ["Competitive salary"Security certifications"Health insurance"Remote work"];
       icon: Shield;
-      color: "from-red-500 to-orange-500",
-    };
+      color: "from-red-500 to-orange-500"};
     {
       title: "Cloud Infrastructure Engineer";
       department: "Cloud Infrastructure";
@@ -72,8 +69,7 @@ export default function CareersPage() {
         "Strong knowledge of infrastructure as code"];
       benefits: ["Competitive salary"Cloud certifications"Health insurance"Flexible hours"];
       icon: Cloud;
-      color: "from-emerald-500 to-teal-500",
-    };
+      color: "from-emerald-500 to-teal-500"};
     {
       title: "Data Scientist";
       department: "Data Analytics";
@@ -89,8 +85,7 @@ export default function CareersPage() {
         "Strong analytical and problem-solving skills"];
       benefits: ["Competitive salary"Learning budget"Health insurance"Remote work"];
       icon: Zap;
-      color: "from-indigo-500 to-purple-500",
-    };
+      color: "from-indigo-500 to-purple-500"};
     {
       title: "Product Manager";
       department: "Product";
@@ -106,34 +101,29 @@ export default function CareersPage() {
         "Excellent communication and leadership abilities"];
       benefits: ["Competitive salary"Equity options"Health insurance"Professional development"];
       icon: Rocket;
-      color: "from-yellow-500 to-orange-500",
-    }
+      color: "from-yellow-500 to-orange-500"}
   ],
   const benefits = [
     {
       title: "Competitive Compensation";
       description: "Above-market salaries with equity options and performance bonuses";
       icon: DollarSign;
-      color: "from-green-500 to-emerald-500",
-    };
+      color: "from-green-500 to-emerald-500"};
     {
       title: "Health & Wellness";
       description: "Comprehensive healthdentaland vision insurance for you and your family";
       icon: Star;
-      color: "from-blue-500 to-cyan-500",
-    };
+      color: "from-blue-500 to-cyan-500"};
     {
       title: "Flexible Work";
       description: "Remote work options and flexible hours to support work-life balance";
       icon: Clock;
-      color: "from-purple-500 to-pink-500",
-    };
+      color: "from-purple-500 to-pink-500"};
     {
       title: "Professional Growth";
       description: "Continuous learning opportunitiesconferencesand career development";
       icon: Rocket;
-      color: "from-orange-500 to-red-500",
-    }
+      color: "from-orange-500 to-red-500"}
   ],
   return (
     <UltraAdvancedFuturisticBackground>,
@@ -401,8 +391,7 @@ export default function CareersPage() {
           </div>,
         </section>,
       </main>,
-    </div>),
-};
+    </div>)};
       <EnhancedFooter />,
     </div>)}
 ,

@@ -8,8 +8,7 @@ export interface Zion20o26InnovativeService {
     monthly: number,
     yearly: number,
     enterprise: number,
-    currency: string,
-  };
+    currency: string};
   benefits: string[],
   useCases: string[],
   technologies: string[],
@@ -19,8 +18,7 @@ export interface Zion20o26InnovativeService {
     phone: string,
     email: string,
     website: string,
-    address: string,
-  };
+    address: string};
 }
 ,
 export const zion20o26InnovativeServices: Zion20o26InnovativeService[] = [
@@ -42,8 +40,7 @@ export const zion20o26InnovativeServices: Zion20o26InnovativeService[] = [
       monthly: 350o00;
       yearly: 350o000;
       enterprise: 750o000;
-      currency: "USD",
-    };
+      currency: "USD"};
     benefits: [
       "24/7 autonomous business operations";
       "Data-driven decision making";
@@ -69,8 +66,7 @@ export const zion20o26InnovativeServices: Zion20o26InnovativeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   };
   {
     id: "quantum-ai-hybrid-computing";
@@ -90,8 +86,7 @@ export const zion20o26InnovativeServices: Zion20o26InnovativeService[] = [
       monthly: 450o00;
       yearly: 450o000;
       enterprise: 90o0000;
-      currency: "USD",
-    };
+      currency: "USD"};
     benefits: [
       "10o00x faster computation";
       "Quantum advantage in AI";
@@ -117,8 +112,7 @@ export const zion20o26InnovativeServices: Zion20o26InnovativeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   };
   {
     id: "blockchain-ai-governance";
@@ -138,8 +132,7 @@ export const zion20o26InnovativeServices: Zion20o26InnovativeService[] = [
       monthly: 250o00;
       yearly: 250o000;
       enterprise: 50o0000;
-      currency: "USD",
-    };
+      currency: "USD"};
     benefits: [
       "Transparent governance";
       "Automated compliance";
@@ -165,8 +158,7 @@ export const zion20o26InnovativeServices: Zion20o26InnovativeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   };
   {
     id: "ai-cybersecurity-defense";
@@ -186,8 +178,7 @@ export const zion20o26InnovativeServices: Zion20o26InnovativeService[] = [
       monthly: 280o00;
       yearly: 280o000;
       enterprise: 60o0000;
-      currency: "USD",
-    };
+      currency: "USD"};
     benefits: [
       "Proactive threat prevention";
       "Reduced false positives";
@@ -213,8 +204,7 @@ export const zion20o26InnovativeServices: Zion20o26InnovativeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   };
   {
     id: "ai-content-creation-revolution";
@@ -234,8 +224,7 @@ export const zion20o26InnovativeServices: Zion20o26InnovativeService[] = [
       monthly: 180o00;
       yearly: 180o000;
       enterprise: 40o0000;
-      currency: "USD",
-    };
+      currency: "USD"};
     benefits: [
       "10x faster content creation";
       "Consistent brand messaging";
@@ -261,8 +250,7 @@ export const zion20o26InnovativeServices: Zion20o26InnovativeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   };
   {
     id: "ai-healthcare-physician";
@@ -282,8 +270,7 @@ export const zion20o26InnovativeServices: Zion20o26InnovativeService[] = [
       monthly: 320o00;
       yearly: 320o000;
       enterprise: 70o0000;
-      currency: "USD",
-    };
+      currency: "USD"};
     benefits: [
       "Improved diagnostic accuracy";
       "Faster treatment decisions";
@@ -309,8 +296,7 @@ export const zion20o26InnovativeServices: Zion20o26InnovativeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   };
   {
     id: "ai-manufacturing-automation";
@@ -330,8 +316,7 @@ export const zion20o26InnovativeServices: Zion20o26InnovativeService[] = [
       monthly: 220o00;
       yearly: 220o000;
       enterprise: 450o000;
-      currency: "USD",
-    };
+      currency: "USD"};
     benefits: [
       "Increased production efficiency";
       "Reduced downtime";
@@ -357,8 +342,7 @@ export const zion20o26InnovativeServices: Zion20o26InnovativeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   };
   {
     id: "ai-legal-counsel";
@@ -378,8 +362,7 @@ export const zion20o26InnovativeServices: Zion20o26InnovativeService[] = [
       monthly: 20o000;
       yearly: 20o0000;
       enterprise: 40o0000;
-      currency: "USD",
-    };
+      currency: "USD"};
     benefits: [
       "Faster legal research";
       "Improved accuracy";
@@ -405,7 +388,6 @@ export const zion20o26InnovativeServices: Zion20o26InnovativeService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 10o08 Middletown DE 19709"}
   }
 ],

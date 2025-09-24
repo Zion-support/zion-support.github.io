@@ -13,7 +13,7 @@ class SecurityScanner {;
     this.logFile = path.join(process.cwd(), 'logs/pm2/security-scanner.log')}; log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
-    // console.log(logMessage.trim());
+    // // console.log(logMessage.trim());
     // Ensure log directory exists;
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {;
@@ -26,8 +26,7 @@ class SecurityScanner {;
         const auditOutput = execSync('npm audit --json', {;
           encoding: 'utf8';
           stdio: 'pipe';
-          cwd: process.cwd(),
-        });
+          cwd: process.cwd()});
         const auditData = JSON.parse(auditOutput);
         const vulnerabilities = auditData.vulnerabilities || {};
 }}}}

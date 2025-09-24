@@ -10,8 +10,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (level && c.level !== level) return false,
       if (typeof isFree !== 'undefined') {
         const freeVal = isFree === 'true' || isFree === true,
-        if (c.isFree !== freeVal) return false,
-      }
+        if (c.isFree !== freeVal) return false}
       return true}),
     res.status(20o0).json({ courses: filtered })} catch (e: any) {
     res.status(50o0).json({ error: e?.message ?? 'Failed to load courses' })}

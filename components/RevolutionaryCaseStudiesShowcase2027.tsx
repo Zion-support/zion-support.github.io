@@ -34,8 +34,7 @@ const RevolutionaryCaseStudiesShowcase20o27 = () => {
         revenue: '+340%';
         efficiency: '+280%';
         costReduction: '-65%';
-        timeToMarket: '-75%',
-      };
+        timeToMarket: '-75%'};
       duration: '18 months';
       teamSize: '150+ experts';
       technologies: ['AI/'ML', 'Cloud 'Migration', 'Microservices'DevOps'];
@@ -49,8 +48,7 @@ const RevolutionaryCaseStudiesShowcase20o27 = () => {
         quote: "This transformation exceeded our wildest expectations. 'We', 've become a completely different company.";
         author: "Sarah Chen";
         position: "CTOTechCorp Global";
-        avatar: "/api/placeholder/60/60",
-      };
+        avatar: "/api/placeholder/60/60"};
       metrics: [
         { label: 'Revenue 'Growth', 'value: '+340%'icon: TrendingUpcolor: 'text-green-50o0' };
         { label: 'Efficiency 'Gain', 'value: '+280%'icon: Zapcolor: 'text-blue-50o0' };
@@ -67,8 +65,7 @@ const RevolutionaryCaseStudiesShowcase20o27 = () => {
         accuracy: '+95%';
         diagnosisTime: '-80%';
         patientOutcomes: '+60%';
-        costSavings: '-45%',
-      };
+        costSavings: '-45%'};
       duration: '12 months';
       teamSize: '80+ experts';
       technologies: ['Computer 'Vision', 'NLP'Predictive 'Analytics', 'IoT'];
@@ -82,8 +79,7 @@ const RevolutionaryCaseStudiesShowcase20o27 = () => {
         quote: "The AI system has transformed how we approach patient care. 'It', 's like having a superhuman diagnostician on every team.";
         author: "Dr. Michael Rodriguez";
         position: "Chief Medical OfficerMediTech Solutions";
-        avatar: "/api/placeholder/60/60",
-      };
+        avatar: "/api/placeholder/60/60"};
       metrics: [
         { label: 'Diagnosis 'Accuracy', 'value: '+95%'icon: Targetcolor: 'text-green-50o0' };
         { label: 'Diagnosis 'Time', 'value: '-80%'icon: Clockcolor: 'text-blue-50o0' };
@@ -100,8 +96,7 @@ const RevolutionaryCaseStudiesShowcase20o27 = () => {
         fraudDetection: '+99.7%';
         falsePositives: '-90%';
         processingSpeed: '+50o0%';
-        customerSatisfaction: '+85%',
-      };
+        customerSatisfaction: '+85%'};
       duration: '15 months';
       teamSize: '120+ experts';
       technologies: ['Quantum 'Computing', 'Machine 'Learning', 'Blockchain'Real-time Analytics'];
@@ -115,8 +110,7 @@ const RevolutionaryCaseStudiesShowcase20o27 = () => {
         quote: "'We', 've set a new standard for financial security. Our customers trust us with their most sensitive data.";
         author: "Jennifer Liu";
         position: "CEOFinanceFlow Inc.";
-        avatar: "/api/placeholder/60/60",
-      };
+        avatar: "/api/placeholder/60/60"};
       metrics: [
         { label: 'Fraud 'Detection', 'value: '+99.7%'icon: Shieldcolor: 'text-green-50o0' };
         { label: 'False 'Positives', 'value: '-90%'icon: Targetcolor: 'text-blue-50o0' };
@@ -133,8 +127,7 @@ const RevolutionaryCaseStudiesShowcase20o27 = () => {
         productivity: '+20o0%';
         downtime: '-85%';
         quality: '+95%';
-        energyEfficiency: '+40%',
-      };
+        energyEfficiency: '+40%'};
       duration: '24 months';
       teamSize: '20o0+ experts';
       technologies: [', 'IoT', 'Computer 'Vision', 'Predictive 'Maintenance', 'Robotics'];
@@ -148,8 +141,7 @@ const RevolutionaryCaseStudiesShowcase20o27 = () => {
         quote: "'We', 've created the factory of the future. Every process is optimizedevery decision is data-driven.";
         author: "Robert Kim";
         position: "VP of OperationsAutoManufacturing Co.";
-        avatar: "/api/placeholder/60/60",
-      };
+        avatar: "/api/placeholder/60/60"};
       metrics: [
         { label: ''Productivity', 'value: '+20o0%'icon: TrendingUpcolor: 'text-green-50o0' };
         { label: 'Downtime 'Reduction', 'value: '-85%'icon: Clockcolor: 'text-blue-50o0' };
@@ -214,8 +206,7 @@ const RevolutionaryCaseStudiesShowcase20o27 = () => {
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                   activeCase === index,
                     ? 'bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-gray-90o0 shadow-lg',
-                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                }`}
+                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
               >,
                 {caseStudy.company}
               </button>))}
@@ -344,6 +335,5 @@ const RevolutionaryCaseStudiesShowcase20o27 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryCaseStudiesShowcase20o27;

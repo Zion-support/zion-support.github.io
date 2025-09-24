@@ -441,6 +441,5 @@ export default function AIResources() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

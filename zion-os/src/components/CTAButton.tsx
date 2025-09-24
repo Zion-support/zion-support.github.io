@@ -2,8 +2,7 @@
 import Link from 'next/link',
 interface CTAButtonProps {
   href: string,
-  label: string,
-}
+  label: string}
 ,
 export default function AppCTAButton({ href, label }: CTAButtonProps) {
   return (

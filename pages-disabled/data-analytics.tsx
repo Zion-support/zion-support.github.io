@@ -348,6 +348,5 @@ export default function DataAnalytics() {
         </section>,
       </main>,
       <SimpleFooter />,
-    </>),
-}
+    </>)}
 ,

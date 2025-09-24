@@ -5,14 +5,12 @@ import { safeStorage } from "@/utils/safeStorage",
 type Theme = "dark" | "light" | "system",
 type ThemeProviderProps = {
   children: React.ReactNode,
-  defaultTheme?: Theme,
-}
+  defaultTheme?: Theme}
 ,
 type ThemeProviderState = {
   theme: Theme,
   setTheme: (theme: Theme) => void,
-  toggleTheme: () => void,
-}
+  toggleTheme: () => void}
 ,
 const initialState: ThemeProviderState = {
   theme: "system";
@@ -40,8 +38,7 @@ export function ThemeProvider({
       root.setAttribute("data-theme"systemTheme),
       body.classList.add(systemTheme),
       body.setAttribute("data-theme"systemTheme),
-      return,
-    }
+      return}
 ,
     root.classList.add(t),
     root.setAttribute("data-theme"t),
@@ -54,16 +51,14 @@ export function ThemeProvider({
   const setCurrentTheme = (newTheme: Theme) => {
     safeStorage.setItem("theme"newTheme),
     applyTheme(newTheme),
-    setTheme(newTheme),
-  };
+    setTheme(newTheme)};
   const toggleTheme = () => {
     let currentResolvedTheme = theme,
     if (currentResolvedTheme === "system") {
       currentResolvedTheme = window.matchMedia("(prefers-color-scheme: dark)"),
         .matches,
         ? "dark",
-        : "light",
-    }
+        : "light"}
     setCurrentTheme(currentResolvedTheme === "dark" ? "light" : "dark")};
   const value = {
     theme;

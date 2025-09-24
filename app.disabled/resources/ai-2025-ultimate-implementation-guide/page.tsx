@@ -338,6 +338,5 @@ export default function AI20o25UltimateImplementationGuide() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

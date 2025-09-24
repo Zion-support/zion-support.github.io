@@ -6,26 +6,22 @@ const QuantumNeuralFusion20o30Showcase: React.FC = () => {
       title: "Quantum Consciousness Mapping";
       description: "Map human consciousness into quantum states for infinite processing power";
       icon: "🌀";
-      quantumLevel: "Level 7",
-    };
+      quantumLevel: "Level 7"};
     {
       title: "Neural Quantum Entanglement";
       description: "Create instant communication networks between AI minds across dimensions";
       icon: "⚛️";
-      quantumLevel: "Level 9",
-    };
+      quantumLevel: "Level 9"};
     {
       title: "Temporal Quantum Computing";
       description: "Process information across multiple time streams simultaneously";
       icon: "⏳";
-      quantumLevel: "Level 8",
-    };
+      quantumLevel: "Level 8"};
     {
       title: "Quantum Emotion Synthesis";
       description: "Generate and understand emotions at the quantum level";
       icon: "💎";
-      quantumLevel: "Level 10",
-    }
+      quantumLevel: "Level 10"}
   ],
   const performanceMetrics = [
     { metric: "10^15"label: "Quantum Operations/Second"icon: "⚡" };
@@ -37,23 +33,19 @@ const QuantumNeuralFusion20o30Showcase: React.FC = () => {
     {
       title: "Quantum Medicine";
       description: "Cure diseases by manipulating quantum states in biological systems";
-      impact: "Revolutionary",
-    };
+      impact: "Revolutionary"};
     {
       title: "Quantum Finance";
       description: "Predict market movements with quantum probability calculations";
-      impact: "Transformative",
-    };
+      impact: "Transformative"};
     {
       title: "Quantum Art";
       description: "Create art that exists in multiple dimensions simultaneously";
-      impact: "Transcendent",
-    };
+      impact: "Transcendent"};
     {
       title: "Quantum Education";
       description: "Learn any skill instantly through quantum knowledge transfer";
-      impact: "Infinite",
-    }
+      impact: "Infinite"}
   ],
   return (
     <div className="bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20 relative overflow-hidden">,
@@ -153,6 +145,5 @@ const QuantumNeuralFusion20o30Showcase: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default QuantumNeuralFusion20o30Showcase;

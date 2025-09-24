@@ -8,6 +8,5 @@ export default function AI20o26AutonomousSystemsBanner() {
           Showcasing next-gen autonomous systems for enterprise.,
         </p>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

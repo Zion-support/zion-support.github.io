@@ -6,13 +6,11 @@ interface UserTypeOption {
   id: 'serviceProvider' | 'talent' | 'client',
   name: string,
   description: string,
-  icon: React.ElementType,
-}
+  icon: React.ElementType}
 ,
 interface UserTypeSelectionProps {
   onSelect: (userType: 'serviceProvider' | 'talent' | 'client') => void,
-  selectedType: string | null,
-}
+  selectedType: string | null}
 ,
 export function UserTypeSelection({
   onSelectselectedType;
@@ -57,8 +55,7 @@ export function UserTypeSelection({
               className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
                 isSelected,
                   ? 'border-zion-purple bg-zion-purple/10 text-zion-purple',
-                  : 'border-zion-blue-light hover: border-zion-cyan/50 text-white',
-              }`}
+                  : 'border-zion-blue-light hover: border-zion-cyan/50 text-white'}`}
             >,
               <div
                 className={`p-3 rounded-full ${isSelected ? 'bg-zion-purple' : 'bg-zion-blue'}`}

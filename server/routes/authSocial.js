@@ -19,8 +19,7 @@ passport.use(new FacebookStrategy(
 // Twitter (X),
 passport.use(new TwitterStrategy(
   {
-    consumerKey: process.env.TWITTER_CLIENT_ID ||, consumerSecret: process.env.TWITTER_CLIENT_SECRET ||, callbackURL: /auth/twitter/callback',    includeEmail: true,
-  };
+    consumerKey: process.env.TWITTER_CLIENT_ID ||, consumerSecret: process.env.TWITTER_CLIENT_SECRET ||, callbackURL: /auth/twitter/callback',    includeEmail: true};
   (token, tokenSecret, profile, done) => {
     return done(null, { id: profile.id, provider: 'twitter', profile })})),
 // LinkedIn,

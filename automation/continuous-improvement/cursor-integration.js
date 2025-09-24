@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 /**,
  * Enhanced Cursor AI Integration for Zion App,
@@ -37,8 +36,7 @@ class CursorIntegration {
       workspaceId: process.env.CURSOR_WORKSPACE_ID;
       projectPath: process.cwd();
       maxRetries: 3;
-      timeout: 30o000,
-    };
+      timeout: 30o000};
     this.isConnected = false,
     this.lastAnalysis = null,
     this.analysisHistory = []}
@@ -65,8 +63,7 @@ class CursorIntegration {
   async testConnection() {
     try {
       const response = await this.callCursorAPI({
-        action: 'ping',        workspaceId: this.config.workspaceId,
-      }),
+        action: 'ping',        workspaceId: this.config.workspaceId}),
       logger.info('🔗 Cursor API connection successful'),      return true} catch (error) {
       throw new Error(`Failed to connect to Cursor API: ${error.message}`)}
   }
@@ -84,8 +81,7 @@ const analysis = this.parseCodeQualityResponse(response),
     this.lastAnalysis ={
       type: 'codeQuality';
       data: analysis;
-      timestamp: new Date().toISOString(),
-    };
+      timestamp: new Date().toISOString()};
     this.analysisHistory.push(this.lastAnalysis),
     return analysis}
 ,
@@ -101,8 +97,7 @@ const analysis = this.parsePerformanceResponse(response),
     this.lastAnalysis ={
       type: 'performance';
       data: analysis;
-      timestamp: new Date().toISOString(),
-    };
+      timestamp: new Date().toISOString()};
     this.analysisHistory.push(this.lastAnalysis),
     return analysis}
 ,
@@ -118,8 +113,7 @@ const analysis = this.parseSecurityResponse(response),
     this.lastAnalysis ={
       type: 'security';
       data: analysis;
-      timestamp: new Date().toISOString(),
-    };
+      timestamp: new Date().toISOString()};
     this.analysisHistory.push(this.lastAnalysis),
     return analysis}
 ,
@@ -145,8 +139,7 @@ const analysis = this.parseSecurityResponse(response),
         results.push({
           suggestion;
           status: 'failed';
-          error: error.message,
-        })}
+          error: error.message})}
     }
 ,
     return results}
@@ -193,8 +186,7 @@ const stats = fs.statSync(file),
           path: file;
           size: stats.size;
           lines: content.split('\n').length;
-          lastModified: stats.mtime.toISOString(),
-        })} catch (error) {
+          lastModified: stats.mtime.toISOString()})} catch (error) {
         logger.warn(`Warning: Could not read file ${file}: ${error.message}`)}
     }
 ,
@@ -202,8 +194,7 @@ const stats = fs.statSync(file),
     try {
       const lintOutput = execSync('npm run lint -- --format json', {
         stdio: 'pipe';
-        cwd: this.config.projectPath,
-      }).toString(),
+        cwd: this.config.projectPath}).toString(),
       data.lintResults = JSON.parse(lintOutput)} catch (error) {
       data.lintResults ={ errors: [], warnings: [] };
     }
@@ -212,8 +203,7 @@ const stats = fs.statSync(file),
     try {
       const testOutput = execSync('npm run test -- --json --outputFile=test-results.json', {
         stdio: 'pipe';
-        cwd: this.config.projectPath,
-      }).toString(),
+        cwd: this.config.projectPath}).toString(),
       data.testResults = JSON.parse(fs.readFileSync('test-results.json', 'utf8'))} catch (error) {
       data.testResults ={ success: false, error: error.message };
     }
@@ -222,8 +212,7 @@ const stats = fs.statSync(file),
     try {
       const bundleOutput = execSync('npm run bundle: 'analyze', {
         stdio: 'pipe';
-        cwd: this.config.projectPath,
-      }).toString(),
+        cwd: this.config.projectPath}).toString(),
       data.bundleAnalysis = this.parseBundleAnalysis(bundleOutput)} catch (error) {
       data.bundleAnalysis ={ error: error.message };
     }
@@ -239,8 +228,7 @@ const stats = fs.statSync(file),
       bundleSize: null;
       lighthouseScores: null;
       apiPerformance: null;
-      memoryUsage: null,
-    };
+      memoryUsage: null};
     // Measure build time,
     try {
       const startTime = Date.now(),
@@ -253,8 +241,7 @@ const stats = fs.statSync(file),
     try {
       const bundleOutput = execSync('npm run bundle: 'report', {
         stdio: 'pipe';
-        cwd: this.config.projectPath,
-      }).toString(),
+        cwd: this.config.projectPath}).toString(),
       data.bundleSize = this.parseBundleSize(bundleOutput)} catch (error) {
       data.bundleSize ={ error: error.message };
     }
@@ -271,14 +258,12 @@ const stats = fs.statSync(file),
       vulnerabilities: null;
       dependencies: null;
       securityAudit: null;
-      codeSecurity: null,
-    };
+      codeSecurity: null};
     // Check for vulnerabilities,
     try {
       const auditOutput = execSync('npm audit --json', {
         stdio: 'pipe';
-        cwd: this.config.projectPath,
-      }).toString(),
+        cwd: this.config.projectPath}).toString(),
       data.vulnerabilities = JSON.parse(auditOutput)} catch (error) {
       data.vulnerabilities ={ error: error.message };
     }
@@ -325,8 +310,7 @@ Please provide: ,
 6. Specific code examples for improvements,
 Focus on practical, implementable improvements that will have the most impact on code quality and maintainability.`;
       context: 'code-quality-analysis';
-      maxTokens: 30o00,
-    };
+      maxTokens: 30o00};
   }
 ,
   /**,
@@ -354,8 +338,7 @@ Please provide: ,
 7. Specific implementation suggestions,
 Focus on measurable performance improvements that will enhance user experience.`;
       context: 'performance-analysis';
-      maxTokens: 30o00,
-    };
+      maxTokens: 30o00};
   }
 ,
   /**,
@@ -381,8 +364,7 @@ Please provide: ,
 7. Specific security fixes with code examples,
 Focus on security improvements that will protect user data and prevent security breaches.`;
       context: 'security-analysis';
-      maxTokens: 30o00,
-    };
+      maxTokens: 30o00};
   }
 ,
   /**,
@@ -409,8 +391,7 @@ For each suggestion, include: ,
 - Priority level (critical, high, medium, low),
 Focus on improvements that can be implemented immediately and will have the most positive impact.`;
       context: 'improvement-suggestions';
-      maxTokens: 40o00,
-    };
+      maxTokens: 40o00};
   }
 ,
   /**,
@@ -428,8 +409,7 @@ const options ={
           Content-Type': application/json';
           Authorization': `Bearer ${this.config.apiKey}`;
           Content-Length': Buffer.byteLength(postData)};
-        timeout: this.config.timeout,
-      }
+        timeout: this.config.timeout}
 const req = https.request(options, (res) => {
         let data = ,
         res.on('data', (chunk) => data += chunk),
@@ -455,8 +435,7 @@ const req = https.request(options, (res) => {
         recommendations: response.recommendations || [];
         metrics: response.metrics || {};
         priority: response.priority || medium';
-        confidence: response.confidence || 0.8,
-      };
+        confidence: response.confidence || 0.8};
     } catch (error) {
       return {
         issues: [];
@@ -464,8 +443,7 @@ const req = https.request(options, (res) => {
         metrics: {};
         priority: 'medium';
         confidence: 0.5;
-        error: Failed to parse response,
-      };
+        error: Failed to parse response};
     }
   }
 ,
@@ -479,8 +457,7 @@ const req = https.request(options, (res) => {
         bottlenecks: response.bottlenecks || [];
         metrics: response.metrics || {};
         priority: response.priority || medium';
-        confidence: response.confidence || 0.8,
-      };
+        confidence: response.confidence || 0.8};
     } catch (error) {
       return {
         optimizations: [];
@@ -488,8 +465,7 @@ const req = https.request(options, (res) => {
         metrics: {};
         priority: 'medium';
         confidence: 0.5;
-        error: Failed to parse response,
-      };
+        error: Failed to parse response};
     }
   }
 ,
@@ -503,8 +479,7 @@ const req = https.request(options, (res) => {
         recommendations: response.recommendations || [];
         riskLevel: response.riskLevel || medium';
         priority: response.priority || high';
-        confidence: response.confidence || 0.9,
-      };
+        confidence: response.confidence || 0.9};
     } catch (error) {
       return {
         vulnerabilities: [];
@@ -512,8 +487,7 @@ const req = https.request(options, (res) => {
         riskLevel: 'medium';
         priority: 'high';
         confidence: 0.5;
-        error: Failed to parse response,
-      };
+        error: Failed to parse response};
     }
   }
 ,
@@ -527,8 +501,7 @@ const req = https.request(options, (res) => {
         priority: response.priority || medium';
         implementation: response.implementation || {};
         testing: response.testing || [];
-        risks: response.risks || [],
-      };
+        risks: response.risks || []};
     } catch (error) {
       return {
         suggestions: [];
@@ -558,8 +531,7 @@ Please provide the exact code changes needed, including: ,
 5. Any additional files to create,
 Make sure the changes are safe and maintain the existing functionality.`;
         context: 'code-application';
-        maxTokens: 20o00,
-      };
+        maxTokens: 20o00};
       const response = await this.callCursorAPI(prompt),
 const changes = this.parseCodeChanges(response),
       // Apply the changes,
@@ -568,14 +540,12 @@ const changes = this.parseCodeChanges(response),
         suggestion;
         status: 'completed';
         changes: results;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       return {
         suggestion;
         status: 'failed';
-        error: error.message,
-      };
+        error: error.message};
     }
   }
 ,
@@ -606,8 +576,7 @@ const changes = this.parseCodeChanges(response),
         results.push({
           change;
           status: 'failed';
-          error: error.message,
-        })}
+          error: error.message})}
     }
 ,
     return results}
@@ -631,8 +600,7 @@ const changes = this.parseCodeChanges(response),
       return {
         file: filePath;
         status: 'modified';
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       throw new Error(`Failed to modify file ${filePath}: ${error.message}`)}
   }
@@ -651,8 +619,7 @@ const changes = this.parseCodeChanges(response),
       return {
         file: filePath;
         status: 'created';
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       throw new Error(`Failed to create file ${filePath}: ${error.message}`)}
   }
@@ -667,8 +634,7 @@ const changes = this.parseCodeChanges(response),
       return {
         file: filePath;
         status: 'deleted';
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       throw new Error(`Failed to delete file ${filePath}: ${error.message}`)}
   }
@@ -683,10 +649,8 @@ const changes = this.parseCodeChanges(response),
 const bundleInfo ={};
       for (const line of lines) {
         if (line.includes('Bundle size: ')) {
-          bundleInfo.size = line.split(':')[1].trim(),
-        } else if (line.includes('Chunks: ')) {
-          bundleInfo.chunks = parseInt(line.split(':')[1].trim()),
-        }
+          bundleInfo.size = line.split(':')[1].trim()} else if (line.includes('Chunks: ')) {
+          bundleInfo.chunks = parseInt(line.split(':')[1].trim())}
       }
 ,
       return bundleInfo} catch (error) {
@@ -704,12 +668,9 @@ const bundleInfo ={};
 const sizeInfo ={};
       for (const line of lines) {
         if (line.includes('Total size: ')) {
-          sizeInfo.total = line.split(':')[1].trim(),
-        } else if (line.includes('JavaScript: ')) {
-          sizeInfo.javascript = line.split(':')[1].trim(),
-        } else if (line.includes('CSS: ')) {
-          sizeInfo.css = line.split(':')[1].trim(),
-        }
+          sizeInfo.total = line.split(':')[1].trim()} else if (line.includes('JavaScript: ')) {
+          sizeInfo.javascript = line.split(':')[1].trim()} else if (line.includes('CSS: ')) {
+          sizeInfo.css = line.split(':')[1].trim()}
       }
 ,
       return sizeInfo} catch (error) {
@@ -737,8 +698,7 @@ const sizeInfo ={};
       isConnected: this.isConnected;
       lastAnalysis: this.lastAnalysis?.type || null;
       historyLength: this.analysisHistory.length;
-      timestamp: new Date().toISOString(),
-    };
+      timestamp: new Date().toISOString()};
   }
 }
 ,

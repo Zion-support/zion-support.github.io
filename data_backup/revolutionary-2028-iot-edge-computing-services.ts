@@ -115,8 +115,7 @@ reviews: number,export const revolutionary20o28IoTEdgeComputingServices: Revolut
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered smart city platform with IoT sensors, edge computing, and comprehensive urban optimization.';
@@ -201,8 +200,7 @@ reviews: number,export const revolutionary20o28IoTEdgeComputingServices: Revolut
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Industrial IoT edge computing platform with real-time processing, predictive maintenance, and comprehensive optimization.';
@@ -288,8 +286,7 @@ reviews: number,export const revolutionary20o28IoTEdgeComputingServices: Revolut
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered healthcare IoT platform with remote monitoring, predictive analytics, and comprehensive healthcare optimization.';
@@ -374,8 +371,7 @@ reviews: number,export const revolutionary20o28IoTEdgeComputingServices: Revolut
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Smart agriculture IoT platform with soil monitoring, precision irrigation, and comprehensive crop management.';
@@ -462,8 +458,7 @@ reviews: number,export const revolutionary20o28IoTEdgeComputingServices: Revolut
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Edge AI computing infrastructure with distributed computing, AI optimization, and comprehensive edge capabilities.';

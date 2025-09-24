@@ -37,8 +37,7 @@ export default function AdvancedServicesShowcase20o27() {
       savings: 'Save 60-80% vs. competitors';
       icon: Brain;
       color: 'from-blue-60o0 to-cyan-60o0';
-      count: advancedAIAutomationServices.length,
-    };
+      count: advancedAIAutomationServices.length};
     {
       name: '⚛️ Emerging Tech Innovations 20o27';
       description: 'Revolutionary emerging technology solutions';
@@ -47,8 +46,7 @@ export default function AdvancedServicesShowcase20o27() {
       savings: 'Save 70-90% vs. competitors';
       icon: Atom;
       color: 'from-purple-60o0 to-violet-60o0';
-      count: emergingTechInnovations.length,
-    };
+      count: emergingTechInnovations.length};
     {
       name: '🏢 Enterprise Solutions Advanced 20o27';
       description: 'Enterprise-grade solutions for large organizations';
@@ -57,8 +55,7 @@ export default function AdvancedServicesShowcase20o27() {
       savings: 'Save 50-70% vs. competitors';
       icon: Shield;
       color: 'from-red-60o0 to-orange-60o0';
-      count: enterpriseSolutionsAdvanced.length,
-    };
+      count: enterpriseSolutionsAdvanced.length};
     {
       name: '🔮 Cutting-Edge Innovations 20o27';
       description: 'Beyond the future of technology';
@@ -67,8 +64,7 @@ export default function AdvancedServicesShowcase20o27() {
       savings: 'Save 80-95% vs. competitors';
       icon: Sparkles;
       color: 'from-violet-60o0 to-purple-60o0';
-      count: cuttingEdge20o27Innovations.length,
-    };
+      count: cuttingEdge20o27Innovations.length};
     {
       name: '🎯 Practical Micro SAAS 20o27';
       description: 'Real business solutions for today';
@@ -77,8 +73,7 @@ export default function AdvancedServicesShowcase20o27() {
       savings: 'Save 60-80% vs. competitors';
       icon: Target;
       color: 'from-green-60o0 to-emerald-60o0';
-      count: practicalMicroSaas20o27.length,
-    }
+      count: practicalMicroSaas20o27.length}
   ],
   // Enhanced pricing tiers,
   const pricingTiers = [
@@ -100,8 +95,7 @@ export default function AdvancedServicesShowcase20o27() {
         'Community Forum Access'];
       icon: <Sparkles className="w-8 h-8"  />;
       color: 'from-blue-60o0 to-cyan-60o0';
-      popular: false,
-    };
+      popular: false};
     {
       name: 'Professional';
       description: 'Ideal for growing businesses';
@@ -122,8 +116,7 @@ export default function AdvancedServicesShowcase20o27() {
         'Performance Optimization'];
       icon: <Crown className="w-8 h-8"  />;
       color: 'from-purple-60o0 to-pink-60o0';
-      popular: true,
-    };
+      popular: true};
     {
       name: 'Enterprise';
       description: 'For large organizations and enterprises';
@@ -146,15 +139,13 @@ export default function AdvancedServicesShowcase20o27() {
         'On-site Implementation'];
       icon: <Infinity className="w-8 h-8"  />;
       color: 'from-red-60o0 to-orange-60o0';
-      popular: false,
-    }
+      popular: false}
   ],
   const contactInfo ={
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   // Filter and sort services,
   const filteredServices = useMemo(() => {
     let filtered = allServices,
@@ -183,8 +174,7 @@ export default function AdvancedServicesShowcase20o27() {
           case 'over-50o00':,
             return price >= 50o00,
           default: ,
-            return true,
-        }
+            return true}
       })}
 ,
     // Sort services,
@@ -205,8 +195,7 @@ export default function AdvancedServicesShowcase20o27() {
         filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
         break,
       default: ,
-        break,
-    }
+        break}
 ,
     return filtered}, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
   const containerVariants ={
@@ -214,8 +203,7 @@ export default function AdvancedServicesShowcase20o27() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -224,8 +212,7 @@ export default function AdvancedServicesShowcase20o27() {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -474,8 +461,7 @@ export default function AdvancedServicesShowcase20o27() {
                   exit={{ opacity: 0 }}
                   className={viewMode === 'grid',
                     ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8",
-                    : "space-y-6",
-                  }
+                    : "space-y-6"}
                 >,
                   {filteredServices.map((service, index) => (
                     <motion.div,
@@ -485,8 +471,7 @@ export default function AdvancedServicesShowcase20o27() {
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       className={viewMode === 'grid',
                         ? "bg-gradient-to-br from-slate-80o0/50 to-slate-90o0/50 rounded-2xl p-6 border border-purple-40o0/20 hover: border-purple-40o0/40 transition-all duration-30o0 hover:transform hover:scale-10o5",
-                        : "bg-gradient-to-r from-slate-80o0/50 to-slate-90o0/50 rounded-2xl p-6 border border-purple-40o0/20 hover:border-purple-40o0/40 transition-all duration-30o0",
-                      }
+                        : "bg-gradient-to-r from-slate-80o0/50 to-slate-90o0/50 rounded-2xl p-6 border border-purple-40o0/20 hover:border-purple-40o0/40 transition-all duration-30o0"}
                     >,
                       <div className="flex items-start justify-between mb-4">,
                         <div className="flex items-center space-x-3">,
@@ -659,5 +644,4 @@ export default function AdvancedServicesShowcase20o27() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}

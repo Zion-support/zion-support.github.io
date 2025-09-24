@@ -3,16 +3,14 @@ interface Feature {
   icon: string,
   title: string,
   description: string,
-  color: string,
-}
+  color: string}
 ,
 interface FeaturesGridProps {
   title: string,
   subtitle?: string,
   features: Feature[],
   columns?: 2 | 3 | 4,
-  className?: string,
-}
+  className?: string}
 ,
 export default function FeaturesGrid({
   title;

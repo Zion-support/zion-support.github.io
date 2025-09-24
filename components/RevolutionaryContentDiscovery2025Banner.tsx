@@ -165,6 +165,5 @@ export default function RevolutionaryContentDiscovery20o25Banner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

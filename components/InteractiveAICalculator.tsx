@@ -5,8 +5,7 @@ interface CalculatorInputs {
   currentCosts: number,
   aiInvestment: number,
   expectedEfficiency: number,
-  timeframe: number,
-}
+  timeframe: number}
 ,
 interface CalculationResult {
   currentROI: number,
@@ -15,8 +14,7 @@ interface CalculationResult {
   monthlySavings: number,
   annualSavings: number,
   paybackPeriod: number,
-  netBenefit: number,
-}
+  netBenefit: number}
 ,
 const InteractiveAICalculator: React.FC = () => {
   const [inputs, setInputs] = useState<CalculatorInputs>({
@@ -24,8 +22,7 @@ const InteractiveAICalculator: React.FC = () => {
     currentCosts: 60o0000;
     aiInvestment: 10o0000;
     expectedEfficiency: 25;
-    timeframe: 12,
-  }),
+    timeframe: 12}),
   const [result, setResult] = useState<CalculationResult | null>(null),
   const [isCalculating, setIsCalculating] = useState(false),
   const [showAnimation, setShowAnimation] = useState(false),

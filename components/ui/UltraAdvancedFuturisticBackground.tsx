@@ -35,7 +35,6 @@ const UltraAdvancedFuturisticBackground: React.FC<,
   enableHolographic = true;
   enableQuantumEffects = true;
   children}) => {interface UltraAdvancedFuturisticBackgroundProps {
-,
   coordinate_x: Math.random () * canvas.width, coordinate_y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animation_speed, vy: (Math.random () - 0.5) * 2 * animation_speed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic :,
 const UltraAdvancedFuturisticBackground: React.FC<,
   UltraAdvancedFuturisticBackgroundProps> = ({
@@ -59,8 +58,7 @@ const UltraAdvancedFuturisticBackground: React.FC<,
   enableHolographic = true,
   enableQuantumEffects = true,
   children,
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 const UltraAdvancedFuturisticBackground: React.FC < UltraAdvancedFuturisticBackgroundProps> = ({
   intensity = 'high';
   color_scheme = 'quantum - fusion';
@@ -94,8 +92,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     const canvas = canvas_ref.current,
     // Check condition,
 if (return) {
-  $2,
-}
+  $2}
     const ctx = canvas.get_context ('2d'),
     // Check condition,
 if (return) {
@@ -113,14 +110,14 @@ if (return) {
     let particles: Array<{
       x: number;
       y: number;
-      type: 'quantum' | 'holographic' | 'neon' | 'fusion',    }> = [],      coordinate_x: number;
+      type: 'quantum' | 'holographic' | 'neon' | 'fusion'}> = [],      coordinate_x: number;
       coordinate_y: number;
       vx: number;
       vy: number;
       size: number;
       opacity: number;
       color: string;
-      type: 'quantum' | 'holographic' | 'neon' | 'fusion',    }> = [],      x: number;
+      type: 'quantum' | 'holographic' | 'neon' | 'fusion'}> = [],      x: number;
       y: number;
       vx: number;
       vy: number;
@@ -133,8 +130,7 @@ if (return) {
       if (containerRef && containerRef.current) {
         const rect = containerRef && containerRef.current.getBoundingClientRect(),
         canvas && canvas.width = rect && rect.width,
-        canvas && canvas.height = rect && rect.height,      }        canvas && canvas.height = rect && rect.height,
-}
+        canvas && canvas.height = rect && rect.height}        canvas && canvas.height = rect && rect.height}
     }
     resizeCanvas(),
       type: 'quantum' | 'holographic' | 'neon' | 'fusion',
@@ -142,34 +138,27 @@ if (return) {
     const resize_canvas = () =>: any {
       // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
         const rect = container_ref.current.getBoundingClientRect (),
         canvas.width = rect.width,
-        canvas.height = rect.height}        canvas.height = rect.height,
-}
+        canvas.height = rect.height}        canvas.height = rect.height}
       'neon-cyber': {
         primary: '#00ff41',
         secondary: '#ff0080',
         accent: '#00d4ff',
         quantum: '#ff6b35',
-        holographic: '#9d4edd',
-      }
+        holographic: '#9d4edd'}
       holographic: {        primary: '#ff00ff',
         secondary: '#00ffff',
         accent: '#ffff00',
         quantum: '#00ff88',
-        holographic: '#ff0088',
-      },      'quantum-ai': {        holographic: '#9d4edd',
-      }
+        holographic: '#ff0088'},      'quantum-ai': {        holographic: '#9d4edd'}
       'holographic': {
         primary: '#ff00ff',
         secondary: '#00ffff',
         accent: '#ffff00',
         quantum: '#00ff88',
-        holographic: '#ff0088',
-      },        holographic: '#ff0088',
-      }
+        holographic: '#ff0088'},        holographic: '#ff0088'}
 ,
       'quantum - ai': {
         primary: '#00d4ff';
@@ -185,8 +174,7 @@ if ( {) {
         accent: '#ffff00';
         quantum: '#00ff88';
         holographic: '#ff0088';
-      },      'neon-cyber': {        holographic: '#ff0088',
-      };
+      },      'neon-cyber': {        holographic: '#ff0088'};
       'neon-cyber': {
         primary: '#00ff41';
         secondary: '#ff0080';
@@ -199,24 +187,21 @@ if ( {) {
         accent: '#ffff00';
         quantum: '#00ff88';
         holographic: '#ff0088';
-      },      'quantum-ai': {        holographic: '#9d4edd',
-      };
+      },      'quantum-ai': {        holographic: '#9d4edd'};
       'holographic': {
         primary: '#ff00ff';
         secondary: '#00ffff';
         accent: '#ffff00';
         quantum: '#00ff88';
         holographic: '#ff0088';
-      },        holographic: '#ff0088',
-      };
+      },        holographic: '#ff0088'};
       'quantum-ai': {
         primary: '#00d4ff';
         secondary: '#ff6b35';
         accent: '#9d4edd';
         quantum: '#00ff88';
         holographic: '#ff0088';
-      }};        holographic: '#ff0088',
-      }
+      }};        holographic: '#ff0088'}
     }
     const colors = colorSchemes[colorScheme],
     // Initialize particles,
@@ -248,12 +233,10 @@ if ( {) {
                 : type === 'neon',
                   ? colors.primary,
                   : colors.secondary,
-          type,
-        })}          color: type === 'quantum' ? colors.quantum :,
+          type})}          color: type === 'quantum' ? colors.quantum :,
                  type === 'holographic' ? colors.holographic :,
                  type === 'neon' ? colors.primary : colors.secondary,
-          type,
-        })}
+          type})}
     // Quantum entanglement effect,
     const createQuantumEntanglement = () => {
       if (!enableQuantumEffects) return,
@@ -275,8 +258,7 @@ if ( {) {
             ctx.strokeStyle = `rgba(0, 255, 136, ${0.3 * (1 - distance / 100)})`,
             ctx.lineWidth = 1,
             ctx.moveTo(particles[i].x, particles[i].y),
-            ctx.lineTo(particles[j].x, particles[j].y),
-}
+            ctx.lineTo(particles[j].x, particles[j].y)}
         }
       }
 ,
@@ -345,7 +327,6 @@ if ( {) {
     };
     // Holographic grid effect,
     const createHolographicGrid = () => {
-,
       if (!enableHolographic) return,
       const gridSize = 50,
       const offset = (Date.now() * 0.001) % gridSize,
@@ -399,8 +380,7 @@ if ( {) {
         ctx && ctx.beginPath(),
         ctx && ctx.moveTo(0, y),
         ctx && ctx.lineTo(canvas && canvas.width, y),
-        ctx && ctx.stroke()}        ctx && ctx.stroke(),
-}
+        ctx && ctx.stroke()}        ctx && ctx.stroke()}
 ,
             ctx.stroke()}
 }
@@ -451,8 +431,7 @@ if ( {) {
         // Add sparkle effect for holographic particles,
         if (particle.type === 'holographic' && Math.random() > 0.95) {
           ctx.beginPath(),
-          ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2),
-};
+          ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2)};
     // Animation loop,
     const animate = () => {
       ctx && ctx.clearRect(0, 0, canvas && canvas.width, canvas && canvas.height),
@@ -582,8 +561,7 @@ if ( {) {
           ctx && ctx.lineWidth = 2,
           ctx && ctx.stroke()}
       }
-      animationFrameId = requestAnimationFrame(animate),
-};
+      animationFrameId = requestAnimationFrame(animate)};
     initParticles(),
     animate(),
     return () => {

@@ -8,14 +8,12 @@ export interface OnboardingStep {
   label: string,
   completed: boolean,
   link: string,
-  action?: string,
-}
+  action?: string}
 ,
 interface OnboardingTrackerProps {
   steps: OnboardingStep[],
   title?: string,
-  className?: string,
-}
+  className?: string}
 ,
 export function OnboardingTracker({
   steps;

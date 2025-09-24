@@ -154,8 +154,7 @@ const AI20o25UltimateTechnologyShowcaseBanner = () => {
                     transition={{
                       duration: 20;
                       repeat: Infinity;
-                      ease: "linear",
-                    }}
+                      ease: "linear"}}
                   >,
                     <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center shadow-lg`}>,
                       <feature.icon className="w-6 h-6 text-white"  />,

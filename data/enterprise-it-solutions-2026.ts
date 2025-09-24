@@ -30,15 +30,13 @@ export interface EnterpriseITSolutions2026 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
   // Zero Trust Network Architecture,
   {
@@ -179,7 +177,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
       'Real-time analytics';
       'Load balancing';
     ];
-    roi: 'Tech companies see 600% ROI through optimized edge computing and improved window.performance.';
+    roi: 'Tech companies see 600% ROI through optimized edge computing and improved window.window.performance.';
     competitors: [
       'Traditional cloud management';
       'Custom orchestration solutions';

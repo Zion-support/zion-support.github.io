@@ -15,6 +15,5 @@ export default function DevnetPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

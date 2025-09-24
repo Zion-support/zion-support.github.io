@@ -22,6 +22,5 @@ export default function AIHealthcareDiagnosticsPage() {
           Decision support tools and AI diagnostics for healthcare providers.,
         </p>,
       </div>,
-    </>),
-}
+    </>)}
 ,

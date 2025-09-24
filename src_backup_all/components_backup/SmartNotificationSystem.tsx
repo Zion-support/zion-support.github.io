@@ -25,12 +25,10 @@ interface Notification {
   read: boolean,
   action?: {
     label: string,
-    onClick: () => void,
-  };
+    onClick: () => void};
   priority: 'low' | 'medium' | 'high',
   category: string,
-  expiresAt?: Date,
-}
+  expiresAt?: Date}
 ,
 interface Props {
   enabled?: boolean}
@@ -55,8 +53,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         category: 'onboarding';
         action: {
           label: 'Get Started';
-          onClick: () => // console.log('Get Started clicked'),
-        }
+          onClick: () => // // console.log('Get Started clicked')}
       };
       {
         id: '2';
@@ -69,8 +66,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         category: 'performance';
         action: {
           label: 'View Details';
-          onClick: () => // console.log('View Details clicked'),
-        }
+          onClick: () => // // console.log('View Details clicked')}
       };
       {
         id: '3';
@@ -80,8 +76,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         timestamp: new Date(Date.now() - 10o00 * 60 * 30), // 30 minutes ago,
         read: true;
         priority: 'low';
-        category: 'features',
-      };
+        category: 'features'};
       {
         id: '4';
         type: 'warning';
@@ -93,8 +88,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         category: 'security';
         action: {
           label: 'Update Now';
-          onClick: () => // console.log('Update Now clicked'),
-        }
+          onClick: () => // // console.log('Update Now clicked')}
       }
     ],
     setNotifications(sampleNotifications),
@@ -136,8 +130,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
     setNotifications(prev => {
       const filtered = prev.filter(n => n.id !== id),
       setUnreadCount(filtered.filter(n => !n.read).length),
-      return filtered,
-    })}, []),
+      return filtered})}, []),
   // Clear all notifications,
   const clearAllNotifications = useCallback(() => {
     setNotifications([]),
@@ -159,8 +152,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
       case 'achievement':,
         return <Award className="w-5 h-5 text-purple-50o0"  />,
       default:,
-        return <Info className="w-5 h-5 text-gray-50o0"  />,
-    }
+        return <Info className="w-5 h-5 text-gray-50o0"  />}
   };
   // Get priority color,
   const getPriorityColor = (priority: Notification['priority']) => {
@@ -172,8 +164,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
       case 'low':,
         return 'border-l-blue-50o0',
       default:,
-        return 'border-l-gray-50o0',
-    }
+        return 'border-l-gray-50o0'}
   };
   // Format timestamp,
   const formatTimestamp = (timestamp: Date) => {

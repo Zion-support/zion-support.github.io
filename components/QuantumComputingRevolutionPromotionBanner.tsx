@@ -10,8 +10,7 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
   useEffect(() => {
     setIsVisible(true),
     const interval = setInterval(() => {
-      setCurrentHighlight(prev => (prev + 1) % 3),
-    }30o00),
+      setCurrentHighlight(prev => (prev + 1) % 3)}30o00),
     return () => clearInterval(interval)}[]),
   const highlights = [
     { icon: Cpuvalue: "99.99%"label: "Quantum Fidelity"color: "from-blue-50o0 to-cyan-50o0" };

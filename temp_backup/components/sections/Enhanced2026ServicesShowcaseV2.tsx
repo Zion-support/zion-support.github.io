@@ -28,19 +28,16 @@ interface Service {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 interface Enhanced20o26ServicesShowcaseV2Props {
-  services: Service[],
-}
+  services: Service[]}
 ,
 export default function Enhanced20o26ServicesShowcaseV2({ services }: Enhanced20o26ServicesShowcaseV2Props) {
   const [searchTerm, setSearchTerm] = useState(''),
@@ -70,16 +67,14 @@ export default function Enhanced20o26ServicesShowcaseV2({ services }: Enhanced20
       case 'popularity':,
         return b.customers - a.customers,
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   // Get unique categories,
   const categories = ['all', ...Array.from(new Set(services.map(s => s.category.split(' ')[0])))],
   // Get category counts,
   const getCategoryCount = (category: string) => {
     if (category === 'all') return services.length,
-    return services.filter(s => s.category.includes(category)).length,
-  };
+    return services.filter(s => s.category.includes(category)).length};
   // Get category icon,
   const getCategoryIcon = (category: string) => {
     switch (category.toLowerCase()) {
@@ -100,8 +95,7 @@ export default function Enhanced20o26ServicesShowcaseV2({ services }: Enhanced20
       case 'emerging':,
         return <Zap className="w-5 h-5"  />,
       default:,
-        return <Rocket className="w-5 h-5"  />,
-    }
+        return <Rocket className="w-5 h-5"  />}
   };
   return (
     <section className="py-20 px-4 sm: px-6 lg:px-8 relative overflow-hidden">,
@@ -271,6 +265,5 @@ export default function Enhanced20o26ServicesShowcaseV2({ services }: Enhanced20
           </Link>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

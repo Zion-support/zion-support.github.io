@@ -12,8 +12,7 @@ interface AnalyticsEvent {
   sessionId: string,
   page: string,
   userAgent: string,
-  referrer: string,
-}
+  referrer: string}
 ,
 interface UserBehavior {
   pageViews: number,
@@ -21,8 +20,7 @@ interface UserBehavior {
   scrollDepth: number,
   clickEvents: number,
   formInteractions: number,
-  exitIntent: boolean,
-}
+  exitIntent: boolean}
 ,
 interface PerformanceMetrics {
   loadTime: number,
@@ -31,8 +29,7 @@ interface PerformanceMetrics {
   firstContentfulPaint: number,
   largestContentfulPaint: number,
   cumulativeLayoutShift: number,
-  firstInputDelay: number,
-}
+  firstInputDelay: number}
 ,
 const AdvancedAnalytics: React.FC = () => {
   const [eventsetEvents] = useState<AnalyticsEvent[]>([]),
@@ -79,8 +76,7 @@ const AdvancedAnalytics: React.FC = () => {
           'Content-Type': 'application/json'};
         body: JSON.stringify(analyticsEvent)}).catch(console.error)}
 ,
-    // console.log('Analytics Event: 'analyticsEvent),
-  }[sessionId]),
+    // // console.log('Analytics Event: 'analyticsEvent)}[sessionId]),
   const trackPageView = useCallback(() => {
     setUserBehavior(prev => ({
       ...prev;
@@ -110,7 +106,7 @@ const AdvancedAnalytics: React.FC = () => {
   useEffect(() => {
     if (typeof window === 'undefined') return,
     const measurePerformance = () => {
-      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+      const navigation = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
       if (navigation) {
         setPerformanceMetrics(prev => ({
           ...prev;
@@ -118,7 +114,7 @@ const AdvancedAnalytics: React.FC = () => {
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart}))}
 ,
       // First Paint,
-      const fcpEntry = window.performance.getEntriesByName('first-contentful-paint')[0],
+      const fcpEntry = window.window.performance.getEntriesByName('first-contentful-paint')[0],
       if (fcpEntry) {
         setPerformanceMetrics(prev => ({
           ...prev;
@@ -183,8 +179,7 @@ const AdvancedAnalytics: React.FC = () => {
   useEffect(() => {
     const handleMouseLeave = (event: MouseEvent) => {
       if (event.clientY <= 0) {
-        trackExitIntent(),
-      }
+        trackExitIntent()}
     };
     document.addEventListener(', 'mouseleave', 'handleMouseLeave),
     return () => document.removeEventListener(', 'mouseleave', 'handleMouseLeave)}[trackExitIntent]),

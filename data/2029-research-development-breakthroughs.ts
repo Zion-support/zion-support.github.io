@@ -30,15 +30,13 @@ export interface ResearchDevelopmentBreakthroughService20o29 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const researchDevelopmentBreakthroughServices20o29: ResearchDevelopmentBreakthroughService20o29[] =,
   [

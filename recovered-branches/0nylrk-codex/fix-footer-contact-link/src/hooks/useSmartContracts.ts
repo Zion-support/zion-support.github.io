@@ -51,8 +51,7 @@ export function useSmartContracts() {
     options: DeploymentOptions): Promise<SmartContractInfo | null> => {
     if (!user?.id) {
       toast.error('You must be logged in to deploy a contract'),
-      return null,
-    }
+      return null}
 ,
     try {
       setDeploymentStatus('deploying'),

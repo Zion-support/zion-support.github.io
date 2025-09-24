@@ -5,8 +5,7 @@ const UltimateAIGlobalImpact20o25: React.FC = () => {
     companies: 0;
     countries: 0;
     users: 0;
-    revenue: 0,
-  }),
+    revenue: 0}),
   const regions ={
     global: {
       name: 'Global Impact';
@@ -15,8 +14,7 @@ const UltimateAIGlobalImpact20o25: React.FC = () => {
         companies: 10o000;
         countries: 195;
         users: 50o000000;
-        revenue: 50o0000000000,
-      }
+        revenue: 50o0000000000}
     };
     northAmerica: {
       name: 'North America';
@@ -25,8 +23,7 @@ const UltimateAIGlobalImpact20o25: React.FC = () => {
         companies: 350o0;
         countries: 3;
         users: 180o00000;
-        revenue: 20o0000000000,
-      }
+        revenue: 20o0000000000}
     };
     europe: {
       name: 'Europe';
@@ -35,8 +32,7 @@ const UltimateAIGlobalImpact20o25: React.FC = () => {
         companies: 280o0;
         countries: 44;
         users: 150o00000;
-        revenue: 150o000000000,
-      }
+        revenue: 150o000000000}
     };
     asia: {
       name: 'Asia Pacific';
@@ -45,8 +41,7 @@ const UltimateAIGlobalImpact20o25: React.FC = () => {
         companies: 250o0;
         countries: 48;
         users: 120o00000;
-        revenue: 10o0000000000,
-      }
+        revenue: 10o0000000000}
     };
     others: {
       name: 'Rest of World';
@@ -55,8 +50,7 @@ const UltimateAIGlobalImpact20o25: React.FC = () => {
         companies: 120o0;
         countries: 10o0;
         users: 50o00000;
-        revenue: 50o000000000,
-      }
+        revenue: 50o000000000}
     }
   };
   useEffect(() => {
@@ -73,23 +67,20 @@ const UltimateAIGlobalImpact20o25: React.FC = () => {
         companies: Math.floor(targetStats.companies * easeOutQuart);
         countries: Math.floor(targetStats.countries * easeOutQuart);
         users: Math.floor(targetStats.users * easeOutQuart);
-        revenue: Math.floor(targetStats.revenue * easeOutQuart),
-      }),
+        revenue: Math.floor(targetStats.revenue * easeOutQuart)}),
       if (currentStep >= steps) {
         clearInterval(interval)}
     }, stepDuration),
     return () => clearInterval(interval)}, [activeRegion]),
   const formatNumber = (num: number) => {
     if (num >= 10o00000000) {
-      return (num / 10o00000000).toFixed(1) + 'B',
-    } else if (num >= 10o00000) {
+      return (num / 10o00000000).toFixed(1) + 'B'} else if (num >= 10o00000) {
       return (num / 10o00000).toFixed(1) + 'M'} else if (num >= 10o00) {
       return (num / 10o00).toFixed(1) + 'K'}
     return num.toFixed(0)};
   const formatCurrency = (num: number) => {
     if (num >= 10o00000000000) {
-      return '$' + (num / 10o00000000000).toFixed(1) + 'T',
-    } else if (num >= 10o00000000) {
+      return '$' + (num / 10o00000000000).toFixed(1) + 'T'} else if (num >= 10o00000000) {
       return '$' + (num / 10o00000000).toFixed(1) + 'B'} else if (num >= 10o00000) {
       return '$' + (num / 10o00000).toFixed(1) + 'M'}
     return '$' + num.toFixed(0)};
@@ -100,32 +91,28 @@ const UltimateAIGlobalImpact20o25: React.FC = () => {
       industry: 'Technology';
       roi: '2,40o0%';
       story: 'Transformed entire business operations with Neural Consciousness AI, achieving unprecedented efficiency and customer satisfaction.';
-      icon: '🚀',
-    };
+      icon: '🚀'};
     {
       region: 'Europe';
       company: 'InnovateEU';
       industry: 'Manufacturing';
       roi: '1,80o0%';
       story: 'Implemented Quantum AI 20o25 Revolution, reducing production costs by 95% while increasing output by 30o0%.';
-      icon: '⚛️',
-    };
+      icon: '⚛️'};
     {
       region: 'Asia';
       company: 'FutureAsia Ltd';
       industry: 'Healthcare';
       roi: '3,20o0%';
       story: 'Advanced AI 20o25 Breakthrough revolutionized patient care, improving outcomes by 250% and reducing costs by 80%.';
-      icon: '⚡',
-    };
+      icon: '⚡'};
     {
       region: 'Global';
       company: 'Worldwide Creative';
       industry: 'Creative Industries';
       roi: '4,50o0%';
       story: 'Creative Intelligence AI enabled unlimited creative potential, generating $50o0M in new revenue streams.';
-      icon: '🎨',
-    }
+      icon: '🎨'}
   ],
   return (
     <section className="py-20 bg-gradient-to-br from-emerald-90o0 via-teal-90o0 to-cyan-90o0 text-white">,
@@ -158,8 +145,7 @@ const UltimateAIGlobalImpact20o25: React.FC = () => {
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-30o0 ${
                   activeRegion === key,
                     ? 'bg-gradient-to-r from-emerald-50o0 to-cyan-60o0 text-white shadow-lg transform scale-10o5',
-                    : 'text-gray-30o0 hover: text-white hover:bg-white hover:bg-opacity-10',
-                }`}
+                    : 'text-gray-30o0 hover: text-white hover:bg-white hover:bg-opacity-10'}`}
               >,
                 <span className="mr-2">{region.icon}</span>,
                 {region.name}
@@ -284,6 +270,5 @@ const UltimateAIGlobalImpact20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateAIGlobalImpact20o25;

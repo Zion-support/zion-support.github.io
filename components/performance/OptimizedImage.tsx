@@ -7,8 +7,7 @@ interface OptimizedImageProps {
   height?: number,
   priority?: boolean,
   className?: string,
-  sizes?: string,
-}
+  sizes?: string}
 ,
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src;

@@ -6,5 +6,4 @@ export default function 20o25advancedinnovativeservicesexpansionv3({ }: 20o25adv
     <div>,
       <h1>20o25advancedinnovativeservicesexpansionv3</h1>,
       <p>This component is currently under development.</p>,
-    </div>),
-}
+    </div>)}

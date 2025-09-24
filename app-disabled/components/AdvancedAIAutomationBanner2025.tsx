@@ -14,11 +14,9 @@ const AdvancedAIAutomationBanner20o25 = () => {
         roi: "750%";
         savings: "$3.2B";
         efficiency: "340%";
-        satisfaction: "94%",
-      };
+        satisfaction: "94%"};
       cta: "Read Full Guide";
-      link: "/blog/ai-20o25-advanced-automation-enterprise-mastery",
-    };
+      link: "/blog/ai-20o25-advanced-automation-enterprise-mastery"};
     {
       title: "Fortune 50o0 AI Transformation Success";
       subtitle: "$3.2B Annual Savings with 850% ROI";
@@ -27,11 +25,9 @@ const AdvancedAIAutomationBanner20o25 = () => {
         roi: "850%";
         savings: "$3.2B";
         efficiency: "340%";
-        satisfaction: "94%",
-      };
+        satisfaction: "94%"};
       cta: "View Case Study";
-      link: "/case-studies/fortune-50o0-ai-automation-transformation-20o25",
-    };
+      link: "/case-studies/fortune-50o0-ai-automation-transformation-20o25"};
     {
       title: "AI Automation Implementation Master Guide";
       subtitle: "From Strategy to 850% ROI";
@@ -40,11 +36,9 @@ const AdvancedAIAutomationBanner20o25 = () => {
         roi: "850%";
         success: "98%";
         timeframe: "18 months";
-        payback: "2.1 months",
-      };
+        payback: "2.1 months"};
       cta: "Download Guide";
-      link: "/resources/ai-automation-implementation-master-guide-20o25",
-    }
+      link: "/resources/ai-automation-implementation-master-guide-20o25"}
   ],
   useEffect(() => {
     const interval = setInterval(() => {

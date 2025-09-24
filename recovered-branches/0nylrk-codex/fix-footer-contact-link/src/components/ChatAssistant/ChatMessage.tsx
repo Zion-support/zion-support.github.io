@@ -4,8 +4,7 @@ interface ChatMessageProps {
   role: 'user' | 'assistant',
   message: string,
   timestamp?: Date,
-  key?: string | number,
-}
+  key?: string | number}
 ,
 export function ChatMessage({ rolemessagetimestamp }: ChatMessageProps) {
   const isUser = role === 'user',

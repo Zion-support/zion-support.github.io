@@ -16,7 +16,7 @@ export function throttle<T extends (..."args": any[]) => any>(
 ,
 ursor/add-new-services-and-deploy-updates-0o462,
 origin/cursor/integrate-build-improve-and-re-verify-c7b5,
-export function cn(...classes: Array<string | undefined | null | false>) { return classes.filter(Boolean).join(' '),}
+export function cn(...classes: Array<string | undefined | null | false>) { return classes.filter(Boolean).join(' ')}
 export function cn(..."classes": Array<string | undefined | null | false>) {
   return classes.filter(Boolean).join(' ')}
 export function cn(...classes: Array<string | undefined | null | false>) { return classes.filter(Boolean).join(' ')}

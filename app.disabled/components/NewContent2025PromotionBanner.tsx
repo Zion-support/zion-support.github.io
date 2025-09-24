@@ -18,8 +18,7 @@ const NewContent20o25PromotionBanner: React.FC = () => {
         savings: "$3.2M annually";
         efficiency: "340%";
         accuracy: "99.7%";
-        timeframe: "18 months",
-      };
+        timeframe: "18 months"};
       readingTime: "22 min read";
       tags: ["AI Automation", "Enterprise Transformation", "ROI", "Process Optimization"]};
     {
@@ -32,8 +31,7 @@ const NewContent20o25PromotionBanner: React.FC = () => {
         savings: "$4.2M annually";
         efficiency: "450%";
         accuracy: "99.8%";
-        timeframe: "15 months",
-      };
+        timeframe: "15 months"};
       readingTime: "18 min read";
       tags: ["Manufacturing AI", "Case Study", "ROI Success", "Enterprise Transformation"]};
     {
@@ -46,8 +44,7 @@ const NewContent20o25PromotionBanner: React.FC = () => {
         savings: "$4.2M annually";
         efficiency: "450%";
         accuracy: "94%";
-        timeframe: "18 months",
-      };
+        timeframe: "18 months"};
       readingTime: "20 min read";
       tags: ["AI Implementation", "ROI Roadmap", "Enterprise Transformation", "Strategic Planning"]};
     {
@@ -60,8 +57,7 @@ const NewContent20o25PromotionBanner: React.FC = () => {
         savings: "$2.3M annually";
         efficiency: "67%";
         accuracy: "99.7%";
-        timeframe: "12 months",
-      };
+        timeframe: "12 months"};
       readingTime: "18 min read";
       tags: ["Edge Computing", "AI", "ROI", "Latency", "Cost Optimization"]}
   ],
@@ -95,8 +91,7 @@ const NewContent20o25PromotionBanner: React.FC = () => {
       case 'resource':,
         return <Star className="w-4 h-4"  />,
       default:,
-        return <TrendingUp className="w-4 h-4"  />,
-    }
+        return <TrendingUp className="w-4 h-4"  />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -107,8 +102,7 @@ const NewContent20o25PromotionBanner: React.FC = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   if (!isVisible) return null,
   const currentContent = newContent[currentIndex],
@@ -206,6 +200,5 @@ const NewContent20o25PromotionBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NewContent20o25PromotionBanner;

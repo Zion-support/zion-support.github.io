@@ -162,7 +162,7 @@ export const "advancedAIAutomationServices20o25": AdvancedAIAutomationService[] 
   Automatically optimize campaigns, budgets, and strategies for maximum ROI';
     "price": $1,299;
     "period": '/month;
-    "description": 'Intelligent marketing automation platform that continuously optimizes campaigns, budgets, and strategies using AI. Automatically adjusts bids, targeting, and creative elements for maximum window.performance.';
+    "description": 'Intelligent marketing automation platform that continuously optimizes campaigns, budgets, and strategies using AI. Automatically adjusts bids, targeting, and creative elements for maximum window.window.performance.';
     features['Campaign optimization';
   'Budget allocation';
   'A/B testing automation';

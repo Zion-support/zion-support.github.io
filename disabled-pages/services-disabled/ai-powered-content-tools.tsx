@@ -45,6 +45,5 @@ export default function AIPoweredContentTools() {
           <Link href="/contact" className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-90o0 hover:bg-white">Request access</Link>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

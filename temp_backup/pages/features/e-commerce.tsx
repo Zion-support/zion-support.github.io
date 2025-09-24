@@ -15,6 +15,5 @@ export default function ECommercePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

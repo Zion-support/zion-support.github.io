@@ -10,10 +10,10 @@ const path = require('path'),
 const { spawn } = require('child_process'),
 // Simple logger,
 const logger ={
-  info: (msg) => // console.log(`[INFO] ${new Date().toISOString()} ${msg}`);
+  info: (msg) => // // console.log(`[INFO] ${new Date().toISOString()} ${msg}`);
   error: (msg) => console.error(`[ERROR] ${new Date().toISOString()} ${msg}`);
   warn: (msg) => console.warn(`[WARN] ${new Date().toISOString()} ${msg}`);
-  success: (msg) => // console.log(`[SUCCESS] ${new Date().toISOString()} ${msg}`)};
+  success: (msg) => // // console.log(`[SUCCESS] ${new Date().toISOString()} ${msg}`)};
 class AutomationScheduler {
   constructor(config ={}) {
     this.config ={
@@ -23,8 +23,7 @@ class AutomationScheduler {
         PerformanceOptimizer: '0 */4 * * *', // Every 4 hours,
         DependencyUpdater: '0 0 * * *', // Daily at midnight,
         StaleCleaner: '0 2 * * *', // Daily at 2 AM,
-        AIEnhancer: '0 */8 * * *' // Every 8 hours,
-      };
+        AIEnhancer: '0 */8 * * *' // Every 8 hours};
       maxConcurrent: 2;
       retryAttempts: 3;
       retryDelay: 50o00;
@@ -47,8 +46,7 @@ class AutomationScheduler {
       this.isRunning = true,
       logger.success('✅ Automation scheduler started successfully'),
       // Keep the process running,
-      this.keepAlive(),
-} catch (error) {
+      this.keepAlive()} catch (error) {
       logger.error('❌ Failed to start scheduler:', error),
       throw error}
   }
@@ -156,8 +154,7 @@ class AutomationScheduler {
         id: taskId;
         taskName;
         startTime: new Date();
-        status: 'running',
-      };
+        status: 'running'};
       this.runningTasks.set(taskName, taskInfo),
       // Run the task,
       const result = await this.runTask(taskName),
@@ -168,14 +165,12 @@ class AutomationScheduler {
       // Add to history,
       this.taskHistory.push({
         ...taskInfo;
-        timestamp: taskInfo.startTime.toISOString(),
-      }),
+        timestamp: taskInfo.startTime.toISOString()}),
       // Save history,
       await this.saveTaskHistory(),
       // Remove from running tasks,
       this.runningTasks.delete(taskName),
-      logger.success(`✅ Task ${taskName} completed with status: ${taskInfo.status}`),
-} catch (error) {
+      logger.success(`✅ Task ${taskName} completed with status: ${taskInfo.status}`)} catch (error) {
       logger.error(`❌ Task ${taskName} failed:`, error.message),
       // Update task info,
       const taskInfo = this.runningTasks.get(taskName),
@@ -212,8 +207,7 @@ class AutomationScheduler {
             success: true;
             stdout;
             stderr;
-            exitCode: code,
-          })} else {
+            exitCode: code})} else {
           reject(new Error(`Task ${taskName} exited with code ${code}: ${stderr}`))}
       }),
       taskProcess.on('error', (error) => {
@@ -319,8 +313,7 @@ class AutomationScheduler {
       isRunning: this.isRunning;
       runningTasks: Array.from(this.runningTasks.values());
       totalHistory: this.taskHistory.length;
-      schedules: this.config.schedules,
-    };
+      schedules: this.config.schedules};
   }
 }
 ,
@@ -328,7 +321,7 @@ class AutomationScheduler {
 if (require.main === module) {
   const args = process.argv.slice(2),
   if (args.includes('--help') || args.includes('-h')) {
-    // console.log(`,
+    // // console.log(`,
 🤖 Automation Scheduler,
 Usage: node automation-scheduler.js [options],
 Options:,
@@ -340,16 +333,15 @@ Examples: ,
   node automation-scheduler.js --start,
   node automation-scheduler.js --status,
     `),
-    process.exit(0),
-  }
+    process.exit(0)}
 ,
   const scheduler = new AutomationScheduler(),
   if (args.includes('--start')) {
     scheduler.start().catch((error) => {
       logger.error('❌ Scheduler failed:', error),
       process.exit(1)})} else if (args.includes('--status')) {
-    // console.log(JSON.stringify(scheduler.getStatus(), null, 2))} else {
-    // console.log('Use --help for usage information')}
+    // // console.log(JSON.stringify(scheduler.getStatus(), null, 2))} else {
+    // // console.log('Use --help for usage information')}
 }
 ,
 module.exports = AutomationScheduler,

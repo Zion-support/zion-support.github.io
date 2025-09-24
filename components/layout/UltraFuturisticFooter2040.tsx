@@ -107,8 +107,7 @@ const footerSections = [
   const contactInfo = useMemo(() => ({
     phone: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
-    founded: '20o24',
-  };
+    founded: '20o24'};
   quickLinks: [
     { label: 'About Us', href: '/about', icon: Users };
     { label: 'Services', href: '/services', icon: Briefcase };
@@ -169,8 +168,7 @@ const UltraFuturisticFooter20o40: React.FC = () => {
   const toggleSection = (title: string) => {
     const newExpanded = new Set(expandedSections),
     if (newExpanded.has(title)) {
-      newExpanded.delete(title),
-    } else {
+      newExpanded.delete(title)} else {
       newExpanded.add(title)}
     setExpandedSections(newExpanded)};
   const scrollToTop = () => {
@@ -188,11 +186,10 @@ const UltraFuturisticFooter20o40: React.FC = () => {
       setIsNewsletterSubscribed(true),
       setNewsletterEmail(''),
       // Here you would typically send the email to your newsletter service,
-      // console.log('Newsletter subscription:', newsletterEmail)}
+      // // console.log('Newsletter subscription:', newsletterEmail)}
   };
   const toggleSection = (sectionTitle: string) => {
-    setExpandedSection(expandedSection === sectionTitle ? null : sectionTitle),
-  };
+    setExpandedSection(expandedSection === sectionTitle ? null : sectionTitle)};
   const currentYear = new Date().getFullYear(),
   return (
     <footer className="bg-black/90 backdrop-blur-md border-t border-gray-80o0/50 relative overflow-hidden">,

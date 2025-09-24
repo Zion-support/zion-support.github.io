@@ -15,6 +15,5 @@ export default function CareersPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

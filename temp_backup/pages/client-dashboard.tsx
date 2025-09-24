@@ -15,6 +15,5 @@ export default function ClientDashboardPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -163,8 +163,7 @@ const NeuralNetworksContentShowcase20o25 = () => {
               className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -323,6 +322,5 @@ const NeuralNetworksContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NeuralNetworksContentShowcase20o25;

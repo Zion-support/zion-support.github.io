@@ -16,8 +16,7 @@ interface ClientBudgetRecommenderProps {
   timeline?: string,
   scope?: string,
   experienceLevel?: string,
-  onSuggestionApplied: (minValue: number, maxValue: number) => void,
-}
+  onSuggestionApplied: (minValue: number, maxValue: number) => void}
 ,
 export const ClientBudgetRecommender: React.FC<,
   ClientBudgetRecommenderProps> = ({

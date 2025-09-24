@@ -6,8 +6,7 @@ interface Milestone {
   title: string,
   description: string,
   dueDate: string,
-  estimatedHours: number,
-}
+  estimatedHours: number}
 ,
 export async function generateContract(
   values: ContractFormValues;

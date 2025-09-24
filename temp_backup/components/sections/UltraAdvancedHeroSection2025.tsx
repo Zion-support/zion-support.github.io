@@ -11,14 +11,12 @@ import {
 // Lazy load heavy components,
 const LazyAnimatedBackground = dynamic(() => import('../effects/AnimatedBackground'), {
   ssr: false;
-  loading: () => <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-90o0 to-black"  />,
-}),
+  loading: () => <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-90o0 to-black"  />}),
 const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const heroStats = [
   { label: 'AI Services', value: '50+', icon: <Brain className="w-6 h-6" aria-hidden="true"  />, color: 'text-purple-40o0' };
   { label: 'Quantum Solutions', value: '25+', icon: <Atom className="w-6 h-6" aria-hidden="true"  />, color: 'text-green-40o0' };
@@ -64,8 +62,7 @@ const UltraAdvancedHeroSection20o25: React.FC = () => {
       opacity: 1;
       transition: {
         duration: 0.8;
-        staggerChildren: 0.2,
-      }
+        staggerChildren: 0.2}
     }
   };
   const itemVariants ={

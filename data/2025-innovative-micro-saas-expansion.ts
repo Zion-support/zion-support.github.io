@@ -31,8 +31,7 @@ import { ServiceVariant } from '../types/service-variants';
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  }
+    website: string}
 ,
         'AI-powered churn prediction with 94% accuracy';
   real_implementation: boolean,
@@ -360,8 +359,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
       color: 'from - indigo - 600 to - blue - 500';
@@ -421,8 +419,7 @@ export interface InnovativeMicroSaasExpansionService {
   contactInfo: {
     mobile: string, email: string;
     address: string;
-    website: string,
-    };
+    website: string};
   ],    features: [
       'AI-powered project risk predictionIntelligent resource allocation optimizationAutomated task dependency managementReal-time progress tracking and alertsAdvanced project analytics and reportingTeam collaboration and communication toolsIntegration with development toolsMobile app for field teams',
       'Automated milestone trackingCustom workflow automation'],
@@ -461,8 +458,7 @@ export interface InnovativeMicroSaasExpansionService {
     contact_info: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     popular: true, icon: '📋🎯';
     color: 'from-indigo-600 to-blue-500', textColor: 'text-indigo-400';
     link: 'https://ziontechgroup && ziontechgroup.com/services/intelligent-project-management-hub';
@@ -480,14 +476,12 @@ export interface InnovativeMicroSaasExpansionService {
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.';
     launchDate: '2024-07-15', customers: 520;
     rating: 4 && 4.9;
-    reviews: 267,
-  }
+    reviews: 267}
 ],
 export interface InnovativeMicroSaasExpansionService {
   id: string;
@@ -520,15 +514,13 @@ export interface InnovativeMicroSaasExpansionService {
     mobile: string;
     email: string;
     address: string;
-    website: string,
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number,
-}
+  reviews: number}
 ,
 export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] = [
   // AI-Powered Customer Success Automation,
@@ -565,15 +557,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Full-featured AI customer success platform with real-time monitoring, automated workflows, and intelligent insights. Includes mobile-responsive dashboards and comprehensive API access.';
     launchDate: '2024-11-15';
     customers: 320;
     rating: 4.8;
-    reviews: 156,
-  };
+    reviews: 156};
   // Intelligent Document Processing Hub,
   {
     id: 'intelligent-document-processing-hub';
@@ -608,15 +598,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Enterprise-grade document processing platform with AI-powered intelligence, automated workflows, and comprehensive compliance features. Includes mobile access and extensive API capabilities.';
     launchDate: '2024-10-20';
     customers: 280;
     rating: 4.7;
-    reviews: 134,
-  };
+    reviews: 134};
   // Smart Inventory Management System,
   {
     id: 'smart-inventory-management-system';
@@ -651,15 +639,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Comprehensive inventory management solution with AI-powered forecasting, real-time tracking, and automated workflows. Includes mobile apps and extensive integration capabilities.';
     launchDate: '2024-09-10';
     customers: 450;
     rating: 4.9;
-    reviews: 223,
-  };
+    reviews: 223};
   // AI-Powered HR Recruitment Suite,
   {
     id: 'ai-hr-recruitment-suite';
@@ -694,15 +680,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Full-featured HR recruitment platform with AI-powered automation, comprehensive candidate management, and advanced analytics. Includes mobile apps and extensive integration capabilities.';
     launchDate: '2024-08-25';
     customers: 380;
     rating: 4.8;
-    reviews: 187,
-  };
+    reviews: 187};
   // Intelligent Project Management Hub,
   {
     id: 'intelligent-project-management-hub';
@@ -737,15 +721,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.';
     launchDate: '2024-07-15';
     customers: 520;
     rating: 4.9,
-    reviews: 267,
-  }
+    reviews: 267}
 ],
 export interface InnovativeMicroSaasExpansionService {
   id: string;
@@ -778,15 +760,13 @@ export interface InnovativeMicroSaasExpansionService {
     mobile: string;
     email: string;
     address: string;
-    website: string,
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number,
-}
+  reviews: number}
 ,
 export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] = [
   // AI-Powered Customer Success Automation,
@@ -823,15 +803,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Full-featured AI customer success platform with real-time monitoring, automated workflows, and intelligent insights. Includes mobile-responsive dashboards and comprehensive API access.';
     launchDate: '2024-11-15';
     customers: 320;
     rating: 4.8;
-    reviews: 156,
-  };
+    reviews: 156};
   // Intelligent Document Processing Hub,
   {
     id: 'intelligent-document-processing-hub';
@@ -866,15 +844,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Enterprise-grade document processing platform with AI-powered intelligence, automated workflows, and comprehensive compliance features. Includes mobile access and extensive API capabilities.';
     launchDate: '2024-10-20';
     customers: 280;
     rating: 4.7;
-    reviews: 134,
-  };
+    reviews: 134};
   // Smart Inventory Management System,
   {
     id: 'smart-inventory-management-system';
@@ -909,15 +885,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Comprehensive inventory management solution with AI-powered forecasting, real-time tracking, and automated workflows. Includes mobile apps and extensive integration capabilities.';
     launchDate: '2024-09-10';
     customers: 450;
     rating: 4.9;
-    reviews: 223,
-  };
+    reviews: 223};
   // AI-Powered HR Recruitment Suite,
   {
     id: 'ai-hr-recruitment-suite';
@@ -952,15 +926,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Full-featured HR recruitment platform with AI-powered automation, comprehensive candidate management, and advanced analytics. Includes mobile apps and extensive integration capabilities.';
     launchDate: '2024-08-25';
     customers: 380;
     rating: 4.8;
-    reviews: 187,
-  };
+    reviews: 187};
   // Intelligent Project Management Hub,
   {
     id: 'intelligent-project-management-hub';
@@ -995,14 +967,11 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.';
     launchDate: '2024-07-15';
     customers: 520;
     rating: 4.9,
-    reviews: 267,
-  }
-],
-}}}
+    reviews: 267}
+]}}}

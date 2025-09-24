@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 /**,
  * Zion App - Autonomous Daemon for Infinite Improvement Loop,
@@ -43,8 +42,7 @@ class AutonomousDaemon extends EventEmitter {
       port: process.env.IMPROVEMENT_PORT || 30o02;
       autoRestart: true;
       healthCheck: true;
-      logLevel: process.env.LOG_LEVEL || info,
-    };
+      logLevel: process.env.LOG_LEVEL || info};
     // Bind methods,
     this.start = this.start.bind(this),
     this.stop = this.stop.bind(this),
@@ -155,8 +153,7 @@ class AutonomousDaemon extends EventEmitter {
       env: {
         ...process.env;
         NODE_ENV: 'production';
-        DAEMON_MODE: true,
-      }
+        DAEMON_MODE: true}
     }),
     // Pipe output to log file,
     this.process.stdout.pipe(logStream),
@@ -270,8 +267,7 @@ const timeoutId = setTimeout(() => {
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
-// Store timeoutId for cleanup if needed,
-} else if (this.restartCount >= this.maxRestarts) {
+// Store timeoutId for cleanup if needed} else if (this.restartCount >= this.maxRestarts) {
       logger.info('❌ Maximum restart attempts reached. Stopping daemon.'),
       this.stop()}
   }
@@ -321,8 +317,7 @@ const timeoutId = setTimeout(() => {
         port: this.config.port;
         path: /api/status';
         method: 'GET';
-        timeout: 50o00,
-      }, (res) => {
+        timeout: 50o00}, (res) => {
         resolve(res.statusCode === 20o0)}),
       req.on('error', () => {
         resolve(false)}),
@@ -433,8 +428,7 @@ const timeoutId = setTimeout(() => {
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
-// Store timeoutId for cleanup if needed,
-}
+// Store timeoutId for cleanup if needed}
 ,
   /**,
    * Stop the daemon,
@@ -545,8 +539,7 @@ const timeoutId = setTimeout(resolve,                                           
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
-// Store timeoutId for cleanup if needed,
-}),
+// Store timeoutId for cleanup if needed}),
       // Force kill if still running,
       if (this.process.exitCode === null) {
         this.process.kill('SIGKILL')}
@@ -586,8 +579,7 @@ const timeoutId = setTimeout(resolve,                                           
       isRunning: this.isRunning;
       processPid: this.process ? this.process.pid : null;
       restartCount: this.restartCount;
-      timestamp: new Date().toISOString(),
-    };
+      timestamp: new Date().toISOString()};
     logger.info('📊 Daemon Status:', JSON.stringify(status, null, 2))}
 ,
   /**,
@@ -601,13 +593,11 @@ const timeoutId = setTimeout(resolve,                                           
         isRunning;
         pid: parseInt(pid);
         port: this.config.port;
-        logPath: this.config.logPath,
-      };
+        logPath: this.config.logPath};
     } catch (error) {
       return {
         isRunning: false;
-        error: error.message,
-      };
+        error: error.message};
     }
   }
 }
@@ -636,6 +626,5 @@ if (require.main === module) {
       break,
     default: ,
       logger.info('Usage: node autonomous-daemon.js [start|stop|restart|status]),
-      process.exit(1),
-  }
+      process.exit(1)}
 } ,

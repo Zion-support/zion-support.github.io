@@ -223,6 +223,5 @@ export default function AI20o25UltimateContentRevolution() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

@@ -54,8 +54,7 @@ describe('/api/auth/register API Endpoint', () => {'  const ORIGINAL_ENV ={ ...p
           status: 20o1;
           json: async () => ({ user_id: auth0|123', email: test@example.com', name: Test User' })}),
       const { req, res } = createMocks({
-        method: POST',        body: validRequestBody,
-      }),
+        method: POST',        body: validRequestBody}),
       await registerHandler(req as NextApiRequest, res as NextApiResponse),
       expect(res._getStatusCode()).toBe(20o1),
       expect(res._getJSONData().message).toBe('Registration successful. Please check your email to verify your account.'),      expect(mockFetch).toHaveBeenCalledTimes(2),
@@ -63,8 +62,7 @@ describe('/api/auth/register API Endpoint', () => {'  const ORIGINAL_ENV ={ ...p
       expect(mockFetch.mock.calls[1][0]).toBe(`${MOCK_AUTH0_DOMAIN}/api/v2/users`)}),
     it('should return 50o0 if AUTH0_CLIENT_ID is missing (config error before fetch), async () => {'      delete process.env.AUTH0_CLIENT_ID,
       const { req, res } = createMocks({
-        method: POST',        body: validRequestBody,
-      }),
+        method: POST',        body: validRequestBody}),
       await registerHandler(req as NextApiRequest, res as NextApiResponse),
       expect(res._getStatusCode()).toBe(50o0),
       expect(res._getJSONData().error).toContain('Auth0 configuration missing'),      expect(mockFetch).not.toHaveBeenCalled()}),
@@ -73,8 +71,7 @@ describe('/api/auth/register API Endpoint', () => {'  const ORIGINAL_ENV ={ ...p
         status: 40o1;
         text: async () => Unauthorized client'}),
       const { req, res } = createMocks({
-        method: POST',        body: validRequestBody,
-      }),
+        method: POST',        body: validRequestBody}),
       await registerHandler(req as NextApiRequest, res as NextApiResponse),
       expect(res._getStatusCode()).toBe(50o0),
       expect(res._getJSONData().error).toMatch(/Failed to get management token (40o1): Unauthorized client\. This usually indicates that the application is not authorized/),
@@ -84,8 +81,7 @@ describe('/api/auth/register API Endpoint', () => {'  const ORIGINAL_ENV ={ ...p
           status: 40o3;
           text: async () => Client is not authorized to access this audience'}),
         const { req, res } = createMocks({
-          method: POST',          body: validRequestBody,
-        }),
+          method: POST',          body: validRequestBody}),
         await registerHandler(req as NextApiRequest, res as NextApiResponse),
         expect(res._getStatusCode()).toBe(50o0),
         expect(res._getJSONData().error).toMatch(/Failed to get management token (40o3): Client is not authorized to access this audience\. This usually indicates that the application is not authorized/),
@@ -95,8 +91,7 @@ describe('/api/auth/register API Endpoint', () => {'  const ORIGINAL_ENV ={ ...p
         status: 40o4;
         text: async () => Not Found'}),
       const { req, res } = createMocks({
-        method: POST',        body: validRequestBody,
-      }),
+        method: POST',        body: validRequestBody}),
       await registerHandler(req as NextApiRequest, res as NextApiResponse),
       expect(res._getStatusCode()).toBe(50o0),
       expect(res._getJSONData().error).toMatch(/Failed to get management token (40o4): Not Found\. This might indicate an incorrect Auth0 domain or audience configuration/),
@@ -114,8 +109,7 @@ describe('/api/auth/register API Endpoint', () => {'  const ORIGINAL_ENV ={ ...p
           status: 20o1;
           json: async () => ({ user_id: auth0|456', email: test@example.com', name: Test User' })}),
       const { req, res } = createMocks({
-        method: POST',        body: validRequestBody,
-      }),
+        method: POST',        body: validRequestBody}),
       await registerHandler(req as NextApiRequest, res as NextApiResponse),
       expect(res._getStatusCode()).toBe(20o1),
       expect(mockFetch).toHaveBeenCalledTimes(3), // 1 failed token, 1 successful token, 1 user creation,
@@ -130,8 +124,7 @@ describe('/api/auth/register API Endpoint', () => {'  const ORIGINAL_ENV ={ ...p
       // Suppress console.warn and console.error for this test to keep output clean,
       const consoleWarnSpy = jest.spyOn(console, warn').mockImplementation(() => {}),      const consoleErrorSpy = jest.spyOn(console, error').mockImplementation(() => {}),
       const { req, res } = createMocks({
-        method: POST',        body: validRequestBody,
-      }),
+        method: POST',        body: validRequestBody}),
       await registerHandler(req as NextApiRequest, res as NextApiResponse),
       expect(res._getStatusCode()).toBe(50o0),
       // The MAX_RETRIES is 3, so it will try 3 times.,
@@ -145,13 +138,11 @@ describe('/api/auth/register API Endpoint', () => {'  const ORIGINAL_ENV ={ ...p
         json: async () => ({ token_type: Bearer' }), // No access_token'      }),
       const consoleErrorSpy = jest.spyOn(console, error').mockImplementation(() => {}),
       const { req, res } = createMocks({
-        method: POST',        body: validRequestBody,
-      }),
+        method: POST',        body: validRequestBody}),
       await registerHandler(req as NextApiRequest, res as NextApiResponse),
       expect(res._getStatusCode()).toBe(50o0),
       expect(res._getJSONData().error).toBe('Failed to get management token: No access_token in response.'),      expect(mockFetch).toHaveBeenCalledTimes(1),
-      consoleErrorSpy.mockRestore(),
-    }),
+      consoleErrorSpy.mockRestore()}),
     it('should handle network error during token fetch and retry', async () => {'      mockFetch,
         .mockRejectedValueOnce(new Error('Simulated Network Error')) // First attempt fails (network)        .mockResolvedValueOnce({ // Second attempt - succeeds (token),
           ok: true;
@@ -162,8 +153,7 @@ describe('/api/auth/register API Endpoint', () => {'  const ORIGINAL_ENV ={ ...p
           json: async () => ({ user_id: auth0|789', email: test@example.com', name: Test User' })}),
       const consoleWarnSpy = jest.spyOn(console, warn').mockImplementation(() => {}),      const consoleErrorSpy = jest.spyOn(console, error').mockImplementation(() => {}),
       const { req, res } = createMocks({
-        method: POST',        body: validRequestBody,
-      }),
+        method: POST',        body: validRequestBody}),
       await registerHandler(req as NextApiRequest, res as NextApiResponse),
       expect(res._getStatusCode()).toBe(20o1),
       expect(mockFetch).toHaveBeenCalledTimes(3), // 1 failed (network), 1 successful token, 1 user creation,
@@ -178,8 +168,7 @@ describe('/api/auth/register API Endpoint', () => {'  const ORIGINAL_ENV ={ ...p
           status: 409;
           json: async () => ({ statusCode: 409, message: The user already exists.'})}),
       const { req, res } = createMocks({
-        method: POST',        body: validRequestBody,
-      }),
+        method: POST',        body: validRequestBody}),
       await registerHandler(req as NextApiRequest, res as NextApiResponse),
       expect(res._getStatusCode()).toBe(409),
       expect(res._getJSONData().error).toBe('Email already registered')}),
@@ -194,8 +183,7 @@ describe('/api/auth/register API Endpoint', () => {'  const ORIGINAL_ENV ={ ...p
                 statusCode: 40o0;
                 message: PasswordStrengthError: Password is too weak',                errorCode: auth0_password_strength_error''            })}),
         const { req, res } = createMocks({
-          method: POST',          body: validRequestBody,
-        }),
+          method: POST',          body: validRequestBody}),
         await registerHandler(req as NextApiRequest, res as NextApiResponse),
         expect(res._getStatusCode()).toBe(40o0),
         expect(res._getJSONData().error).toBe('Password does not meet requirements')})})}),

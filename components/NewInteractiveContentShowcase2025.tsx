@@ -110,8 +110,7 @@ const NewInteractiveContentShowcase20o25 = () => {
               className={`px-6 py-3 m-2 rounded-lg font-semibold transition-all duration-30o0 ${
                 activeTab === key,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md'}`}
             >,
               {section.title}
             </button>))}
@@ -190,6 +189,5 @@ const NewInteractiveContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NewInteractiveContentShowcase20o25;

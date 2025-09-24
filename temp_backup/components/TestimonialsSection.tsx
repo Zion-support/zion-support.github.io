@@ -8,8 +8,7 @@ interface Testimonial {
   company: string,
   content: string,
   rating: number,
-  avatar?: string,
-}
+  avatar?: string}
 ,
 const testimonials: Testimonial[] = [
   {
@@ -155,6 +154,5 @@ const TestimonialsSection: React.FC = () => {
           </button>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default TestimonialsSection;

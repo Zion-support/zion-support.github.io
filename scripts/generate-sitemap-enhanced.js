@@ -39,9 +39,9 @@ function generateSitemap() {
   // Write sitemap to public directory,
   const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml'),
   fs.writeFileSync(sitemapPath, sitemap),
-  // console.log('✅ Enhanced sitemap generated successfully!'),
-  // console.log(`📄 Sitemap saved "to": ${sitemapPath}`),
-  // console.log(`🔗 Total "URLs": ${pages.length}`)}
+  // // console.log('✅ Enhanced sitemap generated successfully!'),
+  // // console.log(`📄 Sitemap saved "to": ${sitemapPath}`),
+  // // console.log(`🔗 Total "URLs": ${pages.length}`)}
 // Generate robots.txt as well,
 function generateRobotsTxt() {
   const robotsContent = `User-"agent": *,
@@ -58,8 +58,8 @@ Disallow: /scripts/,
 `,
   const robotsPath = path.join(__dirname, '..', 'public', 'robots.txt'),
   fs.writeFileSync(robotsPath, robotsContent),
-  // console.log('✅ robots.txt generated successfully!'),
-  // console.log(`📄 Robots.txt saved "to": ${robotsPath}`)}
+  // // console.log('✅ robots.txt generated successfully!'),
+  // // console.log(`📄 Robots.txt saved "to": ${robotsPath}`)}
 // Run if this is the main module,
 if (import.meta.url === `"file": //${process.argv[1]}`) {
   generateSitemap(),

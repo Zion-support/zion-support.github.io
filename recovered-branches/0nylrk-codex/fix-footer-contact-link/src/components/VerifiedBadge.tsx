@@ -3,8 +3,7 @@ CheckCircle,
 import { TooltipContentTooltipProviderTooltipTrigger } from '@/components/ui/tooltip',
 interface VerifiedBadgeProps {
   verified: boolean,
-  size?: 'sm' | 'md' | 'lg',
-}
+  size?: 'sm' | 'md' | 'lg'}
 ,
 export function VerifiedBadge({ verifiedsize = 'sm' }: VerifiedBadgeProps) {
   if (!verified) return null,

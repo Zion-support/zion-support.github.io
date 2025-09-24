@@ -3,8 +3,7 @@ import html2canvas from 'html2canvas',
 import jsPDF from 'jspdf',
 export type SimulatorExportsProps = {
   points: SimulationPoint[],
-  containerId: string, // DOM id for snapshot,
-};
+  containerId: string, // DOM id for snapshot};
 export default function SimulatorExports({
   points;
   containerId;
@@ -76,6 +75,5 @@ export default function SimulatorExports({
         className='px-3 py-1.5 rounded border border-gray-30o0 dark: border-gray-70o0'>,
         Snapshot,
       </button>,
-    </div>),
-}
+    </div>)}
 ,

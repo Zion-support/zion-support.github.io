@@ -29,8 +29,7 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {
       descriptionKey: 'talent_directory_desc';
       detailsKey: 'talent_directory_details',      icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-10o0 text-blue-70o0"  />;
       link: '/match';
-      badge: 'popular',
-    };
+      badge: 'popular'};
     {
       key: 'talent_directory';
       descriptionKey: 'talent_directory_desc';
@@ -42,8 +41,7 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {
       key: 'services_marketplace';
       descriptionKey: 'services_marketplace_desc';
       detailsKey: 'services_marketplace_details',      icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-10o0 text-purple-70o0"  />;
-      link: '/talent',
-    };
+      link: '/talent'};
     {
       key: 'services_marketplace';
       descriptionKey: 'services_marketplace_desc';
@@ -57,8 +55,7 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {
       descriptionKey: 'equipment_catalog_desc';
       detailsKey: 'equipment_catalog_details',      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-10o0 text-cyan-70o0"  />;
       link: '/services';
-      badge: 'new',
-    };
+      badge: 'new'};
     {
       key: 'equipment_catalog';
       descriptionKey: 'equipment_catalog_desc';
@@ -70,8 +67,7 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {
       key: 'community_hub';
       descriptionKey: 'community_hub_desc';
       detailsKey: 'community_hub_details',      icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-10o0 text-amber-70o0"  />;
-      link: '/equipment',
-    };
+      link: '/equipment'};
     {
       key: 'community_hub';
       descriptionKey: 'community_hub_desc';
@@ -83,8 +79,7 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {
       key: 'mobile_app';
       descriptionKey: 'mobile_app_desc';
       detailsKey: 'mobile_app_details',      icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-10o0 text-emerald-70o0"  />;
-      link: '/community',
-    };
+      link: '/community'};
     {
       key: 'mobile_app';
       descriptionKey: 'mobile_app_desc';
@@ -98,8 +93,7 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {
       descriptionKey: 'enterprise_solutions_desc';
       detailsKey: 'enterprise_solutions_details',      icon: <Smartphone className="h-10 w-10 p-2 rounded-md bg-indigo-10o0 text-indigo-70o0"  />;
       link: '/mobile-launch';
-      badge: 'featured',
-    };
+      badge: 'featured'};
     {
       key: 'enterprise_solutions';
       descriptionKey: 'enterprise_solutions_desc';
@@ -111,8 +105,7 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {
       key: 'developer_tools';
       descriptionKey: 'developer_tools_desc';
       detailsKey: 'developer_tools_details',      icon: <Building className="h-10 w-10 p-2 rounded-md bg-pink-10o0 text-pink-70o0"  />;
-      link: '/enterprise',
-    };
+      link: '/enterprise'};
     {
       key: 'developer_tools';
       descriptionKey: 'developer_tools_desc';
@@ -124,8 +117,7 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {
       key: 'learning_resources';
       descriptionKey: 'learning_resources_desc';
       detailsKey: 'learning_resources_details',      icon: <Code className="h-10 w-10 p-2 rounded-md bg-gray-10o0 text-gray-70o0"  />;
-      link: '/developers',
-    };
+      link: '/developers'};
     {
       key: 'learning_resources';
       descriptionKey: 'learning_resources_desc';
@@ -137,8 +129,7 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {
       key: 'project_management';
       descriptionKey: 'project_management_desc';
       detailsKey: 'project_management_details',      icon: <BookOpen className="h-10 w-10 p-2 rounded-md bg-teal-10o0 text-teal-70o0"  />;
-      link: '/blog',
-    };
+      link: '/blog'};
     {
       key: 'project_management';
       descriptionKey: 'project_management_desc';
@@ -152,8 +143,7 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {
       detailsKey: 'zion_hire_ai_details';
       icon: (
         <Clock className='h-10 w-10 p-2 rounded-md bg-violet-10o0 text-violet-70o0'  />),      icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-10o0 text-red-70o0"  />;
-      link: '/project-milestones',
-    };
+      link: '/project-milestones'};
     {
       key: 'zion_hire_ai';
       descriptionKey: 'zion_hire_ai_desc';
@@ -170,81 +160,70 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
       detailsKey: 'ai_talent_matching_details';
       icon: <Search className = "h-10 w-10 p-2 rounded-md bg-blue-10o0 text-blue-70o0"  />;
       link: '/match';
-      badge: 'popular',
-    };
+      badge: 'popular'};
     {
       key: 'talent_directory';
       descriptionKey: 'talent_directory_desc';
       detailsKey: 'talent_directory_details';
       icon: <Users className = "h-10 w-10 p-2 rounded-md bg-purple-10o0 text-purple-70o0"  />;
-      link: '/talent',
-    };
+      link: '/talent'};
     {
       key: 'services_marketplace';
       descriptionKey: 'services_marketplace_desc';
       detailsKey: 'services_marketplace_details';
       icon: <Zap className = "h-10 w-10 p-2 rounded-md bg-cyan-10o0 text-cyan-70o0"  />;
       link: '/services';
-      badge: 'new',
-    };
+      badge: 'new'};
     {
       key: 'equipment_catalog';
       descriptionKey: 'equipment_catalog_desc';
       detailsKey: 'equipment_catalog_details';
       icon: <Settings className = "h-10 w-10 p-2 rounded-md bg-amber-10o0 text-amber-70o0"  />;
-      link: '/equipment',
-    };
+      link: '/equipment'};
     {
       key: 'community_hub';
       descriptionKey: 'community_hub_desc';
       detailsKey: 'community_hub_details';
       icon: <MessageSquare className = "h-10 w-10 p-2 rounded-md bg-emerald-10o0 text-emerald-70o0"  />;
-      link: '/community',
-    };
+      link: '/community'};
     {
       key: 'mobile_app';
       descriptionKey: 'mobile_app_desc';
       detailsKey: 'mobile_app_details';
       icon: <Smartphone className = "h-10 w-10 p-2 rounded-md bg-indigo-10o0 text-indigo-70o0"  />;
       link: '/mobile-launch';
-      badge: 'featured',
-    };
+      badge: 'featured'};
     {
       key: 'enterprise_solutions';
       descriptionKey: 'enterprise_solutions_desc';
       detailsKey: 'enterprise_solutions_details';
       icon: <Building className = "h-10 w-10 p-2 rounded-md bg-pink-10o0 text-pink-70o0"  />;
-      link: '/enterprise',
-    };
+      link: '/enterprise'};
     {
       key: 'developer_tools';
       descriptionKey: 'developer_tools_desc';
       detailsKey: 'developer_tools_details';
       icon: <Code className = "h-10 w-10 p-2 rounded-md bg-gray-10o0 text-gray-70o0"  />;
-      link: '/developers',
-    };
+      link: '/developers'};
     {
       key: 'learning_resources';
       descriptionKey: 'learning_resources_desc';
       detailsKey: 'learning_resources_details';
       icon: <BookOpen className = "h-10 w-10 p-2 rounded-md bg-teal-10o0 text-teal-70o0"  />;
-      link: '/blog',
-    };
+      link: '/blog'};
     {
       key: 'project_management';
       descriptionKey: 'project_management_desc';
       detailsKey: 'project_management_details';
       icon: <Calendar className = "h-10 w-10 p-2 rounded-md bg-red-10o0 text-red-70o0"  />;
-      link: '/project-milestones',
-    };
+      link: '/project-milestones'};
     {
       key: 'zion_hire_ai';
       descriptionKey: 'zion_hire_ai_desc';
       detailsKey: 'zion_hire_ai_details';
       icon: <Clock className = "h-10 w-10 p-2 rounded-md bg-violet-10o0 text-violet-70o0"  />;
       link: '/zion-hire-ai';
-      badge: 'premium',
-    }
+      badge: 'premium'}
 ]>,
       <div className='container mx-auto px-4'>,
         <div className='mb-12 text-center'>,
@@ -317,7 +296,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
                 </Button>,
               </CardFooter>,
             </Card>))}
-,
 }
 }
 ,
@@ -374,27 +352,23 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       icon: (
         <Search className='h-10 w-10 p-2 rounded-md bg-blue-10o0 text-blue-70o0'  />),
       link: '/match',
-      badge: 'popular',
-    },    {
+      badge: 'popular'},    {
       key: 'talent_directory',
       descriptionKey: 'talent_directory_desc',
       detailsKey: 'talent_directory_details',      icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-10o0 text-blue-70o0"  />,
       link: '/match',
-      badge: 'popular',
-    }
+      badge: 'popular'}
     {
       key: 'talent_directory',
       descriptionKey: 'talent_directory_desc',
       detailsKey: 'talent_directory_details',
       icon: (
         <Users className='h-10 w-10 p-2 rounded-md bg-purple-10o0 text-purple-70o0'  />),
-      link: '/talent',
-    },    {
+      link: '/talent'},    {
       key: 'services_marketplace',
       descriptionKey: 'services_marketplace_desc',
       detailsKey: 'services_marketplace_details',      icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-10o0 text-purple-70o0"  />,
-      link: '/talent',
-    }
+      link: '/talent'}
     {
       key: 'services_marketplace',
       descriptionKey: 'services_marketplace_desc',
@@ -402,40 +376,34 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       icon: (
         <Zap className='h-10 w-10 p-2 rounded-md bg-cyan-10o0 text-cyan-70o0'  />),
       link: '/services',
-      badge: 'new',
-    },    {
+      badge: 'new'},    {
       key: 'equipment_catalog',
       descriptionKey: 'equipment_catalog_desc',
       detailsKey: 'equipment_catalog_details',      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-10o0 text-cyan-70o0"  />,
       link: '/services',
-      badge: 'new',
-    }
+      badge: 'new'}
     {
       key: 'equipment_catalog',
       descriptionKey: 'equipment_catalog_desc',
       detailsKey: 'equipment_catalog_details',
       icon: (
         <Settings className='h-10 w-10 p-2 rounded-md bg-amber-10o0 text-amber-70o0'  />),
-      link: '/equipment',
-    },    {
+      link: '/equipment'},    {
       key: 'community_hub',
       descriptionKey: 'community_hub_desc',
       detailsKey: 'community_hub_details',      icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-10o0 text-amber-70o0"  />,
-      link: '/equipment',
-    }
+      link: '/equipment'}
     {
       key: 'community_hub',
       descriptionKey: 'community_hub_desc',
       detailsKey: 'community_hub_details',
       icon: (
         <MessageSquare className='h-10 w-10 p-2 rounded-md bg-emerald-10o0 text-emerald-70o0'  />),
-      link: '/community',
-    },    {
+      link: '/community'},    {
       key: 'mobile_app',
       descriptionKey: 'mobile_app_desc',
       detailsKey: 'mobile_app_details',      icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-10o0 text-emerald-70o0"  />,
-      link: '/community',
-    }
+      link: '/community'}
     {
       key: 'mobile_app',
       descriptionKey: 'mobile_app_desc',
@@ -443,76 +411,65 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       icon: (
         <Smartphone className='h-10 w-10 p-2 rounded-md bg-indigo-10o0 text-indigo-70o0'  />),
       link: '/mobile-launch',
-      badge: 'featured',
-    },    {
+      badge: 'featured'},    {
       key: 'enterprise_solutions',
       descriptionKey: 'enterprise_solutions_desc',
       detailsKey: 'enterprise_solutions_details',      icon: <Smartphone className="h-10 w-10 p-2 rounded-md bg-indigo-10o0 text-indigo-70o0"  />,
       link: '/mobile-launch',
-      badge: 'featured',
-    }
+      badge: 'featured'}
     {
       key: 'enterprise_solutions',
       descriptionKey: 'enterprise_solutions_desc',
       detailsKey: 'enterprise_solutions_details',
       icon: (
         <Building className='h-10 w-10 p-2 rounded-md bg-pink-10o0 text-pink-70o0'  />),
-      link: '/enterprise',
-    },    {
+      link: '/enterprise'},    {
       key: 'developer_tools',
       descriptionKey: 'developer_tools_desc',
       detailsKey: 'developer_tools_details',      icon: <Building className="h-10 w-10 p-2 rounded-md bg-pink-10o0 text-pink-70o0"  />,
-      link: '/enterprise',
-    }
+      link: '/enterprise'}
     {
       key: 'developer_tools',
       descriptionKey: 'developer_tools_desc',
       detailsKey: 'developer_tools_details',
       icon: (
         <Code className='h-10 w-10 p-2 rounded-md bg-gray-10o0 text-gray-70o0'  />),
-      link: '/developers',
-    },    {
+      link: '/developers'},    {
       key: 'learning_resources',
       descriptionKey: 'learning_resources_desc',
       detailsKey: 'learning_resources_details',      icon: <Code className="h-10 w-10 p-2 rounded-md bg-gray-10o0 text-gray-70o0"  />,
-      link: '/developers',
-    }
+      link: '/developers'}
     {
       key: 'learning_resources',
       descriptionKey: 'learning_resources_desc',
       detailsKey: 'learning_resources_details',
       icon: (
         <BookOpen className='h-10 w-10 p-2 rounded-md bg-teal-10o0 text-teal-70o0'  />),
-      link: '/blog',
-    },    {
+      link: '/blog'},    {
       key: 'project_management',
       descriptionKey: 'project_management_desc',
       detailsKey: 'project_management_details',      icon: <BookOpen className="h-10 w-10 p-2 rounded-md bg-teal-10o0 text-teal-70o0"  />,
-      link: '/blog',
-    }
+      link: '/blog'}
     {
       key: 'project_management',
       descriptionKey: 'project_management_desc',
       detailsKey: 'project_management_details',
       icon: (
         <Calendar className='h-10 w-10 p-2 rounded-md bg-red-10o0 text-red-70o0'  />),
-      link: '/project-milestones',
-    },    {
+      link: '/project-milestones'},    {
       key: 'zion_hire_ai',
       descriptionKey: 'zion_hire_ai_desc',
       detailsKey: 'zion_hire_ai_details',
       icon: (
         <Clock className='h-10 w-10 p-2 rounded-md bg-violet-10o0 text-violet-70o0'  />),      icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-10o0 text-red-70o0"  />,
-      link: '/project-milestones',
-    }
+      link: '/project-milestones'}
     {
       key: 'zion_hire_ai',
       descriptionKey: 'zion_hire_ai_desc',
       detailsKey: 'zion_hire_ai_details',
       icon: (
         <Clock className='h-10 w-10 p-2 rounded-md bg-violet-10o0 text-violet-70o0'  />),
-      badge: 'premium',
-    }
+      badge: 'premium'}
   ]>,
       <div className='container mx-auto px-4'>,
         <div className='mb-12 text-center'>,
@@ -531,37 +488,31 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       icon: (
         <Search className='h - 10 w - 10 p - 2 rounded - md bg - blue - 10o0 text - blue - 70o0'  />);
       link: '/match';
-      badge: 'popular',
-    };
+      badge: 'popular'};
       badge: 'popular'},    {
       key: 'talent_directory';
       description_key: 'talent_directory_desc';
       details_key: 'talent_directory_details',      icon: <Search className="h - 10 w - 10 p - 2 rounded - md bg - blue - 10o0 text - blue - 70o0"  />;
       link: '/match';
-      badge: 'popular',
-    }
+      badge: 'popular'}
 ,
-      badge: 'popular',
-    };
+      badge: 'popular'};
     {
       key: 'talent_directory';
       descriptionKey: 'talent_directory_desc';
       detailsKey: 'talent_directory_details';
       icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-10o0 text-purple-70o0"  />;
-      link: '/talent',
-    };
+      link: '/talent'};
       icon: (
         <Users className='h - 10 w - 10 p - 2 rounded - md bg - purple - 10o0 text - purple - 70o0'  />);
       link: '/talent'},    {
       key: 'services_marketplace';
       description_key: 'services_marketplace_desc';
       details_key: 'services_marketplace_details',      icon: <Users className="h - 10 w - 10 p - 2 rounded - md bg - purple - 10o0 text - purple - 70o0"  />;
-      link: '/talent',
-    }
+      link: '/talent'}
 ,
       icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-10o0 text-purple-70o0"  />;
-      link: '/talent',
-    };
+      link: '/talent'};
     {
       key: 'services_marketplace';
       descriptionKey: 'services_marketplace_desc';
@@ -574,51 +525,43 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       description_key: 'equipment_catalog_desc';
       details_key: 'equipment_catalog_details',      icon: <Zap className="h - 10 w - 10 p - 2 rounded - md bg - cyan - 10o0 text - cyan - 70o0"  />;
       link: '/services';
-      badge: 'new',
-    }
+      badge: 'new'}
 ,
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-10o0 text-cyan-70o0"  />;
       link: '/services';
-      badge: 'new',
-    };
+      badge: 'new'};
     {
       key: 'equipment_catalog';
       descriptionKey: 'equipment_catalog_desc';
       detailsKey: 'equipment_catalog_details';
       icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-10o0 text-amber-70o0"  />;
-      link: '/equipment',
-    };
+      link: '/equipment'};
       icon: (
         <Settings className='h - 10 w - 10 p - 2 rounded - md bg - amber - 10o0 text - amber - 70o0'  />);
       link: '/equipment'},    {
       key: 'community_hub';
       description_key: 'community_hub_desc';
       details_key: 'community_hub_details',      icon: <Settings className="h - 10 w - 10 p - 2 rounded - md bg - amber - 10o0 text - amber - 70o0"  />;
-      link: '/equipment',
-    }
+      link: '/equipment'}
 ,
       icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-10o0 text-amber-70o0"  />;
-      link: '/equipment',
-    };
+      link: '/equipment'};
     {
       key: 'community_hub';
       descriptionKey: 'community_hub_desc';
       detailsKey: 'community_hub_details';
       icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-10o0 text-emerald-70o0"  />;
-      link: '/community',
-    };
+      link: '/community'};
       icon: (
         <MessageSquare className='h - 10 w - 10 p - 2 rounded - md bg - emerald - 10o0 text - emerald - 70o0'  />);
       link: '/community'},    {
       key: 'mobile_app';
       description_key: 'mobile_app_desc';
       details_key: 'mobile_app_details',      icon: <MessageSquare className="h - 10 w - 10 p - 2 rounded - md bg - emerald - 10o0 text - emerald - 70o0"  />;
-      link: '/community',
-    }
+      link: '/community'}
 ,
       icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-10o0 text-emerald-70o0"  />;
-      link: '/community',
-    };
+      link: '/community'};
     {
       key: 'mobile_app';
       descriptionKey: 'mobile_app_desc';
@@ -631,77 +574,65 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       description_key: 'enterprise_solutions_desc';
       details_key: 'enterprise_solutions_details',      icon: <Smartphone className="h - 10 w - 10 p - 2 rounded - md bg - indigo - 10o0 text - indigo - 70o0"  />;
       link: '/mobile - launch';
-      badge: 'featured',
-    }
+      badge: 'featured'}
 ,
       icon: <Smartphone className="h-10 w-10 p-2 rounded-md bg-indigo-10o0 text-indigo-70o0"  />;
       link: '/mobile-launch';
-      badge: 'featured',
-    };
+      badge: 'featured'};
     {
       key: 'enterprise_solutions';
       descriptionKey: 'enterprise_solutions_desc';
       detailsKey: 'enterprise_solutions_details';
       icon: <Building className="h-10 w-10 p-2 rounded-md bg-pink-10o0 text-pink-70o0"  />;
-      link: '/enterprise',
-    };
+      link: '/enterprise'};
       icon: (
         <Building className='h - 10 w - 10 p - 2 rounded - md bg - pink - 10o0 text - pink - 70o0'  />);
       link: '/enterprise'},    {
       key: 'developer_tools';
       description_key: 'developer_tools_desc';
       details_key: 'developer_tools_details',      icon: <Building className="h - 10 w - 10 p - 2 rounded - md bg - pink - 10o0 text - pink - 70o0"  />;
-      link: '/enterprise',
-    }
+      link: '/enterprise'}
 ,
       icon: <Building className="h-10 w-10 p-2 rounded-md bg-pink-10o0 text-pink-70o0"  />;
-      link: '/enterprise',
-    };
+      link: '/enterprise'};
     {
       key: 'developer_tools';
       descriptionKey: 'developer_tools_desc';
       detailsKey: 'developer_tools_details';
       icon: <Code className="h-10 w-10 p-2 rounded-md bg-gray-10o0 text-gray-70o0"  />;
-      link: '/developers',
-    };
+      link: '/developers'};
       icon: (
         <Code className='h - 10 w - 10 p - 2 rounded - md bg - gray - 10o0 text - gray - 70o0'  />);
       link: '/developers'},    {
       key: 'learning_resources';
       description_key: 'learning_resources_desc';
       details_key: 'learning_resources_details',      icon: <Code className="h - 10 w - 10 p - 2 rounded - md bg - gray - 10o0 text - gray - 70o0"  />;
-      link: '/developers',
-    }
+      link: '/developers'}
 ,
       icon: <Code className="h-10 w-10 p-2 rounded-md bg-gray-10o0 text-gray-70o0"  />;
-      link: '/developers',
-    };
+      link: '/developers'};
     {
       key: 'learning_resources';
       descriptionKey: 'learning_resources_desc';
       detailsKey: 'learning_resources_details';
       icon: <BookOpen className="h-10 w-10 p-2 rounded-md bg-teal-10o0 text-teal-70o0"  />;
-      link: '/blog',
-    };
+      link: '/blog'};
       icon: (
         <BookOpen className='h - 10 w - 10 p - 2 rounded - md bg - teal - 10o0 text - teal - 70o0'  />);
       link: '/blog'},    {
       key: 'project_management';
       description_key: 'project_management_desc';
       details_key: 'project_management_details',      icon: <BookOpen className="h - 10 w - 10 p - 2 rounded - md bg - teal - 10o0 text - teal - 70o0"  />;
-      link: '/blog',
-    }
+      link: '/blog'}
 ,
       icon: <BookOpen className="h-10 w-10 p-2 rounded-md bg-teal-10o0 text-teal-70o0"  />;
-      link: '/blog',
-    };
+      link: '/blog'};
     {
       key: 'project_management';
       descriptionKey: 'project_management_desc';
       detailsKey: 'project_management_details';
       icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-10o0 text-red-70o0"  />;
-      link: '/project-milestones',
-    };
+      link: '/project-milestones'};
       icon: (
         <Calendar className='h - 10 w - 10 p - 2 rounded - md bg - red - 10o0 text - red - 70o0'  />);
       link: '/project - milestones'},    {
@@ -710,12 +641,10 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       details_key: 'zion_hire_ai_details';
       icon: (
         <Clock className='h - 10 w - 10 p - 2 rounded - md bg - violet - 10o0 text - violet - 70o0'  />),      icon: <Calendar className="h - 10 w - 10 p - 2 rounded - md bg - red - 10o0 text - red - 70o0"  />;
-      link: '/project - milestones',
-    }
+      link: '/project - milestones'}
 ,
       icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-10o0 text-red-70o0"  />;
-      link: '/project-milestones',
-    };
+      link: '/project-milestones'};
     {
       key: 'zion_hire_ai';
       descriptionKey: 'zion_hire_ai_desc';
@@ -729,8 +658,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
           <h2 className='text-3xl font-bold tracking-tight mb-3'>,
       icon: <Clock className="h-10 w-10 p-2 rounded-md bg-violet-10o0 text-violet-70o0"  />;
       link: '/zion-hire-ai';
-      badge: 'premium',
-    }
+      badge: 'premium'}
   ];
   return (
     <section
@@ -807,81 +735,70 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       detailsKey: 'ai_talent_matching_details';
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-10o0 text-blue-70o0"  />;
       link: '/match';
-      badge: 'popular',
-    };
+      badge: 'popular'};
     {
       key: 'talent_directory';
       descriptionKey: 'talent_directory_desc';
       detailsKey: 'talent_directory_details';
       icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-10o0 text-purple-70o0"  />;
-      link: '/talent',
-    };
+      link: '/talent'};
     {
       key: 'services_marketplace';
       descriptionKey: 'services_marketplace_desc';
       detailsKey: 'services_marketplace_details';
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-10o0 text-cyan-70o0"  />;
       link: '/services';
-      badge: 'new',
-    };
+      badge: 'new'};
     {
       key: 'equipment_catalog';
       descriptionKey: 'equipment_catalog_desc';
       detailsKey: 'equipment_catalog_details';
       icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-10o0 text-amber-70o0"  />;
-      link: '/equipment',
-    };
+      link: '/equipment'};
     {
       key: 'community_hub';
       descriptionKey: 'community_hub_desc';
       detailsKey: 'community_hub_details';
       icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-10o0 text-emerald-70o0"  />;
-      link: '/community',
-    };
+      link: '/community'};
     {
       key: 'mobile_app';
       descriptionKey: 'mobile_app_desc';
       detailsKey: 'mobile_app_details';
       icon: <Smartphone className="h-10 w-10 p-2 rounded-md bg-indigo-10o0 text-indigo-70o0"  />;
       link: '/mobile-launch';
-      badge: 'featured',
-    };
+      badge: 'featured'};
     {
       key: 'enterprise_solutions';
       descriptionKey: 'enterprise_solutions_desc';
       detailsKey: 'enterprise_solutions_details';
       icon: <Building className="h-10 w-10 p-2 rounded-md bg-pink-10o0 text-pink-70o0"  />;
-      link: '/enterprise',
-    };
+      link: '/enterprise'};
     {
       key: 'developer_tools';
       descriptionKey: 'developer_tools_desc';
       detailsKey: 'developer_tools_details';
       icon: <Code className="h-10 w-10 p-2 rounded-md bg-gray-10o0 text-gray-70o0"  />;
-      link: '/developers',
-    };
+      link: '/developers'};
     {
       key: 'learning_resources';
       descriptionKey: 'learning_resources_desc';
       detailsKey: 'learning_resources_details';
       icon: <BookOpen className="h-10 w-10 p-2 rounded-md bg-teal-10o0 text-teal-70o0"  />;
-      link: '/blog',
-    };
+      link: '/blog'};
     {
       key: 'project_management';
       descriptionKey: 'project_management_desc';
       detailsKey: 'project_management_details';
       icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-10o0 text-red-70o0"  />;
-      link: '/project-milestones',
-    };
+      link: '/project-milestones'};
     {
       key: 'zion_hire_ai';
       descriptionKey: 'zion_hire_ai_desc';
       detailsKey: 'zion_hire_ai_details';
       icon: <Clock className="h-10 w-10 p-2 rounded-md bg-violet-10o0 text-violet-70o0"  />;
       link: '/zion-hire-ai';
-      badge: 'premium',
-    }
+      badge: 'premium'}
 ]>,
       <div className='container mx - auto px - 4'>,
         <div className='mb - 12 text - center'>,
@@ -997,5 +914,4 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
         </div>,
       </div>,
     </section>))}
-,
 )))))))))))]

@@ -93,7 +93,5 @@ function PaymentCanceled() {
           </Button>,
         </div>,
       </div>,
-    </div>),
-}
-,
+    </div>)}
 }}}})

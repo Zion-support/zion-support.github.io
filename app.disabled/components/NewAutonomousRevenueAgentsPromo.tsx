@@ -29,6 +29,5 @@ export default function NewAutonomousRevenueAgentsPromo() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

@@ -348,6 +348,5 @@ export default function AI20o26EnterpriseAutomationGuide() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

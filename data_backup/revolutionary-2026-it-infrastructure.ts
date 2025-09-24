@@ -107,8 +107,7 @@ reviews: number,export const revolutionary20o26ITInfrastructureServices: Revolut
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full quantum cloud infrastructure with advanced computing, security, and monitoring capabilities.';
@@ -124,7 +123,7 @@ reviews: number,export const revolutionary20o26ITInfrastructureServices: Revolut
   Brain-inspired computing for next-generation AI';
     "price": $6,999;
     "period": '/month;
-    "description": 'Advanced neuromorphic computing platform that mimics the human brain for unprecedented AI window.performance. Perfect for AI research, robotics, and organizations developing next-generation intelligent systems.';
+    "description": 'Advanced neuromorphic computing platform that mimics the human brain for unprecedented AI window.window.performance. Perfect for AI research, robotics, and organizations developing next-generation intelligent systems.';
     features['Brain-inspired computing architecture';
   'Advanced neural networks';
   'Real-time learning capabilities';
@@ -186,8 +185,7 @@ reviews: number,export const revolutionary20o26ITInfrastructureServices: Revolut
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full neuromorphic computing platform with brain-inspired architecture and advanced AI capabilities.';
@@ -265,8 +263,7 @@ reviews: number,export const revolutionary20o26ITInfrastructureServices: Revolut
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full photonic computing infrastructure with light-speed processing and advanced optical capabilities.';
@@ -341,8 +338,7 @@ reviews: number,export const revolutionary20o26ITInfrastructureServices: Revolut
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced DNA computing platform with molecular processing and biological algorithms.';
@@ -420,8 +416,7 @@ reviews: number,export const revolutionary20o26ITInfrastructureServices: Revolut
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full holographic computing infrastructure with 3D processing and immersive capabilities.';
@@ -497,8 +492,7 @@ reviews: number,export const revolutionary20o26ITInfrastructureServices: Revolut
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full quantum internet infrastructure with ultra-secure communication and advanced networking capabilities.';
@@ -573,8 +567,7 @@ reviews: number,export const revolutionary20o26ITInfrastructureServices: Revolut
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced edge quantum computing platform with real-time processing and mobile optimization.';
@@ -650,8 +643,7 @@ reviews: number,export const revolutionary20o26ITInfrastructureServices: Revolut
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full quantum robotics infrastructure with advanced automation and real-time control capabilities.';

@@ -39,6 +39,5 @@ export default function RagAgentsCaseStudyPage() {
           </section>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

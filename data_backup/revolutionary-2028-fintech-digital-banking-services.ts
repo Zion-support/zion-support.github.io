@@ -116,8 +116,7 @@ reviews: number,export const revolutionary20o28FintechDigitalBankingServices: Re
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered digital banking platform with personalized services, automated investment, and comprehensive financial management.';
@@ -203,8 +202,7 @@ reviews: number,export const revolutionary20o28FintechDigitalBankingServices: Re
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered investment management platform with automated trading, portfolio optimization, and comprehensive risk management.';
@@ -291,8 +289,7 @@ technology[;
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   DeFi lending and borrowing platform with AI risk management, smart contracts, and comprehensive DeFi solutions.';

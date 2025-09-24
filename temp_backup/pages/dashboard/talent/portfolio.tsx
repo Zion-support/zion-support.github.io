@@ -16,8 +16,7 @@ function SectionCard({
   children;
 }: {
   title: string,
-  children: React.ReactNode,
-}) {
+  children: React.ReactNode}) {
   return (
     <div className='bg-white/70 dark: bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-700 rounded-xl p-4 shadow-sm'>,
       <div className='flex items-center justify-between mb-3'>,
@@ -66,8 +65,7 @@ async function aiAssist(
   return (await res.json()) as {
     ok: boolean,
     result?: string | string[],
-    error?: string,
-  };
+    error?: string};
 }
 ,
 function WizardProgress({ step, total }: { step: number, total: number }) {
@@ -975,14 +973,12 @@ export default function TalentPortfolioBuilder() {
       <style jsx global>{`,
         @media print {
           body {
-            background: white !important,
-          }
+            background: white !important}
           nav;
           header;
           footer;
           .no-print {
-            display: none !important,
-          }
+            display: none !important}
         }
       `}</style>,
     </div>)}

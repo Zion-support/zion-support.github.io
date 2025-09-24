@@ -29,15 +29,13 @@ export interface EmergingTechService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 const contact = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -469,7 +467,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-gray-400';
     link: 'https://ziontechgroup.com/quantum-robotics';
     marketPosition:,
-      'Competes with robotics platforms ($5,000/month), AI robotics ($3,000/month). Our advantage: Quantum enhancement and superior window.performance.';
+      'Competes with robotics platforms ($5,000/month), AI robotics ($3,000/month). Our advantage: Quantum enhancement and superior window.window.performance.';
     targetAudience: [
       'Manufacturing companies';
       'Healthcare organizations';
@@ -607,7 +605,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-orange-400';
     link: 'https://ziontechgroup.com/quantum-logistics-optimization';
     marketPosition:,
-      'Competes with logistics platforms ($500/month), optimization tools ($300/month). Our advantage: Quantum optimization and superior window.performance.';
+      'Competes with logistics platforms ($500/month), optimization tools ($300/month). Our advantage: Quantum optimization and superior window.window.performance.';
     targetAudience: [
       'Logistics companies';
       'Manufacturing companies';

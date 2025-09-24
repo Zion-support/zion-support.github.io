@@ -62,6 +62,5 @@ const EdgeAISecurityPlaybook20o25 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default EdgeAISecurityPlaybook20o25;

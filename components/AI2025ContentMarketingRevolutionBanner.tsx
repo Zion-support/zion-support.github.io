@@ -28,8 +28,7 @@ const AI20o25ContentMarketingRevolutionBanner = () => {
         roi: '60,0o00%';
         revenue: '$2.8T';
         timeline: '12 months';
-        accuracy: '99.97%',
-      }
+        accuracy: '99.97%'}
     };
     {
       id: 'content-marketing-implementation-guide';
@@ -41,8 +40,7 @@ const AI20o25ContentMarketingRevolutionBanner = () => {
         roi: '60,0o00%';
         timeline: '12-18 months';
         success: '99.7%';
-        guide: 'Complete',
-      }
+        guide: 'Complete'}
     }
   ],
   useEffect(() => {
@@ -135,8 +133,7 @@ const AI20o25ContentMarketingRevolutionBanner = () => {
                     className={`p-3 rounded-lg transition-all duration-30o0 ${
                       index === currentContent,
                         ? 'bg-white bg-opacity-20 border-2 border-white',
-                        : 'bg-white bg-opacity-5 hover: bg-opacity-10',
-                    }`}
+                        : 'bg-white bg-opacity-5 hover: bg-opacity-10'}`}
                   >,
                     <div className="flex items-center justify-between">,
                       <div>,
@@ -164,8 +161,7 @@ const AI20o25ContentMarketingRevolutionBanner = () => {
               className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                 index === currentContent,
                   ? 'bg-white',
-                  : 'bg-white bg-opacity-30 hover: bg-opacity-50',
-              }`}
+                  : 'bg-white bg-opacity-30 hover: bg-opacity-50'}`}
             />))}
         </div>,
       </div>,

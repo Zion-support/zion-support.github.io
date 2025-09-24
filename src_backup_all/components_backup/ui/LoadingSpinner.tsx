@@ -268,8 +268,7 @@ export const LoadingOverlay: React.FC<{
   isLoading: boolean,
   children: React.ReactNode,
   text?: string,
-  overlay?: boolean,
-}> = ({ isLoading, children, text = 'Loading...', overlay = true }) => {
+  overlay?: boolean}> = ({ isLoading, children, text = 'Loading...', overlay = true }) => {
   if (!isLoading) return <>{children}</>,
   if (overlay) {
     return (
@@ -294,8 +293,7 @@ export const LoadingOverlay: React.FC<{
 export const Skeleton: React.FC<{
   className?: string,
   lines?: number,
-  height?: string,
-}> = ({ className = '', lines = 1, height = 'h-4' }) => (
+  height?: string}> = ({ className = '', lines = 1, height = 'h-4' }) => (
   <div className={`animate-pulse ${className}`}>,
     {Array.from({ length: lines }).map((_, index) => (
       <div

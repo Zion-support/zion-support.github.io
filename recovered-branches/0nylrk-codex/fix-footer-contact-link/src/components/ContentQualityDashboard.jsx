@@ -115,8 +115,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
           case 'poor':,
             return page.overallScore < 40,
           default: ,
-            return true,
-        }
+            return true}
       })}
     return filtered};
   const getStatusColor = score => {

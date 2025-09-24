@@ -2,16 +2,13 @@ import React from 'react';
 import type { PublicReview } from '../../types/reviews',
 import StarRating from './StarRating',
 import { Star } from 'lucide-react',
-import {Star} from 'lucide-react',
-
-}</div> </div>) };
+import {Star} from 'lucide-react'}</div> </div>) };
 :backup-problematic-files/reviews/ReviewCard.tsx,
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (import StarRating from './StarRating',
 type Props ={
   review: PublicReview;
-  onReport?: (id: string) => void,
-};
+  onReport?: (id: string) => void};
 type Props ={
   review: PublicReview;
   onReport?: (id: string) => void,

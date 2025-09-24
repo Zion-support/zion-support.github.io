@@ -12,8 +12,7 @@ interface DiscussionPost {
   avatar?: string,
   time: string,
   title: string,
-  body: string,
-}
+  body: string}
 ,
 const initialPosts: DiscussionPost[] = [
   {

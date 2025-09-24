@@ -11,8 +11,7 @@ type InsightResponse = {
   trendMonthly: { label: string, value: number }[],
   regionalComparison: { region: string, medianHourlyUsd: number }[],
   tags: string[],
-  gptRecommendation?: string,
-};
+  gptRecommendation?: string};
 export default function SalaryInsightsPage() {
   const [roleTitlesetRoleTitle] = useState('Senior AI Engineer'),
   const [skillsetSkills] = useState('OpenAIRAGTypeScript'),
@@ -50,8 +49,7 @@ export default function SalaryInsightsPage() {
       if (!res.ok) throw new Error('Failed to fetch insights'),
       const json = (await res.json()) as InsightResponse,
       setData(json)} catch (e: any) {
-      setError(e.message || 'Unexpected error'),
-    } finally {
+      setError(e.message || 'Unexpected error')} finally {
       setLoading(false)}
   }
 ,

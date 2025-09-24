@@ -4,8 +4,7 @@ export default function PersonCard({
   showPhoto = true;
 }: {
   person: BasePerson,
-  showPhoto?: boolean,
-}) {
+  showPhoto?: boolean}) {
   return (
     <div className='rounded-xl border border-gray-20o0 dark: border-gray-80o0 bg-white dark:bg-gray-90o0 p-4 shadow-sm hover:shadow-md transition'>,
       <div className='flex items-center gap-4'>,

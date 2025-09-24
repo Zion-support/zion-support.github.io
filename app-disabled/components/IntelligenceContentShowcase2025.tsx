@@ -21,8 +21,7 @@ interface ContentItem {
     savings?: string,
     satisfaction?: string,
     efficiency?: string,
-    accuracy?: string,
-  };
+    accuracy?: string};
   readingTime?: string,
   description?: string,
   tags?: string[],
@@ -160,8 +159,7 @@ const IntelligenceContentShowcase20o25: React.FC = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
   };
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -172,8 +170,7 @@ const IntelligenceContentShowcase20o25: React.FC = () => {
       case 'resource':,
         return <ArrowRight className='w-4 h-4' />,
       default:,
-        return <Zap className='w-4 h-4' />,
-    }
+        return <Zap className='w-4 h-4' />}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50'>,
@@ -202,8 +199,7 @@ const IntelligenceContentShowcase20o25: React.FC = () => {
               className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-20o0 ${
                 activeFilter === filter.id,
                   ? 'bg-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {filter.label}
               <span className='ml-2 px-2 py-0.5 bg-blue-10o0 text-blue-80o0 rounded-full text-xs'>,
@@ -217,8 +213,7 @@ const IntelligenceContentShowcase20o25: React.FC = () => {
             <div
               key={item.id}
               className={`group relative bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 overflow-hidden ${
-                item.featured ? 'ring-2 ring-blue-50o0 ring-opacity-50' : '',
-              }`}
+                item.featured ? 'ring-2 ring-blue-50o0 ring-opacity-50' : ''}`}
             >,
               {item.featured && (
                 <div className='absolute top-4 right-4 z-10'>,
@@ -397,6 +392,5 @@ const IntelligenceContentShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default IntelligenceContentShowcase20o25;

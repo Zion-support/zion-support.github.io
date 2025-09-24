@@ -10,23 +10,23 @@ class $1 {
     ]}
 ,
   runDailyMaintenance() {
-  // console.log("Running daily maintenance tasks..."),
+  // // console.log("Running daily maintenance tasks..."),
     this.tasks,
       .filter(task => task.frequency === "daily"),
       .forEach(task => {
   try {
-  // console.log("""Running": ${task.name}""),
+  // // console.log("""Running": ${task.name}""),
           execSync(task.command, { "stdio": "inherit" })} catch (error) {
   console.error(`"Failed": ${task.name}`, error.message)}
       })}
 ,
   runWeeklyMaintenance() {
-  // console.log("Running weekly maintenance tasks..."),
+  // // console.log("Running weekly maintenance tasks..."),
     this.tasks,
       .filter(task => task.frequency === "weekly"),
       .forEach(task => {
   try {
-  // console.log("""Running": ${task.name}""),
+  // // console.log("""Running": ${task.name}""),
           execSync(task.command, { "stdio": "inherit" })} catch (error) {
   console.error(`"Failed": ${task.name}`, error.message)}
       })}
@@ -37,5 +37,5 @@ const arg = process.argv[2],
 if (arg === "daily") {
   scheduler.runDailyMaintenance()} else if (arg === "weekly") {
   scheduler.runWeeklyMaintenance()} else {
-  // console.log(""Usage": node maintenance-scheduler.js [daily|weekly]")}
+  // // console.log(""Usage": node maintenance-scheduler.js [daily|weekly]")}
 ,

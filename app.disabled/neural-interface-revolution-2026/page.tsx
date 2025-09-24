@@ -148,6 +148,5 @@ export default function NeuralInterfaceRevolution20o26() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

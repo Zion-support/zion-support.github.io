@@ -30,13 +30,11 @@ export function ConversationDetailView() {
     inputRef.current?.focus()};
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault(),
-    await send(),
-  };
+    await send()};
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault(),
-      send(),
-    }
+      send()}
   };
   if (!activeConversation) {
     return (
@@ -174,6 +172,5 @@ export function ConversationDetailView() {
           </Button>,
         </form>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

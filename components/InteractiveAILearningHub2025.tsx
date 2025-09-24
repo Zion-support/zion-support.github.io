@@ -168,8 +168,7 @@ const InteractiveAILearningHub20o25 = () => {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -178,8 +177,7 @@ const InteractiveAILearningHub20o25 = () => {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -233,8 +231,7 @@ const InteractiveAILearningHub20o25 = () => {
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-20o0 ${
                     selectedLevel === level.id,
                       ? `bg-${level.color}-60o0 text-white shadow-lg`,
-                      : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0',
-                  }`}
+                      : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0'}`}
                 >,
                   {level.name}
                 </button>))}
@@ -254,8 +251,7 @@ const InteractiveAILearningHub20o25 = () => {
               className={`flex items-center px-6 py-3 rounded-lg font-medium transition-all duration-20o0 ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0'}`}
             >,
               <category.icon className="w-5 h-5 mr-2"  />,
               {category.name}
@@ -290,8 +286,7 @@ const InteractiveAILearningHub20o25 = () => {
                       className={`p-2 rounded-full backdrop-blur-sm transition-colors ${
                         bookmarkedCourses.has(course.id),
                           ? 'bg-yellow-50o0 text-white',
-                          : 'bg-white/20 text-white hover: bg-white/30',
-                      }`}
+                          : 'bg-white/20 text-white hover: bg-white/30'}`}
                     >,
                       <Bookmark className={`w-4 h-4 ${bookmarkedCourses.has(course.id) ? 'fill-current' : ''}`}  />,
                     </button>,
@@ -415,24 +410,21 @@ const InteractiveAILearningHub20o25 = () => {
                 courses: 8;
                 duration: '6 months';
                 level: 'Beginner to Intermediate';
-                color: 'green',
-              };
+                color: 'green'};
               {
                 title: 'ML Engineer Track';
                 description: 'Advanced machine learning and engineering skills';
                 courses: 12;
                 duration: '8 months';
                 level: 'Intermediate to Advanced';
-                color: 'blue',
-              };
+                color: 'blue'};
               {
                 title: 'AI Research Path';
                 description: 'Cutting-edge research and innovation in AI';
                 courses: 10;
                 duration: '10 months';
                 level: 'Advanced';
-                color: 'purple',
-              }
+                color: 'purple'}
             ].map((pathindex) => (
               <div
                 key={index}
@@ -492,6 +484,5 @@ const InteractiveAILearningHub20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default InteractiveAILearningHub20o25;

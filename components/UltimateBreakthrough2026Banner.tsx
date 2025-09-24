@@ -128,6 +128,5 @@ const UltimateBreakthrough20o26Banner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateBreakthrough20o26Banner;

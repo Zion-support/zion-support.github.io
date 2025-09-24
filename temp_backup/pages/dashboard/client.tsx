@@ -20,8 +20,7 @@ type TalentSuggestion = {
 interface JobGroup {
   jobId: string;
   jobTitle: string;
-  suggestions: TalentSuggestion[],
-}
+  suggestions: TalentSuggestion[]}
 ,
 const SUGGESTION_TABLE_ENV =,
   process.env.NEXT_PUBLIC_AI_MATCHES_TABLE || "ai_matches";
@@ -39,8 +38,7 @@ function InviteModal({
   open: boolean,
   onClose: () => void,
   talent: TalentSuggestion | null,
-  jobTitle: string | null,
-}) {
+  jobTitle: string | null}) {
   if (!open || !talent) return null;
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">,
@@ -98,8 +96,7 @@ function InviteModal({
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
 export default function ClientDashboardSuggestedTalents() {
   const [userId, setUserId] = useState<string | null>(null);

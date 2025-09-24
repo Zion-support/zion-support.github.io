@@ -26,8 +26,7 @@ import { logErrorToProduction } from '@/utils/productionLogger',
 } from 'lucide-react',
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
-  errorMessage?: string,
-}
+  errorMessage?: string}
 ,
 export function ZionGPTModelManager() {
   const [models, setModels] = useState<ModelVersionData[]>([]),

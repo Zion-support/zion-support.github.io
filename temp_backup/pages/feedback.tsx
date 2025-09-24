@@ -15,6 +15,5 @@ export default function FeedbackPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

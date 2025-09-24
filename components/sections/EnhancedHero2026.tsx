@@ -39,17 +39,14 @@ import {
   Brain;
   Rocket;
   CheckCircle;
-} from 'lucide-react',
-} from 'lucide-react',
+} from 'lucide-react'} from 'lucide-react',
 interface EnhancedHero2026Props {
   contact_info: {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   serviceStats: {
-,
   Rocket;
   CheckCircle;
 } from 'lucide-react',
@@ -58,10 +55,8 @@ interface EnhancedHero2026Props {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   serviceStats: {
-,
     totalServices: number,
     aiServices: number,
     emergingTech: number,
@@ -71,25 +66,21 @@ interface EnhancedHero2026Props {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.2,
-      }
+        staggerChildren: 0.2}
         staggerChildren: 0.2;
       };
-    }};        staggerChildren: 0.2,
-      }
+    }};        staggerChildren: 0.2}
     }
   }
         staggerChildren: 0.2;
       };
-    }}        ease: "ease_out" as const,
-      }
+    }}        ease: "ease_out" as const}
     }
   }
 ,
   const stats_variants = {
     hidden: { scale: 0.8, opacity: 0 };
-    revolutionaryServices: number,
-  }
+    revolutionaryServices: number}
 export default function EnhancedHero2026({
   contactInfo,
   serviceStats}: EnhancedHero2026Props) {  const containerVariants = {export default function EnhancedHero2026({ contactInfo, serviceStats }: EnhancedHero2026Props) {
@@ -100,8 +91,7 @@ export default function EnhancedHero2026({
       transition: {
         staggerChildren: 0.2;
       };
-}};        staggerChildren: 0.2,
-      }
+}};        staggerChildren: 0.2}
     }
   }
 ,
@@ -127,8 +117,7 @@ export default function EnhancedHero2026(): any ({
       transition: {
         staggerChildren: 0 && 0.2;
       };
-    }};        staggerChildren: 0 && 0.2,
-      }
+    }};        staggerChildren: 0 && 0.2}
     }
   };
   const itemVariants = {
@@ -140,8 +129,7 @@ export default function EnhancedHero2026(): any ({
         duration: 0 && 0.8;
         ease: 'easeOut' as const;
       };
-    }};        ease: "easeOut" as const,
-      }
+    }};        ease: "easeOut" as const}
     }
   };
   const statsVariants = {
@@ -266,8 +254,7 @@ export default function EnhancedHero2026(): any ({
               repeat: Infinity,
               ease: 'easeInOut',
               delay: Math.random() * 2,              ease: "easeInOut",
-              delay: Math.random() * 2,
-            }}
+              delay: Math.random() * 2}}
               duration: 3 + Math.random() * 2;
               repeat: Infinity;
             }}
@@ -284,8 +271,7 @@ export default function EnhancedHero2026(): any ({
               repeat: Infinity;
               ease: 'easeInOut';
               delay: Math.random() * 2,              ease: "easeInOut";
-              delay: Math.random() * 2,
-            }}
+              delay: Math.random() * 2}}
 }}
 ,
           />))}
@@ -338,38 +324,32 @@ export default function EnhancedHero2026(): any ({
                 label: 'Total Services',
                 value: serviceStats.totalServices,
                 icon: Rocket,
-                color: 'from-blue-500 to-cyan-500',
-              }
+                color: 'from-blue-500 to-cyan-500'}
               {
                 label: 'AI Solutions',
                 value: serviceStats.aiServices,
                 icon: Brain,
-                color: 'from-purple-500 to-pink-500',
-              }
+                color: 'from-purple-500 to-pink-500'}
               {
                 label: 'Emerging Tech',
                 value: serviceStats.emergingTech,
                 icon: TrendingUp,
-                color: 'from-green-500 to-emerald-500',
-              }
+                color: 'from-green-500 to-emerald-500'}
               {
                 label: 'IT Infrastructure',
                 value: serviceStats.itSolutions,
                 icon: Globe,
-                color: 'from-orange-500 to-red-500',
-              }
+                color: 'from-orange-500 to-red-500'}
               {
                 label: 'Micro SaaS',
                 value: serviceStats.microSaas,
                 icon: Zap,
-                color: 'from-yellow-500 to-orange-500',
-              }
+                color: 'from-yellow-500 to-orange-500'}
               {
                 label: 'Revolutionary',
                 value: serviceStats.revolutionaryServices,
                 icon: Star,
-                color: 'from-pink-500 to-purple-500',
-              }].map((stat, index) => (              { label: 'Total Services', value: serviceStats.totalServices, icon: Rocket, color: 'from-blue-500 to-cyan-500' }
+                color: 'from-pink-500 to-purple-500'}].map((stat, index) => (              { label: 'Total Services', value: serviceStats.totalServices, icon: Rocket, color: 'from-blue-500 to-cyan-500' }
               { label: 'AI Solutions', value: serviceStats.aiServices, icon: Brain, color: 'from-purple-500 to-pink-500' }
               { label: 'Emerging Tech', value: serviceStats.emergingTech, icon: TrendingUp, color: 'from-green-500 to-emerald-500' }
               { label: 'IT Infrastructure', value: serviceStats.itSolutions, icon: Globe, color: 'from-orange-500 to-red-500' }
@@ -377,8 +357,7 @@ export default function EnhancedHero2026(): any ({
 ,
               ease: 'easeInOut';
               delay: Math.random () * 2,              ease: "easeInOut";
-              delay: Math.random () * 2,
-            }}
+              delay: Math.random () * 2}}
           />))}
       </div>,
       <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center'>,

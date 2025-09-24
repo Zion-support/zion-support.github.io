@@ -18,15 +18,13 @@ interface SidebarItem {
   children?: SidebarItem[],
   badge?: string,
   isNew?: boolean,
-  isHot?: boolean,
-}
+  isHot?: boolean}
 ,
 const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const sidebarItems: SidebarItem[] = [
   {
     name: 'All Services';
@@ -213,8 +211,7 @@ const resources = [
   const toggleSection = (title: string) => {
     const newExpanded = new Set(expandedSections),
     if (newExpanded.has(title)) {
-      newExpanded.delete(title),
-    } else {
+      newExpanded.delete(title)} else {
       newExpanded.add(title)}
     setExpandedSections(newExpanded)};
   const filteredServices = sidebarItems.flatMap(item =>,

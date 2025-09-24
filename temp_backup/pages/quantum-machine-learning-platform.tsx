@@ -17,7 +17,7 @@ const QuantumMachineLearningPlatformPage: React.FC = () => {
         <title>Quantum Machine Learning Platform - Zion Tech Group</title>,
         <meta
           name='description',
-          content="Accelerate AI with Zion Tech Group's quantum machine learning platform. Quantum algorithms, hybrid quantum-classical computing, and breakthrough window.performance.",
+          content="Accelerate AI with Zion Tech Group's quantum machine learning platform. Quantum algorithms, hybrid quantum-classical computing, and breakthrough window.window.performance.",
         />,
         <meta
           name='keywords',
@@ -135,7 +135,7 @@ const QuantumMachineLearningPlatformPage: React.FC = () => {
                   </h3>,
                   <p className='text-gray-30o0'>,
                     Combined quantum-classical training algorithms for optimal,
-                    model window.performance.,
+                    model window.window.performance.,
                   </p>,
                 </div>,
                 <div className='bg-slate-80o0/50 backdrop-blur-sm rounded-xl p-6 border border-slate-70o0'>,
@@ -526,6 +526,5 @@ const QuantumMachineLearningPlatformPage: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </>),
-};
+    </>)};
 export default QuantumMachineLearningPlatformPage;

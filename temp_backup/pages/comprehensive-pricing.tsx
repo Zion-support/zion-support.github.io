@@ -64,15 +64,13 @@ export default function ComprehensivePricingPage() {
         const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
         return bRoi - aRoi;
-      default: return a.name.localeCompare(b.name),
-    }
+      default: return a.name.localeCompare(b.name)}
   });
   const contactInfo ={
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   // Pricing tiers,
   const pricingTiers = [
     {
@@ -86,8 +84,7 @@ export default function ComprehensivePricingPage() {
         'Basic analytics'];
       icon: <Star className="w-6 h-6"  />;
       color: 'from-blue-50o0 to-cyan-60o0';
-      popular: false,
-    };
+      popular: false};
     {
       name: 'Professional';
       price: '$199';
@@ -99,8 +96,7 @@ export default function ComprehensivePricingPage() {
         'Advanced analyticsCustom integrations'];
       icon: <Gem className="w-6 h-6"  />;
       color: 'from-purple-50o0 to-pink-60o0';
-      popular: true,
-    };
+      popular: true};
     {
       name: 'Enterprise';
       price: '$499';
@@ -113,8 +109,7 @@ export default function ComprehensivePricingPage() {
         'SLA guarantees'];
       icon: <Crown className="w-6 h-6"  />;
       color: 'from-yellow-50o0 to-orange-60o0';
-      popular: false,
-    }
+      popular: false}
   ];
   // Market statistics,
   const marketStats = [
@@ -122,34 +117,29 @@ export default function ComprehensivePricingPage() {
       metric: '$15.2B';
       label: 'Total Market Size';
       description: 'Combined market value of all services';
-      icon: <ChartBar className="w-6 h-6"  />,
-    };
+      icon: <ChartBar className="w-6 h-6"  />};
     {
       metric: '40o0+';
       label: 'Services Available';
       description: 'Comprehensive micro SaaS portfolio';
-      icon: <Database className="w-6 h-6"  />,
-    };
+      icon: <Database className="w-6 h-6"  />};
     {
       metric: '99.99%';
       label: 'Uptime Guarantee';
       description: 'Enterprise-grade reliability';
-      icon: <Shield className="w-6 h-6"  />,
-    };
+      icon: <Shield className="w-6 h-6"  />};
     {
       metric: '20o00%+';
       label: 'Average ROI';
       description: 'Proven business value';
-      icon: <TrendingUp className="w-6 h-6"  />,
-    }
+      icon: <TrendingUp className="w-6 h-6"  />}
   ];
   const containerVariants ={
     hidden: { opacity: 0 };
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -158,8 +148,7 @@ export default function ComprehensivePricingPage() {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -406,8 +395,7 @@ export default function ComprehensivePricingPage() {
             <motion.div,
               className={viewMode === 'grid',
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8",
-                : "space-y-6",
-              }
+                : "space-y-6"}
               variants={containerVariants}
               initial="hidden",
               whileInView="visible",

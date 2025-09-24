@@ -20,8 +20,7 @@ export type InnovativeMicroSaas = {
   link: string,
   realService?: boolean,
   rating?: number,
-  launchDate?: string,
-};
+  launchDate?: string};
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
   {
     id: 'podcast-transcription-seo-suite';

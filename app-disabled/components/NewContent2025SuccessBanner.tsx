@@ -16,22 +16,19 @@ const NewContent20o25SuccessBanner = () => {
       url: '/blog/ai-20o25-enterprise-automation-mastery-ultimate-success';
       roi: '60o0%';
       savings: '$50o0M+';
-      type: 'Blog Post',
-    };
+      type: 'Blog Post'};
     {
       title: 'Fortune 50o0 AI Transformation';
       url: '/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success';
       roi: '80o0%';
       savings: '$2.1B';
-      type: 'Case Study',
-    };
+      type: 'Case Study'};
     {
       title: 'AI Transformation Ultimate Guide';
       url: '/resources/ai-transformation-ultimate-guide-20o25';
       roi: '80o0%';
       savings: '$50o0M+';
-      type: 'Resource',
-    }
+      type: 'Resource'}
   ],
   useEffect(() => {
     const timer = setInterval(() => {

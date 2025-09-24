@@ -317,6 +317,5 @@ export default function EducationSolutions() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

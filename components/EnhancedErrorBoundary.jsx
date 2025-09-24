@@ -13,14 +13,12 @@ class EnhancedErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     this.setState({
       error: error;
-      errorInfo: errorInfo,
-    }),
+      errorInfo: errorInfo}),
     // Log error to analytics or error reporting service,
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
         description: error.toString();
-        fatal: false,
-      })}
+        fatal: false})}
   }
 ,
   render() {

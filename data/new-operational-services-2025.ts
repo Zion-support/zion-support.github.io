@@ -11,8 +11,7 @@ export interface NewOperationalService20o25 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const newOperationalServices2025: NewOperationalService2025[] = [
   {

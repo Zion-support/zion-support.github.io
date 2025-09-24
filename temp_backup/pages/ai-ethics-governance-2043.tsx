@@ -15,6 +15,5 @@ export default function AiEthicsGovernance20o43Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -292,6 +292,5 @@ export default function AIEducationPlatform() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

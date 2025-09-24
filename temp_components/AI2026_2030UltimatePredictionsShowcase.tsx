@@ -31,8 +31,7 @@ const AI20o26_20o30UltimatePredictionsShowcase = () => {
       impact: 'Transform human-computer interaction forever';
       technologies: ['Neural Implants'Brain-Computer Interfaces'Cognitive Enhancement'];
       icon: Brain;
-      color: 'from-purple-50o0 to-pink-50o0',
-    };
+      color: 'from-purple-50o0 to-pink-50o0'};
     {
       year: '20o27';
       title: 'Quantum AI Fusion';
@@ -40,8 +39,7 @@ const AI20o26_20o30UltimatePredictionsShowcase = () => {
       impact: 'Solve previously impossible computational challenges';
       technologies: ['Quantum AI'Quantum Machine Learning'Quantum Optimization'];
       icon: Atom;
-      color: 'from-blue-50o0 to-cyan-50o0',
-    };
+      color: 'from-blue-50o0 to-cyan-50o0'};
     {
       year: '20o28';
       title: 'Autonomous Everything';
@@ -49,8 +47,7 @@ const AI20o26_20o30UltimatePredictionsShowcase = () => {
       impact: 'Eliminate human intervention in routine operations';
       technologies: ['Autonomous Systems'Self-Managing Infrastructure'AI Governance'];
       icon: Cpu;
-      color: 'from-green-50o0 to-emerald-50o0',
-    };
+      color: 'from-green-50o0 to-emerald-50o0'};
     {
       year: '20o29';
       title: 'Emotional AI Mastery';
@@ -58,8 +55,7 @@ const AI20o26_20o30UltimatePredictionsShowcase = () => {
       impact: 'Revolutionize human-AI relationships and therapy';
       technologies: ['Emotional AI'Empathetic Computing'AI Therapy'];
       icon: Users;
-      color: 'from-orange-50o0 to-red-50o0',
-    };
+      color: 'from-orange-50o0 to-red-50o0'};
     {
       year: '20o30';
       title: 'Consciousness Integration';
@@ -67,8 +63,7 @@ const AI20o26_20o30UltimatePredictionsShowcase = () => {
       impact: 'Redefine what it means to be conscious and intelligent';
       technologies: ['Artificial Consciousness'AI Rights'Human-AI Collaboration'];
       icon: Lightbulb;
-      color: 'from-yellow-50o0 to-orange-50o0',
-    }
+      color: 'from-yellow-50o0 to-orange-50o0'}
   ],
   const keyTrends = [
     {
@@ -266,6 +261,5 @@ const AI20o26_20o30UltimatePredictionsShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o26_20o30UltimatePredictionsShowcase;

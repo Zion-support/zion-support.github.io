@@ -573,6 +573,5 @@ const BenefitsPage: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-};
+    </Layout>)};
 export default BenefitsPage;

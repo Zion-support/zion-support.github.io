@@ -33,7 +33,7 @@ class AutomationRunner {
           : level === 'warn',
             ? '⚠️',
             : 'ℹ️',
-    // console.log(`${prefix} [${timestamp}] ${message}`)}
+    // // console.log(`${prefix} [${timestamp}] ${message}`)}
 ,
   async executeCommand(command, options ={}) {
     try {
@@ -161,25 +161,25 @@ class AutomationRunner {
   async showStatus() {
     const status = await this.getGitStatus(),
     if (!status) return,
-    // console.log('\n📊 Git Status Summary: '),
-    // console.log('====================='),
+    // // console.log('\n📊 Git Status Summary: '),
+    // // console.log('====================='),
     if (status.staged.length > 0) {
-      // console.log(`\n📦 Staged files (${status.staged.length}):`),
-      status.staged.forEach((file) => // console.log(`  ✅ ${file}`))}
+      // // console.log(`\n📦 Staged files (${status.staged.length}):`),
+      status.staged.forEach((file) => // // console.log(`  ✅ ${file}`))}
 ,
     if (status.unstaged.length > 0) {
-      // console.log(`\n📝 Modified files (${status.unstaged.length}):`),
-      status.unstaged.forEach((file) => // console.log(`  📝 ${file}`))}
+      // // console.log(`\n📝 Modified files (${status.unstaged.length}):`),
+      status.unstaged.forEach((file) => // // console.log(`  📝 ${file}`))}
 ,
     if (status.untracked.length > 0) {
-      // console.log(`\n🆕 Untracked files (${status.untracked.length}):`),
-      status.untracked.forEach((file) => // console.log(`  🆕 ${file}`))}
+      // // console.log(`\n🆕 Untracked files (${status.untracked.length}):`),
+      status.untracked.forEach((file) => // // console.log(`  🆕 ${file}`))}
 ,
     if (
       status.staged.length === 0 &&,
       status.unstaged.length === 0 &&,
       status.untracked.length === 0) {
-      // console.log('\n✅ Working directory is clean')}
+      // // console.log('\n✅ Working directory is clean')}
   }
 ,
   async runAll() {
@@ -200,7 +200,7 @@ class AutomationRunner {
     return success}
 ,
   showHelp() {
-    // console.log(`,
+    // // console.log(`,
 🚀 Automation Runner,
 Usage: ,
   node automation/run-automation.js [command],
@@ -224,8 +224,7 @@ Features:,
   ✅ Performance monitoring,
   ✅ Status checking,
   ✅ Quick operations,
-        `),
-  }
+        `)}
 }
 ,
 // Main execution,
@@ -270,7 +269,7 @@ async function main() {
         await runner.push(),
         break,
       default:  ,
-        // console.log(`❌ Unknown command: ${command}`),
+        // // console.log(`❌ Unknown command: ${command}`),
         runner.showHelp(),
         process.exit(1)}
   } catch (error) {

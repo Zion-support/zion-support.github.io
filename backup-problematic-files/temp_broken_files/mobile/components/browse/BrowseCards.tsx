@@ -20,8 +20,7 @@ interface BrowseItem {
 interface BrowseCardsProps {
   items:BrowseItem[];
   type:"jobs" | "talents";
-  onViewDetails: (id:string) => void,
-}
+  onViewDetails: (id:string) => void}
 ,
 export function BrowseCards({ items, type, onViewDetails } BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]>([]);
@@ -117,8 +116,7 @@ badges: string[],
 price?: string,
 image?: string,
 match?: number,
-timePosted?: string ,
-}interface BrowseCardsProps {
+timePosted?: string }interface BrowseCardsProps {
   }export function BrowseCards ({
   items,  type, onViewDetails }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]> ([]),
@@ -127,5 +125,4 @@ setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id
   item.location }</span> </div>) }<span >{
   item.price }</span> </div>) }<span >{
   item.timePosted }</span> </div>) }{
-,
   item.match }% match </div>) "}</div> </div> <div className="border-t border-border p-3 flex justify-end" > <Button > View Details <ChevronRight className="h-4 w-4"  /> </Button> </div> </CardContent> </Card>) ) }</div>) }",

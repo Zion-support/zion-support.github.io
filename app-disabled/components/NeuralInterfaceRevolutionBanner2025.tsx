@@ -15,13 +15,11 @@ const NeuralInterfaceRevolutionBanner20o25 = () => {
         roi: '750%';
         savings: '$4.2M';
         productivity: '156%';
-        accuracy: '99.7%',
-      };
+        accuracy: '99.7%'};
       url: '/blog/ai-20o25-neural-interface-revolution-ultimate-guide';
       type: 'blog';
       readingTime: '22 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'neural-interface-fortune-50o0';
       title: 'Fortune 50o0 Neural Interface Transformation';
@@ -31,13 +29,11 @@ const NeuralInterfaceRevolutionBanner20o25 = () => {
         roi: '850%';
         savings: '$67M';
         efficiency: '94%';
-        satisfaction: '98%',
-      };
+        satisfaction: '98%'};
       url: '/case-studies/neural-interface-fortune-50o0-transformation-20o25';
       type: 'case-study';
       readingTime: '18 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'neural-interface-implementation';
       title: 'Neural Interface Implementation Master Guide';
@@ -47,13 +43,11 @@ const NeuralInterfaceRevolutionBanner20o25 = () => {
         roi: '850%';
         success: '94%';
         timeline: '15 months';
-        savings: '$4.2M',
-      };
+        savings: '$4.2M'};
       url: '/resources/neural-interface-implementation-master-guide-20o25';
       type: 'resource';
       readingTime: '35 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -191,6 +185,5 @@ const NeuralInterfaceRevolutionBanner20o25 = () => {
           <X className="h-6 w-6"  />,
         </button>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NeuralInterfaceRevolutionBanner20o25;

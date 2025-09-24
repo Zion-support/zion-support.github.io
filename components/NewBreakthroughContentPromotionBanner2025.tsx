@@ -141,6 +141,5 @@ export default function NewBreakthroughContentPromotionBanner20o25() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

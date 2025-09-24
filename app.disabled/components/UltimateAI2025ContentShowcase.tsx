@@ -288,8 +288,7 @@ const UltimateAI20o25ContentShowcase = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-purple-50 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-purple-50 border border-gray-20o0'}`}
             >,
               {category.label} ({category.count}),
             </button>))}
@@ -427,6 +426,5 @@ const UltimateAI20o25ContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateAI20o25ContentShowcase;

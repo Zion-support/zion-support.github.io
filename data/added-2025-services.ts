@@ -10,8 +10,7 @@ export interface AddedService {
   icon?: string,
   link?: string,
   rating?: number,
-  customerCount?: number,
-}
+  customerCount?: number}
 export const added2025Services: AddedService[] = [
   {
     id: 'ai-assistant-pro';

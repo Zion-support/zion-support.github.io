@@ -14,8 +14,7 @@ function toSlug(name: string): string {
     .toLowerCase(),
     .replace(/[^a-z0-9]+/g, "-"),
     .replace(/(^-|-$)+/g, ""),
-    .slice(0, 64),
-}
+    .slice(0, 64)}
 function ensureDir(dirPath: string) {if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true })}
 }
@@ -481,7 +480,6 @@ if ( {) {
     .filter(([key, val]) => val && ["globalMap", "franchiseOnboarding", "referralAmbassadors", "grantPortal", "trailer", "bookStore"].includes(key)),
     .map(([key]) => key);
   if (optionalModules.length > 0) {
-,
     const optionalPath = path.join(baseDir, "optional-modules.json");
     writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2));
     assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" })}
@@ -499,7 +497,6 @@ if ( {) {
     version}
     .map(([key]) => key);
   if (optionalModules.length > 0) {
-,
     const optionalPath = path.join(baseDir, "optional-modules.json"),
     writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2));
     assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" })} catch (error) {

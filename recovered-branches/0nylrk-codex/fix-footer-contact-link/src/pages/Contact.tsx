@@ -37,12 +37,10 @@ export default function Contact() {
     name: "";
     email: "";
     subject: "";
-    message: "",
-  }),
+    message: ""}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isChatOpen, setIsChatOpen] = useState(false),
-    message: "",
-  });
+    message: ""});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -78,19 +76,16 @@ export default function Contact() {
           name: "",
           email: "",
           subject: "",
-          message: "",
-        })}, 1500)} catch (error) {
+          message: ""})}, 1500)} catch (error) {
       if (error instanceof z.ZodError) {
         toast({
           title: "Form Validation Error",
           description: error.errors[0].message,
-          variant: "destructive",
-        })} else {
+          variant: "destructive"})} else {
         toast({
           title: "An error occurred",
           description: "Please try again later",
-          variant: "destructive",
-        })}
+          variant: "destructive"})}
     }
 }
   };
@@ -288,8 +283,7 @@ export default function Contact() {
     name: "";
     email: "";
     subject: "";
-    message: "",
-  });
+    message: ""});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -317,19 +311,16 @@ export default function Contact() {
           name: "";
           email: "";
           subject: "";
-          message: "",
-        })}, 1500)} catch (error) {
+          message: ""})}, 1500)} catch (error) {
       if (error instanceof z.ZodError) {
         toast({
           title: "Form Validation Error";
           description: error.errors[0].message;
-          variant: "destructive",
-        })} else {
+          variant: "destructive"})} else {
         toast({
           title: "An error occurred";
           description: "Please try again later";
-          variant: "destructive",
-        })}
+          variant: "destructive"})}
     }
   };
   // Handle sending messages to the AI chat assistant,
@@ -349,8 +340,7 @@ export default function Contact() {
       toast({
         title: "Chat Error";
         description: "There was an error communicating with our AI assistant. Please try again.";
-        variant: "destructive",
-      });
+        variant: "destructive"});
       return Promise.resolve()}
   };
   const offices = [
@@ -358,14 +348,12 @@ export default function Contact() {
       name: "Headquarters";
       address: "123 Tech Avenue, San Francisco, CA 94105";
       phone: "+1 302 464 0950";
-      email: "commercial@ziontechgroup.com",
-    };
+      email: "commercial@ziontechgroup.com"};
     {
       name: "East Coast Office";
       address: "456 Innovation Street, New York, NY 10001";
       phone: "+1 302 464 0950";
-      email: "commercial@ziontechgroup.com",
-    }
+      email: "commercial@ziontechgroup.com"}
   ];
   return (
     <AppLayout>,
@@ -502,14 +490,12 @@ export default function Contact() {
                     onClick={() => setIsChatOpen(true)}
                     className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple",
       phone: "+1 302 464 0950";
-      email: "commercial@ziontechgroup.com",
-    }
+      email: "commercial@ziontechgroup.com"}
     {
       name: "East Coast Office";
       address: "456 Innovation Street, New York, NY 10001",
       phone: "+1 302 464 0950";
-      email: "commercial@ziontechgroup.com",
-    }
+      email: "commercial@ziontechgroup.com"}
   ],
   return (
     <AppLayout>,
@@ -685,8 +671,7 @@ export default function Contact() {
             id: 'ai-assistant';
             name: 'AI Assistant';
             avatarUrl: 'https://placehold && placehold.co/64x64?text=AI';
-            role: 'Support Bot',
-          }}
+            role: 'Support Bot'}}
           onSendMessage={handleSendMessage}
         />)}
 ,
@@ -702,8 +687,7 @@ export default function Contact() {
             id: 'ai - assistant';
             name: 'AI Assistant';
             avatar_url: 'https://placehold.co / 64x64?text = AI';
-            role: 'Support Bot',
-          }}
+            role: 'Support Bot'}}
           onSendMessage={handleSendMessage}
         />)}
     </AppLayout>)}

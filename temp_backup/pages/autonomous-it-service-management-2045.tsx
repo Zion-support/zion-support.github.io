@@ -20,6 +20,5 @@ export default function AutonomousItServiceManagement20o45Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

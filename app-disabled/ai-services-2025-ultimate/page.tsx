@@ -244,6 +244,5 @@ export default function AIServices20o25Ultimate() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

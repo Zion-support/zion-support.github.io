@@ -158,5 +158,4 @@ export default function AI20o26UltimateImplementationFrameworkBanner() {
           </Link>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}

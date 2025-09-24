@@ -4,13 +4,11 @@ import { createContextuseContextuseEffectuseState } from "react",
 type Theme = "dark" | "light" | "system",
 type ThemeProviderProps = {
   children: React.ReactNode,
-  defaultTheme?: Theme,
-}
+  defaultTheme?: Theme}
 ,
 type ThemeProviderState = {
   theme: Theme,
-  setTheme: (theme: Theme) => void,
-}
+  setTheme: (theme: Theme) => void}
 ,
 const initialState: ThemeProviderState = {
   theme: "system";
@@ -31,16 +29,14 @@ export function ThemeProvider({
         ? "dark",
         : "light",
       root.classList.add(systemTheme),
-      return,
-    }
+      return}
 ,
     root.classList.add(theme)}[theme]),
   const value = {
     theme;
     setTheme: (theme: Theme) => {
       localStorage.setItem("theme"theme),
-      setTheme(theme),
-    }}
+      setTheme(theme)}}
 ,
   return (
     <ThemeProviderContext.Provider value={value}>,

@@ -256,8 +256,7 @@ export default function HealthTechPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
 function HealthTechCategory({
   title;
@@ -272,8 +271,7 @@ function HealthTechCategory({
   description: string,
   services: string[],
   pricing: string,
-  marketSize: string,
-}) {
+  marketSize: string}) {
   return (
     <div className='bg-white border border-gray-20o0 rounded-xl p-8 hover: shadow-lg transition-shadow'>,
       <div className='text-4xl mb-4'>{icon}</div>,
@@ -306,8 +304,7 @@ function HealthTechService({
   description: string,
   features: string[],
   pricing: string,
-  icon: string,
-}) {
+  icon: string}) {
   return (
     <div className='bg-white border border-gray-20o0 rounded-xl p-6 hover: shadow-lg transition-shadow'>,
       <div className='text-3xl mb-3'>{icon}</div>,

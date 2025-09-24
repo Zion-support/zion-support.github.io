@@ -1,6 +1,5 @@
 interface MimeTypeMapping {
-  [key: string]: string,
-}
+  [key: string]: string}
 ,
 class MimeTypeFallback {
   private mimeTypes: MimeTypeMapping = {
@@ -64,19 +63,16 @@ class MimeTypeFallback {
       'https: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/ui-vendor-B31yGDq-.js'),
     this.fallbackUrls.set(
       '/js/utils-vendor-CrFdsnXa.js';
-      'https: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/utils-vendor-CrFdsnXa.js'),
-  }
+      'https: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/utils-vendor-CrFdsnXa.js')}
 ,
   getMimeType(filename: string): string {
     const ext = this.getFileExtension(filename),
-    return this.mimeTypes[ext] || 'application/octet-stream',
-  }
+    return this.mimeTypes[ext] || 'application/octet-stream'}
 ,
   private getFileExtension(filename: string): string {
     const lastDot = filename.lastIndexOf('.'),
     if (lastDot === -1) return '',
-    return filename.substring(lastDot).toLowerCase(),
-  }
+    return filename.substring(lastDot).toLowerCase()}
 ,
   async checkAndFixMimeType(url: string): Promise<boolean> {
     try {
@@ -107,14 +103,14 @@ class MimeTypeFallback {
   private async tryFallbackUrl(originalUrl: string): Promise<boolean> {
     const fallbackUrl = this.fallbackUrls.get(originalUrl),
     if (fallbackUrl) {
-      // console.log(`Trying fallback URL: ${fallbackUrl}`),
+      // // console.log(`Trying fallback URL: ${fallbackUrl}`),
       try {
         const response = await fetch(fallbackUrl, { method: 'HEAD' }),
         if (response.ok) {
           const contentType = response.headers.get('content-type'),
           const expectedType = this.getMimeType(originalUrl),
           if (contentType && contentType.includes(expectedType)) {
-            // console.log(`Fallback URL has correct MIME type: ${fallbackUrl}`),
+            // // console.log(`Fallback URL has correct MIME type: ${fallbackUrl}`),
             this.replaceResource(originalUrl, fallbackUrl),
             return true}
         }
@@ -129,12 +125,12 @@ class MimeTypeFallback {
     const scripts = document.querySelectorAll(`script[src="${originalUrl}"]`),
     scripts.forEach(script => {
       (script as HTMLScriptElement).src = fallbackUrl,
-      // console.log(`Replaced script source: ${originalUrl} -> ${fallbackUrl}`)}),
+      // // console.log(`Replaced script source: ${originalUrl} -> ${fallbackUrl}`)}),
     // Replace stylesheet links,
     const links = document.querySelectorAll(`link[href="${originalUrl}"]`),
     links.forEach(link => {
       (link as HTMLLinkElement).href = fallbackUrl,
-      // console.log(`Replaced stylesheet href: ${originalUrl} -> ${fallbackUrl}`)})}
+      // // console.log(`Replaced stylesheet href: ${originalUrl} -> ${fallbackUrl}`)})}
 ,
   async preloadCriticalResources(): Promise<void> {
     const criticalResources = [
@@ -145,7 +141,7 @@ class MimeTypeFallback {
       '/js/ui-vendor-B31yGDq-.js';
       '/js/utils-vendor-CrFdsnXa.js';
     ],
-    // console.log('🔍 Preloading critical resources...'),
+    // // console.log('🔍 Preloading critical resources...'),
     for (const resource of criticalResources) {
       try {
         const isValid = await this.checkAndFixMimeType(resource),
@@ -164,8 +160,7 @@ class MimeTypeFallback {
       script.src = url,
       script.async = true,
       script.type = 'text/javascript',
-      return script,
-    } else {
+      return script} else {
       const link = document.createElement('link'),
       link.rel = 'stylesheet',
       link.href = url,
@@ -177,7 +172,7 @@ class MimeTypeFallback {
     return new Promise((resolve, reject) => {
       const element = this.createResourceElement(url, type),
       element.onload = () => {
-        // console.log(`✅ Resource loaded successfully: ${url}`),
+        // // console.log(`✅ Resource loaded successfully: ${url}`),
         resolve()};
       element.onerror = () => {
         console.error(`❌ Failed to load resource: ${url}`),

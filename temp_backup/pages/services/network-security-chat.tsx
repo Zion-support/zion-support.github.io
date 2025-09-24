@@ -15,6 +15,5 @@ export default function NetworkSecurityChatPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

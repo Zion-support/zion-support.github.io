@@ -654,6 +654,5 @@ export default function NeuralInterfaceRevolutionPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

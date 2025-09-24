@@ -183,5 +183,4 @@ export default function Fortune50o0AI60o0ROICaseStudyBanner() {
           </Link>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}

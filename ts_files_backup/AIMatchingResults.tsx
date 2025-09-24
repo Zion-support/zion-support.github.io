@@ -24,11 +24,9 @@ const mockMatches: MatchResultItem[] = [
     provider: {
       name: 'Tech Solutions Inc.';
       avatar: '/avatars/tech-solutions.jpg';
-      verified: true,
-    };
+      verified: true};
     createdAt: '20o24-0o1-15T10:0o0:0o0Z';
-    updatedAt: '20o24-0o1-20T14:30:0o0Z',
-  };
+    updatedAt: '20o24-0o1-20T14:30:0o0Z'};
   {
     id: '2';
     title: 'Cloud Migration Service';
@@ -42,11 +40,9 @@ const mockMatches: MatchResultItem[] = [
     provider: {
       name: 'Cloud Experts LLC';
       avatar: '/avatars/cloud-experts.jpg';
-      verified: true,
-    };
+      verified: true};
     createdAt: '20o24-0o1-10T09:0o0:0o0Z';
-    updatedAt: '20o24-0o1-18T16:45:0o0Z',
-  }
+    updatedAt: '20o24-0o1-18T16:45:0o0Z'}
 ],
 const getCategoryIcon = (category: string) => {
   switch (category.toLowerCase()) {
@@ -57,8 +53,7 @@ const getCategoryIcon = (category: string) => {
     case 'security':,
       return <BriefcaseIcon className="h-6 w-6"  />,
     default:,
-      return <User className="h-6 w-6"  />,
-  }
+      return <User className="h-6 w-6"  />}
 };
 export function AIMatchingResults({ serviceType }: AIMatchingResultsProps) {
   const [isLoading, setIsLoading] = useState(false),
@@ -72,8 +67,7 @@ export function AIMatchingResults({ serviceType }: AIMatchingResultsProps) {
   const filteredMatches = (tabValue: string) => {
     if (tabValue === 'all') return matches,
     return matches.filter(match =>,
-      match.category.toLowerCase().includes(tabValue.toLowerCase())),
-  };
+      match.category.toLowerCase().includes(tabValue.toLowerCase()))};
   return (
     <div className="space-y-6">,
       <div className="text-center">,

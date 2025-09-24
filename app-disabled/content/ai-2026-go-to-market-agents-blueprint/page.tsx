@@ -93,6 +93,5 @@ export default function GoToMarketAgentsBlueprintPage() {
           </div>,
         </article>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

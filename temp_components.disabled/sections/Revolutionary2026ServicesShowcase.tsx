@@ -255,6 +255,5 @@ export default function Revolutionary20o26ServicesShowcase() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

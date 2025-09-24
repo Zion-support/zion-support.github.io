@@ -301,6 +301,5 @@ export default function AITrendsPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

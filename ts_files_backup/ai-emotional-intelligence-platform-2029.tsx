@@ -8,7 +8,6 @@ import {
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',import {
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',
-,
   Brain,
   Heart,
   Eye,
@@ -58,7 +57,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
   ShieldCheck;
 } from 'lucide-react',
   Brain, Heart, Eye, MessageCircle, Users, Shield,
-,
   Brain;
   Heart;
   Eye;
@@ -84,7 +82,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
   ShieldCheck;
 } from 'lucide-react',
   Brain, Heart, Eye, MessageCircle, Users, Shield,
-,
   Zap, TrendingUp, CheckCircle, ArrowRight, Star,
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3,
   Smartphone, Database, Cloud, Server, ShieldCheck} from 'lucide-react',
@@ -92,50 +89,43 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'};    website: 'https://ziontechgroup.com',
-  }
+    website: 'https://ziontechgroup.com'};    website: 'https://ziontechgroup.com'}
   const features = [
     {
       icon: Brain,
       title: 'Real-time Emotion Detection',
       description:,
         'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time',
-      color: 'from-violet-500 to-purple-600',
-    }
+      color: 'from-violet-500 to-purple-600'}
       icon: Heart,
       title: 'Emotional Response Generation',
       description:,
         'Intelligent system that generates contextually appropriate emotional responses',
-      color: 'from-pink-500 to-rose-600',
-    }
+      color: 'from-pink-500 to-rose-600'}
     {
       icon: Eye,
       title: 'Multi-modal Emotion Analysis',
       description:,
         'Combines visual, auditory, and textual data for comprehensive emotion understanding',
-      color: 'from-blue-500 to-cyan-600',
-    }
+      color: 'from-blue-500 to-cyan-600'}
     {
       icon: MessageCircle,
       title: 'Emotional Intelligence Training',
       description:,
         'AI-powered training modules to improve emotional intelligence skills',
-      color: 'from-green-500 to-emerald-600',
-    }
+      color: 'from-green-500 to-emerald-600'}
     {
       icon: TrendingUp,
       title: 'Sentiment Optimization',
       description:,
         'Optimizes communication and content based on emotional context',
-      color: 'from-orange-500 to-red-600',
-    }
+      color: 'from-orange-500 to-red-600'}
     {
       icon: Shield,
       title: 'Emotional Health Monitoring',
       description:,
         'Tracks emotional patterns and provides insights for mental health support',
-      color: 'from-indigo-500 to-purple-600',
-    }
+      color: 'from-indigo-500 to-purple-600'}
   ],
   const benefits = [
     'Improve customer satisfaction by 85%',
@@ -150,71 +140,54 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       description:,
         'AI agents that understand customer emotions and respond appropriately',
       icon: Users,
-      color: 'from-blue-500 to-cyan-600',
-    },    {
+      color: 'from-blue-500 to-cyan-600'},    {
       title: 'Mental Health Applications',
       description: 'Emotional support and monitoring for mental health care',
       icon: Heart,
-      color: 'from-pink-500 to-rose-600',
-    },    {
+      color: 'from-pink-500 to-rose-600'},    {
       title: 'Educational Platforms',
       description: 'Personalized learning experiences based on emotional state',
       icon: Brain,
-      color: 'from-green-500 to-emerald-600',
-    },    {
+      color: 'from-green-500 to-emerald-600'},    {
       title: 'Marketing Optimization',
       description: 'Campaign optimization based on emotional response analysis',
       icon: TrendingUp,
-      color: 'from-orange-500 to-red-600',
-    },    {
+      color: 'from-orange-500 to-red-600'},    {
       title: 'HR and Recruitment',
       description: 'Emotional intelligence assessment and team building',
       icon: Users,
-      color: 'from-purple-500 to-indigo-600',
-    },    {
+      color: 'from-purple-500 to-indigo-600'},    {
       title: 'Healthcare Diagnostics',
       description: 'Emotional state monitoring for healthcare professionals',
       icon: Shield,
-      color: 'from-teal-500 to-cyan-600',
-    }],      description: 'AI agents that understand customer emotions and respond appropriately',
+      color: 'from-teal-500 to-cyan-600'}],      description: 'AI agents that understand customer emotions and respond appropriately',
       icon: Users,
-      color: 'from-blue-500 to-cyan-600',
-    }
+      color: 'from-blue-500 to-cyan-600'}
     {
       title: 'Mental Health Applications',
       description: 'Emotional support and monitoring for mental health care',
       icon: Heart,
-      color: 'from-pink-500 to-rose-600',
-    },      color: 'from-pink-500 to-rose-600',
-    }
+      color: 'from-pink-500 to-rose-600'},      color: 'from-pink-500 to-rose-600'}
     {
       title: 'Educational Platforms',
       description: 'Personalized learning experiences based on emotional state',
       icon: Brain,
-      color: 'from-green-500 to-emerald-600',
-    },      color: 'from-green-500 to-emerald-600',
-    }
+      color: 'from-green-500 to-emerald-600'},      color: 'from-green-500 to-emerald-600'}
     {
       title: 'Marketing Optimization',
       description: 'Campaign optimization based on emotional response analysis',
       icon: TrendingUp,
-      color: 'from-orange-500 to-red-600',
-    },      color: 'from-orange-500 to-red-600',
-    }
+      color: 'from-orange-500 to-red-600'},      color: 'from-orange-500 to-red-600'}
     {
       title: 'HR and Recruitment',
       description: 'Emotional intelligence assessment and team building',
       icon: Users,
-      color: 'from-purple-500 to-indigo-600',
-    },      color: 'from-purple-500 to-indigo-600',
-    }
+      color: 'from-purple-500 to-indigo-600'},      color: 'from-purple-500 to-indigo-600'}
     {
       title: 'Healthcare Diagnostics',
       description: 'Emotional state monitoring for healthcare professionals',
       icon: Shield,
-      color: 'from-teal-500 to-cyan-600',
-    },      color: 'from-teal-500 to-cyan-600',
-    }
+      color: 'from-teal-500 to-cyan-600'},      color: 'from-teal-500 to-cyan-600'}
   ],
   const pricing = {
     basic: {
@@ -241,8 +214,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         'Advanced analytics and reporting',
         'Custom emotion models',
         'Multi-language support'],
-      popular: true,
-    }
+      popular: true}
     enterprise: {
       name: 'Enterprise',
       price: '$7,999',
@@ -257,8 +229,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         'White-label options',
         'On-premise deployment',
         'Custom training and consulting'],
-      popular: false,
-    }};        'Unlimited emotional interactionsCustom emotion detection models24/7 dedicated supportCustom integrationsAdvanced security featuresWhite-label optionsOn-premise deploymentCustom training and consulting',
+      popular: false}};        'Unlimited emotional interactionsCustom emotion detection models24/7 dedicated supportCustom integrationsAdvanced security featuresWhite-label optionsOn-premise deploymentCustom training and consulting',
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
@@ -283,8 +254,7 @@ class ErrorBoundary extends React.Component {
     mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup && ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup && ziontechgroup.com'};    website: 'https://ziontechgroup && ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup && ziontechgroup.com'};    website: 'https://ziontechgroup && ziontechgroup.com'};
   const features = [
     {
       icon: Brain;
@@ -369,46 +339,39 @@ class ErrorBoundary extends React.Component {
       color: 'from-teal-500 to-cyan-600';
     }],      description: 'AI agents that understand customer emotions and respond appropriately';
       icon: Users;
-      color: 'from-blue-500 to-cyan-600',
-    };
+      color: 'from-blue-500 to-cyan-600'};
     {
       title: 'Mental Health Applications';
       description: 'Emotional support and monitoring for mental health care';
       icon: Heart;
       color: 'from-pink-500 to-rose-600';
-    },      color: 'from-pink-500 to-rose-600',
-    };
+    },      color: 'from-pink-500 to-rose-600'};
     {
       title: 'Educational Platforms';
       description: 'Personalized learning experiences based on emotional state';
       icon: Brain;
       color: 'from-green-500 to-emerald-600';
-    },      color: 'from-green-500 to-emerald-600',
-    };
+    },      color: 'from-green-500 to-emerald-600'};
     {
       title: 'Marketing Optimization';
       description: 'Campaign optimization based on emotional response analysis';
       icon: TrendingUp;
       color: 'from-orange-500 to-red-600';
-    },      color: 'from-orange-500 to-red-600',
-    };
+    },      color: 'from-orange-500 to-red-600'};
     {
       title: 'HR and Recruitment';
       description: 'Emotional intelligence assessment and team building';
       icon: Users;
       color: 'from-purple-500 to-indigo-600';
-    },      color: 'from-purple-500 to-indigo-600',
-    };
+    },      color: 'from-purple-500 to-indigo-600'};
     {
       title: 'Healthcare Diagnostics';
       description: 'Emotional state monitoring for healthcare professionals';
       icon: Shield;
       color: 'from-teal-500 to-cyan-600';
-    },      color: 'from-teal-500 to-cyan-600',
-    }
+    },      color: 'from-teal-500 to-cyan-600'}
   ]],
-      popular: false,
-    }
+      popular: false}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements,
   return (
     <>,
@@ -1116,8 +1079,7 @@ class ErrorBoundary extends React.Component {
                   className={`block w-full text-center py-3 px-6 rounded-xl font-bold transition-all duration-300 ${
                     plan && plan.popular,
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white transform hover:scale-105',
-                      : 'bg-white/10 hover:bg-white/20 text-white border border-white/20',
-                  }`}>,
+                      : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'}`}>,
                   Get Started,
                 </Link>,
               </motion && motion.div>))}
@@ -1131,8 +1093,7 @@ class ErrorBoundary extends React.Component {
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">,
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
-          <motion&& motion.div>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
-                  }`}
+          <motion&& motion.div>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982}`}
                 >,
                   Get Started,
                 </Link>,
@@ -1195,8 +1156,7 @@ class ErrorBoundary extends React.Component {
                   className={`block w - full text - center py - 3 px - 6 rounded - xl font - bold transition - all duration - 300 ${
                     plan.popular,
                       ? 'bg - gradient - to - r from - purple - 500 to - pink - 500 hover: from - purple - 600 hover:to - pink - 600 text - white transform hover:scale - 105',
-                      : 'bg - white / 10 hover:bg - white / 20 text - white border border - white / 20',
-                  }`}
+                      : 'bg - white / 10 hover:bg - white / 20 text - white border border - white / 20'}`}
                 >,
                   Get Started,
                 </Link>,
@@ -1290,10 +1250,8 @@ class ErrorBoundary extends React.Component {
         </div>,
       </section>,
       <UltraFuturisticFooter2028 />,
-    </>),
-};
-export default AIEmotionalIntelligencePlatform2029),
-};
+    </>)};
+export default AIEmotionalIntelligencePlatform2029)};
 export default AIEmotionalIntelligencePlatform2029;
           </motion.div>,
           <div className='grid grid - cols - 1 md: grid - cols - 3 gap - 8 mb - 12'>            <motion.div          >,
@@ -1366,6 +1324,5 @@ export default AIEmotionalIntelligencePlatform2029;
         </div>,
       </section>,
       <UltraFuturisticFooter2028 />,
-    </>),
-};
+    </>)};
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)))))))))))))

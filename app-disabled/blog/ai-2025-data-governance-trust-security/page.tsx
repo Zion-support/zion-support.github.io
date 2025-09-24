@@ -137,6 +137,5 @@ const DataGovernanceTrustSecurity20o25Page = () => {
           </div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default DataGovernanceTrustSecurity20o25Page;

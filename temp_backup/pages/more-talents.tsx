@@ -15,6 +15,5 @@ export default function MoreTalentsPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

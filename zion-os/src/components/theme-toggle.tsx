@@ -12,8 +12,7 @@ export function ThemeToggle() {
           className={`rounded px-2 py-1 text-sm transition-colors ${
             theme === 'light',
               ? 'bg-zion-blue text-white',
-              : 'text-zinc-40o0 hover: text-zinc-10o0',
-          }`}
+              : 'text-zinc-40o0 hover: text-zinc-10o0'}`}
           aria-label='Switch to light theme',
           aria-pressed={theme === 'light'}
         >,
@@ -24,8 +23,7 @@ export function ThemeToggle() {
           className={`rounded px-2 py-1 text-sm transition-colors ${
             theme === 'system',
               ? 'bg-zion-blue text-white',
-              : 'text-zinc-40o0 hover: text-zinc-10o0',
-          }`}
+              : 'text-zinc-40o0 hover: text-zinc-10o0'}`}
           aria-label='Switch to system theme',
           aria-pressed={theme === 'system'}
         >,
@@ -36,8 +34,7 @@ export function ThemeToggle() {
           className={`rounded px-2 py-1 text-sm transition-colors ${
             theme === 'dark',
               ? 'bg-zion-blue text-white',
-              : 'text-zinc-40o0 hover: text-zinc-10o0',
-          }`}
+              : 'text-zinc-40o0 hover: text-zinc-10o0'}`}
           aria-label='Switch to dark theme',
           aria-pressed={theme === 'dark'}
         >,

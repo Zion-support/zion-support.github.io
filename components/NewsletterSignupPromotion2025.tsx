@@ -14,8 +14,7 @@ const NewsletterSignupPromotion20o25 = () => {
     if (email) {
       setIsSubscribed(true),
       // Here you would typically send the email to your backend,
-      // console.log('Email subscribed:'email),
-    }
+      // // console.log('Email subscribed:'email)}
   };
   const benefits = [
     "Exclusive AI insights and trends";
@@ -57,8 +56,7 @@ const NewsletterSignupPromotion20o25 = () => {
             </div>,
           </motion.div>,
         </div>,
-      </div>),
-  }
+      </div>)}
 ,
   return (
     <div className="py-20 bg-gradient-to-br from-blue-60o0 via-purple-60o0 to-pink-60o0 relative overflow-hidden">,

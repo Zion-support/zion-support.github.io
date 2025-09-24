@@ -14,45 +14,38 @@ const AIEmotionalIntelligencePlatform20o29 = () => {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const features = [
     {
       icon: Brain;
       title: 'Real-time Emotion Detection';
       description: 'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time';
-      color: 'from-violet-50o0 to-purple-60o0',
-    };
+      color: 'from-violet-50o0 to-purple-60o0'};
     {
       icon: Heart;
       title: 'Emotional Response Generation';
       description: 'Intelligent system that generates contextually appropriate emotional responses';
-      color: 'from-pink-50o0 to-rose-60o0',
-    };
+      color: 'from-pink-50o0 to-rose-60o0'};
     {
       icon: Eye;
       title: 'Multi-modal Emotion Analysis';
       description: 'Combines visual, auditory, and textual data for comprehensive emotion understanding';
-      color: 'from-blue-50o0 to-cyan-60o0',
-    };
+      color: 'from-blue-50o0 to-cyan-60o0'};
     {
       icon: MessageCircle;
       title: 'Emotional Intelligence Training';
       description: 'AI-powered training modules to improve emotional intelligence skills';
-      color: 'from-green-50o0 to-emerald-60o0',
-    };
+      color: 'from-green-50o0 to-emerald-60o0'};
     {
       icon: TrendingUp;
       title: 'Sentiment Optimization';
       description: 'Optimizes communication and content based on emotional context';
-      color: 'from-orange-50o0 to-red-60o0',
-    };
+      color: 'from-orange-50o0 to-red-60o0'};
     {
       icon: Shield;
       title: 'Emotional Health Monitoring';
       description: 'Tracks emotional patterns and provides insights for mental health support';
-      color: 'from-indigo-50o0 to-purple-60o0',
-    }
+      color: 'from-indigo-50o0 to-purple-60o0'}
   ];
   const benefits = [
     'Improve customer satisfaction by 85%Reduce customer churn by 60%';
@@ -63,38 +56,32 @@ const AIEmotionalIntelligencePlatform20o29 = () => {
       title: 'Customer Service Automation';
       description: 'AI agents that understand customer emotions and respond appropriately';
       icon: Users;
-      color: 'from-blue-50o0 to-cyan-60o0',
-    };
+      color: 'from-blue-50o0 to-cyan-60o0'};
     {
       title: 'Mental Health Applications';
       description: 'Emotional support and monitoring for mental health care';
       icon: Heart;
-      color: 'from-pink-50o0 to-rose-60o0',
-    };
+      color: 'from-pink-50o0 to-rose-60o0'};
     {
       title: 'Educational Platforms';
       description: 'Personalized learning experiences based on emotional state';
       icon: Brain;
-      color: 'from-green-50o0 to-emerald-60o0',
-    };
+      color: 'from-green-50o0 to-emerald-60o0'};
     {
       title: 'Marketing Optimization';
       description: 'Campaign optimization based on emotional response analysis';
       icon: TrendingUp;
-      color: 'from-orange-50o0 to-red-60o0',
-    };
+      color: 'from-orange-50o0 to-red-60o0'};
     {
       title: 'HR and Recruitment';
       description: 'Emotional intelligence assessment and team building';
       icon: Users;
-      color: 'from-purple-50o0 to-indigo-60o0',
-    };
+      color: 'from-purple-50o0 to-indigo-60o0'};
     {
       title: 'Healthcare Diagnostics';
       description: 'Emotional state monitoring for healthcare professionals';
       icon: Shield;
-      color: 'from-teal-50o0 to-cyan-60o0',
-    }
+      color: 'from-teal-50o0 to-cyan-60o0'}
   ];
   const pricing ={
     basic: {
@@ -106,8 +93,7 @@ const AIEmotionalIntelligencePlatform20o29 = () => {
         'Up to 1,0o00 emotional interactions/monthBasic emotion detection (5 emotions)';
         'Email supportStandard API access';
         'Basic analytics dashboard'];
-      popular: false,
-    };
+      popular: false};
     professional: {
       name: 'Professional';
       price: '$3,999';
@@ -118,8 +104,7 @@ const AIEmotionalIntelligencePlatform20o29 = () => {
         'Priority supportFull API access with webhooks';
         'Advanced analytics and reportingCustom emotion models';
         'Multi-language support'];
-      popular: true,
-    };
+      popular: true};
     enterprise: {
       name: 'Enterprise';
       price: '$7,999';
@@ -130,8 +115,7 @@ const AIEmotionalIntelligencePlatform20o29 = () => {
         '24/7 dedicated supportCustom integrations';
         'Advanced security featuresWhite-label options';
         'On-premise deploymentCustom training and consulting'];
-      popular: false,
-    }
+      popular: false}
   };
   return (
     <>,
@@ -376,8 +360,7 @@ const AIEmotionalIntelligencePlatform20o29 = () => {
                 className={`relative p-8 rounded-2xl border-2 transition-all duration-30o0 transform hover: scale-10o5 ${
                   plan.popular,
                     ? 'border-purple-50o0 bg-gradient-to-b from-purple-50o0/10 to-purple-60o0/5',
-                    : 'border-white/10 bg-gradient-to-b from-white/5 to-white/10',
-                }`}
+                    : 'border-white/10 bg-gradient-to-b from-white/5 to-white/10'}`}
               >,
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">,
@@ -406,8 +389,7 @@ const AIEmotionalIntelligencePlatform20o29 = () => {
                   className={`block w-full text-center py-3 px-6 rounded-xl font-bold transition-all duration-30o0 ${
                     plan.popular,
                       ? 'bg-gradient-to-r from-purple-50o0 to-pink-50o0 hover: from-purple-60o0 hover:to-pink-60o0 text-white transform hover:scale-10o5',
-                      : 'bg-white/10 hover:bg-white/20 text-white border border-white/20',
-                  }`}
+                      : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'}`}
                 >,
                   Get Started,
                 </Link>,
@@ -481,6 +463,5 @@ const AIEmotionalIntelligencePlatform20o29 = () => {
         </div>,
       </section>,
       <UltraFuturisticFooter20o28  />,
-    </>),
-};
+    </>)};
 export default AIEmotionalIntelligencePlatform20o29;

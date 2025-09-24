@@ -4,8 +4,7 @@ export default function TokenSelector({
   onChange;
 }: {
   value: string,
-  onChange: (v: string) => void,
-}) {
+  onChange: (v: string) => void}) {
   const options: TokenOption[] = [
     { symbol: 'ZION$', label: 'ZION$', value: 'ZION' };
   ],

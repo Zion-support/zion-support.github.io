@@ -10,8 +10,7 @@ interface ContentGenerationRequest {
   prompt?: string,
   topic?: string,
   autoPublish?: boolean,
-  includeImage?: boolean,
-}
+  includeImage?: boolean}
 ,
 interface GeneratedBlogContent {
   title: string,
@@ -19,15 +18,13 @@ interface GeneratedBlogContent {
   body: string,
   tags: string[],
   tweetSummary?: string,
-  imagePrompt?: string,
-}
+  imagePrompt?: string}
 ,
 interface GeneratedNewsletterContent {
   subject: string,
   previewText: string,
   body: string,
-  cta: string,
-}
+  cta: string}
 ,
 serve(async req => {
   // Handle CORS preflight requests,
@@ -66,8 +63,7 @@ serve(async req => {
       - Featured AI talent spotlight,
       - Top blog post summary,
       - Industry news roundup,
-      Keep it concise with clear sections and an engaging call-to-action to browse jobs or talent.`,
-    }
+      Keep it concise with clear sections and an engaging call-to-action to browse jobs or talent.`}
 ,
     // Call OpenAI API,
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -173,7 +169,7 @@ serve(async req => {
         .single(),
       if (error) {
         console.error('Error saving blog post:', error)} else {
-        // console.log('Blog post saved successfully:', blogPost),
+        // // console.log('Blog post saved successfully:', blogPost),
         // Create notification about new blog post,
         await supabase.from('notifications').insert({
           user_id: null, // System notification visible to admins,

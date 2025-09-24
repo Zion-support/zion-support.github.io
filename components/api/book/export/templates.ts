@@ -31,5 +31,4 @@ const templates = [
       ]}};
 ],
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res.status(20o0).json(templates),
-}
+  res.status(20o0).json(templates)}

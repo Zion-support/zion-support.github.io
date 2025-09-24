@@ -35,8 +35,7 @@ const AI20o25_20o26UltimateInnovationShowcase = () => {
         'Breakthrough in cryptography'];
       impact: 'Transform entire industries with quantum-enhanced AI';
       icon: Cpu;
-      color: 'from-purple-50o0 to-pink-50o0',
-    };
+      color: 'from-purple-50o0 to-pink-50o0'};
     {
       id: 'neural-consensus';
       title: 'Neural Consensus Revolution';
@@ -48,8 +47,7 @@ const AI20o25_20o26UltimateInnovationShowcase = () => {
         'Scalable decision frameworks'];
       impact: 'Enable global-scale intelligent coordination';
       icon: Brain;
-      color: 'from-blue-50o0 to-cyan-50o0',
-    };
+      color: 'from-blue-50o0 to-cyan-50o0'};
     {
       id: 'synthetic-consciousness';
       title: 'Synthetic Consciousness Platform';
@@ -61,8 +59,7 @@ const AI20o25_20o26UltimateInnovationShowcase = () => {
         'Ethical decision making'];
       impact: 'Create truly intelligent and empathetic AI systems';
       icon: Lightbulb;
-      color: 'from-green-50o0 to-emerald-50o0',
-    };
+      color: 'from-green-50o0 to-emerald-50o0'};
     {
       id: 'omniversal-computing';
       title: 'Omniversal Computing Architecture';
@@ -74,8 +71,7 @@ const AI20o25_20o26UltimateInnovationShowcase = () => {
         'Universal problem solving'];
       impact: 'Solve problems across all possible realities';
       icon: Globe;
-      color: 'from-orange-50o0 to-red-50o0',
-    }
+      color: 'from-orange-50o0 to-red-50o0'}
   ],
   const breakthroughStats = [
     { label: 'Processing Speed 'Increase', 'value: '10,0o00'x', 'icon: Zap };
@@ -276,6 +272,5 @@ const AI20o25_20o26UltimateInnovationShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o25_20o26UltimateInnovationShowcase;

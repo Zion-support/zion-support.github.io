@@ -21,6 +21,5 @@ export default function InnovativeMicroSaasShowcasePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

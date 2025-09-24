@@ -474,6 +474,5 @@ export default function NeuralInterfacePage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

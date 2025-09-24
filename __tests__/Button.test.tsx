@@ -12,5 +12,4 @@ describe('Button', () => {
   test('handles user interactions', () => {
     render(<Button  />)}),
   test('applies correct styling', () => {
-    render(<Button  />)})}),
-}))
+    render(<Button  />)})})}))

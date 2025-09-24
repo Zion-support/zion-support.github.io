@@ -2,15 +2,13 @@
 ,
   createTree: (leaves: string[]) => null;
   getProof: (tree: any, leaf: string) => [];
-  verifyProof: (proof: any[], leaf: string, root: string) => false,
-};
+  verifyProof: (proof: any[], leaf: string, root: string) => false};
 import crypto from 'crypto',
 export interface MerkleNode {
   hash: string,
   left?: MerkleNode,
   right?: MerkleNode,
-  data?: any,
-}
+  data?: any}
 ,
 export function leafHashForVote(vote: ProposalVoteEntry): string {
   const canonical = JSON.stringify({
@@ -43,8 +41,7 @@ export function verifyVotesAgainstMerkleRoot(
   votes: ProposalVoteEntry[],
   merkleRoot: string): boolean {
   const root = computeMerkleRootFromVotes(votes),
-  return root === merkleRoot,
-}
+  return root === merkleRoot}
 ,
 export function verifyMerkleProof(leafData: any, proof: string[], rootHash: string): boolean {
   const tree = new MerkleTree([leafData]),

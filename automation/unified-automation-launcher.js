@@ -65,8 +65,8 @@ class UnifiedAutomationLauncher {
     if (level === 'error') {
       console.error(`❌ ${message}`)} else if (level === 'warn') {
       console.warn(`⚠️ ${message}`)} else if (level === 'success') {
-      // console.log(`✅ ${message}`)} else {
-      // console.log(`ℹ️ ${message}`)}
+      // // console.log(`✅ ${message}`)} else {
+      // // console.log(`ℹ️ ${message}`)}
   }
 ,
   updateStatus(component, status) {
@@ -301,7 +301,7 @@ switch (command) {
     break,
   case 'status':,
     const status = launcher.getStatus(),
-    // console.log('Unified Automation Status:', JSON.stringify(status, null, 2)),
+    // // console.log('Unified Automation Status:', JSON.stringify(status, null, 2)),
     break,
   case 'commit':,
     launcher.executeGitOperation('execute').catch((error) => {
@@ -314,7 +314,7 @@ switch (command) {
       process.exit(1)}),
     break,
   default: ,
-    // console.log(`,
+    // // console.log(`,
 🚀 Unified Automation Launcher,
 Usage:,
   node automation/unified-automation-launcher.js [command],
@@ -336,16 +336,15 @@ Examples:,
   node automation/unified-automation-launcher.js start,
   node automation/unified-automation-launcher.js status,
         `),
-    break,
-}
+    break}
 ,
 // Handle graceful shutdown,
 process.on('SIGINT', async () => {
-  // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
+  // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
   await launcher.stopAll(),
   process.exit(0)}),
 process.on('SIGTERM', async () => {
-  // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
+  // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   await launcher.stopAll(),
   process.exit(0)}),
 module.exports = UnifiedAutomationLauncher,

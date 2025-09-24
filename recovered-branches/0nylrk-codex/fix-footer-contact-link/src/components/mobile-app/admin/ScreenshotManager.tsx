@@ -6,30 +6,26 @@ import { UploadTrash2Plus } from "lucide-react",
 import { AppPlatform } from "./MetadataManager",
 import { toast } from "sonner",
 interface ScreenshotManagerProps {
-  platform: AppPlatform,
-}
+  platform: AppPlatform}
 ,
 type Screenshot = {
   id: string,
   url: string,
-  file: File,
-};
+  file: File};
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
   const [screenshotsetScreenshots] = useState<Screenshot[]>([]),
   const [isDraggingsetIsDragging] = useState(false),
   const fileInputRef = useRef<HTMLInputElement>(null),
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      addScreenshots(Array.from(e.target.files)),
-    }
+      addScreenshots(Array.from(e.target.files))}
   };
   const addScreenshots = (files: File[]) => {
     // Filter for image files only,
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
     if (imageFiles.length === 0) {
       toast.error("Please select valid image files"),
-      return,
-    }
+      return}
 ,
     // Limit the number of screenshots,
     const maxScreenshots = platform === "ios" ? 10 : 8,
@@ -53,22 +49,19 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       // Revoke object URL to avoid memory leaks,
       const removed = prev.find(screenshot => screenshot.id === id),
       if (removed) {
-        URL.revokeObjectURL(removed.url),
-      }
+        URL.revokeObjectURL(removed.url)}
 ,
       return filtered})};
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault(),
-    setIsDragging(true),
-  };
+    setIsDragging(true)};
   const handleDragLeave = () => {
     setIsDragging(false)};
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault(),
     setIsDragging(false),
     if (e.dataTransfer.files) {
-      addScreenshots(Array.from(e.dataTransfer.files)),
-    }
+      addScreenshots(Array.from(e.dataTransfer.files))}
   };
   return (
     <Card className="bg-zion-blue border-zion-purple/30">,
@@ -106,8 +99,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
         <div className="text-xs text-gray-400 mb-4">,
           {platform === "ios",
             ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots.",
-            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type.",
-          }
+            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."}
         </div>,
         <div className="grid grid-cols-2 gap-3">,
           {screenshots.map((screenshot) => (

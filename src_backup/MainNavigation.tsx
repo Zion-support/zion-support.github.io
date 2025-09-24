@@ -64,12 +64,10 @@ function MainNavigation() {
   const handleCartClick = (e: React.MouseEvent) =>: any {
     // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
       e.prevent_default (),
       setLoginOpen (true),
-      return,
-}
+      return}
     setIsMobileMenuOpen (false)}
   const base_links = [
     {
@@ -106,16 +104,14 @@ class ErrorBoundary extends React.Component {
       matches: (path: string) =>,
         path === '/dashboard' |,
         path === '/client-dashboard' |,
-        path === '/talent-dashboard',
-    }) }
+        path === '/talent-dashboard'}) }
   // Add admin-only links,
   if (isAdmin) {
     links.push({
       key: 'analytics',
       name: t('nav.analytics'),
       href: '/analytics',
-      matches: (path: string) => path.startsWith('/analytics'),
-    }) }
+      matches: (path: string) => path.startsWith('/analytics')}) }
   return (
     <>,
       <button
@@ -159,33 +155,27 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
       key: 'home';
       href: '/';
-      matches: (path: string) => path === '/',
-    };
+      matches: (path: string) => path === '/'};
     {
       key: 'marketplace';
       href: '/marketplace';
-      matches: (path: string) => path.startsWith('/marketplace'),
-    };
+      matches: (path: string) => path.startsWith('/marketplace')};
     {
       key: 'categories';
       href: '/categories';
-      matches: (path: string) => path.startsWith('/categories'),
-    };
+      matches: (path: string) => path.startsWith('/categories')};
     {
       key: 'talent';
       href: '/talent';
-      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard'),
-    };
+      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')};
     {
       key: 'equipment';
       href: '/equipment';
-      matches: (path: string) => path.startsWith('/equipment'),
-    };
+      matches: (path: string) => path.startsWith('/equipment')};
     {
       key: 'community';
       href: '/community';
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum'),
-    }
+      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')}
   ];
   const links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
   // Add authenticated-only links,
@@ -194,8 +184,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'dashboard';
       name: t('nav.dashboard');
       href: '/dashboard';
-      matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard',
-    })}
+      matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'})}
 ,
   // Add admin-only links,
   if (isAdmin) {
@@ -357,8 +346,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/marketplace';
       matches: (path: string) => path.starts_with ('/marketplace')};
     {
-      matches: (path: string)  => path.startsWith('/contact'),
-}
+      matches: (path: string)  => path.startsWith('/contact')}
     links.push ({
       key: 'dashboard';
       name: t ('nav.dashboard');
@@ -500,8 +488,7 @@ function Page() { []),
       key: 'home';
       href: '/';
       name: 'Home';
-      matches: (path: string) => path = == '/',
-};
+      matches: (path: string) => path = == '/'};
     {
       key: 'services';
       href: '/services';
@@ -534,35 +521,29 @@ function Page() { []),
       key: 'ai - services';
       href: '/ai - services';
       name: 'AI Services';
-      matches: (path: string)  => path.starts_with ('/ai - services'),
-};
+      matches: (path: string)  => path.starts_with ('/ai - services')};
     {
       key: 'it - services';
       href: '/it - services';
       name: 'IT Services';
-      matches: (path: string)  => path.starts_with ('/it - services'),
-};
+      matches: (path: string)  => path.starts_with ('/it - services')};
     {
       key: 'micro - saas';
       href: '/micro - saas';
       name: 'Micro SAAS';
-      matches: (path: string)  => path.starts_with ('/micro - saas'),
-};
+      matches: (path: string)  => path.starts_with ('/micro - saas')};
     {
       key: 'marketplace';
       href: '/marketplace';
       name: 'Marketplace';
-      matches: (path: string)  => path.starts_with ('/marketplace'),
-};
+      matches: (path: string)  => path.starts_with ('/marketplace')};
     {
       key: 'about';
       href: '/about';
       name: 'About';
-      matches: (path: string)  => path.starts_with ('/about'),
-};
+      matches: (path: string)  => path.starts_with ('/about')};
     {
-      matches: (path: string)  => path.starts_with ('/contact'),
-}
+      matches: (path: string)  => path.starts_with ('/contact')}
 ,
       key: 'contact';
       href: '/contact';
@@ -584,14 +565,11 @@ function Page() { []),
                       </span>,
 export default function Page() { []),
   const baseLinks: NavigationLink[] = [{
-,
       key: 'home';
       href: '/';
       name: 'Home';
-      matches: (path: string) => path = == '/',
-};
+      matches: (path: string) => path = == '/'};
     {
-,
       key: 'services';
       href: '/services';
       name: 'Services';
@@ -620,44 +598,32 @@ export default function Page() { []),
         { key: 'mobile-survey', href: '/services/mobile-survey', name: 'Mobile Survey', matches: (p: string) => p && p.startsWith('/services/mobile-survey') }
       ]};
     {
-,
       key: 'ai-services';
       href: '/ai-services';
       name: 'AI Services';
-      matches: (path: string)  => path && path.startsWith('/ai-services'),
-};
+      matches: (path: string)  => path && path.startsWith('/ai-services')};
     {
-,
       key: 'it-services';
       href: '/it-services';
       name: 'IT Services';
-      matches: (path: string)  => path && path.startsWith('/it-services'),
-};
+      matches: (path: string)  => path && path.startsWith('/it-services')};
     {
-,
       key: 'micro-saas';
       href: '/micro-saas';
       name: 'Micro SAAS';
-      matches: (path: string)  => path && path.startsWith('/micro-saas'),
-};
+      matches: (path: string)  => path && path.startsWith('/micro-saas')};
     {
-,
       key: 'marketplace';
       href: '/marketplace';
       name: 'Marketplace';
-      matches: (path: string)  => path && path.startsWith('/marketplace'),
-};
+      matches: (path: string)  => path && path.startsWith('/marketplace')};
     {
-,
       key: 'about';
       href: '/about';
       name: 'About';
-      matches: (path: string)  => path && path.startsWith('/about'),
-};
+      matches: (path: string)  => path && path.startsWith('/about')};
     {
-,
-      matches: (path: string)  => path && path.startsWith('/contact'),
-};
+      matches: (path: string)  => path && path.startsWith('/contact')};
       key: 'contact';
       href: '/contact';
       name: 'Contact';
@@ -682,8 +648,7 @@ export default function Page() { []),
                 to={link && link.href}`,
                 className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link),
                     ? 'bg-zion-cyan text-white'',
-                    : 'text-zion-slate-light hover: text-white hover:bg-white/10'`,
-}`}
+                    : 'text-zion-slate-light hover: text-white hover:bg-white/10'`}`}
 ,
                 {link && link.name}
               </Link>)}
@@ -699,8 +664,7 @@ export default function Page() { []),
                 to={link.href}`,
                 className={`px - 4 py - 2 text - sm font - medium rounded - md transition - colors ${is_active (link),
                     ? 'bg - zion - cyan text - white'',
-                    : 'text - zion - slate - light hover: text - white hover:bg - white / 10'`,
-}`}
+                    : 'text - zion - slate - light hover: text - white hover:bg - white / 10'`}`}
                 {link.name}
               </Link>)}
           </div>))}
@@ -717,16 +681,13 @@ export default function Page() { []),
           <motion.div,
             initial ={
   { opacity: 0;
-  coordinate_x: '10o0%',
-}}
+  coordinate_x: '10o0%'}}
             animate ={
   { opacity: 1;
-  coordinate_x: 0,
-}}
+  coordinate_x: 0}}
             exit ={
   { opacity: 0;
-  coordinate_x: '10o0%',
-}}
+  coordinate_x: '10o0%'}}
             transition={{ duration: 0.3 }}",
             className="lg: hidden fixed inset - y-0 right - 0 w - 80 bg - zion - slate - dark border - l border - white / 10 shadow - xl z - 50",
 ",
@@ -748,8 +709,7 @@ export default function Page() { []),
                           on_click={() => setActiveDropdown (active_dropdown === link.key ? null : link.key)}`,
                           className={`w - full flex items - center justify - between px - 4 py - 3 text - left text - sm font - medium rounded - md transition - colors ${is_active (link),
                               ? 'bg - zion - cyan text - white'',
-                              : 'text - zion - slate - light hover: text - white hover:bg - white / 10'`,
-}`}
+                              : 'text - zion - slate - light hover: text - white hover:bg - white / 10'`}`}
 ,
             {/* Wishlist link */}
             {isAuthenticated && (
@@ -838,8 +798,7 @@ export default function Page() { []),
       key: 'home',
       href: '/',
       name: 'Home',
-      matches: (path: string) => path = == '/',
-}
+      matches: (path: string) => path = == '/'}
     {
       key: 'services',
       href: '/services',
@@ -872,35 +831,29 @@ export default function Page() { []),
       key: 'ai-services',
       href: '/ai-services',
       name: 'AI Services',
-      matches: (path: string)  => path.startsWith('/ai-services'),
-}
+      matches: (path: string)  => path.startsWith('/ai-services')}
     {
       key: 'it-services',
       href: '/it-services',
       name: 'IT Services',
-      matches: (path: string)  => path.startsWith('/it-services'),
-}
+      matches: (path: string)  => path.startsWith('/it-services')}
     {
       key: 'micro-saas',
       href: '/micro-saas',
       name: 'Micro SAAS',
-      matches: (path: string)  => path.startsWith('/micro-saas'),
-}
+      matches: (path: string)  => path.startsWith('/micro-saas')}
     {
       key: 'marketplace',
       href: '/marketplace',
       name: 'Marketplace',
-      matches: (path: string)  => path.startsWith('/marketplace'),
-}
+      matches: (path: string)  => path.startsWith('/marketplace')}
     {
       key: 'about',
       href: '/about',
       name: 'About',
-      matches: (path: string)  => path.startsWith('/about'),
-}
+      matches: (path: string)  => path.startsWith('/about')}
     {
-      matches: (path: string)  => path.startsWith('/contact'),
-}
+      matches: (path: string)  => path.startsWith('/contact')}
       key: 'contact',
       href: '/contact',
       name: 'Contact',
@@ -925,8 +878,7 @@ export default function Page() { []),
                 to={link.href}`,
                 className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link),
                     ? 'bg-zion-cyan text-white'',
-                    : 'text-zion-slate-light hover: text-white hover:bg-white/10'`,
-}`}
+                    : 'text-zion-slate-light hover: text-white hover:bg-white/10'`}`}
                 {link.name}
               </Link>)}
           </div>))}
@@ -943,16 +895,13 @@ export default function Page() { []),
           <motion.div,
             initial ={
   { opacity: 0,
-  x: '10o0%',
-}}
+  x: '10o0%'}}
             animate ={
   { opacity: 1,
-  x: 0,
-}}
+  x: 0}}
             exit ={
   { opacity: 0,
-  x: '10o0%',
-}}
+  x: '10o0%'}}
             transition={{ duration: 0.3 }}",
             className="lg: hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50",
 ",
@@ -974,8 +923,7 @@ export default function Page() { []),
                           onClick={() => setActiveDropdown(activeDropdown === link.key ? null : link.key)}`,
                           className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm font-medium rounded-md transition-colors ${isActive(link),
                               ? 'bg-zion-cyan text-white'',
-                              : 'text-zion-slate-light hover: text-white hover:bg-white/10'`,
-}`}
+                              : 'text-zion-slate-light hover: text-white hover:bg-white/10'`}`}
                           {link.name}'`,
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}   />                        </button>}`};
                           {link.name}'`,
@@ -988,8 +936,7 @@ export default function Page() { []),
                               <Link
                                 key={child.key}
                                 to={child.href}`,
-                                className={`block px - 4 py - 2 text - sm text - zion - slate - light hover: text - white hover:bg - white / 10 rounded - md transition - colors ${is_active (child) ? 'text - zion - cyan bg - zion - cyan / 10' : ''`,
-}`}
+                                className={`block px - 4 py - 2 text - sm text - zion - slate - light hover: text - white hover:bg - white / 10 rounded - md transition - colors ${is_active (child) ? 'text - zion - cyan bg - zion - cyan / 10' : ''`}`}
 ,
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}",
         className="lg: hidden p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors",
@@ -1001,16 +948,13 @@ export default function Page() { []),
           <motion&& motion.div,
             initial ={
   { opacity: 0;
-  x: '10o0%',
-}}
+  x: '10o0%'}}
             animate ={
   { opacity: 1;
-  x: 0,
-}}
+  x: 0}}
             exit ={
   { opacity: 0;
-  x: '10o0%',
-}}
+  x: '10o0%'}}
             transition={{ duration: 0 && 0.3 }}",
             className="lg: hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50",
 ",
@@ -1032,8 +976,7 @@ export default function Page() { []),
                           onClick={() => setActiveDropdown(activeDropdown === link && link.key ? null : link && link.key)}`,
                           className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm font-medium rounded-md transition-colors ${isActive(link),
                               ? 'bg-zion-cyan text-white'',
-                              : 'text-zion-slate-light hover: text-white hover:bg-white/10'`,
-}`}
+                              : 'text-zion-slate-light hover: text-white hover:bg-white/10'`}`}
 ,
                           {link && link.name}'`,
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link && link.key ? 'rotate-180' : ''}`}   />                        </button>,
@@ -1043,8 +986,7 @@ export default function Page() { []),
                               <Link
                                 key={child && child.key}
                                 to={child && child.href}`,
-                                className={`block px-4 py-2 text-sm text-zion-slate-light hover: text-white hover:bg-white/10 rounded-md transition-colors ${isActive(child) ? 'text-zion-cyan bg-zion-cyan/10' : ''`,
-}`}
+                                className={`block px-4 py-2 text-sm text-zion-slate-light hover: text-white hover:bg-white/10 rounded-md transition-colors ${isActive(child) ? 'text-zion-cyan bg-zion-cyan/10' : ''`}`}
                                 onClick={: unknown setIsMobileMenuOpen(false)}
 ,
                                 {child && child.name}
@@ -1056,8 +998,7 @@ export default function Page() { []),
                         to={link && link.href}`,
                         className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive(link),
                             ? 'bg-zion-cyan text-white'',
-                            : 'text-zion-slate-light hover: text-white hover:bg-white/10'`,
-}`}
+                            : 'text-zion-slate-light hover: text-white hover:bg-white/10'`}`}
                         onClick={: unknown setIsMobileMenuOpen(false)}
 ,
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">>,
@@ -1066,5 +1007,4 @@ export default function Page() { []),
                     {cartCount > 0 && (
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">,
                         {cartCount}
-                      </span>,
-}}}}}}}}}}})))))))))
+                      </span>}}}}}}}}}}})))))))))

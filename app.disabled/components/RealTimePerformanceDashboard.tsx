@@ -13,8 +13,7 @@ const RealTimePerformanceDashboard: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default function RealTimePerformanceDashboard() {
   return null}
 ,

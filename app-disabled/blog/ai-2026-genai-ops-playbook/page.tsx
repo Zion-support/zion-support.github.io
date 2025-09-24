@@ -84,6 +84,5 @@ const GenAIOpsPlaybook20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default GenAIOpsPlaybook20o26;

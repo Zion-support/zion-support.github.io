@@ -192,6 +192,5 @@ export default function AI20o25UltimateBreakthrough() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

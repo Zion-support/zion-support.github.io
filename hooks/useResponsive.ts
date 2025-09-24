@@ -5,8 +5,7 @@ interface ResponsiveState {
   orientation: 'landscape' | 'portrait',
   isMobile: boolean,
   isTablet: boolean,
-  isDesktop: boolean,
-}
+  isDesktop: boolean}
 ,
 export default function useResponsive(): ResponsiveState {
   const [state, setState] = useState<ResponsiveState>(() => {

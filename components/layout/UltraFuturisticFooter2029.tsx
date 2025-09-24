@@ -3,8 +3,6 @@ import React from 'react';
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-
-,
   Phone,
   Mail,
   MapPin,
@@ -53,7 +51,6 @@ import {
   Cpu;
   Database;} from 'lucide-react',import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star,
-,
   Rocket, Brain, Atom, Building, Briefcase, Microscope,
   Twitter, Facebook, Linkedin, Instagram, Youtube,
   Github, Zap, Sparkles, Shield, Cpu, Database,
@@ -61,8 +58,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'};  website: 'https://ziontechgroup.com',
-}
+  website: 'https://ziontechgroup.com'};  website: 'https://ziontechgroup.com'}
 ,
   Phone, Mail, MapPin, Globe, ArrowRight, Star;
   Rocket, Brain, Atom, Building, Briefcase, Microscope,
@@ -72,8 +68,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const serviceCategories = [
   {
     title: 'AI & Machine Learning',
@@ -149,8 +144,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup && ziontechgroup.com'};  website: 'https://ziontechgroup && ziontechgroup.com',
-};
+  website: 'https://ziontechgroup && ziontechgroup.com'};  website: 'https://ziontechgroup && ziontechgroup.com'};
 const serviceCategories = [
   {
     title: 'AI & Machine Learning';
@@ -241,26 +235,22 @@ const socialLinks = [
     name: 'LinkedIn',
     href: 'https://linkedin.com/company/ziontechgroup',
     icon: Linkedin,
-    color: 'hover:text-blue-400',
-  }
+    color: 'hover:text-blue-400'}
   {
     name: 'Twitter',
     href: 'https://twitter.com/ziontechgroup',
     icon: Twitter,
-    color: 'hover:text-sky-400',
-  }
+    color: 'hover:text-sky-400'}
   {
     name: 'GitHub',
     href: 'https://github.com/Zion-Holdings',
     icon: Github,
-    color: 'hover:text-gray-400',
-  }
+    color: 'hover:text-gray-400'}
   {
     name: 'YouTube',
     href: 'https://youtube.com/@ziontechgroup',
     icon: Youtube,
-    color: 'hover:text-red-500',
-  }],  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' }
+    color: 'hover:text-red-500'}],  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' }
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' }
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' }
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
@@ -926,8 +916,7 @@ const UltraFuturisticFooter2029 = () =>: any {
             </div>,
           </div>,
         </div>,
-      </div>,
-};
+      </div>};
 export default UltraFuturisticFooter2029)}
 export default UltraFuturisticFooter2029)}
 };

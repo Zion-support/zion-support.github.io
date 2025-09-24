@@ -130,8 +130,7 @@ export default function UltraFuturisticFooter20o36() {
   const staggerContainer ={
     animate: {
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   return (
@@ -352,6 +351,5 @@ export default function UltraFuturisticFooter20o36() {
           </div>,
         </motion.div>,
       </div>,
-    </footer>),
-};
+    </footer>)};
 export default UltraFuturisticFooter20o36}

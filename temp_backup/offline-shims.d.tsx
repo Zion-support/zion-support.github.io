@@ -2,11 +2,9 @@
 export interface offlineshimsdType {
   id: string,
   name: string,
-  createdAt: Date,
-}
+  createdAt: Date}
   interface IntrinsicElements {
-    [elemName: string]: ,
-}}
+    [elemName: string]: }}
 ,
 declare module 'react-dom' {
   export function reactDom:  ,

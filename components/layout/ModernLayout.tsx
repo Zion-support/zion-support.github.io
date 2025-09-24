@@ -7,8 +7,7 @@ interface ModernLayoutProps {
   title?: string,
   description?: string,
   keywords?: string,
-  canonical?: string,
-}
+  canonical?: string}
 ,
 const ModernLayout: React.FC<ModernLayoutProps> = ({
   children;

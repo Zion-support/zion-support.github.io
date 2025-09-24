@@ -28,8 +28,7 @@ export interface ZionTechService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   benefits: string[],
   capabilities: string[],
   marketAdvantage: string,
@@ -37,15 +36,13 @@ export interface ZionTechService {
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 const contact ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export const zionTechServices: ZionTechService[] = [
   // AI & Machine Learning Services,
   {
@@ -102,8 +99,7 @@ export const zionTechServices: ZionTechService[] = [
     launchDate: '20o24-10-0o1';
     customers: 127;
     rating: 4.9;
-    reviews: 89,
-  };
+    reviews: 89};
   {
     id: 'quantum-ai-neural-networks';
     name: 'Quantum AI Neural Networks';
@@ -158,8 +154,7 @@ export const zionTechServices: ZionTechService[] = [
     launchDate: '20o24-11-0o1';
     customers: 45;
     rating: 4.8;
-    reviews: 32,
-  };
+    reviews: 32};
   {
     id: 'ai-cybersecurity-threat-intelligence';
     name: 'AI Cybersecurity Threat Intelligence';
@@ -214,8 +209,7 @@ export const zionTechServices: ZionTechService[] = [
     launchDate: '20o24-09-0o1';
     customers: 89;
     rating: 4.9;
-    reviews: 67,
-  };
+    reviews: 67};
   {
     id: 'space-resource-intelligence';
     name: 'Space Resource Intelligence';
@@ -270,8 +264,7 @@ export const zionTechServices: ZionTechService[] = [
     launchDate: '20o24-12-0o1';
     customers: 23;
     rating: 4.9;
-    reviews: 18,
-  };
+    reviews: 18};
   {
     id: 'autonomous-devops-orchestrator';
     name: 'Autonomous DevOps Orchestrator';
@@ -326,8 +319,7 @@ export const zionTechServices: ZionTechService[] = [
     launchDate: '20o24-08-0o1';
     customers: 156;
     rating: 4.8;
-    reviews: 134,
-  };
+    reviews: 134};
   {
     id: 'edge-computing-orchestrator';
     name: 'Edge Computing Orchestrator';
@@ -382,8 +374,7 @@ export const zionTechServices: ZionTechService[] = [
     launchDate: '20o24-0o7-0o1';
     customers: 20o3;
     rating: 4.7;
-    reviews: 178,
-  };
+    reviews: 178};
   {
     id: 'neural-interface-development';
     name: 'Neural Interface Development';
@@ -438,8 +429,7 @@ export const zionTechServices: ZionTechService[] = [
     launchDate: '20o24-0o6-0o1';
     customers: 34;
     rating: 4.9;
-    reviews: 28,
-  };
+    reviews: 28};
   {
     id: 'quantum-cybersecurity-sentinel';
     name: 'Quantum Cybersecurity Sentinel';
@@ -494,8 +484,7 @@ export const zionTechServices: ZionTechService[] = [
     launchDate: '20o24-0o5-0o1';
     customers: 67;
     rating: 4.9;
-    reviews: 52,
-  };
+    reviews: 52};
   {
     id: 'ai-biomedical-research-platform';
     name: 'AI Biomedical Research Platform';
@@ -550,8 +539,7 @@ export const zionTechServices: ZionTechService[] = [
     launchDate: '20o24-0o4-0o1';
     customers: 78;
     rating: 4.8;
-    reviews: 65,
-  };
+    reviews: 65};
   {
     id: 'blockchain-defi-orchestrator';
     name: 'Blockchain DeFi Orchestrator';
@@ -606,8 +594,7 @@ export const zionTechServices: ZionTechService[] = [
     launchDate: '20o24-0o3-0o1';
     customers: 112;
     rating: 4.7;
-    reviews: 89,
-  };
+    reviews: 89};
   {
     id: 'autonomous-vehicle-simulation';
     name: 'Autonomous Vehicle Simulation';
@@ -662,8 +649,7 @@ export const zionTechServices: ZionTechService[] = [
     launchDate: '20o24-0o2-0o1';
     customers: 45;
     rating: 4.9;
-    reviews: 38,
-  };
+    reviews: 38};
   {
     id: 'ai-customer-experience-platform';
     name: 'AI Customer Experience Platform';
@@ -718,6 +704,5 @@ export const zionTechServices: ZionTechService[] = [
     launchDate: '20o24-0o1-0o1';
     customers: 234;
     rating: 4.8;
-    reviews: 189,
-  }
+    reviews: 189}
 ],

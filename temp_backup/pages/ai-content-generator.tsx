@@ -469,6 +469,5 @@ export default function AIContentGeneratorPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,

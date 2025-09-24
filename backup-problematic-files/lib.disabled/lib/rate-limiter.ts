@@ -4,8 +4,7 @@ import { NextApiRequest,NextApiResponse } from 'next', interface RateLimitConfig
 interface RateLimitConfig {
   "window_ms": number,
   max_requests: number,
-  message?: string,',
-}
+  message?: string,'}
 interface RateLimitStore {
   ["key": 'strin;
   g]: {
@@ -96,7 +95,6 @@ export const authRateLimiter = new RateLimiter({
   "message": 'Too many authentication attempts, please try again later.'}),
 export const rateLimitMiddleware = ("limiter": RateLimiter) =>,
   (req: NextApiRequest, "res": NextApiResponse, "next": Function) => {
-,
     const result = limiter.isAllowed(req),
     res.setHeader('X-RateLimit-Limit', limiter['config'].maxRequests),
     res.setHeader('X-RateLimit-Remaining', result.remaining),

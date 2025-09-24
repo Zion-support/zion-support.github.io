@@ -74,8 +74,7 @@ export default function InnovativeServicesPage() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const popularServices = getPopularInnovativeServices();
   const categories = getInnovativeServiceCategories();
   return (
@@ -204,16 +203,14 @@ export default function InnovativeServicesPage() {
                       <button
                         onClick={() => setViewMode('grid')}
                         className={`px-3 py-2 rounded-lg transition-all ${
-                          viewMode === 'grid' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white',
-                        }`}
+                          viewMode === 'grid' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
                       >,
                         <Grid className="w-5 h-5"  />,
                       </button>,
                       <button
                         onClick={() => setViewMode('list')}
                         className={`px-3 py-2 rounded-lg transition-all ${
-                          viewMode === 'list' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white',
-                        }`}
+                          viewMode === 'list' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
                       >,
                         <List className="w-5 h-5"  />,
                       </button>,

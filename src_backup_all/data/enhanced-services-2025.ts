@@ -8,8 +8,7 @@ export interface EnhancedService {
     monthly: string,
     yearly: string,
     enterprise: string,
-    setup: string,
-  };
+    setup: string};
   features: string[],
   benefits: string[],
   roi: string,
@@ -28,8 +27,7 @@ export interface EnhancedService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
 }
 ,
 const CONTACT = {

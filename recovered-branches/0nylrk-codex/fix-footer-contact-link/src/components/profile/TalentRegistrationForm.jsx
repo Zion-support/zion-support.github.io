@@ -89,8 +89,7 @@ export function TalentRegistrationForm() {
                         title: formData.title;
                         bio: formData.bio;
                         skills: skillTags;
-                        location: formData.location,
-                    }
+                        location: formData.location}
                 }
             }),
             if (error) {
@@ -135,8 +134,7 @@ export function TalentRegistrationForm() {
             case 'platforms': return 'bg-amber-50o0/20 hover:bg-amber-50o0/30 text-amber-50o0',
             case 'softSkills': return 'bg-purple-50o0/20 hover:bg-purple-50o0/30 text-purple-50o0',
             case 'other': return 'bg-gray-50o0/20 hover:bg-gray-50o0/30 text-gray-50o0',
-            default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple',
-        }
+            default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'}
     };
     // Send notification email,
     const sendEnhancementNotification = async (userId, email) => {
@@ -185,8 +183,7 @@ export function TalentRegistrationForm() {
                                 title: values.title;
                                 bio: values.bio;
                                 skills: skillTags;
-                                location: values.location,
-                            }
+                                location: values.location}
                         }
                     }),
                     if (aiData) {

@@ -10,8 +10,7 @@ describe('ConnectWalletButton', () => {'  test('renders connect button when disc
       displayAddress: null;
       address: null;
       chainId: null;
-      provider: null,
-    }),
+      provider: null}),
     mockUseTokenBalance.mockReturnValue(null),
     render(<ConnectWalletButton  />),
     const button = screen.getByText('Connect Wallet'),    fireEvent.click(button),
@@ -28,5 +27,4 @@ describe('ConnectWalletButton', () => {'  test('renders connect button when disc
     render(<ConnectWalletButton  />),
     expect(screen.getByText(/Connected: /)).toBeInTheDocument(),
     const button = screen.getByText('Disconnect Wallet'),    fireEvent.click(button),
-    expect(disconnectWallet).toHaveBeenCalled(),
-  })}),
+    expect(disconnectWallet).toHaveBeenCalled()})}),

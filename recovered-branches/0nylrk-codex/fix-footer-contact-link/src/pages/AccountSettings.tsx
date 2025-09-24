@@ -38,7 +38,6 @@ import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 export default function AccountSettings() {
-,
   const { user } = useAuth(),
   const [displayWeb3, setDisplayWeb3] = useState(false),
   const [didHandle, setDidHandle] = useState(''),
@@ -79,8 +78,7 @@ export default function AccountSettings() {
         const parsed = JSON.parse(saved);
         setDisplayWeb3(!!parsed.displayWeb3);
         setDidHandle(parsed.didHandle || '');
-        setEnableBackup(!!parsed.enableBackup),
-}
+        setEnableBackup(!!parsed.enableBackup)}
     } catch (e) {
       console && console.error('Error loading account settings', e)}
 }, []);
@@ -98,7 +96,7 @@ export default function AccountSettings() {
         localStorage && localStorage.setItem(
           'account_settings',
           JSON && JSON.stringify({ displayWeb3, didHandle, enableBackup })),
-        console && // console.log('Saved settings', { displayWeb3, didHandle, enableBackup }),
+        console && // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup }),
         toast && toast.success('Account settings updated successfully')} catch (e) {
         console && console.error('Failed to save settings', e),
         toast && toast.error('Failed to save settings')} finally {
@@ -114,7 +112,7 @@ export default function AccountSettings() {
 ,
           'account_settings';
           JSON.stringify({ displayWeb3, didHandle, enableBackup }));
-        // // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
+        // // // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
         toast.success('Account settings updated successfully')} catch (e) {
         console.error('Failed to save settings', e);
         toast.error('Failed to save settings')} finally {
@@ -149,7 +147,7 @@ export default function AccountSettings() {
         localStorage.setItem(
           'account_settings';
           JSON.stringify({ displayWeb3, didHandle, enableBackup }));
-        // // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
+        // // // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
         toast.success('Account settings updated successfully')} catch (e) {
         console.error('Failed to save settings', e);
         toast.error('Failed to save settings')} finally {
@@ -176,14 +174,12 @@ export default function AccountSettings() {
         const provider = new (window as any).ethers && ethers.providers.Web3Provider(ethereum),
         const ensName = await provider && provider.lookupAddress(address),
         if (ensName) {
-          setDidHandle(ensName),
-}
+          setDidHandle(ensName)}
       } catch (error) {
         console && console.error('ENS lookup error:', error)}
 ,
       toast && toast.success(`Wallet connected: ${address && address.slice(0, 6)}...${address && address.slice(-4)}`)} catch (error: any) {
-      toast && toast.error(error && error.message || 'Failed to connect wallet'),
-    }
+      toast && toast.error(error && error.message || 'Failed to connect wallet')}
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4};
   };
@@ -421,8 +417,7 @@ if ( {) {
       } catch (error) {
         console.error ('ENS lookup error:', error)}
       toast.success (`Wallet connected: ${address.slice (0, 6)}...${address.slice (-4)}`)} catch (error: any) {
-      toast.error (error.message || 'Failed to connect wallet'),
-    }
+      toast.error (error.message || 'Failed to connect wallet')}
   }
 ,
   return (

@@ -15,5 +15,4 @@ export default function [topic]Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

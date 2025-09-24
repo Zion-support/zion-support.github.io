@@ -30,8 +30,7 @@ const DataRevolutionContentShowcase20o25 = () => {
         roi: '50o0%';
         savings: '$45M';
         accuracy: '99.7%';
-        timeline: '8 months',
-      };
+        timeline: '8 months'};
       url: '/case-studies/fortune-50o0-data-transformation-50o0-roi-success';
       featured: true;
       tags: ['Case 'Study', 'Fortune 50o0'Data 'Transformation', 'ROI'Manufacturing']};
@@ -46,8 +45,7 @@ const DataRevolutionContentShowcase20o25 = () => {
         success: '98%';
         roi: '50o0%';
         projects: '50o0+';
-        timeline: '12 months',
-      };
+        timeline: '12 months'};
       url: '/resources/ai-data-transformation-implementation-guide-20o25';
       featured: true;
       tags: ['Implementation 'Guide', 'AI Data 'Transformation', 'Strategy', 'ROI', 'Best Practices']}
@@ -70,8 +68,7 @@ const DataRevolutionContentShowcase20o25 = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -82,8 +79,7 @@ const DataRevolutionContentShowcase20o25 = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <section className="py-16 bg-gray-50">,
@@ -133,8 +129,7 @@ const DataRevolutionContentShowcase20o25 = () => {
               className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                 activeCategory === category.id,
                   ? 'bg-blue-60o0 text-white',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -224,6 +219,5 @@ const DataRevolutionContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default DataRevolutionContentShowcase20o25;

@@ -52,8 +52,7 @@ describe('Equipment Details Page Fixes', () => {'  // Test the data conversion f
         description: item.description;
         brand: item.brand || Unknown',        category: item.category;
         price: item.price || 0;
-        currency: item.currency || $',        inStock: item.availability === In Stock' || !item.availability,        expectedShipping: item.availability || In Stock',        specifications: (item.specifications || []).map((spec: string) => ({ name: spec, value:  })),        features: item.tags || [],
-      };
+        currency: item.currency || $',        inStock: item.availability === In Stock' || !item.availability,        expectedShipping: item.availability || In Stock',        specifications: (item.specifications || []).map((spec: string) => ({ name: spec, value:  })),        features: item.tags || []};
     }
 ,
     const converted = convertProductListingToEquipmentDetails(minimalListing),

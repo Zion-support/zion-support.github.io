@@ -32,6 +32,5 @@ export default function SecurityGuide() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

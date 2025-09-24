@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
 interface UltraFuturisticBackground20o32Props {
   children: React.ReactNode,
-  className?: string,
-}
+  className?: string}
 ,
 const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Props> = ({
   children;
@@ -24,8 +23,7 @@ const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Pro
       vy: number,
       size: number,
       color: string,
-      alpha: number,
-    }> = [],
+      alpha: number}> = [],
     // Create particles,
     const createParticles = () => {
       particles = [],
@@ -37,8 +35,7 @@ const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Pro
           vy: (Math.random() - 0.5) * 0.5;
           size: Math.random() * 2 + 1;
           color: `hsl(${Math.random() * 360}, 70%, 60%)`;
-          alpha: Math.random() * 0.5 + 0.3,
-        })}
+          alpha: Math.random() * 0.5 + 0.3})}
     };
     // Update and draw particles,
     const animate = () => {
@@ -123,8 +120,7 @@ const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Pro
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/30 rounded-full",
@@ -134,8 +130,7 @@ const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Pro
           transition={{
             duration: 15;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-32 w-40 h-40 border border-pink-40o0/30 transform rotate-45",
@@ -146,8 +141,7 @@ const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Pro
           transition={{
             duration: 25;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute bottom-20 right-20 w-28 h-28 border border-blue-40o0/30 transform rotate-12",
@@ -157,8 +151,7 @@ const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Pro
           transition={{
             duration: 18;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
       </div>,
       {/* Neon Grid Lines */}
@@ -178,8 +171,7 @@ const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Pro
               duration: 8 + i * 0.5;
               repeat: Infinity;
               ease: "easeInOut";
-              delay: i * 0.2,
-            }}
+              delay: i * 0.2}}
            />))}
 ,
         {/* Vertical Lines */}
@@ -195,8 +187,7 @@ const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Pro
               duration: 10 + i * 0.3;
               repeat: Infinity;
               ease: "easeInOut";
-              delay: i * 0.3,
-            }}
+              delay: i * 0.3}}
            />))}
       </div>,
       {/* Floating Data Streams */}
@@ -215,8 +206,7 @@ const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Pro
               duration: 12 + i * 2;
               repeat: Infinity;
               ease: "linear";
-              delay: i * 2,
-            }}
+              delay: i * 2}}
           >,
             {`0x${Math.random().toString(16).substr(2, 8).toUpperCase()}`}
           </motion.div>))}
@@ -242,8 +232,7 @@ const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Pro
               duration: 6 + i * 1;
               repeat: Infinity;
               ease: "easeInOut";
-              delay: i * 2,
-            }}
+              delay: i * 2}}
            />))}
       </div>,
       {/* Content */}

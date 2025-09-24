@@ -51,11 +51,9 @@ function ITServicePricingTable() {
   const [search_query, setSearchQuery] = useState (""),
   const [sort_config, setSortConfig] = useState<{
     key: keyof CountryPricing,
-    direction: "ascending" | "descending",
-  }>({
+    direction: "ascending" | "descending"}>({
     key: "country",
-    direction: "ascending",
-  }),
+    direction: "ascending"}),
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing],
     let filteredData = [...onsiteServicePricing];
@@ -84,8 +82,7 @@ if ( {) {
       // Check condition,
 if ( {) {
   $2}
-        return sort_config.direction === "ascending" ? -1 : 1,
-}
+        return sort_config.direction === "ascending" ? -1 : 1}
       // Check condition,
 if ( {) {
   $2}
@@ -95,8 +92,7 @@ export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState(""),
   const [sortConfig, setSortConfig] = useState<{
     key: keyof CountryPricing;
-    direction: "ascending" | "descending",
-  }>({
+    direction: "ascending" | "descending"}>({
     key: "country";
     direction: "ascending"});
   const sortedData = useMemo(() => {
@@ -121,8 +117,7 @@ export function ITServicePricingTable() {
       direction:,
         sortConfig.key === key && sortConfig.direction === "ascending",
           ? "descending",
-          : "ascending",
-    })}
+          : "ascending"})}
       return 0});
     return filteredData}, [onsiteServicePricing, searchQuery, sortConfig]);
   const handleSort = (key: keyof CountryPricing) => {
@@ -194,8 +189,7 @@ export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortConfig, setSortConfig] = useState<{
     key: keyof CountryPricing;
-    direction: "ascending" | "descending",
-  }>({
+    direction: "ascending" | "descending"}>({
     key: "country";
     direction: "ascending"});
   const sortedData = useMemo(() => {

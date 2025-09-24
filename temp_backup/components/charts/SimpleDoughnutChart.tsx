@@ -5,8 +5,7 @@ export type SimpleDoughnutChartProps ={
   radius?: number,
   thickness?: number,
   onExportCsv?: (rows: Array<Record<string string | number>>) => void,
-  onExportPng?: (svgElement: SVGSVGElement) => void,
-};
+  onExportPng?: (svgElement: SVGSVGElement) => void};
 export default function SimpleDoughnutChart({ data, radius = 80, thickness = 20, onExportCsv, onExportPng }: SimpleDoughnutChartProps) {
   const svgRef = useRef<SVGSVGElement | null>(null),
   const total = Math.max(data.reduce((acc, d) => acc + d.value, 0), 1),

@@ -388,6 +388,5 @@ export default function EnterpriseAIRevolutionPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

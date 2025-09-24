@@ -3,7 +3,6 @@ import { useRouter } from 'next/router',
 import {
 import Button from '../ui/Button',
 "use client",
-,
   Menu,
   X,
   ChevronDown,
@@ -111,16 +110,14 @@ export default function NeoFuturisticNavigation() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-  }
+    website: 'https://ziontechgroup.com'}
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)}
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown),
-  }
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)}
   const closeMobileMenu = () => {
     setIsOpen(false),
     setActiveDropdown(null)}
@@ -135,18 +132,15 @@ export default function NeoFuturisticNavigation() {
         {
           name: 'Quantum AI Platform',
           description: 'AI-powered quantum computing',
-          price: '$299/month',
-        }
+          price: '$299/month'}
         {
           name: 'Quantum Optimization',
           description: 'Quantum algorithms for complex problems',
-          price: '$199/month',
-        }
+          price: '$199/month'}
         {
           name: 'Quantum Simulation',
           description: 'Advanced quantum simulations',
-          price: '$399/month',
-        }
+          price: '$399/month'}
       ]}
     {
       name: 'AI & Machine Learning',
@@ -157,18 +151,15 @@ export default function NeoFuturisticNavigation() {
         {
           name: 'AI Content Generator',
           description: 'Professional AI content creation',
-          price: '$49/month',
-        }
+          price: '$49/month'}
         {
           name: 'AI Analytics Platform',
           description: 'Advanced business intelligence',
-          price: '$99/month',
-        }
+          price: '$99/month'}
         {
           name: 'AI Automation Suite',
           description: 'Complete business automation',
-          price: '$149/month',
-        }
+          price: '$149/month'}
       ]}
     {
       name: 'Cybersecurity',
@@ -179,18 +170,15 @@ export default function NeoFuturisticNavigation() {
         {
           name: 'Quantum Cybersecurity',
           description: 'Post-quantum era security',
-          price: '$159/month',
-        }
+          price: '$159/month'}
         {
           name: 'AI Threat Detection',
           description: 'Intelligent security monitoring',
-          price: '$89/month',
-        }
+          price: '$89/month'}
         {
           name: 'Zero-Trust Platform',
           description: 'Advanced access control',
-          price: '$129/month',
-        }
+          price: '$129/month'}
       ]}
     {
       name: 'Blockchain & Web3',
@@ -201,18 +189,15 @@ export default function NeoFuturisticNavigation() {
         {
           name: 'Quantum Blockchain',
           description: 'Post-quantum blockchain platform',
-          price: '$349/month',
-        }
+          price: '$349/month'}
         {
           name: 'DeFi Protocol Suite',
           description: 'Complete DeFi solutions',
-          price: '$199/month',
-        }
+          price: '$199/month'}
         {
           name: 'NFT Marketplace',
           description: 'AI-curated NFT platform',
-          price: '$99/month',
-        }
+          price: '$99/month'}
       ]}
     {
       name: 'IoT & Smart Cities',
@@ -223,18 +208,15 @@ export default function NeoFuturisticNavigation() {
         {
           name: 'Quantum IoT Platform',
           description: 'Quantum-secured IoT solutions',
-          price: '$199/month',
-        }
+          price: '$199/month'}
         {
           name: 'Smart City Suite',
           description: 'Complete urban intelligence',
-          price: '$299/month',
-        }
+          price: '$299/month'}
         {
           name: 'Industrial IoT',
           description: 'Manufacturing automation',
-          price: '$249/month',
-        }
+          price: '$249/month'}
       ]}
     {
       name: 'Metaverse & VR/AR',
@@ -245,18 +227,15 @@ export default function NeoFuturisticNavigation() {
         {
           name: 'Quantum Metaverse',
           description: 'Quantum-enhanced virtual reality',
-          price: '$499/month',
-        }
+          price: '$499/month'}
         {
           name: 'VR Development',
           description: 'Complete VR platform',
-          price: '$299/month',
-        }
+          price: '$299/month'}
         {
           name: 'AR Solutions',
           description: 'Augmented reality platform',
-          price: '$199/month',
-        }
+          price: '$199/month'}
       ]}
     {
       name: 'Robotics & Automation',
@@ -267,18 +246,15 @@ export default function NeoFuturisticNavigation() {
         {
           name: 'Quantum Robotics',
           description: 'AI-powered robotics platform',
-          price: '$799/month',
-        }
+          price: '$799/month'}
         {
           name: 'Manufacturing AI',
           description: 'Autonomous manufacturing',
-          price: '$199/month',
-        }
+          price: '$199/month'}
         {
           name: 'Service Robotics',
           description: 'Intelligent service automation',
-          price: '$349/month',
-        }
+          price: '$349/month'}
       ]}
     {
       name: 'Energy & Sustainability',
@@ -289,18 +265,15 @@ export default function NeoFuturisticNavigation() {
         {
           name: 'Quantum Energy',
           description: 'AI-optimized energy management',
-          price: '$299/month',
-        }
+          price: '$299/month'}
         {
           name: 'Smart Grid',
           description: 'Intelligent energy distribution',
-          price: '$199/month',
-        }
+          price: '$199/month'}
         {
           name: 'Sustainability AI',
           description: 'Environmental impact optimization',
-          price: '$149/month',
-        }
+          price: '$149/month'}
       ]}
     {
       name: 'Financial Technology',
@@ -311,18 +284,15 @@ export default function NeoFuturisticNavigation() {
         {
           name: 'Quantum Trading',
           description: 'Quantum-enhanced algorithmic trading',
-          price: '$899/month',
-        }
+          price: '$899/month'}
         {
           name: 'AI Risk Management',
           description: 'Intelligent financial risk analysis',
-          price: '$399/month',
-        }
+          price: '$399/month'}
         {
           name: 'Blockchain Finance',
           description: 'DeFi and blockchain solutions',
-          price: '$199/month',
-        }
+          price: '$199/month'}
       ]}
     {
       name: 'Biotechnology & Healthcare',
@@ -333,18 +303,15 @@ export default function NeoFuturisticNavigation() {
         {
           name: 'Biotech AI',
           description: 'AI-powered drug discovery',
-          price: '$599/month',
-        }
+          price: '$599/month'}
         {
           name: 'Healthcare Analytics',
           description: 'Medical data intelligence',
-          price: '$299/month',
-        }
+          price: '$299/month'}
         {
           name: 'Genomic AI',
           description: 'Advanced genetic analysis',
-          price: '$399/month',
-        }
+          price: '$399/month'}
       ]}
   ],
   const companyInfo = [
@@ -352,58 +319,49 @@ export default function NeoFuturisticNavigation() {
       name: 'About Zion Tech Group',
       description: 'Leading the global micro SaaS revolution',
       icon: <Rocket className='w-5 h-5' />,
-      link: '/about',
-    }
+      link: '/about'}
     {
       name: 'Careers',
       description: 'Join our revolutionary team',
       icon: <Star className='w-5 h-5' />,
-      link: '/careers',
-    }
+      link: '/careers'}
     {
       name: 'News & Updates',
       description: 'Latest announcements and releases',
       icon: <TrendingUp className='w-5 h-5' />,
-      link: '/news',
-    }
+      link: '/news'}
     {
       name: 'Contact',
       description: 'Talk to our team 24/7',
       icon: <Phone className='w-5 h-5' />,
-      link: '/contact',
-    }
+      link: '/contact'}
   ],
   const resources = [
     {
       name: 'Documentation',
       description: 'Comprehensive service guides',
       icon: <BookOpen className='w-5 h-5' />,
-      link: '/docs',
-    }
+      link: '/docs'}
     {
       name: 'Blog & Insights',
       description: 'Latest technology trends',
       icon: <FileText className='w-5 h-5' />,
-      link: '/blog',
-    }
+      link: '/blog'}
     {
       name: 'Case Studies',
       description: 'Real-world success stories',
       icon: <BarChart3 className='w-5 h-5' />,
-      link: '/case-studies',
-    }
+      link: '/case-studies'}
     {
       name: 'Pricing',
       description: 'Transparent and flexible plans',
       icon: <CreditCard className='w-5 h-5' />,
-      link: '/pricing',
-    }
+      link: '/pricing'}
     {
       name: 'Reports',
       description: 'Live performance and audits',
       icon: <Activity className='w-5 h-5' />,
-      link: '/reports',
-    }
+      link: '/reports'}
   ],
   // Popular quick links to flagship services,
   const popularServiceLinks = [
@@ -421,24 +379,19 @@ export default function NeoFuturisticNavigation() {
   const newServiceLinks = [
     {
       name: 'Email Deliverability Monitor',
-      href: '/services/email-deliverability-monitor',
-    }
+      href: '/services/email-deliverability-monitor'}
     {
       name: 'Landing Page Experimentation',
-      href: '/services/landing-page-experimentation',
-    }
+      href: '/services/landing-page-experimentation'}
     {
       name: 'Invoice Reconciliation Automation',
-      href: '/services/invoice-reconciliation-automation',
-    }
+      href: '/services/invoice-reconciliation-automation'}
     {
       name: 'GitHub Ops Health Dashboard',
-      href: '/services/github-ops-health-dashboard',
-    }
+      href: '/services/github-ops-health-dashboard'}
     {
       name: 'Error Budget Automation',
-      href: '/services/error-budget-automation',
-    }
+      href: '/services/error-budget-automation'}
     { name: 'LLM Usage Governance', href: '/services/llm-usage-governance' }
   ]>,
       {/* Scroll Progress Bar */}
@@ -1224,16 +1177,14 @@ export default function NeoFuturisticNavigation() {
 		mobile: '+1 302 464 0950';
 		email: 'kleber@ziontechgroup.com';
 		address: '364 E Main St STE 1008 Middletown DE 19709';
-		website: 'https://ziontechgroup.com',
-};
+		website: 'https://ziontechgroup.com'};
 	useEffect(() => {
 		const handleScroll = () => {
 			setIsScrolled(window.scrollY > 20)};
 		window.addEventListener('scroll', handleScroll),
 		return () => window.removeEventListener('scroll', handleScroll)}, []),
 	const toggleDropdown = (dropdown: string) => {
-		setActiveDropdown(activeDropdown === dropdown ? null : dropdown),
-	};
+		setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
 	const closeMobileMenu = () => {
 		setIsOpen(false),
 		setActiveDropdown(null)};
@@ -1241,8 +1192,7 @@ export default function NeoFuturisticNavigation() {
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll)}, []);
 	const toggleDropdown = (dropdown: string) => {
-		setActiveDropdown(activeDropdown === dropdown ? null : dropdown),
-	};
+		setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
 	const closeMobileMenu = () => {
 		setIsOpen(false);
 		setActiveDropdown(null)};

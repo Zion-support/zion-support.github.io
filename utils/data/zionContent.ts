@@ -2,28 +2,24 @@ export type Infobox = {
   founder: string,
   launchYear: string,
   token: string,
-  protocolType: string,
-};
+  protocolType: string};
 export type WikiSection = {
   id: string,
   title: string,
-  paragraphs: string[],
-};
+  paragraphs: string[]};
 export type WikiContent = {
   title: string,
   intro: string,
   infobox: Infobox,
   sections: WikiSection[],
-  references: string[],
-};
+  references: string[]};
 export type DocsContent = {
   productOverview: WikiSection,
   developerApi: WikiSection,
   governanceGuide: WikiSection,
   tokenomics: WikiSection,
   team: WikiSection,
-  publicRoadmap: WikiSection,
-};
+  publicRoadmap: WikiSection};
 export const operatorPrompt = `Write a Wikipedia-style article about Zion OS — the world’s first decentralized AI protocol for trust, work, and talent. Include use cases, launch history, modules, and governance model.`,
 export function generateZionWiki(): WikiContent {
   const title = 'Zion OS',

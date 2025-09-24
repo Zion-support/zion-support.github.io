@@ -73,8 +73,7 @@ const EnhancedLoading = ({
       case 'bars':,
         return renderBars(),
       default: ,
-        return renderSpinner(),
-    }
+        return renderSpinner()}
   };
   return (
     <div

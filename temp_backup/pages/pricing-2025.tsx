@@ -29,8 +29,7 @@ export default function Pricing20o25() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -39,8 +38,7 @@ export default function Pricing20o25() {
       opacity: 1;
       y: 0;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -103,8 +101,7 @@ export default function Pricing20o25() {
                 className={`px-6 py-3 rounded-lg text-lg font-medium transition-all duration-30o0 flex items-center gap-2 ${
                   selectedCategory === category.id,
                     ? 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white',
-                    : 'bg-white/10 text-white/70 hover: bg-white/20 hover:text-white',
-                }`}
+                    : 'bg-white/10 text-white/70 hover: bg-white/20 hover:text-white'}`}
               >,
                 <span>{category.icon}</span>,
                 {category.name}
@@ -125,8 +122,7 @@ export default function Pricing20o25() {
                 key={service.id}
                 variants={itemVariants}
                 className={`group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover: border-cyan-40o0/30 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl ${
-                  service.popular ? 'ring-2 ring-cyan-40o0/50' : '',
-                }`}
+                  service.popular ? 'ring-2 ring-cyan-40o0/50' : ''}`}
               >,
                 {/* Popular Badge */}
                 {service.popular && (
@@ -311,8 +307,7 @@ export default function Pricing20o25() {
                 answer: "Yes! All our services come with free trial periods ranging from 14 to 60 days, depending on the service complexity."};
               {
                 question: "Can I cancel my subscription anytime?";
-                answer: "Absolutely. You can cancel your subscription at any time with no cancellation fees. Your service will remain active until the end of your billing period.",
-              };
+                answer: "Absolutely. You can cancel your subscription at any time with no cancellation fees. Your service will remain active until the end of your billing period."};
               {
                 question: "Do you offer volume discounts?";
                 answer: "Yes, we offer volume discounts for organizations using multiple services. Contact our sales team for custom pricing and enterprise solutions."};

@@ -187,8 +187,7 @@ const RevolutionaryAI20o25ContentShowcase = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -199,8 +198,7 @@ const RevolutionaryAI20o25ContentShowcase = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <div className='bg-gray-50 py-16'>,
@@ -254,8 +252,7 @@ const RevolutionaryAI20o25ContentShowcase = () => {
               className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                 activeFilter === filter.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {filter.label} ({filter.count}),
             </button>))}
@@ -266,8 +263,7 @@ const RevolutionaryAI20o25ContentShowcase = () => {
             <div
               key={item.id}
               className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-30o0 hover: shadow-xl hover:scale-10o5 ${
-                item.featured ? 'ring-2 ring-purple-50o0' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-50o0' : ''}`}
             >,
               {/* Content Header */}
               <div className='p-6'>,
@@ -382,6 +378,5 @@ const RevolutionaryAI20o25ContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default RevolutionaryAI20o25ContentShowcase;

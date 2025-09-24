@@ -32,6 +32,5 @@ export default function AIGovernanceMaturityModel20o26Page() {
           </p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

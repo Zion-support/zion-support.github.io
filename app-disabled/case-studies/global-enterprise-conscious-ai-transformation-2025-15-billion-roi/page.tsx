@@ -356,6 +356,5 @@ export default function GlobalEnterpriseTransformationPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

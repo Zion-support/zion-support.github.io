@@ -11,8 +11,7 @@ export const preloadCriticalResources = () => {
     link && link.rel = 'preload',
     link && link.href = resource,
     link && link.as = resource && resource.endsWith('.css') ? 'style' : 'font',
-    document && document.head.appendChild(link),
-})};
+    document && document.head.appendChild(link)})};
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components,
 // Performance optimization utilities,
@@ -34,30 +33,25 @@ export const preloadCriticalResources = () =>: any {
     link.rel = 'preload',
     link.href = resource,
     link.as = resource.ends_with ('.css') ? 'style' : 'font',
-    document.head.append_child (link),
-})}
+    document.head.append_child (link)})}
 export const optimizeBundleSize = () =>: any {
   // Dynamic imports for non - critical components,
-  const load_component = component_name => {    return import (`./components/${component_name}`),
-}
+  const load_component = component_name => {    return import (`./components/${component_name}`)}
   return { load_component }
 }
 ,
   const loadComponent = componentName => {    return import(`./components/${componentName}`),
 export const lazyLoadComponents = () => {
-  // console.log('Lazy loading components...')};
-    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font',
-})};
+  // // console.log('Lazy loading components...')};
+    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font'})};
 export const lazyLoadComponents = () => {
-  // console.log('Lazy loading components...')}
+  // // console.log('Lazy loading components...')}
 ,
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components,
   const loadComponent = componentName => {
-    return import(`./components/${componentName}`),
-};
+    return import(`./components/${componentName}`)};
   return { loadComponent };
 };
     link.rel = 'preload',
-    link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font',
-}
+    link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font'}

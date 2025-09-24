@@ -19,8 +19,7 @@ export type QuoteFormData = {
   budgetRange: string,
   contactName: string,
   contactEmail: string,
-  company?: string,
-};
+  company?: string};
 const initialData: QuoteFormData = {
   serviceTypes: [];
   talentRoles: [];
@@ -51,8 +50,7 @@ export default function RequestQuotePage() {
   const [submitting, setSubmitting] = useState(false),
   const [submitResult, setSubmitResult] = useState<{
     ok: boolean,
-    message: string,
-  } | null>(null),
+    message: string} | null>(null),
   const goNext = () => setCurrentStep(s => Math.min(s + 1, steps.length - 1)),
   const goBack = () => setCurrentStep(s => Math.max(s - 1, 0)),
   const handleSubmit = async () => {

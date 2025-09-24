@@ -15,6 +15,5 @@ export default function FundraisingPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

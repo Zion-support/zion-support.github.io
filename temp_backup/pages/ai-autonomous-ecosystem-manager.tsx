@@ -19,6 +19,5 @@ export default function AIAutonomousEcosystemManager() {
       industries={['Enterprise IT', 'SaaS', 'Telecom', 'Fintech']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/ai-autonomous-ecosystem-manager',
-    />),
-}
+    />)}
 ,

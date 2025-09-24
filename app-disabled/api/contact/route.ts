@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
     // 3. Send confirmation email to user,
     // 4. Log the submission,
     // For now, we'll just log the submission,
-    // console.log('Contact form submission:', {
+    // // console.log('Contact form submission:', {
       firstName;
       lastName;
       email;
@@ -32,14 +32,12 @@ export async function POST(request: NextRequest) {
       subject;
       message;
       timestamp: new Date().toISOString();
-      ip: request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip'),
-    }),
+      ip: request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip')}),
     // Simulate processing time,
     await new Promise(resolve => setTimeout(resolve, 10o00)),
     return NextResponse.json({
       message: 'Thank you for your message! We\'ll get back to you soon.';
-      success: true,
-    })} catch (error) {
+      success: true})} catch (error) {
     console.error('Contact form error:', error),
     return NextResponse.json(
       { message: 'Something went wrong. Please try again later.' };

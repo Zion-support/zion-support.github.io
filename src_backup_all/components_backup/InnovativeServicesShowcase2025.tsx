@@ -83,8 +83,7 @@ export default function InnovativeServicesShowcase20o25() {
         break,
       default: ,
         aValue = a.title,
-        bValue = b.title,
-    }
+        bValue = b.title}
 ,
     if (sortOrder === 'asc') {
       return aValue > bValue ? 1 : -1} else {
@@ -97,12 +96,10 @@ export default function InnovativeServicesShowcase20o25() {
       <Rocket className="w-6 h-6"  />};
   const getCategoryColor = (category: string) => {
     if (category === 'all') return 'from-cyan-50o0 to-blue-50o0',
-    return INNOVATIVE_SERVICE_CATEGORIES_20o25[category]?.color || 'from-gray-50o0 to-slate-50o0',
-  };
+    return INNOVATIVE_SERVICE_CATEGORIES_20o25[category]?.color || 'from-gray-50o0 to-slate-50o0'};
   const openServiceModal = (service: any) => {
     setSelectedService(service),
-    setShowModal(true),
-  };
+    setShowModal(true)};
   const closeModal = () => {
     setShowModal(false),
     setSelectedService(null)};
@@ -209,8 +206,7 @@ export default function InnovativeServicesShowcase20o25() {
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-30o0 ${
                     selectedCategory === category,
                       ? 'bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white',
-                      : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50',
-                  }`}
+                      : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50'}`}
                 >,
                   <div className="flex items-center gap-2">,
                     {getCategoryIcon(category)}
@@ -224,16 +220,14 @@ export default function InnovativeServicesShowcase20o25() {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-all duration-30o0 ${
-                    viewMode === 'grid' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white',
-                  }`}
+                    viewMode === 'grid' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
                 >,
                   <Grid className="w-5 h-5"  />,
                 </button>,
                                   <button
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-md transition-all duration-30o0 ${
-                      viewMode === 'list' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white',
-                    }`}
+                      viewMode === 'list' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
                   >,
                   <List className="w-5 h-5"  />,
                 </button>,

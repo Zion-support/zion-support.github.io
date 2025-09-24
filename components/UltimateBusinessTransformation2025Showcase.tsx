@@ -220,6 +220,5 @@ const UltimateBusinessTransformation20o25Showcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateBusinessTransformation20o25Showcase;

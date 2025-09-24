@@ -150,6 +150,5 @@ export default function AI20o25NewContentPromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

@@ -18,5 +18,4 @@ export default function AiLegalDocumentAnalysis() {
 			]}
 			industries={["Legal", "Enterprise", "Procurement", "Compliance"]}
 			url="https: //ziontechgroup.com/ai-legal-document-analysis",
-		 />),
-}
+		 />)}

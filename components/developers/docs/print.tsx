@@ -9,11 +9,9 @@ export type Section = {
   code?: { language?: string, content: string }[]};
 type DocsContent = {
   title: string,
-  sections: Section[],
-};
+  sections: Section[]};
 type PageProps = {
-  docs: DocsContent,
-};
+  docs: DocsContent};
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {

@@ -12,6 +12,5 @@ const EnterpriseDataManagement: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default EnterpriseDataManagement;

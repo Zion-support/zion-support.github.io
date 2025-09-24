@@ -136,6 +136,5 @@ const LatestContent20o25PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default LatestContent20o25PromotionBanner;

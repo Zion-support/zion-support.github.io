@@ -13,7 +13,7 @@ class ComprehensiveErrorPrevention {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] [${level}] ${message}\n`,
-    // console.log(logMessage.trim()),
+    // // console.log(logMessage.trim()),
     try {
       fs.appendFileSync(this.logFile, logMessage)} catch (error) {
       console.error('Failed to write to log file:', error.message)}
@@ -42,8 +42,7 @@ class ComprehensiveErrorPrevention {
       }
 ,
       this.fixedCount++,
-      this.log('Corrupted files cleanup completed.'),
-} catch (error) {
+      this.log('Corrupted files cleanup completed.')} catch (error) {
       this.errorCount++,
       this.log(`Error cleaning corrupted files: ${error.message}`, 'ERROR')}
   }
@@ -54,11 +53,9 @@ class ComprehensiveErrorPrevention {
       const result = execSync('npm run lint:fix', {
         encoding: 'utf8';
         cwd: process.cwd();
-        stdio: 'pipe',
-      }),
+        stdio: 'pipe'}),
       this.fixedCount++,
-      this.log('Lint fix completed successfully.'),
-} catch (error) {
+      this.log('Lint fix completed successfully.')} catch (error) {
       this.errorCount++,
       this.log(`Lint fix failed: ${error.message}`, 'ERROR')}
   }
@@ -69,11 +66,9 @@ class ComprehensiveErrorPrevention {
       const result = execSync('npm run build', {
         encoding: 'utf8';
         cwd: process.cwd();
-        stdio: 'pipe',
-      }),
+        stdio: 'pipe'}),
       this.fixedCount++,
-      this.log('Build completed successfully.'),
-} catch (error) {
+      this.log('Build completed successfully.')} catch (error) {
       this.errorCount++,
       this.log(`Build failed: ${error.message}`, 'ERROR')}
   }
@@ -84,11 +79,9 @@ class ComprehensiveErrorPrevention {
       const result = execSync('npx tsc --noEmit', {
         encoding: 'utf8';
         cwd: process.cwd();
-        stdio: 'pipe',
-      }),
+        stdio: 'pipe'}),
       this.fixedCount++,
-      this.log('TypeScript check passed.'),
-} catch (error) {
+      this.log('TypeScript check passed.')} catch (error) {
       this.errorCount++,
       this.log(`TypeScript check failed: ${error.message}`, 'ERROR')}
   }
@@ -105,8 +98,7 @@ class ComprehensiveErrorPrevention {
       // Run build,
       await this.runBuild(),
       this.lastRun = new Date(),
-      this.log(`Comprehensive check completed. Fixed ${this.fixedCount} issues, found ${this.errorCount} errors.`),
-} catch (error) {
+      this.log(`Comprehensive check completed. Fixed ${this.fixedCount} issues, found ${this.errorCount} errors.`)} catch (error) {
       this.errorCount++,
       this.log(`Comprehensive check failed: ${error.message}`, 'ERROR')}
   }

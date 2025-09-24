@@ -12,8 +12,7 @@ export interface Offer {
   agreementUrl?: string,
   status: 'SENT' | 'CONFIRMED' | 'CHANGES_REQUESTED' | 'DECLINED',
   changeRequestNote?: string,
-  projectId?: string,
-}
+  projectId?: string}
 export interface PaymentTerms {
   type: 'hourly' | 'fixed' | 'milestone',
   amount?: number,
@@ -21,8 +20,7 @@ export interface PaymentTerms {
   milestones?: Array<{
     title: string,
     amount: number,
-    dueDateIso: string,
-  }>}
+    dueDateIso: string}>}
 export interface Project {
 export interface PaymentTerms {
   type: 'hourly' | 'fixed' | 'milestone',
@@ -31,11 +29,9 @@ export interface PaymentTerms {
   milestones?: Array<{
     title: string,
     amount: number,
-    dueDateIso: string,
-  }>}
+    dueDateIso: string}>}
 ,
 export interface Project {
-,
   id: string,
   title: string,
   summary: string,
@@ -45,28 +41,24 @@ export interface Project {
   status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED',
   timeline: any[],
   documents: ProjectDocument[],
-  notes: ProjectNote[],
-}
+  notes: ProjectNote[]}
 export interface ProjectDocument {
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
   id: string,
   name: string,
   url?: string,
-  uploadedAtIso: string,
-}
+  uploadedAtIso: string}
 ,
   id: string,
   authorId: string,
   authorRole: string,
   content: string,
-  createdAtIso: string,
-}
+  createdAtIso: string}
 ,
 export interface ProjectNote {
   id: string,
   authorId: string,
   authorRole: string,
   content: string,
-  createdAtIso: string,
-}
+  createdAtIso: string}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

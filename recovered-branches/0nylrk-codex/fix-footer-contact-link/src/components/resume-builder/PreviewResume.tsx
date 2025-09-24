@@ -9,8 +9,7 @@ import {
 } from './preview',
 interface PreviewResumeProps {
   resume: Resume,
-  onBack: () => void,
-}
+  onBack: () => void}
 ,
 export function PreviewResume({ resumeonBack }: PreviewResumeProps) {
   return (

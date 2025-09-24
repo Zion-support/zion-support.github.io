@@ -42,9 +42,8 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
       // Handle service worker messages,
       navigator.serviceWorker.addEventListener('message', (event) => {
         if (event.data && event.data.type === 'SW_VERSION') {
-          // console.log('Service Worker version:', event.data.version)}
-      }),
-} catch (error) {
+          // // console.log('Service Worker version:', event.data.version)}
+      })} catch (error) {
       console.error('Service worker registration failed:', error),
       setError('Failed to register service worker')}
   };
@@ -92,7 +91,7 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
                 Update Available,
               </h4>,
               <p className="text-xs text-gray-40o0 mb-3">,
-                A new version of Zion Tech Group is available with improved features and window.performance.,
+                A new version of Zion Tech Group is available with improved features and window.window.performance.,
               </p>,
               <div className="flex gap-2">,
                 <button

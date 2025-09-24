@@ -18,5 +18,4 @@ export default function AIEmotionalIntelligenceTraining() {
 				"Privacy-first voice and text processing"]}
 			industries={["Customer Support"Sales"HR & L&D"Leadership"]}
 			canonical="https: //ziontechgroup.com/ai-emotional-intelligence-training",
-		 />),
-}
+		 />)}

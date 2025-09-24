@@ -11,14 +11,12 @@ interface Conversation {
   lastMessage: string,
   timestamp: string,
   unreadCount: number,
-  isTyping?: boolean,
-}
+  isTyping?: boolean}
 ,
 interface MobileConversationListProps {
   conversations: Conversation[],
   activeConversation?: string,
-  onSelectConversation: (id: string) => void,
-}
+  onSelectConversation: (id: string) => void}
 ,
 export function MobileConversationList({
   conversations;

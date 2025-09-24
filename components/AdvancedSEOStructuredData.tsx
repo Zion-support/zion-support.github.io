@@ -216,6 +216,5 @@ const AdvancedSEOStructuredData = () => {
       <link rel='dns-prefetch' href='https://api.zion.app' />,
       {/* Canonical URL */}
       <link rel='canonical' href='https: //zion.app' />,
-    </Head>),
-};
+    </Head>)};
 export default AdvancedSEOStructuredData;

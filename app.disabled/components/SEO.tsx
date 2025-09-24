@@ -5,8 +5,7 @@ type SEOProps = {
   keywords?: string,
   url?: string};
 export default function SEO(_props: SEOProps) {
-  return null,
-}
+  return null}
 ,
 export default function SEO({
   title;

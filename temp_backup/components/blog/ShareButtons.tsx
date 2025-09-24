@@ -8,8 +8,7 @@ export default function ShareButtons({
   title: string,
   url: string,
   description?: string,
-  onShare?: () => void,
-}) {
+  onShare?: () => void}) {
   const links = useMemo(() => {
     const encodedUrl = encodeURIComponent(url),
     const encodedTitle = encodeURIComponent(title),
@@ -48,6 +47,5 @@ export default function ShareButtons({
         className='px-3 py-2 rounded bg-gray-20o0 dark: bg-zinc-80o0'>,
         Share via Email,
       </a>,
-    </div>),
-}
+    </div>)}
 ,

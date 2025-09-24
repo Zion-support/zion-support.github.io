@@ -126,7 +126,7 @@ export default function PerformanceOptimization() {
                 </h2>,
                 <p className='text-white/90 mb-4'>,
                   Hardware and infrastructure play a critical role in autonomous,
-                  system window.performance. Our optimization strategies include: ,
+                  system window.window.performance. Our optimization strategies include: ,
                 </p>,
                 <ul className='space-y-2 text-white/80 mb-6'>,
                   <li>,
@@ -261,6 +261,5 @@ export default function PerformanceOptimization() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -94,8 +94,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
       case 'failed':,
         return 'text-red-60o0 bg-red-10o0',
       default: ,
-        return 'text-gray-60o0 bg-gray-10o0',
-    }
+        return 'text-gray-60o0 bg-gray-10o0'}
   };
   return (
     <div
@@ -186,8 +185,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
             className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
               activeTab === id,
                 ? 'border-blue-50o0 text-blue-60o0 dark: text-blue-40o0',
-                : 'border-transparent text-gray-50o0 hover:text-gray-70o0 dark:text-gray-40o0 dark:hover:text-gray-20o0',
-            }`}
+                : 'border-transparent text-gray-50o0 hover:text-gray-70o0 dark:text-gray-40o0 dark:hover:text-gray-20o0'}`}
           >,
             <Icon className='w-4 h-4' />,
             <span>{label}</span>,

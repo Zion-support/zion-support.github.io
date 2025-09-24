@@ -43,8 +43,7 @@ interface InnovationItem {
     efficiency?: string,
     accuracy?: string,
     speed?: string,
-    cost?: string,
-  };
+    cost?: string};
 }
 ,
 const AIInnovationHub20o26: React.FC = () => {
@@ -77,8 +76,7 @@ const AIInnovationHub20o26: React.FC = () => {
         efficiency: '95%';
         accuracy: '99.7%';
         speed: '10x faster';
-        cost: '60% reduction',
-      }
+        cost: '60% reduction'}
     };
     {
       id: '2';
@@ -96,8 +94,7 @@ const AIInnovationHub20o26: React.FC = () => {
         efficiency: '10o00x faster';
         accuracy: '99.9%';
         speed: 'Quantum speedup';
-        cost: '80% reduction',
-      }
+        cost: '80% reduction'}
     };
     {
       id: '3';
@@ -115,8 +112,7 @@ const AIInnovationHub20o26: React.FC = () => {
         efficiency: '90%';
         accuracy: '98%';
         speed: '24/7 operation';
-        cost: '70% reduction',
-      }
+        cost: '70% reduction'}
     };
     {
       id: '4';
@@ -134,8 +130,7 @@ const AIInnovationHub20o26: React.FC = () => {
         efficiency: '85%';
         accuracy: '95%';
         speed: 'Real-time';
-        cost: '50% reduction',
-      }
+        cost: '50% reduction'}
     };
     {
       id: '5';
@@ -153,8 +148,7 @@ const AIInnovationHub20o26: React.FC = () => {
         efficiency: '88%';
         accuracy: '96%';
         speed: 'Continuous learning';
-        cost: '65% reduction',
-      }
+        cost: '65% reduction'}
     };
     {
       id: '6';
@@ -172,8 +166,7 @@ const AIInnovationHub20o26: React.FC = () => {
         efficiency: '95%';
         accuracy: '97%';
         speed: '10x faster';
-        cost: '75% reduction',
-      }
+        cost: '75% reduction'}
     }
   ],
   const filteredInnovations = innovations.filter(innovation => {
@@ -190,8 +183,7 @@ const AIInnovationHub20o26: React.FC = () => {
       case 'medium': return 'bg-blue-10o0 text-blue-80o0',
       case 'high': return 'bg-orange-10o0 text-orange-80o0',
       case 'revolutionary': return 'bg-red-10o0 text-red-80o0',
-      default: return 'bg-gray-10o0 text-gray-80o0',
-    }
+      default: return 'bg-gray-10o0 text-gray-80o0'}
   };
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -199,13 +191,11 @@ const AIInnovationHub20o26: React.FC = () => {
       case 'development': return 'bg-blue-10o0 text-blue-80o0',
       case 'testing': return 'bg-yellow-10o0 text-yellow-80o0',
       case 'deployed': return 'bg-green-10o0 text-green-80o0',
-      default: return 'bg-gray-10o0 text-gray-80o0',
-    }
+      default: return 'bg-gray-10o0 text-gray-80o0'}
   };
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category),
-    return categoryData ? categoryData.icon : Globe,
-  };
+    return categoryData ? categoryData.icon : Globe};
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0">,
       {/* Header Section */}
@@ -306,8 +296,7 @@ const AIInnovationHub20o26: React.FC = () => {
                       <ChevronRight className="h-5 w-5 text-gray-40o0 group-hover: text-blue-40o0 transition-colors"  />,
                     </div>,
                   </div>,
-                </motion.div>),
-            })}
+                </motion.div>)})}
           </div>,
         </motion.div>,
         {/* Category Filter */}
@@ -327,8 +316,7 @@ const AIInnovationHub20o26: React.FC = () => {
                   className={`flex items-center px-6 py-3 rounded-full transition-all duration-30o0 ${
                     activeCategory === category.id,
                       ? 'bg-blue-40o0 text-black font-semibold',
-                      : 'bg-white/10 text-white hover: bg-white/20',
-                  }`}
+                      : 'bg-white/10 text-white hover: bg-white/20'}`}
                 >,
                   <Icon className="h-5 w-5 mr-2"  />,
                   <span>{category.name}</span>,
@@ -392,8 +380,7 @@ const AIInnovationHub20o26: React.FC = () => {
                       <ChevronRight className="h-4 w-4 group-hover: text-blue-40o0 transition-colors"  />,
                     </div>,
                   </div>,
-                </motion.div>),
-            })}
+                </motion.div>)})}
           </div>,
         </motion.div>,
       </div>,

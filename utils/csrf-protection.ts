@@ -13,14 +13,12 @@ export class CSRFProtection {
     const entry = this.tokens.get(sessionId),
     if (!entry || Date.now() > entry.expires) {
       this.tokens.delete(sessionId),
-      return false,
-    }
+      return false}
 ,
     return entry.token === providedToken}
 ,
   invalidateToken(sessionId: string): void {
-    this.tokens.delete(sessionId),
-  }
+    this.tokens.delete(sessionId)}
 ,
   cleanup(): void {
     const now = Date.now(),

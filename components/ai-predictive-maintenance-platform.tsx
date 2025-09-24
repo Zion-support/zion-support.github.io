@@ -19,5 +19,4 @@ export default function AIPredictiveMaintenancePlatform() {
 				"APIs and event webhooks"]}
 			industries={["Manufacturing"Utilities"Oil & Gas"Transportation"]}
 			canonical="https: //ziontechgroup.com/ai-predictive-maintenance-platform",
-		 />),
-}
+		 />)}

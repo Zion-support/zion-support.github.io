@@ -17,15 +17,12 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     categorizedMatches: {
       newMatches,
       viewedMatches,
-      appliedMatches,
-    } } = useJobSuggestions(currentTalentId),
+      appliedMatches} } = useJobSuggestions(currentTalentId),
   const handleApply = (matchId: stringjobId: string) => {
     updateJobMatchStatus(matchId'applied'),
-    // In a real appthis might redirect to application form or open a modal,
-  };
+    // In a real appthis might redirect to application form or open a modal};
   const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId'declined'),
-  };
+    updateJobMatchStatus(matchId'declined')};
   if (isLoading) {
     return (
       <div className="flex items-center justify-center p-6">,

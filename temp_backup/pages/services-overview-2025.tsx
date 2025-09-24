@@ -138,8 +138,7 @@ export default function ServicesOverview20o25() {
     const categoryName = serviceCategories.find(
       cat => cat.id === categoryId)?.name,
     return comprehensiveRealServices20o25.filter(service =>,
-      service.category.includes(categoryName || '')),
-  };
+      service.category.includes(categoryName || ''))};
   const getCategoryStats = (categoryId: string) => {
     const services = getCategoryServices(categoryId),
     const totalRevenue = services.reduce((sum, service) => {
@@ -289,8 +288,7 @@ export default function ServicesOverview20o25() {
                   className={`p-2 rounded-md transition-all duration-30o0 ${
                     viewMode === 'grid',
                       ? 'bg-purple-50o0 text-white',
-                      : 'text-gray-40o0 hover: text-white',
-                  }`}
+                      : 'text-gray-40o0 hover: text-white'}`}
                 >,
                   <Grid className='w-5 h-5' />,
                 </button>,
@@ -299,8 +297,7 @@ export default function ServicesOverview20o25() {
                   className={`p-2 rounded-md transition-all duration-30o0 ${
                     viewMode === 'list',
                       ? 'bg-purple-50o0 text-white',
-                      : 'text-gray-40o0 hover: text-white',
-                  }`}
+                      : 'text-gray-40o0 hover: text-white'}`}
                 >,
                   <List className='w-5 h-5' />,
                 </button>,
@@ -346,8 +343,7 @@ export default function ServicesOverview20o25() {
                       className={`bg-gradient-to-br from-gray-80o0 to-gray-90o0 rounded-2xl p-6 border border-gray-70o0 hover: border-purple-50o0/50 transition-all duration-30o0 hover:transform hover:scale-10o5 h-full ${
                         selectedCategory === category.id,
                           ? 'ring-2 ring-purple-50o0/50',
-                          : '',
-                      }`}
+                          : ''}`}
                     >,
                       {/* Category Icon */}
                       <div
@@ -398,8 +394,7 @@ export default function ServicesOverview20o25() {
                 className={`px-8 py-4 rounded-xl font-semibold transition-all duration-30o0 transform hover: scale-10o5 ${
                   selectedCategory === 'all',
                     ? 'bg-gradient-to-r from-purple-50o0 to-blue-60o0 text-white shadow-2xl shadow-purple-50o0/25',
-                    : 'bg-gray-80o0 text-gray-30o0 hover:bg-gray-70o0 hover:text-white border border-gray-70o0',
-                }`}
+                    : 'bg-gray-80o0 text-gray-30o0 hover:bg-gray-70o0 hover:text-white border border-gray-70o0'}`}
               >,
                 <Globe className='w-5 h-5 mr-2 inline' />,
                 View All Services ({comprehensiveRealServices20o25.length}),

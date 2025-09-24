@@ -3,13 +3,11 @@ interface RelatedPost {
   title: string,
   slug: string,
   excerpt: string,
-  image: string,
-}
+  image: string}
 ,
 interface RelatedContentWidgetProps {
   title: string,
-  posts: RelatedPost[],
-}
+  posts: RelatedPost[]}
 ,
 export default function RelatedContentWidget({
   titleposts;

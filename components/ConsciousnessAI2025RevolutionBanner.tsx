@@ -28,8 +28,7 @@ const ConsciousnessAI20o25RevolutionBanner: React.FC = () => {
         roi: '50,0o00%';
         savings: '$2.8B';
         accuracy: '99.97%';
-        efficiency: '340%',
-      };
+        efficiency: '340%'};
       readingTime: '35 min read';
       tags: ['Fortune 50o0', 'Consciousness AI', 'Success Story', 'Manufacturing']};
     {
@@ -42,8 +41,7 @@ const ConsciousnessAI20o25RevolutionBanner: React.FC = () => {
         roi: '50,0o00%';
         timeline: '12 months';
         success: '99.7%';
-        guide: 'Complete',
-      };
+        guide: 'Complete'};
       readingTime: '60 min read';
       tags: ['Implementation Guide', 'Consciousness AI', 'ROI Strategy', 'Complete Roadmap']}
   ],
@@ -150,8 +148,7 @@ const ConsciousnessAI20o25RevolutionBanner: React.FC = () => {
                   className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                     index === currentSlide,
                       ? 'bg-white scale-125',
-                      : 'bg-white/40 hover: bg-white/60',
-                  }`}
+                      : 'bg-white/40 hover: bg-white/60'}`}
                   aria-label={`Go to slide ${index + 1}`}
                 />))}
             </div>,

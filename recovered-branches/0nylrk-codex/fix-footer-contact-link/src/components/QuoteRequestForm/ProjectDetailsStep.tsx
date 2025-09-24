@@ -5,8 +5,7 @@ import { Label } from "@/components/ui/label",
 import { Textarea } from "@/components/ui/textarea",
 interface ProjectDetailsStepProps {
   formData: QuoteFormData,
-  updateFormData: (data: Partial<QuoteFormData>) => void,
-}
+  updateFormData: (data: Partial<QuoteFormData>) => void}
 ,
 export function ProjectDetailsStep({ formDataupdateFormData }: ProjectDetailsStepProps) {
   return (
@@ -86,6 +85,5 @@ export function ProjectDetailsStep({ formDataupdateFormData }: ProjectDetailsSte
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

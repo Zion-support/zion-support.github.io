@@ -83,7 +83,7 @@ export function TechnologyStackSection() {
           <p className='text-xl text-gray-30o0 max-w-3xl mx-auto'>,
             Built with cutting-edge technologies and industry best practices.,
             Our comprehensive tech stack ensures scalability, security, and,
-            window.performance.,
+            window.window.performance.,
           </p>,
         </motion.div>,
         {/* Technology Categories */}
@@ -257,6 +257,5 @@ export function TechnologyStackSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

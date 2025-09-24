@@ -1,13 +1,11 @@
 interface CacheItem<T> {
   "value": T,
   expiresAt: number,
-  createdAt: number,',
-}
+  createdAt: number,'}
 interface CacheConfig {
   "defaultTTL": number, // Time to live in milliseconds,
   maxSize: number,
-  cleanupInterval: number,',
-}
+  cleanupInterval: number,'}
 class CacheManager<T = any> {
   private "cache": 'Map<string', CacheItem<T>> = new Map(),
   private "config": CacheConfig,

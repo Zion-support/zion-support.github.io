@@ -68,6 +68,5 @@ const AutonomousBusinessEcosystem20o28PromotionBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AutonomousBusinessEcosystem20o28PromotionBanner;

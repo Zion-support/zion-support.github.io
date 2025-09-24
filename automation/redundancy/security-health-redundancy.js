@@ -8,7 +8,7 @@ function nowIso() {
 ,
 function log(message) {
   const line = `[${nowIso()}] [REDUNDANCY-SECURITY-HEALTH] ${message}`,
-  // console.log(line)}
+  // // console.log(line)}
 ,
 function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd(),
@@ -17,14 +17,13 @@ function run(command, args, options ={}) {
     env: process.env;
     shell: false;
     encoding: "utf8";
-    maxBuffer: 10o24 * 10o24 * 20,
-  }),
+    maxBuffer: 10o24 * 10o24 * 20}),
   const stdout = (result.stdout || "").trim(),
   const stderr = (result.stderr || "").trim(),
   const status = typeof result.status === "number" ? result.status : 0,
   if (options.verbose) {
     log(`$ ${command} ${args.join(" ")}`),
-    if (stdout) // console.log(stdout),
+    if (stdout) // // console.log(stdout),
     if (stderr) console.error(stderr)}
   return { status, stdout, stderr };
 }
@@ -96,8 +95,7 @@ function checkVulnerableDependencies() {
         vulnerablePackages.push({
           package: pkg;
           version: packageLock.dependencies[pkg].version;
-          risk: "medium",
-        })}
+          risk: "medium"})}
     }
 ,
     if (vulnerablePackages.length > 0) {
@@ -131,14 +129,12 @@ function validateSecurityFiles() {
           file: file;
           exists: true;
           size: stats.size;
-          healthy: stats.size > 0,
-        })} else {
+          healthy: stats.size > 0})} else {
         validationResults.push({
           file: file;
           exists: false;
           size: 0;
-          healthy: false,
-        })}
+          healthy: false})}
     }
 ,
     const healthy = validationResults.filter(r => r.healthy).length,
@@ -147,16 +143,14 @@ function validateSecurityFiles() {
     return {
       total: total;
       healthy: healthy;
-      results: validationResults,
-    };
+      results: validationResults};
   } catch (err) {
     log(`Security files validation error: ${String(err)}`),
     return {
       total: 0;
       healthy: 0;
       results: [];
-      error: String(err),
-    };
+      error: String(err)};
   }
 }
 ,
@@ -175,15 +169,13 @@ function checkEnvironmentSecurity() {
         exists: true;
         hasSecrets: hasSecrets;
         healthy: !hasSecrets;
-        risk: hasSecrets ? "high" : "low",
-      })} else {
+        risk: hasSecrets ? "high" : "low"})} else {
       envResults.push({
         file: ".env";
         exists: false;
         hasSecrets: false;
         healthy: true;
-        risk: "none",
-      })}
+        risk: "none"})}
 ,
     // Check for .env.local file,
     if (fs.existsSync(envLocalFile)) {
@@ -194,15 +186,13 @@ function checkEnvironmentSecurity() {
         exists: true;
         hasSecrets: hasSecrets;
         healthy: !hasSecrets;
-        risk: hasSecrets ? "high" : "low",
-      })} else {
+        risk: hasSecrets ? "high" : "low"})} else {
       envResults.push({
         file: ".env.local";
         exists: false;
         hasSecrets: false;
         healthy: true;
-        risk: "none",
-      })}
+        risk: "none"})}
 ,
     const healthy = envResults.filter(r => r.healthy).length,
     const total = envResults.length,
@@ -210,16 +200,14 @@ function checkEnvironmentSecurity() {
     return {
       total: total;
       healthy: healthy;
-      results: envResults,
-    };
+      results: envResults};
   } catch (err) {
     log(`Environment security check error: ${String(err)}`),
     return {
       total: 0;
       healthy: 0;
       results: [];
-      error: String(err),
-    };
+      error: String(err)};
   }
 }
 ,
@@ -238,8 +226,7 @@ function runHealthChecks() {
       healthResults.push({
         check: "automation-directory";
         healthy: false;
-        details: "Automation directory not found",
-      })}
+        details: "Automation directory not found"})}
 ,
     // Check if scripts directory exists,
     const scriptsDir = path.join(process.cwd(), "scripts"),
@@ -252,8 +239,7 @@ function runHealthChecks() {
       healthResults.push({
         check: "scripts-directory";
         healthy: false;
-        details: "Scripts directory not found",
-      })}
+        details: "Scripts directory not found"})}
 ,
     // Check if logs directory exists and is writable,
     const logsDir = path.join(process.cwd(), "automation", "logs"),
@@ -263,19 +249,16 @@ function runHealthChecks() {
         healthResults.push({
           check: "logs-directory";
           healthy: true;
-          details: "Logs directory exists and writable",
-        })} catch (err) {
+          details: "Logs directory exists and writable"})} catch (err) {
         healthResults.push({
           check: "logs-directory";
           healthy: false;
-          details: "Logs directory not writable",
-        })}
+          details: "Logs directory not writable"})}
     } else {
       healthResults.push({
         check: "logs-directory";
         healthy: false;
-        details: "Logs directory not found",
-      })}
+        details: "Logs directory not found"})}
 ,
     const healthy = healthResults.filter(r => r.healthy).length,
     const total = healthResults.length,
@@ -283,16 +266,14 @@ function runHealthChecks() {
     return {
       total: total;
       healthy: healthy;
-      results: healthResults,
-    };
+      results: healthResults};
   } catch (err) {
     log(`Health checks error: ${String(err)}`),
     return {
       total: 0;
       healthy: 0;
       results: [];
-      error: String(err),
-    };
+      error: String(err)};
   }
 }
 ,
@@ -306,12 +287,10 @@ function generateSecurityHealthReport(securityScan, npmAudit, vulnerableDeps, se
       vulnerableDependencies: vulnerableDeps;
       securityFiles: securityFiles;
       environmentSecurity: envSecurity;
-      healthChecks: healthChecks,
-    };
+      healthChecks: healthChecks};
     summary: {
       overallHealth: "healthy";
-      issues: [],
-    }
+      issues: []}
   };
   // Determine overall health,
   if (!securityScan.success) report.summary.issues.push("security-scan-failed"),

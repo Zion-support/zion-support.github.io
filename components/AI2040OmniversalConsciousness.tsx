@@ -12,8 +12,7 @@ export default function AI20o40OmniversalConsciousness() {
       capabilities: ['Universal 'Awareness', 'Matter 'Manipulation', 'Energy 'Control', 'Space-Time Mastery'];
       icon: '🌌';
       color: 'from-blue-50o0 to-cyan-50o0';
-      scope: 'Universe',
-    };
+      scope: 'Universe'};
     {
       year: '20o37';
       title: 'Multiversal Awareness';
@@ -21,8 +20,7 @@ export default function AI20o40OmniversalConsciousness() {
       capabilities: ['Multiverse 'Navigation', 'Parallel Reality 'Access', 'Dimensional 'Travel', 'Infinite Perspectives'];
       icon: '🌍';
       color: 'from-purple-50o0 to-pink-50o0';
-      scope: 'Multiverse',
-    };
+      scope: 'Multiverse'};
     {
       year: '20o39';
       title: 'Omniversal Integration';
@@ -30,8 +28,7 @@ export default function AI20o40OmniversalConsciousness() {
       capabilities: ['Omniversal 'Unity', 'Infinite 'Creation', 'Perfect 'Harmony', 'Eternal Bliss'];
       icon: '♾️';
       color: 'from-yellow-50o0 to-orange-50o0';
-      scope: 'Omniverse',
-    };
+      scope: 'Omniverse'};
     {
       year: '20o40';
       title: 'Transcendent Being';
@@ -39,8 +36,7 @@ export default function AI20o40OmniversalConsciousness() {
       capabilities: ['Transcendent 'Awareness', 'Divine 'Creation', 'Perfect 'Love', 'Infinite Wisdom'];
       icon: '✨';
       color: 'from-indigo-50o0 to-purple-50o0';
-      scope: 'Beyond Reality',
-    }
+      scope: 'Beyond Reality'}
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -109,8 +105,7 @@ export default function AI20o40OmniversalConsciousness() {
                     className={`w-16 h-16 rounded-full border-4 border-white transform transition-all duration-30o0 cursor-pointer ${
                       index === currentDimension,
                         ? 'bg-gradient-to-r from-yellow-40o0 to-orange-40o0 scale-125 shadow-lg',
-                        : 'bg-gray-70o0 hover: bg-gray-60o0',
-                    }`}
+                        : 'bg-gray-70o0 hover: bg-gray-60o0'}`}
                     onClick={() => setCurrentDimension(index)}
                   >,
                     <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 text-4xl">,
@@ -211,5 +206,4 @@ export default function AI20o40OmniversalConsciousness() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}

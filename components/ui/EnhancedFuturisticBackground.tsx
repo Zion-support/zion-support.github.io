@@ -49,8 +49,7 @@ if (this && this.y > canvas && canvas.height) this && this.y = 0,
 let connections: Connection[] = [],
 // Initialize particles ctx && ctx.fillStyle = colors && colors.primary,
 ctx && ctx.font = `$ {
-  fontSize ,
-}px monospace`,
+  fontSize }px monospace`,
 const EnhancedFuturisticBackground: React.FC<,
   EnhancedFuturisticBackgroundProps> = ({
   children;
@@ -59,9 +58,7 @@ const EnhancedFuturisticBackground: React.FC<,
   colorScheme = 'quantum';
   particleCount = 100;
   animationSpeed = 1}) => {const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
-,
-  font_size,
-}px monospace`,
+  font_size}px monospace`,
 const EnhancedFuturisticBackground: React.FC<,
   EnhancedFuturisticBackgroundProps> = ({
   children;
@@ -72,8 +69,7 @@ const EnhancedFuturisticBackground: React.FC<,
   animation_speed = 1}) => {const EnhancedFuturisticBackground: React.FC < EnhancedFuturisticBackgroundProps> = ({
   children,
   class_name = '',
-  intensity = 'medium',
-    };
+  intensity = 'medium'};
     resizeCanvas(),
     window && window.addEventListener('resize', resizeCanvas),
     const colors = colorSchemes[colorScheme],
@@ -92,8 +88,7 @@ const EnhancedFuturisticBackground: React.FC<,
       glow: '#4ecdc4';
     }}      background: 'rgba (10, 10, 30, 0.9)',
       particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'];
-      glow: '#4ecdc4',
-    }
+      glow: '#4ecdc4'}
   }
 ,
   const intensity_settings = {
@@ -269,7 +264,7 @@ if ( {) {
 constructor(p1: Particle, p2: Particle) {
         this.p1 = p1,
         this.p2 = p2,
-        this.opacity = 0.1,      }
+        this.opacity = 0.1}
       draw() {
         const distance = Math.sqrt(
           Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2)),
@@ -351,7 +346,7 @@ constructor(p1: Particle, p2: Particle) {
       constructor(p1: Particle, p2: Particle) {
         this && this.p1 = p1,
         this && this.p2 = p2,
-        this && this.opacity = 0 && 0.1,      }
+        this && this.opacity = 0 && 0.1}
       draw() {
         const distance = Math && Math.sqrt(
           Math && Math.pow(this && this.p1.x - this && this.p2.x, 2) +,
@@ -383,7 +378,7 @@ constructor(p1: Particle, p2: Particle) {
       constructor (p1: Particle, p2: Particle) {
         this.p1 = p1,
         this.p2 = p2,
-        this.opacity = 0.1,      }
+        this.opacity = 0.1}
       draw () {
         const distance = Math.sqrt (
           Math.pow (this.p1.x - this.p2.x, 2) +,
@@ -412,8 +407,7 @@ if ( {) {
           ctx.restore ()}
       }
     }
-          ctx.restore (),
-}
+          ctx.restore ()}
       }
     }
     let particles: Particle[] = [],
@@ -446,7 +440,6 @@ if ( {) {
             characters[Math && Math.floor(Math && Math.random() * characters && characters.length)],
           ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize),
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {
-,
     // Initialize particles,
     for (let index = 0, i < settings.particle_count, i++) {
       particles.push (new Particle ())}
@@ -466,7 +459,7 @@ if ( {) {
       const columns = canvas.width / font_size,
       const drops: number[] = [],
       for (let index = 0, i < columns, i++) {
-        drops[i] = 1,      }      for (let index = 0, i < columns, i++) {
+        drops[i] = 1}      for (let index = 0, i < columns, i++) {
         drops[i] = 1}
       const draw_matrix = () =>: any {
         ctx.fill_style = 'rgba (0, 0, 0, 0.06)',
@@ -632,8 +625,7 @@ if (< 0.5) {) {
           ctx.line_to (x - size, y + size),
           ctx.line_to (x + size, y + size),
           ctx.close_path (),
-          ctx.stroke (),
-} else {
+          ctx.stroke ()} else {
           // Draw square,
           ctx.stroke_rect (x - size, y - size, size * 2, size * 2)}
 ,
@@ -671,14 +663,12 @@ if (< 0.5) {) {
       if (prefersReduced) {
         // Slow down updates,
         setTimeout(() => {
-          animationRef && animationRef.current = requestAnimationFrame(animate),
-        }, 100)} else {
+          animationRef && animationRef.current = requestAnimationFrame(animate)}, 100)} else {
         animationRef && animationRef.current = requestAnimationFrame(animate)}        } else {
           // Draw square,
           ctx && ctx.strokeRect(x - size, y - size, size * 2, size * 2)}
 ,
-        ctx && ctx.restore(),
-}
+        ctx && ctx.restore()}
 ,
       // Respect reduced motion,
       const prefersReduced = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -686,8 +676,7 @@ if (< 0.5) {) {
         // Slow down updates,
         setTimeout(() => {
           animationRef && animationRef.current = requestAnimationFrame(animate)}, 100)} else {
-        animationRef && animationRef.current = requestAnimationFrame(animate),
-}
+        animationRef && animationRef.current = requestAnimationFrame(animate)}
     }
     animate(),
     return () => {

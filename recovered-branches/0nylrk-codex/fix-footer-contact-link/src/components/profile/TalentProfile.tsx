@@ -16,8 +16,7 @@ import { Availability } from "@/types/profile",
 interface TalentProfileProps {
   profile: TalentProfileType,
   onRequestHire: () => void,
-  onMessageTalent?: () => void,
-}
+  onMessageTalent?: () => void}
 ,
 export function TalentProfile({
   profile,
@@ -32,15 +31,13 @@ export function TalentProfile({
   // Create proper skills array for ProfileSkills component,
   const skillsArray = profile.skills?.map(skill => ({
     name: skill;
-    level: 3 // Default level since we don't have this data,
-  })) || [],
+    level: 3 // Default level since we don't have this data})) || [],
   // Create proper projects array for ProfileProjects component,
   const projectsArray = profile.key_projects?.map((proji) => ({
     id: `project-${i}`;
     title: proj.title;
     description: proj.description;
-    date: new Date().toISOString() // Default date since we don't have this data,
-  })) || [],
+    date: new Date().toISOString() // Default date since we don't have this data})) || [],
   return (
     <div className="container mx-auto px-4 py-8">,
       {/* Profile Header */}

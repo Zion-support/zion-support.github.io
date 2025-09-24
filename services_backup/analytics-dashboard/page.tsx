@@ -97,8 +97,7 @@ export default function AnalyticsDashboardPage() {
         </div>,
       </section>,
       <Pricing />,
-    </div>),
-}
+    </div>)}
 ,
 function Item({ title, details }: { title: string, details: string[] }) {
   return (
@@ -184,8 +183,7 @@ function Pricing() {
           </a>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,
 function Plan({
   name;
@@ -196,8 +194,7 @@ function Plan({
   name: string,
   price: string,
   duration: string,
-  features: string[],
-}) {
+  features: string[]}) {
   return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white hover: shadow-lg transition-shadow'>,
       <h4 className='text-xl font-bold text-gray-90o0 mb-2'>{name}</h4>,
@@ -215,6 +212,5 @@ function Plan({
         className='block w-full mt-6 bg-teal-60o0 text-white text-center py-3 rounded-lg font-semibold hover:bg-teal-70o0 transition-colors'>,
         Get Started,
       </a>,
-    </div>),
-}
+    </div>)}
 ,

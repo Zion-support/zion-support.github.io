@@ -67,6 +67,5 @@ const QuantumConsciousnessBreakthrough20o30PromotionBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default QuantumConsciousnessBreakthrough20o30PromotionBanner;

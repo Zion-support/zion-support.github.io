@@ -21,6 +21,5 @@ export default function AiSalesIntelligencePlatformPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

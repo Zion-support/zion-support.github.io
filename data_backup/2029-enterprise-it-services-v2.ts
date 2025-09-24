@@ -291,7 +291,7 @@ address: string};export const "enterpriseITServices20o29V2": EnterpriseITService
     "id": 'autonomous-it-operations-center;
     name:;
   Autonomous IT Operations Center';
-    "description": Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal window.performance.;
+    "description": Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal window.window.performance.;
     category['IT Operations';
   'Automation';
   'Infrastructure';

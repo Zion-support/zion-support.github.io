@@ -2,8 +2,7 @@ let DIDKit: any,
 let ethers: any,
 async function lazyLoadDeps() {
   try {
-    DIDKit = await import('@spruceid/didkit-wasm-node'),
-  } catch {}
+    DIDKit = await import('@spruceid/didkit-wasm-node')} catch {}
   try {
     ethers = await import('ethers')} catch {}
 }
@@ -29,16 +28,14 @@ export async function resolveENS(address: string): Promise<string | null> {
   if (!ethers) return null,
   try {
     const provider = ethers.getDefaultProvider(),
-    return await provider.lookupAddress(address),
-  } catch {
+    return await provider.lookupAddress(address)} catch {
     return null}
 }
 ,
 export async function resolveLens(
   handleOrAddress: string): Promise<string | null> {
   // Placeholder: Lens API would be online, return null in offworld,
-  return null,
-}
+  return null}
 ,
 export async function buildIdentityProfile(
   address?: string): Promise<IdentityProfile> {

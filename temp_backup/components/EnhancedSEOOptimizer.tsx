@@ -15,12 +15,10 @@ interface SEOData {
     twitter: {
       card: string,
       site: string,
-      creator: string,
-    };
+      creator: string};
     facebook: {
       appId: string,
-      type: string,
-    };
+      type: string};
   };
 }
 ,
@@ -34,8 +32,7 @@ interface SEOAnalysis {
     keywords: boolean,
     ogImage: boolean,
     canonical: boolean,
-    structuredData: boolean,
-  };
+    structuredData: boolean};
 }
 ,
 const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData }> = ({ seoData }) => {
@@ -49,8 +46,7 @@ const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData }> = ({ seoData }) => {
       keywords: false;
       ogImage: false;
       canonical: false;
-      structuredData: false,
-    }
+      structuredData: false}
   }),
   const [showAnalysis, setShowAnalysis] = useState(false),
   useEffect(() => {
@@ -62,8 +58,7 @@ const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData }> = ({ seoData }) => {
     // Check title,
     if (seoData.title.length < 30 || seoData.title.length > 60) {
       issues.push('Title length should be between 30-60 characters'),
-      score -= 15,
-    } else {
+      score -= 15} else {
       recommendations.push('Title length is optimal')}
 ,
     // Check description,
@@ -117,22 +112,19 @@ const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData }> = ({ seoData }) => {
         keywords: seoData.keywords.length >= 3;
         ogImage: !!seoData.ogImage;
         canonical: !!seoData.canonicalUrl;
-        structuredData: !!seoData.structuredData,
-      }
+        structuredData: !!seoData.structuredData}
     })};
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-40o0',
     if (score >= 80) return 'text-yellow-40o0',
     if (score >= 70) return 'text-orange-40o0',
-    return 'text-red-40o0',
-  };
+    return 'text-red-40o0'};
   const getScoreGrade = (score: number) => {
     if (score >= 90) return 'A',
     if (score >= 80) return 'B',
     if (score >= 70) return 'C',
     if (score >= 60) return 'D',
-    return 'F',
-  };
+    return 'F'};
   return (
     <>,
       {/* SEO Analysis Button */}
@@ -360,8 +352,7 @@ const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData }> = ({ seoData }) => {
           <script
             type="application/ld+json",
             dangerouslySetInnerHTML={{
-              __html: JSON.stringify(seoData.structuredData),
-            }}
+              __html: JSON.stringify(seoData.structuredData)}}
            />)}
 ,
         {/* Additional SEO Meta Tags */}
@@ -384,6 +375,5 @@ const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData }> = ({ seoData }) => {
         <link rel="dns-prefetch" href="//cdn.ziontechgroup.com"  />,
         <link rel="dns-prefetch" href="//api.ziontechgroup.com"  />,
       </Head>,
-    </>),
-};
+    </>)};
 export default EnhancedSEOOptimizer;

@@ -33,13 +33,11 @@ export default function HelpCenter() {
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
   const [searchQuery, setSearchQuery] = useState(""),
 export default function HelpCenter() {
-,
   const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId);
     setSelectedArticle(null)};
   const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId),
-  };
+    setSelectedArticle(articleId)};
   const handleBackToCategories = () => {
     setSelectedCategory(null);
     setSelectedArticle(null)};
@@ -85,8 +83,7 @@ export default function HelpCenter() {
     setSelectedCategory(categoryId);
     setSelectedArticle(null)};
   const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId),
-  };
+    setSelectedArticle(articleId)};
   const handleBackToCategories = () => {
     setSelectedCategory(null),
     setSelectedArticle(null)};
@@ -286,8 +283,7 @@ export default function HelpCenter() {
           </Tabs>,
         </div>,
       </div>,
-    </AppLayout>),
-}
+    </AppLayout>)}
   ),
               {selectedArticle && (
                 <>,

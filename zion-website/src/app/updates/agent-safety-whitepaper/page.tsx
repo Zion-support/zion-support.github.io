@@ -51,6 +51,5 @@ export default function AgentSafetyWhitepaperPage() {
           </p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

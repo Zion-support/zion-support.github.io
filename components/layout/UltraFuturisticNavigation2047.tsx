@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion',
 import {
 import Link from 'next / link',
 "use client",
-,
   Menu;
   ChevronDown;
   X;
@@ -279,38 +278,33 @@ const navigationItems: NavigationItem[] = [
       };
     ];
   }],        icon: <Shield className="w-4 h-4" />;
-        color: 'from-red-500 to-pink-500',
-      }
+        color: 'from-red-500 to-pink-500'}
       {
         name: 'About Us';
         href: '/about';
         description: 'Company information and mission';
         icon: <Info className="w - 4 h - 4" />;
-        color: 'from - blue - 500 to - cyan - 500',
-      }
+        color: 'from - blue - 500 to - cyan - 500'}
       {
         name: 'Contact';
         href: '/contact';
         description: 'Get in touch with our team';
         icon: <Mail className="w - 4 h - 4" />;
-        color: 'from - purple - 500 to - pink - 500',
-      }
+        color: 'from - purple - 500 to - pink - 500'}
       {
         name: 'Team';
         href: '/team';
         description: 'Meet our leadership team';
         icon: <Users className="w - 4 h - 4" />;
-        color: 'from - orange - 500 to - red - 500',
-      }
-    ],
-}
+        color: 'from - orange - 500 to - red - 500'}
+    ]}
 ,
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false),
   const handleDropdownToggle = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name),  };    setActiveDropdown(activeDropdown === name ? null : name)};
+    setActiveDropdown(activeDropdown === name ? null : name)};    setActiveDropdown(activeDropdown === name ? null : name)};
   useEffect(() => {
     const handleResize = () => {
       if (window && window.innerWidth >= 1024) {
@@ -321,8 +315,7 @@ const navigationItems: NavigationItem[] = [
     return () => window && window.removeEventListener('resize', handleResize),        setActiveDropdown(null)}
     }
     window.addEventListener('resize', handleResize),
-    return () => window.removeEventListener('resize', handleResize),
-}, []),
+    return () => window.removeEventListener('resize', handleResize)}, []),
   return (
     <nav className='relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -333,8 +326,7 @@ const navigationItems: NavigationItem[] = [
               <div className='w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center'>,
                 <Rocket className='w-5 h-5 text-white' />,
               </div>,
-              <span className='text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>                Zion Tech Group  }, []),
-}, []),
+              <span className='text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>                Zion Tech Group  }, [])}, []),
   return (
     <nav className="relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -933,8 +925,7 @@ className='lg: hidden bg - slate - 800 / 95 backdrop - blur - md border - t bord
                   </Link>,
                 </div>,
               </div>,
-            </div>,
-};
+            </div>};
 export default UltraFuturisticNavigation2047)}
 export default UltraFuturisticNavigation2047)}
 };

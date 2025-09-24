@@ -15,6 +15,5 @@ export default function AboutPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

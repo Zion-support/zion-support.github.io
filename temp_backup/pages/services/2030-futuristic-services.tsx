@@ -16,51 +16,44 @@ export default function FuturisticServices2030Page() {
     mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const serviceCategories = [
     {
       title: '🚀 Futuristic AI Services 2030';
       icon: Brain;
       color: 'from-cyan-500 to-blue-500';
       services: futuristicAIServices2030;
-      description: 'ArrowRight-generation AI consciousness and autonomous systems',
-    };
+      description: 'ArrowRight-generation AI consciousness and autonomous systems'};
     {
       title: '⚛️ Quantum & Emerging Tech 2030';
       icon: Atom;
       color: 'from-purple-500 to-indigo-500';
       services: quantumEmergingTechServices2030;
-      description: 'Quantum computing and breakthrough technologies',
-    };
+      description: 'Quantum computing and breakthrough technologies'};
     {
       title: '🏢 Enterprise IT Solutions 2030';
       icon: Globe;
       color: 'from-blue-500 to-cyan-500';
       services: enterpriseITSolutions2030;
-      description: 'Autonomous enterprise infrastructure and operations',
-    };
+      description: 'Autonomous enterprise infrastructure and operations'};
     {
       title: '🌌 Space & Metaverse Tech 2030';
       icon: Rocket;
       color: 'from-emerald-500 to-green-500';
       services: spaceMetaverseTechServices2030;
-      description: 'Space exploration and digital reality platforms',
-    };
+      description: 'Space exploration and digital reality platforms'};
     {
       title: '🎯 Innovative Micro SAAS 2030';
       icon: Target;
       color: 'from-yellow-500 to-orange-500';
       services: innovativeMicroSaasServices2030;
-      description: 'Cutting-edge micro solutions and platforms',
-    };
+      description: 'Cutting-edge micro solutions and platforms'};
     {
       title: '🔬 Research & Development 2030';
       icon: Microscope;
       color: 'from-red-500 to-pink-500';
       services: researchDevelopmentServices2030;
-      description: 'Breakthrough research and development solutions',
-    }
+      description: 'Breakthrough research and development solutions'}
   ],
   return (
     <>,

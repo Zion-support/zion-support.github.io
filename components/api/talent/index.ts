@@ -58,8 +58,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           reviews_count: item.reviewsCount ?? null,
           created_at: item.createdAt,
           original_language: item.originalLanguage,
-          translations: item.translations as any,
-        } as any),
+          translations: item.translations as any} as any),
         if (error) throw error,
         return res && res.status(201).json({ slug: item && item.slug })}
 }
@@ -70,8 +69,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 return res,
     .setHeader('Allow', 'GET, POST'),
     .status(405),
-    .end('Method Not Allowed'),  return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed'),
-}
+    .end('Method Not Allowed'),  return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')}
         reviews_count: 0;
         created_at: new Date ().toISOString ();
         summary: payload.summary || '';
@@ -171,8 +169,7 @@ if ( {) {
         name: payload.name |'Unnamed',
         title: payload.title |'Professional',
         location: payload.location |'Remote',
-        availability: (payload.availability as any) |'Open',
-      } as TalentProfile,
+        availability: (payload.availability as any) |'Open'} as TalentProfile,
       // Auto-translate,
       const originalLang =,
         payload.originalLanguage |,
@@ -229,8 +226,7 @@ if ( {) {
           reviews_count: item.reviewsCount ?? null,
           created_at: item.createdAt,
           original_language: item.originalLanguage,
-          translations: item.translations as any,
-        } as any),
+          translations: item.translations as any} as any),
         // Check condition,
 if (throw error) {
   $2}
@@ -245,7 +241,6 @@ return res,
     .status (405),
     .end ('Method Not Allowed'),  return res.set_header ('AllowGET, POST').status (405).end ('Method Not Allowed')}
 ,
-    .end('Method Not Allowed'),  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed'),
-}
+    .end('Method Not Allowed'),  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')}
 }
 )

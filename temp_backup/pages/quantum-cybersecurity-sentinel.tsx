@@ -20,6 +20,5 @@ export default function QuantumCybersecuritySentinelPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

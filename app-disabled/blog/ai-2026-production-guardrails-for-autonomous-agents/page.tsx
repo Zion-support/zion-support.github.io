@@ -78,6 +78,5 @@ export default function ProductionGuardrailsForAutonomousAgentsPage() {
           </div>,
         </div>,
       </section>,
-    </main>),
-}
+    </main>)}
 ,

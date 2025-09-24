@@ -16,8 +16,7 @@ export function useWorkExperience() {
     work: WorkExperience): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to update work experience'),
-      return false,
-    }
+      return false}
 ,
     setIsLoading(true),
     setError(null),
@@ -45,8 +44,7 @@ export function useWorkExperience() {
     work: WorkExperience): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to update work experience'),
-      return false,
-    }
+      return false}
 ,
     setIsLoading(true),
     setError(null),
@@ -74,8 +72,7 @@ export function useWorkExperience() {
   const deleteWorkExperience = async (workId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to delete work experience'),
-      return false,
-    }
+      return false}
 ,
     setIsLoading(true),
     setError(null),

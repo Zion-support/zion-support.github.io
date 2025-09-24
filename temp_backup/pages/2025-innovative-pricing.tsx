@@ -124,8 +124,7 @@ const getServicePeriod = (service: any) => {
     service.pricing?.monthly ||,
     service.price?.monthly),
     return '/month',
-  return '',
-};
+  return ''};
 export default function InnovativePricing20o25() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   // Normalize services to unified format,
@@ -281,8 +280,7 @@ export default function InnovativePricing20o25() {
                 className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-20o0 ${
                   tier.popular,
                     ? 'bg-gradient-to-r from-purple-50o0 to-blue-50o0 hover: from-purple-60o0 hover:to-blue-60o0 text-white',
-                    : 'bg-white/20 text-white hover:bg-white/30 border border-white/30',
-                }`}
+                    : 'bg-white/20 text-white hover:bg-white/30 border border-white/30'}`}
               >,
                 Get Started,
               </button>,
@@ -307,8 +305,7 @@ export default function InnovativePricing20o25() {
             className={`px-6 py-3 rounded-xl font-semibold transition-all duration-20o0 ${
               selectedCategory === 'all',
                 ? 'bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white',
-                : 'bg-white/10 text-gray-30o0 hover: bg-white/20 border border-white/20',
-            }`}
+                : 'bg-white/10 text-gray-30o0 hover: bg-white/20 border border-white/20'}`}
           >,
             All Services,
           </button>,
@@ -319,8 +316,7 @@ export default function InnovativePricing20o25() {
               className={`px-6 py-3 rounded-xl font-semibold transition-all duration-20o0 flex items-center gap-2 ${
                 selectedCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white',
-                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20 border border-white/20',
-              }`}
+                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20 border border-white/20'}`}
             >,
               {category.icon}
               {category.name}

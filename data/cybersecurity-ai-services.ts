@@ -29,15 +29,13 @@ export interface CybersecurityAIService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const cybersecurityAIServices: CybersecurityAIService[] = [
   {

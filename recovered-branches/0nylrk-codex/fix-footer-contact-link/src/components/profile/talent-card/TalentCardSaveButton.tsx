@@ -8,8 +8,7 @@ interface TalentCardSaveButtonProps {
   profileName: string,
   isSaved: boolean,
   onToggleSave?: (id: stringisSaved: boolean) => void,
-  isAuthenticated: boolean,
-}
+  isAuthenticated: boolean}
 ,
 export function TalentCardSaveButton({
   profileId,
@@ -26,8 +25,7 @@ export function TalentCardSaveButton({
       toast({
         title: "Authentication required";
         description: "Please log in to save talents to your favorites";
-        variant: "destructive",
-      }),
+        variant: "destructive"}),
       return}
 ,
     setLocalIsSaved(!localIsSaved),
@@ -39,8 +37,7 @@ export function TalentCardSaveButton({
       description: localIsSaved,
         ? `${profileName} has been removed from your favorites`,
         : `${profileName} has been added to your favorites`;
-      variant: "default",
-    })};
+      variant: "default"})};
   return (
     <button
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover: bg-zion-blue-light/30 transition-colors",

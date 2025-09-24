@@ -9,8 +9,7 @@ const AutomationDetail: NextPage = () => {
   try {
     if (slug === 'marketplace-insights') {
       data = require('@/data/reports/marketplace-insights.json'),
-      title = 'Marketplace Insights',
-    } else if (slug === 'content-health') {
+      title = 'Marketplace Insights'} else if (slug === 'content-health') {
       data = require('@/data/reports/content-health.json'),
       title = 'Content Health'}
   } catch (e) {

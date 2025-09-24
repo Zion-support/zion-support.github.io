@@ -3,8 +3,6 @@ import React from 'react';
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-
-,
   Phone,
   Mail,
   MapPin,
@@ -49,7 +47,6 @@ import {
   Github;
   Youtube;
   Instagram;} from 'lucide-react',import {
-,
   Phone, Mail, MapPin, Star, ArrowRight,
   Brain, Atom, Shield, Rocket, Target, Microscope,
   Zap, Globe, Database, Lock, Cloud, BarChart3,
@@ -58,8 +55,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const serviceCategories = [
   {
     title: 'AI & Consciousness',
@@ -110,8 +106,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup && ziontechgroup.com'};  website: 'https://ziontechgroup && ziontechgroup.com',
-};
+  website: 'https://ziontechgroup && ziontechgroup.com'};  website: 'https://ziontechgroup && ziontechgroup.com'};
 const serviceCategories = [
   {
     title: 'AI & Consciousness';
@@ -230,8 +225,7 @@ const socialLinks = [
     name: 'Instagram',
     href: '#',
     icon: Instagram,
-    color: 'hover:text-pink-400',
-  }],  { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' }
+    color: 'hover:text-pink-400'}],  { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' }
 ],
 const EnhancedFooter2025: React.FC = () => {
   const currentYear = new Date().getFullYear(),
@@ -630,8 +624,7 @@ const EnhancedFooter2025: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </footer>),
-}
+    </footer>)}
 };
 export default EnhancedFooter2025;
 export default EnhancedFooter2025;

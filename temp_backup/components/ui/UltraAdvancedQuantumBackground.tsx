@@ -3,8 +3,7 @@ import { motion } from 'framer-motion',
 interface UltraAdvancedQuantumBackgroundProps {
   intensity?: number,
   variant?: 'quantum' | 'holographic' | 'neural' | 'cyberpunk' | 'space' | 'matrix',
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({
   intensity = 1.0;
@@ -27,8 +26,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       size: number,
       color: string,
       alpha: number,
-      type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk' | 'space' | 'matrix',
-    }> = [],
+      type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk' | 'space' | 'matrix'}> = [],
     const colors ={
       quantum: ['#0o0ffff', '#ff0o0ff', '#ffff0o0', '#0o0ff0o0', '#ff0o080', '#80o00ff'];
       holographic: ['#ff1493', '#0o0bfff', '#ff450o0', '#32cd32', '#ffd70o0', '#ff69b4'];
@@ -47,8 +45,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         size: Math.random() * 3 * intensity + 1;
         color: colorSet[Math.floor(Math.random() * colorSet.length)];
         alpha: Math.random() * 0.8 + 0.2;
-        type: variant,
-      };
+        type: variant};
     };
     // Initialize particles,
     for (let i = 0, i < 150 * intensity, i++) {
@@ -246,8 +243,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-pink-40o0/20 transform rotate-45",
@@ -258,8 +254,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-32 w-40 h-40 border border-purple-40o0/20 rounded-full",
@@ -270,8 +265,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
       </div>,
     </div>)};

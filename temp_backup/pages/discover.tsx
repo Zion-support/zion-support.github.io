@@ -66,8 +66,7 @@ export default function ContentDiscovery() {
       case 'readTime':,
         return parseInt(a.readTime) - parseInt(b.readTime),
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   return (
     <div className='min-h-screen bg-slate-950 text-white'>,
@@ -162,8 +161,7 @@ export default function ContentDiscovery() {
                           ? 'bg-cyan-50o0/20 text-cyan-40o0',
                           : item.type === 'blueprint',
                             ? 'bg-blue-50o0/20 text-blue-40o0',
-                            : 'bg-fuchsia-50o0/20 text-fuchsia-40o0',
-                      }`}
+                            : 'bg-fuchsia-50o0/20 text-fuchsia-40o0'}`}
                     >,
                       {item.type}
                     </span>,

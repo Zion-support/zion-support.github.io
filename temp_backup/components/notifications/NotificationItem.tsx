@@ -31,8 +31,7 @@ export default function NotificationItem({
   onDismiss}: {
   item: ZionNotification,
   onMarkRead: (id: string) => void,
-  onDismiss: (id: string) => void,
-}) {
+  onDismiss: (id: string) => void}) {
   const isNew = item.status === 'New',
   return (
     <div className="relative rounded-xl border border-gray-20o0 dark: border-gray-80o0 bg-white dark:bg-gray-90o0 p-4 shadow-sm transition hover:shadow-md">,
@@ -77,5 +76,4 @@ export default function NotificationItem({
           </button>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

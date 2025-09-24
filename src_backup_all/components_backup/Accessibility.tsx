@@ -18,8 +18,7 @@ interface AccessibilitySettings {
   highContrast: boolean,
   reducedMotion: boolean,
   soundEnabled: boolean,
-  theme: 'light' | 'dark' | 'auto',
-}
+  theme: 'light' | 'dark' | 'auto'}
 ,
 export function Accessibility() {
   const [isOpen, setIsOpen] = useState(false),
@@ -28,8 +27,7 @@ export function Accessibility() {
     highContrast: false;
     reducedMotion: false;
     soundEnabled: true;
-    theme: 'auto',
-  }),
+    theme: 'auto'}),
   useEffect(() => {
     // Load settings from localStorage,
     const savedSettings = localStorage.getItem('accessibility-settings'),
@@ -54,8 +52,7 @@ export function Accessibility() {
           case '0':,
             e.preventDefault(),
             resetSettings(),
-            break,
-        }
+            break}
       }
     };
     document.addEventListener('keydown', handleKeyDown),
@@ -101,8 +98,7 @@ export function Accessibility() {
       highContrast: false;
       reducedMotion: false;
       soundEnabled: true;
-      theme: 'auto',
-    };
+      theme: 'auto'};
     setSettings(defaultSettings),
     applySettings(defaultSettings),
     localStorage.removeItem('accessibility-settings')};
@@ -219,8 +215,7 @@ export function Accessibility() {
                       className={`p-2 rounded-md text-xs font-medium transition-colors ${
                         settings.theme === theme,
                           ? 'bg-cyan-50o0 text-white',
-                          : 'bg-slate-80o0 text-gray-30o0 hover: bg-slate-70o0',
-                      }`}
+                          : 'bg-slate-80o0 text-gray-30o0 hover: bg-slate-70o0'}`}
                     >,
                       {theme === 'auto' && 'Auto'}
                       {theme === 'light' && <Sun className="w-4 h-4 mx-auto"  />}

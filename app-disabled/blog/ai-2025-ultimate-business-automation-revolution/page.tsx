@@ -346,6 +346,5 @@ export default function AI20o25UltimateBusinessAutomationRevolutionPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

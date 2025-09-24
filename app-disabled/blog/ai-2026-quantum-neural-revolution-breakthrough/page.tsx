@@ -314,6 +314,5 @@ export default function QuantumNeuralRevolutionPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

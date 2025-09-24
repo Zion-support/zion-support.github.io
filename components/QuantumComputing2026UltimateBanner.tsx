@@ -126,6 +126,5 @@ const QuantumComputing20o26UltimateBanner = () => {
           </Link>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default QuantumComputing20o26UltimateBanner;

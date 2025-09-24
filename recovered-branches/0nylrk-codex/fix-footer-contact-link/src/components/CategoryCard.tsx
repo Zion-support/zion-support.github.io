@@ -13,8 +13,7 @@ interface CategoryCardProps {
    */,
   color?: string,
   count?: number,
-  className?: string,
-}
+  className?: string}
 ,
 export function CategoryCard({ titledescriptioniconcolorcountclassName }: CategoryCardProps) {
   // Create a URL-friendly slug from the category title,

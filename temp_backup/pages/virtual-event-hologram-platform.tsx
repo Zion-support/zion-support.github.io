@@ -32,6 +32,5 @@ export default function VirtualEventHologramPage() {
         industries={['Events', 'Education', 'Media', 'Enterprises']}
         url='https: //ziontechgroup.com/virtual-event-hologram-platform',
       />,
-    </>),
-}
+    </>)}
 ,

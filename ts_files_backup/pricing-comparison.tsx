@@ -9,8 +9,7 @@ export default function PricingComparisonPage() {
       zionPricing: {
         starter: '$19/month';
         professional: '$49/month';
-        enterprise: '$199/month',
-      };
+        enterprise: '$199/month'};
       competitors: [
         {
           name: 'Jasper AI';
@@ -18,24 +17,21 @@ export default function PricingComparisonPage() {
           rating: '4.8/5';
           pros: ['Excellent 'templates', 'Good AI 'quality', 'Wide integrations'];
           cons: ['Higher 'pricing', 'Limited 'customization', 'No unlimited plan'];
-          savings: 'Save $20/month with Zion',
-        };
+          savings: 'Save $20/month with Zion'};
         {
           name: 'Copy.ai';
           pricing: '$36/month';
           rating: '4.6/5';
           pros: ['Unlimited 'words', 'Good 'value', 'Simple interface'];
           cons: ['Basic 'features', 'Limited 'templates', 'No advanced SEO'];
-          savings: 'Save $17/month with Zion',
-        };
+          savings: 'Save $17/month with Zion'};
         {
           name: 'Writesonic';
           pricing: '$19/month';
           rating: '4.4/5';
           pros: [', 'Affordable', 'Good for 'beginners', 'Basic features'];
           cons: ['Limited 'features', 'Basic AI 'models', 'No team features'];
-          savings: 'Same pricebetter features',
-        }
+          savings: 'Same pricebetter features'}
       ];
       features: [
         'AI-powered content generation';
@@ -45,15 +41,13 @@ export default function PricingComparisonPage() {
         'API access';
         'Custom templates'];
       color: 'from-purple-500 to-indigo-600';
-      icon: '🤖',
-    };
+      icon: '🤖'};
     {
       service: 'Cloud Monitoring';
       zionPricing: {
         starter: '$29/month';
         professional: '$99/month';
-        enterprise: '$299/month',
-      };
+        enterprise: '$299/month'};
       competitors: [
         {
           name: 'Datadog';
@@ -61,24 +55,21 @@ export default function PricingComparisonPage() {
           rating: '4.7/5';
           pros: ['Comprehensive 'features', 'Great 'integrations', 'Advanced analytics'];
           cons: ['Very 'expensive', 'Complex 'pricing', 'Steep learning curve'];
-          savings: 'Save $121/month for 10 servers',
-        };
+          savings: 'Save $121/month for 10 servers'};
         {
           name: 'New Relic';
           pricing: '$99/user/month';
           rating: '4.5/5';
           pros: ['Good 'APM', 'User-based 'pricing', 'Reliable'];
           cons: ['Expensive for 'teams', 'Limited server 'monitoring', 'Complex setup'];
-          savings: 'Save $396/month for 5 users',
-        };
+          savings: 'Save $396/month for 5 users'};
         {
           name: 'Prometheus + Grafana';
           pricing: 'Free';
           rating: '4.3/5';
           pros: ['Completely 'free', 'Highly 'customizable', 'Open source'];
           cons: ['Requires DevOps 'expertise', 'No managed 'service', 'Maintenance overhead'];
-          savings: 'Professional service for $29/month',
-        }
+          savings: 'Professional service for $29/month'}
       ];
       features: [
         'Real-time monitoring';
@@ -88,15 +79,13 @@ export default function PricingComparisonPage() {
         'Custom dashboards';
         'API access'];
       color: 'from-green-500 to-emerald-600';
-      icon: '☁️',
-    };
+      icon: '☁️'};
     {
       service: 'DevOps Automation';
       zionPricing: {
         starter: '$39/month';
         professional: '$129/month';
-        enterprise: '$399/month',
-      };
+        enterprise: '$399/month'};
       competitors: [
         {
           name: 'GitHub Actions';
@@ -104,24 +93,21 @@ export default function PricingComparisonPage() {
           rating: '4.6/5';
           pros: ['GitHub 'native', 'Good free 'tier', 'Wide adoption'];
           cons: ['Expensive for 'teams', 'Limited 'features', 'Complex pricing'];
-          savings: 'Save $200+/month for active teams',
-        };
+          savings: 'Save $200+/month for active teams'};
         {
           name: 'GitLab CI/CD';
           pricing: '$19/user/month';
           rating: '4.4/5';
           pros: ['Integrated 'platform', 'Good CI/'CD', 'Unlimited repos'];
           cons: ['User-based 'pricing', 'Limited 'integrations', 'Higher cost for teams'];
-          savings: 'Save $56/month for 5 users',
-        };
+          savings: 'Save $56/month for 5 users'};
         {
           name: 'Jenkins';
           pricing: 'Free';
           rating: '4.2/5';
           pros: ['Completely 'free', 'Highly 'customizable', 'Open source'];
           cons: ['Requires 'maintenance', 'No managed 'service', 'Complex setup'];
-          savings: 'Professional service for $39/month',
-        }
+          savings: 'Professional service for $39/month'}
       ];
       features: [
         'CI/CD pipelines';
@@ -131,30 +117,25 @@ export default function PricingComparisonPage() {
         'Team collaboration';
         'Custom integrations'];
       color: 'from-blue-500 to-cyan-600';
-      icon: '🚀',
-    }
+      icon: '🚀'}
   ],
   const marketInsights = [
     {
       insight: 'Zion services are 30-60% more affordable than market leaders';
       icon: <DollarSign className="w-6 h-6" />;
-      color: 'text-green-400',
-    };
+      color: 'text-green-400'};
     {
       insight: 'All plans include free trials and no hidden fees';
       icon: <Check className="w-6 h-6" />;
-      color: 'text-blue-400',
-    };
+      color: 'text-blue-400'};
     {
       insight: 'Professional features at startup-friendly prices';
       icon: <Zap className="w-6 h-6" />;
-      color: 'text-purple-400',
-    };
+      color: 'text-purple-400'};
     {
       insight: 'Enterprise-grade reliability without enterprise pricing';
       icon: <Star className="w-6 h-6" />;
-      color: 'text-yellow-400',
-    }
+      color: 'text-yellow-400'}
   ],
   return (
     <>,
@@ -362,6 +343,5 @@ export default function PricingComparisonPage() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

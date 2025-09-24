@@ -14,8 +14,7 @@ const AdminReviewsPage: NextPage = () => {
     const data = await res.json(),
     if (res.ok) {
       setAll(data.reviews),
-      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed)),
-    }
+      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))}
   }
 ,
   useEffect(() => {

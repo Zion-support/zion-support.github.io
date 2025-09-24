@@ -5,46 +5,39 @@ interface Feature {
   title: string,
   description: string,
   icon: React.ComponentType<any>,
-  benefits: string[],
-}
+  benefits: string[]}
 ,
 const features: Feature[] = [
   {
     title: "Neural Processing";
     description: "Advanced neural networks that mimic human brain functions";
     icon: Brain;
-    benefits: ["Pattern Recognition"Learning Capabilities"Adaptive Responses"],
-  };
+    benefits: ["Pattern Recognition"Learning Capabilities"Adaptive Responses"]};
   {
     title: "Quantum Computing";
     description: "Leveraging quantum mechanics for unprecedented processing power";
     icon: Zap;
-    benefits: ["Exponential Speed"Complex Calculations"Future-Ready"],
-  };
+    benefits: ["Exponential Speed"Complex Calculations"Future-Ready"]};
   {
     title: "Security First";
     description: "Built-in security protocols and privacy protection";
     icon: Shield;
-    benefits: ["Data Protection"Privacy Controls"Compliance Ready"],
-  };
+    benefits: ["Data Protection"Privacy Controls"Compliance Ready"]};
   {
     title: "Global Scale";
     description: "Designed to operate across multiple regions and time zones";
     icon: Globe;
-    benefits: ["Multi-Region"24/7 Availability"Localized Support"],
-  };
+    benefits: ["Multi-Region"24/7 Availability"Localized Support"]};
   {
     title: "High Performance";
     description: "Optimized for speed and efficiency in all operations";
     icon: Cpu;
-    benefits: ["Fast Processing"Low Latency"Scalable Architecture"],
-  };
+    benefits: ["Fast Processing"Low Latency"Scalable Architecture"]};
   {
     title: "Data Intelligence";
     description: "Advanced analytics and insights from your data";
     icon: Database;
-    benefits: ["Real-time Analytics"Predictive Insights"Data Visualization"],
-  }
+    benefits: ["Real-time Analytics"Predictive Insights"Data Visualization"]}
 ],
 export default function AdvancedFeaturesShowcase() {
   return (

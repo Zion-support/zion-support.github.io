@@ -347,6 +347,5 @@ export default function AIROICalculatorPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

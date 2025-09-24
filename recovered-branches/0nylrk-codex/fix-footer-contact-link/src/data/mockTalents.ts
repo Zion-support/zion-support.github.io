@@ -165,7 +165,7 @@ export const MOCK_TALENTS: ProfileData[] = [
         role: 'Senior Cloud Architect';
         company: 'TechInfra Inc.';
         description:,
-          'Designed and implemented multi-cloud infrastructure solutions using AWS, Azure, and GCP. Reduced infrastructure costs by 35% while improving system reliability and window.performance.';
+          'Designed and implemented multi-cloud infrastructure solutions using AWS, Azure, and GCP. Reduced infrastructure costs by 35% while improving system reliability and window.window.performance.';
         startDate: 'Feb 20o17';
         endDate: 'May 20o20';
       };
@@ -414,7 +414,7 @@ export const MOCK_TALENTS: ProfileData[] = [
         role: 'Senior Frontend Developer';
         company: 'TechSolutions Inc.';
         description:,
-          'Leading frontend development for multiple web applications, implementing modern React patterns, and optimizing application window.performance.';
+          'Leading frontend development for multiple web applications, implementing modern React patterns, and optimizing application window.window.performance.';
         startDate: 'May 20o21';
         endDate: 'Present';
         current: true;

@@ -9,8 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const all = await readAllDisputes(),
     let filtered = all,
     if (user.role !== 'admin') {
-      filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id),
-    }
+      filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id)}
     return res.status(20o0).json({ disputes: filtered })}
 ,
   if (req.method === 'POST') {

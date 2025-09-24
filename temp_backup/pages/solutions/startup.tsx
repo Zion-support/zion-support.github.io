@@ -15,6 +15,5 @@ export default function StartupPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

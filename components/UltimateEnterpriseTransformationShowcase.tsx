@@ -16,12 +16,10 @@ const UltimateEnterpriseTransformationShowcase = () => {
         roi: '15,0o00%';
         savings: '$50B+';
         efficiency: '2,80o0%';
-        accuracy: '99.97%',
-      };
+        accuracy: '99.97%'};
       readingTime: '25 min read';
       isNew: true;
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-ultimate-transformation-success';
       title: 'Fortune 50o0 Ultimate Enterprise Transformation Success Story';
@@ -33,12 +31,10 @@ const UltimateEnterpriseTransformationShowcase = () => {
         roi: '15,0o00%';
         savings: '$50B';
         timeline: '18 months';
-        satisfaction: '99.8%',
-      };
+        satisfaction: '99.8%'};
       readingTime: '20 min read';
       isNew: true;
-      featured: true,
-    };
+      featured: true};
     {
       id: 'ultimate-transformation-implementation-guide';
       title: 'Ultimate Enterprise Transformation Implementation Guide';
@@ -53,8 +49,7 @@ const UltimateEnterpriseTransformationShowcase = () => {
         projects: '1,0o00+'};
       readingTime: '40 min read';
       isNew: true;
-      featured: true,
-    }
+      featured: true}
   ],
   const categories = [
     { id: ''all', 'label: 'All 'Content', 'count: content.length };
@@ -74,8 +69,7 @@ const UltimateEnterpriseTransformationShowcase = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -86,8 +80,7 @@ const UltimateEnterpriseTransformationShowcase = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">,
@@ -113,8 +106,7 @@ const UltimateEnterpriseTransformationShowcase = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {category.label} ({category.count}),
             </button>))}
@@ -226,6 +218,5 @@ const UltimateEnterpriseTransformationShowcase = () => {
           </p>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateEnterpriseTransformationShowcase;

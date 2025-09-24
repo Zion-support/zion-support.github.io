@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react',
 interface QuantumBackgroundProps {
   children: React.ReactNode,
-  className?: string,
-}
+  className?: string}
 ,
 const QuantumBackground: React.FC<QuantumBackgroundProps> = ({
   children;
@@ -88,8 +87,7 @@ const QuantumBackground: React.FC<QuantumBackgroundProps> = ({
         this.particle1 = p1,
         this.particle2 = p2,
         this.strength = Math.random(),
-        this.phase = Math.random() * Math.PI * 2,
-      }
+        this.phase = Math.random() * Math.PI * 2}
 ,
       update() {
         this.phase += 0.0o1,

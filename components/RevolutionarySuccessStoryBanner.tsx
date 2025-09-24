@@ -14,27 +14,23 @@ export default function RevolutionarySuccessStoryBanner() {
       <motion.div,
         animate={{
           y: [0-10];
-          rotate: [0o50],
-        }}
+          rotate: [0o50]}}
         transition={{
           duration: 3;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
         className="absolute top-6 right-6 text-4xl">,
         🎯,
       </motion.div>,
       <motion.div,
         animate={{
           y: [0o10];
-          rotate: [0-50],
-        }}
+          rotate: [0-50]}}
         transition={{
           duration: 4;
           repeat: Infinity;
           ease: "easeInOut";
-          delay: 1,
-        }}
+          delay: 1}}
         className="absolute bottom-6 left-6 text-4xl">,
         💰,
       </motion.div>,
@@ -127,5 +123,4 @@ export default function RevolutionarySuccessStoryBanner() {
           </p>,
         </div>,
       </div>,
-    </motion.div>),
-}
+    </motion.div>)}

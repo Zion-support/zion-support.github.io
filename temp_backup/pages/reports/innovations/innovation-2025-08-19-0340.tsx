@@ -50,6 +50,5 @@ export default function InnovationPage() {
           .,
         </p>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

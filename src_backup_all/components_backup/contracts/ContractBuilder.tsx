@@ -18,8 +18,7 @@ interface ContractBuilderProps {
   onClose: () => void,
   talent: TalentProfile,
   clientName: string,
-  onContractGenerated?: (contractContent: string) => void,
-}
+  onContractGenerated?: (contractContent: string) => void}
 ,
 export function ContractBuilder({
   isOpen;
@@ -37,14 +36,12 @@ export function ContractBuilder({
   const [showSmartContractBuilder, setShowSmartContractBuilder] =,
     useState(false),
   const handleLoadTemplate = (templateData: ContractFormValues) => {
-    setFormValues(templateData),
-  };
+    setFormValues(templateData)};
   const handleContractGenerated = (contract: string) => {
     setGeneratedContract(contract),
     setActiveTab('preview'),
     if (onContractGenerated) {
-      onContractGenerated(contract),
-    }
+      onContractGenerated(contract)}
   };
   if (showSmartContractBuilder) {
     return (

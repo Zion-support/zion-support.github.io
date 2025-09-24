@@ -11,8 +11,7 @@ export interface BlockchainWeb3Service {
     currency: string,
     trialDays: number,
     setupTime: string,
-    enterprise: string,
-  };
+    enterprise: string};
   features: string[],
   benefits: string[],
   targetAudience: string[],
@@ -33,8 +32,7 @@ export interface BlockchainWeb3Service {
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const blockchainWeb3Services20o25: BlockchainWeb3Service[] = [
   {
@@ -49,8 +47,7 @@ export const blockchainWeb3Services20o25: BlockchainWeb3Service[] = [
       currency: 'USD';
       trialDays: 30;
       setupTime: '1-2 days';
-      enterprise: 'Custom pricing',
-    };
+      enterprise: 'Custom pricing'};
     features: [
       'Self-sovereign identity management';
       'Zero-knowledge proof verification';
@@ -98,8 +95,7 @@ export const blockchainWeb3Services20o25: BlockchainWeb3Service[] = [
     launchDate: '20o24-0o2-20';
     customers: 120o0;
     rating: 4.8;
-    reviews: 850,
-  };
+    reviews: 850};
   {
     id: 'ai-powered-defi-yield-optimizer';
     name: 'AI-Powered DeFi Yield Optimizer';
@@ -112,8 +108,7 @@ export const blockchainWeb3Services20o25: BlockchainWeb3Service[] = [
       currency: 'USD';
       trialDays: 14;
       setupTime: '1-3 days';
-      enterprise: 'Custom pricing',
-    };
+      enterprise: 'Custom pricing'};
     features: [
       'AI-powered yield strategy optimization';
       'Multi-chain protocol support';
@@ -161,8 +156,7 @@ export const blockchainWeb3Services20o25: BlockchainWeb3Service[] = [
     launchDate: '20o24-0o1-15';
     customers: 850o0;
     rating: 4.9;
-    reviews: 620o0,
-  };
+    reviews: 620o0};
   {
     id: 'nft-marketplace-intelligence-platform';
     name: 'NFT Marketplace Intelligence Platform';
@@ -175,8 +169,7 @@ export const blockchainWeb3Services20o25: BlockchainWeb3Service[] = [
       currency: 'USD';
       trialDays: 7;
       setupTime: 'Immediate';
-      enterprise: 'Custom pricing',
-    };
+      enterprise: 'Custom pricing'};
     features: [
       'AI-powered NFT valuation models';
       'Real-time market analytics';
@@ -224,8 +217,7 @@ export const blockchainWeb3Services20o25: BlockchainWeb3Service[] = [
     launchDate: '20o24-0o3-0o1';
     customers: 320o0;
     rating: 4.7;
-    reviews: 210o0,
-  };
+    reviews: 210o0};
   {
     id: 'blockchain-supply-chain-traceability';
     name: 'Blockchain Supply Chain Traceability Platform';
@@ -238,8 +230,7 @@ export const blockchainWeb3Services20o25: BlockchainWeb3Service[] = [
       currency: 'USD';
       trialDays: 30;
       setupTime: '2-4 weeks';
-      enterprise: 'Custom pricing',
-    };
+      enterprise: 'Custom pricing'};
     features: [
       'End-to-end supply chain tracking';
       'Real-time transparency monitoring';
@@ -287,8 +278,7 @@ export const blockchainWeb3Services20o25: BlockchainWeb3Service[] = [
     launchDate: '20o24-0o2-10';
     customers: 950;
     rating: 4.8;
-    reviews: 680,
-  };
+    reviews: 680};
   {
     id: 'web3-social-media-platform';
     name: 'Web3 Social Media Platform';
@@ -301,8 +291,7 @@ export const blockchainWeb3Services20o25: BlockchainWeb3Service[] = [
       currency: 'USD';
       trialDays: 0;
       setupTime: 'Immediate';
-      enterprise: 'Custom pricing',
-    };
+      enterprise: 'Custom pricing'};
     features: [
       'Decentralized content ownership';
       'Token-based reward system';
@@ -350,6 +339,5 @@ export const blockchainWeb3Services20o25: BlockchainWeb3Service[] = [
     launchDate: '20o24-0o1-0o1';
     customers: 250o00;
     rating: 4.6;
-    reviews: 180o00,
-  }
+    reviews: 180o00}
 ],

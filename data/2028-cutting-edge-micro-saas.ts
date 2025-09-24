@@ -11,8 +11,7 @@ export interface CuttingEdgeMicroSaas20o28 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
   {

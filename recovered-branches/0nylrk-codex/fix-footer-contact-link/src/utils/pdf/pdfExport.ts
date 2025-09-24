@@ -13,8 +13,7 @@ export interface ExportOptions {
   theme: 'light' | 'dark',
   includePortfolio?: boolean,
   maxProjects?: number,
-  fontFamily?: FontFamily,
-}
+  fontFamily?: FontFamily}
 ,
 const defaultOptions: ExportOptions = {
   theme: 'light';

@@ -3,8 +3,7 @@ interface GradientTextProps {
   children: React.ReactNode,
   className?: string,
   gradient?: string,
-  animate?: boolean,
-}
+  animate?: boolean}
 ,
 export default function GradientText({
   children;

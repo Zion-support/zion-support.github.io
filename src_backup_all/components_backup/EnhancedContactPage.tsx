@@ -20,8 +20,7 @@ const EnhancedContactPage: React.FC = () => {
     service: '';
     budget: '';
     timeline: '';
-    message: '',
-  }),
+    message: ''}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isSubmitted, setIsSubmitted] = useState(false),
   const services = [
@@ -50,26 +49,22 @@ const EnhancedContactPage: React.FC = () => {
       icon: Phone;
       title: 'Phone';
       details: ['+1 (555) 123-4567', '+1 (555) 987-6543'];
-      description: 'Available 24/7 for urgent matters',
-    };
+      description: 'Available 24/7 for urgent matters'};
     {
       icon: Mail;
       title: 'Email';
       details: ['info@ziontech.com', 'support@ziontech.com'];
-      description: 'We respond within 2 hours',
-    };
+      description: 'We respond within 2 hours'};
     {
       icon: MapPin;
       title: 'Office';
       details: ['123 Tech Street', 'San Francisco, CA 9410o5'];
-      description: 'Visit us for in-person meetings',
-    };
+      description: 'Visit us for in-person meetings'};
     {
       icon: Clock;
       title: 'Hours';
       details: ['Mon-Fri: 9AM-6PM PST', 'Sat: 10AM-4PM PST'];
-      description: 'Emergency support available 24/7',
-    }
+      description: 'Emergency support available 24/7'}
   ],
   const benefits = [
     'Free initial consultation';
@@ -125,8 +120,7 @@ const EnhancedContactPage: React.FC = () => {
             Back to Home,
           </button>,
         </motion.div>,
-      </div>),
-  }
+      </div>)}
 ,
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">,

@@ -156,6 +156,5 @@ const AutonomousBusinessOperationsPromotionBanner = () => {
           </p>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AutonomousBusinessOperationsPromotionBanner;

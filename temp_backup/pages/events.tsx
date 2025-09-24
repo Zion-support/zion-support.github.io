@@ -119,8 +119,7 @@ export default function EventsPage() {
                   className={`px-4 py-2 rounded-full border transition-all duration-200 ${
                     type === 'All',
                       ? 'bg-cyan-400 text-white border-cyan-400',
-                      : 'bg-white/10 text-white/80 border-white/20 hover: bg-white/20 hover:border-cyan-400/50',
-                  }`}
+                      : 'bg-white/10 text-white/80 border-white/20 hover: bg-white/20 hover:border-cyan-400/50'}`}
                 >,
                   {type}
                 </button>))}
@@ -206,6 +205,5 @@ export default function EventsPage() {
           </section>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

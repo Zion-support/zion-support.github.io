@@ -50,8 +50,7 @@ export interface EnhancedService20o27 {
     phone: string,
     email: string,
     website: string,
-    address: string,
-  };
+    address: string};
   competitors: string[],
   roi: string,
   setupTime: string,
@@ -59,8 +58,7 @@ export interface EnhancedService20o27 {
   freeTier: boolean,
   trialPeriod: string,
   compliance: string[],
-  useCases: string[],
-}
+  useCases: string[]}
 ,
 export const enhancedInnovativeServices20o27: EnhancedService20o27[] = [
   // Web3 & Metaverse Solutions,

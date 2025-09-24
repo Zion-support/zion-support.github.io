@@ -17,8 +17,7 @@ interface Stat {
   label: string,
   description: string,
   color: string,
-  gradient: string,
-}
+  gradient: string}
 ,
 const stats: Stat[] = [
   {
@@ -28,8 +27,7 @@ const stats: Stat[] = [
     label: 'Global Clients';
     description: 'Serving businesses across 50+ countries';
     color: 'zion-cyan';
-    gradient: 'from-zion-cyan to-zion-blue',
-  };
+    gradient: 'from-zion-cyan to-zion-blue'};
   {
     id: 'uptime';
     icon: Shield;
@@ -37,8 +35,7 @@ const stats: Stat[] = [
     label: 'Uptime Guarantee';
     description: 'Enterprise-grade reliability and performance';
     color: 'zion-purple';
-    gradient: 'from-zion-purple to-zion-cyan',
-  };
+    gradient: 'from-zion-purple to-zion-cyan'};
   {
     id: 'roi';
     icon: TrendingUp;
@@ -46,8 +43,7 @@ const stats: Stat[] = [
     label: 'Average ROI';
     description: 'Proven business impact and cost savings';
     color: 'zion-blue';
-    gradient: 'from-zion-blue to-zion-purple',
-  };
+    gradient: 'from-zion-blue to-zion-purple'};
   {
     id: 'satisfaction';
     icon: Star;
@@ -55,8 +51,7 @@ const stats: Stat[] = [
     label: 'Client Satisfaction';
     description: 'Consistently exceeding expectations';
     color: 'zion-cyan';
-    gradient: 'from-zion-cyan to-zion-purple',
-  };
+    gradient: 'from-zion-cyan to-zion-purple'};
   {
     id: 'innovation';
     icon: Zap;
@@ -64,8 +59,7 @@ const stats: Stat[] = [
     label: 'Patents & Innovations';
     description: 'Leading edge technology development';
     color: 'zion-purple';
-    gradient: 'from-zion-purple to-zion-blue',
-  };
+    gradient: 'from-zion-purple to-zion-blue'};
   {
     id: 'growth';
     icon: Rocket;
@@ -73,16 +67,14 @@ const stats: Stat[] = [
     label: 'Annual Growth';
     description: 'Rapidly expanding global presence';
     color: 'zion-blue';
-    gradient: 'from-zion-blue to-zion-cyan',
-  }
+    gradient: 'from-zion-blue to-zion-cyan'}
 ],
 export default function EnhancedStatsSection() {
   const [countedValues, setCountedValues] = useState<{ [key: string]: number }>({}),
   const controls = useAnimation(),
   const [ref, inView] = useInView({
     threshold: 0.3;
-    triggerOnce: true,
-  }),
+    triggerOnce: true}),
   useEffect(() => {
     if (inView) {
       controls.start('visible')}
@@ -127,8 +119,7 @@ export default function EnhancedStatsSection() {
               opacity: 1;
               y: 0;
               transition: {
-                duration: 0.6,
-              }
+                duration: 0.6}
             }
           }}
           className="text-center mb-16">,
@@ -152,8 +143,7 @@ export default function EnhancedStatsSection() {
                   y: 0;
                   transition: {
                     duration: 0.6;
-                    delay: index * 0.1,
-                  }
+                    delay: index * 0.1}
                 }
               }}
               className="group relative">,
@@ -172,8 +162,7 @@ export default function EnhancedStatsSection() {
                   className={`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}
                   whileHover={{
                     rotate: 360;
-                    scale: 1.1,
-                  }}
+                    scale: 1.1}}
                   transition={{ duration: 0.6 }}
                 >,
                   {React.createElement(stat.icon, { className: `w-10 h-10 text-${stat.color}` })}
@@ -217,8 +206,7 @@ export default function EnhancedStatsSection() {
               y: 0;
               transition: {
                 duration: 0.6;
-                delay: 0.6,
-              }
+                delay: 0.6}
             }
           }}
           className="mt-16">,
@@ -253,5 +241,4 @@ export default function EnhancedStatsSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}

@@ -13,8 +13,7 @@ import {
 } from '@/components/ui/tooltip',
 interface FavoriteButtonProps {
   itemId: string,
-  className?: string,
-}
+  className?: string}
 ,
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
   const { isWishlisted, toggle } = useWishlist(),
@@ -24,8 +23,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
     e.stopPropagation(),
     if (!isAuthenticated) {
       setLoginOpen(true),
-      return,
-    }
+      return}
 ,
     const wasWishlisted = isWishlisted(itemId),
     toggle(itemId),

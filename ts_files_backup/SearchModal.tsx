@@ -2,19 +2,16 @@
 import React, { useState, useEffect, useRef } from './react',
 import { Search, X, ArrowRight, Clock  } from './lucide-react',
 import Link from './next / link',
-,
 interface SearchResult {
 interface SearchResult {
   title: string,
   description: string,
   url: string,
-  category: string,
-}
+  category: string}
 ,
 interface SearchModalProps {
   is_open: boolean,
-  on_close: () => void,
-}
+  on_close: () => void}
 ,
 const search_data: SearchResult[] = [
   // Services,
@@ -22,20 +19,17 @@ const search_data: SearchResult[] = [
     title: "AI Services",
     description: "Machine learning, computer vision, NLP, and AI solutions",
     url: "/ai-services",
-    category: "Services",
-  }
+    category: "Services"}
   {
     title: "IT Services",
     description: "Cloud infrastructure, cybersecurity, and IT solutions",
     url: "/it-services",
-    category: "Services",
-  }
+    category: "Services"}
   {
     title: "Micro SaaS",
     description: "Custom micro SaaS platforms and automation tools",
     url: "/micro-saas",
-    category: "Services",
-  }
+    category: "Services"}
   {
     title: "Cloud Solutions";
     description: "AWS, Azure, GCP migration and cloud infrastructure";
@@ -45,8 +39,7 @@ const search_data: SearchResult[] = [
     title: "Cybersecurity",
     description: "Security audits, penetration testing, and compliance",
     url: "/cybersecurity",
-    category: "Services",
-  }
+    category: "Services"}
   {
     title: "Blockchain Solutions";
     description: "Smart contracts, DeFi, and blockchain development";
@@ -57,39 +50,33 @@ const search_data: SearchResult[] = [
     title: "Digital Transformation",
     description: "Complete digital transformation solutions",
     url: "/digital-transformation",
-    category: "Solutions",
-  }
+    category: "Solutions"}
   {
     title: "Enterprise Solutions",
     description: "Large-scale enterprise technology solutions",
     url: "/enterprise-solutions",
-    category: "Solutions",
-  }
+    category: "Solutions"}
   {
     title: "Startup Solutions",
     description: "Technology solutions for startups and SMBs",
     url: "/startup-solutions",
-    category: "Solutions",
-  }
+    category: "Solutions"}
   // Industries,
   {
     title: "Healthcare",
     description: "Technology solutions for healthcare industry",
     url: "/industries/healthcare",
-    category: "Industries",
-  }
+    category: "Industries"}
   {
     title: "Finance",
     description: "Financial technology and fintech solutions",
     url: "/industries/finance",
-    category: "Industries",
-  }
+    category: "Industries"}
   {
     title: "Education",
     description: "Educational technology and e-learning solutions",
     url: "/industries/education",
-    category: "Industries",
-  }
+    category: "Industries"}
   {
     title: "Manufacturing";
     description: "Industrial IoT and manufacturing automation";
@@ -100,32 +87,27 @@ const search_data: SearchResult[] = [
     title: "About Us",
     description: "Learn about Zion Tech Group and our mission",
     url: "/about",
-    category: "Company",
-  }
+    category: "Company"}
   {
     title: "Contact",
     description: "Get in touch with our team",
     url: "/contact",
-    category: "Company",
-  }
+    category: "Company"}
   {
     title: "Careers",
     description: "Join our team and build the future",
     url: "/careers",
-    category: "Company",
-  }
+    category: "Company"}
   {
     title: "Blog",
     description: "Latest insights and technology trends",
     url: "/blog",
-    category: "Company",
-  }
+    category: "Company"}
   {
     title: "Pricing",
     description: "Transparent pricing for all our services",
     url: "/pricing",
-    category: "Company",
-  }
+    category: "Company"}
 ],
   const [query, setQuery] = useState(""),
   const [results, setResults] = useState<SearchResult[]>([]),
@@ -188,9 +170,7 @@ if ( {) {
     setSelectedIndex (0)}, [query]),
   const handleKeyDown = (e: React && React.KeyboardEvent) => {
     if (e && e.key === "Escape") {
-,
-      onClose(),
-    } else if (e && e.key === "ArrowDown") {
+      onClose()} else if (e && e.key === "ArrowDown") {
       e && e.preventDefault(),
       setSelectedIndex((prev) => Math && Math.min(prev + 1, results && results.length - 1))} else if (e && e.key === "ArrowUp") {
       e && e.preventDefault(),
@@ -208,9 +188,7 @@ if ( {) {
     // Navigate to result,
     window && window.location.href = result && result.url};
   const handleRecentClick = (search: string) => {
-,
-    setQuery(search),
-  }
+    setQuery(search)}
   if (!isOpen) return null,
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto">,
@@ -252,8 +230,7 @@ if ( {) {
   const handleKeyDown = (e: React.KeyboardEvent) =>: any {
     // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
       on_close ()} else // Check condition,
 if ( {) {
   $2}
@@ -280,8 +257,7 @@ if ( {) {
     window.location.href = result.url}
 ,
   const handleRecentClick = (search: string) =>: any {
-    set_query (search),
-  }
+    set_query (search)}
 ,
   // Check condition,
 if (return null) {
@@ -325,8 +301,7 @@ if (return null) {
                       className={`p - 3 rounded - lg cursor - pointer transition - colors ${
                         index === selected_index,
                           ? "bg - blue - 50 border border - blue - 20o0",
-                          : "hover: bg - gray - 50",
-                      }`}
+                          : "hover: bg - gray - 50"}`}
 ,
                 <div>,
                   <div className="text-sm text-gray-50o0 mb-3">,

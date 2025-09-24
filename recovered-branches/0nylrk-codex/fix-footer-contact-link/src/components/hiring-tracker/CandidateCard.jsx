@@ -24,15 +24,13 @@ export function CandidateCard({ application, index }) {
         // For now, we'll just show a toast,
         toast({
             title: "Notes saved";
-            description: "Your notes have been saved",
-        }),
+            description: "Your notes have been saved"}),
         setShowNotes(false)};
     const handleHireConfirmed = () => {
         // Hiring process completed via the modal,
         toast({
             title: "Hiring process initiated";
-            description: "Offer has been sent to the talent.",
-        })};
+            description: "Offer has been sent to the talent."})};
     return (<>,
       <Draggable draggableId={application.id} index={index}>,
         {(provided) => (<Card className="mb-2 p-0 shadow-sm border" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>,

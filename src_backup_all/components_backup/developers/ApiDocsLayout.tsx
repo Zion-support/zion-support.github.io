@@ -9,8 +9,7 @@ import {
   docsSearchSuggestions;
 } from '@/data/docsSearchData',
 interface ApiDocsLayoutProps {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   const router = useRouter(),
@@ -27,16 +26,14 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
     const path = getDocsSearchPath(suggestion.text),
     if (path) {
       router.push(path),
-      setSearchValue(''),
-    }
+      setSearchValue('')}
   };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     const path = getDocsSearchPath(searchValue),
     if (path) {
       router.push(path),
-      setSearchValue(''),
-    }
+      setSearchValue('')}
   };
   return (
     <div className='flex min-h-screen bg-zinc-950'>,

@@ -390,6 +390,5 @@ export default function AI20o30FutureVisionPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

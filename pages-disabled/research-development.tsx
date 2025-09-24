@@ -8,15 +8,13 @@ export default function ResearchDevelopment() {
 			description: 'Advancing autonomous systems, neural networks, and intelligent automation technologies.';
 			projects['Multi-agent AI systems', 'Federated learning', 'Explainable AI'];
 			icon: FlaskConica l;
-			color: 'blue',
-		};
+			color: 'blue'};
 		{
 			title: 'Quantum Computing';
 			description: 'Exploring quantum algorithms and their applications in business and scientific computing.';
 			projects['Quantum neural networks', 'Quantum cryptography', 'Quantum optimization'];
 			icon: Microscop e;
-			color: 'purple',
-		};
+			color: 'purple'};
 		{
 			title: 'Edge Computing';
 			description: 'Developing next-generation edge computing platforms for IoT and real-time applications.';
@@ -27,6 +25,5 @@ export default function ResearchDevelopment() {
 					</div>,
 				</div>,
 			</section>,
-		</>),
-};
+		</>)};
 }

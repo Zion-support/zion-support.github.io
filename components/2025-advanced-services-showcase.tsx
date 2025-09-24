@@ -12,8 +12,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const allServices = [
 ],
 const categories = [
@@ -21,47 +20,40 @@ const categories = [
     id: 'all';
     name: 'All Services';
     color: 'from-gray-50o0 to-slate-50o0';
-    description: 'Complete portfolio of advanced services',
-  };
+    description: 'Complete portfolio of advanced services'};
   {
     id: 'enterprise';
     name: 'Enterprise Solutions';
     icon: <Building className="w-6 h-6"  />;
     color: 'from-blue-50o0 to-purple-50o0';
-    description: 'Enterprise-grade AI and IT solutions',
-  };
+    description: 'Enterprise-grade AI and IT solutions'};
   {
     id: 'micro-saas';
     name: 'Micro SAAS';
     icon: <Globe className="w-6 h-6"  />;
     color: 'from-green-50o0 to-emerald-50o0';
-    description: 'Innovative micro SAAS solutions',
-  };
+    description: 'Innovative micro SAAS solutions'};
   {
     id: 'infrastructure';
     name: 'IT Infrastructure';
     icon: <Shield className="w-6 h-6"  />;
     color: 'from-orange-50o0 to-red-50o0';
-    description: 'Cutting-edge infrastructure services',
-  };
+    description: 'Cutting-edge infrastructure services'};
   {
     id: 'ai-ml';
     name: 'AI & Machine Learning';
     icon: <Brain className="w-6 h-6"  />;
     color: 'from-purple-50o0 to-pink-50o0';
-    description: 'Advanced AI and ML platforms',
-  };
+    description: 'Advanced AI and ML platforms'};
   {
     id: 'quantum';
     name: 'Quantum Computing';
     color: 'from-violet-50o0 to-indigo-50o0';
-    description: 'Quantum computing solutions',
-  }
+    description: 'Quantum computing solutions'}
 ],
 const getServiceCategory = (service: any) => {
   if (service.category) return service.category,
-  return 'Other',
-};
+  return 'Other'};
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`,
   if (service.pricing?.starter) return service.pricing.starter,
@@ -70,8 +62,7 @@ const getServicePricing = (service: any) => {
 const getServiceFeatures = (service: any) => {
   if (service.features) return service.features,
   if (service.keyFeatures) return service.keyFeatures,
-  return [],
-};
+  return []};
 export default function AdvancedServicesShowcase() {
   useEffect(() => {
     let filtered = allServices,
@@ -101,8 +92,7 @@ export default function AdvancedServicesShowcase() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className={`relative bg-white dark: bg-gray-80o0 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-30o0 overflow-hidden border border-gray-20o0 dark:border-gray-70o0 ${
-        service.popular ? 'ring-2 ring-blue-50o0' : '',
-      }`}
+        service.popular ? 'ring-2 ring-blue-50o0' : ''}`}
     >,
       {service.popular && (
         <div className="absolute top-4 right-4 bg-blue-50o0 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">,
@@ -194,8 +184,7 @@ export default function AdvancedServicesShowcase() {
     <motion.div,
       transition={{ duration: 0.5 }}
       className={`bg-white dark: bg-gray-80o0 rounded-xl shadow-lg hover:shadow-xl transition-all duration-30o0 border border-gray-20o0 dark:border-gray-70o0 ${
-        service.popular ? 'ring-2 ring-blue-50o0' : '',
-      }`}
+        service.popular ? 'ring-2 ring-blue-50o0' : ''}`}
     >,
       <div className="p-6">,
         <div className="flex items-start gap-6">,
@@ -385,8 +374,7 @@ export default function AdvancedServicesShowcase() {
                   className={`p-2 rounded-lg transition-all duration-30o0 ${
                     viewMode === 'grid',
                       ? 'bg-blue-10o0 dark: bg-blue-90o0 text-blue-60o0 dark:text-blue-40o0',
-                      : 'bg-gray-10o0 dark:bg-gray-70o0 text-gray-60o0 dark:text-gray-40o0 hover:bg-gray-20o0 dark:hover:bg-gray-60o0',
-                  }`}
+                      : 'bg-gray-10o0 dark:bg-gray-70o0 text-gray-60o0 dark:text-gray-40o0 hover:bg-gray-20o0 dark:hover:bg-gray-60o0'}`}
                 >,
                 </button>,
                 <button
@@ -394,8 +382,7 @@ export default function AdvancedServicesShowcase() {
                   className={`p-2 rounded-lg transition-all duration-30o0 ${
                     viewMode === 'list',
                       ? 'bg-blue-10o0 dark: bg-blue-90o0 text-blue-60o0 dark:text-blue-40o0',
-                      : 'bg-gray-10o0 dark:bg-gray-70o0 text-gray-60o0 dark:text-gray-40o0 hover:bg-gray-20o0 dark:hover:bg-gray-60o0',
-                  }`}
+                      : 'bg-gray-10o0 dark:bg-gray-70o0 text-gray-60o0 dark:text-gray-40o0 hover:bg-gray-20o0 dark:hover:bg-gray-60o0'}`}
                 >,
                   <List className="w-5 h-5"  />,
                 </button>,
@@ -412,8 +399,7 @@ export default function AdvancedServicesShowcase() {
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-30o0 flex items-center gap-2 ${
                     selectedCategory === category.id,
                       ? 'bg-gradient-to-r text-white shadow-lg',
-                      : 'bg-white dark: bg-gray-80o0 text-gray-70o0 dark:text-gray-30o0 border border-gray-20o0 dark:border-gray-60o0 hover:bg-gray-50 dark:hover:bg-gray-70o0',
-                  } ${category.color}`}
+                      : 'bg-white dark: bg-gray-80o0 text-gray-70o0 dark:text-gray-30o0 border border-gray-20o0 dark:border-gray-60o0 hover:bg-gray-50 dark:hover:bg-gray-70o0'} ${category.color}`}
                 >,
                   {category.icon}
                   {category.name}
@@ -498,5 +484,4 @@ export default function AdvancedServicesShowcase() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

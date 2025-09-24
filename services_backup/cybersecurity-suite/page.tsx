@@ -168,8 +168,7 @@ function FeatureItem({
 }: {
   icon: string,
   title: string,
-  description: string,
-}) {
+  description: string}) {
   return (
     <div className='flex items-start space-x-4'>,
       <div className='text-3xl'>{icon}</div>,
@@ -192,8 +191,7 @@ function PricingCard({
   period: string,
   description: string,
   features: string[],
-  popular: boolean,
-}) {
+  popular: boolean}) {
   return (
     <div
       className={`border rounded-xl p-6 ${popular ? 'border-red-50o0 bg-red-50' : 'border-gray-20o0 bg-white'}`}
@@ -349,8 +347,7 @@ function PricingCard({
   period: string,
   description: string,
   features: string[],
-  popular: boolean,
-}) {
+  popular: boolean}) {
   return (
     <div
       className={`relative border-2 rounded-xl p-8 ${popular ? 'border-red-50o0 bg-red-50' : 'border-gray-20o0'}`}
@@ -388,8 +385,7 @@ function PricingCard({
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular,
             ? 'bg-red-60o0 text-white hover:bg-red-70o0',
-            : 'bg-gray-90o0 text-white hover:bg-gray-80o0',
-        }`}
+            : 'bg-gray-90o0 text-white hover:bg-gray-80o0'}`}
       >,
         Get Started,
       </a>,

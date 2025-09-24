@@ -4,8 +4,7 @@ import { motion } from 'framer-motion',
 const UltraFuturisticBackground2047: React.FC = () => {
   const [isClientsetIsClient] = useState(false),
   useEffect(() => {
-    setIsClient(true),
-  }[]),
+    setIsClient(true)}[]),
   if (!isClient) {
     return (
       <div className="fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black" />)}
@@ -25,8 +24,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
           transition={{
             duration: 20;
             repeat: Infinity as any;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         >,
           <div className="w-full h-full bg-gradient-to-r from-cyan-500 to-blue-500 clip-hexagon" />,
         </motion.div>,
@@ -38,8 +36,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
           transition={{
             duration: 15;
             repeat: Infinity as any;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         >,
           <div className="w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon" />,
         </motion.div>,
@@ -52,8 +49,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
           transition={{
             duration: 8;
             repeat: Infinity as any;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         >,
           <div className="w-full h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full" />,
         </motion.div>,
@@ -65,8 +61,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
           transition={{
             duration: 12;
             repeat: Infinity as any;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         >,
           <div className="w-full h-full bg-gradient-to-r from-purple-400 to-pink-400 rounded-full" />,
         </motion.div>,
@@ -89,8 +84,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
           transition={{
             duration: 30;
             repeat: Infinity as any;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         >,
           <div className="flex space-x-8 justify-center">,
             {[...Array(20)].map((_i) => (
@@ -104,8 +98,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
                   duration: 3;
                   repeat: Infinity as any;
                   delay: i * 0.1;
-                  ease: "easeInOut",
-                }}
+                  ease: "easeInOut"}}
               />))}
           </div>,
         </motion.div>,
@@ -124,8 +117,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
           transition={{
             duration: 8;
             repeat: Infinity as any;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         />,
         {/* Pulse Rings */}
         <motion.div,
@@ -136,8 +128,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
           transition={{
             duration: 4;
             repeat: Infinity as any;
-            ease: "easeOut",
-          }}
+            ease: "easeOut"}}
         >,
           <div className="w-full h-full border-2 border-cyan-400 rounded-full" />,
         </motion.div>,
@@ -150,8 +141,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
             duration: 4;
             repeat: Infinity as any;
             ease: "easeOut";
-            delay: 1,
-          }}
+            delay: 1}}
         >,
           <div className="w-full h-full border-2 border-blue-400 rounded-full" />,
         </motion.div>,
@@ -164,8 +154,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
             duration: 4;
             repeat: Infinity as any;
             ease: "easeOut";
-            delay: 2,
-          }}
+            delay: 2}}
         >,
           <div className="w-full h-full border-2 border-purple-400 rounded-full" />,
         </motion.div>,
@@ -173,8 +162,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
       {/* CSS for hexagon clip */}
       <style jsx>{`,
         .clip-hexagon {
-          clip-path: polygon(50% 0%100% 25%100% 75%50% 100% 75%0% 25%),
-        }
+          clip-path: polygon(50% 0%100% 25%100% 75%50% 100% 75%0% 25%)}
       `}</style>,
     </>)};
 export default UltraFuturisticBackground2047;

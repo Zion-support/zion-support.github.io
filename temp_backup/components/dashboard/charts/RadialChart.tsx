@@ -5,8 +5,7 @@ export type RadialChartProps = {
   labels: string[],
   data: number[],
   colors?: string[],
-  size?: number,
-};
+  size?: number};
 export default function RadialChart({
   labels;
   data;

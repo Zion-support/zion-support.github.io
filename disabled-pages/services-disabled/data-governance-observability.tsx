@@ -48,6 +48,5 @@ export default function DataGovernanceObservability(...args: any[]): any {
           </Link>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

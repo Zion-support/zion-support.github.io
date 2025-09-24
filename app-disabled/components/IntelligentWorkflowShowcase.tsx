@@ -164,8 +164,7 @@ const IntelligentWorkflowShowcase = () => {
       case 'resource':,
         return <Award className='w-4 h-4' />,
       default:,
-        return <Star className='w-4 h-4' />,
-    }
+        return <Star className='w-4 h-4' />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -176,8 +175,7 @@ const IntelligentWorkflowShowcase = () => {
       case 'resource':,
         return 'from-purple-50o0 to-violet-50o0',
       default:,
-        return 'from-gray-50o0 to-slate-50o0',
-    }
+        return 'from-gray-50o0 to-slate-50o0'}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -230,8 +228,7 @@ const IntelligentWorkflowShowcase = () => {
               className={`px-6 py-3 rounded-full font-medium transition-all ${
                 activeTab === tab.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-60o0 hover: bg-gray-50 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-60o0 hover: bg-gray-50 border border-gray-20o0'}`}
             >,
               {tab.label}
               <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-sm'>,
@@ -341,6 +338,5 @@ const IntelligentWorkflowShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default IntelligentWorkflowShowcase;

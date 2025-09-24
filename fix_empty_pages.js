@@ -38,7 +38,7 @@ function fixEmptyFiles(dir) {
       fixEmptyFiles(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
       const content = fs.readFileSync(filePath, 'utf8').trim(),
       if (!content) {
-        // console.log(`Fixing empty file: ${filePath}`),
+        // // console.log(`Fixing empty file: ${filePath}`),
         const fileName = path.basename(file, path.extname(file)),
         const pageTemplate = createPageTemplate(fileName, filePath),
         fs.writeFileSync(filePath, pageTemplate)}
@@ -47,8 +47,8 @@ function fixEmptyFiles(dir) {
 // Start fixing from the pages directory,
 const pagesDir = './pages',
 if (fs.existsSync(pagesDir)) {
-  // console.log('Fixing empty pages...'),
+  // // console.log('Fixing empty pages...'),
   fixEmptyFiles(pagesDir),
-  // console.log('Empty pages fixed successfully!')} else {
+  // // console.log('Empty pages fixed successfully!')} else {
   console.error('Pages directory not found')}
 ,

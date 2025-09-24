@@ -23,8 +23,7 @@ class AutomationDashboard {
       stoppedProcesses: 0;
       totalMemory: 0;
       totalCPU: 0;
-      averageResponseTime: 0,
-    };
+      averageResponseTime: 0};
     this.setupMiddleware(),
     this.setupRoutes(),
     this.setupSocketIO(),
@@ -88,18 +87,17 @@ class AutomationDashboard {
         status: 'healthy';
         timestamp: new Date().toISOString();
         uptime: process.uptime();
-        version: '1.0.0',
-      })})}
+        version: '1.0.0'})})}
 ,
   setupSocketIO() {
     this.io.on('connection', (socket) => {
-      // // // // // // // console.log('Client connected to dashboard'),
+      // // // // // // // // console.log('Client connected to dashboard'),
       // Send initial data,
       socket.emit('processes', Array.from(this.processes.values())),
       socket.emit('metrics', this.metrics),
       socket.emit('alerts', this.alerts),
       socket.on('disconnect', () => {
-        // // // // // // // console.log('Client disconnected from dashboard')})})}
+        // // // // // // // // console.log('Client disconnected from dashboard')})})}
 ,
   async startMonitoring() {
     try {
@@ -112,9 +110,8 @@ class AutomationDashboard {
         this.broadcastUpdates()}, 20o00), // Update every 2 seconds,
       // Start server,
       this.server.listen(this.port, () => {
-        // // // // // // // console.log(`🚀 Automation Dashboard running on http: //localhost:${this.port}`),
-        // // // // // // // console.log(`📊 Monitoring ${this.processes.size} PM2 processes`)}),
-} catch (error) {
+        // // // // // // // // console.log(`🚀 Automation Dashboard running on http: //localhost:${this.port}`),
+        // // // // // // // // console.log(`📊 Monitoring ${this.processes.size} PM2 processes`)})} catch (error) {
       console.error('Failed to start monitoring dashboard:', error),
       process.exit(1)}
   }
@@ -124,7 +121,7 @@ class AutomationDashboard {
       pm2.connect((err) => {
         if (err) {
           reject(err)} else {
-          // // // // // // // console.log('✅ Connected to PM2'),
+          // // // // // // // // console.log('✅ Connected to PM2'),
           resolve()}
       })})}
 ,
@@ -151,8 +148,7 @@ class AutomationDashboard {
           restartCount: process.pm2_env.restart_time;
           instances: process.pm2_env.instances;
           version: process.pm2_env.version;
-          lastUpdate: new Date().toISOString(),
-        };
+          lastUpdate: new Date().toISOString()};
         this.processes.set(process.name, processInfo),
         if (process.pm2_env.status === 'online') {
           this.metrics.onlineProcesses++} else {
@@ -177,8 +173,7 @@ class AutomationDashboard {
           process: name;
           message: `High memory usage: ${Math.round(process.memory / 10o24 / 10o24)}MB`;
           timestamp: new Date().toISOString();
-          severity: 'medium',
-        })}
+          severity: 'medium'})}
 ,
       // CPU usage alert,
       if (process.cpu > 80) { // 80%,
@@ -188,8 +183,7 @@ class AutomationDashboard {
           process: name;
           message: `High CPU usage: ${process.cpu}%`;
           timestamp: new Date().toISOString();
-          severity: 'medium',
-        })}
+          severity: 'medium'})}
 ,
       // Process stopped alert,
       if (process.status === 'stopped') {
@@ -199,8 +193,7 @@ class AutomationDashboard {
           process: name;
           message: `Process ${name} is stopped`;
           timestamp: new Date().toISOString();
-          severity: 'high',
-        })}
+          severity: 'high'})}
 ,
       // High restart count alert,
       if (process.restartCount > 10) {
@@ -210,8 +203,7 @@ class AutomationDashboard {
           process: name;
           message: `High restart count: ${process.restartCount}`;
           timestamp: new Date().toISOString();
-          severity: 'medium',
-        })}
+          severity: 'medium'})}
     }),
     // Add new alerts,
     this.alerts = [...newAlerts, ...this.alerts].slice(0, 10o0), // Keep last 10o0 alerts}
@@ -226,17 +218,17 @@ class AutomationDashboard {
       clearInterval(this.monitoringInterval)}
     pm2.disconnect(),
     this.server.close(),
-    // // // // // // // console.log('🛑 Dashboard stopped')}
+    // // // // // // // // console.log('🛑 Dashboard stopped')}
 }
 ,
 // Handle graceful shutdown,
 process.on('SIGINT', () => {
-  // // // // // // // console.log('\n🛑 Shutting down dashboard...'),
+  // // // // // // // // console.log('\n🛑 Shutting down dashboard...'),
   if (global.dashboard) {
     global.dashboard.stop()}
   process.exit(0)}),
 process.on('SIGTERM', () => {
-  // // // // // // // console.log('\n🛑 Shutting down dashboard...'),
+  // // // // // // // // console.log('\n🛑 Shutting down dashboard...'),
   if (global.dashboard) {
     global.dashboard.stop()}
   process.exit(0)}),

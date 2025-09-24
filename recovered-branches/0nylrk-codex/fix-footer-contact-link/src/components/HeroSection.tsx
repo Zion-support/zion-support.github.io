@@ -37,6 +37,5 @@ export function HeroSection() {
           </Button>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

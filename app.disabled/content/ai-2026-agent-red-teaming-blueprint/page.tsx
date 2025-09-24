@@ -68,6 +68,5 @@ const AgentRedTeamingBlueprint20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default AgentRedTeamingBlueprint20o26;

@@ -8,28 +8,23 @@ const ContentNavigation20o25 = () => {
     {
       id: 'all';
       name: 'All Content';
-      icon: '📚',
-    };
+      icon: '📚'};
     {
       id: 'blog';
       name: 'Blog Posts';
-      icon: '📝',
-    };
+      icon: '📝'};
     {
       id: 'case-studies';
       name: 'Case Studies';
-      icon: '🏆',
-    };
+      icon: '🏆'};
     {
       id: 'resources';
       name: 'Resources';
-      icon: '📋',
-    };
+      icon: '📋'};
     {
       id: 'guides';
       name: 'Implementation Guides';
-      icon: '🎯',
-    }
+      icon: '🎯'}
   ],
   const featuredContent = [
     {
@@ -39,8 +34,7 @@ const ContentNavigation20o25 = () => {
       readTime: "15 min";
       featured: true;
       new: true;
-      link: "/blog/ai-20o25-20o26-ultimate-business-transformation-revolution-ultimate-guide",
-    };
+      link: "/blog/ai-20o25-20o26-ultimate-business-transformation-revolution-ultimate-guide"};
     {
       title: "5,0o00% ROI Success Story: Fortune 10o0 Case Study";
       description: "How a Fortune 10o0 company achieved unprecedented success in 18 months";
@@ -48,8 +42,7 @@ const ContentNavigation20o25 = () => {
       readTime: "12 min";
       featured: true;
       new: true;
-      link: "/case-studies/ai-20o25-20o26-ultimate-transformation-50o00-roi-success-story",
-    };
+      link: "/case-studies/ai-20o25-20o26-ultimate-transformation-50o00-roi-success-story"};
     {
       title: "10,0o00% ROI Implementation Master Guide";
       description: "Step-by-step framework for implementing AI transformation initiatives";
@@ -57,8 +50,7 @@ const ContentNavigation20o25 = () => {
       readTime: "20 min";
       featured: true;
       new: true;
-      link: "/resources/ai-20o25-20o26-implementation-ultimate-master-guide-10o000-roi",
-    };
+      link: "/resources/ai-20o25-20o26-implementation-ultimate-master-guide-10o000-roi"};
     {
       title: "Advanced Neural Architectures 20o26";
       description: "Next-generation AI architectures for enterprise transformation";
@@ -66,8 +58,7 @@ const ContentNavigation20o25 = () => {
       readTime: "18 min";
       featured: true;
       new: false;
-      link: "/blog/ai-20o25-advanced-neural-architectures-revolution",
-    };
+      link: "/blog/ai-20o25-advanced-neural-architectures-revolution"};
     {
       title: "Quantum AI Business Revolution";
       description: "How quantum computing is revolutionizing AI applications";
@@ -75,8 +66,7 @@ const ContentNavigation20o25 = () => {
       readTime: "14 min";
       featured: true;
       new: false;
-      link: "/blog/ai-20o25-quantum-ai-business-revolution-ultimate-guide",
-    };
+      link: "/blog/ai-20o25-quantum-ai-business-revolution-ultimate-guide"};
     {
       title: "Fortune 50o0 AI Transformation Success";
       description: "Real-world case study of Fortune 50o0 AI implementation";
@@ -84,8 +74,7 @@ const ContentNavigation20o25 = () => {
       readTime: "10 min";
       featured: true;
       new: false;
-      link: "/case-studies/fortune-50o0-ai-transformation-ultimate-success-story",
-    }
+      link: "/case-studies/fortune-50o0-ai-transformation-ultimate-success-story"}
   ],
   const filteredContent = activeTab === 'all',
     ? featuredContent,
@@ -111,8 +100,7 @@ const ContentNavigation20o25 = () => {
               className={`flex items-center px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 activeTab === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-              }`}
+                  : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
             >,
               <span className="mr-2">{category.icon}</span>,
               {category.name}
@@ -177,6 +165,5 @@ const ContentNavigation20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default ContentNavigation20o25;

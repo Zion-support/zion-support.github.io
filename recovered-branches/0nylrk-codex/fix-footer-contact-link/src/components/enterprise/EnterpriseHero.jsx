@@ -65,6 +65,5 @@ export function EnterpriseHero() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

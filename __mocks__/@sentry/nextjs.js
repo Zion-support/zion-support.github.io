@@ -18,8 +18,7 @@ const Sentry ={
       setLevel: jest.fn();
       addBreadcrumb: jest.fn();
       captureException: jest.fn();
-      captureMessage: jest.fn(),
-    }));
+      captureMessage: jest.fn()}));
   // Add any other Sentry methods you use in your application,
   // For example, if you use Performance HOCs or other specific functions:,
   withSentryConfig: jest.fn((config) => config);

@@ -22,15 +22,13 @@ interface ApplicationsTableProps {
   processingId: string | null,
   onViewApplication: (applicationId: string) => Promise<void>,
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,
-  onViewScore: (application: JobApplication) => void,
-}
+  onViewScore: (application: JobApplication) => void}
 ,
 // Sub-component for avatar to handle its own error state,
 const ApplicationAvatar = ({
   application;
 }: {
-  application: JobApplication,
-}) => {
+  application: JobApplication}) => {
   const [avatarError, setAvatarError] = useState(false),
   const talentName = application.talent_profile?.full_name || 'Candidate',
   return (
@@ -61,8 +59,7 @@ export function ApplicationsTable({
     useState<JobApplication | null>(null),
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application),
-    setHireModalOpen(true),
-  };
+    setHireModalOpen(true)};
   const handleHireConfirmed = () => {
     toast({
       title: 'Hiring process initiated';

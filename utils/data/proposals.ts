@@ -30,7 +30,6 @@ export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
   languages: string[],
   status: ProposalStatus,
   artifacts: {
-,
     } catch (error) {
     console.error("Error:", error),
     return res.status(500).json({ error: "Internal server error" })}
@@ -45,8 +44,7 @@ export type ProposalPayload = {
   supportingMultiverses: string[],
   contentMarkdown: string,
   language?: string,
-  metadata?: Record<string any>,
-};
+  metadata?: Record<string any>};
 const dataDir = path.join(process.cwd(), 'dataproposals');
 const publicDir = path.join(process.cwd(), 'publicproposals');
 function ensureDirs() {
@@ -108,8 +106,7 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs(),
     pdfPath?: string;
     ipfsCid?: string;
     ensRecordHash?: string;
-    signature?: string,
-}
+    signature?: string}
 };
 export type ProposalPayload = {
   title: string;
@@ -293,8 +290,7 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {
   fs.mkdirSync(publicProposalDir, { recursive: true }),
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf'),
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes)),
-  return `/proposals/${id}/proposal.pdf`,
-}
+  return `/proposals/${id}/proposal.pdf`}
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {return updateProposalMeta(id, (meta) => ({
     ...meta,
     artifacts: { ...meta.artifacts, ...artifacts }}))} catch (error) {
@@ -305,6 +301,5 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {
   return updateProposalMeta(id, (meta) => ({
     ...meta,
-    artifacts: { ...meta.artifacts, ...artifacts }})),
-}
+    artifacts: { ...meta.artifacts, ...artifacts }}))}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

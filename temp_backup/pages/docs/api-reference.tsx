@@ -15,6 +15,5 @@ export default function ApiReferencePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

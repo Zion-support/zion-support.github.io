@@ -34,12 +34,10 @@ const ModernHero = () => {
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
           style={{
             opacity: 0.1;
-            backgroundSize: '400% 400%',
-          }}
+            backgroundSize: '400% 400%'}}
         />,
       </div>,
       {/* Floating elements */}
@@ -55,8 +53,7 @@ const ModernHero = () => {
             transition={{
               duration: 3 + i;
               repeat: Infinity;
-              delay: i * 0.5,
-            }}
+              delay: i * 0.5}}
             style={{
               left: `${20 + i * 15}%`;
               top: `${30 + i * 10}%`}}

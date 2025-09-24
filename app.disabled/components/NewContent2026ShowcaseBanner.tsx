@@ -198,6 +198,5 @@ const NewContent20o26ShowcaseBanner = () => {
           </p>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NewContent20o26ShowcaseBanner;

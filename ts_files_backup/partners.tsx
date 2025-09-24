@@ -18,6 +18,5 @@ export default function PartnersPage() {
 				</ul>,
 				<div className="pt-4 text-slate-300">Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>,
 			</div>,
-		</div>),
-}
+		</div>)}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

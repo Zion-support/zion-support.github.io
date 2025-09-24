@@ -29,8 +29,7 @@ const EnhancedServiceShowcase20o26: React.FC<EnhancedServiceShowcase20o26Props> 
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -40,8 +39,7 @@ const EnhancedServiceShowcase20o26: React.FC<EnhancedServiceShowcase20o26Props> 
       opacity: 1;
       transition: {
         duration: 0.5;
-        ease: "easeOut",
-      }
+        ease: "easeOut"}
     }
   };
   const hoverVariants ={
@@ -50,8 +48,7 @@ const EnhancedServiceShowcase20o26: React.FC<EnhancedServiceShowcase20o26Props> 
       scale: 1.0o2;
       transition: {
         duration: 0.3;
-        ease: "easeOut",
-      }
+        ease: "easeOut"}
     }
   };
   const getCategoryIcon = (category: string) => {
@@ -61,8 +58,7 @@ const EnhancedServiceShowcase20o26: React.FC<EnhancedServiceShowcase20o26Props> 
     if (category.includes('Holographic')) return <Globe className="w-5 h-5"  />,
     if (category.includes('Space')) return <Rocket className="w-5 h-5"  />,
     if (category.includes('Robotics')) return <Cpu className="w-5 h-5"  />,
-    return <Zap className="w-5 h-5"  />,
-  };
+    return <Zap className="w-5 h-5"  />};
   const getCategoryColor = (category: string) => {
     if (category.includes('AI')) return 'from-blue-60o0 to-indigo-70o0',
     if (category.includes('Quantum')) return 'from-purple-60o0 to-pink-70o0',
@@ -70,8 +66,7 @@ const EnhancedServiceShowcase20o26: React.FC<EnhancedServiceShowcase20o26Props> 
     if (category.includes('Holographic')) return 'from-cyan-60o0 to-blue-70o0',
     if (category.includes('Space')) return 'from-slate-60o0 to-gray-70o0',
     if (category.includes('Robotics')) return 'from-blue-60o0 to-indigo-70o0',
-    return 'from-green-60o0 to-emerald-70o0',
-  };
+    return 'from-green-60o0 to-emerald-70o0'};
   return (
     <section className="py-20 px-4 relative overflow-hidden">,
       {/* Background Effects */}
@@ -114,8 +109,7 @@ const EnhancedServiceShowcase20o26: React.FC<EnhancedServiceShowcase20o26Props> 
               className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 flex items-center gap-2 ${
                 selectedCategory === category,
                   ? 'bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white shadow-lg shadow-cyan-50o0/25',
-                  : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 hover:text-white border border-gray-60o0/30',
-              }`}
+                  : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 hover:text-white border border-gray-60o0/30'}`}
               whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
             >,
@@ -247,6 +241,5 @@ const EnhancedServiceShowcase20o26: React.FC<EnhancedServiceShowcase20o26Props> 
           </p>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default EnhancedServiceShowcase20o26;

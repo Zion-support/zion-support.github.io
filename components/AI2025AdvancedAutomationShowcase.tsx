@@ -116,8 +116,7 @@ const AI20o25AdvancedAutomationShowcase = () => {
       case 'Implementation Guide':,
         return <Target className='w-5 h-5' />,
       default:,
-        return <CheckCircle className='w-5 h-5' />,
-    }
+        return <CheckCircle className='w-5 h-5' />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -128,8 +127,7 @@ const AI20o25AdvancedAutomationShowcase = () => {
       case 'Implementation Guide':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -193,8 +191,7 @@ const AI20o25AdvancedAutomationShowcase = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-20o0 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -205,8 +202,7 @@ const AI20o25AdvancedAutomationShowcase = () => {
             <div
               key={item.id}
               className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-30o0 hover: shadow-xl hover:scale-10o5 ${
-                item.featured ? 'ring-2 ring-purple-50o0' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-50o0' : ''}`}
             >,
               {/* Content Header */}
               <div className='p-6'>,
@@ -298,6 +294,5 @@ const AI20o25AdvancedAutomationShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25AdvancedAutomationShowcase;

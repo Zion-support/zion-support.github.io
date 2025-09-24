@@ -13,8 +13,7 @@ export interface EmergingTechBreakthrough2029 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  }
+    address: string}
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =,
   [
     {
@@ -36,8 +35,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       contactInfo: {
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-      }
+        address: '364 E Main St STE 1008 Middletown DE 19709'}
     }
   ],    features: [
       "Emerging tech breakthroughs",
@@ -66,8 +64,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709",
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ],
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =,
@@ -112,8 +109,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
   contactInfo: {
     mobile: string;
     email: string;
-    address: string,
-  }
+    address: string}
 }
 ,
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
@@ -139,11 +135,9 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709",
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ],
-,
 export interface EmergingTechBreakthrough2029 {
   };
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =,
@@ -188,8 +182,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
   contactInfo: {
     mobile: string;
     email: string;
-    address: string,
-  }
+    address: string}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982}
 ,
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
@@ -211,7 +204,6 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
     contactInfo: {
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ]>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))]]]

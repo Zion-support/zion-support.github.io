@@ -105,8 +105,7 @@ reviews: number,export const autonomousSystemsRobotics20o25: AutonomousSystemsRo
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Comprehensive autonomous manufacturing platform with equipment integration, predictive analytics, and quality control. Includes custom workflow development and equipment integration services.';
@@ -182,8 +181,7 @@ reviews: number,export const autonomousSystemsRobotics20o25: AutonomousSystemsRo
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise-grade swarm robotics platform with robot coordination, task management, and performance analytics. Includes custom robot programming and integration services.';
@@ -259,8 +257,7 @@ reviews: number,export const autonomousSystemsRobotics20o25: AutonomousSystemsRo
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Comprehensive autonomous vehicle platform with perception systems, decision-making algorithms, and safety protocols. Includes custom vehicle integration and safety certification services.';
@@ -336,8 +333,7 @@ reviews: number,export const autonomousSystemsRobotics20o25: AutonomousSystemsRo
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise-grade advanced robotics platform with robot control, safety systems, and integration capabilities. Includes custom robot programming and safety certification services.';
@@ -413,8 +409,7 @@ reviews: number,export const autonomousSystemsRobotics20o25: AutonomousSystemsRo
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Comprehensive autonomous supply chain platform with predictive analytics, optimization algorithms, and real-time monitoring. Includes custom optimization development and system integration services.';

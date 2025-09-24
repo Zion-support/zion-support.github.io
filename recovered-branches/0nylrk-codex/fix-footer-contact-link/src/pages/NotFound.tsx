@@ -9,9 +9,7 @@ const NotFound = () => {
   useEffect(() => {
     console.error(
       "404 Error: User attempted to access non-existent route:",
-      location.pathname),
-  }, [location.pathname]),
-}, [location.pathname]);
+      location.pathname)}, [location.pathname])}, [location.pathname]);
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">,
       <div className="text-center">,
@@ -21,8 +19,7 @@ const NotFound = () => {
           Return to Home,
         </a>,
       </div>,
-    </div>),
-}
+    </div>)}
 export default NotFound;
 };
 export default NotFound;
@@ -41,8 +38,7 @@ const NotFound = () => {
           Return to Home,
         </a>,
       </div>,
-    </div>),
-};
+    </div>)};
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
 export default NotFound;
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

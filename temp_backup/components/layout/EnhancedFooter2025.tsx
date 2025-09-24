@@ -39,8 +39,7 @@ const EnhancedFooter20o25: React.FC = () => {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const footerSections = [
     {
       title: "Services";
@@ -342,6 +341,5 @@ const EnhancedFooter20o25: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </footer>),
-};
+    </footer>)};
 export default EnhancedFooter20o25})

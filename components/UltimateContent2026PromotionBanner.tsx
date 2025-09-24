@@ -63,6 +63,5 @@ const UltimateContent20o26PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateContent20o26PromotionBanner;

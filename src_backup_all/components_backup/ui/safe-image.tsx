@@ -11,8 +11,7 @@ interface SafeImageProps {
   fallbackSrc?: string,
   priority?: boolean,
   sizes?: string,
-  quality?: number,
-}
+  quality?: number}
 ,
 export function SafeImage({
   src;

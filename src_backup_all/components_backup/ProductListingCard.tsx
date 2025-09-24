@@ -16,8 +16,7 @@ interface ProductListingCardProps {
   listing: ProductListing,
   view?: 'grid' | 'list',
   onRequestQuote?: (id: string) => void,
-  detailBasePath?: string,
-}
+  detailBasePath?: string}
 ,
 const ProductListingCardComponent = ({
   listing;
@@ -103,8 +102,7 @@ const ProductListingCardComponent = ({
     e.preventDefault(),
     e.stopPropagation(),
     if (onRequestQuote) {
-      onRequestQuote(listing.id),
-    } else {
+      onRequestQuote(listing.id)} else {
       router.push(`/request-quote?listing=${listing.id}`)}
   };
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48',
@@ -216,8 +214,7 @@ const ProductListingCardComponent = ({
               className='bg-primary hover: bg-primary/80 text-primary-foreground',
               onClick={e => {
                 e.stopPropagation(), // Prevent card click event,
-                addToCart(),
-              }}
+                addToCart()}}
               disabled={loading}
             >,
               {loading ? (

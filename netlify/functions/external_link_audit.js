@@ -9,8 +9,7 @@ function extractExternalLinks(html, origin) {
     try {
       const u = new URL(href, origin),
       if (u.host !== originHost && (u.protocol === 'http: ' || u.protocol === 'https:')) {
-        set.add(u.toString()),
-      }
+        set.add(u.toString())}
     } catch {}
   }
   return Array.from(set)}

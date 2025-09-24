@@ -30,15 +30,13 @@ export interface InnovativeAIAutomationService20o29 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const innovativeAIAutomationServices20o29: InnovativeAIAutomationService20o29[] = [
   {
@@ -82,15 +80,13 @@ export const innovativeAIAutomationServices20o29: InnovativeAIAutomationService2
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced multi-agent AI system with autonomous decision-making capabilities, real-time business intelligence, and comprehensive automation workflows. Includes enterprise-grade security and compliance features.';
     launchDate: '20o25-0o1-15';
     customers: 150;
     rating: 4.9;
-    reviews: 89,
-  };
+    reviews: 89};
   {
     id: 'ai-emotion-intelligence-platform';
     name: 'AI Emotional Intelligence Platform';
@@ -132,15 +128,13 @@ export const innovativeAIAutomationServices20o29: InnovativeAIAutomationService2
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced emotional intelligence platform with real-time emotion detection, analysis, and response generation. Includes privacy-compliant processing and comprehensive API integration capabilities.';
     launchDate: '20o25-0o2-0o1';
     customers: 450;
     rating: 4.7;
-    reviews: 234,
-  };
+    reviews: 234};
   {
     id: 'ai-creativity-orchestrator';
     name: 'AI Creativity Orchestrator';
@@ -182,15 +176,13 @@ export const innovativeAIAutomationServices20o29: InnovativeAIAutomationService2
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced multi-model AI creativity platform with orchestration capabilities, creative fusion algorithms, and comprehensive collaboration tools. Includes real-time processing and advanced analytics.';
     launchDate: '20o25-0o1-20';
     customers: 320;
     rating: 4.8;
-    reviews: 156,
-  };
+    reviews: 156};
   {
     id: 'ai-dream-interpreter-platform';
     name: 'AI Dream Interpreter Platform';
@@ -232,15 +224,13 @@ export const innovativeAIAutomationServices20o29: InnovativeAIAutomationService2
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced dream interpretation platform with AI-powered analysis, psychological insights, and comprehensive dream tracking. Includes privacy-focused design and professional consultation integration.';
     launchDate: '20o25-0o2-15';
     customers: 280o0;
     rating: 4.6;
-    reviews: 890,
-  };
+    reviews: 890};
   {
     id: 'ai-consciousness-evolution-platform';
     name: 'AI Consciousness Evolution Platform';
@@ -282,13 +272,11 @@ export const innovativeAIAutomationServices20o29: InnovativeAIAutomationService2
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI consciousness development platform with sophisticated neural architectures, consciousness modeling algorithms, and comprehensive research tools. Includes ethical guidelines and validation frameworks.';
     launchDate: '20o25-0o1-0o1';
     customers: 25;
     rating: 4.9;
-    reviews: 12,
-  }
+    reviews: 12}
 ],

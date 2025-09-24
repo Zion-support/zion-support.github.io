@@ -79,8 +79,7 @@ const AI20o25RevolutionaryContentShowcase = () => {
             <div
               key={item.id}
               className={`bg-white rounded-xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 ${
-                item.featured ? 'ring-2 ring-purple-50o0' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-50o0' : ''}`}
             >,
               {item.featured && (
                 <div className='bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white text-xs font-bold px-3 py-1 rounded-t-xl text-center'>,
@@ -123,6 +122,5 @@ const AI20o25RevolutionaryContentShowcase = () => {
           </Link>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25RevolutionaryContentShowcase;

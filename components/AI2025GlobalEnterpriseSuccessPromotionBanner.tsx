@@ -65,6 +65,5 @@ export default function AI20o25GlobalEnterpriseSuccessPromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

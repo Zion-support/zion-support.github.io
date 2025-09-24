@@ -24,8 +24,7 @@ export interface InnovativeMicroSaasService20o28Part2 {
     name: string,
     id: string,
     avatarUrl?: string,
-    verified: boolean,
-  };
+    verified: boolean};
   images: string[],
   createdAt: string,
   useCases: string[],
@@ -38,8 +37,7 @@ export interface InnovativeMicroSaasService20o28Part2 {
   customDevelopment: boolean,
   trainingIncluded: boolean,
   freeTrial: boolean,
-  moneyBackGuarantee: boolean,
-}
+  moneyBackGuarantee: boolean}
 ,
 export const INNOVATIVE_MICRO_SAAS_SERVICES_20o28_PART2: InnovativeMicroSaasService20o28Part2[] =,
   [

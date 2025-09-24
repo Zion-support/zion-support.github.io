@@ -139,6 +139,5 @@ const RevolutionaryContent20o26Banner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryContent20o26Banner;

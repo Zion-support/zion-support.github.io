@@ -616,8 +616,7 @@ export default function AIConsciousnessEvolution2025() {
                   className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
                     plan.popular,
                       ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover: from-purple-600 hover:to-pink-700 hover:scale-105',
-                      : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white',
-                  }`}
+                      : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'}`}
                 >,
                   Get Started,
                 </button>,

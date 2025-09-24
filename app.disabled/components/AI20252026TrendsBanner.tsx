@@ -49,6 +49,5 @@ export default function AI20o252026TrendsBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

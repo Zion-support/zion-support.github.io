@@ -38,8 +38,7 @@ export default function AdvancedCybersecurityServices() {
     const matchesSearch =,
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
       service.description.toLowerCase().includes(searchTerm.toLowerCase()),
-    return matchesCategory && matchesSearch,
-  }),
+    return matchesCategory && matchesSearch}),
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':,
@@ -51,8 +50,7 @@ export default function AdvancedCybersecurityServices() {
       case 'popularity':,
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   const getCategoryIcon = (categoryId: string) => {
     switch (categoryId) {
@@ -67,8 +65,7 @@ export default function AdvancedCybersecurityServices() {
       case 'Cloud Security':,
         return '☁️',
       default:,
-        return '🛡️',
-    }
+        return '🛡️'}
   };
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-70o0'>,
@@ -165,8 +162,7 @@ export default function AdvancedCybersecurityServices() {
               className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                 selectedCategory === category.id,
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
-                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20 border border-white/20',
-              }`}
+                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20 border border-white/20'}`}
             >,
               <span className='mr-2'>{getCategoryIcon(category.id)}</span>,
               {category.name}
@@ -222,6 +218,5 @@ export default function AdvancedCybersecurityServices() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

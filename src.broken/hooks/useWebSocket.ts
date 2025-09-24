@@ -13,13 +13,11 @@ export function useWebSocket(options: unknown)  {
         setIsConnected(true),
         setError(null),
         reconnectAttemptsRef.current = 0,
-        options.onOpen?.(),
-      };
+        options.onOpen?.()};
       ws.onmessage = (event) => {
         try {
           const data: unknown = JSON.parse(event.data),
-          options.onMessage?.(data),
-        } catch {
+          options.onMessage?.(data)} catch {
           options.onMessage?.(event.data)};
       };
       ws.onclose = () => {
@@ -41,8 +39,7 @@ export function useWebSocket(options: unknown)  {
   const disconnect: unknown = useCallback(() => {
     if (reconnectTimeoutRef.current) {
       clearTimeout(reconnectTimeoutRef.current),
-      reconnectTimeoutRef.current = null,
-    };
+      reconnectTimeoutRef.current = null};
     if (wsRef.current) {
       wsRef.current.close(),
       wsRef.current = null};

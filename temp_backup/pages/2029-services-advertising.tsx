@@ -564,8 +564,7 @@ export default function ServicesAdvertising20o29() {
         </section>,
         <UltraFuturisticFooter20o28 />,
       </div>,
-    </>),
-}
+    </>)}
 ,
 // Add missing icon component,
 const CheckCircle = ({ className }: { className?: string }) => (

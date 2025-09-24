@@ -193,6 +193,5 @@ export function MainSidebar() {
           </Link>,
         </div>,
       </div>,
-    </aside>),
-}
+    </aside>)}
 ,

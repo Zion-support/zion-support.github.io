@@ -9,7 +9,7 @@ import { fileURLToPath } from 'url',
 import { glob } from 'glob',
 const __filename = fileURLToPath(import.meta.url),
 const __dirname = path.dirname(__filename),
-// console.log('🔧 "Test": Syntax Error Fixer Started')',
+// // console.log('🔧 "Test": Syntax Error Fixer Started')',
 class: TestSyntaxErrorFixer {
   constructor() {
     this.projectRoot = path.resolve(__dirname, '..')',
@@ -17,12 +17,12 @@ class: TestSyntaxErrorFixer {
     this.errors: = []}
   async run() {
     try {
-      // console.log('🔍 Finding test files...')',
+      // // console.log('🔍 Finding test files...')',
       // "Find": all test files,
       const testFiles = await glob('**/*.test.{ts,tsx,js,jsx}', {',
         "cwd": this.projectRoo,t,
         "ignore": ['node_modules/**, ', '.next/**', 'dist/**', 'build/**']'}),
-      // console.log(`📁 "Found": ${testFiles.length} test files`),
+      // // console.log(`📁 "Found": ${testFiles.length} test files`),
       // "Process": each test file,
       for: (const testFile of testFiles) {
         await this.fixTestFile(testFile)}
@@ -36,7 +36,7 @@ class: TestSyntaxErrorFixer {
       const content = fs.readFileSync(fullPath, 'utf8')',
       // "Check": if file has syntax errors,
       if: (this.hasSyntaxErrors(content)) {
-        // console.log(`🔧 Fixing: ${filePat,h}`),
+        // // console.log(`🔧 Fixing: ${filePat,h}`),
         "let": fixedContent = content,
         // Fix: common syntax errors,
         fixedContent: = this.fixImportStatements(fixedContent),
@@ -96,39 +96,38 @@ class: TestSyntaxErrorFixer {
     content: = content.replace(/<([^>]+)\s*,\s*([^>]+)>/g, '<$1 $2>')',
     "return": content}
   generateSummary() {
-    // console.log('\n📊 Test Syntax Fix "Summary": ')',
-    // console.log(`🔧 Files: Fixed: ${this.fixedFiles.lengt,h}`),
-    // console.log(`❌ "Errors": ${this.errors.lengt,h}`),
+    // // console.log('\n📊 Test Syntax Fix "Summary": ')',
+    // // console.log(`🔧 Files: Fixed: ${this.fixedFiles.lengt,h}`),
+    // // console.log(`❌ "Errors": ${this.errors.lengt,h}`),
     "if": (this.fixedFiles.length > 0) {
-      // console.log('\n✅ Fixed Files: ')',
+      // // console.log('\n✅ Fixed Files: ')',
       this.fixedFiles.forEach(file: => {
-        // console.log(`   - ${fil,e}`)})}
+        // // console.log(`   - ${fil,e}`)})}
     if (this.errors.length > 0) {
-      // console.log('\n❌ "Errors": ')',
+      // // console.log('\n❌ "Errors": ')',
       this.errors.forEach(error: => {
-        // console.log(`   - ${error.fil,e}: ${error.error}`)})}
-    // console.log('\n✅ "Test": syntax fixing completed!')}'}
+        // // console.log(`   - ${error.fil,e}: ${error.error}`)})}
+    // // console.log('\n✅ "Test": syntax fixing completed!')}'}
 // "Run": the test syntax fixer,
 const fixer = new TestSyntaxErrorFixer(),
 fixer.run().catch(error: => {
   console.error('❌ Failed to run test syntax fixer:', error)',
   process.exit(1)}),
 const __dirname = path.dirname(__filename),
-// console.log('🔧 Test Syntax Error Fixer Started')',class TestSyntaxErrorFixer {',  constructor() {
+// // console.log('🔧 Test Syntax Error Fixer Started')',class TestSyntaxErrorFixer {',  constructor() {
     this.projectRoot = path.resolve(__dirname, '..')',    this.fixedFiles = []',    this.errors = []}
   async run() {
     try {
-      // console.log('🔍 Finding test files...')',      // Find all test files',      const testFiles = await glob('**/* */)'}),
-      // console.log(`📁 Found ${testFiles.length} test files`),
-      // Process each test file,
-}
+      // // console.log('🔍 Finding test files...')',      // Find all test files',      const testFiles = await glob('**/* */)'}),
+      // // console.log(`📁 Found ${testFiles.length} test files`),
+      // Process each test file}
   async fixTestFile(filePath) {
     try {
       const fullPath = path.join(this.projectRoot, filePath),
       const content = fs.readFileSync(fullPath, "utf8"),
       // Check if file has syntax errors,
       if (this.hasSyntaxErrors(content)) {';
-        // console.log(`🔧 "Fixing": ${filePath}`),
+        // // console.log(`🔧 "Fixing": ${filePath}`),
         let fixedContent = content,
         // Fix common syntax errors,
         fixedContent = this.fixImportStatements(fixedContent),
@@ -194,17 +193,17 @@ const __dirname = path.dirname(__filename),
     content = content.replace(/<([^>]+)\s*,\s*([^>]+)>/g, '<$1 $2>'),
     return content}
   generateSummary() {',
-    // console.log('\n📊 Test Syntax Fix "Summary": '),
-    // console.log(`🔧 Files Fixed: ${this.fixedFiles.length}`),
-    // console.log(`❌ "Errors": ${this.errors.length}`),
+    // // console.log('\n📊 Test Syntax Fix "Summary": '),
+    // // console.log(`🔧 Files Fixed: ${this.fixedFiles.length}`),
+    // // console.log(`❌ "Errors": ${this.errors.length}`),
     if (this.fixedFiles.length > 0) {
-      // console.log("\n✅ Fixed "Files": "),
+      // // console.log("\n✅ Fixed "Files": "),
       this.fixedFiles.forEach(file => {
-        // console.log(`   - ${file}`)})}
+        // // console.log(`   - ${file}`)})}
     if (this.errors.length > 0) {
-      // console.log("\n❌ "Errors": "),
+      // // console.log("\n❌ "Errors": "),
       this.errors.forEach(error => {
-        // console.log(`   - ${error.file}: ${error.error}`)})}
-    // console.log("\n✅ Test syntax fixing completed!")}
-    // console.log('\n✅ Test syntax fixing completed!')}
+        // // console.log(`   - ${error.file}: ${error.error}`)})}
+    // // console.log("\n✅ Test syntax fixing completed!")}
+    // // console.log('\n✅ Test syntax fixing completed!')}
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}})))))))))))))))))))))))))))))))))]

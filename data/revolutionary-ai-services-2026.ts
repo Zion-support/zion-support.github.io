@@ -30,15 +30,13 @@ export interface RevolutionaryAIService2026 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
   // AI Multimodal Fusion Platform,
   {

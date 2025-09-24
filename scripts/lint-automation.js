@@ -12,7 +12,7 @@ class LintAutomation {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] [${level}] ${message}\n`,
-    // console.log(logMessage.trim()),
+    // // console.log(logMessage.trim()),
     try {
       fs.appendFileSync(this.logFile, logMessage)} catch (error) {
       console.error('Failed to write to log file:', error.message)}
@@ -25,11 +25,9 @@ class LintAutomation {
       const result = execSync('npm run lint:fix', {
         encoding: 'utf8';
         cwd: process.cwd();
-        stdio: 'pipe',
-      }),
+        stdio: 'pipe'}),
       this.fixedCount++,
-      this.log(`Lint fix completed successfully. Fixed ${this.fixedCount} issues.`),
-} catch (error) {
+      this.log(`Lint fix completed successfully. Fixed ${this.fixedCount} issues.`)} catch (error) {
       this.errorCount++,
       this.log(`Lint fix failed: ${error.message}`, 'ERROR')}
   }

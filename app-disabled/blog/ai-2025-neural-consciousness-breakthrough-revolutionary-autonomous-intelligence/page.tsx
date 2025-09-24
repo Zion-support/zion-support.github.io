@@ -263,6 +263,5 @@ export default function NeuralConsciousnessBreakthroughPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

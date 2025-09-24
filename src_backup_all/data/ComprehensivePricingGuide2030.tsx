@@ -18,8 +18,7 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {
         break,
       case 'ai':,
         services = comprehensiveAIServices20o30,
-        break,
-    }
+        break}
 ,
     // Filter by price range,
     services = services.filter(service => {
@@ -43,8 +42,7 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {
         break,
       case 'ai':,
         services = comprehensiveAIServices20o30,
-        break,
-    }
+        break}
 ,
     const categories = [...new Set(services.map(service => service.category))],
     return categories};
@@ -59,8 +57,7 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {
         break,
       case 'ai':,
         services = comprehensiveAIServices20o30,
-        break,
-    }
+        break}
 ,
     if (activeTab === 'it') {
       const min = Math.min(...services.map(s => s.hourlyRate)),
@@ -362,8 +359,7 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                   activeTab === 'microsaas',
                     ? 'bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white shadow-lg',
-                    : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0',
-                }`}
+                    : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0'}`}
               >,
                 Micro SAAS Services ({innovativeMicroSaasServices20o30.length}),
               </button>,
@@ -372,8 +368,7 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                   activeTab === 'it',
                     ? 'bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white shadow-lg',
-                    : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0',
-                }`}
+                    : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0'}`}
               >,
                 IT Services ({comprehensiveITServices20o30.length}),
               </button>,
@@ -382,8 +377,7 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                   activeTab === 'ai',
                     ? 'bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white shadow-lg',
-                    : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0',
-                }`}
+                    : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0'}`}
               >,
                 AI Services ({comprehensiveAIServices20o30.length}),
               </button>,
@@ -552,6 +546,5 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {
           </div>,
         </div>,
       </div>,
-    </>),
-};
+    </>)};
 export default ComprehensivePricingGuide20o30;

@@ -1,7 +1,7 @@
 
 const fs = require('fs'),
 const path = require('path'),
-// console.log('🔧 Starting Merge Conflict Resolution'),
+// // console.log('🔧 Starting Merge Conflict Resolution'),
 // Function to fix merge conflicts in a file,
 /**,
  * fixMergeConflicts - Function description,

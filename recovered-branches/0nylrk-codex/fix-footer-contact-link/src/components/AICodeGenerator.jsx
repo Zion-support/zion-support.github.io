@@ -6,8 +6,7 @@ import { useAnalytics } from '../hooks/useAnalytics',
 export const AICodeGenerator = () => {
     const { trackEvent } = useAnalytics({
         enableTracking: true;
-        enableUserBehaviorTracking: true,
-    }),
+        enableUserBehaviorTracking: true}),
     const [activeTab, setActiveTab] = useState('generate'),
     const [showAdvanced, setShowAdvanced] = useState(false),
     const [customCode, setCustomCode] = useState(''),
@@ -24,8 +23,7 @@ export const AICodeGenerator = () => {
         includeDocs: false;
         includeErrorHandling: false;
         includeLogging: false;
-        includeMetrics: false,
-    }),
+        includeMetrics: false}),
     // Handle form submission,
     const handleSubmit = useCallback(async (e) => {
         e.preventDefault(),
@@ -36,8 +34,7 @@ export const AICodeGenerator = () => {
             framework: form.framework;
             style: form.style;
             target: form.target;
-            quality: form.quality,
-        })}, [form, generateCode, trackEvent]),
+            quality: form.quality})}, [form, generateCode, trackEvent]),
     // Handle custom code analysis,
     const handleAnalyzeCustomCode = useCallback(async () => {
         if (!customCode.trim()),
@@ -61,7 +58,7 @@ export const AICodeGenerator = () => {
         const codeToTest = generatedCode || customCode,
         const testCode = await generateTests(codeToTest, form.language),
         // In a real implementation, you'd want to display the test code,
-        // console.log('Generated tests:', testCode),
+        // // console.log('Generated tests:', testCode),
         trackEvent('ai_code_generator', 'tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]),
     // Handle documentation generation,
     const handleGenerateDocs = useCallback(async () => {
@@ -70,7 +67,7 @@ export const AICodeGenerator = () => {
         const codeToDoc = generatedCode || customCode,
         const docs = await generateDocs(codeToDoc, form.language),
         // In a real implementation, you'd want to display the documentation,
-        // console.log('Generated docs:', docs),
+        // // console.log('Generated docs:', docs),
         trackEvent('ai_code_generator', 'docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]),
     // Copy code to clipboard,
     const copyToClipboard = useCallback(async (code) => {
@@ -87,8 +84,7 @@ export const AICodeGenerator = () => {
         applySuggestion(suggestion),
         trackEvent('ai_code_generator', 'suggestion_applied', suggestion.type, undefined, {
             suggestionId: suggestion.id;
-            impact: suggestion.impact,
-        })}, [applySuggestion, trackEvent]),
+            impact: suggestion.impact})}, [applySuggestion, trackEvent]),
     // Clear history,
     const handleClearHistory = useCallback(() => {
         clearHistory(),

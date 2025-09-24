@@ -4,8 +4,7 @@ import RoadmapCard from './RoadmapCard',
 type Props ={
   features: Feature[],
   onUpvote: (feature: Feature) => void,
-  onFollow: (feature: Feature) => void,
-};
+  onFollow: (feature: Feature) => void};
 export default function RoadmapBoard({ features, onUpvote, onFollow }: Props) {
   const groups: Record<string Feature[]> ={
     Planned: [];

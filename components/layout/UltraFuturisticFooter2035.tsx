@@ -119,8 +119,7 @@ import {
   Brain, Atom, Shield, Rocket, Target, BookOpen, Users,
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb,
   Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare,
-  ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2,
-}
+  ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2}
   {
     title: 'Micro SAAS';
     description: 'Innovative business solutions for modern enterprises';
@@ -131,40 +130,31 @@ import {
     links: [
       {
         name: 'Space Resource Mining',
-        href: '/space-resource-mining-platform',
-      }
+        href: '/space-resource-mining-platform'}
       {
         name: 'Quantum Internet Security',
-        href: '/quantum-internet-security-platform',
-      }
+        href: '/quantum-internet-security-platform'}
       {
         name: 'Quantum-Secure Cloud Infrastructure',
-        href: '/quantum-secure-cloud-infrastructure',
-      }
+        href: '/quantum-secure-cloud-infrastructure'}
       {
         name: 'Quantum Financial Trading Platform',
-        href: '/quantum-financial-trading',
-      }
+        href: '/quantum-financial-trading'}
       {
         name: 'AI-Powered Space Technology',
-        href: '/ai-powered-space-technology',
-      }
+        href: '/ai-powered-space-technology'}
       {
         name: 'Brain-Computer Interface',
-        href: '/brain-computer-interface-platform',
-      }
+        href: '/brain-computer-interface-platform'}
       {
         name: 'Quantum Materials Discovery',
-        href: '/quantum-materials-discovery-platform',
-      }
+        href: '/quantum-materials-discovery-platform'}
       {
         name: 'Autonomous Vehicle AI',
-        href: '/autonomous-vehicle-ai-platform',
-      }
+        href: '/autonomous-vehicle-ai-platform'}
       {
         name: 'Quantum Bio-Computing',
-        href: '/quantum-bio-computing-platform',
-      }
+        href: '/quantum-bio-computing-platform'}
       { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' }
       { name: 'Quantum Robotics', href: '/quantum-robotics' }
     ]}
@@ -175,25 +165,20 @@ import {
     links: [
       {
         name: 'Quantum-Secure Cloud',
-        href: '/quantum-secure-cloud-infrastructure',
-      }
+        href: '/quantum-secure-cloud-infrastructure'}
       {
         name: 'Autonomous IT Operations',
-        href: '/autonomous-it-operations-center',
-      }
+        href: '/autonomous-it-operations-center'}
       {
         name: 'Edge Computing Orchestration',
-        href: '/edge-computing-orchestration',
-      }
+        href: '/edge-computing-orchestration'}
       {
         name: 'Blockchain Infrastructure',
-        href: '/blockchain-infrastructure-platform',
-      }
+        href: '/blockchain-infrastructure-platform'}
       { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform' }
       {
         name: 'Quantum Cloud Infrastructure',
-        href: '/quantum-cloud-infrastructure',
-      }
+        href: '/quantum-cloud-infrastructure'}
       { name: 'Zero Trust Security', href: '/zero-trust-security-platform' }
       { name: 'AI-Powered Cybersecurity', href: '/ai-powered-cybersecurity' }
     ]}
@@ -259,8 +244,7 @@ import {
       { name: 'AI Meeting Transcriber', href: '/ai-meeting-transcriber-pro' }
       {
         name: 'AI Legal Contract Analyzer',
-        href: '/ai-legal-contract-analyzer',
-      }
+        href: '/ai-legal-contract-analyzer'}
       { name: 'AI Sales Automation', href: '/ai-sales-automation' }
       { name: 'AI HR Recruitment', href: '/ai-hr-recruitment' }
       { name: 'AI Customer Service', href: '/ai-customer-service' }
@@ -277,8 +261,7 @@ import {
       { name: 'Education Technology', href: '/education-technology-solutions' }
       {
         name: 'Government Solutions',
-        href: '/government-technology-solutions',
-      }
+        href: '/government-technology-solutions'}
       { name: 'Energy & Utilities', href: '/energy-utilities-solutions' }
       { name: 'Biotech AI Research', href: '/biotech-ai-research-platform' }
     ]}
@@ -338,16 +321,14 @@ const UltraFuturisticFooter2035: React.FC = () => {
               linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px);
               linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px),
             `;
-            backgroundSize: '200px 200px',
-          }}
+            backgroundSize: '200px 200px'}}
 ,
           animate={{
             backgroundPosition: ['0px 0px200px 200px']}}
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: 'linear',
-          }}
+            ease: 'linear'}}
         />,
       </div>,
       <div className="relative z-10">,
@@ -433,8 +414,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
           }}
         />,
       </div>,
-      <div className='relative z-10'>            ease: 'linear',
-          }}
+      <div className='relative z-10'>            ease: 'linear'}}
           transition={{
             duration: 20;
             repeat: Infinity;
@@ -444,15 +424,13 @@ const UltraFuturisticFooter2035: React.FC = () => {
 ,
         />,
       </div>,
-      <div className='relative z-10'>            ease: 'linear',
-          }}
+      <div className='relative z-10'>            ease: 'linear'}}
         />,
       </div>,
       <div className='relative z-10'>,
         />,
       </div>,
-      <div className='relative z - 10'>            ease: 'linear',
-          }}
+      <div className='relative z - 10'>            ease: 'linear'}}
         />,
       </div>,
       <div className='relative z - 10'>,
@@ -594,8 +572,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
                         className={`text-sm transition-colors duration-200 ${
                           link && link.featured,
                             ? 'text-cyan-400 hover: text-cyan-300'                          link && link.featured,
-                            ? 'text-cyan-400 hover:text-cyan-300',
-                        }`}
+                            ? 'text-cyan-400 hover:text-cyan-300'}`}
                       >,
                         {link.name}
                       </Link>,
@@ -689,8 +666,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
           </motion.div>,
         </div>,
       </div>,
-    </footer>),
-}
+    </footer>)}
 /* Animated grid */};
   /* Animated grid */,
 /* Animated grid */,
@@ -702,10 +678,8 @@ const UltraFuturisticFooter2035: React.FC = () => {
   link.name}> <Link href= {
   link.href}className= {
   `text-sm transition-colors duration-200 $ {
-  link.featured ? 'text-cyan-400 hover: text-cyan-300' : 'text-gray-400 hover:text-white',
-}`}> </li>) )}</ul> </motion.div>) )}</div> {
-  /* Bottom Section */}<motion.div > <div className="flex flex-col md: flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" >  2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>),
-}
+  link.featured ? 'text-cyan-400 hover: text-cyan-300' : 'text-gray-400 hover:text-white'}`}> </li>) )}</ul> </motion.div>) )}</div> {
+  /* Bottom Section */}<motion.div > <div className="flex flex-col md: flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" >  2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>)}
 export default UltraFuturisticFooter2035)}
 };
   /* Animated grid */ }<motion && motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {
@@ -721,14 +695,11 @@ export default UltraFuturisticFooter2035)}
   link && link.name}> <Linkhref= {
   link && link.href}className= {
   `text-sm transition-colors duration-200 $ {
-  link && link.featured ? 'text-cyan-400 hover: text-cyan-300' : 'text-gray-400 hover:text-white',
-}`}> </li>) ) }</ul> </motion && motion.div>) ) }</div> {
-  /* Bottom Section */ }<motion && motion.div > <div className="flex flex-col md: flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" >  2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion && motion.div> </div> </div> </footer>) ,
-};
+  link && link.featured ? 'text-cyan-400 hover: text-cyan-300' : 'text-gray-400 hover:text-white'}`}> </li>) ) }</ul> </motion && motion.div>) ) }</div> {
+  /* Bottom Section */ }<motion && motion.div > <div className="flex flex-col md: flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" >  2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion && motion.div> </div> </div> </footer>) };
 export default UltraFuturisticFooter2035)};
 export default UltraFuturisticFooter2035;
-  /* Bottom Section */}<motion.div > <div className="flex flex-col md: flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>),
-};
+  /* Bottom Section */}<motion.div > <div className="flex flex-col md: flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>)};
 export default UltraFuturisticFooter2035;
 export default UltraFuturisticFooter2035)};
 export default UltraFuturisticFooter2035;

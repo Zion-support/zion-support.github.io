@@ -86,8 +86,7 @@ export function useFilterTalents(talents: TalentProfile[]) {
         break,
       default: ,
         // Default sorting by relevance (no specific order),
-        break,
-    }
+        break}
 ,
     return result}, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]),
   return {

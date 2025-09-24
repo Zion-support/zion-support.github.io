@@ -112,8 +112,7 @@ reviews: number,export const revolutionary20o27AdvancedMicroSaasServices: Revolu
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full-stack SaaS platform with AI content generation, SEO optimization, multi-platform publishing, and comprehensive analytics dashboard.';
@@ -194,8 +193,7 @@ reviews: number,export const revolutionary20o27AdvancedMicroSaasServices: Revolu
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered customer success platform with predictive analytics, automated workflows, and comprehensive integration capabilities.';
@@ -277,8 +275,7 @@ reviews: number,export const revolutionary20o27AdvancedMicroSaasServices: Revolu
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered financial planning platform with automated forecasting, real-time dashboards, and comprehensive integration capabilities.';
@@ -359,8 +356,7 @@ reviews: number,export const revolutionary20o27AdvancedMicroSaasServices: Revolu
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered HR platform with recruitment automation, performance management, and comprehensive workforce analytics.';
@@ -443,8 +439,7 @@ reviews: number,export const revolutionary20o27AdvancedMicroSaasServices: Revolu
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered supply chain optimization platform with demand forecasting, inventory optimization, and comprehensive logistics management.';

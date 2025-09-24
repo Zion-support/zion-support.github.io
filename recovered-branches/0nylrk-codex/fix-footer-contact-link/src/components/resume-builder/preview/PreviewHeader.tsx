@@ -7,8 +7,7 @@ import { useState } from 'react',
 import { useIsMobile } from '@/hooks/use-mobile',
 interface PreviewHeaderProps {
   resume: Resume,
-  onBack: () => void,
-}
+  onBack: () => void}
 ,
 export function PreviewHeader({ resumeonBack }: PreviewHeaderProps) {
   const [isPrintingsetIsPrinting] = useState(false),
@@ -20,20 +19,16 @@ export function PreviewHeader({ resumeonBack }: PreviewHeaderProps) {
     style.innerHTML = `,
       @media print {
         body * {
-          visibility: hidden,
-        }
+          visibility: hidden}
         .print-section * {
-          visibility: visible,
-        }
+          visibility: visible}
         .print-section {
           position: absolute,
           left: 0,
           top: 0,
-          width: 100%,
-        }
+          width: 100%}
         .no-print {
-          display: none !important,
-        }
+          display: none !important}
       }
     `,
     document.head.appendChild(style),

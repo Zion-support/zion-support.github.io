@@ -136,5 +136,4 @@ export default function UltimatePromotionalBanner() {
           </motion.div>,
         </div>,
       </div>,
-    </motion.section>),
-}
+    </motion.section>)}

@@ -24,6 +24,5 @@ const MobileLaunchPage: React.FC = () => {
       <AppTestimonials />,
       <MobileEmailCapture />,
       <AppStoreBanner />,
-    </AppLayout>),
-};
+    </AppLayout>)};
 export default MobileLaunchPage;

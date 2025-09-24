@@ -9,20 +9,17 @@ const fadeInUp ={
 const staggerContainer ={
   animate: {
     transition: {
-      staggerChildren: 0.1,
-    }
+      staggerChildren: 0.1}
   }
 };
 export default function ComprehensiveServicesShowcase20o25V2() {
   const allNewServices = [
-      description: 'Breakthrough technologies of the future',
-    }
+      description: 'Breakthrough technologies of the future'}
   ],
   const contactInfo ={
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709',
-  };
+    address: '364 E Main St STE 10o08 Middletown DE 19709'};
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
       <SEO
@@ -252,5 +249,4 @@ export default function ComprehensiveServicesShowcase20o25V2() {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}

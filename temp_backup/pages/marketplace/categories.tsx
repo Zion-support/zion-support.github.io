@@ -15,6 +15,5 @@ export default function CategoriesPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -38,6 +38,5 @@ export default function UpdateDetailPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

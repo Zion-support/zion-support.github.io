@@ -12,8 +12,7 @@ const UltimateContentRevolutionShowcase = () => {
       icon: '🧠';
       title: 'Quantum-Neural Fusion';
       description: 'Revolutionary AI processing that combines quantum computing with neural networks for unprecedented speed and accuracy.';
-      stats: '10o00x faster processing',
-    };
+      stats: '10o00x faster processing'};
       icon: '🎯';
       title: 'Autonomous Content Creation';
       description: 'AI systems that independently generate, optimize, and distribute content without human intervention.';
@@ -33,8 +32,7 @@ const UltimateContentRevolutionShowcase = () => {
       icon: '⚡';
       title: 'Edge Computing Integration';
       description: 'Global content delivery network with edge computing for instant performance worldwide.';
-      stats: '50ms global response time',
-    }
+      stats: '50ms global response time'}
   ],
   const caseStudies = [
       company: 'Global Tech Corporation';
@@ -79,8 +77,7 @@ const UltimateContentRevolutionShowcase = () => {
         roi: '25,0o00%';
         savings: '$50o0B+';
         speed: '1,20o0%';
-        accuracy: '99.9%',
-      };
+        accuracy: '99.9%'};
       description: 'Transform your business with revolutionary AI content strategies that deliver unprecedented results.';
       readingTime: '35 min read';
       featured: true,
@@ -152,8 +149,7 @@ const UltimateContentRevolutionShowcase = () => {
       resource: '📚';
       tool: '🛠️';
       service: '🎯';
-      platform: '💻',
-    };
+      platform: '💻'};
     return icons[category as keyof typeof icons] || '📄'};
   const getCategoryColor = (category: string) => {
     const colors ={
@@ -194,8 +190,7 @@ const UltimateContentRevolutionShowcase = () => {
                 className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                   activeTab === tab.id,
                     ? 'bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white shadow-lg transform scale-10o5',
-                    : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0',
-                }`}
+                    : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
               >,
                 <span className="text-lg">{tab.icon}</span>,
                 {tab.label}
@@ -266,8 +261,7 @@ const UltimateContentRevolutionShowcase = () => {
               className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -349,7 +343,6 @@ const UltimateContentRevolutionShowcase = () => {
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors",
                 View All Resources,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateContentRevolutionShowcase;
 }}}}}}}}))))))))]]]]

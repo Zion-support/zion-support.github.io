@@ -65,8 +65,7 @@ const UltraFuturisticNavigation: React.FC<UltraFuturisticNavigationProps> = ({ c
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   return (
     <motion.nav,
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-50o0 ${
@@ -270,6 +269,5 @@ const UltraFuturisticNavigation: React.FC<UltraFuturisticNavigationProps> = ({ c
           </div>,
         </div>,
       </motion.div>,
-    </motion.nav>),
-};
+    </motion.nav>)};
 export default UltraFuturisticNavigation;

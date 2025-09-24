@@ -17,8 +17,7 @@ export interface EmergingTechInnovationService {
   contact: {
     phone: string,
     email: string,
-    address: string,
-  };
+    address: string};
   trialDays: number,
   setupTime: string,
   competitors: string[],
@@ -44,8 +43,7 @@ export interface EmergingTechInnovationService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation?: boolean,
   implementationDetails?: string}
 ,

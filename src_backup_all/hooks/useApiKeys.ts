@@ -3,16 +3,14 @@ interface ApiKeyInfo {
   id: string,
   name: string,
   createdAt: string,
-  redactedKey: string,
-}
+  redactedKey: string}
 ,
 interface UseApiKeysResult {
   apiKeys: ApiKeyInfo[],
   isLoading: boolean,
   error: null | Error,
   createKey: (name: string) => Promise<ApiKeyInfo>,
-  revokeKey: (id: string) => Promise<void>,
-}
+  revokeKey: (id: string) => Promise<void>}
 ,
 export default function useApiKeys(): UseApiKeysResult {
   const apiKeys: ApiKeyInfo[] = [],
@@ -30,8 +28,7 @@ export default function useApiKeys(): UseApiKeysResult {
         };
       };
       async revokeKey(_id: string) {
-        return,
-      };
+        return};
     });
     [])}
 ,

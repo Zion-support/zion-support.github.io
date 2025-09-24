@@ -15,12 +15,10 @@ const AI20o25UltimateBusinessRevolution10o0000ROIBanner = () => {
         roi: '10o0,0o00%';
         savings: '$2.5T';
         efficiency: '99.99%';
-        timeline: '18 months',
-      };
+        timeline: '18 months'};
       description: 'Transform your enterprise with revolutionary AI technologies and achieve unprecedented returns';
       readingTime: '45 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-success-story';
       title: 'Fortune 50o0 Ultimate Business Revolution: $2.5 Trillion Annual Savings - 10o0,0o00% ROI Success Story';
@@ -30,12 +28,10 @@ const AI20o25UltimateBusinessRevolution10o0000ROIBanner = () => {
         roi: '10o0,0o00%';
         savings: '$2.5T';
         efficiency: '99.99%';
-        timeline: '18 months',
-      };
+        timeline: '18 months'};
       description: 'How TechGlobal Industries achieved unprecedented transformation with revolutionary AI';
       readingTime: '30 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'implementation-guide';
       title: 'AI 20o25 Ultimate Business Revolution Implementation Guide: Complete Roadmap to 10o0,0o00% ROI';
@@ -45,12 +41,10 @@ const AI20o25UltimateBusinessRevolution10o0000ROIBanner = () => {
         roi: '10o0,0o00%';
         timeline: '18 months';
         success: '99.7%';
-        guide: 'Complete',
-      };
+        guide: 'Complete'};
       description: 'Your comprehensive step-by-step guide to achieving unprecedented business transformation';
       readingTime: '60 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     const interval = setInterval(() => {

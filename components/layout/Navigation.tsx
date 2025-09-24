@@ -51,7 +51,6 @@ class ErrorBoundary extends React.Component {
 } from 'lucide-react',
   Menu, X, Home, Brain, Cpu, Rocket,
   Phone, Mail, MapPin, Globe, ChevronDown} from 'lucide-react',
-,
   Menu, X, Home, Brain, Cpu, Rocket;
   Phone, Mail, MapPin, Globe, ChevronDown} from 'lucide-react',
   Menu;
@@ -82,9 +81,7 @@ class ErrorBoundary extends React.Component {
     {
       name: 'Home',
       href: '/',
-      icon: Home,
-    },    {      icon: Home,
-    }
+      icon: Home},    {      icon: Home}
     {
       name: 'Services',
       href: '/services',
@@ -94,26 +91,22 @@ class ErrorBoundary extends React.Component {
           name: 'AI Services',
           href: '/ai-services',
           icon: Brain,
-          description: 'Revolutionary AI solutions',
-        }
+          description: 'Revolutionary AI solutions'}
         {
           name: 'IT Services',
           href: '/it-services',
           icon: Cpu,
-          description: 'Enterprise IT solutions',
-        }
+          description: 'Enterprise IT solutions'}
         {
           name: 'Micro SaaS',
           href: '/micro-saas',
           icon: Rocket,
-          description: 'Specialized software solutions',
-        }
+          description: 'Specialized software solutions'}
         {
           name: 'Innovative Showcase',
           href: '/innovative-services-showcase',
           icon: Globe,
-          description: 'Cutting-edge technology',
-        }
+          description: 'Cutting-edge technology'}
       ]}
     {
       name: 'Solutions',
@@ -121,18 +114,15 @@ class ErrorBoundary extends React.Component {
       icon: Cpu,    {
       name: 'Solutions';
       href: '/solutions';
-      icon: Cpu,
-    }
+      icon: Cpu}
     {
       name: 'About';
       href: '/about';
-      icon: Globe,
-    }
+      icon: Globe}
     {
       name: 'Contact',
       href: '/contact',
-      icon: Phone,
-    }
+      icon: Phone}
 ,
   useEffect(() => {
     const handleScroll = () => {
@@ -146,8 +136,7 @@ class ErrorBoundary extends React.Component {
       name: 'Home';
       href: '/';
       icon: Home;
-    },    {      icon: Home,
-    };
+    },    {      icon: Home};
     {
       name: 'Services';
       href: '/services';
@@ -185,13 +174,11 @@ class ErrorBoundary extends React.Component {
       icon: Cpu,    {
       name: 'Solutions';
       href: '/solutions';
-      icon: Cpu,
-    };
+      icon: Cpu};
     {
       name: 'About';
       href: '/about';
-      icon: Globe,
-    };
+      icon: Globe};
     {
       name: 'Contact';
       href: '/contact';
@@ -206,15 +193,13 @@ class ErrorBoundary extends React.Component {
       name: 'Contact';
       href: '/contact';
       icon: Phone;
-    }],      icon: Phone,
-    }
+    }],      icon: Phone}
   ],
   const contactInfo = {
     mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup && ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup && ziontechgroup.com'};    website: 'https://ziontechgroup && ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup && ziontechgroup.com'};    website: 'https://ziontechgroup && ziontechgroup.com'};
   return (
     <>,
       {/* Navigation Bar */}
@@ -229,8 +214,7 @@ class ErrorBoundary extends React.Component {
                 <div className='hidden sm: block'>,
           isScrolled,
             ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10',
-            : 'bg-transparent',
-        }`}
+            : 'bg-transparent'}`}
       >,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex items-center justify-between h-16 lg:h-20">,

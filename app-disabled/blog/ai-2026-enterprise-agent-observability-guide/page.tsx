@@ -91,6 +91,5 @@ const EnterpriseAgentObservabilityGuide20o26: React.FC = () => {
           </div>,
         </div>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default EnterpriseAgentObservabilityGuide20o26;

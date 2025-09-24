@@ -17,8 +17,7 @@ interface UltraFuturisticServiceCard20o35Props {
       yearly: number,
       currency: string,
       trialDays: number,
-      setupTime: string,
-    };
+      setupTime: string};
     features: string[],
     benefits: string[],
     targetAudience: string[],
@@ -40,8 +39,7 @@ interface UltraFuturisticServiceCard20o35Props {
     customers: number,
     rating: number,
     reviews: number,
-    contact: string,
-  };
+    contact: string};
   className?: string}
 ,
 const UltraFuturisticServiceCard20o35: React.FC<UltraFuturisticServiceCard20o35Props> = ({
@@ -59,18 +57,15 @@ const UltraFuturisticServiceCard20o35: React.FC<UltraFuturisticServiceCard20o35P
       y: -8;
       boxShadow: "0 20px 40px rgba(0, 255, 255, 0.3)"};
     tap: {
-      scale: 0.98,
-    }
+      scale: 0.98}
   };
   const contentVariants ={
     collapsed: {
       height: 0;
-      opacity: 0,
-    };
+      opacity: 0};
     expanded: {
       height: "auto";
-      opacity: 1,
-    }
+      opacity: 1}
   };
   const getGradientClass = (color: string) => {
     const colorMap: { [key: string]: string } ={

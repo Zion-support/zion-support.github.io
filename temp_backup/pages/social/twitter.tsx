@@ -3,8 +3,7 @@ import Head from 'next/head',
 export default function TwitterRedirect() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      window.location.replace('https: //x.com/ziontechgroup'),
-    }
+      window.location.replace('https: //x.com/ziontechgroup')}
   }, []),
   return (
     <>,
@@ -21,6 +20,5 @@ export default function TwitterRedirect() {
           Continue to X (Twitter),
         </a>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -4,8 +4,7 @@ import { AnalyticsChart } from '@/components/analytics/AnalyticsChart',
 interface PageViewsChartProps {
   data: Array<{ date: string, views: number }>,
   timeRange: string,
-  onTimeRangeChange: (range: string) => void,
-}
+  onTimeRangeChange: (range: string) => void}
 ,
 export function PageViewsChart({
   datatimeRangeonTimeRangeChange;

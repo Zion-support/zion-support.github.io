@@ -19,8 +19,7 @@ import { useResume } from '@/hooks/useResume',
 } from '@/components/ui/dialog',
 interface ResumeVersionSelectorProps {
   currentResume: Resume,
-  onResumeChange: (resumeId: string) => void,
-}
+  onResumeChange: (resumeId: string) => void}
 ,
 export function ResumeVersionSelector({
   currentResume;

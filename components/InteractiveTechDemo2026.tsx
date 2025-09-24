@@ -15,8 +15,7 @@ const InteractiveTechDemo20o26 = () => {
       demoData: {
         datasets: 15;
         accuracy: 99.2;
-        timeSaved: "85%",
-      }
+        timeSaved: "85%"}
     };
     {
       id: 1;
@@ -27,8 +26,7 @@ const InteractiveTechDemo20o26 = () => {
       demoData: {
         processes: 8;
         efficiency: 95;
-        timeSaved: "70%",
-      }
+        timeSaved: "70%"}
     };
     {
       id: 2;
@@ -39,8 +37,7 @@ const InteractiveTechDemo20o26 = () => {
       demoData: {
         assets: 12;
         uptime: 99.8;
-        costSaved: "40%",
-      }
+        costSaved: "40%"}
     };
     {
       id: 3;
@@ -51,8 +48,7 @@ const InteractiveTechDemo20o26 = () => {
       demoData: {
         nodes: 25;
         latency: "2ms";
-        reliability: 99.9,
-      }
+        reliability: 99.9}
     }
   ],
   const handleStartDemo = () => {
@@ -83,8 +79,7 @@ const InteractiveTechDemo20o26 = () => {
               className={`p-6 rounded-xl transition-all duration-30o0 ${
                 activeDemo === demo.id,
                   ? 'bg-blue-60o0 text-white',
-                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-              }`}
+                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
             >,
               <demo.icon className="h-8 w-8 mb-4 mx-auto"  />,
               <h3 className="font-semibold text-lg mb-2">{demo.title}</h3>,
@@ -173,6 +168,5 @@ const InteractiveTechDemo20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default InteractiveTechDemo20o26;

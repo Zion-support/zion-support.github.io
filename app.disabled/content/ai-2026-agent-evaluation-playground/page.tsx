@@ -71,6 +71,5 @@ export default function AgentEvaluationPlaygroundPage() {
           </Link>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

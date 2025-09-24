@@ -37,8 +37,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export default function AIEducationPlatformPro() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -273,7 +272,7 @@ export default function AIEducationPlatformPro() {
               </div>,
               <h3 className="text-xl font-semibold mb-3">Adaptive Learning</h3>,
               <p className="text-gray-40o0">,
-                Continuously adjusts content difficulty and approach based on real-time window.performance.,
+                Continuously adjusts content difficulty and approach based on real-time window.window.performance.,
               </p>,
             </div>,
             <div className="text-center">,
@@ -356,5 +355,4 @@ export default function AIEducationPlatformPro() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}

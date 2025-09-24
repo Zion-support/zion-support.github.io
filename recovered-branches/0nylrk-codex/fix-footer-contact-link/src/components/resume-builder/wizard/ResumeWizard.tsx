@@ -50,8 +50,7 @@ export function ResumeWizard() {
       setActiveTab(RESUME_STEPS[currentIndex - 1].id)}
   };
   const handleResumeChange = (resumeId: string) => {
-    fetchResume(resumeId),
-  };
+    fetchResume(resumeId)};
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">,

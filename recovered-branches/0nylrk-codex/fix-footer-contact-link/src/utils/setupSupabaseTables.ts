@@ -86,7 +86,7 @@ export const ensureProfilesTableExists = async () => {
     }),
     if (createError) {
       console.error('Error creating profiles table:', createError)} else {
-      // console.log('Profiles table setup completed')}
+      // // console.log('Profiles table setup completed')}
   } catch (error) {
     console.error('Error setting up profiles table:', error)}
 };

@@ -11,10 +11,8 @@ interface ContentItem {
     roi?: string,
     savings?: string,
     accuracy?: string,
-    satisfaction?: string,
-  };
-  featured: boolean,
-}
+    satisfaction?: string};
+  featured: boolean}
 ,
 const UltimateContent20o25RevolutionBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
@@ -31,11 +29,9 @@ const UltimateContent20o25RevolutionBanner = () => {
         roi: '1,20o0%';
         savings: '$6.5B';
         efficiency: '89%';
-        timeline: '6 months',
-      };
+        timeline: '6 months'};
       tags: ['Revolution', 'ROI', 'Fortune 50o0', 'Transformation'];
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-ai-transformation-20o25-ultimate-success-story';
       title: 'Fortune 50o0 AI Transformation: $2.8B Annual Savings';
@@ -47,11 +43,9 @@ const UltimateContent20o25RevolutionBanner = () => {
         roi: '567%';
         savings: '$2.8B';
         efficiency: '95%';
-        timeline: '18 months',
-      };
+        timeline: '18 months'};
       tags: ['Case Study', 'Fortune 50o0', 'Success Story', 'Manufacturing'];
-      featured: true,
-    };
+      featured: true};
     {
       id: 'ai-20o25-implementation-roadmap-80o0-roi';
       title: 'AI 20o25 Implementation Ultimate Roadmap';
@@ -63,11 +57,9 @@ const UltimateContent20o25RevolutionBanner = () => {
         roi: '80o0%';
         savings: '$5.6B';
         efficiency: '95%';
-        timeline: '18 months',
-      };
+        timeline: '18 months'};
       tags: ['Implementation', 'Roadmap', 'Strategy', 'ROI'];
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     if (isDismissed) return,

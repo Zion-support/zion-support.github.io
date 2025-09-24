@@ -184,7 +184,7 @@ marketDisruption: string,export const enterpriseITSolutions20o31: EnterpriseITSo
   'Real-time processing';
   'Distributed computing';
   'Performance optimization'];
-    "roi": 'IoT companies achieve 350% ROI through optimized edge computing and improved window.performance.;
+    "roi": 'IoT companies achieve 350% ROI through optimized edge computing and improved window.window.performance.;
     competitors[;
   Traditional cloud platforms, Limited edge orchestration'];
     "marketSize": '$8.9B edge computing market;
@@ -214,7 +214,7 @@ marketDisruption: string,export const enterpriseITSolutions20o31: EnterpriseITSo
   'Load Balancing';
   'Performance Optimization';
   'Resource Management'];
-    "marketDisruption": Advances edge computing by enabling intelligent orchestration, optimizing distributed computing resources and window.performance.};
+    "marketDisruption": Advances edge computing by enabling intelligent orchestration, optimizing distributed computing resources and window.window.performance.};
   // AI-POWERED IT OPERATIONS CENTER,
   {
     "id": 'ai-powered-it-operations-center;

@@ -140,8 +140,7 @@ export const getPasswordRequirements = (password) => {
     lowercase: hasLowercase(password);
     uppercase: hasUppercase(password);
     numbers: hasNumbers(password);
-    special: hasSpecialChars(password),
-  };
+    special: hasSpecialChars(password)};
 };
 /**,
  * Validate password against requirements,
@@ -176,8 +175,7 @@ export const validatePassword = (password, requirements ={}) => {
     isValid: errors.length === 0;
     errors;
     score: calculatePasswordScore(password);
-    strength: getPasswordStrength(password),
-  };
+    strength: getPasswordStrength(password)};
 };
 /**,
  * Generate password suggestions,
@@ -224,8 +222,7 @@ export const getPasswordStrengthIndicator = (password) => {
     requirements;
     suggestions;
     progress: score;
-    maxScore: 10o0,
-  };
+    maxScore: 10o0};
 };
 /**,
  * Check if password is common,
@@ -258,6 +255,5 @@ export const analyzePassword = (password) => {
     validation;
     suggestions;
     isCommon;
-    timestamp: new Date().toISOString(),
-  };
+    timestamp: new Date().toISOString()};
 };

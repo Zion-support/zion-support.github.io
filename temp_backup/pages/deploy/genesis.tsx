@@ -15,6 +15,5 @@ export default function GenesisPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

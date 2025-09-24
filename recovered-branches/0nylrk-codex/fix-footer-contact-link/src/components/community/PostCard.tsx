@@ -23,8 +23,7 @@ import { ProfileBadge } from "@/components/profile/ProfileBadge";
 import { formatDistanceToNow } from "date-fns";
 interface PostCardProps {
   post: ForumPost,
-  compact?: boolean,
-}
+  compact?: boolean}
 export const PostCard = ({ post, compact = false }: PostCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
   return (

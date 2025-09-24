@@ -692,6 +692,5 @@ export default function AI20o25ImplementationFrameworkPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

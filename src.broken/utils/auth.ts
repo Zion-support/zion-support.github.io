@@ -3,8 +3,7 @@ import { getTenantByApiKey, getTenantById } from './tenant',
 export interface AuthResult {
   ok: boolean,
   error?: string,
-  tenantId?: string,
-}
+  tenantId?: string}
 ,
 export function authenticateRequest(
   req: NextApiRequest;

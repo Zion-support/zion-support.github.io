@@ -15,6 +15,5 @@ export default function ProjectMilestonesPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

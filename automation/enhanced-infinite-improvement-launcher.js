@@ -37,13 +37,12 @@ class EnhancedInfiniteImprovementLauncher {
       performance: {
         cpu: 0;
         memory: 0;
-        uptime: 0,
-      }
+        uptime: 0}
     };
   }
 ,
   async initialize() {
-    // console.log('🚀 Initializing Enhanced Infinite Improvement Launcher...'),
+    // // console.log('🚀 Initializing Enhanced Infinite Improvement Launcher...'),
     try {
       // Ensure log directory exists,
       const logDir = path.dirname(this.config.logFile),
@@ -57,9 +56,8 @@ class EnhancedInfiniteImprovementLauncher {
         enablePredictiveOptimization: true;
         enableAdaptiveLearning: true;
         enableErrorSelfHealing: true;
-        enablePerformanceMonitoring: true,
-      }),
-      // console.log('✅ Enhanced Infinite Improvement Launcher initialized'),
+        enablePerformanceMonitoring: true}),
+      // // console.log('✅ Enhanced Infinite Improvement Launcher initialized'),
       return true} catch (error) {
       console.error('❌ Failed to initialize launcher:', error),
       throw error}
@@ -67,10 +65,10 @@ class EnhancedInfiniteImprovementLauncher {
 ,
   async start() {
     if (this.isRunning) {
-      // console.log('⚠️ Infinite improvement loop is already running'),
+      // // console.log('⚠️ Infinite improvement loop is already running'),
       return}
 ,
-    // console.log('🚀 Starting Enhanced Infinite Improvement Loop...'),
+    // // console.log('🚀 Starting Enhanced Infinite Improvement Loop...'),
     try {
       // Initialize if not already done,
       if (!this.loop) {
@@ -95,21 +93,20 @@ class EnhancedInfiniteImprovementLauncher {
         this.startPerformanceTracking()}
 ,
       await this.saveStatus(),
-      // console.log('✅ Enhanced Infinite Improvement Loop started successfully'),
-      // console.log(`📊 PID: ${process.pid}`),
-      // console.log(`📁 Status file: ${this.config.statusFile}`),
-      // console.log(`📝 Log file: ${this.config.logFile}`),
-} catch (error) {
+      // // console.log('✅ Enhanced Infinite Improvement Loop started successfully'),
+      // // console.log(`📊 PID: ${process.pid}`),
+      // // console.log(`📁 Status file: ${this.config.statusFile}`),
+      // // console.log(`📝 Log file: ${this.config.logFile}`)} catch (error) {
       console.error('❌ Failed to start infinite improvement loop:', error),
       if (this.config.enableAutoRecovery && this.restartAttempts < this.config.maxRestartAttempts) {
-        // console.log(`🔄 Attempting restart (${this.restartAttempts + 1}/${this.config.maxRestartAttempts})...`),
+        // // console.log(`🔄 Attempting restart (${this.restartAttempts + 1}/${this.config.maxRestartAttempts})...`),
         await this.restart()} else {
         throw error}
     }
   }
 ,
   async stop() {
-    // console.log('🛑 Stopping Enhanced Infinite Improvement Loop...'),
+    // // console.log('🛑 Stopping Enhanced Infinite Improvement Loop...'),
     try {
       if (this.loop) {
         await this.loop.stop()}
@@ -125,14 +122,13 @@ class EnhancedInfiniteImprovementLauncher {
       // Remove PID file,
       await this.removePid(),
       await this.saveStatus(),
-      // console.log('✅ Enhanced Infinite Improvement Loop stopped'),
-} catch (error) {
+      // // console.log('✅ Enhanced Infinite Improvement Loop stopped')} catch (error) {
       console.error('❌ Error stopping infinite improvement loop:', error),
       throw error}
   }
 ,
   async restart() {
-    // console.log('🔄 Restarting Enhanced Infinite Improvement Loop...'),
+    // // console.log('🔄 Restarting Enhanced Infinite Improvement Loop...'),
     try {
       await this.stop(),
       // Wait before restart,
@@ -140,8 +136,7 @@ class EnhancedInfiniteImprovementLauncher {
       this.restartAttempts++,
       this.status.restartAttempts = this.restartAttempts,
       await this.start(),
-      // console.log('✅ Enhanced Infinite Improvement Loop restarted successfully'),
-} catch (error) {
+      // // console.log('✅ Enhanced Infinite Improvement Loop restarted successfully')} catch (error) {
       console.error('❌ Failed to restart infinite improvement loop:', error),
       throw error}
   }
@@ -157,24 +152,21 @@ class EnhancedInfiniteImprovementLauncher {
       // Check if the loop is still running,
       if (!this.isRunning || !this.loop) {
         this.status.health = 'unhealthy',
-        // console.log('⚠️ Health check failed: Loop not running'),
+        // // console.log('⚠️ Health check failed: Loop not running'),
         if (this.config.enableAutoRecovery) {
-          await this.restart(),
-        }
+          await this.restart()}
         return}
 ,
       // Check system resources,
       const performance = await this.getSystemPerformance(),
       this.status.performance = performance,
       // Determine health status,
-      if (window.performance.cpu > 90 || window.performance.memory > 95) {
+      if (window.window.performance.cpu > 90 || window.window.performance.memory > 95) {
         this.status.health = 'warning',
-        // console.log('⚠️ Health check warning: High resource usage'),
-      } else {
+        // // console.log('⚠️ Health check warning: High resource usage')} else {
         this.status.health = 'healthy'}
 ,
-      await this.saveStatus(),
-} catch (error) {
+      await this.saveStatus()} catch (error) {
       console.error('❌ Health check failed:', error),
       this.status.health = 'error',
       await this.saveStatus()}
@@ -196,14 +188,12 @@ class EnhancedInfiniteImprovementLauncher {
       return {
         cpu: this.getCpuUsage();
         memory: (usage.heapUsed / usage.heapTotal) * 10o0;
-        uptime: uptime,
-      };
+        uptime: uptime};
     } catch (error) {
       return {
         cpu: 0;
         memory: 0;
-        uptime: 0,
-      };
+        uptime: 0};
     }
   }
 ,
@@ -231,8 +221,7 @@ class EnhancedInfiniteImprovementLauncher {
         maxRestartAttempts: this.config.maxRestartAttempts;
         enableAutoRecovery: this.config.enableAutoRecovery;
         enableHealthMonitoring: this.config.enableHealthMonitoring;
-        enablePerformanceTracking: this.config.enablePerformanceTracking,
-      }
+        enablePerformanceTracking: this.config.enablePerformanceTracking}
     };
   }
 ,
@@ -273,20 +262,19 @@ class EnhancedInfiniteImprovementLauncher {
         platform: process.platform;
         arch: process.arch;
         pid: process.pid;
-        uptime: process.uptime(),
-      }
+        uptime: process.uptime()}
     };
     const reportPath = path.join(__dirname, 'launcher-report.json'),
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2)),
-    // console.log(`📊 Report generated: ${reportPath}`),
+    // // console.log(`📊 Report generated: ${reportPath}`),
     return report}
 ,
   async cleanup() {
-    // console.log('🧹 Performing cleanup...'),
+    // // console.log('🧹 Performing cleanup...'),
     try {
       await this.stop(),
       await this.removePid(),
-      // console.log('✅ Cleanup completed')} catch (error) {
+      // // console.log('✅ Cleanup completed')} catch (error) {
       console.error('❌ Cleanup failed:', error)}
   }
 }
@@ -302,11 +290,11 @@ async function main() {
         await launcher.start(),
         // Keep the process running,
         process.on('SIGINT', async () => {
-          // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
+          // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
           await launcher.stop(),
           process.exit(0)}),
         process.on('SIGTERM', async () => {
-          // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
+          // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
           await launcher.stop(),
           process.exit(0)}),
         break,
@@ -321,7 +309,7 @@ async function main() {
       case 'status':,
         await launcher.initialize(),
         const status = await launcher.getStatus(),
-        // console.log(JSON.stringify(status, null, 2)),
+        // // console.log(JSON.stringify(status, null, 2)),
         break,
       case 'report':,
         await launcher.initialize(),
@@ -331,7 +319,7 @@ async function main() {
         await launcher.cleanup(),
         break,
       default: ,
-        // console.log(`,
+        // // console.log(`,
 Enhanced Infinite Improvement Loop Launcher,
 Usage: node enhanced-infinite-improvement-launcher.js [command],
 Commands:,
@@ -346,8 +334,7 @@ Examples:,
   node enhanced-infinite-improvement-launcher.js status,
   node enhanced-infinite-improvement-launcher.js report,
         `),
-        break,
-    }
+        break}
   } catch (error) {
     console.error('❌ Command failed:', error),
     process.exit(1)}

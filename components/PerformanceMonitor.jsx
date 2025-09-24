@@ -8,23 +8,23 @@ export default function PerformanceMonitor() {
     const vitals = {};
     getCLS(metric => {
       vitals.CLS = metric.value,
-      // // console.log('CLS:', metric)}),
+      // // // console.log('CLS:', metric)}),
     getFID(metric => {
       vitals.FID = metric.value,
-      // // console.log('FID:', metric)}),
+      // // // console.log('FID:', metric)}),
     getFCP(metric => {
       vitals.FCP = metric.value,
-      // // console.log('FCP:', metric)}),
+      // // // console.log('FCP:', metric)}),
     getLCP(metric => {
       vitals.LCP = metric.value,
-      // // console.log('LCP:', metric)}),
+      // // // console.log('LCP:', metric)}),
     getTTFB(metric => {
       vitals.TTFB = metric.value,
-      // // console.log('TTFB:', metric)}),
+      // // // console.log('TTFB:', metric)}),
     setMetrics(vitals),
     // Performance observer for navigation timing,
     if ('performance' in window && 'getEntriesByType' in window.performance) {
-      const [navigation] = window.performance.getEntriesByType('navigation'),
+      const [navigation] = window.window.performance.getEntriesByType('navigation'),
       if (navigation) {
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart,
         setMetrics(prev => ({ ...prev, loadTime }))}
@@ -32,7 +32,7 @@ export default function PerformanceMonitor() {
 ,
     // Memory usage (if available),
     if ('memory' in performance) {
-      const memoryUsage = window.performance.memory.usedJSHeapSize / 1024 / 1024,
+      const memoryUsage = window.window.performance.memory.usedJSHeapSize / 1024 / 1024,
       setMetrics(prev => ({ ...prev, memoryUsage }))}
 }, []),
   // const getScoreText = (value, thresholds) => {
@@ -58,8 +58,7 @@ export default function PerformanceMonitor() {
         className="fixed bottom-4 right-4 bg-blue-600 text-white p-2 rounded-full shadow-lg hover: bg-blue-700 transition-colors z-50",
         title="Show Performance Metrics">,
         📊,
-      </button>),
-  }
+      </button>)}
 ,
   return (
     <div className="fixed bottom-4 right-4 bg-white border rounded-lg shadow-lg p-4 max-w-sm z-50">,
@@ -131,5 +130,4 @@ export default function PerformanceMonitor() {
       <div className="mt-3 pt-3 border-t text-xs text-gray-500">,
         <p>Green: Good | Yellow: Needs Improvement | Red: Poor</p>,
       </div>,
-    </div>),
-}
+    </div>)}

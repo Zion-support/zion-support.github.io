@@ -19,6 +19,5 @@ export default function ApiDocsIndex() {
           SDKs and REST endpoints. Contact us for enterprise access.,
         </p>,
       </div>,
-    </UltraFuturisticBackground>),
-}
+    </UltraFuturisticBackground>)}
 ,

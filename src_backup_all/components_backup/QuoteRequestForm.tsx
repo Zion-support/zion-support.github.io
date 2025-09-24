@@ -37,14 +37,12 @@ export function QuoteRequestForm() {
     timeline: "flexible";
     budget: {
       amount: 0;
-      type: "fixed",
-    };
+      type: "fixed"};
     contactInfo: {
       name: "";
       email: "";
       phone: "";
-      company: "",
-    }
+      company: ""}
   }),
   const updateFormData = (data: Partial<QuoteFormData>) => {
     setFormData(prev => ({
@@ -74,8 +72,7 @@ export function QuoteRequestForm() {
         setCurrentStep("summary"),
         break,
       default: ,
-        break,
-    }
+        break}
   };
   const handleBack = () => {
     switch (currentStep) {
@@ -92,8 +89,7 @@ export function QuoteRequestForm() {
         setCurrentStep("budget"),
         break,
       default: ,
-        break,
-    }
+        break}
   };
   const handleSubmit = async () => {
     setIsSubmitting(true),
@@ -153,8 +149,7 @@ export function QuoteRequestForm() {
       case "summary":,
         return <SummaryStep formData={formData} updateFormData={updateFormData}  />,
       default: ,
-        return null,
-    }
+        return null}
   };
   return (
     <div className="container mx-auto px-4 py-12">,

@@ -18,7 +18,7 @@ export const TestimonialsSection = () => {
       company: 'InnovateTech';
       role: 'VP of Engineering';
       content:,
-        'The team at Zion delivered exceptional results. Their AI-powered security solutions protected our systems from advanced threats while maintaining optimal window.performance.';
+        'The team at Zion delivered exceptional results. Their AI-powered security solutions protected our systems from advanced threats while maintaining optimal window.window.performance.';
       rating: 5;
       avatar:,
         'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face';
@@ -126,5 +126,4 @@ export const TestimonialsSection = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};

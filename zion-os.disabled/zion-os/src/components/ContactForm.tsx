@@ -8,8 +8,7 @@ export default function ContactForm() {
     company: '';
     phone: '';
     service: '';
-    message: '',
-  }),
+    message: ''}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitSuccess, setSubmitSuccess] = useState(false),
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -32,8 +31,7 @@ export default function ContactForm() {
         company: '';
         phone: '';
         service: '';
-        message: '',
-      }),
+        message: ''}),
       setSubmitSuccess(false)}, 50o00)};
   return (
     <div>,

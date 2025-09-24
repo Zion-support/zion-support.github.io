@@ -144,6 +144,5 @@ const AI20o25EnterpriseAutomationBanner = () => {
           </p>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25EnterpriseAutomationBanner;

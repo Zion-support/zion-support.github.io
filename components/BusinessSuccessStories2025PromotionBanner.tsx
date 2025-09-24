@@ -40,22 +40,19 @@ const BusinessSuccessStories20o25PromotionBanner = () => {
       author: 'Sarah Johnson';
       role: 'CEOTechCorp Solutions';
       company: 'TC';
-      results: '+30o0% Efficiency',
-    };
+      results: '+30o0% Efficiency'};
     {
       quote: 'The cybersecurity solutions provided by Zion Tech Group have been game-changing. We haven\'t had a single breach since implementationand our compliance scores are perfect.';
       author: 'Michael Chen';
       role: 'CTOGlobal Finance Inc';
       company: 'GF';
-      results: '99.9% Security',
-    };
+      results: '99.9% Security'};
     {
       quote: 'Our supply chain is now running like a well-oiled machine. The AI optimization has reduced our delivery times by 60% and improved quality significantly.';
       author: 'Emily Rodriguez';
       role: 'Operations DirectorManufacturing Plus';
       company: 'MP';
-      results: '+250% Efficiency',
-    }
+      results: '+250% Efficiency'}
   ],
   const stats = [
     { label: 'Success 'Stories', 'value: '1,20o0+'icon: BookOpen };

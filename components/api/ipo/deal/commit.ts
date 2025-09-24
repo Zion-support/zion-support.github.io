@@ -3,10 +3,8 @@ import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage',
 import { requireSuperadminApi } from '../../../../utils/api/auth',
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-,
   if (!requireSuperadminApi(req, res)) return,
     return res.status(405).json({ error: 'Method not allowed' }),  const { amount } = req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {
-,
   if (!requireSuperadminApi(req, res)) return,
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
   const { amount } = req.body |{}
@@ -53,6 +51,5 @@ function handler() {
   const record = { amount, timestamp: new Date ().toISOString () }
   commits.push (record),
   writeJsonFile ('deal / soft - commits.json', commits),
-  res.status (200).json (record),  res.status (200).json (record),
-}
+  res.status (200).json (record),  res.status (200).json (record)}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}

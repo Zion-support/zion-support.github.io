@@ -4,13 +4,11 @@ import { Button } from './ui/button',
 import { Progress } from './ui/progress',
 interface UploadError {
   row: number,
-  error: string,
-}
+  error: string}
 ,
 interface UploadReport {
   created: number,
-  errors: UploadError[],
-}
+  errors: UploadError[]}
 ,
 export function DropzoneBulkUpload() {
   const [filesetFile] = useState<File | null>(null),
@@ -21,8 +19,7 @@ export function DropzoneBulkUpload() {
     if (accepted.length) {
       setFile(accepted[0]),
       setReport(null),
-      setErrorUrl(null),
-    }
+      setErrorUrl(null)}
   }[]),
   const { getRootPropsgetInputPropsisDragActive } = useDropzone({
     onDrop;

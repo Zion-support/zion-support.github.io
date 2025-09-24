@@ -42,6 +42,5 @@ export default function RealTimeRetrievalArchitectures20o26() {
           </a>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -46,6 +46,5 @@ export default function EmotionalIQPage() {
         industries={['Customer Support', 'Sales', 'HR', 'Healthcare']}
         url='https: //ziontechgroup.com/ai-emotional-intelligence-platform',
       />,
-    </>),
-}
+    </>)}
 ,

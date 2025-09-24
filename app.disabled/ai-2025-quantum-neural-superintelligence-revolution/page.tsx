@@ -516,6 +516,5 @@ export default function QuantumNeuralSuperintelligenceRevolutionPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

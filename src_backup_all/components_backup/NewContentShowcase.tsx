@@ -55,8 +55,7 @@ const NewContentShowcase: React.FC = () => {
                     ? 'bg-green-50o0/30 text-green-20o0',
                     : content.badge === 'REVOLUTIONARY',
                       ? 'bg-purple-50o0/30 text-purple-20o0',
-                      : 'bg-blue-50o0/30 text-blue-20o0',
-                }`}
+                      : 'bg-blue-50o0/30 text-blue-20o0'}`}
               >,
                 {content.badge}
               </span>,
@@ -81,6 +80,5 @@ const NewContentShowcase: React.FC = () => {
           View All Content,
         </a>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NewContentShowcase;

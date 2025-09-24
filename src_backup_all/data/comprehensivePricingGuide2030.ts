@@ -23,8 +23,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o30: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/micro-saas-starter";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$250-40o0/month";
     competitors: ["Zapier", "Make", "n8n"];
     roi: "30o0% within 4 months";
@@ -59,8 +58,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o30: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/micro-saas-professional";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$60o0-120o0/month";
     competitors: ["HubSpot", "Salesforce", "Adobe"];
     roi: "50o0% within 6 months";
@@ -97,8 +95,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o30: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/micro-saas-enterprise";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$20o00-50o00/month";
     competitors: ["Microsoft", "Oracle", "SAP"];
     roi: "80o0% within 12 months";
@@ -138,8 +135,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o30: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-content-studio-pricing";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$20o0-50o0/month";
     competitors: ["Jasper", "Copy.ai", "Writesonic"];
     roi: "30o0% within 3 months";
@@ -181,8 +177,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o30: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-support-pricing";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$150-40o0/month";
     competitors: ["Intercom", "Zendesk", "Freshdesk"];
     roi: "40o0% within 4 months";
@@ -225,8 +220,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o30: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/enterprise-ai-transformation-pricing";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$20,0o00-50,0o00";
     competitors: ["McKinsey", "BCG", "Deloitte"];
     roi: "10o00% within 18 months";
@@ -269,8 +263,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o30: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/healthcare-ai-pricing";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$150o0-50o00/month";
     competitors: ["Epic", "Cerner", "Practice Fusion"];
     roi: "60o0% within 12 months";
@@ -313,8 +306,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_20o30: ProductListing[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/fintech-ai-pricing";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     marketPrice: "$250o0-80o00/month";
     competitors: ["Betterment", "Wealthfront", "Personal Capital"];
     roi: "70o0% within 15 months";

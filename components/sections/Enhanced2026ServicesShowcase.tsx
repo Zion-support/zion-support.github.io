@@ -90,8 +90,7 @@ const Enhanced2026ServicesShowcase = () =>: any {
       id: 'quantum - cybersecurity - suite - 2026';
       name: 'Quantum Cybersecurity Suite 2026';
       description:,
-        'Next - generation cybersecurity platform that uses quantum - resistant algorithms to protect against current and future cyber threats.',      price: '$599',      features: ['Task AutomationProcess Optimization24 / 7 OperationScalable Architecture'],
-    }
+        'Next - generation cybersecurity platform that uses quantum - resistant algorithms to protect against current and future cyber threats.',      price: '$599',      features: ['Task AutomationProcess Optimization24 / 7 OperationScalable Architecture']}
 ,
     {
       id: 'quantum - cybersecurity - suite - 2026';
@@ -117,8 +116,7 @@ const Enhanced2026ServicesShowcase = () =>: any {
       icon: Cpu;
       color: 'from - green - 500 to - emerald - 500';
       category: 'Emerging Tech';
-      features: ['Brain-like ProcessingLow PowerReal-time LearningCognitive Computing'],
-    }
+      features: ['Brain-like ProcessingLow PowerReal-time LearningCognitive Computing']}
     {
       id: 'dna-computing-platform-2026',
       name: 'DNA Computing Platform 2026',
@@ -128,8 +126,7 @@ const Enhanced2026ServicesShowcase = () =>: any {
       icon: Globe,
       color: 'from-indigo-500 to-purple-500',
       category: 'Emerging Tech',
-      features: ['Molecular ProcessingExponential SpeedComplex AlgorithmsResearch Ready'],
-    }
+      features: ['Molecular ProcessingExponential SpeedComplex AlgorithmsResearch Ready']}
     {
       id: 'space - debris - tracking - system';
       name: 'Space Debris Tracking System 2026';
@@ -164,8 +161,7 @@ const Enhanced2026ServicesShowcase = () =>: any {
         'Molecular Processing',
         'Exponential Speed',
         'Complex Algorithms',
-        'Research Ready'],
-    }
+        'Research Ready']}
     {
       id: 'space - debris - tracking - system';
       name: 'Space Debris Tracking System 2026';
@@ -230,8 +226,7 @@ const Enhanced2026ServicesShowcase = () => {
       id: 'quantum-cybersecurity-suite-2026';
       name: 'Quantum Cybersecurity Suite 2026';
       description:,
-        'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.',      price: '$599',      features: ['Task AutomationProcess Optimization24/7 OperationScalable Architecture'],
-    };
+        'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.',      price: '$599',      features: ['Task AutomationProcess Optimization24/7 OperationScalable Architecture']};
     {
       id: 'quantum-cybersecurity-suite-2026';
       name: 'Quantum Cybersecurity Suite 2026';
@@ -258,8 +253,7 @@ const Enhanced2026ServicesShowcase = () => {
       icon: Cpu;
       color: 'from-green-500 to-emerald-500';
       category: 'Emerging Tech';
-      features: ['Brain-like ProcessingLow PowerReal-time LearningCognitive Computing'],
-    };
+      features: ['Brain-like ProcessingLow PowerReal-time LearningCognitive Computing']};
     {
       id: 'dna-computing-platform-2026';
       name: 'DNA Computing Platform 2026';
@@ -269,8 +263,7 @@ const Enhanced2026ServicesShowcase = () => {
       icon: Globe;
       color: 'from-indigo-500 to-purple-500';
       category: 'Emerging Tech';
-      features: ['Molecular ProcessingExponential SpeedComplex AlgorithmsResearch Ready'],
-    };
+      features: ['Molecular ProcessingExponential SpeedComplex AlgorithmsResearch Ready']};
     {
       id: 'space-debris-tracking-system';
       name: 'Space Debris Tracking System 2026';
@@ -692,8 +685,7 @@ const Enhanced2026ServicesShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 };
 export default Enhanced2026ServicesShowcase)}
 export default Enhanced2026ServicesShowcase;

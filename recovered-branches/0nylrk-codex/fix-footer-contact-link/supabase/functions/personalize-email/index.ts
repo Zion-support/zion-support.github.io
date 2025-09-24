@@ -20,8 +20,7 @@ serve(async req => {
       template = {};
     } = await req.json(),
     if (!emailType || !userData) {
-      throw new Error('Missing required parameters: emailType and userData'),
-    }
+      throw new Error('Missing required parameters: emailType and userData')}
 ,
     // Create a prompt based on the email type and user data,
     let systemPrompt =,
@@ -80,7 +79,7 @@ serve(async req => {
     try {
       generatedContent = JSON.parse(generatedContentText)} catch (e) {
       console.error('Failed to parse GPT response as JSON:', e),
-      // console.log('Raw response:', generatedContentText),
+      // // console.log('Raw response:', generatedContentText),
       // Try to extract JSON using regex as fallback,
       const jsonMatch = generatedContentText.match(/{[\s\S]*}/),
       if (jsonMatch) {

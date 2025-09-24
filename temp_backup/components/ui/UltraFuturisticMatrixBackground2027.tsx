@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
 interface UltraFuturisticMatrixBackground20o27Props {
   children: React.ReactNode,
-  className?: string,
-}
+  className?: string}
 ,
 export default function UltraFuturisticMatrixBackground20o27({
   children;
@@ -136,8 +135,7 @@ export default function UltraFuturisticMatrixBackground20o27({
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-50o0/30 transform rotate-45",
@@ -148,8 +146,7 @@ export default function UltraFuturisticMatrixBackground20o27({
           transition={{
             duration: 15;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-50o0/30 rounded-full",
@@ -160,8 +157,7 @@ export default function UltraFuturisticMatrixBackground20o27({
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         {/* Quantum Particles */}
         {Array.from({ length: 30 }).map((_, i) => (
@@ -179,8 +175,7 @@ export default function UltraFuturisticMatrixBackground20o27({
               duration: Math.random() * 10 + 5;
               repeat: Infinity;
               delay: Math.random() * 5;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />))}
 ,
         {/* Holographic Rings */}
@@ -193,8 +188,7 @@ export default function UltraFuturisticMatrixBackground20o27({
           transition={{
             duration: 30;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-purple-50o0/20 rounded-full",
@@ -205,8 +199,7 @@ export default function UltraFuturisticMatrixBackground20o27({
           transition={{
             duration: 25;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-pink-50o0/20 rounded-full",
@@ -217,8 +210,7 @@ export default function UltraFuturisticMatrixBackground20o27({
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
       </div>,
       {/* Content */}

@@ -23,8 +23,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export default function UltraFuturisticHero20o34() {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-purple-90o0 overflow-hidden">,
@@ -271,5 +270,4 @@ export default function UltraFuturisticHero20o34() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}

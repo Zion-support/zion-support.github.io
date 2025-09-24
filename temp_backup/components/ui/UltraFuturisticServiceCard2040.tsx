@@ -16,8 +16,7 @@ interface UltraFuturisticServiceCard20o40Props {
       yearly: number,
       currency: string,
       trialDays: number,
-      setupTime: string,
-    };
+      setupTime: string};
     features: string[],
     benefits: string[],
     targetAudience: string[],
@@ -38,10 +37,8 @@ interface UltraFuturisticServiceCard20o40Props {
     launchDate: string,
     customers: number,
     rating: number,
-    reviews: number,
-  };
-  index: number,
-}
+    reviews: number};
+  index: number}
 ,
 export default function UltraFuturisticServiceCard20o40({ service, index }: UltraFuturisticServiceCard20o40Props) {
   const [isHovered, setIsHovered] = useState(false),
@@ -51,8 +48,7 @@ export default function UltraFuturisticServiceCard20o40({ service, index }: Ultr
       opacity: 0;
       y: 50;
       scale: 0.9;
-      rotateX: -15,
-    };
+      rotateX: -15};
     visible: {
       opacity: 1;
       y: 0;
@@ -60,16 +56,14 @@ export default function UltraFuturisticServiceCard20o40({ service, index }: Ultr
       rotateX: 0;
       transition: {
         duration: 0.6;
-        delay: index * 0.1,
-      }
+        delay: index * 0.1}
     };
     hover: {
       y: -10;
       scale: 1.0o2;
       rotateX: 5;
       transition: {
-        duration: 0.3,
-      }
+        duration: 0.3}
     }
   };
   const contentVariants ={
@@ -78,8 +72,7 @@ export default function UltraFuturisticServiceCard20o40({ service, index }: Ultr
       opacity: 1;
       height: "auto";
       transition: {
-        duration: 0.4,
-      }
+        duration: 0.4}
     }
   };
   const neonGlowVariants ={
@@ -88,8 +81,7 @@ export default function UltraFuturisticServiceCard20o40({ service, index }: Ultr
     hover: {
       boxShadow: "0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor";
       transition: {
-        duration: 0.3,
-      }
+        duration: 0.3}
     }
   };
   const getGradientClass = (color: string) => {
@@ -302,8 +294,7 @@ export default function UltraFuturisticServiceCard20o40({ service, index }: Ultr
               transition={{
                 duration: 3 + i;
                 repeat: -1;
-                delay: i * 0.5,
-              }}
+                delay: i * 0.5}}
              />))}
         </div>,
       </div>,

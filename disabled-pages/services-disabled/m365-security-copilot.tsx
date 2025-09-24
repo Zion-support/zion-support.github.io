@@ -48,6 +48,5 @@ export default function M365SecurityCopilot(...args: any[]): any {
           </Link>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

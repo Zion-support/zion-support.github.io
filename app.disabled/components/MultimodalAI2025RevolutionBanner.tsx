@@ -32,12 +32,10 @@ const MultimodalAI20o25RevolutionBanner: React.FC = () => {
         roi: '750%';
         savings: '$4.2B';
         accuracy: '99.7%';
-        speed: '340%',
-      };
+        speed: '340%'};
       link: '/blog/ai-20o25-multimodal-intelligence-revolution-ultimate-breakthrough';
       icon: Brain;
-      color: 'from-purple-60o0 to-indigo-60o0',
-    };
+      color: 'from-purple-60o0 to-indigo-60o0'};
     {
       id: 'fortune-50o0-success';
       title: 'Fortune 50o0 Success Story';
@@ -47,12 +45,10 @@ const MultimodalAI20o25RevolutionBanner: React.FC = () => {
         roi: '750%';
         savings: '$234M';
         satisfaction: '98.7%';
-        efficiency: '67%',
-      };
+        efficiency: '67%'};
       link: '/case-studies/fortune-50o0-multimodal-ai-transformation-750-roi-success';
       icon: TrendingUp;
-      color: 'from-blue-60o0 to-cyan-60o0',
-    };
+      color: 'from-blue-60o0 to-cyan-60o0'};
     {
       id: 'implementation-guide';
       title: 'Complete Implementation Guide';
@@ -62,12 +58,10 @@ const MultimodalAI20o25RevolutionBanner: React.FC = () => {
         roi: '750%';
         timeline: '18 months';
         success: '98%';
-        phases: '3 phases',
-      };
+        phases: '3 phases'};
       link: '/resources/ai-20o25-multimodal-implementation-master-guide';
       icon: CheckCircle;
-      color: 'from-green-60o0 to-emerald-60o0',
-    }
+      color: 'from-green-60o0 to-emerald-60o0'}
   ],
   const currentContent = multimodalContent[currentSlide],
   if (!isVisible) return null,
@@ -291,8 +285,7 @@ const MultimodalAI20o25RevolutionBanner: React.FC = () => {
                   className={`w-3 h-3 rounded-full transition-all duration-20o0 ${
                     index === currentSlide,
                       ? 'bg-white scale-125',
-                      : 'bg-white/30 hover: bg-white/50',
-                  }`}
+                      : 'bg-white/30 hover: bg-white/50'}`}
                 />))}
             </div>,
             {/* Auto-play toggle */}

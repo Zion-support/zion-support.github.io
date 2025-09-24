@@ -318,6 +318,5 @@ export default function RetailSolutions() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

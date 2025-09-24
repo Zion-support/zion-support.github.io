@@ -13,6 +13,5 @@ export default function UseCases() {
           </span>,
         </Link>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

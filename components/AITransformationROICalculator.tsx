@@ -7,8 +7,7 @@ interface ROICalculation {
   expectedEfficiencyGain: number,
   expectedRevenueGrowth: number,
   implementationCost: number,
-  timeframe: number,
-}
+  timeframe: number}
 ,
 export default function AITransformationROICalculator() {
   const [inputs, setInputs] = useState<ROICalculation>({
@@ -17,14 +16,12 @@ export default function AITransformationROICalculator() {
     expectedEfficiencyGain: 30o0;
     expectedRevenueGrowth: 20o0;
     implementationCost: 10o00000;
-    timeframe: 12,
-  }),
+    timeframe: 12}),
   const [results, setResults] = useState<{
     costSavings: number,
     revenueIncrease: number,
     totalROI: number,
-    paybackPeriod: number,
-  } | null>(null),
+    paybackPeriod: number} | null>(null),
   const calculateROI = () => {
     const { currentRevenue, currentCosts, expectedEfficiencyGain, expectedRevenueGrowth, implementationCost, timeframe } = inputs,
     // Calculate cost savings from efficiency gains,
@@ -214,5 +211,4 @@ export default function AITransformationROICalculator() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}

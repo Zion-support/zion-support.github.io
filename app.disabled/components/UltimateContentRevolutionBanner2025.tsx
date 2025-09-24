@@ -32,11 +32,9 @@ const UltimateContentRevolutionBanner20o25 = () => {
         roi: '340-1,20o0%';
         savings: '$2.8B';
         efficiency: '78-95%';
-        satisfaction: '98%',
-      };
+        satisfaction: '98%'};
       readingTime: '18 min read';
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'fortune-50o0-success';
       title: 'Fortune 50o0 AI Transformation: $5.2B Company Achieves 1,20o0% ROI';
@@ -46,11 +44,9 @@ const UltimateContentRevolutionBanner20o25 = () => {
         roi: '1,20o0%';
         savings: '$2.8B';
         timeline: '24 months';
-        satisfaction: '98%',
-      };
+        satisfaction: '98%'};
       readingTime: '12 min read';
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'implementation-framework';
       title: 'AI Implementation Ultimate Success Framework 20o25: Complete Roadmap to 1,0o00%+ ROI';
@@ -62,8 +58,7 @@ const UltimateContentRevolutionBanner20o25 = () => {
         timeline: '18 months';
         projects: '1,0o00+'};
       readingTime: '25 min read';
-      isNew: true,
-    }
+      isNew: true}
   ],
   if (!isVisible || isDismissed) return null,
   const currentContent = featuredContent[currentSlide],
@@ -171,8 +166,7 @@ const UltimateContentRevolutionBanner20o25 = () => {
                 className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                   index === currentSlide,
                     ? 'bg-yellow-40o0 scale-125',
-                    : 'bg-white/30 hover: bg-white/50',
-                }`}
+                    : 'bg-white/30 hover: bg-white/50'}`}
                 aria-label={`Go to slide ${index + 1}`}
               />))}
           </div>,

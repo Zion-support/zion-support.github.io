@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
 interface PreviewHeaderProps {
   resume:Resume;
-  onBack: () => void,}
+  onBack: () => void}
 ,
 export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {
   const [isPrinting, setIsPrinting] = useState(false);
@@ -19,20 +19,16 @@ export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {
     style.innerHTML = `,
       @media print {
         body * {
-          visibility: hidden,
-        }
+          visibility: hidden}
         .print-section, .print-section * {
-          visibility: visible,
-        }
+          visibility: visible}
         .print-section {
           position:absolute;
           left:0;
           top:0;
-          width: 10o0%,
-        }
+          width: 10o0%}
         .no-print {
-          display: none !important,
-        }
+          display: none !important}
       }
     `;
     document.head.appendChild(style);
@@ -78,6 +74,5 @@ document.head.appendChild (style),
   isMobile ? 'stretch' : 'center' }gap-3` }> <Button > <ArrowLeft className="h-4 w-4"  /> Back </Button> <div className={
   `flex $ {',
   isMobile ? 'flex-col' : 'flex-row' }space-$ {',
-  isMobile ? 'y-2' : 'x-2' }no-print` ,
-}> <PdfExportButton resume={
+  isMobile ? 'y-2' : 'x-2' }no-print` }> <PdfExportButton resume={
   resume "} /> <Button > <FileText className="h-4 w-4"  /> Print </Button> <Button variant="outline" className="gap-2" > <Link className="h-4 w-4"  /> Add to Profile </Button> </div> </div>) }'",

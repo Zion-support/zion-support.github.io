@@ -7,8 +7,7 @@ function createRateLimiter(maxRequests: number, windowMs: number) {
     const userRequests = requests.get(key) || [],
     const recentRequests = userRequests.filter(time => time > windowStart),
     if (recentRequests.length >= maxRequests) {
-      return false,
-    }
+      return false}
 ,
     recentRequests.push(now),
     requests.set(key, recentRequests),

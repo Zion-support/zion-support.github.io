@@ -132,8 +132,7 @@ export default function NeoFuturisticNavigation() {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown),
-  };
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
   const closeMobileMenu = () => {
     setIsOpen(false),
     setActiveDropdown(null)};

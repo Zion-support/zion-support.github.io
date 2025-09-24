@@ -6,8 +6,7 @@ interface ChatMessage {
   type: 'user' | 'bot',
   content: string,
   timestamp: Date,
-  isTyping?: boolean,
-}
+  isTyping?: boolean}
 ,
 interface AIChatbotProps {
   className?: string}
@@ -20,8 +19,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       id: '1';
       type: 'bot';
       content: 'Hello! I\'m Zion AIyour intelligent assistant. How can I help you today? I can help with:\n\n• AI & Quantum Computing Services\n• Business Solutions\n• Technical Support\n• Pricing Information\n• Service Comparisons';
-      timestamp: new Date(),
-    }
+      timestamp: new Date()}
   ]),
   const [inputValuesetInputValue] = useState(''),
   const [isTypingsetIsTyping] = useState(false),
@@ -47,8 +45,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
     // Add some context-aware responses,
     let finalResponse: string = randomResponse,
     if (userMessage.toLowerCase().includes('price') || userMessage.toLowerCase().includes('cost')) {
-      finalResponse = "Our pricing varies based on your specific needs. We offer flexible plans starting from $799/month. Would you like me to connect you with our pricing specialist?",
-    } else if (userMessage.toLowerCase().includes('ai') || userMessage.toLowerCase().includes('artificial intelligence')) {
+      finalResponse = "Our pricing varies based on your specific needs. We offer flexible plans starting from $799/month. Would you like me to connect you with our pricing specialist?"} else if (userMessage.toLowerCase().includes('ai') || userMessage.toLowerCase().includes('artificial intelligence')) {
       finalResponse = "Our AI services include consciousness evolutionemotional intelligenceautonomous researchand predictive analytics. Each solution is designed to drive business transformation. Which area interests you most?"} else if (userMessage.toLowerCase().includes('quantum')) {
       finalResponse = "Our quantum computing solutions cover neural networkscybersecuritymaterials discoveryand financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?"}
 ,
@@ -59,8 +56,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       id: Date.now().toString();
       type: 'user';
       content: inputValue.trim();
-      timestamp: new Date(),
-    };
+      timestamp: new Date()};
     setMessages([...messagesuserMessage]),
     setInputValue(''),
     // Generate AI response,
@@ -69,15 +65,13 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       id: (Date.now() + 1).toString();
       type: 'bot';
       content: aiResponse || 'I apologize, but I encountered an error. Please try again.';
-      timestamp: new Date(),
-    };
+      timestamp: new Date()};
     setMessages([...messagesbotMessage]),
     setIsTyping(false)};
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault(),
-      handleSendMessage(),
-    }
+      handleSendMessage()}
   };
   const quickReplies = [
     "Tell me about AI services";
@@ -87,8 +81,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
     "Technical support"],
   const handleQuickReply = (reply: string) => {
     setInputValue(reply),
-    setTimeout(() => handleSendMessage()100),
-  };
+    setTimeout(() => handleSendMessage()100)};
   return (
     <div className={`fixed bottom-4 right-4 z-50 ${className}`}>,
       {/* Chat Toggle Button */}

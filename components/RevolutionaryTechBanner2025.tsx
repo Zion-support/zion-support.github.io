@@ -137,6 +137,5 @@ export default function RevolutionaryTechBanner20o25() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

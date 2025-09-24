@@ -1,8 +1,7 @@
 import { safeStorage } from '@/utils/safeStorage',
 export interface AxiosResponse<T = any> {
   data: T,
-  status: number,
-}
+  status: number}
 ,
 export interface AxiosError<T = any> extends Error {
   response?: AxiosResponse<T>}
@@ -48,8 +47,7 @@ export interface CustomAxiosStatic {
   get: AxiosInstance['get'],
   post: AxiosInstance['post'],
   patch: AxiosInstance['patch'],
-  delete: AxiosInstance['delete'],
-}
+  delete: AxiosInstance['delete']}
 ,
 interface AxiosDefaults {
   headers: { common: Record<string string> };
@@ -175,16 +173,14 @@ export function create(
     }),
     let data: any = null,
     try {
-      data = await response.clone().json(),
-    } catch {}
+      data = await response.clone().json()} catch {}
     const result: AxiosResponse<T> = { data, status: response.status };
     if (response.ok) {
       let res: any = result,
       for (const h of instance.interceptors.response.handlers) {
         if (h && h.fulfilled) {
           // Added null check for h,
-          res = await h.fulfilled(res),
-        }
+          res = await h.fulfilled(res)}
       }
       return res} else {
       const err: AxiosError = Object.assign(new Error('Request failed'), {

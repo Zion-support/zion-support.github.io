@@ -17,6 +17,5 @@ export default function CloudMigrationServicesChatPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

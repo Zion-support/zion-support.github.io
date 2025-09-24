@@ -31,8 +31,7 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
       life: number,
       maxLife: number,
       color: string,
-      type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk',
-    }> = [],
+      type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk'}> = [],
     const colors ={
       quantum: ['#0o0ffff', '#0o080ff', '#80o00ff', '#ff0o080'];
       holographic: ['#ff0o0ff', '#80o00ff', '#0o080ff', '#0o0ffff'];
@@ -242,8 +241,7 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/20 transform rotate-45",
@@ -255,8 +253,7 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
             duration: 10;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 2,
-          }}
+            delay: 2}}
          />,
         <motion.div,
           className="absolute bottom-32 left-32 w-40 h-40 border border-pink-40o0/20 rounded-full",
@@ -268,8 +265,7 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
             duration: 12;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 4,
-          }}
+            delay: 4}}
          />,
       </div>,
       {/* Content */}

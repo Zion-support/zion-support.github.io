@@ -35,8 +35,7 @@ const AI20o25TrendsInnovationShowcase = () => {
       icon: Brain;
       stats: "85% efficiency increase";
       color: "from-purple-50o0 to-pink-50o0";
-      features: ["Content Generation"Process Automation"Creative Solutions"],
-    };
+      features: ["Content Generation"Process Automation"Creative Solutions"]};
     {
       id: 2;
       title: "Edge AI Computing";
@@ -44,17 +43,15 @@ const AI20o25TrendsInnovationShowcase = () => {
       icon: Cpu;
       stats: "60% faster processing";
       color: "from-blue-50o0 to-cyan-50o0";
-      features: ["Real-time Processing"Privacy Protection"Reduced Latency"],
-    };
+      features: ["Real-time Processing"Privacy Protection"Reduced Latency"]};
     {
       id: 3;
       title: "AI-Powered Analytics";
-      description: "Unlock insights from your data with advanced AI analytics that predict trends and optimize window.performance.";
+      description: "Unlock insights from your data with advanced AI analytics that predict trends and optimize window.window.performance.";
       icon: BarChart3;
       stats: "30o0% better insights";
       color: "from-green-50o0 to-emerald-50o0";
-      features: ["Predictive Analytics"Trend Analysis"Performance Optimization"],
-    };
+      features: ["Predictive Analytics"Trend Analysis"Performance Optimization"]};
     {
       id: 4;
       title: "Quantum AI Integration";
@@ -62,34 +59,29 @@ const AI20o25TrendsInnovationShowcase = () => {
       icon: Zap;
       stats: "10o00x faster computation";
       color: "from-yellow-50o0 to-orange-50o0";
-      features: ["Quantum Computing"Exponential Speed"Complex Problem Solving"],
-    }
+      features: ["Quantum Computing"Exponential Speed"Complex Problem Solving"]}
   ],
   const innovations = [
     {
       title: "Neural Interface Technology";
       description: "Direct brain-computer interfaces for seamless human-AI interaction";
       impact: "Revolutionary";
-      category: "Human-AI Integration",
-    };
+      category: "Human-AI Integration"};
     {
       title: "Autonomous Business Systems";
       description: "Self-managing business processes that adapt and optimize automatically";
       impact: "Transformative";
-      category: "Business Automation",
-    };
+      category: "Business Automation"};
     {
       title: "AI-Powered Cybersecurity";
       description: "Advanced threat detection and prevention using machine learning";
       impact: "Critical";
-      category: "Security",
-    };
+      category: "Security"};
     {
       title: "Predictive Customer Experience";
       description: "Anticipate customer needs and deliver personalized experiences";
       impact: "Game-changing";
-      category: "Customer Experience",
-    }
+      category: "Customer Experience"}
   ],
   const benefits = [
     { icon: TrendingUptext: "Increased Revenue"value: "+150%" };
@@ -133,8 +125,7 @@ const AI20o25TrendsInnovationShowcase = () => {
                   className={`p-6 rounded-xl cursor-pointer transition-all duration-30o0 ${
                     activeTrend === index,
                       ? 'bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 border border-blue-50o0/50',
-                      : 'bg-white/5 border border-white/10 hover: bg-white/10',
-                  }`}
+                      : 'bg-white/5 border border-white/10 hover: bg-white/10'}`}
                   onClick={() => setActiveTrend(index)}
                   whileHover={{ scale: 1.0o2 }}
                   whileTap={{ scale: 0.98 }}
@@ -249,6 +240,5 @@ const AI20o25TrendsInnovationShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25TrendsInnovationShowcase;

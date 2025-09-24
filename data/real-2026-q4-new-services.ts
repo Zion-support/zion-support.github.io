@@ -3,8 +3,7 @@ export interface Real20o26Q4NewService {
   name: string,
   tagline: string,
   price: string,
-  features: string[],
-}
+  features: string[]}
 export const real20o26Q4NewServices: Real20o26Q4NewService[] = [
   {
     id: 'q4-20o26-new-service-1';

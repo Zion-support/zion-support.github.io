@@ -15,6 +15,5 @@ export default function QuantumApiGateway20o43Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

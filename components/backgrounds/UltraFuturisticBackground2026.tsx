@@ -18,8 +18,7 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)'),
     setIsReducedMotion(mediaQuery.matches),
     const handleChange = (event: MediaQueryListEvent) => {
-      setIsReducedMotion(event.matches),
-    };
+      setIsReducedMotion(event.matches)};
     mediaQuery.addEventListener('change', handleChange),
     return () => mediaQuery.removeEventListener('change', handleChange)}, []),
   // Intersection Observer for performance,
@@ -40,8 +39,7 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
       case 'low': return 0.3,
       case 'medium': return 0.6,
       case 'high': return 1.0,
-      default: return 0.6,
-    }
+      default: return 0.6}
   }, []),
   // Get theme colors,
   const getThemeColors = useCallback((theme: string): { primary: string, secondary: string, accent: string } => {
@@ -50,26 +48,22 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
         return {
           primary: '#3b82f6',   // Blue,
           secondary: '#8b5cf6',  // Purple,
-          accent: '#06b6d4'      // Cyan,
-        };
+          accent: '#06b6d4'      // Cyan};
       case 'cyber':,
         return {
           primary: '#10b981',    // Green,
           secondary: '#f59e0b',  // Amber,
-          accent: '#ef4444'      // Red,
-        };
+          accent: '#ef4444'      // Red};
       case 'neon':,
         return {
           primary: '#ec4899',    // Pink,
           secondary: '#f97316',  // Orange,
-          accent: '#8b5cf6'      // Purple,
-        };
+          accent: '#8b5cf6'      // Purple};
       default: ,
         return {
           primary: '#3b82f6';
           secondary: '#8b5cf6';
-          accent: '#06b6d4',
-        };
+          accent: '#06b6d4'};
     }
   }, []),
   // Memoized particle system configuration,
@@ -106,8 +100,7 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
       opacity: number,
       color: string,
       life: number,
-      maxLife: number,
-    }> = [],
+      maxLife: number}> = [],
     const colors = [
       '#00ffff'// Cyan,
       '#ff00ff'// Magenta,
@@ -144,8 +137,7 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
           y = Math.random() * canvas.height,
           vx = Math.random() * 2 + 1,
           vy = (Math.random() - 0.5) * 2,
-          break,
-      }
+          break}
 ,
       return {
         x;
@@ -156,8 +148,7 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
         color: colors[Math.floor(Math.random() * colors.length)];
         alpha: Math.random() * 0.8 + 0.2;
         life: 0;
-        maxLife: Math.random() * 200 + 100,
-      };
+        maxLife: Math.random() * 200 + 100};
     };
     // Initialize particles,
     const initParticles = () => {
@@ -172,8 +163,7 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
           opacity: Math.random() * (particleConfig.opacity.max - particleConfig.opacity.min) + particleConfig.opacity.min;
           color: [colors.primary, colors.secondary, colors.accent][Math.floor(Math.random() * 3)];
           life: Math.random() * 100;
-          maxLife: 100,
-        })}
+          maxLife: 100})}
     };
     // Animation loop,
     const animate = () => {
@@ -274,49 +264,41 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
           animate={{
             rotate: 360;
             scale: [1.21];
-            opacity: [0.30.60.3],
-          }}
+            opacity: [0.30.60.3]}}
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-pink-400/20 rounded-full",
           animate={{
             y: [0-20];
-            opacity: [0.20.50.2],
-          }}
+            opacity: [0.20.50.2]}}
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         />,
         <motion.div,
           className="absolute bottom-32 left-32 w-40 h-40 border border-purple-400/20 transform rotate-45",
           animate={{
             rotate: [0180360];
-            scale: [1.1],
-          }}
+            scale: [1.1]}}
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         />,
         <motion.div,
           className="absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12",
           animate={{
             rotate: [0-180-360];
-            opacity: [0.40.70.4],
-          }}
+            opacity: [0.40.70.4]}}
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         />,
       </div>,
       {/* Energy Field Effects */}
@@ -324,24 +306,20 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
         <motion.div,
           className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent",
           animate={{
-            x: ['-100%'100%'],
-          }}
+            x: ['-100%'100%']}}
           transition={{
             duration: 15;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         />,
         <motion.div,
           className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent",
           animate={{
-            y: ['-100%'100%'],
-          }}
+            y: ['-100%'100%']}}
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         />,
       </div>,
       {/* Content */}

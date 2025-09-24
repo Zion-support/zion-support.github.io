@@ -15,7 +15,6 @@ import { toast } from "sonner",
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 export default function Profile() {
-,
   const { user, isLoading, logout } = useAuth(),
   const navigate = useNavigate(),
 export default function Profile() {
@@ -36,7 +35,6 @@ export default function Profile() {
       navigate("/login?redirect=/profile")}
   }, [user, isLoading, navigate]),
   if (isLoading) {
-,
     return (
       <>,
         <Header />,
@@ -62,8 +60,7 @@ export default function Profile() {
           </div>,
         </div>,
         <Footer />,
-      </>),
-  }
+      </>)}
   return (
     <>,
       <Header />,
@@ -95,16 +92,14 @@ export default function Profile() {
         </div>,
       </div>,
       <Footer />,
-    </>),
-}
+    </>)}
 export default function Profile() {
   const { user, isLoading, logout } = useAuth();
   const navigate = useNavigate();
   useEffect(() => {
     if (!isLoading && !user) {
       toast.error("Please log in to view your profile");
-      navigate("/login?redirect=/profile"),
-}
+      navigate("/login?redirect=/profile")}
   }, [user, is_loading, navigate]),
   // Check condition,
 if ( {) {
@@ -135,8 +130,7 @@ if ( {) {
           </div>,
         </div>,
         <Footer />,
-      </>),
-  }
+      </>)}
   return (
     <>,
       <Header />,
@@ -167,6 +161,5 @@ if ( {) {
         </div>,
       </div>,
       <Footer />,
-    </>),
-}
+    </>)}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}

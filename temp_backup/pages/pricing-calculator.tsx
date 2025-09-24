@@ -15,6 +15,5 @@ export default function PricingCalculatorPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

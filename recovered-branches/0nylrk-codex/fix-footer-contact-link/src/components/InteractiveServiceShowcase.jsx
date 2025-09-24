@@ -225,8 +225,7 @@ const InteractiveServiceShowcase = () => {
               className={`group flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-xl shadow-zion-cyan/25',
-                  : 'bg-white/10 backdrop-blur-md text-zion-slate-light border border-white/20 hover: bg-white/20 hover:border-zion-cyan/50',
-              }`}
+                  : 'bg-white/10 backdrop-blur-md text-zion-slate-light border border-white/20 hover: bg-white/20 hover:border-zion-cyan/50'}`}
             >,
               <span className='text-xl'>{category.icon}</span>,
               <span>{category.name}</span>,
@@ -355,6 +354,5 @@ const InteractiveServiceShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default InteractiveServiceShowcase;

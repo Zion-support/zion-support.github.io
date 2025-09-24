@@ -15,6 +15,5 @@ export default function Storybook() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

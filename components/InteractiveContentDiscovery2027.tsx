@@ -25,8 +25,7 @@ export default function InteractiveContentDiscovery20o27() {
       accuracy: '99.7%';
       type: 'blog';
       url: '/blog/ai-20o26-quantum-neural-fusion-breakthrough';
-      featured: true,
-    };
+      featured: true};
     {
       id: 2;
       title: 'AI 20o27 Neural Synthesis Predictions';
@@ -37,8 +36,7 @@ export default function InteractiveContentDiscovery20o27() {
       accuracy: '99.7%';
       type: 'blog';
       url: '/blog/ai-20o27-neural-synthesis-breakthrough';
-      featured: true,
-    };
+      featured: true};
     {
       id: 3;
       title: 'Quantum Computing Solutions 20o26';
@@ -49,8 +47,7 @@ export default function InteractiveContentDiscovery20o27() {
       accuracy: '99.9%';
       type: 'services';
       url: '/quantum-computing-solutions';
-      featured: false,
-    };
+      featured: false};
     {
       id: 4;
       title: 'Neural Interface Healthcare Success';
@@ -61,8 +58,7 @@ export default function InteractiveContentDiscovery20o27() {
       accuracy: '95%';
       type: 'case-study';
       url: '/case-studies/ai-20o26-neural-interface-healthcare-breakthrough';
-      featured: true,
-    };
+      featured: true};
     {
       id: 5;
       title: 'Autonomous Manufacturing Revolution';
@@ -73,8 +69,7 @@ export default function InteractiveContentDiscovery20o27() {
       accuracy: '99.9%';
       type: 'case-study';
       url: '/case-studies/ai-20o26-autonomous-manufacturing-revolution';
-      featured: false,
-    };
+      featured: false};
     {
       id: 6;
       title: 'AI 20o27 Future Predictions Analysis';
@@ -85,8 +80,7 @@ export default function InteractiveContentDiscovery20o27() {
       accuracy: '95%';
       type: 'blog';
       url: '/ai-20o27-future-predictions-revolutionary';
-      featured: true,
-    }
+      featured: true}
   ],
   const filteredContent = contentItems.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
@@ -100,8 +94,7 @@ export default function InteractiveContentDiscovery20o27() {
       case 'Intermediate': return 'bg-yellow-10o0 text-yellow-80o0',
       case 'Advanced': return 'bg-orange-10o0 text-orange-80o0',
       case 'Expert': return 'bg-red-10o0 text-red-80o0',
-      default: return 'bg-gray-10o0 text-gray-80o0',
-    }
+      default: return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <div className="py-16 px-4 sm: px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">,
@@ -155,8 +148,7 @@ export default function InteractiveContentDiscovery20o27() {
                 <button
                   onClick={() => setSelectedTag(', ')}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-20o0 ${
-                    selectedTag === ', ' ? 'bg-purple-50o0 text-white' : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-                  }`}
+                    selectedTag === ', ' ? 'bg-purple-50o0 text-white' : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
                 >,
                   All Tags,
                 </button>,
@@ -165,8 +157,7 @@ export default function InteractiveContentDiscovery20o27() {
                     key={tag.id}
                     onClick={() => setSelectedTag(tag.id)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-20o0 ${
-                      selectedTag === tag.id ? 'bg-purple-50o0 text-white' : `${tag.color} hover: opacity-80`,
-                    }`}
+                      selectedTag === tag.id ? 'bg-purple-50o0 text-white' : `${tag.color} hover: opacity-80`}`}
                   >,
                     {tag.name}
                   </button>))}
@@ -283,6 +274,5 @@ export default function InteractiveContentDiscovery20o27() {
           </div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default InteractiveContentDiscovery20o27;

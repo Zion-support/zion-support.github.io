@@ -31,36 +31,31 @@ export default function UltraFuturisticBackground2037({
             primary: ['#ff0080'#00ffff'#ffff00'#ff00ff'];
             secondary: ['#8000ff'#00ff80'#ff8000'#0080ff'];
             accent: ['#ff4080'#40ffff'#ffff40'#ff40ff'];
-            glow: ['#ff0066'#00ffff'#ffff00'#ff00ff'],
-          };
+            glow: ['#ff0066'#00ffff'#ffff00'#ff00ff']};
         case 'holographic':,
           return {
             primary: ['#ff6b6b'#4ecdc4'#45b7d1'#96ceb4'];
             secondary: ['#feca57'#ff9ff3'#54a0ff'#5f27cd'];
             accent: ['#ff9ff3'#54a0ff'#5f27cd'#ff6b6b'];
-            glow: ['#ff5252'#26d0ce'#42a5f5'#66bb6a'],
-          };
+            glow: ['#ff5252'#26d0ce'#42a5f5'#66bb6a']};
         case 'cyberpunk':,
           return {
             primary: ['#ff0055'#00ffff'#ffff00'#ff00ff'];
             secondary: ['#8000ff'#00ff80'#ff8000'#0080ff'];
             accent: ['#ff4080'#40ffff'#ffff40'#ff40ff'];
-            glow: ['#ff0033'#00ffff'#ffff00'#ff00ff'],
-          };
+            glow: ['#ff0033'#00ffff'#ffff00'#ff00ff']};
         case 'quantum':,
           return {
             primary: ['#8b5cf6'#06b6d4'#ec4899'#10b981'];
             secondary: ['#f59e0b'#ef4444'#8b5cf6'#06b6d4'];
             accent: ['#ec4899'#10b981'#f59e0b'#ef4444'];
-            glow: ['#7c3aed'#0891b2'#db2777'#059669'],
-          };
+            glow: ['#7c3aed'#0891b2'#db2777'#059669']};
         default: // quantum-neon,
           return {
             primary: ['#8b5cf6'#06b6d4'#ec4899'#10b981'];
             secondary: ['#ff0080'#00ffff'#ffff00'#ff00ff'];
             accent: ['#f59e0b'#ef4444'#8000ff'#00ff80'];
-            glow: ['#7c3aed'#0891b2'#ff0066'#00ffff'],
-          };
+            glow: ['#7c3aed'#0891b2'#ff0066'#00ffff']};
       }
     };
     const colors = getThemeColors(),
@@ -81,8 +76,7 @@ export default function UltraFuturisticBackground2037({
       waveAmplitude: number,
       quantumState: number,
       neonIntensity: number,
-      hologramOpacity: number,
-    }> = [],
+      hologramOpacity: number}> = [],
     // Initialize particles,
     const initParticles = () => {
       particles = [],
@@ -112,8 +106,7 @@ export default function UltraFuturisticBackground2037({
           waveAmplitude: Math.random() * 20 + 10;
           quantumState: Math.random() * Math.PI * 2;
           neonIntensity: Math.random() * 0.8 + 0.2;
-          hologramOpacity: Math.random() * 0.6 + 0.4,
-        })}
+          hologramOpacity: Math.random() * 0.6 + 0.4})}
     };
     // Enhanced rendering functions,
     const drawQuantumNeonParticle = (particle: any) => {
@@ -297,8 +290,7 @@ export default function UltraFuturisticBackground2037({
             ctx.globalAlpha = particle.opacity,
             ctx.beginPath(),
             ctx.arc(particle.xparticle.yparticle.size0Math.PI * 2),
-            ctx.fill(),
-        }
+            ctx.fill()}
       }),
       // Add quantum entanglement effects,
       if (theme === 'quantum-neon' || theme === 'quantum') {
@@ -338,8 +330,7 @@ export default function UltraFuturisticBackground2037({
         className="w-full h-full",
         style={{
           background: 'transparent';
-          filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none',
-        }}
+          filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none'}}
       />,
       {children}
     </div>)}

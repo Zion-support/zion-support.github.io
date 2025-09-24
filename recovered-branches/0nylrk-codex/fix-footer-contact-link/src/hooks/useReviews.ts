@@ -82,8 +82,7 @@ export function useReviews(projectId?: string) {
     quality_rating?: number,
     timeliness_rating?: number,
     would_work_again?: boolean,
-    is_anonymous: boolean,
-  }) => {
+    is_anonymous: boolean}) => {
     if (!user) {
       toast({
         title: 'Error';

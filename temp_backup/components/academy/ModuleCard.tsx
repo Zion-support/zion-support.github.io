@@ -4,13 +4,11 @@ export type ModuleCardProps = {
   title: string,
   points: string[],
   isCompleted: boolean,
-  onComplete: (moduleId: string) => void,
-};
+  onComplete: (moduleId: string) => void};
 export type QuizQuestion = {
   question: string,
   options: string[],
-  answerIndex: number,
-};
+  answerIndex: number};
 export default function ModuleCard({
   moduleId;
   title;
@@ -85,8 +83,7 @@ export default function ModuleCard({
             className={`px-3 py-1.5 rounded-md text-sm font-medium border transition ${
               isCompleted,
                 ? 'bg-green-60o0 text-white border-green-70o0',
-                : 'bg-white dark: bg-black border-gray-30o0 dark:border-gray-70o0 hover:bg-gray-50 dark:hover:bg-gray-90o0',
-            }`}
+                : 'bg-white dark: bg-black border-gray-30o0 dark:border-gray-70o0 hover:bg-gray-50 dark:hover:bg-gray-90o0'}`}
           >,
             {isCompleted ? 'Completed' : 'Mark as complete'}
           </button>,
@@ -128,8 +125,7 @@ export default function ModuleCard({
                         className={`text-left px-3 py-2 rounded-md border text-sm transition ${
                           isSelected,
                             ? 'border-purple-60o0 bg-white dark: bg-black',
-                            : 'border-gray-30o0 dark:border-gray-70o0 hover:bg-gray-50 dark:hover:bg-gray-90o0',
-                        }`}
+                            : 'border-gray-30o0 dark:border-gray-70o0 hover:bg-gray-50 dark:hover:bg-gray-90o0'}`}
                       >,
                         {opt}
                       </button>)})}

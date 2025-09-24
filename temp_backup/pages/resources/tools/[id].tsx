@@ -206,6 +206,5 @@ export default function ToolPage() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

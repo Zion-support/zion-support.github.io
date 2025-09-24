@@ -39,8 +39,7 @@ interface NavigationItem {
   badge?: string,
   title?: string,
   category?: string,
-  color?: string,
-}
+  color?: string}
 ,
 const contactInfo = {
   mobile: '+1 30o2 464 0950';
@@ -928,8 +927,7 @@ const UltraAdvancedFuturisticNavigation20o25: React.FC = () => {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name),
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
   const closeDropdown = () => {
     setActiveDropdown(null)};
   return (

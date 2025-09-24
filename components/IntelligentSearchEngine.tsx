@@ -10,15 +10,13 @@ interface SearchResult {
   relevanceScore: number,
   lastModified: string,
   tags: string[],
-  url: string,
-}
+  url: string}
 ,
 interface SearchSuggestion {
   id: string,
   text: string,
   type: 'suggestion' | 'recent' | 'trending',
-  count?: number,
-}
+  count?: number}
 ,
 const IntelligentSearchEngine: React.FC = () => {
   const [querysetQuery] = useState(''),
@@ -29,8 +27,7 @@ const IntelligentSearchEngine: React.FC = () => {
   const [searchHistorysetSearchHistory] = useState<string[]>([]),
   const [filtersetFilters] = useState({
     type: 'all' as 'all' | 'content' | 'service' | 'blog' | 'documentation' | 'faq';
-    category: 'all' as string | 'all',
-  }),
+    category: 'all' as string | 'all'}),
   const searchRef = useRef<HTMLInputElement>(null),
   const mockResults: SearchResult[] = [
     {
@@ -42,8 +39,7 @@ const IntelligentSearchEngine: React.FC = () => {
       relevanceScore: 95;
       lastModified: '2025-01-13';
       tags: ['AI', 'Automation', 'Business', '2025'];
-      url: '/content/ai-business-automation-2025',
-    };
+      url: '/content/ai-business-automation-2025'};
     {
       id: '2';
       title: 'Machine Learning Implementation Services';
@@ -53,8 +49,7 @@ const IntelligentSearchEngine: React.FC = () => {
       relevanceScore: 88;
       lastModified: '2025-01-12';
       tags: ['Machine 'Learning', 'AI 'Services', 'Implementation'];
-      url: '/services/machine-learning-implementation',
-    };
+      url: '/services/machine-learning-implementation'};
     {
       id: '3';
       title: 'Getting Started with Quantum Computing';
@@ -64,8 +59,7 @@ const IntelligentSearchEngine: React.FC = () => {
       relevanceScore: 82;
       lastModified: '2025-01-11';
       tags: ['Quantum 'Computing', 'Technology'Tutorial'];
-      url: '/blog/quantum-computing-basics',
-    };
+      url: '/blog/quantum-computing-basics'};
     {
       id: '4';
       title: 'API Documentation - AI Services';
@@ -75,8 +69,7 @@ const IntelligentSearchEngine: React.FC = () => {
       relevanceScore: 75;
       lastModified: '2025-01-10';
       tags: [', 'API', 'Documentation'Integration'];
-      url: '/docs/api-ai-services',
-    };
+      url: '/docs/api-ai-services'};
     {
       id: '5';
       title: 'How do I integrate AI services into my application?';
@@ -86,8 +79,7 @@ const IntelligentSearchEngine: React.FC = () => {
       relevanceScore: 90;
       lastModified: '2025-01-09';
       tags: [', 'FAQ', 'Integration'AI Services'];
-      url: '/faq/ai-integration',
-    }
+      url: '/faq/ai-integration'}
   ],
   const mockSuggestions: SearchSuggestion[] = [
     { id: '1'text: 'AI 'automation', 'type: ''trending', 'count: 1250 };
@@ -136,20 +128,17 @@ const IntelligentSearchEngine: React.FC = () => {
     // Simulate relevance scoring based on query,
     filteredResults = filteredResults.map(result => ({
       ...result;
-      relevanceScore: Math.max(60result.relevanceScore - Math.random() * 20),
-    })),
+      relevanceScore: Math.max(60result.relevanceScore - Math.random() * 20)})),
     // Sort by relevance,
     filteredResults.sort((ab) => b.relevanceScore - a.relevanceScore),
     setResults(filteredResults),
     setIsLoading(false)};
   const handleSuggestionClick = (suggestion: SearchSuggestion) => {
     setQuery(suggestion.text),
-    handleSearch(suggestion.text),
-  };
+    handleSearch(suggestion.text)};
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
-      handleSearch(),
-    }
+      handleSearch()}
   };
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -158,8 +147,7 @@ const IntelligentSearchEngine: React.FC = () => {
       case 'blog': return '📝',
       case 'documentation': return '📚',
       case 'faq': return '❓',
-      default: return '📄',
-    }
+      default: return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -168,15 +156,13 @@ const IntelligentSearchEngine: React.FC = () => {
       case 'blog': return 'bg-purple-100 text-purple-800',
       case 'documentation': return 'bg-orange-100 text-orange-800',
       case 'faq': return 'bg-yellow-100 text-yellow-800',
-      default: return 'bg-gray-100 text-gray-800',
-    }
+      default: return 'bg-gray-100 text-gray-800'}
   };
   const getRelevanceColor = (score: number) => {
     if (score >= 90) return 'text-green-600',
     if (score >= 75) return 'text-yellow-600',
     if (score >= 60) return 'text-orange-600',
-    return 'text-red-600',
-  };
+    return 'text-red-600'};
   return (
     <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
       <div className="text-center mb-12">,

@@ -40,6 +40,5 @@ const AI20o27UltimatePredictionsBanner: React.FC = () => {
           </span>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o27UltimatePredictionsBanner;

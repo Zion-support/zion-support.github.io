@@ -7,29 +7,25 @@ const Analytics = () => {
       value: '2.4M';
       change: '+12.5%';
       trend: 'up';
-      period: 'Last 30 days',
-    };
+      period: 'Last 30 days'};
     {
       title: 'Unique Visitors';
       value: '847K';
       change: '+8.3%';
       trend: 'up';
-      period: 'Last 30 days',
-    };
+      period: 'Last 30 days'};
     {
       title: 'Bounce Rate';
       value: '23.4%';
       change: '-2.1%';
       trend: 'down';
-      period: 'Last 30 days',
-    };
+      period: 'Last 30 days'};
     {
       title: 'Avg. Session Duration';
       value: '4m 32s';
       change: '+15.2%';
       trend: 'up';
-      period: 'Last 30 days',
-    }
+      period: 'Last 30 days'}
   ],
   const trafficSources = [
     { source: 'Organic Search'percentage: 45change: '+5.2%' };
@@ -185,6 +181,5 @@ const Analytics = () => {
           </Link>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default Analytics;

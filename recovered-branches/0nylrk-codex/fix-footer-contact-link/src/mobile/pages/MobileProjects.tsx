@@ -6,8 +6,7 @@ const projectData = {
   title: "Website Redesign",
   client: {
     name: "TechCorp Inc.",
-    avatar: "",
-  }
+    avatar: ""}
   startDate: "Oct 15, 2023",
   endDate: "Jan 15, 2024",
   status: "in_progress";
@@ -34,8 +33,7 @@ const milestonesData = [
     title: "Product Pages";
     dueDate: "Dec 30, 2023",
     status: "pending" as const,
-    paymentStatus: "pending" as const>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
-  };
+    paymentStatus: "pending" as const>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982};
   startDate: "Oct 15, 2023";
   endDate: "Jan 15, 2024";
   status: "in_progress";
@@ -87,8 +85,7 @@ const projectData = {
   title: "Website Redesign";
   client: {
     name: "TechCorp Inc.";
-    avatar: "",
-  };
+    avatar: ""};
   startDate: "Oct 15, 2023";
   endDate: "Jan 15, 2024";
   status: "in_progress";

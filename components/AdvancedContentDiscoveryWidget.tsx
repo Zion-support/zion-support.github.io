@@ -11,24 +11,21 @@ export default function AdvancedContentDiscoveryWidget() {
         category: 'Breakthrough';
         readTime: '8 min read';
         href: '/ai-20o25-ultimate-breakthrough-revolution';
-        featured: true,
-      };
+        featured: true};
       {
         title: 'Global Transformation Success Story';
         description: 'How a Fortune 50o0 company achieved 10,0o00% ROI in 6 months';
         category: 'Case Study';
         readTime: '6 min read';
         href: '/case-studies/ai-20o25-global-transformation-breakthrough';
-        featured: true,
-      };
+        featured: true};
       {
         title: 'AI 20o25 Revolutionary Trends & Predictions';
         description: 'Expert insights on the AI trends that will define 20o25';
         category: 'Analysis';
         readTime: '15 min read';
         href: '/blog/ai-20o25-revolutionary-trends-predictions';
-        featured: false,
-      }
+        featured: false}
     ];
     breakthrough: [
       {
@@ -37,24 +34,21 @@ export default function AdvancedContentDiscoveryWidget() {
         category: 'Technology';
         readTime: '12 min read';
         href: '/blog/quantum-ai-fusion-20o25';
-        featured: true,
-      };
+        featured: true};
       {
         title: 'Neural Interface Breakthroughs';
         description: 'Direct brain-computer communication revolutionizing human-AI interaction';
         category: 'Innovation';
         readTime: '10 min read';
         href: '/blog/neural-interface-breakthroughs-20o25';
-        featured: false,
-      };
+        featured: false};
       {
         title: 'Autonomous Operations Mastery';
         description: 'Fully autonomous business operations with 99.9% efficiency';
         category: 'Automation';
         readTime: '9 min read';
         href: '/blog/autonomous-operations-mastery-20o25';
-        featured: false,
-      }
+        featured: false}
     ];
     caseStudies: [
       {
@@ -63,24 +57,21 @@ export default function AdvancedContentDiscoveryWidget() {
         category: 'Manufacturing';
         readTime: '7 min read';
         href: '/case-studies/manufacturing-ai-transformation-20o25';
-        featured: true,
-      };
+        featured: true};
       {
         title: 'Financial Services: 8,50o0% ROI Breakthrough';
         description: 'Revolutionary AI implementation in financial risk management';
         category: 'Finance';
         readTime: '6 min read';
         href: '/case-studies/financial-services-ai-breakthrough-20o25';
-        featured: false,
-      };
+        featured: false};
       {
         title: 'Healthcare Revolution: 95% Patient Recovery';
         description: 'AI-powered healthcare achieving breakthrough patient outcomes';
         category: 'Healthcare';
         readTime: '8 min read';
         href: '/case-studies/healthcare-ai-revolution-20o25';
-        featured: false,
-      }
+        featured: false}
     ];
     resources: [
       {
@@ -89,24 +80,21 @@ export default function AdvancedContentDiscoveryWidget() {
         category: 'Guide';
         readTime: '20 min read';
         href: '/resources/ai-20o25-ultimate-implementation-toolkit';
-        featured: true,
-      };
+        featured: true};
       {
         title: 'AI ROI Calculator 20o25';
         description: 'Calculate your potential ROI with our advanced AI solutions';
         category: 'Tool';
         readTime: '5 min read';
         href: '/tools/ai-20o25-roi-calculator';
-        featured: false,
-      };
+        featured: false};
       {
         title: 'AI Readiness Assessment';
         description: 'Evaluate your organization\'s readiness for AI transformation';
         category: 'Assessment';
         readTime: '10 min read';
         href: '/tools/ai-readiness-assessment-20o25';
-        featured: false,
-      }
+        featured: false}
     ]};
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } ={
@@ -142,16 +130,14 @@ export default function AdvancedContentDiscoveryWidget() {
             trending: '🔥 Trending';
             breakthrough: '🚀 Breakthroughs';
             caseStudies: '📊 Case Studies';
-            resources: '📚 Resources',
-          }).map(([keylabel]) => (
+            resources: '📚 Resources'}).map(([keylabel]) => (
             <button
               key={key}
               onClick={() => setActiveTab(key)}
               className={`px-6 py-4 text-sm font-semibold whitespace-nowrap border-b-2 transition-colors ${
                 activeTab === key,
                   ? 'border-blue-60o0 text-blue-60o0',
-                  : 'border-transparent text-gray-50o0 hover: text-gray-70o0',
-              }`}
+                  : 'border-transparent text-gray-50o0 hover: text-gray-70o0'}`}
             >,
               {label}
             </button>))}
@@ -165,8 +151,7 @@ export default function AdvancedContentDiscoveryWidget() {
               key={index}
               href={item.href}
               className={`group relative bg-white rounded-xl border border-gray-20o0 p-6 hover: shadow-lg transition-all duration-30o0 hover:scale-10o5 ${
-                item.featured ? 'ring-2 ring-blue-50o0 ring-opacity-50' : '',
-              }`}
+                item.featured ? 'ring-2 ring-blue-50o0 ring-opacity-50' : ''}`}
             >,
               {item.featured && (
                 <div className="absolute -top-2 -right-2 bg-gradient-to-r from-red-50o0 to-pink-50o0 text-white text-xs px-3 py-1 rounded-full font-semibold">,
@@ -224,5 +209,4 @@ export default function AdvancedContentDiscoveryWidget() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

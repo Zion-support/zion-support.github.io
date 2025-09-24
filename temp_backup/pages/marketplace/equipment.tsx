@@ -15,6 +15,5 @@ export default function EquipmentPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

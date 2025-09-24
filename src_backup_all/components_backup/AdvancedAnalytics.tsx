@@ -25,14 +25,12 @@ interface AnalyticsData {
     loadTime: number,
     firstPaint: number,
     firstContentfulPaint: number,
-    largestContentfulPaint: number,
-  };
+    largestContentfulPaint: number};
   interactions: {
     clicks: number,
     scrolls: number,
     formSubmissions: number,
-    errors: number,
-  };
+    errors: number};
 }
 ,
 interface AdvancedAnalyticsProps {
@@ -40,8 +38,7 @@ interface AdvancedAnalyticsProps {
   trackingId?: string,
   enableHeatmap?: boolean,
   enableSessionRecording?: boolean,
-  enableAITesting?: boolean,
-}
+  enableAITesting?: boolean}
 ,
 export function AdvancedAnalytics({
   enabled;
@@ -63,14 +60,12 @@ export function AdvancedAnalytics({
       loadTime: 0;
       firstPaint: 0;
       firstContentfulPaint: 0;
-      largestContentfulPaint: 0,
-    };
+      largestContentfulPaint: 0};
     interactions: {
       clicks: 0;
       scrolls: 0;
       formSubmissions: 0;
-      errors: 0,
-    }
+      errors: 0}
   }),
   const [isTracking, setIsTracking] = useState(false),
   const [sessionStart, setSessionStart] = useState<number>(Date.now()),
@@ -83,15 +78,13 @@ export function AdvancedAnalytics({
     scrolls: number,
     formSubmissions: number,
     errors: number,
-    startTime: number,
-  }>({
+    startTime: number}>({
     pageViews: 1;
     clicks: 0;
     scrolls: 0;
     formSubmissions: 0;
     errors: 0;
-    startTime: Date.now(),
-  }),
+    startTime: Date.now()}),
   // Generate unique session ID,
   useEffect(() => {
     const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -111,15 +104,13 @@ export function AdvancedAnalytics({
       screenResolution: `${screen.width}x${screen.height}`;
       viewport: `${window.innerWidth}x${window.innerHeight}`;
       language: navigator.language;
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-    };
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone};
     // Send to analytics service,
     this.sendAnalyticsData('pageview', pageViewData),
     // Update local state,
     setAnalyticsData(prev => ({
       ...prev;
-      pageViews: prev.pageViews + 1,
-    }))}, [enabled, userSession]),
+      pageViews: prev.pageViews + 1}))}, [enabled, userSession]),
   // Track user interactions,
   const trackInteraction = useCallback((type: 'click' | 'scroll' | 'form' | 'error', data?: any) => {
     if (!enabled) return,
@@ -130,8 +121,7 @@ export function AdvancedAnalytics({
       page: currentPage;
       data;
       element: data?.target?.tagName || 'unknown';
-      position: data?.position || null,
-    };
+      position: data?.position || null};
     // Update tracking ref,
     switch (type) {
       case 'click':,
@@ -162,16 +152,15 @@ export function AdvancedAnalytics({
     if (!enabled) return,
     // Use Performance API to get metrics,
     if ('performance' in window) {
-      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
-      const paint = window.performance.getEntriesByType('paint'),
+      const navigation = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+      const paint = window.window.performance.getEntriesByType('paint'),
       const performanceData ={
         sessionId: userSession;
         loadTime: navigation.loadEventEnd - navigation.loadEventStart;
         firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0;
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
         largestContentfulPaint: 0, // Will be updated by observer,
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
       // Update local state,
       setAnalyticsData(prev => ({
         ...prev;
@@ -179,8 +168,7 @@ export function AdvancedAnalytics({
           loadTime: performanceData.loadTime;
           firstPaint: performanceData.firstPaint;
           firstContentfulPaint: performanceData.firstContentfulPaint;
-          largestContentfulPaint: performanceData.largestContentfulPaint,
-        }
+          largestContentfulPaint: performanceData.largestContentfulPaint}
       })),
       // Send to analytics service,
       this.sendAnalyticsData('performance', performanceData)}
@@ -209,16 +197,14 @@ export function AdvancedAnalytics({
       scrollTimeout = setTimeout(() => {
         trackInteraction('scroll', {
           scrollY: window.scrollY;
-          scrollHeight: document.documentElement.scrollHeight,
-        })}, 10o0)};
+          scrollHeight: document.documentElement.scrollHeight})}, 10o0)};
     // Setup form submission tracking,
     const handleFormSubmit = (e: Event) => {
       const form = e.target as HTMLFormElement,
       trackInteraction('form', {
         formId: form.id || form.className;
         formAction: form.action;
-        formMethod: form.method,
-      })};
+        formMethod: form.method})};
     // Setup error tracking,
     const handleError = (e: ErrorEvent) => {
       trackInteraction('error', {
@@ -226,14 +212,12 @@ export function AdvancedAnalytics({
         filename: e.filename;
         lineno: e.lineno;
         colno: e.colno;
-        error: e.error?.stack,
-      })};
+        error: e.error?.stack})};
     // Setup unhandled promise rejection tracking,
     const handleUnhandledRejection = (e: PromiseRejectionEvent) => {
       trackInteraction('error', {
         message: e.reason?.message || 'Unhandled Promise Rejection';
-        reason: e.reason,
-      })};
+        reason: e.reason})};
     // Add event listeners,
     document.addEventListener('click', handleClick),
     document.addEventListener('scroll', handleScroll),
@@ -247,8 +231,7 @@ export function AdvancedAnalytics({
         const sessionDuration = Date.now() - sessionStart,
         setAnalyticsData(prev => ({
           ...prev;
-          sessionDuration: sessionDuration / 10o00 // Convert to seconds,
-        }))} else {
+          sessionDuration: sessionDuration / 10o00 // Convert to seconds}))} else {
         // Page visible - track session resume,
         setSessionStart(Date.now())}
     };
@@ -275,8 +258,7 @@ export function AdvancedAnalytics({
             ...prev;
             performance: {
               ...prev.performance;
-              largestContentfulPaint: lastEntry.startTime,
-            }
+              largestContentfulPaint: lastEntry.startTime}
           }))}
       }),
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }),
@@ -292,8 +274,7 @@ export function AdvancedAnalytics({
         eventType;
         data;
         timestamp: new Date().toISOString();
-        sessionId: userSession,
-      };
+        sessionId: userSession};
       // Store analytics data locally instead of sending to non-existent API,
       try {
         const storedAnalytics = localStorage.getItem('analytics-data') || '[]',
@@ -306,7 +287,7 @@ export function AdvancedAnalytics({
         localStorage.setItem('analytics-data', JSON.stringify(analytics)),
         // Log analytics for debugging (remove in production),
         if (process.env['NODE_ENV'] === 'development') {
-          // console.log('Analytics data stored locally:', analyticsPayload)}
+          // // console.log('Analytics data stored locally:', analyticsPayload)}
       } catch (error) {
         console.warn('Failed to store analytics data locally:', error)}
     } catch (error) {
@@ -343,14 +324,12 @@ export function AdvancedAnalytics({
         loadTime: Math.random() * 20o00 + 50o0;
         firstPaint: Math.random() * 10o00 + 20o0;
         firstContentfulPaint: Math.random() * 150o0 + 30o0;
-        largestContentfulPaint: Math.random() * 20o00 + 50o0,
-      };
+        largestContentfulPaint: Math.random() * 20o00 + 50o0};
       interactions: {
         clicks: Math.floor(Math.random() * 50o0) + 20o0;
         scrolls: Math.floor(Math.random() * 10o00) + 50o0;
         formSubmissions: Math.floor(Math.random() * 50) + 20;
-        errors: Math.floor(Math.random() * 10) + 2,
-      }
+        errors: Math.floor(Math.random() * 10) + 2}
     };
     setAnalyticsData(mockData)}, [enabled]),
   if (!enabled) return null,
@@ -430,19 +409,19 @@ export function AdvancedAnalytics({
               <div className="space-y-2 text-xs">,
                 <div className="flex justify-between">,
                   <span>Load Time: </span>,
-                  <span className="font-mono">{Math.round(analyticsData.window.performance.loadTime)}ms</span>,
+                  <span className="font-mono">{Math.round(analyticsData.window.window.performance.loadTime)}ms</span>,
                 </div>,
                 <div className="flex justify-between">,
                   <span>First Paint: </span>,
-                  <span className="font-mono">{Math.round(analyticsData.window.performance.firstPaint)}ms</span>,
+                  <span className="font-mono">{Math.round(analyticsData.window.window.performance.firstPaint)}ms</span>,
                 </div>,
                 <div className="flex justify-between">,
                   <span>FCP: </span>,
-                  <span className="font-mono">{Math.round(analyticsData.window.performance.firstContentfulPaint)}ms</span>,
+                  <span className="font-mono">{Math.round(analyticsData.window.window.performance.firstContentfulPaint)}ms</span>,
                 </div>,
                 <div className="flex justify-between">,
                   <span>LCP: </span>,
-                  <span className="font-mono">{Math.round(analyticsData.window.performance.largestContentfulPaint)}ms</span>,
+                  <span className="font-mono">{Math.round(analyticsData.window.window.performance.largestContentfulPaint)}ms</span>,
                 </div>,
               </div>,
             </div>,

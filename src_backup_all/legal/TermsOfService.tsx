@@ -179,6 +179,5 @@ const TermsOfService = () => {
           </a>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default TermsOfService;

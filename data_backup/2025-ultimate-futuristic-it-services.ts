@@ -89,8 +89,7 @@ reviews: number,export const ultimateFuturisticITServices20o25: UltimateFuturist
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quantum-secured zero-trust platform with advanced threat detection, behavioral analytics, and automated incident response.';
@@ -150,8 +149,7 @@ reviews: number,export const ultimateFuturisticITServices20o25: UltimateFuturist
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Autonomous DevOps platform with AI-powered automation, self-healing systems, and predictive maintenance capabilities.';
@@ -211,8 +209,7 @@ reviews: number,export const ultimateFuturisticITServices20o25: UltimateFuturist
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quantum-enhanced cloud infrastructure with quantum processing, quantum networking, and quantum-secured storage.';
@@ -273,8 +270,7 @@ reviews: number,export const ultimateFuturisticITServices20o25: UltimateFuturist
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered IT asset management platform with automatic discovery, classification, and optimization capabilities.';
@@ -322,7 +318,7 @@ reviews: number,export const ultimateFuturisticITServices20o25: UltimateFuturist
   AI/ML, Software-Defined Networking, Network Automation, IoT Integration'];
     integrations['Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes'];
     useCases['Network monitoring, Performance optimization, Traffic management, Security management, Cost reduction'];
-    "roi": 'Organizations report 350% ROI through automated network management and improved window.performance.;
+    "roi": 'Organizations report 350% ROI through automated network management and improved window.window.performance.;
     competitors[;
   Cisco DNA Center, Juniper Mist, Arista CloudVision, VMware NSX'];
     "marketSize": '$12B network management market;
@@ -335,8 +331,7 @@ reviews: number,export const ultimateFuturisticITServices20o25: UltimateFuturist
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Autonomous network management platform with AI-powered monitoring, optimization, and self-healing capabilities.';
@@ -353,7 +348,7 @@ reviews: number,export const ultimateFuturisticITServices20o25: UltimateFuturist
   Ultra-secure data centers with quantum encryption';
     "price": $3,999;
     "period": '/month;
-    "description": 'Next-generation data center platform that combines traditional data center services with quantum encryption for ultimate security and window.performance.';
+    "description": 'Next-generation data center platform that combines traditional data center services with quantum encryption for ultimate security and window.window.performance.';
     features['Quantum encryption at rest';
   'Quantum-secured data transmission';
   'Quantum-resistant storage';
@@ -396,8 +391,7 @@ reviews: number,export const ultimateFuturisticITServices20o25: UltimateFuturist
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quantum-secured data center platform with quantum encryption, zero-trust security, and high-performance computing capabilities.';
@@ -458,8 +452,7 @@ reviews: number,export const ultimateFuturisticITServices20o25: UltimateFuturist
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered IT service desk with automated ticket resolution, intelligent routing, and predictive problem prevention.';
@@ -519,8 +512,7 @@ reviews: number,export const ultimateFuturisticITServices20o25: UltimateFuturist
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quantum-enhanced backup and recovery platform with quantum encryption, zero-knowledge security, and instant recovery capabilities.';
@@ -580,8 +572,7 @@ reviews: number,export const ultimateFuturisticITServices20o25: UltimateFuturist
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Autonomous compliance platform with AI-powered monitoring, automated reporting, and regulatory intelligence.';

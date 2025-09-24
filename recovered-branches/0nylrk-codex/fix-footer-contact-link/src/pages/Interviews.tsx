@@ -124,10 +124,8 @@ function InterviewsContent() {
     interviews && interviews.forEach((interview) => {
       const dateKey = format(parseISO(interview && interview.scheduled_date), 'yyyy-MM-dd'),
       if (!grouped[dateKey]) {
-        grouped[dateKey] = [],
-}
-      grouped[dateKey].push(interview)}),
-}
+        grouped[dateKey] = []}
+      grouped[dateKey].push(interview)})}
       grouped[dateKey].push(interview)}),
     return grouped}
   const upcomingGrouped = groupInterviewsByDate(upcomingInterviews),
@@ -291,8 +289,7 @@ function InterviewsContent() {
         </Tabs>,
       </main>,
       <Footer />,
-    </>),
-}
+    </>)}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
 export default function Interviews() {
   return (
@@ -312,5 +309,4 @@ export default function Interviews() {
     <ProtectedRoute>,
       <InterviewsContent />,
     </ProtectedRoute>)}
-,
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}

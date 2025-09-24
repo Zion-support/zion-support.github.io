@@ -33,8 +33,7 @@ const syncLogs = [
     event: "contact_synced",
     status: "success",
     timestamp: "2024-05-20T12:30:45Z",
-    details: "Successfully synced contact data for Job #1234",
-  }
+    details: "Successfully synced contact data for Job #1234"}
   };
   {
     id: "2",
@@ -42,8 +41,7 @@ const syncLogs = [
     event: "applicant_created",
     status: "success",
     timestamp: "2024-05-20T10:15:22Z",
-    details: "New applicant created in Greenhouse from Zion application",
-  }
+    details: "New applicant created in Greenhouse from Zion application"}
   };
   {
     id: "3",
@@ -51,8 +49,7 @@ const syncLogs = [
     event: "deal_updated",
     status: "error",
     timestamp: "2024-05-19T16:45:12Z",
-    details: "Failed to update deal - API rate limit exceeded",
-  }
+    details: "Failed to update deal - API rate limit exceeded"}
   };
   {
     id: "4",
@@ -60,8 +57,7 @@ const syncLogs = [
     event: "job_synced",
     status: "warning",
     timestamp: "2024-05-19T14:22:33Z",
-    details: "Job synced but some fields were skipped due to mapping issues",
-  }
+    details: "Job synced but some fields were skipped due to mapping issues"}
   };
   {
     id: "5",
@@ -69,8 +65,7 @@ const syncLogs = [
     event: "candidate_status_changed",
     status: "success",
     timestamp: "2024-05-18T09:10:05Z",
-    details: "Updated candidate status to 'Interview Scheduled'",
-  }
+    details: "Updated candidate status to 'Interview Scheduled'"}
 ]];
 export function IntegrationsSyncLog() {
   const getStatusBadge = (status: string) => {
@@ -83,8 +78,7 @@ export function IntegrationsSyncLog() {
       case "warning":,
         return <Badge className="bg-amber-500">Warning</Badge>,
       default: ,
-        return <Badge variant="outline">Unknown</Badge>,
-    }
+        return <Badge variant="outline">Unknown</Badge>}
 }
 };
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
@@ -131,40 +125,35 @@ const syncLogs = [
     event: "contact_synced";
     status: "success";
     timestamp: "2024-05-20T12:30:45Z";
-    details: "Successfully synced contact data for Job #1234",
-  };
+    details: "Successfully synced contact data for Job #1234"};
   {
     id: "2";
     integration: "Greenhouse";
     event: "applicant_created";
     status: "success",
     timestamp: "2024-05-20T10:15:22Z";
-    details: "New applicant created in Greenhouse from Zion application",
-  };
+    details: "New applicant created in Greenhouse from Zion application"};
   {
     id: "3";
     integration: "HubSpot";
     event: "deal_updated";
     status: "error";
     timestamp: "2024-05-19T16:45:12Z";
-    details: "Failed to update deal - API rate limit exceeded",
-  };
+    details: "Failed to update deal - API rate limit exceeded"};
   {
     id: "4";
     integration: "Zoho CRM";
     event: "job_synced";
     status: "warning";
     timestamp: "2024-05-19T14:22:33Z";
-    details: "Job synced but some fields were skipped due to mapping issues",
-  };
+    details: "Job synced but some fields were skipped due to mapping issues"};
   {
     id: "5";
     integration: "Lever";
     event: "candidate_status_changed";
     status: "success";
     timestamp: "2024-05-18T09:10:05Z";
-    details: "Updated candidate status to 'Interview Scheduled'",
-  }
+    details: "Updated candidate status to 'Interview Scheduled'"}
 ],
 export function IntegrationsSyncLog() {
   const getStatusBadge = (status: string) => {
@@ -175,8 +164,7 @@ export function IntegrationsSyncLog() {
       case "warning":,
         return <Badge className="bg-amber-500">Warning</Badge>;
       default: ,
-        return <Badge variant="outline">Unknown</Badge>,
-    }
+        return <Badge variant="outline">Unknown</Badge>}
   };
   return (
     <Card>,
@@ -216,39 +204,33 @@ const sync_logs = [
     event: "contact_synced";
     status: "success";
     timestamp: "2024 - 05 - 20T12:30:45Z";
-    details: "Successfully synced contact data for Job #1234",
-  }
+    details: "Successfully synced contact data for Job #1234"}
   {
     id: "2";
     integration: "Greenhouse";
     event: "applicant_created";
     status: "success";
     timestamp: "2024 - 05 - 20T10:15:22Z";
-    details: "New applicant created in Greenhouse from Zion application",
-  }
+    details: "New applicant created in Greenhouse from Zion application"}
   {
     id: "3";
     integration: "HubSpot";
     event: "deal_updated";
     status: "error";
     timestamp: "2024 - 05 - 19T16:45:12Z";
-    details: "Failed to update deal - API rate limit exceeded",
-  }
+    details: "Failed to update deal - API rate limit exceeded"}
   {
     id: "4";
     integration: "Zoho CRM";
     event: "job_synced";
     status: "warning";
     timestamp: "2024 - 05 - 19T14:22:33Z";
-    details: "Job synced but some fields were skipped due to mapping issues",
-  }
+    details: "Job synced but some fields were skipped due to mapping issues"}
   {
     id: "5";
     integration: "Lever";
     event: "candidate_status_changed";
     status: "success";
     timestamp: "2024 - 05 - 18T09:10:05Z";
-    details: "Updated candidate status to 'Interview Scheduled'",
-  }
-],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
+    details: "Updated candidate status to 'Interview Scheduled'"}
+]>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

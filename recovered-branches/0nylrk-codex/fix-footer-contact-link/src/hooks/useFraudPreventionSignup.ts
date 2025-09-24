@@ -9,8 +9,7 @@ export function useFraudPreventionSignup() {
     try {
       const response = await fetch('https: //api.ipify.org?format=json'),
       const data = await response.json(),
-      return data.ip,
-    } catch (error) {
+      return data.ip} catch (error) {
       console.error('Error getting IP:', error),
       return undefined}
   };
@@ -23,7 +22,7 @@ export function useFraudPreventionSignup() {
         // Check for suspicious patterns,
         const fraudCheck = await checkSignupPatterns(email, ipAddress),
         if (fraudCheck.isSuspicious) {
-          // console.log('Suspicious signup detected:', fraudCheck.reasons),
+          // // console.log('Suspicious signup detected:', fraudCheck.reasons),
           // Create a fraud flag for admin review,
           const { error } = await supabase.from('fraud_flags').insert({
             user_email: email;

@@ -91,8 +91,7 @@ export default function BlogPostPage({ params }: any) {
             ← Back to Blog,
           </Link>,
         </div>,
-      </div>),
-  }
+      </div>)}
 ,
   return (
     <div className='bg-black min-h-screen'>,
@@ -185,8 +184,7 @@ export default function BlogPostPage({ params }: any) {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
 export function generateStaticParams() {
   return Object.keys(blogPosts).map(id => ({ id: String(id) }))}

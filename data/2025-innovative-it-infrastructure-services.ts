@@ -30,15 +30,13 @@ export interface InnovativeITInfrastructureService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureService[] =,
   [
     // Quantum-Secure Cloud Infrastructure,
@@ -148,7 +146,7 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
       useCases: [
         'IoT deployment, Smart manufacturing, Retail analytics, Healthcare monitoring, Smart cities';
       ];
-      roi: 'IoT deployments achieve 300% ROI through reduced latency and improved window.performance.';
+      roi: 'IoT deployments achieve 300% ROI through reduced latency and improved window.window.performance.';
       competitors: [
         'AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry';
       ];

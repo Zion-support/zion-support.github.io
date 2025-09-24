@@ -5,26 +5,22 @@ export const dataStore = {
   getData: () => [],
   setData: (data: any) => null,
   updateData: (id: string, data: any) => null,
-  deleteData: (id: string) => null,
-}
+  deleteData: (id: string) => null}
   getData: () => [];
   setData: (data: any) => null;
   updateData: (id: string, data: any) => null;
-  deleteData: (id: string) => null,
-};
+  deleteData: (id: string) => null};
   getData: () => [];
   setData: (data: any) => null;
   updateData: (id: string, data: any) => null;
-  deleteData: (id: string) => null,
-};
+  deleteData: (id: string) => null};
 interface Project {
   id: string,
   title: string,
   description: string,
   status: string,
   createdAt: Date,
-  updatedAt: Date,
-}
+  updatedAt: Date}
 ,
 export async function readReviews(): Promise<Review[]> {
   await ensureFilesExist(),
@@ -36,27 +32,23 @@ export async function writeReviews(reviews: Review[]): Promise<void> {
 export async function findProjectById(
   projectId: string): Promise<Project | undefined> {
   const projects = await readProjects(),
-  return projects.find(p => p.id === projectId),
-}
+  return projects.find(p => p.id === projectId)}
 ,
 export async function upsertReview(newReview: Review): Promise<void> {
   const reviews = await readReviews(),
   const idx = reviews.findIndex(r => r.id === newReview.id),
   if (idx >= 0) {
-    reviews[idx] = newReview,
-  } else {
+    reviews[idx] = newReview} else {
     reviews.push(newReview)}
   await writeReviews(reviews)}
 ,
 export async function getProjectReviews(projectId: string): Promise<Review[]> {
   const reviews = await readReviews(),
-  return reviews.filter(r => r.projectId === projectId && !r.removed),
-}
+  return reviews.filter(r => r.projectId === projectId && !r.removed)}
 ,
 export function counterpartRole(
   role: 'client' | 'talent'): 'client' | 'talent' {
-  return role === 'client' ? 'talent' : 'client',
-}
+  return role === 'client' ? 'talent' : 'client'}
 ,
 export async function hasExistingReview(
   projectId: string;
@@ -68,16 +60,14 @@ export async function hasExistingReview(
       r.projectId === projectId &&,
       r.fromRole === fromRole &&,
       r.fromId === fromId &&,
-      !r.removed),
-}
+      !r.removed)}
 // Data store utilities,
 export const data_store = {
   // Add data store functionality here,
   get_data: () => [];
   set_data: (data: any) => null;
   update_data: (id: string, data: any) => null;
-  delete_data: (id: string) => null,
-}
+  delete_data: (id: string) => null}
 export const findProjectById = (id: string) => store.findProjectById(id),
 export const createProject = (data: Partial<Project>) => store.createProject(data),
 export const hasExistingReview = (projectId: string, fromRole: string, fromId: string) => store.hasExistingReview(projectId, fromRole, fromId),

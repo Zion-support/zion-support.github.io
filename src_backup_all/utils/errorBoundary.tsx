@@ -2,31 +2,27 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
 import { motion } from 'framer-motion',
 interface Props {
   children: ReactNode,
-  fallback?: ReactNode,
-}
+  fallback?: ReactNode}
 ,
 interface State {
   hasError: boolean,
   error?: Error,
   errorInfo?: ErrorInfo,
-  retryCount: number,
-}
+  retryCount: number}
 ,
 class ErrorBoundary extends Component<Props State> {
   constructor(props: Props) {
     super(props),
     this.state ={
       hasError: false;
-      retryCount: 0,
-    };
+      retryCount: 0};
   }
 ,
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true;
       error;
-      retryCount: 0,
-    };
+      retryCount: 0};
   }
 ,
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -52,8 +48,7 @@ class ErrorBoundary extends Component<Props State> {
       hasError: false;
       error: undefined;
       errorInfo: undefined;
-      retryCount: prevState.retryCount + 1,
-    }))};
+      retryCount: prevState.retryCount + 1}))};
   handleReload = () => {
     window.location.reload()};
   render() {
@@ -142,8 +137,7 @@ class ErrorBoundary extends Component<Props State> {
               </div>,
             </motion.div>,
           </div>,
-        </motion.div>),
-    }
+        </motion.div>)}
 ,
     return this.props.children}
 }

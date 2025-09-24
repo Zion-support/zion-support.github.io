@@ -523,6 +523,5 @@ export default function QuantumAIRevolution20o25Guide() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -8,8 +8,7 @@ jest.mock('@/components/DynamicListingPage', () => ({'  DynamicListingPage: (pro
 jest.mock('@/components/ui/skeleton', () => ({'    Skeleton: () => <div data-testid="skeleton">Loading Skeleton</div>,"    SkeletonCard: () => <div data-testid="skeleton-card">Skeleton Card</div>,"})),""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
 jest.mock('@/components/skeletons/FilterSidebarSkeleton', () => ({'    FilterSidebarSkeleton: () => <div data-testid="filter-sidebar-skeleton">Filter Skeleton</div>,"})),""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
 jest.mock('@/hooks/useAuth', () => ({'  useAuth: () => ({ user: { id: test-user' }, isAuthenticated: true })})),
-jest.mock('@/hooks/use-toast', () => ({'  toast: jest.fn(),
-})),
+jest.mock('@/hooks/use-toast', () => ({'  toast: jest.fn()})),
 jest.mock('@/services/apiClient'), // Mock apiClient',
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -44,7 +43,7 @@ describe('EquipmentPage', () => {'  beforeEach(() => {
   it('handles 50o0 error gracefully and shows toast', async () => {'    const error ={ response: { status: 50o0, headers: {} }, message: ' 'Server error' };    (apiClient.get as jest.Mock).mockRejectedValue(error),
     renderWithProviders(<EquipmentPage  />),
     await waitFor(() => {
-      expect(screen.getByText('Failed to load equipment: Server error')).toBeInTheDocument(),    }),
+      expect(screen.getByText('Failed to load equipment: Server error')).toBeInTheDocument()}),
     expect(toast).toHaveBeenCalled()}),
   it('shows loading skeletons initially', async () => {'    (apiClient.get as jest.Mock).mockImplementation(() => new Promise(() => {})), // Never resolves,
     renderWithProviders(<EquipmentPage  />),

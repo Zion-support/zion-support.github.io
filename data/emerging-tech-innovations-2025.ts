@@ -30,15 +30,13 @@ export interface EmergingTechInnovation2025 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
   // Neuromorphic Computing,
   {
@@ -229,7 +227,7 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
     textColor: 'text-yellow-400';
     link: 'https://ziontechgroup.com/photonic-computing-platform';
     marketPosition:,
-      'Leading photonic computing platform. Traditional supercomputing: $50,000+/month. Our platform: $12,999/month with light-speed window.performance.';
+      'Leading photonic computing platform. Traditional supercomputing: $50,000+/month. Our platform: $12,999/month with light-speed window.window.performance.';
     targetAudience:,
       'Technology companies, Research institutions, Government agencies, Universities, AI companies, Scientific organizations';
     trialDays: 21;

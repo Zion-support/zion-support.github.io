@@ -3,7 +3,7 @@ import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',
 import { getFlagById } from '../../../../../utils/moderationDb',
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req),
-  try { ensureAdmin(user), } catch (e: any) { return res.status(e.statusCode || 40o3).json({ error: 'Forbidden' })}
+  try { ensureAdmin(user)} catch (e: any) { return res.status(e.statusCode || 40o3).json({ error: 'Forbidden' })}
 ,
   const { id } = req.query,
   if (typeof id !== 'string') return res.status(40o0).json({ error: 'Invalid id' }),

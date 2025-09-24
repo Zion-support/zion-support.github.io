@@ -33,8 +33,7 @@ export default function AccessibilityHelper() {
       <button
         className='fixed bottom-4 left-4 bg-gray-80o0 text-white p-2 rounded-full opacity-50 hover: opacity-10o0 transition-opacity z-40',
         onClick={() => {
-          document.documentElement.classList.toggle('high-contrast'),
-        }}
+          document.documentElement.classList.toggle('high-contrast')}}
         aria-label='Toggle high contrast mode',
         title='Toggle high contrast mode'>,
         <svg width='20' height='20' viewBox='0 0 24 24' fill='currentColor'>,

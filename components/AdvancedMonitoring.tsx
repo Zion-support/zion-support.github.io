@@ -8,8 +8,7 @@ interface ErrorLog {
   stack?: string,
   url: string,
   userAgent: string,
-  userId?: string,
-}
+  userId?: string}
 ,
 interface PerformanceMetrics {
   loadTime: number,
@@ -19,8 +18,7 @@ interface PerformanceMetrics {
   largestContentfulPaint: number,
   firstInputDelay: number,
   cumulativeLayoutShift: number,
-  memoryUsage?: number,
-}
+  memoryUsage?: number}
 ,
 interface UserSession {
   sessionId: string,
@@ -31,8 +29,7 @@ interface UserSession {
   deviceInfo: {
     type: string,
     os: string,
-    browser: string,
-  };
+    browser: string};
 }
 ,
 export default function AdvancedMonitoring() {
@@ -54,8 +51,7 @@ export default function AdvancedMonitoring() {
             stack: event.error?.stack;
             url: event.filename || window.location.href;
             userAgent: navigator.userAgent;
-            userId: getUserId(),
-          };
+            userId: getUserId()};
           setErrors(prev => [errorLog...prev.slice(099)]), // Keep last 10o0 errors,
           logErrorToServer(errorLog)}),
         // Unhandled Promise Rejections,
@@ -67,8 +63,7 @@ export default function AdvancedMonitoring() {
             message: `Unhandled Promise Rejection: ${event.reason}`;
             url: window.location.href;
             userAgent: navigator.userAgent;
-            userId: getUserId(),
-          };
+            userId: getUserId()};
           setErrors(prev => [errorLog...prev.slice(099)]),
           logErrorToServer(errorLog)}),
         // Console Errors,
@@ -81,8 +76,7 @@ export default function AdvancedMonitoring() {
             message: args.join(' ');
             url: window.location.href;
             userAgent: navigator.userAgent;
-            userId: getUserId(),
-          };
+            userId: getUserId()};
           setErrors(prev => [errorLog...prev.slice(099)]),
           logErrorToServer(errorLog),
           originalConsoleError.apply(consoleargs)};
@@ -90,8 +84,8 @@ export default function AdvancedMonitoring() {
       // Performance Monitoring,
       const setupPerformanceMonitoring = () => {
         const measurePerformance = () => {
-          const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
-          const paintEntries = window.performance.getEntriesByType('paint'),
+          const navigation = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+          const paintEntries = window.window.performance.getEntriesByType('paint'),
           const metrics: PerformanceMetrics ={
             loadTime: navigation.loadEventEnd - navigation.loadEventStart;
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
@@ -100,8 +94,7 @@ export default function AdvancedMonitoring() {
             largestContentfulPaint: 0;
             firstInputDelay: 0;
             cumulativeLayoutShift: 0;
-            memoryUsage: (performance as any).memory?.usedJSHeapSize,
-          };
+            memoryUsage: (performance as any).memory?.usedJSHeapSize};
           // LCP Observer,
           const lcpObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries(),
@@ -112,16 +105,14 @@ export default function AdvancedMonitoring() {
           const fidObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries(),
             entries.forEach((entry: any) => {
-              metrics.firstInputDelay = entry.processingStart - entry.startTime,
-            })}),
+              metrics.firstInputDelay = entry.processingStart - entry.startTime})}),
           fidObserver.observe({ entryTypes: ['first-input'] }),
           // CLS Observer,
           const clsObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries(),
             entries.forEach((entry: any) => {
               if (!entry.hadRecentInput) {
-                metrics.cumulativeLayoutShift += entry.value,
-              }
+                metrics.cumulativeLayoutShift += entry.value}
             })}),
           clsObserver.observe({ entryTypes: ['layout-shift'] }),
           setPerformance(metrics),
@@ -146,8 +137,7 @@ export default function AdvancedMonitoring() {
           deviceInfo: {
             type: getDeviceType();
             os: getOperatingSystem();
-            browser: getBrowser(),
-          }
+            browser: getBrowser()}
         };
         setSessions(prev => [session...prev.slice(09)]), // Keep last 10 sessions,
         // Track page views,
@@ -187,8 +177,7 @@ export default function AdvancedMonitoring() {
           // CLS scoring,
           if (metrics.cumulativeLayoutShift > 0.1) score -= 20,
           else if (metrics.cumulativeLayoutShift > 0.25) score -= 40,
-          return Math.max(0score),
-        };
+          return Math.max(0score)};
         // Update performance score when metrics change,
         const performanceObserver = new MutationObserver(() => {
           if (performance) {
@@ -235,20 +224,16 @@ export default function AdvancedMonitoring() {
       await fetch('/api/errors'{
         method: 'POST';
         headers: { 'Content-Type': 'application/json' };
-        body: JSON.stringify(error),
-      })} catch (err) {
-      console.warn('Failed to log error to server: 'err),
-    }
+        body: JSON.stringify(error)})} catch (err) {
+      console.warn('Failed to log error to server: 'err)}
   };
   const logPerformanceToServer = async (metrics: PerformanceMetrics) => {
     try {
       await fetch('/api/performance'{
         method: 'POST';
         headers: { 'Content-Type': 'application/json' };
-        body: JSON.stringify(metrics),
-      })} catch (err) {
-      console.warn('Failed to log performance to server: 'err),
-    }
+        body: JSON.stringify(metrics)})} catch (err) {
+      console.warn('Failed to log performance to server: 'err)}
   };
   const clearErrors = () => setErrors([]),
   const clearSessions = () => setSessions([]),
@@ -263,8 +248,7 @@ export default function AdvancedMonitoring() {
         <button
           onClick={() => setIsMonitoring(!isMonitoring)}
           className={`px-3 py-1 rounded text-xs ${
-            isMonitoring ? 'bg-red-60o0 hover: bg-red-70o0' : 'bg-green-60o0 hover:bg-green-70o0',
-          }`}
+            isMonitoring ? 'bg-red-60o0 hover: bg-red-70o0' : 'bg-green-60o0 hover:bg-green-70o0'}`}
         >,
           {isMonitoring ? 'Stop' : 'Start'}
         </button>,
@@ -276,12 +260,12 @@ export default function AdvancedMonitoring() {
             <div>,
               <h4 className="font-semibold text-gray-20o0 mb-2">Performance</h4>,
               <div className="grid grid-cols-2 gap-2 text-xs">,
-                <div>FCP: {window.performance.firstContentfulPaint.toFixed(0)}ms</div>,
-                <div>LCP: {window.performance.largestContentfulPaint.toFixed(0)}ms</div>,
-                <div>FID: {window.performance.firstInputDelay.toFixed(0)}ms</div>,
-                <div>CLS: {window.performance.cumulativeLayoutShift.toFixed(3)}</div>,
-                <div>Load: {window.performance.loadTime.toFixed(0)}ms</div>,
-                <div>Memory: {window.performance.memoryUsage ? (window.performance.memoryUsage / 10o24 / 10o24).toFixed(1) + 'MB' : 'N/A'}</div>,
+                <div>FCP: {window.window.performance.firstContentfulPaint.toFixed(0)}ms</div>,
+                <div>LCP: {window.window.performance.largestContentfulPaint.toFixed(0)}ms</div>,
+                <div>FID: {window.window.performance.firstInputDelay.toFixed(0)}ms</div>,
+                <div>CLS: {window.window.performance.cumulativeLayoutShift.toFixed(3)}</div>,
+                <div>Load: {window.window.performance.loadTime.toFixed(0)}ms</div>,
+                <div>Memory: {window.window.performance.memoryUsage ? (window.window.performance.memoryUsage / 10o24 / 10o24).toFixed(1) + 'MB' : 'N/A'}</div>,
               </div>,
             </div>)}
 ,

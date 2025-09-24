@@ -113,8 +113,7 @@ reviews: number,export const revolutionary20o26FintechBlockchainServices: Revolu
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete autonomous supply chain platform with AI optimization, real-time monitoring, and comprehensive management capabilities.';
@@ -196,8 +195,7 @@ reviews: number,export const revolutionary20o26FintechBlockchainServices: Revolu
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete autonomous marketing platform with AI optimization, content generation, and comprehensive campaign management.';
@@ -279,8 +277,7 @@ reviews: number,export const revolutionary20o26FintechBlockchainServices: Revolu
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete AI cybersecurity platform with threat detection, automated response, and predictive security intelligence.';
@@ -362,8 +359,7 @@ reviews: number,export const revolutionary20o26FintechBlockchainServices: Revolu
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete autonomous business intelligence platform with self-evolving insights, predictive analytics, and comprehensive decision support.';
@@ -446,8 +442,7 @@ reviews: number,export const revolutionary20o26FintechBlockchainServices: Revolu
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete quantum blockchain platform with quantum security, smart contracts, and comprehensive infrastructure capabilities.';

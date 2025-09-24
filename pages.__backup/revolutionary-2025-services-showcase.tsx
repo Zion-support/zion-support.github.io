@@ -18,8 +18,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const serviceCategories = [
   {
     id: 'ai-consciousness';
@@ -28,8 +27,7 @@ const serviceCategories = [
     icon: Brain;
     color: 'from-violet-50o0 to-purple-50o0';
     services: allServices.filter(s => s.category.includes('AI Consciousness') || s.category.includes('Healthcare AI'));
-    gradient: 'from-violet-50o0/20 to-indigo-50o0/20',
-  };
+    gradient: 'from-violet-50o0/20 to-indigo-50o0/20'};
   {
     id: 'quantum-emerging';
     title: '⚛️ Quantum & Emerging Tech';
@@ -37,8 +35,7 @@ const serviceCategories = [
     icon: Atom;
     color: 'from-blue-50o0 to-cyan-50o0';
     services: allServices.filter(s => s.category.includes('Quantum') || s.category.includes('DNA Computing'));
-    gradient: 'from-blue-50o0/20 to-cyan-50o0/20',
-  };
+    gradient: 'from-blue-50o0/20 to-cyan-50o0/20'};
   {
     id: 'space-tech';
     title: '🚀 Space Technology & Satellite';
@@ -46,8 +43,7 @@ const serviceCategories = [
     icon: Rocket;
     color: 'from-indigo-50o0 to-blue-50o0';
     services: allServices.filter(s => s.category.includes('Space Technology'));
-    gradient: 'from-indigo-50o0/20 to-blue-50o0/20',
-  };
+    gradient: 'from-indigo-50o0/20 to-blue-50o0/20'};
   {
     id: 'cybersecurity';
     title: '🔒 Next-Generation Cybersecurity';
@@ -55,8 +51,7 @@ const serviceCategories = [
     icon: Shield;
     color: 'from-red-50o0 to-pink-50o0';
     services: allServices.filter(s => s.category.includes('Cybersecurity'));
-    gradient: 'from-red-50o0/20 to-pink-50o0/20',
-  };
+    gradient: 'from-red-50o0/20 to-pink-50o0/20'};
   {
     id: 'cloud-infrastructure';
     title: '☁️ Quantum Cloud & Infrastructure';
@@ -64,8 +59,7 @@ const serviceCategories = [
     icon: Cloud;
     color: 'from-cyan-50o0 to-blue-50o0';
     services: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('Infrastructure'));
-    gradient: 'from-cyan-50o0/20 to-blue-50o0/20',
-  };
+    gradient: 'from-cyan-50o0/20 to-blue-50o0/20'};
   {
     id: 'fintech';
     title: '🏦 Financial Technology Revolution';
@@ -73,8 +67,7 @@ const serviceCategories = [
     icon: DollarSign;
     color: 'from-green-50o0 to-emerald-50o0';
     services: allServices.filter(s => s.category.includes('Financial Technology'));
-    gradient: 'from-green-50o0/20 to-emerald-50o0/20',
-  };
+    gradient: 'from-green-50o0/20 to-emerald-50o0/20'};
   {
     id: 'industrial-iot';
     title: '🏭 Industrial IoT & Smart Manufacturing';
@@ -82,8 +75,7 @@ const serviceCategories = [
     icon: Building2;
     color: 'from-gray-50o0 to-slate-50o0';
     services: allServices.filter(s => s.category.includes('Industrial IoT'));
-    gradient: 'from-gray-50o0/20 to-slate-50o0/20',
-  };
+    gradient: 'from-gray-50o0/20 to-slate-50o0/20'};
   {
     id: 'edtech';
     title: '🎓 Education Technology Revolution';
@@ -91,8 +83,7 @@ const serviceCategories = [
     icon: Users;
     color: 'from-blue-50o0 to-cyan-50o0';
     services: allServices.filter(s => s.category.includes('Education Technology'));
-    gradient: 'from-blue-50o0/20 to-cyan-50o0/20',
-  };
+    gradient: 'from-blue-50o0/20 to-cyan-50o0/20'};
   {
     id: 'sustainability';
     title: '🌱 Sustainability & Green Technology';
@@ -100,8 +91,7 @@ const serviceCategories = [
     icon: Globe;
     color: 'from-green-50o0 to-emerald-50o0';
     services: allServices.filter(s => s.category.includes('Sustainability'));
-    gradient: 'from-green-50o0/20 to-emerald-50o0/20',
-  };
+    gradient: 'from-green-50o0/20 to-emerald-50o0/20'};
   {
     id: 'logistics';
     title: '🚛 Logistics & Supply Chain';
@@ -109,8 +99,7 @@ const serviceCategories = [
     icon: Package;
     color: 'from-orange-50o0 to-red-50o0';
     services: allServices.filter(s => s.category.includes('Logistics'));
-    gradient: 'from-orange-50o0/20 to-red-50o0/20',
-  }
+    gradient: 'from-orange-50o0/20 to-red-50o0/20'}
 ],
 export default function Revolutionary20o25ServicesShowcase() {
   const [searchTermsetSearchTerm] = useState(''),
@@ -135,8 +124,7 @@ export default function Revolutionary20o25ServicesShowcase() {
       case 'customers':,
         return b.customers - a.customers,
       default: ,
-        return b.popular ? 1 : -1,
-    }
+        return b.popular ? 1 : -1}
   }),
   return (
     <>,
@@ -538,5 +526,4 @@ export default function Revolutionary20o25ServicesShowcase() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}

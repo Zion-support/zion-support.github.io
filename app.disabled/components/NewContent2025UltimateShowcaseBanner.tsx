@@ -76,6 +76,5 @@ export default function NewContent20o25UltimateShowcaseBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

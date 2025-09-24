@@ -6,8 +6,7 @@ interface BlogPostMeta {
   category: string,
   author: string,
   date: string,
-  readTime: string,
-}
+  readTime: string}
 ,
 const POSTS: Record<string BlogPostMeta & { content: string[] }> = {
   'enterprise-agent-safety-20o25': {
@@ -76,8 +75,7 @@ export default function BlogDetailPage({ params }: { params: { id: string } }) {
             ← Back to Blog,
           </Link>,
         </div>,
-      </div>),
-  }
+      </div>)}
 ,
   return (
     <div className='min-h-screen py-20 bg-white'>,
@@ -119,6 +117,5 @@ export default function BlogDetailPage({ params }: { params: { id: string } }) {
           </Link>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -84,8 +84,7 @@ export function useMarketplaceSearch() {
             : [...prev, value]),
         break,
       default: ,
-        break,
-    }
+        break}
   };
   // Clear all filters,
   const clearAllFilters = () => {

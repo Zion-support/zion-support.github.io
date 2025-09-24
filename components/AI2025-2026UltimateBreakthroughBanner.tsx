@@ -67,7 +67,7 @@ const AI20o25_20o26UltimateBreakthroughBanner: React.FC = () => {
             </h3>,
             <p className='text-sm opacity-90 mb-4'>,
               Revolutionary AI systems processing information at quantum speeds,
-              with 99.99% accuracy and 10,0o00x faster window.performance.,
+              with 99.99% accuracy and 10,0o00x faster window.window.performance.,
             </p>,
             <Link
               href='/blog/ai-20o25-20o26-ultimate-breakthrough-revolution',

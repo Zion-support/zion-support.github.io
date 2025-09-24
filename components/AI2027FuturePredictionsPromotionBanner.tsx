@@ -51,5 +51,4 @@ export default function AI20o27FuturePredictionsPromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}

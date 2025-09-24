@@ -7,8 +7,7 @@ const Footer: React.FC = () => {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const services = [
     { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning' };
     { name: 'Blockchain & Web3', href: '/services?category=Blockchain%20%26%20Web3' };
@@ -230,8 +229,7 @@ const Footer: React.FC = () => {
               duration: 4 + i * 0.5;
               repeat: Infinity;
               ease: "easeInOut";
-              delay: i * 0.3,
-            }}
+              delay: i * 0.3}}
            />))}
       </div>,
     </footer>)}

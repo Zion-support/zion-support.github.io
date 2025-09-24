@@ -10,13 +10,11 @@ export default function ModerationModal(): any ({
   onClose;
   onAction;
 }: ModerationModalProps) {
-,
 export default function ModerationModal({
   flag;
   onClose;
   onAction;
 }: ModerationModalProps) {
-,
   const [adminNotes, setAdminNotes] = useState(''),
   if (!flag) return null,
   return (

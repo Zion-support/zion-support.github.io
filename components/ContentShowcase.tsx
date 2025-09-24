@@ -11,8 +11,7 @@ interface ContentItem {
   icon?: string,
   category?: string,
   featured?: boolean,
-  isTrending?: boolean,
-}
+  isTrending?: boolean}
 ,
 interface ContentShowcaseProps {
   title: string,
@@ -22,8 +21,7 @@ interface ContentShowcaseProps {
   viewAllHref?: string,
   maxItems?: number,
   className?: string,
-  variant?: 'default' | 'featured' | 'compact',
-}
+  variant?: 'default' | 'featured' | 'compact'}
 ,
 const ContentShowcase: React.FC<ContentShowcaseProps> = ({
   title;
@@ -53,8 +51,7 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
       case 'blog': return 'bg-blue-10o0 text-blue-80o0',
       case 'resource': return 'bg-green-10o0 text-green-80o0',
       case 'case-study': return 'bg-purple-10o0 text-purple-80o0',
-      default: return 'bg-gray-10o0 text-gray-80o0',
-    }
+      default: return 'bg-gray-10o0 text-gray-80o0'}
   };
   const getTypeLabel = (type: string) => {
     switch (type) {
@@ -65,8 +62,7 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
       case 'case-study':,
         return 'Case Study',
       default:,
-        return 'Content',
-    }
+        return 'Content'}
   };
   return (
     <section className={`py-16 ${className}`}>,
@@ -143,8 +139,7 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
       case 'blog': return 'Article',
       case 'resource': return 'Resource',
       case 'case-study': return 'Case Study',
-      default: return 'Content',
-    }
+      default: return 'Content'}
   };
   if (variant === 'compact') {
     return (

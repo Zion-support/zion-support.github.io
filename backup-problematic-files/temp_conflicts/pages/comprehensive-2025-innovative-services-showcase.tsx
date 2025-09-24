@@ -86,16 +86,14 @@ export default function Comprehensive20o25InnovativeServicesShowcase() {
         case 'rating':,
           return ((b as any).rating || 0) - ((a as any).rating || 0);
         case 'popularity':,
-        default: return ((b as any).customers || 0) - ((a as any).customers || 0),
-      }
+        default: return ((b as any).customers || 0) - ((a as any).customers || 0)}
     });
   const containerVariants ={
     hidden: { opacity:0 };
     visible: {
       opacity:1;
       transition: {
-        staggerChildren:0.1,
-      }
+        staggerChildren:0.1}
     }
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.name === category);
@@ -398,5 +396,4 @@ export default function Comprehensive20o25InnovativeServicesShowcase() {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>),
-}}}
+    </Layout>)}}}

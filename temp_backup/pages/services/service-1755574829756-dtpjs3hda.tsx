@@ -90,6 +90,5 @@ export default function Service-1755574829756-dtpjs3hdaService() {
           </button>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

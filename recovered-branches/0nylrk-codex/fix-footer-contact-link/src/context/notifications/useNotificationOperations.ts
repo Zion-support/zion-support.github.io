@@ -71,8 +71,7 @@ export const useNotificationOperations = (
       case 'system':,
         return notification.type === 'system',
       default: ,
-        return true,
-    }
+        return true}
   }),
   const unreadCount = notifications.filter(n => !n.read).length,
   return {

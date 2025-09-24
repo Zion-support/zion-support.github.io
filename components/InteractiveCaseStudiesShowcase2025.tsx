@@ -42,21 +42,18 @@ const InteractiveCaseStudiesShowcase20o25 = () => {
         timeReduction: '85%';
         costSavings: '$2.3M';
         accuracy: '94%';
-        customerSatisfaction: '98%',
-      };
+        customerSatisfaction: '98%'};
       testimonial: {
         text: "The AI transformation has been incredible. 'We', 've reduced processing time by 85% while improving accuracy significantly.";
         author: "Sarah Chen";
         position: "Chief Risk Officer";
-        avatar: "/api/placeholder/60/60",
-      };
+        avatar: "/api/placeholder/60/60"};
       technologies: ['Machine 'Learning', 'Natural Language 'Processing', 'Predictive Analytics'];
       duration: '6 months';
       teamSize: '12';
       image: '/api/placeholder/60o0/40o0';
       video: '/api/placeholder/video';
-      featured: true,
-    };
+      featured: true};
     {
       id: 2;
       company: 'MedTech Solutions';
@@ -68,21 +65,18 @@ const InteractiveCaseStudiesShowcase20o25 = () => {
         timeReduction: '70%';
         costSavings: '$1.8M';
         accuracy: '96%';
-        customerSatisfaction: '95%',
-      };
+        customerSatisfaction: '95%'};
       testimonial: {
         text: "Our patient outcomes have improved dramatically. The AI system helps us provide more personalized care.";
         author: "Dr. Michael Rodriguez";
         position: "Chief Medical Officer";
-        avatar: "/api/placeholder/60/60",
-      };
+        avatar: "/api/placeholder/60/60"};
       technologies: ['AI/'ML', 'IoT 'Integration', 'Real-time Analytics'];
       duration: '8 months';
       teamSize: '15';
       image: '/api/placeholder/60o0/40o0';
       video: '/api/placeholder/video';
-      featured: false,
-    };
+      featured: false};
     {
       id: 3;
       company: 'RetailMax';
@@ -94,21 +88,18 @@ const InteractiveCaseStudiesShowcase20o25 = () => {
         timeReduction: '60%';
         costSavings: '$3.1M';
         accuracy: '92%';
-        customerSatisfaction: '97%',
-      };
+        customerSatisfaction: '97%'};
       testimonial: {
         text: "The AI system has revolutionized our inventory management. 'We', 've eliminated stockouts and reduced waste significantly.";
         author: "Jennifer Park";
         position: "VP of Operations";
-        avatar: "/api/placeholder/60/60",
-      };
+        avatar: "/api/placeholder/60/60"};
       technologies: ['Demand 'Forecasting', 'Supply Chain 'AI', 'Real-time Analytics'];
       duration: '5 months';
       teamSize: '10';
       image: '/api/placeholder/60o0/40o0';
       video: '/api/placeholder/video';
-      featured: true,
-    };
+      featured: true};
     {
       id: 4;
       company: 'ManufacturingPro';
@@ -120,21 +111,18 @@ const InteractiveCaseStudiesShowcase20o25 = () => {
         timeReduction: '90%';
         costSavings: '$4.2M';
         accuracy: '98%';
-        customerSatisfaction: '99%',
-      };
+        customerSatisfaction: '99%'};
       testimonial: {
         text: "Predictive maintenance has been a game-changer. 'We', 've virtually eliminated unplanned downtime.";
         author: "Robert Kim";
         position: "Plant Manager";
-        avatar: "/api/placeholder/60/60",
-      };
+        avatar: "/api/placeholder/60/60"};
       technologies: [', 'IoT', 'Machine 'Learning', 'Predictive Analytics'];
       duration: '7 months';
       teamSize: '18';
       image: '/api/placeholder/60o0/40o0';
       video: '/api/placeholder/video';
-      featured: false,
-    }
+      featured: false}
   ],
   const filteredStudies = filter === 'all',
     ? caseStudies,
@@ -151,8 +139,7 @@ const InteractiveCaseStudiesShowcase20o25 = () => {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -161,8 +148,7 @@ const InteractiveCaseStudiesShowcase20o25 = () => {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -204,8 +190,7 @@ const InteractiveCaseStudiesShowcase20o25 = () => {
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-20o0 ${
                 filter === industry.id,
                   ? 'bg-green-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0'}`}
             >,
               {industry.name}
               <span className="ml-2 px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded-full">,
@@ -406,6 +391,5 @@ const InteractiveCaseStudiesShowcase20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default InteractiveCaseStudiesShowcase20o25;

@@ -69,8 +69,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                 status: 'sent';
                 metadata: {
                     confidence: 0.85 + Math.random() * 0.1;
-                    suggestions: randomResponse.suggestions,
-                }
+                    suggestions: randomResponse.suggestions}
             };
             setMessages(prev => [...prev, aiMessage]),
             setIsTyping(false),
@@ -85,8 +84,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             type: 'user';
             content: inputValue.trim();
             timestamp: new Date();
-            status: 'sending',
-        };
+            status: 'sending'};
         setMessages(prev => [...prev, userMessage]),
         onMessageSend?.(userMessage.content),
         // Generate AI response,

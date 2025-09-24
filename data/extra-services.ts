@@ -11,8 +11,7 @@ export interface ExtraService {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const extraServices: ExtraService[] = [
   {

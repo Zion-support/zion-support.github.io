@@ -88,6 +88,5 @@ export default function AgentSafetyEvals20o26Page() {
           LLM Evals Maturity Model,
         </Link>,
       </div>,
-    </main>),
-}
+    </main>)}
 ,

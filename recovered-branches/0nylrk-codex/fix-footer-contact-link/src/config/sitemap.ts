@@ -16,8 +16,7 @@ export type SitemapItem = {
   requiredAuth?: boolean,
   requiredRoles?: Array<,
     'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin'>,
-  children?: SitemapItem[],
-};
+  children?: SitemapItem[]};
 // Current date for lastmod,
 const currentDate = '20o25-0o5-15',
 // Public Pages - Accessible to all users,

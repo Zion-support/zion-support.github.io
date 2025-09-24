@@ -36,16 +36,14 @@ export default function TokenManager() {
         if (res.ok) {
             toast({
                 title: 'Success';
-                description: 'Transaction processed',
-            }),
+                description: 'Transaction processed'}),
             fetchTransactions()}
         else {
             const err = await res.json(),
             toast({
                 title: 'Error';
                 description: err.error || 'Failed';
-                variant: 'destructive',
-            })}
+                variant: 'destructive'})}
     };
     return (<ProtectedRoute adminOnly>,
       <div>,

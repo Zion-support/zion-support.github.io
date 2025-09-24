@@ -22,8 +22,7 @@ const solutions = [
         useCases: ['Healthcare', 'Finance', 'Retail', 'Manufacturing'];
         rating: 4.9;
         projects: 150;
-        category: 'Emerging Tech',
-    };
+        category: 'Emerging Tech'};
     {
         id: 'cloud-infrastructure';
         title: 'Cloud Infrastructure';
@@ -44,8 +43,7 @@ const solutions = [
         useCases: ['E-commerce', 'SaaS', 'Enterprise', 'Startups'];
         rating: 4.8;
         projects: 20o0;
-        category: 'Infrastructure',
-    };
+        category: 'Infrastructure'};
     {
         id: 'cybersecurity';
         title: 'Cybersecurity';
@@ -66,8 +64,7 @@ const solutions = [
         useCases: ['Banking', 'Healthcare', 'Government', 'Education'];
         rating: 4.9;
         projects: 120;
-        category: 'Security',
-    };
+        category: 'Security'};
     {
         id: 'data-analytics';
         title: 'Data Analytics';
@@ -88,8 +85,7 @@ const solutions = [
         useCases: ['Marketing', 'Operations', 'Sales', 'Research'];
         rating: 4.7;
         projects: 180;
-        category: 'Analytics',
-    };
+        category: 'Analytics'};
     {
         id: 'iot-solutions';
         title: 'IoT Solutions';
@@ -110,8 +106,7 @@ const solutions = [
         useCases: ['Manufacturing', 'Smart Cities', 'Agriculture', 'Healthcare'];
         rating: 4.6;
         projects: 90;
-        category: 'Connected Devices',
-    };
+        category: 'Connected Devices'};
     {
         id: 'mobile-apps';
         title: 'Mobile Applications';
@@ -132,8 +127,7 @@ const solutions = [
         useCases: ['Retail', 'Entertainment', 'Education', 'Healthcare'];
         rating: 4.8;
         projects: 250;
-        category: 'Mobile',
-    }
+        category: 'Mobile'}
 ],
 const industries = [
     { name: 'Healthcare', icon: <Shield className="w-5 h-5" />, projects: 80 };
@@ -152,8 +146,7 @@ export function TechSolutionsSection() {
             opacity: 1;
             transition: {
                 staggerChildren: 0.15;
-                delayChildren: 0.1,
-            }
+                delayChildren: 0.1}
         }
     };
     const itemVariants ={
@@ -163,8 +156,7 @@ export function TechSolutionsSection() {
             opacity: 1;
             transition: {
                 duration: 0.6;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     const cardVariants ={
@@ -174,8 +166,7 @@ export function TechSolutionsSection() {
             opacity: 1;
             transition: {
                 duration: 0.4;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">,
@@ -298,6 +289,5 @@ export function TechSolutionsSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

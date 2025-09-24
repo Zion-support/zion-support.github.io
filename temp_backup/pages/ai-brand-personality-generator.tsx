@@ -32,6 +32,5 @@ export default function BrandPersonalityPage() {
         industries={['Marketing', 'Brand', 'Agencies', 'SaaS']}
         url='https: //ziontechgroup.com/ai-brand-personality-generator',
       />,
-    </>),
-}
+    </>)}
 ,

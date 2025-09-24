@@ -256,8 +256,7 @@ export function TechnologyStackSection() {
             opacity: 1;
             transition: {
                 staggerChildren: 0.15;
-                delayChildren: 0.1,
-            }
+                delayChildren: 0.1}
         }
     };
     const itemVariants ={
@@ -267,8 +266,7 @@ export function TechnologyStackSection() {
             opacity: 1;
             transition: {
                 duration: 0.6;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-purple via-zion-slate-dark to-zion-blue relative overflow-hidden">,
@@ -419,6 +417,5 @@ export function TechnologyStackSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

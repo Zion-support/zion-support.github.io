@@ -20,6 +20,5 @@ export default function AiLegalDocumentAutomation20o25Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -28,15 +28,13 @@ export interface RevolutionaryAIService {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const revolutionaryAIServices20o29: RevolutionaryAIService[] = [
   {

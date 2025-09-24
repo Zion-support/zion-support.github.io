@@ -21,8 +21,7 @@ export function SiteHealthDashboard() {
                             value: 2.1;
                             status: 'good';
                             description: 'Average page load time across all pages';
-                            recommendation: 'Optimize images and enable compression to reach < 2s',
-                        };
+                            recommendation: 'Optimize images and enable compression to reach < 2s'};
                         {
                             name: 'First Contentful Paint';
                             value: 1.4;
@@ -49,8 +48,7 @@ export function SiteHealthDashboard() {
                             value: 78;
                             status: 'good';
                             description: 'Percentage of pages with proper meta descriptions';
-                            recommendation: 'Add meta descriptions to remaining 22% of pages',
-                        };
+                            recommendation: 'Add meta descriptions to remaining 22% of pages'};
                         {
                             name: 'Title Tags';
                             value: 95;
@@ -61,8 +59,7 @@ export function SiteHealthDashboard() {
                             value: 72;
                             status: 'warning';
                             description: 'Internal link structure and distribution';
-                            recommendation: 'Improve internal linking between related services',
-                        };
+                            recommendation: 'Improve internal linking between related services'};
                         {
                             name: 'Mobile Friendliness';
                             value: 98;
@@ -84,8 +81,7 @@ export function SiteHealthDashboard() {
                             value: 88;
                             status: 'good';
                             description: 'ARIA labels and roles implementation';
-                            recommendation: 'Add ARIA labels to interactive elements',
-                        };
+                            recommendation: 'Add ARIA labels to interactive elements'};
                         {
                             name: 'Keyboard Navigation';
                             value: 95;
@@ -122,8 +118,7 @@ export function SiteHealthDashboard() {
                             value: 88;
                             status: 'good';
                             description: 'Security vulnerability assessment';
-                            recommendation: 'Update dependencies with known vulnerabilities',
-                        };
+                            recommendation: 'Update dependencies with known vulnerabilities'};
                         {
                             name: 'Content Security Policy';
                             value: 95;
@@ -140,15 +135,13 @@ export function SiteHealthDashboard() {
                             value: 68;
                             status: 'warning';
                             description: 'Percentage of pages with complete content';
-                            recommendation: 'Add comprehensive content to 32% of service pages',
-                        };
+                            recommendation: 'Add comprehensive content to 32% of service pages'};
                         {
                             name: 'Broken Links';
                             value: 45;
                             status: 'critical';
                             description: 'Link health across the website';
-                            recommendation: 'Fix 278 broken links identified in audit',
-                        };
+                            recommendation: 'Fix 278 broken links identified in audit'};
                         {
                             name: 'Image Optimization';
                             value: 82;
@@ -199,8 +192,7 @@ export function SiteHealthDashboard() {
             case 'good': return 'text-blue-50o0 bg-blue-50 border-blue-20o0',
             case 'warning': return 'text-yellow-50o0 bg-yellow-50 border-yellow-20o0',
             case 'critical': return 'text-red-50o0 bg-red-50 border-red-20o0',
-            default: return 'text-gray-50o0 bg-gray-50 border-gray-20o0',
-        }
+            default: return 'text-gray-50o0 bg-gray-50 border-gray-20o0'}
     };
     const getStatusIcon = (status) => {
         switch (status) {
@@ -208,8 +200,7 @@ export function SiteHealthDashboard() {
             case 'good': return <CheckCircle className="w-4 h-4" />,
             case 'warning': return <AlertTriangle className="w-4 h-4" />,
             case 'critical': return <AlertCircle className="w-4 h-4" />,
-            default: return <Clock className="w-4 h-4" />,
-        }
+            default: return <Clock className="w-4 h-4" />}
     };
     const getScoreColor = (score) => {
         if (score >= 90),
@@ -248,9 +239,9 @@ export function SiteHealthDashboard() {
         </div>,
         <p className="text-gray-60o0">,
           {overallScore >= 90 ? 'Excellent - Your site is performing at peak levels!' :,
-            overallScore >= 75 ? 'Good - Minor improvements can boost window.performance.' :,
+            overallScore >= 75 ? 'Good - Minor improvements can boost window.window.performance.' :,
                 overallScore >= 60 ? 'Needs Attention - Several areas require improvement.' :,
-                    'Critical - Immediate action required for optimal window.performance.'}
+                    'Critical - Immediate action required for optimal window.window.performance.'}
         </p>,
       </div>,
       {/* Health Categories */}
@@ -354,6 +345,5 @@ export function SiteHealthDashboard() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

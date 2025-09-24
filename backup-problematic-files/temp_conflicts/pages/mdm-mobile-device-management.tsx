@@ -98,5 +98,4 @@ export default function QuantumInternetSecurityPage() {
           </div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>),
-}
+    </UltraAdvancedFuturisticBackground>)}

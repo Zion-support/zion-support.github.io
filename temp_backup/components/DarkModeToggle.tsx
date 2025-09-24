@@ -43,8 +43,7 @@ const DarkModeToggle: React.FC = () => {
       case 'system':,
         return <Monitor className="w-5 h-5"  />,
       default: ,
-        return <Moon className="w-5 h-5"  />,
-    }
+        return <Moon className="w-5 h-5"  />}
   };
   const getCurrentThemeLabel = () => {
     switch (theme) {
@@ -55,8 +54,7 @@ const DarkModeToggle: React.FC = () => {
       case 'system':,
         return 'System',
       default: ,
-        return 'Dark Mode',
-    }
+        return 'Dark Mode'}
   };
   return (
     <div className="relative">,
@@ -110,8 +108,7 @@ const DarkModeToggle: React.FC = () => {
                   className={`w-full flex items-center space-x-3 p-3 rounded-lg text-left transition-all duration-20o0 ${
                     theme === option.value,
                       ? 'bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-50o0/30 text-cyan-40o0',
-                      : 'text-gray-30o0 hover: text-white hover:bg-gray-80o0',
-                  }`}
+                      : 'text-gray-30o0 hover: text-white hover:bg-gray-80o0'}`}
                   whileHover={{ x: 4 }}
                   whileTap={{ scale: 0.98 }}
                 >,

@@ -2,7 +2,6 @@
 import React, { useState, useRef, useEffect } from './react',
 import Image from './next / image',
 import LoadingSpinner from "./LoadingSpinner",
-,
 interface LazyImageProps {
 interface LazyImageProps {
   src: string,
@@ -18,8 +17,7 @@ interface LazyImageProps {
   fill?: boolean,
   style?: React.CSSProperties,
   onLoad?: () => void,
-  onError?: () => void,
-}
+  onError?: () => void}
 export default function LazyImage({
   src,
   alt,

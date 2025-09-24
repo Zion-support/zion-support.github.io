@@ -95,6 +95,5 @@ export function ContactSection() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

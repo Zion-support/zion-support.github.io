@@ -10,8 +10,7 @@ const NewContent20o25CybersecurityBanner: React.FC = () => {
     // Check if banner was previously dismissed,
     const dismissed = localStorage.getItem('cybersecurity-banner-dismissed'),
     if (!dismissed) {
-      setIsVisible(true),
-    }
+      setIsVisible(true)}
   }[]),
   const handleDismiss = () => {
     setIsVisible(false),
@@ -81,6 +80,5 @@ const NewContent20o25CybersecurityBanner: React.FC = () => {
           </button>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NewContent20o25CybersecurityBanner;

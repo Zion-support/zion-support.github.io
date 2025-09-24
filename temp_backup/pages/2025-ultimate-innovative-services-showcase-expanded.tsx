@@ -50,8 +50,7 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {
     if (service.benefits) return service.benefits,
     if (service.features) return service.features,
     if (service.keyFeatures) return service.keyFeatures,
-    return [],
-  };
+    return []};
   // Helper function to get service pricing,
   const getServicePricing = (service: any) => {
     if (typeof service.price === 'string') return service.price,
@@ -62,8 +61,7 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {
   const getServiceSetupTime = (service: any) => {
     if (service.setupTime) return service.setupTime,
     if (service.period) return service.period,
-    return 'Contact for details',
-  };
+    return 'Contact for details'};
   // Filter and sort services,
   const filteredServices = allServices,
     .filter(service => {
@@ -88,8 +86,7 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {
           return (
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()),
         default: ,
-          return 0,
-      }
+          return 0}
     }),
   const containerVariants = {
     hidden: { opacity: 0 };
@@ -188,8 +185,7 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                       selectedCategory === category,
                         ? 'bg-purple-60o0 text-white',
-                        : 'bg-white/20 text-gray-30o0 hover: bg-white/30',
-                    }`}
+                        : 'bg-white/20 text-gray-30o0 hover: bg-white/30'}`}
                   >,
                     {category}
                   </button>))}
@@ -211,8 +207,7 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {
                   className={`p-2 rounded-md transition-all ${
                     viewMode === 'grid',
                       ? 'bg-purple-60o0 text-white',
-                      : 'text-gray-30o0 hover: text-white',
-                  }`}
+                      : 'text-gray-30o0 hover: text-white'}`}
                 >,
                   <Grid className='w-5 h-5' />,
                 </button>,
@@ -221,8 +216,7 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {
                   className={`p-2 rounded-md transition-all ${
                     viewMode === 'list',
                       ? 'bg-purple-60o0 text-white',
-                      : 'text-gray-30o0 hover: text-white',
-                  }`}
+                      : 'text-gray-30o0 hover: text-white'}`}
                 >,
                   <List className='w-5 h-5' />,
                 </button>,
@@ -241,16 +235,14 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {
             className={
               viewMode === 'grid',
                 ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8',
-                : 'space-y-6',
-            }
+                : 'space-y-6'}
           >,
             {filteredServices.map(service => (
               <motion.div,
                 key={service.id}
                 variants={itemVariants}
                 className={`bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden transition-all hover: scale-10o5 hover:bg-white/20 ${
-                  viewMode === 'list' ? 'flex' : '',
-                }`}
+                  viewMode === 'list' ? 'flex' : ''}`}
               >,
                 {/* Service Header */}
                 <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>,

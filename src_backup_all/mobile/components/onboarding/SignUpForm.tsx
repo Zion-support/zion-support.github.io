@@ -83,8 +83,7 @@ export function SignUpForm() {
   const handleGoogleLogin = async () => {
     try {
       await loginWithGoogle()} catch (err: any) {
-      setError(err.message),
-    }
+      setError(err.message)}
   };
   return (
     <div className='space-y-4 px-4'>,
@@ -221,6 +220,5 @@ export function SignUpForm() {
           Sign In,
         </Link>,
       </p>,
-    </div>),
-}
+    </div>)}
 ,

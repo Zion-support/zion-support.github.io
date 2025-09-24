@@ -18,11 +18,9 @@ export interface ExpandedService20o27 {
       starter: number,
       professional: number,
       enterprise: number,
-      custom: string,
-    };
+      custom: string};
     freeTier: boolean,
-    trialPeriod: string,
-  };
+    trialPeriod: string};
   marketPrice: string,
   competitors: string[],
   roi: string,
@@ -36,21 +34,18 @@ export interface ExpandedService20o27 {
     phone: string,
     email: string,
     website: string,
-    address: string,
-  };
+    address: string};
   technicalSpecs: {
     uptime: string,
     security: string[],
     compliance: string[],
     apiEndpoints: number,
-    scalability: string,
-  };
+    scalability: string};
   support: string,
   rating: number,
   reviews: number,
   launchDate: string,
-  status: 'active' | 'beta' | 'coming-soon',
-}
+  status: 'active' | 'beta' | 'coming-soon'}
 ,
 // 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE,
 export const advancedCybersecurityServices: ExpandedService20o27[] = [
@@ -98,11 +93,9 @@ export const advancedCybersecurityServices: ExpandedService20o27[] = [
         starter: 250o0;
         professional: 50o00;
         enterprise: 10o000;
-        custom: 'Contact Sales',
-      };
+        custom: 'Contact Sales'};
       freeTier: false;
-      trialPeriod: '30 days',
-    };
+      trialPeriod: '30 days'};
     marketPrice: '$2,50o0 - $15,0o00/month';
     competitors: ['CrowdStrike', 'SentinelOne', 'Palo Alto Networks'];
     roi: '40o0-60o0% through threat prevention';
@@ -116,21 +109,18 @@ export const advancedCybersecurityServices: ExpandedService20o27[] = [
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com/quantum-threat-hunter';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    };
+      address: '364 E Main St STE 10o08 Middletown DE 19709'};
     technicalSpecs: {
       uptime: '99.99%';
       security: ['Zero Trust Architecture', 'Quantum Encryption', 'AI-Powered Detection'];
       compliance: ['SOC 2 Type II', 'ISO 270o01', 'FedRAMP', 'GDPR'];
       apiEndpoints: 20o0;
-      scalability: 'Unlimited',
-    };
+      scalability: 'Unlimited'};
     support: '24/7 Security Operations Center';
     rating: 4.9;
     reviews: 342;
     launchDate: '20o27-0o1-15';
-    status: 'active',
-  };
+    status: 'active'};
   {
     id: 'ai-compliance-automator';
     name: 'AI Compliance Automator';
@@ -175,11 +165,9 @@ export const advancedCybersecurityServices: ExpandedService20o27[] = [
         starter: 150o0;
         professional: 30o00;
         enterprise: 60o00;
-        custom: 'Contact Sales',
-      };
+        custom: 'Contact Sales'};
       freeTier: true;
-      trialPeriod: '14 days',
-    };
+      trialPeriod: '14 days'};
     marketPrice: '$1,50o0 - $8,0o00/month';
     competitors: ['OneTrust', 'TrustArc', 'LogicGate'];
     roi: '30o0-50o0% through automation';
@@ -193,21 +181,18 @@ export const advancedCybersecurityServices: ExpandedService20o27[] = [
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com/ai-compliance-automator';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    };
+      address: '364 E Main St STE 10o08 Middletown DE 19709'};
     technicalSpecs: {
       uptime: '99.9%';
       security: ['Role-based Access Control', 'Data Encryption', 'Audit Logging'];
       compliance: ['SOC 2', 'ISO 270o01', 'GDPR', 'HIPAA'];
       apiEndpoints: 150;
-      scalability: 'Enterprise-grade',
-    };
+      scalability: 'Enterprise-grade'};
     support: 'Business hours + emergency support';
     rating: 4.8;
     reviews: 189;
     launchDate: '20o27-0o2-0o1';
-    status: 'active',
-  }
+    status: 'active'}
 ],
 // 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE,
 export const advancedDataAnalyticsServices: ExpandedService20o27[] = [
@@ -255,11 +240,9 @@ export const advancedDataAnalyticsServices: ExpandedService20o27[] = [
         starter: 180o0;
         professional: 350o0;
         enterprise: 70o00;
-        custom: 'Contact Sales',
-      };
+        custom: 'Contact Sales'};
       freeTier: true;
-      trialPeriod: '21 days',
-    };
+      trialPeriod: '21 days'};
     marketPrice: '$1,80o0 - $10,0o00/month';
     competitors: ['Tableau', 'Power BI', 'Qlik', 'Looker'];
     roi: '250-40o0% through improved decisions';
@@ -273,21 +256,18 @@ export const advancedDataAnalyticsServices: ExpandedService20o27[] = [
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com/predictive-insights-engine';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    };
+      address: '364 E Main St STE 10o08 Middletown DE 19709'};
     technicalSpecs: {
       uptime: '99.9%';
       security: ['Data Encryption', 'Access Control', 'Audit Logging'];
       compliance: ['GDPR', 'CCPA', 'SOC 2', 'ISO 270o01'];
       apiEndpoints: 180;
-      scalability: 'Unlimited data processing',
-    };
+      scalability: 'Unlimited data processing'};
     support: 'Business hours + 24/7 emergency';
     rating: 4.7;
     reviews: 267;
     launchDate: '20o27-0o1-20';
-    status: 'active',
-  };
+    status: 'active'};
   {
     id: 'real-time-data-streaming';
     name: 'Real-Time Data Streaming Platform';
@@ -332,11 +312,9 @@ export const advancedDataAnalyticsServices: ExpandedService20o27[] = [
         starter: 220o0;
         professional: 450o0;
         enterprise: 90o00;
-        custom: 'Contact Sales',
-      };
+        custom: 'Contact Sales'};
       freeTier: false;
-      trialPeriod: '14 days',
-    };
+      trialPeriod: '14 days'};
     marketPrice: '$2,20o0 - $12,0o00/month';
     competitors: ['Apache Kafka', 'Amazon Kinesis', 'Google Cloud Dataflow'];
     roi: '30o0-50o0% through real-time insights';
@@ -350,21 +328,18 @@ export const advancedDataAnalyticsServices: ExpandedService20o27[] = [
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com/real-time-data-streaming';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    };
+      address: '364 E Main St STE 10o08 Middletown DE 19709'};
     technicalSpecs: {
       uptime: '99.99%';
       security: ['Data Encryption', 'Access Control', 'Network Security'];
       compliance: ['SOC 2', 'ISO 270o01', 'GDPR', 'Industry standards'];
       apiEndpoints: 250;
-      scalability: 'Millions of events per second',
-    };
+      scalability: 'Millions of events per second'};
     support: '24/7 technical support';
     rating: 4.8;
     reviews: 198;
     launchDate: '20o27-0o2-15';
-    status: 'active',
-  }
+    status: 'active'}
 ],
 // 3. ADVANCED CLOUD & DEVOPS SOLUTIONS,
 export const advancedCloudDevOpsServices: ExpandedService20o27[] = [
@@ -412,11 +387,9 @@ export const advancedCloudDevOpsServices: ExpandedService20o27[] = [
         starter: 20o00;
         professional: 40o00;
         enterprise: 80o00;
-        custom: 'Contact Sales',
-      };
+        custom: 'Contact Sales'};
       freeTier: false;
-      trialPeriod: '30 days',
-    };
+      trialPeriod: '30 days'};
     marketPrice: '$2,0o00 - $15,0o00/month';
     competitors: ['Terraform', 'Ansible', 'HashiCorp', 'AWS Systems Manager'];
     roi: '20o0-40o0% through cost optimization';
@@ -430,21 +403,18 @@ export const advancedCloudDevOpsServices: ExpandedService20o27[] = [
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com/multi-cloud-orchestrator';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    };
+      address: '364 E Main St STE 10o08 Middletown DE 19709'};
     technicalSpecs: {
       uptime: '99.9%';
       security: ['Multi-cloud Security', 'Access Control', 'Encryption'];
       compliance: ['SOC 2', 'ISO 270o01', 'FedRAMP', 'Industry standards'];
       apiEndpoints: 30o0;
-      scalability: 'Unlimited cloud resources',
-    };
+      scalability: 'Unlimited cloud resources'};
     support: '24/7 cloud operations support';
     rating: 4.9;
     reviews: 312;
     launchDate: '20o27-0o1-10';
-    status: 'active',
-  };
+    status: 'active'};
   {
     id: 'ai-powered-devops-automation';
     name: 'AI-Powered DevOps Automation';
@@ -489,11 +459,9 @@ export const advancedCloudDevOpsServices: ExpandedService20o27[] = [
         starter: 120o0;
         professional: 250o0;
         enterprise: 50o00;
-        custom: 'Contact Sales',
-      };
+        custom: 'Contact Sales'};
       freeTier: true;
-      trialPeriod: '21 days',
-    };
+      trialPeriod: '21 days'};
     marketPrice: '$1,20o0 - $8,0o00/month';
     competitors: ['Jenkins', 'GitLab CI/CD', 'GitHub Actions', 'CircleCI'];
     roi: '30o0-50o0% through automation';
@@ -507,21 +475,18 @@ export const advancedCloudDevOpsServices: ExpandedService20o27[] = [
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com/ai-powered-devops-automation';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    };
+      address: '364 E Main St STE 10o08 Middletown DE 19709'};
     technicalSpecs: {
       uptime: '99.9%';
       security: ['Secure CI/CD', 'Access Control', 'Audit Logging'];
       compliance: ['SOC 2', 'ISO 270o01', 'DevSecOps standards'];
       apiEndpoints: 20o0;
-      scalability: 'Unlimited developers and projects',
-    };
+      scalability: 'Unlimited developers and projects'};
     support: 'Business hours + emergency support';
     rating: 4.7;
     reviews: 245;
     launchDate: '20o27-0o2-0o5';
-    status: 'active',
-  }
+    status: 'active'}
 ],
 // 4. ADVANCED IOT & EDGE COMPUTING,
 export const advancedIoTServices: ExpandedService20o27[] = [
@@ -569,11 +534,9 @@ export const advancedIoTServices: ExpandedService20o27[] = [
         starter: 280o0;
         professional: 550o0;
         enterprise: 110o00;
-        custom: 'Contact Sales',
-      };
+        custom: 'Contact Sales'};
       freeTier: false;
-      trialPeriod: '30 days',
-    };
+      trialPeriod: '30 days'};
     marketPrice: '$2,80o0 - $18,0o00/month';
     competitors: ['PTC ThingWorx', 'Siemens Mindsphere', 'GE Predix', 'IBM Watson IoT'];
     roi: '250-40o0% through operational efficiency';
@@ -587,21 +550,18 @@ export const advancedIoTServices: ExpandedService20o27[] = [
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com/industrial-iot-intelligence';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    };
+      address: '364 E Main St STE 10o08 Middletown DE 19709'};
     technicalSpecs: {
       uptime: '99.9%';
       security: ['Industrial Security', 'Data Encryption', 'Access Control'];
       compliance: ['ISO 270o01', 'IEC 62443', 'Industry 4.0 standards'];
       apiEndpoints: 40o0;
-      scalability: 'Unlimited devices and data',
-    };
+      scalability: 'Unlimited devices and data'};
     support: '24/7 industrial support';
     rating: 4.8;
     reviews: 178;
     launchDate: '20o27-0o1-25';
-    status: 'active',
-  };
+    status: 'active'};
   {
     id: 'smart-city-operations';
     name: 'Smart City Operations Platform';
@@ -646,11 +606,9 @@ export const advancedIoTServices: ExpandedService20o27[] = [
         starter: 50o00;
         professional: 10o000;
         enterprise: 20o000;
-        custom: 'Contact Sales',
-      };
+        custom: 'Contact Sales'};
       freeTier: false;
-      trialPeriod: '60 days',
-    };
+      trialPeriod: '60 days'};
     marketPrice: '$5,0o00 - $50,0o00/month';
     competitors: ['Cisco Smart Cities', 'IBM Smart Cities', 'Microsoft CityNext', 'Siemens Smart Cities'];
     roi: '20o0-350% through operational efficiency';
@@ -664,21 +622,18 @@ export const advancedIoTServices: ExpandedService20o27[] = [
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com/smart-city-operations';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    };
+      address: '364 E Main St STE 10o08 Middletown DE 19709'};
     technicalSpecs: {
       uptime: '99.9%';
       security: ['City Security', 'Data Privacy', 'Access Control'];
       compliance: ['Government standards', 'Data protection', 'Urban regulations'];
       apiEndpoints: 50o0;
-      scalability: 'City-wide deployment',
-    };
+      scalability: 'City-wide deployment'};
     support: '24/7 city operations support';
     rating: 4.9;
     reviews: 156;
     launchDate: '20o27-0o2-10';
-    status: 'active',
-  }
+    status: 'active'}
 ],
 // 5. ADVANCED FINANCIAL TECHNOLOGY,
 export const advancedFinTechServices: ExpandedService20o27[] = [
@@ -726,11 +681,9 @@ export const advancedFinTechServices: ExpandedService20o27[] = [
         starter: 80o00;
         professional: 150o00;
         enterprise: 30o000;
-        custom: 'Contact Sales',
-      };
+        custom: 'Contact Sales'};
       freeTier: false;
-      trialPeriod: '30 days',
-    };
+      trialPeriod: '30 days'};
     marketPrice: '$8,0o00 - $50,0o00/month';
     competitors: ['Bloomberg Terminal', 'Thomson Reuters', 'FactSet', 'Refinitiv'];
     roi: '50o0-10o00% through superior returns';
@@ -744,21 +697,18 @@ export const advancedFinTechServices: ExpandedService20o27[] = [
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com/quantum-financial-modeling';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    };
+      address: '364 E Main St STE 10o08 Middletown DE 19709'};
     technicalSpecs: {
       uptime: '99.99%';
       security: ['Financial-grade Security', 'Quantum Encryption', 'Access Control'];
       compliance: ['SOX', 'Basel III', 'MiFID II', 'Financial regulations'];
       apiEndpoints: 60o0;
-      scalability: 'Unlimited financial calculations',
-    };
+      scalability: 'Unlimited financial calculations'};
     support: '24/7 financial support';
     rating: 4.9;
     reviews: 89;
     launchDate: '20o27-0o1-0o5';
-    status: 'active',
-  };
+    status: 'active'};
   {
     id: 'decentralized-finance-protocol';
     name: 'Decentralized Finance Protocol';
@@ -803,11 +753,9 @@ export const advancedFinTechServices: ExpandedService20o27[] = [
         starter: 0;
         professional: 0;
         enterprise: 0;
-        custom: 'Governance tokens',
-      };
+        custom: 'Governance tokens'};
       freeTier: true;
-      trialPeriod: 'Immediate',
-    };
+      trialPeriod: 'Immediate'};
     marketPrice: 'Transaction fees only';
     competitors: ['Uniswap', 'Compound', 'Aave', 'MakerDAO'];
     roi: 'Variable based on DeFi yields';
@@ -821,21 +769,18 @@ export const advancedFinTechServices: ExpandedService20o27[] = [
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com/defi-protocol';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    };
+      address: '364 E Main St STE 10o08 Middletown DE 19709'};
     technicalSpecs: {
       uptime: '99.9%';
       security: ['Smart Contract Security', 'Multi-sig Wallets', 'Audit Reports'];
       compliance: ['DeFi standards', 'Smart contract best practices'];
       apiEndpoints: 30o0;
-      scalability: 'Layer 2 solutions',
-    };
+      scalability: 'Layer 2 solutions'};
     support: 'Community + Developer support';
     rating: 4.6;
     reviews: 423;
     launchDate: '20o27-0o1-0o1';
-    status: 'active',
-  }
+    status: 'active'}
 ],
 // 6. ADVANCED HEALTHCARE TECHNOLOGY,
 export const advancedHealthcareServices: ExpandedService20o27[] = [
@@ -883,11 +828,9 @@ export const advancedHealthcareServices: ExpandedService20o27[] = [
         starter: 350o0;
         professional: 70o00;
         enterprise: 140o00;
-        custom: 'Contact Sales',
-      };
+        custom: 'Contact Sales'};
       freeTier: false;
-      trialPeriod: '30 days',
-    };
+      trialPeriod: '30 days'};
     marketPrice: '$3,50o0 - $25,0o00/month';
     competitors: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Philips Healthcare'];
     roi: '30o0-60o0% through improved outcomes';
@@ -901,21 +844,18 @@ export const advancedHealthcareServices: ExpandedService20o27[] = [
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com/ai-diagnostic-assistant';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    };
+      address: '364 E Main St STE 10o08 Middletown DE 19709'};
     technicalSpecs: {
       uptime: '99.9%';
       security: ['HIPAA Compliance', 'Data Encryption', 'Access Control'];
       compliance: ['HIPAA', 'FDA', 'CE Mark', 'Medical standards'];
       apiEndpoints: 250;
-      scalability: 'Enterprise healthcare',
-    };
+      scalability: 'Enterprise healthcare'};
     support: '24/7 medical support';
     rating: 4.8;
     reviews: 134;
     launchDate: '20o27-0o2-0o1';
-    status: 'active',
-  };
+    status: 'active'};
   {
     id: 'telemedicine-platform';
     name: 'Advanced Telemedicine Platform';
@@ -960,11 +900,9 @@ export const advancedHealthcareServices: ExpandedService20o27[] = [
         starter: 250o0;
         professional: 50o00;
         enterprise: 10o000;
-        custom: 'Contact Sales',
-      };
+        custom: 'Contact Sales'};
       freeTier: false;
-      trialPeriod: '30 days',
-    };
+      trialPeriod: '30 days'};
     marketPrice: '$2,50o0 - $20,0o00/month';
     competitors: ['Teladoc', 'Amwell', 'MDLive', 'Doxy.me'];
     roi: '250-40o0% through increased efficiency';
@@ -978,21 +916,18 @@ export const advancedHealthcareServices: ExpandedService20o27[] = [
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com/telemedicine-platform';
-      address: '364 E Main St STE 10o08 Middletown DE 19709',
-    };
+      address: '364 E Main St STE 10o08 Middletown DE 19709'};
     technicalSpecs: {
       uptime: '99.9%';
       security: ['HIPAA Compliance', 'End-to-End Encryption', 'Secure Video'];
       compliance: ['HIPAA', 'HITECH', 'State regulations', 'International standards'];
       apiEndpoints: 30o0;
-      scalability: 'Unlimited providers and patients',
-    };
+      scalability: 'Unlimited providers and patients'};
     support: '24/7 healthcare support';
     rating: 4.7;
     reviews: 289;
     launchDate: '20o27-0o1-15';
-    status: 'active',
-  }
+    status: 'active'}
 ],
 // Export all expanded services,
 export const ALL_EXPANDED_SERVICES_20o27 = [
@@ -1014,13 +949,11 @@ export const EXPANDED_SERVICE_CATEGORIES = [
 // Helper function to get services by category,
 export const getExpandedServicesByCategory = (category: string): ExpandedService20o27[] => {
   if (category === 'All') {
-    return ALL_EXPANDED_SERVICES_20o27,
-  }
+    return ALL_EXPANDED_SERVICES_20o27}
   return ALL_EXPANDED_SERVICES_20o27.filter(service => service.category === category)};
 // Helper function to get services by subcategory,
 export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService20o27[] => {
-  return ALL_EXPANDED_SERVICES_20o27.filter(service => service.subcategory === subcategory),
-};
+  return ALL_EXPANDED_SERVICES_20o27.filter(service => service.subcategory === subcategory)};
 // Helper function to search services,
 export const searchExpandedServices = (query: string): ExpandedService20o27[] => {
   const lowercaseQuery = query.toLowerCase(),
@@ -1029,5 +962,4 @@ export const searchExpandedServices = (query: string): ExpandedService20o27[] =>
     service.description.toLowerCase().includes(lowercaseQuery) ||,
     service.category.toLowerCase().includes(lowercaseQuery) ||,
     service.subcategory.toLowerCase().includes(lowercaseQuery) ||,
-    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))),
-};
+    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery)))};

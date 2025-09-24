@@ -23,8 +23,7 @@ interface Listing {
   rating?: number,
   reviewCount?: number,
   price?: number | null,
-  createdAt: string,
-}
+  createdAt: string}
 ,
 interface CategoryListingPageProps {
   title: string,
@@ -81,8 +80,7 @@ export function CategoryListingPage({
         case 'z-a':,
           return b.title.localeCompare(a.title),
         default: ,
-          return 0,
-      }
+          return 0}
     }),
   return (
     <>,

@@ -596,6 +596,5 @@ const QuantumSupplyChainOptimizer: React.FC = () => {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>),
-};
+    </Layout>)};
 export default QuantumSupplyChainOptimizer;

@@ -9,8 +9,7 @@ interface ContentItem {
   featured: boolean,
   tags: string[],
   description: string,
-  publishDate: string,
-}
+  publishDate: string}
 ,
 const InteractiveContentWidget20o26: React.FC = () => {
   const [selectedCategorysetSelectedCategory] = useState<string>('all'),
@@ -25,8 +24,7 @@ const InteractiveContentWidget20o26: React.FC = () => {
       featured: true;
       tags: [', 'AI', 'Automation'Business'];
       description: 'Discover the latest AI automation strategies transforming businesses worldwide.';
-      publishDate: '20o26-0o1-15',
-    };
+      publishDate: '20o26-0o1-15'};
     {
       id: 'quantum-breakthroughs';
       title: 'Quantum Computing Breakthroughs in Enterprise';
@@ -35,8 +33,7 @@ const InteractiveContentWidget20o26: React.FC = () => {
       featured: true;
       tags: [', 'Quantum', 'Enterprise'Innovation'];
       description: 'Explore how quantum computing is revolutionizing data processing and optimization.';
-      publishDate: '20o26-0o1-12',
-    };
+      publishDate: '20o26-0o1-12'};
     {
       id: 'neural-interfaces';
       title: 'Neural Interface Technology: The Future is Here';
@@ -45,8 +42,7 @@ const InteractiveContentWidget20o26: React.FC = () => {
       featured: false;
       tags: [', 'Neural', 'Interface'Future Tech'];
       description: 'Dive deep into neural interface developments bridging human cognition and AI.';
-      publishDate: '20o26-0o1-10',
-    };
+      publishDate: '20o26-0o1-10'};
     {
       id: 'customer-experience-ai';
       title: 'AI-Driven Customer Experience Transformation';
@@ -55,8 +51,7 @@ const InteractiveContentWidget20o26: React.FC = () => {
       featured: false;
       tags: [', 'AI', 'Customer'Experience'];
       description: 'Learn how AI is reshaping customer interactions and creating personalized experiences.';
-      publishDate: '20o26-0o1-08',
-    };
+      publishDate: '20o26-0o1-08'};
     {
       id: 'sustainable-ai';
       title: 'Sustainable AI: Green Computing for the Future';
@@ -65,8 +60,7 @@ const InteractiveContentWidget20o26: React.FC = () => {
       featured: true;
       tags: [', 'Sustainability', 'Green 'AI', 'Environment'];
       description: 'Explore eco-friendly AI implementations and sustainable computing practices.';
-      publishDate: '20o26-0o1-0o5',
-    };
+      publishDate: '20o26-0o1-0o5'};
     {
       id: 'edge-ai';
       title: 'Edge AI: Bringing Intelligence to the Edge';
@@ -75,8 +69,7 @@ const InteractiveContentWidget20o26: React.FC = () => {
       featured: false;
       tags: ['Edge 'AI', 'Real-'time', 'Performance'];
       description: 'Understand how edge AI enables real-time decision making in critical applications.';
-      publishDate: '20o26-0o1-0o3',
-    }
+      publishDate: '20o26-0o1-0o3'}
   ],
   const categories = ['all'...Array.from(new Set(contentItems.map(item => item.category)))],
   const filteredContent = contentItems.filter(item => {
@@ -134,8 +127,7 @@ const InteractiveContentWidget20o26: React.FC = () => {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-30o0 ${
                   selectedCategory === category,
                     ? 'bg-blue-60o0 text-white shadow-lg',
-                    : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-                }`}
+                    : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
               >,
                 {category === 'all' ? 'All Topics' : category}
               </button>))}
@@ -242,6 +234,5 @@ const InteractiveContentWidget20o26: React.FC = () => {
           </Link>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default InteractiveContentWidget20o26;

@@ -21,7 +21,6 @@ class ErrorBoundary extends React.Component {
       return <div>Something went wrong.</div>}
     return this.props.children}
 }
-,
 };
   return (
   ArrowRight;
@@ -39,14 +38,12 @@ export default function Revolutionary2030ServicesPage() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com',
-  }
+    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'}
 ,
     mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'};
   return (
     <UltraFuturisticBackground2030>,
       <Head>,
@@ -190,8 +187,7 @@ export default function Revolutionary2030ServicesPage() {
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />,
 {/* Additional Meta Tags */}
         <meta name="theme-color" content="#8b5cf6" />,
-        <link rel="canonical" href="https: //ziontechgroup.com/2030-revolutionary-services" />,
-  };
+        <link rel="canonical" href="https: //ziontechgroup.com/2030-revolutionary-services" />};
   return (
     <UltraFuturisticBackground2030>,
       <Head>,

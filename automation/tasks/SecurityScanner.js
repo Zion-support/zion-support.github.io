@@ -10,10 +10,10 @@ const fs = require('fs'),
 const path = require('path'),
 // Simple logger,
 const logger ={
-  info: (msg) => // console.log(`[INFO] ${msg}`);
+  info: (msg) => // // console.log(`[INFO] ${msg}`);
   error: (msg) => console.error(`[ERROR] ${msg}`);
   warn: (msg) => console.warn(`[WARN] ${msg}`);
-  debug: (msg) => // console.log(`[DEBUG] ${msg}`)};
+  debug: (msg) => // // console.log(`[DEBUG] ${msg}`)};
 class SecurityScanner {
   constructor(config ={}) {
     this.config ={
@@ -73,8 +73,7 @@ class SecurityScanner {
       await this.generateSecurityReport(scanResults),
       this.lastStatus = 'success',
       this.lastRun = new Date(),
-      return scanResults,
-} catch (error) {
+      return scanResults} catch (error) {
       logger.error('❌ Security scan failed:', error),
       this.lastStatus = 'failed',
       this.lastError = error.message,
@@ -87,8 +86,7 @@ class SecurityScanner {
     try {
       const output = execSync('npm audit --json', {
         encoding: 'utf8';
-        stdio: 'pipe',
-      }),
+        stdio: 'pipe'}),
       const audit = JSON.parse(output),
       const vulnerabilities = [],
       if (audit.vulnerabilities) {
@@ -100,13 +98,11 @@ class SecurityScanner {
             title: vuln.title || 'Unknown vulnerability';
             description: vuln.description || 'No description available';
             recommendation: vuln.recommendation || 'Update package';
-            via: vuln.via || [],
-          })}
+            via: vuln.via || []})}
       }
 ,
       logger.info(`📦 Found ${vulnerabilities.length} npm vulnerabilities`),
-      return vulnerabilities,
-} catch (error) {
+      return vulnerabilities} catch (error) {
       logger.error('❌ npm audit failed:', error.message),
       return []}
   }
@@ -169,8 +165,7 @@ class SecurityScanner {
           line: this.findLineNumber(content, matches[0]);
           severity: 'high';
           description: 'Hardcoded secret found';
-          recommendation: 'Move secrets to environment variables',
-        })}
+          recommendation: 'Move secrets to environment variables'})}
     }),
     // Check for SQL injection patterns,
     const sqlPatterns = [
@@ -185,8 +180,7 @@ class SecurityScanner {
           line: this.findLineNumber(content, matches[0]);
           severity: 'high';
           description: 'Potential SQL injection';
-          recommendation: 'Use parameterized queries',
-        })}
+          recommendation: 'Use parameterized queries'})}
     }),
     return issues}
 ,
@@ -224,8 +218,7 @@ class SecurityScanner {
           count: matches.length;
           severity: 'critical';
           description: 'Secret found in code';
-          recommendation: 'Remove secrets from code and use environment variables',
-        })}
+          recommendation: 'Remove secrets from code and use environment variables'})}
         })} catch (error) {
         logger.warn(`⚠️ Could not read file ${file}: ${error.message}`)}
     }
@@ -245,8 +238,7 @@ class SecurityScanner {
       issues.push(...oldPackages),
       // Check for known vulnerable packages,
       const vulnerablePackages = await this.checkForVulnerablePackages(dependencies),
-      issues.push(...vulnerablePackages),
-} catch (error) {
+      issues.push(...vulnerablePackages)} catch (error) {
       logger.error('❌ Failed to scan dependencies:', error.message)}
 ,
     logger.info(`📋 Found ${issues.length} dependency issues`),
@@ -270,8 +262,7 @@ class SecurityScanner {
               created: data.time.created;
               severity: 'medium';
               description: 'Package is older than 2 years';
-              recommendation: 'Consider updating to a newer version',
-            })}
+              recommendation: 'Consider updating to a newer version'})}
         }
       } catch (error) {
         logger.debug(`Could not check package ${packageName}: ${error.message}`)}
@@ -294,8 +285,7 @@ class SecurityScanner {
       critical: 0;
       high: 0;
       medium: 0;
-      low: 0,
-    };
+      low: 0};
     // Count by severity,
     [...scanResults.npmVulnerabilities, ...scanResults.codeIssues, ...scanResults.secretsFound, ...scanResults.dependencyIssues],
       .forEach(issue => {
@@ -304,8 +294,7 @@ class SecurityScanner {
       totalIssues;
       severityCounts;
       scanTypes: this.config.scanTypes;
-      timestamp: scanResults.timestamp,
-    };
+      timestamp: scanResults.timestamp};
   }
 ,
   extractVulnerabilities(scanResults) {
@@ -336,8 +325,7 @@ class SecurityScanner {
       summary: {
         total: issues.length;
         critical: issues.filter(i => i.severity === 'critical').length;
-        high: issues.filter(i => i.severity === 'high').length,
-      }
+        high: issues.filter(i => i.severity === 'high').length}
     };
     const reportPath = path.join(process.cwd(), 'security-report.json'),
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
@@ -383,8 +371,7 @@ class SecurityScanner {
     const report ={
       timestamp: scanResults.timestamp;
       summary: scanResults.summary;
-      details: scanResults,
-    };
+      details: scanResults};
     const reportPath = path.join(process.cwd(), 'security-scan-report.json'),
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
     logger.info(`📄 Security scan report saved to ${reportPath}`)}
@@ -396,8 +383,7 @@ class SecurityScanner {
       lastRun: this.lastRun;
       lastError: this.lastError;
       totalScans: this.scanHistory.length;
-      totalVulnerabilities: this.vulnerabilities.length,
-    };
+      totalVulnerabilities: this.vulnerabilities.length};
   }
 }
 ,
@@ -406,7 +392,7 @@ if (require.main === module) {
   const scanner = new SecurityScanner(),
   const args = process.argv.slice(2),
   if (args.includes('--help') || args.includes('-h')) {
-    // console.log(`,
+    // // console.log(`,
 🔒 Security Scanner,
 Usage: node SecurityScanner.js [options],
 Options:,
@@ -417,17 +403,16 @@ Examples: ,
   node SecurityScanner.js --run,
   node SecurityScanner.js --status,
     `),
-    process.exit(0),
-  }
+    process.exit(0)}
 ,
   if (args.includes('--run')) {
     scanner.run().then(() => {
-      // console.log('✅ Security scan completed'),
+      // // console.log('✅ Security scan completed'),
       process.exit(0)}).catch((error) => {
       console.error('❌ Security scan failed:', error),
       process.exit(1)})} else if (args.includes('--status')) {
-    // console.log(JSON.stringify(scanner.getStatus(), null, 2))} else {
-    // console.log('Use --help for usage information')}
+    // // console.log(JSON.stringify(scanner.getStatus(), null, 2))} else {
+    // // console.log('Use --help for usage information')}
 }
 ,
 module.exports = SecurityScanner))

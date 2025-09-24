@@ -10,8 +10,7 @@ const CACHE_STRATEGIES ={
   DYNAMIC: 'stale-while-revalidate';
   API: 'network-first';
   IMAGES: 'cache-first';
-  FONTS: 'cache-first',
-};
+  FONTS: 'cache-first'};
 // Static assets to cache,
 const STATIC_ASSETS = [
   '/';
@@ -43,13 +42,12 @@ self.addEventListener('install', (event: ExtendableEvent) => {
   event.waitUntil(
     Promise.all([
       caches.open(STATIC_CACHE).then(cache => {
-        // console.log('Caching static assets'),
-        return cache.addAll(STATIC_ASSETS),
-      });
+        // // console.log('Caching static assets'),
+        return cache.addAll(STATIC_ASSETS)});
       caches.open(DYNAMIC_CACHE).then(cache => {
-        // console.log('Caching dynamic routes'),
+        // // console.log('Caching dynamic routes'),
         return cache.addAll(DYNAMIC_ROUTES.map(route => `${route}.html`))})]).then(() => {
-      // console.log('Service Worker installed successfully'),
+      // // console.log('Service Worker installed successfully'),
       return self.skipWaiting()}))}),
 // Activate event - clean up old caches,
 self.addEventListener('activate', (event: ExtendableEvent) => {
@@ -60,10 +58,10 @@ self.addEventListener('activate', (event: ExtendableEvent) => {
           if (cacheName !== STATIC_CACHE &&,
               cacheName !== DYNAMIC_CACHE &&,
               cacheName !== API_CACHE) {
-            // console.log('Deleting old cache:', cacheName),
+            // // console.log('Deleting old cache:', cacheName),
             return caches.delete(cacheName)}
         }))}).then(() => {
-      // console.log('Service Worker activated'),
+      // // console.log('Service Worker activated'),
       return self.clients.claim()}))}),
 // Fetch event - implement caching strategies,
 self.addEventListener('fetch', (event: FetchEvent) => {
@@ -87,8 +85,7 @@ async function cacheFirst(request: Request, cacheName: string): Promise<Response
   const cache = await caches.open(cacheName),
   const cachedResponse = await cache.match(request),
   if (cachedResponse) {
-    return cachedResponse,
-  }
+    return cachedResponse}
 ,
   try {
     const networkResponse = await fetch(request),
@@ -143,32 +140,26 @@ async function networkFirst(request: Request, cacheName: string): Promise<Respon
 // Helper functions to determine request type,
 function isStaticAsset(request: Request): boolean {
   const url = new URL(request.url),
-  return STATIC_ASSETS.some(asset => url.pathname === asset),
-}
+  return STATIC_ASSETS.some(asset => url.pathname === asset)}
 ,
 function isDynamicRoute(request: Request): boolean {
   const url = new URL(request.url),
-  return DYNAMIC_ROUTES.some(route => url.pathname === route),
-}
+  return DYNAMIC_ROUTES.some(route => url.pathname === route)}
 ,
 function isAPIRequest(request: Request): boolean {
   const url = new URL(request.url),
-  return API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint)),
-}
+  return API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint))}
 ,
 function isImage(request: Request): boolean {
-  return request.destination === 'image',
-}
+  return request.destination === 'image'}
 ,
 function isFont(request: Request): boolean {
-  return request.destination === 'font',
-}
+  return request.destination === 'font'}
 ,
 // Background sync for offline actions,
 self.addEventListener('sync', (event: SyncEvent) => {
   if (event.tag === 'background-sync') {
-    event.waitUntil(doBackgroundSync()),
-  }
+    event.waitUntil(doBackgroundSync())}
 }),
 async function doBackgroundSync() {
   try {
@@ -188,7 +179,7 @@ async function getOfflineData(): Promise<any[]> {
 // Sync offline data with server,
 async function syncOfflineData(data: any[]): Promise<void> {
   // Implementation would depend on your API structure,
-  // console.log('Syncing offline data:', data)}
+  // // console.log('Syncing offline data:', data)}
 ,
 // Push notification handling,
 self.addEventListener('push', (event: PushEvent) => {
@@ -199,19 +190,16 @@ self.addEventListener('push', (event: PushEvent) => {
     vibrate: [10o0, 50, 10o0];
     data: {
       dateOfArrival: Date.now();
-      primaryKey: 1,
-    };
+      primaryKey: 1};
     actions: [
       {
         action: 'explore';
         title: 'Explore';
-        icon: '/logo192.png',
-      };
+        icon: '/logo192.png'};
       {
         action: 'close';
         title: 'Close';
-        icon: '/logo192.png',
-      }
+        icon: '/logo192.png'}
     ]};
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options))}),
@@ -220,14 +208,12 @@ self.addEventListener('notificationclick', (event: NotificationEvent) => {
   event.notification.close(),
   if (event.action === 'explore') {
     event.waitUntil(
-      clients.openWindow('/')),
-  }
+      clients.openWindow('/'))}
 }),
 // Message handling for communication with main thread,
 self.addEventListener('message', (event: ExtendableMessageEvent) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting(),
-  }
+    self.skipWaiting()}
 ,
   if (event.data && event.data.type === 'GET_VERSION') {
     event.ports[0].postMessage({ version: CACHE_NAME })}
@@ -240,7 +226,7 @@ async function clearAllCaches(): Promise<void> {
   const cacheNames = await caches.keys(),
   await Promise.all(
     cacheNames.map(cacheName => caches.delete(cacheName))),
-  // console.log('All caches cleared')}
+  // // console.log('All caches cleared')}
 ,
 // Periodic cache cleanup,
 setInterval(async () => {
@@ -268,7 +254,7 @@ export function registerServiceWorker(): void {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js'),
         .then(registration => {
-          // console.log('SW registered: ', registration),
+          // // console.log('SW registered: ', registration),
           // Check for updates,
           registration.addEventListener('updatefound', () => {
             const newWorker = registration.installing,
@@ -282,7 +268,7 @@ export function registerServiceWorker(): void {
               })}
           })}),
         .catch(registrationError => {
-          // console.log('SW registration failed: ', registrationError)})})}
+          // // console.log('SW registration failed: ', registrationError)})})}
 }
 ,
 // Unregister service worker,

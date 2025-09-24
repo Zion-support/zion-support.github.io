@@ -15,6 +15,5 @@ export default function AiModelDevelopmentChatPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

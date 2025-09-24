@@ -566,6 +566,5 @@ export default function AIDataAnalytics20o41() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

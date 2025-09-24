@@ -22,15 +22,13 @@ interface AccessibilitySettings {
   dyslexiaFriendly: boolean,
   screenReader: boolean,
   keyboardNavigation: boolean,
-  focusIndicators: boolean,
-}
+  focusIndicators: boolean}
 ,
 interface AccessibilityAnnouncement {
   id: string,
   message: string,
   type: 'info' | 'success' | 'warning' | 'error',
-  timestamp: Date,
-}
+  timestamp: Date}
 ,
 const EnhancedAccessibilityEnhancer: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
@@ -44,8 +42,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       dyslexiaFriendly: false;
       screenReader: false;
       keyboardNavigation: false;
-      focusIndicators: true,
-    };
+      focusIndicators: true};
   }),
   const [announcements, setAnnouncements] = useState<AccessibilityAnnouncement[]>([]),
   const [currentAnnouncement, setCurrentAnnouncement] = useState<AccessibilityAnnouncement | null>(null),
@@ -77,8 +74,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       // Ctrl/Cmd + Shift + A to toggle accessibility panel,
       if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'A') {
         e.preventDefault(),
-        setIsVisible(prev => !prev),
-      }
+        setIsVisible(prev => !prev)}
 ,
       // Ctrl/Cmd + Shift + H for high contrast,
       if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'H') {
@@ -98,8 +94,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       id: Date.now().toString();
       message;
       type;
-      timestamp: new Date(),
-    };
+      timestamp: new Date()};
     setAnnouncements(prev => [...prev, announcement]),
     setCurrentAnnouncement(announcement),
     // Remove announcement after 5 seconds,
@@ -119,8 +114,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       dyslexiaFriendly: 'Dyslexia friendly';
       screenReader: 'Screen reader mode';
       keyboardNavigation: 'Keyboard navigation';
-      focusIndicators: 'Focus indicators',
-    };
+      focusIndicators: 'Focus indicators'};
     announce(`${settingNames[key]} ${value ? 'enabled' : 'disabled'}`)}, [announce]),
   // Reset all settings,
   const resetSettings = useCallback(() => {
@@ -132,8 +126,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       dyslexiaFriendly: false;
       screenReader: false;
       keyboardNavigation: false;
-      focusIndicators: true,
-    }),
+      focusIndicators: true}),
     announce('All accessibility settings have been reset')}, [announce]),
   // Toggle panel visibility,
   const togglePanel = useCallback(() => {
@@ -151,8 +144,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       dyslexiaFriendly: Type;
       screenReader: Volume2;
       keyboardNavigation: Keyboard;
-      focusIndicators: MousePointer,
-    };
+      focusIndicators: MousePointer};
     return icons[key]};
   // Get setting description,
   const getSettingDescription = (key: keyof AccessibilitySettings) => {
@@ -164,8 +156,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       dyslexiaFriendly: 'Uses dyslexia-friendly fonts and spacing';
       screenReader: 'Optimizes for screen readers';
       keyboardNavigation: 'Enhances keyboard navigation';
-      focusIndicators: 'Shows clear focus indicators',
-    };
+      focusIndicators: 'Shows clear focus indicators'};
     return descriptions[key]};
   // Get keyboard shortcut,
   const getKeyboardShortcut = (key: keyof AccessibilitySettings) => {
@@ -177,8 +168,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       dyslexiaFriendly: 'None';
       screenReader: 'None';
       keyboardNavigation: 'None';
-      focusIndicators: 'None',
-    };
+      focusIndicators: 'None'};
     return shortcuts[key]};
   return (
     <>,

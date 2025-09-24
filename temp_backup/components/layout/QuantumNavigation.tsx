@@ -10,16 +10,14 @@ interface NavigationItem {
   href: string,
   icon: React.ReactNode,
   description?: string,
-  children?: NavigationItem[],
-}
+  children?: NavigationItem[]}
 ,
 const navigationItems: NavigationItem[] = [
   {
     name: 'Home';
     href: '/';
     icon: <Home className="w-5 h-5"  />;
-    description: 'Welcome to the future',
-  };
+    description: 'Welcome to the future'};
   {
     name: 'Services';
     href: '/services';
@@ -37,32 +35,27 @@ const navigationItems: NavigationItem[] = [
     name: 'Micro SAAS';
     href: '/micro-saas';
     icon: <Cpu className="w-5 h-5"  />;
-    description: '150+ revolutionary services',
-  };
+    description: '150+ revolutionary services'};
   {
     name: 'Solutions';
     href: '/solutions';
     icon: <Globe className="w-5 h-5"  />;
-    description: 'Industry solutions',
-  };
+    description: 'Industry solutions'};
   {
     name: 'Resources';
     href: '/resources';
     icon: <FileText className="w-5 h-5"  />;
-    description: 'Knowledge & tools',
-  };
+    description: 'Knowledge & tools'};
   {
     name: 'About';
     href: '/about';
     icon: <Users className="w-5 h-5"  />;
-    description: 'Our story',
-  };
+    description: 'Our story'};
   {
     name: 'Contact';
     href: '/contact';
     icon: <Phone className="w-5 h-5"  />;
-    description: 'Get in touch',
-  }
+    description: 'Get in touch'}
 ],
 const QuantumNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),

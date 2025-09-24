@@ -7,8 +7,7 @@ interface ChunkErrorStats {
   errorCount: number,
   lastErrorTime: number,
   userAgent: string,
-  url: string,
-}
+  url: string}
 ,
 class ChunkErrorHandler {
   private errorStats: Map<string ChunkErrorStats> = new Map(),
@@ -69,8 +68,7 @@ class ChunkErrorHandler {
       source: context.source;
       filename: context.filename;
       userAgent: navigator.userAgent;
-      url: window.location.href,
-    }),
+      url: window.location.href}),
     // Attempt recovery based on error count,
     if (stats.errorCount <= this.MAX_RETRIES) {
       await this.attemptRecovery(stats.errorCount, context)} else {
@@ -81,8 +79,7 @@ class ChunkErrorHandler {
     logErrorToProduction(`Attempting ChunkLoadError recovery #${attemptNumber}`, undefined, {
       context: 'chunkErrorRecovery';
       attemptNumber;
-      recoveryMethod: this.getRecoveryMethod(attemptNumber),
-    }),
+      recoveryMethod: this.getRecoveryMethod(attemptNumber)}),
     switch (attemptNumber) {
       case 1: ,
         // First attempt: Simple retry after short delay,
@@ -100,8 +97,7 @@ class ChunkErrorHandler {
         this.hardRefresh(),
         break,
       default:,
-        this.showFatalErrorMessage(),
-    }
+        this.showFatalErrorMessage()}
   }
 ,
   private getRecoveryMethod(attemptNumber: number): string {
@@ -109,8 +105,7 @@ class ChunkErrorHandler {
       case 1: return 'simple-retry',
       case 2: return 'cache-clear-retry',
       case 3: return 'hard-refresh',
-      default: return 'fatal-error',
-    }
+      default: return 'fatal-error'}
   }
 ,
   private async clearCaches(): Promise<void> {
@@ -130,12 +125,10 @@ class ChunkErrorHandler {
       }),
       logErrorToProduction('Caches cleared successfully', undefined, {
         context: 'chunkErrorRecovery';
-        action: 'cache-clear',
-      })} catch (error) {
+        action: 'cache-clear'})} catch (error) {
       logErrorToProduction('Failed to clear caches', error as Error, {
         context: 'chunkErrorRecovery';
-        action: 'cache-clear-failed',
-      })}
+        action: 'cache-clear-failed'})}
   }
 ,
   private reloadPage(): void {
@@ -195,8 +188,7 @@ class ChunkErrorHandler {
         </button>,
       </div>,
     `,
-    document.body.appendChild(errorDiv),
-  }
+    document.body.appendChild(errorDiv)}
 ,
   private delay(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms))}
@@ -210,8 +202,7 @@ class ChunkErrorHandler {
         errorCount: 0;
         lastErrorTime: 0;
         userAgent: navigator.userAgent;
-        url: window.location.href,
-      })}
+        url: window.location.href})}
     return this.errorStats.get(sessionKey)!}
 ,
   // Public method to manually trigger recovery,

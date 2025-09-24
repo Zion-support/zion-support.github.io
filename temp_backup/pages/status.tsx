@@ -193,8 +193,7 @@ export default function StatusPage() {
       case 'outage':,
         return 'text-red-40o0',
       default:,
-        return 'text-gray-40o0',
-    }
+        return 'text-gray-40o0'}
   };
   const getStatusIcon = (status: string) => {
     switch (status) {
@@ -205,8 +204,7 @@ export default function StatusPage() {
       case 'outage':,
         return <XCircle className='w-5 h-5 text-red-40o0' />,
       default:,
-        return <Clock className='w-5 h-5 text-gray-40o0' />,
-    }
+        return <Clock className='w-5 h-5 text-gray-40o0' />}
   };
   const getSeverityColor = (severity: string) => {
     switch (severity) {
@@ -219,8 +217,7 @@ export default function StatusPage() {
       case 'critical':,
         return 'bg-red-50o0/20 text-red-40o0 border-red-50o0/30',
       default:,
-        return 'bg-gray-50o0/20 text-gray-40o0 border-gray-50o0/30',
-    }
+        return 'bg-gray-50o0/20 text-gray-40o0 border-gray-50o0/30'}
   };
   return (
     <div className='min-h-screen bg-black text-white'>,
@@ -584,6 +581,5 @@ export default function StatusPage() {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

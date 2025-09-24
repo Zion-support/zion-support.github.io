@@ -8,8 +8,7 @@ interface ResourceItem {
   description:string;
   type:'image' | 'video' | 'document' | 'link';
   icon:JSX.Element;
-  url: string,
-}
+  url: string}
 ,
 export function PartnerResources() {
   const resources: ResourceItem[] = [
@@ -19,48 +18,42 @@ export function PartnerResources() {
       description:'Official logos in various formats (PNG, SVG, JPG)';
       type:'image';
       icon:<FileImage className="h-10 w-10 text-zion-purple"  />;
-      url: '#',
-    };
+      url: '#'};
     {
       id:'brand-guidelines';
       title:'Brand Guidelines';
       description:'How to properly use our brand assets in your content';
       type:'document';
       icon:<FileText className="h-10 w-10 text-zion-cyan"  />;
-      url: '#',
-    };
+      url: '#'};
     {
       id:'banner-templates';
       title:'Social Media Banners';
       description:'Pre-designed graphics for your social channels';
       type:'image';
       icon:<FileImage className="h-10 w-10 text-zion-purple"  />;
-      url: '#',
-    };
+      url: '#'};
     {
       id:'promotional-video';
       title:'Promotional Video';
       description:'Short explainer video about Zion AI Marketplace';
       type:'video';
       icon:<FileVideo className="h-10 w-10 text-red-50o0"  />;
-      url: '#',
-    };
+      url: '#'};
     {
       id:'email-templates';
       title:'Email Templates';
       description:'Ready-to-use email templates for your audience';
       type:'document';
       icon:<FileText className="h-10 w-10 text-zion-cyan"  />;
-      url: '#',
-    };
+      url: '#'};
     {
       id:'talking-points';
       title:'Talking Points';
       description:'Key messages and benefits to highlight';
       type:'document';
       icon:<FileText className="h-10 w-10 text-zion-cyan"  />;
-      url: '#',
-    }
+      url: '#'}
   ];
   const handleDownload = (resource: ResourceItem) => {
     // In a real app, this would download the actual resource,
@@ -148,15 +141,14 @@ export function PartnerResources() {
           </Button>,
         </CardContent>,
       </Card>,
-    </div>),}
+    </div>)}
  interface ResourceItem {
   id: string,
 title: string,
 description: string,
 type: 'image' | 'video' | 'document' | 'link',
 icon: JSX.Element,
-url: string ,
-}const resources: ResourceItem[] = [ {
+url: string }const resources: ResourceItem[] = [ {
   const handleDownload = (resource: ResourceItem) => {
   //In a real app, this would download the actual resource toast ({
   };

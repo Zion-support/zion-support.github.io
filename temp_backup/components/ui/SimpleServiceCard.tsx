@@ -16,8 +16,7 @@ interface SimpleServiceCardProps {
     marketValidation: string,
     targetAudience: string,
     competitiveAdvantage: string,
-    pricingStrategy: string,
-  };
+    pricingStrategy: string};
 }
 ,
 const SimpleServiceCard: React.FC<SimpleServiceCardProps> = ({ service }) => {
@@ -94,6 +93,5 @@ const SimpleServiceCard: React.FC<SimpleServiceCardProps> = ({ service }) => {
           <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-20o0' />,
         </button>,
       </div>,
-    </motion.div>),
-};
+    </motion.div>)};
 export default SimpleServiceCard;

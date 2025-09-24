@@ -459,6 +459,5 @@ export default function AIPredictiveAnalytics20o41() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

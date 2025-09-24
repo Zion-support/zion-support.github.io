@@ -3,8 +3,7 @@ import { cn } from '../../utils/cn',
 interface EnhancedFuturisticBackgroundProps {
   variant?: 'quantum-advanced' | 'holographic-advanced' | 'neural-network' | 'quantum-field',
   intensity?: 'low' | 'medium' | 'high',
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 export default function EnhancedFuturisticBackground({
   variant = 'quantum-advanced';
@@ -28,8 +27,7 @@ export default function EnhancedFuturisticBackground({
       size: number,
       opacity: number,
       color: string,
-      type: 'quantum' | 'holographic' | 'neural' | 'field',
-    }> = [],
+      type: 'quantum' | 'holographic' | 'neural' | 'field'}> = [],
     const colors ={
       quantum: ['#0o0ffff', '#0o080ff', '#80o00ff', '#ff0o080'];
       holographic: ['#ff0o0ff', '#0o0ffff', '#ffff0o0', '#ff80o00'];
@@ -38,8 +36,7 @@ export default function EnhancedFuturisticBackground({
     const intensityMultiplier ={
       low: 0.5;
       medium: 1;
-      high: 1.5,
-    };
+      high: 1.5};
     const particleCount = Math.floor(10o0 * intensityMultiplier[intensity]),
     // Initialize particles,
     for (let i = 0, i < particleCount, i++) {
@@ -51,8 +48,7 @@ export default function EnhancedFuturisticBackground({
         size: Math.random() * 3 + 1;
         opacity: Math.random() * 0.8 + 0.2;
         color: colors[variant === 'quantum-advanced' ? 'quantum' : variant === 'holographic-advanced' ? 'holographic' : variant === 'neural-network' ? 'neural' : 'field'][Math.floor(Math.random() * 4)];
-        type: variant === 'quantum-advanced' ? 'quantum' : variant === 'holographic-advanced' ? 'holographic' : variant === 'neural-network' ? 'neural' : 'field',
-      })}
+        type: variant === 'quantum-advanced' ? 'quantum' : variant === 'holographic-advanced' ? 'holographic' : variant === 'neural-network' ? 'neural' : 'field'})}
 ,
     // Quantum entanglement effect,
     const createEntanglement = () => {

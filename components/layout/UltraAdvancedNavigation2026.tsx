@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion',
 import {
 import Link from 'next / link',
 "use client",
-,
   Menu,
   X,
   ChevronDown,
@@ -64,8 +63,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};  website: 'https://ziontechgroup.com',
-}
+  website: 'https://ziontechgroup.com'};  website: 'https://ziontechgroup.com'}
 const serviceCategories = [
   {
     title: 'AI & Machine Learning 2026',
@@ -82,20 +80,17 @@ const serviceCategories = [
         name: 'Autonomous AI Agents',
         href: '/autonomous-ai-agents-platform-2026',
         description: 'Create autonomous AI agents',
-        price: '$199/month',
-      }
+        price: '$199/month'}
       {
         name: 'AI Healthcare Companion',
         href: '/ai-healthcare-companion-2026',
         description: 'Revolutionary healthcare AI',
-        price: '$399/month',
-      }
+        price: '$399/month'}
       {
         name: 'AI Content Creation Revolution',
         href: '/ai-content-creation-revolution',
         description: 'Unlimited AI content generation',
-        price: '$599/month',
-      }
+        price: '$599/month'}
     ]},  {      { name: 'AI Consciousness Simulation', href: '/ai-consciousness-simulation-platform', description: 'Simulate human consciousness', price: '$4,999/month' }
       { name: 'Autonomous AI Agents', href: '/autonomous-ai-agents-platform-2026', description: 'Create autonomous AI agents', price: '$199/month' }
       { name: 'AI Healthcare Companion', href: '/ai-healthcare-companion-2026', description: 'Revolutionary healthcare AI', price: '$399/month' }
@@ -170,26 +165,22 @@ const serviceCategories = [
         name: 'Zero Trust Architecture',
         href: '/zero-trust-network-architecture-2026',
         description: 'Next-gen security',
-        price: 'Custom pricing',
-      }
+        price: 'Custom pricing'}
       {
         name: 'Edge Computing Orchestration',
         href: '/edge-computing-orchestration-2026',
         description: 'Intelligent edge computing',
-        price: 'Custom pricing',
-      }
+        price: 'Custom pricing'}
       {
         name: '5G Private Networks',
         href: '/5g-private-network-solutions-2026',
         description: 'Enterprise 5G',
-        price: 'Custom pricing',
-      }
+        price: 'Custom pricing'}
       {
         name: 'Blockchain Infrastructure',
         href: '/blockchain-infrastructure-platform-2026',
         description: 'Enterprise blockchain',
-        price: 'Custom pricing',
-      }
+        price: 'Custom pricing'}
     ]},  {      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture-2026', description: 'Next-gen security', price: 'Custom pricing' }
       { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-2026', description: 'Intelligent edge computing', price: 'Custom pricing' }
       { name: '5G Private Networks', href: '/5g-private-network-solutions-2026', description: 'Enterprise 5G', price: 'Custom pricing' }
@@ -219,8 +210,7 @@ const serviceCategories = [
         name: 'AI Legal Research',
         href: '/ai-legal-research-platform',
         description: 'Revolutionary legal tech',
-        price: '$899/month',
-      }
+        price: '$899/month'}
     ]},  {      { name: 'AI Drug Discovery', href: '/ai-drug-discovery-platform', description: 'Accelerate drug development', price: '$4,999/month' }
       { name: 'Autonomous Healthcare AI', href: '/autonomous-healthcare-ai-platform', description: 'Self-learning healthcare', price: '$2,499/month' }
       { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', description: 'Quantum AI research', price: '$6,999/month' }
@@ -235,8 +225,7 @@ const serviceCategories = [
         name: 'Autonomous Supply Chain',
         href: '/autonomous-supply-chain-optimization-ai',
         description: 'AI supply chain optimization',
-        price: '$899/month',
-      }
+        price: '$899/month'}
       {
         name: 'Autonomous Marketing AI',
         href: '/autonomous-marketing-ai-platform',
@@ -298,18 +287,15 @@ const companyLinks = [
   {
     name: 'Innovative 2026',
     href: '/2026-innovative-services-showcase',
-    icon: Zap,
-  }
+    icon: Zap}
   {
     name: 'Ultimate 2026',
     href: '/ultimate-2026-services-showcase',
-    icon: Sparkles,
-  }
+    icon: Sparkles}
   {
     name: '2026 Pricing',
     href: '/revolutionary-2026-pricing',
-    icon: DollarSign,
-  }
+    icon: DollarSign}
   { name: 'Case Studies', href: '/case-studies', icon: Briefcase }
   { name: 'Blog & Resources', href: '/blog', icon: BookOpen }
   { name: 'Careers', href: '/careers', icon: Users }
@@ -510,23 +496,19 @@ const UltraAdvancedNavigation2026 = () => {
         {
           name: 'Cloud Solutions',
           href: '/services?category=cloud',
-          description: 'Cloud infrastructure and services',
-        }
+          description: 'Cloud infrastructure and services'}
         {
           name: 'Cybersecurity',
           href: '/services?category=security',
-          description: 'Advanced security solutions',
-        }
+          description: 'Advanced security solutions'}
         {
           name: 'Data Analytics',
           href: '/services?category=analytics',
-          description: 'Business intelligence and analytics',
-        }
+          description: 'Business intelligence and analytics'}
         {
           name: 'DevOps',
           href: '/services?category=devops',
-          description: 'Development and operations',
-        }
+          description: 'Development and operations'}
       ]}],        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' }
         { name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' }
         { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' }
@@ -546,8 +528,7 @@ const UltraAdvancedNavigation2026 = () => {
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'};    address: '364 E Main St STE 1008 Middletown DE 19709',
-  }
+    address: '364 E Main St STE 1008 Middletown DE 19709'};    address: '364 E Main St STE 1008 Middletown DE 19709'}
 ,
   const contactInfo = {
     phone: '+1 302 464 0950';
@@ -569,23 +550,19 @@ const UltraAdvancedNavigation2026 = () => {
         {
           name: 'Quantum Space Tech',
           href: '/services?category=quantum-space',
-          description: 'Space exploration and communication',
-        }
+          description: 'Space exploration and communication'}
         {
           name: 'Quantum Computing',
           href: '/services?category=quantum-computing',
-          description: 'Advanced quantum systems',
-        }
+          description: 'Advanced quantum systems'}
         {
           name: 'Quantum AI',
           href: '/services?category=quantum-ai',
-          description: 'Quantum-powered AI',
-        }
+          description: 'Quantum-powered AI'}
         {
           name: 'Quantum Security',
           href: '/services?category=quantum-security',
-          description: 'Quantum encryption and security',
-        }
+          description: 'Quantum encryption and security'}
       ]},    {        { name: 'Quantum Space Tech', href: '/services?category=quantum-space', description: 'Space exploration and communication' }
         { name: 'Quantum Computing', href: '/services?category=quantum-computing', description: 'Advanced quantum systems' }
         { name: 'Quantum AI', href: '/services?category=quantum-ai', description: 'Quantum-powered AI' }
@@ -600,23 +577,19 @@ const UltraAdvancedNavigation2026 = () => {
         {
           name: 'Metaverse Platforms',
           href: '/services?category=metaverse-platforms',
-          description: 'Virtual world platforms',
-        }
+          description: 'Virtual world platforms'}
         {
           name: 'Digital Reality',
           href: '/services?category=digital-reality',
-          description: 'Immersive experiences',
-        }
+          description: 'Immersive experiences'}
         {
           name: 'Holographic Tech',
           href: '/services?category=holographic',
-          description: '3D holographic systems',
-        }
+          description: '3D holographic systems'}
         {
           name: 'Consciousness Interface',
           href: '/services?category=consciousness-interface',
-          description: 'Brain-computer interfaces',
-        }
+          description: 'Brain-computer interfaces'}
       ]},    {        { name: 'Metaverse Platforms', href: '/services?category=metaverse-platforms', description: 'Virtual world platforms' }
         { name: 'Digital Reality', href: '/services?category=digital-reality', description: 'Immersive experiences' }
         { name: 'Holographic Tech', href: '/services?category=holographic', description: '3D holographic systems' }
@@ -631,18 +604,15 @@ const UltraAdvancedNavigation2026 = () => {
         {
           name: 'Cloud Solutions',
           href: '/services?category=cloud',
-          description: 'Cloud infrastructure and services',
-        }
+          description: 'Cloud infrastructure and services'}
         {
           name: 'Cybersecurity',
           href: '/services?category=security',
-          description: 'Advanced security solutions',
-        }
+          description: 'Advanced security solutions'}
         {
           name: 'Data Analytics',
           href: '/services?category=analytics',
-          description: 'Business intelligence and analytics',
-        }
+          description: 'Business intelligence and analytics'}
         {
           name: 'DevOps';
           href: '/services?category=devops';
@@ -658,8 +628,7 @@ const UltraAdvancedNavigation2026 = () => {
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'};    address: '364 E Main St STE 1008 Middletown DE 19709',
-  }
+    address: '364 E Main St STE 1008 Middletown DE 19709'};    address: '364 E Main St STE 1008 Middletown DE 19709'}
 const company_links = [
   { name: 'Home', href: '/', icon: Home };
   { name: 'About Us', href: '/about', icon: Users };
@@ -851,8 +820,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
   const contactInfo = {
     phone: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  };
+    address: '364 E Main St STE 1008 Middletown DE 19709'};
   return (
     <>,
       {/* Enhanced Navigation Bar */}
@@ -1402,8 +1370,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
 export default UltraAdvancedNavigation2026;
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>,
-    </>),
-}
+    </>)}
 };
 export default UltraAdvancedNavigation2026;    </>)}
 export default UltraAdvancedNavigation2026;

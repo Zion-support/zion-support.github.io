@@ -32,14 +32,12 @@ const RevolutionarySuccessStories20o26 = () => {
         efficiency: '+30o0%';
         costReduction: '-75%';
         timeSaved: '2,0o00 hours/month';
-        roi: '50o0%',
-      };
+        roi: '50o0%'};
       testimonial: {
         text: "Zion Tech 'Group', 's AI solutions transformed our entire operation. We achieved 30o0% efficiency gains in just 3 months.";
         author: "Sarah Chen";
         position: "CEOTechCorp Global";
-        avatar: "👩‍💼",
-      };
+        avatar: "👩‍💼"};
       timeline: [
         { month: 'Month 1'achievement: 'AI system 'deployment', 'status: 'completed' };
         { month: 'Month 2'achievement: '30o0% efficiency 'gain', 'status: 'completed' };
@@ -57,14 +55,12 @@ const RevolutionarySuccessStories20o26 = () => {
         efficiency: '+40o0%';
         costReduction: '-60%';
         timeSaved: '6 hours/day';
-        roi: '350%',
-      };
+        roi: '350%'};
       testimonial: {
         text: "The AI diagnostic system has revolutionized our patient care. We can now process complex cases in minutes instead of hours.";
         author: "Dr. Michael Rodriguez";
         position: "Chief Medical OfficerHealthPlus";
-        avatar: "👨‍⚕️",
-      };
+        avatar: "👨‍⚕️"};
       timeline: [
         { month: 'Week 1'achievement: 'System 'integration', 'status: 'completed' };
         { month: 'Week 2'achievement: 'Staff 'training', 'status: 'completed' };
@@ -82,14 +78,12 @@ const RevolutionarySuccessStories20o26 = () => {
         efficiency: '+250%';
         costReduction: '-80%';
         timeSaved: '1,50o0 hours/month';
-        roi: '60o0%',
-      };
+        roi: '60o0%'};
       testimonial: {
         text: "Our fraud detection accuracy increased to 99.9% while reducing processing time by 80%. Incredible results!";
         author: "Jennifer Walsh";
         position: "CTOFinancePro Solutions";
-        avatar: "👩‍💻",
-      };
+        avatar: "👩‍💻"};
       timeline: [
         { month: 'Week 1'achievement: 'AI model 'training', 'status: 'completed' };
         { month: 'Week 3'achievement: 'System 'deployment', 'status: 'completed' };
@@ -107,14 +101,12 @@ const RevolutionarySuccessStories20o26 = () => {
         efficiency: '+20o0%';
         costReduction: '-65%';
         timeSaved: '3,0o00 hours/month';
-        roi: '450%',
-      };
+        roi: '450%'};
       testimonial: {
         text: "Our inventory accuracy improved to 99.5% and we reduced waste by 65%. The AI predictions are incredibly accurate.";
         author: "David Kim";
         position: "Operations DirectorRetailMax";
-        avatar: "👨‍💼",
-      };
+        avatar: "👨‍💼"};
       timeline: [
         { month: 'Week 1'achievement: 'Data 'integration', 'status: 'completed' };
         { month: 'Week 2'achievement: 'AI model 'training', 'status: 'completed' };
@@ -188,8 +180,7 @@ const RevolutionarySuccessStories20o26 = () => {
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                   activeStory === index,
                     ? 'bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white shadow-lg shadow-blue-50o0/25',
-                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white',
-                }`}
+                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white'}`}
               >,
                 <div className="flex items-center space-x-2">,
                   <span className="text-xl">{story.logo}</span>,
@@ -321,6 +312,5 @@ const RevolutionarySuccessStories20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default RevolutionarySuccessStories20o26;

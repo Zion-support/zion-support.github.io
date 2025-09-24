@@ -373,6 +373,5 @@ export default function UltimateBusinessRevolutionPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

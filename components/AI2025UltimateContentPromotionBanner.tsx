@@ -25,11 +25,9 @@ const AI20o25UltimateContentPromotionBanner = () => {
         roi: '50o0%';
         savings: '$2.8B';
         efficiency: '340%';
-        satisfaction: '98%',
-      };
+        satisfaction: '98%'};
       readingTime: '25 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-transformation';
       title: 'Fortune 50o0 AI Transformation: $3.2B Company Achieves 650% ROI with Intelligent Automation';
@@ -39,11 +37,9 @@ const AI20o25UltimateContentPromotionBanner = () => {
         roi: '650%';
         savings: '$2.8B';
         accuracy: '99.7%';
-        efficiency: '78%',
-      };
+        efficiency: '78%'};
       readingTime: '22 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'implementation-roadmap';
       title: 'AI Implementation Ultimate Roadmap 20o25: From Strategy to 80o0% ROI in 18 Months';
@@ -53,11 +49,9 @@ const AI20o25UltimateContentPromotionBanner = () => {
         roi: '80o0%';
         savings: '$173.7M';
         success: '99%';
-        timeline: '18 months',
-      };
+        timeline: '18 months'};
       readingTime: '35 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % content.length)};
@@ -168,8 +162,7 @@ const AI20o25UltimateContentPromotionBanner = () => {
                     className={`p-4 rounded-lg cursor-pointer transition-all duration-20o0 ${
                       index === currentSlide,
                         ? 'bg-white/20 backdrop-blur-sm border-2 border-blue-40o0',
-                        : 'bg-white/5 hover: bg-white/10',
-                    }`}
+                        : 'bg-white/5 hover: bg-white/10'}`}
                     onClick={() => setCurrentSlide(index)}
                   >,
                     <div className="flex items-start justify-between">,
@@ -245,6 +238,5 @@ const AI20o25UltimateContentPromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o25UltimateContentPromotionBanner;

@@ -2,7 +2,7 @@
 ,
 const fs = require('fs'),
 const path = require('path'),
-console && // console.log('🔧 Starting Merge Conflict Resolution'),
+console && // // console.log('🔧 Starting Merge Conflict Resolution'),
 // Function to fix merge conflicts in a file,
 function fixMergeConflicts(filePath) {
   try {
@@ -12,7 +12,7 @@ function fixMergeConflicts(filePath) {
     content = content && content.replace(/[\s\S]*?[\s\S]*?    content = content && content.replace(/[\s\S]*?,
     if (content !== originalContent) {
       fs && fs.writeFileSync(filePath, content, 'utf8'),
-      console && // console.log(`✅ Fixed merge conflicts in: ${path && path.relative(process && process.cwd(), filePath)}`),
+      console && // // console.log(`✅ Fixed merge conflicts in: ${path && path.relative(process && process.cwd(), filePath)}`),
 const fs = require ('fs'), const path = require ('path'),  /**,
  * fixMergeConflicts - Function description,
  */,
@@ -144,15 +144,14 @@ for (const file of files) {
       const content = fs.readFileSync (file, 'utf8'),
         if () {) {
   $2}
-          fixed_count++,
-}
+          fixed_count++}
       }
     } catch (error) {
       // Skip files that can't be read}
   }
 ,
-  console && // console.log(`✅ Fixed merge conflicts in ${fixedCount} files`),
-  console && // console.log('🎉 Merge conflict resolution completed!')}
+  console && // // console.log(`✅ Fixed merge conflicts in ${fixedCount} files`),
+  console && // // console.log('🎉 Merge conflict resolution completed!')}
 }
 }catch (error) {
   // Skip files that can't be read}

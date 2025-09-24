@@ -41,8 +41,7 @@ export default function NotificationList() {
 ,
   async function handleMarkOne(id: string) {
     await markNotificationRead(id),
-    await load(),
-  }
+    await load()}
 ,
   const emptyMessage = useMemo(() => {
     switch (active) {
@@ -57,8 +56,7 @@ export default function NotificationList() {
       case 'matches':,
         return 'No new matches',
       default: ,
-        return 'No notifications',
-    }
+        return 'No notifications'}
   }, [active]),
   return (
     <div className='space-y-4'>,
@@ -72,8 +70,7 @@ export default function NotificationList() {
                 className={`text-sm px-3 py-1.5 rounded-full border transition whitespace-nowrap ${
                   active === t.key,
                     ? 'border-transparent bg-gradient-to-r from-indigo-50o0 via-violet-50o0 to-cyan-40o0 text-white shadow',
-                    : 'border-gray-20o0 dark: border-gray-80o0 hover:bg-black/5 dark:hover:bg-white/10',
-                }`}
+                    : 'border-gray-20o0 dark: border-gray-80o0 hover:bg-black/5 dark:hover:bg-white/10'}`}
               >,
                 {t.label}
               </button>))}
@@ -116,8 +113,7 @@ export default function NotificationList() {
                         ? 'from-emerald-50o0 to-teal-40o0',
                         : n.type === 'match',
                           ? 'from-pink-50o0 to-rose-40o0',
-                          : 'from-slate-50o0 to-gray-40o0',
-                }`}
+                          : 'from-slate-50o0 to-gray-40o0'}`}
               >,
                 <Bell className='h-4 w-4 text-white' />,
               </div>,

@@ -9,8 +9,7 @@ interface LayoutProps {
     description?: string,
     keywords?: string,
     canonicalUrl?: string,
-    ogImage?: string,
-  };
+    ogImage?: string};
 }
 ,
 export function Layout({ children, seo }: LayoutProps) {
@@ -27,8 +26,7 @@ export function Layout({ children, seo }: LayoutProps) {
   const ogImage = seo?.ogImage || 'https://ziontechgroup.com/og-image.jpg',
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Escape') {
-      setSidebarOpen(false),
-    }
+      setSidebarOpen(false)}
   };
   return (
     <div
@@ -165,8 +163,7 @@ export function Layout({ children, seo }: LayoutProps) {
       {/* Sidebar */}
       <div
         className={`fixed top-0 right-0 h-full w-80 bg-zion-blue-dark border-l border-zion-blue-light transform transition-transform duration-30o0 ease-in-out z-50 lg: translate-x-full ${
-          sidebarOpen ? 'translate-x-0' : 'translate-x-full',
-        }`}
+          sidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >,
         <div className='flex items-center justify-between p-6 border-b border-zion-blue-light'>,
           <h2 className='text-xl font-semibold text-white'>Menu</h2>,
@@ -212,6 +209,5 @@ export function Layout({ children, seo }: LayoutProps) {
           </div>,
         </nav>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -13,8 +13,7 @@ interface Participant {
   isMuted?: boolean,
   isVideoEnabled?: boolean,
   isScreenSharing?: boolean,
-  isHost?: boolean,
-}
+  isHost?: boolean}
 ,
 interface VideoCallRoomProps {
   roomId: string,
@@ -23,8 +22,7 @@ interface VideoCallRoomProps {
   onToggleMute?: (isMuted: boolean) => void,
   onToggleVideo?: (isEnabled: boolean) => void,
   onToggleScreenShare?: (isSharing: boolean) => void,
-  className?: string,
-}
+  className?: string}
 ,
 export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   roomId,

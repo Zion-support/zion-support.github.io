@@ -3,8 +3,7 @@ import Link from 'next/link',
 interface BreadcrumbItem {
   label: string,
   href: string,
-  isCurrent?: boolean,
-}
+  isCurrent?: boolean}
 ,
 export default function Breadcrumbs() {
   const router = useRouter(),

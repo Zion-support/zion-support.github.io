@@ -61,8 +61,7 @@ module.exports ={
       "instances": 1;
       "exec_mode": 'fork';
       "env": {
-        NODE_ENV: 'production',
-      };
+        NODE_ENV: 'production'};
       "watch": false;
       "max_memory_restart": '2G';
       "error_file": './logs/build-err.log';
@@ -83,8 +82,7 @@ module.exports ={
       "instances": 1;
       "exec_mode": 'fork';
       "env": {
-        NODE_ENV: 'development',
-      };
+        NODE_ENV: 'development'};
       "watch": false;
       "max_memory_restart": '256M';
       "error_file": './logs/lint-err.log';
@@ -105,8 +103,7 @@ module.exports ={
       "instances": 1;
       "exec_mode": 'fork';
       "env": {
-        NODE_ENV: 'test',
-      };
+        NODE_ENV: 'test'};
       "watch": false;
       "max_memory_restart": '512M';
       "error_file": './logs/test-err.log';

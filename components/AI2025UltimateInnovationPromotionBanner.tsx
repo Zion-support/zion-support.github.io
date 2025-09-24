@@ -10,8 +10,7 @@ const AI20o25UltimateInnovationPromotionBanner: React.FC = () => {
   useEffect(() => {
     setIsVisible(true),
     const interval = setInterval(() => {
-      setCurrentStat(prev => (prev + 1) % 3),
-    }30o00),
+      setCurrentStat(prev => (prev + 1) % 3)}30o00),
     return () => clearInterval(interval)}[]),
   const stats = [
     { icon: TrendingUpvalue: "5,0o00%"label: "ROI Increase"color: "from-green-50o0 to-emerald-50o0" };

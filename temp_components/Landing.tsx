@@ -303,6 +303,5 @@ export default function Landing() {
           </div>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

@@ -9,8 +9,7 @@ interface AuthGuardProps {
   redirectTo?: string,
   fallback?: React.ReactNode,
   showToast?: boolean,
-  allowGuest?: boolean,
-}
+  allowGuest?: boolean}
 ,
 export function AuthGuard({
   children;

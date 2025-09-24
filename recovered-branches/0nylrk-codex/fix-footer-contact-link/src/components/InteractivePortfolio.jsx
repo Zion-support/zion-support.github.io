@@ -150,8 +150,7 @@ export function InteractivePortfolio() {
                 : 'hover:shadow-xl'}`} style={{
                 transform: hoveredProject === project.id,
                     ? 'perspective(10o00px) rotateY(2deg) rotateX(1deg)',
-                    : 'perspective(10o00px) rotateY(0deg) rotateX(0deg)',
-            }}>,
+                    : 'perspective(10o00px) rotateY(0deg) rotateX(0deg)'}}>,
                 {/* Featured Badge */}
                 {project.featured && (<div className="absolute top-4 left-4 z-10">,
                     <span className="px-3 py-1 bg-gradient-to-r from-zion-gold to-zion-orange text-white text-xs font-medium rounded-full">,

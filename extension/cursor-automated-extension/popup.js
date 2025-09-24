@@ -7,12 +7,11 @@ class CursorAutomatedPopup {
       computerId: -';
       activeTabs: 0;
       improvements: 0;
-      lastSync: null,
-    };
+      lastSync: null};
     this.init()}
 ,
   async init() {
-    // console.log('🚀 Initializing Cursor Automated Popup'),
+    // // console.log('🚀 Initializing Cursor Automated Popup'),
     // Load current status,
     await this.loadStatus(),
     // Set up event listeners,
@@ -21,7 +20,7 @@ class CursorAutomatedPopup {
     this.updateUI(),
     // Start periodic updates,
     this.startPeriodicUpdates(),
-    // console.log('✅ Popup initialized')}
+    // // console.log('✅ Popup initialized')}
 ,
   async loadStatus() {
     try {
@@ -105,8 +104,7 @@ class CursorAutomatedPopup {
   async updateImprovementsList() {
     try {
       const response = await chrome.runtime.sendMessage({
-        type: GET_IMPROVEMENTS,
-      }),
+        type: GET_IMPROVEMENTS}),
       const improvements = response.improvements || [],
       const improvementsList = document.getElementById('improvementsList'),
       improvementsList.innerHTML = ,
@@ -140,8 +138,7 @@ class CursorAutomatedPopup {
       file_change: File Change';
       performance_issue: Performance Issue';
       quick_improvement: Quick Improvement';
-      system_initialized: System Initialized,
-    };
+      system_initialized: System Initialized};
     return (
       typeMap[type] ||,
       type.replace(/_/g).replace(/\b\w/g, (l) => l.toUpperCase()))}
@@ -169,8 +166,7 @@ class CursorAutomatedPopup {
   async toggleAutomation() {
     try {
       const response = await chrome.runtime.sendMessage({
-        type: TOGGLE_AUTOMATION,
-      }),
+        type: TOGGLE_AUTOMATION}),
       this.status.isEnabled = response.isEnabled,
       this.updateUI(),
       // Show feedback,
@@ -193,12 +189,10 @@ class CursorAutomatedPopup {
       const improvement ={
         type: 'manual_improvement';
         message: User requested improvement';
-        timestamp: Date.now(),
-      };
+        timestamp: Date.now()};
       await chrome.runtime.sendMessage({
         type: 'SEND_IMPROVEMENT';
-        improvement: improvement,
-      }),
+        improvement: improvement}),
       this.showNotification('Improvement sent successfully'),
       // Reload status to update counts,
       await this.loadStatus(),
@@ -222,8 +216,7 @@ class CursorAutomatedPopup {
   openWebInterface() {
     // Open the web interface in a new tab,
     chrome.tabs.create({
-      url: http://localhost:30o07,
-    })}
+      url: http://localhost:30o07})}
 ,
   async clearImprovements() {
     try {
@@ -256,8 +249,8 @@ class CursorAutomatedPopup {
     const style = document.createElement('style'),
     style.textContent = `,
             @keyframes slideIn {
-                from { transform: translateX(10o0%), opacity: 0, }
-                to { transform: translateX(0), opacity: 1, }
+                from { transform: translateX(10o0%), opacity: 0}
+                to { transform: translateX(0), opacity: 1}
             }
         `,
     document.head.appendChild(style),

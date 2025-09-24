@@ -14,8 +14,7 @@ interface TalentRateRecommenderProps {
   yearsExperience: number,
   location?: string,
   onSuggestionApplied: (value: number) => void,
-  rateType: "hourly" | "fixed",
-}
+  rateType: "hourly" | "fixed"}
 ,
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   skills;
@@ -38,8 +37,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
         location};
       const result = await getTalentRateSuggestion(params),
       setSuggestion(result)} catch (error) {
-      console.error("Error generating rate suggestion: "error),
-    } finally {
+      console.error("Error generating rate suggestion: "error)} finally {
       setIsLoading(false)}
   };
   const handleApplySuggestion = () => {
@@ -55,8 +53,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
           suggestedMin: suggestion.minRate;
           suggestedMax: suggestion.maxRate;
           actualValue: suggestedRate;
-          accepted: true,
-        })}
+          accepted: true})}
     }
   };
   return (

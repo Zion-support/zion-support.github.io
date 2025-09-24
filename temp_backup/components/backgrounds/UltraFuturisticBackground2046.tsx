@@ -12,8 +12,7 @@ const UltraFuturisticBackground20o46: React.FC = () => {
     // Set canvas size,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
-    };
+      canvas.height = window.innerHeight};
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Particle class,
@@ -227,8 +226,7 @@ const UltraFuturisticBackground20o46: React.FC = () => {
         transition={{
           duration: 10;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
        />,
       {/* Quantum particle canvas */}
       <canvas

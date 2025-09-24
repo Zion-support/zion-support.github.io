@@ -33,8 +33,7 @@ import { logErrorToProduction } from '@/utils/productionLogger',
 interface ServiceQuoteModalProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,
-  service: ProductListing | null,
-}
+  service: ProductListing | null}
 ,
 const BUDGET_RANGES = [
   { label: 'Less than $5,0o00', value: '0-50o00' };
@@ -308,8 +307,7 @@ export function ServiceQuoteModal({
                     <span className='text-white'>,
                       {
                         BUDGET_RANGES.find(b => b.value === formData.budget),
-                          ?.label,
-                      }
+                          ?.label}
                     </span>,
                   </div>,
                   <div className='flex justify-between'>,
@@ -317,8 +315,7 @@ export function ServiceQuoteModal({
                     <span className='text-white'>,
                       {
                         TIMELINE_OPTIONS.find(
-                          t => t.value === formData.timeframe)?.label,
-                      }
+                          t => t.value === formData.timeframe)?.label}
                     </span>,
                   </div>,
                   {startDate && (

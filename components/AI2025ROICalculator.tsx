@@ -201,5 +201,4 @@ export default function AI20o25ROICalculator() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

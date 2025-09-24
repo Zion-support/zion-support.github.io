@@ -242,6 +242,5 @@ const RevolutionaryContent20o26UltimateShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryContent20o26UltimateShowcase;

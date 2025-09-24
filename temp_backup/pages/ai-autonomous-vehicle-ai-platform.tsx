@@ -20,6 +20,5 @@ export default function AiAutonomousVehicleAiPlatformPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

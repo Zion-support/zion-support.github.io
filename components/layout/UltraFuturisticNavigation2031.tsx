@@ -158,21 +158,18 @@ import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase,
-,
   BookOpen, MessageCircle, Star, TrendingUp, Target,
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
   Earth, Factory, Car, Building, GraduationCap, Scale,
   Palette, Camera, Video, Music, Gamepad2, Heart,
   Leaf, Sun, Moon, Wind, Droplets, Mountain,
   Code, Wrench, Smartphone, BarChart3, Eye,
-  Network, Server, HardDrive, Monitor,
-} from 'lucide-react',
+  Network, Server, HardDrive, Monitor} from 'lucide-react',
 const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const serviceCategories = [
   {
     title: ' 2031 Revolutionary AI Services',
@@ -188,8 +185,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup && ziontechgroup.com'};  website: 'https://ziontechgroup && ziontechgroup.com',
-};
+  website: 'https://ziontechgroup && ziontechgroup.com'};  website: 'https://ziontechgroup && ziontechgroup.com'};
 const serviceCategories = [
   {
     title: '🚀 2031 Revolutionary AI Services';
@@ -266,26 +262,22 @@ const serviceCategories = [
         name: 'Autonomous DevOps Platform',
         href: '/autonomous-devops-platform',
         description: 'Fully autonomous DevOps',
-        price: '$799/month',
-      }
+        price: '$799/month'}
       {
         name: 'Zero Trust Network Architecture',
         href: '/zero-trust-network-architecture',
         description: 'Never trust, always verify',
-        price: '$599/month',
-      }
+        price: '$599/month'}
       {
         name: 'Edge Computing Orchestration',
         href: '/edge-computing-orchestration',
         description: 'Distributed edge computing',
-        price: '$449/month',
-      }
+        price: '$449/month'}
       {
         name: 'AI-Powered IT Operations Center',
         href: '/ai-it-operations-center',
         description: 'Intelligent IT operations',
-        price: '$699/month',
-      }
+        price: '$699/month'}
     ]},  {      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: '$799/month' }
       { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Never trust, always verify', price: '$599/month' }
       { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed edge computing', price: '$449/month' }
@@ -305,8 +297,7 @@ const serviceCategories = [
         name: 'Metaverse Development Platform',
         href: '/metaverse-development-platform',
         description: 'Build immersive virtual worlds',
-        price: '$499/month',
-      }
+        price: '$499/month'}
       {
         name: 'AI Predictive Health Analytics',
         href: '/ai-predictive-health-analytics',
@@ -331,26 +322,22 @@ const serviceCategories = [
         name: 'AI Business Intelligence Suite',
         href: '/ai-business-intelligence-suite',
         description: 'Intelligent business insights',
-        price: '$299/month',
-      }
+        price: '$299/month'}
       {
         name: 'Quantum-Secure Communication Platform',
         href: '/quantum-secure-communication-platform',
         description: 'Unbreakable encryption',
-        price: '$599/month',
-      }
+        price: '$599/month'}
       {
         name: 'AI Customer Success Automation',
         href: '/ai-customer-success-automation',
         description: 'Automate customer success',
-        price: '$199/month',
-      }
+        price: '$199/month'}
       {
         name: 'Blockchain Supply Chain Transparency',
         href: '/blockchain-supply-chain-transparency',
         description: 'End-to-end traceability',
-        price: '$399/month',
-      }
+        price: '$399/month'}
     ]},  {      { name: 'AI Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights', price: '$299/month' }
       { name: 'Quantum-Secure Communication Platform', href: '/quantum-secure-communication-platform', description: 'Unbreakable encryption', price: '$599/month' }
       { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation', description: 'Automate customer success', price: '$199/month' }
@@ -365,8 +352,7 @@ const serviceCategories = [
         name: 'Neuromorphic Computing Platform',
         href: '/neuromorphic-computing-platform',
         description: 'Brain-inspired computing',
-        price: '$899/month',
-      }
+        price: '$899/month'}
       {
         name: 'DNA Computing Platform',
         href: '/dna-computing-platform',
@@ -376,14 +362,12 @@ const serviceCategories = [
         name: 'Photonic Computing Infrastructure',
         href: '/photonic-computing-infrastructure',
         description: 'Light-speed computing',
-        price: '$699/month',
-      }
+        price: '$699/month'}
       {
         name: 'Swarm Robotics Orchestration',
         href: '/swarm-robotics-orchestration',
         description: 'Coordinate robot swarms',
-        price: '$449/month',
-      }
+        price: '$449/month'}
     ]}],      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing', price: '$899/month' }
       { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1,299/month' }
       { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' }
@@ -430,26 +414,22 @@ const serviceCategories = [
         name: 'Autonomous DevOps Platform',
         href: '/autonomous-devops-platform',
         description: 'Fully autonomous DevOps',
-        price: '$799/month',
-      }
+        price: '$799/month'}
       {
         name: 'Zero Trust Network Architecture',
         href: '/zero-trust-network-architecture',
         description: 'Never trust, always verify',
-        price: '$599/month',
-      }
+        price: '$599/month'}
       {
         name: 'Edge Computing Orchestration',
         href: '/edge-computing-orchestration',
         description: 'Distributed edge computing',
-        price: '$449/month',
-      }
+        price: '$449/month'}
       {
         name: 'AI-Powered IT Operations Center',
         href: '/ai-it-operations-center',
         description: 'Intelligent IT operations',
-        price: '$699/month',
-      }
+        price: '$699/month'}
     ]},  {      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: '$799/month' }
       { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Never trust, always verify', price: '$599/month' }
       { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed edge computing', price: '$449/month' }
@@ -469,8 +449,7 @@ const serviceCategories = [
         name: 'Metaverse Development Platform',
         href: '/metaverse-development-platform',
         description: 'Build immersive virtual worlds',
-        price: '$499/month',
-      }
+        price: '$499/month'}
       {
         name: 'AI Predictive Health Analytics',
         href: '/ai-predictive-health-analytics',
@@ -495,26 +474,22 @@ const serviceCategories = [
         name: 'AI Business Intelligence Suite',
         href: '/ai-business-intelligence-suite',
         description: 'Intelligent business insights',
-        price: '$299/month',
-      }
+        price: '$299/month'}
       {
         name: 'Quantum-Secure Communication Platform',
         href: '/quantum-secure-communication-platform',
         description: 'Unbreakable encryption',
-        price: '$599/month',
-      }
+        price: '$599/month'}
       {
         name: 'AI Customer Success Automation',
         href: '/ai-customer-success-automation',
         description: 'Automate customer success',
-        price: '$199/month',
-      }
+        price: '$199/month'}
       {
         name: 'Blockchain Supply Chain Transparency',
         href: '/blockchain-supply-chain-transparency',
         description: 'End-to-end traceability',
-        price: '$399/month',
-      }
+        price: '$399/month'}
     ]},  {      { name: 'AI Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights', price: '$299/month' }
       { name: 'Quantum-Secure Communication Platform', href: '/quantum-secure-communication-platform', description: 'Unbreakable encryption', price: '$599/month' }
       { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation', description: 'Automate customer success', price: '$199/month' }
@@ -529,8 +504,7 @@ const serviceCategories = [
         name: 'Neuromorphic Computing Platform',
         href: '/neuromorphic-computing-platform',
         description: 'Brain-inspired computing',
-        price: '$899/month',
-      }
+        price: '$899/month'}
       {
         name: 'DNA Computing Platform',
         href: '/dna-computing-platform',
@@ -540,14 +514,12 @@ const serviceCategories = [
         name: 'Photonic Computing Infrastructure',
         href: '/photonic-computing-infrastructure',
         description: 'Light-speed computing',
-        price: '$699/month',
-      }
+        price: '$699/month'}
       {
         name: 'Swarm Robotics Orchestration',
         href: '/swarm-robotics-orchestration',
         description: 'Coordinate robot swarms',
-        price: '$449/month',
-      }
+        price: '$449/month'}
     ]}],      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing', price: '$899/month' }
       { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1,299/month' }
       { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' }
@@ -571,8 +543,7 @@ const mainNavigation = [
   {
     name: '2030 Services',
     href: '/services/2030-futuristic-services',
-    icon: Rocket,
-  },  { name: 'AI Solutions', href: '/ai-services', icon: Brain },  { name: '2030 Services', href: '/services/2030-futuristic-services', icon: Rocket }
+    icon: Rocket},  { name: 'AI Solutions', href: '/ai-services', icon: Brain },  { name: '2030 Services', href: '/services/2030-futuristic-services', icon: Rocket }
   { name: 'AI Solutions', href: '/ai-services', icon: Brain }
   { name: 'IT Solutions', href: '/it-services', icon: Cpu }
   { name: 'Quantum Tech', href: '/quantum-services', icon: Atom }
@@ -1080,8 +1051,7 @@ function UltraFuturisticNavigation2031() {
 ,
                                 transition={{
                                   duration: 0.2,
-                                  delay: serviceIndex * 0.05,
-                                }}
+                                  delay: serviceIndex * 0.05}}
                                 className='group cursor-pointer'>,
                                 <Link
                                   href={service.href}
@@ -1282,8 +1252,7 @@ function UltraFuturisticNavigation2031() {
       {/* Spacer for fixed navigation */}
       <div className='h-32 lg: h-40'></div>,
     </>),      <div className="h-32 lg: h-40"></div>,
-    </>),
-}
+    </>)}
 ,
                 <div className='pt-6 border-t border-gray-800'>,
                   <div className='space-y-4'>,

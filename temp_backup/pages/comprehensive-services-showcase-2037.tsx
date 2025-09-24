@@ -12,15 +12,13 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const containerVariants ={
   hidden: { opacity: 0 };
   visible: {
     opacity: 1;
     transition: {
-      staggerChildren: 0.1,
-    }
+      staggerChildren: 0.1}
   }
 };
 const itemVariants ={
@@ -29,8 +27,7 @@ const itemVariants ={
     y: 0;
     opacity: 1;
     transition: {
-      duration: 0.5,
-    }
+      duration: 0.5}
   }
 };
 export default function ComprehensiveServicesShowcase20o37() {
@@ -66,8 +63,7 @@ export default function ComprehensiveServicesShowcase20o37() {
       case 'Quantum & Space':,
         return <Rocket className="w-6 h-6"  />,
       default:,
-        return <Target className="w-6 h-6"  />,
-    }
+        return <Target className="w-6 h-6"  />}
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
@@ -310,5 +306,4 @@ export default function ComprehensiveServicesShowcase20o37() {
           </div>,
         </div>,
       </footer>,
-    </div>),
-}
+    </div>)}

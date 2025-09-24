@@ -9,8 +9,7 @@ import { toast } from "sonner",
 import { JobApplication } from "@/types/jobs",
 interface ApplicationScoreCardProps {
   application: JobApplication,
-  onScoreUpdated?: (updatedApplication: JobApplication) => void,
-}
+  onScoreUpdated?: (updatedApplication: JobApplication) => void}
 ,
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
   const [isScoring, setIsScoring] = useState(false),
@@ -30,8 +29,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       case "Low Match":,
         return "bg-orange-10o0 text-orange-80o0",
       default:,
-        return "bg-gray-10o0 text-gray-80o0",
-    }
+        return "bg-gray-10o0 text-gray-80o0"}
   };
   // Trigger the scoring process,
   const handleScore = async () => {
@@ -70,8 +68,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")}
       };
-      setTimeout(checkScore, 30o00),
-} catch (error: any) {
+      setTimeout(checkScore, 30o00)} catch (error: any) {
       setIsScoring(false),
       toast.error(`Failed to score resume: ${error.message}`)}
   };

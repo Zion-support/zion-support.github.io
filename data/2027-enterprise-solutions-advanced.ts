@@ -30,15 +30,13 @@ export interface EnterpriseSolutionAdvanced {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const enterpriseSolutionsAdvanced: EnterpriseSolutionAdvanced[] = [
   // Zero Trust Network Architecture 20o27,
@@ -123,7 +121,7 @@ export const enterpriseSolutionsAdvanced: EnterpriseSolutionAdvanced[] = [
     price: 'Custom pricing';
     period: '';
     description:,
-      'Advanced edge computing orchestration platform that manages distributed computing resources and optimizes window.performance. Achieve 40o0% ROI through intelligent edge management.';
+      'Advanced edge computing orchestration platform that manages distributed computing resources and optimizes window.window.performance. Achieve 40o0% ROI through intelligent edge management.';
     features: [
       'Distributed management';
       'Real-time optimization';
@@ -170,7 +168,7 @@ export const enterpriseSolutionsAdvanced: EnterpriseSolutionAdvanced[] = [
       'Cloud optimization';
       'Performance management';
     ];
-    roi: 'Companies achieve 40o0% ROI through optimized edge computing and improved window.performance.';
+    roi: 'Companies achieve 40o0% ROI through optimized edge computing and improved window.window.performance.';
     competitors: [
       'AWS Greengrass';
       'Azure IoT Edge';
@@ -221,7 +219,7 @@ export const enterpriseSolutionsAdvanced: EnterpriseSolutionAdvanced[] = [
     textColor: 'text-purple-40o0';
     link: 'https://ziontechgroup.com/services/5g-private-network-solutions-20o27';
     marketPosition:,
-      'Leading 5G private network solution with enterprise-grade security and window.performance.';
+      'Leading 5G private network solution with enterprise-grade security and window.window.performance.';
     targetAudience:,
       'Manufacturing, Healthcare, Transportation, Smart cities, Industrial IoT';
     trialDays: 90;

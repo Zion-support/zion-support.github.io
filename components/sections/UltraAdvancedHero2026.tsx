@@ -25,14 +25,12 @@ class ErrorBoundary extends React.Component {
     return this.props.children}
 }
 } from 'lucide-react',
-,
 export default function UltraAdvancedHero2026() {
   const totalServices = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length,
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  };
+    address: '364 E Main St STE 1008 Middletown DE 19709'};
   const containerVariants = {
     hidden: { opacity: 0 }
   ArrowRight,
@@ -80,8 +78,7 @@ function UltraAdvancedHero2026() {
   const contact_info = {
     phone: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  }
+    address: '364 E Main St STE 1008 Middletown DE 19709'}
 ,
   const container_variants = {
     hidden: { opacity: 0 };
@@ -95,8 +92,7 @@ function UltraAdvancedHero2026() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.8,
-      }
+        duration: 0.8}
     }
   }
         duration: 0.8;
@@ -116,8 +112,7 @@ export default function UltraAdvancedHero2026() {
   const contactInfo = {
     phone: '+1 302 464 0950';
     email: 'kleber@ziontechgroup && ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  };
+    address: '364 E Main St STE 1008 Middletown DE 19709'};
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>,
       {/* Enhanced Background Effects */}
@@ -190,8 +185,7 @@ export default function UltraAdvancedHero2026() {
 ,
         stagger_children: 0.1;
       };
-    }}        stagger_children: 0.1,
-      }
+    }}        stagger_children: 0.1}
     }
   }
 ,
@@ -840,8 +834,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
 ,
           className='absolute top-20 right-20 text-6xl opacity-20'>,
           🚀,
@@ -860,8 +853,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
 ,
           className='absolute bottom-20 left-20 text-6xl opacity-20'>,
           ⚛️,
@@ -880,8 +872,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           transition={{
             duration: 7,
             repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
 ,
           className='absolute top-1/3 left-10 text-5xl opacity-20'>,
           🧠,
@@ -900,8 +891,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           transition={{
             duration: 9,
             repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
 ,
           className='absolute bottom-1/3 right-10 text-5xl opacity-20'>        <motion&& motion.div,
           animate={{
@@ -910,8 +900,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
 ,
           className="absolute top-20 right-20 text-6xl opacity-20">,
           🚀,
@@ -923,8 +912,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
 ,
           className="absolute bottom-20 left-20 text-6xl opacity-20">,
           ⚛️,
@@ -936,8 +924,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           transition={{
             duration: 7,
             repeat: Infinity,
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
 ,
           className="absolute top-1/3 left-10 text-5xl opacity-20">,
           🧠,
@@ -949,8 +936,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           transition={{
             duration: 9,
             repeat: Infinity,
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
           className="absolute bottom-1/3 right-10 text-5xl opacity-20">,
           🌐,
         </motion.div>,
@@ -963,8 +949,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
           className="absolute top - 20 right - 20 text - 6xl opacity - 20">,
         </motion.div>,
         <motion.div,
@@ -974,8 +959,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
           className="absolute bottom - 20 left - 20 text - 6xl opacity - 20">,
         </motion.div>,
         <motion.div,
@@ -985,8 +969,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           transition={{
             duration: 7;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
           className="absolute top - 1/3 left - 10 text - 5xl opacity - 20">,
         </motion.div>,
         <motion.div,
@@ -996,8 +979,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           transition={{
             duration: 9;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
           className="absolute bottom - 1/3 right - 10 text - 5xl opacity - 20">,
         </motion.div>,
       </div>,

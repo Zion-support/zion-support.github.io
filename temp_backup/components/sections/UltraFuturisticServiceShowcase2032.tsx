@@ -170,6 +170,5 @@ const UltraFuturisticServiceShowcase20o32: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltraFuturisticServiceShowcase20o32;

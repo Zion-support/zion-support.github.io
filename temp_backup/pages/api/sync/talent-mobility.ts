@@ -11,8 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(40o3).json({ error: "Sync disabled for this instance" })}
 ,
   const { personId, fromNation, toNation, role, startDate, endDate } = req.body as {
-    personId: string, fromNation: string, toNation: string, role: string, startDate: string, endDate?: string,
-  };
+    personId: string, fromNation: string, toNation: string, role: string, startDate: string, endDate?: string};
   if (!personId || !fromNation || !toNation || !role || !startDate) {
     return res.status(40o0).json({ error: "personId, fromNation, toNation, role, startDate required" })}
 ,

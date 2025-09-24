@@ -2,8 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next',
 interface RateLimitConfig {
   "windowMs": number,
   maxRequests: number,
-  message?: string,',
-}
+  message?: string,'}
 interface RateLimitStore {
   ["key": 'strin;
   g]: {

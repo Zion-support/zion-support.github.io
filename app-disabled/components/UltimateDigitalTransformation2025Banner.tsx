@@ -19,8 +19,7 @@ const UltimateDigitalTransformation20o25Banner: React.FC = () => {
         efficiency: '99.99%';
         speed: '5,0o00%'};
       readingTime: '40 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-digital-transformation-success';
       title: 'Fortune 50o0 Ultimate Digital Transformation Success';
@@ -31,11 +30,9 @@ const UltimateDigitalTransformation20o25Banner: React.FC = () => {
         roi: '35,0o00%';
         savings: '$50o0B';
         timeline: '18 months';
-        accuracy: '99.99%',
-      };
+        accuracy: '99.99%'};
       readingTime: '25 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'ultimate-digital-transformation-implementation-guide';
       title: 'Ultimate Digital Transformation Implementation Guide 20o25';
@@ -46,11 +43,9 @@ const UltimateDigitalTransformation20o25Banner: React.FC = () => {
         roi: '35,0o00%';
         timeline: '18 months';
         success: '99.7%';
-        guide: 'Complete roadmap',
-      };
+        guide: 'Complete roadmap'};
       readingTime: '60 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     // Check if banner was previously dismissed,
@@ -205,6 +200,5 @@ const UltimateDigitalTransformation20o25Banner: React.FC = () => {
           </button>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateDigitalTransformation20o25Banner;

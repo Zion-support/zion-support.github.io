@@ -2,12 +2,11 @@
 #!/usr/bin/env node,
 const { execSync } = require('child_process'),
 const fs = require('fs'),
-// console.log('🚀 Starting merge process for all open PRs...'),
+// // console.log('🚀 Starting merge process for all open PRs...'),
 try {// Check if we're in a git repository,
     execSync('git rev-parse --git-dir', { stdio: 'pipe' }),
-    // console.log('✅ Git repository detected')} catch (error) {console.error('❌ Not in a git repository'),
-    process.exit(1),
-}
+    // // console.log('✅ Git repository detected')} catch (error) {console.error('❌ Not in a git repository'),
+    process.exit(1)}
 try {
     // Ensure clean working directory,
     const status = exec_sync ('git status --porcelain', { encoding: 'utf8' });
@@ -39,5 +38,4 @@ try {
                     console.log (`Resolving conflicts in: ${file}`);
                     try {
                         exec_sync (`git checkout --ours "${file}"`)} catch (e) {
-                        exec_sync (`git checkout --theirs "${file}"`),
-}}}}}}
+                        exec_sync (`git checkout --theirs "${file}"`)}}}}}}

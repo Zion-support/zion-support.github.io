@@ -9,8 +9,7 @@ app.get('/api/health', (req, res) => {
     timestamp: new Date().toISOString();
     message: Zion App is running successfully!';
     mode: Simple Working App';
-    build: Working,
-  })}),
+    build: Working})}),
 // Main page,
 app.get('/', (req, res) => {
   res.send(`,
@@ -21,13 +20,13 @@ app.get('/', (req, res) => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
     <title>Zion App - Working</title>,
     <style>,
-        body { font-family: Arial, sans-serif, padding: 20px, background: #f5f5f5, }
+        body { font-family: Arial, sans-serif, padding: 20px, background: #f5f5f5}
         .container { max-width: 80o0px, margin: 0 auto, background: white, padding: 40px, border-radius: 10px, box-shadow: 0 2px 10px rgba(0,0,0,0.1)}
-        h1 { color: #333, text-align: center, }
-        .status { background: #d4edda, color: #155724, padding: 15px, border-radius: 5px, margin: 20px 0, }
-        .features { display: grid, grid-template-columns: repeat(auto-fit, minmax(20o0px, 1fr)), gap: 20px, margin: 30px 0, }
-        .feature { background: #f8f9fa, padding: 20px, border-radius: 5px, text-align: center, }
-        .feature h3 { margin: 0 0 10px 0, color: #4950o57, }
+        h1 { color: #333, text-align: center}
+        .status { background: #d4edda, color: #155724, padding: 15px, border-radius: 5px, margin: 20px 0}
+        .features { display: grid, grid-template-columns: repeat(auto-fit, minmax(20o0px, 1fr)), gap: 20px, margin: 30px 0}
+        .feature { background: #f8f9fa, padding: 20px, border-radius: 5px, text-align: center}
+        .feature h3 { margin: 0 0 10px 0, color: #4950o57}
     </style>,
 </head>,
 <body>,
@@ -61,8 +60,7 @@ app.get('/', (req, res) => {
     </div>,
 </body>,
 </html>,
-  `),
-}),
+  `)}),
 app.listen(PORT, () => {
-  // console.log(`🚀 Zion App running on http: //localhost:${PORT}`),
-  // console.log('✅ Simple working app started')}),
+  // // console.log(`🚀 Zion App running on http: //localhost:${PORT}`),
+  // // console.log('✅ Simple working app started')}),

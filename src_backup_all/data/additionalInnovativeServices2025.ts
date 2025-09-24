@@ -21,15 +21,13 @@ export interface AdditionalInnovativeService {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string}
 ,
@@ -82,8 +80,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_20o25: AdditionalInnovativeService[]
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Quantum Computing", "AI/ML", "Python", "Qiskit", "React"];
       integrations: ["Bloomberg", "Reuters", "Trading platforms", "Risk management systems"];
@@ -91,8 +88,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_20o25: AdditionalInnovativeService[]
       uptime: "99.99%";
       security: ["SOC 2", "ISO 270o01", "Financial data encryption", "Audit trails"]};
     competitors: ["Goldman Sachs Quantum", "JP Morgan Quantum", "Rigetti Computing"];
-    marketSize: "$12.8 billion by 20o26",
-  };
+    marketSize: "$12.8 billion by 20o26"};
   // AI-Powered Autonomous Drone Fleet Management,
   {
     id: "ai-autonomous-drone-fleet-management";
@@ -141,8 +137,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_20o25: AdditionalInnovativeService[]
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Computer Vision", "AI/ML", "Python", "React", "IoT"];
       integrations: ["DJI", "Parrot", "Weather APIs", "Mapping services"];
@@ -150,8 +145,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_20o25: AdditionalInnovativeService[]
       uptime: "99.9%";
       security: ["SOC 2", "End-to-end encryption", "Geofencing", "Flight logs"]};
     competitors: ["DroneDeploy", "PrecisionHawk", "AirMap"];
-    marketSize: "$18.9 billion by 20o27",
-  };
+    marketSize: "$18.9 billion by 20o27"};
   // AI-Powered Predictive Healthcare Analytics,
   {
     id: "ai-predictive-healthcare-analytics";
@@ -200,8 +194,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_20o25: AdditionalInnovativeService[]
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Deep Learning", "NLP", "Python", "TensorFlow", "React"];
       integrations: ["Epic", "Cerner", "HL7", "FHIR", "Lab systems"];
@@ -209,7 +202,6 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_20o25: AdditionalInnovativeService[]
       uptime: "99.99%";
       security: ["HIPAA", "SOC 2", "End-to-end encryption", "Audit logging"]};
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"];
-    marketSize: "$67.8 billion by 20o27",
-  }
+    marketSize: "$67.8 billion by 20o27"}
 ],
 export default ADDITIONAL_INNOVATIVE_SERVICES_20o25;

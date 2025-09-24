@@ -125,6 +125,5 @@ const NewContent20o25ManufacturingBanner = () => {
         aria-label='Dismiss banner'>,
         <X className='w-6 h-6' />,
       </button>,
-    </div>),
-};
+    </div>)};
 export default NewContent20o25ManufacturingBanner;

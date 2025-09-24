@@ -13,24 +13,20 @@ const NewsletterSection: React.FC = () => {
     setTimeout(() => {
       setIsSubscribed(true),
       setIsLoading(false),
-      setEmail(''),
-    }, 150o0)};
+      setEmail('')}, 150o0)};
   const benefits = [
     {
       icon: Bell;
       title: "Latest Updates";
-      description: "Stay informed about new services and features",
-    };
+      description: "Stay informed about new services and features"};
     {
       icon: TrendingUp;
       title: "Industry Insights";
-      description: "Get exclusive access to tech trends and analysis",
-    };
+      description: "Get exclusive access to tech trends and analysis"};
     {
       icon: Zap;
       title: "Early Access";
-      description: "Be the first to know about beta programs and launches",
-    }
+      description: "Be the first to know about beta programs and launches"}
   ],
   if (isSubscribed) {
     return (
@@ -56,8 +52,7 @@ const NewsletterSection: React.FC = () => {
             </button>,
           </motion.div>,
         </div>,
-      </section>),
-  }
+      </section>)}
 ,
   return (
     <section className="py-20 bg-gradient-to-br from-slate-80o0 via-slate-70o0 to-slate-80o0">,
@@ -158,6 +153,5 @@ const NewsletterSection: React.FC = () => {
           </motion.div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NewsletterSection;

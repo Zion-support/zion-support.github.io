@@ -14,8 +14,7 @@ class ComprehensiveSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd(),
     this.fixedFiles = [],
-    this.errors = [],
-  }
+    this.errors = []}
 ,
   log(message, level = 'info') {
     const timestamp = new Date().toISOString(),
@@ -27,7 +26,7 @@ class ComprehensiveSyntaxFixer {
           : level === 'warn',
             ? '⚠️',
             : 'ℹ️',
-    // console.log(`${prefix} [${timestamp}] ${message}`)}
+    // // console.log(`${prefix} [${timestamp}] ${message}`)}
 ,
   async fixFile(filePath) {
     try {
@@ -194,13 +193,13 @@ switch (command) {
     fixer,
       .fixAll(),
       .then(() => {
-        // console.log('\n🎉 Comprehensive syntax fix completed!')}),
+        // // console.log('\n🎉 Comprehensive syntax fix completed!')}),
       .catch((error) => {
         console.error('❌ Fix failed:', error.message),
         process.exit(1)}),
     break,
   default: ,
-    // console.log(`,
+    // // console.log(`,
 🔧 Comprehensive Syntax Fixer,
 Usage:,
   node automation/comprehensive-syntax-fixer.js [command],
@@ -209,8 +208,6 @@ Commands:,
 Examples:,
   node automation/comprehensive-syntax-fixer.js fix,
         `),
-    break,
-}
+    break}
 ,
-module.exports = ComprehensiveSyntaxFixer,
-}}}}}}}}}}}}}}}}}))))))
+module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}}}}}))))))

@@ -25,5 +25,4 @@ export default function ZeroTrustSecurityPlatformPage() {
 				industries={["Enterprise IT"Financial Services"Healthcare"SaaS"Public Sector"]}
 				canonical="https: //ziontechgroup.com/zero-trust-security-platform",
 			 />,
-		</>),
-}
+		</>)}

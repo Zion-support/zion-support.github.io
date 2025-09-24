@@ -2,14 +2,12 @@ import React{ createContextuseContextuseEffectuseStateReactNode } from 'react',
 import Cookies from 'js-cookie',
 export type ConsentState = {
   analytics: boolean,
-  ads: boolean,
-};
+  ads: boolean};
 interface ConsentContextValue {
   consent: ConsentState,
   acceptAll: () => void,
   rejectNonEssential: () => void,
-  updateConsent: (state: ConsentState) => void,
-}
+  updateConsent: (state: ConsentState) => void}
 ,
 const defaultState: ConsentState = { analytics: falseads: false };
 const ConsentContext = createContext<ConsentContextValue>({
@@ -25,7 +23,7 @@ function loadAnalytics() {
   s.id = 'ga-script',
   document.body.appendChild(s),
   const inline = document.createElement('script'),
-  inline.text = `window.dataLayer=window.dataLayer||[],function gtag(){dataLayer.push(arguments),}gtag('js',new Date()),gtag('config','GA_MEASUREMENT_ID'),`,
+  inline.text = `window.dataLayer=window.dataLayer||[],function gtag(){dataLayer.push(arguments)}gtag('js',new Date()),gtag('config','GA_MEASUREMENT_ID'),`,
   document.body.appendChild(inline)}
 ,
 function loadAds() {
@@ -34,8 +32,7 @@ function loadAds() {
   s.src = 'https: //pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
   s.async = true,
   s.id = 'ads-script',
-  document.body.appendChild(s),
-}
+  document.body.appendChild(s)}
 ,
 export function ConsentProvider({ children }: { children: ReactNode }) {
   const [consentsetConsent] = useState<ConsentState>(() => {

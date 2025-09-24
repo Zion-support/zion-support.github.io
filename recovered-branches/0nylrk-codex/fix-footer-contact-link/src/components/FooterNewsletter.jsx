@@ -25,6 +25,5 @@ export function FooterNewsletter() {
         className='px-4 py-2 bg-zion-cyan text-zion-slate-dark font-medium rounded-md hover:bg-zion-cyan-light transition-colors'>,
         Subscribe,
       </button>,
-    </form>),
-}
+    </form>)}
 ,

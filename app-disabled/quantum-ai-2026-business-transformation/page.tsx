@@ -416,6 +416,5 @@ export default function QuantumAI20o26Page() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

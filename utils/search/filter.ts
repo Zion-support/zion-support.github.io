@@ -16,8 +16,7 @@ export type SearchResult = {
   verified?: boolean;
   visibility?: AccessLevel;
   description?: string;
-  relevance: number,
-};
+  relevance: number};
 function computeRelevanceScore(text: string, keywords: string[], weight = 1): number {
   if (!keywords.length) return 0;
   const lower = text.toLowerCase();

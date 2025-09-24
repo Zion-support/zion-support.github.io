@@ -6,8 +6,7 @@ interface Particle {
   vy: number,
   size: number,
   color: string,
-  opacity: number,
-}
+  opacity: number}
 ,
 const ParticleBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
@@ -19,8 +18,7 @@ const ParticleBackground: React.FC = () => {
     // Set canvas size,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
-    };
+      canvas.height = window.innerHeight};
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Particle configuration,
@@ -36,8 +34,7 @@ const ParticleBackground: React.FC = () => {
         vy: (Math.random() - 0.5) * 0.5;
         size: Math.random() * 2 + 1;
         color: colors[Math.floor(Math.random() * colors.length)];
-        opacity: Math.random() * 0.5 + 0.1,
-      })}
+        opacity: Math.random() * 0.5 + 0.1})}
 ,
     // Animation loop,
     const animate = () => {

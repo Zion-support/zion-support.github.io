@@ -33,14 +33,12 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
       size: number,
       color: string,
       life: number,
-      maxLife: number,
-    }> = [],
+      maxLife: number}> = [],
     const neuralNodes: Array<{
       x: number,
       y: number,
       connections: number[],
-      pulse: number,
-    }> = [],
+      pulse: number}> = [],
     // Initialize neural network nodes,
     const initNeuralNetwork = () => {
       neuralNodes.length = 0,
@@ -50,8 +48,7 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
           x: Math.random() * canvas.width;
           y: Math.random() * canvas.height;
           connections: [];
-          pulse: Math.random() * Math.PI * 2,
-        })}
+          pulse: Math.random() * Math.PI * 2})}
 ,
       // Create connections,
       neuralNodes.forEach((node, i) => {
@@ -75,8 +72,7 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
           size: Math.random() * 3 + 1;
           color: getParticleColor(variant);
           life: Math.random() * 10o0;
-          maxLife: 10o0,
-        })}
+          maxLife: 10o0})}
     };
     const getParticleColor = (variant: string): string => {
       switch (variant) {

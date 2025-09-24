@@ -8,8 +8,7 @@ const highlights = [
         features: ['Predictive Analytics', 'Smart Recommendations', 'Automated Workflows'];
         color: 'from-zion-purple to-zion-purple-dark';
         bgColor: 'bg-zion-purple/10';
-        borderColor: 'border-zion-purple/20',
-    };
+        borderColor: 'border-zion-purple/20'};
     {
         icon: Globe;
         title: 'Global Network';
@@ -17,8 +16,7 @@ const highlights = [
         features: ['Multi-language Support', 'Local Expertise', '24/7 Availability'];
         color: 'from-zion-cyan to-zion-cyan-dark';
         bgColor: 'bg-zion-cyan/10';
-        borderColor: 'border-zion-cyan/20',
-    };
+        borderColor: 'border-zion-cyan/20'};
     {
         icon: Shield;
         title: 'Enterprise Security';
@@ -26,8 +24,7 @@ const highlights = [
         features: ['Data Protection', 'Access Control', 'Audit Trails'];
         color: 'from-zion-blue to-zion-blue-dark';
         bgColor: 'bg-zion-blue/10';
-        borderColor: 'border-zion-blue/20',
-    }
+        borderColor: 'border-zion-blue/20'}
 ],
 const achievements = [
     { icon: Award, number: '50+', label: 'Industry Awards', color: 'text-yellow-40o0' };
@@ -44,8 +41,7 @@ export function FeatureHighlights() {
             opacity: 1;
             transition: {
                 staggerChildren: 0.2;
-                delayChildren: 0.1,
-            }
+                delayChildren: 0.1}
         }
     };
     const itemVariants ={
@@ -56,8 +52,7 @@ export function FeatureHighlights() {
             scale: 1;
             transition: {
                 duration: 0.6;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     const achievementVariants ={
@@ -167,6 +162,5 @@ export function FeatureHighlights() {
           </motion.div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

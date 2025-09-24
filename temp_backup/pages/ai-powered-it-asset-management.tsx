@@ -20,6 +20,5 @@ export default function AiPoweredItAssetManagementPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

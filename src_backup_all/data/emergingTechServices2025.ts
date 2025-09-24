@@ -20,15 +20,13 @@ export interface EmergingTechService {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string}
 ,
@@ -81,8 +79,7 @@ export const EMERGING_TECH_SERVICES_20o25: EmergingTechService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Neuromorphic chips", "AI/ML", "Python", "C++", "Hardware acceleration"];
       integrations: ["IoT platforms", "Edge devices", "Cloud services", "AI frameworks"];
@@ -90,8 +87,7 @@ export const EMERGING_TECH_SERVICES_20o25: EmergingTechService[] = [
       uptime: "99.9%";
       security: ["Hardware security", "Encryption", "Access controls", "Secure boot"]};
     competitors: ["Intel Loihi", "IBM TrueNorth", "BrainChip", "SpiNNaker"];
-    marketSize: "$8.9 billion by 20o27",
-  };
+    marketSize: "$8.9 billion by 20o27"};
   // AI-Powered Synthetic Biology Platform,
   {
     id: "ai-synthetic-biology-platform";
@@ -140,8 +136,7 @@ export const EMERGING_TECH_SERVICES_20o25: EmergingTechService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["AI/ML", "Bioinformatics", "Python", "Molecular modeling", "CRISPR tools"];
       integrations: ["Lab equipment", "DNA synthesis", "Sequencing platforms", "Bioinformatics tools"];
@@ -149,8 +144,7 @@ export const EMERGING_TECH_SERVICES_20o25: EmergingTechService[] = [
       uptime: "99.9%";
       security: ["Biosafety protocols", "Data encryption", "Access controls", "Audit trails"]};
     competitors: ["Ginkgo Bioworks", "Twist Bioscience", "Zymergen", "Benchling"];
-    marketSize: "$23.7 billion by 20o28",
-  };
+    marketSize: "$23.7 billion by 20o28"};
   // AI-Powered Quantum Internet Platform,
   {
     id: "ai-quantum-internet-platform";
@@ -199,8 +193,7 @@ export const EMERGING_TECH_SERVICES_20o25: EmergingTechService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Quantum hardware", "Quantum algorithms", "Python", "Qiskit", "Quantum protocols"];
       integrations: ["Classical networks", "Quantum computers", "Security systems", "Cloud platforms"];
@@ -208,7 +201,6 @@ export const EMERGING_TECH_SERVICES_20o25: EmergingTechService[] = [
       uptime: "99.5%";
       security: ["Quantum encryption", "Quantum key distribution", "Quantum security", "Post-quantum crypto"]};
     competitors: ["Quantum Xchange", "ID Quantique", "Quantum Machines", "Rigetti"];
-    marketSize: "$15.8 billion by 20o30",
-  }
+    marketSize: "$15.8 billion by 20o30"}
 ],
 export default EMERGING_TECH_SERVICES_20o25;

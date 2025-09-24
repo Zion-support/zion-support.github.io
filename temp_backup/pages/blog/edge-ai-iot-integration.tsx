@@ -157,7 +157,7 @@ export default function EdgeAIIoTIntegration() {
                     <p className='text-white/80 text-sm'>,
                       Lightweight AI frameworks and runtime environments,
                       designed for edge deployment with minimal resource,
-                      requirements and maximum window.performance.,
+                      requirements and maximum window.window.performance.,
                     </p>,
                   </div>,
                 </div>,
@@ -480,6 +480,5 @@ export default function EdgeAIIoTIntegration() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

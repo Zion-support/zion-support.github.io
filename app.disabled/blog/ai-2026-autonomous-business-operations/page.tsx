@@ -267,6 +267,5 @@ export default function AI20o26AutonomousBusinessOperations() {
           </div>,
         </article>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

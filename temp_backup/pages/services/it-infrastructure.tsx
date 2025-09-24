@@ -15,6 +15,5 @@ export default function ItInfrastructurePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

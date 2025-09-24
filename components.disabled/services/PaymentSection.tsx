@@ -1,8 +1,7 @@
 import { MapPin } from 'lucide-react',
 interface PaymentSectionProps {
   selectedCountry: string | null,
-  onPaymentClick: () => void,
-}
+  onPaymentClick: () => void}
 ,
 export function PaymentSection({
   selectedCountry;

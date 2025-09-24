@@ -348,6 +348,5 @@ export default function Showcase() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

@@ -117,8 +117,7 @@ const EnhancedContentNavigation = () => {
       case 'resources':,
         return BarChart3,
       default:,
-        return BookOpen,
-    }
+        return BookOpen}
   };
   const getCategoryColor = (category: string) => {
     switch (category) {
@@ -129,8 +128,7 @@ const EnhancedContentNavigation = () => {
       case 'resources':,
         return 'text-purple-60o0 bg-purple-10o0',
       default:,
-        return 'text-gray-60o0 bg-gray-10o0',
-    }
+        return 'text-gray-60o0 bg-gray-10o0'}
   };
   return (
     <div className='bg-gray-50 py-16'>,
@@ -171,8 +169,7 @@ const EnhancedContentNavigation = () => {
                     className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-20o0 ${
                       activeCategory === category.id,
                         ? 'bg-purple-60o0 text-white',
-                        : 'bg-white text-gray-60o0 hover: bg-gray-10o0',
-                    }`}
+                        : 'bg-white text-gray-60o0 hover: bg-gray-10o0'}`}
                   >,
                     <Icon className='h-4 w-4' />,
                     <span className='font-medium'>{category.name}</span>,
@@ -274,8 +271,7 @@ const EnhancedContentNavigation = () => {
                 </div>,
                 {/* Hover Effect */}
                 <div className='h-1 bg-gradient-to-r from-purple-50o0 to-blue-50o0 transform scale-x-0 group-hover: scale-x-10o0 transition-transform duration-30o0'></div>,
-              </motion.div>),
-          })}
+              </motion.div>)})}
         </div>,
         {/* Call to Action */}
         <div className='mt-12 text-center'>,
@@ -305,6 +301,5 @@ const EnhancedContentNavigation = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default EnhancedContentNavigation;

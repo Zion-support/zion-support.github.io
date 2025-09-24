@@ -16,7 +16,6 @@ export function readJsonFile<T>(filePath: string, defaultValue: T): T {
 ,
 export function writeJsonFile<T>(fileName: string, data: T): void {
 export function writeJsonFile<T>(fileName: string, data: T): void {
-,
   const filePath = getFilePath(fileName),
   const tmpPath = `${filePath}.tmp`,
   fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8'),
@@ -25,8 +24,7 @@ export function writeJsonFile<T>(fileName: string, data: T): void {
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []),
   items && items.push(item),
-  writeJsonFile<T[]>(fileName, items),
-}
+  writeJsonFile<T[]>(fileName, items)}
 ,
 // Database utilities,
 export interface DatabaseConfig {
@@ -35,32 +33,28 @@ export interface DatabaseConfig {
   database: string,
   username: string,
   password: string,
-  ssl?: boolean,
-}
+  ssl?: boolean}
 export interface QueryResult<T = any> {
   rows: T[],
   rowCount: number,
-  fields: any[],
-}
+  fields: any[]}
 export class DatabaseManager {
   private config: DatabaseConfig,
   constructor(config: DatabaseConfig) {
-    this.config = config,
-  }
+    this.config = config}
   async connect(): Promise<void> {
     // Mock connection - in production, this would establish a real database connection,
-    // console.log('Connected to database')}
+    // // console.log('Connected to database')}
   async disconnect(): Promise<void> {
     // Mock disconnection - in production, this would close the database connection,
-    // console.log('Disconnected from database')}
+    // // console.log('Disconnected from database')}
   async query<T = any>(sql: string, params?: any[]): Promise<QueryResult<T>> {
     // Mock query execution - in production, this would execute real SQL,
-    // console.log('Executing query:', sql, params),
+    // // console.log('Executing query:', sql, params),
     return {
       rows: [];
       rowCount: 0;
-      fields: [],
-    };
+      fields: []};
   }
   async transaction<T>(callback: (db: DatabaseManager) => Promise<T>): Promise<T> {
     // Mock transaction - in production, this would wrap the callback in a real transaction,

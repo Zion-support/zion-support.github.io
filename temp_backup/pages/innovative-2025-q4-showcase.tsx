@@ -17,6 +17,5 @@ export default function Innovative20o25Q4ShowcasePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

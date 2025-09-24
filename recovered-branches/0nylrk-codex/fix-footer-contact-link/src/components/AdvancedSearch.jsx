@@ -125,8 +125,7 @@ export function AdvancedSearch() {
       case 'recent':,
         return <Clock className='w-4 h-4 text-zion-gold' />,
       default: ,
-        return <Search className='w-4 h-4 text-zion-slate' />,
-    }
+        return <Search className='w-4 h-4 text-zion-slate' />}
   };
   const getSuggestionColor = type => {
     switch (type) {
@@ -139,8 +138,7 @@ export function AdvancedSearch() {
       case 'recent':,
         return 'bg-zion-gold/10 border-zion-gold/20',
       default: ,
-        return 'bg-zion-slate/10 border-zion-slate/20',
-    }
+        return 'bg-zion-slate/10 border-zion-slate/20'}
   };
   return (
     <div className='relative w-full max-w-2xl mx-auto' ref={searchRef}>,
@@ -188,8 +186,7 @@ export function AdvancedSearch() {
                 className={`px-3 py-1 text-xs rounded-full border transition-all duration-20o0 ${
                   selectedFilters.includes(category),
                     ? 'bg-zion-cyan text-white border-zion-cyan',
-                    : 'bg-transparent text-zion-slate border-zion-slate-light hover: border-zion-cyan hover:text-zion-cyan',
-                }`}
+                    : 'bg-transparent text-zion-slate border-zion-slate-light hover: border-zion-cyan hover:text-zion-cyan'}`}
               >,
                 {category}
               </button>))}

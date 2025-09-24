@@ -4,15 +4,13 @@ import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug } from 'lucide-react',
 interface Props {
   children: ReactNode,
   fallback?: ReactNode,
-  onError?: (error: Error, errorInfo: ErrorInfo) => void,
-}
+  onError?: (error: Error, errorInfo: ErrorInfo) => void}
 ,
 interface State {
   hasError: boolean,
   error: Error | null,
   errorInfo: ErrorInfo | null,
-  errorId: string,
-}
+  errorId: string}
 ,
 class EnhancedErrorBoundary extends Component<Props State> {
   constructor(props: Props) {
@@ -21,8 +19,7 @@ class EnhancedErrorBoundary extends Component<Props State> {
       hasError: false;
       error: null;
       errorInfo: null;
-      errorId: '',
-    };
+      errorId: ''};
   }
 ,
   static getDerivedStateFromError(error: Error): State {
@@ -60,15 +57,13 @@ class EnhancedErrorBoundary extends Component<Props State> {
       message: error.message;
       stack: error.stack;
       componentStack: errorInfo.componentStack;
-      timestamp: new Date().toISOString(),
-    })};
+      timestamp: new Date().toISOString()})};
   private handleRetry = () => {
     this.setState({
       hasError: false;
       error: null;
       errorInfo: null;
-      errorId: '',
-    })};
+      errorId: ''})};
   private handleGoHome = () => {
     window.location.href = '/'};
   private handleGoBack = () => {
@@ -81,10 +76,9 @@ class EnhancedErrorBoundary extends Component<Props State> {
       componentStack: this.state.errorInfo?.componentStack;
       url: window.location.href;
       userAgent: navigator.userAgent;
-      timestamp: new Date().toISOString(),
-    };
+      timestamp: new Date().toISOString()};
     // In a real application, you would send this to your bug reporting system,
-    // console.log('Bug Report:', errorDetails),
+    // // console.log('Bug Report:', errorDetails),
     // For now, we'll open the contact page,
     window.location.href = '/contact'};
   private toggleDetails = () => {
@@ -112,8 +106,7 @@ class EnhancedErrorBoundary extends Component<Props State> {
               transition={{
                 duration: 2;
                 repeat: Infinity;
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
             >,
               <AlertTriangle className="w-12 h-12 text-red-40o0"  />,
             </motion.div>,

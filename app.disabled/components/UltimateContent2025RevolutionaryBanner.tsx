@@ -15,12 +15,10 @@ const UltimateContent20o25RevolutionaryBanner = () => {
         roi: '50o0%';
         savings: '$2.8B';
         satisfaction: '98%';
-        projects: '50o0+',
-      };
+        projects: '50o0+'};
       description: 'Discover how Fortune 50o0 companies are achieving 50o0% ROI with revolutionary AI implementations.';
       readingTime: '18 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-transformation';
       title: 'Fortune 50o0 AI Transformation: $2.8B Annual Savings in 18 Months';
@@ -30,12 +28,10 @@ const UltimateContent20o25RevolutionaryBanner = () => {
         roi: '567%';
         savings: '$2.8B';
         satisfaction: '99.2%';
-        timeline: '18 months',
-      };
+        timeline: '18 months'};
       description: 'How a $50B manufacturing giant achieved 567% ROI with revolutionary AI implementation.';
       readingTime: '22 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'quantum-computing-revolution';
       title: 'AI 20o25: The Quantum Computing Business Revolution - $10o0B Market Transformation';
@@ -48,8 +44,7 @@ const UltimateContent20o25RevolutionaryBanner = () => {
         speed: '1,20o0%'};
       description: 'Discover how quantum computing is revolutionizing business operations with 1,20o0% processing speed improvements.';
       readingTime: '20 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'implementation-ultimate-guide';
       title: 'AI Implementation Ultimate Guide 20o25: From Strategy to 50o0% ROI - Complete Edition';
@@ -59,12 +54,10 @@ const UltimateContent20o25RevolutionaryBanner = () => {
         roi: '50o0%+';
         success: '94%';
         timeline: '18 months';
-        projects: '50o0+',
-      };
+        projects: '50o0+'};
       description: 'Complete step-by-step guide to AI implementation with proven frameworks and actionable strategies.';
       readingTime: '35 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     const savedDismissed = localStorage.getItem('ultimateContent20o25RevolutionaryBanner_dismissed'),
@@ -274,6 +267,5 @@ const UltimateContent20o25RevolutionaryBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateContent20o25RevolutionaryBanner;

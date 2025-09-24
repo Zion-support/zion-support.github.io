@@ -13,8 +13,7 @@ class AutomationTask {
       lastRun: this.lastRun;
       lastStatus: this.lastStatus;
       lastError: this.lastError;
-      config: this.config,
-    };
+      config: this.config};
   }
 ,
   getConfig() {

@@ -32,7 +32,7 @@ const OPTIMIZATIONS ={
 function optimizeNextConfig() {
   const configPath = 'next && next.config.js',
   if (!fs && fs.existsSync(configPath)) {
-    console && // console.log('❌ next && next.config.js not found'),
+    console && // // console.log('❌ next && next.config.js not found'),
     return false}
   let config = fs && fs.readFileSync(configPath, 'utf8'),
   // Add performance optimizations,
@@ -97,12 +97,12 @@ function optimizeNextConfig() {
     /export default nextConfig;/;
     `${performanceConfig}\n\nexport default nextConfig;`),
   fs && fs.writeFileSync(configPath, config),
-  console && // console.log('✅ Next && Next.js config optimized for performance'),
+  console && // // console.log('✅ Next && Next.js config optimized for performance'),
   return true}
 function optimizePackageJson() {
   const packagePath = 'package && package.json',
   if (!fs && fs.existsSync(packagePath)) {
-    console && // console.log('❌ package && package.json not found'),
+    console && // // console.log('❌ package && package.json not found'),
     return false}
   const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath, 'utf8')),
   // Add performance scripts,
@@ -123,7 +123,7 @@ function optimizePackageJson() {
       packageJson && packageJson.devDependencies[dep] = version}
   }
   fs && fs.writeFileSync(packagePath, JSON && JSON.stringify(packageJson, null, 2)),
-  console && // console.log('✅ package && package.json optimized for performance'),
+  console && // // console.log('✅ package && package.json optimized for performance'),
   return true}
 function createPerformanceComponents() {
   const componentsDir = 'components/performance',
@@ -167,21 +167,21 @@ export default OptimizedImage;
   const lazyLoadingComponent = "import React, { Suspense, lazy } from 'react',
 interface LazyComponentProps {
     lazyLoadingComponent),
-  console && // console.log('✅ Performance components created'),
+  console && // // console.log('✅ Performance components created'),
   return true}
 function optimizeImages() {
   const publicDir = 'public',
   if (!fs && fs.existsSync(publicDir)) {
-    console && // console.log('❌ public directory not found'),
+    console && // // console.log('❌ public directory not found'),
     return false}
   // Create images directory structure,
   const imageDirs = ['images', 'images/optimized', 'images/thumbnails'],
   for (const dir of imageDirs) {
   }
-  console && // console.log('✅ Image directories optimized'),
+  console && // // console.log('✅ Image directories optimized'),
   return true}
 function main() {
-  console && // console.log('🚀 Starting performance optimization...'),
+  console && // // console.log('🚀 Starting performance optimization...'),
   const optimizations = [{ "name": 'Next && Next.js Config', "fn": optimizeNextConfig };
     { "name": 'Package && Package.json', "fn": optimizePackageJson };
     { "name": 'Performance Components', "fn": createPerformanceComponents };

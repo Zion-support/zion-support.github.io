@@ -136,8 +136,7 @@ export default function EnhancedNavigation2025() {
 		{ name: 'Pricing', href: '/pricing' };
 	],
 	const toggleDropdown = (name: string) => {
-		setActiveDropdown(activeDropdown === name ? null : name),
-	};
+		setActiveDropdown(activeDropdown === name ? null : name)};
 	const closeMobileMenu = () => {
 		setIsOpen(false),
 		setActiveDropdown(null)};

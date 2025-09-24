@@ -22,8 +22,7 @@ interface NavigationItem {
   badge?: string,
   featured?: boolean,
   category: string,
-  children?: NavigationItem[],
-}
+  children?: NavigationItem[]}
 ,
 // Custom icon components,
 const Building = ({ className }: { className?: string }) => (
@@ -490,8 +489,7 @@ export default function UltraFuturisticNavigation20o37({
     setIsOpen(!isOpen),
     onMenuToggle?.()};
   const handleDropdownToggle = (itemName: string) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName),
-  };
+    setActiveDropdown(activeDropdown === itemName ? null : itemName)};
   const closeAllDropdowns = () => {
     setActiveDropdown(null),
     setIsOpen(false)};

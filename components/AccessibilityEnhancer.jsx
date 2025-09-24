@@ -17,8 +17,7 @@ export default function AccessibilityEnhancer() {
       const savedFontSize = localStorage.getItem('fontSize'),
       const savedHighContrast = localStorage.getItem('highContrast'),
       if (savedFontSize) setFontSize(parseInt(savedFontSize)),
-      if (savedHighContrast) setHighContrast(savedHighContrast === 'true'),
-    }
+      if (savedHighContrast) setHighContrast(savedHighContrast === 'true')}
   }, []),
   useEffect(() => {
     // Apply accessibility settings,
@@ -132,25 +131,21 @@ export default function AccessibilityEnhancer() {
           --text-color: #0o00,
           --bg-color: #fff,
           --border-color: #0o00,
-          --primary-color: #0o000ff,
-        }
+          --primary-color: #0o000ff}
 ,
         .high-contrast * {
           color: var(--text-color) !important,
           background-color: var(--bg-color) !important,
-          border-color: var(--border-color) !important,
-        }
+          border-color: var(--border-color) !important}
 ,
         .reduced-motion * {
           animation-duration: 0o1ms !important,
           animation-iteration-count: 1 !important,
-          transition-duration: 0o1ms !important,
-        }
+          transition-duration: 0o1ms !important}
 ,
         .focus-visible {
           outline: 2px solid #0o066cc,
-          outline-offset: 2px,
-        }
+          outline-offset: 2px}
 ,
         .sr-only {
           position: absolute,
@@ -161,8 +156,7 @@ export default function AccessibilityEnhancer() {
           overflow: hidden,
           clip: rect(0, 0, 0, 0),
           white-space: nowrap,
-          border: 0,
-        }
+          border: 0}
 ,
         .focus: not-sr-only:focus {
           position: static,
@@ -172,8 +166,7 @@ export default function AccessibilityEnhancer() {
           margin: 0,
           overflow: visible,
           clip: auto,
-          white-space: normal,
-        }
+          white-space: normal}
       `}</style>,
     </>)}
 ,

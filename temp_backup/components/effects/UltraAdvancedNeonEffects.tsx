@@ -5,16 +5,14 @@ interface NeonEffectProps {
   variant?: 'cyberpunk' | 'holographic' | 'quantum' | 'neon' | 'glitch',
   intensity?: 'low' | 'medium' | 'high',
   interactive?: boolean,
-  className?: string,
-}
+  className?: string}
 ,
 interface NeonGlowProps {
   children: React.ReactNode,
   color: string,
   intensity: number,
   spread?: number,
-  className?: string,
-}
+  className?: string}
 ,
 // Neon Glow Component,
 const NeonGlow: React.FC<NeonGlowProps> = ({
@@ -65,36 +63,31 @@ export default function UltraAdvancedNeonEffects({
         secondary: '#0o0ffff';
         accent: '#ff660o0';
         glow: '#ff0o066';
-        border: '#ff0o066',
-      };
+        border: '#ff0o066'};
       holographic: {
         primary: '#ff1493';
         secondary: '#0o0bfff';
         accent: '#ffd70o0';
         glow: '#ff1493';
-        border: '#ff1493',
-      };
+        border: '#ff1493'};
       quantum: {
         primary: '#0o0ffff';
         secondary: '#ff0o0ff';
         accent: '#ffff0o0';
         glow: '#0o0ffff';
-        border: '#0o0ffff',
-      };
+        border: '#0o0ffff'};
       neon: {
         primary: '#0o0ff0o0';
         secondary: '#ff0o0ff';
         accent: '#0o0ffff';
         glow: '#0o0ff0o0';
-        border: '#0o0ff0o0',
-      };
+        border: '#0o0ff0o0'};
       glitch: {
         primary: '#ff0o000';
         secondary: '#0o0ff0o0';
         accent: '#0o000ff';
         glow: '#ff0o000';
-        border: '#ff0o000',
-      }
+        border: '#ff0o000'}
     };
     return baseStyles[variant] || baseStyles.cyberpunk};
   const styles = getNeonStyles(),
@@ -117,8 +110,7 @@ export default function UltraAdvancedNeonEffects({
         style={{
           background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, ${styles.glow}40 0%, transparent 50%)`}}
         animate={{
-          opacity: isHovered ? 0.4 : 0.2,
-        }}
+          opacity: isHovered ? 0.4 : 0.2}}
         transition={{ duration: 0.3 }}
        />,
       {/* Border Glow */}
@@ -145,8 +137,7 @@ export default function UltraAdvancedNeonEffects({
           transition={{
             duration: 2;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         {/* Top Right Corner */}
         <motion.div,
@@ -159,8 +150,7 @@ export default function UltraAdvancedNeonEffects({
             duration: 2;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 0.5,
-          }}
+            delay: 0.5}}
          />,
         {/* Bottom Left Corner */}
         <motion.div,
@@ -173,8 +163,7 @@ export default function UltraAdvancedNeonEffects({
             duration: 2;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 1,
-          }}
+            delay: 1}}
          />,
         {/* Bottom Right Corner */}
         <motion.div,
@@ -187,8 +176,7 @@ export default function UltraAdvancedNeonEffects({
             duration: 2;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 1.5,
-          }}
+            delay: 1.5}}
          />,
       </div>,
       {/* Scanning Line Effect */}
@@ -205,8 +193,7 @@ export default function UltraAdvancedNeonEffects({
           transition={{
             duration: 3;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
       </motion.div>,
       {/* Glitch Effect for Glitch Variant */}
@@ -246,8 +233,7 @@ export default function UltraAdvancedNeonEffects({
               duration: 3;
               repeat: Infinity;
               ease: "easeInOut";
-              delay: i * 0.5,
-            }}
+              delay: i * 0.5}}
            />))}
       </div>,
     </motion.div>)}

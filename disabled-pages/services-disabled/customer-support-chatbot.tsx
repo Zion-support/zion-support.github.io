@@ -42,6 +42,5 @@ export default function CustomerSupportChatbot() {
           </Link>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

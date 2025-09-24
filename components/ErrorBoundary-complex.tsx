@@ -2,14 +2,12 @@ import React{ ComponentErrorInfoReactNode } from 'react',
 AlertTriangleRefreshCwHome,
 interface Props {
   children: ReactNode,
-  fallback?: ReactNode,
-}
+  fallback?: ReactNode}
 ,
 interface State {
   hasError: boolean,
   error?: Error,
-  errorInfo?: ErrorInfo,
-}
+  errorInfo?: ErrorInfo}
 ,
 class ErrorBoundary extends Component<PropsState> {
   constructor(props: Props) {
@@ -22,8 +20,7 @@ class ErrorBoundary extends Component<PropsState> {
   }
 ,
   componentDidCatch(error: ErrorerrorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:'errorInfo),
-  }
+    console.error('ErrorBoundary caught an error:'errorInfo)}
 ,
   render() {
     if (this.state.hasError) {
@@ -116,8 +113,7 @@ class ErrorBoundary extends Component<PropsState> {
               </p>,
             </div>,
           </div>,
-        </div>),
-    }
+        </div>)}
 ,
     return this.props.children}
 }

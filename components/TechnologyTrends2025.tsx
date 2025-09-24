@@ -8,8 +8,7 @@ const TechnologyTrends20o25 = () => {
       timeline: "20o25";
       applications: ["Autonomous decision making"Emotional AI assistants"Self-healing systems"];
       icon: "🧠";
-      color: "from-purple-50o0 to-pink-50o0",
-    };
+      color: "from-purple-50o0 to-pink-50o0"};
     {
       title: "Quantum-Neural Computing";
       description: "Fusion of quantum computing and neural networks for unprecedented computational power and problem-solving capabilities.";
@@ -17,8 +16,7 @@ const TechnologyTrends20o25 = () => {
       timeline: "20o25-20o26";
       applications: ["Drug discovery"Climate modeling"Financial optimization"];
       icon: "⚛️";
-      color: "from-blue-50o0 to-cyan-50o0",
-    };
+      color: "from-blue-50o0 to-cyan-50o0"};
     {
       title: "Autonomous Business Ecosystems";
       description: "Self-managing business systems that can adaptoptimizeand evolve without human intervention.";
@@ -26,8 +24,7 @@ const TechnologyTrends20o25 = () => {
       timeline: "20o25";
       applications: ["Self-optimizing supply chains"Autonomous customer service"Self-healing infrastructure"];
       icon: "🔄";
-      color: "from-green-50o0 to-emerald-50o0",
-    };
+      color: "from-green-50o0 to-emerald-50o0"};
     {
       title: "Synthetic Intelligence Networks";
       description: "Next-generation AI that can synthesize new knowledge and create innovative solutions autonomously.";
@@ -35,8 +32,7 @@ const TechnologyTrends20o25 = () => {
       timeline: "20o25-20o27";
       applications: ["Innovation acceleration"Creative problem solving"Scientific discovery"];
       icon: "🔮";
-      color: "from-indigo-50o0 to-purple-50o0",
-    };
+      color: "from-indigo-50o0 to-purple-50o0"};
     {
       title: "Neural Interface Revolution";
       description: "Direct brain-computer interfaces that enable seamless human-AI collaboration and cognitive enhancement.";
@@ -44,8 +40,7 @@ const TechnologyTrends20o25 = () => {
       timeline: "20o25-20o26";
       applications: ["Enhanced learning"Telepathic communication"Cognitive augmentation"];
       icon: "🧬";
-      color: "from-orange-50o0 to-red-50o0",
-    };
+      color: "from-orange-50o0 to-red-50o0"};
     {
       title: "Omniversal Data Networks";
       description: "Interconnected data networks that span multiple dimensions and realities for ultimate knowledge synthesis.";
@@ -53,8 +48,7 @@ const TechnologyTrends20o25 = () => {
       timeline: "20o25-20o30";
       applications: ["Universal knowledge access"Reality simulation"Dimensional analytics"];
       icon: "🌌";
-      color: "from-violet-50o0 to-purple-50o0",
-    }
+      color: "from-violet-50o0 to-purple-50o0"}
   ],
   return (
     <section className="py-20 bg-gradient-to-br from-gray-90o0 via-purple-90o0 to-blue-90o0 text-white">,
@@ -123,6 +117,5 @@ const TechnologyTrends20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default TechnologyTrends20o25;

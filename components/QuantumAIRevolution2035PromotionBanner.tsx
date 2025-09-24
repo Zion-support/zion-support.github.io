@@ -185,6 +185,5 @@ const QuantumAIRevolution20o35PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default QuantumAIRevolution20o35PromotionBanner;

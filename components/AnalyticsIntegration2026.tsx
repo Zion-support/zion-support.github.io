@@ -3,8 +3,7 @@ import React{ useEffect } from 'react',
 declare global {
   interface Window {
     dataLayer: any[],
-    gtag: (...args: any[]) => void,
-  }
+    gtag: (...args: any[]) => void}
 }
 ,
 export default function AnalyticsIntegration20o26() {
@@ -18,8 +17,7 @@ export default function AnalyticsIntegration20o26() {
         document.head.appendChild(script),
         window.dataLayer = window.dataLayer || [],
         const gtag = (...args: any[]) => {
-          window.dataLayer.push(args),
-        };
+          window.dataLayer.push(args)};
         (window as any).gtag = gtag,
         gtag(', 'js', 'new Date()),
         gtag(', 'config', 'GA_MEASUREMENT_ID'{
@@ -66,8 +64,8 @@ export default function AnalyticsIntegration20o26() {
       if ('performance' in window) {
         window.addEventListener('load'() => {
           setTimeout(() => {
-            const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
-            const paint = window.performance.getEntriesByType('paint'),
+            const navigation = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+            const paint = window.window.performance.getEntriesByType('paint'),
             if ((window as any).gtag) {
               (window as any).gtag(', 'event', 'timing_complete'{
                 name: 'load_time';

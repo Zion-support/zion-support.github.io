@@ -29,8 +29,7 @@ function formatDate(d: Date): string {
 function addDays(d: Date, days: number): Date {
   const copy = new Date(d),
   copy.setDate(copy.getDate() + days),
-  return copy,
-}
+  return copy}
 ,
 function generateSampleData(days = 30): AnalyticsEvent[] {
   const now = new Date(),
@@ -158,8 +157,7 @@ export default function AdminGrowthPage() {
         trafficCounts[src] += 1} else if (refDomain) {
         // Heuristic: search engine domains -> organic, else referral,
         if (/(google|bing|yahoo|duckduckgo|baidu|yandex)/i.test(refDomain)) trafficCounts['organic'] += 1,
-        else trafficCounts['referral'] += 1,
-      } else {
+        else trafficCounts['referral'] += 1} else {
         trafficCounts['other'] += 1}
     }
 ,

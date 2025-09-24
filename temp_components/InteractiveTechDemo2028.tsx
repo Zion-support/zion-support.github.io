@@ -116,8 +116,7 @@ const InteractiveTechDemo20o28 = () => {
         setProgress((prev) => {
           if (prev >= 10o0) {
             setIsPlaying(false),
-            return 0,
-          }
+            return 0}
           return prev + 1})}10o0)}
     return () => clearInterval(interval)}[isPlaying]),
   const currentDemoData = demos[currentDemo],
@@ -163,8 +162,7 @@ const InteractiveTechDemo20o28 = () => {
                 className={`p-6 rounded-2xl transition-all duration-30o0 ${
                   currentDemo === key,
                     ? 'bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white',
-                    : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-80o0/70',
-                }`}
+                    : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-80o0/70'}`}
               >,
                 <demo.icon className="w-12 h-12 mx-auto mb-4"  />,
                 <h3 className="text-lg font-semibold mb-2">{demo.title}</h3>,
@@ -260,8 +258,7 @@ const InteractiveTechDemo20o28 = () => {
                         className={`p-3 rounded-lg cursor-pointer transition-all duration-30o0 ${
                           selectedFeature === index,
                             ? 'bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white',
-                            : 'bg-gray-70o0/50 text-gray-30o0 hover: bg-gray-70o0',
-                        }`}
+                            : 'bg-gray-70o0/50 text-gray-30o0 hover: bg-gray-70o0'}`}
                         onClick={() => setSelectedFeature(index)}
                       >,
                         <div className="flex items-center gap-2">,
@@ -283,13 +280,11 @@ const InteractiveTechDemo20o28 = () => {
                   <motion.div,
                     animate={{
                       scale: isPlaying ? [1.21] : 1;
-                      opacity: isPlaying ? [0.510.5] : 0.7,
-                    }}
+                      opacity: isPlaying ? [0.510.5] : 0.7}}
                     transition={{
                       duration: 2;
                       repeat: isPlaying ? Infinity : 0;
-                      ease: "easeInOut",
-                    }}
+                      ease: "easeInOut"}}
                     className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">,
                     <div className={`w-32 h-32 bg-gradient-to-r ${currentDemoData.color} rounded-full flex items-center justify-center`}>,
                       <currentDemoData.icon className="w-16 h-16 text-white"  />,
@@ -306,14 +301,12 @@ const InteractiveTechDemo20o28 = () => {
                             opacity: [0o10];
                             scale: [0o10];
                             x: [0Math.random() * 20o0 - 10o0];
-                            y: [0Math.random() * 20o0 - 10o0],
-                          }}
+                            y: [0Math.random() * 20o0 - 10o0]}}
                           transition={{
                             duration: 3;
                             repeat: Infinity;
                             delay: i * 0.5;
-                            ease: "easeOut",
-                          }}
+                            ease: "easeOut"}}
                           className="absolute top-1/2 left-1/2 w-4 h-4 bg-blue-40o0 rounded-full",
                          />))}
                     </>)}
@@ -381,6 +374,5 @@ const InteractiveTechDemo20o28 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default InteractiveTechDemo20o28;

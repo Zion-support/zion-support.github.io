@@ -71,8 +71,7 @@ const InteractiveContentWidget = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 selectedCategory === key,
                   ? 'bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white transform scale-10o5',
-                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white',
-              }`}
+                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white'}`}
             >,
               <span className="mr-2">{category.icon}</span>,
               {category.title}
@@ -98,8 +97,7 @@ const InteractiveContentWidget = () => {
                 className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-30o0 cursor-pointer ${
                   item.featured,
                     ? 'border-gradient-to-r from-cyan-40o0 to-purple-40o0 border-2',
-                    : 'border-white/20 hover: border-white/40',
-                } ${hoveredItem === item.title ? 'transform scale-10o5 shadow-2xl' : ''}`}
+                    : 'border-white/20 hover: border-white/40'} ${hoveredItem === item.title ? 'transform scale-10o5 shadow-2xl' : ''}`}
               >,
                 {item.featured && (
                   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-3 py-1 rounded-full text-sm font-bold">,
@@ -118,8 +116,7 @@ const InteractiveContentWidget = () => {
                   className={`inline-flex items-center font-semibold transition-colors duration-30o0 ${
                     item.featured,
                       ? 'text-cyan-40o0 hover: text-cyan-30o0',
-                      : 'text-purple-40o0 hover:text-purple-30o0',
-                  }`}
+                      : 'text-purple-40o0 hover:text-purple-30o0'}`}
                 >,
                   Explore Now →,
                 </Link>,
@@ -145,6 +142,5 @@ const InteractiveContentWidget = () => {
           </Link>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default InteractiveContentWidget;

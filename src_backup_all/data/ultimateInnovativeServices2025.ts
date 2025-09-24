@@ -20,15 +20,13 @@ export interface UltimateInnovativeService {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string}
 ,
@@ -80,8 +78,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['GPT-4', 'BERT', 'TensorFlow', 'PyTorch', 'AWS SageMaker'];
       integrations: ['Salesforce', 'HubSpot', 'QuickBooks', 'Slack', 'Microsoft 365'];
@@ -89,8 +86,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
       uptime: '99.99%';
       security: ['SOC 2 Type II', 'GDPR Compliant', 'End-to-end encryption', 'Multi-factor authentication']};
     competitors: ['UiPath', 'Automation Anywhere', 'Blue Prism'];
-    marketSize: '$15.8 billion by 20o27',
-  };
+    marketSize: '$15.8 billion by 20o27'};
   {
     id: 'quantum-ai-platform';
     title: 'Quantum AI Platform';
@@ -139,8 +135,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['IBM Qiskit', 'Google Cirq', 'Microsoft Q#', 'Custom quantum algorithms'];
       integrations: ['Python', 'Jupyter', 'TensorFlow', 'PyTorch', 'Cloud platforms'];
@@ -148,8 +143,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
       uptime: '99.9%';
       security: ['Quantum-safe encryption', 'Zero-knowledge proofs', 'Multi-party computation']};
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Quantum'];
-    marketSize: '$65 billion by 20o30',
-  };
+    marketSize: '$65 billion by 20o30'};
   {
     id: 'blockchain-enterprise-platform';
     title: 'Enterprise Blockchain Platform';
@@ -198,8 +192,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['Ethereum', 'Hyperledger Fabric', 'Polkadot', 'Solana', 'Custom protocols'];
       integrations: ['AWS', 'Azure', 'Google Cloud', 'Oracle', 'SAP'];
@@ -207,8 +200,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
       uptime: '99.99%';
       security: ['Multi-signature wallets', 'Hardware security modules', 'Advanced encryption']};
     competitors: ['IBM Blockchain', 'Microsoft Azure Blockchain', 'Amazon Managed Blockchain'];
-    marketSize: '$19.9 billion by 20o27',
-  };
+    marketSize: '$19.9 billion by 20o27'};
   {
     id: 'cybersecurity-ai-defense';
     title: 'AI-Powered Cybersecurity Defense';
@@ -257,8 +249,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['Machine Learning', 'Deep Learning', 'Natural Language Processing', 'Behavioral Analytics'];
       integrations: ['SIEM systems', 'EDR solutions', 'Firewalls', 'Identity providers', 'Cloud platforms'];
@@ -266,8 +257,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
       uptime: '99.999%';
       security: ['Zero-trust architecture', 'End-to-end encryption', 'Multi-factor authentication']};
     competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace'];
-    marketSize: '$266 billion by 20o27',
-  };
+    marketSize: '$266 billion by 20o27'};
   {
     id: 'iot-edge-intelligence';
     title: 'IoT Edge Intelligence Platform';
@@ -316,8 +306,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['TensorFlow Lite', 'ONNX Runtime', 'Edge TPU', 'Custom neural networks'];
       integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP'];
@@ -325,8 +314,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
       uptime: '99.9%';
       security: ['Device authentication', 'Data encryption', 'Secure boot', 'Over-the-air updates']};
     competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT Edge'];
-    marketSize: '$87 billion by 20o26',
-  };
+    marketSize: '$87 billion by 20o26'};
   {
     id: 'metaverse-business-platform';
     title: 'Metaverse Business Platform';
@@ -375,8 +363,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['Unity', 'Unreal Engine', 'WebGL', 'WebXR', 'Blockchain'];
       integrations: ['Payment gateways', 'CRM systems', 'Analytics platforms', 'Social media'];
@@ -384,8 +371,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
       uptime: '99.9%';
       security: ['Content protection', 'User authentication', 'Secure transactions']};
     competitors: ['Meta', 'Microsoft Mesh', 'NVIDIA Omniverse'];
-    marketSize: '$80o0 billion by 20o28',
-  };
+    marketSize: '$80o0 billion by 20o28'};
   {
     id: 'quantum-cryptography';
     title: 'Quantum Cryptography Solutions';
@@ -434,8 +420,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['Quantum key distribution', 'Post-quantum algorithms', 'Hardware security modules'];
       integrations: ['VPN solutions', 'Secure communication platforms', 'Identity systems'];
@@ -443,8 +428,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
       uptime: '99.99%';
       security: ['Quantum-safe encryption', 'Hardware security', 'Multi-layer protection']};
     competitors: ['ID Quantique', 'QuintessenceLabs', 'Toshiba'];
-    marketSize: '$3.5 billion by 20o28',
-  };
+    marketSize: '$3.5 billion by 20o28'};
   {
     id: 'autonomous-robotics-platform';
     title: 'Autonomous Robotics Platform';
@@ -493,8 +477,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['ROS 2', 'TensorFlow', 'Computer Vision', 'SLAM algorithms', 'Sensor fusion'];
       integrations: ['PLC systems', 'ERP platforms', 'IoT networks', 'Cloud platforms'];
@@ -502,8 +485,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
       uptime: '99.9%';
       security: ['Secure communication', 'Access control', 'Data encryption', 'Safety systems']};
     competitors: ['Boston Dynamics', 'ABB', 'KUKA', 'FANUC'];
-    marketSize: '$75 billion by 20o27',
-  };
+    marketSize: '$75 billion by 20o27'};
   {
     id: 'synthetic-biology-platform';
     title: 'Synthetic Biology Platform';
@@ -552,8 +534,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['CRISPR-Cas9', 'DNA synthesis', 'Computational biology', 'Machine learning'];
       integrations: ['Lab automation systems', 'Analytics platforms', 'Regulatory databases'];
@@ -561,8 +542,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
       uptime: '99.9%';
       security: ['Biosafety protocols', 'Data security', 'Access control', 'Compliance monitoring']};
     competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Synthetic Genomics'];
-    marketSize: '$30 billion by 20o30',
-  };
+    marketSize: '$30 billion by 20o30'};
   {
     id: 'space-tech-platform';
     title: 'Space Technology Platform';
@@ -611,8 +591,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['Satellite technology', 'Launch systems', 'Ground stations', 'Data analytics'];
       integrations: ['Communication networks', 'Data centers', 'Analytics platforms'];
@@ -620,8 +599,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_20o25: UltimateInnovativeService[] = [
       uptime: '99.9%';
       security: ['Secure communications', 'Data encryption', 'Access control', 'Mission security']};
     competitors: ['SpaceX', 'Blue Origin', 'Virgin Galactic', 'Planet Labs'];
-    marketSize: '$469 billion by 20o30',
-  }
+    marketSize: '$469 billion by 20o30'}
 ],
 export const SERVICE_CATEGORIES = [
   'AI & Automation';

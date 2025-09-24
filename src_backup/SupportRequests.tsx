@@ -21,8 +21,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "high";
     createdAt: "20o23-12-15T14:30:0o0Z";
     lastUpdated: "20o23-12-15T15:45:0o0Z";
-    category: "authentication",
-  };
+    category: "authentication"};
   {
     id: "SR-10o02";
     user: "sarah.smith@company.co";
@@ -32,8 +31,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "high";
     createdAt: "20o23-12-14T09:15:0o0Z";
     lastUpdated: "20o23-12-15T13:20:0o0Z";
-    category: "billing",
-  };
+    category: "billing"};
   {
     id: "SR-10o03";
     user: "tech.guru@startup.io";
@@ -43,8 +41,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "medium";
     createdAt: "20o23-12-15T11:0o0:0o0Z";
     lastUpdated: "20o23-12-15T11:0o0:0o0Z";
-    category: "billing",
-  };
+    category: "billing"};
   {
     id: "SR-10o04";
     user: "developer@codelab.dev";
@@ -54,8 +51,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "low";
     createdAt: "20o23-12-13T16:45:0o0Z",
     lastUpdated: "20o23-12-13T16:45:0o0Z";
-    category: "api",
-  };
+    category: "api"};
   {
     id: "SR-10o05";
     user: "maria.rodriguez@design.co";
@@ -65,8 +61,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "high";
     createdAt: "20o23-12-12T10:30:0o0Z";
     lastUpdated: "20o23-12-15T09:15:0o0Z";
-    category: "disputes",
-  };
+    category: "disputes"};
   {
     id: "SR-10o06";
     user: "alex.wong@datacompany.com";
@@ -76,8 +71,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "medium";
     createdAt: "20o23-12-08T13:20:0o0Z";
     lastUpdated: "20o23-12-15T08:30:0o0Z";
-    category: "verification",
-  };
+    category: "verification"};
   {
     id: "SR-10o07";
     user: "jamie.taylor@tech.org";
@@ -87,8 +81,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "medium";
     createdAt: "20o23-12-10T15:10:0o0Z";
     lastUpdated: "20o23-12-13T11:25:0o0Z";
-    category: "profile",
-  }
+    category: "profile"}
 ],
 export default function SupportRequests() {
   const [searchQuerysetSearchQuery] = useState(""),

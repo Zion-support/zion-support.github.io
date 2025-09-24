@@ -426,6 +426,5 @@ export default function AISolutionsPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

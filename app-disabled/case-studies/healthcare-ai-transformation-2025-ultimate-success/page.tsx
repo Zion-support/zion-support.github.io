@@ -571,6 +571,5 @@ export default function HealthcareAITransformationPage() {
           </div>,
         </article>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

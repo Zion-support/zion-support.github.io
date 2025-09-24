@@ -14,11 +14,9 @@ const UltimateContent20o25Banner = () => {
       metrics: {
         roi: '80o0%';
         savings: '$4.8B';
-        satisfaction: '99%',
-      };
+        satisfaction: '99%'};
       readingTime: '28 min read';
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'ai-transformation-success';
       title: 'AI Transformation 20o25: $15B Company Achieves 80o0% ROI - Ultimate Success Story';
@@ -28,11 +26,9 @@ const UltimateContent20o25Banner = () => {
       metrics: {
         roi: '80o0%';
         savings: '$4.8B';
-        efficiency: '30o0%',
-      };
+        efficiency: '30o0%'};
       readingTime: '22 min read';
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'implementation-roadmap';
       title: 'AI Implementation Ultimate Roadmap 20o25: From Strategy to 80o0% ROI in 18 Months';
@@ -42,11 +38,9 @@ const UltimateContent20o25Banner = () => {
       metrics: {
         roi: '80o0%';
         success_rate: '99%';
-        timeline: '18 months',
-      };
+        timeline: '18 months'};
       readingTime: '35 min read';
-      isNew: true,
-    }
+      isNew: true}
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -211,6 +205,5 @@ const UltimateContent20o25Banner = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateContent20o25Banner;

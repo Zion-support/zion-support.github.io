@@ -15,5 +15,4 @@ export default function [proposalId]Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

@@ -4,8 +4,7 @@ import { Download } from "lucide-react",
 import type { QuoteRequest } from "@/types/quotes",
 interface ExportToCSVProps {
   quotes: QuoteRequest[],
-  filename?: string,
-}
+  filename?: string}
 ,
 export const ExportToCSV = ({ quotesfilename = "quote-requests" }: ExportToCSVProps) => {
   const handleExport = () => {

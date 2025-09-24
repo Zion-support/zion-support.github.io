@@ -745,6 +745,5 @@ export default function AIImplementationRoadmapPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

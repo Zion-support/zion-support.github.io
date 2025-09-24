@@ -11,8 +11,7 @@ interface ServiceWorkerState {
   isInstalled: boolean,
   isOnline: boolean,
   hasUpdate: boolean,
-  isInstalling: boolean,
-}
+  isInstalling: boolean}
 ,
 export function ServiceWorker() {
   const [swState, setSwState] = useState<ServiceWorkerState>({
@@ -28,7 +27,7 @@ export function ServiceWorker() {
       navigator.serviceWorker,
         .register('/sw.js'),
         .then(registration => {
-          // console.log('SW registered: ', registration),
+          // // console.log('SW registered: ', registration),
           setSwState(prev => ({ ...prev, isInstalled: true })),
           // Check for updates,
           registration.addEventListener('updatefound', () => {
@@ -48,7 +47,7 @@ export function ServiceWorker() {
           navigator.serviceWorker.addEventListener('controllerchange', () => {
             window.location.reload()})}),
         .catch(registrationError => {
-          // console.log('SW registration failed: ', registrationError)})}
+          // // console.log('SW registration failed: ', registrationError)})}
 ,
     // Online/offline detection,
     const handleOnline = () =>,

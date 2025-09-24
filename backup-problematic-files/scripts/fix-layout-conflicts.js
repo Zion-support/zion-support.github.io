@@ -33,10 +33,9 @@ function processFile(filePath) {
     'src && src.disabled';
     'pages && pages.disabled';
     'components && components.disabled';
-  ],
-}
-  console && // console.log("\n📊 Layout Conflicts Fix "Summary": "),
-  console && // console.log(`   Files processed: ${filesProcessed}`),
-  console && // console.log(`   Total "fixes": ${totalFixes}`),
-  console && // console.log("\n✨ Layout conflicts fix completed!")}
+  ]}
+  console && // // console.log("\n📊 Layout Conflicts Fix "Summary": "),
+  console && // // console.log(`   Files processed: ${filesProcessed}`),
+  console && // // console.log(`   Total "fixes": ${totalFixes}`),
+  console && // // console.log("\n✨ Layout conflicts fix completed!")}
 // Run the script,

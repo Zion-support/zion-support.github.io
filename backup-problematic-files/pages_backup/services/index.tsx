@@ -33,8 +33,7 @@ const ServicesIndex: NextPage = () => {
         'Fraud Detection & Risk Assessment'];
       pricing: 'Starting at $2,50o0/month';
       icon: '🧠';
-      link: '/services/ai-development',
-    };
+      link: '/services/ai-development'};
     {
       id: 'cloud-solutions';
       title: 'Cloud Solutions & Infrastructure';
@@ -48,8 +47,7 @@ const ServicesIndex: NextPage = () => {
         'Disaster Recovery & Backup'];
       pricing: 'Starting at $1,80o0/month';
       icon: '☁️';
-      link: '/services/cloud-solutions',
-    };
+      link: '/services/cloud-solutions'};
     {
       id: 'blockchain';
       title: 'Blockchain & Cryptocurrency Solutions';
@@ -63,8 +61,7 @@ const ServicesIndex: NextPage = () => {
         'Blockchain Security Audits'];
       pricing: 'Starting at $3,50o0/month';
       icon: '🔗';
-      link: '/services/blockchain',
-    };
+      link: '/services/blockchain'};
     {
       id: 'iot-platforms';
       title: 'IoT Platforms & Connected Solutions';
@@ -78,8 +75,7 @@ const ServicesIndex: NextPage = () => {
         'Remote Device Control'];
       pricing: 'Starting at $2,20o0/month';
       icon: '🌐';
-      link: '/services/iot-platforms',
-    };
+      link: '/services/iot-platforms'};
     {
       id: 'micro-saas';
       title: 'Micro SAAS Solutions';
@@ -93,8 +89,7 @@ const ServicesIndex: NextPage = () => {
         'Third-party Integrations'];
       pricing: 'Starting at $1,50o0/month';
       icon: '⚡';
-      link: '/products/micro-saas',
-    };
+      link: '/products/micro-saas'};
     {
       id: 'cybersecurity';
       title: 'Cybersecurity & Compliance';
@@ -108,8 +103,7 @@ const ServicesIndex: NextPage = () => {
         'Vulnerability Management'];
       pricing: 'Starting at $2,0o00/month';
       icon: '🔒';
-      link: '/services/cybersecurity',
-    };
+      link: '/services/cybersecurity'};
     {
       id: 'web-development';
       title: 'Web & Mobile Development';
@@ -123,8 +117,7 @@ const ServicesIndex: NextPage = () => {
         'Performance Optimization'];
       pricing: 'Starting at $1,20o0/month';
       icon: '💻';
-      link: '/services/web-development',
-    };
+      link: '/services/web-development'};
     {
       id: 'data-analytics';
       title: 'Data Analytics & Business Intelligence';
@@ -145,29 +138,25 @@ const ServicesIndex: NextPage = () => {
       description: "Real-time business intelligence with predictive analytics and automated reporting";
       features: ["Custom dashboards", "Predictive modeling", "Automated alerts", "Multi-platform integration"];
       pricing: "Starting at $299/month";
-      link: "/services/ai-analytics-dashboard",
-    };
+      link: "/services/ai-analytics-dashboard"};
     {
       name: "Smart Document Processor";
       description: "Automated document processing with OCR, classification, and data extraction";
       features: ["OCR technology", "Document classification", "Data extraction", "API integration"];
       pricing: "Starting at $199/month";
-      link: "/services/smart-document-processor",
-    };
+      link: "/services/smart-document-processor"};
     {
       name: "Customer Experience Optimizer";
       description: "AI-driven customer journey mapping and optimization platform";
       features: ["Journey mapping", "Sentiment analysis", "A/B testing", "ROI tracking"];
       pricing: "Starting at $399/month";
-      link: "/services/customer-experience-optimizer",
-    };
+      link: "/services/customer-experience-optimizer"};
     {
       name: "Automated Social Media Manager";
       description: "AI-powered social media scheduling, content creation, and engagement tracking";
       features: ["Content generation", "Optimal timing", "Engagement tracking", "Multi-platform support"];
       pricing: "Starting at $149/month";
-      link: "/services/automated-social-media-manager",
-    };
+      link: "/services/automated-social-media-manager"};
     {
       name: "Intelligent Inventory Manager";
       description: "Smart inventory optimization with demand forecasting and automated reordering";
@@ -189,8 +178,7 @@ const ServicesIndex: NextPage = () => {
         'Fraud Detection & Risk Assessment'];
       pricing: 'Starting at $2,50o0/month';
       icon: '🧠';
-      link: '/services/ai-development',
-    };
+      link: '/services/ai-development'};
     {
       id: 'cloud-solutions';
       title: 'Cloud Solutions & Infrastructure';
@@ -204,8 +192,7 @@ const ServicesIndex: NextPage = () => {
         'Disaster Recovery & Backup'];
       pricing: 'Starting at $1,80o0/month';
       icon: '☁️';
-      link: '/services/cloud-solutions',
-    };
+      link: '/services/cloud-solutions'};
     {
       id: 'blockchain';
       title: 'Blockchain & Cryptocurrency Solutions';
@@ -219,8 +206,7 @@ const ServicesIndex: NextPage = () => {
         'Blockchain Security Audits'];
       pricing: 'Starting at $3,50o0/month';
       icon: '🔗';
-      link: '/services/blockchain',
-    };
+      link: '/services/blockchain'};
     {
       id: 'iot-platforms';
       title: 'IoT Platforms & Connected Solutions';
@@ -234,8 +220,7 @@ const ServicesIndex: NextPage = () => {
         'Remote Device Control'];
       pricing: 'Starting at $2,20o0/month';
       icon: '🌐';
-      link: '/services/iot-platforms',
-    };
+      link: '/services/iot-platforms'};
     {
       id: 'micro-saas';
       title: 'Micro SAAS Solutions';
@@ -249,8 +234,7 @@ const ServicesIndex: NextPage = () => {
         'Third-party Integrations'];
       pricing: 'Starting at $1,50o0/month';
       icon: '⚡';
-      link: '/products/micro-saas',
-    };
+      link: '/products/micro-saas'};
     {
       id: 'cybersecurity';
       title: 'Cybersecurity & Compliance';
@@ -264,8 +248,7 @@ const ServicesIndex: NextPage = () => {
         'Vulnerability Management'];
       pricing: 'Starting at $2,0o00/month';
       icon: '🔒';
-      link: '/services/cybersecurity',
-    };
+      link: '/services/cybersecurity'};
     {
       id: 'web-development';
       title: 'Web & Mobile Development';
@@ -279,8 +262,7 @@ const ServicesIndex: NextPage = () => {
         'Performance Optimization'];
       pricing: 'Starting at $1,20o0/month';
       icon: '💻';
-      link: '/services/web-development',
-    };
+      link: '/services/web-development'};
     {
       id: 'data-analytics';
       title: 'Data Analytics & Business Intelligence';
@@ -301,36 +283,31 @@ const ServicesIndex: NextPage = () => {
       description: "Real-time business intelligence with predictive analytics and automated reporting";
       features: ["Custom dashboards", "Predictive modeling", "Automated alerts", "Multi-platform integration"];
       pricing: "Starting at $299/month";
-      link: "/services/ai-analytics-dashboard",
-    };
+      link: "/services/ai-analytics-dashboard"};
     {
       name: "Smart Document Processor";
       description: "Automated document processing with OCR, classification, and data extraction";
       features: ["OCR technology", "Document classification", "Data extraction", "API integration"];
       pricing: "Starting at $199/month";
-      link: "/services/smart-document-processor",
-    };
+      link: "/services/smart-document-processor"};
     {
       name: "Customer Experience Optimizer";
       description: "AI-driven customer journey mapping and optimization platform";
       features: ["Journey mapping", "Sentiment analysis", "A/B testing", "ROI tracking"];
       pricing: "Starting at $399/month";
-      link: "/services/customer-experience-optimizer",
-    };
+      link: "/services/customer-experience-optimizer"};
     {
       name: "Automated Social Media Manager";
       description: "AI-powered social media scheduling, content creation, and engagement tracking";
       features: ["Content generation", "Optimal timing", "Engagement tracking", "Multi-platform support"];
       pricing: "Starting at $149/month";
-      link: "/services/automated-social-media-manager",
-    };
+      link: "/services/automated-social-media-manager"};
     {
       name: "Intelligent Inventory Manager";
       description: "Smart inventory optimization with demand forecasting and automated reordering";
       features: ["Demand forecasting", "Automated reordering", "Cost optimization", "Multi-location support"];
       pricing: "Starting at $249/month";
-      link: "/services/intelligent-inventory-manager",
-    }
+      link: "/services/intelligent-inventory-manager"}
   ],
   const itServices = [
     {
@@ -338,36 +315,31 @@ const ServicesIndex: NextPage = () => {
       description: "Complete cloud transformation with AWS, Azure, and Google Cloud expertise";
       features: ["Multi-cloud strategy", "Security implementation", "Cost optimization", "24/7 monitoring"];
       pricing: "Starting at $5,0o00/project";
-      link: "/services/cloud-migration",
-    };
+      link: "/services/cloud-migration"};
     {
       name: "Cybersecurity Solutions";
       description: "Comprehensive security assessment, implementation, and ongoing protection";
       features: ["Security audits", "Penetration testing", "Compliance management", "Incident response"];
       pricing: "Starting at $3,0o00/month";
-      link: "/services/cybersecurity-solutions",
-    };
+      link: "/services/cybersecurity-solutions"};
     {
       name: "DevOps & CI/CD Implementation";
       description: "Automated deployment pipelines and infrastructure as code solutions";
       features: ["CI/CD pipelines", "Infrastructure automation", "Monitoring setup", "Performance optimization"];
       pricing: "Starting at $4,0o00/month";
-      link: "/services/devops-implementation",
-    };
+      link: "/services/devops-implementation"};
     {
       name: "Database Design & Optimization";
       description: "High-performance database architecture and optimization services";
       features: ["Database design", "Performance tuning", "Backup strategies", "Scalability planning"];
       pricing: "Starting at $2,50o0/project";
-      link: "/services/database-optimization",
-    };
+      link: "/services/database-optimization"};
     {
       name: "API Development & Integration";
       description: "Custom API development and third-party system integration";
       features: ["RESTful APIs", "GraphQL", "Microservices", "Documentation"];
       pricing: "Starting at $3,50o0/project";
-      link: "/services/api-development",
-    }
+      link: "/services/api-development"}
   ],
   const aiServices = [
     {
@@ -375,36 +347,31 @@ const ServicesIndex: NextPage = () => {
       description: "Tailored machine learning models for your specific business needs";
       features: ["Custom model training", "Data preprocessing", "Model deployment", "Performance monitoring"];
       pricing: "Starting at $8,0o00/project";
-      link: "/services/custom-ai-models",
-    };
+      link: "/services/custom-ai-models"};
     {
       name: "Natural Language Processing";
       description: "Advanced NLP solutions for text analysis, chatbots, and content generation";
       features: ["Text analysis", "Chatbot development", "Content generation", "Sentiment analysis"];
       pricing: "Starting at $4,50o0/project";
-      link: "/services/nlp-solutions",
-    };
+      link: "/services/nlp-solutions"};
     {
       name: "Computer Vision Solutions";
       description: "Image and video analysis with object detection and recognition capabilities";
       features: ["Object detection", "Image classification", "Video analysis", "Real-time processing"];
       pricing: "Starting at $6,0o00/project";
-      link: "/services/computer-vision",
-    };
+      link: "/services/computer-vision"};
     {
       name: "Predictive Analytics Platform";
       description: "Advanced forecasting and predictive modeling for business intelligence";
       features: ["Time series forecasting", "Risk assessment", "Trend analysis", "Automated insights"];
       pricing: "Starting at $5,50o0/month";
-      link: "/services/predictive-analytics",
-    };
+      link: "/services/predictive-analytics"};
     {
       name: "AI-Powered Automation";
       description: "Intelligent process automation to streamline business operations";
       features: ["Process mapping", "Workflow automation", "Decision trees", "Integration capabilities"];
       pricing: "Starting at $3,0o00/month";
-      link: "/services/ai-automation",
-    }
+      link: "/services/ai-automation"}
   ],
 import { motion } from 'framer-motion',
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react',

@@ -52,7 +52,7 @@ export default function AutonomousSystemsDeepDive() {
                   A comprehensive technical guide to building production-ready,
                   autonomous systems that can operate independently, make,
                   intelligent decisions, and continuously improve their,
-                  window.performance.,
+                  window.window.performance.,
                 </p>,
               </header>,
               <section className='mb-12'>,
@@ -131,18 +131,15 @@ export default function AutonomousSystemsDeepDive() {
 abstract class AutonomousAgent {
   abstract async process(input: any): Promise<any>,
   abstract async learn(feedback: any): Promise<void>,
-  abstract async healthCheck(): Promise<HealthStatus>,
-}
+  abstract async healthCheck(): Promise<HealthStatus>}
 ,
 // Specialized agents,
 class DataProcessingAgent extends AutonomousAgent {
   async process(input: any) {
-    // Data processing logic,
-  }
+    // Data processing logic}
 ,
   async learn(feedback: any) {
-    // Learning from feedback,
-  }
+    // Learning from feedback}
 ,
   async healthCheck() {
     // Health monitoring}
@@ -292,8 +289,7 @@ class DataProcessingAgent extends AutonomousAgent {
       agent;
       decision;
       outcome;
-      timestamp: Date.now(),
-    }),
+      timestamp: Date.now()}),
     // Analyze decision effectiveness,
     const effectiveness = this.analyzeEffectiveness(decision, outcome),
     await this.learningEngine.update(agent, effectiveness)}
@@ -509,6 +505,5 @@ class DataProcessingAgent extends AutonomousAgent {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

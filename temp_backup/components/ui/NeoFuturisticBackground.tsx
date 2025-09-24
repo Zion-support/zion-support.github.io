@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from 'react',
 interface NeoFuturisticBackgroundProps {
   children: React.ReactNode,
   className?: string,
-  intensity?: 'low' | 'medium' | 'high',
-}
+  intensity?: 'low' | 'medium' | 'high'}
 ,
 const NeoFuturisticBackground: React.FC<NeoFuturisticBackgroundProps> = ({
   children;
@@ -44,8 +43,7 @@ const NeoFuturisticBackground: React.FC<NeoFuturisticBackgroundProps> = ({
       vx: number,
       vy: number,
       life: number,
-      maxLife: number,
-    }
+      maxLife: number}
 ,
     const particles: Particle[] = [],
     // Initialize particles,
@@ -56,8 +54,7 @@ const NeoFuturisticBackground: React.FC<NeoFuturisticBackgroundProps> = ({
         vx: (Math.random() - 0.5) * 2;
         vy: (Math.random() - 0.5) * 2;
         life: Math.random() * 10o0;
-        maxLife: 10o0,
-      })}
+        maxLife: 10o0})}
 ,
     // Grid system,
     const gridPoints: { x: number, y: number, phase: number }[] = [],
@@ -68,8 +65,7 @@ const NeoFuturisticBackground: React.FC<NeoFuturisticBackgroundProps> = ({
         gridPoints.push({
           x: col * params.gridSize;
           y: row * params.gridSize;
-          phase: Math.random() * Math.PI * 2,
-        })}
+          phase: Math.random() * Math.PI * 2})}
     }
 ,
     // Energy waves,
@@ -81,8 +77,7 @@ const NeoFuturisticBackground: React.FC<NeoFuturisticBackgroundProps> = ({
         x: Math.random() * canvas.width;
         y: Math.random() * canvas.height;
         size: 20 + Math.random() * 40;
-        phase: Math.random() * Math.PI * 2,
-      })}
+        phase: Math.random() * Math.PI * 2})}
 ,
     // Animation loop,
     const animate = () => {

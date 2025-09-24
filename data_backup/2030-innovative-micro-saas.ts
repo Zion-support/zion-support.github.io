@@ -89,8 +89,7 @@ reviews: number,export const innovativeMicroSaas20o30: InnovativeMicroSaas20o30[
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced AI business intelligence platform with real-time analytics, predictive insights, and autonomous decision-making.';
@@ -150,8 +149,7 @@ reviews: number,export const innovativeMicroSaas20o30: InnovativeMicroSaas20o30[
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced quantum-secure communication platform with unbreakable encryption and secure communication channels.';
@@ -211,8 +209,7 @@ reviews: number,export const innovativeMicroSaas20o30: InnovativeMicroSaas20o30[
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced AI customer success automation platform with autonomous customer service and success optimization.';
@@ -272,8 +269,7 @@ reviews: number,export const innovativeMicroSaas20o30: InnovativeMicroSaas20o30[
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced blockchain supply chain transparency platform with end-to-end traceability and verification.';
@@ -333,8 +329,7 @@ reviews: number,export const innovativeMicroSaas20o30: InnovativeMicroSaas20o30[
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced AI marketing automation platform with autonomous marketing campaigns and optimization.';

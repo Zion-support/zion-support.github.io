@@ -18,8 +18,7 @@ export interface MarketValidatedService {
     mobile: string,
     email: string,
     address: string,
-    website?: string,
-  };
+    website?: string};
 }
 const contactInfo = {
   mobile: '+1 302 464 0950';

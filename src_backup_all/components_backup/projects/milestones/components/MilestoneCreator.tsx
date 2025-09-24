@@ -6,8 +6,7 @@ interface MilestoneCreatorProps {
   projectScope?: string,
   projectStartDate?: string,
   projectEndDate?: string | null,
-  projectType?: string,
-}
+  projectType?: string}
 ,
 export function MilestoneCreator({
   onSubmit;

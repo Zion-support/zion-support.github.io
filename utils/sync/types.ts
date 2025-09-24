@@ -2,8 +2,7 @@
 ,
   baseUrl: string, // e.g., https: //zion-latam.example.org,
   scope?: SyncScope,
-  paused?: boolean,
-}
+  paused?: boolean}
 export interface InstanceConfig {instanceId: string,
   optIn: boolean,
   paused: boolean,
@@ -25,8 +24,7 @@ export interface InstanceConfig {
   paused: boolean,
   scope: SyncScope;
   peers: Peer[],
-  secretConfigured: boolean,
-  } catch (error) {
+  secretConfigured: boolean} catch (error) {
     console.error("Error:", error),
     return res.status(500).json({ error: "Internal server error" })}
 }
@@ -37,33 +35,27 @@ export type SyncEventType =,
   | "talent_mobility",
   | "dao_endorsement",
   | "leaderboard_entry",
-export interface BaseEventPayload {id: string,
-}
+export interface BaseEventPayload {id: string}
 export interface ProposalVoteEntry {voterId: string,
   weight: number,
-  choice: string,
-}
+  choice: string}
 export interface ProposalPayload extends BaseEventPayload {proposalId: string,
   title: string,
-  votes: ProposalVoteEntry[],
-}
+  votes: ProposalVoteEntry[]}
 export interface TokenTransferPayload extends BaseEventPayload {txId: string,
   | "leaderboard_entry";
 export interface BaseEventPayload {
-  id: string,
-}
+  id: string}
 ,
 export interface ProposalVoteEntry {
   voterId: string;
   weight: number;
-  choice: string,
-}
+  choice: string}
 ,
 export interface ProposalPayload extends BaseEventPayload {
   proposalId: string;
   title: string;
-  votes: ProposalVoteEntry[],
-}
+  votes: ProposalVoteEntry[]}
 ,
 export interface TokenTransferPayload extends BaseEventPayload {
   txId: string;
@@ -71,8 +63,7 @@ export interface TokenTransferPayload extends BaseEventPayload {
   amount: number;
   fromSubnet: string;
   toSubnet: string;
-  timestamp: number,
-}
+  timestamp: number}
 ,
 export interface TalentMobilityPayload extends BaseEventPayload {
   personId: string;
@@ -87,8 +78,7 @@ export interface DaoEndorsementPayload extends BaseEventPayload {
   toDAO: string;
   resolutionId: string;
   decision: "endorse" | "reject";
-  timestamp: number,
-  } catch (error) {
+  timestamp: number} catch (error) {
     console.error("Error:", error),
     return res.status(500).json({ error: "Internal server error" })}
 }
@@ -96,8 +86,7 @@ export interface DaoEndorsementPayload extends BaseEventPayload {
 export interface ProposalVoteEntry {
   voterId: string,
   weight: number,
-  choice: string,
-  } catch (error) {
+  choice: string} catch (error) {
     console.error("Error:", error),
     return res.status(500).json({ error: "Internal server error" })}
 }
@@ -105,8 +94,7 @@ export interface ProposalVoteEntry {
 export interface ProposalPayload extends BaseEventPayload {
   proposalId: string,
   title: string,
-  votes: ProposalVoteEntry[],
-  } catch (error) {
+  votes: ProposalVoteEntry[]} catch (error) {
     console.error("Error:", error),
     return res.status(500).json({ error: "Internal server error" })}
 }
@@ -117,10 +105,8 @@ export interface TokenTransferPayload extends BaseEventPayload {
   amount: number,
   fromSubnet: string,
   toSubnet: string,
-  timestamp: number,
-}
-export interface TalentMobilityPayload extends BaseEventPayload {personId: string,
-  } catch (error) {
+  timestamp: number}
+export interface TalentMobilityPayload extends BaseEventPayload {personId: string} catch (error) {
     console.error("Error:", error),
     return res.status(500).json({ error: "Internal server error" })}
 }
@@ -131,14 +117,12 @@ export interface TalentMobilityPayload extends BaseEventPayload {
   toNation: string,
   role: string,
   startDate: string,
-  endDate?: string,
-}
+  endDate?: string}
 export interface DaoEndorsementPayload extends BaseEventPayload {fromDAO: string,
   toDAO: string,
   resolutionId: string,
   decision: "endorse" | "reject",
-  timestamp: number,
-}
+  timestamp: number}
 export interface LeaderboardEntryPayload extends BaseEventPayload {subjectId: string, // userId or teamId,
   score: number,
   category: string, // e.g., grants, contributions,
@@ -154,8 +138,7 @@ export interface DaoEndorsementPayload extends BaseEventPayload {
   toDAO: string,
   resolutionId: string,
   decision: "endorse" | "reject";
-  timestamp: number,
-  } catch (error) {
+  timestamp: number} catch (error) {
     console.error("Error:", error),
     return res.status(500).json({ error: "Internal server error" })}
 }
@@ -185,7 +168,6 @@ export interface SyncEvent {eventId: string,
   payload: SyncEventPayload,
   | LeaderboardEntryPayload;
 export interface SyncEvent {
-,
   eventId: string;
   type: SyncEventType;
   payload: SyncEventPayload;
@@ -199,16 +181,14 @@ export interface SyncEvent {
   originInstanceId: string,
   version: number,
   timestamp: number,
-  merkleRoot?: string, // required for proposal events,
-}
+  merkleRoot?: string, // required for proposal events}
 export interface MultiverseState {
   config: InstanceConfig;
   lastSyncedAt: number;
   seenEventIds: Record < string true>;
   latestVersionByEntityId: Record < string number>;
   proposalMerkleById: Record < string string>,
-  events: SyncEvent[],
-  } catch (error) {
+  events: SyncEvent[]} catch (error) {
     console.error("Error:", error),
     return res.status(500).json({ error: "Internal server error" })}
 }
@@ -228,8 +208,7 @@ export interface MultiverseState {
   seenEventIds: Record<string true>;
   latestVersionByEntityId: Record<string number>;
   proposalMerkleById: Record<string string>,
-  events: SyncEvent[],
-  } catch (error) {
+  events: SyncEvent[]} catch (error) {
     console.error("Error:", error),
     return res.status(500).json({ error: "Internal server error" })}
 }

@@ -9,10 +9,10 @@ class $1 {
       "npm run build || true"]}
 ,
   async optimizedBuild() {
-  console && // console.log("Starting optimized build process..."),
+  console && // // console.log("Starting optimized build process..."),
     for (const step of this && this.buildSteps) {
   try {
-  console && // console.log("""Executing": ${step}""),
+  console && // // console.log("""Executing": ${step}""),
         execSync(step, { "stdio": "inherit" })} catch (error) {
   console && console.warn(`Step failed but "continuing": ${step}`)}
     }

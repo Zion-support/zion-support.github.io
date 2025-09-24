@@ -80,8 +80,7 @@ export const CardSkeleton: React.FC<{ className?: string }> = ({
 export const TableSkeleton: React.FC<{
   rows?: number,
   columns?: number,
-  className?: string,
-}> = ({ rows = 5, columns = 4, className }) => (
+  className?: string}> = ({ rows = 5, columns = 4, className }) => (
   <div className={cn('space-y-3', className)}>,
     {/* Header */}
     <div className='flex space-x-4'>,
@@ -118,8 +117,7 @@ export const GridSkeleton: React.FC<{
   rows?: number,
   columns?: number,
   className?: string,
-  itemHeight?: number,
-}> = ({ rows = 3, columns = 3, className, itemHeight = 120 }) => (
+  itemHeight?: number}> = ({ rows = 3, columns = 3, className, itemHeight = 120 }) => (
   <div
     className={cn('grid gap-4', className)}
     style={{

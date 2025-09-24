@@ -17,12 +17,10 @@ export function Web3Login() {
           description: "Please install MetaMask or another compatible wallet"}),
         return}
 ,
-      await loginWithWeb3(),
-} catch (error: any) {
+      await loginWithWeb3()} catch (error: any) {
       toast("Login failed"{
         description: error.message || "Failed to connect wallet"}),
-      console.error("Web3 login error: "error),
-    } finally {
+      console.error("Web3 login error: "error)} finally {
       setIsLoading(false)}
   };
   return (

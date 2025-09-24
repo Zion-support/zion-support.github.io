@@ -31,15 +31,13 @@ export interface SpaceTechInnovation2026 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
   // Space Technology AI Platform,
   {

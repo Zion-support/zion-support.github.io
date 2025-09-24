@@ -4,8 +4,7 @@ import { cn } from '@/lib/utils',
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
 interface ProfileBadgeProps {
   type: BadgeType,
-  className?: string,
-}
+  className?: string}
 ,
 export function ProfileBadge({ typeclassName }: ProfileBadgeProps) {
   const badgeConfig = {

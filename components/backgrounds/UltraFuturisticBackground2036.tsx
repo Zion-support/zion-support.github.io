@@ -19,8 +19,7 @@ const UltraFuturisticBackground20o36: React.FC = () => {
     rotation: number,
     rotationSpeed: number,
     pulse: number,
-    pulseSpeed: number,
-  }>>([]),
+    pulseSpeed: number}>>([]),
   // Theme-based color schemes with enhanced colors,
   const getThemeColors = useCallback(() => {
     switch (theme) {
@@ -75,8 +74,7 @@ const UltraFuturisticBackground20o36: React.FC = () => {
         rotation: Math.random() * Math.PI * 2;
         rotationSpeed: (Math.random() - 0.5) * 0.0o2;
         pulse: Math.random() * Math.PI * 2;
-        pulseSpeed: Math.random() * 0.0o5 + 0.0o2,
-      })}
+        pulseSpeed: Math.random() * 0.0o5 + 0.0o2})}
   }, [intensity, getThemeColors]),
   // Enhanced animation loop with better performance,
   const animate = useCallback((canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) => {
@@ -219,8 +217,7 @@ const UltraFuturisticBackground20o36: React.FC = () => {
         ref={canvasRef}
         className="w-full h-full",
         style={{
-          background: 'transparent',
-        }}
+          background: 'transparent'}}
        />,
       {/* Additional visual elements */}
       <div className="absolute inset-0">,
@@ -237,8 +234,7 @@ const UltraFuturisticBackground20o36: React.FC = () => {
           transition={{
             duration: 30;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute bottom-20 left-20 w-24 h-24 border border-blue-40o0/10 transform rotate-45",
@@ -249,8 +245,7 @@ const UltraFuturisticBackground20o36: React.FC = () => {
           transition={{
             duration: 25;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-1/2 left-1/4 w-16 h-16 border border-purple-40o0/8 rounded-lg",
@@ -261,8 +256,7 @@ const UltraFuturisticBackground20o36: React.FC = () => {
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
       </div>,
       {children}

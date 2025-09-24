@@ -31,8 +31,7 @@ import { Button } from '@/components/ui/button',
 interface ReviewsModerationTableProps {
   reviews: Review[],
   isLoading: boolean,
-  onRefresh: () => void,
-}
+  onRefresh: () => void}
 ,
 export function ReviewsModerationTable({
   reviews;
@@ -47,8 +46,7 @@ export function ReviewsModerationTable({
       status;
     }: {
       reviewId: string,
-      status: ReviewStatus,
-    }) => {
+      status: ReviewStatus}) => {
       const { error } = await supabase,
         .from('reviews'),
         .update({ status }),
@@ -75,8 +73,7 @@ export function ReviewsModerationTable({
       .split(' '),
       .map(n => n[0]),
       .join(''),
-      .toUpperCase(),
-  };
+      .toUpperCase()};
   if (isLoading) {
     return (
       <div className='space-y-4'>,
@@ -101,8 +98,7 @@ export function ReviewsModerationTable({
     updateReviewStatus({ reviewId, status: 'rejected' })};
   const handleViewDetails = (review: Review) => {
     setSelectedReview(review),
-    setViewDetailsOpen(true),
-  };
+    setViewDetailsOpen(true)};
   const renderStars = (rating: number) => {
     return (
       <div className='flex'>,

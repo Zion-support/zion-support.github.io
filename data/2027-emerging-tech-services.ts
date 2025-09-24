@@ -13,8 +13,7 @@ export interface Service {
   implementationTime: string,
   roi: string,
   link: string,
-  tags: string[],
-}
+  tags: string[]}
 export const emergingTech2027Services: Service[] = [
   {
     id: 'quantum-machine-learning';

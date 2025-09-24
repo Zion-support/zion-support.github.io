@@ -441,6 +441,5 @@ const EnhancedFooter: React.FC = () => {
           <span>Get Started</span>,
         </Link>,
       </motion.div>,
-    </footer>),
-};
+    </footer>)};
 export default EnhancedFooter;

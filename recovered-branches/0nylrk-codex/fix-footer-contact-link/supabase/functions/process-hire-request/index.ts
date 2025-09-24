@@ -11,25 +11,21 @@ interface HireRequest {
     id: string,
     full_name: string,
     professional_title: string,
-    email?: string,
-  };
+    email?: string};
   requester: {
     name: string,
     email: string,
-    id?: string,
-  };
+    id?: string};
   project: {
     overview: string,
     timeline: string,
     budgetMin: number,
-    budgetMax: number,
-  };
+    budgetMax: number};
 }
 ,
 interface EnhancedContent {
   summary: string,
-  projectType: string,
-}
+  projectType: string}
 ,
 serve(async req => {
   // Handle CORS preflight requests,
@@ -75,7 +71,7 @@ serve(async req => {
           const jsonMatch = responseText.match(/{[\s\S]*}/),
           if (jsonMatch) {
             enhancedContent = JSON.parse(jsonMatch[0]),
-            // console.log('Enhanced content generated:', enhancedContent)}
+            // // console.log('Enhanced content generated:', enhancedContent)}
         } catch (jsonError) {
           console.error('Error parsing AI response:', jsonError),
           // Continue without enhanced content}
@@ -164,7 +160,7 @@ serve(async req => {
           `;
         };
       }),
-      // console.log('Email sending result:', emailResponse)}
+      // // console.log('Email sending result:', emailResponse)}
 ,
     return new Response(
       JSON.stringify({

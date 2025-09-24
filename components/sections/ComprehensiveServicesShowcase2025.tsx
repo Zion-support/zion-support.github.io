@@ -71,115 +71,93 @@ const ComprehensiveServicesShowcase2025 = () => {
       services: advancedAIAutomation2025,
       gradient: 'from-purple-600 via-pink-600 to-blue-600',
       description:,
-        'Cutting-edge AI solutions that transform business operations',
-    },      description: 'Cutting-edge AI solutions that transform business operations',
-    }
+        'Cutting-edge AI solutions that transform business operations'},      description: 'Cutting-edge AI solutions that transform business operations'}
     {
       title: 'Cybersecurity & Security',
       icon: Shield,
       services: advancedCybersecurity2025,
       gradient: 'from-red-600 via-orange-600 to-yellow-600',
-      description: 'Advanced security solutions for the digital age',
-    },    {      description: 'Advanced security solutions for the digital age',
-    }
+      description: 'Advanced security solutions for the digital age'},    {      description: 'Advanced security solutions for the digital age'}
     {
       title: 'Blockchain & Web3',
       icon: Globe,
       services: blockchainWeb32025,
       gradient: 'from-green-600 via-teal-600 to-cyan-600',
-      description: 'Next-generation blockchain and decentralized solutions',
-    },    {      description: 'Next-generation blockchain and decentralized solutions',
-    }
+      description: 'Next-generation blockchain and decentralized solutions'},    {      description: 'Next-generation blockchain and decentralized solutions'}
     {
       title: 'IoT & Edge Computing',
       icon: Cloud,
       services: iotEdgeComputing2025,
       gradient: 'from-blue-600 via-indigo-600 to-purple-600',
-      description: 'Smart connected solutions for the Internet of Things',
-    },    {      description: 'Smart connected solutions for the Internet of Things',
-    }
+      description: 'Smart connected solutions for the Internet of Things'},    {      description: 'Smart connected solutions for the Internet of Things'}
     {
       title: 'Healthcare & Biotechnology',
       icon: Target,
       services: healthcareBiotech2025,
       gradient: 'from-pink-600 via-rose-600 to-red-600',
-      description: 'Innovative healthcare and biotech solutions',
-    },    {      description: 'Innovative healthcare and biotech solutions',
-    }
+      description: 'Innovative healthcare and biotech solutions'},    {      description: 'Innovative healthcare and biotech solutions'}
     {
       title: 'Fintech & Financial',
       icon: DollarSign,
       services: fintechFinancial2025,
       gradient: 'from-emerald-600 via-green-600 to-teal-600',
-      description: 'Revolutionary financial technology solutions',
-    },    {      description: 'Revolutionary financial technology solutions',
-    }
+      description: 'Revolutionary financial technology solutions'},    {      description: 'Revolutionary financial technology solutions'}
     {
       title: 'Education & E-Learning',
       icon: Award,
       services: educationElearning2025,
       gradient: 'from-amber-600 via-yellow-600 to-orange-600',
-      description: 'Advanced learning and educational technology',
-    }],      description: 'Advanced learning and educational technology',
+      description: 'Advanced learning and educational technology'}],      description: 'Advanced learning and educational technology',
     {
       title: 'AI & Automation Services';
       icon: Brain;
       services: advancedAIAutomation2025;
       gradient: 'from-purple-600 via-pink-600 to-blue-600';
-      description: 'Cutting-edge AI solutions that transform business operations',
-    };
+      description: 'Cutting-edge AI solutions that transform business operations'};
     {
       title: 'Cybersecurity & Security';
       icon: Shield;
       services: advancedCybersecurity2025;
       gradient: 'from-red-600 via-orange-600 to-yellow-600';
-      description: 'Advanced security solutions for the digital age',
-    };
+      description: 'Advanced security solutions for the digital age'};
     {
       title: 'Blockchain & Web3';
       icon: Globe;
       services: blockchainWeb32025;
       gradient: 'from-green-600 via-teal-600 to-cyan-600';
-      description: 'Next-generation blockchain and decentralized solutions',
-    };
+      description: 'Next-generation blockchain and decentralized solutions'};
     {
       title: 'IoT & Edge Computing';
       icon: Cloud;
       services: iotEdgeComputing2025;
       gradient: 'from-blue-600 via-indigo-600 to-purple-600';
-      description: 'Smart connected solutions for the Internet of Things',
-    };
+      description: 'Smart connected solutions for the Internet of Things'};
     {
       title: 'Healthcare & Biotechnology';
       icon: Target;
       services: healthcareBiotech2025;
       gradient: 'from-pink-600 via-rose-600 to-red-600';
-      description: 'Innovative healthcare and biotech solutions',
-    };
+      description: 'Innovative healthcare and biotech solutions'};
     {
       title: 'Fintech & Financial';
       icon: DollarSign;
       services: fintechFinancial2025;
       gradient: 'from-emerald-600 via-green-600 to-teal-600';
-      description: 'Revolutionary financial technology solutions',
-    };
+      description: 'Revolutionary financial technology solutions'};
     {
       title: 'Education & E - Learning';
       icon: Award;
       services: educationElearning2025;
       gradient: 'from-amber-600 via-yellow-600 to-orange-600';
-      description: 'Advanced learning and educational technology',
-    }
+      description: 'Advanced learning and educational technology'}
   ],
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-      }
-    }};        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
+    }};        staggerChildren: 0.1}
     }
   }
   const itemVariants = {
@@ -188,8 +166,7 @@ const ComprehensiveServicesShowcase2025 = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   }
         duration: 0.5;
@@ -202,8 +179,7 @@ const ComprehensiveServicesShowcase2025 = () => {
       transition: {
         staggerChildren: 0 && 0.1;
       };
-    }};        staggerChildren: 0 && 0.1,
-      }
+    }};        staggerChildren: 0 && 0.1}
     }
   };
   return (
@@ -256,8 +232,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 ,
       gradient: 'from - amber - 600 via - yellow - 600 to - orange - 600';
       description: 'Advanced learning and educational technology';
-    }],      description: 'Advanced learning and educational technology',
-    }
+    }],      description: 'Advanced learning and educational technology'}
   ],
   const container_variants = {
     hidden: { opacity: 0 };
@@ -266,8 +241,7 @@ const ComprehensiveServicesShowcase2025 = () => {
       transition: {
         stagger_children: 0.1;
       };
-    }}        stagger_children: 0.1,
-      }
+    }}        stagger_children: 0.1}
     }
   }
 ,
@@ -639,8 +613,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                 <Rocket className="w-5 h-5 ml-2" />,
               </a>,
               <a
-                href="tel:+13024640950",
-};
+                href="tel:+13024640950"};
 export default ComprehensiveServicesShowcase2025)}
 export default ComprehensiveServicesShowcase2025)}
 };
@@ -817,8 +790,7 @@ export default ComprehensiveServicesShowcase2025;
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,
 export default ComprehensiveServicesShowcase2025)}
 ,

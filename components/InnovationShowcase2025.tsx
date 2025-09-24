@@ -85,8 +85,7 @@ const InnovationShowcase20o25 = () => {
               className={`px-6 py-3 rounded-md font-semibold transition-all duration-30o0 ${
                 activeTab === 'ai',
                   ? 'bg-blue-60o0 text-white shadow-lg',
-                  : 'text-gray-60o0 hover: text-gray-90o0',
-              }`}
+                  : 'text-gray-60o0 hover: text-gray-90o0'}`}
             >,
               AI Innovation,
             </button>,
@@ -95,8 +94,7 @@ const InnovationShowcase20o25 = () => {
               className={`px-6 py-3 rounded-md font-semibold transition-all duration-30o0 ${
                 activeTab === 'quantum',
                   ? 'bg-blue-60o0 text-white shadow-lg',
-                  : 'text-gray-60o0 hover: text-gray-90o0',
-              }`}
+                  : 'text-gray-60o0 hover: text-gray-90o0'}`}
             >,
               Quantum Computing,
             </button>,
@@ -105,8 +103,7 @@ const InnovationShowcase20o25 = () => {
               className={`px-6 py-3 rounded-md font-semibold transition-all duration-30o0 ${
                 activeTab === 'automation',
                   ? 'bg-blue-60o0 text-white shadow-lg',
-                  : 'text-gray-60o0 hover: text-gray-90o0',
-              }`}
+                  : 'text-gray-60o0 hover: text-gray-90o0'}`}
             >,
               Business Automation,
             </button>,
@@ -174,6 +171,5 @@ const InnovationShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default InnovationShowcase20o25;

@@ -15,6 +15,5 @@ export default function ForumPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

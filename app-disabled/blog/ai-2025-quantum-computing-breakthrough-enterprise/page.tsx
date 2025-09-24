@@ -384,6 +384,5 @@ export default function QuantumComputingBreakthroughPage() {
           </div>,
         </article>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

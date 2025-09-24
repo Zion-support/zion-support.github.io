@@ -10,15 +10,13 @@ export function useAuthOperations(
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>) {
   // Check for referral code in URL when the hook is first used,
   useEffect(() => {
-    checkUrlForReferralCode(),
-  }, []),
+    checkUrlForReferralCode()}, []),
   const login = async ({
     email;
     password;
   }: {
     email: string,
-    password: string,
-  }) => {
+    password: string}) => {
     setIsLoading(true),
     try {
       // Clean up any stale auth state before login,
@@ -150,8 +148,7 @@ export function useAuthOperations(
     setIsLoading(true),
     try {
       if (!profileData || !profileData.id) {
-        throw new Error('Profile data or user ID is missing.'),
-      }
+        throw new Error('Profile data or user ID is missing.')}
 ,
       const { error } = await supabase,
         .from('profiles'),

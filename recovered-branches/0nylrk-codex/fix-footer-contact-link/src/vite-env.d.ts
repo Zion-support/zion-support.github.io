@@ -2,12 +2,10 @@ import React from 'react';
   import { Plugin } from 'vite',
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string,
-  // add more env variables as needed,
-}
+  // add more env variables as needed}
 ,
 interface ImportMeta {
-  readonly env: ImportMetaEnv,
-}
+  readonly env: ImportMetaEnv}
 ,
 // Global type declarations,
 declare namespace React {
@@ -27,8 +25,7 @@ declare module '@vitejs/plugin-react-swc' {
 declare module 'path' {
   export function resolve(...paths: string[]): string,
   export function join(...paths: string[]): string,
-  export function dirname(path: string): string,
-}
+  export function dirname(path: string): string}
 ,
 declare module 'lovable-tagger' {
   export function componentTagger(): Plugin}
@@ -39,8 +36,7 @@ declare var process: {
   env: {
     [key: string]: string | undefined,
     NODE_ENV: 'development' | 'production' | 'test',
-    PORT?: string,
-  };
+    PORT?: string};
 };
 // Badge component type fixes,
 declare module '@/components/ui/badge' {
@@ -50,8 +46,7 @@ declare module '@/components/ui/badge' {
     children?: React.ReactNode,
     key?: string | number}
 ,
-  export const Badge: React.FC<BadgeProps>,
-}
+  export const Badge: React.FC<BadgeProps>}
 ,
 // FeatureCard type fixes,
 declare module '@/components/FeatureCard' {
@@ -60,8 +55,7 @@ declare module '@/components/FeatureCard' {
     description: string,
     icon: React.ReactNode,
     className?: string,
-    key?: number | string,
-  }
+    key?: number | string}
 }
 ,
 // ListingScoreCard type fixes,
@@ -78,11 +72,9 @@ declare module '@/components/ListingScoreCard' {
     rating?: number,
     reviewCount?: number,
     key?: string | number,
-    variant?: string,
-  }
+    variant?: string}
 ,
-  export const ListingScoreCard: React.FC<ListingScoreCardProps>,
-}
+  export const ListingScoreCard: React.FC<ListingScoreCardProps>}
 ,
 // ChatMessage type fixes,
 declare module '@/components/ChatAssistant/ChatMessage' {
@@ -90,8 +82,7 @@ declare module '@/components/ChatAssistant/ChatMessage' {
     role: 'user' | 'assistant',
     message: string,
     timestamp?: Date,
-    key?: string | number,
-  }
+    key?: string | number}
 }
 ,
 // ProductListingCard type fixes,
@@ -100,11 +91,9 @@ declare module '@/components/ProductListingCard' {
     listing: any,
     view?: any, // Made optional to fix the errors,
     onRequestQuote: (listingId: string) => void,
-    key?: string | number,
-  }
+    key?: string | number}
 ,
-  export const ProductListingCard: React.FC<ProductListingCardProps>,
-}
+  export const ProductListingCard: React.FC<ProductListingCardProps>}
 ,
 // Removed custom lucide-react stub,
 // Create a replacement stub for LiveKit components,
@@ -117,8 +106,7 @@ declare module '@livekit/components-react' {
     className?: string}
 ,
   export const VideoCall: React.FC<VideoCallProps>,
-  export const LiveKitRoom: React.FC<any>,
-}
+  export const LiveKitRoom: React.FC<any>}
 ,
 declare module '@livekit/components-styles' {
   // Empty stub for the styles}

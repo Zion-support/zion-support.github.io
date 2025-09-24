@@ -407,7 +407,7 @@ export default function AutonomousSystems20o26Page() {
           <p className='text-xl opacity-90 mb-12'>,
             Transform your business with fully autonomous systems that work,
             around the clock, adapt to changing conditions, and continuously,
-            optimize window.performance. The future of business is autonomous.,
+            optimize window.window.performance. The future of business is autonomous.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
             <Link
@@ -423,6 +423,5 @@ export default function AutonomousSystems20o26Page() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

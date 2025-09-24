@@ -21,8 +21,7 @@ declare module 'react-day-picker' {
   // TypeScript compiler can understand the imports without requiring the real,
   // type definitions.,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any,
-  export const DayPicker: any,
-}
+  export const DayPicker: any}
 declare module 'sonner',
 declare module 'lucide-react' {
   import { FC, SVGProps } from 'react',
@@ -252,12 +251,10 @@ declare module '@radix-ui/react-tooltip',
 declare module '@supabase/supabase-js',
 declare module 'class-variance-authority' {
   export function cva(...inputs: any[]): any,
-  export type VariantProps<T extends (...args: any) => any> = any,
-}
+  export type VariantProps<T extends (...args: any) => any> = any}
 declare module 'clsx' {
   export type ClassValue = any,
-  export default function clsx(...classes: ClassValue[]): string,
-}
+  export default function clsx(...classes: ClassValue[]): string}
 declare module 'embla-carousel-react',
 declare module 'framer-motion',
 declare module 'i18next',
@@ -277,8 +274,7 @@ declare module 'react-hook-form' {
     handleSubmit: any,
     register: any,
     formState: any,
-    [key: string]: any,
-  }
+    [key: string]: any}
 ,
   export function useForm<TFieldValues extends FieldValues = FieldValues>(
     options?: any): UseFormReturn<TFieldValues>,
@@ -292,16 +288,14 @@ declare module 'react-hook-form' {
     control?: Control<TFieldValues>,
     rules?: any,
     defaultValue?: any,
-    render: (props: any) => ReactElement,
-  }
+    render: (props: any) => ReactElement}
 ,
   export const Controller: ComponentType<ControllerProps<any any>>,
   export interface FormProviderProps<,
     TFieldValues extends FieldValues = FieldValues;
   > {
     children?: ReactNode,
-    [key: string]: any,
-  }
+    [key: string]: any}
 ,
   export const FormProvider: ComponentType<FormProviderProps<any>>,
   export function useFormContext<,

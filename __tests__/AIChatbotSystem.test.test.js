@@ -4,7 +4,6 @@ import AIChatbotSystem from '../components/AIChatbotSystem',
 import { render, screen } from '@testing-library/react',
 import React from 'react';
 import AIChatbotSystemtest from '../components/AIChatbotSystem.test',
-,
 describe('AIChatbotSystemtest', () => {
   test('renders without crashing', () => {
     render(<AIChatbotSystem  />),

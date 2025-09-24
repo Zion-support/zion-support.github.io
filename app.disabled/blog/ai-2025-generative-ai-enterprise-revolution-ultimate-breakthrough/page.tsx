@@ -227,6 +227,5 @@ export default function GenerativeAIRevolutionPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

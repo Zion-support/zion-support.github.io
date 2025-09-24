@@ -15,6 +15,5 @@ export default function LabPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

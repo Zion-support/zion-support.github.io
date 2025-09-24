@@ -12,8 +12,7 @@ interface AIEnhancementButtonProps {
   context?: string,
   onEnhanced: (enhancedContent: string) => void,
   buttonText?: string,
-  className?: string,
-}
+  className?: string}
 ,
 export function AIEnhancementButton({
   currentContent;

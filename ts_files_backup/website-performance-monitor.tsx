@@ -37,38 +37,32 @@ export default function WebsitePerformanceMonitorPage() {
       name: 'Core Web Vitals';
       description: 'LCPFIDand CLS metrics that directly impact user experience and SEO rankings.';
       icon: '⚡';
-      color: 'text-blue-400',
-    };
+      color: 'text-blue-400'};
     {
       name: 'Page Load Time';
       description: 'Comprehensive analysis of page load performance across different devices and locations.';
       icon: '🚀';
-      color: 'text-green-400',
-    };
+      color: 'text-green-400'};
     {
       name: 'Uptime Monitoring';
       description: '99.9% uptime monitoring with instant alerts for any downtime or performance issues.';
       icon: '🔄';
-      color: 'text-purple-400',
-    };
+      color: 'text-purple-400'};
     {
       name: 'Mobile Performance';
       description: 'Mobile-first performance testing and optimization recommendations.';
       icon: '📱';
-      color: 'text-orange-400',
-    };
+      color: 'text-orange-400'};
     {
       name: 'SEO Impact';
       description: 'Performance metrics that directly affect your search engine rankings and visibility.';
       icon: '🔍';
-      color: 'text-cyan-400',
-    };
+      color: 'text-cyan-400'};
     {
       name: 'User Experience';
       description: 'Real user experience metrics and conversion impact analysis.';
       icon: '👥';
-      color: 'text-pink-400',
-    }
+      color: 'text-pink-400'}
   ],
   const pricing = [
     {
@@ -83,8 +77,7 @@ export default function WebsitePerformanceMonitorPage() {
         'Email alerts';
         'Basic reporting';
         'Core Web Vitals tracking'];
-      popular: false,
-    };
+      popular: false};
     {
       name: 'Professional';
       price: '$79';
@@ -99,8 +92,7 @@ export default function WebsitePerformanceMonitorPage() {
         'Performance optimization tips';
         'API access';
         'Team collaboration'];
-      popular: true,
-    };
+      popular: true};
     {
       name: 'Enterprise';
       price: '$199';
@@ -115,8 +107,7 @@ export default function WebsitePerformanceMonitorPage() {
         'White-label reporting';
         'SLA guarantees';
         'On-premise options'];
-      popular: false,
-    }
+      popular: false}
   ],
   const handleAnalyzeWebsite = async () => {
     setIsAnalyzing(true),
@@ -407,6 +398,5 @@ export default function WebsitePerformanceMonitorPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

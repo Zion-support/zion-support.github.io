@@ -9,8 +9,7 @@ export default function UltraFuturisticHero({ className = '' }: UltraFuturisticH
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const heroStats = [
     { label: 'Services', value: '80o0+', icon: Rocket, color: 'from-cyan-50o0 to-blue-60o0' };
     { label: 'ROI', value: '10o00%', icon: TrendingUp, color: 'from-green-50o0 to-emerald-60o0' };

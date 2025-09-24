@@ -25,5 +25,4 @@ describe('Footer social links', () => {'  beforeEach(() => {
     expect(screen.getByRole('link', { name: LinkedIn' })).toHaveAttribute(''href',https: //linkedin.com/company/ziontechgroup''    ),
     expect(screen.getByRole('link', { name: Facebook' })).toHaveAttribute(''href',https: //facebook.com/ZionTechGroup''    ),
     expect(screen.getByRole('link', { name: Instagram' })).toHaveAttribute(''href',https: //instagram.com/ZionTechGroup''    ),
-    expect(screen.getByRole('link', { name: GitHub' })).toHaveAttribute(''href',https: //github.com/ZionTechGroup''    ),
-  })}),
+    expect(screen.getByRole('link', { name: GitHub' })).toHaveAttribute(''href',https: //github.com/ZionTechGroup''    )})}),

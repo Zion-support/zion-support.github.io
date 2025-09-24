@@ -18,20 +18,17 @@ export function SkillsForm({ resumeIdskillsonCompleteonBack }: SkillsFormProps) 
       const success = await addSkill(resumeIdata),
       if (success) {
         // Refresh the skills list,
-        await refreshSkills(),
-      }
+        await refreshSkills()}
       return success} catch (err: any) {
       setError(err.message || 'An error occurred'),
-      return false,
-    }
+      return false}
   };
   const handleDeleteSkill = async (id: stringcategory: string = 'Other') => {
     if (confirm('Are you sure you want to delete this skill?')) {
       const success = await deleteSkill(id),
       if (success) {
         // Update local state,
-        setLocalSkills(localSkills.filter(skill => skill.id !== id)),
-      }
+        setLocalSkills(localSkills.filter(skill => skill.id !== id))}
     }
   };
   const refreshSkills = async () => {
@@ -40,8 +37,7 @@ export function SkillsForm({ resumeIdskillsonCompleteonBack }: SkillsFormProps) 
       if (resumeData && resumeData.skills) {
         setLocalSkills(resumeData.skills)}
     } catch (err: any) {
-      setError(err.message || 'Failed to refresh skills'),
-    }
+      setError(err.message || 'Failed to refresh skills')}
   };
   return (
     <div className="space-y-6">,

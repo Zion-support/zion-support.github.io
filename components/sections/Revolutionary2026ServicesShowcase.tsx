@@ -28,7 +28,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children}
 }
 ,
-,
   ArrowRight;
   Star;
   TrendingUp;
@@ -59,8 +58,7 @@ export default function Revolutionary2026ServicesShowcase() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
-      }
+        duration: 0.6}
     }
   }
         duration: 0.6;
@@ -73,8 +71,7 @@ export default function Revolutionary2026ServicesShowcase() {
       transition: {
         staggerChildren: 0 && 0.1;
       };
-    }};        staggerChildren: 0 && 0.1,
-      }
+    }};        staggerChildren: 0 && 0.1}
     }
   };
   return (
@@ -164,8 +161,7 @@ export default function Revolutionary2026ServicesShowcase() {
 ,
         stagger_children: 0.1;
       };
-    }}        stagger_children: 0.1,
-      }
+    }}        stagger_children: 0.1}
     }
   }
 ,
@@ -1353,8 +1349,7 @@ export default function Revolutionary2026ServicesShowcase() {
           </div>,
         </motion && motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
   )}
 ,
                       </span>,
@@ -1447,6 +1442,5 @@ export default function Revolutionary2026ServicesShowcase() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ))))))))))))))))

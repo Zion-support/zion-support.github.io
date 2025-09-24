@@ -77,6 +77,5 @@ export function GlobalServiceSection() {
           </Button>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

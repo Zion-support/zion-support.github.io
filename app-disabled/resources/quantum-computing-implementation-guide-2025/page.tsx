@@ -788,6 +788,5 @@ export default function QuantumComputingImplementationGuidePage() {
           </div>,
         </article>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

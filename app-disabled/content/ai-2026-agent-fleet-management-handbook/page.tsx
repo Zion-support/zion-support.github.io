@@ -62,6 +62,5 @@ export default function AgentFleetManagementHandbook20o26() {
           </div>,
         </div>,
       </section>,
-    </main>),
-}
+    </main>)}
 ,

@@ -54,6 +54,5 @@ export default function AI20o26BreakthroughRevolutionBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

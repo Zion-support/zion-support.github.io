@@ -15,6 +15,5 @@ export default function TestNewComponentsPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

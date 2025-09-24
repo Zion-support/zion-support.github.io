@@ -247,6 +247,5 @@ const CookiePolicy = () => {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default CookiePolicy;

@@ -9,7 +9,6 @@ interface Service {
   tagline: string;
   description: string;
   price?: string | {
-,
     monthly?: number,
     yearly?: number,
     currency?: string,
@@ -34,8 +33,7 @@ interface ServiceCardProps {
   variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'}
 ,
   service: Service,
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default',
-}
+  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'}
 const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {
   const getVariantStyles = () => {
   category: string;
@@ -68,80 +66,70 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
           borderColor: 'border-purple-400/30';
           textColor: 'text-purple-400';
           iconBg: 'bg-purple-500/20';
-          iconBorder: 'border-purple-400/30',
-        };
+          iconBorder: 'border-purple-400/30'};
       case 'quantum':,
         return {
           gradient: 'from-cyan-600 via-blue-600 to-cyan-700';
           borderColor: 'border-cyan-400/30';
           textColor: 'text-cyan-400';
           iconBg: 'bg-cyan-500/20';
-          iconBorder: 'border-cyan-400/30',
-        };
+          iconBorder: 'border-cyan-400/30'};
       case 'space':,
         return {
           gradient: 'from-indigo-600 via-purple-600 to-indigo-700';
           borderColor: 'border-indigo-400/30';
           textColor: 'text-indigo-400';
           iconBg: 'bg-indigo-500/20';
-          iconBorder: 'border-indigo-400/30',
-        };
+          iconBorder: 'border-indigo-400/30'};
       case 'cybersecurity':,
         return {
           gradient: 'from-red-600 via-orange-600 to-red-700';
           borderColor: 'border-red-400/30';
           textColor: 'text-red-400';
           iconBg: 'bg-red-500/20';
-          iconBorder: 'border-red-400/30',
-        };
+          iconBorder: 'border-red-400/30'};
       case 'enterprise':,
         return {
           gradient: 'from-indigo-600 via-purple-600 to-indigo-700';
           borderColor: 'border-indigo-400/30';
           textColor: 'text-indigo-400';
           iconBg: 'bg-indigo-500/20';
-          iconBorder: 'border-indigo-400/30',
-        };
+          iconBorder: 'border-indigo-400/30'};
       case 'automation':,
         return {
           gradient: 'from-green-600 via-emerald-600 to-green-700';
           borderColor: 'border-green-400/30';
           textColor: 'text-green-400';
           iconBg: 'bg-green-500/20';
-          iconBorder: 'border-green-400/30',
-        };
+          iconBorder: 'border-green-400/30'};
       case 'it':,
         return {
           gradient: 'from-blue-600 via-indigo-600 to-blue-700';
           borderColor: 'border-blue-400/30';
           textColor: 'text-blue-400';
           iconBg: 'bg-blue-500/20';
-          iconBorder: 'border-blue-400/30',
-        };
+          iconBorder: 'border-blue-400/30'};
       case 'emerging':,
         return {
           gradient: 'from-yellow-600 via-orange-600 to-yellow-700';
           borderColor: 'border-yellow-400/30';
           textColor: 'text-yellow-400';
           iconBg: 'bg-yellow-500/20';
-          iconBorder: 'border-yellow-400/30',
-        };
+          iconBorder: 'border-yellow-400/30'};
       case 'premium':,
         return {
           gradient: 'from-amber-600 via-yellow-600 to-amber-700';
           borderColor: 'border-amber-400/30';
           textColor: 'text-amber-400';
           iconBg: 'bg-amber-500/20';
-          iconBorder: 'border-amber-400/30',
-        };
+          iconBorder: 'border-amber-400/30'};
       default: ,
         return {
           gradient: 'from-gray-600 via-gray-700 to-gray-800';
           borderColor: 'border-gray-400/30';
           textColor: 'text-gray-400';
           iconBg: 'bg-gray-500/20';
-          iconBorder: 'border-gray-400/30',
-        }
+          iconBorder: 'border-gray-400/30'}
     }
   }
   const styles = getVariantStyles(),
@@ -150,8 +138,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
     if (category && category.includes('Quantum')) return Atom,
     if (category && category.includes('Space')) return Rocket,
     if (category && category.includes('Cybersecurity')) return Shield,
-    return TrendingUp,
-  };
+    return TrendingUp};
   const CategoryIcon = getCategoryIcon(service && service.category),
   return (
     <motion&& motion.div,
@@ -179,88 +166,77 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
           border_color: 'border - purple - 400 / 30';
           text_color: 'text - purple - 400';
           icon_bg: 'bg - purple - 500 / 20';
-          icon_border: 'border - purple - 400 / 30',
-        }
+          icon_border: 'border - purple - 400 / 30'}
       case 'quantum':,
         return {
           gradient: 'from - cyan - 600 via - blue - 600 to - cyan - 700';
           border_color: 'border - cyan - 400 / 30';
           text_color: 'text - cyan - 400';
           icon_bg: 'bg - cyan - 500 / 20';
-          icon_border: 'border - cyan - 400 / 30',
-        }
+          icon_border: 'border - cyan - 400 / 30'}
       case 'space':,
         return {
           gradient: 'from - indigo - 600 via - purple - 600 to - indigo - 700';
           border_color: 'border - indigo - 400 / 30';
           text_color: 'text - indigo - 400';
           icon_bg: 'bg - indigo - 500 / 20';
-          icon_border: 'border - indigo - 400 / 30',
-        }
+          icon_border: 'border - indigo - 400 / 30'}
       case 'cybersecurity':,
         return {
           gradient: 'from - red - 600 via - orange - 600 to - red - 700';
           border_color: 'border - red - 400 / 30';
           text_color: 'text - red - 400';
           icon_bg: 'bg - red - 500 / 20';
-          icon_border: 'border - red - 400 / 30',
-        }
+          icon_border: 'border - red - 400 / 30'}
       case 'enterprise':,
         return {
           gradient: 'from - indigo - 600 via - purple - 600 to - indigo - 700';
           border_color: 'border - indigo - 400 / 30';
           text_color: 'text - indigo - 400';
           icon_bg: 'bg - indigo - 500 / 20';
-          icon_border: 'border - indigo - 400 / 30',
-        }
+          icon_border: 'border - indigo - 400 / 30'}
       case 'automation':,
         return {
           gradient: 'from - green - 600 via - emerald - 600 to - green - 700';
           border_color: 'border - green - 400 / 30';
           text_color: 'text - green - 400';
           icon_bg: 'bg - green - 500 / 20';
-          icon_border: 'border - green - 400 / 30',
-        }
+          icon_border: 'border - green - 400 / 30'}
       case 'it':,
         return {
           gradient: 'from - blue - 600 via - indigo - 600 to - blue - 700';
           border_color: 'border - blue - 400 / 30';
           text_color: 'text - blue - 400';
           icon_bg: 'bg - blue - 500 / 20';
-          icon_border: 'border - blue - 400 / 30',
-        }
+          icon_border: 'border - blue - 400 / 30'}
       case 'emerging':,
         return {
           gradient: 'from - yellow - 600 via - orange - 600 to - yellow - 700';
           border_color: 'border - yellow - 400 / 30';
           text_color: 'text - yellow - 400';
           icon_bg: 'bg - yellow - 500 / 20';
-          icon_border: 'border - yellow - 400 / 30',
-        }
+          icon_border: 'border - yellow - 400 / 30'}
       case 'premium':,
         return {
           gradient: 'from - amber - 600 via - yellow - 600 to - amber - 700';
           border_color: 'border - amber - 400 / 30';
           text_color: 'text - amber - 400';
           icon_bg: 'bg - amber - 500 / 20';
-          icon_border: 'border - amber - 400 / 30',
-        }
+          icon_border: 'border - amber - 400 / 30'}
       default: ,
         return {
           gradient: 'from - gray - 600 via - gray - 700 to - gray - 800';
           border_color: 'border - gray - 400 / 30';
           text_color: 'text - gray - 400';
           icon_bg: 'bg - gray - 500 / 20';
-          icon_border: 'border - gray - 400 / 30',
-        }
+          icon_border: 'border - gray - 400 / 30'}
     }
   }
 ,
   const styles = getVariantStyles (),
   const getCategoryIcon = (category: string) =>: any {
     if () return Brain) {
-  $2,
-}
+  $2}
     if () return Atom) {
   $2}
     if () return Rocket) {
@@ -402,8 +378,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
         {/* Enhanced Hover Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>,
       </div>,
-    </motion.div>),
-};
+    </motion.div>)};
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026',
 export default UltraFuturisticServiceCard2026;
 export default UltraFuturisticServiceCard2026;

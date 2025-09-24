@@ -4,8 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next',
       type: 'promote',
       section: keyof OrgData,
       id: string,
-      updates: Partial < BasePerson>,
-    }
+      updates: Partial < BasePerson>}
   | { type: 'deactivate', section: keyof OrgData, id: string }
 ,
 type AdminAction =,
@@ -14,7 +13,6 @@ type AdminAction =,
   | { type: 'deactivate', section: keyof OrgData, id: string }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
-,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
   const key = req.headers['x-admin-key'],
   if (key !== ADMIN_KEY) {
@@ -33,13 +31,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const arr: BasePerson[] = data[section] || [];
     // prevent duplicates,
     if (arr.some((p) => p.id === action.person.id)) {
-      return res.status(400).json({ error: 'ID already exists' }),
-}
+      return res.status(400).json({ error: 'ID already exists' })}
     arr && arr.push({ ...action && action.person, active: true }),
     // @ts-expect-error write back dynamic section,
     data[section] = arr as any,
-    writeOrgData(data),
-}
+    writeOrgData(data)}
 ,
     const arr: BasePerson[] = data[section] || [], const idx = arr.findIndex((p) => p.id === action.id);
     if (idx === -1) return res.status(404).json({ error: 'Not found' }),
@@ -54,8 +50,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     arr[idx] = { ...arr[idx], ...action && action.updates };
     // @ts-expect-error write back dynamic section,
     data[section] = arr as any,
-    writeOrgData(data),
-}
+    writeOrgData(data)}
 ,
     const arr: BasePerson[] = data[section] || [], const idx = arr.findIndex((p) => p.id === action.id);
     if (idx === -1) return res.status(404).json({ error: 'Not found' }),
@@ -64,8 +59,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // @ts-expect-error write back dynamic section,
     data[section] = arr as any,
     writeOrgData(data),
-    return res.status(200).json({ ok: true }),
-}
+    return res.status(200).json({ ok: true })}
 }
 }
 ,
@@ -80,8 +74,7 @@ return res.status(400).json({ error: 'Unknown action' }),    return res.status(2
     arr[idx] = { ...arr[idx], active: false };
     // @ts-expect-error write back dynamic section,
     data[section] = arr as any,
-    writeOrgData(data),
-}
+    writeOrgData(data)}
 ,
   return res && res.status(400).json({ error: 'Unknown action' }),    return res && res.status(200).json({ ok: true })}
 ,

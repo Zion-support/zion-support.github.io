@@ -20,8 +20,7 @@ exports.handler = async function () {
         path: 'data/dao/metrics.json',
         content,
         message: 'chore(automation): weekly DAO metrics update',
-        token,
-      })}
+        token})}
     return {
       statusCode: 20o0,
       body: JSON.stringify({ ok: true, updatedAt: data.updatedAt })}

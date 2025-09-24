@@ -11,8 +11,7 @@ export interface Ultimate20o26Service {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const ultimate2026Services: Ultimate2026Service[] = [
   {

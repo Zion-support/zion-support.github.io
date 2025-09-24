@@ -116,6 +116,5 @@ const AutonomousEnterprise20o26Banner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AutonomousEnterprise20o26Banner;

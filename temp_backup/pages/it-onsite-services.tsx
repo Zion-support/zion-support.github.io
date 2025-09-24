@@ -15,6 +15,5 @@ export default function ItOnsiteServicesPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

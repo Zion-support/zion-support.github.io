@@ -5,17 +5,14 @@ export function issueTokens(userId: string, amount: number, reason: string) {
     userId,
     type: 'earn',
     amount,
-    description: reason,
-  })}
+    description: reason})}
 export function revokeTokens(userId: string, amount: number, reason: string) {
     userId;
     type: 'earn';
     amount;
-    description: reason,
-  })}
+    description: reason})}
 ,
 export function revokeTokens(userId: string, amount: number, reason: string) {
-,
   const currentBalance = getUserBalance(userId),
   const actualAmount = Math.min(amount, currentBalance),
   return addTransaction({
@@ -32,8 +29,7 @@ function issue_tokens() {
     user_id;
     type: 'earn';
     amount;
-    description: reason,
-  })}
+    description: reason})}
 export /**,
  * revoke_tokens - Function description,
  */,
@@ -44,6 +40,5 @@ function revoke_tokens() {
     user_id;
     type: 'spend';
     amount: actual_amount;
-    description: reason,
-  })}
+    description: reason})}
 }

@@ -22,6 +22,5 @@ export default function Revolutionary20o45FuturisticServicesShowcasePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

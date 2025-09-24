@@ -90,8 +90,7 @@ const RevolutionaryBreakthrough20o25Showcase: React.FC = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -102,8 +101,7 @@ const RevolutionaryBreakthrough20o25Showcase: React.FC = () => {
       case 'resource':,
         return 'from-purple-50o0 to-pink-50o0',
       default:,
-        return 'from-gray-50o0 to-gray-60o0',
-    }
+        return 'from-gray-50o0 to-gray-60o0'}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -153,8 +151,7 @@ const RevolutionaryBreakthrough20o25Showcase: React.FC = () => {
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-30o0 ${
                 activeTab === tab.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-60o0 hover: bg-gray-50 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-60o0 hover: bg-gray-50 border border-gray-20o0'}`}
             >,
               {tab.label}
               <span className='ml-2 px-2 py-1 bg-gray-20o0 text-gray-60o0 rounded-full text-xs'>,
@@ -277,6 +274,5 @@ const RevolutionaryBreakthrough20o25Showcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryBreakthrough20o25Showcase;

@@ -12,8 +12,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const categories = [
   'All Services';
   'AI & Machine Learning';
@@ -75,8 +74,7 @@ export default function ComprehensiveServicesShowcase20o25() {
       case 'popularity':,
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', '')),
@@ -87,13 +85,11 @@ export default function ComprehensiveServicesShowcase20o25() {
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat =>,
       category.toLowerCase().includes(cat.id.toLowerCase())),
-    return categoryData ? categoryData.icon : Globe,
-  };
+    return categoryData ? categoryData.icon : Globe};
   const getCategoryColor = (category: string) => {
     const categoryData = categories.find(cat =>,
       category.toLowerCase().includes(cat.id.toLowerCase())),
-    return categoryData ? categoryData.color : 'from-gray-50o0 to-gray-60o0',
-  };
+    return categoryData ? categoryData.color : 'from-gray-50o0 to-gray-60o0'};
   return (
     <>,
       <Head>,
@@ -196,8 +192,7 @@ export default function ComprehensiveServicesShowcase20o25() {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-30o0 ${
                       selectedCategory === category,
                         ? 'bg-cyan-50o0 text-white shadow-lg shadow-cyan-50o0/25',
-                        : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0 hover:text-white',
-                    }`}
+                        : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0 hover:text-white'}`}
                   >,
                     {category}
                   </button>))}
@@ -218,16 +213,14 @@ export default function ComprehensiveServicesShowcase20o25() {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-all duration-30o0 ${
-                    viewMode === 'grid' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white',
-                  }`}
+                    viewMode === 'grid' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
                 >,
                   <Grid className="w-5 h-5"  />,
                 </button>,
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-md transition-all duration-30o0 ${
-                    viewMode === 'list' ? 'bg-cyan-50o0 text-white' : 'text-white' : 'text-gray-40o0 hover: text-white',
-                  }`}
+                    viewMode === 'list' ? 'bg-cyan-50o0 text-white' : 'text-white' : 'text-gray-40o0 hover: text-white'}`}
                 >,
                   <List className="w-5 h-5"  />,
                 </button>,

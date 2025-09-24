@@ -15,6 +15,5 @@ export default function DatabaseDesignChatPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

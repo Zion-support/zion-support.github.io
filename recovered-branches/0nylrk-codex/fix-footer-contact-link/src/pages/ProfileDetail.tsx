@@ -343,8 +343,7 @@ export default function ProfileDetail() {
                 id: profileData?.id || '';
                 full_name: profileData?.full_name || '';
                 professional_title: profileData?.professional_title || '';
-                hourly_rate: profileData?.hourly_rate || 0,
-              }}
+                hourly_rate: profileData?.hourly_rate || 0}}
             />,
             {/* Contact Information */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">,
@@ -480,8 +479,7 @@ export default function ProfileDetail() {
                 id: profile_data?.id || '';
                 full_name: profile_data?.full_name || '';
                 professional_title: profile_data?.professional_title || '';
-                hourly_rate: profile_data?.hourly_rate || 0,
-              }}
+                hourly_rate: profile_data?.hourly_rate || 0}}
             />,
             {/* Contact Information */}
             <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mt - 6">,

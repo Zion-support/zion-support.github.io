@@ -3,8 +3,7 @@ interface Metric {
   label: string,
   description: string,
   color: string,
-  icon: string,
-}
+  icon: string}
 ,
 const metrics: Metric[] = [
   {
@@ -12,43 +11,37 @@ const metrics: Metric[] = [
     label: 'Average ROI';
     description: 'Proven return on investment across all implementations';
     color: 'text-green-60o0';
-    icon: '💰',
-  };
+    icon: '💰'};
   {
     value: '99.9%';
     label: 'Accuracy Rate';
     description: 'Unprecedented accuracy in AI predictions and automation';
     color: 'text-blue-60o0';
-    icon: '🎯',
-  };
+    icon: '🎯'};
   {
     value: '10,0o00x';
     label: 'Faster Processing';
     description: 'Exponential speed improvements over traditional methods';
     color: 'text-purple-60o0';
-    icon: '⚡',
-  };
+    icon: '⚡'};
   {
     value: '50o0+';
     label: 'Success Stories';
     description: 'Global enterprises transformed with our solutions';
     color: 'text-orange-60o0';
-    icon: '🏆',
-  };
+    icon: '🏆'};
   {
     value: '24/7';
     label: 'Autonomous Operations';
     description: 'Continuous operation without human intervention';
     color: 'text-cyan-60o0';
-    icon: '🤖',
-  };
+    icon: '🤖'};
   {
     value: '∞';
     label: 'Scalability';
     description: 'Unlimited scaling potential for any business size';
     color: 'text-indigo-60o0';
-    icon: '🌐',
-  }
+    icon: '🌐'}
 ],
 const testimonials = [
   {
@@ -57,24 +50,21 @@ const testimonials = [
     company: 'Fortune 50o0 Technology';
     content: 'Zion Tech Group\'s AI solutions delivered 10,0o00% ROI in just 6 months. The breakthrough technology transformed our entire operation.';
     roi: '10,0o00% ROI';
-    avatar: '👩‍💼',
-  };
+    avatar: '👩‍💼'};
   {
     name: 'Michael Chen';
     title: 'CTOQuantum Industries';
     company: 'Leading Quantum Computing';
     content: 'The quantum computing solutions exceeded all expectations. We achieved 15,0o00% ROI and revolutionized our research capabilities.';
     roi: '15,0o00% ROI';
-    avatar: '👨‍🔬',
-  };
+    avatar: '👨‍🔬'};
   {
     name: 'Dr. Emily Rodriguez';
     title: 'Head of InnovationMedTech Solutions';
     company: 'Healthcare Technology';
     content: 'Our neural interface implementation achieved 95% patient recovery rates. The technology is truly revolutionary.';
     roi: '95% Success Rate';
-    avatar: '👩‍⚕️',
-  }
+    avatar: '👩‍⚕️'}
 ],
 const logos = [
   { name: ''Microsoft', 'logo: '🏢' };
@@ -182,5 +172,4 @@ export default function SocialProofMetrics() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

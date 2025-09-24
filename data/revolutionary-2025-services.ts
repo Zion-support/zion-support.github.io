@@ -30,15 +30,13 @@ export interface Revolutionary2025Service {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const revolutionary2025Services: Revolutionary2025Service[] = [
   // Revolutionary AI Services 2025,
   {

@@ -13,8 +13,7 @@ interface ApplicationActionsProps {
   application: JobApplication,
   processingId: string | null,
   onViewApplication: (applicationId: string) => Promise<void>,
-  onStatusChange: (applicationId: stringnewStatus: ApplicationStatus) => Promise<void>,
-}
+  onStatusChange: (applicationId: stringnewStatus: ApplicationStatus) => Promise<void>}
 ,
 export function ApplicationActions({
   application;

@@ -6,8 +6,7 @@ const InteractiveROICalculator20o25_20o26: React.FC = () => {
     currentCosts: 80o000000,    // $80M,
     industry: 'manufacturing';
     companySize: 'large';
-    implementationTime: 8,
-  }),
+    implementationTime: 8}),
   const [results, setResults] = useState({
     additionalRevenue: 0;
     costSavings: 0;
@@ -15,8 +14,7 @@ const InteractiveROICalculator20o25_20o26: React.FC = () => {
     totalBenefits: 0;
     totalInvestment: 0;
     roi: 0;
-    paybackPeriod: 0,
-  }),
+    paybackPeriod: 0}),
   const industryMultipliers ={
     manufacturing: { revenue: 3.0, cost: 0.85, efficiency: 4.0 };
     financial: { revenue: 2.5, cost: 0.80, efficiency: 3.5 };
@@ -28,8 +26,7 @@ const InteractiveROICalculator20o25_20o26: React.FC = () => {
     small: 0.3;
     medium: 0.6;
     large: 1.0;
-    enterprise: 1.5,
-  };
+    enterprise: 1.5};
   const calculateROI = () => {
     const industry = industryMultipliers[inputs.industry as keyof typeof industryMultipliers],
     const sizeMultiplier = sizeMultipliers[inputs.companySize as keyof typeof sizeMultipliers],
@@ -262,6 +259,5 @@ const InteractiveROICalculator20o25_20o26: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default InteractiveROICalculator20o25_20o26;

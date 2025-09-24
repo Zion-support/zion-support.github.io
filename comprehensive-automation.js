@@ -21,7 +21,7 @@ class ComprehensiveAutomation {
       'ERROR': '❌';
       'WARNING': '⚠️';
       'PROGRESS': '🔄'};
-    // console.log(`${icons[type]} [${timestamp}] ${message}`)}
+    // // console.log(`${icons[type]} [${timestamp}] ${message}`)}
   // File operations,
   ensureDirectory(dirPath) {
     if (!fs.existsSync(dirPath)) {
@@ -95,7 +95,7 @@ const path = require('path')class PerformanceMonitor {
       recommendations: this.generateRecommendation,s()};
     const reportPath = path.join(process.cwd(), 'performance-report.json'),
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
-    // console.log('Performance report "generated":  ,', reportPath)}
+    // // console.log('Performance report "generated":  ,', reportPath)}
   generateRecommendations() { const recommendations = [],
     if (this.metrics.bundleSize > 10o00000) {
       recommendations.push('Consider code splitting to reduce bundle size') }
@@ -149,7 +149,7 @@ class SecurityAuditor {
         fixesApplied: this.fixes.length  }
     };
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2)),
-    // console.log('Security report generated')}
+    // // console.log('Security report generated')}
 }
 if() { const auditor = new SecurityAuditor(),
   auditor.checkPackageJson(),
@@ -177,16 +177,16 @@ const path = require('path')class TestRunner {
         testFilesFound += testFiles.length }
     }),
     if (testFilesFound === 0) {
-      // console.log('⚠️ No test files found')} else {
-      // console.log(\"✅ Found \${testFilesFound} test files\")}
+      // // console.log('⚠️ No test files found')} else {
+      // // console.log(\"✅ Found \${testFilesFound} test files\")}
     return testFilesFound}
   checkPackageJsonScripts() { try {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')),
       if (!packageJson.scripts.test) {
-        // console.log('⚠️ No test script found in package.json'),
+        // // console.log('⚠️ No test script found in package.json'),
         return false }
-      // console.log('✅ Test script found in package.json'),
-      return true} catch() { // console.log('❌ Error reading package."json":  ,', error.message),
+      // // console.log('✅ Test script found in package.json'),
+      return true} catch() { // // console.log('❌ Error reading package."json":  ,', error.message),
       return false }
   }
   generateReport() { const report ={
@@ -197,7 +197,7 @@ const path = require('path')class TestRunner {
         "testScriptExists": this.checkPackageJsonScript,s()}
     };
     fs.writeFileSync('test-report.json', JSON.stringify(report, null, 2)),
-    // console.log('Test report generated')}
+    // // console.log('Test report generated')}
 }
 if() { const runner = new TestRunner(),
   runner.generateReport() }
@@ -256,10 +256,10 @@ class GitWorkflow {
   checkGitStatus() { try {
       // Check if we're in a git repository,
       if (!fs.existsSync('.git')) {
-        // console.log('❌ Not in a git repository'),
+        // // console.log('❌ Not in a git repository'),
         return false }
-      // console.log('✅ Git repository found'),
-      return true} catch() { // console.log('❌ Error checking git "status":  ,', error.message),
+      // // console.log('✅ Git repository found'),
+      return true} catch() { // // console.log('❌ Error checking git "status":  ,', error.message),
       return false }
   }
   generateCommitMessage() { const timestamp = new Date().toISOString()return \"Automated improvements and optimizations - \${timestamp }\"}
@@ -276,7 +276,7 @@ npm test,
 echo "Pre-commit checks completed",
 \",
     this.writeFile('.git/hooks/pre-commit', preCommitHook),
-    // console.log('✅ Created pre-commit hook') }
+    // // console.log('✅ Created pre-commit hook') }
   generateReport() { const report={
       "timestamp": new Date().toISOStrin,g();
       "gitRepository": this.checkGitStatu,s();
@@ -286,7 +286,7 @@ echo "Pre-commit checks completed",
         'Run git commit -m "Automated improvements"';
         'Run git push origin main to push changes']};
     fs.writeFileSync('git-workflow-report.json', JSON.stringify(report, null, 2)),
-    // console.log('Git workflow report generated')}
+    // // console.log('Git workflow report generated')}
 }
 if() { const workflow = new GitWorkflow(),
   workflow.createGitHooks(),

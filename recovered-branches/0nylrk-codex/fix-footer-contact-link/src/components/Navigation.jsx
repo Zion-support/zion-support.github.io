@@ -108,8 +108,7 @@ const Navigation = () => {
                   className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive(item.href),
                       ? 'text-zion-cyan bg-zion-cyan/10',
-                      : 'text-zion-slate-light hover: text-white hover:bg-white/10',
-                  }`}
+                      : 'text-zion-slate-light hover: text-white hover:bg-white/10'}`}
                 >,
                   <Icon className='w-4 h-4' />,
                   <span>{item.name}</span>,
@@ -184,8 +183,7 @@ const Navigation = () => {
                   className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-base font-medium transition-colors ${
                     isActive(item.href),
                       ? 'text-zion-cyan bg-zion-cyan/10',
-                      : 'text-zion-slate-light hover: text-white hover:bg-white/10',
-                  }`}
+                      : 'text-zion-slate-light hover: text-white hover:bg-white/10'}`}
                   onClick={() => setIsOpen(false)}
                 >,
                   <Icon className='w-5 h-5' />,

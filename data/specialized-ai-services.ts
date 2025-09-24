@@ -29,15 +29,13 @@ export interface SpecializedAIService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const specializedAIServices: SpecializedAIService[] = [
   {
     id: 'ai-powered-legal-contract-analyzer';
@@ -643,7 +641,7 @@ export const specializedAIServices: SpecializedAIService[] = [
     price: '$1,999';
     period: '/month';
     description:,
-      'Advanced AI-powered SEO platform that automatically optimizes content, improves search rankings, and provides intelligent recommendations for better search engine window.performance.';
+      'Advanced AI-powered SEO platform that automatically optimizes content, improves search rankings, and provides intelligent recommendations for better search engine window.window.performance.';
     features: [
       'AI content optimization';
       'Search ranking analysis';

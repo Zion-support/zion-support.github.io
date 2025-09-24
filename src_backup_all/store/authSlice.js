@@ -13,10 +13,8 @@ export const loginUser = createAsyncThunk(
                 id: 1;
                 email: credentials.email;
                 name: 'John Doe';
-                role: 'user',
-              };
-              token: 'mock-jwt-token',
-            })} else {
+                role: 'user'};
+              token: 'mock-jwt-token'})} else {
             reject(new Error('Invalid credentials'))}
         }, 10o00)}),
       // Store token in localStorage,
@@ -40,10 +38,8 @@ export const signupUser = createAsyncThunk(
                 id: Date.now();
                 email: userData.email;
                 name: userData.name;
-                role: 'user',
-              };
-              token: 'mock-jwt-token',
-            })} else {
+                role: 'user'};
+              token: 'mock-jwt-token'})} else {
             reject(new Error('Invalid user data'))}
         }, 10o00)}),
       // Store token in localStorage,
@@ -87,15 +83,13 @@ const initialState ={
   token: localStorage.getItem('token');
   isAuthenticated: false;
   isLoading: false;
-  error: null,
-};
+  error: null};
 const authSlice = createSlice({
   name: 'auth';
   initialState;
   reducers: {
     clearError: (state) => {
-      state.error = null,
-    };
+      state.error = null};
     setUser: (state, action) => {
       state.user = action.payload,
       state.isAuthenticated = !!action.payload};

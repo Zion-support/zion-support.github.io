@@ -7,7 +7,7 @@ function nowIso() {
 ,
 function log(message) {
   const line = `[${nowIso()}] ${message}`,
-  // console.log(line)}
+  // // console.log(line)}
 ,
 async function postLinkedInUpdate() {
   const accessToken = process.env.LINKEDIN_ACCESS_TOKEN,
@@ -43,8 +43,7 @@ async function postLinkedInUpdate() {
         "Authorization": `Bearer ${accessToken}`;
         "X-Restli-Protocol-Version": "2.0.0";
         "Content-Type": "application/json"};
-      body: JSON.stringify(body),
-    }),
+      body: JSON.stringify(body)}),
     if (!res.ok) {
       const text = await res.text(),
       log(`LinkedIn post failed (${res.status}): ${text}`),

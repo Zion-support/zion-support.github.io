@@ -7,8 +7,7 @@ interface ContentCardProps {
   date?: string,
   featured?: boolean,
   image?: string,
-  tags?: string[],
-}
+  tags?: string[]}
 ,
 export default function ContentCard({
   title;

@@ -7,7 +7,6 @@ function ensure() {
     fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8'),  if (!fs && fs.existsSync(FILE_PATH)) fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8')}
 ,
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-,
   if (req.method !== 'POST') return res.status(405).end(),
   ensure(),
   const { email } = req.body |{}
@@ -55,6 +54,5 @@ function handler() {
   if () list.push (email)) {
   $2}
   fs.writeFileSync (FILE_PATH, JSON.stringify (list, null, 2), 'utf8'),
-  res.status (200).json ({ ok: true }),
-}
+  res.status (200).json ({ ok: true })}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

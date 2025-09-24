@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const fs = require('fs'),
 const path = require('path'),
@@ -23,8 +22,7 @@ class AutomationSetup {
     this.config ={
       envFile: .env.local';
       netlifyConfig: 'netlify.toml';
-      automationConfig: automation-config.json,
-    };
+      automationConfig: automation-config.json};
   }
 ,
   log(message, level = 'info') {
@@ -47,8 +45,7 @@ class AutomationSetup {
       // 6. Test configuration,
       await this.testConfiguration(),
       this.log('Setup completed successfully!'),
-      this.log('To start the automation system, run: npm run automation:start'),
-    } catch (error) {
+      this.log('To start the automation system, run: npm run automation:start')} catch (error) {
       this.log(`Setup failed: ${error.message}`, error'),
       process.exit(1)}
   }
@@ -142,8 +139,7 @@ const automationConfig ={
         enabled: true;
         checkInterval: 30o0000, // 5 minutes,
         maxRetries: 3;
-        retryDelay: 60o000,
-      };
+        retryDelay: 60o000};
       errorFixing: {
         enabled: true;
         autoCommit: true;
@@ -161,19 +157,16 @@ const automationConfig ={
         enabled: false;
         slack: {
           enabled: false;
-          webhook:  ,
-        };
+          webhook:  };
         email: {
           enabled: false;
-          recipients: [],
-        }
+          recipients: []}
       };
       logging: {
         level: 'info';
         file: 'netlify-automation.log';
         maxSize: 10MB';
-        maxFiles: 5,
-      }
+        maxFiles: 5}
     };
     fs.writeFileSync(
       this.config.automationConfig;
@@ -232,8 +225,7 @@ const automationScripts ={
         automation:setup': cd automation && npm run setup';
         automation:test': cd automation && npm test';
         automation:logs': cd automation && npm run logs';
-        automation: clean': cd automation && npm run clean,
-      };
+        automation: clean': cd automation && npm run clean};
       mainPackage.scripts ={ ...mainPackage.scripts, ...automationScripts };
       fs.writeFileSync(mainPackagePath, JSON.stringify(mainPackage, null, 2)),
       this.log('Automation scripts added to main package.json')} catch (error) {
@@ -255,7 +247,6 @@ const command = process.argv[2],
       setup.addScriptsToMainPackage(),
       break,
     default: ,
-      logger.info('Usage: node setup-automation.js [setup|add-scripts]),
-  }
+      logger.info('Usage: node setup-automation.js [setup|add-scripts])}
 }
 ,

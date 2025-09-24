@@ -12,8 +12,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const pricingTiers = [
   {
     name: 'Starter';
@@ -28,8 +27,7 @@ const pricingTiers = [
     color: 'from-blue-50o0 to-cyan-50o0';
     cta: 'Start Free Trial';
     ctaLink: '/contact';
-    popular: false,
-  };
+    popular: false};
   {
     name: 'Professional';
     price: 299;
@@ -44,8 +42,7 @@ const pricingTiers = [
     color: 'from-purple-50o0 to-pink-50o0';
     cta: 'Start Free Trial';
     ctaLink: '/contact';
-    popular: true,
-  };
+    popular: true};
   {
     name: 'Enterprise';
     price: 999;
@@ -61,8 +58,7 @@ const pricingTiers = [
     color: 'from-green-50o0 to-emerald-50o0';
     cta: 'Contact Sales';
     ctaLink: '/contact';
-    popular: false,
-  }
+    popular: false}
 ];
 const serviceCategories = [
   {
@@ -70,29 +66,25 @@ const serviceCategories = [
     icon: <Brain className="w-8 h-8"  />;
     color: 'from-cyan-50o0 to-blue-50o0';
     services: cuttingEdgeAIServices20o25.slice(0, 6);
-    description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
-  };
+    description: 'Revolutionary AI platforms with consciousness and emotional intelligence'};
   {
     name: 'Quantum & Emerging Tech';
     icon: <Atom className="w-8 h-8"  />;
     color: 'from-purple-50o0 to-pink-50o0';
     services: cuttingEdgeQuantumServices20o25.slice(0, 6);
-    description: 'Breakthrough quantum computing and space technology solutions',
-  };
+    description: 'Breakthrough quantum computing and space technology solutions'};
   {
     name: 'Enterprise IT Solutions';
     icon: <Shield className="w-8 h-8"  />;
     color: 'from-blue-50o0 to-cyan-50o0';
     services: cuttingEdgeEnterpriseITServices20o25.slice(0, 6);
-    description: 'Advanced enterprise infrastructure and security solutions',
-  };
+    description: 'Advanced enterprise infrastructure and security solutions'};
   {
     name: 'Micro SAAS Solutions';
     icon: <Rocket className="w-8 h-8"  />;
     color: 'from-teal-50o0 to-emerald-50o0';
     services: cuttingEdgeMicroSaasServices20o25.slice(0, 6);
-    description: 'Innovative business solutions for modern enterprises',
-  }
+    description: 'Innovative business solutions for modern enterprises'}
 ];
 const stats = [
   { number: '25+', label: 'Cutting-Edge Services', icon: Star, color: 'text-cyan-40o0' };
@@ -115,8 +107,7 @@ export default function CuttingEdgePricing20o25() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -125,8 +116,7 @@ export default function CuttingEdgePricing20o25() {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -228,8 +218,7 @@ export default function CuttingEdgePricing20o25() {
                     </div>)}
 ,
                   <div className={`relative p-8 rounded-2xl border border-cyan-50o0/20 bg-gradient-to-br from-black/80 via-purple-90o0/10 to-black/80 backdrop-blur-sm hover: border-cyan-50o0/50 transition-all duration-50o0 transform hover:scale-10o5 hover:shadow-2xl hover:shadow-cyan-50o0/20 ${
-                    tier.popular ? 'border-cyan-50o0/50 shadow-cyan-50o0/20' : '',
-                  }`}>,
+                    tier.popular ? 'border-cyan-50o0/50 shadow-cyan-50o0/20' : ''}`}>,
                     <div className="text-center mb-8">,
                       <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${tier.color} mb-4`}>,
                         {tier.icon}
@@ -253,8 +242,7 @@ export default function CuttingEdgePricing20o25() {
                       className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 transform hover: scale-10o5 ${
                         tier.popular,
                           ? 'bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white hover:from-cyan-60o0 hover:to-purple-70o0 shadow-lg hover:shadow-cyan-50o0/25',
-                          : 'border-2 border-cyan-50o0/50 text-cyan-40o0 hover:bg-cyan-50o0/10',
-                      }`}
+                          : 'border-2 border-cyan-50o0/50 text-cyan-40o0 hover:bg-cyan-50o0/10'}`}
                     >,
                       {tier.cta}
                       <ArrowRight className="ml-2 w-4 h-4"  />,
@@ -291,8 +279,7 @@ export default function CuttingEdgePricing20o25() {
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-30o0 ${
                   selectedCategory === 'all',
                     ? 'bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white',
-                    : 'bg-black/50 border border-cyan-50o0/30 text-cyan-40o0 hover: bg-cyan-50o0/10',
-                }`}
+                    : 'bg-black/50 border border-cyan-50o0/30 text-cyan-40o0 hover: bg-cyan-50o0/10'}`}
               >,
                 All Categories ({allServices.length}),
               </button>,
@@ -303,8 +290,7 @@ export default function CuttingEdgePricing20o25() {
                   className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-30o0 ${
                     selectedCategory === category.name,
                       ? 'bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white',
-                      : 'bg-black/50 border border-cyan-50o0/30 text-cyan-40o0 hover: bg-cyan-50o0/10',
-                  }`}
+                      : 'bg-black/50 border border-cyan-50o0/30 text-cyan-40o0 hover: bg-cyan-50o0/10'}`}
                 >,
                   {category.name} ({category.services.length}),
                 </button>))}

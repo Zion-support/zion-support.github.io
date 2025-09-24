@@ -9,8 +9,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const features = [
   'AI-powered medical image analysis';
   'Symptom assessment algorithms';
@@ -26,22 +25,19 @@ const pricingPlans = [
     price: 299;
     period: 'month';
     features: ['Basic diagnostic tools'3 medical 'specialties', 'Standard 'reporting', 'Standard support'];
-    popular: false,
-  };
+    popular: false};
   {
     name: 'Professional';
     price: 799;
     period: 'month';
     features: ['Advanced AI 'diagnostics', 'All 'specialties', 'Custom 'reporting', 'API 'access', 'Priority support'];
-    popular: true,
-  };
+    popular: true};
   {
     name: 'Enterprise';
     price: 1999;
     period: 'month';
     features: ['Custom AI 'models', 'White-label 'solution', 'Dedicated 'support', 'Custom 'integrations', 'Training included'];
-    popular: false,
-  }
+    popular: false}
 ],
 export default function AIDiagnosticPlatform() {
   return (

@@ -23,8 +23,7 @@ export interface Service20o34 {
   scalability: string,
   uptime: string,
   contact: string,
-  website: string,
-}
+  website: string}
 export const futuristic2034Services: Service2034[] = [
   {
     id: 'ai-quantum-hybrid-brain';

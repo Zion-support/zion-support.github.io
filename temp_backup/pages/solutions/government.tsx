@@ -316,6 +316,5 @@ export default function GovernmentSolutions() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

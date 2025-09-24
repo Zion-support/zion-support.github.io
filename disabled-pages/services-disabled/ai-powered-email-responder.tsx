@@ -46,6 +46,5 @@ export default function AIPoweredEmailResponder() {
           <Link href="/contact" className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-90o0 hover:bg-white">Book a demo</Link>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

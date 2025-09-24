@@ -19,8 +19,7 @@ export function HeroSection() {
             opacity: 1;
             transition: {
                 staggerChildren: 0.2;
-                delayChildren: 0.1,
-            }
+                delayChildren: 0.1}
         }
     };
     const itemVariants ={
@@ -30,8 +29,7 @@ export function HeroSection() {
             y: 0;
             transition: {
                 duration: 0.8;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     const floatingVariants ={
@@ -41,8 +39,7 @@ export function HeroSection() {
             transition: {
                 duration: 4;
                 repeat: Infinity;
-                ease: "easeInOut",
-            }
+                ease: "easeInOut"}
         }
     };
     const pulseVariants ={
@@ -52,8 +49,7 @@ export function HeroSection() {
             transition: {
                 duration: 2;
                 repeat: Infinity;
-                ease: "easeInOut",
-            }
+                ease: "easeInOut"}
         }
     };
     const particleVariants ={
@@ -63,8 +59,7 @@ export function HeroSection() {
             transition: {
                 duration: 3;
                 repeat: Infinity;
-                ease: "easeInOut",
-            }
+                ease: "easeInOut"}
         }
     };
     return (
@@ -271,6 +266,5 @@ export function HeroSection() {
                     </motion.div>,
                 </motion.div>,
             </motion.div>,
-        </section>),
-}
+        </section>)}
 ,

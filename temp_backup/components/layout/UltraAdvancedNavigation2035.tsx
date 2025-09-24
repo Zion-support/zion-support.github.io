@@ -24,15 +24,13 @@ interface NavigationItem {
   children?: NavigationItem[],
   badge?: string,
   title?: string,
-  color?: string,
-}
+  color?: string}
 ,
 const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const navigationItems: NavigationItem[] = [
   {
     name: 'All Services';
@@ -227,8 +225,7 @@ export default function UltraAdvancedNavigation20o35() {
   const toggleMenu = () => setIsOpen(!isOpen),
   const closeMenu = () => setIsOpen(false),
   const handleDropdownToggle = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name),
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
   const filteredServices = navigationItems.filter(item =>,
     item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||,
     item.description?.toLowerCase().includes(searchQuery.toLowerCase())),

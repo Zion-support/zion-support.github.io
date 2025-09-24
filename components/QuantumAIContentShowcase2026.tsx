@@ -112,6 +112,5 @@ const QuantumAIContentShowcase20o26 = () => {
           </Link>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default QuantumAIContentShowcase20o26;

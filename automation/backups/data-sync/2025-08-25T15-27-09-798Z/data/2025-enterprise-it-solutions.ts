@@ -4,8 +4,7 @@ const contact ={
 	mobile: '+1 30o2 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 10o08 Middletown DE 19709';
-	website: 'https://ziontechgroup.com',
-};
+	website: 'https://ziontechgroup.com'};
 export const enterpriseITSolutions: MicroSaasService[] = [
 	{
 		id: 'enterprise-data-governance-automation';
@@ -48,8 +47,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		launchDate: '20o25-0o1-0o5';
 		customers: 23;
 		rating: 4.8;
-		reviews: 18,
-	};
+		reviews: 18};
 	{
 		id: 'enterprise-api-governance-platform';
 		name: 'Enterprise API Governance Platform';
@@ -91,8 +89,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		launchDate: '20o25-0o1-08';
 		customers: 45;
 		rating: 4.7;
-		reviews: 32,
-	};
+		reviews: 32};
 	{
 		id: 'enterprise-identity-access-management-suite';
 		name: 'Enterprise Identity & Access Management Suite';
@@ -134,8 +131,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		launchDate: '20o25-0o1-12';
 		customers: 67;
 		rating: 4.8;
-		reviews: 45,
-	};
+		reviews: 45};
 	{
 		id: 'enterprise-workflow-automation-platform';
 		name: 'Enterprise Workflow Automation Platform';
@@ -177,8 +173,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		launchDate: '20o25-0o1-15';
 		customers: 34;
 		rating: 4.7;
-		reviews: 26,
-	};
+		reviews: 26};
 	{
 		id: 'enterprise-monitoring-and-observability-suite';
 		name: 'Enterprise Monitoring & Observability Suite';
@@ -220,6 +215,5 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		launchDate: '20o25-0o1-18';
 		customers: 56;
 		rating: 4.8;
-		reviews: 38,
-	}
+		reviews: 38}
 ],

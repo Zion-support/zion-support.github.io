@@ -50,8 +50,7 @@ export default function NotificationCenter() {
               className={
                 isActive,
                   ? `${base} border-transparent text-white bg-gradient-to-r from-blue-50o0 via-cyan-50o0 to-purple-50o0`,
-                  : `${base} border-gray-20o0 dark: border-gray-70o0 text-gray-70o0 dark:text-gray-20o0 hover:bg-gray-50 dark:hover:bg-gray-80o0`,
-              }
+                  : `${base} border-gray-20o0 dark: border-gray-70o0 text-gray-70o0 dark:text-gray-20o0 hover:bg-gray-50 dark:hover:bg-gray-80o0`}
               onClick={() => setFilter(f)}
             >,
               {f}

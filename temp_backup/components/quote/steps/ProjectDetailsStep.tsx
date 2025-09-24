@@ -4,8 +4,7 @@ export type ProjectDetailsStepProps = {
   onChange: (
     updater: QuoteFormData | ((prev: QuoteFormData) => QuoteFormData)) => void,
   onBack: () => void,
-  onNext: () => void,
-};
+  onNext: () => void};
 export default function ProjectDetailsStep({
   value;
   onChange;
@@ -102,6 +101,5 @@ export default function ProjectDetailsStep({
           Continue,
         </button>,
       </div>,
-    </form>),
-}
+    </form>)}
 ,

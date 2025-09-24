@@ -108,8 +108,7 @@ const AI20o25BusinessIntelligenceShowcase = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
   };
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -120,8 +119,7 @@ const AI20o25BusinessIntelligenceShowcase = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -173,8 +171,7 @@ const AI20o25BusinessIntelligenceShowcase = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 border border-gray-30o0 hover: border-purple-30o0 hover:text-purple-60o0',
-              }`}
+                  : 'bg-white text-gray-70o0 border border-gray-30o0 hover: border-purple-30o0 hover:text-purple-60o0'}`}
             >,
               {category.label} ({category.count}),
             </button>))}
@@ -185,8 +182,7 @@ const AI20o25BusinessIntelligenceShowcase = () => {
             <div
               key={item.id}
               className={`bg-white rounded-xl shadow-lg border border-gray-20o0 overflow-hidden transition-all duration-30o0 hover: shadow-xl hover:scale-10o5 ${
-                item.featured ? 'ring-2 ring-purple-50o0 ring-opacity-50' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-50o0 ring-opacity-50' : ''}`}
             >,
               {item.featured && (
                 <div className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-4 py-2 text-sm font-semibold text-center'>,
@@ -265,6 +261,5 @@ const AI20o25BusinessIntelligenceShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25BusinessIntelligenceShowcase;

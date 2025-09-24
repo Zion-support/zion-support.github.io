@@ -15,8 +15,7 @@ interface ContentItem {
     roi: string,
     savings: string,
     accuracy: string,
-    efficiency: string,
-  };
+    efficiency: string};
 }
 ,
 const AutonomousEnterpriseContentShowcase: React.FC = () => {
@@ -111,8 +110,7 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeLabel = (type: string) => {
     switch (type) {
@@ -123,8 +121,7 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {
       case 'resource':,
         return 'Implementation Guide',
       default:,
-        return 'Content',
-    }
+        return 'Content'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -135,8 +132,7 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
   };
   return (
     <section className='py-16 bg-gray-50'>,
@@ -192,8 +188,7 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                 selectedCategory === category.id,
                   ? 'bg-purple-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 border border-gray-20o0 hover: bg-gray-50',
-              }`}
+                  : 'bg-white text-gray-70o0 border border-gray-20o0 hover: bg-gray-50'}`}
             >,
               {category.label}
               <span className='ml-2 bg-current bg-opacity-20 rounded-full px-2 py-1 text-xs'>,
@@ -355,6 +350,5 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AutonomousEnterpriseContentShowcase;

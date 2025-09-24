@@ -8,8 +8,7 @@ export interface MicroSaasService {
     monthly: number,
     yearly: number,
     oneTime?: number,
-    currency: string,
-  };
+    currency: string};
   features: string[],
   benefits: string[],
   useCases: string[],
@@ -25,8 +24,7 @@ export interface MicroSaasService {
   author: {
     name: string,
     id: string,
-    avatarUrl?: string,
-  };
+    avatarUrl?: string};
 }
 ,
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
@@ -39,8 +37,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: {
       monthly: 49;
       yearly: 490;
-      currency: "$",
-    };
+      currency: "$"};
     features: [
       "GPT-4 powered content generation";
       "SEO optimization suggestions";
@@ -74,8 +71,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     author: {
       name: "Zion AI Labs";
       id: "zion-ai-labs";
-      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0"}
   };
   {
     id: "ai-chatbot-builder";
@@ -85,8 +81,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: {
       monthly: 79;
       yearly: 790;
-      currency: "$",
-    };
+      currency: "$"};
     features: [
       "Drag-and-drop chatbot builder";
       "Advanced NLP and intent recognition";
@@ -120,8 +115,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     author: {
       name: "Zion Conversational AI";
       id: "zion-conversational-ai";
-      avatarUrl: "https://images.unsplash.com/photo-15734970o19940-1c28c88b4f3e?auto=format&fit=crop&w=10o0&h=10o0",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-15734970o19940-1c28c88b4f3e?auto=format&fit=crop&w=10o0&h=10o0"}
   };
   {
     id: "ai-data-analytics";
@@ -131,8 +125,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: {
       monthly: 99;
       yearly: 990;
-      currency: "$",
-    };
+      currency: "$"};
     features: [
       "Automated data insights generation";
       "Predictive analytics and forecasting";
@@ -166,8 +159,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     author: {
       name: "Zion Data Intelligence";
       id: "zion-data-intelligence";
-      avatarUrl: "https://images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0"}
   };
   // IT Services,
   {
@@ -179,8 +171,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       monthly: 0;
       yearly: 0;
       oneTime: 50o00;
-      currency: "$",
-    };
+      currency: "$"};
     features: [
       "Cloud architecture design";
       "Data migration planning";
@@ -214,8 +205,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     author: {
       name: "Zion Cloud Solutions";
       id: "zion-cloud-solutions";
-      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0"}
   };
   {
     id: "cybersecurity-audit";
@@ -226,8 +216,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       monthly: 0;
       yearly: 0;
       oneTime: 350o0;
-      currency: "$",
-    };
+      currency: "$"};
     features: [
       "Vulnerability assessment";
       "Penetration testing";
@@ -261,8 +250,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     author: {
       name: "Zion Security";
       id: "zion-security";
-      avatarUrl: "https://images.unsplash.com/photo-15734970o19940-1c28c88b4f3e?auto=format&fit=crop&w=10o0&h=10o0",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-15734970o19940-1c28c88b4f3e?auto=format&fit=crop&w=10o0&h=10o0"}
   };
   {
     id: "it-onsite-support";
@@ -272,8 +260,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: {
       monthly: 299;
       yearly: 2990;
-      currency: "$",
-    };
+      currency: "$"};
     features: [
       "4-hour response time guarantee";
       "Certified IT technicians";
@@ -307,8 +294,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     author: {
       name: "Zion Global IT Support";
       id: "zion-global-it-support";
-      avatarUrl: "https://images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0"}
   };
   // Micro SAAS,
   {
@@ -319,8 +305,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: {
       monthly: 29;
       yearly: 290;
-      currency: "$",
-    };
+      currency: "$"};
     features: [
       "AI-powered task prioritization";
       "Real-time team collaboration";
@@ -354,8 +339,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     author: {
       name: "Zion Productivity";
       id: "zion-productivity";
-      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0"}
   };
   {
     id: "invoicing-automation";
@@ -365,8 +349,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: {
       monthly: 19;
       yearly: 190;
-      currency: "$",
-    };
+      currency: "$"};
     features: [
       "Automated invoice generation";
       "AI expense categorization";
@@ -400,8 +383,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     author: {
       name: "Zion Financial Solutions";
       id: "zion-financial-solutions";
-      avatarUrl: "https://images.unsplash.com/photo-15734970o19940-1c28c88b4f3e?auto=format&fit=crop&w=10o0&h=10o0",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-15734970o19940-1c28c88b4f3e?auto=format&fit=crop&w=10o0&h=10o0"}
   };
   {
     id: "customer-support-saas";
@@ -411,8 +393,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: {
       monthly: 39;
       yearly: 390;
-      currency: "$",
-    };
+      currency: "$"};
     features: [
       "AI-powered chatbot support";
       "Ticket management system";
@@ -446,8 +427,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     author: {
       name: "Zion Customer Experience";
       id: "zion-customer-experience";
-      avatarUrl: "https://images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0"}
   };
   // Development Services,
   {
@@ -459,8 +439,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       monthly: 0;
       yearly: 0;
       oneTime: 80o00;
-      currency: "$",
-    };
+      currency: "$"};
     features: [
       "Custom web application design";
       "Responsive and mobile-first design";
@@ -494,8 +473,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     author: {
       name: "Zion Development Studio";
       id: "zion-development-studio";
-      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0"}
   };
   {
     id: "mobile-app-development";
@@ -506,8 +484,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       monthly: 0;
       yearly: 0;
       oneTime: 120o00;
-      currency: "$",
-    };
+      currency: "$"};
     features: [
       "Cross-platform mobile app development";
       "Custom UI/UX design";
@@ -541,8 +518,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     author: {
       name: "Zion Mobile Studio";
       id: "zion-mobile-studio";
-      avatarUrl: "https://images.unsplash.com/photo-15734970o19940-1c28c88b4f3e?auto=format&fit=crop&w=10o0&h=10o0",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-15734970o19940-1c28c88b4f3e?auto=format&fit=crop&w=10o0&h=10o0"}
   };
   // Analytics Services,
   {
@@ -553,8 +529,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: {
       monthly: 149;
       yearly: 1490;
-      currency: "$",
-    };
+      currency: "$"};
     features: [
       "Interactive dashboard creation";
       "Automated report generation";
@@ -588,8 +563,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     author: {
       name: "Zion Business Intelligence";
       id: "zion-business-intelligence";
-      avatarUrl: "https://images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0"}
   };
   // Security Services,
   {
@@ -600,8 +574,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: {
       monthly: 299;
       yearly: 2990;
-      currency: "$",
-    };
+      currency: "$"};
     features: [
       "24/7 security monitoring";
       "Threat detection and response";
@@ -635,8 +608,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     author: {
       name: "Zion Security Operations";
       id: "zion-security-operations";
-      avatarUrl: "https://images.unsplash.com/photo-15734970o19940-1c28c88b4f3e?auto=format&fit=crop&w=10o0&10o0",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-15734970o19940-1c28c88b4f3e?auto=format&fit=crop&w=10o0&10o0"}
   };
   // Automation Services,
   {
@@ -647,8 +619,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: {
       monthly: 89;
       yearly: 890;
-      currency: "$",
-    };
+      currency: "$"};
     features: [
       "Workflow automation builder";
       "RPA (Robotic Process Automation)";
@@ -682,17 +653,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     author: {
       name: "Zion Automation Solutions";
       id: "zion-automation-solutions";
-      avatarUrl: "https://images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0"}
   }
 ],
 export const getServiceByCategory = (category: string) => {
-  return MICRO_SAAS_SERVICES.filter(service => service.category === category),
-};
+  return MICRO_SAAS_SERVICES.filter(service => service.category === category)};
 export const getFeaturedServices = () => {
   return MICRO_SAAS_SERVICES.filter(service => service.badge === 'Popular' || service.badge === 'Featured')};
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return MICRO_SAAS_SERVICES.filter(service => {
     const monthlyPrice = service.price.monthly || service.price.oneTime || 0,
-    return monthlyPrice >= minPrice && monthlyPrice <= maxPrice,
-  })};
+    return monthlyPrice >= minPrice && monthlyPrice <= maxPrice})};

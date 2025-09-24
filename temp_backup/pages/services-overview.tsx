@@ -15,6 +15,5 @@ export default function ServicesOverviewPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

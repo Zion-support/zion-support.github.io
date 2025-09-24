@@ -35,6 +35,5 @@ export default function AI20o262030FuturePredictionsBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

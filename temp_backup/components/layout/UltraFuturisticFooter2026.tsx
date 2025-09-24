@@ -589,6 +589,5 @@ const UltraFuturisticFooter20o26: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </footer>),
-};
+    </footer>)};
 export default UltraFuturisticFooter20o26;

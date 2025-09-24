@@ -28,8 +28,7 @@ export default function LoginContent({ }: LoginContentProps) {
     <div>,
       <h1>LoginContent</h1>,
       <p>This component is currently under development.</p>,
-    </div>),
-}
+    </div>)}
 }
 ursor/add-new-services-and-deploy-updates-0o462,
 origin/cursor/integrate-build-improve-and-re-verify-c7b5}

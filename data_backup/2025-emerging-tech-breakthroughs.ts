@@ -89,8 +89,7 @@ reviews: number,export const emergingTechBreakthroughs20o25: EmergingTechBreakth
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete brain-computer interface platform with neural signal processing, real-time monitoring, and application development tools.';
@@ -150,8 +149,7 @@ reviews: number,export const emergingTechBreakthroughs20o25: EmergingTechBreakth
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete quantum internet security platform with quantum cryptography, network monitoring, and compliance tools.';
@@ -211,8 +209,7 @@ reviews: number,export const emergingTechBreakthroughs20o25: EmergingTechBreakth
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete space mining operations platform with asteroid identification, automated mining, and resource management.';
@@ -272,8 +269,7 @@ reviews: number,export const emergingTechBreakthroughs20o25: EmergingTechBreakth
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete quantum robotics platform with quantum-enhanced AI, autonomous navigation, and multi-robot coordination.';
@@ -333,8 +329,7 @@ reviews: number,export const emergingTechBreakthroughs20o25: EmergingTechBreakth
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete autonomous vehicle AI platform with computer vision, decision-making, and safety systems.';
@@ -394,8 +389,7 @@ reviews: number,export const emergingTechBreakthroughs20o25: EmergingTechBreakth
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete quantum materials discovery platform with quantum chemistry, AI design, and property prediction.';
@@ -455,8 +449,7 @@ reviews: number,export const emergingTechBreakthroughs20o25: EmergingTechBreakth
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete metaverse AI development platform with AI-powered tools, dynamic generation, and intelligent environments.';

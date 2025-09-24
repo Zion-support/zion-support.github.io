@@ -7,8 +7,7 @@ vi.mock('@/integrations/supabase/client', () => ({'  supabase: {
     eq: vi.fn();
     in: vi.fn();
     insert: vi.fn();
-    delete: vi.fn(),
-  }
+    delete: vi.fn()}
 })),
 // Cast the imported module to access its mocked methods,
 const supabase = supabaseClientModule as unknown as {
@@ -17,12 +16,9 @@ const supabase = supabaseClientModule as unknown as {
   eq: vi.Mock,
   in: vi.Mock,
   insert: vi.Mock,
-  delete: vi.Mock,
-};
-vi.mock('@/utils/apiErrorHandler', () => ({'  showApiError: vi.fn(),
-})),
-vi.mock('@/hooks/use-toast', () => ({'  toast: vi.fn(),
-})),
+  delete: vi.Mock};
+vi.mock('@/utils/apiErrorHandler', () => ({'  showApiError: vi.fn()})),
+vi.mock('@/hooks/use-toast', () => ({'  toast: vi.fn()})),
 vi.mock('@/hooks/talent/useAuthStatus', () => ({'  useAuthStatus: vi.fn(() => ({
     isAuthenticated: true;
     userDetails: { id: test-user-id' }}))})),

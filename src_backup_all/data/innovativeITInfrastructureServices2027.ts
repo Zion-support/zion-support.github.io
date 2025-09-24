@@ -5,7 +5,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_20o27: ProductListing[] = [
     id: 'cloud-native-infrastructure-platform';
     title: 'Cloud-Native Infrastructure Platform';
     description:,
-      'Enterprise-grade cloud-native infrastructure platform that automatically scales, self-heals, and optimizes window.performance. Features multi-cloud orchestration, zero-downtime deployments, and intelligent resource management.';
+      'Enterprise-grade cloud-native infrastructure platform that automatically scales, self-heals, and optimizes window.window.performance. Features multi-cloud orchestration, zero-downtime deployments, and intelligent resource management.';
     category: 'Cloud & DevOps';
     subcategory: 'Infrastructure Platform';
     price: 8999;
@@ -352,7 +352,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_20o27: ProductListing[] = [
     id: 'network-performance-monitoring';
     title: 'AI-Powered Network Performance Monitoring Platform';
     description:,
-      'Intelligent network monitoring platform that uses AI to detect anomalies, predict failures, and optimize network window.performance. Provides real-time visibility and reduces network downtime by 80%.';
+      'Intelligent network monitoring platform that uses AI to detect anomalies, predict failures, and optimize network window.window.performance. Provides real-time visibility and reduces network downtime by 80%.';
     category: 'IT Infrastructure';
     subcategory: 'Network Monitoring';
     price: 4499;

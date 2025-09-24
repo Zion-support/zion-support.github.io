@@ -3,8 +3,7 @@ import EnhancedNavigation from './EnhancedNavigation',
 import EnhancedFooter from './EnhancedFooter',
 import dynamic from 'next/dynamic',
 interface EnhancedLayoutProps {
-  children: ReactNode,
-}
+  children: ReactNode}
 ,
 // Lazy-load chat widget to avoid adding to initial critical path,
 const ChatWidget = dynamic(() => import('../chat/ChatWidget'), { ssr: false }),

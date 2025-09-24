@@ -32,16 +32,14 @@ const SecurityDashboard = () => {
       case 'Low': return 'text-green-60o0 bg-green-10o0',
       case 'Medium': return 'text-yellow-60o0 bg-yellow-10o0',
       case 'High': return 'text-red-60o0 bg-red-10o0',
-      default: return 'text-gray-60o0 bg-gray-10o0',
-    }
+      default: return 'text-gray-60o0 bg-gray-10o0'}
   };
   const getStatusColor = (status) => {
     switch (status) {
       case 'Success': return 'text-green-60o0 bg-green-10o0',
       case 'Blocked': return 'text-red-60o0 bg-red-10o0',
       case 'Quarantined': return 'text-yellow-60o0 bg-yellow-10o0',
-      default: return 'text-gray-60o0 bg-gray-10o0',
-    }
+      default: return 'text-gray-60o0 bg-gray-10o0'}
   };
   return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-10o0">,
@@ -170,6 +168,5 @@ const SecurityDashboard = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default SecurityDashboard;

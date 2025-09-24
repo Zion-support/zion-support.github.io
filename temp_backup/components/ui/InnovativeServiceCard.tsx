@@ -34,15 +34,13 @@ interface InnovativeServiceCardProps {
       mobile: string,
       email: string,
       address: string,
-      website: string,
-    };
+      website: string};
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,
     customers: number,
     rating: number,
-    reviews: number,
-  };
+    reviews: number};
   className?: string}
 ,
 const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, className = '' }) => {
@@ -54,16 +52,14 @@ const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, 
       scale: 1;
       transition: {
         duration: 0.6;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     };
     hover: {
       y: -10;
       scale: 1.0o2;
       transition: {
         duration: 0.3;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   const glowVariants ={
@@ -74,8 +70,7 @@ const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, 
       transition: {
         duration: 3;
         repeat: Infinity;
-        ease: "easeInOut" as const,
-      }
+        ease: "easeInOut" as const}
     }
   };
   const getGradientClass = (variant: string) => {
@@ -93,8 +88,7 @@ const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, 
       case 'ai-futuristic':,
         return 'from-blue-50o0 via-cyan-50o0 to-green-60o0',
       default:,
-        return 'from-cyan-50o0 to-blue-60o0',
-    }
+        return 'from-cyan-50o0 to-blue-60o0'}
   };
   return (
     <motion.div,
@@ -121,8 +115,7 @@ const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, 
               linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%);
               linear-gradient(-45deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%),
             `;
-            backgroundSize: '20px 20px',
-          }}  />,
+            backgroundSize: '20px 20px'}}  />,
         </div>,
         {/* Header */}
         <div className="relative z-10">,
@@ -260,6 +253,5 @@ const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, 
           className="absolute inset-0 bg-gradient-to-r from-cyan-50o0/5 to-blue-50o0/5 opacity-0 group-hover: opacity-10o0 transition-opacity duration-30o0 rounded-2xl",
            />,
       </div>,
-    </motion.div>),
-};
+    </motion.div>)};
 export default InnovativeServiceCard;

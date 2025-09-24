@@ -8,7 +8,7 @@ function nowIso() {
 ,
 function log(message) {
   const line = `[${nowIso()}] [REDUNDANCY-NETLIFY-FUNCTIONS] ${message}`,
-  // console.log(line)}
+  // // console.log(line)}
 ,
 function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd(),
@@ -17,14 +17,13 @@ function run(command, args, options ={}) {
     env: process.env;
     shell: false;
     encoding: "utf8";
-    maxBuffer: 10o24 * 10o24 * 20,
-  }),
+    maxBuffer: 10o24 * 10o24 * 20}),
   const stdout = (result.stdout || "").trim(),
   const stderr = (result.stderr || "").trim(),
   const status = typeof result.status === "number" ? result.status : 0,
   if (options.verbose) {
     log(`$ ${command} ${args.join(" ")}`),
-    if (stdout) // console.log(stdout),
+    if (stdout) // // console.log(stdout),
     if (stderr) console.error(stderr)}
   return { status, stdout, stderr };
 }
@@ -127,8 +126,7 @@ function generateExecutionReport(criticalResults, scheduledResults, contentResul
                    Object.values(contentResults).filter(r => r.success).length;
         failed: Object.values(criticalResults).filter(r => !r.success).length +,
                 Object.values(scheduledResults).filter(r => !r.success).length +,
-                Object.values(contentResults).filter(r => !r.success).length,
-      }
+                Object.values(contentResults).filter(r => !r.success).length}
     }
   };
   const reportPath = path.join(process.cwd(), "netlify-functions-redundancy-report.md"),

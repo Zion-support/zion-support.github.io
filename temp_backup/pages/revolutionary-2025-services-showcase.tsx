@@ -98,8 +98,7 @@ export default function Revolutionary2025ServicesShowcase() {
         return (
           new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()),
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   // Statistics,
   const stats = {
@@ -250,8 +249,7 @@ export default function Revolutionary2025ServicesShowcase() {
                       className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-300 ${
                         selectedCategory === category.id,
                           ? 'bg-gradient-to-r from-blue-600 to-purple-600 border-blue-500 text-white',
-                          : 'border-gray-600 text-gray-300 hover: border-blue-500 hover:text-blue-400',
-                      }`}
+                          : 'border-gray-600 text-gray-300 hover: border-blue-500 hover:text-blue-400'}`}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >,
@@ -282,8 +280,7 @@ export default function Revolutionary2025ServicesShowcase() {
                       className={`p-2 rounded-lg transition-colors ${
                         viewMode === 'grid',
                           ? 'bg-blue-600 text-white',
-                          : 'text-gray-400 hover: text-blue-400',
-                      }`}
+                          : 'text-gray-400 hover: text-blue-400'}`}
                     >,
                       <Grid className='w-5 h-5' />,
                     </button>,
@@ -292,8 +289,7 @@ export default function Revolutionary2025ServicesShowcase() {
                       className={`p-2 rounded-lg transition-colors ${
                         viewMode === 'list',
                           ? 'bg-blue-600 text-white',
-                          : 'text-gray-400 hover: text-blue-400',
-                      }`}
+                          : 'text-gray-400 hover: text-blue-400'}`}
                     >,
                       <List className='w-5 h-5' />,
                     </button>,
@@ -314,8 +310,7 @@ export default function Revolutionary2025ServicesShowcase() {
                 className={
                   viewMode === 'grid',
                     ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8',
-                    : 'space-y-6',
-                }
+                    : 'space-y-6'}
               >,
                 {sortedServices.map(service => (
                   <motion.div,
@@ -326,8 +321,7 @@ export default function Revolutionary2025ServicesShowcase() {
                     className={`group relative ${
                       viewMode === 'grid',
                         ? 'bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover: border-blue-500/50 transition-all duration-300 hover:scale-105',
-                        : 'bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300',
-                    }`}
+                        : 'bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300'}`}
                   >,
                     {/* Service Header */}
                     <div className='flex items-start justify-between mb-4'>,
@@ -499,6 +493,5 @@ export default function Revolutionary2025ServicesShowcase() {
           </section>,
         </div>,
       </UltraQuantumHolographicBackground>,
-    </Layout>),
-}
+    </Layout>)}
 ,

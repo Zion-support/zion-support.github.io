@@ -20,8 +20,7 @@ export default function InsightPage() {
         </ul>,
         <p className="mt-6">More at <a className="text-cyan-30o0 underline" href="https: //ziontechgroup.com" target="_blank" rel="noopener">ziontechgroup.com</a>.</p>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-12290o1" className="internal-link">Related Content</Link>,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-122931" className="internal-link">Related Content</Link>,

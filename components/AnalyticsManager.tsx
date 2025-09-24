@@ -13,8 +13,7 @@ interface PerformanceMetrics {
   lcp: number,
   fid: number,
   cls: number,
-  ttfb: number,
-}
+  ttfb: number}
 ,
 interface AnalyticsManagerProps {
   trackingId?: string,
@@ -42,8 +41,7 @@ const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
       gtag('config', '${trackingId}', {
         page_title: document.title;
         page_location: window.location.href;
-        send_page_view: true,
-      }),
+        send_page_view: true}),
     `,
     document.head.appendChild(script2),
     setIsLoaded(true)}, [trackingId]),
@@ -54,7 +52,7 @@ const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
       if (
         typeof (window as any).gtag !== 'undefined' &&,
         'performance' in window) {
-        const perfData = window.performance.getEntriesByType(
+        const perfData = window.window.performance.getEntriesByType(
           'navigation')[0] as PerformanceNavigationTiming,
         if (perfData) {
           const loadTime = perfData.loadEventEnd - perfData.fetchStart,

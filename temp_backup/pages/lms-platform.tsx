@@ -26,6 +26,5 @@ export default function LmsPlatform() {
         'Education';
       ]}
       canonical='https: //ziontechgroup.com/lms-platform',
-    />),
-}
+    />)}
 ,

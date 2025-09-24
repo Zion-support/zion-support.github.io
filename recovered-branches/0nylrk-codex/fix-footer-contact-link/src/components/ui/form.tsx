@@ -13,8 +13,7 @@ import { cn } from "@/lib/utils",
 import { Label } from "@/components/ui/label",
 const Form = FormProvider,
 type FormFieldContextValue = {
-  name: string,
-}
+  name: string}
 ,
 const FormFieldContext = React.createContext<FormFieldContextValue>({
   name: ""}),
@@ -46,8 +45,7 @@ const useFormField = () => {
 }
 ,
 type FormItemContextValue = {
-  id: string,
-}
+  id: string}
 ,
 const FormItemContext = React.createContext<FormItemContextValue | null>(null),
 const FormItem = React.forwardRef<,

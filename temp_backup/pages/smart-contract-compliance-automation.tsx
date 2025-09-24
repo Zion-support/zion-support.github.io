@@ -20,6 +20,5 @@ export default function SmartContractComplianceAutomationPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

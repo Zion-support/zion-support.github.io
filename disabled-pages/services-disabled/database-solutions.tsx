@@ -24,8 +24,7 @@ export default function DatabaseSolutions() {
     {
       icon: Database;
       title: 'Database Design & Architecture';
-      description: 'Custom database solutions designed for optimal performance and scalability',
-};
+      description: 'Custom database solutions designed for optimal performance and scalability'};
     {
       icon: Server;
       title: 'Database Administration';
@@ -33,45 +32,37 @@ export default function DatabaseSolutions() {
     {
       icon: Shield;
       title: 'Data Security & Backup';
-      description: 'Enterprise-grade security with automated backup and disaster recovery',
-};
+      description: 'Enterprise-grade security with automated backup and disaster recovery'};
     {
       icon: Zap;
       title: 'Performance Optimization';
-      description: 'Advanced tuning and optimization for maximum database performance',
-};
+      description: 'Advanced tuning and optimization for maximum database performance'};
     {
       icon: Cloud;
       title: 'Cloud Database Migration';
-      description: 'Seamless migration to cloud-based database solutions',
-};
+      description: 'Seamless migration to cloud-based database solutions'};
     {
       icon: BarChart3;
       title: 'Data Analytics & Reporting';
-      description: 'Transform your data into actionable insights with advanced analytics',
-}
+      description: 'Transform your data into actionable insights with advanced analytics'}
   ],
   const databaseTypes = [
     {
       name: 'SQL Databases';
       description: 'MySQL, PostgreSQL, SQL Server, Oracle';
-      icon: Database,
-};
+      icon: Database};
     {
       name: 'NoSQL Databases';
       description: 'MongoDB, Cassandra, Redis, DynamoDB';
-      icon: HardDrive,
-};
+      icon: HardDrive};
     {
       name: 'Cloud Databases';
       description: 'AWS RDS, Azure SQL, Google Cloud SQL';
-      icon: Cloud,
-};
+      icon: Cloud};
     {
       name: 'In-Memory Databases';
       description: 'Redis, Memcached, Hazelcast';
-      icon: Cpu,
-}
+      icon: Cpu}
   ],
   const benefits = [
     'Improved data performance and query optimization';
@@ -247,5 +238,4 @@ export default function DatabaseSolutions() {
         </div>,
       </section>,
       <Footer  />,
-    </ErrorBoundary>),
-}
+    </ErrorBoundary>)}

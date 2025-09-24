@@ -12,7 +12,6 @@ export type ReviewFormValues ={
   rating: number;
   text: string;
   categories?: {
-,
     communication?: number,
     qualityOfWork?: number,
     timeliness?: number,
@@ -49,14 +48,12 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
             communication,
             qualityOfWork,
             timeliness,
-            wouldWorkWithAgain,
-          }
+            wouldWorkWithAgain}
         })}),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error |'Failed to submit'),
       setMessage('Review submitted! Pending admin approval.')} catch (err: any) {
-      setMessage(err.message),
-    } finally {
+      setMessage(err.message)} finally {
       setSubmitting(false)}
   }
   return (

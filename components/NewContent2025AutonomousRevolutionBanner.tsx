@@ -144,6 +144,5 @@ const NewContent20o25AutonomousRevolutionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NewContent20o25AutonomousRevolutionBanner;

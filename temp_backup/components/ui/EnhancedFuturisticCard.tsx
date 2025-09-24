@@ -7,8 +7,7 @@ interface EnhancedFuturisticCardProps {
   intensity?: 'low' | 'medium' | 'high',
   glow?: boolean,
   interactive?: boolean,
-  onClick?: () => void,
-}
+  onClick?: () => void}
 ,
 const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
   children;
@@ -34,64 +33,56 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
           glowColor: 'from-cyan-40o0/20 to-blue-40o0/20';
           accentColor: 'text-cyan-40o0';
           bgGradient: 'from-slate-90o0/80 to-slate-80o0/80';
-          particleColor: '#60a5fa',
-        };
+          particleColor: '#60a5fa'};
       case 'quantum':,
         return {
           borderColor: 'from-purple-50o0/50 to-pink-50o0/50';
           glowColor: 'from-purple-40o0/20 to-pink-40o0/20';
           accentColor: 'text-purple-40o0';
           bgGradient: 'from-slate-90o0/80 to-slate-80o0/80';
-          particleColor: '#a855f7',
-        };
+          particleColor: '#a855f7'};
       case 'holographic':,
         return {
           borderColor: 'from-green-50o0/50 to-emerald-50o0/50';
           glowColor: 'from-green-40o0/20 to-emerald-40o0/20';
           accentColor: 'text-green-40o0';
           bgGradient: 'from-slate-90o0/80 to-slate-80o0/80';
-          particleColor: '#10b981',
-        };
+          particleColor: '#10b981'};
       case 'cyberpunk':,
         return {
           borderColor: 'from-red-50o0/50 to-orange-50o0/50';
           glowColor: 'from-red-40o0/20 to-orange-40o0/20';
           accentColor: 'text-red-40o0';
           bgGradient: 'from-slate-90o0/80 to-slate-80o0/80';
-          particleColor: '#ef4444',
-        };
+          particleColor: '#ef4444'};
       case 'space':,
         return {
           borderColor: 'from-blue-50o0/50 to-indigo-50o0/50';
           glowColor: 'from-blue-40o0/20 to-indigo-40o0/20';
           accentColor: 'text-blue-40o0';
           bgGradient: 'from-slate-90o0/80 to-slate-80o0/80';
-          particleColor: '#3b82f6',
-        };
+          particleColor: '#3b82f6'};
       case 'biotech':,
         return {
           borderColor: 'from-green-50o0/50 to-teal-50o0/50';
           glowColor: 'from-green-40o0/20 to-teal-40o0/20';
           accentColor: 'text-green-40o0';
           bgGradient: 'from-slate-90o0/80 to-slate-80o0/80';
-          particleColor: '#14b8a6',
-        };
+          particleColor: '#14b8a6'};
       case 'energy':,
         return {
           borderColor: 'from-yellow-50o0/50 to-orange-50o0/50';
           glowColor: 'from-yellow-40o0/20 to-orange-40o0/20';
           accentColor: 'text-yellow-40o0';
           bgGradient: 'from-slate-90o0/80 to-slate-80o0/80';
-          particleColor: '#eab308',
-        };
+          particleColor: '#eab308'};
       default: ,
         return {
           borderColor: 'from-cyan-50o0/50 to-blue-50o0/50';
           glowColor: 'from-cyan-40o0/20 to-blue-40o0/20';
           accentColor: 'text-cyan-40o0';
           bgGradient: 'from-slate-90o0/80 to-slate-80o0/80';
-          particleColor: '#60a5fa',
-        };
+          particleColor: '#60a5fa'};
     }
   };
   const styles = getVariantStyles(),
@@ -117,8 +108,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
       vy: number,
       size: number,
       life: number,
-      maxLife: number,
-    }> = [],
+      maxLife: number}> = [],
     const createParticles = () => {
       const count = intensity === 'high' ? 20 : intensity === 'medium' ? 12 : 6,
       for (let i = 0, i < count, i++) {
@@ -129,8 +119,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
           vy: (Math.random() - 0.5) * 2;
           size: Math.random() * 2 + 1;
           life: Math.random() * 10o0;
-          maxLife: 10o0,
-        })}
+          maxLife: 10o0})}
     };
     const getParticleColor = (variant: string): string => {
       switch (variant) {
@@ -289,8 +278,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
           style={{
             background: `linear-gradient(90deg, transparent, ${styles.particleColor}, transparent)`;
             backgroundSize: '20o0% 10o0%';
-            animation: isHovered ? 'borderFlow 2s linear infinite' : 'none',
-          }}
+            animation: isHovered ? 'borderFlow 2s linear infinite' : 'none'}}
          />,
       </div>,
       {/* Scanning line effect */}
@@ -498,8 +486,8 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
       </AnimatePresence>,
       <style jsx>{`,
         @keyframes borderFlow {
-          0% { background-position: 20o0% 0, }
-          10o0% { background-position: -20o0% 0, }
+          0% { background-position: 20o0% 0}
+          10o0% { background-position: -20o0% 0}
         }
       `}</style>,
     </motion.div>)};

@@ -20,6 +20,5 @@ export default function AutoUpdate20o250808t232723886zPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

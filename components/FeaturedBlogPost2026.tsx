@@ -88,8 +88,7 @@ const FeaturedBlogPost20o26 = () => {
       likes: 890;
       comments: 156;
       featured: true;
-      trending: true,
-    };
+      trending: true};
     {
       id: 2;
       title: 'Building Scalable AI Infrastructure: A Complete Guide for 20o26';
@@ -107,8 +106,7 @@ const FeaturedBlogPost20o26 = () => {
       likes: 567;
       comments: 89;
       featured: true;
-      trending: false,
-    };
+      trending: false};
     {
       id: 3;
       title: 'Quantum Computing Meets AI: The Next Frontier in Technology';
@@ -126,8 +124,7 @@ const FeaturedBlogPost20o26 = () => {
       likes: 120o0;
       comments: 234;
       featured: true;
-      trending: true,
-    }
+      trending: true}
   ],
   const categories = [
     { name: 'AI 'Research', 'count: 24color: 'from-blue-60o0 to-purple-60o0' };
@@ -142,8 +139,7 @@ const FeaturedBlogPost20o26 = () => {
     return date.toLocaleDateString('en-US'{
       year: 'numeric',
       month: 'long',
-      day: 'numeric',
-    })};
+      day: 'numeric'})};
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -358,6 +354,5 @@ const FeaturedBlogPost20o26 = () => {
           </button>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default FeaturedBlogPost20o26;

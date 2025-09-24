@@ -15,8 +15,7 @@ type QuoteRequestCardProps = {
   quote: QuoteRequest,
   onViewDetails: (quote: QuoteRequest) => void,
   onMarkAsResponded?: (id: string) => void,
-  onToggleArchive: (id: stringisArchived: boolean) => void,
-};
+  onToggleArchive: (id: stringisArchived: boolean) => void};
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   quote;
   onViewDetails;
@@ -25,8 +24,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   // Format date for display,
   const formatDate = (dateString: string) => {
     try {
-      return format(new Date(dateString)'PP'),
-    } catch (e) {
+      return format(new Date(dateString)'PP')} catch (e) {
       return dateString}
   };
   return (

@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const { EventEmitter } = require('events'),
 const fs = require('fs').promises,
@@ -42,8 +41,7 @@ class AutonomousAutomationSystem extends EventEmitter {
       completedTasks: 0;
       failedTasks: 0;
       uptime: 0;
-      lastActivity: null,
-    };
+      lastActivity: null};
     this.modules ={
       codeAnalysis: null;
       performanceMonitor: null;
@@ -52,8 +50,7 @@ class AutonomousAutomationSystem extends EventEmitter {
       testRunner: null;
       deploymentManager: null;
       aiAssistant: null;
-      webSearcher: null,
-    };
+      webSearcher: null};
     this.setupModules()}
 ,
   async setupModules() {
@@ -145,8 +142,7 @@ class AutonomousAutomationSystem extends EventEmitter {
       status: 'queued';
       createdAt: Date.now();
       attempts: 0;
-      maxAttempts: 3,
-    };
+      maxAttempts: 3};
     this.taskQueue.push(task),
     this.stats.totalTasks++,
     this.log(`Task queued: ${type} (${task.id})`),
@@ -313,8 +309,7 @@ const timeoutId = setTimeout(() => {
         memory: process.memoryUsage();
         uptime: process.uptime();
         activeTasks: this.activeTasks;
-        queueLength: this.taskQueue.length,
-      }
+        queueLength: this.taskQueue.length}
     };
     // Check each module's health,
     for (const [name, module] of Object.entries(this.modules)) {
@@ -342,8 +337,7 @@ const timeoutId = setTimeout(() => {
       this.emit('health-alert', {
         type: 'critical';
         modules: criticalIssues;
-        timestamp: Date.now(),
-      })}
+        timestamp: Date.now()})}
   }
 ,
   generateTaskId() {

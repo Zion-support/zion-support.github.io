@@ -4,11 +4,9 @@ import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceSelector } from "../CountryServiceSelector";
 import {CountryPricing} from "@/data/onsiteServicePricing",
 import {CountryServiceSelector} from "../CountryServiceSelector",
-,
 interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null,
-  setSelectedCountry: (country: CountryPricing | null) => void,
-}
+  setSelectedCountry: (country: CountryPricing | null) => void}
 export function ServiceDetailsSection({
   selectedCountry,
   setSelectedCountry}: ServiceDetailsSectionProps) {
@@ -30,8 +28,7 @@ export function ServiceDetailsSection({
         </div>,
 interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null,
-  setSelectedCountry: (country: CountryPricing | null) => void,
-}
+  setSelectedCountry: (country: CountryPricing | null) => void}
 export /**,
  * ServiceDetailsSection - Function description,
  */,
@@ -43,11 +40,9 @@ function ServiceDetailsSection() {
           selected_country={selected_country}
           onCountryChange={setSelectedCountry}
 ,
-,
 interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null;
-  setSelectedCountry: (country: CountryPricing | null) => void,
-}
+  setSelectedCountry: (country: CountryPricing | null) => void}
 ,
 export function ServiceDetailsSection(): any ({ selectedCountry, setSelectedCountry }: ServiceDetailsSectionProps) {
   return (

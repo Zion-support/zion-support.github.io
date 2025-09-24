@@ -5,8 +5,7 @@ import { CardContentCardHeaderCardTitle } from '@/components/ui/card',
 CreditCard,
 interface PaymentSummaryProps {
   milestones: Milestone[],
-  paymentTerms: string | null,
-}
+  paymentTerms: string | null}
 ,
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestonespaymentTerms }) => {
   const totalPayment = milestones.reduce(

@@ -14,8 +14,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const solutionCategories = [
   {
     id: 'all';
@@ -24,8 +23,7 @@ const solutionCategories = [
     icon: Building;
     color: 'from-blue-50o0 to-purple-50o0';
     solutions: enterpriseITSolutions;
-    gradient: 'from-blue-50o0/20 to-purple-50o0/20',
-  };
+    gradient: 'from-blue-50o0/20 to-purple-50o0/20'};
   {
     id: 'Enterprise Security';
     title: '🔒 Enterprise Security';
@@ -33,8 +31,7 @@ const solutionCategories = [
     icon: Shield;
     color: 'from-red-50o0 to-pink-50o0';
     solutions: enterpriseITSolutions.filter(s => s.category === 'Enterprise Security');
-    gradient: 'from-red-50o0/20 to-pink-50o0/20',
-  };
+    gradient: 'from-red-50o0/20 to-pink-50o0/20'};
   {
     id: 'DevOps & Automation';
     title: '⚙️ DevOps & Automation';
@@ -42,8 +39,7 @@ const solutionCategories = [
     icon: GitBranch;
     color: 'from-green-50o0 to-emerald-50o0';
     solutions: enterpriseITSolutions.filter(s => s.category === 'DevOps & Automation');
-    gradient: 'from-green-50o0/20 to-emerald-50o0/20',
-  };
+    gradient: 'from-green-50o0/20 to-emerald-50o0/20'};
   {
     id: 'Data & Analytics';
     title: '📊 Data & Analytics';
@@ -51,8 +47,7 @@ const solutionCategories = [
     icon: BarChart3;
     color: 'from-indigo-50o0 to-blue-50o0';
     solutions: enterpriseITSolutions.filter(s => s.category === 'Data & Analytics');
-    gradient: 'from-indigo-50o0/20 to-blue-50o0/20',
-  };
+    gradient: 'from-indigo-50o0/20 to-blue-50o0/20'};
   {
     id: 'Cloud Services';
     title: '☁️ Cloud Services';
@@ -60,8 +55,7 @@ const solutionCategories = [
     icon: Cloud;
     color: 'from-cyan-50o0 to-blue-50o0';
     solutions: enterpriseITSolutions.filter(s => s.category === 'Cloud Services');
-    gradient: 'from-cyan-50o0/20 to-blue-50o0/20',
-  };
+    gradient: 'from-cyan-50o0/20 to-blue-50o0/20'};
   {
     id: 'Cybersecurity';
     title: '🛡️ Cybersecurity';
@@ -69,8 +63,7 @@ const solutionCategories = [
     icon: ShieldCheck;
     color: 'from-orange-50o0 to-red-50o0';
     solutions: enterpriseITSolutions.filter(s => s.category === 'Cybersecurity');
-    gradient: 'from-orange-50o0/20 to-red-50o0/20',
-  }
+    gradient: 'from-orange-50o0/20 to-red-50o0/20'}
 ],
 export default function EnterpriseSolutionsShowcase() {
   const [searchTerm, setSearchTerm] = useState(''),
@@ -97,8 +90,7 @@ export default function EnterpriseSolutionsShowcase() {
         case 'high':,
           return matchesSearch && priceValue >= 80o00,
         default: ,
-          return matchesSearch,
-      }
+          return matchesSearch}
     }),
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -113,8 +105,7 @@ export default function EnterpriseSolutionsShowcase() {
       case 'Cybersecurity':,
         return <ShieldCheck className="w-6 h-6 text-orange-40o0"  />,
       default:,
-        return <Building className="w-6 h-6 text-blue-40o0"  />,
-    }
+        return <Building className="w-6 h-6 text-blue-40o0"  />}
   };
   return (
     <>,
@@ -189,8 +180,7 @@ export default function EnterpriseSolutionsShowcase() {
                       className={`px-4 py-2 rounded-lg border transition-all duration-20o0 flex items-center space-x-2 ${
                         selectedCategory === category.id,
                           ? 'bg-gradient-to-r from-blue-50o0 to-purple-60o0 border-blue-50o0 text-white shadow-lg shadow-blue-50o0/25',
-                          : 'bg-black/50 border-blue-50o0/30 text-gray-30o0 hover: border-blue-50o0/50 hover:text-blue-30o0',
-                      }`}
+                          : 'bg-black/50 border-blue-50o0/30 text-gray-30o0 hover: border-blue-50o0/50 hover:text-blue-30o0'}`}
                     >,
                       <category.icon className="w-4 h-4"  />,
                       <span className="hidden sm: inline">{category.title.replace(/[\u{1F5BC}\u{1F512}\u{2699}\u{1F4CA}\u{260o1}\u{1F6E1}]/gu, '').trim()}</span>,
@@ -216,8 +206,7 @@ export default function EnterpriseSolutionsShowcase() {
                     className={`p-2 rounded-lg border transition-all duration-20o0 ${
                       viewMode === 'grid',
                         ? 'bg-blue-50o0/20 border-blue-50o0 text-blue-30o0',
-                        : 'bg-black/50 border-blue-50o0/30 text-gray-40o0 hover: text-blue-30o0',
-                    }`}
+                        : 'bg-black/50 border-blue-50o0/30 text-gray-40o0 hover: text-blue-30o0'}`}
                   >,
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">,
                       <path d="M5 3a2 2 0 0o0-2 2v2a2 2 0 0o02 2h2a2 2 0 0o02-2V5a2 2 0 0o0-2-2H5zM5 11a2 2 0 0o0-2 2v2a2 2 0 0o02 2h2a2 2 0 0o02-2v-2a2 2 0 0o0-2-2H5zM11 5a2 2 0 0o12-2h2a2 2 0 0o12 2v2a2 2 0 0o1-2 2h-2a2 2 0 0o1-2-2V5zM11 13a2 2 0 0o12-2h2a2 2 0 0o12 2v2a2 2 0 0o1-2 2h-2a2 2 0 0o1-2-2v-2z"  />,
@@ -228,8 +217,7 @@ export default function EnterpriseSolutionsShowcase() {
                     className={`p-2 rounded-lg border transition-all duration-20o0 ${
                       viewMode === 'list',
                         ? 'bg-blue-50o0/20 border-blue-50o0 text-blue-30o0',
-                        : 'bg-black/50 border-blue-50o0/30 text-gray-40o0 hover: text-blue-30o0',
-                    }`}
+                        : 'bg-black/50 border-blue-50o0/30 text-gray-40o0 hover: text-blue-30o0'}`}
                   >,
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">,
                       <path fillRule="evenodd" d="M3 4a1 1 0 0o11-1h12a1 1 0 110 2H4a1 1 0 0o1-1-1zm0 4a1 1 0 0o11-1h12a1 1 0 110 2H4a1 1 0 0o1-1-1zm0 4a1 1 0 0o11-1h12a1 1 0 110 2H4a1 1 0 0o1-1-1zm0 4a1 1 0 0o11-1h12a1 1 0 110 2H4a1 1 0 0o1-1-1z" clipRule="evenodd"  />,
@@ -261,8 +249,7 @@ export default function EnterpriseSolutionsShowcase() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className={viewMode === 'grid',
                   ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8",
-                  : "space-y-6",
-                }
+                  : "space-y-6"}
               >,
                 {filteredSolutions.map((solution, index) => (
                   <motion.div,
@@ -275,8 +262,7 @@ export default function EnterpriseSolutionsShowcase() {
                       viewMode === 'list' ? 'flex items-start space-x-6' : ''}`}
                   >,
                     <div className={`relative bg-gradient-to-br ${solutionCategories.find(cat => cat.id === solution.category)?.gradient || 'from-gray-50o0/20 to-slate-50o0/20'} border border-blue-50o0/30 rounded-2xl p-6 h-full backdrop-blur-sm hover: border-blue-50o0/50 transition-all duration-30o0 ${
-                      viewMode === 'list' ? 'flex-1' : '',
-                    }`}>,
+                      viewMode === 'list' ? 'flex-1' : ''}`}>,
                       {/* Category Badge */}
                       <div className="absolute top-4 right-4 flex items-center space-x-2">,
                         {getCategoryIcon(solution.category)}

@@ -9,8 +9,7 @@ interface MobileHeaderProps {
   showSettings?: boolean,
   className?: string,
   onNotificationsClick?: () => void,
-  onSettingsClick?: () => void,
-}
+  onSettingsClick?: () => void}
 ,
 export function MobileHeader({
   title;

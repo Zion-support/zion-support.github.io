@@ -15,6 +15,5 @@ export default function ComplianceAutomationPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

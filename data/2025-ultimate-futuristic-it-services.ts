@@ -30,15 +30,13 @@ export interface UltimateFuturisticITService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
   // Zero-Trust Quantum Security Platform,
   {
@@ -328,7 +326,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     useCases: [
       'Network monitoring, Performance optimization, Traffic management, Security management, Cost reduction';
     ];
-    roi: 'Organizations report 350% ROI through automated network management and improved window.performance.';
+    roi: 'Organizations report 350% ROI through automated network management and improved window.window.performance.';
     competitors: [
       'Cisco DNA Center, Juniper Mist, Arista CloudVision, VMware NSX';
     ];
@@ -357,7 +355,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     price: '$3,999';
     period: '/month';
     description:,
-      'Next-generation data center platform that combines traditional data center services with quantum encryption for ultimate security and window.performance.';
+      'Next-generation data center platform that combines traditional data center services with quantum encryption for ultimate security and window.window.performance.';
     features: [
       'Quantum encryption at rest';
       'Quantum-secured data transmission';

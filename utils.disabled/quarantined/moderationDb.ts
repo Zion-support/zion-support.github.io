@@ -7,15 +7,13 @@ export interface ModerationFlag {
   reportedBy: string,
   createdAt: string,
   updatedAt: string,
-  adminNotes?: string,
-}
+  adminNotes?: string}
 ,
 // In-memory storage. Replace with DB integration as needed.,
 let flags: ModerationFlag[] = [],
 export async function getFlagById(
   id: string): Promise<ModerationFlag | null> {
-  return flags.find((flag) => flag.id === id) || null,
-}
+  return flags.find((flag) => flag.id === id) || null}
 ,
 export async function readAllFlags(): Promise<ModerationFlag[]> {
   return [...flags]}

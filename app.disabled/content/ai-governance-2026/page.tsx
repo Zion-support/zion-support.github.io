@@ -57,6 +57,5 @@ export default function AIGovernance20o26Page() {
           </div>,
         </div>,
       </section>,
-    </main>),
-}
+    </main>)}
 ,

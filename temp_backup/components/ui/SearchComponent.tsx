@@ -10,8 +10,7 @@ interface SearchResult {
   type: 'service' | 'solution' | 'page' | 'resource',
   url: string,
   category: string,
-  tags: string[],
-}
+  tags: string[]}
 ,
 const SearchComponent: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
@@ -79,8 +78,7 @@ const SearchComponent: React.FC = () => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false),
         setQuery(''),
-        setSelectedIndex(-1),
-      }
+        setSelectedIndex(-1)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
@@ -105,8 +103,7 @@ const SearchComponent: React.FC = () => {
         case 'Enter':,
           event.preventDefault(),
           if (selectedIndex >= 0 && filteredResults[selectedIndex]) {
-            window.location.href = filteredResults[selectedIndex].url,
-          }
+            window.location.href = filteredResults[selectedIndex].url}
           break}
     };
     document.addEventListener('keydown', handleKeyDown),
@@ -149,8 +146,7 @@ const SearchComponent: React.FC = () => {
       case 'resource':,
         return <Rocket className="w-4 h-4 text-orange-50o0"  />,
       default:,
-        return <Globe className="w-4 h-4 text-gray-50o0"  />,
-    }
+        return <Globe className="w-4 h-4 text-gray-50o0"  />}
   };
   const getTypeLabel = (type: string) => {
     switch (type) {
@@ -163,8 +159,7 @@ const SearchComponent: React.FC = () => {
       case 'resource':,
         return 'Resource',
       default:,
-        return 'Item',
-    }
+        return 'Item'}
   };
   return (
     <div className="relative" ref={searchRef}>,
@@ -227,8 +222,7 @@ const SearchComponent: React.FC = () => {
                       className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all duration-20o0 ${
                         selectedCategory === category.id,
                           ? 'bg-blue-10o0 text-blue-70o0 border border-blue-20o0',
-                          : 'bg-gray-10o0 text-gray-60o0 hover: bg-gray-20o0',
-                      }`}
+                          : 'bg-gray-10o0 text-gray-60o0 hover: bg-gray-20o0'}`}
                     >,
                       {category.icon}
                       <span>{category.name}</span>,
@@ -251,8 +245,7 @@ const SearchComponent: React.FC = () => {
                         className={`block p-4 rounded-xl transition-all duration-20o0 ${
                           index === selectedIndex,
                             ? 'bg-blue-50 border border-blue-20o0',
-                            : 'hover: bg-gray-50',
-                        }`}
+                            : 'hover: bg-gray-50'}`}
                       >,
                         <div className="flex items-start space-x-3">,
                           <div className="flex-shrink-0 mt-1">,

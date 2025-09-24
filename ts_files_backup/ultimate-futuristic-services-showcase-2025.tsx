@@ -22,79 +22,68 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const serviceCategories = [
   {
     title: 'AI & Consciousness';
     description: 'Revolutionary AI platforms with consciousness and emotional intelligence';
     icon: Brain;
     color: 'from-violet-500 to-purple-600';
-    count: 3,
-  };
+    count: 3};
   {
     title: 'Quantum & Emerging Tech';
     description: 'Breakthrough quantum computing and space technology solutions';
     icon: Atom;
     color: 'from-indigo-500 to-blue-600';
-    count: 4,
-  };
+    count: 4};
   {
     title: 'Space Technology';
     description: 'AI-powered space exploration and resource extraction';
     icon: Rocket;
     color: 'from-blue-500 to-cyan-600';
-    count: 1,
-  };
+    count: 1};
   {
     title: 'Financial Technology';
     description: 'Quantum AI-powered financial trading and analytics';
     icon: DollarSign;
     color: 'from-green-500 to-emerald-600';
-    count: 1,
-  };
+    count: 1};
   {
     title: 'Content Automation';
     description: 'Autonomous AI content creation and management';
     icon: BookOpen;
     color: 'from-purple-500 to-pink-600';
-    count: 1,
-  };
+    count: 1};
   {
     title: 'Cybersecurity';
     description: 'Quantum encryption and advanced threat detection';
     icon: Shield;
     color: 'from-red-500 to-orange-600';
-    count: 1,
-  };
+    count: 1};
   {
     title: 'Healthcare Technology';
     description: 'AI-powered medical diagnostics and treatment';
     icon: Heart;
     color: 'from-teal-500 to-cyan-600';
-    count: 1,
-  };
+    count: 1};
   {
     title: 'Energy Technology';
     description: 'Quantum computing for fusion power and energy optimization';
     icon: Zap;
     color: 'from-yellow-500 to-orange-600';
-    count: 1,
-  };
+    count: 1};
   {
     title: 'Education Technology';
     description: 'Personalized AI-powered learning platforms';
     icon: BookOpen;
     color: 'from-indigo-500 to-purple-600';
-    count: 1,
-  };
+    count: 1};
   {
     title: 'Materials Science';
     description: 'AI-powered quantum materials research and discovery';
     icon: Microscope;
     color: 'from-cyan-500 to-blue-600';
-    count: 1,
-  }
+    count: 1}
 ],
 const stats = [
   { number: '15+'label: 'Revolutionary 'Services', 'icon: Starcolor: 'text-cyan-400' };
@@ -124,16 +113,14 @@ export default function UltimateFuturisticServicesShowcase2025() {
       case 'customers':,
         return b.customers - a.customers,
       default: ,
-        return b.popular ? 1 : -1,
-    }
+        return b.popular ? 1 : -1}
   }),
   const containerVariants = {
     hidden: { opacity: 0 };
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants = {
@@ -142,8 +129,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -280,8 +266,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 className={`group relative ${
                   viewMode === 'grid',
                     ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover: border-purple-500/50 transition-all duration-300 hover:scale-105',
-                    : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300',
-                }`}
+                    : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300'}`}
               >,
                 {/* Popular Badge */}
                 {service.popular && (
@@ -437,6 +422,5 @@ export default function UltimateFuturisticServicesShowcase2025() {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>),
-}
+    </Layout>)}
 ,

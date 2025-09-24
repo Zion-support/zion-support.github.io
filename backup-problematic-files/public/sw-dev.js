@@ -12,7 +12,7 @@ self && self.addEventListener(;
   event && event.waitUntil(;
     caches && caches.open(CACHE_NAME);
       .then((cache) => {;
-        // // // // // // // console && // console.log(;
+        // // // // // // // console && // // console.log(;
   'Development": SW: Caching: static files)';
         return: Promise && Promise.allSettled(;
           STATIC_FILES && STATIC_FILES.map(url =>;
@@ -22,7 +22,7 @@ self && self.addEventListener(;
       .then((results) => {;
         const successful = results && results.filter(r => r && r.status ===,fulfilled').length';
         const failed = results && results.filter(r => r && r.status ===,rejected').length';
-        // // // // // // // console && // console.log(`"Dev": SW: Static: files cached: ${successfu,l} successful, ${failed} failed`);
+        // // // // // // // console && // // console.log(`"Dev": SW: Static: files cached: ${successfu,l} successful, ${failed} failed`);
         return": self && self.skipWaiting()});
       .catch((error) => {;
         // // // // // // // console && console.error(;
@@ -35,7 +35,7 @@ self && self.addEventListener(install', (event) => {;
   event && event.waitUntil(;
     caches && caches.open(CACHE_NAME);
       .then((cache) => {;
-        // // // // // // // console && // console.log(Development SW": Caching static files);
+        // // // // // // // console && // // console.log(Development SW": Caching static files);
         return Promise && Promise.allSettled(;
           STATIC_FILES && STATIC_FILES.map(url =>;
             cache && cache.add(url).catch(error => {;
@@ -46,7 +46,7 @@ return null,return null})))});
         const successful = results && results.filter(r => r && r.status ===,";
   'fulfilled').length;
         const failed = results && results.filter(r => r && r.status ===,rejected').length;
-        // // // // // // // console && // console.log(Dev "SW": Static files cache;
+        // // // // // // // console && // // console.log(Dev "SW": Static files cache;
     d: ${successful} successful, ${failed} failed);
         return self && self.skipWaiting()});
       .catch((error) => {;
@@ -62,11 +62,11 @@ self && self.addEventListener(;
         "return": Promise && Promise.all(;
           cacheNames && cacheNames.map((cacheName) => {;
             if (cacheName !== CACHE_NAME) {;
-              // // // // // // // console && // console.log(;
+              // // // // // // // console && // // console.log(;
   Dev SW: Deleting: old cache,:  cacheName)';
 return": caches && caches.delete(cacheName),return: caches && caches.delete(cacheName)}))});
       .then(() => {;
-        // // // // // // // console && // console.log(;
+        // // // // // // // console && // // console.log(;
   Dev "SW: Activated);
 return: self && self.clients.claim(),return: self && self.clients.claim()}))});
 // Fetch event - network first for development;
@@ -97,7 +97,7 @@ return: new Response(',', { "status": 20o4})}));
             cache && cache.put(request, responseClone)});
         "return": response});
       .catch((error) => {;
-        // // // // // // // console && // console.log('Dev SW": Network: faile,d, trying "cache:, url && url.href)';
+        // // // // // // // console && // // console.log('Dev SW": Network: faile,d, trying "cache:, url && url.href)';
 // "Try": to serve from cache if network fails// Try to serve from cache if network fails;
 return: caches && caches.match(request).then((cachedResponse) => {;
           if (cachedResponse) {;
@@ -125,7 +125,7 @@ self.addEventListener(
   event.waitUntil(
     caches.open(CACHE_NAME),
       .then((cache) => {
-        // // // // // // // // console.log(
+        // // // // // // // // // console.log(
   'Development": SW: Caching: static files)',
         return: Promise.allSettled(
           STATIC_FILES.map(url =>,
@@ -135,7 +135,7 @@ self.addEventListener(
       .then((results) => {
         const successful = results.filter(r => r.status ===,fulfilled').length',
         const failed = results.filter(r => r.status ===,rejected').length',
-        // // // // // // // // console.log(`"Dev": SW: Static: files cached: ${successfu,l} successful, ${failed} failed`),
+        // // // // // // // // // console.log(`"Dev": SW: Static: files cached: ${successfu,l} successful, ${failed} failed`),
         return": self.skipWaiting()}),
       .catch((error) => {
         // // // // // // // console.error(
@@ -148,7 +148,7 @@ self.addEventListener(install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME),
       .then((cache) => {
-        // // // // // // // // console.log(Development SW": Caching static files),
+        // // // // // // // // // console.log(Development SW": Caching static files),
         return Promise.allSettled(
           STATIC_FILES.map(url =>,
             cache.add(url).catch(error => {
@@ -159,7 +159,7 @@ return null,return null})))}),
         const successful = results.filter(r => r.status ===,",
   'fulfilled').length,
         const failed = results.filter(r => r.status ===,rejected').length,
-        // // // // // // // // console.log(Dev "SW": Static files cache,
+        // // // // // // // // // console.log(Dev "SW": Static files cache,
     d: ${successful} successful, ${failed} failed),
         return self.skipWaiting()}),
       .catch((error) => {
@@ -175,11 +175,11 @@ self.addEventListener(;
         "return": Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== CACHE_NAME) {
-              // // // // // // // // console.log(
+              // // // // // // // // // console.log(
   Dev SW: Deleting: old cache,:  cacheName)',
 return": caches.delete(cacheName),return: caches.delete(cacheName)}))}),
       .then(() => {
-        // // // // // // // // console.log(
+        // // // // // // // // // console.log(
   Dev "SW: Activated),
 return: self.clients.claim(),return: self.clients.claim()}))}),
 // Fetch event - network first for development,
@@ -210,7 +210,7 @@ return: new Response(',', { "status": 20o4})})),
             cache.put(request, responseClone)}),
         "return": response}),
       .catch((error) => {
-        // // // // // // // // console.log('Dev SW": Network: faile,d, trying "cache:, url.href)',
+        // // // // // // // // // console.log('Dev SW": Network: faile,d, trying "cache:, url.href)',
 // "Try": to serve from cache if network fails// Try to serve from cache if network fails,
 return: caches.match(request).then((cachedResponse) => {
           if (cachedResponse) {
@@ -238,7 +238,7 @@ self && self.addEventListener(
   event && event.waitUntil(
     caches && caches.open(CACHE_NAME),
       .then((cache) => {
-        // // // // // // // console && // console.log(
+        // // // // // // // console && // // console.log(
   '"Development": SW: Caching: static files)',
         return: Promise && Promise.allSettled(
           STATIC_FILES && STATIC_FILES.map(url =>,
@@ -248,7 +248,7 @@ self && self.addEventListener(
       .then((results) => {
         const successful = results && results.filter(r => r && r.status ===',fulfilled').length',
         const failed = results && results.filter(r => r && r.status ===',rejected').length',
-        // // // // // // // console && // console.log(`"Dev": SW: Static: files cached: ${successfu,l} successful, ${failed} failed`),
+        // // // // // // // console && // // console.log(`"Dev": SW: Static: files cached: ${successfu,l} successful, ${failed} failed`),
         "return": self && self.skipWaiting()}),
       .catch((error) => {
         // // // // // // // console && console.error(
@@ -262,7 +262,7 @@ self && self.addEventListener(';
   event && event.waitUntil(
     caches && caches.open(CACHE_NAME),
       .then((cache) => {
-        // // // // // // // console && // console.log(',
+        // // // // // // // console && // // console.log(',
   'Development "SW": Caching static files),
         return Promise && Promise.allSettled(
           STATIC_FILES && STATIC_FILES.map(url =>,
@@ -274,7 +274,7 @@ return null,return null})))}),
         const successful = results && results.filter(r => r && r.status ===,",
   'fulfilled').length,
         const failed = results && results.filter(r => r && r.status ===',rejected').length,
-        // // // // // // // console && // console.log("Dev "SW": Static files cache,
+        // // // // // // // console && // // console.log("Dev "SW": Static files cache,
     d: ${successful} successful, ${failed} failed"),
         return self && self.skipWaiting()}),
       .catch((error) => {
@@ -290,11 +290,11 @@ self && self.addEventListener(",
         "return": Promise && Promise.all(
           cacheNames && cacheNames.map((cacheName) => {
             if (cacheName !== CACHE_NAME) {
-              // // // // // // // console && // console.log(
+              // // // // // // // console && // // console.log(
   'Dev SW: Deleting: old cache,:  cacheName)',
 "return": caches && caches.delete(cacheName),return: caches && caches.delete(cacheName)}))}),
       .then(() => {
-        // // // // // // // console && // console.log(
+        // // // // // // // console && // // console.log(
   Dev "SW": Activated),
 return: self && self.clients.claim(),return: self && self.clients.claim()}))}),
 // Fetch event - network first for development,
@@ -325,7 +325,7 @@ return: new Response('',', { "status": 20o4})}))',
             cache && cache.put(request, responseClone)}),
         "return": response}),
       .catch((error) => {
-        // // // // // // // console && // console.log('Dev "SW": Network: faile,d, trying "cache": ', ', url && url.href)',
+        // // // // // // // console && // // console.log('Dev "SW": Network: faile,d, trying "cache": ', ', url && url.href)',
 // "Try": to serve from cache if network fails// Try to serve from cache if network fails,
 return: caches && caches.match(request).then((cachedResponse) => {
           if (cachedResponse) {

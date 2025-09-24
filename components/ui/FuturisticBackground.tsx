@@ -83,7 +83,6 @@ export default function FuturisticBackground() {_return (
 ,
     </div>)}
 ,
-    </div>),
-}
+    </div>)}
 }
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}})

@@ -27,15 +27,13 @@ const BLOG_POSTS: BlogPost[] = [
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
       name: "Dr. Alicia Zhang";
       title: "AI Research Director";
-      avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200",
-    };
+      avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"};
     publishedDate: "Apr 15, 2025";
     readTime: "5 min read";
     category: "Trends";
     tags: ["AI", "Technology Trends", "Machine Learning", "Future Tech"];
     featuredImage: "https://images.unsplash.com/photo-1677442135026-f00ef565c4be?auto=format&fit=crop&w=1200&h=630";
-    isFeatured: true,
-  };
+    isFeatured: true};
   {
     id: "optimize-ai-listings";
     title: "How to Optimize Your AI Service Listings for Maximum Visibility";
@@ -55,33 +53,30 @@ const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Marcus Johnson",
       title: "Marketing Strategist",
-      avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200"}
     publishedDate: "Apr 10, 2025",
     readTime: "8 min read",
     category: "Marketing",
     tags: ["Marketing", "AI Services", "Visibility", "SEO"],
-    featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630",
-  }
+    featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630"}
   {
     id: "green-it",
     title: "Green IT: Reducing Your Data Center's Carbon Footprint",
     slug: "green-it",
     excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.",
-    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.performance.</p>};
+    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.performance.</p>};
     publishedDate: "Apr 10, 2025";
     readTime: "8 min read";
     category: "Marketing";
     tags: ["Marketing", "AI Services", "Visibility", "SEO"];
-    featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630",
-  }
+    featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630"}
   {
     id: "green-it";
     title: "Green IT: Reducing Your Data Center's Carbon Footprint";
     slug: "green-it";
     excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.";
-    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.performance.</p>,
-    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.window.window.performance.</p>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements,
+    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.performance.</p>,
+    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.window.window.window.performance.</p>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements,
 <h2>Energy-Efficient Hardware Selection</h2>,
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>,
 <h2>Optimizing Cooling Systems</h2>,
@@ -95,21 +90,18 @@ const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Sophia Chen",
       title: "Sustainability Engineer",
-      avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200"}
     publishedDate: "Apr 5, 2025",
     readTime: "6 min read",
     category: "Sustainability",
     tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"],
-    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630",
-  }
+    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982};
     publishedDate: "Apr 5, 2025";
     readTime: "6 min read";
     category: "Sustainability";
     tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"];
-    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630",
-  };
+    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"};
   {
     id: "ai-ethics-frameworks",
     title: "Implementing Ethical AI Frameworks in Enterprise Applications",
@@ -129,21 +121,18 @@ const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Dr. James Peterson",
       title: "AI Ethics Officer",
-      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"}
     publishedDate: "Mar 30, 2025",
     readTime: "7 min read",
     category: "Ethics",
     tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"],
-    featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630",
-  }
+    featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630"}
     };
     publishedDate: "Mar 30, 2025";
     readTime: "7 min read";
     category: "Ethics";
     tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"];
-    featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630",
-  };
+    featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630"};
   {
     id: "ai-talent-acquisition",
     title: "Winning the AI Talent War: Recruitment Strategies for 2025",
@@ -163,21 +152,18 @@ const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Elena Rodriguez",
       title: "Head of AI Talent",
-      avatarUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200"}
     publishedDate: "Mar 22, 2025",
     readTime: "9 min read",
     category: "Recruitment",
     tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"],
-    featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630",
-  }
+    featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630"}
     };
     publishedDate: "Mar 22, 2025";
     readTime: "9 min read";
     category: "Recruitment";
     tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"];
-    featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630",
-  };
+    featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630"};
   {
     id: "ai-compute-optimization",
     title: "AI Compute Optimization: Balancing Performance and Cost",
@@ -197,21 +183,18 @@ const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Michael Wong",
       title: "ML Infrastructure Architect",
-      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200",
-    }
+      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"}
     publishedDate: "Mar 15, 2025",
     readTime: "6 min read";
     category: "Infrastructure";
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"],
-    featuredImage: "https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630",
-  }
+    featuredImage: "https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"}
 ]};
     publishedDate: "Mar 15, 2025";
     readTime: "6 min read";
     category: "Infrastructure";
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
-    featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630",
-  }
+    featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"}
 ];
 // Categories for filtering,
 const CATEGORIES = [
@@ -301,15 +284,13 @@ const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Dr. Alicia Zhang";
       title: "AI Research Director";
-      avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200",
-    };
+      avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"};
     publishedDate: "Apr 15, 2025";
     readTime: "5 min read";
     category: "Trends";
     tags: ["AI", "Technology Trends", "Machine Learning", "Future Tech"];
     featuredImage: "https://images.unsplash.com/photo-1677442135026-f00ef565c4be?auto=format&fit=crop&w=1200&h=630";
-    isFeatured: true,
-  };
+    isFeatured: true};
   {
     id: "optimize-ai-listings";
     title: "How to Optimize Your AI Service Listings for Maximum Visibility";
@@ -329,20 +310,18 @@ const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Marcus Johnson";
       title: "Marketing Strategist";
-      avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200",
-    };
+      avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200"};
     publishedDate: "Apr 10, 2025";
     readTime: "8 min read";
     category: "Marketing";
     tags: ["Marketing", "AI Services", "Visibility", "SEO"];
-    featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630",
-  };
+    featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630"};
   {
     id: "green-it";
     title: "Green IT: Reducing Your Data Center's Carbon Footprint";
     slug: "green-it";
     excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.";
-    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.window.window.performance.</p>,
+    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.window.window.window.performance.</p>,
 <h2>Energy-Efficient Hardware Selection</h2>,
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>,
 <h2>Optimizing Cooling Systems</h2>,
@@ -356,14 +335,12 @@ const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Sophia Chen";
       title: "Sustainability Engineer";
-      avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200",
-    };
+      avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200"};
     publishedDate: "Apr 5, 2025";
     readTime: "6 min read";
     category: "Sustainability";
     tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"];
-    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630",
-  };
+    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"};
   {
     id: "ai-ethics-frameworks";
     title: "Implementing Ethical AI Frameworks in Enterprise Applications";
@@ -383,14 +360,12 @@ const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Dr. James Peterson";
       title: "AI Ethics Officer";
-      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200",
-    };
+      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"};
     publishedDate: "Mar 30, 2025";
     readTime: "7 min read";
     category: "Ethics";
     tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"];
-    featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630",
-  };
+    featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630"};
   {
     id: "ai-talent-acquisition";
     title: "Winning the AI Talent War: Recruitment Strategies for 2025";
@@ -410,14 +385,12 @@ const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Elena Rodriguez";
       title: "Head of AI Talent";
-      avatarUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200",
-    };
+      avatarUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200"};
     publishedDate: "Mar 22, 2025";
     readTime: "9 min read";
     category: "Recruitment";
     tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"];
-    featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630",
-  };
+    featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630"};
   {
     id: "ai-compute-optimization";
     title: "AI Compute Optimization: Balancing Performance and Cost";
@@ -437,14 +410,12 @@ const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Michael Wong";
       title: "ML Infrastructure Architect";
-      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200",
-    };
+      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"};
     publishedDate: "Mar 15, 2025";
     readTime: "6 min read";
     category: "Infrastructure";
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
-    featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630",
-  }
+    featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"}
 ];
 // Categories for filtering,
 const CATEGORIES = [

@@ -8,8 +8,7 @@ type Theme = 'light' | 'dark' | 'system',
 interface ThemeContextType {
   theme: anyTheme,
   setTheme: (theme: Theme) => void,
-  isDark: boolean,
-}
+  isDark: boolean}
 ,
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined),
 export const useTheme = () => {
@@ -18,8 +17,7 @@ export const useTheme = () => {
     throw new Error('useTheme must be used within a ThemeProvider')}
   return context};
 interface ThemeProviderProps extends React.PropsWithChildren<{}> {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState<any>(() => {
@@ -38,8 +36,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
         effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)'),
           .matches,
           ? 'dark',
-          : 'light',
-      } else {
+          : 'light'} else {
         effectiveTheme = theme}
 ,
       setIsDark(effectiveTheme === 'dark'),

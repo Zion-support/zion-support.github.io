@@ -47,6 +47,5 @@ export default function GovernedAIAgents(...args: any[]): any {
           </Link>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

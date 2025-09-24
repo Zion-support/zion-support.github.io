@@ -33,8 +33,7 @@ export default function NotificationBell() {
 ,
   async function handleMarkOne(id: string) {
     await markNotificationRead(id),
-    await refresh(),
-  }
+    await refresh()}
 ,
   return (
     <div className="relative">,

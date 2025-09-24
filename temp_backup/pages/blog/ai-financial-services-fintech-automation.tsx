@@ -400,6 +400,5 @@ export default function AIFinancialServicesFintechAutomation() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

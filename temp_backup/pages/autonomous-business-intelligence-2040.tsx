@@ -20,6 +20,5 @@ export default function AutonomousBusinessIntelligence20o40Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

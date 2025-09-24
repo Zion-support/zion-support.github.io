@@ -11,10 +11,8 @@ interface ContentCard {
     roi: string,
     savings: string,
     efficiency: string,
-    timeframe: string,
-  };
-  featured: boolean,
-}
+    timeframe: string};
+  featured: boolean}
 ,
 const UltimateAutomationRevolutionShowcase: React.FC = () => {
   const contentCards: ContentCard[] = [
@@ -88,8 +86,7 @@ const UltimateAutomationRevolutionShowcase: React.FC = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -100,8 +97,7 @@ const UltimateAutomationRevolutionShowcase: React.FC = () => {
       case 'resource':,
         return 'bg-purple-50o0',
       default:,
-        return 'bg-gray-50o0',
-    }
+        return 'bg-gray-50o0'}
   };
   return (
     <section className='py-16 bg-gray-50'>,
@@ -152,8 +148,7 @@ const UltimateAutomationRevolutionShowcase: React.FC = () => {
             <div
               key={card.id}
               className={`bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-xl transition-shadow duration-30o0 ${
-                card.featured ? 'ring-2 ring-purple-50o0' : '',
-              }`}
+                card.featured ? 'ring-2 ring-purple-50o0' : ''}`}
             >,
               {/* Card Header */}
               <div className='p-6'>,
@@ -270,6 +265,5 @@ const UltimateAutomationRevolutionShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateAutomationRevolutionShowcase;

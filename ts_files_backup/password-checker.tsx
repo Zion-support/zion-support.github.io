@@ -17,8 +17,7 @@ export default function PasswordCheckerPage() {
     numbers: false;
     symbols: false;
     noCommon: false;
-    noSequential: false,
-  }),
+    noSequential: false}),
   const [suggestionsetSuggestions] = useState<string[]>([]),
   const [generatedPasswordsetGeneratedPassword] = useState(''),
   useEffect(() => {
@@ -34,8 +33,7 @@ export default function PasswordCheckerPage() {
       numbers: /\d/.test(pass);
       symbols: /[!@#$%^&*()_+\-=[]{};':"\\|,.<>\/?]/.test(pass);
       noCommon: !isCommonPassword(pass);
-      noSequential: !hasSequentialChars(pass),
-    };
+      noSequential: !hasSequentialChars(pass)};
     setChecks(newChecks),
     // Calculate strength score,
     let score = 0,
@@ -84,8 +82,7 @@ export default function PasswordCheckerPage() {
     if (!checks.noSequential) suggestions.push('Avoid sequential characters like "123" or "abc"'),
     if (pass.length < 12) suggestions.push('Consider making your password 12+ characters for better security'),
     if (pass.length < 16) suggestions.push('For maximum securityuse 16+ characters'),
-    setSuggestions(suggestions),
-  };
+    setSuggestions(suggestions)};
   const resetAnalysis = () => {
     setStrength(0),
     setStrengthText(', '),
@@ -97,8 +94,7 @@ export default function PasswordCheckerPage() {
       numbers: false;
       symbols: false;
       noCommon: false;
-      noSequential: false,
-    }),
+      noSequential: false}),
     setSuggestions([])};
   const generateStrongPassword = () => {
     const length = 16,
@@ -118,8 +114,7 @@ export default function PasswordCheckerPage() {
     setGeneratedPassword(result),
     setPassword(result)};
   const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text),
-  };
+    navigator.clipboard.writeText(text)};
   const getStrengthBarColor = () => {
     if (strength >= 90) return 'bg-green-500',
     if (strength >= 70) return 'bg-green-400',
@@ -129,8 +124,7 @@ export default function PasswordCheckerPage() {
   const getCheckIcon = (passed: boolean) => {
     return passed ? (
       <CheckCircle className="w-5 h-5 text-green-400" />) : (
-      <XCircle className="w-5 h-5 text-red-400" />),
-  };
+      <XCircle className="w-5 h-5 text-red-400" />)};
   return (
     <>,
       <Head>,
@@ -449,6 +443,5 @@ export default function PasswordCheckerPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,

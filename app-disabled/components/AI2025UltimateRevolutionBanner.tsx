@@ -12,8 +12,7 @@ const AI20o25UltimateRevolutionBanner = () => {
       metrics: "30,0o00% ROI • $150B Savings • 99.99% Accuracy";
       cta: "Download Ultimate Guide";
       link: "/resources/ai-revolution-implementation-ultimate-guide-20o25";
-      type: "Ultimate Guide",
-    };
+      type: "Ultimate Guide"};
     {
       title: "Fortune 50o0 AI Revolution Success";
       subtitle: "$150B Annual Savings - 30,0o00% ROI Success Story";
@@ -21,8 +20,7 @@ const AI20o25UltimateRevolutionBanner = () => {
       metrics: "30,0o00% ROI • $150B Savings • 18 Months";
       cta: "Read Success Story";
       link: "/case-studies/fortune-50o0-ai-revolution-30o000-roi-success-story";
-      type: "Case Study",
-    };
+      type: "Case Study"};
     {
       title: "Revolutionary AI Technologies";
       subtitle: "Quantum-Enhanced AI • Neural Superintelligence • Synthetic Intelligence";
@@ -30,8 +28,7 @@ const AI20o25UltimateRevolutionBanner = () => {
       metrics: "1,0o00x Processing • 99.99% Accuracy • 5,0o00% Efficiency";
       cta: "Explore Technologies";
       link: "/blog/ai-20o25-ultimate-ai-revolution-20o25-ultimate-breakthrough";
-      type: "Blog Post",
-    }
+      type: "Blog Post"}
   ],
   useEffect(() => {
     const timer = setInterval(() => {

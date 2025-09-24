@@ -58,7 +58,7 @@ Format the response as a JSON object with the following structure: ,
       const jsonString = jsonMatch[1].trim(),
       parsedResponse = JSON.parse(jsonString)} catch (error) {
       console.error('Failed to parse AI response as JSON:', error),
-      // console.log('Raw response:', responseText),
+      // // console.log('Raw response:', responseText),
       // Provide a fallback structured response,
       parsedResponse = {
         description:,

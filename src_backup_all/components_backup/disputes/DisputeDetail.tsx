@@ -115,8 +115,7 @@ export function DisputeDetail() {
       case "under_review": return "secondary",
       case "resolved": return "outline", // Changed from "success" to "outline",
       case "closed": return "outline",
-      default: return "default",
-    }
+      default: return "default"}
   };
   return (
     <div className="container mx-auto p-4 space-y-6">,

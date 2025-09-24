@@ -2,14 +2,12 @@ import { useState, useEffect } from 'react',
 interface User {
   id: string,
   email: string,
-  name?: string,
-}
+  name?: string}
 ,
 interface AuthState {
   user: User | null,
   loading: boolean,
-  isAuthenticated: boolean,
-}
+  isAuthenticated: boolean}
 ,
 export function useAuth() {
   const [authState, setAuthState] = useState<AuthState>({

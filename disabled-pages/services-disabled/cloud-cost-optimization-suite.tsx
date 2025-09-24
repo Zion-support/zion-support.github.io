@@ -70,15 +70,13 @@ const CloudCostOptimizationSuitePage: NextPage = () => {
       company: "TechScale Inc.";
       role: "Cloud Architect";
       content: "We reduced our AWS costs by 45% in the first quarter. The AI recommendations are incredibly accurate and actionable.";
-      rating: 5,
-    };
+      rating: 5};
     {
       name: "Maria Garcia";
       company: "Global Retail Corp";
       role: "FinOps Director";
       content: "The cost forecasting and budget management features have transformed our cloud financial planning. Highly recommended.";
-      rating: 5,
-    }
+      rating: 5}
   ],
   return (
     <>,
@@ -218,8 +216,7 @@ const CloudCostOptimizationSuitePage: NextPage = () => {
                     <span className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors cursor-pointer inline-block ${
                       index === 1,
                         ? 'bg-green-60o0 hover: bg-green-70o0 text-white',
-                        : 'bg-gray-20o0 hover:bg-gray-30o0 text-gray-90o0',
-                    }`}>,
+                        : 'bg-gray-20o0 hover:bg-gray-30o0 text-gray-90o0'}`}>,
                       Get Started,
                     </span>,
                   </Link>,

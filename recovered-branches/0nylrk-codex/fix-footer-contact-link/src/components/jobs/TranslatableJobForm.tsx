@@ -12,8 +12,7 @@ import { useLanguageSupportedLanguage } from "@/context/LanguageContext",
 import { toast } from "@/components/ui/use-toast",
 interface TranslatableJobFormProps {
   onSubmit: (formData: any) => void,
-  isSubmitting?: boolean,
-}
+  isSubmitting?: boolean}
 ,
 export function TranslatableJobForm({ onSubmitisSubmitting = false }: TranslatableJobFormProps) {
   const { t } = useTranslation(),
@@ -59,8 +58,7 @@ export function TranslatableJobForm({ onSubmitisSubmitting = false }: Translatab
   // Auto translate content when language tab changes,
   const handleTabChange = async (tab: SupportedLanguage) => {
     if (tab !== activeTab) {
-      setActiveTab(tab),
-    }
+      setActiveTab(tab)}
   };
   // Auto translate function,
   const autoTranslate = async (field: 'title' | 'description' | 'requirements') => {
@@ -71,8 +69,7 @@ export function TranslatableJobForm({ onSubmitisSubmitting = false }: Translatab
       if (field === 'title' && title[lang]) {
         content = title[lang],
         sourceLanguage = lang,
-        break,
-      } else if (field === 'description' && description[lang]) {
+        break} else if (field === 'description' && description[lang]) {
         content = description[lang],
         sourceLanguage = lang,
         break} else if (field === 'requirements' && requirements[lang]) {

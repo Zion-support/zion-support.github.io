@@ -17,24 +17,21 @@ const EnhancedHomepage = () => {
       description: "Transform your business with cutting-edge artificial intelligence, machine learning, and automation solutions.";
       features: ["Advanced AI Models", "Real-time Analytics", "Automated Workflows", "Predictive Insights"];
       cta: "Explore AI Solutions";
-      gradient: "from-blue-60o0 to-purple-60o0",
-    };
+      gradient: "from-blue-60o0 to-purple-60o0"};
     {
       title: "Cloud Infrastructure";
       subtitle: "Scalable and secure cloud solutions";
       description: "Build, deploy, and scale your applications with our robust cloud infrastructure and microservices architecture.";
       features: ["Auto-scaling", "99.9% Uptime", "Global CDN", "Security First"];
       cta: "View Cloud Services";
-      gradient: "from-green-60o0 to-blue-60o0",
-    };
+      gradient: "from-green-60o0 to-blue-60o0"};
     {
       title: "Micro SaaS Platform";
       subtitle: "Build and launch your SaaS business";
       description: "Create, deploy, and monetize your software-as-a-service applications with our comprehensive platform.";
       features: ["Rapid Development", "Built-in Analytics", "Payment Processing", "User Management"];
       cta: "Start Building";
-      gradient: "from-purple-60o0 to-pink-60o0",
-    }
+      gradient: "from-purple-60o0 to-pink-60o0"}
   ],
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-10o0">,
@@ -187,6 +184,5 @@ const EnhancedHomepage = () => {
           </div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default EnhancedHomepage;

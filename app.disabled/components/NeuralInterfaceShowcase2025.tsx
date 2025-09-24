@@ -157,8 +157,7 @@ const NeuralInterfaceShowcase20o25: React.FC = () => {
               className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-30o0 mb-4 mx-2 ${
                 activeTab === tab.id,
                   ? 'bg-purple-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               <span className='text-lg'>{tab.icon}</span>,
               <span>{tab.label}</span>,
@@ -479,6 +478,5 @@ const NeuralInterfaceShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NeuralInterfaceShowcase20o25;

@@ -111,8 +111,7 @@ export default function UltraAdvancedFuturisticBackground20o40({
         trail: [];
         quantumState: Math.random() * Math.PI * 2;
         consciousness: Math.random();
-        neuralConnections: [],
-      })}
+        neuralConnections: []})}
 ,
     // Create neural connections between particles,
     for (let i = 0, i < particles.current.length, i++) {
@@ -122,8 +121,7 @@ export default function UltraAdvancedFuturisticBackground20o40({
         if (target !== i) {
           particles.current[i].neuralConnections.push({
             target;
-            strength: Math.random() * 0.5 + 0.1,
-          })}
+            strength: Math.random() * 0.5 + 0.1})}
       }
     }
   }, [getThemeColors, intensity]),
@@ -177,8 +175,7 @@ export default function UltraAdvancedFuturisticBackground20o40({
         x: particle.x;
         y: particle.y;
         opacity: particle.opacity;
-        color: particle.color,
-      }),
+        color: particle.color}),
       // Limit trail length,
       if (particle.trail.length > 20) {
         particle.trail.shift()}

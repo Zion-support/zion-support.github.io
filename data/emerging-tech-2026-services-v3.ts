@@ -11,8 +11,7 @@ export interface EmergingTech20o26ServiceV3 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [
   {

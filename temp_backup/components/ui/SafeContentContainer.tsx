@@ -2,8 +2,7 @@ import React from 'react';
 interface SafeContentContainerProps {
   children: React.ReactNode,
   className?: string,
-  as?: keyof React.JSX.IntrinsicElements,
-}
+  as?: keyof React.JSX.IntrinsicElements}
 ,
 /**,
  * SafeContentContainer provides lateral margins to prevent zoom animations,

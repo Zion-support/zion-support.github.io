@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const fs = require('fs'),
 const path = require('path'),
@@ -41,7 +40,7 @@ class SecurityChecker {
         if (level === 'error') {
             console.error(message)} else if (level === 'warn') {
             console.warn(message)} else {
-            // console.log(message)}
+            // // console.log(message)}
     }
 ,
     async checkNpmAudit() {
@@ -49,8 +48,7 @@ class SecurityChecker {
             this.log('Running npm audit...'),
             const auditResult = execSync('npm audit --audit-level=moderate --json', {
                 encoding: 'utf8';
-                stdio: 'pipe',
-            }),
+                stdio: 'pipe'}),
             const audit = JSON.parse(auditResult),
             if (audit.metadata.vulnerabilities.total > 0) {
                 this.log(`⚠️  Found ${audit.metadata.vulnerabilities.total} vulnerabilities`, 'warn'),
@@ -89,8 +87,7 @@ class SecurityChecker {
                                         foundSensitive.push({
                                             file: filePath;
                                             pattern: pattern;
-                                            matches: matches.length,
-                                        })}
+                                            matches: matches.length})}
                                 }
                             } catch (error) {
                                 // Skip files that can't be read}
@@ -129,8 +126,7 @@ class SecurityChecker {
                             if (key) {
                                 foundEnvVars.push({
                                     file: envFile;
-                                    key: key,
-                                })}
+                                    key: key})}
                         }
                     }
                 }
@@ -193,8 +189,7 @@ class SecurityChecker {
                 environmentVariables: await this.checkEnvironmentVariables();
                 dependencies: await this.checkDependencies();
                 auditLevel: this.config.auditLevel;
-                recommendations: [],
-            };
+                recommendations: []};
             // Generate recommendations,
             if (!report.npmAudit) {
                 report.recommendations.push('Run npm audit fix to resolve security vulnerabilities')}
@@ -246,5 +241,5 @@ switch (command) {
             process.exit(1)}),
         break,
     default: ,
-        // console.log(`,
+        // // console.log(`,
 🔒 Security Check System)

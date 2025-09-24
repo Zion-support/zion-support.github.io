@@ -4,8 +4,7 @@ import { useState } from 'react',
 interface YoutubeEmbedProps {
   videoId: string,
   title: string,
-  poster: string,
-}
+  poster: string}
 ,
 export default function YoutubeEmbed({
   videoId;

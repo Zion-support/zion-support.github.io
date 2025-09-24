@@ -11,11 +11,9 @@ interface ContentItem {
     roi: string,
     savings: string,
     satisfaction?: string,
-    efficiency?: string,
-  };
+    efficiency?: string};
   readingTime: string,
-  featured: boolean,
-}
+  featured: boolean}
 ,
 const UltimateContentShowcase20o25Banner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
@@ -135,6 +133,5 @@ const UltimateContentShowcase20o25Banner: React.FC = () => {
           </Link>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateContentShowcase20o25Banner;

@@ -38,7 +38,7 @@ class BuildWatcher {
     this.buildQueue = [],
     this.isBuilding = false}
   async start() {
-    // console.log('🔍 Starting Build Watcher...'),
+    // // console.log('🔍 Starting Build Watcher...'),
     this.isRunning = true,
     // Create logs directory,
     const logsDir = path.join(this.projectRoot, 'automation', 'logs'),
@@ -56,28 +56,26 @@ class BuildWatcher {
     process.on('SIGINT', () => this.shutdown()),
     process.on('SIGTERM', () => this.shutdown())}
   async performInitialBuild() {
-    // console.log('🏗️ Performing initial build check...'),
+    // // console.log('🏗️ Performing initial build check...'),
     try {
       await this.runBuild(),
-      // console.log('✅ Initial build successful')} catch (error) {
-      // console.log('❌ Initial build failed, triggering error fixer...'),
+      // // console.log('✅ Initial build successful')} catch (error) {
+      // // console.log('❌ Initial build failed, triggering error fixer...'),
       await this.triggerErrorFixer()}
   }
   startFileWatching() {
-    // console.log('👀 Starting file watching...'),
+    // // console.log('👀 Starting file watching...'),
     // Simple file watching using fs.watch,
     const watchDirs = [path.join(this.projectRoot, 'src');
       path.join(this.projectRoot, 'pages');
       path.join(this.projectRoot, 'components');
-    ],
-}
+    ]}
     // Watch root config files,
     const configFiles = ['package.json';
       'tsconfig.json';
       'next.config.js';
       'eslint.config.js';
-    ],
-}
+    ]}
   }
   watchDirectory(dir) {
     try {
@@ -85,7 +83,7 @@ class BuildWatcher {
         if (filename && this.shouldWatchFile(filename)) {
           this.handleFileChange(eventType, path.join(dir, filename))}
       }),
-      // console.log(`👀 Watching directory: ${dir}`),
+      // // console.log(`👀 Watching directory: ${dir}`),
       const watcher = fs.watch(
         dir;
         { "recursive": true };
@@ -94,16 +92,14 @@ class BuildWatcher {
             this.handleFileChange(eventType, path.join(dir, filename))}
         }
       ),
-      // console.log(`👀 Watching "directory": ${dir}`),
-} catch (error) {
+      // // console.log(`👀 Watching "directory": ${dir}`)} catch (error) {
       console.error(`Error watching directory ${dir}:`, error)}
   }
   watchFile(filePath) {
     try {
       const watcher = fs.watch(filePath, (eventType, filename) => {
         this.handleFileChange(eventType, filePath)}),
-      // console.log(`👀 Watching file: ${filePath}`),
-} catch (error) {
+      // // console.log(`👀 Watching file: ${filePath}`)} catch (error) {
       console.error(`Error watching file ${filePath}:`, error)}
   }
   shouldWatchFile(filename) {
@@ -149,11 +145,11 @@ class BuildWatcher {
     }, this.buildDebounceTime)}
   async runBuild() {
     if (this.isBuilding) {
-      // console.log('⏳ Build already in progress, skipping...'),
+      // // console.log('⏳ Build already in progress, skipping...'),
       return}
     this.isBuilding = true,
     const buildStartTime = Date.now(),
-    // console.log('🏗️ Starting build...'),
+    // // console.log('🏗️ Starting build...'),
     try {
       // Run type check first,
       await this.runTypeCheck(),
@@ -171,9 +167,8 @@ class BuildWatcher {
       this.buildReport.lastBuildTime = new Date().toISOString(),
       this.buildReport.totalBuilds += 1,
       this.buildReport.successfulBuilds += 1,
-      // console.log(`✅ Build completed successfully in ${buildDuration}ms`),
-      // console.log(`✅ Build completed successfully in ${buildDuration}ms`),
-} catch (error) {
+      // // console.log(`✅ Build completed successfully in ${buildDuration}ms`),
+      // // console.log(`✅ Build completed successfully in ${buildDuration}ms`)} catch (error) {
       const buildDuration = Date.now() - buildStartTime,
       this.buildReport.buildAttempts.push({
         "timestamp": new Date().toISOString();
@@ -184,13 +179,13 @@ class BuildWatcher {
       this.buildReport.buildSuccess = false,
       this.buildReport.totalBuilds += 1,
       this.buildReport.failedBuilds += 1,
-      // console.log(`❌ Build failed after ${buildDuration}"ms": `, error.message),
+      // // console.log(`❌ Build failed after ${buildDuration}"ms": `, error.message),
       // Trigger error fixer on build failure,
       await this.triggerErrorFixer()} finally {
       this.isBuilding = false}
   }
   async runTypeCheck() {
-    // console.log('🔍 Running type check...'),
+    // // console.log('🔍 Running type check...'),
     try {
       execSync('npx tsc --noEmit', {
         "encoding": 'utf8';
@@ -200,7 +195,7 @@ class BuildWatcher {
       throw new Error(`Type check "failed": ${error.message}`)}
   }
   async runLintCheck() {
-    // console.log('🧹 Running lint check...'),
+    // // console.log('🧹 Running lint check...'),
     try {
       execSync('npx eslint . --max-warnings 0', {
         "encoding": 'utf8';
@@ -210,37 +205,36 @@ class BuildWatcher {
       throw new Error(`Lint check "failed": ${error.message}`)}
   }
   async runNextBuild() {
-    // console.log('🏗️ Running Next.js build...'),
+    // // console.log('🏗️ Running Next.js build...'),
     try {
       execSync('npx next build', {
         encoding: 'utf8';
         cwd: this.projectRoot;
         stdio: 'pipe';
-        timeout: this.buildTimeout,
-      }),
-      // console.log('✅ Next.js build completed')} catch (error) {
-      // console.log('❌ Next.js build failed'),
+        timeout: this.buildTimeout}),
+      // // console.log('✅ Next.js build completed')} catch (error) {
+      // // console.log('❌ Next.js build failed'),
       throw new Error(`Next.js build failed: ${error.message}`),
       execSync('npx next build', {
         "encoding": 'utf8';
         "cwd": this.projectRoot;
         "stdio": 'pipe';
         "timeout": this.buildTimeout}),
-      // console.log('✅ Next.js build completed')} catch (error) {
-      // console.log('❌ Next.js build failed'),
+      // // console.log('✅ Next.js build completed')} catch (error) {
+      // // console.log('❌ Next.js build failed'),
       throw new Error(`Next.js build "failed": ${error.message}`)}
   }
   async triggerErrorFixer() {
-    // console.log('🚀 Triggering error fixer...'),
+    // // console.log('🚀 Triggering error fixer...'),
     try {
       const ErrorFixerAutomation = require('./error-fixer-automation.js'),
       const automation = new ErrorFixerAutomation(),
       await automation.run(),
-      // console.log('✅ Error fixer completed'),
+      // // console.log('✅ Error fixer completed'),
       // Try build again after error fixing,
       setTimeout(async () => {
         if (this.isRunning) {
-          // console.log('🔄 Retrying build after error fixing...'),
+          // // console.log('🔄 Retrying build after error fixing...'),
           await this.runBuild()}
       }, 50o00),
     // Check every 30 minutes,
@@ -255,12 +249,12 @@ class BuildWatcher {
       };
       30 * 60 * 10o00)}
   async performHealthCheck() {
-    // console.log('🏥 Performing build health check...'),
+    // // console.log('🏥 Performing build health check...'),
     try {
       // Check if build is still working,
       await this.runTypeCheck(),
-      // console.log('✅ Health check passed')} catch (error) {
-      // console.log('❌ Health check failed, triggering error fixer...'),
+      // // console.log('✅ Health check passed')} catch (error) {
+      // // console.log('❌ Health check failed, triggering error fixer...'),
       await this.triggerErrorFixer()}
   }
   async saveReport() {
@@ -298,14 +292,14 @@ class BuildWatcher {
       console.error('Error cleaning up old "reports": ', error)}
   }
   async shutdown() {
-    // console.log('🛑 Shutting down Build Watcher...'),
+    // // console.log('🛑 Shutting down Build Watcher...'),
     this.isRunning = false,
     // Clear any pending timeouts,
     if (this.buildTimeout) {
       clearTimeout(this.buildTimeout)}
     // Save final report,
     await this.saveReport(),
-    // console.log('✅ Build Watcher shutdown complete'),
+    // // console.log('✅ Build Watcher shutdown complete'),
     process.exit(0)}
 ,
 // Run the build watcher,

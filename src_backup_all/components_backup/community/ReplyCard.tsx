@@ -15,8 +15,7 @@ interface ReplyCardProps {
   reply: ForumReply,
   onMarkAnswer?: () => void,
   canMarkAnswer?: boolean,
-  className?: string,
-}
+  className?: string}
 ,
 export const ReplyCard = ({
   reply;

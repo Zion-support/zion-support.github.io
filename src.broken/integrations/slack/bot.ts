@@ -3,20 +3,17 @@
 // This replaces the original implementation which had dependency issues,
 import { switchNetlifySite } from '../../../scripts/switch-netlify-site.js',
 interface SlackCommand {
-  text: string,
-}
+  text: string}
 ,
 interface SlackAck {
   (): Promise<void>}
 ,
 interface SlackRespond {
-  (text: string): Promise<void>,
-}
+  (text: string): Promise<void>}
 ,
 // Define console type to avoid TypeScript errors,
 interface SafeConsole {
-  log: (message: string) => void,
-}
+  log: (message: string) => void}
 ,
 // Declare available globals,
 declare const globalThis: {
@@ -24,8 +21,7 @@ declare const globalThis: {
   process?: {
     env: {
       PORT?: string,
-      [key: string]: string | undefined,
-    };
+      [key: string]: string | undefined};
   };
 };
 type CommandHandler = (args: { command?: SlackCommand, ack: SlackAck, respond: SlackRespond }) => Promise<void>,
@@ -33,8 +29,7 @@ class MockApp {
   private commandHandlers: Record<string CommandHandler> ={};
   command(commandName: string, handler: CommandHandler) {
     this.commandHandlers[commandName] = handler,
-    return this,
-  }
+    return this}
 ,
   async start(port?: number): Promise<void> {
     // Safely log without direct console reference,
@@ -76,8 +71,7 @@ app.command('/zion', async ({ command, ack, respond }: { command?: SlackCommand,
           '`/zion post-job` - post a new job\n' +,
           '`/zion suggest-talent [skills]` - AI talent suggestions\n' +,
           '`/zion track-project [name]` - project status\n' +,
-          '`/zion help` - show this list'),
-  }
+          '`/zion help` - show this list')}
 }),
 app.command('/zion-rollback', async ({ ack, respond }: { ack: SlackAck, respond: SlackRespond }) => {
   await ack(),

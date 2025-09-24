@@ -66,6 +66,5 @@ export async function translateText(
 export function detectLanguageSimple(text: string): string {
   // Very simple heuristic, in production use a language detection library or model,
   // Default to 'en',
-  return 'en',
-}
+  return 'en'}
 ,

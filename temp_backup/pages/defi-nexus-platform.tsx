@@ -10,8 +10,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const features = [
   'Multi-chain DeFi aggregationAutomated yield optimization';
   'Liquidity pool managementCross-chain bridge services';
@@ -23,22 +22,19 @@ const pricingPlans = [
     price: 29;
     period: 'month';
     features: ['Basic DeFi tools3 blockchain networks', 'Yield trackingStandard support'];
-    popular: false,
-  };
+    popular: false};
   {
     name: 'Professional';
     price: 99;
     period: 'month';
     features: ['Advanced DeFi toolsAll major networks', 'Automated strategiesAnalytics', 'Priority support'];
-    popular: true,
-  };
+    popular: true};
   {
     name: 'Enterprise';
     price: 299;
     period: 'month';
     features: ['Custom DeFi solutionsWhite-label platform', 'API accessPriority support', 'Custom integrations'];
-    popular: false,
-  }
+    popular: false}
 ];
 export default function DeFiNexusPlatform() {
   return (

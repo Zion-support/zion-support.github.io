@@ -93,7 +93,5 @@ function PaymentSuccess() {
           </Button>,
         </div>,
       </div>,
-    </div>),
-}
-,
+    </div>)}
 }}}})

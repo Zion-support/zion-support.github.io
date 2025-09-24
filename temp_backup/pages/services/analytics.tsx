@@ -239,6 +239,5 @@ export default function AnalyticsServicesPage() {
         </div>,
       </section>,
       <EnhancedFooter />,
-    </div>),
-}
+    </div>)}
 ,

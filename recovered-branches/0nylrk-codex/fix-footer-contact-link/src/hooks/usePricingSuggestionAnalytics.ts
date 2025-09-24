@@ -13,11 +13,9 @@ interface PricingSuggestionAnalytics {
     actualValue?: number,
     accepted: boolean,
     createdAt: string,
-    type: 'client' | 'talent',
-  }[],
+    type: 'client' | 'talent'}[],
   isLoading: boolean,
-  error: string | null,
-}
+  error: string | null}
 ,
 export function usePricingSuggestionAnalytics(days = 30) {
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
@@ -27,8 +25,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
     suggestionsByCategory: [];
     recentSuggestions: [];
     isLoading: true;
-    error: null,
-  }),
+    error: null}),
   useEffect(() => {
     // This would fetch actual data from the database in a real implementation,
     // For now, let's simulate the data,
@@ -59,8 +56,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
         setAnalytics({
           ...mockData;
           isLoading: false;
-          error: null,
-        }),
+          error: null}),
         // In a real implementation with Supabase, you might do:,
         // const { data, error } = await supabase,
         //   .from('pricing_suggestions'),
@@ -72,8 +68,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
         setAnalytics({
           ...analytics;
           isLoading: false;
-          error: "Failed to load pricing analytics data.",
-        })}
+          error: "Failed to load pricing analytics data."})}
     };
     fetchAnalytics()}, [days]),
   return analytics}

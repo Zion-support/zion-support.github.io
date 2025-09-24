@@ -654,6 +654,5 @@ export function ServicesOverview() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

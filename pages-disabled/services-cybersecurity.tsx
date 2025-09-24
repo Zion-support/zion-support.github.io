@@ -320,6 +320,5 @@ export default function CybersecurityPage() {
           </section>,
         </div>,
       </main>,
-    </>),
-}
+    </>)}
 ,

@@ -11,8 +11,7 @@ export interface NextGenAi20o26Service {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const nextGenAI2026Services: NextGenAi2026Service[] = [
   {

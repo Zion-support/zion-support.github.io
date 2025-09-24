@@ -8,22 +8,19 @@ const Testimonials = () => {
       company: "TechCorp Inc.";
       role: "CTO";
       content: "Zion Tech transformed our AI infrastructure. The results exceeded our expectations with a 340% ROI increase.";
-      rating: 5,
-    };
+      rating: 5};
     {
       name: "Michael Chen";
       company: "DataFlow Systems";
       role: "CEO";
       content: "Outstanding cloud solutions and cybersecurity implementation. Highly recommend their expertise.";
-      rating: 5,
-    };
+      rating: 5};
     {
       name: "Emily Rodriguez";
       company: "InnovateLab";
       role: "Founder";
       content: "Professional, reliable, and innovative. Zion Tech helped us scale our business with cutting-edge technology.";
-      rating: 5,
-    }
+      rating: 5}
   ],
   return (
     <section className="py-16">,

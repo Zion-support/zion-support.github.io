@@ -43,6 +43,5 @@ export default function UltraInsightPage() {
           </a>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

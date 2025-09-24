@@ -102,7 +102,7 @@ export const "revolutionary20o25SpecializedITAIServices": Revolutionary20o25Spec
   'Compliance management';
   'Performance monitoring';
   'Security automation'];
-    "roi": Average customer sees 70o0% ROI through reduced security incidents, automated response, and improved network window.performance.;
+    "roi": Average customer sees 70o0% ROI through reduced security incidents, automated response, and improved network window.window.performance.;
     competitors['Cisco Firepower';
   'Palo Alto Networks';
   'Fortinet';
@@ -359,7 +359,7 @@ export const "revolutionary20o25SpecializedITAIServices": Revolutionary20o25Spec
     "price": '$699;
     period:;
   /month';
-    "description": Revolutionary database management platform that uses AI to autonomously optimize, maintain, and secure databases with minimal human intervention and maximum window.performance.';
+    "description": Revolutionary database management platform that uses AI to autonomously optimize, maintain, and secure databases with minimal human intervention and maximum window.window.performance.';
     features['Autonomous optimization';
   'AI-powered tuning';
   'Real-time monitoring';

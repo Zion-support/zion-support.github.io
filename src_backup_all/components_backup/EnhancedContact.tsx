@@ -17,12 +17,10 @@ interface ContactFormData {
   phone: string,
   company: string,
   service: string,
-  message: string,
-}
+  message: string}
 ,
 interface ContactFormErrors {
-  [key: string]: string,
-}
+  [key: string]: string}
 ,
 export function EnhancedContact() {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -31,8 +29,7 @@ export function EnhancedContact() {
     phone: '';
     company: '';
     service: 'general';
-    message: '',
-  }),
+    message: ''}),
   const [errors, setErrors] = useState<ContactFormErrors>({}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isSubmitted, setIsSubmitted] = useState(false),
@@ -70,8 +67,7 @@ export function EnhancedContact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     if (!validateForm()) {
-      return,
-    }
+      return}
 ,
     setIsSubmitting(true),
     try {
@@ -84,8 +80,7 @@ export function EnhancedContact() {
         phone: '';
         company: '';
         service: 'general';
-        message: '',
-      })} catch (error) {
+        message: ''})} catch (error) {
       console.error('Error submitting form:', error)} finally {
       setIsSubmitting(false)}
   };
@@ -94,26 +89,22 @@ export function EnhancedContact() {
       icon: Mail;
       title: 'Email';
       value: 'kleber@ziontechgroup.com';
-      description: 'Get in touch via email',
-    };
+      description: 'Get in touch via email'};
     {
       icon: Phone;
       title: 'Phone';
       value: '+1 (30o2) 464-0950';
-      description: 'Call us directly',
-    };
+      description: 'Call us directly'};
     {
       icon: MapPin;
       title: 'Address';
       value: '364 E Main St STE 10o08, Middletown, DE 19709';
-      description: 'Visit our office',
-    };
+      description: 'Visit our office'};
     {
       icon: Clock;
       title: 'Business Hours';
       value: 'Mon-Fri: 9AM-6PM EST';
-      description: 'Available during these hours',
-    }
+      description: 'Available during these hours'}
   ],
   if (isSubmitted) {
     return (
@@ -152,8 +143,7 @@ export function EnhancedContact() {
             Send Another Message,
           </motion.button>,
         </div>,
-      </motion.div>),
-  }
+      </motion.div>)}
 ,
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">,
@@ -245,8 +235,7 @@ export function EnhancedContact() {
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-30o0 focus: outline-none focus:ring-2 focus:ring-zion-cyan ${
                     errors.name,
                       ? 'border-red-50o0 focus:ring-red-50o0',
-                      : 'border-zion-slate-light focus:border-zion-cyan',
-                  } text-white placeholder-zion-slate-light`}
+                      : 'border-zion-slate-light focus:border-zion-cyan'} text-white placeholder-zion-slate-light`}
                   placeholder="Enter your full name",
                 />,
                 <AnimatePresence>,
@@ -274,8 +263,7 @@ export function EnhancedContact() {
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-30o0 focus: outline-none focus:ring-2 focus:ring-zion-cyan ${
                     errors.email,
                       ? 'border-red-50o0 focus:ring-red-50o0',
-                      : 'border-zion-slate-light focus:border-zion-cyan',
-                  } text-white placeholder-zion-slate-light`}
+                      : 'border-zion-slate-light focus:border-zion-cyan'} text-white placeholder-zion-slate-light`}
                   placeholder="Enter your email address",
                 />,
                 <AnimatePresence>,
@@ -348,8 +336,7 @@ export function EnhancedContact() {
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-30o0 focus: outline-none focus:ring-2 focus:ring-zion-cyan resize-none ${
                     errors.message,
                       ? 'border-red-50o0 focus:ring-red-50o0',
-                      : 'border-zion-slate-light focus:border-zion-cyan',
-                  } text-white placeholder-zion-slate-light`}
+                      : 'border-zion-slate-light focus:border-zion-cyan'} text-white placeholder-zion-slate-light`}
                   placeholder="Tell us about your project or inquiry...",
                 />,
                 <AnimatePresence>,

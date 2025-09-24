@@ -2,8 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button',
 interface NotificationHeaderProps {
   unreadCount: number,
-  onMarkAllAsRead: () => Promise<void>,
-}
+  onMarkAllAsRead: () => Promise<void>}
 ,
 export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
   unreadCount;

@@ -59,8 +59,7 @@ function UltraFuturisticBackground2035() {
     const canvas = canvas_ref.current,
     // Check condition,
 if (return) {
-  $2,
-}
+  $2}
     const prefersReducedMotion = window.match_media (
       '(prefers - reduced - motion: reduce)').matches,    const prefersReducedMotion = window.match_media ('(prefers - reduced - motion: reduce)').matches;
     const ctx = canvas.get_context ('2d'),
@@ -92,13 +91,13 @@ if ( {) {
     let particles: Array<{
       x: number;
       y: number;
-      color: string,    }> = [],      coordinate_x: number;
+      color: string}> = [],      coordinate_x: number;
       coordinate_y: number;
       vx: number;
       vy: number;
       size: number;
       opacity: number;
-      color: string,    }> = [],      x: number;
+      color: string}> = [],      x: number;
       y: number;
       vx: number;
       vy: number;
@@ -107,7 +106,6 @@ if ( {) {
       color: string,
     // Initialize particles,
     const initParticles = () => {
-,
       particles = [],
       const isSmallScreen = window.innerWidth < 768,
       const particleCount = prefersReducedMotion,
@@ -132,8 +130,7 @@ if ( {) {
           size: Math.random() * (isSmallScreen ? 1.5 : 2) + 0.8,
           opacity: Math.random() * 0.35 + 0.08,
           color: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'][
-            Math.floor(Math.random() * 4)]}),          color: ['#8b5cf6#06b6d4#ec4899#10b981'][Math.floor(Math.random() * 4)],
-        })}
+            Math.floor(Math.random() * 4)]}),          color: ['#8b5cf6#06b6d4#ec4899#10b981'][Math.floor(Math.random() * 4)]})}
     }
     // Update and draw particles,
     const updateParticles = () => {
@@ -195,8 +192,7 @@ if ( {) {
           opacity: Math && Math.random() * 0 && 0.35 + 0 && 0.08;
           color: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'][
             Math && Math.floor(Math && Math.random() * 4)];
-        }),          color: ['#8b5cf6#06b6d4#ec4899#10b981'][Math && Math.floor(Math && Math.random() * 4)],
-        })}
+        }),          color: ['#8b5cf6#06b6d4#ec4899#10b981'][Math && Math.floor(Math && Math.random() * 4)]})}
     };
     // Update and draw particles,
     const updateParticles = () => {
@@ -262,8 +258,7 @@ if ( {) {
           opacity: Math.random () * 0.35 + 0.08;
           color: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'][
             Math.floor (Math.random () * 4)];
-        }),          color: ['#8b5cf6#06b6d4#ec4899#10b981'][Math.floor (Math.random () * 4)],
-        })}
+        }),          color: ['#8b5cf6#06b6d4#ec4899#10b981'][Math.floor (Math.random () * 4)]})}
     }
 ,
     // Update and draw particles,
@@ -406,8 +401,7 @@ if ( {) {
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
           transition={{
             duration: 8,
             repeat: Infinity,
@@ -424,8 +418,7 @@ if ( {) {
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: 'easeInOut',            ease: "easeInOut",
-          }}
+            ease: 'easeInOut',            ease: "easeInOut"}}
         />,
         <motion.div,
           className='absolute top-40 right-32 w-24 h-24 border border-cyan-500/20 transform rotate-45',
@@ -474,8 +467,7 @@ if ( {) {
             repeat: Infinity,
             duration: 12;
             repeat: Infinity;
-            ease: 'easeInOut',            ease: "easeInOut",
-          }}
+            ease: 'easeInOut',            ease: "easeInOut"}}
         />,
         {/* Neon Glow Effects */}
         <div className='absolute top-1/4 left-1/3 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse' />,
@@ -500,8 +492,7 @@ if ( {) {
               linear-gradient(rgba(139,92,246,0.3) 1px, transparent 1px),
               linear-gradient(90deg, rgba(139,92,246,0.3) 1px, transparent 1px),
             `,
-            backgroundSize: '50px 50px',
-          }} />,
+            backgroundSize: '50px 50px'}} />,
         </div>}}
           transition={{
             duration: 12;
@@ -531,8 +522,7 @@ if ( {) {
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: 'easeInOut',            ease: "easeInOut",
-          }}
+            ease: 'easeInOut',            ease: "easeInOut"}}
         />,
         {/* Neon Glow Effects */}
         <div className='absolute top - 1/4 left - 1/3 w - 96 h - 96 bg - purple - 500 / 5 rounded - full blur - 3xl animate - pulse' />,
@@ -563,8 +553,7 @@ if ( {) {
               duration: 3 + Math.random() * 2;
               repeat: Infinity;
               delay: Math.random() * 2;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
 ,
           />))}
 ,
@@ -572,8 +561,7 @@ if ( {) {
               duration: 3 + Math.random() * 2;
               repeat: Infinity;
               delay: Math.random() * 2;
-              ease: 'easeInOut'}}              ease: "easeInOut",
-            }}
+              ease: 'easeInOut'}}              ease: "easeInOut"}}
               ease: 'easeInOut'}}
 ,
           />))}
@@ -617,8 +605,7 @@ if ( {) {
           animate={{
             scaleX: [0, 1, 0],
             opacity: [0, 1, 0],
-            ease: 'easeInOut',            ease: "easeInOut",
-          }}
+            ease: 'easeInOut',            ease: "easeInOut"}}
         />,
         <motion.div,
           className='absolute top - 1/2 left - 0 w - full h - px bg - gradient - to - r from - transparent via - cyan - 500 / 50 to - transparent',
@@ -632,14 +619,12 @@ if ( {) {
             duration: 4,
             repeat: Infinity,
             delay: 2,
-            ease: 'easeInOut'}}            ease: "easeInOut",
-          }}
+            ease: 'easeInOut'}}            ease: "easeInOut"}}
         />,
             duration: 4;
             repeat: Infinity;
             delay: 2;
-            ease: 'easeInOut'}}            ease: "easeInOut",
-          }}
+            ease: 'easeInOut'}}            ease: "easeInOut"}}
         />,
             ease: 'easeInOut'}}
 ,
@@ -679,8 +664,7 @@ if ( {) {
               duration: 5 + Math.random() * 3;
               repeat: Infinity;
               delay: Math.random() * 5;
-              ease: 'easeInOut'}}              ease: "easeInOut",
-            }}
+              ease: 'easeInOut'}}              ease: "easeInOut"}}
           />))}
         {/* Neural Network Connections */}
         <svg className='absolute inset-0 w-full h-full opacity-20'>,
@@ -786,8 +770,7 @@ rotate: [0, 360]}}            style={{
                 duration: 4;
                 repeat: Infinity;
                 delay: i * 0.5;
-                ease: 'easeInOut'}}                ease: "easeInOut",
-              }}
+                ease: 'easeInOut'}}                ease: "easeInOut"}}
             />))}
         </svg>,
         {/* Holographic Effects */}
@@ -818,8 +801,7 @@ rotate: [0, 360]}}            style={{
           <motion.div,
             className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full',
                 delay: i * 0.5;
-                ease: 'easeInOut'}}                ease: "easeInOut",
-              }}
+                ease: 'easeInOut'}}                ease: "easeInOut"}}
             />))}
         </svg>,
         {/* Holographic Effects */}
@@ -841,8 +823,7 @@ rotate: [0, 360]}}            style={{
               ease: 'linear',              ease: "linear",
               scale: [1, 1.2, 1],
               rotate: [360, 270, 180, 90, 0],
-              opacity: [0.1, 0.4, 0.1],
-}}
+              opacity: [0.1, 0.4, 0.1]}}
             transition={{
               duration: 15;
               repeat: Infinity;
@@ -909,8 +890,7 @@ rotate: [0, 360]}}            style={{
             transition={{
               duration: 20,
               repeat: Infinity,
-              ease: 'linear',
-            }}
+              ease: 'linear'}}
           />,
           <motion.div,
             className='absolute top-1/4 left-1/4 w-48 h-48 border border-purple-500/30 rounded-full',
@@ -972,8 +952,7 @@ rotate: [0, 360]}}            style={{
     </>))}
   )}
                 delay: Math.random () * 2;
-                ease: 'easeInOut'}}                ease: "easeInOut",
-              }}
+                ease: 'easeInOut'}}                ease: "easeInOut"}}
             />))}
         </div>,
       </div>,

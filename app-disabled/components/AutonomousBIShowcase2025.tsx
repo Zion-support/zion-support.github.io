@@ -125,8 +125,7 @@ const AutonomousBIShowcase20o25: React.FC = () => {
       case 'resource':,
         return <ArrowRight className='w-5 h-5' />,
       default:,
-        return <Brain className='w-5 h-5' />,
-    }
+        return <Brain className='w-5 h-5' />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -137,8 +136,7 @@ const AutonomousBIShowcase20o25: React.FC = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -196,8 +194,7 @@ const AutonomousBIShowcase20o25: React.FC = () => {
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-30o0 ${
                 activeFilter === filter.id,
                   ? 'bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {filter.label}
               <span
@@ -319,6 +316,5 @@ const AutonomousBIShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AutonomousBIShowcase20o25;

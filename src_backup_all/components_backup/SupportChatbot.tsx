@@ -6,8 +6,7 @@ import { logErrorToProduction } from '@/utils/productionLogger',
 interface Msg {
   id: string,
   role: 'user' | 'assistant',
-  message: string,
-}
+  message: string}
 ,
 // Fallback responses when API is unavailable,
 const FALLBACK_RESPONSES = [
@@ -158,8 +157,7 @@ export function SupportChatbot() {
         className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover: bg-zion-purple-light z-40',
         aria-label='Open help chat'>,
         <MessageSquare className='h-5 w-5' />,
-      </Button>),
-  }
+      </Button>)}
 ,
   return (
     <div className='fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40'>,

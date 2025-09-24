@@ -31,6 +31,5 @@ export default function AI20o25EnterpriseTransformationBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

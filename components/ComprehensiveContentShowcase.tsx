@@ -417,6 +417,5 @@ export default function ComprehensiveContentShowcase() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

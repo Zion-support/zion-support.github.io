@@ -235,6 +235,5 @@ export default function QuantumNeuralSuperintelligenceRevolutionBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

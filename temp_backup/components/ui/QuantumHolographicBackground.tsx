@@ -3,8 +3,7 @@ import { motion } from 'framer-motion',
 interface QuantumHolographicBackgroundProps {
   children: React.ReactNode,
   intensity?: 'low' | 'medium' | 'high',
-  variant?: 'quantum' | 'holographic' | 'cyberpunk' | 'neural' | 'quantum-entanglement',
-}
+  variant?: 'quantum' | 'holographic' | 'cyberpunk' | 'neural' | 'quantum-entanglement'}
 ,
 const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> = ({
   children;
@@ -27,8 +26,7 @@ const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> 
       size: number,
       opacity: number,
       color: string,
-      type: 'quantum' | 'holographic' | 'neural',
-    }> = [],
+      type: 'quantum' | 'holographic' | 'neural'}> = [],
     const colors ={
       quantum: ['#0o0ffff', '#ff0o0ff', '#ffff0o0', '#0o0ff0o0', '#ff0o080'];
       holographic: ['#ff1493', '#0o0bfff', '#32cd32', '#ffd70o0', '#ff450o0'];
@@ -46,8 +44,7 @@ const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> 
         size: Math.random() * 3 + 1;
         opacity: Math.random() * 0.8 + 0.2;
         color: currentColors[Math.floor(Math.random() * currentColors.length)];
-        type: variant === 'quantum-entanglement' ? 'quantum' : variant as any,
-      })}
+        type: variant === 'quantum-entanglement' ? 'quantum' : variant as any})}
 ,
     // Quantum entanglement effect,
     const createEntanglement = () => {
