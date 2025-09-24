@@ -24,6 +24,7 @@ const nextConfig = {
 		optimizeCss: true,
 		optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
 		// Force SWC to use JavaScript fallback if native binary fails
+		swcMinify: true,
 		// Disable SWC binary download to force JavaScript fallback
 		forceSwcTransforms: true,
 	},
@@ -63,7 +64,6 @@ const nextConfig = {
 		ignoreBuildErrors: true
 	},
 	eslint: {
-		// Skip ESLint during builds to avoid blocking on stylistic issues
 		ignoreDuringBuilds: true
 	},
 };
