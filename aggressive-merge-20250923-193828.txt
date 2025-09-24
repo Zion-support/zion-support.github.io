@@ -1,0 +1,102 @@
+🚀 Starting batch merge for cursor branches...
+⏰ Started at: Tue Sep 23 07:38:28 PM UTC 2025
+---
+🔒 Creating backup branch: backup-main-20250923-193828
+Your branch and 'origin/main' have diverged,
+and have 88 and 4 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+📋 Fetching all cursor branches...
+📊 Total branches to process: 8784
+🔄 Starting batch processing...
+---
+🚀 Starting batch 1-5 of 8784
+📊 Batch contains 5 branches
+---
+🔄 Processing batch 1-5 of 8784
+---
+📋 Processing branch 1: cursor/bc-e3d4493c-9c67-4aab-b397-735d366d858b-6298
+🔄 Attempting to merge cursor/bc-e3d4493c-9c67-4aab-b397-735d366d858b-6298...
+Auto-merging package-lock.json
+Auto-merging package.json
+CONFLICT (content): Merge conflict in package.json
+CONFLICT (modify/delete): yarn.lock deleted in origin/cursor/bc-e3d4493c-9c67-4aab-b397-735d366d858b-6298 and modified in HEAD.  Version HEAD of yarn.lock left in tree.
+Automatic merge failed; fix conflicts and then commit the result.
+⚠️  Merge conflicts detected in cursor/bc-e3d4493c-9c67-4aab-b397-735d366d858b-6298, resolving...
+📋 Conflicted files: package.json yarn.lock
+🔧 Resolving conflicts in package.json for branch cursor/bc-e3d4493c-9c67-4aab-b397-735d366d858b-6298...
+⚠️  Found conflicts in package.json, resolving...
+📦 Critical file detected, keeping main version...
+✅ Resolved conflicts in package.json
+🔧 Resolving conflicts in yarn.lock for branch cursor/bc-e3d4493c-9c67-4aab-b397-735d366d858b-6298...
+[main 324ee9b10133] Resolve merge conflicts for cursor/bc-e3d4493c-9c67-4aab-b397-735d366d858b-6298 - Tue Sep 23 07:38:37 PM UTC 2025
+✅ Successfully resolved conflicts and merged cursor/bc-e3d4493c-9c67-4aab-b397-735d366d858b-6298
+✅ Branch cursor/bc-e3d4493c-9c67-4aab-b397-735d366d858b-6298 processed successfully
+📊 Progress: 1 successful, 0 failed, 1 conflicts resolved, 0 skipped
+---
+📋 Processing branch 2: cursor/check-fix-push-and-merge-to-main-c954
+🔄 Attempting to merge cursor/check-fix-push-and-merge-to-main-c954...
+✅ Successfully merged cursor/check-fix-push-and-merge-to-main-c954
+[main fa1f8e2c0ca7] Merge cursor/check-fix-push-and-merge-to-main-c954 into main - Tue Sep 23 07:38:41 PM UTC 2025
+✅ Branch cursor/check-fix-push-and-merge-to-main-c954 processed successfully
+📊 Progress: 2 successful, 0 failed, 1 conflicts resolved, 0 skipped
+---
+📋 Processing branch 3: cursor/check-fix-push-and-merge-to-main-a697
+🔄 Attempting to merge cursor/check-fix-push-and-merge-to-main-a697...
+Already up to date.
+✅ Successfully merged cursor/check-fix-push-and-merge-to-main-a697
+On branch main
+Your branch is ahead of 'origin/main' by 17 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   aggressive-merge-20250923-193828.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+✅ Branch cursor/check-fix-push-and-merge-to-main-a697 processed successfully
+📊 Progress: 3 successful, 0 failed, 1 conflicts resolved, 0 skipped
+---
+📋 Processing branch 4: cursor/check-fix-push-and-merge-to-main-6bfd
+🔄 Attempting to merge cursor/check-fix-push-and-merge-to-main-6bfd...
+CONFLICT (modify/delete): app/components/PerformanceMetrics.tsx deleted in HEAD and modified in origin/cursor/check-fix-push-and-merge-to-main-6bfd.  Version origin/cursor/check-fix-push-and-merge-to-main-6bfd of app/components/PerformanceMetrics.tsx left in tree.
+CONFLICT (modify/delete): app/components/ROICalculator.tsx deleted in HEAD and modified in origin/cursor/check-fix-push-and-merge-to-main-6bfd.  Version origin/cursor/check-fix-push-and-merge-to-main-6bfd of app/components/ROICalculator.tsx left in tree.
+Auto-merging app/globals.css
+CONFLICT (content): Merge conflict in app/globals.css
+Auto-merging app/page.tsx
+CONFLICT (content): Merge conflict in app/page.tsx
+Auto-merging eslint.config.js
+CONFLICT (content): Merge conflict in eslint.config.js
+Automatic merge failed; fix conflicts and then commit the result.
+⚠️  Merge conflicts detected in cursor/check-fix-push-and-merge-to-main-6bfd, resolving...
+📋 Conflicted files: app/components/PerformanceMetrics.tsx app/components/ROICalculator.tsx app/globals.css app/page.tsx eslint.config.js
+🔧 Resolving conflicts in app/components/PerformanceMetrics.tsx for branch cursor/check-fix-push-and-merge-to-main-6bfd...
+🔧 Resolving conflicts in app/components/ROICalculator.tsx for branch cursor/check-fix-push-and-merge-to-main-6bfd...
+🔧 Resolving conflicts in app/globals.css for branch cursor/check-fix-push-and-merge-to-main-6bfd...
+⚠️  Found conflicts in app/globals.css, resolving...
+📝 Regular file, attempting to merge both versions...
+✅ Resolved conflicts in app/globals.css
+🔧 Resolving conflicts in app/page.tsx for branch cursor/check-fix-push-and-merge-to-main-6bfd...
+⚠️  Found conflicts in app/page.tsx, resolving...
+📝 Regular file, attempting to merge both versions...
+✅ Resolved conflicts in app/page.tsx
+🔧 Resolving conflicts in eslint.config.js for branch cursor/check-fix-push-and-merge-to-main-6bfd...
+⚠️  Found conflicts in eslint.config.js, resolving...
+📝 Regular file, attempting to merge both versions...
+✅ Resolved conflicts in eslint.config.js
+[main d62a07273a40] Resolve merge conflicts for cursor/check-fix-push-and-merge-to-main-6bfd - Tue Sep 23 07:38:47 PM UTC 2025
+✅ Successfully resolved conflicts and merged cursor/check-fix-push-and-merge-to-main-6bfd
+✅ Branch cursor/check-fix-push-and-merge-to-main-6bfd processed successfully
+📊 Progress: 4 successful, 0 failed, 4 conflicts resolved, 0 skipped
+---
+📋 Processing branch 5: cursor/check-fix-push-and-merge-to-main-d192
+🔄 Attempting to merge cursor/check-fix-push-and-merge-to-main-d192...
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+Automatic merge failed; fix conflicts and then commit the result.
+⚠️  Merge conflicts detected in cursor/check-fix-push-and-merge-to-main-d192, resolving...
+📋 Conflicted files: package-lock.json
+🔧 Resolving conflicts in package-lock.json for branch cursor/check-fix-push-and-merge-to-main-d192...
+⚠️  Found conflicts in package-lock.json, resolving...
+📦 Critical file detected, keeping main version...
+✅ Resolved conflicts in package-lock.json

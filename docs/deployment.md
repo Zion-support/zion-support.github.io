@@ -1,15 +1,52 @@
-# Deployment Pipeline
+# Deployment Guide
 
-This project uses GitHub Actions to run tests, lint the codebase and build the application. After a successful build a Netlify deploy hook is called to publish the site.
+## Production Build
 
-## Workflow overview
+1. Build the application:
 
-1. Install Node and (optionally) Python dependencies
-2. Cache `node_modules` and pip downloads to speed up subsequent runs
-3. Run `npm run lint`, `npm run test` and `npm run build`
-4. If all steps succeed, trigger Netlify using the build hook URL
-5. If the workflow fails, a Slack message is sent
+```bash
+npm run build
+```
 
-Environment variables `NETLIFY_BUILD_HOOK_URL` and `SLACK_WEBHOOK_URL` must be configured in the repository secrets for the hook and Slack notification to work.
+2. The build output will be in the `dist` directory
 
-The workflow definition lives in `.github/workflows/ci.yml`.
+## Deployment Options
+
+### Netlify (Recommended)
+
+1. Connect your repository to Netlify
+2. Set build command: `npm run build`
+3. Set publish directory: `dist`
+4. Deploy automatically on push to main branch
+
+### Vercel
+
+1. Import your repository to Vercel
+2. Set build command: `npm run build`
+3. Set output directory: `dist`
+4. Deploy
+
+### Manual Deployment
+
+1. Upload the contents of `dist` directory to your web server
+2. Configure your server to serve `index.html` for all routes
+3. Set up proper caching headers
+
+## Environment Variables
+
+Set the following environment variables in production:
+
+```env
+VITE_API_URL=https://your-production-api.com
+VITE_APP_ENV=production
+```
+
+## Monitoring
+
+- Set up error tracking (Sentry, LogRocket)
+- Monitor performance metrics
+- Set up uptime monitoring
+
+---
+
+_Generated automatically by Smart Documentation Generator_

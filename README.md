@@ -1,153 +1,192 @@
+# Zion App
 
-# Welcome to the project
+A modern, high-performance web application built with Next.js 14, TypeScript, and Tailwind CSS.
 
-## Project info
+## 🚀 Features
 
-**Maintained by**: Jules, Codex, and Kleber Alcatrao
+- **Next.js 14** with App Router
+- **TypeScript** with strict type checking
+- **Tailwind CSS** for styling
+- **Performance monitoring** and optimization
+- **Error boundaries** for better error handling
+- **Security headers** and best practices
+- **Image optimization** with WebP/AVIF support
+- **Bundle optimization** with code splitting
 
-## How can I edit this code?
+## 🛠️ Tech Stack
 
-There are several ways of editing your application.
+- **Framework**: Next.js 14.2.0
+- **Language**: TypeScript 5.0.0
+- **Styling**: Tailwind CSS 3.4.0
+- **Icons**: Lucide React, Heroicons
+- **Animation**: Framer Motion
+- **HTTP Client**: Axios
+- **Package Manager**: npm
 
-**Use your preferred IDE**
+## 📋 Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js 20.18.1 or higher
+- npm 10.0.0 or higher
 
-Follow these steps:
+## 🚀 Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Zion-Holdings/zion.app.git
+   cd zion.app
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-# Step 3: Run the setup script with your preferred package manager (npm, pnpm, yarn, or bun)
-./setup.sh npm  # Default and most compatible option
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env.local
+   # Edit .env.local with your configuration
+   ```
 
-# If you're using OpenAI Codex environments, a convenience script is available:
-./.codex/setup.sh  # Installs dependencies using npm
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev  # Use the same package manager you specified in setup.sh
+5. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📜 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint errors
+- `npm run type-check` - Run TypeScript type checking
+- `npm run test` - Run tests
+- `npm run test:coverage` - Run tests with coverage
+- `npm run clean` - Clean build artifacts
+
+## 🏗️ Project Structure
+
+```
+zion.app/
+├── app/                    # Next.js App Router pages
+├── components/             # Reusable React components
+├── lib/                    # Utility functions and configurations
+├── public/                 # Static assets
+├── styles/                 # Global styles
+├── types/                  # TypeScript type definitions
+├── next.config.js          # Next.js configuration
+├── tailwind.config.js      # Tailwind CSS configuration
+├── tsconfig.json           # TypeScript configuration
+└── package.json            # Dependencies and scripts
 ```
 
-> **IMPORTANT**: This project requires internet access to install dependencies. Without network connectivity, the build process will fail with errors about missing modules like 'react', 'react-router-dom', and 'lucide-react'.
+## 🔧 Configuration
 
-**Edit a file directly in GitHub**
+### TypeScript Configuration
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The project uses strict TypeScript configuration with:
+- Strict type checking enabled
+- Path mapping for clean imports
+- Modern ES2022 target
+- Comprehensive type safety rules
 
-**Use GitHub Codespaces**
+### Next.js Configuration
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Optimized for performance and security:
+- Image optimization with WebP/AVIF
+- Bundle optimization with code splitting
+- Security headers
+- Performance monitoring
 
-## What technologies are used for this project?
+### Tailwind CSS
 
-This project is built with:
+Configured with:
+- Custom design system
+- Responsive utilities
+- Dark mode support
+- Performance optimizations
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🚀 Performance Features
 
-## How can I deploy this project?
+- **Code Splitting**: Automatic code splitting for optimal loading
+- **Image Optimization**: Next.js Image component with WebP/AVIF
+- **Bundle Analysis**: Built-in bundle analyzer
+- **Performance Monitoring**: Custom performance tracking utilities
+- **Caching**: Optimized caching strategies
 
-Deployment instructions to be updated.
+## 🛡️ Security Features
 
-## Integrations
+- **Security Headers**: Comprehensive security headers
+- **Content Security Policy**: XSS protection
+- **HTTPS Enforcement**: Strict Transport Security
+- **Input Validation**: Type-safe input handling
 
-See [docs/Integrations.md](docs/Integrations.md) for information on the Zion Assistant browser extension and Slack bot.
-Payment environment variables are documented in [docs/Payments.md](docs/Payments.md).
+## 🧪 Testing
 
-## Troubleshooting
+The project includes:
+- Unit tests with Jest
+- Type checking with TypeScript
+- Linting with ESLint
+- Performance testing utilities
 
-### Network Issues
+## 📦 Deployment
 
-If you see errors related to missing modules like 'react', 'react-dom', or 'lucide-react', your environment may not have internet access to download these dependencies. Options to resolve this:
+### Vercel (Recommended)
 
-1. Ensure you have internet connectivity
-2. Configure proxy settings if needed: `npm config set proxy http://your-proxy:port`
-3. Use a pre-downloaded `node_modules` directory if available
+1. Connect your GitHub repository to Vercel
+2. Configure environment variables
+3. Deploy automatically on push to main
 
-### Package Manager Issues
+### Netlify
 
-If you encounter errors running `bun install` (for example, integrity check failures), delete any `bun.lockb` file and run `npm install` instead. This project relies on npm and is not guaranteed to work with Bun. Adding `bun.lockb` to `.gitignore` ensures Bun isn't accidentally used.
+1. Build command: `npm run build`
+2. Publish directory: `.next`
+3. Configure environment variables
 
-For pnpm errors showing "This project is configured to use npm", use `./setup.sh npm` instead as the project may have npm-specific configurations.
+### Docker
 
-If you see a warning about `rimraf@3.0.2` being deprecated, install the latest
-version of `rimraf`:
-
-```sh
-npm install rimraf@^5 --save-dev
+```dockerfile
+FROM node:20-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]
 ```
 
-This updates the dependency to a supported v5 release.
+## 🤝 Contributing
 
-To prevent memory leaks from the deprecated `inflight` package, the project pins
-`glob` to version `10.4.5` via the `resolutions` field in `package.json`. Run
-`npm install` to ensure this version is installed.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
-To suppress npm warnings about `@humanwhocodes/config-array`, the `resolutions`
-block maps it to `@eslint/config-array`. Run `npm install` to apply this
-override.
+## 📄 License
 
-### Whitelabel Tenant Errors
+This project is licensed under the MIT License.
 
-If the app logs **"Error loading tenant"** during startup, the request to the
-Supabase edge function that provides whitelabel settings failed. Confirm that
-`VITE_SUPABASE_URL`/`VITE_SUPABASE_ANON_KEY` (or the Next.js style
-`NEXT_PUBLIC_SUPABASE_URL`/`NEXT_PUBLIC_SUPABASE_ANON_KEY`) are set in your
-environment and that you have network connectivity. The tenant hook will retry
-a few times before giving up.
+## 🆘 Support
 
-### Translation Service
+For support and questions:
+- Create an issue on GitHub
+- Check the documentation
+- Review the code examples
 
-Automatic translations rely on OpenAI. Set `VITE_OPENAI_API_KEY` (or
-`NEXT_PUBLIC_OPENAI_API_KEY`) to allow the client to contact the API directly
-when the Supabase function is unavailable.
+## 🔄 Changelog
 
-## Testing
+### Latest Updates
+- Enhanced TypeScript configuration
+- Improved performance monitoring
+- Better error handling
+- Security improvements
+- Bundle optimization
 
-Run unit tests with:
+---
 
-```sh
-npm run test
-```
-
-To watch tests during development:
-
-```sh
-npm run test:watch
-```
-
-### End-to-End Tests
-
-Open Cypress for interactive debugging:
-
-```sh
-npm run cypress:open
-```
-
-Run the Cypress suite headlessly:
-
-```sh
-npm run cypress:run
-```
-
-### Coverage Report
-
-After running `npm run test`, open `coverage/lcov-report/index.html` in your
-browser to view detailed coverage information.
-
-When tests run on GitHub Actions, the workflow uploads the `coverage` directory
-using `actions/upload-artifact@v4`. Visit a workflow run and download the
-`coverage-report` artifact to retrieve the generated HTML coverage report.
+Built with ❤️ by the Zion team
