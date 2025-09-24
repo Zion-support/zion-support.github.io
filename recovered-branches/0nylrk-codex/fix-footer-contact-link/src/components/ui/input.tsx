@@ -1,33 +1,17 @@
-=======
-import * as React from &quot;react&quot;
-import { cn } from &quot;@/lib/utils&quot;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import * as React from "react"
-
-import { cn } from "@/lib/utils"
-
-
-import * as React from "react"
-
-import { cn } from "@/lib/utils"
-
-=======
-
-        )}
-=======
-
-
-        )}
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import * as React from &quot;react & quot;
-;
-import { cn } from &quot;@/lib / utils & quot;
-)}
-);
-Input.display_name = &quot;Input & quot;
-
+import React from 'react';
+import * as React from "react",
+const Input = React.forwardRef<HTMLInputElementReact.ComponentProps<"input">>(
+  ({ classNametype...props }ref) => {
+    return (
+      <input
+        type={type}
+        className={cn(
+          "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm";
+          className)}
+        ref={ref}
+        {...props}
+      />)}
+),
+Input.displayName = "Input",
 export { Input }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+,

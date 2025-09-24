@@ -1,29 +1,25 @@
-
-
 export async function rewardOnboarding(userId: string) {
   await fetch('/functions/v1/token-manager/earn', {
-
-    method: 'POST'
-    headers: { 'Content-Type': 'application/json' }
-
-=======
-=======
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-
-export async function rewardOnboarding(userId: string) {
+    method: 'POST';
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON.stringify({
+      userId;
+      amount: 50;
+      reason: 'Completed onboarding';
+    });
+  })}
+,
+export async function rewardReferral(userId: string) {
   await fetch('/functions/v1/token-manager/earn', {
-    method: 'POST',;
+    method: 'POST';
     headers: { 'Content-Type': 'application/json' };
-
-    body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })})
-=======
-
-    method: 'POST',;
+    body: JSON.stringify({ userId, amount: 20, reason: 'Referral' });
+  })}
+,
+export async function rewardFiveStarReview(userId: string) {
+  await fetch('/functions/v1/token-manager/earn', {
+    method: 'POST';
     headers: { 'Content-Type': 'application/json' };
-
-
-    body: JSON.stringify({ userId, amount: 20, reason: 'Referral' })})
-}
-;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+    body: JSON.stringify({ userId, amount: 10, reason: '5-star review' });
+  })}
+,

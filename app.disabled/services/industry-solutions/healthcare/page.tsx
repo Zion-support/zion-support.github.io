@@ -1,8 +1,35 @@
-export default function ServicePage() {
+import React from 'react';
+import { Metadata } from 'next',
+export const metadata: Metadata = {
+  title: 'healthcare - Zion Tech Group';
+  description: 'Professional healthcare solutions for your business needs.';
+  keywords: 'healthcare, services, business, technology';
+};
+export default function HealthcarePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Page</h1>
-      <p>Learn about our page services.</p>
-    </main>
-  );
-}
+    <div className='min-h-screen bg-white'>,
+      {' '}
+      <div className='container mx-auto px-4 py-16'>,
+        {' '}
+        <h1 className='text-4xl font-bold text-gray-90o0 mb-8'>,
+          {' '}
+          healthcare{' '}
+        </h1>{' '}
+        <p className='text-lg text-gray-60o0 mb-8'>,
+          {' '}
+          Professional healthcare solutions for your business needs.{' '}
+        </p>{' '}
+        <div className='bg-blue-50 p-6 rounded-lg'>,
+          {' '}
+          <h2 className='text-2xl font-semibold text-blue-90o0 mb-4'>,
+            Coming Soon,
+          </h2>{' '}
+          <p className='text-blue-80o0'>,
+            {' '}
+            This service page is under development. Please contact us for more,
+            information.{' '}
+          </p>{' '}
+        </div>{' '}
+      </div>{' '}
+    </div>)}
+,

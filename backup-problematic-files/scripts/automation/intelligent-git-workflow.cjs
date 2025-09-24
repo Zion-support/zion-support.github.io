@@ -1,7 +1,364 @@
+
+
+
+
+#!/usr/bin/env node;
+;#!/usr/bin/env node;
+
+/**
+ * Intelligent Git Workflow Automation;
+ * Advanced Git automation with intelligent conflict resolution, auto-merge, and code review;
+ * Features: Smart branching, conflict resolution, PR automation, code quality checks;
+ */
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+    this.logFile = path.join(this.projectRoot, 'logs', 'git-workflow.log')
+    this.configFile = path.join(this.projectRoot, 'logs', 'git-workflow-config.json')
+    this.workflowHistoryFile = path.join(this.projectRoot, 'logs', 'git-workflow-history.json')
+      autoMerge: process.env.AUTO_MERGE === 'true'
+      conflictResolution: process.env.CONFLICT_RESOLUTION === 'intelligent'
+      branchCleanup: process.env.BRANCH_CLEANUP === 'true'
+      prAutomation: process.env.PR_AUTOMATION === 'true'
+      codeReviewAI: process.env.CODE_REVIEW_AI === 'true'
+      branchStrategy: process.env.BRANCH_STRATEGY || 'gitflow'
+      protectedBranches: ['main', 'master', 'develop']
+      autoCommit: process.env.AUTO_COMMIT === 'true'
+      commitMessageTemplate: process.env.COMMIT_MESSAGE_TEMPLATE || 'feat: {type} - {description}'
+      mergeStrategy: process.env.MERGE_STRATEGY || 'recursive'
+
+
+    };
+    this.workflowHistory = [];
+    this.currentWorkflow = null;
+    this.ensureLogsDirectory();
+  }
+  async ensureLogsDirectory() {
+
+
+#!/usr/bin/env node
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+console.log('🔄 Starting Intelligent Git Workflow Automation...');
+
+class IntelligentGitWorkflow {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.config = {
+      autoCommit: process.env.AUTO_COMMIT === 'true',
+      autoMerge: process.env.AUTO_MERGE === 'intelligent',
+      conflictResolution: process.env.CONFLICT_RESOLUTION === 'ai-powered',
+      branchStrategy: process.env.BRANCH_STRATEGY || 'smart',
+    };
+    this.workflowData = this.loadWorkflowData();
+  }
+
+
+  loadWorkflowData() {
+    const dataFile = path.join(
+      this.projectRoot,
+      'logs',
+      'git-workflow-data.json'
+    );
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+    try {
+      await fs.mkdir(path.join(this.projectRoot, 'logs'), { recursive: true });
+      await this.loadConfiguration();
+      await this.loadWorkflowHistory();
+    } catch (error) {
+
+
+
+      console.log('📚 Creating new workflow data file...');
+    }
+    return {
+      lastCommit: null,
+      branchHistory: [],
+      mergeHistory: [],
+      conflictHistory: [],
+      performance: {},
+    };
+  }
+
+
+  saveWorkflowData() {
+    const dataFile = path.join(
+      this.projectRoot,
+      'logs',
+      'git-workflow-data.json'
+    );
+    fs.writeFileSync(dataFile, JSON.stringify(this.workflowData, null, 2));
+  }
+
+  async runWorkflow() {
+    console.log('🚀 Starting intelligent Git workflow...');
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
     try {
       const config = await fs.readFile(this.configFile, 'utf8');
       this.config = { ...this.config, ...JSON.parse(config) };
       this.log('✅ Git workflow configuration loaded');
+    } catch (error) {
+      this.log('📝 Using default Git workflow configuration');
+      await this.saveConfiguration();
+    }
+  }
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+    try {
+      const status = execSync('git status --porcelain', { encoding: 'utf8' });
+      const hasChanges = status.trim().length > 0;
+
+      return {
+        hasChanges,
+        status: status.trim(),
+        files: status.trim() ? status.trim().split('\n') : [],
+      };
+    } catch (error) {
+      console.log('⚠️  Not a Git repository or Git not available');
+      return { hasChanges: false, status: '', files: [] };
+    }
+  }
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+    try {
+      await fs.writeFile(this.configFile, JSON.stringify(this.config, null, 2));
+    } catch (error) {
+      this.log(`❌ Failed to save configuration: ${error.message}`, 'ERROR');
+    }
+  }
+
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  shouldAutoCommit(changes) {
+    if (!this.config.autoCommit) return false;
+
+    // Don't auto-commit if there are too many changes
+    if (changes.linesAdded > 500 || changes.linesDeleted > 200) {
+    console.log('⚠️  Too many changes for auto-commit'),
+    return false
+  }
+
+
+    // Don't auto-commit if there are test failures
+    if (changes.types.tests > 0) {
+      console.log('🧪 Test changes detected, skipping auto-commit');
+      return false;
+
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+    }
+
+    // Auto-commit for small fixes and documentation
+    if (changes.types.fixes > 0 || changes.types.documentation > 0) {
+      return true;
+    }
+
+
+    // Auto-commit for small feature additions
+    if (changes.types.features > 0 && changes.linesAdded < 100) {
+      return true;
+    }
+
+    return false;
+  }
+
+  async initialize() {
+    this.log('🚀 Initializing Intelligent Git Workflow...');
+    try {
+      // Check if we're in a git repository
+      await this.runGitCommand('git rev-parse --git-dir');
+      this.log('✅ Git repository detected');
+      // Set up git configuration if needed
+      await this.setupGitConfiguration();
+      this.log('🎯 Intelligent Git Workflow is ready');
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  async intelligentCommit(changes) {
+    console.log('💾 Performing intelligent commit...');
+    try {
+      // Stage all changes
+      execSync('git add .', { stdio: 'inherit' });
+      // Generate intelligent commit message
+      const commitMessage = this.generateCommitMessage(changes);
+      // Create commit
+      execSync(`git commit -m "${commitMessage}"`, { stdio: 'inherit' });
+      console.log(`✅ Committed: ${commitMessage}`);
+
+      // Update workflow data
+      this.workflowData.lastCommit = {
+        message: commitMessage,
+        timestamp: new Date().toISOString(),
+        changes: changes,
+      };
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+    } catch (error) {
+      this.log(`❌ Git workflow initialization failed: ${error.message}`, 'ERROR');
+      throw error;
+    }
+  }
+
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  generateCommitMessage(changes) {
+    const timestamp = new Date().toISOString().split('T')[0];
+
+    // Determine commit type
+    let type = 'feat';
+    if (changes.types.fixes > 0) type = 'fix';
+    else if (changes.types.refactoring > 0) type = 'refactor';
+    else if (changes.types.documentation > 0) type = 'docs';
+    else if (changes.types.tests > 0) type = 'test';
+
+
+    // Generate description
+    let description = '';
+    if (changes.types.fixes > 0) {
+      description = 'Fix issues and improve stability';
+    } else if (changes.types.features > 0) {
+      description = 'Add new features and enhancements';
+    } else if (changes.types.refactoring > 0) {
+      description = 'Refactor code for better maintainability';
+    } else if (changes.types.documentation > 0) {
+      description = 'Update documentation and comments';
+    } else {
+      description = 'Update codebase';
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+    }
+  }
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+    }
+  }
+
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  async intelligentMerge() {
+    console.log('🔀 Checking for merge opportunities...');
+
+    try {
+      // Get current branch
+      const currentBranch = execSync('git branch --show-current', {
+        encoding: 'utf8',
+      }).trim();
+
+
+      // Get all branches
+      const branches = execSync('git branch -r', { encoding: 'utf8' })
+        .split('\n')
+        .map(branch => branch.trim())
+        .filter(branch => branch && !branch.includes('HEAD'));
+
+
+      // Find mergeable branches
+      const mergeableBranches = await this.findMergeableBranches(
+        currentBranch,
+        branches
+      );
+
+      if (mergeableBranches.length > 0) {
+        console.log(`🔀 Found ${mergeableBranches.length} mergeable branches`);
+        for (const branch of mergeableBranches) {
+          await this.performIntelligentMerge(branch);
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+        }
+      } else {
+        await this.runGitCommand('git add .');
+      }
+
+
+    } catch (error) {
+      console.log('⚠️  Merge check failed:', error.message);
+    }
+  }
+  async findMergeableBranches(currentBranch, branches) {
+    const mergeable = [];
+    for (const branch of branches) {
+      try {
+        // Check if branch can be merged
+        const mergeBase = execSync(
+          `git merge-base ${currentBranch} ${branch}`,
+          { encoding: 'utf8' }
+        ).trim();
+        const currentCommit = execSync(`git rev-parse ${currentBranch}`, {
+          encoding: 'utf8',
+        }).trim();
+        const branchCommit = execSync(`git rev-parse ${branch}`, {
+          encoding: 'utf8',
+        }).trim();
+        // If branch is ahead of current branch
+        if (branchCommit !== currentCommit && mergeBase === currentCommit) {
+          mergeable.push(branch);
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+        }
+      }
+
+
+
+          conflictType = 'separator';
+          continue;
+        } else if (line.startsWith('>>>>>>')) {
+          inConflict = false;
+          conflictType = 'end';
+          continue;
+        }
+        if (!inConflict) {
+          resolvedLines.push(line);
+        } else if (conflictType === 'separator') {
+          // Use the version after the separator (incoming changes)
+          resolvedLines.push(line);const { execSync } = require('child_process');
+#!/usr/bin/env node
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
 console.log('🔄 Starting Intelligent Git Workflow Automation...');
 
 class IntelligentGitWorkflow {
@@ -284,6 +641,7 @@ class IntelligentGitWorkflow {
       } else {
         console.log('✅ No merge opportunities found');
       }
+
     } catch (error) {
       console.log('⚠️  Merge check failed:', error.message);
     }
@@ -310,9 +668,13 @@ class IntelligentGitWorkflow {
         if (branchCommit !== currentCommit && mergeBase === currentCommit) {
           mergeable.push(branch);
         }
+
       } catch (error) {
         // Skip branches that can't be checked
       }
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     }
   }
   async resolveConflictsIntelligently(conflicts, workflow) {
@@ -353,7 +715,38 @@ class IntelligentGitWorkflow {
       // Read the conflicted file
       const content = await fs.readFile(file, 'utf8');
       // Check if file has conflict markers
-      if (!content.includes('const { execSync } = require('child_process');
+      if (!content.includes('<<<<<<<') || !content.includes('>>>>>>')) {
+        return { resolved: true, method: 'no_conflicts' };
+      }
+      // Simple conflict resolution strategies
+      const lines = content.split('\n');
+      const resolvedLines = [];
+      let inConflict = false;
+      let conflictType = '';
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        if (line.startsWith('<<<<<<<')) {
+          inConflict = true;
+          conflictType = 'start';
+          continue;
+        } else if (line.startsWith('')) {
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+
+          conflictType = 'separator';
+          continue;
+        } else if (line.startsWith('>>>>>>')) {
+          inConflict = false;
+          conflictType = 'end';
+          continue;
+        }
+        if (!inConflict) {
+          resolvedLines.push(line);
+        } else if (conflictType === 'separator') {
+          // Use the version after the separator (incoming changes)
+          resolvedLines.push(line);const { execSync } = require('child_process');
+#!/usr/bin/env node
+
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
@@ -668,22 +1061,31 @@ class IntelligentGitWorkflow {
       } catch (error) {
         // Skip branches that can't be checked
       }
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     }
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return mergeable;
   }
   async performIntelligentMerge(branch) {
     console.log(`🔀 Attempting to merge ${branch}...`);
+
     try {
       // Check for conflicts first
       const mergeCheck = execSync(`git merge --no-commit --no-ff ${branch}`, {
         encoding: 'utf8',
       });
+
+
       // If no conflicts, complete the merge
       execSync(`git commit -m "Merge ${branch} [auto-merge]"`, {
         stdio: 'inherit',
       });
+
       console.log(`✅ Successfully merged ${branch}`);
+
       // Update workflow data
       this.workflowData.mergeHistory.push({
         branch: branch,
@@ -692,10 +1094,14 @@ class IntelligentGitWorkflow {
       });
     } catch (error) {
       console.log(`⚠️  Merge failed for ${branch}:`, error.message);
+
+
       // Handle conflicts if configured
       if (this.config.conflictResolution === 'ai-powered') {
         await this.handleMergeConflicts(branch);
       }
+
+
       // Update workflow data
       this.workflowData.mergeHistory.push({
         branch: branch,
@@ -705,10 +1111,14 @@ class IntelligentGitWorkflow {
       });
     }
   }
+
+
   async handleMergeConflicts(branch) {
     console.log(
       `🤖 Attempting AI-powered conflict resolution for ${branch}...`
     );
+
+
     try {
       // Get conflicted files
       const status = execSync('git status --porcelain', { encoding: 'utf8' });
@@ -719,19 +1129,132 @@ class IntelligentGitWorkflow {
             line.includes('UU') || line.includes('AA') || line.includes('DD')
         )
         .map(line => line.split(' ').pop());
+
       for (const file of conflictedFiles) {
         await this.resolveFileConflict(file);
       }
+
       // Complete the merge
       execSync(`git commit -m "Merge ${branch} [ai-resolved conflicts]"`, {
         stdio: 'inherit',
       });
+
       console.log(`✅ AI resolved conflicts for ${branch}`);
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+    } catch (error) {
+      console.log(
+        `❌ AI conflict resolution failed for ${branch}:`,
+        error.message
+      );
+
+
+      // Abort the merge
+      execSync('git merge --abort', { stdio: 'inherit' });
+    }
+  }
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async resolveFileConflict(filePath) {
     console.log(`🔧 Resolving conflict in ${filePath}...`);
     try {
       const content = fs.readFileSync(filePath, 'utf8');
-        if (line.startsWith('    } catch (e) {
+
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+      const lines = content.split('\n');
+      const resolvedLines = [];
+
+      let inConflict = false;
+      let conflictType = '';
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      const lines = content.split('\n');
+      const resolvedLines = [];
+      let inConflict = false;
+      let conflictType = '';
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        if (line.startsWith('<<<<<<<')) {
+
+          inConflict = true;
+          conflictType = 'start';
+          continue;
+        } else if (line.startsWith('')) {
+          conflictType = 'separator';
+          continue;
+        } else if (line.startsWith('>>>>>>')) {
+          inConflict = false;
+          conflictType = 'end';
+          continue;
+        }
+        if (!inConflict) {
+
+
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+
+        if (line.startsWith('<<<<<<<')) {
+    inConflict = true,
+    conflictType = 'ours'
+
+
+
+
+          conflictType = 'theirs';
+        } else if (line.startsWith('>>>>>>>')) {
+    inConflict = false,
+    conflictType = ''
+  } else if (!inConflict) {
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+          resolvedLines.push(line);
+        } else if (inConflict && conflictType === 'ours') {
+          // Keep our version for now (simple strategy)
+          resolvedLines.push(line);
+        }
+        // Skip their version
+      }
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+      fs.writeFileSync(filePath, resolvedLines.join('\n'));
+      // Add resolved file
+      execSync(`git add ${filePath}`, { stdio: 'inherit' });
+      console.log(`✅ Resolved conflict in ${filePath}`);
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+    } catch (error) {
+      console.log(
+        `❌ Failed to resolve conflict in ${filePath}:`,
+        error.message
+      );
+    }
+  }
+
+
+
+
+    } catch (e) {
       // Start fresh if file is corrupted
     }
 
@@ -739,6 +1262,33 @@ class IntelligentGitWorkflow {
     fs.writeFileSync(errorFile, JSON.stringify(errors, null, 2));
   }
 }
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+      console.log('Logs directory already exists')
+  log(message, level = 'INFO')
+    fs.appendFile(this.logFile, logMessage + '\n')
+      const config = await fs.readFile(this.configFile, 'utf8')
+      this.log(' Git workflow configuration loaded')
+      this.log('� Using default Git workflow configuration')
+      this.log(` Failed to save configuration: ${error.message}`, 'ERROR'`)
+      const history = await fs.readFile(this.workflowHistoryFile, 'utf8')
+      this.log('� No workflow history found, starting fresh')
+      this.log(` Failed to save workflow history: ${error.message}`, 'ERROR'`)
+    this.log(' Initializing Intelligent Git Workflow...')
+      // Check if we'
+      await this.runGitCommand('git rev-parse --git-dir')
+      this.log(' Git repository detected')
+      this.log(' Intelligent Git Workflow is ready')
+      this.log(` Git workflow initialization failed: ${error.message}`, 'ERROR'`)
+      const userName = await this.runGitCommand('git config user.name').catch(() => ''
+      const userEmail = await this.runGitCommand('git config user.email').catch(() => ''
+        await this.runGitCommand('git config user.name "AI Git Workflow")
+        await this.runGitCommand('git config user.email "ai-workflow@example.com")
+
+
+
   updateWorkflowData() {
     this.workflowData.lastUpdated = new Date().toISOString();
 
@@ -767,6 +1317,10 @@ class IntelligentGitWorkflow {
       'git-workflow-errors.json'
     );
     let errors = [];
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     try {
       if (fs.existsSync(errorFile)) {
         errors = JSON.parse(fs.readFileSync(errorFile, 'utf8'));
@@ -774,13 +1328,35 @@ class IntelligentGitWorkflow {
     } catch (e) {
       // Start fresh if file is corrupted
     }
+
+
     errors.push(errorLog);
     fs.writeFileSync(errorFile, JSON.stringify(errors, null, 2));
   }
 }
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 // Run the workflow
 const workflow = new IntelligentGitWorkflow();
 workflow.runWorkflow().catch(console.error);
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
 // Run the workflow
 const workflow = new IntelligentGitWorkflow();
-workflow.runWorkflow().catch(console.error);>>>>>>> origin/automation-improvements-final
+workflow.runWorkflow().catch(console.error);
+        await this.runGitCommand('git config user.email "ai-workflow@example.com")
+
+>>>>>>> origin/main
+
+
+// Run the workflow
+const workflow = new IntelligentGitWorkflow();
+workflow.runWorkflow().catch(console.error);
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+

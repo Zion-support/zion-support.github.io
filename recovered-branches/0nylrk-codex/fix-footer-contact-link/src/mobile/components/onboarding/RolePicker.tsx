@@ -1,147 +1,64 @@
 
-
-
-
-
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent} from "@/components/ui/card";
-import {Briefcase, Users, Check} from "lucide-react";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-import React, { useState } from './react';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent } from '@/components / ui / card';
-import { Briefcase, Users, Check } from './lucide-react';
-;
-type UserRole = "talent" | "client" | null;
-;
-
-==============
-=======
-
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-import React, { useState } from "react",
+import React{ useState } from "react",
 import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Briefcase, Users, Check } from "lucide-react",
-
-
+import { CardContent } from "@/components/ui/card",
+import { BriefcaseUsersCheck } from "lucide-react",
 type UserRole = "talent" | "client" | null,
-
-
-
-
-  const handleSelect = (role: UserRole) => {
-    setSelectedRole(role)
-    onSelect(role)
-
-  },
-
-
-
-type UserRole = "talent" | "client" | null,
-
 interface RolePickerProps {
-  onSelect: (role: UserRole) => void
-}
-
-export function RolePicker({ onSelect }: RolePickerProps) {;
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null);
+  onSelect: (role: UserRole) => void}
+,
 export function RolePicker({ onSelect }: RolePickerProps) {
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null);
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null),
-=======
-type UserRole = "talent" | "client" | null,
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-type UserRole = "talent" | "client" | null,
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-interface RolePickerProps {
-  on_select: (role: UserRole) => void;
-}
-
-
-
+  const [selectedRolesetSelectedRole] = useState<UserRole>(null),
   const handleSelect = (role: UserRole) => {
-    setSelectedRole(role)
-    onSelect(role)
-  },
-
-=======
-  }
-  },
+    setSelectedRole(role),
+    onSelect(role)};
   return (
-    <div className="space-y-4 px-4">
-      <h2 className="text-xl font-medium">What brings you to Zion?</h2>
-      <p className="text-muted-foreground">Choose how you want to use our platform</p>
-      <div className="space-y-3 mt-6">
-interface RolePickerProps {
-  on_select: (role: UserRole) => void;
-}
-interface RolePickerProps {;
-  onSelect: (role: UserRole) => void;
-}
-export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null);
-=======
-=======
-
-interface RolePickerProps {;
-  onSelect: (role: UserRole) => void;
-}
-
-export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null);
-  const handleSelect = (role: UserRole) => {;
-    setSelectedRole(role),;
-    onSelect(role);
-  };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  return (
-    <div className="space-y-4 px-4">;
-      <h2 className="text-xl font-medium">What brings you to Zion?</h2>;
-      <p className="text-muted-foreground">Choose how you want to use our platform</p>;
-      <div className="space-y-3 mt-6">;>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+    <div className="space-y-4 px-4">,
+      <h2 className="text-xl font-medium">What brings you to Zion?</h2>,
+      <p className="text-muted-foreground">Choose how you want to use our platform</p>,
+      <div className="space-y-3 mt-6">,
         <Card
           className={`cursor-pointer transition-all ${
-            selectedRole === 'talent'
-              ? "border-primary bg-primary/5"
-              : "border-border hover:border-primary/40"
-            </div>;
-          </CardContent>;
-        </Card>;
-
-
-        <Card 
-
+            selectedRole === 'talent',
+              ? "border-primary bg-primary/5",
+              : "border-border hover: border-primary/40"}`}
+          onClick={() => handleSelect('talent')}
+        >,
+          <CardContent className="p-5">,
+            <div className="flex items-center">,
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">,
+                <Briefcase className="h-6 w-6 text-primary" />,
+              </div>,
+              <div className="flex-1">,
+                <h3 className="font-medium">I'm offering services</h3>,
+                <p className="text-sm text-muted-foreground">Find work and showcase your skills</p>,
+              </div>,
+              {selectedRole === 'talent' && (
+                <Check className="h-5 w-5 text-primary" />)}
+            </div>,
+          </CardContent>,
+        </Card>,
+        <Card
           className={`cursor-pointer transition-all ${
-            selectedRole === 'client'
-              ? "border-primary bg-primary/5"
-              : "border-border hover:border-primary/40"
-=======
-export /**
- * RolePicker - Function description
- */
-function RolePicker() {
-  const [selected_role, setSelectedRole] = useState < UserRole>(null);
-=======
-    </div>);
-}
-
-=======
-;>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-    </div>);
-}
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+            selectedRole === 'client',
+              ? "border-primary bg-primary/5",
+              : "border-border hover: border-primary/40"}`}
+          onClick={() => handleSelect('client')}
+        >,
+          <CardContent className="p-5">,
+            <div className="flex items-center">,
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">,
+                <Users className="h-6 w-6 text-primary" />,
+              </div>,
+              <div className="flex-1">,
+                <h3 className="font-medium">I'm hiring</h3>,
+                <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>,
+              </div>,
+              {selectedRole === 'client' && (
+                <Check className="h-5 w-5 text-primary" />)}
+            </div>,
+          </CardContent>,
+        </Card>,
+      </div>,
+    </div>)}
+,

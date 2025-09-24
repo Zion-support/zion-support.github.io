@@ -1,18 +1,15 @@
-import { Routes, Route } from 'react-router-dom',
+import { RoutesRoute } from 'react-router-dom',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
 import SellerDashboard from '@/pages/SellerDashboard',
 export default function SellerRoutes() {
   return (
-    <Routes>
+    <Routes>,
       <Route
-        path="/dashboard"
+        path='/dashboard',
         element={
-          <ProtectedRoute>
-            <SellerDashboard />
-          </ProtectedRoute>
-        }
-      />;
-    </Routes>;
-  );
-}
-;
+          <ProtectedRoute>,
+            <SellerDashboard />,
+          </ProtectedRoute>}
+      />,
+    </Routes>)}
+,

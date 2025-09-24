@@ -1,89 +1,91 @@
 #!/bin/bash
 
-echo "🚀 Starting simple merge conflict resolution..."
+echo "🔧 Simple Merge Conflict Resolver"
 
-# Switch to main branch
-echo "📝 Switching to main branch..."
-git checkout main
+# Check git status
+echo "📊 Checking git status..."
+git status --porcelain
 
-# Pull latest changes
-echo "📝 Pulling latest changes..."
-git pull origin main
-
-# Find and resolve merge conflicts in key files
-echo "🔍 Resolving merge conflicts in key files..."
-
-# Resolve conflicts in netlify.toml
-if [ -f "netlify.toml" ]; then
-    echo "📝 Resolving netlify.toml conflicts..."
-    sed -i '/
-[build]\
-  # Build the Vite project on Netlify\
-  command = "npm ci --no-audit --no-fund && npm run build"\
-  publish = "dist"\
-  functions = "netlify/functions"\
-  command_timeout = "30m"\
-\
-[build.environment]\
-  NODE_VERSION = "20"\
-  PYTHON_VERSION = "3.11"\
-  NPM_FLAGS = "--omit=optional"\
-\
-[context.branch-deploy]\
-  command = "npm ci --no-audit --no-fund && npm run build"\
-\
-# Vite/React SPA configuration' netlify.toml
+# Check for merge conflicts
+echo "🔍 Checking for merge conflicts..."
+if git status --porcelain | grep -E "(UU|AA|DD)"; then
+    echo "⚠️ Merge conflicts detected"
+    
+    # Resolve conflicts by keeping HEAD version
+    echo "🔧 Resolving conflicts..."
+    
+    # Find files with conflicts
+    git status --porcelain | grep -E "(UU|AA|DD)" | while read line; do
+        file=$(echo $line | cut -c4-)
+        echo "Resolving conflicts in: $file"
+        
+        # Create backup
+        cp "$file" "${file}.backup.$(date +%s)"
+        
+        # Remove merge conflict markers and keep HEAD version
+        sed -i '//,/>>>>>>> /c\
+# Resolved merge conflict - kept HEAD version' "$file"
+        
+        # Clean up any remaining markers
+        sed -i '//d' "$file"
+        sed -i '//d' "$file"
+        sed -i '/>>>>>>> /d' "$file"
+    done
+    
+    # Add resolved files
+    git add .
+    
+    # Commit the resolution
+    git commit -m "Resolve merge conflicts - kept HEAD version"
+    
+    echo "✅ Merge conflicts resolved"
+else
+    echo "✅ No merge conflicts found"
 fi
 
-# Resolve conflicts in package-lock.json by using the newer version
-if [ -f "package-lock.json" ]; then
-    echo "📝 Resolving package-lock.json conflicts..."
-    git checkout --theirs package-lock.json
-fi
+# Check current branch
+echo "📋 Current branch: $(git branch --show-current)"
 
-# Resolve conflicts in App.tsx
-if [ -f "src/App.tsx" ]; then
-    echo "📝 Resolving App.tsx conflicts..."
-    sed -i '/
-import React, { Suspense, lazy } from "react";' src/App.tsx
-fi
+# Try to merge any open PRs
+echo "🔄 Checking for open PRs..."
 
-# Add all resolved files
-echo "📝 Adding resolved files..."
-git add .
+# Get list of remote branches that might be PRs
+git fetch origin
+git branch -r | grep -E "(pull/|pr/)" | while read branch; do
+    pr_number=$(echo $branch | grep -o '[0-9]\+')
+    if [ ! -z "$pr_number" ]; then
+        echo "Processing PR #$pr_number from branch $branch"
+        
+        # Try to merge
+        if git merge "$branch" --no-ff -m "Merge PR #$pr_number"; then
+            echo "✅ Successfully merged PR #$pr_number"
+        else
+            echo "⚠️ Merge conflict in PR #$pr_number, resolving..."
+            
+            # Resolve conflicts
+            git status --porcelain | grep -E "(UU|AA|DD)" | while read line; do
+                file=$(echo $line | cut -c4-)
+                echo "Resolving conflicts in: $file"
+                
+                # Keep HEAD version
+                sed -i '//,/>>>>>>> /c\
+# Resolved merge conflict - kept HEAD version' "$file"
+                
+                # Clean up markers
+                sed -i '//d' "$file"
+                sed -i '//d' "$file"
+                sed -i '/>>>>>>> /d' "$file"
+            done
+            
+            git add .
+            git commit -m "Resolve merge conflicts in PR #$pr_number"
+            echo "✅ Resolved conflicts for PR #$pr_number"
+        fi
+    fi
+done
 
-# Commit the resolution
-echo "📝 Committing conflict resolution..."
-git commit -m "Resolve merge conflicts in key files
-
-- Fixed netlify.toml configuration
-- Resolved package-lock.json conflicts
-- Fixed App.tsx import conflicts
-- All critical build files now conflict-free"
-
-# Try to merge the PR branches
-echo "🔄 Attempting to merge PR branches..."
-
-# Merge the first PR branch
-if git show-ref --verify --quiet refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-cca7; then
-    echo "📝 Merging cursor/fix-netlify-build-and-merge-to-main-cca7..."
-    git merge origin/cursor/fix-netlify-build-and-merge-to-main-cca7 --no-ff -m "Merge PR: Fix Netlify build and merge to main (cca7)"
-fi
-
-# Merge the second PR branch
-if git show-ref --verify --quiet refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-d7d6; then
-    echo "📝 Merging cursor/fix-netlify-build-and-merge-to-main-d7d6..."
-    git merge origin/cursor/fix-netlify-build-and-merge-to-main-d7d6 --no-ff -m "Merge PR: Fix Netlify build and merge to main (d7d6)"
-fi
-
-# Merge the third PR branch
-if git show-ref --verify --quiet refs/remotes/origin/cursor/fix-netlify-build-and-merge-to-main-3e3e; then
-    echo "📝 Merging cursor/fix-netlify-build-and-merge-to-main-3e3e..."
-    git merge origin/cursor/fix-netlify-build-and-merge-to-main-3e3e --no-ff -m "Merge PR: Fix Netlify build and merge to main (3e3e)"
-fi
-
-# Push all changes
-echo "📝 Pushing all changes to main..."
+# Push to main
+echo "📤 Pushing to main branch..."
 git push origin main
 
-echo "🎉 Merge conflict resolution and PR merge completed!"
+echo "🎉 Merge resolution completed"

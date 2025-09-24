@@ -241,3 +241,4 @@ if (require.main === module) {}
   const improver = new ComprehensiveAppImprover();
   improver.run().catch(console.error);
 };
+module.exports = ComprehensiveAppImprover;

@@ -1,51 +1,32 @@
-module.exports = {
-  displayName: 'Smoke Tests',
-  testMatch: [
-    '<rootDir>/__tests__/**/*.test.{js,jsx,ts,tsx}',
-    '<rootDir>/src/**/*.test.{js,jsx,ts,tsx}',
-    '<rootDir>/components/**/*.test.{js,jsx,ts,tsx}',
-  ],
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '/.next/',
-    '/out/',
-    '/dist/',
-    '/build/',
-    '/coverage/',
-    '/automation/',
-    '/scripts/',
-    '/backup/',
-    '/temp_/',
-  ],
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '^@/components/(.*)$': '<rootDir>/src/components/$1',
-    '^@/pages/(.*)$': '<rootDir>/src/pages/$1',
-    '^@/utils/(.*)$': '<rootDir>/src/utils/$1',
-    '^@/hooks/(.*)$': '<rootDir>/src/hooks/$1',
-    '^@/types/(.*)$': '<rootDir>/src/types/$1',
-  },
+const nextJest = require('next/jest');
+
+const createJestConfig = nextJest({
+  dir: './',
+});
+
+const config = {
   testEnvironment: 'jsdom',
-  collectCoverageFrom: [
-    'src/**/*.{js,jsx,ts,tsx}',
-    'components/**/*.{js,jsx,ts,tsx}',
-    '!src/**/*.d.ts',
-    '!src/**/*.test.{js,jsx,ts,tsx}',
-    '!src/**/*.spec.{js,jsx,ts,tsx}',
-    '!components/**/*.test.{js,jsx,ts,tsx}',
-    '!components/**/*.spec.{js,jsx,ts,tsx}',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  roots: ['<rootDir>/src', '<rootDir>/app', '<rootDir>/components', '<rootDir>/tests'],
+  testMatch: [
+    '**/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
+    '**/*.smoke.(test|spec).(js|jsx|ts|tsx)',
   ],
-  coverageDirectory: 'coverage',
-  coverageReporters: ['text', 'lcov', 'html'],
+  collectCoverage: false,
+  verbose: true,
+  testTimeout: 10000,
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
-  transformIgnorePatterns: [
-    '/node_modules/(?!(.*\\.mjs$|@testing-library|@jest))',
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+  modulePathIgnorePatterns: [
+    '<rootDir>/recovered-branches/',
+    '<rootDir>/automation/backups/',
+    '<rootDir>/.temp_backup_components/',
+    '<rootDir>/apps.backup/',
+    '<rootDir>/components/apps/',
   ],
-  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
-  testTimeout: 10000,
-  maxWorkers: '50%',
-  verbose: true,
 };
+
+module.exports = createJestConfig(config);

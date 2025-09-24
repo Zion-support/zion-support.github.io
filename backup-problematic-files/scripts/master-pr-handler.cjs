@@ -1,6 +1,10 @@
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 const { execSync } = require('child_process')
 // console.log(' Master PR Handler & Automation System')
 console.log('')
@@ -32,4 +36,8 @@ async function githubApiCall(endpoint, method = 'GET')
       "automationSuccess"
       "automationFailed"
     console.log('\n Final "Summary")
-    console.error(' Master PR handler "failed")
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+

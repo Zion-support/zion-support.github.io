@@ -1,27 +1,26 @@
 #!/bin/bash
 
-# Script to fix syntax errors caused by merge conflict resolution
-echo "Fixing syntax errors in files..."
+echo "Fixing syntax errors in the codebase..."
 
-# Find files with malformed import statements in the middle
-files_with_errors=$(find src/ -name "*.tsx" -o -name "*.ts" | xargs grep -l "import.*react-helmet-async" 2>/dev/null)
-
-for file in $files_with_errors; do
-    echo "Fixing: $file"
-    
-    # Create a backup
-    cp "$file" "$file.backup"
-    
-    # Remove malformed import statements that appear after the main component
-    # This removes lines that start with "import" after the first closing brace and parenthesis
-    awk '
-    BEGIN { in_component = 0; found_closing = 0 }
-    /^[[:space:]]*\);[[:space:]]*$/ { found_closing = 1; print; next }
-    found_closing && /^[[:space:]]*import/ { next }
-    { print }
-    ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
-    
-    echo "Fixed: $file"
+# Fix standalone semicolons at the beginning of lines
+find src -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | while read file; do
+    if [ -f "$file" ]; then
+        echo "Processing $file..."
+        # Remove standalone semicolons at the beginning of lines
+        sed -i 's/^;.*$//' "$file"
+        # Remove empty lines that might have been created
+        sed -i '/^$/N;/^\n$/d' "$file"
+    fi
 done
 
-echo "Syntax error fixing completed."
+# Fix common malformed patterns
+find src -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | while read file; do
+    if [ -f "$file" ]; then
+        # Fix malformed export statements
+        sed -i 's/export const \([a-zA-Z_][a-zA-Z0-9_]*\) = {}$/export const \1 = {};/' "$file"
+        # Fix missing semicolons after export statements
+        sed -i 's/export default \([a-zA-Z_][a-zA-Z0-9_]*\)$/export default \1;/' "$file"
+    fi
+done
+
+echo "Syntax error fixes completed!"

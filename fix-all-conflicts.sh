@@ -1,15 +1,15 @@
 #!/bin/bash
 
-echo "Fixing all remaining merge conflicts..."
-
-# Find all files with merge conflict markers
-files_with_conflicts=$(grep -r "/d' "$file"
+# Fix all merge conflicts by removing all conflict markers
+find pages/ components/ -name "*.tsx" -exec grep -l ">>>>>>>" {} \; | while read file; do
+    echo "Fixing merge conflicts in $file"
     
-    # Check if file is empty or has only whitespace
-    if [ ! -s "$file" ] || [ -z "$(cat "$file" | tr -d '[:space:]')" ]; then
-        echo "File $file is empty, adding placeholder content..."
-        echo "// Placeholder content - file was empty after conflict resolution" > "$file"
-    fi
+    # Remove all merge conflict markers
+    sed -i '/^/,/^/d' "$file"
+    sed -i '/^>>>>>>>/d' "$file"
+    
+    # Clean up any remaining empty lines
+    sed -i '/^$/N;/^\n$/d' "$file"
 done
 
 echo "All merge conflicts fixed!"

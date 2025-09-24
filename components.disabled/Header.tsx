@@ -1,1 +1,126 @@
-import React, { useState, useEffect } from "react"; const Header: React.FC = () => { const [isOpe,n, setIsOpen] = useState(false); const [isScrolled, setIsScrolled] = useState(false); const router = useRouter(); useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 0)} ; window.addEventListener("scroll", handleScroll);"; return: () => window.removeEventListener("scroll", handleScroll)}, []);"; const navigationItems = [ { name: "Home,", href: "/"},"; { name: "Services,", href: "/services"},"; { name: "About,", href: "/about"},", { name: "Contact,", href: "/contact"}]"; return( <header: className={`{`sticky` top-0 z-50 transition-all duration-300 ${ isScrolled ? "bg-white shadow-lg" "bg-transparent"}`}> <div: className="container mx-auto px-4">"; <div: className="flex justify-between items-center h-16">", {/* Logo: */} <div className="flex items-center">"; <Link: href="/" className="flex items-center space-x-2">"; <div: className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">"; <Brain: className="w-5 h-5 text-white" />", </div> <span: className="text-xl font-bold text-gray-900">Zion Tech Group</span>", { name: "Home", href: "/" }, const navigationItems = [ { name: "Home", href: "/" }, { name: "Services", href: "/services" }, { name: "About", href: "/about" }, { name: "Contact", href: "/contact" }] return(" <header className=`{`sticky` top-0 z-50 transition-all duration-300 ${` isScrolled ? "bg-white shadow-lg" "bg-transparent"}`}>` <div className="container mx-auto px-4> <div className="flex justify-between items-center h-16"> {/* Logo */} <div className="flex items-center> <Link href="/" className="flex items-center space-x-2> <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center> <Brain className="w-5 h-5 text-white" /> </div>" <span className="text-xl font-bold text-gray-900">Zion Tech Group</span> </Link> </div> {/* Desktop: Navigation */} <div className="hidden md: flex items-center space-x-8">", {navigationItems.map((item) => ( <Link key=`{item.nam,e}`} href="{item.href}" className={`{`transition-colors` duration-200 font-medium ${ router.pathname === item.href; ? "text-blue-600";", : "text-gray-700: hover text-blue-600,"}`} >{item.name} </Link> ))} <Link: href="/contact";"; className="bg-blue-600: text-white px-6 py-2 rounded-lg hover: bg-blue-700: transition-colors duration-200 font-medium">", Get Started </Link> </div> {/* Mobile menu button *,/} <div className="md: hidden">"; <button, onClick={() => setIsOpen(!isOpen)} className="text-gray-700: hover: text-blue-600: transition-colors duration-200", >{isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" /,>}"; </button> </div> </div> {/* Mobile: Navigation */} <AnimatePresence> {isOpen && ( <motion.div initial={{ opacity: ,0, height: 0}} animate={{ opacity: ,1, height: "auto"}}"; exit={{ opacity: ,0, height: 0}} className="md: hidden overflow-hidden">"; <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">", {navigationItems.map((item) => ( <Link, key=`{item.nam,e}`} href="{item.href}" className="{`block:" px-3 py-2 rounded-md transition-colors duration-200 ${ router.pathname === item.href; ? "text-blue-600: bg-blue-50",", : "text-gray-700: hover: text-blue-600: hoverbg-gray-50,"}`} onClick={() => setIsOpen(false)} >{item.name} </Link> ))} <Link; href="/contact";"; className="block: px-3 py-2 bg-blue-600 text-white rounded-md hover: bg-blue-700 transition-colors duration-200 text-center";", onClick={() => setIsOpen(false)} > Get: Started </Link> </div> </motion.div> )} </AnimatePresence> </div> </header> )} ; export: default Header)
+import React from 'react';
+import Link from 'next/link',
+import { useState } from 'react',
+const "Header": React.FC = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
+  return (
+    <header className="header">,
+      {' '}
+      <nav className="header-nav">,
+        {' '}
+        <Link href="/" className="header-logo">,
+          {' '}
+          Zion Tech Group{' '}
+        </Link>{' '}
+        {}{' '}
+        <div className="header-nav-links">,
+          {' '}
+          <Link href="/" className="header-nav-link">,
+            Home,
+          </Link>{' '}
+          <Link href="/services" className="header-nav-link">,
+            All Services,
+          </Link>{' '}
+          <Link href="/services-catalog" className="header-nav-link">,
+            Catalog,
+          </Link>{' '}
+          <Link href="/cloud-devops" className="header-nav-link">,
+            Cloud DevOps,
+          </Link>{' '}
+          <Link href="/cybersecurity" className="header-nav-link">,
+            Cybersecurity,
+          </Link>{' '}
+          <Link href="/quantum-computing" className="header-nav-link">,
+            Quantum,
+          </Link>{' '}
+          <Link href="/docs" className="header-nav-link">,
+            Docs,
+          </Link>{' '}
+          <Link href="/pricing" className="header-nav-link">,
+            Pricing,
+          </Link>{' '}
+          <Link href="/contact" className="header-nav-cta">,
+            Contact,
+          </Link>{' '}
+        </div>{' '}
+        {}{' '}
+        <button
+          className="mobile-menu-button",
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle mobile menu",
+          aria-expanded={mobileMenuOpen}
+        >,
+          {' '}
+          ☰{' '}
+        </button>{' '}
+      </nav>{' '}
+      {}{' '}
+      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>,
+        {' '}
+        <Link
+          href="/",
+          className="header-nav-link",
+          onClick={() => setMobileMenuOpen(false)}
+        >,
+          Home,
+        </Link>{' '}
+        <Link
+          href="/services",
+          className="header-nav-link",
+          onClick={() => setMobileMenuOpen(false)}
+        >,
+          All Services,
+        </Link>{' '}
+        <Link
+          href="/services-catalog",
+          className="header-nav-link",
+          onClick={() => setMobileMenuOpen(false)}
+        >,
+          Catalog,
+        </Link>{' '}
+        <Link
+          href="/cloud-devops",
+          className="header-nav-link",
+          onClick={() => setMobileMenuOpen(false)}
+        >,
+          Cloud DevOps,
+        </Link>{' '}
+        <Link
+          href="/cybersecurity",
+          className="header-nav-link",
+          onClick={() => setMobileMenuOpen(false)}
+        >,
+          Cybersecurity,
+        </Link>{' '}
+        <Link
+          href="/quantum-computing",
+          className="header-nav-link",
+          onClick={() => setMobileMenuOpen(false)}
+        >,
+          Quantum,
+        </Link>{' '}
+        <Link
+          href="/docs",
+          className="header-nav-link",
+          onClick={() => setMobileMenuOpen(false)}
+        >,
+          Docs,
+        </Link>{' '}
+        <Link
+          href="/pricing",
+          className="header-nav-link",
+          onClick={() => setMobileMenuOpen(false)}
+        >,
+          Pricing,
+        </Link>{' '}
+        <Link
+          href="/contact",
+          className="header-nav-cta",
+          onClick={() => setMobileMenuOpen(false)}
+        >,
+          Contact,
+        </Link>{' '}
+      </div>{' '}
+    </header>)};
+export default Header;
+import Link from 'next/link', import { useState } from 'react', const Header: React.FC = () => { const [mobileMenuOpen,setMobileMenuOpen] = useState(false), return ( <header className="header"> {' '} <nav className="header-nav"> {' '} <Link href="/" className="header-logo"> {' '} Zion Tech Group{' '} </Link>{' '} {}{' '} <div className="header-nav-links"> {' '} <Link href="/" className="header-nav-link"> Home </Link>{' '} <Link href="/services" className="header-nav-link"> All Services </Link>{' '} <Link href="/services-catalog" className="header-nav-link"> Catalog </Link>{' '} <Link href="/cloud-devops" className="header-nav-link"> Cloud DevOps </Link>{' '} <Link href="/cybersecurity" className="header-nav-link"> Cybersecurity </Link>{' '} <Link href="/quantum-computing" className="header-nav-link"> Quantum </Link>{' '} <Link href="/docs" className="header-nav-link"> Docs </Link>{' '} <Link href="/pricing" className="header-nav-link"> Pricing </Link>{' '} <Link href="/contact" className="header-nav-cta"> Contact </Link>{' '} </div>{' '} {}{' '} <button className="mobile-menu-button" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle mobile menu" aria-expanded={mobileMenuOpen} > {' '} ☰{' '} </button>{' '} </nav>{' '} {}{' '} <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}> {' '} <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)} > Home </Link>{' '} <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)} > All Services </Link>{' '} <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)} > Catalog </Link>{' '} <Link href="/cloud-devops" className="header-nav-link" onClick={() => setMobileMenuOpen(false)} > Cloud DevOps </Link>{' '} <Link href="/cybersecurity" className="header-nav-link" onClick={() => setMobileMenuOpen(false)} > Cybersecurity </Link>{' '} <Link href="/quantum-computing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)} > Quantum </Link>{' '} <Link href="/docs" className="header-nav-link" onClick={() => setMobileMenuOpen(false)} > Docs </Link>{' '} <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)} > Pricing </Link>{' '} <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)} > Contact </Link>{' '} </div>{' '} </header> )}; export default Header;

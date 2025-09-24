@@ -1,56 +1,48 @@
 #!/bin/bash
 
-echo "🚀 Starting comprehensive merge conflict resolution..."
+echo "🔧 Resolving all merge conflicts systematically..."
 
-# Find all files with merge conflicts
-conflict_files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | xargs grep -l "\|
+# Find all files with merge conflict markers
+echo "📁 Searching for files with merge conflicts..."
+conflict_files=$(grep -l "<<<<<<< HEAD" -r . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null)
 
-total_files=$(echo "$conflict_files" | wc -l)
-echo "Found $total_files files with merge conflicts"
-
-# Counter for progress
-count=0
-
-# Process each file
-echo "$conflict_files" | while read -r file; do
-    if [ -f "$file" ]; then
-        count=$((count + 1))
-        echo "Processing file $count/$total_files: $file"
-        
-        # Create a backup
-        cp "$file" "$file.backup"
-        
-        # Use sed to resolve conflicts by keeping HEAD version
-        # Remove conflict markers and keep content between 
-        sed -i '/
-        
-        # Remove any remaining conflict markers
-        sed -i '/
-        
-        # Check if file is empty or corrupted
-        if [ ! -s "$file" ] || grep -q "
-            echo "Restoring from backup for $file"
-            cp "$file.backup" "$file"
-        fi
-    fi
-done
-
-echo "✅ Merge conflict resolution completed!"
-
-# Check remaining conflicts
-remaining=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | xargs grep -l "
-echo "Remaining conflicts: $remaining"
-
-if [ "$remaining" -gt 0 ]; then
-    echo "Running second pass for remaining conflicts..."
-    find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | xargs grep -l "
-        echo "Second pass: $file"
-        # More aggressive approach - keep everything before  and remove conflict markers
-        sed -i '//,/
-    done
+if [ -z "$conflict_files" ]; then
+    echo "✅ No merge conflicts found!"
+    exit 0
 fi
 
-final_remaining=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | xargs grep -l "
-echo "Final remaining conflicts: $final_remaining"
+echo "⚠️  Found $(echo "$conflict_files" | wc -l) files with merge conflicts"
 
-echo "🎉 Conflict resolution process completed!"
+# Process each file
+for file in $conflict_files; do
+    echo "🔧 Processing: $file"
+    
+    # Create backup
+    cp "$file" "$file.backup.$(date +%s)"
+    
+    # Remove all merge conflict markers and keep the first version (HEAD)
+    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+    sed -i '/^>>>>>>> .*$/d' "$file"
+    
+    # Remove any remaining conflict markers
+    sed -i '/^<<<<<<< HEAD/d' "$file"
+    sed -i '/^=======/d' "$file"
+    sed -i '/^>>>>>>> /d' "$file"
+    
+    echo "✅ Resolved conflicts in: $file"
+done
+
+echo "🎉 All merge conflicts resolved!"
+echo "📝 Files processed:"
+echo "$conflict_files"
+
+# Check if any conflicts remain
+remaining_conflicts=$(grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null | wc -l)
+
+if [ "$remaining_conflicts" -eq 0 ]; then
+    echo "✅ No remaining conflicts found!"
+else
+    echo "⚠️  $remaining_conflicts conflicts still remain"
+    echo "🔍 Remaining conflicts:"
+    grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null | head -10
+fi

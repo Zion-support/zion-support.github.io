@@ -1,76 +1,192 @@
-# Zion Tech Group Website
+# Zion App
 
-A modern, high-performance website built with Next.js, TypeScript, and Tailwind CSS.
+A modern, high-performance web application built with Next.js 14, TypeScript, and Tailwind CSS.
 
 ## 🚀 Features
 
-- **High Performance**: Optimized for Core Web Vitals
-- **SEO Optimized**: Comprehensive meta tags and structured data
-- **Accessibility**: WCAG 2.1 AA compliant
-- **Responsive Design**: Mobile-first approach
-- **TypeScript**: Full type safety
-- **Error Handling**: Comprehensive error boundaries
-- **Analytics**: Built-in performance monitoring
+- **Next.js 14** with App Router
+- **TypeScript** with strict type checking
+- **Tailwind CSS** for styling
+- **Performance monitoring** and optimization
+- **Error boundaries** for better error handling
+- **Security headers** and best practices
+- **Image optimization** with WebP/AVIF support
+- **Bundle optimization** with code splitting
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 14
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Build Tool**: Vite
-- **Deployment**: Netlify
+- **Framework**: Next.js 14.2.0
+- **Language**: TypeScript 5.0.0
+- **Styling**: Tailwind CSS 3.4.0
+- **Icons**: Lucide React, Heroicons
+- **Animation**: Framer Motion
+- **HTTP Client**: Axios
+- **Package Manager**: npm
 
-## 📦 Installation
+## 📋 Prerequisites
 
-```bash
-# Install dependencies
-npm install
+- Node.js 20.18.1 or higher
+- npm 10.0.0 or higher
 
-# Run development server
-npm run dev
+## 🚀 Getting Started
 
-# Build for production
-npm run build
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Zion-Holdings/zion.app.git
+   cd zion.app
+   ```
 
-# Run linting
-npm run lint
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-# Run type checking
-npm run type-check
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env.local
+   # Edit .env.local with your configuration
+   ```
 
-# Run tests
-npm run test
-```
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📜 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint errors
+- `npm run type-check` - Run TypeScript type checking
+- `npm run test` - Run tests
+- `npm run test:coverage` - Run tests with coverage
+- `npm run clean` - Clean build artifacts
 
 ## 🏗️ Project Structure
 
 ```
-src/
-├── components/          # Reusable components
-├── pages/              # Next.js pages
-├── utils/              # Utility functions
-├── types/              # TypeScript type definitions
-└── styles/             # Global styles
+zion.app/
+├── app/                    # Next.js App Router pages
+├── components/             # Reusable React components
+├── lib/                    # Utility functions and configurations
+├── public/                 # Static assets
+├── styles/                 # Global styles
+├── types/                  # TypeScript type definitions
+├── next.config.js          # Next.js configuration
+├── tailwind.config.js      # Tailwind CSS configuration
+├── tsconfig.json           # TypeScript configuration
+└── package.json            # Dependencies and scripts
 ```
 
-## 🚀 Deployment
+## 🔧 Configuration
 
-The site is automatically deployed to Netlify on every push to main.
+### TypeScript Configuration
 
-## 📊 Performance
+The project uses strict TypeScript configuration with:
+- Strict type checking enabled
+- Path mapping for clean imports
+- Modern ES2022 target
+- Comprehensive type safety rules
 
-- **Lighthouse Score**: 95+
-- **Core Web Vitals**: All green
-- **Bundle Size**: Optimized and tree-shaken
+### Next.js Configuration
+
+Optimized for performance and security:
+- Image optimization with WebP/AVIF
+- Bundle optimization with code splitting
+- Security headers
+- Performance monitoring
+
+### Tailwind CSS
+
+Configured with:
+- Custom design system
+- Responsive utilities
+- Dark mode support
+- Performance optimizations
+
+## 🚀 Performance Features
+
+- **Code Splitting**: Automatic code splitting for optimal loading
+- **Image Optimization**: Next.js Image component with WebP/AVIF
+- **Bundle Analysis**: Built-in bundle analyzer
+- **Performance Monitoring**: Custom performance tracking utilities
+- **Caching**: Optimized caching strategies
+
+## 🛡️ Security Features
+
+- **Security Headers**: Comprehensive security headers
+- **Content Security Policy**: XSS protection
+- **HTTPS Enforcement**: Strict Transport Security
+- **Input Validation**: Type-safe input handling
+
+## 🧪 Testing
+
+The project includes:
+- Unit tests with Jest
+- Type checking with TypeScript
+- Linting with ESLint
+- Performance testing utilities
+
+## 📦 Deployment
+
+### Vercel (Recommended)
+
+1. Connect your GitHub repository to Vercel
+2. Configure environment variables
+3. Deploy automatically on push to main
+
+### Netlify
+
+1. Build command: `npm run build`
+2. Publish directory: `.next`
+3. Configure environment variables
+
+### Docker
+
+```dockerfile
+FROM node:20-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]
+```
 
 ## 🤝 Contributing
 
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Run tests and linting
+4. Add tests if applicable
 5. Submit a pull request
 
 ## 📄 License
 
-MIT License - see LICENSE file for details
+This project is licensed under the MIT License.
+
+## 🆘 Support
+
+For support and questions:
+- Create an issue on GitHub
+- Check the documentation
+- Review the code examples
+
+## 🔄 Changelog
+
+### Latest Updates
+- Enhanced TypeScript configuration
+- Improved performance monitoring
+- Better error handling
+- Security improvements
+- Bundle optimization
+
+---
+
+Built with ❤️ by the Zion team

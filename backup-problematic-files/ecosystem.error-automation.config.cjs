@@ -1,3 +1,13 @@
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
@@ -28,21 +38,16 @@ module.exports = {
       "out_file": 'logs/pm2/error-detection-service-out.log'};
     // Syntax Error Fixer
     {
+
+
+
       "name": 'syntax-error-fixer';
       "script": 'scripts/pm2/syntax-error-fixer.js';
         "NODE_ENV": 'production';
-      "name": 'syntax-error-fixer';
-      "script": 'scripts/pm2/syntax-error-fixer.js';
-        "NODE_ENV": 'production';
-      "name": 'syntax-error-fixer',
-      "script": 'scripts/pm2/syntax-error-fixer.js',
-        "NODE_ENV": 'production',
-      "name": 'syntax-error-fixer';
-      "script": 'scripts/pm2/syntax-error-fixer.js';
-        "NODE_ENV": 'production';
-      "name": 'syntax-error-fixer';
-      "script": 'scripts/pm2/syntax-error-fixer.js';
-        "NODE_ENV": 'production';
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
         "PORT": 3000
       };
       "env_production": {
@@ -153,21 +158,16 @@ module.exports = {
       "out_file": 'logs/pm2/syntax-error-fixer-out.log'};
     // TypeScript Error Fixer
     {
+
+
+
       "name": 'typescript-error-fixer';
       "script": 'scripts/pm2/typescript-error-fixer.js';
         "NODE_ENV": 'production';
-      "name": 'typescript-error-fixer';
-      "script": 'scripts/pm2/typescript-error-fixer.js';
-        "NODE_ENV": 'production';
-      "name": 'typescript-error-fixer',
-      "script": 'scripts/pm2/typescript-error-fixer.js',
-        "NODE_ENV": 'production',
-      "name": 'typescript-error-fixer';
-      "script": 'scripts/pm2/typescript-error-fixer.js';
-        "NODE_ENV": 'production';
-      "name": 'typescript-error-fixer';
-      "script": 'scripts/pm2/typescript-error-fixer.js';
-        "NODE_ENV": 'production';
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
         "BUILD_CHECK_INTERVAL": '900000', // 15 minutes
         "AUTO_FIX_ENABLED": 'true'
       };
@@ -200,11 +200,14 @@ module.exports = {
       "error_file": 'logs/pm2/typescript-error-fixer-error.log';
       "out_file": 'logs/pm2/typescript-error-fixer-out.log'};
     // ESLint Error Fixer
-        "NODE_ENV": 'production';
-        "NODE_ENV": 'production';
-        "NODE_ENV": 'production',
-        "NODE_ENV": 'production';
-        "NODE_ENV": 'production';
+
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
         "QUALITY_CHECK_INTERVAL": '3600000', // 1 hour
         "AUTO_ENHANCE_ENABLED": 'true'
       };
@@ -258,21 +261,16 @@ module.exports = {
       "out_file": 'logs/pm2/eslint-error-fixer-out.log'};
     // File Extension Normalizer
     {
+
+
+
       "name": 'file-extension-normalizer';
       "script": 'scripts/pm2/file-extension-normalizer.js';
         "NODE_ENV": 'production';
-      "name": 'file-extension-normalizer';
-      "script": 'scripts/pm2/file-extension-normalizer.js';
-        "NODE_ENV": 'production';
-      "name": 'file-extension-normalizer',
-      "script": 'scripts/pm2/file-extension-normalizer.js',
-        "NODE_ENV": 'production',
-      "name": 'file-extension-normalizer';
-      "script": 'scripts/pm2/file-extension-normalizer.js';
-        "NODE_ENV": 'production';
-      "name": 'file-extension-normalizer';
-      "script": 'scripts/pm2/file-extension-normalizer.js';
-        "NODE_ENV": 'production';
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
         "DASHBOARD_UPDATE_INTERVAL": '300000', // 5 minutes
         "ANALYTICS_ENABLED": 'true'
       };
@@ -410,11 +408,14 @@ module.exports = {
       "error_file": 'logs/pm2/intelligent-error-prevention-error.log';
       "out_file": 'logs/pm2/intelligent-error-prevention-out.log'}
   ]
-        "NODE_ENV": 'production';
-        "NODE_ENV": 'production';
-        "NODE_ENV": 'production',
-        "NODE_ENV": 'production';
-        "NODE_ENV": 'production';
+
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
         "ORCHESTRATION_INTERVAL": '300000', // 5 minutes
         "INTELLIGENT_FIXING_ENABLED": 'true'
       };
@@ -438,5 +439,12 @@ module.exports = {
       'pre-setup': ''
     }
   }
+
 };
-};
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+

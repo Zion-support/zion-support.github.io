@@ -1,30 +1,36 @@
 import React from 'react';
-interface AppStoreBannerProps {
-  // Add props here as needed
-=======}
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props),
+    this.state ={ hasError: false };
+  }
+,
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+,
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo)}
+,
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>}
+,
+    return this.props.children}
+}
+interface AppStoreBannerProps {
+  // Add props here as needed}
+,
+origin/cursor/integrate-build-improve-and-re-verify-c7b5,
 export default function AppStoreBanner({ }: AppStoreBannerProps) {
   return (
-    <div>
-      <h1>AppStoreBanner</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    <div>,
+      <h1>AppStoreBanner</h1>,
+      <p>This component is currently under development.</p>,
+    </div>),
+:src.disabled/components/mobile-app/AppStoreBanner.jsx}
 }
-:src.disabled/components/mobile-app/AppStoreBanner.jsx
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-}
-:temp_exclude/src.disabled/components/mobile-app/AppStoreBanner.jsx
-=======
-
-}
-
-==============
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/mobile-app/AppStoreBanner.jsx
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+ursor/add-new-services-and-deploy-updates-0o462,
+origin/cursor/integrate-build-improve-and-re-verify-c7b5}
+:temp_exclude/src.disabled/components/mobile-app/AppStoreBanner.jsx,

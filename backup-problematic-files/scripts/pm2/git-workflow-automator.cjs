@@ -1,3 +1,15 @@
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+            // Simple conflict resolution - take the incoming change
+            fs.writeFileSync(file, resolved);
+            execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
+            this.log(`✅ Auto-resolved conflicts in: ${file}`);
+          }
+        }
+
         // Commit the resolution
         try {
           execSync('git commit -m "fix: resolve merge conflicts"', {
@@ -104,6 +116,15 @@ if (require.main === module) {
   const automator = new GitWorkflowAutomator();
   automator.run();
 }
+
+module.exports = GitWorkflowAutomator;
+
+'
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"
         "encoding"
@@ -170,4 +191,8 @@ execSync(`"git": add ${file}`, { "cwd": this.projectRoo,t, "stdio"`})
             "stdio"
           this.log(' "Merge")
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
-  git commit -m '"fix"
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+

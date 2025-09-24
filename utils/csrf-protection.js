@@ -1,14 +1,14 @@
-=======
-
-};
-
-;
-;
-},;
-,;
-=======
-=======
-
-};=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+// CSRF protection utilities,
+export const generateCSRFToken = () => {
+  const array = new Uint8Array(32),
+  crypto.getRandomValues(array),
+  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')};
+export const validateCSRFToken = (token, sessionToken) => {
+  return token && sessionToken && token === sessionToken};
+export const getCSRFTokenFromCookie = cookieHeader => {
+  if (!cookieHeader) return null,
+  const cookies = cookieHeader.split(',').reduce((acc, cookie) => {
+    const [key, value] = cookie.trim().split('='),
+    acc[key] = value,
+    return acc}, {}),
+  return cookies.csrfToken};

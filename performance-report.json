@@ -1,13 +1,11 @@
 {
-  "timestamp": "2025-09-09T23:37:37.077Z",
-  "metrics": {
-    "bundleSize": 73298
-  },
+  "timestamp": "2025-09-24T03:55:22.638Z",
+  "buildTime": 17652,
+  "bundleSize": 102,
   "recommendations": [
-    "Enable gzip compression",
-    "Use CDN for static assets",
-    "Implement lazy loading for images",
-    "Minify CSS and JavaScript",
-    "Use modern image formats (WebP, AVIF)"
+    "Consider optimizing build process - build time is over 10s",
+    "Enable compression in production",
+    "Consider implementing service worker for caching",
+    "Monitor Core Web Vitals in production"
   ]
 }

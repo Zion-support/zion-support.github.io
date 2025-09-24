@@ -1,3 +1,10 @@
+
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -46,6 +53,8 @@ function autoResolveConflicts() {}
 };
 async function main() {}
   const { owner, repo } = getRepo();
+
+
   const startBranch = sh('git rev-parse --abbrev-ref HEAD');
   sh('git fetch origin');
   sh('git checkout main');
@@ -56,18 +65,11 @@ async function main() {}
     attempted++;
     const head = pr.head && pr.head.ref;
     if (!head) continue;
-    `);
-    try {
-      sh(`git fetch origin ${head}:${head} || true`);
-      try {
-        sh(`git merge --no-ff --no-edit origin/${head}`)} catch (e) {
-        autoResolveConflicts()}
-      mergedCount++} catch (e) {
-      : ${e.message}`);
-      // Abort merge if in progress
-      try { sh('git merge --abort')} catch {}
-    }
-  }
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
     console.log(`Merging head into "main": PR #${pr.number} (${head})`);
     try {}
       sh(`git fetch origin ${head}:${head} || true`);
@@ -87,4 +89,8 @@ async function main() {}
   try { sh(`git checkout ${startBranch}`)} catch {};
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
-});
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+

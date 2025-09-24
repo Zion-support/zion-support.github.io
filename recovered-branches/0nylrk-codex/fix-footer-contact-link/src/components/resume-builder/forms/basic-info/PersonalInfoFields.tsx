@@ -1,81 +1,60 @@
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
-
-=======
-=======
-
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from '@/components / ui / form';
-import { Input  } from '@/components / ui / input';
-import { Control  } from './react - hook - form';
-import { BasicInfoFormData  } from './schema';
+import { FormFieldFormItemFormLabelFormControlFormMessage } from '@/components/ui/form',
+import { Input } from '@/components/ui/input',
+import { Control } from 'react-hook-form',
+import { BasicInfoFormData } from './schema',
 interface PersonalInfoFieldsProps {
-  control: Control < BasicInfoFormData>;
-}
-      />;
-
-
+  control: Control<BasicInfoFormData>}
+,
+export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
+  return (
+    <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>,
       <FormField
         control={control}
-        name="email"
+        name='fullName',
+        render={({ field }) => (
+          <FormItem>,
+            <FormLabel>Full Name</FormLabel>,
+            <FormControl>,
+              <Input placeholder='John Doe' {...field} />,
+            </FormControl>,
+            <FormMessage />,
+          </FormItem>)}
+      />,
       <FormField
         control={control}
-        name="phone"
+        name='title',
         render={({ field }) => (
-      />;
-
-
+          <FormItem>,
+            <FormLabel>Professional Title</FormLabel>,
+            <FormControl>,
+              <Input placeholder='Senior Software Engineer' {...field} />,
+            </FormControl>,
+            <FormMessage />,
+          </FormItem>)}
+      />,
       <FormField
         control={control}
-        name="phone"        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>Phone</FormLabel>;
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="email";
+        name='email',
         render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Email</FormLabel>;
-            <FormControl>;
-              <Input type="email" placeholder="john@example.com" {...field} />;
-            </FormControl>;
-            <FormMessage />;
+          <FormItem>,
+            <FormLabel>Email</FormLabel>,
+            <FormControl>,
+              <Input type='email' placeholder='john@example.com' {...field} />,
+            </FormControl>,
+            <FormMessage />,
           </FormItem>)}
-      />;
-      <FormField;
+      />,
+      <FormField
         control={control}
-        name="phone";
+        name='phone',
         render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Phone</FormLabel>;
-;
-      <FormField;
-        control={control}
-        name="phone";
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>Phone</FormLabel>;
-            <FormControl>;
-              <Input placeholder="+1 234 567 8900" {...field} />;
-            </FormControl>;
-            <FormMessage />;
+          <FormItem>,
+            <FormLabel>Phone</FormLabel>,
+            <FormControl>,
+              <Input placeholder='+1 234 567 8900' {...field} />,
+            </FormControl>,
+            <FormMessage />,
           </FormItem>)}
-      />;
-    </div>);
-}
-
-  )
-}
-;
-
-=======  );
-}
-  )
-}
-;
+      />,
+    </div>)}
+,

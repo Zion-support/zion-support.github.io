@@ -1,48 +1,37 @@
-</div>
-      </section>
-
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-          Digital Transformation Framework
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Item
-            title="Assessment & Strategy"
-            details={[
-              'Current state analysis and digital maturity assessment',
-              'Competitive landscape analysis and market positioning',
-              'Technology stack evaluation and gap analysis',
-              'Digital strategy development and roadmap creation',
-              'Stakeholder alignment and change management planning',
-              'ROI modeling and business case development',
-            ]}
-          />
-          <Item
-            title="Implementation & Execution"
-            details={[
-              'Phased implementation approach with agile methodology',
-              'Technology selection and vendor management',
-              'Custom development and system integration',
-              'Data migration and system modernization',
-              'Testing, quality assurance, and performance optimization',
-              'Deployment and go-live support',
-            ]}
-          />
-          <Item
-            title="Optimization & Growth"
-            details={[
-              'Performance monitoring and continuous improvement',
-              'User adoption tracking and training optimization',
-              'Business process refinement and automation',
-              'Advanced analytics and AI implementation',
-              'Scalability planning and future roadmap',
-              'Ongoing support and maintenance',
-            ]}
-          />
-      </div>
-      </section>
-
-      <Pricing />
-      <ContactSection />
-      </div>
-  );
+import React from 'react';
+import { Metadata } from 'next',
+export const metadata: Metadata = {
+  title: 'digital-transformation - Zion Tech Group';
+  description:,
+    'Professional digital-transformation solutions for your business needs.';
+  keywords: 'digital-transformation, services, business, technology';
+};
+export default function DigitalTransformationPage() {
+  return (
+    <div className='min-h-screen bg-white'>,
+      {' '}
+      <div className='container mx-auto px-4 py-16'>,
+        {' '}
+        <h1 className='text-4xl font-bold text-gray-90o0 mb-8'>,
+          {' '}
+          digital-transformation{' '}
+        </h1>{' '}
+        <p className='text-lg text-gray-60o0 mb-8'>,
+          {' '}
+          Professional digital-transformation solutions for your business,
+          needs.{' '}
+        </p>{' '}
+        <div className='bg-blue-50 p-6 rounded-lg'>,
+          {' '}
+          <h2 className='text-2xl font-semibold text-blue-90o0 mb-4'>,
+            Coming Soon,
+          </h2>{' '}
+          <p className='text-blue-80o0'>,
+            {' '}
+            This service page is under development. Please contact us for more,
+            information.{' '}
+          </p>{' '}
+        </div>{' '}
+      </div>{' '}
+    </div>)}
+,

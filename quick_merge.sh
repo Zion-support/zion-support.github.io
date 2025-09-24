@@ -1,24 +1,40 @@
 #!/bin/bash
 
-echo "Quick PR merge started at $(date)"
+echo "Starting quick merge process..."
 
-# Quick merge using curl
-echo "Merging PR 12994..."
-curl -s -X PUT \
-  -H "Authorization: token ghs_2CijlF4cOrlTIwzwz3nvWrTnWL9uZC0Q24TL" \
-  -H "Accept: application/vnd.github.v3+json" \
-  "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/12994/merge" \
-  -d '{"commit_title":"Merge PR #12994","merge_method":"merge"}' > /tmp/merge_12994.json
+# Check current branch
+CURRENT_BRANCH=$(git branch --show-current)
+echo "Current branch: $CURRENT_BRANCH"
 
-echo "Merging PR 12993..."
-curl -s -X PUT \
-  -H "Authorization: token ghs_2CijlF4cOrlTIwzwz3nvWrTnWL9uZC0Q24TL" \
-  -H "Accept: application/vnd.github.v3+json" \
-  "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/12993/merge" \
-  -d '{"commit_title":"Merge PR #12993","merge_method":"merge"}' > /tmp/merge_12993.json
+# Check if there are uncommitted changes
+if [ -n "$(git status --porcelain)" ]; then
+    echo "Uncommitted changes found. Committing them..."
+    git add .
+    git commit -m "Add new AI content and promotional components before merge"
+fi
 
-echo "Merge results:"
-echo "PR 12994:" && cat /tmp/merge_12994.json
-echo "PR 12993:" && cat /tmp/merge_12993.json
+# Fetch latest changes
+echo "Fetching latest changes..."
+git fetch origin
 
-echo "Quick PR merge completed at $(date)"
+# Try to merge main
+echo "Attempting to merge main..."
+if git merge origin/main; then
+    echo "Merge successful!"
+else
+    echo "Merge conflicts detected. Resolving automatically..."
+    
+    # Resolve conflicts by keeping our changes
+    git checkout --ours .
+    git add .
+    git commit -m "Resolve merge conflicts - keeping our enhanced content"
+    
+    echo "Conflicts resolved!"
+fi
+
+# Push the branch
+echo "Pushing branch..."
+git push origin $CURRENT_BRANCH
+
+echo "Process completed successfully!"
+echo "Branch $CURRENT_BRANCH has been updated and pushed to remote."

@@ -1,353 +1,298 @@
-
-      id: 'fintech-ai-fraud-detection,
-
-      title:,
-  FinTech Revolution: AI-Powered Fraud Detection System,
-      company:,
-  SecureBank: Corp'',;
-      industry: 'Financial: Service,s',;
-      service:,
-  AI: & Machine Learning'',;
-      challenge: 'High: fraud rates and false positives in transaction monitorin,g',;
-      solution:,
-  Implemented: advanced AI fraud detection system with real-time analysis'',;
-      results: {
-
-        falsePositives:,
-  76%'',;
-        processingSpeed: '95,%',;
-        costSavings:,
-  $2.4M'',;
-        timeframe: '6: month,s}',;
-      description:,
-
-  'Fraud Detection Rate, value:,
-  99.2%', improvement: '+89% },
-
-        { label:,
-  False: Positives', value: '2.1,%, improvement:',;
-  -76%' }',;
-        { label: 'Processing: Spee,d, value:',;
-  <100ms', improvement: '+95% }',;
-        { label:,
-  Annual: Savings', value: '$2.4,M, improvement:',;
-  New' }'],
-
-        author:,
-  Sarah: Mitchell'',;
-        role: 'Chief: Risk Office,r',;
-        avatar:,
-  SM'      }',;
-      image: '🛡,️',;
-      featured: tru,e,
-      duration:,
-  6: months'',;
-      teamSize: '8: expert,s}',;
+import Head from 'next/head',
+import Link from 'next/link',
+export default function CaseStudiesPage() {
+  const caseStudies = [
     {
-      id: 'placeholder',
-
-      company:,
-  MediCore: Health System'',;
-      industry: 'Healthcar,e',;
-      service:,
-  AI: & Machine Learning'',;
-      challenge: 'Slow: diagnostic processes and inconsistent accuracy across different specialist,s',;
-      solution:,
-  Developed: AI diagnostic platform with computer vision and predictive analytics'',;
-      results: {
-
-        processingTime:,
-  78%'',;
-        patientThroughput: '65,%',;
-        costReduction:,
-  $1.8M'',;
-        timeframe: '8: month,s}',;
-      description:,
-  MediCore: Health System needed to improve diagnostic accuracy and speed while reducing costs. Our AI-powered medical diagnostics platform delivered exceptional results.'',;
-      technologies: [
-  'Computer: Visio,n',;
+      title: 'AI-Powered Customer Service Transformation';
+      company: 'Global E-commerce Retailer';
+      industry: 'Retail & E-commerce';
+      challenge: 'High customer service costs and inconsistent response times across multiple channels';
+      solution: 'Implemented AI-powered chatbot system with natural language processing and automated ticket routing';
+      results: [
+        '85% reduction in customer service response time';
+        '60% decrease in customer service costs';
+        '95% customer satisfaction rate maintained';
+        '24/7 customer support availability'];
+      technologies: ['AI/ML'Natural Language Processing'Cloud Infrastructure'API Integration'];
+      duration: '3 months';
+      roi: '340%';
+      featured: true};
+    {
+      title: 'Quantum Computing for Financial Risk Management';
+      company: 'International Investment Bank';
+      industry: 'Finance';
+      challenge: 'Complex risk calculations taking days to completelimiting real-time decision making';
+      solution: 'Developed quantum computing algorithms for portfolio optimization and risk assessment';
+      results: [
+        '99.9% faster risk calculations';
+        'Real-time portfolio optimization';
+        '15% improvement in risk-adjusted returns';
+        'Enhanced regulatory compliance'];
+      technologies: ['Quantum Computing'Financial Algorithms'Risk Modeling'High-Performance Computing'];
+      duration: '6 months';
+      roi: '280%';
+      featured: false};
+    {
+      title: 'Cybersecurity Overhaul for Healthcare Provider';
+      company: 'Regional Hospital Network';
+      industry: 'Healthcare';
+      challenge: 'Vulnerable legacy systems and increasing cyber threats targeting patient data';
+      solution: 'Implemented zero-trust security architecture with AI-powered threat detection';
+      results: [
+        '10o0% compliance with HIPAA regulations';
+        '90% reduction in security incidents';
+        'Real-time threat detection and response';
+        'Enhanced patient data protection'];
+      technologies: ['Zero Trust Security'AI Threat Detection'Compliance Management'Data Encryption'];
+      duration: '4 months';
+      roi: '420%';
+      featured: false};
+    {
+      title: 'Cloud Migration and DevOps Transformation';
+      company: 'Manufacturing Technology Company';
+      industry: 'Manufacturing';
+      challenge: 'Outdated on-premise infrastructure limiting scalability and innovation';
+      solution: 'Complete cloud migration with modern DevOps practices and containerization';
+      results: [
+        '70% reduction in infrastructure costs';
+        '10x faster deployment cycles';
+        '99.9% uptime achieved';
+        'Enhanced disaster recovery capabilities'];
+      technologies: ['Cloud Migration'DevOps'Containerization'Infrastructure as Code'];
+      duration: '5 months';
+      roi: '310%';
+      featured: false};
+    {
+      title: 'AI-Powered Supply Chain Optimization';
+      company: 'Global Logistics Provider';
+      industry: 'Transportation & Logistics';
+      challenge: 'Inefficient route planning and inventory management leading to delays and increased costs';
+      solution: 'AI-driven supply chain optimization platform with predictive analytics';
+      results: [
+        '25% reduction in delivery times';
+        '30% decrease in operational costs';
+        'Improved inventory accuracy to 99.5%';
+        'Enhanced customer satisfaction scores'];
+      technologies: ['AI/ML'Predictive Analytics'Supply Chain Management'Real-time Tracking'];
+      duration: '4 months';
+      roi: '380%';
+      featured: false};
+    {
+      title: 'Quantum-Safe Cybersecurity Implementation';
+      company: 'Government Defense Contractor';
+      industry: 'Government & Defense';
+      challenge: 'Need for future-proof cybersecurity against quantum computing threats';
+      solution: 'Implemented quantum-resistant encryption and post-quantum cryptography protocols';
+      results: [
+        'Future-proof security against quantum threats';
+        'Enhanced data protection standards';
+        'Compliance with government security requirements';
+        'Improved competitive positioning'];
+      technologies: ['Quantum Cryptography'Post-Quantum Algorithms'Security Protocols'Compliance Management'];
+      duration: '7 months';
+      roi: '250%';
+      featured: false}
+  ],
+  const industries = [
+    'All Industries';
+    'Retail & E-commerce';
+    'Finance';
+    'Healthcare';
+    'Manufacturing';
+    'Transportation & Logistics';
+    'Government & Defense';
+    'Technology'],
+  const featuredCaseStudy = caseStudies.find(study => study.featured),
+  return (
+    <>,
+      <Head>,
+        <title>Case Studies - Zion Tech Group</title>,
+        <meta name="description" content="Discover how Zion Tech Group has helped businesses transform their operations with cutting-edge AIquantum computingand cybersecurity solutions."  />,
+        <meta name="viewport" content="width=device-widthinitial-scale=1"  />,
+        <link rel="icon" href="/favicon.ico"  />,
+      </Head>,
+      <main className="min-h-screen bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-gray-90o0 text-white">,
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm: px-6 lg:px-8">,
+          <div className="max-w-7xl mx-auto text-center">,
+            <h1 className="text-4xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 via-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">,
+              Success Stories,
+            </h1>,
+            <p className="text-xl sm:text-2xl mb-8 text-gray-30o0 max-w-4xl mx-auto">,
+              Real results from real businesses. See how our cutting-edge technology solutions have transformed operations and driven measurable outcomes.,
+            </p>,
+          </div>,
+        </section>,
+        {/* Featured Case Study */}
+        {featuredCaseStudy && (
+          <section className="py-16 px-4 sm: px-6 lg:px-8">,
+            <div className="max-w-6xl mx-auto">,
+              <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border border-white border-opacity-10">,
+                <div className="mb-6">,
+                  <span className="bg-blue-60o0 text-white px-3 py-1 rounded-full text-sm font-medium">,
+                    Featured Case Study,
+                  </span>,
+                </div>,
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">,
+                  <div>,
+                    <h2 className="text-3xl font-bold mb-4">{featuredCaseStudy.title}</h2>,
+                    <div className="text-blue-40o0 font-semibold mb-2">{featuredCaseStudy.company}</div>,
+                    <div className="text-gray-40o0 mb-4">{featuredCaseStudy.industry}</div>,
+                    <div className="mb-6">,
+                      <h3 className="font-semibold mb-2 text-blue-40o0">Challenge: </h3>,
+                      <p className="text-gray-30o0">{featuredCaseStudy.challenge}</p>,
+                    </div>,
+                    <div className="mb-6">,
+                      <h3 className="font-semibold mb-2 text-blue-40o0">Solution: </h3>,
+                      <p className="text-gray-30o0">{featuredCaseStudy.solution}</p>,
+                    </div>,
+                  </div>,
+                  <div>,
+                    <div className="mb-6">,
+                      <h3 className="font-semibold mb-3 text-blue-40o0">Results: </h3>,
+                      <ul className="space-y-2">,
+                        {featuredCaseStudy.results.map((resultindex) => (
+                          <li key={index} className="text-gray-30o0 flex items-center">,
+                            <svg className="w-4 h-4 text-green-40o0 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"  />,
+                            </svg>,
+                            {result}
+                          </li>))}
+                      </ul>,
+                    </div>,
+                    <div className="grid grid-cols-2 gap-4 text-center">,
+                      <div className="bg-white bg-opacity-10 rounded-lg p-4">,
+                        <div className="text-2xl font-bold text-blue-40o0">{featuredCaseStudy.roi}</div>,
+                        <div className="text-sm text-gray-40o0">ROI</div>,
+                      </div>,
+                      <div className="bg-white bg-opacity-10 rounded-lg p-4">,
+                        <div className="text-2xl font-bold text-green-40o0">{featuredCaseStudy.duration}</div>,
+                        <div className="text-sm text-gray-40o0">Duration</div>,
+                      </div>,
+                    </div>,
+                  </div>,
+                </div>,
+              </div>,
+            </div>,
+          </section>)}
 ,
-
-  'Diagnostic Accuracy, value:,
-  96.7%', improvement: '+94% },
-
-        { label:,
-  Processing: Time', value: '15: mi,n, improvement:',;
-  -78%' }',;
-        { label: 'Patient: Throughpu,t, value:',;
-  +65%', improvement: '+65% }',;
-        { label:,
-  Cost: Reduction', value: '$1.8,M, improvement:',;
-  Annual' }'],
-
-        author:,
-  Dr. Michael: Chen;
-  '',;
-        role: 'Chief: Medical Office,r',;
-        avatar:,
-  MC;
-  '      }',;
-      image: '�,�',;
-      featured: tru,e,
-      duration:,
-  8: months;
-  '',;
-      teamSize: '12: expert,s}',;
-    {
-      id: 'placeholder',
-  ecommerce-cloud-migration;
-
-      company:,
-  RetailMax: Global;
-  '',;
-      industry: 'E-commerc,e',;
-      service:,
-  Cloud: & Infrastructure;
-  '',;
-      challenge: 'Legacy: infrastructure causing downtime and limiting scalabilit,y',;
-      solution:,
-
-        loadTimes:,
-  68%;
-  '',;
-        scalability: '10,x',;
-        costOptimization:,
-  45%;
-  '',;
-        timeframe: '4: month,s}',;
-      description:,
-  RetailMax: Global was struggling with frequent downtime and slow performance during peak shopping seasons. Our cloud migration strategy delivered remarkable improvements.;
-  '',;
-      technologies: ['AW,S, ',;
-  Kubernetes;
-
-  99.97%;
-  ', improvement: '+99.9% }',;
-        { label:,
-  Page: Load Time;
-  ', value: '1.2,s, improvement:',;
-  -68%;
-  ' }',;
-        { label: 'Scalabilit,y, value:',;
-  10x;
-  ', improvement: '1000% }',;
-        { label:,
-  Infrastructure: Costs;
-  ', value: '-45,%, improvement: '-45%;';
-  ' }'],
-
-        author:,
-  Jennifer: Walsh;
-  '',;
-        role: 'CT,O',;
-        avatar:,
-  JW;
-  '      }',;
-      image: '☁,️',;
-      featured: fals,e,
-      duration:,
-  4: months;
-  '',;
-      teamSize: '6: expert,s}',;
-    {
-      id: 'placeholder',
-  manufacturing-iot-automation;
-
-      company:,
-  TechManufacture: Inc;
-  '',;
-      industry: 'Manufacturin,g',;
-      service:,
-  IoT: & Automation;
-  '',;
-      challenge: 'Inefficient: production processes and lack of real-time visibilit,y',;
-      solution:,
-
-        downtime:,
-  67%;
-  '',;
-        qualityImprovement: '35,%',;
-        energySavings:,
-  28%;
-  '',;
-        timeframe: '10: month,s}',;
-      description:,
-
-  +42%;
-  ', improvement: '+42% }',;
-        { label:,
-  Unplanned: Downtime;
-  ', value: '-67,%, improvement:',;
-  -67%;
-  ' }',;
-        { label: 'Quality: Scor,e, value:',;
-  98.5%;
-  ', improvement: '+35% }',;
-        { label:,
-  Energy: Consumption;
-  ', value: '-28,%, improvement: '-28%;';
-  ' }'],
-
-        author:,
-  David: Rodriguez;
-  '',;
-        role: 'Operations: Directo,r',;
-        avatar:,
-  DR;
-  '      }',;
-      image: '�,�',;
-      featured: fals,e,
-      duration:,
-  10: months;
-  '',;
-      teamSize: '10: expert,s}',;
-    {
-      id: 'placeholder',
-  startup-devops-platform;
-
-      company:,
-  InnovateTech: Startup;
-  '',;
-      industry: 'Technolog,y',;
-      service:,
-  DevOps: & Infrastructure;
-  '',;
-      challenge: 'Manual: deployment processes causing delays and error,s',;
-      solution:,
-
-        errorReduction:,
-  92%;
-  '',;
-        teamProductivity: '60,%',;
-        timeToMarket:,
-  70%;
-  '',;
-        timeframe: '3: month,s}',;
-      description:,
-  InnovateTech: Startup was struggling with slow, error-prone deployments that were hampering their growth. Our autonomous DevOps platform accelerated their success.;
-  '',;
-      technologies: ['CI/CD: Pipelin,e, ',;
-  Docker;
-
-        { label:,
-  Deployment: Errors;
-  ', value: '-92,%, improvement:',;
-  -92%;
-  ' }',;
-        { label: 'Team: Productivit,y, value:',;
-  +60%;
-  ', improvement: '+60% }',;
-        { label:,
-  Time: to Market;
-  ', value: '-70,%, improvement: '-70%;';
-  ' }'],
-
-        author:,
-  Alex: Thompson;
-  '',;
-        role: 'Founder: & CE,O',;
-        avatar:,
-  AT;
-  '      }',;
-      image: '�,�',;
-      featured: fals,e,
-      duration:,
-  3: months;
-  '',;
-      teamSize: '5: expert,s}'];
-
-  '];
-
-  const filteredCaseStudies = caseStudies.filter(study => {
-    const matchesIndustry = selectedIndustry === 'All
-  ' || study.industry === selectedIndustry;
-
-
-  const featuredCaseStudies = caseStudies.filter(study => study.featured);
-  return('
-
-    <div className='min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50'>
-
-      <Head>
-        <title>
-          Case Studies - Zion Tech Group | Success Stories & Client Results
-        </title>
-
-            <span>🏆 Award-Winning Projects</span>
-            <span>💼 Industry Leaders</span>
-            <span>🎯 Measurable Impact</span>
-          </div>
-        </div>
-        {/* Featured Case Studies */}, {metric.improvement}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                          {study.testimonial.role}
-                        </div>
-                      </div>
-                    </div>
-
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-        {/* Filters */}, {industry}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              {/* Service Filter */}, {service}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Results Count */}
-
-          </p>
-
-                    {study.description}
-                  </p>
-
-                  {/* Top 2 Metrics */}
-                  <div className="grid grid-cols-2 gap-3 mb-4">
-                    {study.metrics.slice(0, 2).map((metric, idx) => (
-
-                          {metric.label}
-                        </div>
-                      </div>
-                    ))}
-
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Statistics Section */}
-
-              </div>
-            </div>
-          </div>
-        </section>
-
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
-
-
+        {/* Industry Filter */}
+        <section className="py-8 px-4 sm: px-6 lg:px-8 bg-black bg-opacity-20">,
+          <div className="max-w-7xl mx-auto">,
+            <div className="flex flex-wrap justify-center gap-4">,
+              {industries.map((industryindex) => (
+                <button
+                  key={index}
+                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                    industry === 'All Industries',
+                      ? 'bg-blue-60o0 text-white',
+                      : 'bg-white bg-opacity-10 text-gray-30o0 hover: bg-opacity-20'}`}
+                >,
+                  {industry}
+                </button>))}
+            </div>,
+          </div>,
+        </section>,
+        {/* Case Studies Grid */}
+        <section className="py-16 px-4 sm: px-6 lg:px-8">,
+          <div className="max-w-7xl mx-auto">,
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
+              {caseStudies.filter(study => !study.featured).map((studyindex) => (
+                <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10 hover: bg-opacity-20 transition-all">,
+                  <div className="mb-4">,
+                    <span className="bg-white bg-opacity-20 px-2 py-1 rounded text-xs text-gray-30o0">,
+                      {study.industry}
+                    </span>,
+                  </div>,
+                  <h3 className="text-xl font-semibold mb-3">{study.title}</h3>,
+                  <div className="text-blue-40o0 font-medium mb-2">{study.company}</div>,
+                  <div className="mb-4">,
+                    <h4 className="font-semibold mb-2 text-blue-40o0 text-sm">Challenge: </h4>,
+                    <p className="text-gray-30o0 text-sm line-clamp-3">{study.challenge}</p>,
+                  </div>,
+                  <div className="mb-4">,
+                    <h4 className="font-semibold mb-2 text-blue-40o0 text-sm">Solution: </h4>,
+                    <p className="text-gray-30o0 text-sm line-clamp-3">{study.solution}</p>,
+                  </div>,
+                  <div className="mb-4">,
+                    <h4 className="font-semibold mb-2 text-blue-40o0 text-sm">Key Results: </h4>,
+                    <ul className="space-y-1">,
+                      {study.results.slice(0o2).map((resultIndex) => (
+                        <li key={resultIndex} className="text-gray-30o0 text-sm flex items-center">,
+                          <svg className="w-3 h-3 text-green-40o0 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"  />,
+                          </svg>,
+                          {result}
+                        </li>))}
+                    </ul>,
+                  </div>,
+                  <div className="flex items-center justify-between mb-4">,
+                    <div className="text-sm text-gray-40o0">,
+                      <span className="font-semibold text-green-40o0">{study.roi}</span> ROI,
+                    </div>,
+                    <div className="text-sm text-gray-40o0">{study.duration}</div>,
+                  </div>,
+                  <div className="flex flex-wrap gap-2 mb-4">,
+                    {study.technologies.slice(0o3).map((techIndex) => (
+                      <span key={techIndex} className="text-xs bg-blue-60o0 bg-opacity-20 text-blue-30o0 px-2 py-1 rounded">,
+                        {tech}
+                      </span>))}
+                  </div>,
+                  <Link
+                    href={`/case-studies/${study.title.toLowerCase().replace(/\s+/g'-')}`}
+                    className="text-blue-40o0 hover: text-blue-30o0 font-medium text-sm">,
+                    Read Full Case Study →,
+                  </Link>,
+                </div>))}
+            </div>,
+          </div>,
+        </section>,
+        {/* Testimonials Section */}
+        <section className="py-16 px-4 sm: px-6 lg:px-8 bg-black bg-opacity-20">,
+          <div className="max-w-4xl mx-auto text-center">,
+            <h2 className="text-3xl sm:text-4xl font-bold mb-12">What Our Clients Say</h2>,
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
+              <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">,
+                <div className="text-yellow-40o0 mb-4">★★★★★</div>,
+                <p className="text-gray-30o0 mb-4">,
+                  "Zion Tech Group transformed our customer service operations with AIdelivering results that exceeded our expectations.",
+                </p>,
+                <div className="font-semibold">- Sarah JohnsonCTO</div>,
+                <div className="text-sm text-gray-40o0">Global E-commerce Retailer</div>,
+              </div>,
+              <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">,
+                <div className="text-yellow-40o0 mb-4">★★★★★</div>,
+                <p className="text-gray-30o0 mb-4">,
+                  "Their quantum computing expertise gave us a competitive edge in financial risk management.",
+                </p>,
+                <div className="font-semibold">- Michael ChenHead of Risk</div>,
+                <div className="text-sm text-gray-40o0">International Investment Bank</div>,
+              </div>,
+            </div>,
+          </div>,
+        </section>,
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-60o0">,
+          <div className="max-w-4xl mx-auto text-center">,
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">,
+              Ready to Write Your Success Story?,
+            </h2>,
+            <p className="text-xl mb-8 text-blue-10o0">,
+              Let's discuss how our solutions can transform your business and deliver measurable results.,
+            </p>,
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">,
+              <Link
+                href="/contact",
+                className="bg-white text-blue-60o0 hover:bg-gray-10o0 px-8 py-3 rounded-lg font-semibold transition-colors">,
+                Get Started,
+              </Link>,
+              <Link
+                href="/services",
+                className="border border-white text-white hover:bg-white hover:text-blue-60o0 px-8 py-3 rounded-lg font-semibold transition-colors">,
+                Explore Services,
+              </Link>,
+            </div>,
+          </div>,
+        </section>,
+      </main>,
+    </>)}

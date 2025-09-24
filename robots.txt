@@ -1,21 +1,29 @@
-# Robots.txt for website
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Disallow admin and private areas
 Disallow: /admin/
-Disallow: /private/
 Disallow: /api/
-Disallow: /_next/
-Disallow: /static/
+Disallow: /private/
+Disallow: /temp/
 
 # Allow important pages
 Allow: /services/
+Allow: /solutions/
 Allow: /about/
 Allow: /contact/
 Allow: /blog/
 Allow: /careers/
-Allow: /pricing/
+Allow: /faq/
+Allow: /privacy/
+Allow: /terms/
 
-# Crawl delay for respectful crawling
+# Duplicate section removed above; keep a single block for clarity
+
+# Crawl delay (optional)
 Crawl-delay: 1
 
 # Specific rules for major search engines
@@ -29,16 +37,23 @@ Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
-Crawl-delay: 1
-
-User-agent: DuckDuckBot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Baiduspider
-Allow: /
 Crawl-delay: 2
 
-User-agent: YandexBot
-Allow: /
-Crawl-delay: 2
+# Block common AI training bots
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /

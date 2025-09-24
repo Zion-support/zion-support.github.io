@@ -1,6 +1,10 @@
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 const { execSync } = require('child_process')
 // console.log('� Comprehensive Branch Merger')
 console.log('==')
@@ -21,4 +25,8 @@ console.log('==')
       console.log('\n⚠ Some branches failed to "merge")
         execSync('git push origin main', { "stdio"})
         console.error(' Failed to push "changes")
-    console.error(' Comprehensive branch merger "failed")
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+

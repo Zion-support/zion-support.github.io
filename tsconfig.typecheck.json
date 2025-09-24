@@ -1,17 +1,29 @@
 {
+  "extends": "./tsconfig.json",
+  "include": [
+    "next-env.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "dist",
+    "out",
+    "coverage",
+    "build",
+    "public/build",
+    "automation",
+    "server",
+    "components",
+    "lib",
+    "types",
+    "data",
+    "utils",
+    "**/*.backup.*",
+    "**/*.bak/**",
+    "**/backup/**",
+    "**/backups/**"
+  ],
   "compilerOptions": {
-    "noEmit": true,
-    "strict": true,
-    "jsx": "react-jsx",
-    "skipLibCheck": true,
-    "lib": ["dom", "es2020"],
-    "types": ["react", "react-dom", "node"],
-    "esModuleInterop": true
-  },
-  "files": [
-    "src/AppMinimal.tsx",
-    "src/main.tsx",
-    "types/global.d.ts"
-  ]
+    "noEmit": true
+  }
 }
-

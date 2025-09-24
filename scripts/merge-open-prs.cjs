@@ -1,141 +1,159 @@
-#!/usr/bin/env node/usr/bin/env node/ Minimal, safe PR merger: lists open PRs and attempts to merge them via GitHub API/ Uses GITHUB_TOKEN if set; otherwise extracts the x-access-token from the origin remoteconst { execSync } = require("child_process");function getRepoFromGit() {" / Example: https:/x-access-token:***@github.com/Zion-Holdings/zion.app"" const remoteUrl = execSync("git remote get-url origin", { encoding: "utf8" }).trim(); const match = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);" if (!match) throw new Error("Unable to parse owner/repo from origin");" return { owner: match[1], repo: match[2] }}function getToken() { if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"" const remoteUrl = execSync("git remote get-url origin", { encoding: "utf8" }).trim();" const tokenMatch = remoteUrl.match(/^https: \/\/x-access-token:([^@]+)@github\.com\/);" if (!tokenMatch) throw new Error("No GitHub token found in env or origin remote"); return tokenMatch[1]}"async function ghRequest(path, method = "GET", body) {"" const base = "https: /api.github.com"; const token = getToken(); const res = await fetch(`${base}${path}`, { method," headers: {` Authorization: `token ${token}`,"" Accept: "application/vnd.github.v3+json"," "User-Agent": "merge-open-prs-script"," "Content-Type": "application/json" }," body: body ? JSON.stringify(body) : undefined }); const text = await res.text(); let data;" try { data = text ? JSON.parse(text) : undefined} catch { data = { raw: text }} if (!res.ok) {` const message = data && data.message ? data.message : `HTTP ${res.status}`; throw new Error(message)} return data}async function sleep(ms) { return new Promise(r => setTimeout(r, ms))}async function getPR(owner, repo, number) {` return ghRequest(`/repos/${owner}/${repo}/pulls/${number}`)}async function readyForReview(owner, repo, number) { / Convert draft PR to ready for review try {"` await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/ready_for_review`, "PUT"); return true} catch (e) { return false}}async function updateBranch(owner, repo, number) { / Ask GitHub to update the PR branch with base try {"` await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/update-branch`, "PUT", {}); return true} catch (e) { return false}}async function listOpenPRs(owner, repo) {` const prs = await ghRequest(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`); return prs}async function tryMergePR(owner, repo, number, title) { try {"` const result = await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/merge`, "PUT", {"` commit_title: `Merge PR #${number}: ${title}`,"` commit_message: `Automated merge of PR #${number}`,"" merge_method: "merge" });"" if (result && result.merged) return { status: "merged", message: "merged via API" };"" return { status: "skipped", message: result && result.message ? result.message : "not merged" }} catch (e) { / Fallback to squash merge on failure try {"` const sq = await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/merge`, "PUT", {"` commit_title: `Squash merge PR #${number}: ${title}`,"` commit_message: `Automated squash merge of PR #${number}`,"" merge_method: "squash" });"" if (sq && sq.merged) return { status: "merged", message: "squash merged" };"" return { status: "skipped", message: sq && sq.message ? sq.message : e.message }} catch (e2) {"" return { status: "skipped", message: e2.message }} }}async function main() { const { owner, repo } = getRepoFromGit();"` console.log(`Repository: ${owner}/${repo}`); const prs = await listOpenPRs(owner, repo); if (!prs.length) {" console.log("No open PRs"); return}"` console.log(`Open PRs: ${prs.length}`); const results = []; for (const pr of prs) {"` console.log(`Attempting merge: #${pr.number} ${pr.title}`); / If draft, try to ready it if (pr.draft) { const ok = await readyForReview(owner, repo, pr.number);""` console.log(` -> draft -> ready_for_review: ${ok ? "ok" : "failed"}`); await sleep(500)} / Try initial merge" let res = await tryMergePR(owner, repo, pr.number, pr.title | ""); / If not mergeable, ask GitHub to update branch and retry once" if (res.status !== "merged") { const updated = await updateBranch(owner, repo, pr.number); if (updated) {" console.log(" -> update-branch requested; waiting before retry."); await sleep(2500); / refresh PR data try { await getPR(owner, repo, pr.number)} catch {}" res = await tryMergePR(owner, repo, pr.number, pr.title | "")} }` console.log(` -> ${res.status}: ${res.message}`);" results.push({ number: pr.number, title: pr.title, status: res.status, message: res.message }); await new Promise(r => setTimeout(r, 500))}" const merged = results.filter(r => r.status === "merged").length; const skipped = results.length - merged;"` console.log(`Merged: ${merged}, Skipped: ${skipped}`)}main().catch(err => {"" console.error("Error: ", err.message); process.exit(1)});'"`'"`
-#!/usr/bin/env node;
-// Minimal, safe PR "merger": lists open PRs and attempts to merge them via GitHub API.
-// Uses GITHUB_TOKEN if set; otherwise extracts the x-access-token from the origin remote.
-const { execSync } = require('child_process');
-function getRepoFromGit() {}
-  // "Example": https://x-access-token:***@github.com/Zion-Holdings/zion.app;
-  const remoteUrl = execSync('git remote get-url origin', { "encoding": 'utf8' }).trim();
-  const match = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
-  if (!match) throw new Error('Unable to parse owner/repo from origin');
-  return { "owner": match[1], "repo": match[2] }};
-function getToken() {}
-  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();
-  const remoteUrl = execSync('git remote get-url origin', { "encoding": 'utf8' }).trim();
-  const tokenMatch = remoteUrl.match(/^"https": \/\/x-access-token:([^@]+)@github\.com\//);
-  if (!tokenMatch) throw new Error('No GitHub token found in env or origin remote');
-  return tokenMatch[1]};
-async function ghRequest(path, method = 'GET', body) {}
-  const base = '"https": //api.github.com';
-  const token = getToken();
-  const res = await fetch(`${base}${path}`, {`})
-    method,
-    "headers": {}
-      Authorization: `token ${token}`,`
-      "Accept": 'application/vnd.github.v3+json',
-      'User-Agent': 'merge-open-prs-script',
-      'Content-Type': 'application/json'
-    },
-    "body": body ? JSON.stringify(body) : undefined;
-  }
-});
-  const text = await res.text();
-  let data;
-  try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }};
-  if (!res.ok) {}
-    const message = data && data.message ? data.message : `HTTP ${res.status}`;`
-    throw new Error(message)};
-  return data};
-async function sleep(ms) { return new Promise(r => setTimeout(r, ms))};
-async function getPR(owner, repo, number) {}
-  return ghRequest(`/repos/${owner}/${repo}/pulls/${number}`)};
-async function readyForReview(owner, repo, number) {}
-  // Convert draft PR to ready for review;
-  try {}
-    await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/ready_for_review`, 'PUT');
-    return true} catch (e) {}
-    return false};
-};
-async function updateBranch(owner, repo, number) {}
-  // Ask GitHub to update the PR branch with base;
-  try {}
-    await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/update-branch`, 'PUT', {}
-});
-    return true} catch (e) {}
-    return false};
-};
-async function listOpenPRs(owner, repo) {}
-  const prs = await ghRequest(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
-  return prs};
-async function tryMergePR(owner, repo, number, title) {}
-  try {}
-    const result = await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/merge`, 'PUT', {`})
-      "commit_title": `Merge PR #${number}: ${title}`,`
-      "commit_message": `Automated merge of PR #${number}`,`
-      "merge_method": 'merge'
-    }
-});
-    if (result && result.merged) return { "status": 'merged', "message": 'merged via API' };
-    return { "status": 'skipped', "message": result && result.message ? result.message : 'not merged' }} catch (e) {}
-    // Fallback to squash merge on failure;
-    try {}
-      const sq = await ghRequest(`/repos/${owner}/${repo}/pulls/${number}/merge`, 'PUT', {`})
-        "commit_title": `Squash merge PR #${number}: ${title}`,`
-        "commit_message": `Automated squash merge of PR #${number}`,`
-        "merge_method": 'squash'
-      }
-});
-      if (sq && sq.merged) return { "status": 'merged', "message": 'squash merged' };
-      return { "status": 'skipped', "message": sq && sq.message ? sq.message : e.message }} catch (e2) {}
-      return { "status": 'skipped', "message": e2.message }};
-  };
-};
-async function main() {}
-  const { owner, repo } = getRepoFromGit();
-  const prs = await listOpenPRs(owner, repo);
-  if (!prs.length) {
-    return}
-  const results = [];
-  for (const pr of prs) {
-    // If draft, try to ready it
-    if (pr.draft) {
-      const ok = await readyForReview(owner, repo, pr.number);
-      await sleep(500)}
-    // Try initial merge
-  if (!prs.length) {}
-    console.log('No open PRs');
-    return};
-  console.log(`Open "PRs": ${prs.length}`);
-  const results = [];
-  for (const pr of prs) {}
-    console.log(`Attempting "merge": #${pr.number} ${pr.title}`);
-    // If draft, try to ready it;
-    if (pr.draft) {}
-      const ok = await readyForReview(owner, repo, pr.number);
-      console.log(` -> draft -> "ready_for_review": ${ok ? 'ok' : 'failed'}`);
-      await sleep(500)};
-    // Try initial merge;
-    let res = await tryMergePR(owner, repo, pr.number, pr.title || '');
-    // If not mergeable, ask GitHub to update branch and retry once;
-    if (res.status !== 'merged') {}
-      const updated = await updateBranch(owner, repo, pr.number);
-      if (updated) {
-        await sleep(2500);
-        // refresh PR data
-        try { await getPR(owner, repo, pr.number)} catch {}
-        res = await tryMergePR(owner, repo, pr.number, pr.title || '')}
-    }
-    results.push({ "number": pr.number, "title": pr.title, "status": res.status, "message": res.message });
-    await new Promise(r => setTimeout(r, 500))}
-  const merged = results.filter(r => r.status === 'merged').length;
-  const skipped = results.length - merged;
-  }
+#!/usr/bin/env node
+/*
+  Merge all open GitHub PRs into main with conflict auto-resolution and build verification.
+  - Discovers owner/repo and token from `origin` URL (x-access-token)
+  - Fetches open PRs via GitHub REST API
+  - For each PR: fetch head -> merge into main (prefer PR changes) -> build -> keep or revert
+*/
+
+const { execSync, spawnSync } = require('child_process');
+const https = require('https');
+
+function run(cmd, opts = {}) {
+	try {
+		const out = execSync(cmd, { stdio: ['ignore', 'pipe', 'pipe'], encoding: 'utf8', ...opts });
+		return out.trim();
+	} catch (e) {
+		if (opts.allowFail) return null;
+		throw e;
+	}
+}
+
+function parseOrigin() {
+	const remote = run('git remote get-url origin');
+	const m = remote.match(/github\.com[:/ ]([^/]+)\/([^/]+?)(?:\.git)?$/);
+	const tokenMatch = remote.match(/x-access-token:([^@]+)/);
+	if (!m || !tokenMatch) {
+		throw new Error('Unable to parse origin for owner/repo/token');
+	}
+	return { owner: m[1], repo: m[2], token: tokenMatch[1] };
+}
+
+function ghApi(path, token) {
+	return new Promise((resolve, reject) => {
+		const req = https.request(
+			{
+				hostname: 'api.github.com',
+				path,
+				method: 'GET',
+				headers: {
+					'User-Agent': 'merge-open-prs-script',
+					Accept: 'application/vnd.github+json',
+					Authorization: `token ${token}`,
+				},
+			},
+			res => {
+				let data = '';
+				res.on('data', chunk => (data += chunk));
+				res.on('end', () => {
+					if (res.statusCode && res.statusCode >= 200 && res.statusCode < 300) {
+						try {
+							resolve(JSON.parse(data));
+						} catch (e) {
+							reject(e);
+						}
+					} else {
+						reject(new Error(`GitHub API ${res.statusCode}: ${data}`));
+					}
+				});
+			}
+		);
+		req.on('error', reject);
+		req.end();
+	});
+}
+
+async function listOpenPRs(owner, repo, token) {
+	const prs = await ghApi(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`, token);
+	if (!Array.isArray(prs)) return [];
+	return prs.map(pr => ({ number: pr.number, title: pr.title || '', headRef: pr.head && pr.head.ref }));
+}
+
+function ensureOnMainAndUpToDate() {
+	run('git checkout -q main');
+	run('git fetch origin main:refs/remotes/origin/main');
+	run('git pull -q --rebase origin main');
+}
+
+function fetchPrRef(prNumber) {
+	run(`git fetch -q origin pull/${prNumber}/head:pr-${prNumber}`);
+}
+
+function tryMergePR(prNumber, title) {
+	const msg = `Merge PR #${prNumber}: ${title.replace(/\s+/g, ' ').slice(0, 120)}`;
+	const merged = run(`git merge -q --no-ff -m "${msg}" -X theirs pr-${prNumber}`, { allowFail: true });
+	if (merged !== null) return true;
+	try {
+		run('git checkout --theirs .');
+		run('git add -A');
+		run(`git commit -m "Auto-resolve conflicts for PR #${prNumber} by favoring PR changes"`);
+		return true;
+	} catch (e) {
+		run('git merge --abort', { allowFail: true });
+		return false;
+	}
+}
+
+function buildProject() {
+	const res = spawnSync('npm', ['run', '-s', 'build'], { stdio: 'ignore', env: { ...process.env, HUSKY: '0' } });
+	return res.status === 0;
+}
+
+async function main() {
+	console.log('🚀 Merge open PRs into main');
+	const { owner, repo, token } = parseOrigin();
+	console.log(`📍 ${owner}/${repo}`);
+
+	ensureOnMainAndUpToDate();
+
+	const prs = await listOpenPRs(owner, repo, token);
+	if (!prs.length) {
+		console.log('✅ No open PRs');
+		return;
+	}
+	console.log(`📋 Found ${prs.length} open PR(s)`);
+
+	let mergedCount = 0;
+	let skippedCount = 0;
+
+	for (const pr of prs) {
+		console.log(`\n=== Processing PR #${pr.number} (${pr.headRef}) - ${pr.title} ===`);
+		try {
+			fetchPrRef(pr.number);
+		} catch (e) {
+			console.log(`❌ Failed to fetch PR #${pr.number}: ${e.message}`);
+			skippedCount++;
+			continue;
+		}
+
+		ensureOnMainAndUpToDate();
+
+		const merged = tryMergePR(pr.number, pr.title);
+		if (!merged) {
+			console.log(`⚠️  Could not auto-merge PR #${pr.number}`);
+			skippedCount++;
+			continue;
+		}
+
+		console.log('🔧 Running build...');
+		const ok = buildProject();
+		if (!ok) {
+			console.log(`❌ Build failed for PR #${pr.number}. Reverting merge.`);
+			run('git reset --hard -q HEAD~1');
+			skippedCount++;
+			continue;
+		}
+
+		console.log(`✅ Build OK for PR #${pr.number}`);
+		mergedCount++;
+	}
+
+	console.log('\n⬆️  Pushing main...');
+	run('git push origin main');
+	console.log(`🎉 Done. Merged: ${mergedCount}, Skipped: ${skippedCount}`);
+}
+
 main().catch(err => {
-      if (updated) {}
-        console.log(' -> update-branch requested; waiting before retry...');
-        await sleep(2500);
-        // refresh PR data;
-        try { await getPR(owner, repo, pr.number)} catch {};
-        res = await tryMergePR(owner, repo, pr.number, pr.title || '')};
-    };
-    console.log(` -> ${res.status}: ${res.message}`);
-    results.push({ "number": pr.number, "title": pr.title, "status": res.status, "message": res.message }
-});
-    await new Promise(r => setTimeout(r, 500))};
-  const merged = results.filter(r => r.status === 'merged').length;
-  const skipped = results.length - merged;
-  console.log(`"Merged": ${merged}, "Skipped": ${skipped}`)};
-main().catch(err => {})
-  console.error('"Error": ', err.message);
-  process.exit(1)}
+	console.error(err);
+	process.exit(1);
 });

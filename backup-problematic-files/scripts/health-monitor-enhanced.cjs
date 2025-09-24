@@ -1,3 +1,23 @@
+
+
+
+const fs = require('fs')
+const path = require('path')
+        console.log(' Checking system health...')
+            "status"
+            "status"
+            "message"
+            "status"
+            "message"
+            "status"
+            "message"
+            "status"
+
+            "message"
+
+
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -376,17 +396,15 @@ class HealthMonitor {
    */
   displayStatus() {
     console.log('\n🏥 HEALTH MONITOR REPORT');
-    console.log('========================');
-    console.log(`Overall Status: ${this.healthData.overallStatus.toUpperCase()}`);
-    console.log(`Timestamp: ${this.healthData.timestamp}`);
-    
-    if (this.healthData.recommendations.length > 0) {
-      console.log('\n📋 Recommendations:');
-      this.healthData.recommendations.forEach((rec, index) => {
-        console.log(`${index + 1}. ${rec}`);
-      });
-    }
-  }
-}
+    console.log('
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
 
 module.exports = HealthMonitor;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+

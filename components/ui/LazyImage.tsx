@@ -1,135 +1,64 @@
-
-
-
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-
-    if (imgRef && imgRef.current) {;
-      observer && observer.observe(imgRef && imgRef.current);          observer && observer.disconnect();
-
-        }
-      }
-      { threshold }
-    );
-
-    if (imgRef && imgRef.current) {;
-      observer && observer.observe(imgRef && imgRef.current);
-    }
-    return () => observer && observer.disconnect();
-  }, [threshold]);
-  const handleLoad = () => {;
-    setIsLoaded(true);  };    }
-    return () => observer && observer.disconnect();
-  }, [threshold]);
-  const handleLoad = () => {;
-    setIsLoaded(true);
-
-
-        alt=""
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-    return () => observer.disconnect();
-  }, [threshold]);
-  const handleLoad = () => {
-    setIsLoaded(true);  };    }
-    return () => observer.disconnect()
-  }, [threshold]);
-  const handleLoad = () => {
-    setIsLoaded(true)
-  }
-  return (
-    <div className={`relative overflow-hidden ${className}`}>
-      {/* Placeholder */}
-  return (
-    <div className={`relative overflow - hidden ${class_name}`}>;
-      {/* Placeholder */}      <img
-        src={placeholder}
-        alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${        alt=""
-        alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-
-
-        alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-          isLoaded ? 'opacity-0' : 'opacity-100'
-        }`}
-        style={{ width, height }}
-
-
-
-
-  useEffect__(() => {
-    const _observer = new IntersectionObserver(_([entry]) => {
+"use client",
+import React{ useEffectuseRefuseState } from 'react',
+import { motion } from 'framer-motion',
+interface LazyImageProps {
+  src: string,
+  alt: string,
+  className?: string,
+  placeholder?: string,
+  threshold?: number,
+  width?: number,
+  height?: number}
+,
+export const LazyImage: React.FC<LazyImageProps> = ({
+  src;
+  alt;
+  className = ', ';
+  placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+';
+  threshold = 0.1;
+  width;
+  height}) => {
+  const [isLoadedsetIsLoaded] = useState(false),
+  const [isInViewsetIsInView] = useState(false),
+  const imgRef = useRef<HTMLImageElement>(null),
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true),
-          observer.disconnect()
-        }
-      },
+          observer.disconnect()}
+      };
       { threshold }
     ),
-
     if (imgRef.current) {
-      observer.observe(imgRef.current)
-    }
-          setIsInView(true);
-          observer.disconnect();}
-      },
-      {_threshold}
-    );
-
-    return () => observer.disconnect()
-  }, [threshold]),
-
-    return () => observer.disconnect()
-  }, [threshold]),
-
+      observer.observe(imgRef.current)}
+,
+    return () => observer.disconnect()}[threshold]),
   const handleLoad = () => {
-    setIsLoaded(true)
-  },
-
+    setIsLoaded(true)};
   return (
-    <div className={_`relative overflow-hidden ${className}`}>
-      {_/* Placeholder */}
+    <div className={`relative overflow-hidden ${className}`}>,
+      {/* Placeholder */}
       <img
-        src={_placeholder}
-        alt=""
-        className={_`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+        src={placeholder}
+        alt="",
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'}`}
-        style={_{ width, _height}}
-      />
-      
-      {_/* Actual Image */}
-      {_isInView && (
-      />
-
+        style={{ widtheight }}
+      />,
       {/* Actual Image */}
       {isInView && (
-        <motion.img
-
-      {/* Actual Image */}
-      {isInView && (;
-        <motion&& motion.img
-
-    </div>
-    </div>
-          className='w - full h - full object - cover';
-          loading='lazy'          style={{ width, height }}
+        <motion.img,
+          ref={imgRef}
+          src={src}
+          alt={alt}
+          onLoad={handleLoad}
+          initial={{ opacity: 0scale: 1.1 }}
+          animate={{ opacity: isLoaded ? 1 : 0scale: isLoaded ? 1 : 1.1 }}
+          transition={{ duration: 0.5 }}
+          className="w-full h-full object-cover",
+          loading="lazy",
+          style={{ widtheight }}
         />)}
-    </div>);
-}
-;
-export default LazyImage;          className="w - full h - full object - cover";
-          loading="lazy";
-          style={{ width, height }}
-        />)}
-    </div>);
-}
-;
-export default LazyImage);
-}
-;
+    </div>)};
 export default LazyImage;
-;<<<<<<< HEAD

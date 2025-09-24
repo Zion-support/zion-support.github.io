@@ -1,33 +1,32 @@
 #!/bin/bash
-set -e
 
-echo "=== QUICK MERGE PROCESS ==="
-echo "Starting merge process..."
+# Quick merge script using existing infrastructure
+echo "🚀 Quick merge process starting..."
 
-# Change to workspace directory
-cd /workspace
-
-# Check current branch
-echo "Current branch: $(git branch --show-current)"
-
-# Switch to main
-echo "Switching to main..."
-git checkout main
-
-# Pull latest
-echo "Pulling latest changes..."
-git pull origin main
-
-# Merge cursor branch
-echo "Merging cursor/prepare-git-repository-for-build-c571..."
-git merge cursor/prepare-git-repository-for-build-c571 || {
-    echo "Merge conflicts detected. Resolving automatically..."
-    git add .
-    git commit -m "Resolve merge conflicts automatically"
-}
-
-# Push changes
-echo "Pushing changes..."
-git push origin main
-
-echo "=== MERGE COMPLETED ==="
+# Use existing comprehensive merge script if available
+if [ -f "comprehensive-merge-all-prs.sh" ]; then
+    echo "Using existing comprehensive merge script..."
+    bash comprehensive-merge-all-prs.sh
+elif [ -f "bulk-merge-all-prs.sh" ]; then
+    echo "Using existing bulk merge script..."
+    bash bulk-merge-all-prs.sh
+elif [ -f "complete_merge_all_prs.sh" ]; then
+    echo "Using existing complete merge script..."
+    bash complete_merge_all_prs.sh
+else
+    echo "No existing merge script found, using basic git commands..."
+    
+    # Basic merge process
+    git checkout main
+    git pull origin main
+    
+    # Get current branch if not main
+    CURRENT_BRANCH=$(git branch --show-current)
+    if [ "$CURRENT_BRANCH" != "main" ]; then
+        echo "Merging current branch: $CURRENT_BRANCH"
+        git merge $CURRENT_BRANCH --no-edit
+        git push origin main
+    fi
+    
+    echo "✅ Basic merge completed!"
+fi

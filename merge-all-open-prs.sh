@@ -4,6 +4,10 @@
 set -e
 
 echo "🚀 Starting comprehensive merge of all open PRs..."
+set -e
+
+echo "🚀 Starting comprehensive merge conflict resolution for all open PRs..."
+echo "📊 Total unmerged branches to process: $(git branch -r --no-merged main | wc -l)"
 echo "⏰ Started at: $(date)"
 echo "---"
 
@@ -27,6 +31,20 @@ log_message() {
 }
 
 # Function to resolve conflicts in a file with enhanced logic
+
+# Get all unmerged branches, prioritizing cursor branches
+CURSOR_BRANCHES=$(git branch -r --no-merged main | grep "origin/cursor/" | sed 's/origin\///' | sort)
+OTHER_BRANCHES=$(git branch -r --no-merged main | grep -v "origin/cursor/" | sed 's/origin\///' | sort)
+
+# Combine branches with cursor branches first
+ALL_BRANCHES="$CURSOR_BRANCHES $OTHER_BRANCHES"
+
+echo "📋 Processing cursor branches first, then other branches"
+echo "🔍 Found $(echo "$CURSOR_BRANCHES" | wc -l) cursor branches"
+echo "🔍 Found $(echo "$OTHER_BRANCHES" | wc -l) other branches"
+echo "---"
+
+# Function to resolve conflicts in a file
 resolve_conflicts() {
     local file="$1"
     local branch="$2"
@@ -34,27 +52,37 @@ resolve_conflicts() {
     log_message "🔧 Resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
-    if grep -q "/d' "$file"
-            sed -i '/
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        log_message "⚠️  Found conflicts in $file, resolving..."
+        
+        # Create a backup of the conflicted file
+        cp "$file" "${file}.backup.$(date +%s)"
+        
+        # Enhanced conflict resolution strategy
+        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
+            log_message "📦 Critical file detected, keeping main version and merging dependencies..."
+            # For package files, we'll need special handling
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
         elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
             log_message "⚙️  Config file detected, keeping main version..."
-            sed -i '/
-            sed -i '/
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
         elif [[ "$file" == "README.md" || "$file" == "LICENSE" ]]; then
             log_message "📚 Documentation file, keeping both versions where possible..."
             # Remove conflict markers but try to preserve content
-            sed -i '/
-            sed -i '/
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
         elif [[ "$file" == *".tsx" || "$file" == *".ts" ]]; then
             log_message "📱 TypeScript file detected, keeping incoming version..."
             # For TypeScript files, prefer the incoming version (feature branch)
-            sed -i '/
-            sed -i '/
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
         else
             log_message "📝 Regular file, attempting to merge both versions..."
             # Remove conflict markers and try to keep both versions
-            sed -i '/
-            sed -i '/
+            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+            sed -i '/>>>>>>> /d' "$file"
         fi
         
         log_message "✅ Resolved conflicts in $file"
@@ -67,6 +95,18 @@ merge_branch() {
     local branch="$1"
     
     log_message "🔄 Attempting to merge $branch..."
+        echo "⚠️  Skipping $branch - too many commits ($commit_count)"
+        return 1
+    fi
+    
+    return 0
+}
+
+# Function to merge a single branch
+merge_branch() {
+    local branch="$1"
+    
+    echo "🔄 Attempting to merge $branch..."
     
     # Fetch the latest version of the branch
     git fetch origin "$branch"
@@ -148,11 +188,16 @@ awk '
 ' prs.json | while IFS='|' read -r pr_number branch_name is_draft; do
     if [ -n "$pr_number" ] && [ -n "$branch_name" ]; then
         echo ""
-        echo ""
+        echo "=========================================="
         echo "🔄 Processing PR #$pr_number from branch: $branch_name"
-        echo ""
+        echo "=========================================="
         
-        # Proceed even if PR is a draft (merge branch directly into main)
+        # Skip draft PRs
+        if [ "$is_draft" = "true" ]; then
+            log_message "⏭️  PR #$pr_number is a draft, skipping..."
+            SKIPPED_DRAFTS=$((SKIPPED_DRAFTS + 1))
+            continue
+        fi
         
         if merge_branch "$branch_name"; then
             log_message "✅ PR #$pr_number processed successfully"
@@ -160,7 +205,7 @@ awk '
             log_message "❌ PR #$pr_number processing failed"
         fi
         
-        echo ""
+        echo "=========================================="
         echo ""
         
         # Push changes every 3 successful merges to avoid losing work
@@ -176,6 +221,37 @@ done
 
 # Final push
 log_message "💾 Pushing final changes to remote..."
+    
+    # Check if branch can be merged
+    if ! can_merge_branch "$branch"; then
+        echo "⏭️  Skipping $branch (already merged, doesn't exist, or too complex)"
+        SKIPPED_BRANCHES=$((SKIPPED_BRANCHES + 1))
+        continue
+    fi
+    
+    # Try to merge the branch
+    if merge_branch "$branch"; then
+        echo "✅ Branch $branch processed successfully"
+    else
+        echo "❌ Failed to process branch $branch"
+    fi
+    
+    # Progress update
+    echo "📊 Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved"
+    echo "---"
+    
+    # Push changes periodically to avoid losing work
+    if [ $((SUCCESSFUL_MERGES % 5)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
+        echo "💾 Pushing progress to remote..."
+        git push origin main
+    fi
+    
+    # Small delay to avoid overwhelming the system
+    sleep 1
+done
+
+# Final push
+echo "💾 Pushing final changes to remote..."
 git push origin main
 
 # Summary
@@ -186,6 +262,7 @@ echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
 echo "   🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
 echo "   ⏭️  Draft PRs skipped: $SKIPPED_DRAFTS"
+>>>>>>> origin/auto/autonomy-17186719616
 echo "   🔒 Backup branch: $BACKUP_BRANCH"
 echo "⏰ Completed at: $(date)"
 

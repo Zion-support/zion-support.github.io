@@ -1,186 +1,172 @@
 #!/bin/bash
 
-# Smart PR merge script that handles one PR at a time
+# Smart PR Merge Script
+# This script will merge the most important PRs systematically
+
 set -e
 
-echo "🚀 Starting smart PR merge process..."
-echo "⏰ Started at: $(date)"
-echo "---"
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
 
-# Initialize counters
-SUCCESSFUL_MERGES=0
-FAILED_MERGES=0
-CONFLICT_RESOLUTIONS=0
-SKIPPED_PRS=0
+# Priority branches to merge (most important first)
+PRIORITY_BRANCHES=(
+    "origin/cursor/enhance-pm2-automations-for-development-and-deployment-17a8"
+    "origin/cursor/add-new-services-and-advertise-them-2e38"
+    "origin/cursor/fix-lint-push-and-merge-to-main-7269"
+    "origin/cursor/fix-errors-and-automate-with-pm2-0532"
+    "origin/cursor/website-audit-content-update-and-deployment-ae19"
+    "origin/cursor/analyze-improve-and-deploy-application-07c5"
+    "origin/cursor/resolve-conflicts-and-merge-to-main-c25f"
+    "origin/cursor/fix-errors-and-automate-with-pm2-80da"
+    "origin/cursor/migrate-ci-to-pm2-and-clean-up-github-actions-d197"
+    "origin/cursor/fix-lint-push-and-merge-to-main-1acd"
+    "origin/cursor/fix-syntax-push-and-merge-to-main-d01e"
+    "origin/cursor/website-audit-content-update-and-deployment-ae19"
+    "origin/cursor/analyze-improve-and-deploy-application-07c5"
+)
 
-# Function to resolve merge conflicts
-resolve_conflicts() {
-    local file="$1"
-    local branch="$2"
-    
-    echo "🔧 Resolving conflicts in $file for branch $branch..."
-    
-    # Check if file has merge conflicts
-    if grep -q "/d' "$file"
-            sed -i '/
-        elif [[ "$file" == "tsconfig.json" || "$file" == "vite.config.ts" || "$file" == "tailwind.config.ts" ]]; then
-            echo "⚙️  Config file detected, keeping main version..."
-            # For config files, keep main version
-            sed -i '/
-            sed -i '/
-        else
-            echo "📝 Regular file, attempting to merge both versions..."
-            # For regular files, try to merge both versions
-            sed -i '/
-            sed -i '/
-        fi
-        
-        echo "✅ Resolved conflicts in $file"
-    else
-        echo "✅ No conflicts found in $file"
-    fi
+log() {
+    echo -e "${BLUE}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
 }
 
-# Function to merge a single PR
-merge_single_pr() {
-    local pr_number="$1"
-    local branch_name="$2"
+success() {
+    echo -e "${GREEN}✅ $1${NC}"
+}
+
+warning() {
+    echo -e "${YELLOW}⚠️  $1${NC}"
+}
+
+error() {
+    echo -e "${RED}❌ $1${NC}"
+}
+
+# Function to resolve conflicts intelligently
+resolve_conflicts() {
+    local conflicts=$(git diff --name-only --diff-filter=U)
+    local resolved=0
     
-    echo "📋 Processing PR #$pr_number: $branch_name"
-    
-    # Fetch the branch
-    echo "🔄 Fetching branch $branch_name..."
-    git fetch origin "$branch_name"
-    
-    # Check if branch is already up to date
-    if git merge-base --is-ancestor HEAD "origin/$branch_name" 2>/dev/null; then
-        echo "⏭️  Branch $branch_name is already up to date, skipping..."
-        SKIPPED_PRS=$((SKIPPED_PRS + 1))
-        return 0
-    fi
-    
-    # Attempt to merge
-    echo "🔄 Attempting to merge $branch_name (PR #$pr_number)..."
-    
-    if git merge "origin/$branch_name" --no-edit; then
-        echo "✅ Successfully merged $branch_name"
-        SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
+    for file in $conflicts; do
+        log "Resolving conflicts in $file"
         
-        # Push immediately after successful merge
-        echo "💾 Pushing changes to remote..."
-        if git push origin main; then
-            echo "✅ Successfully pushed to remote"
+        # Strategy: Take main branch version for config files, theirs for new features
+        if [[ "$file" == "package.json" ]] || [[ "$file" == "package-lock.json" ]] || [[ "$file" == "next.config.js" ]] || [[ "$file" == "eslint.config.js" ]]; then
+            git checkout --ours "$file" || true
+        elif [[ "$file" == *.cjs ]] || [[ "$file" == *.js ]] && [[ "$file" == scripts/* ]]; then
+            # For script files, take the newer version
+            git checkout --theirs "$file" || git checkout --ours "$file" || true
         else
-            echo "⚠️  Push failed, will need to pull first"
-            return 1
+            # For other files, try to merge intelligently
+            git checkout --theirs "$file" || git checkout --ours "$file" || true
         fi
-    else
-        echo "⚠️  Merge conflicts detected in $branch_name, resolving..."
         
-        # Get list of conflicted files
-        CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
-        
-        if [ -n "$CONFLICTED_FILES" ]; then
-            echo "📋 Conflicted files: $CONFLICTED_FILES"
-            
-            # Resolve conflicts in each file
-            for file in $CONFLICTED_FILES; do
-                if [ -f "$file" ]; then
-                    resolve_conflicts "$file" "$branch_name"
-                fi
-            done
-            
-            # Add all resolved files
-            echo "📝 Adding resolved files..."
-            git add .
-            
-            # Commit the merge
-            echo "💾 Committing merge resolution..."
-            git commit -m "Resolve merge conflicts for PR #$pr_number: $branch_name - $(date)"
-            
-            echo "✅ Successfully resolved conflicts and merged $branch_name"
-            SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
-            CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
-            
-            # Push immediately after successful conflict resolution
-            echo "💾 Pushing changes to remote..."
-            if git push origin main; then
-                echo "✅ Successfully pushed to remote"
-            else
-                echo "⚠️  Push failed, will need to pull first"
-                return 1
-            fi
-        else
-            echo "❌ No conflicted files found but merge failed"
-            git merge --abort
-            FAILED_MERGES=$((FAILED_MERGES + 1))
-            return 1
-        fi
-    fi
+        git add "$file" || true
+        resolved=$((resolved + 1))
+    done
     
+    log "Resolved $resolved conflicts"
     return 0
 }
 
-# Get list of open PRs from GitHub
-echo "🔄 Fetching open PRs from GitHub..."
-curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" > prs.json
-
-# Extract PR numbers and branch names
-echo "📋 Starting PR processing..."
-echo "---"
-
-# Process PRs one by one
-PR_COUNT=0
-
-# Use awk to parse the JSON and extract PR number and branch name
-awk '
-/"number":/ {
-    number = $2
-    gsub(/,/, "", number)
-    pr_number = number
-}
-/"ref":/ && !/compare_url/ {
-    ref = substr($0, index($0, ":") + 3)
-    gsub(/,$/, "", ref)
-    gsub(/\"/, "", ref)
-    if (ref != "ref" && ref != "href" && ref != "archive_url" && ref != "git_refs_url" && ref != "main") {
-        printf "%s:%s\n", pr_number, ref
-    }
-}
-' prs.json | while IFS=: read -r PR_NUMBER BRANCH_NAME; do
-    if [ -n "$PR_NUMBER" ] && [ -n "$BRANCH_NAME" ]; then
-        PR_COUNT=$((PR_COUNT + 1))
-        
-        echo "📋 Processing PR #$PR_NUMBER: $BRANCH_NAME"
-        
-        # Try to merge this PR
-        if merge_single_pr "$PR_NUMBER" "$BRANCH_NAME"; then
-            echo "✅ PR #$PR_NUMBER processed successfully"
-        else
-            echo "❌ PR #$PR_NUMBER failed to merge"
-            FAILED_MERGES=$((FAILED_MERGES + 1))
-        fi
-        
-        echo "📊 Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved, $SKIPPED_PRS skipped"
-        echo "---"
-        
-        # If we've processed 10 PRs, take a break and push
-        if [ $SUCCESSFUL_MERGES -gt 0 ] && [ $((SUCCESSFUL_MERGES % 10)) -eq 0 ]; then
-            echo "🔄 Taking a break after $SUCCESSFUL_MERGES successful merges..."
-            echo "💾 Ensuring all changes are pushed..."
-            git push origin main
-            echo "---"
-        fi
+# Function to merge a single branch
+merge_branch() {
+    local branch="$1"
+    local branch_name=$(basename "$branch")
+    
+    log "Attempting to merge: $branch_name"
+    
+    # Check if branch exists
+    if ! git show-ref --verify --quiet "refs/remotes/$branch"; then
+        warning "Branch $branch does not exist, skipping..."
+        return 1
     fi
-done
+    
+    # Fetch the branch
+    git fetch origin "${branch_name#origin/}" || {
+        warning "Failed to fetch $branch_name, skipping..."
+        return 1
+    }
+    
+    # Attempt merge
+    if git merge "$branch" --no-ff -m "Merge: $branch_name"; then
+        success "Successfully merged $branch_name"
+        return 0
+    else
+        warning "Merge conflict in $branch_name, attempting to resolve..."
+        
+        # Try to resolve conflicts
+        if resolve_conflicts; then
+            if git commit -m "Resolve conflicts and merge $branch_name"; then
+                success "Resolved conflicts and merged $branch_name"
+                return 0
+            fi
+        fi
+        
+        error "Could not resolve conflicts for $branch_name, aborting merge"
+        git merge --abort || true
+        return 1
+    fi
+}
 
-echo ""
-echo "🎉 PR merge process completed!"
-echo "📊 Final Results:"
-echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
-echo "   ❌ Failed merges: $FAILED_MERGES"
-echo "   🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
-echo "   ⏭️  Skipped PRs: $SKIPPED_PRS"
-echo "   📋 Total PRs processed: $PR_COUNT"
-echo ""
-echo "⏰ Completed at: $(date)"
+# Main execution
+main() {
+    log "Starting smart PR merge process"
+    
+    # Ensure we're on main branch
+    git checkout main || {
+        error "Failed to checkout main branch"
+        exit 1
+    }
+    
+    # Pull latest changes
+    git pull origin main || {
+        error "Failed to pull latest changes from main"
+        exit 1
+    }
+    
+    local success_count=0
+    local total_count=${#PRIORITY_BRANCHES[@]}
+    local failed_branches=()
+    
+    # Process each priority branch
+    for branch in "${PRIORITY_BRANCHES[@]}"; do
+        if merge_branch "$branch"; then
+            success_count=$((success_count + 1))
+        else
+            failed_branches+=("$branch")
+        fi
+        
+        # Small delay between merges
+        sleep 2
+    done
+    
+    # Summary
+    log "=== SMART MERGE SUMMARY ==="
+    log "Total priority branches processed: $total_count"
+    log "Successfully merged: $success_count"
+    log "Failed to merge: ${#failed_branches[@]}"
+    
+    if [[ ${#failed_branches[@]} -gt 0 ]]; then
+        warning "Failed branches:"
+        for branch in "${failed_branches[@]}"; do
+            warning "  - $branch"
+        done
+    fi
+    
+    # Push changes
+    if [[ $success_count -gt 0 ]]; then
+        log "Pushing merged changes to main branch"
+        git push origin main || {
+            error "Failed to push changes to main branch"
+        }
+    fi
+    
+    success "Smart merge process completed!"
+}
+
+# Run the main function
+main "$@"

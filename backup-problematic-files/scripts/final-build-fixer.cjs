@@ -1,6 +1,10 @@
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 // console.log(' Final Build Fixer')
 console.log('=====')
       const filesToFix = ['pages/NotFound.tsx','pages/_document.tsx','pages/about.tsx']
@@ -11,4 +15,8 @@ console.log('=====')
           "replacement"
         {"pattern": /content="([^"]*)"\s*\/>/g,"replacement": 'content="$1"}
           "replacement": 'const Layout = dynamic(() => import("../components/Layout"), { "ssr"}
-          "pattern"
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+

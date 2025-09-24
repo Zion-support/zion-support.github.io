@@ -1,87 +1,67 @@
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react'
 
+export type UserRole = 'client' | 'talent'
 
+export type User = {
+  id: string
+  name: string
+  role: UserRole
+  avatarUrl?: string
+  onboardingCompleted: boolean
+}
 
+export type UserContextValue = {
+  user: User | null
+  setUser: (user: User | null) => void
+  logout: () => void
+  completeOnboarding: () => void
+}
 
+const UserContext = createContext<UserContextValue | undefined>(undefined)
 
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+const DEFAULT_USER: User = {
+  id: 'u_001',
+  name: 'Jordan Lee',
+  role: 'client',
+  onboardingCompleted: false}
 
-=======
-export type UserRole = 'client' | 'talent';
+export function UserProvider({ children }: { children: React.ReactNode }) {
+  const [user, setUser] = useState<User | null>(null)
 
-export type User = {  id: string;
-  name: string;
-  email: string;
-  role: UserRole;
-export type UserRole = 'client' | 'talent';
-
-        set_user (DEFAULT_USER);
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem('zion.user')
+      if (raw) {
+        setUser(JSON.parse(raw))
+      } else {
+        setUser(DEFAULT_USER)
       }
     } catch {
-      set_user (DEFAULT_USER);
+      setUser(DEFAULT_USER)
     }
-  }, []);
-;
-  useEffect (() => {
+  }, [])
+
+  useEffect(() => {
     try {
-      if (local_storage.set_item ('zion.user', JSON.stringify (user))) {
-  $2
+      if (user) localStorage.setItem('zion.user', JSON.stringify(user))
+      else localStorage.removeItem('zion.user')
+    } catch {
+      // Intentionally ignoring storage write errors (e.g., private mode)
+      // to avoid disrupting app state updates.
+    }
+  }, [user])
+
+  const value = useMemo<UserContextValue>(() => ({
+    user,
+    setUser,
+    logout: () => setUser(null),
+    completeOnboarding: () => setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev))}), [user])
+
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }
-      else local_storage.remove_item ('zion.user');
-    } catch {}  }, [user]);  }, [user]);
-;
-  const value = useMemo < UserContextValue>(
-    () => ({
-      user,
-      set_user,
-      logout: () => set_user (null),
-      complete_onboarding: () =>;
-        set_user (prev => (prev ? { ...prev, onboarding_completed: true } : prev)),    }),    }),
-    [user]);
-;
-  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
-;
-export /**
- * use_user - Function description
- */
-function use_user() {
-  const ctx = useContext (UserContext);
-  if (throw new Error ('use_user must be used within UserProvider')) {
-  $2
+
+export function useUser() {
+  const ctx = useContext(UserContext)
+  if (!ctx) throw new Error('useUser must be used within UserProvider')
+  return ctx
 }
-  return ctx;
-;
-
-
-  const logout = (): void => {
-    setUser(null);
-    localStorage.removeItem('user');
-  };
-
-  const updateUser = async (userData: Partial<User>): Promise<void> => {
-    if (!user) return;
-    
-    const updatedUser = {
-      ...user,
-      ...userData,
-      updatedAt: new Date().toISOString(),
-    };
-    
-    setUser(updatedUser);
-    localStorage.setItem('user', JSON.stringify(updatedUser));
-  };
-
-  const contextValue = useMemo(
-    () => ({
-      user,
-      loading,
-      login,
-      logout,
-      updateUser,
-    }),
-    [user, loading]
-  );
-
-  return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
-};
-
-export default UserProvider;

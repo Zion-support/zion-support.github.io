@@ -1,9 +1,3 @@
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-export type UserRole = 'admin' | 'user' | 'guest';
-
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+,
+export type UserRole = 'admin' | 'user' | 'guest'>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

@@ -1,3 +1,52 @@
+
+
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const automationFiles = ['automation/dependency-fixer.cjs']
+  'automation/typescript-fixer.cjs'
+  'automation/health-check.cjs'
+  'automation/security-scanner.cjs'
+  'automation/performance-optimizer.cjs'
+    let content = fs.readFileSync(filePath, 'utf8')
+    const fileName = path.basename(filePath, '.cjs')
+    let className = ''
+      case 'dependency-fixer'
+        className = 'DependencyFixer'
+      case 'typescript-fixer'
+        className = 'TypeScriptFixer'
+      case 'health-check'
+        className = 'HealthChecker'
+      case 'security-scanner'
+        className = 'SecurityScanner'
+      case 'performance-optimizer'
+        className = 'PerformanceOptimizer'
+      .replace(/\[\],/g, '[];')
+      .replace(/\{\},/g, '{};')
+      .replace(/\),/g, ');'
+      .replace(/\],/g, '];')
+      .replace(/\[\];/g, '[];')
+      .replace(/\{\};/g, '{};')
+      .replace(/\);/g, ');'
+      .replace(/\];/g, '];')
+      .replace(/\/[^\/]*\/gi,/g, (match) => match.replace(/,$/, '')
+      .replace(/return files\.filter\(file => ;/g, 'return files.filter(file => {'})
+      .replace(/^\s*;\s*$/gm, '')
+      .replace(/:\s*\[\],/g, ': [];')
+      .replace(/:\s*\{\},/g, ': {};')
+      .replace(/\(\s*\[\],/g, '([];')
+      .replace(/\(\s*\{\},/g, '({};')
+
+
+      .replace(/script1\."async")
+      .replace(/script1\."src")
+      .replace(/['"]react;['"]/g, ")
+      .replace(/['"]framer-motion;['"]/g, ")
+
+
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -81,88 +130,10 @@ class ComprehensiveAutomationFixer {
         this.log('✅ Fixed index.html', 'SUCCESS');
         this.fixes.push('index.html');
       }
-const path = require('path');
-const { execSync } = require('child_process');
 
-console.log('🔧 Starting Comprehensive Automation Fixer...');
 
-class ComprehensiveAutomationFixer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.fixes = [];
-    this.improvements = [];
-    this.errors = [];
-  }
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type}] ${message}`;
-    console.log(logMessage);
-  }
-
-  // Fix critical files
-  fixCriticalFiles() {
-    this.log('🔧 Fixing critical files...');
-
-    // Fix index.html
-    this.fixIndexHtml();
-    
-    // Fix main.tsx
-    this.fixMainTsx();
-    
-    // Fix jest config
-    this.fixJestConfig();
-    
-    // Fix performance monitor
-    this.fixPerformanceMonitor();
-    
-    // Fix health monitor
-    this.fixHealthMonitor();
-    
-    // Fix sitemap generator
-    this.fixSitemapGenerator();
-    
-    // Fix search index generator
-    this.fixSearchIndexGenerator();
-    
-    // Fix enhanced orchestrator
-    this.fixEnhancedOrchestrator();
-    
-    // Fix AI code quality analyzer
-    this.fixAICodeQualityAnalyzer();
-  }
-
-  fixIndexHtml() {
-    try {
-      const indexPath = path.join(this.projectRoot, 'index.html');
-      if (fs.existsSync(indexPath)) {
-        let content = fs.readFileSync(indexPath, 'utf8');
-        
-        // Remove merge conflict markers
-        content = content.replace(/[\s\S]*?
-        content = content.replace(/
-        
-        // Ensure proper HTML structure
-        if (!content.includes('<!DOCTYPE html>')) {
-          content = `<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zion Tech Group</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>`;
-        }
-        
-        fs.writeFileSync(indexPath, content);
-        this.log('✅ Fixed index.html', 'SUCCESS');
-        this.fixes.push('index.html');
-      }
     } catch (error) {
       this.log(`❌ Error fixing index.html: ${error.message}`, 'ERROR');
     }
@@ -278,6 +249,9 @@ class PerformanceMonitor {
     console.log('✅ Performance monitoring completed');
   }
 }
+
+
+
 const monitor = new PerformanceMonitor();
 monitor.run().catch(console.error);
 
@@ -729,10 +703,17 @@ if (require.main === module) {
 }
 
 module.exports = ComprehensiveAutomationFixer;
+
+
+
+
 // Fix all automation files
 automationFiles.forEach(fixAutomationFile);
       .replace(/script1\."async")
       .replace(/script1\."src")
       .replace(/['"]react;['"]/g, ")
       .replace(/['"]framer-motion;['"]/g, ")
-      .replace(/['"]lucide-react;['"]/g, ")
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+

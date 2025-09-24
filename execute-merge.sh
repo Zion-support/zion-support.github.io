@@ -1,97 +1,93 @@
 #!/bin/bash
+
+# Execute Merge Process
+# This script will resolve all merge conflicts and merge the PR into main
+
 set -e
 
-echo "🚀 Starting comprehensive PR merge process for zion.app"
-echo "=================================================="
+echo "🚀 Starting merge process..."
 
-# Ensure we're on main and synced
-echo "📋 Step 1: Syncing main branch..."
+# Step 1: Navigate to workspace
+cd /workspace
+
+# Step 2: Check git status
+echo "📊 Checking git status..."
+git status
+
+# Step 3: Fetch latest changes
+echo "📥 Fetching latest changes..."
+git fetch origin
+
+# Step 4: Update main branch
+echo "🔄 Updating main branch..."
 git checkout main
 git pull origin main
-echo "✅ Main branch synced"
 
-# Fetch all PR refs
-echo "📋 Step 2: Fetching PR references..."
-git fetch origin "+refs/pull/*/head:refs/remotes/origin/pr/*"
-echo "✅ PR references fetched"
+# Step 5: Checkout PR branch
+echo "🔀 Checking out PR branch..."
+git checkout cursor/create-and-deploy-new-content-d115
 
-# Get the latest 20 PR numbers
-echo "📋 Step 3: Identifying PRs to merge..."
-PRS=$(git for-each-ref --format='%(refname:short)' refs/remotes/origin/pr | awk -F/ '{print $3}' | sort -n | tail -n 20)
-echo "Found PRs to merge: $PRS"
-
-# Process each PR
-echo "📋 Step 4: Processing PRs..."
-success_count=0
-failed_count=0
-
-for PR in $PRS; do
-    echo ""
-    echo "🔄 Processing PR #$PR..."
-    
-    # Create merge branch
-    git checkout -B "merge-pr-$PR" main
-    
-    # Try to merge with conflict resolution
-    if git merge -m "Merge PR #$PR" -X theirs "origin/pr/$PR" 2>/dev/null; then
-        echo "✅ PR #$PR merged cleanly"
-    else
-        echo "⚠️  Conflicts detected in PR #$PR, auto-resolving..."
-        
-        # Auto-resolve common conflicts
-        git checkout --ours -- package-lock.json 2>/dev/null || true
-        git checkout --ours -- yarn.lock 2>/dev/null || true
-        git checkout --ours -- pnpm-lock.yaml 2>/dev/null || true
-        git checkout --theirs -- dist/** 2>/dev/null || true
-        git checkout --theirs -- build/** 2>/dev/null || true
-        git checkout --theirs -- out/** 2>/dev/null || true
-        
-        git add -A
-        
-        if git commit -m "Auto-resolve conflicts for PR #$PR" 2>/dev/null; then
-            echo "✅ Auto-resolved conflicts for PR #$PR"
-        else
-            echo "❌ Could not auto-resolve PR #$PR, skipping..."
-            git checkout main
-            git branch -D "merge-pr-$PR" 2>/dev/null || true
-            failed_count=$((failed_count + 1))
-            continue
-        fi
-    fi
-    
-    # Merge into main
-    echo "🔄 Integrating PR #$PR into main..."
-    git checkout main
-    git merge --no-ff -m "Merge PR #$PR" "merge-pr-$PR"
-    
-    # Push to origin
-    echo "🔄 Pushing changes to GitHub..."
-    if git push origin main; then
-        echo "✅ Successfully pushed PR #$PR to GitHub"
-        success_count=$((success_count + 1))
-    else
-        echo "❌ Failed to push PR #$PR to GitHub"
-        failed_count=$((failed_count + 1))
-    fi
-    
-    # Clean up
-    git branch -D "merge-pr-$PR"
-    echo "✅ Cleaned up temporary branch for PR #$PR"
-done
-
-# Summary
-echo ""
-echo "=================================================="
-echo "📊 MERGE SUMMARY"
-echo "=================================================="
-echo "✅ Successfully merged: $success_count PRs"
-echo "❌ Failed to merge: $failed_count PRs"
-echo "📈 Total processed: $((success_count + failed_count)) PRs"
-echo "=================================================="
-
-if [ $success_count -gt 0 ]; then
-    echo "🎉 PR merge process completed successfully!"
-    echo "🚀 Ready to proceed with improvements!"
+# Step 6: Merge main into PR branch
+echo "🔧 Merging main into PR branch..."
+if git merge main --no-commit; then
+    echo "✅ No conflicts found"
+    git commit -m "Merge main into PR branch - no conflicts"
 else
-    echo "⚠️  No PRs were successfully merged. Please check for issues."
+    echo "⚠️ Conflicts detected. Resolving automatically..."
+    
+    # Auto-resolve conflicts
+    git checkout --ours package.json 2>/dev/null || true
+    git checkout --ours package-lock.json 2>/dev/null || true
+    git rm "*.backup*" 2>/dev/null || true
+    git checkout --ours app/page.tsx 2>/dev/null || true
+    git checkout --ours app/layout.tsx 2>/dev/null || true
+    git checkout --ours components/ 2>/dev/null || true
+    
+    # Add all changes
+    git add .
+    
+    # Commit resolution
+    git commit -m "Auto-resolve merge conflicts"
+    echo "✅ Conflicts resolved"
 fi
+
+# Step 7: Switch to main
+echo "🔄 Switching to main branch..."
+git checkout main
+
+# Step 8: Merge PR into main
+echo "🔀 Merging PR into main..."
+git merge cursor/create-and-deploy-new-content-d115 --no-ff -m "Merge cursor/create-and-deploy-new-content-d115: Add new AI 2025 content and promotional components"
+
+# Step 9: Push to remote
+echo "📤 Pushing to remote..."
+git push origin main
+
+# Step 10: Clean up
+echo "🧹 Cleaning up..."
+git branch -d cursor/create-and-deploy-new-content-d115
+git push origin --delete cursor/create-and-deploy-new-content-d115
+
+# Step 11: Update dependencies
+echo "📦 Updating dependencies..."
+if [ -f "package.json" ]; then
+    npm install
+fi
+
+# Step 12: Final cleanup
+echo "🧹 Final cleanup..."
+find . -name "*.backup*" -type f -delete 2>/dev/null || true
+find . -name "*.bak" -type f -delete 2>/dev/null || true
+
+# Step 13: Verify success
+echo "✅ Verifying merge success..."
+git status
+echo "📊 Recent commits:"
+git log --oneline -3
+
+echo "🎉 Merge process completed successfully!"
+echo "✅ PR merged into main branch"
+echo "✅ All conflicts resolved"
+echo "✅ Changes pushed to remote"
+echo "✅ Branch cleaned up"
+echo "✅ Dependencies updated"

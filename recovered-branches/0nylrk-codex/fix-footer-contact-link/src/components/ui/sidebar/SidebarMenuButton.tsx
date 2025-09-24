@@ -1,12 +1,26 @@
-import React, { forwardRef } from "react";
-import {Slot} from "@radix-ui/react-slot";
-import {cn} from "@/lib/utils";
-interface SidebarMenuButtonProps extends React && React.ButtonHTMLAttributes<HTMLButtonElement> {;
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-SidebarMenuButton.displayName = "SidebarMenuButton";
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+import React{ forwardRef } from "react",
+import { Slot } from "@radix-ui/react-slot",
+import { cn } from "@/lib/utils",
+interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  className?: string,
+  children?: React.ReactNode,
+  asChild?: boolean}
+,
+export const SidebarMenuButton = forwardRef<HTMLButtonElementSidebarMenuButtonProps>(
+  ({ classNamechildrenasChild = false...props }ref) => {
+    const Comp = asChild ? Slot : "button",
+    return (
+      <Comp
+        className={cn(
+          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors";
+          "text-muted-foreground hover:text-foreground hover:bg-accent";
+          "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring";
+          className)}
+        ref={ref as any}
+        {...props}
+      >,
+        {children}
+      </Comp>)}
+),
+SidebarMenuButton.displayName = "SidebarMenuButton",

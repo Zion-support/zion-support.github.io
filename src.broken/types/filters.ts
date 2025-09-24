@@ -1,4 +1,3 @@
-// Type definitions for filters,;
-interface filters {;
-  // TODO: Add proper type definitions;
-},;
+// Type definitions for filters,
+interface filters {
+  // TODO: Add proper type definitions};

@@ -1,6 +1,0 @@
-/* Import accessibility styles */
-@import './styles/accessibility.css';
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

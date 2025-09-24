@@ -1,5 +1,5 @@
-
-=======
-
-  return <ExpoPage />;
-}>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import dynamic from 'next/dynamic',
+const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'){ ssr: false }),
+export default function GlobalEventRoute() {
+  return <ExpoPage />}
+,

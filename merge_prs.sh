@@ -1,53 +1,71 @@
 #!/bin/bash
 
-# Script to merge all open PRs
+# Script to merge all codex branches into main
+# This script will attempt to merge branches systematically and handle conflicts
+
 set -e
 
-echo "Starting PR merge process..."
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
 
-if [ -z "$GITHUB_TOKEN" ]; then
-  echo "Error: GITHUB_TOKEN is not set. Export GITHUB_TOKEN before running." >&2
-  exit 1
-fi
+# Counters
+SUCCESS_COUNT=0
+CONFLICT_COUNT=0
+ERROR_COUNT=0
+TOTAL_COUNT=0
 
-# Get list of open PRs
-PRS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=20" | grep -o '"number":[0-9]*' | grep -o '[0-9]*')
+echo -e "${BLUE}Starting bulk merge of codex branches...${NC}"
 
-echo "Found PRs: $PRS"
+# Get all codex branches
+BRANCHES=$(git branch -r | grep "origin/.*-codex/" | head -50)
 
-for pr in $PRS; do
-    echo "Processing PR #$pr..."
+for branch in $BRANCHES; do
+    TOTAL_COUNT=$((TOTAL_COUNT + 1))
+    echo -e "\n${YELLOW}[$TOTAL_COUNT] Attempting to merge: $branch${NC}"
     
-    # Get PR details
-    PR_DETAILS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr")
+    # Fetch the latest changes
+    BRANCH_NAME=$(echo "$branch" | sed 's/origin\///')
+    git fetch origin "$BRANCH_NAME"
     
-    # Extract head branch
-    HEAD_BRANCH=$(echo "$PR_DETAILS" | grep -o '"ref":"[^"]*"' | head -1 | cut -d'"' -f4)
-    
-    if [ -n "$HEAD_BRANCH" ]; then
-        echo "Merging branch: $HEAD_BRANCH"
+    # Try to merge
+    if git merge --no-edit "$branch" 2>/dev/null; then
+        echo -e "${GREEN}✅ Successfully merged: $branch${NC}"
+        SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
         
-        # Fetch the branch
-        git fetch origin "$HEAD_BRANCH"
-        
-        # Try to merge
-        if git merge "origin/$HEAD_BRANCH" --no-ff -m "Merge PR #$pr: $HEAD_BRANCH"; then
-            echo "Successfully merged PR #$pr"
-            git push origin main
-        else
-            echo "Failed to merge PR #$pr, resolving conflicts..."
-            # Try to resolve conflicts automatically
-            git checkout --theirs .
+        # Commit the merge if needed
+        if [ -n "$(git status --porcelain)" ]; then
             git add .
-            git commit -m "Resolve merge conflicts for PR #$pr"
-            git push origin main
+            git commit -m "Merge branch '$BRANCH_NAME' into main"
         fi
     else
-        echo "Could not find head branch for PR #$pr"
+        echo -e "${RED}❌ Merge conflict in: $branch${NC}"
+        CONFLICT_COUNT=$((CONFLICT_COUNT + 1))
+        
+        # Reset to clean state
+        git merge --abort 2>/dev/null || true
+        git reset --hard HEAD
+        
+        # Log the conflicted branch
+        echo "$BRANCH_NAME" >> /workspace/conflicted_branches.txt
     fi
     
-    echo "Completed PR #$pr"
-    echo "---"
+    # Break after 10 merges to avoid overwhelming the system
+    if [ $TOTAL_COUNT -ge 10 ]; then
+        echo -e "${YELLOW}Stopping after 10 merges to assess progress...${NC}"
+        break
+    fi
 done
 
-echo "All PRs processed!"
+echo -e "\n${BLUE}=== Merge Summary ===${NC}"
+echo -e "${GREEN}Successful merges: $SUCCESS_COUNT${NC}"
+echo -e "${RED}Conflicts: $CONFLICT_COUNT${NC}"
+echo -e "${YELLOW}Total processed: $TOTAL_COUNT${NC}"
+
+if [ -f /workspace/conflicted_branches.txt ]; then
+    echo -e "\n${RED}Conflicted branches:${NC}"
+    cat /workspace/conflicted_branches.txt
+fi

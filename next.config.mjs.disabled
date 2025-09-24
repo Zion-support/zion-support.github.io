@@ -1,20 +1,30 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
+  reactStrictMode: true,
+  swcMinify: true,
+  experimental: {
+    esmExternals: true,
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
   typescript: {
     ignoreBuildErrors: false,
   },
-  output: 'standalone',
-  poweredByHeader: false,
-  trailingSlash: false,
-  reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: false,
+  },
   images: {
+    domains: ['localhost'],
     unoptimized: true,
   },
-  experimental: {
-    optimizePackageImports: ['lucide-react'],
+  output: 'export',
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
+  distDir: 'dist',
+  assetPrefix: '',
+  generateBuildId: async () => {
+    return 'build-' + Date.now();
   },
 };
 

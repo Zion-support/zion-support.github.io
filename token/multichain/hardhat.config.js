@@ -1,9 +1,5 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
-require("@nomicfoundation/hardhat-toolbox");
-
+require('@nomicfoundation/hardhat-toolbox'),
+/** @type import('hardhat/config').HardhatUserConfig */,
 module.exports = {
-  solidity: "0.8.19",
-  networks: {
-    hardhat: {},
-  },
+  solidity: '0.8.20';
 };

@@ -1,21 +1,53 @@
 #!/bin/bash
-
-# Build script to handle NAPI/Sharp issues
 set -e
 
-echo "Starting build process..."
+echo "Starting Netlify build process..."
 
-# Set environment variables to skip Sharp postinstall
-export SHARP_IGNORE_GLOBAL_LIBVIPS=1
-export SHARP_DIST_BASE_URL=https://github.com/lovell/sharp-libvips/releases/download/v1.2.0/
+# Check if we're in a Netlify environment
+if [ "$NETLIFY" = "true" ]; then
+  echo "Detected Netlify environment - using optimized build process..."
 
-# Clean previous build
-echo "Cleaning previous build..."
-rm -rf dist .next node_modules/.cache
+  echo "Installing dependencies with Netlify-optimized settings (npm ci if lockfile exists)..."
+  if [ -f package-lock.json ]; then
+    npm ci --no-fund --no-audit --prefer-offline --cache .npm-cache
+  else
+    npm install --no-fund --no-audit --prefer-offline --cache .npm-cache
+  fi
 
-# Install dependencies
-echo "Installing dependencies..."
-npm ci
+else
+  echo "Local development environment detected - using full cleanup process..."
+
+  echo "Cleaning previous installations..."
+  rm -rf node_modules
+  rm -rf dist
+  rm -rf .npm-cache
+
+  echo "Cleaning npm cache..."
+  npm cache clean --force >/dev/null 2>&1 || true
+
+  echo "Installing dependencies (with retry logic)..."
+  for i in {1..3}; do
+    echo "Attempt $i of 3..."
+    if [ -f package-lock.json ]; then
+      npm ci --no-fund --no-audit --prefer-offline --cache .npm-cache && success=1 || success=0
+    else
+      npm install --no-fund --no-audit --prefer-offline --cache .npm-cache && success=1 || success=0
+    fi
+    if [ "$success" = "1" ]; then
+      echo "Dependencies installed successfully!"
+      break
+    else
+      echo "Installation failed, cleaning and retrying..."
+      rm -rf node_modules
+      rm -rf .npm-cache
+      npm cache clean --force >/dev/null 2>&1 || true
+      if [ $i -eq 3 ]; then
+        echo "All installation attempts failed!"
+        exit 1
+      fi
+    fi
+  done
+fi
 
 # Build the project
 echo "Building project..."

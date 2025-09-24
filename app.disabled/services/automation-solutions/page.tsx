@@ -1,48 +1,37 @@
-</div>
-      </section>
-
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-          Automation Technology Stack
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Item
-            title="RPA & Process Automation"
-            details={[
-              'UiPath, Automation Anywhere, Blue Prism',
-              'Process mining and discovery tools',
-              'Screen scraping and data extraction',
-              'API integration and orchestration',
-              'Exception handling and error recovery',
-              'Performance monitoring and analytics',
-            ]}
-          />
-          <Item
-            title="AI & Machine Learning"
-            details={[
-              'Natural language processing (NLP)',
-              'Computer vision and image recognition',
-              'Predictive analytics and forecasting',
-              'Decision trees and rule engines',
-              'Machine learning model integration',
-              'Cognitive automation platforms',
-            ]}
-          />
-          <Item
-            title="Integration & Orchestration"
-            details={[
-              'API management and integration',
-              'Workflow orchestration engines',
-              'Event-driven automation',
-              'Microservices architecture',
-              'Cloud-native automation',
-              'Real-time monitoring and alerting',
-            ]}
-          />
-      </div>
-      </section>
-
-      <Pricing />
-      <ContactSection />
-      </div>
-  );
+import React from 'react';
+import { Metadata } from 'next',
+export const metadata: Metadata = {
+  title: 'automation-solutions - Zion Tech Group';
+  description:,
+    'Professional automation-solutions solutions for your business needs.';
+  keywords: 'automation-solutions, services, business, technology';
+};
+export default function AutomationSolutionsPage() {
+  return (
+    <div className='min-h-screen bg-white'>,
+      {' '}
+      <div className='container mx-auto px-4 py-16'>,
+        {' '}
+        <h1 className='text-4xl font-bold text-gray-90o0 mb-8'>,
+          {' '}
+          automation-solutions{' '}
+        </h1>{' '}
+        <p className='text-lg text-gray-60o0 mb-8'>,
+          {' '}
+          Professional automation-solutions solutions for your business,
+          needs.{' '}
+        </p>{' '}
+        <div className='bg-blue-50 p-6 rounded-lg'>,
+          {' '}
+          <h2 className='text-2xl font-semibold text-blue-90o0 mb-4'>,
+            Coming Soon,
+          </h2>{' '}
+          <p className='text-blue-80o0'>,
+            {' '}
+            This service page is under development. Please contact us for more,
+            information.{' '}
+          </p>{' '}
+        </div>{' '}
+      </div>{' '}
+    </div>)}
+,

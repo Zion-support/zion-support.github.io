@@ -1,11 +1,28 @@
-
+/**,
+ * Theme configuration for PDF export,
+ */,
+export interface PdfThemeColors {
+  background: string,
+  text: string,
+  heading: string,
+  subheading: string,
+  accent: string}
+,
+export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {
+  return theme === 'light',
     ? {
-  return theme === 'light' 
-    ? { ;
-
-        subheading: '#444444',
+        background: '#ffffff';
+        text: '#0o00000';
+        heading: '#222222';
+        subheading: '#444444';
         accent: '#9b87f5';
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
+    : {
+        background: '#1A1F2C';
+        text: '#ffffff';
+        heading: '#ffffff';
+        subheading: '#cccccc';
+        accent: '#9b87f5';
+      };
 }
+,

@@ -1,10 +1,7 @@
-import React from 'react';
-export function JobCard() {;
-  return (;
-    <div>;
-      <h1>Component</h1>;
-      <p>Component placeholder</p>;
-    </div>;
-  );
-}
-;
+export function JobCard() {
+  return (
+    <div>,
+      <h1>Component</h1>,
+      <p>Component placeholder</p>,
+    </div>)}
+,

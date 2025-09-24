@@ -1,173 +1,77 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-    "target": "ES2017",
-    "useDefineForClassFields": true,
-=======
-    "target": "ES2022",
->>>>>>> main
     "lib": [
       "dom",
       "dom.iterable",
-      "es2022"
+      "esnext"
     ],
-<<<<<<< HEAD
-    "module": "esnext",
-    "skipLibCheck": true,
-    "importHelpers": false,
-    "noEmitHelpers": false,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/pages/*": [
-        "./src/pages/*",
-        "./pages/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/api/*": [
-        "./src/api/*"
-      ],
-      "@/types/*": [
-        "./src/types/*",
-        "./types/*"
-      ],
-      "@/utils/*": [
-        "./src/utils/*",
-        "./utils/*"
-      ],
-      "@/hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@/context/*": [
-        "./src/context/*"
-      ],
-      "@/services/*": [
-        "./src/services/*"
-      ],
-      "react-router-dom": [
-        "./src/stubs/react-router-dom.tsx"
-      ],
-      "next-cloudinary": [
-        "./types/next-cloudinary.d.ts"
-      ],
-      "types/*": [
-        "./types/*"
-      ]
-    },
-    /* Bundler mode */
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "strict": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": false,
-    "noUncheckedIndexedAccess": false,
-    "noImplicitReturns": false,
     "allowJs": true,
-    "incremental": true,
-    "typeRoots": [
-      "./node_modules/@types",
-      "./types"
-    ],
-    "types": [
-      "node"
-    ],
-    "jsx": "preserve",
-    "noEmit": true,
-    "isolatedModules": true
-=======
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "jsx": "preserve",
-    "strict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "allowJs": false,
+    "strict": true,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "incremental": false,
-    "baseUrl": "."
->>>>>>> main
+    "jsx": "preserve",
+    "target": "es2022",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/types/*": ["./types/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "lib/**/*.ts",
-    "lib/**/*.tsx",
-    "pages/**/*.ts",
-    "pages/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     "src/**/*.ts",
     "src/**/*.tsx",
-    "types/**/*.ts"
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "scripts/**/*.ts",
+    "scripts/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
-<<<<<<< HEAD
-    "zion.app/recovered-content/**",
-    "apps/**",
-    "browserstack.config.ts",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx"
-  ]
-}
-=======
     ".next",
     "out",
     "dist",
-    "data_backup/**",
-    "src.corrupted/**",
-    "src/data/**",
-    "utils/next-link-shim.tsx",
-    "playwright.config.ts",
-    "api-backup",
-    "api-disabled",
-    "api.disabled.temp",
-    "pages.disabled",
-    "backup-pages",
-    "automation/**",
-    "scripts/**",
-    "deployments/**",
-    "deployment/**",
-    "backup/**",
-    "automation/backups",
-    "automation_backup",
-    "broken_files_backup",
-    "contracts",
-    "data",
-    "data/**",
-    "cypress",
-    "temp_working",
-    "supabase/functions",
-    "**/*.backup",
-    "**/*.disabled",
-    "cypress_backup",
-    "contracts_backup",
-    "fix_utils_files.ts",
-    "hooks/useResponsive.ts",
-    "lib_backup",
-    "pages-backup",
-    "pages.__backup",
-    "server",
-    "services",
-    "src.broken",
-    "temp_backup",
-    "temp_backup/**",
-    "temp_broken_components",
-    "temp_broken_components/**",
-    "src/components/SEOOptimizer.tsx",
-    "src/App*.tsx",
-    "src/main*.tsx",
-    "src/components/AIChatbotSystem.tsx"
+    "utils/**",
+    "types/**",
+    "**/*.backup.*",
+    "**/*.cleanup-backup.*",
+    "**/*.conflict-backup.*",
+    "**/*.disabled/**",
+    "src_backup/**",
+    "src_backup_all/**",
+    "src.broken/**",
+    "src-corrupted/**",
+    "src.pages.disabled/**",
+    "services_backup/**",
+    "types.disabled/**",
+    "utils.disabled/**",
+    "tests.disabled/**",
+    "zion-os.disabled/**"
   ]
 }
->>>>>>> main

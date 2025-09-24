@@ -1,114 +1,57 @@
-import { useEffect, useMemo, useState } from 'react';
-import { translateTextViaAI } from '../utils / translation';
+import { useEffect, useState } from 'react';
+
+// Simulated translator
+async function translateTextViaAI(
+  text: string,
+  target: string): Promise<string> {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(`${text} (${target})`), 100);
+  });
+}
+
 export type UseAutoTranslateResult = {
-  translations: Record < string, string>;
+  translations: Record<string string>;
   loading: boolean;
   error?: string;
-}
-import { useEffect, useMemo, useState } from 'react';
-import { translateTextViaAI } from '../utils/translation';
-export type UseAutoTranslateResult = {
-  translations: Record<string, string>,
-  loading: boolean,
-  error?: string
-},
+};
 
-export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {
-
-  const [translations, setTranslations] = useState<Record<string, string>>({});
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | undefined>(undefined);
-
-
-  const [translations, setTranslations] = useState<Record<string, string>>({});
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | undefined>(undefined);
-  const key = useMemo(() => JSON && JSON.stringify({ text, targets }), [text, targets]);
-
-  useEffect(() => {
-    if (!text || targets && targets.length === 0) {
-
-      setTranslations({});
-
-
-      setTranslations({});
-      return
-;
-export function useAutoTranslate (
+export function useAutoTranslate(
   text: string,
   targets: string[],
-  debounce_ms = 600): UseAutoTranslateResult {  const [translations, set_translations] = useState < Record < string, string>>({});export function useAutoTranslate (text: string, targets: string[], debounce_ms = 600): UseAutoTranslateResult {
-  const [translations, set_translations] = useState < Record < string, string>>({});
-  const [loading, set_loading] = useState (false);
-  const [error, set_error] = useState < string | undefined>(undefined);
-;
-  const key = useMemo (() => JSON.stringify ({ text, targets }), [text, targets]);
-;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_translations ({});
-      return;    }      return;
-=======
-  const [translations, setTranslations] = useState<Record<string, string>>({});
+  debounceMs = 300): UseAutoTranslateResult {
+  const [translations, setTranslations] = useState<Record<string string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
 
-
-  const key = useMemo(() => JSON && JSON.stringify({ text, targets }), [text, targets]);
   useEffect(() => {
-    if (!text || targets && targets.length === 0) {
-
+    if (!text || targets.length === 0) {
       setTranslations({});
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      return;
     }
 
-    let cancelled = $2;
+    let cancelled = false;
     const timer = setTimeout(async () => {
       try {
-
-=======        set_loading (true);
-        set_error (undefined);
-        const res = await translateTextViaAI (text, targets);
-        if (set_translations (res)) {
-  $2
-}
-      } catch (e: any) {
-        if (set_error (e?.message || 'Translation failed')) {
-  $2
-}
+        setLoading(true);
+        setError(undefined);
+        const results: Record<string string> = {};
+        for (const target of targets) {
+          results[target] = await translateTextViaAI(text, target);
+        }
+        if (!cancelled) setTranslations(results);
+      } catch (e: unknown) {
+        const message = e instanceof Error ? e.message : 'Translation failed';
+        if (!cancelled) setError(message);
       } finally {
-        if (set_loading (false)) {
-  $2
-}      }      } catch (e: any) {
-        if (set_error (e?.message || 'Translation failed')) {
-  $2
-}
-      } finally {
-        if (set_loading (false)) {
-  $2
-}
+        if (!cancelled) setLoading(false);
       }
+    }, debounceMs);
 
-    }
-  }, [key, debounce_ms]);
-;
-  return { translations, loading, error }
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
+  }, [text, targets.join(','), debounceMs]);
 
-}
-
-=======    }
-  }, [key, debounce_ms]);
-;
-  return { translations, loading, error }
-}
-    }
-  }, [key, debounce_ms]);
-;
-  return { translations, loading, error }
+  return { translations, loading, error };
 }

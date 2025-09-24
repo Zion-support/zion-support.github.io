@@ -1,36 +1,68 @@
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-import {UserProfile, UserDetails} from '@/types/auth';
-import {Message, Conversation, ConversationContextData} from '@/types/messaging';
-import {useConversationState} from './useConversationState';
-import {useConversations} from './useConversations';
-import {useMessages} from './useMessages';
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-// Allow either UserProfile or UserDetails
-
-type UserWithProfile = UserProfile | UserDetails | null;
-/**
- * Hook that combines all messaging operations
-    loadMessages
-import { UserProfile, UserDetails } from '@/types/auth',;
-import { Message, Conversation, ConversationContextData } from '@/types/messaging',;
-import { useConversationState } from './useConversationState',;
-import { useConversations } from './useConversations',;
-import { useMessages } from './useMessages',;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+import { UserProfile, UserDetails } from '@/types/auth',
+import {
+  Message;
+  Conversation;
+  ConversationContextData;
+} from '@/types/messaging',
+import { useConversationState } from './useConversationState',
+import { useConversations } from './useConversations',
+import { useMessages } from './useMessages',
+// Allow either UserProfile or UserDetails,
+type UserWithProfile = UserProfile | UserDetails | null,
+/**,
+ * Hook that combines all messaging operations,
+ */,
+export function useMessagingOperations(user: UserWithProfile) {
+  // State management,
   const {
-    fetch_conversations;
-    create_conversation;
-  } = use_conversations (
-    user;
-    set_conversations;
+    messages;
+    setMessages;
+    activeMessages;
+    setActiveMessages;
+    conversations;
+    setConversations;
+    unreadCount;
     setUnreadCount;
-    setIsLoading);
-;
-  // Messages management;
-
+    activeConversation;
+    setActiveConversation;
+    isLoading;
+    setIsLoading;
+  } = useConversationState(),
+  // Conversations management,
+  const { fetchConversations, createConversation } = useConversations(
+    user;
+    setConversations;
+    setUnreadCount;
+    setIsLoading),
+  // Messages management,
+  const { loadMessages, sendMessage, markAsRead } = useMessages(
+    user;
+    activeConversation;
+    activeMessages;
+    setActiveMessages;
+    conversations;
+    setConversations;
+    setUnreadCount;
+    setIsLoading;
+    fetchConversations),
+  return {
+    // State,
+    messages;
+    activeMessages;
+    setActiveMessages;
+    conversations;
+    setConversations;
+    unreadCount;
+    setUnreadCount;
+    activeConversation;
+    setActiveConversation;
+    isLoading;
+    // Operations,
+    sendMessage;
+    createConversation;
+    markAsRead;
+    fetchConversations;
+    loadMessages;
+  };
+}
+,

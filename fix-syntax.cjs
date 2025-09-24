@@ -1,69 +1,83 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixSyntaxErrors(filePath) {
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
 
-    // Fix common syntax errors
-    const fixes = [
-      // Fix trailing commas in statements
-      { pattern: /return res\.status\([^)]+\)\.json\([^)]+\),\s*$/gm, replacement: (match) => match.replace(/,$/, ';') },
-      { pattern: /return res\.status\([^)]+\)\.end\([^)]*\),\s*$/gm, replacement: (match) => match.replace(/,$/, ';') },
-      
-      // Fix variable declarations with trailing commas
-      { pattern: /const\s+[^=]+=\s+[^,]+,\s*$/gm, replacement: (match) => match.replace(/,$/, ';') },
-      { pattern: /let\s+[^=]+=\s+[^,]+,\s*$/gm, replacement: (match) => match.replace(/,$/, ';') },
-      
-      // Fix if statements with trailing commas
-      { pattern: /if\s*\([^)]+\)\s*return\s+[^,]+,\s*$/gm, replacement: (match) => match.replace(/,$/, ';') },
-      
-      // Fix function calls with trailing commas at end of line
-      { pattern: /\w+\([^)]*\),\s*$/gm, replacement: (match) => {
-        if (match.includes('return')) return match.replace(/,$/, ';');
-        return match.replace(/,$/, ';');
-      }},
-      
-      // Fix object properties with semicolons instead of commas
-      { pattern: /(\w+):\s*([^;]+);(?=\s*\w+:)/g, replacement: '$1: $2,' },
-      
-      // Fix missing semicolons at end of statements
-      { pattern: /return\s+[^;]+(?=\s*})/g, replacement: (match) => match + ';' }
-    ];
+    // Fix import statements - replace trailing commas with semicolons
+    content = content.replace(/import\s+[^;]+,\s*$/gm, match => {
+      return match.replace(/,\s*$/, ';');
+    });
 
-    for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
+    // Fix export statements
+    content = content.replace(/export\s+[^;]+,\s*$/gm, match => {
+      return match.replace(/,\s*$/, ';');
+    });
+
+    // Fix function declarations
+    content = content.replace(/function\s+[^{]+{\s*$/gm, match => {
+      return match.replace(/,\s*$/, '');
+    });
+
+    // Fix const/let/var declarations
+    content = content.replace(
+      /(const|let|var)\s+[^=]+=\s*[^;]+,\s*$/gm,
+      match => {
+        return match.replace(/,\s*$/, ';');
       }
-    }
+    );
 
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-    }
+    // Fix return statements
+    content = content.replace(/return\s+[^;]+,\s*$/gm, match => {
+      return match.replace(/,\s*$/, ';');
+    });
+
+    // Fix JSX closing tags
+    content = content.replace(/<\/[^>]+>,\s*$/gm, match => {
+      return match.replace(/,\s*$/, '');
+    });
+
+    // Fix object properties
+    content = content.replace(/(\w+):\s*[^,}]+,\s*$/gm, match => {
+      return match.replace(/,\s*$/, '');
+    });
+
+    // Fix array elements
+    content = content.replace(/\[([^\]]+)\],\s*$/gm, (match, inner) => {
+      if (inner.includes(',')) {
+        return match.replace(/,\s*$/, '');
+      }
+      return match;
+    });
+
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-function processDirectory(dir) {
+function walkDir(dir) {
   const files = fs.readdirSync(dir);
-  
-  for (const file of files) {
+
+  files.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
+
     if (stat.isDirectory()) {
-      processDirectory(filePath);
-    } else if (file.endsWith('.ts') && !file.endsWith('.d.ts')) {
-      fixSyntaxErrors(filePath);
+      walkDir(filePath);
+    } else if (
+      file.endsWith('.tsx') ||
+      file.endsWith('.ts') ||
+      file.endsWith('.jsx') ||
+      file.endsWith('.js')
+    ) {
+      fixFile(filePath);
     }
-  }
+  });
 }
 
-// Process the pages/api directory
-processDirectory('/workspace/pages/api');
-console.log('Syntax fixes completed!');
+// Fix pages directory
+walkDir('./pages');
+console.log('Syntax fixing complete!');

@@ -1,15 +1,24 @@
+#!/usr/bin/env node
 const fs = require('fs');
-
-// Read package.json
-let content = fs.readFileSync('package.json', 'utf8');
-
-// Remove all merge conflict markers and keep HEAD version
-=======
-content = content.replace(/\n?/g, '');
-content = content.replace(/.*?\n?/g, '');
-content = content.replace(/content = content.replace(/content = content.replace(/// Clean up any remaining artifacts
-content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-
-// Remove any remaining conflict markers
-console.log('package.json conflicts resolved!');
+console.log('🔧 Fixing package.json merge conflicts...');
+try {
+  let content = fs.readFileSync('package.json', 'utf8');
+  // Remove all merge conflict markers and keep the incoming version (from PRs)
+  content = content
+  // Clean up any remaining artifacts
+  content = content
+    .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines
+    .replace(/,\s*}/g, '}') // Remove trailing commas before closing braces
+    .replace(/,\s*]/g, ']'); // Remove trailing commas before closing brackets
+  fs.writeFileSync('package.json', content);
+  console.log('✅ package.json merge conflicts resolved');
+  // Validate JSON
+  try {
+    JSON.parse(content);
+    console.log('✅ package.json is valid JSON');
+  } catch (error) {
+    console.log('❌ package.json is still invalid:', error.message);
+  }
+} catch (error) {
+  console.log('❌ Error fixing package.json:', error.message);
+}

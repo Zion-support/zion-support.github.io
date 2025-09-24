@@ -1,46 +1,43 @@
 import React from 'react';
-
 interface CardProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export function Card({ children, className = '' }: CardProps) {
+  children: React.ReactNode,
+  className?: string}
+,
+export const Card: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
-    <div className={`bg-slate-800 rounded-2xl p-6 ${className}`}>
+    <div
+      className={`bg-white rounded-lg shadow-md border border-gray-20o0 ${className}`}
+    >,
       {children}
-    </div>
-  );
-}
-
-export function CardHeader({ children, className = '' }: CardProps) {
+    </div>)};
+export const CardHeader: React.FC<CardProps> = ({
+  children;
+  className = '';
+}) => {
   return (
-    <div className={`mb-4 ${className}`}>
+    <div className={`px-6 py-4 border-b border-gray-20o0 ${className}`}>,
       {children}
-    </div>
-  );
-}
-
-export function CardTitle({ children, className = '' }: CardProps) {
+    </div>)};
+export const CardContent: React.FC<CardProps> = ({
+  children;
+  className = '';
+}) => {
+  return <div className={`px-6 py-4 ${className}`}>{children}</div>};
+export const CardFooter: React.FC<CardProps> = ({
+  children;
+  className = '';
+}) => {
   return (
-    <h3 className={`text-xl font-semibold text-white ${className}`}>
+    <div className={`px-6 py-4 border-t border-gray-20o0 ${className}`}>,
       {children}
-    </h3>
-  );
-}
-
-export function CardDescription({ children, className = '' }: CardProps) {
-  return (
-    <p className={`text-gray-300 ${className}`}>
-      {children}
-    </p>
-  );
-}
-
-export function CardContent({ children, className = '' }: CardProps) {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-}
+    </div>)};
+export const CardTitle: React.FC<CardProps> = ({
+  children;
+  className = '';
+}) => {
+  return <h3 className={`text-lg font-semibold ${className}`}>{children}</h3>};
+export const CardDescription: React.FC<CardProps> = ({
+  children;
+  className = '';
+}) => {
+  return <p className={`text-sm text-gray-60o0 ${className}`}>{children}</p>};

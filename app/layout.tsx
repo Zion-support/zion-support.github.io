@@ -1,25 +1,40 @@
-import React from 'react';
-import Link from 'next/link';
-import './globals.css';
+import React from 'react'
+import type { ReactNode } from 'react'
+
+import './globals.css'
+import ErrorBoundary from './components/ErrorBoundary'
+import PerformanceOptimizer from './components/PerformanceOptimizer'
 
 export const metadata = {
-  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software',
+  title: {
+    default: 'Zion Tech Group - AI & Technology Solutions',
+    template: '%s | Zion Tech Group'},
+  description:
+    'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
+  keywords: ['AI', 'Technology', 'Cloud', 'Cybersecurity', 'Micro SaaS', 'Consulting', 'Digital Transformation'],
   authors: [{ name: 'Zion Tech Group' }],
+  creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false},
+  metadataBase: new URL('https://zion.app'),
+  alternates: { canonical: '/' },
   openGraph: {
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-    url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
     type: 'website',
-  },
+    locale: 'en_US',
+    url: 'https://zion.app',
+    title: 'Zion Tech Group - AI & Technology Solutions',
+    description:
+      'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
+    siteName: 'Zion Tech Group'},
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-  },
+    title: 'Zion Tech Group - AI & Technology Solutions',
+    description:
+      'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
+    creator: '@ziontech'},
   robots: {
     index: true,
     follow: true,
@@ -28,46 +43,24 @@ export const metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      'max-snippet': -1}},
+  verification: { google: 'your-google-verification-code' }}
 
-function Header() {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
-      <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto">
-        <Link href="/" className="font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors">
-          Zion Tech Group
-        </Link>
-        <div className="hidden md:flex gap-6">
-          <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
-          <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
-          <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
-        </div>
-function Footer() {
-  return (
-    <footer className="border-t border-gray-200 mt-10 py-6 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Services</h3>
-            <div className="space-y-2">
-              <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">All Services</Link>
-              <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Micro SaaS</Link>
-              <Link href="/services/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Services</Link>
-              <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">IT Services</Link>
-=======
-import React from 'react'; import Link from 'next / link'; import './globals.css'; export const metadata = { title: 'Zion Tech Group — AI, Micro SaaS, and IT Services', description: 'Enterprise - grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.', keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software', authors: [{ name: 'Zion Tech Group' }], open_graph: { title: 'Zion Tech Group — AI, Micro SaaS, and IT Services', description: 'Enterprise - grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.', url: 'https: site_name: 'Zion Tech Group', locale: 'en_US', type: 'website', }, twitter: { card: 'summary_large_image', title: 'Zion Tech Group — AI, Micro SaaS, and IT Services', description: 'Enterprise - grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.', }, robots: { index: true, follow: true, google_bot: { index: true, follow: true, 'max - video - preview': -1, 'max - image - preview': 'large', 'max - snippet': -1, }, }, } /**
- * Header - Function description
- */
-function Header() { return ( <header className="border - b border - gray - 200 sticky top - 0 z - 50 bg - white shadow - sm"> <nav className="flex items - center justify - between px - 4 py - 3 max - w-6xl mx - auto"> <Link href="/" className="font - bold text - lg text - gray - 900 hover:text - blue - 600 transition - colors"> Zion Tech Group </Link> <div className="hidden md:flex gap - 6"> <Link href="/about" className="text - gray - 700 hover:text - blue - 600 transition - colors">About</Link> <Link href="/services" className="text - gray - 700 hover:text - blue - 600 transition - colors">Services</Link> <Link href="/contact" className="text - gray - 700 hover:text - blue - 600 transition - colors">Contact</Link> </div> {} <button className="md:hidden p - 2" aria - label="Toggle menu"> <svg className="w - 6 h - 6" fill="none" stroke="current_color" view_box="0 0 24 24"> <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M4 6h16M4 12h16M4 18h16" /> </svg> </button> </nav> </header> )} /**
- * Footer - Function description
- */
-function Footer() { return ( <footer className="border - t border - gray - 200 mt - 10 py - 6 bg - gray - 50"> <div className="max - w-6xl mx - auto px - 4"> <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6"> <div> <h3 className="font - semibold text - gray - 900 mb - 3">Services</h3> <div className="space - y-2"> <Link href="/services" className="block text - gray - 600 hover:text - blue - 600 transition - colors">All Services</Link> <Link href="/services / micro - saas" className="block text - gray - 600 hover:text - blue - 600 transition - colors">Micro SaaS</Link> <Link href="/services / ai - services" className="block text - gray - 600 hover:text - blue - 600 transition - colors">AI Services</Link> <Link href="/services / it - services" className="block text - gray - 600 hover:text - blue - 600 transition - colors">IT Services</Link> </div> </div> <div> <h3 className="font - semibold text - gray - 900 mb - 3">Company</h3> <div className="space - y-2"> <Link href="/" className="block text - gray - 600 hover:text - blue - 600 transition - colors">Home</Link> <Link href="/contact" className="block text - gray - 600 hover:text - blue - 600 transition - colors">Contact</Link> <a href="https: </div> </div> <div> <h3 className="font - semibold text - gray - 900 mb - 3">Contact Info</h3> <div className="text - sm text - gray - 600 space - y-1"> <div > Mobile: +1 302 464 0950</div> <div > Email: <a href="mailto:kleber@ziontechgroup.com" className="hover:text - blue - 600 transition - colors">kleber@ziontechgroup.com</a></div> <div > Address: 364 E Main St STE 1008 < br />Middletown DE 19709</div> </div> </div> </div> <div className="border - t border - gray - 200 mt - 6 pt - 4 text - xs text - gray - 500 text - center"> © {new Date ().getFullYear ()} Zion Tech Group. All rights reserved. </div> </div> </footer> )} export default /**
- * RootLayout - Function description
- */
-function RootLayout() { return ( <html lang="en"> <body className="min - h-screen bg - white text - gray - 900"> <Header /> <main className="max - w-6xl mx - auto px - 4 py - 6 min - h-screen"> {children} </main> <Footer /> </body> </html> )}=======
-
-import React from 'react'; import Link from 'next/link'; import './globals.css'; export const metadata = { title: 'Zion Tech Group — AI,Micro SaaS,and IT Services',description: 'Enterprise-grade AI,micro SaaS,and IT solutions. Build faster with Zion Tech Group.',keywords: 'AI services,micro SaaS,IT services,cloud migration,DevOps,SRE,enterprise software',authors: [{ name: 'Zion Tech Group' }],openGraph: { title: 'Zion Tech Group — AI,Micro SaaS,and IT Services',description: 'Enterprise-grade AI,micro SaaS,and IT solutions. Build faster with Zion Tech Group.',url: 'https: siteName: 'Zion Tech Group',locale: 'en_US',type: 'website',},twitter: { card: 'summary_large_image',title: 'Zion Tech Group — AI,Micro SaaS,and IT Services',description: 'Enterprise-grade AI,micro SaaS,and IT solutions. Build faster with Zion Tech Group.',},robots: { index: true,follow: true,googleBot: { index: true,follow: true,'max-video-preview': -1,'max-image-preview': 'large','max-snippet': -1,},},}; function Header() { return ( <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm"> <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto"> <Link href="/" className="font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors"> Zion Tech Group </Link> <div className="hidden md:flex gap-6"> <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link> <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link> <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link> </div> {} <button className="md:hidden p-2" aria-label="Toggle menu"> <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /> </svg> </button> </nav> </header> )} function Footer() { return ( <footer className="border-t border-gray-200 mt-10 py-6 bg-gray-50"> <div className="max-w-6xl mx-auto px-4"> <div className="grid grid-cols-1 md:grid-cols-3 gap-6"> <div> <h3 className="font-semibold text-gray-900 mb-3">Services</h3> <div className="space-y-2"> <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">All Services</Link> <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Micro SaaS</Link> <Link href="/services/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Services</Link> <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">IT Services</Link> </div> </div> <div> <h3 className="font-semibold text-gray-900 mb-3">Company</h3> <div className="space-y-2"> <Link href="/" className="block text-gray-600 hover:text-blue-600 transition-colors">Home</Link> <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">Contact</Link> <a href="https: </div> </div> <div> <h3 className="font-semibold text-gray-900 mb-3">Contact Info</h3> <div className="text-sm text-gray-600 space-y-1"> <div>Mobile: +1 302 464 0950</div> <div>Email: <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-600 transition-colors">kleber@ziontechgroup.com</a></div> <div>Address: 364 E Main St STE 1008<br />Middletown DE 19709</div> </div> </div> </div> <div className="border-t border-gray-200 mt-6 pt-4 text-xs text-gray-500 text-center"> © {new Date().getFullYear()} Zion Tech Group. All rights reserved. </div> </div> </footer> )} export default function RootLayout({ children }: { children: React.ReactNode }) { return ( <html lang="en"> <body className="min-h-screen bg-white text-gray-900"> <Header /> <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen"> {children} </main> <Footer /> </body> </html> )};
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#6366f1" />
+      </head>
+      <body className="antialiased">
+        <ErrorBoundary>
+          <PerformanceOptimizer />
+          {children}
+        </ErrorBoundary>
+      </body>
+    </html>
+  )
+}

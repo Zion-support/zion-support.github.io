@@ -1,54 +1,46 @@
 {
-  "timestamp": "2025-09-06T23:55:30.887Z",
-  "healthStatus": {
-    "overall": "unhealthy",
-    "checks": [
-      {
-        "type": "dependencies",
-        "status": "passed",
-        "message": "Dependencies check completed",
-        "timestamp": "2025-09-06T23:55:30.635Z"
-      },
-      {
-        "type": "configuration",
-        "status": "passed",
-        "message": "All configuration files present",
-        "timestamp": "2025-09-06T23:55:30.636Z"
-      },
-      {
-        "type": "build_process",
-        "status": "passed",
-        "message": "Build script found",
-        "timestamp": "2025-09-06T23:55:30.636Z"
-      },
-      {
-        "type": "linting",
-        "status": "passed",
-        "message": "Linting configuration found",
-        "timestamp": "2025-09-06T23:55:30.887Z"
+  "timestamp": "2025-09-23T21:50:21.312Z",
+  "status": "unhealthy",
+  "checks": {
+    "buildHealth": {
+      "status": "fail",
+      "message": "Build directory not found",
+      "details": {
+        "error": "No .next directory found"
       }
-    ],
-    "issues": [
-      {
-        "type": "missing_critical_deps",
-        "message": "Missing critical dependencies: typescript",
-        "severity": "high",
-        "timestamp": "2025-09-06T23:55:30.635Z"
-      },
-      {
-        "type": "test_check_failed",
-        "message": "ENOENT: no such file or directory, stat '/workspace/media/docu-script/requirements.txt'",
-        "severity": "low",
-        "timestamp": "2025-09-06T23:55:30.887Z"
+    },
+    "dependencies": {
+      "status": "pass",
+      "message": "Dependencies are properly configured",
+      "details": {
+        "dependencies": 21,
+        "devDependencies": 32,
+        "total": 53
       }
-    ],
-    "recommendations": []
+    },
+    "fileStructure": {
+      "status": "pass",
+      "message": "All required files present",
+      "details": {
+        "checkedFiles": 4
+      }
+    },
+    "performance": {
+      "status": "skip",
+      "message": "No build found, skipping performance check",
+      "details": {}
+    },
+    "security": {
+      "status": "warning",
+      "message": "Potentially insecure scripts found",
+      "details": {
+        "insecureScripts": [
+          "build:clean",
+          "dev:clean",
+          "clean"
+        ]
+      }
+    }
   },
-  "summary": {
-    "totalChecks": 4,
-    "passedChecks": 4,
-    "totalIssues": 2,
-    "criticalIssues": 0,
-    "highIssues": 1
-  }
+  "metrics": {}
 }

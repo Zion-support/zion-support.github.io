@@ -1,116 +1,85 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix parsing errors
 function fixParsingErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix missing commas in object literals and arrays
-    content = content.replace(/(\w+):\s*([^,\n}]+)\s*\n\s*(\w+):/g, '$1: $2,\n$3:');
-    content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n$2:');
-    content = content.replace(/(\w+)\s*\n\s*(\w+)\]/g, '$1,\n$2]');
-    content = content.replace(/(\w+)\s*\n\s*(\w+)\}/g, '$1,\n$2}');
-    content = content.replace(/(\w+)\s*\n\s*(\w+)\)/g, '$1,\n$2)');
-
-    // Fix interface and type definitions
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):/g, '$1: $2;\n$3:');
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+)\}/g, '$1: $2;\n$3}');
-
-    // Fix function parameters
-    content = content.replace(/\(\s*(\w+)\s*\n\s*(\w+)\s*\)/g, '($1,\n$2)');
-    content = content.replace(/\(\s*(\w+)\s*\n\s*(\w+):/g, '($1,\n$2:');
-
-    // Fix JSX syntax
-    content = content.replace(/<\s*(\w+)\s*>\s*{/g, '<$1>{');
-    content = content.replace(/<\s*(\w+)\s*>\s*</g, '<$1><');
-
-    // Fix import statements
-    content = content.replace(/import\s+([^;]+)\s*\n\s*import/g, 'import $1;\nimport');
-    content = content.replace(/import\s+([^;]+)\s*\n\s*const/g, 'import $1;\nconst');
-
-    // Fix variable declarations
-    content = content.replace(/const\s+(\w+)\s*=\s*{\s*\n\s*(\w+):/g, 'const $1 = {\n$2:');
-    content = content.replace(/let\s+(\w+)\s*=\s*{\s*\n\s*(\w+):/g, 'let $1 = {\n$2:');
-    content = content.replace(/var\s+(\w+)\s*=\s*{\s*\n\s*(\w+):/g, 'var $1 = {\n$2:');
-
-    // Fix React component syntax
-    content = content.replace(/React\.FC<(\w+)>\s*=\s*\(\s*{\s*(\w+)\s*}\s*\)\s*=>/g, 'React.FC<$1> = ({ $2 }) =>');
-    content = content.replace(/React\.FC<(\w+)>\s*=\s*\(\s*{\s*(\w+)\s*,\s*(\w+)\s*}\s*\)\s*=>/g, 'React.FC<$1> = ({ $2, $3 }) =>');
+    // Fix common parsing errors
 
     // Fix missing semicolons
-    content = content.replace(/(\w+)\s*\n\s*export/g, '$1;\nexport');
-    content = content.replace(/(\w+)\s*\n\s*const/g, '$1;\nconst');
-    content = content.replace(/(\w+)\s*\n\s*let/g, '$1;\nlet');
-    content = content.replace(/(\w+)\s*\n\s*var/g, '$1;\nvar');
+    if (content.match(/[^;]\s*$/m)) {
+      content = content.replace(/([^;])\s*$/gm, '$1;');
+      modified = true;
+    }
 
-    // Clean up multiple empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    // Remove trailing whitespace
-    content = content.replace(/\s+$/gm, '');
+    // Fix missing colons in object properties
+    content = content.replace(/(\w+)\s*=\s*(\w+)\s*:/g, '$1: $2:');
 
-    // Check if content changed
-    const originalContent = fs.readFileSync(filePath, 'utf8');
-    if (content !== originalContent) {
+    // Fix property assignment syntax
+    content = content.replace(/(\w+)\s*=\s*(\w+)\s*=/g, '$1: $2 =');
+
+    // Fix missing closing braces
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+
+    if (openBraces > closeBraces) {
+      const missingBraces = openBraces - closeBraces;
+      content += '\n' + '}'.repeat(missingBraces);
+      modified = true;
+    }
+
+    // Fix missing closing parentheses
+    const openParens = (content.match(/\(/g) || []).length;
+    const closeParens = (content.match(/\)/g) || []).length;
+
+    if (openParens > closeParens) {
+      const missingParens = openParens - closeParens;
+      content += '\n' + ')'.repeat(missingParens);
+      modified = true;
+    }
+
+    // Fix common syntax issues
+    content = content.replace(/,\s*}/g, '}');
+    content = content.replace(/,\s*]/g, ']');
+    content = content.replace(/,\s*\)/g, ')');
+
+    if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed parsing errors in: ${filePath}`);
       return true;
     }
-    
+
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Main execution
-const filesToFix = [
-  'components/AccessibilityEnhancer.tsx',
-  'components/Analytics.tsx',
-  'components/ContactForm.tsx',
-  'components/ErrorBoundary.tsx',
-  'components/Footer.tsx',
-  'components/Header.tsx',
-  'components/LoadingSpinner.tsx',
-  'components/Navigation.tsx',
-  'components/OptimizedImage.tsx',
-  'components/PerformanceMonitor.tsx',
-  'components/SEOHead.tsx',
-  'components/SearchBar.tsx',
-  'components/Sidebar.tsx',
-  'components/SimpleLayout.tsx',
-  'components/SkeletonLoader.tsx',
-  'components/layout/EnhancedFooter.tsx',
-  'components/layout/Footer.tsx',
-  'components/layout/Header.tsx',
-  'components/layout/Layout.tsx',
-  'components/layout/MainLayout.tsx',
-  'components/performance/LazyComponent.tsx',
-  'components/performance/OptimizedImage.tsx',
-  'components/ui/EnhancedMarketplaceCard.tsx',
-  'components/ui/InteractiveNavigation.tsx',
-  'components/ui/NotificationSystem.tsx',
-  'pages/404.tsx',
-  'pages/ai-services.tsx',
-  'pages/blockchain.tsx',
-  'pages/contact.tsx',
-  'pages/index.tsx'
-];
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  let fixedCount = 0;
 
-console.log('Fixing parsing errors...');
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
 
-let fixedCount = 0;
-for (const file of filesToFix) {
-  if (fs.existsSync(file)) {
-    if (fixParsingErrors(file)) {
-      fixedCount++;
+    if (stat.isDirectory()) {
+      fixedCount += processDirectory(filePath);
+    } else if (
+      file.endsWith('.tsx') ||
+      file.endsWith('.ts') ||
+      file.endsWith('.jsx') ||
+      file.endsWith('.js')
+    ) {
+      if (fixParsingErrors(filePath)) fixedCount++;
     }
   }
+
+  return fixedCount;
 }
 
+console.log('Starting parsing error fixes...');
+const fixedCount = processDirectory('./pages');
 console.log(`Fixed ${fixedCount} files`);

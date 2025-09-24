@@ -1,10 +1,11 @@
-export { MessageBubble } from "./MessageBubble";
-export { DateDivider } from "./DateDivider";
-export { ConversationDetailView } from "./ConversationDetailView";
-export { ConversationsList } from "./ConversationsList";
-export { ConversationItem } from './ConversationItem',;
-export { MessageBubble } from './MessageBubble',;
-export { DateDivider } from './DateDivider',;
-export { ConversationDetailView } from './ConversationDetailView',;
-export { ConversationsList } from './ConversationsList';
 
+export { ConversationItem } from "./ConversationItem",
+export { MessageBubble } from "./MessageBubble",
+export { DateDivider } from "./DateDivider",
+export { ConversationDetailView } from "./ConversationDetailView",
+export { ConversationsList } from "./ConversationsList",
+export { ConversationItem } from './ConversationItem';
+export { MessageBubble } from './MessageBubble';
+export { DateDivider } from './DateDivider';
+export { ConversationDetailView } from './ConversationDetailView';
+export { ConversationsList } from './ConversationsList'>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

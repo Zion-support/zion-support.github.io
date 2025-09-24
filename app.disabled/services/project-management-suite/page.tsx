@@ -1,68 +1,37 @@
-export default function ServicePage() {
-
+import React from 'react';
+import { Metadata } from 'next',
+export const metadata: Metadata = {
+  title: 'project-management-suite - Zion Tech Group';
+  description:,
+    'Professional project-management-suite solutions for your business needs.';
+  keywords: 'project-management-suite, services, business, technology';
+};
+export default function ProjectManagementSuitePage() {
   return (
-        </p>
-      </div>      </div>
-      </div>
-      </div>
-      <PricingSection />
-
-      <ContactSection />
-      </div>
-  );
-
-            <span className="text-gray-600">{feature}</span>
-          </li>
-        ))}
-      </ul>
-      </div>
-  );
-
-            "Email support",
-
-          ]}
-          popular={false}
-        />
-
-            "Priority support",
-
-          ]}
-          popular={true}
-        />
-
-            "24/7 phone support",
-
-          ]}
-          popular={false}
-        />
-      </div>
-      </div>
-  );
-
-  name,
-  price,
-  duration,
-
-  popular,
-
-  name: string;
-  price: string;
-  duration: string;
-
-  popular: boolean;
-
-            <span className="text-gray-600">{feature}</span>
-          </li>
-        ))}
-      </ul>
-
-      </a>
-      </div>
-  );
-
-      <div className="mt-6 text-sm text-gray-500">
-        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-        <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
-      </div>
-      </div>
-  );
+    <div className='min-h-screen bg-white'>,
+      {' '}
+      <div className='container mx-auto px-4 py-16'>,
+        {' '}
+        <h1 className='text-4xl font-bold text-gray-90o0 mb-8'>,
+          {' '}
+          project-management-suite{' '}
+        </h1>{' '}
+        <p className='text-lg text-gray-60o0 mb-8'>,
+          {' '}
+          Professional project-management-suite solutions for your business,
+          needs.{' '}
+        </p>{' '}
+        <div className='bg-blue-50 p-6 rounded-lg'>,
+          {' '}
+          <h2 className='text-2xl font-semibold text-blue-90o0 mb-4'>,
+            Coming Soon,
+          </h2>{' '}
+          <p className='text-blue-80o0'>,
+            {' '}
+            This service page is under development. Please contact us for more,
+            information.{' '}
+          </p>{' '}
+        </div>{' '}
+      </div>{' '}
+    </div>)}
+,

@@ -11,14 +11,13 @@ class User(db.Model):
     is_premium = db.Column(db.Boolean, default=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     profile_badge_url = db.Column(db.String(200), nullable=True)
+    last_visit = db.Column(db.DateTime, default=datetime.utcnow)
 
     enrollments = db.relationship('Enrollment', back_populates='user', cascade="all, delete-orphan")
     certificates = db.relationship('Certificate', backref='user', lazy=True, cascade="all, delete-orphan")
-    def check_password(self, password):
-        return check_password_hash(self.password_hash, password)
-=======
     update_reactions = db.relationship('UpdateReaction', backref='user', lazy=True, cascade="all, delete-orphan")
     update_comments = db.relationship('UpdateComment', backref='user', lazy=True, cascade="all, delete-orphan")
+
     def __repr__(self):
         return f'<User {self.username}>'
 
@@ -42,6 +41,8 @@ class Course(db.Model):
     quizzes = db.relationship('Quiz', backref='course', lazy='dynamic', cascade="all, delete-orphan")
     enrollments = db.relationship('Enrollment', back_populates='course', cascade="all, delete-orphan")
     certificates = db.relationship('Certificate', backref='course', lazy=True)
+    analytics_events = db.relationship('AnalyticsEvent', backref='course', lazy='dynamic', cascade="all, delete-orphan")
+    feedback_submissions = db.relationship('FeedbackSubmission', backref='course', lazy='dynamic', cascade="all, delete-orphan")
 
     def __repr__(self):
         return f'<Course {self.title}>'
@@ -56,6 +57,8 @@ class Lesson(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
     completions = db.relationship('LessonCompletion', backref='lesson', lazy='dynamic', cascade="all, delete-orphan")
+    analytics_events = db.relationship('AnalyticsEvent', backref='lesson', lazy='dynamic', cascade="all, delete-orphan")
+    feedback_submissions = db.relationship('FeedbackSubmission', backref='lesson', lazy='dynamic', cascade="all, delete-orphan")
 
     def __repr__(self):
         return f'<Lesson {self.title} - Course {self.course_id}>'
@@ -108,23 +111,20 @@ class LessonCompletion(db.Model):
             ['enrollment.user_id', 'enrollment.course_id']
         ),
     )
-    # 'lesson' relationship is defined by backref from Lesson.completions
-    # 'enrollment' relationship is defined by backref from Enrollment.lesson_completions
 
     def __repr__(self):
-        return f'<LessonCompletion L{self.lesson_id} by U{self.enrollment_user_id} C{self.enrollment_course_id}>'
+        return f'<LessonCompletion {self.id} - User {self.enrollment_user_id} completed Lesson {self.lesson_id} in Course {self.enrollment_course_id}>'
 
 class Certificate(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     course_id = db.Column(db.Integer, db.ForeignKey('course.id'), nullable=False)
-    issued_on = db.Column(db.DateTime, default=datetime.utcnow)
-    certificate_url = db.Column(db.String(200), nullable=False) # Link to the generated PDF or an identifier
-
-    # 'user' and 'course' relationships are established by backrefs from User and Course models.
+    issued_at = db.Column(db.DateTime, default=datetime.utcnow)
+    certificate_url = db.Column(db.String(200), nullable=True)
 
     def __repr__(self):
         return f'<Certificate {self.id} for U{self.user_id} - C{self.course_id}>'
+
 class Update(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(200), nullable=False)
@@ -136,6 +136,11 @@ class Update(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     
+    # Admin response
+    admin_response = db.Column(db.Text, nullable=True)
+    resolved_at = db.Column(db.DateTime, nullable=True)
+    
+    # No direct FK relationships; linked generically by content_type/content_id
     # Relationships
     reactions = db.relationship('UpdateReaction', backref='update', lazy='dynamic', cascade="all, delete-orphan")
     comments = db.relationship('UpdateComment', backref='update', lazy='dynamic', cascade="all, delete-orphan")
@@ -174,3 +179,64 @@ class UpdateComment(db.Model):
     
     def __repr__(self):
         return f'<UpdateComment {self.id} by User {self.user_id} on Update {self.update_id}>'
+
+# --- Analytics & Feedback Models (imported in app.py) ---
+
+class AnalyticsEvent(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True)
+    session_id = db.Column(db.String(64), nullable=False)
+    event_type = db.Column(db.String(50), nullable=False)
+    event_data = db.Column(db.JSON, nullable=True)
+    course_id = db.Column(db.Integer, db.ForeignKey('course.id'), nullable=True)
+    lesson_id = db.Column(db.Integer, db.ForeignKey('lesson.id'), nullable=True)
+    user_agent = db.Column(db.String(256), nullable=True)
+    ip_address = db.Column(db.String(64), nullable=True)
+    referrer = db.Column(db.String(256), nullable=True)
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def __repr__(self):
+        return f'<AnalyticsEvent {self.event_type} session {self.session_id}>'
+
+
+class ContentAnalytics(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    content_type = db.Column(db.String(50), nullable=False)  # 'course' | 'lesson'
+    content_id = db.Column(db.Integer, nullable=False)
+    date = db.Column(db.Date, default=datetime.utcnow)
+
+    views = db.Column(db.Integer, default=0)
+    clicks = db.Column(db.Integer, default=0)
+    unique_views = db.Column(db.Integer, default=0)
+    completion_rate = db.Column(db.Float, default=0.0)
+    time_spent_seconds = db.Column(db.Integer, default=0)
+    feedback_count = db.Column(db.Integer, default=0)
+
+    __table_args__ = (
+        db.UniqueConstraint('content_type', 'content_id', 'date'),
+    )
+
+    def __repr__(self):
+        return f'<ContentAnalytics {self.content_type}:{self.content_id} {self.date}>'
+
+
+class FeedbackSubmission(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True)
+    # Direct foreign keys to support relationships from Course and Lesson
+    course_id = db.Column(db.Integer, db.ForeignKey('course.id'), nullable=True)
+    lesson_id = db.Column(db.Integer, db.ForeignKey('lesson.id'), nullable=True)
+    feedback_type = db.Column(db.String(50), nullable=True)  # bug, idea, praise, etc.
+    content_type = db.Column(db.String(50), nullable=True)  # course | lesson | other
+    content_id = db.Column(db.Integer, nullable=True)
+    title = db.Column(db.String(200), nullable=True)
+    description = db.Column(db.Text, nullable=True)
+    priority = db.Column(db.String(20), default='medium')  # low | medium | high | urgent
+    status = db.Column(db.String(20), default='open')  # open | in_progress | resolved
+    admin_response = db.Column(db.Text, nullable=True)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    resolved_at = db.Column(db.DateTime, nullable=True)
+
+    def __repr__(self):
+        return f'<FeedbackSubmission {self.id} {self.status}>'

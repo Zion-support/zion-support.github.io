@@ -1,239 +1,223 @@
 #!/bin/bash
 
-# Zion Tech Group - Comprehensive Merge Conflict Resolution Script
-# This script resolves all merge conflicts and merges all open PRs into main
+# Comprehensive Merge Conflict Resolution Script
+# This script will resolve all merge conflicts and merge all open PRs
 
-echo "🚀 Starting Comprehensive Merge Conflict Resolution..."
+set -e
 
-# Check if we're on main branch
-if [ "$(git branch --show-current)" != "main" ]; then
-    echo "❌ Please run this script from the main branch"
-    exit 1
-fi
+echo "🚀 Starting comprehensive merge conflict resolution..."
 
-# Ensure main is up to date
-echo "📥 Updating main branch..."
-git pull origin main
+# Function to log with timestamp
+log() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1"
+}
 
-# Create a backup branch
-echo "💾 Creating backup branch..."
-git checkout -b backup-before-merge-conflict-resolution-$(date +%Y%m%d-%H%M%S)
-git checkout main
-
-# Function to safely merge a branch
-merge_branch() {
-    local branch_name=$1
-    echo "🔄 Attempting to merge: $branch_name"
-    
-    # Check if branch exists
-    if ! git ls-remote --heads origin "$branch_name" | grep -q "$branch_name"; then
-        echo "⚠️  Branch $branch_name not found, skipping..."
-        return 1
+# Function to check if we're in a git repository
+check_git_repo() {
+    if [ ! -d ".git" ]; then
+        log "❌ Not in a git repository. Exiting."
+        exit 1
     fi
+    log "✅ Git repository detected"
+}
+
+# Function to fetch latest changes
+fetch_latest() {
+    log "📥 Fetching latest changes from remote..."
+    git fetch origin --all --prune
+    log "✅ Latest changes fetched"
+}
+
+# Function to check current branch
+check_current_branch() {
+    current_branch=$(git branch --show-current)
+    log "📍 Current branch: $current_branch"
     
-    # Fetch the branch
-    git fetch origin "$branch_name"
+    if [ "$current_branch" != "main" ]; then
+        log "🔄 Switching to main branch..."
+        git checkout main
+        git pull origin main
+    fi
+}
+
+# Function to get list of open PRs
+get_open_prs() {
+    log "📋 Getting list of open PRs..."
+    
+    # Check if _open_prs.json exists
+    if [ -f "_open_prs.json" ]; then
+        log "✅ Found _open_prs.json file"
+        # Extract PR numbers from the JSON file
+        pr_numbers=$(grep -o '"number": [0-9]*' _open_prs.json | grep -o '[0-9]*' | sort -n)
+        echo "$pr_numbers"
+    else
+        log "⚠️  _open_prs.json not found, trying to fetch from GitHub API..."
+        # Fallback: try to get PRs from GitHub API (requires authentication)
+        pr_numbers=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open" | grep -o '"number": [0-9]*' | grep -o '[0-9]*' | sort -n)
+        echo "$pr_numbers"
+    fi
+}
+
+# Function to resolve merge conflicts for a specific PR
+resolve_pr_conflicts() {
+    local pr_number=$1
+    log "🔧 Resolving conflicts for PR #$pr_number..."
+    
+    # Fetch the PR branch
+    git fetch origin "pull/$pr_number/head:pr-$pr_number" || {
+        log "⚠️  Could not fetch PR #$pr_number, skipping..."
+        return 1
+    }
     
     # Try to merge
-    if git merge "origin/$branch_name" --no-commit --no-ff; then
-        echo "✅ Merge successful for $branch_name"
-        git commit -m "Merge $branch_name into main - Auto-resolved conflicts"
+    if git merge "pr-$pr_number" --no-ff -m "Merge PR #$pr_number" 2>/dev/null; then
+        log "✅ Successfully merged PR #$pr_number"
         return 0
     else
-        echo "⚠️  Merge conflicts detected for $branch_name, attempting auto-resolution..."
+        log "⚠️  Merge conflict detected for PR #$pr_number, attempting resolution..."
         
-        # Auto-resolve common conflicts
-        auto_resolve_conflicts
-        
-        # Check if conflicts are resolved
-        if git status --porcelain | grep -q "^UU"; then
-            echo "❌ Auto-resolution failed for $branch_name, manual intervention needed"
-            git merge --abort
-            return 1
+        # Check for conflict markers
+        if git diff --name-only --diff-filter=U | grep -q .; then
+            log "🔍 Found merge conflicts, attempting automatic resolution..."
+            
+            # List conflicted files
+            conflicted_files=$(git diff --name-only --diff-filter=U)
+            log "📄 Conflicted files: $conflicted_files"
+            
+            # Try to resolve conflicts automatically
+            for file in $conflicted_files; do
+                log "🔧 Resolving conflicts in $file..."
+                
+                # Check if it's a TypeScript/JavaScript file
+                if [[ "$file" == *.tsx || "$file" == *.ts || "$file" == *.jsx || "$file" == *.js ]]; then
+                    # For TS/JS files, try to resolve by taking both versions and cleaning up
+                    log "📝 Processing TypeScript/JavaScript file: $file"
+                    
+                    # Create a backup
+                    cp "$file" "$file.backup.$(date +%s)"
+                    
+                    # Try to resolve by taking the incoming changes (PR version)
+                    git checkout --theirs "$file" 2>/dev/null || {
+                        log "⚠️  Could not checkout theirs for $file, trying ours..."
+                        git checkout --ours "$file" 2>/dev/null || {
+                            log "❌ Could not resolve $file automatically"
+                            continue
+                        }
+                    }
+                    
+                    # Clean up any remaining conflict markers
+                    sed -i '/^<<<<<<< /d' "$file" 2>/dev/null || true
+                    sed -i '/^=======/d' "$file" 2>/dev/null || true
+                    sed -i '/^>>>>>>> /d' "$file" 2>/dev/null || true
+                    
+                    log "✅ Resolved conflicts in $file"
+                else
+                    # For other files, try to resolve by taking the incoming changes
+                    git checkout --theirs "$file" 2>/dev/null || {
+                        log "⚠️  Could not checkout theirs for $file, trying ours..."
+                        git checkout --ours "$file" 2>/dev/null || {
+                            log "❌ Could not resolve $file automatically"
+                            continue
+                        }
+                    }
+                fi
+            done
+            
+            # Add resolved files
+            git add .
+            
+            # Complete the merge
+            if git commit --no-edit; then
+                log "✅ Successfully resolved and merged PR #$pr_number"
+                return 0
+            else
+                log "❌ Failed to complete merge for PR #$pr_number"
+                git merge --abort 2>/dev/null || true
+                return 1
+            fi
         else
-            echo "✅ Auto-resolution successful for $branch_name"
-            git commit -m "Merge $branch_name into main - Auto-resolved conflicts"
-            return 0
+            log "❌ No conflict markers found but merge failed for PR #$pr_number"
+            git merge --abort 2>/dev/null || true
+            return 1
         fi
     fi
 }
 
-# Function to auto-resolve common conflicts
-auto_resolve_conflicts() {
-    echo "🔧 Auto-resolving common conflicts..."
-    
-    # Add all resolved files
-    git add .
-    
-    # Handle specific file conflicts
-    resolve_specific_file_conflicts
-    
-    # Check for remaining conflicts
-    if git status --porcelain | grep -q "^UU"; then
-        echo "⚠️  Some conflicts remain after auto-resolution"
+# Function to clean up merged branches
+cleanup_branches() {
+    log "🧹 Cleaning up merged branches..."
+    git branch --merged main | grep -v main | xargs -r git branch -d
+    log "✅ Cleanup completed"
+}
+
+# Function to push changes
+push_changes() {
+    log "📤 Pushing changes to remote..."
+    if git push origin main; then
+        log "✅ Successfully pushed changes to remote"
+    else
+        log "❌ Failed to push changes to remote"
         return 1
     fi
-    
-    return 0
-}
-
-# Function to resolve specific file conflicts
-resolve_specific_file_conflicts() {
-    echo "🔍 Resolving specific file conflicts..."
-    
-    # Handle package.json conflicts
-    if [ -f "package.json" ]; then
-        echo "📦 Resolving package.json conflicts..."
-        # Keep the version with more dependencies
-        git checkout --ours package.json
-        git add package.json
-    fi
-    
-    # Handle TypeScript config conflicts
-    if [ -f "tsconfig.json" ]; then
-        echo "⚙️  Resolving tsconfig.json conflicts..."
-        git checkout --ours tsconfig.json
-        git add tsconfig.json
-    fi
-    
-    # Handle Vite config conflicts
-    if [ -f "vite.config.ts" ]; then
-        echo "⚡ Resolving vite.config.ts conflicts..."
-        git checkout --ours vite.config.ts
-        git add vite.config.ts
-    fi
-    
-    # Handle Tailwind config conflicts
-    if [ -f "tailwind.config.ts" ]; then
-        echo "🎨 Resolving tailwind.config.ts conflicts..."
-        git checkout --ours tailwind.config.ts
-        git add tailwind.config.ts
-    fi
-    
-    # Handle ecosystem config conflicts
-    if [ -f "ecosystem.config.cjs" ]; then
-        echo "🔄 Resolving ecosystem.config.cjs conflicts..."
-        git checkout --ours ecosystem.config.cjs
-        git add ecosystem.config.cjs
-    fi
-}
-
-# Function to fix common TypeScript errors
-fix_typescript_errors() {
-    echo "🔧 Fixing common TypeScript errors..."
-    
-    # Fix JSX closing tag issues
-    find src -name "*.tsx" -o -name "*.jsx" | while read file; do
-        if [ -f "$file" ]; then
-            # Fix common JSX issues
-            sed -i 's/<\/any>/<\/div>/g' "$file"
-            sed -i 's/<any/g<div/g' "$file"
-            
-            # Fix missing closing tags
-            sed -i 's/\(<div[^>]*>\)/\1/g' "$file"
-        fi
-    done
-    
-    # Fix import issues
-    find src -name "*.tsx" -o -name "*.ts" | while read file; do
-        if [ -f "$file" ]; then
-            # Remove unused React imports if not needed
-            if ! grep -q "React\." "$file" && ! grep -q "<React" "$file"; then
-                sed -i '/import React from/d' "$file"
-            fi
-        fi
-    done
 }
 
 # Main execution
-echo "🚀 Starting merge process..."
-
-# List of branches to merge (prioritized)
-branches_to_merge=(
-    "cursor/fix-project-errors-and-automate-future-fixes-8aee"
-    "cursor/enhance-app-services-and-website-with-futuristic-design-ef9e"
-    "cursor/enhance-app-services-and-website-with-futuristic-design-f757"
-    "cursor/enhance-app-services-and-website-with-futuristic-design-f903"
-    "cursor/enhance-app-services-and-website-with-futuristic-design-fc05"
-    "cursor/enhance-app-with-micro-saas-and-advertising-3ee6"
-    "cursor/enhance-app-with-micro-saas-and-advertising-5f5b"
-    "cursor/enhance-app-with-micro-saas-and-advertising-5f6f"
-    "cursor/enhance-app-with-micro-saas-and-advertising-602f"
-    "cursor/enhance-app-with-micro-saas-and-advertising-a86c"
-    "cursor/enhance-app-with-micro-saas-and-advertising-b762"
-    "cursor/enhance-app-with-micro-saas-and-advertising-c308"
-    "cursor/enhance-app-with-micro-saas-and-advertising-f3e4"
-    "cursor/enhance-app-with-micro-saas-and-deploy-005b"
-    "cursor/enhance-app-with-micro-saas-and-deploy-3e2f"
-    "cursor/enhance-app-with-micro-saas-and-deploy-4739"
-    "cursor/enhance-app-with-micro-saas-and-deploy-5442"
-    "cursor/enhance-app-with-micro-saas-and-deploy-655c"
-    "cursor/enhance-app-with-micro-saas-and-deploy-832b"
-    "cursor/enhance-app-with-micro-saas-and-deploy-a78d"
-    "cursor/enhance-app-with-micro-saas-and-deploy-b249"
-    "cursor/enhance-app-with-micro-saas-and-deploy-b680"
-    "cursor/enhance-app-with-micro-saas-and-deploy-d4e7"
-    "cursor/enhance-app-with-micro-saas-and-deploy-d599"
-    "cursor/enhance-app-with-micro-saas-and-deploy-dfdd"
-)
-
-# Track successful and failed merges
-successful_merges=()
-failed_merges=()
-
-# Attempt to merge each branch
-for branch in "${branches_to_merge[@]}"; do
-    echo ""
-    echo "🔄 Processing branch: $branch"
+main() {
+    log "🎯 Starting comprehensive merge conflict resolution process..."
     
-    if merge_branch "$branch"; then
-        successful_merges+=("$branch")
-        echo "✅ Successfully merged: $branch"
+    # Check prerequisites
+    check_git_repo
+    fetch_latest
+    check_current_branch
+    
+    # Get list of open PRs
+    pr_numbers=$(get_open_prs)
+    
+    if [ -z "$pr_numbers" ]; then
+        log "ℹ️  No open PRs found"
+        return 0
+    fi
+    
+    log "📋 Found open PRs: $pr_numbers"
+    
+    # Process each PR
+    success_count=0
+    failure_count=0
+    
+    for pr_number in $pr_numbers; do
+        log "🔄 Processing PR #$pr_number..."
+        
+        if resolve_pr_conflicts "$pr_number"; then
+            ((success_count++))
+            log "✅ PR #$pr_number processed successfully"
+        else
+            ((failure_count++))
+            log "❌ Failed to process PR #$pr_number"
+        fi
+        
+        # Small delay to avoid overwhelming the system
+        sleep 1
+    done
+    
+    # Cleanup and push
+    cleanup_branches
+    
+    if [ $success_count -gt 0 ]; then
+        push_changes
+    fi
+    
+    # Summary
+    log "📊 Merge resolution summary:"
+    log "   ✅ Successful merges: $success_count"
+    log "   ❌ Failed merges: $failure_count"
+    log "   📋 Total PRs processed: $((success_count + failure_count))"
+    
+    if [ $failure_count -eq 0 ]; then
+        log "🎉 All PRs merged successfully!"
     else
-        failed_merges+=("$branch")
-        echo "❌ Failed to merge: $branch"
+        log "⚠️  Some PRs failed to merge. Check logs for details."
     fi
-    
-    # Fix any TypeScript errors that may have been introduced
-    fix_typescript_errors
-    
-    # Commit any fixes
-    if git status --porcelain | grep -q "^"; then
-        git add .
-        git commit -m "Fix TypeScript errors after merging $branch"
-    fi
-done
+}
 
-# Summary
-echo ""
-echo "📊 Merge Summary:"
-echo "✅ Successful merges: ${#successful_merges[@]}"
-echo "❌ Failed merges: ${#failed_merges[@]}"
-
-if [ ${#successful_merges[@]} -gt 0 ]; then
-    echo ""
-    echo "✅ Successfully merged branches:"
-    for branch in "${successful_merges[@]}"; do
-        echo "  - $branch"
-    done
-fi
-
-if [ ${#failed_merges[@]} -gt 0 ]; then
-    echo ""
-    echo "❌ Failed to merge branches:"
-    for branch in "${failed_merges[@]}"; do
-        echo "  - $branch"
-    done
-    echo ""
-    echo "🔧 Manual intervention required for failed merges"
-fi
-
-# Final status
-echo ""
-echo "🔍 Final git status:"
-git status
-
-echo ""
-echo "🚀 Merge conflict resolution completed!"
-echo "📝 Review the results and push to main if satisfied"
-echo "🔄 To push: git push origin main"
+# Run main function
+main "$@"
