@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+/// <reference types="next"  />
+/// <reference types="next/image-types/global"  />
 
 // Global type definitions
 declare module '*.svg' {
@@ -15,9 +16,6 @@ declare module '*.jpg' {
   const content: string;
   export default content;
 }
-=======
-/// <reference types="next"  />
-/// <reference types="next/image-types/global"  />
 
 declare global {
   interface Window {
@@ -29,4 +27,3 @@ declare global {
 // This file ensures they are properly recognized by ESLint
 
 export {};
->>>>>>> 76ac031ee1bd0638dab6f2aa5c6a46ca343d86e9
