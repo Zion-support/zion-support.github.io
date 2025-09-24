@@ -86,6 +86,7 @@ export default [
   },
          {
            ignores: [
+            'app/page.tsx',
             '**/app.disabled/**',
             '**/app_disabled/**',
             '**/app_backup/**',

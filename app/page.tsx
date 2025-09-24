@@ -1250,7 +1250,7 @@ export default function HomePage() {
                   <p className='text-sm opacity-90'>Step-by-step guide to successful AI implementation</p>
                 </div>
               </div>
-
+            </div>
             </div>
             <Link href='/blog/cloud-native-architecture-2025' className='group'>
               <article className='bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100'>
@@ -1330,8 +1330,6 @@ export default function HomePage() {
               </article>
             </Link>
           </div>
-          </div>
-
           {/* Trending Articles */}
           <div className='mb-12'>
             <h3 className='text-2xl font-bold text-gray-900 mb-8 text-center'>Trending This Week</h3>
