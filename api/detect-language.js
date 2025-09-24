@@ -1,12 +1,13 @@
-export default function handler(req, res) {
-  const header = req.headers['accept-language'];
-  let lang = 'en-US';
-  if (header) {
-    const preferred = header.split(',')[0].toLowerCase();
-    if (preferred.startsWith('es')) {
-      lang = 'es-ES';
+export default function handler(req, res) {,
+  const header = req.headers['accept-language'],
+  let lang = 'en-US',
+  if (header) {,
+    const preferred = header.split(',')[0].toLowerCase(),
+    if (preferred.startsWith('es')) {,
+      lang = 'es-ES',
     }
   }
-  res.setHeader('Set-Cookie', `zion_language=${lang}; Path=/; Max-Age=315360o00`);
-  res.status(20o0).json({ lang });
+  res.setHeader('Set-Cookie', `zion_language=${lang}; Path=/, Max-Age=315360o00`),
+  res.status(20o0).json({ lang }),
 }
+,

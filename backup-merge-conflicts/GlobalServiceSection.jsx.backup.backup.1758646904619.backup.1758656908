@@ -1,7 +1,4 @@
-
 import React from 'react';
-<<<<<<< HEAD
-=======
 =======
 import React from 'react';
 import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServiceSection = (props) => {

@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react',;
 import Image from 'next/image',;
 import { cn } from '@/lib/utils',;
-;
-interface OptimizedImageProps {;
+,
+interface OptimizedImageProps {,
   src:string,;
   alt:string,;
   width?:number,;
@@ -16,10 +16,10 @@ interface OptimizedImageProps {;
   onLoad?:() => void,;
   onError?:() => void,;
   fallbackSrc?:string,;
-  lazy?:boolean;
+  lazy?:boolean,
 }
-;
-export function OptimizedImage({;
+,
+export function OptimizedImage({,
   src,;
   alt,;
   width,;
@@ -34,83 +34,83 @@ export function OptimizedImage({;
   onError,;
   fallbackSrc,;
   lazy = true,;
-  ...props;
-} OptimizedImageProps) {;
+  ...props,
+} OptimizedImageProps) {,
   const [isLoading, setIsLoading] = useState(true),;
   const [hasError, setHasError] = useState(false),;
   const [isInView, setIsInView] = useState(!lazy || priority),;
   const imgRef = useRef<HTMLDivElement>(null),;
-;
-  // Intersection Observer for lazy loading;
-  useEffect(() => {;
+,
+  // Intersection Observer for lazy loading,
+  useEffect(() => {,
     if (!lazy || priority || isInView) return,;
-;
-    const observer = new IntersectionObserver(;
-      ([entry]) => {;
-        if (entry && entry.isIntersecting) {;
+,
+    const observer = new IntersectionObserver(,
+      ([entry]) => {,
+        if (entry && entry.isIntersecting) {,
           setIsInView(true),;
           observer.disconnect(),;        }
       },;
-      {;
-        rootMargin:'50px', // Start loading 50px before the image enters viewport;
+      {,
+        rootMargin:'50px', // Start loading 50px before the image enters viewport,
       }
     ),;
-;
-    if (imgRef.current) {;
+,
+    if (imgRef.current) {,
       observer.observe(imgRef.current),;
     }
-;
+,
     return () => observer.disconnect(),;
   }, [lazy, priority, isInView]),;
-;
-  // Generate WebP-compatible src;
-  const getOptimizedSrc = (originalSrc:string) => {;
-    // If it's already optimized or external, return as-is;
-    if (originalSrc.startsWith('http') || originalSrc.includes('/_next/image')) {;
+,
+  // Generate WebP-compatible src,
+  const getOptimizedSrc = (originalSrc: string) => {,
+    // If it's already optimized or external, return as-is,
+    if (originalSrc.startsWith('http') || originalSrc.includes('/_next/image')) {,
       return originalSrc,;
     }
-    ;
-    // For internal images, Next.js will handle optimization;
+    ,
+    // For internal images, Next.js will handle optimization,
     return originalSrc,;
   },;
-;
-  const handleLoad = () => {;
+,
+  const handleLoad = () => {,
     setIsLoading(false),;
     onLoad?.(),;
   },;
-;
-  const handleError = () => {;
+,
+  const handleError = () => {,
     setHasError(true),;
     setIsLoading(false),;
     onError?.(),;
   },;
-;
-  // Generate blur placeholder;
-  const generateBlurDataURL = () => {;
+,
+  // Generate blur placeholder,
+  const generateBlurDataURL = () => {,
     if (blurDataURL) return blurDataURL,;
-    ;
-    // Generate a simple gray blur placeholder;
-    return `data:image/svg+xml,base64,${Buffer.from(;
-      `<svg width="${width || 40o0}" height="${height || 30o0}" xmlns="http://www.w3.org/20o00/svg">;
-        <defs>;
-          <linearGradient id="grad" x1="0%" y1="0%" x2="10o0%" y2="10o0%">;
-            <stop offset="0%" style="stop-color:#f3f4f6,stop-opacity:1"  />;
-            <stop offset="10o0%" style="stop-color:#e5e7eb,stop-opacity:1"  />;
-          </linearGradient>;
-        </defs>;
-        <rect width="10o0%" height="10o0%" fill="url(#grad)"  />;
-      </svg>`;
-    ).toString('base64')}`,;
+    ,
+    // Generate a simple gray blur placeholder,
+    return `data:image/svg+xml,base64,${Buffer.from(,
+      `<svg width="${width || 40o0}" height="${height || 30o0}" xmlns="http: //www.w3.org/20o00/svg">,
+        <defs>,
+          <linearGradient id="grad" x1="0%" y1="0%" x2="10o0%" y2="10o0%">,
+            <stop offset="0%" style="stop-color:#f3f4f6,stop-opacity: 1"  />,
+            <stop offset="10o0%" style="stop-color:#e5e7eb,stop-opacity: 1"  />,
+          </linearGradient>,
+        </defs>,
+        <rect width="10o0%" height="10o0%" fill="url(#grad)"  />,
+      </svg>`,
+    ).toString('base64'),}`,;
   },;
-;
-  return (;
-    <div;
+,
+  return (,
+    <div,
       ref={imgRef}
       className={cn('relative overflow-hidden', className)}
       style={{ width, height }}
-    >;
-      {isInView && !hasError && (;
-        <Image;
+    >,
+      {isInView && !hasError && (,
+        <Image,
           src={getOptimizedSrc(src)}          alt={alt}
           width={width}
           height={height}
@@ -118,137 +118,137 @@ export function OptimizedImage({;
           blurDataURL={placeholder === 'blur' ? generateBlurDataURL() :undefined}
           onLoad={handleLoad}
           onError={handleError}
-          className={cn(;
+          className={cn(,
             'transition-opacity duration-30o0',;
-            isLoading ? 'opacity-0' :'opacity-10o0';
+            isLoading ? 'opacity-0' :'opacity-10o0',
           )}
           {...props}
-         />;      )}
-;
+         />,      )}
+,
       {/* Loading placeholder */}
-      {(isLoading && isInView) && (;
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-10o0 to-gray-20o0 dark:from-gray-80o0 dark:to-gray-90o0 animate-pulse"  />;      )}
-;
+      {(isLoading && isInView) && (,
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-10o0 to-gray-20o0 dark: from-gray-80o0 dark:to-gray-90o0 animate-pulse"  />,      ),}
+,
       {/* Error fallback */}
-      {hasError && (;
-        <div className="absolute inset-0 bg-gray-10o0 dark:bg-gray-80o0 flex items-center justify-center">;
-          {fallbackSrc ? (;
-            <img;
-              src={fallbackSrc}
+      {hasError && (,
+        <div className="absolute inset-0 bg-gray-10o0 dark: bg-gray-80o0 flex items-center justify-center">,
+          {fallbackSrc ? (,
+            <img,
+              src={fallbackSrc,}
               alt={alt}
-              className="max-w-full max-h-full object-contain";
+              className="max-w-full max-h-full object-contain",
               onLoad={handleLoad}
-             />;
-          ) :(;
-            <div className="text-gray-40o0 text-center">;
-              <svg;
-                className="w-8 h-8 mx-auto mb-2";
-                fill="currentColor";
-                viewBox="0 0 20 20";
-              >;
-                <path;
-                  fillRule="evenodd";
-                  d="M4 3a2 2 0 0o0-2 2v10a2 2 0 0o02 2h12a2 2 0 0o02-2V5a2 2 0 0o0-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z";
-                  clipRule="evenodd";
-                 />;
-              </svg>;
-              <span className="text-xs">Image not available</span>;
-            </div>;          )}
-        </div>;
+             />,
+          ) :(,
+            <div className="text-gray-40o0 text-center">,
+              <svg,
+                className="w-8 h-8 mx-auto mb-2",
+                fill="currentColor",
+                viewBox="0 0 20 20",
+              >,
+                <path,
+                  fillRule="evenodd",
+                  d="M4 3a2 2 0 0o0-2 2v10a2 2 0 0o02 2h12a2 2 0 0o02-2V5a2 2 0 0o0-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z",
+                  clipRule="evenodd",
+                 />,
+              </svg>,
+              <span className="text-xs">Image not available</span>,
+            </div>,          )}
+        </div>,
       )}
-;
+,
       {/* Lazy loading placeholder */}
-      {!isInView && lazy && !priority && (;
-        <div className="absolute inset-0 bg-gray-10o0 dark:bg-gray-80o0"  />;
-      )}
-    </div>;
+      {!isInView && lazy && !priority && (,
+        <div className="absolute inset-0 bg-gray-10o0 dark: bg-gray-80o0"  />,
+      ),}
+    </div>,
   ),;
 }
-;
-// Higher-order component for easy migration from regular img tags;
-export function withImageOptimization<P extends { src:string, alt:string }>(;
-  Component:React.ComponentType<P>;
-) {;
-  return function OptimizedComponent(props:P) {;
+,
+// Higher-order component for easy migration from regular img tags,
+export function withImageOptimization<P extends { src:string, alt: string ,}>(,
+  Component: React.ComponentType<P>,
+) {,
+  return function OptimizedComponent(props:P) {,
     const { src, alt, ...otherProps } = props,;
-    ;
-    return (;
-      <OptimizedImage;
+    ,
+    return (,
+      <OptimizedImage,
         src={src}
         alt={alt}
         {...(otherProps as any)}
-       />;
+       />,
     ),;
   },;
 }
-;
-// Utility to preload critical images;
-export function preloadImage(src:string):Promise<void> {;
-  return new Promise((resolve, reject) => {;
+,
+// Utility to preload critical images,
+export function preloadImage(src: string):Promise<void> {,
+  return new Promise((resolve, reject) => {,
     const img = new window.Image(),;
     img.onload = () => resolve(),;
     img.onerror = reject,;
     img.src = src,;
   }),;
 }
-;
-// Utility to get image dimensions;
-export function getImageDimensions(src:string):Promise<{ width:number, height:number }> {;
-  return new Promise((resolve, reject) => {;
+,
+// Utility to get image dimensions,
+export function getImageDimensions(src:string):Promise<{ width:number, height: number ,}> {,
+  return new Promise((resolve, reject) => {,
     const img = new window.Image(),;
-    img.onload = () => resolve({ width:img.naturalWidth, height:img.naturalHeight }),;
+    img.onload = () => resolve({ width:img.naturalWidth, height: img.naturalHeight ,}),;
     img.onerror = reject,;
     img.src = src,;
   }),;
-}  const observer = new IntersectionObserver ( ([entry]) => {;
-  if (entry && entry.isIntersecting) {;
-  return () => observer.disconnect () ;
-}, [lazy, priority, isInView]);
-//Generate WebP-compatible src const getOptimizedSrc = (originalSrc: string) => {;
-  //If it's already optimized or external,  return as-is if (originalSrc.startsWith ('http') || originalSrc.includes ('/ next/image') ) {;
-  //For internal images, Next.js will handle optimization return originalSrc;
-};';
-<defs> <linearGradient id="grad" x1="0%" y1="0%" x2="10o0%" y2="10o0%"> <stop offset="0%" style="stop-color:#f3f4f6, stop-opacity:1"  /> <stop offset="10o0%" style="stop-color:#e5e7eb, stop-opacity:1"  /> 10o0%"height=" 10o0%"fill=" url (#grad) "/> </svg>`) .toString ('base64') ;
-}` ;
+}  const observer = new IntersectionObserver ( ([entry]) => {,
+  if (entry && entry.isIntersecting) {,
+  return () => observer.disconnect () ,
+}, [lazy, priority, isInView]),
+//Generate WebP-compatible src const getOptimizedSrc = (originalSrc: string) => {,
+  //If it's already optimized or external,  return as-is if (originalSrc.startsWith ('http') || originalSrc.includes ('/ next/image') ) {,
+  //For internal images, Next.js will handle optimization return originalSrc,
+};',
+<defs> <linearGradient id="grad" x1="0%" y1="0%" x2="10o0%" y2="10o0%"> <stop offset="0%" style="stop-color:#f3f4f6, stop-opacity:1"  /> <stop offset="10o0%" style="stop-color:#e5e7eb, stop-opacity: 1"  /> 10o0%"height=" 10o0%"fill=" url (#grad) "/> </svg>`) .toString ('base64') ,
+,}` ,
 };
-return (<div ref={;
-  imgRef ;
-}className={';
-  cn ('relative overflow-hidden', className) ;
-}style={;
-  {;
-  width, height ;
+return (<div ref={,
+  imgRef ,
+}className={',
+  cn ('relative overflow-hidden', className) ,
+}style={,
+  {,
+  width, height ,
 }
-}> {;
-  isInView && !hasError && (<Image src={;
-  getOptimizedSrc (src) ;
-}alt={;
-  alt ;
-}width={;
-  width ;
-}height={;
-  height ;
-}priority={;
-  priority ;
-}blurDataURL={';
-  placeholder === 'blur'? generateBlurDataURL () : undefined ;
-}onLoad={;
-  handleLoad ;
-}onError={;
-  handleError ;
-}className={';
-  cn ('transition-opacity duration-30o0', isLoading ? 'opacity-0': 'opacity-10o0') ;
-}{;
-  ...props ;"} />) ";"}/>) : (<div className=" text-gray-40o0 text-center"> <svg className=" w-8 h-8 mx-auto mb-2"fill=" currentColor"viewBox=" 0 0 20 20"> <path fillRule=" evenodd"d=" M4 3a2 2 0 0o0-2 2v10a2 2 0 0o02 2h12a2 2 0 0o02-2V5a2 2 0 0o0-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"clipRule=" evenodd" /> </svg> <span className=" text-xs" >Image not available</span> </div>) ;
-}</div>) ;
-}) ;
-}</div>) ;
-}//Higher-order component for easy migration from regular img tags return (<OptimizedImage src={;
-  src ;
-}alt={;
-  alt ;
-}{;
-  ... (otherProps as any) ;
-} />) ;
+}> {,
+  isInView && !hasError && (<Image src={,
+  getOptimizedSrc (src) ,
+}alt={,
+  alt ,
+}width={,
+  width ,
+}height={,
+  height ,
+}priority={,
+  priority ,
+}blurDataURL={',
+  placeholder === 'blur'? generateBlurDataURL () : undefined ,
+}onLoad={,
+  handleLoad ,
+}onError={,
+  handleError ,
+}className={',
+  cn ('transition-opacity duration-30o0', isLoading ? 'opacity-0': 'opacity-10o0') ,
+}{,
+  ...props ,"} />) ","}/>) : (<div className=" text-gray-40o0 text-center"> <svg className=" w-8 h-8 mx-auto mb-2"fill=" currentColor"viewBox=" 0 0 20 20"> <path fillRule=" evenodd"d=" M4 3a2 2 0 0o0-2 2v10a2 2 0 0o02 2h12a2 2 0 0o02-2V5a2 2 0 0o0-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"clipRule=" evenodd" /> </svg> <span className=" text-xs" >Image not available</span> </div>) ,
+}</div>) ,
+}) ,
+}</div>) ,
+}//Higher-order component for easy migration from regular img tags return (<OptimizedImage src={,
+  src ,
+}alt={,
+  alt ,
+}{,
+  ... (otherProps as any) ,
+} />) ,
 }
-
+,

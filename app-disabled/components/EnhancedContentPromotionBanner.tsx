@@ -1,3 +1,4 @@
-export default function EnhancedContentPromotionBanner() {
-  return null;
+export default function EnhancedContentPromotionBanner() {,
+  return null,
 }
+,

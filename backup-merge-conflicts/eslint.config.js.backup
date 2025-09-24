@@ -2,21 +2,11 @@ import js from '@eslint/js';
 =======
 =======
 import globals from 'globals';
-<<<<<<< HEAD
-import react from 'eslint-plugin-react';
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
->>>>>>> pr-11914:backup-merge-conflicts/eslint.config.js.backup
-import reactHooks from 'eslint-plugin-react-hooks';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
-=======
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
-
 export default [
   {
     ignores: [
@@ -24,7 +14,6 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
-
 export default [
   js.configs.recommended,
   {
@@ -105,7 +94,6 @@ import tsparser from '@typescript-eslint/parser';
 export default [{
     "ignores": [
 =======
->>>>>>> pr-11914:backup-merge-conflicts/eslint.config.js.backup
       'node_modules/',
       '.next/',
       'out/',
@@ -516,35 +504,6 @@ export default [{
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
-<<<<<<< HEAD
-      ecmaVersion: 2020,
-      globals: globals.browser,
-      parser: tsparser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        ecmaFeatures: { jsx: true },
-        sourceType: 'module',
-      },
-    },
-    plugins: {
-      '@typescript-eslint': tseslint,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-    },
-    rules: {
-      ...tseslint.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
-      'no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react-hooks/exhaustive-deps': 'warn',
-      'no-undef': 'off',
-    },
-  },
-=======
 =======
       '.prettierrc.js',
       '.eslintrc.*',
@@ -582,12 +541,6 @@ export default [{
       'src.disabled/',
       'src.broken/',
       'src.corrupted/',
-<<<<<<< HEAD
-      'pages_backup/',
-      'pages_backup_conflicts/',
-      'pages_disabled/',
-      'pages_api.disabled/',
-=======
 =======
       'src_backup_temp/',
       'temp-backup/',
@@ -965,15 +918,9 @@ export default [{
       },
     },
   },
->>>>>>> main
 ];
->>>>>>> main
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ];
 =======
 ];
->>>>>>> pr-11914:backup-merge-conflicts/eslint.config.js.backup
 =======
 ];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> pr-11935

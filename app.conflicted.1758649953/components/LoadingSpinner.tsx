@@ -1,11 +1,12 @@
-'use client';
-
-const LoadingSpinner = () => {
-  return (
-    <div className='flex items-center justify-center'>
-      <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-40o0'></div>
-    </div>
-  );
+'use client',
+,
+const LoadingSpinner = () => {,
+  return (,
+    <div className='flex items-center justify-center'>,
+      <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-40o0'></div>,
+    </div>,
+  ),
 };
-
-export default LoadingSpinner;
+,
+export default LoadingSpinner,
+,

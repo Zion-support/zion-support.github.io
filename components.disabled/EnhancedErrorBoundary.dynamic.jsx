@@ -1,5 +1,5 @@
-const EnhancedErrorBoundary = dynamic(() => import("./EnhancedErrorBoundary"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedErrorBoundary' ,'
-</p>'
-</p>'
-</p>'
-</p>'
+const EnhancedErrorBoundary = dynamic(() => import("./EnhancedErrorBoundary"),{', "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedErrorBoundary' ,',
+</p>',
+</p>',
+</p>',
+</p>',

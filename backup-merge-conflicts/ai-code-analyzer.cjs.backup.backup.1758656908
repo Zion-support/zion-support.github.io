@@ -4,11 +4,9 @@
  * AI Code Analyzer Automation;
  * Analyzes code quality, patterns, and provides intelligent suggestions;
  */
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class AICodeAnalyzer {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -30,23 +28,14 @@ class AICodeAnalyzer {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-        }
-
-    analyzeCodeQuality() {
-        console.log(message)};
-    analyzeCodeQuality() {}
-=======
 #!/usr/bin/env node
 /**
  * AI Code Analyzer
  * Intelligent code analysis with auto-fixing capabilities
  */
-
 const fs = require('fs').promises;
 const path = require('path');
 const { execSync } = require('child_process');
-
 class AICodeAnalyzer {
   constructor() {
     this.projectRoot = process.cwd();
@@ -57,14 +46,12 @@ class AICodeAnalyzer {
     this.config = this.loadConfig();
     this.initializeLogging();
   }
-
   initializeLogging() {
     const logsDir = path.dirname(this.logFile);
     if (!require('fs').existsSync(logsDir)) {
       require('fs').mkdirSync(logsDir, { recursive: true });
     }
   }
-
   loadConfig() {
     try {
       if (require('fs').existsSync(this.configFile)) {
@@ -73,7 +60,6 @@ class AICodeAnalyzer {
     } catch (error) {
       this.log(`Error loading config: ${error.message}`);
     }
-
     return {
       analysis: {
         enabled: true,
@@ -114,67 +100,51 @@ class AICodeAnalyzer {
       }
     };
   }
-
   async log(message, level = 'info') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-    
     console.log(logMessage);
-    
     try {
       await fs.appendFile(this.logFile, logMessage + '\n');
     } catch (error) {
       console.error('Failed to write to log file:', error.message);
     }
   }
-
   async analyze() {
     this.log('🔍 Starting AI code analysis...');
-    
     try {
       // Get all files to analyze
       const files = await this.getFilesToAnalyze();
       this.log(`Found ${files.length} files to analyze`);
-
       // Analyze files
       const results = await this.analyzeFiles(files);
-      
       // Generate analysis report
       const report = await this.generateAnalysisReport(results);
-      
       // Apply auto-fixes if enabled
       if (this.config.autoFix.enabled) {
         await this.applyAutoFixes(results);
       }
-      
       // Save results
       await this.saveAnalysisResults(report);
-      
       this.log('✅ AI code analysis completed');
       return report;
-      
     } catch (error) {
       this.log(`Analysis failed: ${error.message}`, 'error');
       throw error;
     }
   }
-
   async getFilesToAnalyze() {
     const files = [];
     const excludePatterns = this.config.analysis.excludePatterns;
-    
     const scanDirectory = async (dir) => {
       try {
         const entries = await fs.readdir(dir, { withFileTypes: true });
-        
         for (const entry of entries) {
           const fullPath = path.join(dir, entry.name);
-          
           // Skip excluded patterns
           if (excludePatterns.some(pattern => fullPath.includes(pattern))) {
             continue;
           }
-          
           if (entry.isDirectory()) {
             await scanDirectory(fullPath);
           } else if (entry.isFile()) {
@@ -192,18 +162,14 @@ class AICodeAnalyzer {
         this.log(`Error scanning directory ${dir}: ${error.message}`, 'error');
       }
     };
-    
     await scanDirectory(this.projectRoot);
     return files;
   }
-
   async analyzeFiles(files) {
     const results = [];
-    
     if (this.config.analysis.parallelAnalysis) {
       // Analyze files in parallel
       const chunks = this.chunkArray(files, 10); // Process 10 files at a time
-      
       for (const chunk of chunks) {
         const promises = chunk.map(file => this.analyzeFile(file));
         const chunkResults = await Promise.all(promises);
@@ -216,10 +182,8 @@ class AICodeAnalyzer {
         results.push(result);
       }
     }
-    
     return results;
   }
-
   async analyzeFile(filePath) {
     try {
       const content = await fs.readFile(filePath, 'utf8');
@@ -230,31 +194,23 @@ class AICodeAnalyzer {
         metrics: {},
         suggestions: []
       };
-
       // Basic metrics
       analysis.metrics = this.calculateBasicMetrics(content);
-      
       // Pattern analysis
       const patternIssues = await this.analyzePatterns(filePath, content);
       analysis.issues.push(...patternIssues);
-      
       // Code quality analysis
       const qualityIssues = await this.analyzeCodeQuality(filePath, content);
       analysis.issues.push(...qualityIssues);
-      
       // Security analysis
       const securityIssues = await this.analyzeSecurity(filePath, content);
       analysis.issues.push(...securityIssues);
-      
       // Performance analysis
       const performanceIssues = await this.analyzePerformance(filePath, content);
       analysis.issues.push(...performanceIssues);
-      
       // Generate suggestions
       analysis.suggestions = this.generateSuggestions(analysis.issues);
-      
       return analysis;
-      
     } catch (error) {
       this.log(`Error analyzing file ${filePath}: ${error.message}`, 'error');
       return {
@@ -266,11 +222,9 @@ class AICodeAnalyzer {
       };
     }
   }
-
   calculateBasicMetrics(content) {
     const lines = content.split('\n');
     const nonEmptyLines = lines.filter(line => line.trim().length > 0);
-    
     return {
       totalLines: lines.length,
       nonEmptyLines: nonEmptyLines.length,
@@ -282,10 +236,8 @@ class AICodeAnalyzer {
       complexity: this.calculateComplexity(content)
     };
   }
-
   calculateComplexity(content) {
     let complexity = 1; // Base complexity
-    
     // Add complexity for control structures
     const controlStructures = [
       /if\s*\(/g,
@@ -299,20 +251,16 @@ class AICodeAnalyzer {
       /&&/g,
       /\|\|/g
     ];
-    
     controlStructures.forEach(pattern => {
       const matches = content.match(pattern);
       if (matches) {
         complexity += matches.length;
       }
     });
-    
     return complexity;
   }
-
   async analyzePatterns(filePath, content) {
     const issues = [];
-    
     // Console logs
     if (this.config.patterns.consoleLogs.test(content)) {
       const matches = content.match(this.config.patterns.consoleLogs);
@@ -325,7 +273,6 @@ class AICodeAnalyzer {
         fix: 'Remove console.log statements'
       });
     }
-    
     // TODO comments
     if (this.config.patterns.todoComments.test(content)) {
       const matches = content.match(this.config.patterns.todoComments);
@@ -338,7 +285,6 @@ class AICodeAnalyzer {
         fix: 'Address TODO comments'
       });
     }
-    
     // Long lines
     const lines = content.split('\n');
     lines.forEach((line, index) => {
@@ -353,14 +299,11 @@ class AICodeAnalyzer {
         });
       }
     });
-    
     return issues;
   }
-
   async analyzeCodeQuality(filePath, content) {
     const issues = [];
     const metrics = this.calculateBasicMetrics(content);
-    
     // High complexity
     if (metrics.complexity > this.config.thresholds.maxComplexity) {
       issues.push({
@@ -371,7 +314,6 @@ class AICodeAnalyzer {
         fix: 'Refactor to reduce complexity'
       });
     }
-    
     // Long functions
     const functions = this.extractFunctions(content);
     functions.forEach(func => {
@@ -386,7 +328,6 @@ class AICodeAnalyzer {
         });
       }
     });
-    
     // Deep nesting
     const maxNesting = this.calculateMaxNesting(content);
     if (maxNesting > this.config.thresholds.maxNestingDepth) {
@@ -398,13 +339,10 @@ class AICodeAnalyzer {
         fix: 'Refactor to reduce nesting'
       });
     }
-    
     return issues;
   }
-
   async analyzeSecurity(filePath, content) {
     const issues = [];
-    
     // Dangerous patterns
     const dangerousPatterns = [
       { pattern: /eval\s*\(/g, message: 'Use of eval() is dangerous' },
@@ -413,7 +351,6 @@ class AICodeAnalyzer {
       { pattern: /setTimeout\s*\(\s*['"][^'"]*['"]/g, message: 'String-based setTimeout is dangerous' },
       { pattern: /setInterval\s*\(\s*['"][^'"]*['"]/g, message: 'String-based setInterval is dangerous' }
     ];
-    
     dangerousPatterns.forEach(({ pattern, message }) => {
       if (pattern.test(content)) {
         issues.push({
@@ -425,7 +362,6 @@ class AICodeAnalyzer {
         });
       }
     });
-    
     // Hardcoded secrets
     const secretPatterns = [
       /password\s*=\s*['"][^'"]+['"]/gi,
@@ -433,7 +369,6 @@ class AICodeAnalyzer {
       /secret\s*=\s*['"][^'"]+['"]/gi,
       /token\s*=\s*['"][^'"]+['"]/gi
     ];
-    
     secretPatterns.forEach(pattern => {
       if (pattern.test(content)) {
         issues.push({
@@ -445,13 +380,10 @@ class AICodeAnalyzer {
         });
       }
     });
-    
     return issues;
   }
-
   async analyzePerformance(filePath, content) {
     const issues = [];
-    
     // Inefficient patterns
     const inefficientPatterns = [
       { pattern: /for\s*\(\s*var\s+\w+\s*=\s*0/g, message: 'Use let/const instead of var in loops' },
@@ -459,7 +391,6 @@ class AICodeAnalyzer {
       { pattern: /new\s+Array\s*\(\s*\d+\s*\)/g, message: 'Use Array.from() or array literals' },
       { pattern: /\.length\s*>\s*0/g, message: 'Use array.length directly in conditions' }
     ];
-    
     inefficientPatterns.forEach(({ pattern, message }) => {
       if (pattern.test(content)) {
         issues.push({
@@ -471,14 +402,12 @@ class AICodeAnalyzer {
         });
       }
     });
-    
     // Memory leaks
     const memoryLeakPatterns = [
       { pattern: /addEventListener\s*\([^,]+,\s*[^,)]+\)(?!.*removeEventListener)/g, message: 'Event listener may cause memory leak' },
       { pattern: /setInterval\s*\([^)]+\)(?!.*clearInterval)/g, message: 'setInterval without clearInterval may cause memory leak' },
       { pattern: /setTimeout\s*\([^)]+\)(?!.*clearTimeout)/g, message: 'setTimeout without clearTimeout may cause memory leak' }
     ];
-    
     memoryLeakPatterns.forEach(({ pattern, message }) => {
       if (pattern.test(content)) {
         issues.push({
@@ -490,22 +419,17 @@ class AICodeAnalyzer {
         });
       }
     });
-    
     return issues;
   }
-
   extractFunctions(content) {
     const functions = [];
     const lines = content.split('\n');
-    
     let inFunction = false;
     let functionStart = 0;
     let functionName = '';
     let braceCount = 0;
-    
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-      
       // Function declaration
       const funcMatch = line.match(/function\s+(\w+)\s*\(/);
       if (funcMatch) {
@@ -515,7 +439,6 @@ class AICodeAnalyzer {
         braceCount = 0;
         continue;
       }
-      
       // Arrow function
       const arrowMatch = line.match(/(?:const|let|var)\s+(\w+)\s*=\s*\([^)]*\)\s*=>/);
       if (arrowMatch) {
@@ -525,12 +448,10 @@ class AICodeAnalyzer {
         braceCount = 0;
         continue;
       }
-      
       if (inFunction) {
         // Count braces
         braceCount += (line.match(/{/g) || []).length;
         braceCount -= (line.match(/}/g) || []).length;
-        
         // Function ended
         if (braceCount === 0 && line.includes('}')) {
           functions.push({
@@ -543,14 +464,11 @@ class AICodeAnalyzer {
         }
       }
     }
-    
     return functions;
   }
-
   calculateMaxNesting(content) {
     let maxNesting = 0;
     let currentNesting = 0;
-    
     for (const char of content) {
       if (char === '{') {
         currentNesting++;
@@ -559,10 +477,8 @@ class AICodeAnalyzer {
         currentNesting--;
       }
     }
-    
     return maxNesting;
   }
-
   findLineNumber(content, searchText) {
     const lines = content.split('\n');
     for (let i = 0; i < lines.length; i++) {
@@ -572,17 +488,14 @@ class AICodeAnalyzer {
     }
     return 0;
   }
-
   generateSuggestions(issues) {
     const suggestions = [];
-    
     // Group issues by type
     const issuesByType = issues.reduce((acc, issue) => {
       if (!acc[issue.type]) acc[issue.type] = [];
       acc[issue.type].push(issue);
       return acc;
     }, {});
-    
     // Generate suggestions based on issue types
     Object.entries(issuesByType).forEach(([type, typeIssues]) => {
       switch (type) {
@@ -620,19 +533,14 @@ class AICodeAnalyzer {
           break;
       }
     });
-    
     return suggestions;
   }
-
   async applyAutoFixes(results) {
     this.log('🔧 Applying auto-fixes...');
-    
     for (const result of results) {
       if (result.issues.length === 0) continue;
-      
       const fixableIssues = result.issues.filter(issue => issue.fixable);
       if (fixableIssues.length === 0) continue;
-      
       try {
         const fixedContent = await this.fixFile(result.file, fixableIssues);
         if (fixedContent !== null) {
@@ -640,16 +548,13 @@ class AICodeAnalyzer {
           if (this.config.autoFix.backupFiles) {
             await this.backupFile(result.file);
           }
-          
           // Write fixed content
           await fs.writeFile(result.file, fixedContent);
-          
           this.fixesApplied.push({
             file: result.file,
             fixes: fixableIssues.length,
             timestamp: new Date().toISOString()
           });
-          
           this.log(`✅ Applied ${fixableIssues.length} fixes to ${result.file}`);
         }
       } catch (error) {
@@ -657,12 +562,10 @@ class AICodeAnalyzer {
       }
     }
   }
-
   async fixFile(filePath, issues) {
     try {
       const content = await fs.readFile(filePath, 'utf8');
       let fixedContent = content;
-      
       for (const issue of issues) {
         switch (issue.type) {
           case 'console_log':
@@ -679,24 +582,20 @@ class AICodeAnalyzer {
             break;
         }
       }
-      
       return fixedContent;
     } catch (error) {
       this.log(`Error fixing file ${filePath}: ${error.message}`, 'error');
       return null;
     }
   }
-
   fixConsoleLogs(content) {
     // Remove console.log statements
     return content.replace(this.config.patterns.consoleLogs, '');
   }
-
   fixTodoComments(content) {
     // Remove TODO comments
     return content.replace(this.config.patterns.todoComments, '');
   }
-
   fixLongLines(content) {
     // This is a simplified version - in practice, you'd want more sophisticated line breaking
     const lines = content.split('\n');
@@ -709,18 +608,15 @@ class AICodeAnalyzer {
     });
     return fixedLines.join('\n');
   }
-
   fixUnusedImports(content) {
     // This would require more sophisticated analysis
     // For now, just return the content as-is
     return content;
   }
-
   async backupFile(filePath) {
     const backupPath = `${filePath}.backup.${Date.now()}`;
     await fs.copyFile(filePath, backupPath);
   }
-
   async generateAnalysisReport(results) {
     const report = {
       timestamp: new Date().toISOString(),
@@ -734,7 +630,6 @@ class AICodeAnalyzer {
       results: results,
       recommendations: this.generateOverallRecommendations(results)
     };
-    
     // Calculate issue statistics
     results.forEach(result => {
       result.issues.forEach(issue => {
@@ -743,7 +638,6 @@ class AICodeAnalyzer {
           report.summary.issuesByType[issue.type] = 0;
         }
         report.summary.issuesByType[issue.type]++;
-        
         // By severity
         if (!report.summary.issuesBySeverity[issue.severity]) {
           report.summary.issuesBySeverity[issue.severity] = 0;
@@ -751,18 +645,14 @@ class AICodeAnalyzer {
         report.summary.issuesBySeverity[issue.severity]++;
       });
     });
-    
     return report;
   }
-
   generateOverallRecommendations(results) {
     const recommendations = [];
-    
     // High priority issues
     const highPriorityIssues = results.reduce((sum, result) => 
       sum + result.issues.filter(issue => issue.severity === 'high').length, 0
     );
-    
     if (highPriorityIssues > 0) {
       recommendations.push({
         priority: 'high',
@@ -771,14 +661,12 @@ class AICodeAnalyzer {
         action: 'Address security risks and critical bugs immediately'
       });
     }
-    
     // Code quality
     const qualityIssues = results.reduce((sum, result) => 
       sum + result.issues.filter(issue => 
         ['high_complexity', 'long_function', 'deep_nesting'].includes(issue.type)
       ).length, 0
     );
-    
     if (qualityIssues > 0) {
       recommendations.push({
         priority: 'medium',
@@ -787,12 +675,10 @@ class AICodeAnalyzer {
         action: 'Refactor complex code and improve structure'
       });
     }
-    
     // Performance
     const performanceIssues = results.reduce((sum, result) => 
       sum + result.issues.filter(issue => issue.type === 'performance_issue').length, 0
     );
-    
     if (performanceIssues > 0) {
       recommendations.push({
         priority: 'medium',
@@ -801,10 +687,8 @@ class AICodeAnalyzer {
         action: 'Replace inefficient patterns with better alternatives'
       });
     }
-    
     return recommendations;
   }
-
   async saveAnalysisResults(report) {
     try {
       const resultsFile = path.join(this.projectRoot, 'logs/ai-code-analysis-results.json');
@@ -814,13 +698,10 @@ class AICodeAnalyzer {
       this.log(`Failed to save analysis results: ${error.message}`, 'error');
     }
   }
-
   async start() {
     this.log('🚀 AI Code Analyzer started');
-    
     // Run analysis
     await this.analyze();
-    
     // Schedule periodic analysis
     setInterval(async () => {
       this.log('Running scheduled code analysis...');
@@ -828,16 +709,13 @@ class AICodeAnalyzer {
     }, 3600000); // Every hour
   }
 }
-
 // Run if called directly
 if (require.main === module) {
   const analyzer = new AICodeAnalyzer();
   analyzer.start().catch(console.error);
 }
-
 module.exports = AICodeAnalyzer;
         this.log('Starting code quality analysis...');
-        
         try {}
             // Run ESLint analysis;
             const eslintResult = execSync('npm run lint', { })
@@ -845,7 +723,6 @@ module.exports = AICodeAnalyzer;
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
-            
             this.log('ESLint analysis completed successfully');
             return { "eslint": 'passed', "output": eslintResult }} catch (error) {}
             this.log(`ESLint analysis "failed": ${error.message}`);
@@ -853,14 +730,12 @@ module.exports = AICodeAnalyzer;
     };
     analyzeTypeScript() {}
         this.log('Starting TypeScript analysis...');
-        
         try {}
             const typeCheckResult = execSync('npm run type-check', { })
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
-            
             this.log('TypeScript analysis completed successfully');
             return { "typescript": 'passed', "output": typeCheckResult }} catch (error) {}
             this.log(`TypeScript analysis "failed": ${error.message}`);
@@ -868,17 +743,14 @@ module.exports = AICodeAnalyzer;
     };
     analyzeDependencies() {}
         this.log('Analyzing dependencies...');
-        
         try {}
             const auditResult = execSync('npm audit --json', { })
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
-            
             const auditData = JSON.parse(auditResult;);
             this.log(`Found ${auditData.vulnerabilities?.total || 0} vulnerabilities`);
-            
             return {;}
                 "vulnerabilities": auditData.vulnerabilities?.total || 0,
                 "dependencies": auditData.metadata?.dependencies || 0,
@@ -889,7 +761,6 @@ module.exports = AICodeAnalyzer;
     };
     generateReport() {}
         this.log('Generating comprehensive analysis report...');
-        
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -900,10 +771,8 @@ module.exports = AICodeAnalyzer;
             },
             "recommendations": this.generateRecommendations();
        };
-
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Analysis report saved to ${this.reportFile}`);
-        
         return report};
     generateRecommendations() {}
         return [;]
@@ -915,7 +784,6 @@ module.exports = AICodeAnalyzer;
         ]};
     async run() {}
         this.log('AI Code Analyzer started');
-        
         try {}
             const report = this.generateReport(;);
             this.log('AI Code Analyzer completed successfully');

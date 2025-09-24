@@ -1,5 +1,5 @@
-const Navigation = dynamic(() => import("./Navigation"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Navigation' ,'
-</p>'
-</p>'
-</p>'
-</p>'
+const Navigation = dynamic(() => import("./Navigation"),{', "loading": () => <p>Loading...</p,>}) "export": 'default Navigation' ,',
+</p>',
+</p>',
+</p>',
+</p>',

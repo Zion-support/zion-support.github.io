@@ -1,12 +1,8 @@
 =======
 =======
 =======
-<<<<<<< HEAD:src.disabled/types/listings.ts
 =======
-=======
->>>>>>> pr-11935
 "export": interface Listing {
->>>>>>> main
    id: string;
    title: string;
    description: string;
@@ -29,15 +25,5 @@ export: interface Listing { id: string; title: string; description: string; pric
 =======
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number} reviews: 'numbe',r} location: 'string' ,;
    reviews: numbe,r} "location": string ,
-<<<<<<< HEAD
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
-   reviews: numbe,r} location: string ,
-   reviews: numbe,r} "location": string ,
-=======
->>>>>>> main
-export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
->>>>>>> main
->>>>>>> pr-11914:backup-merge-conflicts/listings.ts.backup
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> pr-11935
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,

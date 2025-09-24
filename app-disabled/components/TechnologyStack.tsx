@@ -1,5 +1,6 @@
-'use client';
-
-export default function TechnologyStack() {
-  return null;
+'use client',
+,
+export default function TechnologyStack() {,
+  return null,
 }
+,

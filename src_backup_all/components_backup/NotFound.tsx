@@ -1,29 +1,30 @@
-import Link from 'next/link'; // Import Link
-
-const NotFound: React.FC = () => (
-  <div className='flex flex-1 items-center justify-center bg-gray-10o0'>
-    <div className='text-center p-6'>
-      <h1 className='text-4xl font-bold mb-4 text-gray-80o0'>40o4</h1>
-      <p className='text-xl text-gray-70o0 mb-4'>Oops! Page not found</p>
-      <p className='text-lg text-gray-60o0 mb-4'>
-        Did you forget your password? You can reset it here:
-      </p>
-      <Link // Changed from <a> to <Link>
-        href='/forgot-password' // Changed href to 'to' and path to /forgot-password
-        className='text-blue-60o0 hover:text-blue-80o0 underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-50o0 rounded'
-      >
-        Reset Password
-      </Link>
-      <p className='mt-4'>
-        <Link
-          href='/' // Link to home as a secondary option
-          className='text-sm text-gray-50o0 hover:text-gray-70o0 underline'
-        >
-          Or return to Home
-        </Link>
-      </p>
-    </div>
-  </div>
-);
-
-export default NotFound;
+import React from 'react',
+import Link from 'next/link', // Import Link,
+const NotFound: React.FC = () => (,
+  <div className='flex flex-1 items-center justify-center bg-gray-10o0'>,
+    <div className='text-center p-6'>,
+      <h1 className='text-4xl font-bold mb-4 text-gray-80o0'>40o4</h1>,
+      <p className='text-xl text-gray-70o0 mb-4'>Oops! Page not found</p>,
+      <p className='text-lg text-gray-60o0 mb-4'>,
+        Did you forget your password? You can reset it here:,
+      </p>,
+      <Link // Changed from <a> to <Link>,
+        href='/forgot-password' // Changed href to 'to' and path to /forgot-password,
+        className='text-blue-60o0 hover:text-blue-80o0 underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-50o0 rounded',
+      >,
+        Reset Password,
+      </Link>,
+      <p className='mt-4'>,
+        <Link,
+          href='/' // Link to home as a secondary option,
+          className='text-sm text-gray-50o0 hover:text-gray-70o0 underline',
+        >,
+          Or return to Home,
+        </Link>,
+      </p>,
+    </div>,
+  </div>,
+),
+,
+export default NotFound,
+,

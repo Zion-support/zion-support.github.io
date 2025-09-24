@@ -14,12 +14,6 @@ function log(message, level = 'info') {
   console.log(logMessage);
   // Also log to file
   const logFile = path.join(__dirname, '..', 'automation', 'logs', 'automation.log');
-<<<<<<< HEAD
-  fs.appendFileSync(logFile, logMessage + '\n');
-}
-
-  fs.appendFileSync(logFile, logMessage + '\n')}
-=======
 // Error handling utility
 function handleError(error, context) {
   log(`Error in ${context}: ${error.message}`, 'error');
@@ -34,7 +28,6 @@ function handleError(error, context) {
   fs.appendFileSync(errorLogFile, JSON.stringify(errorDetails, null, 2) + '\n')}
   fs.appendFileSync(errorLogFile, JSON.stringify(errorDetails, null, 2) + '\n');
 }
-
 // Automation functions
 const automations = {
   "fix": async () => {
@@ -66,7 +59,6 @@ const automations = {
         // Fix critical syntax errors
         await fixCriticalSyntaxErrors();
       }
-      
       // Fix TypeScript errors
       log('Checking TypeScript errors...');
       try {
@@ -76,12 +68,9 @@ const automations = {
         log('TypeScript errors found, attempting auto-fixes...', 'warn');
         await fixTypeScriptErrors();
       }
-      
       // Update dependencies if needed
       await checkAndUpdateDependencies();
-      
       log('Console error fixing completed');
-      
     } catch (error) {
       handleError(error, 'console-error-fixer');
     }
@@ -103,9 +92,7 @@ const automations = {
       fs.writeFileSync(reportFile, JSON.stringify(linkReport, null, 2));
       log('Link checking completed')} catch (error) {
       handleError(error, 'link-checker')}
-      
       log('Link checking completed');
-      
     } catch (error) {
       handleError(error, 'link-checker');
     }
@@ -123,9 +110,7 @@ const automations = {
       await checkPerformanceIssues();
       log('Continuous improvement completed')} catch (error) {
       handleError(error, 'continuous-improvement')}
-      
       log('Continuous improvement completed');
-      
     } catch (error) {
       handleError(error, 'continuous-improvement');
     }
@@ -154,7 +139,6 @@ const automations = {
         log('Build failed, attempting fixes...', 'warn');
         await fixBuildErrors();
       }
-      
       // Run tests
       log('Running tests...');
       try {
@@ -163,9 +147,7 @@ const automations = {
       } catch (testError) {
         log('Tests failed, reviewing issues...', 'warn');
       }
-      
       log('Build and test automation completed');
-      
     } catch (error) {
       handleError(error, 'build-test');
     }
@@ -188,9 +170,7 @@ const automations = {
         log('Security issues found, attempting fixes...', 'warn');
         await fixSecurityIssues();
       }
-      
       log('Security audit completed');
-      
     } catch (error) {
       handleError(error, 'security-audit');
     }
@@ -203,9 +183,7 @@ const automations = {
       await checkAndUpdateDependencies();
       log('Dependency update completed')} catch (error) {
       handleError(error, 'dependency-updates')}
-      
       log('Dependency update completed');
-      
     } catch (error) {
       handleError(error, 'dependency-updates');
     }
@@ -228,9 +206,7 @@ const automations = {
       fs.writeFileSync(reportFile, JSON.stringify(performanceReport, null, 2));
       log('Performance monitoring completed')} catch (error) {
       handleError(error, 'performance-monitor')}
-      
       log('Performance monitoring completed');
-      
     } catch (error) {
       handleError(error, 'performance-monitor');
     }
@@ -253,9 +229,7 @@ const automations = {
       fs.writeFileSync(reportFile, JSON.stringify(qualityReport, null, 2));
       log('Quality checks completed')} catch (error) {
       handleError(error, 'quality-checks')}
-      
       log('Quality checks completed');
-      
     } catch (error) {
       handleError(error, 'quality-checks');
     }
@@ -267,7 +241,6 @@ const automations = {
       log('Checking link integrity...');
       // Implementation for link integrity checks
       log('Link integrity check completed');
-      
     } catch (error) {
       handleError(error, 'link-integrity');
     }
@@ -279,7 +252,6 @@ const automations = {
       log('Optimizing frontend...');
       // Implementation for frontend optimization
       log('Frontend optimization completed');
-      
     } catch (error) {
       handleError(error, 'front-maximizer');
     }
@@ -300,9 +272,7 @@ const automations = {
       } catch (sitemapError) {
         log('Sitemap generation failed, using fallback...', 'warn');
       }
-      
       log('Sitemap automation completed');
-      
     } catch (error) {
       handleError(error, 'sitemap-runner');
     }
@@ -324,13 +294,11 @@ async function fixTypeScriptErrors() {
   log('TypeScript errors addressed')}
   log('Critical syntax errors fixed');
 }
-
 async function fixTypeScriptErrors() {
   log('Fixing TypeScript errors...');
   // Implementation for TypeScript error fixes
   log('TypeScript errors addressed');
 }
-
 async function checkAndUpdateDependencies() {
   log('Checking dependencies...');
   try {
@@ -385,9 +353,7 @@ async function main() {
     log(`Invalid action: ${action}. Available actions: ${Object.keys(automations).join(', ')}`, 'error');
     process.exit(1);
   }
-  
   log(`Starting automation: ${action}`);
-  
   try {
     await automations[action]();
     log(`Automation completed successfully: ${action}`);
@@ -406,6 +372,4 @@ module.exports = { automations, log, handleError };
     process.exit(1);
   });
 }
-
 module.exports = { automations, log, handleError };
->>>>>>> main

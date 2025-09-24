@@ -1,20 +1,21 @@
-'use client';
-
-export default function Loading() {
-  return (
-    <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50'>
-      <div className='text-center'>
-        <div className='relative'>
-          <div className='w-16 h-16 border-4 border-blue-20o0 rounded-full animate-spin border-t-blue-60o0'></div>
-          <div className='absolute inset-0 flex items-center justify-center'>
-            <div className='w-8 h-8 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-full animate-pulse'></div>
-          </div>
-        </div>
-        <h2 className='text-xl font-semibold text-gray-80o0 mt-6'>
-          Loading...
-        </h2>
-        <p className='text-gray-60o0 mt-2'>Preparing your experience</p>
-      </div>
-    </div>
-  );
+'use client',
+,
+export default function Loading() {,
+  return (,
+    <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50'>,
+      <div className='text-center'>,
+        <div className='relative'>,
+          <div className='w-16 h-16 border-4 border-blue-20o0 rounded-full animate-spin border-t-blue-60o0'></div>,
+          <div className='absolute inset-0 flex items-center justify-center'>,
+            <div className='w-8 h-8 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-full animate-pulse'></div>,
+          </div>,
+        </div>,
+        <h2 className='text-xl font-semibold text-gray-80o0 mt-6'>,
+          Loading...,
+        </h2>,
+        <p className='text-gray-60o0 mt-2'>Preparing your experience</p>,
+      </div>,
+    </div>,
+  ),
 }
+,

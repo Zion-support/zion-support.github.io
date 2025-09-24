@@ -1,11 +1,6 @@
 =======
-<<<<<<< HEAD
-export: interface ComprehensiveNewService {
-<<<<<<< HEAD
-=======
 =======
 "export": interface ComprehensiveNewService {
->>>>>>> main
    id: string;
    title: string;
    description: string;

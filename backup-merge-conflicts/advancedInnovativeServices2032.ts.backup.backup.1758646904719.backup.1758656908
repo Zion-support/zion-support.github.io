@@ -1,11 +1,6 @@
 =======
-<<<<<<< HEAD
-export: interface AdvancedInnovativeService2032 {
-<<<<<<< HEAD
-=======
 =======
 "export": interface AdvancedInnovativeService2032 {
->>>>>>> main
    id: string;
    title: string;
    description: string;

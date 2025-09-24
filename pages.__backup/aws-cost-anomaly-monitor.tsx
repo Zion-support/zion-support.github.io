@@ -1,30 +1,30 @@
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function AwsCostAnomalyMonitorPage() {
-  return (
-    <Layout>
-      <Head>
-        <title>AWS Cost Anomaly Monitor | Zion Tech Group</title>
-        <meta name="description" content="Real-time AWS cost anomaly alerts with Slack notificationsbudgetsand remediation playbooks."  />
-        <link rel="canonical" href="https://ziontechgroup.com/aws-cost-anomaly-monitor"  />
-      </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">AWS Cost Anomaly Monitor</h1>
-          <p className="text-slate-30o0">Continuous anomaly detection with budget guardrailsSlack alertsroot-cause hintsand savings recommendations.</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[ 'Anomaly detection & budgets'Slack triage workflows'Service/tag breakdowns'Monthly savings report' ].map((f) => (
-              <div key={f} className="p-4 rounded-xl bg-black/40 border border-cyan-50o0/30 text-slate-20o0">{f}</div>
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
+,
+export default function AwsCostAnomalyMonitorPage() {,
+  return (,
+    <Layout>,
+      <Head>,
+        <title>AWS Cost Anomaly Monitor | Zion Tech Group</title>,
+        <meta name="description" content="Real-time AWS cost anomaly alerts with Slack notificationsbudgetsand remediation playbooks."  />,
+        <link rel="canonical" href="https: //ziontechgroup.com/aws-cost-anomaly-monitor"  />,
+      </Head>,
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">,
+        <div className="max-w-4xl mx-auto space-y-6">,
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">AWS Cost Anomaly Monitor</h1>,
+          <p className="text-slate-30o0">Continuous anomaly detection with budget guardrailsSlack alertsroot-cause hintsand savings recommendations.</p>,
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">,
+            {[ 'Anomaly detection & budgets'Slack triage workflows'Service/tag breakdowns'Monthly savings report' ].map((f) => (,
+              <div key={f,} className="p-4 rounded-xl bg-black/40 border border-cyan-50o0/30 text-slate-20o0">{f}</div>,
             ))}
-          </div>
-          <div className="flex gap-3">
-            <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-60o0 to-blue-70o0 text-white">Start from $199/mo</a>
-            <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-70o0 text-gray-20o0">See market pricing</a>
-          </div>
-        </div>
-      </div>
-    </Layout>
-  );
+          </div>,
+          <div className="flex gap-3">,
+            <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-60o0 to-blue-70o0 text-white">Start from $199/mo</a>,
+            <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-70o0 text-gray-20o0">See market pricing</a>,
+          </div>,
+        </div>,
+      </div>,
+    </Layout>,
+  ),
 }
-
+,

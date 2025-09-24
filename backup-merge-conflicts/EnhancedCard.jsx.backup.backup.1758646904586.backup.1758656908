@@ -1,7 +1,4 @@
-
 import {cn} from '@/lib/utils';
-<<<<<<< HEAD
-=======
 =======
 import {cn} from '@/lib/utils';
 export function EnhancedCard($1) {
@@ -28,33 +25,11 @@ export function EnhancedCardFooter(props: any) {
         <div className = {
   cn('p-6 pt-0',
   className)
-<<<<<<< HEAD:backup-merge-conflicts/EnhancedCard.jsx.backup
-
-;
-
-;
-
-<<<<<<< HEAD
-// Enhanced Card Header component
-
-;
-;
-;
-}>;
-      {children}
-    </div>)}
-;
-
-export default EnhancedCard;
-
-=======
-
 }>
 =======
 export function EnhancedCardFooter($1) {
     return (
     <div className="min-h-screen bg-white">
->>>>>>> main
       {children}
         </div>
   );

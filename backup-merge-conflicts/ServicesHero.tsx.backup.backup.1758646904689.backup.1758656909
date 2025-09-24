@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:backup-merge-conflicts/ServicesHero.tsx.backup
-<<<<<<< HEAD
-=======
 ;
 const "ServicesHero": "React.FC = ("props": any) => {;
 	return (;

@@ -1,5 +1,6 @@
-'use client';
-
-export default function WhatsNew() {
-  return null;
+'use client',
+,
+export default function WhatsNew() {,
+  return null,
 }
+,

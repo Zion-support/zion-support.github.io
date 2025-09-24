@@ -1,12 +1,3 @@
-<<<<<<< HEAD:components.disabled/EnhancedPerformanceMonitor.dynamic.jsx
-const EnhancedPerformanceMonitor = dynamic(() => import(\"./EnhancedPerformanceMonitor\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default EnhancedPerformanceMonitor\' ,
-=======
 =======
 const EnhancedPerformanceMonitor = dynamic(() => import("./EnhancedPerformanceMonitor"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedPerformanceMonitor' ,'
 </p>'
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> main
-</p>'
-=======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

@@ -1,78 +1,80 @@
-import Link from 'next/link';
-
-const AI20o27UltimateInnovationRevolutionPromotionBanner: React.FC = () => {
-  return (
-    <div className='relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-slate-90o0 border border-purple-50o0/30 rounded-2xl p-8 mb-8'>
-      <div className='absolute inset-0 bg-gradient-to-r from-cyan-50o0/10 via-purple-50o0/10 to-blue-50o0/10 animate-pulse'></div>
-      <div className='relative'>
-        <div className='flex flex-col md:flex-row items-center justify-between gap-6'>
-          <div className='flex-1'>
-            <div className='flex items-center gap-3 mb-4'>
-              <span className='text-2xl'>🚀</span>
-              <span className='text-sm font-semibold text-cyan-40o0 uppercase tracking-wider'>
-                Revolutionary Innovation
-              </span>
-            </div>
-            <h3 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-              AI 20o27 Ultimate Innovation Revolution
-            </h3>
-            <p className='text-lg text-gray-30o0 mb-6 leading-relaxed'>
-              Witness the dawn of genuine AI consciousness and quantum-neural
-              fusion. Experience the future where artificial intelligence
-              transcends all human limitations.
-            </p>
-            <div className='flex flex-wrap gap-4 mb-6'>
-              <span className='bg-cyan-50o0/20 text-cyan-40o0 px-3 py-1 rounded-full text-sm font-medium'>
-                Quantum Consciousness
-              </span>
-              <span className='bg-purple-50o0/20 text-purple-40o0 px-3 py-1 rounded-full text-sm font-medium'>
-                Autonomous Systems
-              </span>
-              <span className='bg-blue-50o0/20 text-blue-40o0 px-3 py-1 rounded-full text-sm font-medium'>
-                Omniversal Intelligence
-              </span>
-            </div>
-          </div>
-          <div className='flex flex-col gap-4'>
-            <Link
-              href='/ai-20o27-ultimate-innovation-revolution'
-              className='bg-gradient-to-r from-cyan-50o0 to-blue-50o0 hover:from-cyan-60o0 hover:to-blue-60o0 text-white font-bold py-3 px-8 rounded-full text-center transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-cyan-50o0/25 whitespace-nowrap'
-            >
-              Explore the Revolution
-            </Link>
-            <Link
-              href='/contact'
-              className='border-2 border-purple-40o0 text-purple-40o0 hover:bg-purple-40o0 hover:text-white font-bold py-3 px-8 rounded-full text-center transition-all duration-30o0 transform hover:scale-10o5 whitespace-nowrap'
-            >
-              Get Early Access
-            </Link>
-          </div>
-        </div>
-        <div className='mt-6 pt-6 border-t border-gray-70o0'>
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-4 text-center'>
-            <div>
-              <div className='text-2xl font-bold text-cyan-40o0'>99.9%</div>
-              <div className='text-sm text-gray-40o0'>Accuracy</div>
-            </div>
-            <div>
-              <div className='text-2xl font-bold text-purple-40o0'>
-                10,0o00x
-              </div>
-              <div className='text-sm text-gray-40o0'>Faster</div>
-            </div>
-            <div>
-              <div className='text-2xl font-bold text-blue-40o0'>∞</div>
-              <div className='text-sm text-gray-40o0'>Possibilities</div>
-            </div>
-            <div>
-              <div className='text-2xl font-bold text-green-40o0'>10o0%</div>
-              <div className='text-sm text-gray-40o0'>Autonomous</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+import React from 'react',
+import Link from 'next/link',
+,
+const AI20o27UltimateInnovationRevolutionPromotionBanner: React.FC = () => {,
+  return (,
+    <div className='relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-slate-90o0 border border-purple-50o0/30 rounded-2xl p-8 mb-8'>,
+      <div className='absolute inset-0 bg-gradient-to-r from-cyan-50o0/10 via-purple-50o0/10 to-blue-50o0/10 animate-pulse'></div>,
+      <div className='relative'>,
+        <div className='flex flex-col md:flex-row items-center justify-between gap-6'>,
+          <div className='flex-1'>,
+            <div className='flex items-center gap-3 mb-4'>,
+              <span className='text-2xl'>🚀</span>,
+              <span className='text-sm font-semibold text-cyan-40o0 uppercase tracking-wider'>,
+                Revolutionary Innovation,
+              </span>,
+            </div>,
+            <h3 className='text-3xl md:text-4xl font-bold text-white mb-4'>,
+              AI 20o27 Ultimate Innovation Revolution,
+            </h3>,
+            <p className='text-lg text-gray-30o0 mb-6 leading-relaxed'>,
+              Witness the dawn of genuine AI consciousness and quantum-neural,
+              fusion. Experience the future where artificial intelligence,
+              transcends all human limitations.,
+            </p>,
+            <div className='flex flex-wrap gap-4 mb-6'>,
+              <span className='bg-cyan-50o0/20 text-cyan-40o0 px-3 py-1 rounded-full text-sm font-medium'>,
+                Quantum Consciousness,
+              </span>,
+              <span className='bg-purple-50o0/20 text-purple-40o0 px-3 py-1 rounded-full text-sm font-medium'>,
+                Autonomous Systems,
+              </span>,
+              <span className='bg-blue-50o0/20 text-blue-40o0 px-3 py-1 rounded-full text-sm font-medium'>,
+                Omniversal Intelligence,
+              </span>,
+            </div>,
+          </div>,
+          <div className='flex flex-col gap-4'>,
+            <Link,
+              href='/ai-20o27-ultimate-innovation-revolution',
+              className='bg-gradient-to-r from-cyan-50o0 to-blue-50o0 hover:from-cyan-60o0 hover:to-blue-60o0 text-white font-bold py-3 px-8 rounded-full text-center transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-cyan-50o0/25 whitespace-nowrap',
+            >,
+              Explore the Revolution,
+            </Link>,
+            <Link,
+              href='/contact',
+              className='border-2 border-purple-40o0 text-purple-40o0 hover:bg-purple-40o0 hover:text-white font-bold py-3 px-8 rounded-full text-center transition-all duration-30o0 transform hover:scale-10o5 whitespace-nowrap',
+            >,
+              Get Early Access,
+            </Link>,
+          </div>,
+        </div>,
+        <div className='mt-6 pt-6 border-t border-gray-70o0'>,
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-4 text-center'>,
+            <div>,
+              <div className='text-2xl font-bold text-cyan-40o0'>99.9%</div>,
+              <div className='text-sm text-gray-40o0'>Accuracy</div>,
+            </div>,
+            <div>,
+              <div className='text-2xl font-bold text-purple-40o0'>,
+                10,0o00x,
+              </div>,
+              <div className='text-sm text-gray-40o0'>Faster</div>,
+            </div>,
+            <div>,
+              <div className='text-2xl font-bold text-blue-40o0'>∞</div>,
+              <div className='text-sm text-gray-40o0'>Possibilities</div>,
+            </div>,
+            <div>,
+              <div className='text-2xl font-bold text-green-40o0'>10o0%</div>,
+              <div className='text-sm text-gray-40o0'>Autonomous</div>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+    </div>,
+  ),
 };
-
-export default AI20o27UltimateInnovationRevolutionPromotionBanner;
+,
+export default AI20o27UltimateInnovationRevolutionPromotionBanner,
+,
