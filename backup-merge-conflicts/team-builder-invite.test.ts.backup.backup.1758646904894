@@ -1,0 +1,14 @@
+=======
+import { describe, it, expect } from 'vitest';
+describe('Team Builder Invite API', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+const { describe,it,expect } from "vitest"; describe("Team Builder Invite API",() => { it("should work",() => { expect(true).toBe(true)})});''"
+=======
+>>>>>>> pr-11935
+import { describe,it,expect } from 'vitest'; describe('Team Builder Invite API',() => { it('should work',() => { expect(true).toBe(true)})}
+});''
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

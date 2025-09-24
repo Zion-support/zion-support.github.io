@@ -1,55 +1,76 @@
 import React from 'react';
+
 import Link from 'next/link';
+
 import { cn } from '../../lib/utils';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
+  variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
   href?: string;
-  variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
-  size?: 'default' | 'sm' | 'lg' | 'icon';
-  asChild?: boolean;
+  onClick?: () => void;
+  className?: string;
+  disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset';
+  icon?: React.ReactNode;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = 'default', size = 'default', asChild = false, href, ...props }, ref) => {
-    const baseClasses = 'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50';
-    
-    const variants = {
-      default: 'bg-primary text-primary-foreground hover:bg-primary/90',
-      destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90',
-      outline: 'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
-      secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-      ghost: 'hover:bg-accent hover:text-accent-foreground',
-      link: 'text-primary underline-offset-4 hover:underline',
-    };
+const Button: React.FC<ButtonProps> = ({
+  children,
+  variant = 'primary',
+  size = 'md',
+  href,
+  onClick,
+  className = '',
+  disabled = false,
+  type = 'button',
+  icon,
+  ...props
+}) => {
+  const baseClasses = 'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
+  
+  const variantClasses = {
+    primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500 shadow-lg hover:shadow-xl',
+    secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500',
+    ghost: 'text-gray-700 hover:bg-gray-100 focus:ring-gray-500',
+    outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-gray-500'
+  };
+  
+  const sizeClasses = {
+    sm: 'px-3 py-2 text-sm',
+    md: 'px-4 py-2 text-base',
+    lg: 'px-6 py-3 text-lg'
+  };
 
-    const sizes = {
-      default: 'h-10 px-4 py-2',
-      sm: 'h-9 rounded-md px-3',
-      lg: 'h-11 rounded-md px-8',
-      icon: 'h-10 w-10',
-    };
+  const classes = cn(
+    baseClasses,
+    variantClasses[variant],
+    sizeClasses[size],
+    className
+  );
 
-    const classes = cn(baseClasses, variants[variant], sizes[size], className);
-
-    if (asChild && href) {
-      return (
-        <Link href={href} className={classes}>
-          {props.children}
-        </Link>
-      );
-    }
-
+  if (href) {
     return (
-      <button
-        className={classes}
-        ref={ref}
-        {...props}
-      />
+      <Link href={href} className={classes}>
+        {icon && <span className="mr-2">{icon}</span>}
+        {children}
+      </Link>
     );
   }
-);
 
-Button.displayName = 'Button';
+  return (
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={classes}
+      {...props}
+    >
+      {icon && <span className="mr-2">{icon}</span>}
+      {children}
+    </button>
+  );
+};
 
-export { Button };
+export default Button;

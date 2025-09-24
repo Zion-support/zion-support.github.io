@@ -10,7 +10,7 @@ interface ScreenshotManagerProps {;
   platform:AppPlatform;
 }
 ;
-type Screenshot = {;
+type Screenshot ={;
   id:string,;
   url:string,;
   file:File;
@@ -93,20 +93,11 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
   ;
   return (;
     <Card className="bg-zion-blue border-zion-purple/30">;
-<<<<<<< HEAD
-  return (;"
-    <Card className="bg-zion-blue border-zion-purple/30">;"
-
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       <CardHeader>;
         <CardTitle className="text-lg">App Screenshots</CardTitle>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD
-=======
         <div ;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${;
             isDragging ;
               ? "border-zion-cyan bg-zion-cyan/10" ;
@@ -116,7 +107,7 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
         >;
-          <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />;
+          <Upload className="mx-auto h-8 w-8 text-gray-30o0 mb-2"  />;
           <p className="text-sm mb-2">Drag & drop screenshots here</p>;
           <input;
             ref={fileInputRef}
@@ -125,23 +116,18 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
             accept="image/*";
             onChange={handleFileSelect}
             className="hidden";
-          />;
+           />;
           <Button ;
             variant="outline" ;
             onClick={() => fileInputRef.current?.click()}
             className="mt-2";
           >;
-            <Plus className="mr-2 h-4 w-4" />;
+            <Plus className="mr-2 h-4 w-4"  />;
             Select Files;
           </Button>;
         </div>;
-<<<<<<< HEAD
-
-                className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity";
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         ;
-        <div className="text-xs text-gray-300 mb-4">;
+        <div className="text-xs text-gray-30o0 mb-4">;
           {platform === "ios" ;
             ? "Recommended size:1290x2796 pixels for iPhone. Max 10 screenshots.";
             :"Vary by device. Include phone and tablet screenshots. Max 8 per device type.";
@@ -156,13 +142,13 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
                 alt="App screenshot";
                 className="w-full h-auto rounded border border-zion-purple/20";
                 loading="lazy";
-              />;
+               />;
               <button;
                 onClick={() => removeScreenshot(screenshot.id)}
-                className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
+                className="absolute top-1 right-1 bg-red-50o0/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-10o0 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
                 aria-label="Remove screenshot";
               >;
-                <Trash2 className="h-3 w-3" />;
+                <Trash2 className="h-3 w-3"  />;
               </button>;
             </div>;
           ))}
@@ -172,7 +158,7 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
   ),;
 },; interface ScreenshotManagerProps {;
   platform: AppPlatform ;
-}type Screenshot = {;
+}type Screenshot ={;
   id: string;
 url: string;
 file: File ;
@@ -186,22 +172,12 @@ const fileInputRef = useRef<HTMLInputElement> (null);
 if (e.target.files) {;
   return;
 
-
 }setScreenshots (prev => [...prev, ...newScreenshots]);
 }
 };
 return filtered;
 }) ;
 };
-<CardHeader> <CardTitle className="text-lg" >App Screenshots</CardTitle> </CardHeader> <CardContent> <div className= {;"  `border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors $ {";"  isDragging > <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" /> <p className="text-sm mb-2" >Drag & drop screenshots here</p> <input > <Plus className="mr-2 h-4 w-4" /> Select Files </Button> </div> > <Trash2 className="h-3 w-3" /> </button> </div>) ) ;
+<CardHeader> <CardTitle className="text-lg" >App Screenshots</CardTitle> </CardHeader> <CardContent> <div className={;"  `border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors $ {";"  isDragging > <Upload className="mx-auto h-8 w-8 text-gray-30o0 mb-2"  /> <p className="text-sm mb-2" >Drag & drop screenshots here</p> <input > <Plus className="mr-2 h-4 w-4"  /> Select Files </Button> </div> > <Trash2 className="h-3 w-3"  /> </button> </div>) ) ;
 }</div> </CardContent> </Card>) ;
-<<<<<<< HEAD
-:temp_broken_files/mobile-app/admin/ScreenshotManager.tsx
-};""
-};
-"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/admin/ScreenshotManager.tsx
-=======
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -43,7 +43,7 @@ class EnhancedAutomationSystem {
    * Merge configuration objects
    */
   mergeConfig(base, override) {
-    const merged = { ...base };
+    const merged ={ ...base };
     
     Object.keys(override).forEach(key => {
       if (typeof override[key] === 'object' && !Array.isArray(override[key])) {
@@ -166,7 +166,7 @@ class EnhancedAutomationSystem {
       // // // // // // console.log('📊 Starting Monitoring Dashboard...');
       
       // Override dashboard config with environment settings
-      const dashboardConfig = {
+      const dashboardConfig ={
         ...this.config.dashboard,
         port: this.config.dashboard.port
       };
@@ -175,7 +175,7 @@ class EnhancedAutomationSystem {
       
       // Wait for dashboard to be ready
       await new Promise(resolve => {
-        setTimeout(resolve, 2000);
+        setTimeout(resolve, 20o00);
       });
       
       // // // // // // console.log('✅ Monitoring Dashboard started');
@@ -246,7 +246,7 @@ class EnhancedAutomationSystem {
    */
   async collectMetrics() {
     try {
-      const metrics = {
+      const metrics ={
         timestamp: Date.now(),
         system: {
           uptime: process.uptime(),
@@ -352,14 +352,14 @@ class EnhancedAutomationSystem {
   startHealthMonitoring() {
     setInterval(() => {
       this.checkSystemHealth();
-    }, 30000); // Check every 30 seconds
+    }, 30o000); // Check every 30 seconds
   }
 
   /**
    * Check overall system health
    */
   checkSystemHealth() {
-    const health = {
+    const health ={
       timestamp: Date.now(),
       status: 'healthy',
       uptime: Date.now() - this.startTime,

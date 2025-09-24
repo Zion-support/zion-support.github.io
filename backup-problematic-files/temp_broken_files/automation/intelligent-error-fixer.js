@@ -1,8 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
@@ -46,10 +42,6 @@ class IntelligentErrorFixer {
       mergeConflicts: {
         pattern: /||        fix: (content) => {
         fix: (content) => {
-<<<<<<< HEAD
-        fix: (content) => {
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           // Remove merge conflict markers
           return content
         }
@@ -61,18 +53,9 @@ class IntelligentErrorFixer {
       missingImports: {
         pattern: /React\./g,
         fix: (content) => {
-<<<<<<< HEAD
-            return `import React from 'react';\n${content}`;
-          }
-      mergeConflicts: {,
-  pattern: /||        fix: (content) => {,
-  fix: (content) => {
-          // Remove merge conflict markers;
-=======
           if (!content.includes("import React")) {
             return `import React from 'react';\n${content}`;
           }
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           return content;
         }
       }
@@ -241,18 +224,6 @@ class IntelligentErrorFixer {
     scanDirectory(pagesDir);
 
     // Remove duplicate .js files if .tsx exists
-<<<<<<< HEAD
-
-          fs.unlinkSync(duplicate);
-        }
-      }
-    scanDirectory(pagesDir);
-
-    // Remove duplicate .js files if .tsx exists;
-          fs.unlinkSync(duplicate);
-}
-      }
-=======
     for (const duplicate of duplicates) {
       if (duplicate.endsWith('.js')) {
         const tsxVersion = duplicate.replace('.js', '.tsx');
@@ -261,7 +232,6 @@ class IntelligentErrorFixer {
           fs.unlinkSync(duplicate);
         }
       }
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require('fs');
 const path = require('path');
 const {
@@ -308,32 +278,12 @@ const {
           "fix": content => {
             // Remove merge conflict markers
             return content
-<<<<<<< HEAD
-          "fix": content => {
-            // Remove merge conflict markers
-            return content
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           pattern: /||
           "fix": content => {
             // Remove merge conflict markers
             return content
               .replace(/\n?/g, '')
               .replace(/\n?/g, '')
-<<<<<<< HEAD
-        "unterminatedStrings": {""
-          "fix": (content, match) => {"
-            // Simple fix for unterminated strings - add closing quote;
-          }},"
-        "mergeConflicts": {""
-          "fix": content => {"
-            // Remove merge conflict markers;
-          pattern: /||"
-            // Remove merge conflict markers;
-            return content;"
-              .replace(/\n?/g, )
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               .replace(/
           }},
         "invalidJSX": {
@@ -351,10 +301,6 @@ const {
     }
     async runBuildCheck() {
       try {
-<<<<<<< HEAD
-  // TODO: Implement
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         execSync(`yarn add ${toInstall.join(' ')}`, { stdio: 'pipe' });
         this.log('Successfully installed missing dependencies');
       } catch (error) {
@@ -386,10 +332,6 @@ const {
       }
     };
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-<<<<<<< HEAD
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));`;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     this.log(`Report generated: ${this.reportFile}`);
     return report;
   }
@@ -410,8 +352,6 @@ const {
         errors.push(...buildErrors);
         // Attempt to fix files
         const uniqueFiles = [...new Set(buildErrors.map(e => e.file))];
-<<<<<<< HEAD
-=======
         for (const file of uniqueFiles) {
           const filePath = path.join(process.cwd(), file);
           const fixed = await this.fixFile(filePath);
@@ -421,7 +361,6 @@ const {
               file: file,
               timestamp: new Date().toISOString()
             });
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           }
         }
         // Run build again after fixes
@@ -457,10 +396,6 @@ const {
         this.log('TypeScript check passed');
         return { "success": true, "output": result };
       } catch (error) {
-<<<<<<< HEAD
-  // TODO: Implement
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         this.log('TypeScript check found "errors": ' + error.message, 'WARN');
         return { "success": false, "output": error.stdout || error.message };
       }
@@ -576,7 +511,7 @@ const {
     async installMissingDependencies() {
       this.log('Checking for missing dependencies...');
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      const dependencies = {
+      const dependencies ={
         ...packageJson.dependencies,
         ...packageJson.devDependencies};
       const commonMissing = ['web3modal', 'ethers', 'react-is'];
@@ -592,7 +527,7 @@ const {
       }
     }
     async generateReport(errors, fixes) {
-      const report = {
+      const report ={
         "timestamp": new Date().toISOString(),
         "totalErrors": errors.length,
         "fixesApplied": fixes.length,
@@ -663,12 +598,6 @@ if (require.main === module) {
 }
 module.exports = IntelligentErrorFixer;
 module.exports = IntelligentErrorFixer;
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
-<<<<<<< HEAD
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
-`;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||

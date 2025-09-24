@@ -151,7 +151,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                       :"text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
                   )}
                 >;
-                  <Heart className="w-4 h-4" />;
+                  <Heart className="w-4 h-4"  />;
                   {count > 0 && (;
                     <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                       {count}
@@ -175,7 +175,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                       :"text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
                   )}
                 >;
-                  <Wallet className="w-4 h-4" />;
+                  <Wallet className="w-4 h-4"  />;
                 </Link>;
               </li>;            )}
 ;
@@ -194,9 +194,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                       :"text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
                   )}
                 >;
-                  <MessageSquare className="w-4 h-4" />;
+                  <MessageSquare className="w-4 h-4"  />;
                   {unreadCount > 0 && (;
-                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
+                    <span className="absolute -top-1 -right-1 bg-red-50o0 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                       {unreadCount > 9 ? '9+' :unreadCount}
                     </span>;                  )}
                 </Link>;
@@ -205,7 +205,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
 ;
             {/* Cart icon with badge */}
             <li className="nav-item">;
-              <HoverCard openDelay={100}>;
+              <HoverCard openDelay={10o0}>;
                 <HoverCardTrigger asChild>;
                   <Link;
                     href="/cart";
@@ -218,7 +218,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                         :'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
                     )}
                   >;
-                    <ShoppingCart className="w-4 h-4 mr-1" />;
+                    <ShoppingCart className="w-4 h-4 mr-1"  />;
                     {t('nav.cartCart')}
                     {cartCount > 0 && (;
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;                        {cartCount}
@@ -227,17 +227,17 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                   </Link>;
                 </HoverCardTrigger>;
                 <HoverCardContent>;
-                  <MiniCartPreview />;
+                  <MiniCartPreview  />;
                 </HoverCardContent>;
               </HoverCard>;
             </li>;
           </ul>;
           <div className="flex items-center gap-2 mt-4 md:mt-0 md:ml-auto">;
-            <LanguageSelector />;
+            <LanguageSelector  />;
           </div>;
         </div>;
       </nav>;
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen}  />;
     </>;
   ),;}
  import { ;
@@ -345,13 +345,12 @@ matches: (path: string) => path.startsWith ('/analytics') ;"}) ;";"}return (<> <
 }> {;"  link.name ;";"}</Link> </li>) ) ";";"}<Link href="/wishlist" aria-label="Wishlist" onClick={;
   () => setIsMobileMenuOpen (false) ;
 }{;
-  count ;"}</span>) ;";"}</Link> </li>) ";";"}<Link href="/wallet" aria-label="Wallet" onClick={;"  () => setIsMobileMenuOpen (false) ;";"}) ";";"}> <Wallet className="w-4 h-4" /> </Link> </li>) ";";"}<Link href="/messages" aria-label="Messages" onClick={;
+  count ;"}</span>) ;";"}</Link> </li>) ";";"}<Link href="/wallet" aria-label="Wallet" onClick={;"  () => setIsMobileMenuOpen (false) ;";"}) ";";"}> <Wallet className="w-4 h-4"  /> </Link> </li>) ";";"}<Link href="/messages" aria-label="Messages" onClick={;
   () => setIsMobileMenuOpen (false) ;';
 }{';';
   unreadCount > 9 ? '9+' : unreadCount ;
 }</span>) ;';
-}</Link> </li>) ';';"}? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan') ;";"}> {";";"  cartCount > 0 && (<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" > cartCount ;";"}</span>) ";";"}</Link> </HoverCardTrigger> <HoverCardContent> <MiniCartPreview /> </HoverCardContent> </HoverCard> </li> </ul> <div className="flex items-center gap-2 mt-4 md:mt-0 md:ml-auto" > <LanguageSelector /> </div> </div> </nav> <LoginModal isOpen= {;
+}</Link> </li>) ';';"}? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan') ;";"}> {";";"  cartCount > 0 && (<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" > cartCount ;";"}</span>) ";";"}</Link> </HoverCardTrigger> <HoverCardContent> <MiniCartPreview  /> </HoverCardContent> </HoverCard> </li> </ul> <div className="flex items-center gap-2 mt-4 md:mt-0 md:ml-auto" > <LanguageSelector  /> </div> </div> </nav> <LoginModal isOpen={;
   loginOpen ;
 }onOpenChange= {;
-
 

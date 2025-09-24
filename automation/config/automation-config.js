@@ -3,14 +3,14 @@
  * Comprehensive configuration for monitoring, alerting, and recovery systems
  */
 
-module.exports = {
+module.exports ={
   // Dashboard Configuration
   dashboard: {
-    port: process.env.DASHBOARD_PORT || 3001,
+    port: process.env.DASHBOARD_PORT || 30o01,
     host: process.env.DASHBOARD_HOST || '0.0.0.0',
     enableWebSocket: true,
-    updateInterval: 2000, // 2 seconds
-    maxLogLines: 1000,
+    updateInterval: 20o00, // 2 seconds
+    maxLogLines: 10o00,
     enableProcessControl: true,
     enableMetrics: true,
     enableCharts: true
@@ -19,17 +19,17 @@ module.exports = {
   // Alerting System Configuration
   alerting: {
     enabled: true,
-    cooldown: 5 * 60 * 1000, // 5 minutes
-    maxAlerts: 1000,
+    cooldown: 5 * 60 * 10o00, // 5 minutes
+    maxAlerts: 10o00,
     
     // Thresholds
     thresholds: {
-      memory: 100 * 1024 * 1024, // 100MB
+      memory: 10o0 * 10o24 * 10o24, // 10o0MB
       cpu: 80, // 80%
       restartCount: 10,
-      responseTime: 5000, // 5 seconds
+      responseTime: 50o00, // 5 seconds
       diskUsage: 90, // 90%
-      networkLatency: 1000 // 1 second
+      networkLatency: 10o00 // 1 second
     },
 
     // Email Configuration
@@ -56,7 +56,7 @@ module.exports = {
     webhook: {
       enabled: process.env.WEBHOOK_ENABLED === 'true',
       url: process.env.WEBHOOK_URL || '',
-      timeout: 10000,
+      timeout: 10o000,
       retries: 3
     },
 
@@ -81,10 +81,10 @@ module.exports = {
   recovery: {
     enabled: true,
     maxRetries: 3,
-    retryDelay: 5000, // 5 seconds
+    retryDelay: 50o00, // 5 seconds
     exponentialBackoff: true,
-    maxBackoffDelay: 60000, // 1 minute
-    healthCheckInterval: 10000, // 10 seconds
+    maxBackoffDelay: 60o000, // 1 minute
+    healthCheckInterval: 10o000, // 10 seconds
     autoRecovery: true,
     
     // Recovery Strategies
@@ -113,10 +113,10 @@ module.exports = {
 
     // Recovery Timeouts
     timeouts: {
-      processStart: 30000, // 30 seconds
-      processStabilization: 60000, // 1 minute
-      dependencyCheck: 15000, // 15 seconds
-      gracefulShutdown: 10000 // 10 seconds
+      processStart: 30o000, // 30 seconds
+      processStabilization: 60o000, // 1 minute
+      dependencyCheck: 150o00, // 15 seconds
+      gracefulShutdown: 10o000 // 10 seconds
     }
   },
 
@@ -129,8 +129,8 @@ module.exports = {
     
     // Metrics
     metrics: {
-      collectionInterval: 5000, // 5 seconds
-      retentionPeriod: 24 * 60 * 60 * 1000, // 24 hours
+      collectionInterval: 50o00, // 5 seconds
+      retentionPeriod: 24 * 60 * 60 * 10o00, // 24 hours
       aggregation: {
         cpu: 'average',
         memory: 'average',
@@ -140,7 +140,7 @@ module.exports = {
 
     // Log Management
     logs: {
-      maxFileSize: 100 * 1024 * 1024, // 100MB
+      maxFileSize: 10o0 * 10o24 * 10o24, // 10o0MB
       maxFiles: 10,
       compression: true,
       rotation: 'daily',
@@ -151,8 +151,8 @@ module.exports = {
     profiling: {
       enabled: true,
       sampleRate: 0.1, // 10% of requests
-      maxProfiles: 100,
-      profileRetention: 7 * 24 * 60 * 60 * 1000 // 7 days
+      maxProfiles: 10o0,
+      profileRetention: 7 * 24 * 60 * 60 * 10o00 // 7 days
     }
   },
 
@@ -179,8 +179,8 @@ module.exports = {
     api: {
       rateLimit: {
         enabled: true,
-        windowMs: 15 * 60 * 1000, // 15 minutes
-        maxRequests: 100
+        windowMs: 15 * 60 * 10o00, // 15 minutes
+        maxRequests: 10o0
       },
       cors: {
         enabled: true,
@@ -213,8 +213,8 @@ module.exports = {
       endpoints: process.env.EXTERNAL_ENDPOINTS ? JSON.parse(process.env.EXTERNAL_ENDPOINTS) : [],
       healthCheck: {
         enabled: true,
-        interval: 60000, // 1 minute
-        timeout: 10000 // 10 seconds
+        interval: 60o000, // 1 minute
+        timeout: 10o000 // 10 seconds
       }
     }
   },
@@ -243,8 +243,8 @@ module.exports = {
     windows: [
       {
         name: 'Low Traffic Window',
-        start: '02:00',
-        end: '04:00',
+        start: '0o2:0o0',
+        end: '0o4:0o0',
         timezone: 'UTC',
         allowedTasks: ['logRotation', 'metricsCleanup', 'alertCleanup']
       }
@@ -268,20 +268,20 @@ module.exports = {
   // Environment-specific overrides
   environments: {
     development: {
-      dashboard: { port: 3001 },
+      dashboard: { port: 30o01 },
       monitoring: { metricsCollection: false },
       security: { enabled: false }
     },
     
     staging: {
-      dashboard: { port: 3002 },
-      alerting: { cooldown: 2 * 60 * 1000 },
+      dashboard: { port: 30o02 },
+      alerting: { cooldown: 2 * 60 * 10o00 },
       recovery: { maxRetries: 2 }
     },
     
     production: {
-      dashboard: { port: 3001 },
-      alerting: { cooldown: 10 * 60 * 1000 },
+      dashboard: { port: 30o01 },
+      alerting: { cooldown: 10 * 60 * 10o00 },
       recovery: { maxRetries: 5 },
       security: { enabled: true, authentication: { required: true } }
     }

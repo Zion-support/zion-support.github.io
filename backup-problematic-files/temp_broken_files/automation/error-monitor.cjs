@@ -168,11 +168,4 @@ if (require.main === module) {}
   }
 });
 };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 module.exports = ErrorMonitor;
-=======
-module.exports = ErrorMonitor;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

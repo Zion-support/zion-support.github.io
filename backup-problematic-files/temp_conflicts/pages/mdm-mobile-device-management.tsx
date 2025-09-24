@@ -1,6 +1,5 @@
 
 
-import React from "react";
 import Head from "next/head";
 import {
   Phone,
@@ -11,19 +10,13 @@ import {
   Shield,
   Star,;
 
-
-
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   );
   if (!service) return null;
 
@@ -31,57 +24,57 @@ export default function QuantumInternetSecurityPage() {
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-        <meta name="description" content={service.description} />
+        <meta name="description" content={service.description}  />
         <link
           rel="canonical"
           href="https://ziontechgroup.com/quantum-internet-security-platform"
-        />
+         />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-green-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3">
-              <Shield className="w-10 h-10" />
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-40o0 via-green-40o0 to-cyan-40o0 bg-clip-text text-transparent flex items-center justify-center gap-3">
+              <Shield className="w-10 h-10"  />
               {service.name}
             </h1>
-            <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">
+            <p className="mt-4 text-xl text-slate-30o0 max-w-3xl mx-auto">
               {service.tagline}
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-            <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
+            <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-emerald-50o0/30 p-6">
               <h2 className="text-2xl font-semibold mb-4">
                 Platform capabilities
               </h2>
-              <p className="text-slate-300 mb-6">{service.description}</p>
+              <p className="text-slate-30o0 mb-6">{service.description}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li
                     key={i}
-                    className="flex items-start space-x-3 text-slate-200"
+                    className="flex items-start space-x-3 text-slate-20o0"
                   >
-                    <Check className="w-5 h-5 text-emerald-400 mt-0.5" />
+                    <Check className="w-5 h-5 text-emerald-40o0 mt-0.5"  />
                     <span>{feat}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">
+            <div className="bg-black/30 rounded-2xl border border-emerald-50o0/30 p-6 h-fit">
               <div className="flex items-end justify-between mb-3">
                 <div>
                   <div className="text-3xl font-bold text-white">
                     {service.price}
-                    <span className="text-slate-400 text-base">
+                    <span className="text-slate-40o0 text-base">
                       {service.period}
                     </span>
                   </div>
-                  <div className="text-slate-400">
+                  <div className="text-slate-40o0">
                     {service.trialDays}-day free trial  Setup:{" "}
                     {service.setupTime}
                   </div>
                 </div>
-                <div className="flex items-center text-yellow-400">
-                  <Star className="w-4 h-4 mr-1" />
+                <div className="flex items-center text-yellow-40o0">
+                  <Star className="w-4 h-4 mr-1"  />
                   {service.rating.toFixed(1)}
                 </div>
               </div>
@@ -92,19 +85,19 @@ export default function QuantumInternetSecurityPage() {
                 className="w-full"
               >
                 Request a Security Demo
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </Button>
-              <div className="mt-6 space-y-3 text-sm text-slate-300">
+              <div className="mt-6 space-y-3 text-sm text-slate-30o0">
                 <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <Phone className="w-4 h-4 text-cyan-40o0"  />
                   <span>{service.contactInfo.mobile}</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4 text-purple-400" />
+                  <Mail className="w-4 h-4 text-purple-40o0"  />
                   <span>{service.contactInfo.email}</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4 text-green-400" />
+                  <MapPin className="w-4 h-4 text-green-40o0"  />
                   <span className="text-xs">{service.contactInfo.address}</span>
                 </div>
               </div>
@@ -114,12 +107,4 @@ export default function QuantumInternetSecurityPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-}
-;
-:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx

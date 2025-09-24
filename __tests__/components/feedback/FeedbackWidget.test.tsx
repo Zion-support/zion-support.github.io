@@ -11,14 +11,14 @@ test('rating persists after navigation', async () => {'  const user = userEvent.
   render(
     <FeedbackProvider>
       <MemoryRouterProvider>
-        <TestRoutes />
-        <FeedbackWidget />
+        <TestRoutes  />
+        <FeedbackWidget  />
       </MemoryRouterProvider>
     </FeedbackProvider>
   );
 
   await user.click(screen.getByText('Feedback'));  const stars = screen.getAllByLabelText(/Rate/);
   await user.click(stars[4]);
-  expect(stars.filter(s => s.className.includes('text-yellow-400')).length).toBe(5);
+  expect(stars.filter(s => s.className.includes('text-yellow-40o0')).length).toBe(5);
   await user.click(screen.getByText('Go'));  expect(screen.getByText('Marketplace')).toBeInTheDocument();  const starsAfter = screen.getAllByLabelText(/Rate/);
-  expect(starsAfter.filter(s => s.className.includes('text-yellow-400')).length).toBe(5);});
+  expect(starsAfter.filter(s => s.className.includes('text-yellow-40o0')).length).toBe(5);});

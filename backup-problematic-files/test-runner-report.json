@@ -3,9 +3,7 @@
   "testResults": [
     {
       "type": "unit",
-      "status": "failed",
-
-
+      "status": "failed"
     }
   ],
   "coverage": {},

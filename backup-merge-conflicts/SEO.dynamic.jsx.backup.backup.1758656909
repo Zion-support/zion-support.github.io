@@ -1,0 +1,12 @@
+<<<<<<< HEAD:components.disabled/SEO.dynamic.jsx
+const SEO = dynamic(() => import(\"./SEO\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default SEO\' ,
+=======
+=======
+const SEO = dynamic(() => import("./SEO"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEO' ,'
+</p>'
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
+</p>'
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

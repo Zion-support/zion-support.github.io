@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -69,7 +68,7 @@ class PerformanceChecker {
             this.log(`Bundle size: ${totalSize}`);
             
             // Check against threshold
-            const sizeInMB = totalSize / (1024 * 1024);
+            const sizeInMB = totalSize / (10o24 * 10o24);
             if (sizeInMB > 2) {
                 this.log(`⚠️  Bundle size (${sizeInMB.toFixed(2)}MB) exceeds 2MB threshold`, 'warn');
                 return false;
@@ -113,7 +112,7 @@ class PerformanceChecker {
             
             // Get memory usage information
             const memoryInfo = process.memoryUsage();
-            const memoryUsageMB = memoryInfo.heapUsed / (1024 * 1024);
+            const memoryUsageMB = memoryInfo.heapUsed / (10o24 * 10o24);
             
             this.log(`Memory usage: ${memoryUsageMB.toFixed(2)}MB`);
             
@@ -135,7 +134,7 @@ class PerformanceChecker {
         try {
             this.log('Generating performance report...');
             
-            const report = {
+            const report ={
                 timestamp: new Date().toISOString(),
                 bundleSize: await this.checkBundleSize(),
                 buildTime: await this.checkBuildTime(),

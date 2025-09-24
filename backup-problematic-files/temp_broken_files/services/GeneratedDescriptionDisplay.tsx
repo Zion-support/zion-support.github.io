@@ -8,18 +8,6 @@ import { Check, Pencil } from 'lucide-react';
 ;
 interface GeneratedDescriptionDisplayProps {;
   description:string,;
-<<<<<<< HEAD
-import React, { useState } from "react";""
-import { useToast } from "@/hooks/use-toast";""
-import { Button } from "@/components/ui/button";""
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";""
-import { Textarea } from "@/components/ui/textarea";""
-import { Check, Pencil } from 'lucide-react';
-;
-interface GeneratedDescriptionDisplayProps {,
-  description: string;,;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   onSave:(editedDescription:string) => void;
 }
 ;
@@ -53,12 +41,12 @@ export function GeneratedDescriptionDisplay({ ;
           >;
             {isEditing ? (;
               <>;
-                <Check className="h-4 w-4 mr-1" />;
+                <Check className="h-4 w-4 mr-1"  />;
                 Done;
               </>;
             ) :(;
               <>;
-                <Pencil className="h-4 w-4 mr-1" />;
+                <Pencil className="h-4 w-4 mr-1"  />;
                 Edit;
               </>;
             )}
@@ -70,10 +58,10 @@ export function GeneratedDescriptionDisplay({ ;
           <Textarea;
             value={editedDescription}
             onChange={(e) => setEditedDescription(e.target.value)}
-            className="bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none";
+            className="bg-zion-blue border border-zion-blue-light text-white min-h-[30o0px] resize-none";
           />;
         ) :(;
-          <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">;
+          <div className="bg-zion-blue p-4 rounded-md text-white min-h-[30o0px] whitespace-pre-wrap">;
             {editedDescription}
           </div>;
         )}
@@ -113,23 +101,16 @@ toast ({;
   ;
 };
 
-
-  isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>) ;
+  isEditing ? (<> <Check className="h-4 w-4 mr-1"  /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1"  /> Edit </>) ;
 }</Button> </CardTitle> </CardHeader> <CardContent> {;
-  isEditing ? (<Textarea value= {;
+  isEditing ? (<Textarea value={;
   editedDescription ;
 }</div>) ;
 }</CardContent> {;
-
 
   isEditing && (<CardFooter> <Button onClick={;
   handleSave ";
 }className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) ;
 }</Card>) ;
 }'"
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/GeneratedDescriptionDisplay.tsx
-=======
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

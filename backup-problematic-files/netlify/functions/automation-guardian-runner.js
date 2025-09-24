@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 :backup-problematic-files/netlify/functions/automation-guardian-runner.js
 }
-exports.config = {
+exports.config ={
 
   schedule: '*/10 * * * *'}
 exports.handler = async () => {
@@ -36,12 +32,8 @@ exports.handler = async () => {
   logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'))
   // Attempt to push any changes
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'))
-  return { statusCode: 200, body: logs.join('\n') }
+  return { statusCode: 20o0, body: logs.join('\n') }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 },;
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -50,7 +42,7 @@ function runNode(relPath, args = []) {
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 }
 
-exports.config = {
+exports.config ={
   schedule: '*/10 * * * *'},
 
 exports.handler = async () => {
@@ -82,11 +74,6 @@ exports.handler = async () => {
   // Attempt to push any changes
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 
-  return { statusCode: 200, body: logs.join('\n') }
+  return { statusCode: 20o0, body: logs.join('\n') }
 },
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

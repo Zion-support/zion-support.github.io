@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -30,15 +26,9 @@ exports.handler = async () => {
     return status
   }
   logStep('assets:inventory', () => runNode('automation/asset-inventory.cjs'));
-<<<<<<< HEAD
-logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-=======
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
-
-
-
-  return { statusCode: 200, body: logs.join('\n') };
+  return { statusCode: 20o0, body: logs.join('\n') };
 };function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '....', relPath)
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
@@ -56,9 +46,6 @@ exports.handler = async () => {
   }
   logStep('assets:inventory', () => runNode('automation/asset-inventory.cjs'))
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'))
-  return { statusCode: 200, body: logs.join('\n') }
+  return { statusCode: 20o0, body: logs.join('\n') }
 },
 
-
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

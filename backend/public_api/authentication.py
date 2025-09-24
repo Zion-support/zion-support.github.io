@@ -8,17 +8,28 @@ class ApiKeyAuthentication(BaseAuthentication):
     keyword = 'Api-Key'
 
     def authenticate(self, request):
-        key = request.headers.get('X-API-KEY') or request.headers.get('Authorization')
-        if not key:
+        x_api_key = request.headers.get('X-API-KEY')
+        auth_header = request.headers.get('Authorization')
+        # Prefer explicit header
+        raw = x_api_key or auth_header
+        if not raw:
             return None
-        if key.startswith(self.keyword + ' '):
-            key = key[len(self.keyword) + 1:]
-        prefix = key[:8]
+        if auth_header and not auth_header.startswith(self.keyword + ' '):
+            # Different auth scheme; do not attempt
+            return None
+        if raw.startswith(self.keyword + ' '):
+            raw = raw[len(self.keyword) + 1:]
+        # Expect format prefix.secret
+        if '.' not in raw:
+            # If scheme provided but no key, raise; otherwise None
+            raise exceptions.AuthenticationFailed(_('Invalid API key format.'))
+        prefix, secret = raw.split('.', 1)
         try:
-            api_key = ApiKey.objects.get(prefix=prefix, revoked=False)
+            api_key = ApiKey.objects.get(prefix=prefix)
         except ApiKey.DoesNotExist:
-            raise exceptions.AuthenticationFailed(_('Invalid API key'))
-        digest = sha256(key.encode()).hexdigest()
-        if digest != api_key.hashed_key:
-            raise exceptions.AuthenticationFailed(_('Invalid API key'))
+            raise exceptions.AuthenticationFailed(_('Invalid API key.'))
+        if api_key.revoked:
+            raise exceptions.AuthenticationFailed(_('API key revoked.'))
+        if sha256(secret.encode()).hexdigest() != api_key.hashed_key:
+            raise exceptions.AuthenticationFailed(_('Invalid API key.'))
         return (api_key.user, None)

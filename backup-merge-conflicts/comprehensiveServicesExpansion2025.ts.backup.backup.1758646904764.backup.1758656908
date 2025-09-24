@@ -1,0 +1,22 @@
+=======
+<<<<<<< HEAD
+import { ProductListing } from "@/types/listings"; ;"","});"})"""""""@/types/listings";&apos,"
+""
+import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings";&apos,"
+";";"
+const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"""""";";"""
+=======
+import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"",
+""";,
+";";"
+=======
+=======
+import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings";&apos,"
+";";"
+const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"""""";";"""
+import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"",
+""";,
+";";"
+=======
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

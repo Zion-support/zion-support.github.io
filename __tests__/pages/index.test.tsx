@@ -15,15 +15,15 @@ const mockedFetchHomeData = fetchHomeData as jest.Mock;
 
 describe('Home page server side error handling', () => {'  it('renders error boundary fallback when getServerSideProps throws', async () => {'    mockedFetchHomeData.mockRejectedValueOnce(new Error('fail'));    (useRouter as jest.Mock).mockReturnValue({ query: {} });
 
-    const ctx: unknown = { req: {}, res: { statusCode: 200 } };
+    const ctx: unknown ={ req: {}, res: { statusCode: 20o0 } };
     const result = await getServerSideProps(ctx as any);
 
-    expect(ctx.res.statusCode).toBe(500);
+    expect(ctx.res.statusCode).toBe(50o0);
     expect(result).toEqual({ props: { hasError: true } });
 
     render(
       <GlobalErrorBoundary>
-        <IndexPage {...(result as any).props} />
+        <IndexPage {...(result as any).props}  />
       </GlobalErrorBoundary>
     );
 
@@ -31,9 +31,9 @@ describe('Home page server side error handling', () => {'  it('renders error bou
 });
 
 describe('Home page data fetch success', () => {'  it('returns props when data fetch succeeds', async () => {'    mockedFetchHomeData.mockResolvedValueOnce(null);
-    const ctx: unknown = { req: {}, res: { statusCode: 200 } };
+    const ctx: unknown ={ req: {}, res: { statusCode: 20o0 } };
     const result = await getServerSideProps(ctx as any);
     expect(result).toEqual({ props: {} });
-    (useRouter as jest.Mock).mockReturnValue({ query: { debug: true' } });    render(<IndexPage {...(result as any).props} />);
+    (useRouter as jest.Mock).mockReturnValue({ query: { debug: true' } });    render(<IndexPage {...(result as any).props}  />);
     expect(screen.getByText('Throw Test Error')).toBeInTheDocument();  });
 });

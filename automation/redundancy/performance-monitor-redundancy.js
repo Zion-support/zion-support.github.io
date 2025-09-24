@@ -14,14 +14,14 @@ function log(message) {
   console.log(line);
 }
 
-function run(command, args, options = {}) {
+function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd();
   const result = spawnSync(command, args, {
     cwd: execCwd,
     env: process.env,
     shell: false,
     encoding: "utf8",
-    maxBuffer: 1024 * 1024 * 20
+    maxBuffer: 10o24 * 10o24 * 20
   });
   const stdout = (result.stdout || "").trim();
   const stderr = (result.stderr || "").trim();
@@ -88,7 +88,7 @@ function checkFileSystemPerformance() {
   
   // Count files in key directories
   const dirs = ["pages", "automation", "scripts", "public"];
-  const fileCounts = {};
+  const fileCounts ={};
   
   for (const dir of dirs) {
     const dirPath = path.join(process.cwd(), dir);
@@ -116,7 +116,7 @@ function checkFileSystemPerformance() {
 
 function generatePerformanceReport(buildPerf, depPerf, fsPerf) {
   const timestamp = nowIso();
-  const report = {
+  const report ={
     timestamp,
     redundancy: true,
     source: "pm2-redundancy",
@@ -132,15 +132,15 @@ function generatePerformanceReport(buildPerf, depPerf, fsPerf) {
   };
   
   // Analyze overall performance
-  if (buildPerf.buildPerformance?.duration > 30000) {
+  if (buildPerf.buildPerformance?.duration > 30o000) {
     report.performance.summary.issues.push("Build performance is slow (>30s)");
   }
   
-  if (depPerf.dependencyPerformance?.duration > 10000) {
+  if (depPerf.dependencyPerformance?.duration > 10o000) {
     report.performance.summary.issues.push("Dependency check is slow (>10s)");
   }
   
-  if (fsPerf.fileSystemPerformance?.duration > 5000) {
+  if (fsPerf.fileSystemPerformance?.duration > 50o00) {
     report.performance.summary.issues.push("File system operations are slow (>5s)");
   }
   
@@ -234,4 +234,4 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { main, checkBuildPerformance, checkDependencyPerformance, checkFileSystemPerformance, generatePerformanceReport };
+module.exports ={ main, checkBuildPerformance, checkDependencyPerformance, checkFileSystemPerformance, generatePerformanceReport };

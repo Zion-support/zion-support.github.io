@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
@@ -8,15 +7,15 @@ describe('PerformanceOptimizer', () => {
     render(<PerformanceOptimizer />);
     expect(screen.getByTestId('performanceoptimizer')).toBeInTheDocument();
   });
-  
+
   test('displays correct content', () => {
     render(<PerformanceOptimizer />);
   });
-  
+
   test('handles user interactions', () => {
     render(<PerformanceOptimizer />);
   });
-  
+
   test('applies correct styling', () => {
     render(<PerformanceOptimizer />);
   });

@@ -1,0 +1,12 @@
+<<<<<<< HEAD:components.disabled/SEOOptimizer.dynamic.jsx
+const SEOOptimizer = dynamic(() => import(\"./SEOOptimizer\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default SEOOptimizer\' ,
+=======
+=======
+const SEOOptimizer = dynamic(() => import("./SEOOptimizer"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEOOptimizer' ,'
+</p>'
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
+</p>'
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

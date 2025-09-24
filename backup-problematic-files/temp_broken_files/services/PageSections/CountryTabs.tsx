@@ -17,27 +17,11 @@ interface CountryTabsProps {;
   popularCountries:string[],;
   filteredCountries:CountryPricing[],;
   handleCountrySelect:(country:CountryPricing) => void,;
-<<<<<<< HEAD
-=======
   onQuote?:(country:CountryPricing) => void,;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   searchQuery:string,;
   setSearchQuery:(query:string) => void;
 }
 ;
-<<<<<<< HEAD
-export function CountryTabs({ ;
-  popularCountries,;
-  filteredCountries, ;
-  handleCountrySelect, ;
-  searchQuery, ;
-  setSearchQuery ;
-
-    <Tabs defaultValue="featured" className="w-full">;
-      <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">;
-        <TabsTrigger value="featured" className="data-[state=active]:bg-zion-purple">;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 export function CountryTabs({;
   popularCountries,;
   filteredCountries,;
@@ -70,13 +54,6 @@ export function CountryTabs({;
           All Countries;
         </TabsTrigger>;
       </TabsList>;
-<<<<<<< HEAD
-
-      <TabsContent value="featured" className="mt-0">;
-        <div className="mb-6">;
-          <h2 className="text-2xl font-bold text-white text-center">Featured Service Locations</h2>;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
       <TabsContent value="featured" className="mt-0">;
         <div className="mb-6">;
@@ -87,16 +64,6 @@ export function CountryTabs({;
             Browse our most popular service destinations;
           </p>;
         </div>;
-<<<<<<< HEAD
-
-                isPopular={true}
-              />;
-            ));
-          }
-        </div>;
-      </TabsContent>;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">;
           {filteredCountries;
@@ -107,7 +74,7 @@ export function CountryTabs({;
                 onSelect={handleCountrySelect}
                 onQuote={onQuote}
                 isPopular={true}
-              />;
+               />;
             ))}
         </div>;
       </TabsContent>;
@@ -115,12 +82,7 @@ export function CountryTabs({;
       <TabsContent value="all" className="mt-0">;
         <div className="mb-6 max-w-md mx-auto">;
           <div className="relative">;
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
-<<<<<<< HEAD
-
-            </Button>;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light"  />;
             <Input;
               type="text";
               placeholder="Search by country...";
@@ -138,7 +100,7 @@ export function CountryTabs({;
               onSelect={handleCountrySelect}
               onQuote={onQuote}
               isPopular={popularCountries.includes(country.country)}
-            />;
+             />;
           ))}
         </div>;
 ;
@@ -185,44 +147,35 @@ export function CountryTabs({;
       </TabsContent>;
     </Tabs>;
   ),;}
- <TabsTrigger value="featured" className="data-[state=active]:bg-zion-purple" > Featured Countries </TabsTrigger> <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple" > All Countries </TabsTrigger> </TabsList> <TabsContent value="featured" className="mt-0" > <div className="mb-6" > <h2 className="text-2xl font-bold text-white text-center" > Featured Service Locations </h2> <p className="text-zion-slate-light text-center mt-2" > Browse our most popular service destinations </p> </div> .filter ( (country) => popularCountries.includes (country.country) ) .map ( (country) => (<CountryServiceCard key= {;
+ <TabsTrigger value="featured" className="data-[state=active]:bg-zion-purple" > Featured Countries </TabsTrigger> <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple" > All Countries </TabsTrigger> </TabsList> <TabsContent value="featured" className="mt-0" > <div className="mb-6" > <h2 className="text-2xl font-bold text-white text-center" > Featured Service Locations </h2> <p className="text-zion-slate-light text-center mt-2" > Browse our most popular service destinations </p> </div> .filter ( (country) => popularCountries.includes (country.country) ) .map ( (country) => (<CountryServiceCard key={;
   country.country ;
-}country= {;
+}country={;
   country ;
-}onSelect= {;
+}onSelect={;
   handleCountrySelect ;
-}onQuote= {;
+}onQuote={;
   onQuote ;
-}isPopular= {;
-  true ;"}/>) ) ";"}</div> </TabsContent> <TabsContent value="all" className="mt-0" > <div className="mb-6 max-w-md mx-auto" > <div className="relative" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" /> <Input /> </div> </div> <CountryServiceCard key= {;
+}isPopular={;
+  true ;"} />) ) ";"}</div> </TabsContent> <TabsContent value="all" className="mt-0" > <div className="mb-6 max-w-md mx-auto" > <div className="relative" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light"  /> <Input  /> </div> </div> <CountryServiceCard key={;
   country.country ;
-}country= {;
+}country={;
   country ;
-}onSelect= {;
+}onSelect={;
   handleCountrySelect ;
-}onQuote= {;
+}onQuote={;
   onQuote ;
-}isPopular= {;
+}isPopular={;
   popularCountries.includes (country.country) ;
-}/>) ) ;
-}</div> <PaginationContent> <PaginationItem> <PaginationPrevious href= {;
+} />) ) ;
+}</div> <PaginationContent> <PaginationItem> <PaginationPrevious href={;
   `?page=$ {;
   currentPage - 1 ;
 }` ;
-}/> </PaginationItem> {;
+} /> </PaginationItem> {;
   Array.from ({;
   length: totalPages ;
-}, (, i) => i + 1) .map ( (page) => (<PaginationItem key= {;
+}, (, i) => i + 1) .map ( (page) => (<PaginationItem key={;
   page ;
-}> <PaginationButton /> </PaginationItem>) ) ;
-}<PaginationItem> <PaginationNext /> </PaginationItem> </PaginationContent> </Pagination> </div>) ;
-<<<<<<< HEAD
-:temp_broken_files/services/PageSections/CountryTabs.tsx
-}</TabsContent> </Tabs>) ;"}"
-}</TabsContent> </Tabs>) ;
-}"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/PageSections/CountryTabs.tsx
-=======
+}> <PaginationButton  /> </PaginationItem>) ) ;
+}<PaginationItem> <PaginationNext  /> </PaginationItem> </PaginationContent> </Pagination> </div>) ;
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

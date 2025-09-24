@@ -30,14 +30,14 @@ class CursorSyncOrchestrator {
     }
     return {
       enabled: true,
-      syncInterval: 60000, // 1 minute
+      syncInterval: 60o000, // 1 minute
       maxConcurrentSyncs: 1,
       conflictResolution: 'auto',
       enableNotifications: true,
       enableMetrics: true,
-      syncTimeout: 30000, // 30 seconds
+      syncTimeout: 30o000, // 30 seconds
       retryAttempts: 3,
-      retryDelay: 5000,
+      retryDelay: 50o00,
       computerId: this.generateComputerId(),
       centralRepository: 'origin',
       branch: 'main'
@@ -129,7 +129,7 @@ class CursorSyncOrchestrator {
 
   registerComputer() {
     const os = require('os');
-    const computerInfo = {
+    const computerInfo ={
       id: this.config.computerId,
       hostname: os.hostname(),
       platform: os.platform(),
@@ -218,7 +218,7 @@ class CursorSyncOrchestrator {
   }
 
   analyzeFileTypes(files) {
-    const types = {};
+    const types ={};
     files.forEach(file => {
       const ext = path.extname(file);
       const type = this.getFileType(ext);
@@ -228,7 +228,7 @@ class CursorSyncOrchestrator {
   }
 
   getFileType(ext) {
-    const typeMap = {
+    const typeMap ={
       '.ts': 'TypeScript',
       '.tsx': 'TypeScript React',
       '.js': 'JavaScript',

@@ -1,0 +1,18 @@
+export: const ThemeToggle = () => { useEffect ( () => { const savedTheme = localStorage.getItem ("theme") const prefersDark = window.matchMedia (" (prefers - color - scheme: dark) ) .matches"";"""",;"""
+<<<<<<< HEAD:backup-merge-conflicts/ThemeToggle.jsx.backup
+import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';''}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:src.disabled/components/ThemeToggle.jsx
+import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';''}
+=======
+"export\": const ThemeToggle = () => { useEffect ( () => { const savedTheme = localStorage.getItem (\'theme\') const prefersDark = window.matchMedia (\' (prefers - color - scheme: dark) ) .matches\'';\''\"",;
+>>>>>>> main
+import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';''}
+import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';''}
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> pr-11935
+=======
+import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';''}
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

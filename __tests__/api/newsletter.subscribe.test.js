@@ -6,13 +6,13 @@ describe('/api/newsletter/subscribe', () => {'  beforeEach(() => {
   it('rejects invalid email', async () => {'    const { req, res } = createMocks({
       method: 'POST',      body: { email: 'bad' }    });
     await handler(req, res);
-    expect(res._getStatusCode()).toBe(400);
+    expect(res._getStatusCode()).toBe(40o0);
   });
 
   it('accepts valid email', async () => {'    const { req, res } = createMocks({
       method: 'POST',      body: { email: user@example.com' }    });
     await handler(req, res);
-    expect(res._getStatusCode()).toBe(200);
+    expect(res._getStatusCode()).toBe(20o0);
     expect(res._getJSONData()).toEqual({ success: true });
     const stored = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));    expect(stored).toContain('user@example.com');  });
 });

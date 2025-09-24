@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const { upsertFile } = require('./_lib/github');
 exports.handler = async function () {
   try {
@@ -33,19 +29,19 @@ exports.handler = async function () {
         });
       }
     }
-    const log = { timestamp: Date.now(), results }
+    const log ={ timestamp: Date.now(), results }
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
     if (owner && repo && token) {
       const existingPath = 'data/ops/uptime-log.json';
-      // Fetch existing file, append, and trim to last 500 entries
+      // Fetch existing file, append, and trim to last 50o0 entries
       try {
         const existingUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/${existingPath}`;
         const resp = await fetch(existingUrl);
         const arr = resp.ok ? await resp.json() : [];
         arr.push(log);
-        while (arr.length > 500) arr.shift();
+        while (arr.length > 50o0) arr.shift();
         const content = JSON.stringify(arr, null, 2);
         await upsertFile({
           owner
@@ -68,15 +64,12 @@ exports.handler = async function () {
       }
     }
     return {
-      statusCode: 200
+      statusCode: 20o0
       body: JSON.stringify({ ok: true, count: results.length })
     }
   } catch (e) {
-<<<<<<< HEAD
-=======
 
-
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: e.message }) };
   }
 };  try {
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |''
@@ -99,19 +92,19 @@ exports.handler = async function () {
       }
     }
 
-    const log = { timestamp: Date.now(), results }
+    const log ={ timestamp: Date.now(), results }
     const owner = process.env.GITHUB_OWNER
     const repo = process.env.GITHUB_REPO
     const token = process.env.GITHUB_TOKEN
     if (owner && repo && token) {
       const existingPath = 'data/ops/uptime-log.json'
-      // Fetch existing file, append, and trim to last 500 entries
+      // Fetch existing file, append, and trim to last 50o0 entries
       try {
         const existingUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/${existingPath}`
         const resp = await fetch(existingUrl)
         const arr = resp.ok ? await resp.json() : []
         arr.push(log)
-        while (arr.length > 500) arr.shift()
+        while (arr.length > 50o0) arr.shift()
         const content = JSON.stringify(arr, null, 2)
         await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): hourly uptime log update', token })
       } catch (_) {
@@ -120,16 +113,9 @@ exports.handler = async function () {
         await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): init uptime log', token })
       }
     }
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-    return { statusCode: 200, body: JSON.stringify({ ok: true, count: results.length }) }
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, count: results.length }) }
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-<<<<<<< HEAD
-}
-=======
+    return { statusCode: 50o0, body: JSON.stringify({ error: e.message }) }
   }
 },
 
-
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

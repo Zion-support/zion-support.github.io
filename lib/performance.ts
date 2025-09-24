@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+// Note: Removed unused Metadata import to satisfy ESLint no-unused-vars
 
 export function optimizeImages() {
   return {
@@ -11,27 +11,30 @@ export function optimizeImages() {
   };
 }
 
-export function getPerformanceHeaders() {
-  return [
-    {
-      key: 'X-DNS-Prefetch-Control',
-      value: 'on'
+export function getPerformanceConfig() {
+  return {
+    experimental: {
+      optimizeCss: true,
+      optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
     },
-    {
-      key: 'X-Frame-Options',
-      value: 'DENY'
+    compiler: {
+      removeConsole: process.env.NODE_ENV === 'production',
     },
-    {
-      key: 'X-Content-Type-Options',
-      value: 'nosniff'
-    },
-    {
-      key: 'Referrer-Policy',
-      value: 'origin-when-cross-origin'
-    },
-    {
-      key: 'Permissions-Policy',
-      value: 'camera=(), microphone=(), geolocation=()'
+    poweredByHeader: false,
+    compress: true,
+  };
+}
+
+export function measurePerformance() {
+  if (typeof window === 'undefined') return;
+
+  const observer = new PerformanceObserver((list) => {
+    for (const entry of list.getEntries()) {
+      if (entry.entryType === 'navigation') {
+        console.log('Navigation timing:', entry);
+      }
     }
-  ];
+  });
+
+  observer.observe({ entryTypes: ['navigation'] });
 }

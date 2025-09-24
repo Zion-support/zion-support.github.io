@@ -1,12 +1,9 @@
 
-<<<<<<< HEAD
-=======
 import React from "react",;
 import { Heart } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 import { useToast } from "@/hooks/use-toast",;
 import { useRouter } from 'next/router',;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 interface TalentCardSaveButtonProps {;
   profileId:string,;
@@ -16,17 +13,6 @@ interface TalentCardSaveButtonProps {;
   isAuthenticated:boolean;
 }
 ;
-<<<<<<< HEAD
-export function TalentCardSaveButton({ ;
-  profileId, ;
-  profileName,;
-  isSaved, ;
-  onToggleSave,;
-  isAuthenticated ;
-} TalentCardSaveButtonProps) {;
-  const { toast } = useToast(),;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 export function TalentCardSaveButton({;
   profileId,;
   profileName,;
@@ -42,11 +28,7 @@ export function TalentCardSaveButton({;
   // Handle save toggle;
   const handleSaveToggle = (e:React.MouseEvent) => {;
     e.stopPropagation(),;
-<<<<<<< HEAD
-    ;
-=======
 ;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     if (!isAuthenticated) {;
       toast({;
         title:"Authentication required",;
@@ -66,10 +48,6 @@ export function TalentCardSaveButton({;
     toast({;
       title:localIsSaved ? "Removed from favorites" :"Added to favorites",;
       description:localIsSaved ;
-<<<<<<< HEAD
-  description:localIsSaved ;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         ? `${profileName} has been removed from your favorites` ;
         :`${profileName} has been added to your favorites`,;
       variant:"default";
@@ -85,16 +63,12 @@ export function TalentCardSaveButton({;
       <Heart ;
         className={cn(;
           "h-4 w-4 transition-colors", ;
-          localIsSaved ? "fill-red-500 text-red-500" :"text-zion-slate";
+          localIsSaved ? "fill-red-50o0 text-red-50o0" :"text-zion-slate";
         )} ;
-      />;
+       />;
     </button>;
   ),;}
-<<<<<<< HEAD
- interface TalentCardSaveButtonProps {
-=======
  interface TalentCardSaveButtonProps {;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   profileId: string;
 profileName: string;
 isSaved: boolean;
@@ -105,25 +79,6 @@ isAuthenticated: boolean ;
 profileName;
 isSaved;
 onToggleSave;
-<<<<<<< HEAD
-isAuthenticated 
-}: TalentCardSaveButtonProps) {
-  const {
-  toast 
-}= useToast ();
-const [localIsSaved, setLocalIsSaved] = React.useState (isSaved);
-//Handle save toggle const handleSaveToggle = (e: React.MouseEvent) => {
-  e.stopPropagation ();
-if (!isAuthenticated) {
-  toast ({
-  return;
-}variant: "default" 
-}) 
-};
-}/> </button>) 
-}
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 isAuthenticated ;
 }: TalentCardSaveButtonProps) {;
   const { ;
@@ -132,23 +87,9 @@ isAuthenticated ;
 const router = useRouter ();
 //Handle save toggle return;
 
-
 }variant: "default" ;
 }) ;
-<<<<<<< HEAD
-}) 
-};
-}/> </button>) ;"}"
-}variant: "default" ;
-}) 
-};
-}/> </button>) ;
-}"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/talent-card/TalentCardSaveButton.tsx
-=======
 };
 }/> </button>) ;
 }"
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

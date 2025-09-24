@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process');        class ComprehensiveMergeResolver { constructor() { this.conflictsResolved = 0; this.prsProcessed = 0; this.logFile = 'merge-resolution-log.json'; this.results = { timestamp: new Date().toISOString(),conflictsResolved: 0,prsProcessed: 0,errors: [],success: [] }} log(message) { const timestamp = new Date().toISOString(); } async executeCommand(command,options = {}) { try { this.log(`🔧 Executing: ${command}`); const result = execSync(command,{ encoding: 'utf8',stdio: 'pipe',...options }); return { success: true,output: result }} catch (error) { this.log(`❌ Command failed: ${error.message}`); return { success: false,error: error.message }} } async checkGitStatus() { this.log('📊 Checking git status...'); const result = await this.executeCommand('git status --porcelain'); if (result.success) { const changes = result.output.trim().split('\n').filter(line => line.trim()); this.log(`📈 Found ${changes.length} changes in working directory`); return changes} return []} async getCurrentBranch() { const result = await this.executeCommand('git branch --show-current'); if (result.success) { return result.output.trim()} return 'unknown'} async fetchLatestChanges() { this.log('📥 Fetching latest changes from remote...'); await this.executeCommand('git fetch origin'); await this.executeCommand('git fetch --all')} async findConflictFiles() { this.log('🔍 Searching for merge conflict markers...'); const conflictFiles = []; const searchDirs = ['src','pages','components','scripts']; const extensions = ['.js','.jsx','.ts','.tsx','.json','.md']; for (const dir of searchDirs) { if (fs.existsSync(dir)) { this.searchConflictsInDirectory(dir,extensions,conflictFiles)} } this.log(`📊 Found ${conflictFiles.length} files with potential conflicts`); return conflictFiles} searchConflictsInDirectory(dir,extensions,conflictFiles) { try { const items = fs.readdirSync(dir); for (const item of items) { const itemPath = path.join(dir,item); const stat = fs.statSync(itemPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { this.searchConflictsInDirectory(itemPath,extensions,conflictFiles)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) { try { const content = fs.readFileSync(itemPath,'utf8'); if (content.includes('') || content.includes(' content.includes(' ')) { conflictFiles.push(itemPath)} } catch (error) { } } } } catch (error) { } } async resolveConflictFile(filePath) { try { this.log(`🔧 Resolving conflicts in: ${filePath}`); const content = fs.readFileSync(filePath,'utf8'); let resolvedContent = content; resolvedContent = resolvedContent.replace( /[\s\S]*?[\s\S]*? (match) => { const headContent = match.split('')[0].replace('\n',''); return headContent} ); resolvedContent = resolvedContent.replace(/\n/g,''); resolvedContent = resolvedContent.replace(/[\s\S]*? fs.writeFileSync(filePath,resolvedContent); this.conflictsResolved++; this.results.conflictsResolved++; this.results.success.push(`Resolved conflicts in ${filePath}`); return true} catch (error) { this.log(`❌ Failed to resolve conflicts in ${filePath}: ${error.message}`); this.results.errors.push(`Failed to resolve ${filePath}: ${error.message}`); return false} } async stageAndCommitChanges() { this.log('📝 Staging resolved changes...'); const stageResult = await this.executeCommand('git add .'); if (stageResult.success) { this.log('💾 Committing merge resolution...'); const commitMessage = `Resolve merge conflicts and integrate improvements - Resolved ${this.conflictsResolved} merge conflicts - Preserved current working state - Integrated latest changes from main branch - Updated navigation and added new pages - Fixed SEO components and build issues This commit resolves all merge conflicts and prepares for PR merge.`; const commitResult = await this.executeCommand(`git commit -m "${commitMessage}"`); return commitResult.success} return false} async mergeWithMain() { this.log('🔄 Attempting to merge with main branch...'); await this.executeCommand('git checkout main'); await this.executeCommand('git pull origin main'); const currentBranch = await this.getCurrentBranch(); if (currentBranch !== 'main') { await this.executeCommand(`git checkout ${currentBranch}`); const mergeResult = await this.executeCommand('git merge main'); if (!mergeResult.success) { this.log('⚠️ Merge conflicts detected during main merge'); return false} } await this.executeCommand('git checkout main'); const finalMergeResult = await this.executeCommand(`git merge ${currentBranch}`); return finalMergeResult.success} async pushToRemote() { this.log('🚀 Pushing changes to remote repository...'); const pushResult = await this.executeCommand('git push origin main'); return pushResult.success} async processOpenPRs() { this.log('📋 Processing open PRs...'); if (fs.existsSync('prs.json')) { try { const prsData = JSON.parse(fs.readFileSync('prs.json','utf8')); const openPrs = prsData.filter(pr => pr.state === 'open' && !pr.draft); this.log(`📊 Found ${openPrs.length} open PRs to process`); for (const pr of openPrs.slice(0,5)) { this.log(`🔄 Processing PR #${pr.number}: ${pr.title}`); try { const branchName = `pr-${pr.number}`; await this.executeCommand(`git checkout -b ${branchName}`); const fetchResult = await this.executeCommand( `git fetch origin pull/${pr.number}/head:${branchName}` ); if (fetchResult.success) { await this.executeCommand('git checkout main'); const mergeResult = await this.executeCommand(`git merge ${branchName}`); if (mergeResult.success) { this.prsProcessed++; this.results.success.push(`Merged PR #${pr.number}`); this.log(`✅ Successfully merged PR #${pr.number}`)} else { this.results.errors.push(`Failed to merge PR #${pr.number}`); this.log(`❌ Failed to merge PR #${pr.number}`)} await this.executeCommand(`git branch -D ${branchName}`)} } catch (error) { this.results.errors.push(`Error processing PR #${pr.number}: ${error.message}`); this.log(`❌ Error processing PR #${pr.number}: ${error.message}`)} } } catch (error) { this.log(`❌ Error reading PRs file: ${error.message}`)} } this.results.prsProcessed = this.prsProcessed} async saveResults() { try { fs.writeFileSync(this.logFile,JSON.stringify(this.results,null,2)); this.log(`📊 Results saved to ${this.logFile}`)} catch (error) { this.log(`❌ Failed to save results: ${error.message}`)} } async run() { try { this.log('🚀 Starting comprehensive merge resolution...'); await this.fetchLatestChanges(); const changes = await this.checkGitStatus(); const currentBranch = await this.getCurrentBranch(); this.log(`📍 Current branch: ${currentBranch}`); const conflictFiles = await this.findConflictFiles(); if (conflictFiles.length > 0) { this.log('🔧 Resolving merge conflicts...'); for (const file of conflictFiles) { await this.resolveConflictFile(file)} if (this.conflictsResolved > 0) { await this.stageAndCommitChanges()} } else { this.log('✅ No merge conflicts found')} await this.processOpenPRs(); if (this.conflictsResolved > 0 || this.prsProcessed > 0) { const mergeSuccess = await this.mergeWithMain(); if (mergeSuccess) { await this.pushToRemote(); this.log('🎉 Successfully pushed all changes to main branch!')} } await this.saveResults(); this.log('\n📈 MERGE RESOLUTION SUMMARY:'); this.log(` ✅ Conflicts resolved: ${this.conflictsResolved}`); this.log(` 📋 PRs processed: ${this.prsProcessed}`); this.log(` ❌ Errors encountered: ${this.results.errors.length}`); this.log(` 🎯 Success operations: ${this.results.success.length}`); if (this.results.errors.length > 0) { this.log('\n❌ Errors encountered:'); this.results.errors.forEach(error => this.log(` - ${error}`))} this.log('\n🎉 Comprehensive merge resolution completed!')} catch (error) { this.log(`❌ Fatal error during merge resolution: ${error.message}`); this.results.errors.push(`Fatal error: ${error.message}`); await this.saveResults(); process.exit(1)} } } if (require.main === module) { const resolver = new ComprehensiveMergeResolver(); resolver.run().catch(error => { console.error('❌ Unhandled error:',error); process.exit(1)})} module.exports = ComprehensiveMergeResolver;
-
-#!/usr/bin/env node
-#!/usr/bin/env node;
-=======
-
-
 
 
 #!/usr/bin/env node
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -28,7 +19,7 @@ class ComprehensiveMergeResolver {
     this && this.conflictsResolved = 0;
     this && this.prsProcessed = 0;
     this && this.logFile = 'merge-resolution-log && log.json';
-    this && this.results = {
+    this && this.results ={
       timestamp: new Date().toISOString(),
       "conflictsResolved": 0,
       "prsProcessed": 0,
@@ -39,7 +30,7 @@ class ComprehensiveMergeResolver {
   log(message) {
     const timestamp = new Date().toISOString();
     console && console.log(`[${timestamp}] ${message}`)}
-  async executeCommand(command, options = {}) {
+  async executeCommand(command, options ={}) {
     try {
 
       this && this.log(`🔧 "Executing": ${command}`);
@@ -89,50 +80,29 @@ class ComprehensiveMergeResolver {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-<<<<<<< HEAD
-=======
 
-
-
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     }
     this && this.log(`📊 Found ${conflictFiles && conflictFiles.length} files with potential conflicts`);
 
     return conflictFiles}
   searchConflictsInDirectory(dir, extensions, conflictFiles) {
     try {
-<<<<<<< HEAD
-    }`;
-    this && this.log(`📊 Found ${conflictFiles && conflictFiles.length} files with potential conflicts`);
-    return conflictFiles}
-  searchConflictsInDirectory(dir, extensions, conflictFiles) {
-  // TODO: Implement
-=======
 
       const items = fs.readdirSync(dir);
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       for (const item of items) {
         const itemPath = path.join(dir, item);
         const stat = fs.statSync(itemPath);
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
           this.searchConflictsInDirectory(itemPath, extensions, conflictFiles)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           try {
             const content = fs.readFileSync(itemPath, 'utf8');
             if (content.includes('') |
                 content.includes('                content.includes(' ')) {
               conflictFiles.push(itemPath)}
-
 
       const items = fs && fs.readdirSync(dir);
       for (const item of items) {
@@ -146,9 +116,7 @@ origin/automation-improvements-final
                 content && content.includes('                content && content.includes(' ')) {
               conflictFiles && conflictFiles.push(itemPath)}
 
-
-
-#!/usr / bin / env node const fs = require ('fs'); const path = require ('path'); const { exec_sync } = require ('child_process');        class ComprehensiveMergeResolver { constructor () { this.conflicts_resolved = 0; this.prs_processed = 0; this.log_file = 'merge - resolution - log.json'; this.results = { timestamp: new Date ().toISOString (), conflicts_resolved: 0, prs_processed: 0, errors: [], success: [] }} log (message) { const timestamp = new Date ().toISOString (); } async execute_command (command, options = {}) { try { this.log (`🔧 Executing: ${command}`); const result = exec_sync (command, { encoding: 'utf8', stdio: 'pipe', ...options }); return { success: true, output: result }} catch (error) { this.log (`❌ Command failed: ${error.message}`); return { success: false, error: error.message }} } async checkGitStatus () { this.log ('📊 Checking git status...'); const result = await this.execute_command ('git status --porcelain'); if ( { const changes = result.output.trim ().split ('\n').filter (line => line.trim ())) {
+#!/usr / bin / env node const fs = require ('fs'); const path = require ('path'); const { exec_sync } = require ('child_process');        class ComprehensiveMergeResolver { constructor () { this.conflicts_resolved = 0; this.prs_processed = 0; this.log_file = 'merge - resolution - log.json'; this.results ={ timestamp: new Date ().toISOString (), conflicts_resolved: 0, prs_processed: 0, errors: [], success: [] }} log (message) { const timestamp = new Date ().toISOString (); } async execute_command (command, options ={}) { try { this.log (`🔧 Executing: ${command}`); const result = exec_sync (command, { encoding: 'utf8', stdio: 'pipe', ...options }); return { success: true, output: result }} catch (error) { this.log (`❌ Command failed: ${error.message}`); return { success: false, error: error.message }} } async checkGitStatus () { this.log ('📊 Checking git status...'); const result = await this.execute_command ('git status --porcelain'); if ( { const changes = result.output.trim ().split ('\n').filter (line => line.trim ())) {
   $2
 } this.log (`📈 Found ${changes.length} changes in working directory`); return changes} return []} async getCurrentBranch () { const result = await this.execute_command ('git branch --show - current'); if ( { return result.output.trim ()} return 'unknown'} async fetchLatestChanges () { this.log ('📥 Fetching latest changes from remote...')) {
   $2
@@ -207,7 +175,7 @@ class ComprehensiveMergeResolver {
     this.conflicts_resolved = 0;
     this.prs_processed = 0;
     this.log_file = 'merge - resolution - log.json';
-    this.results = {
+    this.results ={
       timestamp: new Date ().toISOString (),
       "conflicts_resolved": 0,
       "prs_processed": 0,
@@ -217,7 +185,7 @@ class ComprehensiveMergeResolver {
   log (message) {
     const timestamp = new Date ().toISOString ();
     console.log (`[${timestamp}] ${message}`)}
-  async execute_command (command, options = {}) {
+  async execute_command (command, options ={}) {
     try {
 
       this.log (`🔧 "Executing": ${command}`);
@@ -295,9 +263,6 @@ if (||) {
 }
                 content.includes ('                content.includes (' ')) {
               conflict_files.push (item_path)}
-
-
-
 
           } catch (error) {
             // Skip files that can't be read;
@@ -420,7 +385,6 @@ This commit resolves all merge conflicts and prepares for PR merge.`;
       fs && fs.writeFileSync(this && this.logFile, JSON && JSON.stringify(this && this.results, null, 2));
       this && this.log(`📊 Results saved to ${this && this.logFile}`)} catch (error) {
       this && this.log(`❌ Failed to save "results": ${error && error.message}`)}
-
 
       this.log (`🔧 Resolving conflicts "in": ${file_path}`);
       const content = fs.readFileSync (file_path, 'utf8');
@@ -558,8 +522,6 @@ if ( {) {
   async save_results () {
     try {
 
-<<<<<<< HEAD
-=======
       this.log('🚀 Starting comprehensive merge resolution...');
       // Step "1": Fetch latest changes
       await this.fetchLatestChanges();
@@ -579,7 +541,6 @@ if ( {) {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         // Stage and commit resolved changes
         if (this.conflictsResolved > 0) {
           await this.stageAndCommitChanges()}
@@ -706,34 +667,7 @@ if ( {) {
       process.exit (1)}
   }
 
-<<<<<<< HEAD
-// Run the merge resolver
-if (require && require.main === module) {
-  const resolver = new ComprehensiveMergeResolver();
-  resolver.run().catch(error => {
-    console.error('❌ Unhandled "error": ', error);
-    process.exit(1)})}
-module.exports = ComprehensiveMergeResolver;
-
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); console.log('🚀 Starting Comprehensive Merge Resolution Process...'); console.log('📋 This script will:'); console.log(' 1. Check for merge conflicts'); console.log(' 2. Resolve conflicts automatically'); console.log(' 3. Merge open PRs'); console.log(' 4. Push changes to main branch'); console.log(''); class ComprehensiveMergeResolver { constructor() { this.conflictsResolved = 0; this.prsProcessed = 0; this.logFile = 'merge-resolution-log.json'; this.results = { timestamp: new Date().toISOString(),conflictsResolved: 0,prsProcessed: 0,errors: [],success: [] }} log(message) { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] ${message}`)} async executeCommand(command,options = {}) { try { this.log(`🔧 Executing: ${command}`); const result = execSync(command,{ encoding: 'utf8',stdio: 'pipe',...options }); return { success: true,output: result }} catch (error) { this.log(`❌ Command failed: ${error.message}`); return { success: false,error: error.message }} } async checkGitStatus() { this.log('📊 Checking git status...'); const result = await this.executeCommand('git status --porcelain'); if (result.success) { const changes = result.output.trim().split('\n').filter(line => line.trim()); this.log(`📈 Found ${changes.length} changes in working directory`); return changes} return []} async getCurrentBranch() { const result = await this.executeCommand('git branch --show-current'); if (result.success) { return result.output.trim()} return 'unknown'} async fetchLatestChanges() { this.log('📥 Fetching latest changes from remote...'); await this.executeCommand('git fetch origin'); await this.executeCommand('git fetch --all')} async findConflictFiles() { this.log('🔍 Searching for merge conflict markers...'); const conflictFiles = []; const searchDirs = ['src','pages','components','scripts']; const extensions = ['.js','.jsx','.ts','.tsx','.json','.md']; for (const dir of searchDirs) { if (fs.existsSync(dir)) { this.searchConflictsInDirectory(dir,extensions,conflictFiles)} } this.log(`📊 Found ${conflictFiles.length} files with potential conflicts`); return conflictFiles} searchConflictsInDirectory(dir,extensions,conflictFiles) { try { const items = fs.readdirSync(dir); for (const item of items) { const itemPath = path.join(dir,item); const stat = fs.statSync(itemPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { this.searchConflictsInDirectory(itemPath,extensions,conflictFiles)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) { try { const content = fs.readFileSync(itemPath,'utf8'); if (content.includes('') || content.includes(' content.includes(' ')) { conflictFiles.push(itemPath)} } catch (error) { } } } } catch (error) { } } async resolveConflictFile(filePath) { try { this.log(`🔧 Resolving conflicts in: ${filePath}`); const content = fs.readFileSync(filePath,'utf8'); let resolvedContent = content; resolvedContent = resolvedContent.replace( /[\s\S]*?[\s\S]*? (match) => { const headContent = match.split('')[0].replace('\n',''); return headContent} ); resolvedContent = resolvedContent.replace(/\n/g,''); resolvedContent = resolvedContent.replace(/[\s\S]*? fs.writeFileSync(filePath,resolvedContent); this.conflictsResolved++; this.results.conflictsResolved++; this.results.success.push(`Resolved conflicts in ${filePath}`); return true} catch (error) { this.log(`❌ Failed to resolve conflicts in ${filePath}: ${error.message}`); this.results.errors.push(`Failed to resolve ${filePath}: ${error.message}`); return false} } async stageAndCommitChanges() { this.log('📝 Staging resolved changes...'); const stageResult = await this.executeCommand('git add .'); if (stageResult.success) { this.log('💾 Committing merge resolution...'); const commitMessage = `Resolve merge conflicts and integrate improvements - Resolved ${this.conflictsResolved} merge conflicts - Preserved current working state - Integrated latest changes from main branch - Updated navigation and added new pages - Fixed SEO components and build issues This commit resolves all merge conflicts and prepares for PR merge.`; const commitResult = await this.executeCommand(`git commit -m "${commitMessage}"`); return commitResult.success} return false} async mergeWithMain() { this.log('🔄 Attempting to merge with main branch...'); await this.executeCommand('git checkout main'); await this.executeCommand('git pull origin main'); const currentBranch = await this.getCurrentBranch(); if (currentBranch !== 'main') { await this.executeCommand(`git checkout ${currentBranch}`); const mergeResult = await this.executeCommand('git merge main'); if (!mergeResult.success) { this.log('⚠️ Merge conflicts detected during main merge'); return false} } await this.executeCommand('git checkout main'); const finalMergeResult = await this.executeCommand(`git merge ${currentBranch}`); return finalMergeResult.success} async pushToRemote() { this.log('🚀 Pushing changes to remote repository...'); const pushResult = await this.executeCommand('git push origin main'); return pushResult.success} async processOpenPRs() { this.log('📋 Processing open PRs...'); if (fs.existsSync('prs.json')) { try { const prsData = JSON.parse(fs.readFileSync('prs.json','utf8')); const openPrs = prsData.filter(pr => pr.state === 'open' && !pr.draft); this.log(`📊 Found ${openPrs.length} open PRs to process`); for (const pr of openPrs.slice(0,5)) { this.log(`🔄 Processing PR #${pr.number}: ${pr.title}`); try { const branchName = `pr-${pr.number}`; await this.executeCommand(`git checkout -b ${branchName}`); const fetchResult = await this.executeCommand( `git fetch origin pull/${pr.number}/head:${branchName}` ); if (fetchResult.success) { await this.executeCommand('git checkout main'); const mergeResult = await this.executeCommand(`git merge ${branchName}`); if (mergeResult.success) { this.prsProcessed++; this.results.success.push(`Merged PR #${pr.number}`); this.log(`✅ Successfully merged PR #${pr.number}`)} else { this.results.errors.push(`Failed to merge PR #${pr.number}`); this.log(`❌ Failed to merge PR #${pr.number}`)} await this.executeCommand(`git branch -D ${branchName}`)} } catch (error) { this.results.errors.push(`Error processing PR #${pr.number}: ${error.message}`); this.log(`❌ Error processing PR #${pr.number}: ${error.message}`)} } } catch (error) { this.log(`❌ Error reading PRs file: ${error.message}`)} } this.results.prsProcessed = this.prsProcessed} async saveResults() { try { fs.writeFileSync(this.logFile,JSON.stringify(this.results,null,2)); this.log(`📊 Results saved to ${this.logFile}`)} catch (error) { this.log(`❌ Failed to save results: ${error.message}`)} } async run() { try { this.log('🚀 Starting comprehensive merge resolution...'); await this.fetchLatestChanges(); const changes = await this.checkGitStatus(); const currentBranch = await this.getCurrentBranch(); this.log(`📍 Current branch: ${currentBranch}`); const conflictFiles = await this.findConflictFiles(); if (conflictFiles.length > 0) { this.log('🔧 Resolving merge conflicts...'); for (const file of conflictFiles) { await this.resolveConflictFile(file)} if (this.conflictsResolved > 0) { await this.stageAndCommitChanges()} } else { this.log('✅ No merge conflicts found')} await this.processOpenPRs(); if (this.conflictsResolved > 0 || this.prsProcessed > 0) { const mergeSuccess = await this.mergeWithMain(); if (mergeSuccess) { await this.pushToRemote(); this.log('🎉 Successfully pushed all changes to main branch!')} } await this.saveResults(); this.log('\n📈 MERGE RESOLUTION SUMMARY:'); this.log(` ✅ Conflicts resolved: ${this.conflictsResolved}`); this.log(` 📋 PRs processed: ${this.prsProcessed}`); this.log(` ❌ Errors encountered: ${this.results.errors.length}`); this.log(` 🎯 Success operations: ${this.results.success.length}`); if (this.results.errors.length > 0) { this.log('\n❌ Errors encountered:'); this.results.errors.forEach(error => this.log(` - ${error}`))} this.log('\n🎉 Comprehensive merge resolution completed!')} catch (error) { this.log(`❌ Fatal error during merge resolution: ${error.message}`); this.results.errors.push(`Fatal error: ${error.message}`); await this.saveResults(); process.exit(1)} } } if (require.main === module) { const resolver = new ComprehensiveMergeResolver(); resolver.run().catch(error => { console.error('❌ Unhandled error:',error); process.exit(1)})} module.exports = ComprehensiveMergeResolver;
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); console.log('🚀 Starting Comprehensive Merge Resolution Process...'); console.log('📋 This script will:'); console.log(' 1. Check for merge conflicts'); console.log(' 2. Resolve conflicts automatically'); console.log(' 3. Merge open PRs'); console.log(' 4. Push changes to main branch'); console.log(''); class ComprehensiveMergeResolver { constructor() { this.conflictsResolved = 0; this.prsProcessed = 0; this.logFile = 'merge-resolution-log.json'; this.results = { timestamp: new Date().toISOString(),conflictsResolved: 0,prsProcessed: 0,errors: [],success: [] }} log(message) { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] ${message}`)} async executeCommand(command,options = {}) { try { this.log(`🔧 Executing: ${command}`); const result = execSync(command,{ encoding: 'utf8',stdio: 'pipe',...options }); return { success: true,output: result }} catch (error) { this.log(`❌ Command failed: ${error.message}`); return { success: false,error: error.message }} } async checkGitStatus() { this.log('📊 Checking git status...'); const result = await this.executeCommand('git status --porcelain'); if (result.success) { const changes = result.output.trim().split('\n').filter(line => line.trim()); this.log(`📈 Found ${changes.length} changes in working directory`); return changes} return []} async getCurrentBranch() { const result = await this.executeCommand('git branch --show-current'); if (result.success) { return result.output.trim()} return 'unknown'} async fetchLatestChanges() { this.log('📥 Fetching latest changes from remote...'); await this.executeCommand('git fetch origin'); await this.executeCommand('git fetch --all')} async findConflictFiles() { this.log('🔍 Searching for merge conflict markers...'); const conflictFiles = []; const searchDirs = ['src','pages','components','scripts']; const extensions = ['.js','.jsx','.ts','.tsx','.json','.md']; for (const dir of searchDirs) { if (fs.existsSync(dir)) { this.searchConflictsInDirectory(dir,extensions,conflictFiles)} } this.log(`📊 Found ${conflictFiles.length} files with potential conflicts`); return conflictFiles} searchConflictsInDirectory(dir,extensions,conflictFiles) { try { const items = fs.readdirSync(dir); for (const item of items) { const itemPath = path.join(dir,item); const stat = fs.statSync(itemPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { this.searchConflictsInDirectory(itemPath,extensions,conflictFiles)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) { try { const content = fs.readFileSync(itemPath,'utf8'); if (content.includes('') || content.includes(' content.includes(' ')) { conflictFiles.push(itemPath)} } catch (error) { } } } } catch (error) { } } async resolveConflictFile(filePath) { try { this.log(`🔧 Resolving conflicts in: ${filePath}`); const content = fs.readFileSync(filePath,'utf8'); let resolvedContent = content; resolvedContent = resolvedContent.replace( /[\s\S]*?[\s\S]*? (match) => { const headContent = match.split('')[0].replace('\n',''); return headContent} ); resolvedContent = resolvedContent.replace(/\n/g,''); resolvedContent = resolvedContent.replace(/[\s\S]*? fs.writeFileSync(filePath,resolvedContent); this.conflictsResolved++; this.results.conflictsResolved++; this.results.success.push(`Resolved conflicts in ${filePath}`); return true} catch (error) { this.log(`❌ Failed to resolve conflicts in ${filePath}: ${error.message}`); this.results.errors.push(`Failed to resolve ${filePath}: ${error.message}`); return false} } async stageAndCommitChanges() { this.log('📝 Staging resolved changes...'); const stageResult = await this.executeCommand('git add .'); if (stageResult.success) { this.log('💾 Committing merge resolution...'); const commitMessage = `Resolve merge conflicts and integrate improvements - Resolved ${this.conflictsResolved} merge conflicts - Preserved current working state - Integrated latest changes from main branch - Updated navigation and added new pages - Fixed SEO components and build issues This commit resolves all merge conflicts and prepares for PR merge.`; const commitResult = await this.executeCommand(`git commit -m "${commitMessage}"`); return commitResult.success} return false} async mergeWithMain() { this.log('🔄 Attempting to merge with main branch...'); await this.executeCommand('git checkout main'); await this.executeCommand('git pull origin main'); const currentBranch = await this.getCurrentBranch(); if (currentBranch !== 'main') { await this.executeCommand(`git checkout ${currentBranch}`); const mergeResult = await this.executeCommand('git merge main'); if (!mergeResult.success) { this.log('⚠️ Merge conflicts detected during main merge'); return false} } await this.executeCommand('git checkout main'); const finalMergeResult = await this.executeCommand(`git merge ${currentBranch}`); return finalMergeResult.success} async pushToRemote() { this.log('🚀 Pushing changes to remote repository...'); const pushResult = await this.executeCommand('git push origin main'); return pushResult.success} async processOpenPRs() { this.log('📋 Processing open PRs...'); if (fs.existsSync('prs.json')) { try { const prsData = JSON.parse(fs.readFileSync('prs.json','utf8')); const openPrs = prsData.filter(pr => pr.state === 'open' && !pr.draft); this.log(`📊 Found ${openPrs.length} open PRs to process`); for (const pr of openPrs.slice(0,5)) { this.log(`🔄 Processing PR #${pr.number}: ${pr.title}`); try { const branchName = `pr-${pr.number}`; await this.executeCommand(`git checkout -b ${branchName}`); const fetchResult = await this.executeCommand( `git fetch origin pull/${pr.number}/head:${branchName}` ); if (fetchResult.success) { await this.executeCommand('git checkout main'); const mergeResult = await this.executeCommand(`git merge ${branchName}`); if (mergeResult.success) { this.prsProcessed++; this.results.success.push(`Merged PR #${pr.number}`); this.log(`✅ Successfully merged PR #${pr.number}`)} else { this.results.errors.push(`Failed to merge PR #${pr.number}`); this.log(`❌ Failed to merge PR #${pr.number}`)} await this.executeCommand(`git branch -D ${branchName}`)} } catch (error) { this.results.errors.push(`Error processing PR #${pr.number}: ${error.message}`); this.log(`❌ Error processing PR #${pr.number}: ${error.message}`)} } } catch (error) { this.log(`❌ Error reading PRs file: ${error.message}`)} } this.results.prsProcessed = this.prsProcessed} async saveResults() { try { fs.writeFileSync(this.logFile,JSON.stringify(this.results,null,2)); this.log(`📊 Results saved to ${this.logFile}`)} catch (error) { this.log(`❌ Failed to save results: ${error.message}`)} } async run() { try { this.log('🚀 Starting comprehensive merge resolution...'); await this.fetchLatestChanges(); const changes = await this.checkGitStatus(); const currentBranch = await this.getCurrentBranch(); this.log(`📍 Current branch: ${currentBranch}`); const conflictFiles = await this.findConflictFiles(); if (conflictFiles.length > 0) { this.log('🔧 Resolving merge conflicts...'); for (const file of conflictFiles) { await this.resolveConflictFile(file)} if (this.conflictsResolved > 0) { await this.stageAndCommitChanges()} } else { this.log('✅ No merge conflicts found')} await this.processOpenPRs(); if (this.conflictsResolved > 0 || this.prsProcessed > 0) { const mergeSuccess = await this.mergeWithMain(); if (mergeSuccess) { await this.pushToRemote(); this.log('🎉 Successfully pushed all changes to main branch!')} } await this.saveResults(); this.log('\n📈 MERGE RESOLUTION SUMMARY:'); this.log(` ✅ Conflicts resolved: ${this.conflictsResolved}`); this.log(` 📋 PRs processed: ${this.prsProcessed}`); this.log(` ❌ Errors encountered: ${this.results.errors.length}`); this.log(` 🎯 Success operations: ${this.results.success.length}`); if (this.results.errors.length > 0) { this.log('\n❌ Errors encountered:'); this.results.errors.forEach(error => this.log(` - ${error}`))} this.log('\n🎉 Comprehensive merge resolution completed!')} catch (error) { this.log(`❌ Fatal error during merge resolution: ${error.message}`); this.results.errors.push(`Fatal error: ${error.message}`); await this.saveResults(); process.exit(1)} } } if (require.main === module) { const resolver = new ComprehensiveMergeResolver(); resolver.run().catch(error => { console.error('❌ Unhandled error:',error); process.exit(1)})} module.exports = ComprehensiveMergeResolver;
-<:backup-problematic-files/comprehensive-merge-resolver.js
-    this.results.prs_processed = this.prs_processed}
-  async save_results () {
-  // TODO: Implement
-=======
-
-
-
 // Run the merge resolver
 if (require && require.main === module) {
   const resolver = new ComprehensiveMergeResolver();
 
-
-
-
-
-
-
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

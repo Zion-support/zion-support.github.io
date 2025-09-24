@@ -1,22 +1,14 @@
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 interface UseIntersectionObserverProps {
   threshold?: number;
   root?: Element | null;
   rootMargin?: string;
 
-
   }, [node, threshold, root, rootMargin, frozen]);
   const prevNode = useRef<Element | null>(null);
   useEffect(() => {
     if (prevNode.current) {
-<<<<<<< HEAD
-=======
-
 
   return [setNode, entry] as const;
 }
@@ -32,8 +24,7 @@ export function useIntersectionObserver({;
   root = null,;
   rootMargin = '0%',;
   freezeOnceVisible = false;
-}: UseIntersectionObserverProps = {}) {;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
+}: UseIntersectionObserverProps ={}) {;
   const [entry, setEntry] = useState<IntersectionObserverEntry>(),;
   const [node, setNode] = useState<Element | null>(null),;
   const observer = useRef<IntersectionObserver | null>(null),;
@@ -44,7 +35,7 @@ export function useIntersectionObserver({;
   useEffect(() => {;
     const hasIOSupport = !!window.IntersectionObserver,;
     if (!hasIOSupport || frozen || !node) return,;
-    const observerParams = { threshold, root, rootMargin },;
+    const observerParams ={ threshold, root, rootMargin },;
     const currentObserver = new IntersectionObserver(updateEntry, observerParams),;
     observer.current = currentObserver,;
     currentObserver.observe(node),;
@@ -73,9 +64,4 @@ export function useIntersectionObserver({;
   }, [node]);
   return [setNode, entry] as const
 }
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

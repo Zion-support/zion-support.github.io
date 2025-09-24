@@ -1,0 +1,8 @@
+export default function NotFound(){
+  return <div style={{padding:20}}>Not Found</div>
+}
+  return <div className="min-h-screen flex items-center justify-center">Page not found.</div>;
+}
+=======
+export default function NotFoundPage() { return null }
+>>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

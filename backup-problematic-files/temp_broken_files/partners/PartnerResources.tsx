@@ -19,7 +19,7 @@ export function PartnerResources() {;
       title:'Zion AI Logo Pack',;
       description:'Official logos in various formats (PNG, SVG, JPG)',;
       type:'image',;
-      icon:<FileImage className="h-10 w-10 text-zion-purple" />,;
+      icon:<FileImage className="h-10 w-10 text-zion-purple"  />,;
       url:'#';
     },;
     {;
@@ -27,7 +27,7 @@ export function PartnerResources() {;
       title:'Brand Guidelines',;
       description:'How to properly use our brand assets in your content',;
       type:'document',;
-      icon:<FileText className="h-10 w-10 text-zion-cyan" />,;
+      icon:<FileText className="h-10 w-10 text-zion-cyan"  />,;
       url:'#';
     },;
     {;
@@ -35,7 +35,7 @@ export function PartnerResources() {;
       title:'Social Media Banners',;
       description:'Pre-designed graphics for your social channels',;
       type:'image',;
-      icon:<FileImage className="h-10 w-10 text-zion-purple" />,;
+      icon:<FileImage className="h-10 w-10 text-zion-purple"  />,;
       url:'#';
     },;
     {;
@@ -43,7 +43,7 @@ export function PartnerResources() {;
       title:'Promotional Video',;
       description:'Short explainer video about Zion AI Marketplace',;
       type:'video',;
-      icon:<FileVideo className="h-10 w-10 text-red-500" />,;
+      icon:<FileVideo className="h-10 w-10 text-red-50o0"  />,;
       url:'#';
     },;
     {;
@@ -51,7 +51,7 @@ export function PartnerResources() {;
       title:'Email Templates',;
       description:'Ready-to-use email templates for your audience',;
       type:'document',;
-      icon:<FileText className="h-10 w-10 text-zion-cyan" />,;
+      icon:<FileText className="h-10 w-10 text-zion-cyan"  />,;
       url:'#';
     },;
     {;
@@ -59,7 +59,7 @@ export function PartnerResources() {;
       title:'Talking Points',;
       description:'Key messages and benefits to highlight',;
       type:'document',;
-      icon:<FileText className="h-10 w-10 text-zion-cyan" />,;
+      icon:<FileText className="h-10 w-10 text-zion-cyan"  />,;
       url:'#';
     }
   ],;
@@ -76,11 +76,7 @@ export function PartnerResources() {;
     <div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
-<<<<<<< HEAD
-<CardTitle>Marketing Resources</CardTitle>;
-=======
           <CardTitle>Marketing Resources</CardTitle>;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           <CardDescription>;
             Download brand assets and marketing materials to promote Zion AI;
           </CardDescription>;
@@ -101,11 +97,8 @@ export function PartnerResources() {;
                     variant="outline";
                     className="w-full flex items-center gap-2";
                   >;
-                    <Download className="h-4 w-4" />;
-<<<<<<< HEAD
-=======
+                    <Download className="h-4 w-4"  />;
                     {resource.type === 'link' ? 'Visit Link' :'Download'}
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                   </Button>;
                 </CardContent>;
               </Card>;
@@ -163,21 +156,12 @@ export function PartnerResources() {;
           </Button>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-
-}
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     </div>;
   );}
  interface ResourceItem {;
   id: string;
 title: string;
 description: string;
-<<<<<<< HEAD
-  description: string;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 type: 'image' | 'video' | 'document' | 'link';
 icon: JSX.Element;
 url: string ;
@@ -187,11 +171,3 @@ url: string ;
   ;
 };
 
-<<<<<<< HEAD
-}</div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle>Promotion Guidelines</CardTitle> <CardDescription> Best practices for promoting the Zion AI Marketplace </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <h3 className="text-lg font-semibold text-white" >Do's</h3> <ul className="list-disc pl-5 space-y-1 text-zion-slate-light" > <li>Use our official brand assets from the resources provided</li> <li>Share your unique referral link in your content</li> <li>Highlight the benefits of the Zion AI Marketplace for both talent and clients</li> <li>Be transparent that you're a partner and may earn from referrals</li> <li>Focus on how the platform can help your audience solve their AI talent needs</li> </ul> </div> <div className="space-y-2" > <h3 className="text-lg font-semibold text-white" >Don'ts</h3> <ul className="list-disc pl-5 space-y-1 text-zion-slate-light" > <li>Make unrealistic promises about earnings or results</li> <li>Use manipulative or misleading marketing tactics</li> <li>Spam your referral link across unrelated content</li> <li>Modify or alter our brand assets in unauthorized ways</li> <li>Create fake accounts or use bots to generate referrals</li> </ul> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle>Partner Support</CardTitle> <CardDescription> Need help with your affiliate marketing? Contact our partner support team. </CardDescription> </CardHeader> <CardContent className="flex flex-col items-center text-center py-6" > <p className="text-zion-slate-light mb-4" > Our partner success team is available to help you maximize your partnership with Zion AI Marketplace. Feel free to reach out if you have questions about promotions, resources, or payment. </p> Contact Partner Support </Button> </CardContent> </Card> </div>) ;"}'"
-}</div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle>Promotion Guidelines</CardTitle> <CardDescription> Best practices for promoting the Zion AI Marketplace </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <h3 className="text-lg font-semibold text-white" >Do's</h3> <ul className="list-disc pl-5 space-y-1 text-zion-slate-light" > <li>Use our official brand assets from the resources provided</li> <li>Share your unique referral link in your content</li> <li>Highlight the benefits of the Zion AI Marketplace for both talent and clients</li> <li>Be transparent that you're a partner and may earn from referrals</li> <li>Focus on how the platform can help your audience solve their AI talent needs</li> </ul> </div> <div className="space-y-2" > <h3 className="text-lg font-semibold text-white" >Don'ts</h3> <ul className="list-disc pl-5 space-y-1 text-zion-slate-light" > <li>Make unrealistic promises about earnings or results</li> <li>Use manipulative or misleading marketing tactics</li> <li>Spam your referral link across unrelated content</li> <li>Modify or alter our brand assets in unauthorized ways</li> <li>Create fake accounts or use bots to generate referrals</li> </ul> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle>Partner Support</CardTitle> <CardDescription> Need help with your affiliate marketing? Contact our partner support team. </CardDescription> </CardHeader> <CardContent className="flex flex-col items-center text-center py-6" > <p className="text-zion-slate-light mb-4" > Our partner success team is available to help you maximize your partnership with Zion AI Marketplace. Feel free to reach out if you have questions about promotions, resources, or payment. </p> Contact Partner Support </Button> </CardContent> </Card> </div>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/partners/PartnerResources.tsx
-=======
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

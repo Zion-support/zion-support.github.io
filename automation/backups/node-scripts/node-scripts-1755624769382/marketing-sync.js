@@ -23,7 +23,7 @@ async function postLinkedInUpdate() {
     return { ok: false, skipped: true, platform: "linkedin" };
   }
 
-  const body = {
+  const body ={
     author: authorUrn,
     lifecycleState: "PUBLISHED",
     specificContent: {
@@ -152,5 +152,4 @@ function updateReport(results) {
     process.exit(1);
   }
 })();
-
 
