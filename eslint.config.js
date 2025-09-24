@@ -1,8 +1,10 @@
 import eslintJs from '@eslint/js'
 import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
+import importPlugin from 'eslint-plugin-import'
 import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin'
 import typescriptParser from '@typescript-eslint/parser'
+import globals from 'globals'
 
 export default [
 	{
@@ -32,8 +34,8 @@ export default [
 			'zion-ai-assistant/**',
 			'zion-os.disabled/**',
 			'ts_files_backup/**',
-			'ts_files_backup/**',
 			'src_backup/**',
+			'src_backup_all/**',
 			'src_backup_temp/**',
 			'utils.disabled/**',
 			'temp_components.disabled/**',
@@ -59,32 +61,19 @@ export default [
 			parser: typescriptParser,
 			ecmaVersion: 2021,
 			sourceType: 'module',
-			globals: {
-				window: 'readonly',
-				document: 'readonly',
-				localStorage: 'readonly',
-				setTimeout: 'readonly',
-				clearTimeout: 'readonly',
-				setInterval: 'readonly',
-				clearInterval: 'readonly',
-				requestAnimationFrame: 'readonly',
-				cancelAnimationFrame: 'readonly',
-				IntersectionObserver: 'readonly',
-				HTMLImageElement: 'readonly',
-				HTMLSpanElement: 'readonly',
-				URL: 'readonly',
-				process: 'readonly',
-				console: 'readonly'
-			}},
+			globals: { ...globals.browser, ...globals.node }
+		},
 		plugins: {
 			react: reactPlugin,
 			'react-hooks': reactHooksPlugin,
-			'@typescript-eslint': typescriptEslintPlugin},
+			'@typescript-eslint': typescriptEslintPlugin,
+			import: importPlugin},
 		settings: { react: { version: 'detect' } },
 		rules: {
-			'no-unused-vars': 'off',
 			'react/react-in-jsx-scope': 'off',
 			'no-console': 'warn',
+			'import/order': 'off',
 			'@typescript-eslint/no-unused-vars': [
 				'warn',
-				{ argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }]}}]
+				{ argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }]}}
+]
