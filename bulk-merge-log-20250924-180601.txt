@@ -1,0 +1,55 @@
+[2025-09-24 18:06:03] 🔄 Starting bulk processing...
+[2025-09-24 18:06:03] 📊 Batch size: 50
+[2025-09-24 18:06:03] 📊 Max conflicts per batch: 10
+[2025-09-24 18:06:03] ---
+[2025-09-24 18:06:06] 📊 Total branches to process: 17
+[2025-09-24 18:06:06] ---
+[2025-09-24 18:06:06] 🚀 Processing batch 1 (branches 1 to 17)
+[2025-09-24 18:06:06] ---
+[2025-09-24 18:06:06] 📋 Processing branch 1: aggressive-merge-backup-20250923-155532
+[2025-09-24 18:06:07] 🔄 Attempting to merge aggressive-merge-backup-20250923-155532...
+[2025-09-24 18:06:09] ⚠️  Merge conflicts detected in aggressive-merge-backup-20250923-155532, resolving...
+[2025-09-24 18:06:09] 📋 Conflicted files: zion-os/src/app/api/user/onboarding/route.ts
+zion-os/src/app/auth/signin/page.tsx
+zion-os/src/app/auth/signup/page.tsx
+zion-os/src/app/careers/page.tsx
+zion-os/src/app/case-studies/page.tsx
+zion-os/src/app/community/page.tsx
+zion-os/src/app/contact/page.tsx
+zion-os/src/components/Button.tsx
+zion-os/src/components/Header.tsx
+zion-os/src/contexts/AuthContext.tsx
+zion-os/tsconfig.json
+[2025-09-24 18:06:09] 🔧 Resolving conflicts in zion-os/src/app/api/user/onboarding/route.ts for branch aggressive-merge-backup-20250923-155532...
+[2025-09-24 18:06:09] 🧩 Generic file: prefer main version
+[2025-09-24 18:06:10] ✅ Resolved conflicts in zion-os/src/app/api/user/onboarding/route.ts
+[2025-09-24 18:06:10] 🔧 Resolving conflicts in zion-os/src/app/auth/signin/page.tsx for branch aggressive-merge-backup-20250923-155532...
+[2025-09-24 18:06:10] 🧩 Generic file: prefer main version
+[2025-09-24 18:06:10] ✅ Resolved conflicts in zion-os/src/app/auth/signin/page.tsx
+[2025-09-24 18:06:10] 🔧 Resolving conflicts in zion-os/src/app/auth/signup/page.tsx for branch aggressive-merge-backup-20250923-155532...
+[2025-09-24 18:06:10] 🧩 Generic file: prefer main version
+[2025-09-24 18:06:11] ✅ Resolved conflicts in zion-os/src/app/auth/signup/page.tsx
+[2025-09-24 18:06:11] 🔧 Resolving conflicts in zion-os/src/app/careers/page.tsx for branch aggressive-merge-backup-20250923-155532...
+[2025-09-24 18:06:11] 🧩 Generic file: prefer main version
+[2025-09-24 18:06:12] ✅ Resolved conflicts in zion-os/src/app/careers/page.tsx
+[2025-09-24 18:06:12] 🔧 Resolving conflicts in zion-os/src/app/case-studies/page.tsx for branch aggressive-merge-backup-20250923-155532...
+[2025-09-24 18:06:12] 🧩 Generic file: prefer main version
+[2025-09-24 18:06:12] ✅ Resolved conflicts in zion-os/src/app/case-studies/page.tsx
+[2025-09-24 18:06:12] 🔧 Resolving conflicts in zion-os/src/app/community/page.tsx for branch aggressive-merge-backup-20250923-155532...
+[2025-09-24 18:06:12] 🧩 Generic file: prefer main version
+[2025-09-24 18:06:13] ✅ Resolved conflicts in zion-os/src/app/community/page.tsx
+[2025-09-24 18:06:13] 🔧 Resolving conflicts in zion-os/src/app/contact/page.tsx for branch aggressive-merge-backup-20250923-155532...
+[2025-09-24 18:06:13] 🧩 Generic file: prefer main version
+[2025-09-24 18:06:13] ✅ Resolved conflicts in zion-os/src/app/contact/page.tsx
+[2025-09-24 18:06:13] 🔧 Resolving conflicts in zion-os/src/components/Button.tsx for branch aggressive-merge-backup-20250923-155532...
+[2025-09-24 18:06:13] 🧩 Generic file: prefer main version
+[2025-09-24 18:06:14] ✅ Resolved conflicts in zion-os/src/components/Button.tsx
+[2025-09-24 18:06:14] 🔧 Resolving conflicts in zion-os/src/components/Header.tsx for branch aggressive-merge-backup-20250923-155532...
+[2025-09-24 18:06:14] 🧩 Generic file: prefer main version
+[2025-09-24 18:06:14] ✅ Resolved conflicts in zion-os/src/components/Header.tsx
+[2025-09-24 18:06:14] 🔧 Resolving conflicts in zion-os/src/contexts/AuthContext.tsx for branch aggressive-merge-backup-20250923-155532...
+[2025-09-24 18:06:14] 🧩 Generic file: prefer main version
+[2025-09-24 18:06:15] ✅ Resolved conflicts in zion-os/src/contexts/AuthContext.tsx
+[2025-09-24 18:06:15] 🔧 Resolving conflicts in zion-os/tsconfig.json for branch aggressive-merge-backup-20250923-155532...
+[2025-09-24 18:06:15] 🧩 Generic file: prefer main version
+[2025-09-24 18:06:15] ✅ Resolved conflicts in zion-os/tsconfig.json
