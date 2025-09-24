@@ -549,35 +549,6 @@ const App: React.FC = () => {
           <Route path="/ai-innovation-hub-2026" element={<AIInnovationHub2026 />} />
           <Route path="/advanced-tech-solutions-2026" element={<AdvancedTechSolutions2026 />} />
           <Route path="/quantum-computing-guide-2026" element={<QuantumComputingGuide2026 />} />
-          
-          {/* NEW: Ultimate Content Routes 2026 */}
-          <Route path="/ai-2026-ultimate-innovation-hub" element={<AI2026UltimateInnovationHub />} />
-          <Route path="/quantum-ai-revolution-2026" element={<QuantumAIRevolution2026 />} />
-          
-          {/* NEW: Next Gen Content Routes 2026 */}
-          <Route path="/next-gen-ai-content-hub-2026" element={<NextGenAIContentHub2026 />} />
-          <Route path="/ai-trends-insights-2026" element={<AITrendsInsights2026 />} />
-          
-          {/* NEW: Advanced AI Solutions 2027 */}
-          <Route path="/advanced-ai-solutions-2027" element={<AdvancedAISolutions2027 />} />
-          
-          {/* NEW: Ultimate Content Showcase 2026 */}
-          <Route path="/ultimate-content-showcase-2026" element={<UltimateContentShowcase2026Page />} />
-          
-          {/* NEW: Revolutionary Content Routes 2026 */}
-          <Route path="/ai-business-automation-2026" element={<AIBusinessAutomation2026 />} />
-          <Route path="/quantum-computing-enterprise-2026" element={<QuantumComputingEnterprise2026 />} />
-          
-          {/* NEW: 2027 Breakthrough Innovation Routes */}
-          <Route path="/ai-2027-breakthrough-innovations" element={<AI2027BreakthroughInnovations />} />
-          <Route path="/quantum-computing-revolution-2027" element={<QuantumComputingRevolution2027 />} />
-          <Route path="/neural-interface-breakthrough-2027" element={<NeuralInterfaceBreakthrough2027 />} />
-          
-          {/* NEW: January 2026 Content Routes */}
-          <Route path="/advanced-ai-services-2026" element={<AdvancedAIServices2026 />} />
-          <Route path="/blog/ai-ethics-framework-2026" element={<BlogPost_Jan2026_AIEthicsFramework />} />
-          <Route path="/blog/quantum-computing-breakthrough-2026" element={<BlogPost_Jan2026_QuantumComputingBreakthrough />} />
-          <Route path="/blog/edge-ai-revolution-2026" element={<BlogPost_Jan2026_EdgeAIRevolution />} />
         </Routes>
         
         <Footer />
