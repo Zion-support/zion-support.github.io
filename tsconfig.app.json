@@ -1,31 +1,39 @@
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
-
-    /* Linting */
-    "strict": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noImplicitAny": false,
-    "noFallthroughCasesInSwitch": false,
-
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-    "types": ["vite/client", "react", "react-router-dom"]
-  },
-  "include": ["src"]
+  "extends": "./tsconfig.json",
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/__tests__/**",
+    "tests/**",
+    "automation/**",
+    "**/*backup*/**",
+    "**/backup/**",
+    "**/backups/**",
+    "**/recovered-branches/**",
+    "zion-*/**",
+    "src.broken/**",
+    "temp_*/**",
+    "utils/**",
+    "types/**",
+    "data/**",
+    "providers/**",
+    "hooks/**",
+    "lib/**",
+    "**/*.broken.*",
+    "lib.broken/**",
+    "backup-merge-conflicts/**",
+    "backup-problematic-files/**",
+    "src/**",
+    "**/*conflict*",
+    "**/*temp*",
+    "apps.backup/**",
+    "e2e/**"
+  ]
 }
