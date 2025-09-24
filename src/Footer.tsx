@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Mail, 
   Phone, 
@@ -136,7 +136,7 @@ const Footer: React.FC = () => {
                     {links.slice(0, 3).map((link) => (
                       <li key={link.name}>
                         <Link 
-                          href={link.href}
+                          to={link.href}
                           className="text-sm text-gray-300 hover:text-white transition-colors"
                         >
                           {link.name}
@@ -156,7 +156,7 @@ const Footer: React.FC = () => {
               {company.map((link) => (
                 <li key={link.name}>
                   <Link 
-                    href={link.href}
+                    to={link.href}
                     className="text-sm text-gray-300 hover:text-white transition-colors"
                   >
                     {link.name}
@@ -208,13 +208,13 @@ const Footer: React.FC = () => {
               © 2024 Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors">
+              <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors">
                 Cookie Policy
               </Link>
             </div>
