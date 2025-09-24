@@ -23,17 +23,12 @@ const nextConfig = {
 	experimental: {
 		optimizeCss: true,
 		optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-		// Force SWC to use JavaScript fallback if native binary fails
-		swcMinify: true,
-		swcLoader: true,
-		// Disable SWC binary download to force JavaScript fallback
+		// Disable SWC native requirements in this environment
 		forceSwcTransforms: true,
 	},
-	
-	// SWC configuration - force JavaScript fallback
+
+	// SWC configuration
 	swcMinify: true,
-	// Disable SWC binary to force JavaScript fallback
-	swcLoader: true,
 	
 	// Webpack optimizations
 	webpack: (config, { dev, isServer }) => {
@@ -62,12 +57,21 @@ const nextConfig = {
 	
 	
 	// TypeScript and ESLint configuration
+<<<<<<< HEAD
     typescript: {
         ignoreBuildErrors: true
     },
     eslint: {
         ignoreDuringBuilds: true
     },
+=======
+	typescript: {
+		ignoreBuildErrors: false
+	},
+	eslint: {
+		ignoreDuringBuilds: true
+	},
+>>>>>>> origin/main
 };
 
 export default nextConfig;
