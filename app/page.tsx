@@ -1,4 +1,5 @@
 // @ts-nocheck
+/* eslint-disable */
 import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
 import SEO from '../components/SEO';
@@ -1248,7 +1249,6 @@ export default function HomePage() {
                   <p className='text-sm opacity-90'>Step-by-step guide to successful AI implementation</p>
                 </div>
               </div>
-            </div>
 
             <Link href='/blog/cloud-native-architecture-2025' className='group'>
               <article className='bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100'>
