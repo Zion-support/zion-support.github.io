@@ -39,10 +39,10 @@ import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
 import AdvancedQuantumComputing2026 from './src/pages/AdvancedQuantumComputing2026';
 import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
 import AdvancedAISolutions2026 from './src/pages/AdvancedAISolutions2026';
-import AdvancedNeuralInterface2026 from './src/pages/AdvancedNeuralInterface2026';
+// import AdvancedNeuralInterface2026 from './src/pages/AdvancedNeuralInterface2026';
 import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
 import ComprehensiveCaseStudies2026 from './src/pages/ComprehensiveCaseStudies2026';
-import InnovationShowcase2026 from './src/pages/InnovationShowcase2026';
+import AIInnovationShowcase2026 from './src/pages/AIInnovationShowcase2026';
 import RevolutionaryTechShowcase from './src/components/RevolutionaryTechShowcase';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 
@@ -283,12 +283,9 @@ export default function App(): JSX.Element {
                         <a href="/pages/NextGenTechShowcase2025" className="block w-full bg-white text-orange-600 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center text-sm">
                           Explore Next-Gen Tech →
                         </a>
-                      </div>
-                    </div>
                   </div>
                 </div>
-                    </div>
-                  </div>
+              </div>
                 </div>
 
                 {/* Hero Section with New Content Promotions */}
@@ -801,10 +798,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedQuantumComputing2026" element={<AdvancedQuantumComputing2026 />} />
           <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
           <Route path="/pages/AdvancedAISolutions2026" element={<AdvancedAISolutions2026 />} />
-          <Route path="/pages/AdvancedNeuralInterface2026" element={<AdvancedNeuralInterface2026 />} />
+          {/* <Route path="/pages/AdvancedNeuralInterface2026" element={<AdvancedNeuralInterface2026 />} /> */}
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/pages/ComprehensiveCaseStudies2026" element={<ComprehensiveCaseStudies2026 />} />
-          <Route path="/pages/InnovationShowcase2026" element={<InnovationShowcase2026 />} />
+          <Route path="/pages/InnovationShowcase2026" element={<AIInnovationShowcase2026 />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={

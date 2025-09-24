@@ -15,3 +15,27 @@ dist/
 build/
 *.min.js
 *.min.css
+
+# Additional ignores to avoid linting broken/backup workspaces
+src.broken/
+ts_files_backup/
+src_backup/
+styles_backup/
+types.disabled/
+utils.disabled/
+app_backup/
+app.disabled/
+app-disabled/
+pages.__backup/
+pages-backup/
+pages.bak/
+pages-disabled/
+__jest__/
+__mocks__/
+__safe_tests__/
+zion-website/
+zion-os/
+zion-ai-assistant/
+apps/
+packages/
+coverage/
