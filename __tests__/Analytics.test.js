@@ -3,20 +3,20 @@ import React from 'react';,';
 import '@testing-library/jest-dom';';
 import Analytics from '../components/Analytics';';describe('Analytics', () => {'}
   test('renders without crashing', () => {'}
-    render(<Analytics />),expect(screen.getByTestId('analytics')).toBeInTheDocument()';
+    render(<Analytics  />),expect(screen.getByTestId('analytics')).toBeInTheDocument()';
   }),test('displays correct content', () => {'}
-    render(<Analytics />)}),test('handles user interactions', () => {'}
-    render(<Analytics />)}),test('applies correct styling', () => {'}
-    render(<Analytics />)})ursor/fix-syntax-push-and-merge-to-main-40de;
+    render(<Analytics  />)}),test('handles user interactions', () => {'}
+    render(<Analytics  />)}),test('applies correct styling', () => {'}
+    render(<Analytics  />)})ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/automate-test-improve-and-merge-code-646c;
 ';
 describe('Analytics', () => {'}
   test('renders without crashing', () => {'}
-    render(<Analytics />),expect(screen.getByTestId('analytics')).toBeInTheDocument()';
+    render(<Analytics  />),expect(screen.getByTestId('analytics')).toBeInTheDocument()';
   }),test('displays correct content', () => {'}
-    render(<Analytics />)}),test('handles user interactions', () => {'}
-    render(<Analytics />)}),test('applies correct styling', () => {'}
-    render(<Analytics />)})})})})ursor/add-new-services-and-deploy-updates-0462;
+    render(<Analytics  />)}),test('handles user interactions', () => {'}
+    render(<Analytics  />)}),test('applies correct styling', () => {'}
+    render(<Analytics  />)})})})})ursor/add-new-services-and-deploy-updates-0o462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/automate-test-improve-and-merge-code-646c;
@@ -29,17 +29,17 @@ describe('Analytics', () => {';
   test('handles user interactions', () => {';
   test('applies correct styling', () => {';
 ursor/automate-test-improve-and-merge-code-646c;
-    render(<Analytics />);,
+    render(<Analytics  />);,
     expect(screen.getByTestId('analytics')).toBeInTheDocument();';
   });,
   test('displays correct content', () => {'}
-    render(<Analytics />);
+    render(<Analytics  />);
   });,
   test('handles user interactions', () => {'}
-    render(<Analytics />);
+    render(<Analytics  />);
   });,
   test('applies correct styling', () => {'}
-    render(<Analytics />);
+    render(<Analytics  />);
   });
 });
 });
@@ -53,28 +53,3 @@ describe('Analytics', () => {'
   test('displays correct content', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Analytics from '../components/Analytics';
-
-describe('Analytics', () => {
-  test('renders without crashing', () => {
-    render(<Analytics />);
-    expect(screen.getByTestId('analytics')).toBeInTheDocument();
-  });
-  
-  test('displays correct content', () => {
-    render(<Analytics />);
-  });
-  
-  test('handles user interactions', () => {
-    render(<Analytics />);
-  });
-  
-  test('applies correct styling', () => {
-    render(<Analytics />);
-  });
-});
-});
-});

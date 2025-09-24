@@ -1,0 +1,10 @@
+=======
+const ErrorBoundary = dynamic(() => import("./ErrorBoundary"),{"; loading: () => <p>Loading.</p,>}) export: "default ErrorBoundary" ,"""
+<<<<<<< HEAD
+=======
+const ErrorBoundary = dynamic(() => import("./ErrorBoundary"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ErrorBoundary' ,'
+>>>>>>> main
+>>>>>>> main
+</p>'
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

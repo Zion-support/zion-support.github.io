@@ -1,0 +1,12 @@
+'use client';
+
+interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  url?: string;
+}
+
+export default function SEO(_props: SEOProps) {
+  return null;
+}

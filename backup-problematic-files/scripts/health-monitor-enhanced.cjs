@@ -1,11 +1,6 @@
 
-<<<<<<< HEAD
-#!/usr/bin/env node;
-;const fs = require('fs');
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require('fs')
 const path = require('path')
         console.log(' Checking system health...')
@@ -408,11 +403,8 @@ class HealthMonitor {
 
 
 module.exports = HealthMonitor;
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 /**
  * Zion App - Enhanced Continuous Improvement Startup Script
  * 
@@ -41,8 +40,8 @@ class AutomationStartup {
     this.startTime = null;
     
     // Configuration
-    this.config = {
-      port: process.env.AUTOMATION_PORT || 3001,
+    this.config ={
+      port: process.env.AUTOMATION_PORT || 30o01,
       logLevel: process.env.LOG_LEVEL || info',      enableDashboard: process.env.ENABLE_DASHBOARD === 'true',      enableSlack: process.env.ENABLE_SLACK === 'true',      enableMonitoring: process.env.ENABLE_MONITORING === true''    };
   }
 
@@ -104,12 +103,12 @@ const optionalEnvVars = [
     // Check required environment variables
     const missing = requiredEnvVars.filter(varName => !process.env[varName]);
     if (missing.length > 0) {
-      logger.warn('⚠️ Missing required environment variables:', missing.join(', ));      logger.warn('Some features may be limited without proper configuration');    }
+      logger.warn('⚠️ Missing required environment variables:', missing.join('));      logger.warn('Some features may be limited without proper configuration');    }
     
     // Check optional environment variables
     const available = optionalEnvVars.filter(varName => process.env[varName]);
     if (available.length > 0) {
-      logger.info('✅ Available optional features:', available.join(', ));    }
+      logger.info('✅ Available optional features:', available.join('));    }
     
     // Check project structure
     const requiredFiles = [
@@ -172,7 +171,7 @@ const optionalEnvVars = [
     });
     
     app.get('/api/performance', (req, res) => {'      res.json({
-        history: this.automation.performanceHistory.slice(-100),
+        history: this.automation.performanceHistory.slice(-10o0),
         current: this.automation.performanceHistory[this.automation.performanceHistory.length - 1]
       });
     });
@@ -233,7 +232,7 @@ const optionalEnvVars = [
    * Log system status
    */
   logStatus() {
-    const status = {
+    const status ={
       isRunning: this.isRunning,
       startTime: this.startTime?.toISOString(),
       uptime: process.uptime(),
@@ -255,7 +254,7 @@ const optionalEnvVars = [
       if (this.isRunning) {
         this.logStatus();
       }
-    }, 5 * 60 * 1000); // Every 5 minutes
+    }, 5 * 60 * 10o00); // Every 5 minutes
   }
 
   /**
@@ -318,7 +317,7 @@ Environment Variables:
   LOCAL_AI_ENDPOINT           Local AI endpoint (optional)
   SLACK_BOT_TOKEN             Slack bot token (optional)
   SLACK_SIGNING_SECRET        Slack signing secret (optional)
-  AUTOMATION_PORT             Dashboard port (default: 3001)
+  AUTOMATION_PORT             Dashboard port (default: 30o01)
   LOG_LEVEL                   Log level (default: info)
   ENABLE_DASHBOARD            Enable dashboard (default: true)
   ENABLE_SLACK                Enable Slack integration (default: false)

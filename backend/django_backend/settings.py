@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+import sys
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-placeholder'
@@ -15,8 +16,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'drf_yasg',
-    'authentication',
-    'public_api',
+    'backend.authentication.apps.AuthenticationConfig',
+    'backend.public_api.apps.PublicApiConfig',
 ]
 
 MIDDLEWARE = [
@@ -64,28 +65,48 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.redis.RedisCache',
-        'LOCATION': os.environ.get('REDIS_URL', 'redis://127.0.0.1:6379/1'),
+if 'test' in sys.argv:
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+            'LOCATION': 'test-cache'
+        }
     }
-}
+else:
+    CACHES = {
+        'default': {
+            'BACKEND': 'django_redis.cache.RedisCache',
+            'LOCATION': os.environ.get('REDIS_URL', 'redis://127.0.0.1:6379/1'),
+            'OPTIONS': {
+                'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+            },
+        }
+    }
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_BACKEND = 'sendgrid_backend.SendgridBackend'
-SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
+if 'test' in sys.argv:
+    EMAIL_BACKEND = 'django.core.mail.backends.locmem.EmailBackend'
+else:
+    EMAIL_BACKEND = 'sendgrid_backend.SendgridBackend'
+    SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
 
 PASSWORD_RESET_TIMEOUT = 900  # 15 minutes
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'public_api.authentication.ApiKeyAuthentication',
-    ],
-    'DEFAULT_THROTTLE_CLASSES': [
-        'public_api.throttling.RedisDailyThrottle',
-    ],
-}
+if 'test' in sys.argv:
+    REST_FRAMEWORK = {
+        'DEFAULT_AUTHENTICATION_CLASSES': [],
+        'DEFAULT_THROTTLE_CLASSES': [],
+    }
+else:
+    REST_FRAMEWORK = {
+        'DEFAULT_AUTHENTICATION_CLASSES': [
+            'public_api.authentication.ApiKeyAuthentication',
+        ],
+        'DEFAULT_THROTTLE_CLASSES': [
+            'public_api.throttling.RedisDailyThrottle',
+        ],
+    }
 
 SWAGGER_SETTINGS = {
     'SECURITY_DEFINITIONS': {

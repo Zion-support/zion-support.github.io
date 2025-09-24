@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import PerformanceMonitor from '../components/PerformanceMonitor';
@@ -8,15 +7,15 @@ describe('PerformanceMonitor', () => {
     render(<PerformanceMonitor />);
     expect(screen.getByTestId('performancemonitor')).toBeInTheDocument();
   });
-  
+
   test('displays correct content', () => {
     render(<PerformanceMonitor />);
   });
-  
+
   test('handles user interactions', () => {
     render(<PerformanceMonitor />);
   });
-  
+
   test('applies correct styling', () => {
     render(<PerformanceMonitor />);
   });

@@ -1,243 +1,253 @@
-
-
-
-import React from "react";""
-import Layout from "../components/Layout";""
-import React from 'react';
-import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
-import MainLayout from '../components/layout/MainLayout';
-import {
-  // TODO: Implement
-}
 
-  TrendingUp,
-  Building,
-  Rocket,
-  Lightbulb,
-  Handshake,
-  Brain, 
-  Users, 
-  Award, 
-  Target, 
-  Heart,
-  Globe, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  DollarSign, 
-  Clock, 
-  BarChart3,
-  Phone,
-
-  Mail,
-  MapPin;
-} from 'lucide-react';
-const values = [
-  {
-    icon: Lightbulb,
-    title: 'Innovation',
-    description: 'We constantly push the boundaries of technology to create cutting-edge solutions that drive real business value.
-  },
-    icon: Shield,
-    title: 'Security',
-    description: 'Security is at the core of everything we do, ensuring your data and systems are protected with enterprise-grade security.
-    icon: Users,
-    title: 'Collaboration',
-    description: 'We work closely with our clients as partners, understanding their unique challenges and delivering tailored solutions.
-    icon: Target,
-    title: 'Excellence',
-    description: '$1]
-  }];
-const team = [
-    name: 'John Smith',
-    role: 'CEO & Founder',
-    expertise: 'Strategic Leadership',
-    experience: '15+ years in technology leadership
-    name: 'Sarah Johnson',
-    role: 'CTO',
-    expertise: 'Technical Innovation',
-    experience: '12+ years in AI and cloud technologies
-    name: 'Mike Chen',
-    role: 'Lead Developer',
-    expertise: 'Full-Stack Development',
-    experience: '10+ years in modern web technologies]
-];
-const achievements = [
-    stat: '500+',
-    title: 'Projects Completed',
-    description: 'Successfully delivered projects across various industries',
-    icon: CheckCircle;
-    stat: '99.9%',
-    title: 'Client Satisfaction',
-    description: 'Consistently high client satisfaction ratings',
-    icon: Star;
-    stat: '24/7',
-    title: 'Support Available',
-    description: 'Round-the-clock support for all our clients',
-    icon: Clock;
-    stat: '50+',
-    title: 'Team Members',
-    description: 'Expert professionals dedicated to your success',
-    icon: Users;]
 export default function AboutPage() {
   return (
-    <MainLayout;
-      title="About Us - Zion Tech Group"""
-      description="Learn about Zion Tech Group's mission, values, and team. We're dedicated to delivering cutting-edge technology solutions."""
-      keywords="about us, company, team, mission, values, technology solutions""
-    >
-"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-</div>"
-        <div className="container mx-auto px-4 py-16">"
-</div>
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}"
-            className="text-center mb-16""
-</motion>"
-            <h1 className="text-5xl font-bold text-white mb-6">"
-</h1>
-            </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-</p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">"
-                key={index}
-                transition={{ duration: 0.6, delay: index * 0.1 }}"
-                className="text-center""
-                <div className="text-4xl font-bold text-blue-400 mb-2">{achievement.stat}</div>""
-                <div className="text-white font-semibold mb-2">{achievement.title}</div>""
-                <div className="text-gray-300 text-sm">{achievement.description}</div>"
-              </motion.div>)
-            ))}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">"
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20""
-                <div className="flex items-center mb-4">"
-                  <value.icon className="h-8 w-8 text-blue-400 mr-3" />"
-</value>"
-                  <h3 className="text-2xl font-bold text-white">{value.title}</h3>"
-                <p className="text-gray-300">{value.description}</p>"
-
-
-              </motion.div>
-            ))}
-          </div>
-
-
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}"
-            className="bg-blue-600 rounded-xl p-8 text-center""
-            <h2 className="text-3xl font-bold text-white mb-4">"
-</h2>
-            </h2>"
-            <p className="text-xl text-blue-100 mb-8">"
-            </p>"
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">"
-              <div className="flex items-center text-white">"
-                <Phone className="h-5 w-5 mr-2" />"
-
-                <span>+1 302 464 0950</span>
-                <Mail className="h-5 w-5 mr-2" />"
-
-                <span>kleber@ziontechgroup.com</span>
-                <MapPin className="h-5 w-5 mr-2" />"
-
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>
-
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-    </MainLayout>"
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"
+    <>
       <Head>
-
-        <title>About | Zion Tech Group</title>"
-        <meta name="description" content="About Zion Tech Group: AI, micro SaaS, and enterprise IT innovators." />"
-</meta>"
-        <link rel="canonical" href="https://ziontechgroup.com/about" />"
-</link>
-      
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">"
-        <div className="max-w-6xl mx-auto space-y-10">"
-          <header className="text-center">"
-</header>"
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">About Zion Tech Group</h1>""
-            <p className="text-gray-300 text-lg">We build real, outcome-oriented AI, micro SaaS, and enterprise IT solutions.</p>"
-          </header>
-          <section className="grid grid-cols-1 md:grid-cols-3 gap-6">"
-</section>"
-            <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">"
-              <div className="text-sm text-gray-400 mb-2">What we do</div>""
-              <div className="text-gray-200">200+ production-ready services across AI, DevOps, Security, Cloud, and Data.</div>"
-              <div className="text-sm text-gray-400 mb-2">How we deliver</div>""
-              <div className="text-gray-200">Template-driven deployments, SLAs, clear pricing, and measurable ROI.</div>"
-              <div className="text-sm text-gray-400 mb-2">Who we serve</div>""
-              <div className="text-gray-200">Startups to enterprises across healthcare, fintech, manufacturing, media, and public sector.</div>"
+        <title>About Zion Tech Group | Leading AI & Technology Solutions</title>
+        <meta
+          name='description'
+          content='Zion Tech Group is a leading technology company specializing in AI solutions, cybersecurity, cloud infrastructure, and enterprise automation. Learn about our mission, team, and innovative approach.'
+        />
+        <link rel='canonical' href='https://ziontechgroup.com/about' />
+      </Head>
+      <main className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
+        <div className='container mx-auto px-6 py-16'>
+          {/* Hero Section */}
+          <section className='text-center mb-16'>
+            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 bg-clip-text text-transparent'>
+              About Zion Tech Group
+            </h1>
+            <p className='text-xl text-white/80 max-w-3xl mx-auto mb-8'>
+              We are a forward-thinking technology company dedicated to building
+              autonomous systems and cutting-edge technology solutions that
+              drive business transformation.
+            </p>
+            <div className='flex flex-wrap justify-center gap-4'>
+              <Link
+                href='/services'
+                className='px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-fuchsia-60o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-fuchsia-70o0 transition-all duration-20o0'
+              >
+                Our Services
+              </Link>
+              <Link
+                href='/team'
+                className='px-6 py-3 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-20o0'
+              >
+                Meet Our Team
+              </Link>
+              <Link
+                href='/contact'
+                className='px-6 py-3 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-20o0'
+              >
+                Get In Touch
+              </Link>
+            </div>
           </section>
-          <section className="grid grid-cols-1 md: grid-cols-2 gap-6">"
-              <h2 className="text-2xl font-semibold mb-3">Contact</h2>""
-              <ul className="text-gray-300 space-y-2">"
-</ul>"
-                <li>Mobile: <a className="text-cyan-300" href="tel:+13024640950">+1 302 464 0950</a></li>""
-                <li>E-mail: <a className="text-purple-300" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></li>""
-                <li>Address: <span className="text-gray-200">364 E Main St STE 1008 Middletown DE 19709</span></li>""
-                <li>Website: <a className="text-cyan-300" href="https://ziontechgroup.com">ziontechgroup.com</a></li>"
-              </ul>
-              <h2 className="text-2xl font-semibold mb-3">Get Started</h2>""
-              <p className="text-gray-300 mb-4">Book a consultation to map your roadmap to shipped outcomes.</p>""
-              <div className="flex gap-3">"
-                <Button href="/contact" className="bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales""
-                <Button href="/pricing" variant="outline" className="border border-gray-600 text-gray-200">Pricing"
-</div>"
-                <Button href="/contact" className="bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales</Button>""
-                <Button href="/pricing" variant="outline" className="border border-gray-600 text-gray-200">Pricing</Button>"
 
+          {/* Mission & Vision */}
+          <section className='mb-16'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
+              <div>
+                <h2 className='text-3xl font-bold mb-6 text-cyan-40o0'>
+                  Our Mission
+                </h2>
+                <p className='text-lg text-white/80 mb-4'>
+                  To democratize access to cutting-edge technology solutions and
+                  empower businesses with autonomous systems that drive
+                  innovation and growth.
+                </p>
+                <p className='text-white/70'>
+                  We believe that every organization, regardless of size, should
+                  have access to enterprise-grade technology solutions that can
+                  transform their operations and competitive position.
+                </p>
+              </div>
+              <div>
+                <h2 className='text-3xl font-bold mb-6 text-fuchsia-40o0'>
+                  Our Vision
+                </h2>
+                <p className='text-lg text-white/80 mb-4'>
+                  To be the leading provider of autonomous technology solutions
+                  that enable businesses to operate more efficiently, securely,
+                  and innovatively.
+                </p>
+                <p className='text-white/70'>
+                  We envision a future where AI and automation work seamlessly
+                  together to solve complex business challenges and unlock new
+                  opportunities.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Core Values */}
+          <section className='mb-16'>
+            <h2 className='text-3xl font-bold mb-8 text-center text-white'>
+              Our Core Values
+            </h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-cyan-40o0/50 transition-all duration-20o0'>
+                <h3 className='text-xl font-semibold mb-3 text-cyan-40o0'>
+                  Innovation First
+                </h3>
+                <p className='text-white/70'>
+                  We constantly push the boundaries of what's possible,
+                  exploring emerging technologies and creative solutions.
+                </p>
+              </div>
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-fuchsia-40o0/50 transition-all duration-20o0'>
+                <h3 className='text-xl font-semibold mb-3 text-fuchsia-40o0'>
+                  Client Success
+                </h3>
+                <p className='text-white/70'>
+                  Your success is our success. We're committed to delivering
+                  solutions that drive measurable business outcomes.
+                </p>
+              </div>
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-purple-40o0/50 transition-all duration-20o0'>
+                <h3 className='text-xl font-semibold mb-3 text-purple-40o0'>
+                  Excellence
+                </h3>
+                <p className='text-white/70'>
+                  We maintain the highest standards of quality in everything we
+                  do, from code to customer service.
+                </p>
+              </div>
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-green-40o0/50 transition-all duration-20o0'>
+                <h3 className='text-xl font-semibold mb-3 text-green-40o0'>
+                  Security & Trust
+                </h3>
+                <p className='text-white/70'>
+                  Security is built into every solution we create, ensuring your
+                  data and systems remain protected.
+                </p>
+              </div>
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-blue-40o0/50 transition-all duration-20o0'>
+                <h3 className='text-xl font-semibold mb-3 text-blue-40o0'>
+                  Collaboration
+                </h3>
+                <p className='text-white/70'>
+                  We work closely with our clients, partners, and team members
+                  to achieve the best possible outcomes.
+                </p>
+              </div>
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-yellow-40o0/50 transition-all duration-20o0'>
+                <h3 className='text-xl font-semibold mb-3 text-yellow-40o0'>
+                  Continuous Learning
+                </h3>
+                <p className='text-white/70'>
+                  We stay ahead of the curve by continuously learning and
+                  adapting to new technologies and market trends.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* What We Do */}
+          <section className='mb-16'>
+            <h2 className='text-3xl font-bold mb-8 text-center text-white'>
+              What We Do
+            </h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+              <Link href='/services/ai-solutions' className='group'>
+                <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-cyan-40o0/50 transition-all duration-20o0 group-hover:bg-white/10'>
+                  <h3 className='text-xl font-semibold mb-3 text-cyan-40o0'>
+                    AI & Machine Learning
+                  </h3>
+                  <p className='text-white/70'>
+                    Custom AI development, autonomous systems, and intelligent
+                    automation solutions.
+                  </p>
+                </div>
+              </Link>
+              <Link href='/services/cybersecurity' className='group'>
+                <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-fuchsia-40o0/50 transition-all duration-20o0 group-hover:bg-white/10'>
+                  <h3 className='text-xl font-semibold mb-3 text-fuchsia-40o0'>
+                    Cybersecurity
+                  </h3>
+                  <p className='text-white/70'>
+                    Comprehensive security solutions, compliance automation, and
+                    zero-trust architectures.
+                  </p>
+                </div>
+              </Link>
+              <Link href='/services/cloud-devops' className='group'>
+                <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-purple-40o0/50 transition-all duration-20o0 group-hover:bg-white/10'>
+                  <h3 className='text-xl font-semibold mb-3 text-purple-40o0'>
+                    Cloud & DevOps
+                  </h3>
+                  <p className='text-white/70'>
+                    Scalable cloud infrastructure, automation, and streamlined
+                    development processes.
+                  </p>
+                </div>
+              </Link>
+              <Link href='/services/data-analytics' className='group'>
+                <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-green-40o0/50 transition-all duration-20o0 group-hover:bg-white/10'>
+                  <h3 className='text-xl font-semibold mb-3 text-green-40o0'>
+                    Data Analytics
+                  </h3>
+                  <p className='text-white/70'>
+                    Data engineering, analytics platforms, and real-time
+                    insights for informed decision-making.
+                  </p>
+                </div>
+              </Link>
+              <Link href='/services/quantum-technology' className='group'>
+                <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-blue-40o0/50 transition-all duration-20o0 group-hover:bg-white/10'>
+                  <h3 className='text-xl font-semibold mb-3 text-blue-40o0'>
+                    Quantum Technology
+                  </h3>
+                  <p className='text-white/70'>
+                    Next-generation computing solutions and quantum-ready
+                    infrastructure.
+                  </p>
+                </div>
+              </Link>
+              <Link href='/solutions' className='group'>
+                <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-yellow-40o0/50 transition-all duration-20o0 group-hover:bg-white/10'>
+                  <h3 className='text-xl font-semibold mb-3 text-yellow-40o0'>
+                    Enterprise Solutions
+                  </h3>
+                  <p className='text-white/70'>
+                    Large-scale business solutions tailored to your industry and
+                    specific needs.
+                  </p>
+                </div>
+              </Link>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className='text-center'>
+            <div className='bg-gradient-to-r from-cyan-50o0/10 to-fuchsia-50o0/10 border border-cyan-40o0/30 rounded-lg p-8'>
+              <h2 className='text-2xl font-bold mb-4 text-white'>
+                Ready to Transform Your Business?
+              </h2>
+              <p className='text-white/80 mb-6 max-w-2xl mx-auto'>
+                Let's discuss how our technology solutions can help you achieve
+                your goals and stay ahead of the competition.
+              </p>
+              <div className='flex flex-wrap justify-center gap-4'>
+                <Link
+                  href='/contact'
+                  className='px-8 py-3 bg-gradient-to-r from-cyan-50o0 to-fuchsia-60o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-fuchsia-70o0 transition-all duration-20o0'
+                >
+                  Get Started Today
+                </Link>
+                <Link
+                  href='/services'
+                  className='px-8 py-3 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-20o0'
+                >
+                  Explore Our Services
+                </Link>
               </div>
             </div>
           </section>
         </div>
-      </div>
+      </main>
     </>
-  )
-
-
-export default AboutPage;"
-import React from './react';
-import Layout from "../components / Layout";;"
-
-export default /**
- * About - Function description;
- */
-function About() {
-  return (
-
-    <Layout;"
-      title="About Us - Zion Tech Group";""
-      description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting - edge technology solutions.";"
-    >;
-      <div className="min - h-screen bg - gray - 50 py - 20">;"
-        <div className="container mx - auto px - 4">;"
-          <div className="text - center mb - 12">;"
-            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;"
-            </h1>;"
-            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;"
-            </p>;
-          </div>;"
-          <div className="text - center">;"
-            <p className="text - gray - 600">About page is under construction.</p>;"
-          </div>;
-      </div>;)
-    );"
-    </Layout>);"
-
+  );
+}

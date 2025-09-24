@@ -1,15 +1,13 @@
 
 
-
-</div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
+</div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required  /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
   submitting ? 'Submitting...' : 'Submit Review'
 }</button> </form>)
 }
-type Props = {
+type Props ={
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
 import StarRating from './StarRating';
-export type ReviewFormValues = {
-
+export type ReviewFormValues ={
 
   projectId: string,
   fromRole: 'client' | 'talent',
@@ -18,7 +16,6 @@ export type ReviewFormValues = {
   text: string,
   categories?: {;
 
-
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
@@ -26,7 +23,7 @@ export type ReviewFormValues = {
   }
   anonymous?: boolean
 }
-type Props = {
+type Props ={
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
 const ReviewForm: React.FC<Props> = ({ initial }) => {
   const [rating, setRating] = useState(0);
@@ -72,36 +69,15 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
   return (
     <form onSubmit={handleSubmit} className='space-y-6'>
       <div>
-        <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />
+        <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating}  />
       </div>
       <div>
-
 
     }
   }
   return (
 
-
-        <StarRating value={rating} onChange={setRating} />
+        <StarRating value={rating} onChange={setRating}  />
       </div>
       <div>
-
-
-
-      >
-        {submitting ? 'Submitting...' : 'Submit Review'}
-      </button>
-      {message && <p className='text-sm'>{message}</p>}
-
-
-
-    </form>
-  );
-}
-export default ReviewForm;    </form>
-  )
-}
-export default ReviewForm;
-
-
 

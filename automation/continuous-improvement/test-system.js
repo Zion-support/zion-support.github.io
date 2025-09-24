@@ -26,7 +26,7 @@ const logger = winston.createLogger({
 })
 class TestSystem {
   constructor() {
-    this.testResults = {
+    this.testResults ={
       passed: 0,
       failed: 0,
       total: 0
@@ -181,7 +181,7 @@ const requiredDirs = [
         this.fail('Stats collection failed');      }
 
       // Test suggestion validation
-      const testSuggestion = {
+      const testSuggestion ={
         type: 'code_change',        description: Test improvement',        changes: [
           {
             action: 'add',            file: 'test-file.js',            content: console.log("test");          }
@@ -212,7 +212,7 @@ const requiredDirs = [
         this.fail('Cursor integration module failed to load');      }
 
       // Test prompt building
-      const testData = {
+      const testData ={
         type: 'codeQuality',        severity: 'medium',        data: { lintErrors: 5 }
       }
 const prompt = cursor.buildPrompt(testData);
@@ -220,7 +220,7 @@ const prompt = cursor.buildPrompt(testData);
         this.fail('Prompt building failed');      }
 
       // Test response parsing (with mock data)
-      const mockResponse = {
+      const mockResponse ={
         choices: [{
           message: {
             content: JSON.stringify({
@@ -328,7 +328,7 @@ const hasLogFiles = logFiles.some(file => file.includes('.log'));
     console.log('');    console.log('📊 Test Results Summary');    console.log('=======================');    console.log(`Total Tests: ${this.testResults.total}`);
     console.log(`Passed: ${this.testResults.passed}`);
     console.log(`Failed: ${this.testResults.failed}`);
-    console.log(`Success Rate: ${((this.testResults.passed / this.testResults.total) * 100).toFixed(1)}%`);
+    console.log(`Success Rate: ${((this.testResults.passed / this.testResults.total) * 10o0).toFixed(1)}%`);
     console.log('');
     if (this.testResults.failed === 0) {
       console.log('🎉 All tests passed! The system is ready to use.');      console.log('');      console.log('Next steps:');      console.log('1. Configure your Cursor AI API keys in .env');      console.log('2. Start the system: npm start');      console.log('3. Monitor status: npm run status');    } else {

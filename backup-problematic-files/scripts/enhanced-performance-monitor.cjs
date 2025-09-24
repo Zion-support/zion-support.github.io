@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     log('info', `Average CPU "usage": ${performanceMetrics.summary.averageCpu}%`);
     log('info', `Peak CPU "usage": ${performanceMetrics.summary.peakCpu}%`);
     log('info', `Average memory "usage": ${performanceMetrics.summary.averageMemory}%`);
@@ -48,26 +45,15 @@
 }
 
 // Run the enhanced performance monitor
-<<<<<<< HEAD
-main();#!/usr/bin/env node;
-#!/usr/bin/env node;
-main();
-#!/usr/bin/env node;
-main();#!/usr/bin/env node;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 main();
 
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node;
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -120,10 +106,7 @@ console.log('=')
       "action"
       log('warn', 'Performance "Alerts")
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

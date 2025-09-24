@@ -7,21 +7,17 @@ const logger = winston.createLogger({
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.errors({ stack: true }),
-    winston.format.json(),
-  ),
+    winston.format.json()),
   defaultMeta: { service: 'automation-script' },
   transports: [
     new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' }),
-  ],
-});
+  ]});
 
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
     new winston.transports.Console({
-      format: winston.format.simple(),
-    }),
-  );
+      format: winston.format.simple()}));
 }
 
 const fs = require('fs');
@@ -30,7 +26,7 @@ const { execSync } = require('child_process');
 
 class NetlifyErrorFixer {
   constructor() {
-    this.fixStrategies = {
+    this.fixStrategies ={
       'build-timeout': this.fixBuildTimeout.bind(this),
       'memory-error': this.fixMemoryError.bind(this),
       'dependency-error': this.fixDependencyError.bind(this),
@@ -38,8 +34,7 @@ class NetlifyErrorFixer {
       'eslint-error': this.fixESLintError.bind(this),
       'nextjs-error': this.fixNextJSError.bind(this),
       'port-conflict': this.fixPortConflict.bind(this),
-      'environment-error': this.fixEnvironmentError.bind(this),
-    };
+      'environment-error': this.fixEnvironmentError.bind(this)};
   }
 
   log(message, level = 'info') {
@@ -61,8 +56,7 @@ class NetlifyErrorFixer {
     } catch (error) {
       this.log(
         `Error applying fix for ${errorType}: ${error.message}`,
-        'error',
-      );
+        'error');
       return false;
     }
   }
@@ -117,13 +111,12 @@ class NetlifyErrorFixer {
     try {
       // Update tsconfig.json with more permissive settings
       const tsconfig = JSON.parse(fs.readFileSync('tsconfig.json', 'utf8'));
-      tsconfig.compilerOptions = {
+      tsconfig.compilerOptions ={
         ...tsconfig.compilerOptions,
         skipLibCheck: true,
         noEmit: true,
         allowJs: true,
-        strict: false,
-      };
+        strict: false};
       fs.writeFileSync('tsconfig.json', JSON.stringify(tsconfig, null, 2));
 
       this.log('TypeScript error fix applied');
@@ -165,8 +158,8 @@ class NetlifyErrorFixer {
     try {
       // Update package.json scripts to use different ports
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      packageJson.scripts.dev = 'next dev --port 3002';
-      packageJson.scripts.start = 'next start --port 3002';
+      packageJson.scripts.dev = 'next dev --port 30o02';
+      packageJson.scripts.start = 'next start --port 30o02';
       fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
 
       this.log('Port conflict fix applied');
@@ -197,7 +190,7 @@ NODE_ENV=production
   }
 
   async applyAllFixes() {
-    const results = {};
+    const results ={};
     for (const errorType of Object.keys(this.fixStrategies)) {
       results[errorType] = await this.fixError(errorType);
     }
@@ -228,8 +221,7 @@ if (require.main === module) {
       logger.info('Usage: node netlify-error-fixer.js fix [error-type]');
       logger.info(
         'Available error types:',
-        Object.keys(fixer.fixStrategies).join(', '),
-      );
+        Object.keys(fixer.fixStrategies).join(', '));
   }
 }
 

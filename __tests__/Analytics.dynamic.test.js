@@ -1,31 +1,29 @@
-import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Analytics from '../components/Analytics';
 
 describe('Analytics', () => {
   test('renders without crashing', () => {
-    render(<Analytics />);
+    render(<Analytics  />);
     expect(screen.getByTestId('analytics')).toBeInTheDocument();
   });
   
   test('displays correct content', () => {
-    render(<Analytics />);
+    render(<Analytics  />);
   });
   
   test('handles user interactions', () => {
-    render(<Analytics />);
+    render(<Analytics  />);
   });
   
   test('applies correct styling', () => {
-    render(<Analytics />);
+    render(<Analytics  />);
   });
 });
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Analyticsdynamic from "./components/Analytics.dynamic"; describe("Analyticsdynamic",() => { test("renders without crashing",() => { render(<Analyticsdynamic />); expect(screen.getByTestId("analytics.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Analyticsdynamic />)}); test("handles user interactions",() => { render(<Analyticsdynamic />)}); test("applies correct styling",() => { render(<Analyticsdynamic />)})});''"
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Analyticsdynamic from "./components/Analytics.dynamic"; describe("Analyticsdynamic",() => { test("renders without crashing",() => { render(<Analyticsdynamic  />); expect(screen.getByTestId("analytics.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Analyticsdynamic  />)}); test("handles user interactions",() => { render(<Analyticsdynamic  />)}); test("applies correct styling",() => { render(<Analyticsdynamic  />)})});''"
 
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
-
 
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
@@ -37,7 +35,7 @@ describe('Analyticsdynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Analyticsdynamic from "./components/Analytics.dynamic"; describe('Analyticsdynamic', () => { test("renders without crashing",() => { render(<Analyticsdynamic />); expect(screen.getByTestId("analytics.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Analyticsdynamic />)}); test("handles user interactions",() => { render(<Analyticsdynamic />)}); test("applies correct styling"
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Analyticsdynamic from "./components/Analytics.dynamic"; describe('Analyticsdynamic', () => { test("renders without crashing",() => { render(<Analyticsdynamic  />); expect(screen.getByTestId("analytics.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Analyticsdynamic  />)}); test("handles user interactions",() => { render(<Analyticsdynamic  />)}); test("applies correct styling"
 
 });
 });

@@ -1,11 +1,11 @@
 import { register } from ../sentry';import * as Sentry from @sentry/nextjs';import { Integrations } from "@sentry/tracing"; // Import this if it's used in the Sentry.init call options
 describe('Sentry Initialization', () => {'  let _consoleWarnSpy: jest.SpyInstance;
   let sentryInitSpy: jest.SpyInstance;
-  const originalEnv = { ...process.env }; // Shallow copy to preserve original values
+  const originalEnv ={ ...process.env }; // Shallow copy to preserve original values
 
   beforeEach(() => {
     // Reset process.env for each test to ensure isolation
-    process.env = { ...originalEnv };
+    process.env ={ ...originalEnv };
     // Mock console.warn
     consoleWarnSpy = jest.spyOn(console, warn').mockImplementation(() => {});    // Mock Sentry.init
     sentryInitSpy = jest.spyOn(Sentry, init').mockImplementation(() => {});  });

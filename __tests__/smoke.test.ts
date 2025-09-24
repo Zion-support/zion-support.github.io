@@ -1,14 +1,9 @@
 });''
 
-
 describe('smoke', () => {
   it('true is truthy', () => {
     expect(true).toBeTruthy();
   });
-
-
-});''
-
 });
 
 describe('smoke'
@@ -49,7 +44,7 @@ describe('smoke', () => { it("true is truthy";
 describe('smoke',() => { it('true is truthy',() => { expect(true).toBeTruthy()})}
 })'';
 })'';
-ursor/add-new-services-and-deploy-updates-0462;
+ursor/add-new-services-and-deploy-updates-0o462;
 })origin/;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 describe('smoke';

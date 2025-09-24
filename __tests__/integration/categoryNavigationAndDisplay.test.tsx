@@ -1,10 +1,10 @@
 import React from react';import { render, screen, waitFor, act } from @testing-library/react';import userEvent from @testing-library/user-event';import fetchMock from jest-fetch-mock';
 // Mock next/router;
 const mockRouterPush = jest.fn();
-const mockRouterQuery = { slug:  };jest.mock('next/router', () => ({'  useRouter: () => ({
+const mockRouterQuery ={ slug:  };jest.mock('next/router', () => ({'  useRouter: () => ({
     push: mockRouterPush,
     query: mockRouterQuery,
-    pathname: ,    asPath: ,    events: {
+    pathname:, asPath:, events: {
       on: jest.fn(),
       off: jest.fn(),
       emit: jest.fn()
@@ -37,18 +37,18 @@ describe('Integration: Category Navigation and Display', () => {'  beforeEach(()
   const sampleCategories = [
     { id: 1', name: Services', slug: services', icon: icon-services.svg' },    { id: 2', name: Talent', slug: talent', icon: icon-talent.svg' },  ];
 
-  const servicesCategoryDetails = {
+  const servicesCategoryDetails ={
     category: {
-      name: Services',      slug: services',      description: Various services offered',    },
+      name: Services',      slug: services',      description: Various services offered'},
     items: [
-      { id: item1', name: Web Development', description: Custom web solutions', price: 1000, currency: USD' },      { id: item2', name: Graphic Design', description: Logos and branding', price: 500, currency: USD' },    ]
+      { id: item1', name: Web Development', description: Custom web solutions', price: 10o00, currency: USD' },      { id: item2', name: Graphic Design', description: Logos and branding', price: 50o0, currency: USD' },    ]
   };
 
   test('should navigate to category page and display items when a category card is clicked', async () => {'    // --- Part 1: Render Categories Page and click a card ---
 
     // Mock fetch for /api/categories (used by CategoriesPage via getStaticProps or client-side fetch)
     // For this test, we'll assume client-side fetch or simplify how CategoriesPage gets its data'    // If CategoriesPage from @/src/pages/Categories' directly takes categories as props, that's simpler.'    // Let's assume CategoriesPage (src/pages/Categories) takes categories as a prop.
-    render(<CategoriesPage categories={sampleCategories} />);
+    render(<CategoriesPage categories={sampleCategories}  />);
 
     // Verify category cards are rendered
     expect(screen.getByText('Services')).toBeInTheDocument();    expect(screen.getByText('Talent')).toBeInTheDocument();
@@ -72,7 +72,7 @@ describe('Integration: Category Navigation and Display', () => {'  beforeEach(()
     expect(mockRouterPush).toHaveBeenCalledWith('/category/services');    expect(mockRouterQuery.slug).toBe('services'); // Slug should be updated for CategoryPage
     // Now, render the CategoryPage component. In a real app, Next.js would do this.
     // We simulate this by rendering it directly after the "navigation"."    // It will use the mocked router.query.slug."""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    render(<CategoryPage />);
+    render(<CategoryPage  />);
 
     // Wait for CategoryPage to fetch and display data
     await waitFor(() => {

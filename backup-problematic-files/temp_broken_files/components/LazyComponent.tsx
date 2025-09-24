@@ -4,23 +4,6 @@ interface LazyComponentProps {component: () => Promise<{ default: React.Componen
   [key: string]: any;
 }
 
-
-;
-const LazyComponent: React.FC<LazyComponentProps> = ({;
-  component,;
-  fallback = <div>Loading...</div>,;
-
-
-  ...props;
-}) => {const LazyLoadedComponent = lazy(component);
-  return (;
-    <Suspense fallback={fallback}>;
-      <LazyLoadedComponent {...props} />;
-    </Suspense>;
-  );
-}
-export default LazyComponent;
-
 ;
 const LazyComponent: React.FC<LazyComponentProps> = ({;
   component,;
@@ -30,26 +13,14 @@ const LazyComponent: React.FC<LazyComponentProps> = ({;
 }) => {const LazyLoadedComponent = lazy(component);
   return (;
     <Suspense fallback={fallback}>;
-      <LazyLoadedComponent {...props} />;
+      <LazyLoadedComponent {...props}  />;
     </Suspense>;
   );
 }
 export default LazyComponent;
 
-const LazyComponent: React.FC<LazyComponentProps> = ({ 
-  component, 
-  fallback = <div>Loading...</div>, 
-  ...props 
-}) => {
-  const LazyLoadedComponent = lazy(component),  
-  return (
-    <Suspense fallback={fallback}>
-      <LazyLoadedComponent {_...props} />
-    </Suspense>
-  )
-},
-
-export default LazyComponent,
-
-
+;
+const LazyComponent: React.FC<LazyComponentProps> = ({;
+  component,;
+  fallback = <div>Loading...</div>,;
 

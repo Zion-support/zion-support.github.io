@@ -1,0 +1,18 @@
+export: function SocialShareSection () { const socialPlatforms = [ { name: "Twitter,",icon: ",url: ",https: """;",;'"'"
+<<<<<<< HEAD:backup-merge-conflicts/SocialShareSection.jsx.backup
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:src.disabled/components/SocialShareSection.jsx
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+=======
+"export\": function SocialShareSection () { const socialPlatforms = [ { name: \'Twitter,\',\"icon\": \',\"url\": \',\"https\": \''\";\",;
+>>>>>>> main
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> pr-11935
+=======
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

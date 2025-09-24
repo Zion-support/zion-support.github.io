@@ -27,7 +27,7 @@ class DependencyIntelligence {
     this.dependencyAnalysis = process.env.DEPENDENCY_ANALYSIS === 'deep';
     
     // Safety thresholds
-    this.safetyThresholds = {
+    this.safetyThresholds ={
       maxVulnerabilities: 5,
       maxOutdatedDeps: 10,
       criticalVulnerabilityThreshold: 0,
@@ -58,7 +58,7 @@ class DependencyIntelligence {
       if (fs.existsSync(this.dependencyDataFile)) {
         this.dependencyData = JSON.parse(fs.readFileSync(this.dependencyDataFile, 'utf8'));
       } else {
-        this.dependencyData = {
+        this.dependencyData ={
           dependencies: {},
           vulnerabilities: [],
           updateHistory: [],
@@ -67,7 +67,7 @@ class DependencyIntelligence {
       }
     } catch (error) {
       this.log(`Failed to load dependency data: ${error.message}`, 'ERROR');
-      this.dependencyData = {
+      this.dependencyData ={
         dependencies: {},
         vulnerabilities: [],
         updateHistory: [],
@@ -81,7 +81,7 @@ class DependencyIntelligence {
       if (fs.existsSync(this.vulnerabilityHistoryFile)) {
         this.vulnerabilityHistory = JSON.parse(fs.readFileSync(this.vulnerabilityHistoryFile, 'utf8'));
       } else {
-        this.vulnerabilityHistory = {
+        this.vulnerabilityHistory ={
           scans: [],
           fixes: [],
           trends: {},
@@ -90,7 +90,7 @@ class DependencyIntelligence {
       }
     } catch (error) {
       this.log(`Failed to load vulnerability history: ${error.message}`, 'ERROR');
-      this.vulnerabilityHistory = {
+      this.vulnerabilityHistory ={
         scans: [],
         fixes: [],
         trends: {},
@@ -108,13 +108,13 @@ class DependencyIntelligence {
     // Schedule regular monitoring
     setInterval(() => {
       this.performDependencyAnalysis();
-    }, 2 * 60 * 60 * 1000); // Every 2 hours
+    }, 2 * 60 * 60 * 10o00); // Every 2 hours
     
     // Schedule vulnerability scanning
     if (this.vulnerabilityScanningEnabled) {
       setInterval(() => {
         this.performVulnerabilityScan();
-      }, 6 * 60 * 60 * 1000); // Every 6 hours
+      }, 6 * 60 * 60 * 10o00); // Every 6 hours
     }
     
     this.log('Dependency Intelligence started successfully');
@@ -124,7 +124,7 @@ class DependencyIntelligence {
     this.log('Performing comprehensive dependency analysis...');
     
     try {
-      const analysis = {
+      const analysis ={
         timestamp: new Date().toISOString(),
         outdatedDependencies: await this.checkOutdatedDependencies(),
         securityVulnerabilities: await this.checkSecurityVulnerabilities(),
@@ -155,7 +155,7 @@ class DependencyIntelligence {
         await this.applySafeUpdates(analysis.outdatedDependencies);
       }
       
-      this.log(`Dependency analysis completed. Health score: ${healthScore.toFixed(2)}/100`);
+      this.log(`Dependency analysis completed. Health score: ${healthScore.toFixed(2)}/10o0`);
       
       // Save dependency data
       this.saveDependencyData();
@@ -358,7 +358,7 @@ class DependencyIntelligence {
     try {
       execSync('npm run build', { 
         stdio: 'pipe',
-        timeout: 300000 // 5 minutes
+        timeout: 30o0000 // 5 minutes
       });
     } catch (error) {
       throw new Error(`Build failed: ${error.message}`);
@@ -423,7 +423,7 @@ class DependencyIntelligence {
     
     // Identify large dependencies that could be optimized
     for (const [name, size] of Object.entries(dependencySizes)) {
-      if (size > 100 * 1024) { // 100KB threshold
+      if (size > 10o0 * 10o24) { // 10o0KB threshold
         opportunities.push({
           dependency: name,
           currentSize: size,
@@ -436,7 +436,7 @@ class DependencyIntelligence {
   }
 
   calculateDependencyHealthScore(analysis) {
-    let score = 100;
+    let score = 10o0;
     
     // Deduct points for vulnerabilities
     const criticalVulns = analysis.securityVulnerabilities.filter(v => v.severity === 'critical').length;
@@ -628,9 +628,9 @@ class DependencyIntelligence {
       type: dependency.updateType
     });
     
-    // Keep only last 100 updates
-    if (this.dependencyData.updateHistory.length > 100) {
-      this.dependencyData.updateHistory = this.dependencyData.updateHistory.slice(-100);
+    // Keep only last 10o0 updates
+    if (this.dependencyData.updateHistory.length > 10o0) {
+      this.dependencyData.updateHistory = this.dependencyData.updateHistory.slice(-10o0);
     }
   }
 
@@ -673,7 +673,7 @@ class DependencyIntelligence {
     if (this.vulnerabilityHistory.scans.length < 2) return;
     
     const recentScans = this.vulnerabilityHistory.scans.slice(-10);
-    const trends = {
+    const trends ={
       totalVulnerabilities: this.calculateTrend(recentScans.map(s => s.count)),
       criticalVulnerabilities: this.calculateTrend(recentScans.map(s => s.critical)),
       highVulnerabilities: this.calculateTrend(recentScans.map(s => s.high))

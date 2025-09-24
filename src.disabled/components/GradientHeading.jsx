@@ -1,27 +1,11 @@
 "export function GradientHeading({ children,className,level = "h2",id }) {" const Tag = level; return (); <Tag id={id} className={cn("text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",className" )}" > ";""
-:src.disabled/components/GradientHeading.jsx
 
+:src.disabled/components/GradientHeading.jsx
 </Tag>"
 </Tag>"
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 </Tag>"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 </Tag>"
 :temp_exclude/src.disabled/components/GradientHeading.jsx
-</Tag>"
-</Tag>"
-</Tag>"
-</Tag>"
-</Tag>"
-"
-</Tag>""
-</Tag>"
-ursor/add-new-services-and-deploy-updates-0462"
-</Tag>"
 
-"
-</Tag>""
-</Tag>"
-
-"
-</Tag>"
-</Tag>"

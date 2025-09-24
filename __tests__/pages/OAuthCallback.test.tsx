@@ -17,7 +17,7 @@ describe('OAuthCallback page', () => {'  it('stores token from query string and 
     });
     (useAuth as jest.Mock).mockReturnValue({ setUser: jest.fn() });
 
-    render(<OAuthCallback />);
+    render(<OAuthCallback  />);
 
     await waitFor(() => {
       expect(safeStorage.setItem).toHaveBeenCalledWith('zion_token', testtoken');    });

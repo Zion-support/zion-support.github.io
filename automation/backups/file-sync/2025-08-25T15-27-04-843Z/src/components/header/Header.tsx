@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 import { UserMenu } from './UserMenu';
@@ -49,12 +48,12 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/4 w-1 h-1 bg-zion-cyan rounded-full animate-pulse"></div>
-        <div className="absolute top-2 right-1/3 w-1 h-1 bg-zion-purple rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute top-4 left-1/2 w-1 h-1 bg-zion-blue rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute top-2 right-1/3 w-1 h-1 bg-zion-purple rounded-full animate-pulse delay-10o00"></div>
+        <div className="absolute top-4 left-1/2 w-1 h-1 bg-zion-blue rounded-full animate-pulse delay-20o00"></div>
       </div>
       
       <div className="container flex h-16 items-center px-4 sm:px-6 relative z-10">
-        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
+        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor}  />
 
         <div className="ml-6 flex-1">
           {/* Navigation removed - using sidebar instead */}
@@ -72,8 +71,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         </form>
 
         <div className="flex items-center gap-2">
-          <LanguageSelector />
-          {!hideLogin && <UserMenu />}
+          <LanguageSelector  />
+          {!hideLogin && <UserMenu  />}
         </div>
       </div>
     </header>

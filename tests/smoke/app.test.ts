@@ -1,3 +1,7 @@
+import { describe, it, expect } from 'vitest';
 
-describe('smoke',() => { it('runs',() => { expect(true).toBe(true)})}
+describe('App', () => {
+  it('should work', () => {
+    expect(1 + 1).toBe(2);
+  });
 });

@@ -15,19 +15,18 @@ const path = require('path');
 const fs = require('fs');
 
 // Simple logger
-const logger = {
+const logger ={
   info: (msg) => console.log(`[INFO] ${msg}`),
   error: (msg) => console.error(`[ERROR] ${msg}`),
   warn: (msg) => console.warn(`[WARN] ${msg}`),
-  debug: (msg) => console.log(`[DEBUG] ${msg}`),
-};
+  debug: (msg) => console.log(`[DEBUG] ${msg}`)};
 
 class IntelligentAutomationOrchestrator extends EventEmitter {
-  constructor(config = {}) {
+  constructor(config ={}) {
     super();
 
     this.config = config;
-    this.port = config.dashboard?.port || 3001;
+    this.port = config.dashboard?.port || 30o01;
     this.isRunning = false;
 
     // Core components
@@ -96,10 +95,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
             name,
             status: system.status,
             health: system.health,
-            performance: system.performance,
-          }),
-        ),
-      });
+            performance: system.performance}))});
     });
 
     // API endpoints
@@ -107,9 +103,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
       const systems = Array.from(this.automationSystems.entries()).map(
         ([name, system]) => ({
           name,
-          ...system,
-        }),
-      );
+          ...system}));
       res.json(systems);
     });
 
@@ -119,7 +113,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
         await this.startSystem(name);
         res.json({ success: true, message: `Started system: ${name}` });
       } catch (error) {
-        res.status(500).json({ success: false, error: error.message });
+        res.status(50o0).json({ success: false, error: error.message });
       }
     });
 
@@ -129,7 +123,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
         await this.stopSystem(name);
         res.json({ success: true, message: `Stopped system: ${name}` });
       } catch (error) {
-        res.status(500).json({ success: false, error: error.message });
+        res.status(50o0).json({ success: false, error: error.message });
       }
     });
 
@@ -139,7 +133,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
         await this.restartSystem(name);
         res.json({ success: true, message: `Restarted system: ${name}` });
       } catch (error) {
-        res.status(500).json({ success: false, error: error.message });
+        res.status(50o0).json({ success: false, error: error.message });
       }
     });
   }
@@ -158,11 +152,10 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
       health: 0,
       performance: 0,
       lastActivity: null,
-      port: 3001,
+      port: 30o01,
       start: () => this.startSystem('autonomous'),
       stop: () => this.stopSystem('autonomous'),
-      restart: () => this.restartSystem('autonomous'),
-    });
+      restart: () => this.restartSystem('autonomous')});
 
     // Infinite Improvement Loop
     this.automationSystems.set('infinite-improvement', {
@@ -172,11 +165,10 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
       health: 0,
       performance: 0,
       lastActivity: null,
-      port: 3002,
+      port: 30o02,
       start: () => this.startSystem('infinite-improvement'),
       stop: () => this.stopSystem('infinite-improvement'),
-      restart: () => this.restartSystem('infinite-improvement'),
-    });
+      restart: () => this.restartSystem('infinite-improvement')});
 
     // Enhanced Infinite Improvement Loop
     this.automationSystems.set('enhanced-improvement', {
@@ -186,11 +178,10 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
       health: 0,
       performance: 0,
       lastActivity: null,
-      port: 3003,
+      port: 30o03,
       start: () => this.startSystem('enhanced-improvement'),
       stop: () => this.stopSystem('enhanced-improvement'),
-      restart: () => this.restartSystem('enhanced-improvement'),
-    });
+      restart: () => this.restartSystem('enhanced-improvement')});
 
     // Continuous Improvement System
     this.automationSystems.set('continuous-improvement', {
@@ -200,15 +191,13 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
       health: 0,
       performance: 0,
       lastActivity: null,
-      port: 3005,
+      port: 30o05,
       start: () => this.startSystem('continuous-improvement'),
       stop: () => this.stopSystem('continuous-improvement'),
-      restart: () => this.restartSystem('continuous-improvement'),
-    });
+      restart: () => this.restartSystem('continuous-improvement')});
 
     logger.info(
-      `✅ Initialized ${this.automationSystems.size} automation systems`,
-    );
+      `✅ Initialized ${this.automationSystems.size} automation systems`);
   }
 
   /**
@@ -234,8 +223,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
       await this.startOrchestration();
 
       logger.info(
-        '✅ Intelligent Automation Orchestrator started successfully',
-      );
+        '✅ Intelligent Automation Orchestrator started successfully');
       logger.info(`📊 Dashboard: http://localhost:${this.port}`);
       logger.info(`🔗 API: http://localhost:${this.port}/health`);
     } catch (error) {
@@ -251,9 +239,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
     this.io = socketIo(this.server, {
       cors: {
         origin: '*',
-        methods: ['GET', 'POST'],
-      },
-    });
+        methods: ['GET', 'POST']}});
 
     this.io.on('connection', (socket) => {
       logger.info('🔌 Client connected to orchestrator');
@@ -292,7 +278,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
     for (const [name, system] of this.automationSystems) {
       try {
         await this.startSystem(name);
-        await this.sleep(2000); // Wait between starts
+        await this.sleep(20o00); // Wait between starts
       } catch (error) {
         logger.error(`❌ Failed to start system ${name}:`, error);
       }
@@ -329,8 +315,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
       system.process = spawn('node', [scriptPath], {
         stdio: 'pipe',
         detached: false,
-        env: { ...process.env, PORT: system.port },
-      });
+        env: { ...process.env, PORT: system.port }});
 
       system.status = 'starting';
       system.lastActivity = Date.now();
@@ -355,8 +340,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
         if (this.isRunning) {
           const timeoutId = setTimeout(
             () => this.restartSystem(systemName),
-            5000,
-          );
+            50o00);
           // Store timeoutId for cleanup if needed
         }
       });
@@ -365,8 +349,8 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
       await this.waitForSystemStart(systemName);
 
       system.status = 'running';
-      system.health = 100;
-      system.performance = 100;
+      system.health = 10o0;
+      system.performance = 10o0;
 
       logger.info(`✅ System ${systemName} started successfully`);
       this.emitSystemUpdate(systemName);
@@ -402,7 +386,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
           const timeout = setTimeout(() => {
             system.process.kill('SIGKILL');
             resolve();
-          }, 5000);
+          }, 50o00);
 
           system.process.on('close', () => {
             clearTimeout(timeout);
@@ -432,7 +416,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
 
     try {
       await this.stopSystem(systemName);
-      await this.sleep(1000);
+      await this.sleep(10o00);
       await this.startSystem(systemName);
 
       logger.info(`✅ System ${systemName} restarted successfully`);
@@ -447,13 +431,12 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
    */
   async waitForSystemStart(systemName) {
     const maxAttempts = 30;
-    const delay = 1000;
+    const delay = 10o00;
 
     for (let i = 0; i < maxAttempts; i++) {
       try {
         const response = await fetch(
-          `http://localhost:${this.automationSystems.get(systemName).port}/health`,
-        );
+          `http://localhost:${this.automationSystems.get(systemName).port}/health`);
         if (response.ok) {
           return;
         }
@@ -465,8 +448,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
     }
 
     throw new Error(
-      `System ${systemName} failed to start within ${maxAttempts * delay}ms`,
-    );
+      `System ${systemName} failed to start within ${maxAttempts * delay}ms`);
   }
 
   /**
@@ -475,7 +457,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
   startMonitoringLoop() {
     this.monitoringInterval = setInterval(async () => {
       await this.monitorSystems();
-    }, this.config.monitoring?.interval || 60000);
+    }, this.config.monitoring?.interval || 60o000);
   }
 
   /**
@@ -484,7 +466,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
   startDecisionLoop() {
     this.decisionInterval = setInterval(async () => {
       await this.makeDecisions();
-    }, 30000);
+    }, 30o000);
   }
 
   /**
@@ -493,7 +475,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
   startLearningLoop() {
     this.learningInterval = setInterval(async () => {
       await this.learnFromData();
-    }, 60000);
+    }, 60o000);
   }
 
   /**
@@ -530,7 +512,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
       const response = await fetch(`http://localhost:${port}/health`);
       if (response.ok) {
         const data = await response.json();
-        return data.health || 100;
+        return data.health || 10o0;
       }
     } catch (error) {
       logger.debug(`Health check failed for ${systemName}: ${error.message}`);
@@ -544,8 +526,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
    */
   async checkConflicts() {
     const conflicts = await this.conflictResolver.detectConflicts(
-      this.automationSystems,
-    );
+      this.automationSystems);
     if (conflicts.length > 0) {
       logger.warn(`⚠️ Detected ${conflicts.length} conflicts`);
       await this.handleConflicts();
@@ -556,18 +537,15 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
    * Update health metrics
    */
   async updateHealthMetrics() {
-    const metrics = {
+    const metrics ={
       totalSystems: this.automationSystems.size,
       runningSystems: Array.from(this.automationSystems.values()).filter(
-        (s) => s.status === 'running',
-      ).length,
+        (s) => s.status === 'running').length,
       averageHealth:
         Array.from(this.automationSystems.values()).reduce(
           (sum, s) => sum + s.health,
-          0,
-        ) / this.automationSystems.size,
-      timestamp: Date.now(),
-    };
+          0) / this.automationSystems.size,
+      timestamp: Date.now()};
 
     this.performanceTracker.updateMetrics(metrics);
   }
@@ -577,8 +555,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
    */
   async makeDecisions() {
     const decisions = await this.decisionEngine.makeDecisions(
-      this.automationSystems,
-    );
+      this.automationSystems);
 
     for (const decision of decisions) {
       try {
@@ -594,8 +571,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
    */
   async executeDecision(decision) {
     logger.info(
-      `🎯 Executing decision: ${decision.action} on ${decision.target}`,
-    );
+      `🎯 Executing decision: ${decision.action} on ${decision.target}`);
 
     switch (decision.action) {
       case 'restart':
@@ -691,7 +667,7 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
   /**
    * Orchestrate an action across systems
    */
-  async orchestrateAction(action, target, data = {}) {
+  async orchestrateAction(action, target, data ={}) {
     logger.info(`🎼 Orchestrating action: ${action} on ${target}`);
 
     try {
@@ -721,12 +697,11 @@ class IntelligentAutomationOrchestrator extends EventEmitter {
    * Get system script path
    */
   getSystemScriptPath(systemName) {
-    const scriptMap = {
+    const scriptMap ={
       autonomous: 'start-autonomous-system.js',
       'infinite-improvement': 'start-infinite-improvement.sh',
       'enhanced-improvement': 'enhanced-automation-system.js',
-      'continuous-improvement': 'continuous-improvement.js',
-    };
+      'continuous-improvement': 'continuous-improvement.js'};
 
     const scriptName = scriptMap[systemName];
     if (!scriptName) {
@@ -810,10 +785,9 @@ class ResourceManager {
   getUsage() {
     // Mock resource usage
     return {
-      cpu: Math.random() * 100,
-      memory: Math.random() * 100,
-      disk: Math.random() * 100,
-    };
+      cpu: Math.random() * 10o0,
+      memory: Math.random() * 10o0,
+      disk: Math.random() * 10o0};
   }
 
   async optimize() {
@@ -884,9 +858,9 @@ class PerformanceTracker {
       timestamp: Date.now()
     });
     
-    // Keep only last 100 metrics
-    if (this.metrics.length > 100) {
-      this.metrics = this.metrics.slice(-100);
+    // Keep only last 10o0 metrics
+    if (this.metrics.length > 10o0) {
+      this.metrics = this.metrics.slice(-10o0);
     }
   }
 
@@ -922,7 +896,7 @@ class LearningEngine {
   }
 }
 
-module.exports = { IntelligentAutomationOrchestrator 
+module.exports ={ IntelligentAutomationOrchestrator 
   async healthCheck() {
     try {
       const health = {
@@ -939,10 +913,10 @@ module.exports = { IntelligentAutomationOrchestrator
             const systemHealth = await system.healthCheck();
             health.systems[name] = systemHealth;
           } else {
-            health.systems[name] = { status: 'unknown' };
+            health.systems[name] ={ status: 'unknown' };
           }
         } catch (error) {
-          health.systems[name] = { status: 'error', error: error.message };
+          health.systems[name] ={ status: 'error', error: error.message };
           health.errors.push({ system: name, error: error.message });
         }
       }

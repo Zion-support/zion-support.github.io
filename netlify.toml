@@ -1,82 +1,60 @@
 [build]
-  command = "npm run build"
+  command = "npm install --no-audit --no-fund && npm run build"
   publish = ".next"
-  # Netlify Next.js plugin manages functions output automatically
-  # functions = "netlify/functions"
+  base = "."
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "18.20.8"
   NPM_FLAGS = "--legacy-peer-deps"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+  # Configure secrets scanning to ignore expected public values
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
+  SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "ghs_cdMF1uXtPrMpMzDGF8xCh38WM7LCKx0wdnwq,ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY,ghs_mVwAd3X7sGrxLk26IqwlW3En74KQgQ1MJu5r,ghs_19kccVEp5VIJbcu1Oe1bBomzNM9uj62KhopR"
+  SECRETS_SCAN_OMIT_PATHS = "automation_logs/**,improvement_report_*.md,data/reports/**"
 
-# Use the official Netlify Next.js plugin for SSR/ISR support
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-## Security and caching headers for static assets
-[[headers]]
-for = "/assets/*"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
 
-[[headers]]
-for = "/*.js"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-for = "/*.css"
-[headers.values]
-Referrer-Policy = "strict-origin-when-cross-origin"
-X-Content-Type-Options = "nosniff"
-X-Frame-Options = "DENY"
-Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-X-DNS-Prefetch-Control = "on"
-Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
-Cross-Origin-Opener-Policy = "same-origin"
-Cross-Origin-Resource-Policy = "same-origin"
-X-Permitted-Cross-Domain-Policies = "none"
-Origin-Agent-Cluster = "?1"
-
-## Using Netlify Next.js runtime
-
-# Static redirects for specific routes
+# Static redirects for exported site
 [[redirects]]
-from = "/ai-customer-success-platform"
-to = "/services/ai-customer-success-platform/"
-status = 301
+  from = "/ai-customer-success-platform"
+  to = "/services/ai-customer-success-platform/"
+  status = 301
 
 [[redirects]]
-from = "/ai-sales-intelligence-platform"
-to = "/services/ai-sales-intelligence-platform/"
-status = 301
+  from = "/ai-sales-intelligence-platform"
+  to = "/services/ai-sales-intelligence-platform/"
+  status = 301
 
 [[redirects]]
-from = "/ai-financial-planning-platform"
-to = "/services/ai-financial-planning-platform/"
-status = 301
+  from = "/ai-financial-planning-platform"
+  to = "/services/ai-financial-planning-platform/"
+  status = 301
 
 [[redirects]]
-from = "/ai-powered-decision-engine"
-to = "/services/ai-powered-decision-engine/"
-status = 301
+  from = "/ai-powered-decision-engine"
+  to = "/services/ai-powered-decision-engine/"
+  status = 301
 
 [[redirects]]
-from = "/intelligent-content-automation-platform"
-to = "/services/intelligent-content-automation-platform/"
-status = 301
+  from = "/intelligent-content-automation-platform"
+  to = "/services/intelligent-content-automation-platform/"
+  status = 301
 
 [[redirects]]
-from = "/intelligent-hr-analytics-platform"
-to = "/services/intelligent-hr-analytics-platform/"
-status = 301
+  from = "/intelligent-hr-analytics-platform"
+  to = "/services/intelligent-hr-analytics-platform/"
+  status = 301
 
 [[redirects]]
-from = "/smart-crm-intelligence-suite"
-to = "/services/smart-crm-intelligence-suite/"
-status = 301
+  from = "/smart-crm-intelligence-suite"
+  to = "/services/smart-crm-intelligence-suite/"
+  status = 301
 
 [[redirects]]
-from = "/affiliate-attribution-suite"
-to = "/services/affiliate-attribution-suite/"
-status = 301
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301

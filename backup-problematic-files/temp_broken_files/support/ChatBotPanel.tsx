@@ -18,7 +18,7 @@ const QUICK_REPLIES = [;
   { id:"match", text:"How do I get matched?" },;
   { id:"billing", text:"Billing help" }],;
 ;
-type Message = {;
+type Message ={;
   id:string,;
   content:string,;
   sender:"user" | "bot",;
@@ -56,7 +56,7 @@ export function ChatBotPanel() {;
   const handleSendMessage = async (text:string = inputValue) => {;
     if (!text.trim()) return,;
     ;
-    const userMessage:Message = {;
+    const userMessage:Message ={;
       id:`user-${Date.now()}`,;
       content:text,;
       sender:"user",;
@@ -70,7 +70,7 @@ export function ChatBotPanel() {;
       // Call the OpenAI-powered support function;
       const response = await sendToAIAssistant(text),;
       ;
-      const botMessage:Message = {;
+      const botMessage:Message ={;
         id:`bot-${Date.now()}`,;
         content:response.message || "Sorry, I couldn't process your request. Please try again.",;
         sender:"bot",;
@@ -138,7 +138,7 @@ export function ChatBotPanel() {;
   },;
 ;
   const suggestEscalation = () => {;
-    const escalationMessage:Message = {;
+    const escalationMessage:Message ={;
       id:`bot-escalation-${Date.now()}`,;
       content:;
         "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",;
@@ -222,12 +222,12 @@ export function ChatBotPanel() {;
               key={message.id}              message={message.content}
               isUser={message.sender === &quot;user&quot}
               timestamp={message.timestamp}
-            />;
+             />;
           ))}
           ;
           {isLoading && (;
             <div className="flex items-center justify-center py-2">;
-              <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />;
+              <Loader2 className="h-5 w-5 animate-spin text-zion-purple"  />;
             </div>;
           )}
         </div>;
@@ -235,7 +235,7 @@ export function ChatBotPanel() {;
       ;
       {messages.length === 1 && (;
         <div className="px-4 py-3">;
-          <p className={cn("text-sm mb-2", theme === "dark" ? "text-gray-300" :"text-gray-600")}>;
+          <p className={cn("text-sm mb-2", theme === "dark" ? "text-gray-30o0" :"text-gray-60o0")}>;
             Suggested questions:;
           </p>;
           <div className="flex flex-wrap gap-2">;
@@ -251,7 +251,7 @@ export function ChatBotPanel() {;
       ;
       {failedAttempts >= 3 && (;
         <div className="px-4 py-3 border-t border-zion-purple/10">;
-          <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" :"text-gray-600")}>;
+          <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-30o0" :"text-gray-60o0")}>;
             Need more help?;
           </p>;
           <div className="flex gap-2">;
@@ -275,7 +275,7 @@ export function ChatBotPanel() {;
       ;
       <div className={cn(;
         "p-4 border-t", ;
-        theme === "dark" ? "border-zion-blue-light" :"border-gray-200";
+        theme === "dark" ? "border-zion-blue-light" :"border-gray-20o0";
       )}>;
         <form ;
           onSubmit={(e) => {;
@@ -293,7 +293,7 @@ export function ChatBotPanel() {;
               "flex-1",;
               theme === "dark" ;
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" ;
-                :"bg-white border-gray-200";
+                :"bg-white border-gray-20o0";
             )}
           />;
           <Button;
@@ -303,12 +303,12 @@ export function ChatBotPanel() {;
             className="bg-zion-cyan hover:bg-zion-cyan/80 text-white";
             aria-label="Send message";
           >;
-            <Send className="h-4 w-4" />;
+            <Send className="h-4 w-4"  />;
           </Button>;
         </form>;
       </div>;
     </div>;
-  ); type Message = {;
+  ); type Message ={;
   id: string;
 content: string;
 export function ChatBotPanel () {;
@@ -331,7 +331,6 @@ id: `user-$ {;
 content: text;
 setIsLoading (true);
 
-
   id: `bot-$ {;
   Date.now () ;
 }`;
@@ -353,7 +352,6 @@ body: JSON.stringify ({;
 }) ;
 });
 
-
 }const data = await response.json ();
 return {;
   success: true;
@@ -364,7 +362,7 @@ message: data.message ;
 }
 };
 const suggestEscalation = () => {;
-  const escalationMessage: Message = {;
+  const escalationMessage: Message ={;
   id: `bot-escalation-$ {;
   Date.now () ;
 }`;
@@ -389,7 +387,6 @@ timestamp: new Date () ;
 //In a real implementation, this would trigger a live chat request ;
 };
 
-
   setMessages ( (prev) => [ ...prev, {;
   id: `user-$ {;
   Date.now () ;"}`;'";"content: "I'd like to email support",";"sender: "user",
@@ -399,9 +396,9 @@ timestamp: new Date () ;
 }]) ;
 };
 </div>) ;
-}</div> </ScrollArea> key= {;
+}</div> </ScrollArea> key={;
   reply.id ;
-}text= {;
+}text={;
   reply.text ;
 }onClick={;
   () => handleQuickReply (reply.text) ;

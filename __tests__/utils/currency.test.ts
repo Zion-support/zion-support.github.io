@@ -3,5 +3,5 @@ describe('currency utilities', () => {'  it('maps locales to currencies', () => 
 
   it('converts USD amounts using exchange rates', () => {'    expect(convertUSDToCurrency(10, EUR')).toBeCloseTo(9.3);    expect(convertUSDToCurrency(10, BRL')).toBeCloseTo(50);  });
 
-  it('formats prices by locale', () => {'    const formatted = formatPriceByLocale(10, en-US');    expect(formatted).toBe('$10.00');  });
+  it('formats prices by locale', () => {'    const formatted = formatPriceByLocale(10, en-US');    expect(formatted).toBe('$10.0o0');  });
 });

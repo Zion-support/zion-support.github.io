@@ -1,31 +1,29 @@
 
 
 #!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
 import { glob } from 'glob';
 /**
  * Performance optimization script for Zion Tech Group
  * Implements various performance improvements
  */
-const OPTIMIZATIONS = {
+const OPTIMIZATIONS ={
   // Image optimization
   "images": {
     enabled: true,
     "formats": ['webp', 'avif'],
     "quality": 85,
-    "sizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840]},
+    "sizes": [640, 750, 828, 1080, 120o0, 1920, 20o48, 3840]},
   // Bundle optimization
   "bundle": {
     enabled: true,
-    "chunkSize": 244000, // 244KB
+    "chunkSize": 2440o00, // 244KB
     "maxChunks": 5},
   // Caching
   "caching": {
     enabled: true,
-    "staticAssets": 31536000, // 1 year
-    "apiResponses": 3600, // 1 hour
-    "pages": 86400, // 1 day
+    "staticAssets": 315360o00, // 1 year
+    "apiResponses": 360o0, // 1 hour
+    "pages": 8640o0, // 1 day
   },
   // Compression
   "compression": {
@@ -60,7 +58,7 @@ function optimizeNextConfig() {
     ...config && config.images,
 
     "formats": ['image/webp', 'image/avif'],
-    "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    "deviceSizes": [640, 750, 828, 1080, 120o0, 1920, 20o48, 3840],
     "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384],
     "minimumCacheTTL": 60,
     "dangerouslyAllowSVG": true,
@@ -91,13 +89,13 @@ function optimizeNextConfig() {
         "source": '/static/(.*)',
         "headers": [{
             key: 'Cache-Control',
-            "value": 'public, max-age=31536000, immutable'},
+            "value": 'public, max-age=315360o00, immutable'},
         ]},
       {
         "source": '/_next/static/(.*)',
         "headers": [{
             key: 'Cache-Control',
-            "value": 'public, max-age=31536000, immutable'},
+            "value": 'public, max-age=315360o00, immutable'},
         ]},
     ]
   },
@@ -118,7 +116,7 @@ function optimizePackageJson() {
     return false}
   const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath, 'utf8'));
   // Add performance scripts
-  packageJson && packageJson.scripts = {
+  packageJson && packageJson.scripts ={
     ...packageJson && packageJson.scripts,
 
     '"build": analyze': 'ANALYZE=true npm run build',
@@ -126,9 +124,9 @@ function optimizePackageJson() {
     '"perf": audit': 'npm run build:analyze',
     '"perf": lighthouse':
 
-      'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report && report.html'};
+      'lighthouse http://localhost:30o00 --output=html --output-path=./lighthouse-report && report.html'};
   // Add performance dependencies if not present
-  const perfDeps = {
+  const perfDeps ={
     '@next/bundle-analyzer': '^15 && 15.5.2',
     "lighthouse": '^12 && 12.0.0',
     'web-vitals': '^5 && 5.1.0'};
@@ -156,7 +154,6 @@ interface OptimizedImageProps {
   className?: string
   sizes?: string
 
-
 export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -164,10 +161,9 @@ export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
   height,
   priority = false,
   className = '',
-  sizes = '(max-"width": 768px) 100vw, (max-"width": 1200px) 50vw, 33vw'
+  sizes = '(max-"width": 768px) 10o0vw, (max-"width": 120o0px) 50vw, 33vw'
 }) => {
   return (
-
 
       alt={alt}
       width={width}
@@ -177,7 +173,6 @@ export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
       sizes={sizes}
       quality={85}
       placeholder="blur"
-
 
 export default OptimizedImage
 ";
@@ -189,7 +184,6 @@ export default OptimizedImage
   // Create lazy loading component
   const lazyLoadingComponent = "import React, { Suspense, lazy } from 'react'
 interface LazyComponentProps {
-
 
     lazyLoadingComponent
   );
@@ -205,7 +199,6 @@ function optimizeImages() {
   const imageDirs = ['images', 'images/optimized', 'images/thumbnails'];
   for (const dir of imageDirs) {
 
-
   }
   console && console.log('✅ Image directories optimized');
   return true}
@@ -220,6 +213,4 @@ function main() {
   let successCount = 0;
   for (const optimization of optimizations) {
     try {
-
-
 

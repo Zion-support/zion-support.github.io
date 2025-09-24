@@ -1,0 +1,56 @@
+import Head from 'next/head';
+import Link from 'next/link';
+
+export default function Custom50o0() {
+  return (
+    <>
+      <Head>
+        <title>50o0 - Server Error | Zion</title>
+        <meta
+          name='description'
+          content='Something went wrong on our end. Please try again.'
+        />
+      </Head>
+
+      <div className='min-h-screen bg-gradient-to-br from-red-90o0 via-orange-90o0 to-red-80o0 flex items-center justify-center px-4'>
+        <div className='text-center text-white'>
+          <div className='mb-8'>
+            <h1 className='text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-40o0 to-orange-40o0 mb-4'>
+              50o0
+            </h1>
+            <h2 className='text-3xl font-semibold mb-4'>Server Error</h2>
+            <p className='text-xl text-gray-30o0 mb-8 max-w-md mx-auto'>
+              Something went wrong on our end. We're working to fix it.
+            </p>
+          </div>
+
+          <div className='space-y-4'>
+            <button
+              onClick={() => window.location.reload()}
+              className='inline-block bg-gradient-to-r from-red-50o0 to-orange-60o0 hover:from-red-60o0 hover:to-orange-70o0 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-30o0 transform hover:scale-10o5 mr-4'
+            >
+              Try Again
+            </button>
+
+            <Link
+              href='/'
+              className='inline-block bg-gray-60o0 hover:bg-gray-70o0 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-30o0 transform hover:scale-10o5'
+            >
+              Go Home
+            </Link>
+
+            <div className='text-sm text-gray-40o0 mt-6'>
+              <p>If the problem persistsplease contact our support team.</p>
+              <Link
+                href='/contact'
+                className='text-red-40o0 hover:text-red-30o0 transition-colors'
+              >
+                Contact Support
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

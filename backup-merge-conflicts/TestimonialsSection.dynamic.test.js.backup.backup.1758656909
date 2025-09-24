@@ -1,0 +1,31 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:__tests__/TestimonialsSection.dynamic.test.js
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import TestimonialsSectiondynamic from '../components/TestimonialsSection.dynamic';
+describe('TestimonialsSectiondynamic', () => {
+  test('renders without crashing', () => {
+    render(<TestimonialsSectiondynamic />);
+    expect(
+      screen.getByTestId('testimonialssection.dynamic')
+    ).toBeInTheDocument();
+  });
+  test('displays correct content', () => {
+    render(<TestimonialsSectiondynamic />);
+  });
+  test('handles user interactions', () => {
+    render(<TestimonialsSectiondynamic />);
+  });
+  test('applies correct styling', () => {
+    render(<TestimonialsSectiondynamic />);
+  });
+});
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import TestimonialsSectiondynamic from "./components/TestimonialsSection.dynamic"; describe("TestimonialsSectiondynamic",() => { test("renders without crashing",() => { render(<TestimonialsSectiondynamic />); expect( screen.getByTestId("testimonialssection.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<TestimonialsSectiondynamic />)}); test("handles user interactions",() => { render(<TestimonialsSectiondynamic />)}); test("applies correct styling",() => { render(<TestimonialsSectiondynamic />)})});''"
+=======
+import _React from 'react';  import '@testing-library/jest-dom'; import TestimonialsSectiondynamic from '../components/TestimonialsSection.dynamic'; describe('TestimonialsSectiondynamic',() => { test('renders without crashing',() => { render(<TestimonialsSectiondynamic />); expect( screen.getByTestId('testimonialssection.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<TestimonialsSectiondynamic />)}); test('handles user interactions',() => { render(<TestimonialsSectiondynamic />)}); test('applies correct styling',() => { render(<TestimonialsSectiondynamic />)})});
+>>>>>>> main
+import _React from 'react';  import '@testing-library/jest-dom'; import TestimonialsSectiondynamic from '../components/TestimonialsSection.dynamic'; describe('TestimonialsSectiondynamic',() => { test('renders without crashing',() => { render(<TestimonialsSectiondynamic />); expect( screen.getByTestId('testimonialssection.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<TestimonialsSectiondynamic />)}); test('handles user interactions',() => { render(<TestimonialsSectiondynamic />)}); test('applies correct styling',() => { render(<TestimonialsSectiondynamic />)})});
+>>>>>>> pr-11914:backup-merge-conflicts/TestimonialsSection.dynamic.test.js.backup
+=======
+>>>>>>> pr-11913:__tests__/TestimonialsSection.dynamic.test.js
