@@ -1,0 +1,40 @@
+#!/bin/bash
+# Comprehensive script to resolve merge conflicts and merge all open PRs into main
+# Optimized for handling thousands of unmerged branches
+set -e
+echo "🚀 Starting comprehensive merge conflict resolution for all open PRs..."
+echo "📊 Total unmerged branches to process: $(git branch -r --no-merged main | wc -l)"
+echo "⏰ Started at: $(date)"
+echo "---"
+# Create a backup branch
+BACKUP_BRANCH="backup-main-$(date +%Y%m%d-%H%M%S)"
+echo "🔒 Creating backup branch: $BACKUP_BRANCH"
+git checkout -b "$BACKUP_BRANCH"
+git push origin "$BACKUP_BRANCH"
+git checkout main
+# Initialize counters
+SUCCESSFUL_MERGES=0
+FAILED_MERGES=0
+CONFLICT_RESOLUTIONS=0
+SKIPPED_BRANCHES=0
+TOTAL_PROCESSED=0
+# Get all unmerged branches, prioritizing cursor branches
+CURSOR_BRANCHES=$(git branch -r --no-merged main | grep "origin/cursor/" | sed 's/origin\///' | sort)
+OTHER_BRANCHES=$(git branch -r --no-merged main | grep -v "origin/cursor/" | sed 's/origin\///' | sort)
+# Combine branches with cursor branches first
+ALL_BRANCHES="$CURSOR_BRANCHES $OTHER_BRANCHES"
+echo "📋 Processing cursor branches first, then other branches"
+echo "🔍 Found $(echo "$CURSOR_BRANCHES" | wc -l) cursor branches"
+echo "🔍 Found $(echo "$OTHER_BRANCHES" | wc -l) other branches"
+echo "---"
+# Function to resolve conflicts in a file
+resolve_conflicts() {
+    local file="$1"
+    local branch="$2"
+    echo "🔧 Resolving conflicts in $file for branch $branch..."
+    # Check if file has merge conflicts
+        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
+            echo "⚙️  Config file detected, keeping main version..."
+        else
+            echo "📝 Regular file, attempting to merge both versions..."
+            # Remove conflict markers and try to keep both versions

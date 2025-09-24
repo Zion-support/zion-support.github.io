@@ -1,31 +1,5 @@
 {
-  "timestamp": "2025-09-21T13:30:37.930Z",
-  "securityIssues": [
-    {
-      "type": "configuration",
-      "severity": "medium",
-      "issue": "TypeScript build errors are ignored",
-      "recommendation": "Enable TypeScript error checking in production"
-    },
-    {
-      "type": "configuration",
-      "severity": "medium",
-      "issue": "ESLint errors are ignored during builds",
-      "recommendation": "Enable ESLint error checking in production"
-    }
-  ],
-  "recommendations": [],
-  "checks": [
-    {
-      "type": "dependencies",
-      "status": "checked",
-      "recommendation": "Run npm audit regularly and update dependencies"
-    }
-  ],
-  "summary": {
-    "totalIssues": 2,
-    "criticalIssues": 0,
-    "highIssues": 0,
-    "status": "excellent"
-  }
+  "timestamp": "2025-08-28T20:48:48.267Z",
+  "summary": "Security audit completed",
+  "status": "completed"
 }

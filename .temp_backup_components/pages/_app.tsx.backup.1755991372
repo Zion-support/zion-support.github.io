@@ -1,0 +1,7 @@
+export default function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <EnhancedLayout>
+      <Component {...pageProps} />
+    </EnhancedLayout>
+  );
+}

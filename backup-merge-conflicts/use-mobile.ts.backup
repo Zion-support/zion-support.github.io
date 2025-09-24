@@ -1,0 +1,21 @@
+=======
+import { useState, useEffect } from 'react'  export function useMobile() { const [isMobile, setIsMobile] = useState(false)  useEffect(() => {;""';
+}};';;';
+=======
+import { useState,useEffect } from 'react' export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;"" }}
+import { useState,useEffect } from &apos;react&apos; export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;&quot;}};&apos;;&apos;;
+=======
+=======
+import { useState,useEffect } from 'react' export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;"" }}
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+import { useState,useEffect } from &apos;react&apos; export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;&quot;}};&apos;;&apos;;
+import { useEffect } from 'react';,
+import { useState } from 'react';,
+import { useState,useEffect } from 'react' export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;"}};';';
+=======
+const { useState,useEffect } from "react" export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;"}};";";'"'"
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
