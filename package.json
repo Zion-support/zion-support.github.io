@@ -7,11 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "build:netlify": "vite build",
-<<<<<<< HEAD
     "lint": "eslint --no-error-on-unmatched-pattern \"src/**/*.{ts,tsx,js,jsx}\" \"src-clean/**/*.{ts,tsx,js,jsx}\" \"*.{ts,tsx,js,jsx}\" --report-unused-disable-directives --max-warnings 0",
-=======
-    "lint": "eslint --no-error-on-unmatched-pattern \"src/**/*.{ts,tsx,js,jsx}\" \"src-clean/**/*.{ts,tsx,js,jsx}\" \"*.{ts,tsx,js,jsx}\" --report-unused-disable-directives --max-warnings 0",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-acfe
     "preview": "vite preview",
     "test": "jest",
     "test:watch": "jest --watch",
