@@ -23,28 +23,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-<<<<<<< HEAD
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "src-clean/src/*"
-      ]
-    },
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": false,
-    "noImplicitReturns": false,
-    "noImplicitAny": false,
-    "noImplicitThis": false,
-    "noImplicitOverride": false,
-    "types": [
-      "node",
-      "react",
-      "react-dom"
-    ],
-=======
->>>>>>> 6ae6df4a84c41566ef0ec447b781bce8f661ffae
     "incremental": true,
     "plugins": [
       {
@@ -60,39 +38,25 @@
     "strictNullChecks": true
   },
   "include": [
-<<<<<<< HEAD
-    "src-clean/src/**/*",
-    "src-clean/src/types/offline-shims.d.ts",
-    "*.d.ts",
-    "tailwind.config.js",
-    "postcss.config.js",
-=======
     "next-env.d.ts",
->>>>>>> 6ae6df4a84c41566ef0ec447b781bce8f661ffae
-    ".next/types/**/*.ts"
+    "src",
+    "app"
   ],
   "exclude": [
     "node_modules",
-<<<<<<< HEAD
+    ".next",
     "dist",
     "build",
     "coverage",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "coverage",
     "zion-website",
-    "zion-os",
-    "zion-ai-assistant",
-    "utils",
-    "pages",
-    "pages.*",
-    "services",
-    "tests",
-    "__tests__"
-=======
-    "**/*"
->>>>>>> 6ae6df4a84c41566ef0ec447b781bce8f661ffae
+    "zion_academy",
+    "apps",
+    "backup",
+    "backups",
+    "temp_*",
+    "temp*",
+    "**/__tests__/**",
+    "**/test/**",
+    "**/__mocks__/**"
   ]
 }
