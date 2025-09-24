@@ -441,7 +441,19 @@ export default [
              '**/api.tsx',
              '**/app-disabled/**',
              '**/app-minimal/**',
-             '**/app-optimizer.js'
+             '**/app-optimizer.js',
+             '**/src.broken/**',
+             '**/ts_files_backup/**',
+             '**/types.disabled/**',
+             '**/types/**',
+             '**/structural-fix.js',
+             '**/ultimate-fix.js',
+             '**/ultimate-merge-conflict-resolver.js',
+             '**/verify-and-complete-merges.js',
+             '**/verify_completion.js',
+             '**/vite.config.ts',
+             '**/workbox-config.js',
+             '**/tailwind.config.ts'
            ]
          }
 ];
