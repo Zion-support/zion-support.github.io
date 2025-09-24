@@ -1,23 +1,17 @@
-name: commitlint
-'on':
-  workflow_dispatch: {}
-  schedule:
-    - cron: 0 */2 * * *
-permissions:
-  contents: write
-  actions: read
+name: Commitlint
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
 jobs:
-  main:
-    name: Main Job
+  lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: wagoid/commitlint-github-action@v6
         with:
           node-version: '20'
           cache: npm
