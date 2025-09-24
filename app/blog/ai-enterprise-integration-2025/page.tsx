@@ -356,7 +356,7 @@ export default function AIEnterpriseIntegration2025() {
                   <span className="text-blue-500 mt-1">⚡</span>
                   <div>
                     <span className="font-semibold">Response Time:</span>
-                    <span className="text-gray-600"> < 200ms for real-time applications</span>
+                    <span className="text-gray-600"> &lt; 200ms for real-time applications</span>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
@@ -370,7 +370,7 @@ export default function AIEnterpriseIntegration2025() {
                   <span className="text-blue-500 mt-1">📈</span>
                   <div>
                     <span className="font-semibold">Model Drift:</span>
-                    <span className="text-gray-600"> < 5% performance degradation</span>
+                    <span className="text-gray-600"> &lt; 5% performance degradation</span>
                   </div>
                 </li>
               </ul>
