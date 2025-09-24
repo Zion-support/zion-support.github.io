@@ -52,17 +52,15 @@ class ErrorBoundary extends React.Component<
 			console.groupEnd();
 		}
 
-		if (
-			typeof window !== 'undefined' &&
-			typeof (window as unknown as {
+		if (typeof window !== 'undefined') {
+			const maybeGtag = (window as unknown as {
 				gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
-			}).gtag === 'function'
-		) {
-			((window as unknown as {
-				gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
-			}).gtag)('event', 'exception', {
-				description: error.message,
-				fatal: true});
+			}).gtag;
+			if (typeof maybeGtag === 'function') {
+				maybeGtag('event', 'exception', {
+					description: error.message,
+					fatal: true});
+			}
 		}
 
 		if (typeof window !== 'undefined') {

@@ -3,6 +3,7 @@ import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin'
 import typescriptParser from '@typescript-eslint/parser'
+import globals from 'globals'
 
 export default [
 	{
@@ -58,13 +59,20 @@ export default [
 		languageOptions: {
 			parser: typescriptParser,
 			ecmaVersion: 2021,
-			sourceType: 'module'},
+			sourceType: 'module',
+			globals: {
+				...globals.browser,
+				process: 'readonly',
+				console: 'readonly'
+			}
+		},
 		plugins: {
 			react: reactPlugin,
 			'react-hooks': reactHooksPlugin,
 			'@typescript-eslint': typescriptEslintPlugin},
 		settings: { react: { version: 'detect' } },
 		rules: {
+			'no-unused-vars': 'off',
 			'react/react-in-jsx-scope': 'off',
 			'no-console': 'warn',
 			'@typescript-eslint/no-unused-vars': [
