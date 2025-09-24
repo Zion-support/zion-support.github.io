@@ -1,273 +1,33 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface Job {
-=======
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-export interface Job {;
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export interface Job {;
-
-=======
-export interface Job {export interface Job {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export interface Job {
-export interface Job {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-export interface Job {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+export interface Job {
+  id: string,
+  title: string,
+  description: string,
+  company_name?: string,
+  budget?: string,
+  client_id: string}
+,
+export interface ApplyToJobModalProps {
+  job: Job,
+  isOpen: boolean,
+export interface ApplyToJobModalProps {
+  job: Job,
+  isOpen: boolean,
+  onClose: () => void,
+  onApplySuccess?: (jobId: string) => Promise<void>}
+,
+export interface Job {
   id: string;
   title: string;
-=======
-  title: string,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-export interface Job {;
-
-export interface Job {;
-
-export interface Job {
-export interface Job {;
-<<<<<<< HEAD
-  title: string,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  id: string;
-  title: string;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   description: string;
   company_name?: string;
   budget?: string;
-  client_id: string;
-=======
-
-export interface Job {;
-
-export interface Job {export interface Job {;
-
-export interface Job {
-export interface Job {;
-  title: string,
-  description: string;
-  company_name?: string;
-  budget?: string;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  client_id: string}
+,
 export interface ApplyToJobModalProps {
   job: Job;
   isOpen: boolean;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
-<<<<<<< HEAD
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-export interface ApplyToJobModalProps {;
-  job: Job;
-  isOpen: boolean;
-  onClose: () => void;
-  onApplySuccess?: (jobId: string) => Promise<void>;
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-export interface Job {;
-  id: string,;
-  title: string,;
-  description: string,;
-  company_name?: string,;
-  budget?: string,;
-  client_id: string;
-}
-;
-export interface ApplyToJobModalProps {;
-  job: Job,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  isOpen: boolean,;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  onClose: () => void;
-=======
-  isOpen: boolean,;  onClose: () => void;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-
-  onApplySuccess?: (jobId: string) => Promise<void>;
-}
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-export interface ApplyToJobModalProps {
-<<<<<<< HEAD
-  job: Job;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  job: Job;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  isOpen: boolean,;  onClose: () => void;
-=======
-  isOpen: boolean,;
-
-  onClose: () => void;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-  onApplySuccess?: (jobId: string) => Promise<void>;
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface ApplyToJobModalProps {
-  job: Job;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-;
-
-;
-;
-
-
-export interface ApplyToJobModalProps {};
-  job: Job;
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  is_open: boolean;
-  on_close: () => void;
-  onApplySuccess?: (job_id: string) => Promise < void>;
-}
-
-;
-;
-
-;
-;
-export interface ApplyToJobModalProps {
-job: Job;
-export interface ApplyToJobModalProps {
-  job: Job;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
-
-export interface Job {
-  // TODO: Implement
-}
-  id: string;,
-  title: string;
-  description: string;
-  company_name?: string;
-  budget?: string;
-  client_id: string;
-
-
-
-export interface ApplyToJobModalProps {;
-  job: Job;,
-  isOpen: boolean;
-  onClose: () => void;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  onClose: () => void,
+  onApplySuccess?: (jobId: string) => Promise<void>}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}

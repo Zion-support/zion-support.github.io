@@ -1,22 +1,25 @@
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
-
-import React from 'react';''
-import MainLayout from '../components/layout/MainLayout';'
-const Page = () => {
+export default function FAQPage() {
   return (
-    <MainLayout;
-      title="FAQ - Zion Tech Group"""
-      description="Frequently asked questions about Zion Tech Group services""
-    >
-"
-      <div className="min-h-screen bg-gray-50">"
-</div>"
-        <div className="container mx-auto px-4 py-16">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">FAQ</h1>""
-          <p className="text-xl text-gray-600">Coming soon...</p>"
-        </div>
-    )"
-      </div>
-    </MainLayout>)"
-
+    <main className='max-w-4xl mx-auto px-4 py-16'>,
+      <h1 className='text-3xl font-bold mb-6'>Frequently Asked Questions</h1>,
+      <p className='text-gray-60o0 mb-8'>,
+        We're building out comprehensive FAQs. In the meantime, contact us for,
+        any questions.,
+      </p>,
+      <div className='space-y-6'>,
+        <section>,
+          <h2 className='text-xl font-semibold'>What services do you offer?</h2>,
+          <p className='text-gray-70o0'>,
+            We provide AI services, cloud & DevOps, cybersecurity, data,
+            analytics, and more.,
+          </p>,
+        </section>,
+        <section>,
+          <h2 className='text-xl font-semibold'>How can I get a quote?</h2>,
+          <p className='text-gray-70o0'>,
+            Visit our contact page to request a tailored quote.,
+          </p>,
+        </section>,
+      </div>,
+    </main>)}
+,

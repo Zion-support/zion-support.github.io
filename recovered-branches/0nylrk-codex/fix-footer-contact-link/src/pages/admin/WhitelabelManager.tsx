@@ -1,786 +1,168 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+import React, { useState } from 'react',
+import {Header} from "@/components/Header",
+import {Footer} from "@/components/Footer",
+import {SEO} from "@/components/SEO",
+import {WhitelabelRequestForm} from "@/components/admin/whitelabel/WhitelabelRequestForm",
+import {TenantsList} from "@/components/admin/whitelabel/TenantsList",
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs",
+import {useAuth} from "@/hooks/useAuth",
+import {Navigate} from "react-router-dom",
 import React, { useState } from 'react';
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {SEO} from "@/components/SEO";
-import {WhitelabelRequestForm} from "@/components/admin/whitelabel/WhitelabelRequestForm";
-import {TenantsList} from "@/components/admin/whitelabel/TenantsList";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {useAuth} from "@/hooks/useAuth";
-import {Navigate} from "react-router-dom";
-export default function WhitelabelManager() {;
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("tenants");
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-import React, { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm";
 import { TenantsList } from "@/components/admin/whitelabel/TenantsList";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth";
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Navigate } from "react-router-dom";
+import { Header } from '@/components / Header',
+import { Footer } from '@/components / Footer',
+import { SEO } from '@/components / SEO',
+import { WhitelabelRequestForm } from '@/components / admin / whitelabel / WhitelabelRequestForm',
+import { TenantsList } from '@/components / admin / whitelabel / TenantsList',
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs',
+import { use_auth } from '@/hooks / use_auth',
+import { Navigate } from './react-router-dom',
+export default function WhitelabelManager() {
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState("tenants"),
+export default function WhitelabelManager() {
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState("tenants"),
+  // Check if user has admin role,
+  // Check if user has admin role,
+  const isAdmin = user?.role === "admin",
 export default function WhitelabelManager() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("tenants");
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // Check if user has admin role;
+  // Check if user has admin role,
   const isAdmin = user?.role === "admin";
-
-  if (!isAdmin) {;
-    return <Navigate to="/unauthorized" />;
-
-=======
-
-
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  }
+    return <Navigate to="/unauthorized" />}
   return (
-
-=======
-
-
-=======
-=======
-
-  if (!isAdmin) {
-    return <Navigate to="/unauthorized" />;
-  }
-  return (
-    <>
-      <SEO
-        title="White-Label Management - Zion AI Marketplace"
-        description="Create and manage white-label instances of the Zion AI Marketplace platform."
-      />
-      <Header />
-      <main className="flex-1 container max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col space-y-6">
-          <div>
-            <h1 className="text-3xl font-bold tracking-tight">
-              White-Label Management
-            </h1>
-            <p className="text-muted-foreground mt-2">
-              Create and manage branded versions of the platform for agencies,
-              startups, and enterprise clients.
-            </p>
-          </div>
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-import React, { useState } from 'react',
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO",
-import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm",
-import { TenantsList } from "@/components/admin/whitelabel/TenantsList",
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-
-  // Check if user has admin role
-  const isAdmin = user?.role === "admin",
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-import React, { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm";
-import { TenantsList } from "@/components/admin/whitelabel/TenantsList";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useAuth } from "@/hooks/useAuth";
-=======
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",import { useAuth } from "@/hooks/useAuth";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",import { useAuth } from "@/hooks/useAuth";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import React, { useState } from "react";"
-import { Header } from "@/components/Header";"
-import { Footer } from "@/components/Footer";"
-import { SEO } from "@/components/SEO";"
-import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm";"
-import { TenantsList } from "@/components/admin/whitelabel/TenantsList";"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
-import { useAuth } from "@/hooks/useAuth";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-import { Navigate } from "react-router-dom";
-export default function WhitelabelManager() {};
-  const { user } = useAuth();"
+                  including content, users, and analytics. Tenant admins cannot access data from other tenants.,
+                </p>,
+              </div>,
+            </TabsContent>,
+          </Tabs>,
+        </div>,
+      </main>,
+      <Footer />,
+    </>),
+export default function WhitelabelManager() {
+  const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("tenants");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-  // Check if user has admin role
-<<<<<<< HEAD
+  // Check if user has admin role,
   const isAdmin = user?.role === "admin",
-  
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-  const isAdmin = user?.role === "admin";
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" />
-  }
+    return <Navigate to="/unauthorized" />}
+,
   return (
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  including content, users, and analytics. Tenant admins cannot access data from other tenants.
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-          <Tabs
-            value={activeTab}
-            onValueChange={setActiveTab}
-            className="w-full"
-          >
-            <TabsList className="mb-8">
-              <TabsTrigger value="tenants">Tenants</TabsTrigger>
-              <TabsTrigger value="create">Create New</TabsTrigger>
-              <TabsTrigger value="docs">Documentation</TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="tenants" className="space-y-6">
-              <TenantsList />
-            </TabsContent>
-
-            <TabsContent value="create" className="flex justify-center">
-              <WhitelabelRequestForm />
-            </TabsContent>
-
-            <TabsContent value="docs" className="space-y-6">
-              <div className="prose dark:prose-invert max-w-none">
-                <h2>White-Label Documentation</h2>
-                <h3>DNS Configuration</h3>
-                <p>
-                  To use a custom domain with your white-label instance, you
-                  need to configure the DNS records. Add a CNAME record pointing
-                  to <code>ziontechmarketplace.com</code>.
-                </p>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Record Type</th>
-                      <th>Name</th>
-                      <th>Value</th>
-                      <th>TTL</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>CNAME</td>
-                      <td>marketplace</td>
-                      <td>ziontechmarketplace.com</td>
-                      <td>3600</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <h3>Email Templates</h3>
-                <p>
-                  White-label instances can use customized email templates. You
-                  can upload HTML templates for the following emails:
-                </p>
-                <ul>
-                  <li>Welcome Email</li>
-                  <li>Password Reset</li>
-                  <li>Quote Request</li>
-                  <li>Invoice</li>
-                  <li>Receipt</li>
-                </ul>
-
-                <h3>Admin Access</h3>
-                <p>
-                  You can assign tenant administrators who will have access to
-                  manage their white-label instance, including content, users,
-                  and analytics. Tenant admins cannot access data from other
-                  tenants.
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                </p>
-              </div>
-            </TabsContent>
-          </Tabs>
-        </div>
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      </main>
-      <Footer />
-
-    </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-
-<<<<<<< HEAD
-=======
-
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-import React, { useState } from 'react',;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { SEO } from "@/components/SEO",;
-import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm",;
-import { TenantsList } from "@/components/admin/whitelabel/TenantsList",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Navigate } from "react-router-dom",;
-export default function WhitelabelManager() {;
-  const { user } = useAuth(),;
-  const [activeTab, setActiveTab] = useState("tenants"),;
-  // Check if user has admin role;
-  const isAdmin = user?.role === "admin";
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (!isAdmin) {;
-    return <Navigate to="/unauthorized" />;
-  }
-;
-  return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  }
-  return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <>;
+    <>,
       <SEO
-        title="White-Label Management - Zion AI Marketplace"
-        description="Create and manage white-label instances of the Zion AI Marketplace platform."
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-import React, { useState } from 'react',;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { SEO } from "@/components/SEO",;
-import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm",;
-import { TenantsList } from "@/components/admin/whitelabel/TenantsList",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Navigate } from "react-router-dom",;
-;
-export default function WhitelabelManager() {;
-  const { user } = useAuth(),;
-  const [activeTab, setActiveTab] = useState("tenants"),;
-  ;
-  // Check if user has admin role;
-  const isAdmin = user?.role === "admin",;
-  ;
-  if (!isAdmin) {;
-    return <Navigate to="/unauthorized" />,;
-  }
-;
-  return (;
-    <>;
-      <SEO ;
-        title="White-Label Management - Zion AI Marketplace";
-        description="Create and manage white-label instances of the Zion AI Marketplace platform.";
-    <>;
-      <SEO;
-        title="White-Label Management - Zion AI Marketplace";
-        description="Create and manage white-label instances of the Zion AI Marketplace platform.";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      />;
-      <Header />;
-      <main className="flex-1 container max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">;
-        <div className="flex flex-col space-y-6">;
-          <div>;
-            <h1 className="text-3xl font-bold tracking-tight">White-Label Management</h1>;
-            <p className="text-muted-foreground mt-2">;
-              Create and manage branded versions of the platform for agencies, startups, and enterprise clients.;
-            </p>;
-          </div>;
-<<<<<<< HEAD
-
-          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
-            <TabsList className="mb-8">;
-=======
-  );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-}
-<<<<<<< HEAD
-;
-=======
-=======
-  );
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-    return <Navigate to="/unauthorized" />;
-  }
+        title="White-Label Management - Zion AI Marketplace",
+        description="Create and manage white-label instances of the Zion AI Marketplace platform.",
+      />,
+      <Header />,
+      <main className="flex-1 container max-w-7xl mx-auto py-10 px-4 sm: px-6 lg:px-8">,
+        <div className="flex flex-col space-y-6">,
+          <div>,
+            <h1 className="text-3xl font-bold tracking-tight">White-Label Management</h1>,
+            <p className="text-muted-foreground mt-2">,
+              Create and manage branded versions of the platform for agencies, startups, and enterprise clients.,
+            </p>,
+          </div>,
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">,
+            <TabsList className="mb-8">,
+export default /**,
+ * WhitelabelManager - Function description,
+ */,
+function WhitelabelManager() {
+  const { user } = use_auth (),
+  const [active_tab, setActiveTab] = useState ("tenants"),
+  // Check if user has admin role,
+  const is_admin = user?.role === "admin",
+  // Check condition,
+if ( {) {
+  $2}
+    return <Navigate to="/unauthorized" />}
   return (
-    <>;
-      <SEO;
-        title="White - Label Management - Zion AI Marketplace";
-        description="Create and manage white - label instances of the Zion AI Marketplace platform.";
-      />;
-      <Header />;
-      <main className="flex - 1 container max - w-7xl mx - auto py - 10 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="flex flex - col space - y-6">;
-          <div>;
-            <h1 className="text - 3xl font - bold tracking - tight">White - Label Management</h1>;
-            <p className="text - muted - foreground mt - 2">;
-              Create and manage branded versions of the platform for agencies, startups, and enterprise clients.;
-            </p>;
-          </div>;
-          <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;
-            <TabsList className="mb - 8">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-;
-=======
-  if (!isAdmin) {;;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  if (!isAdmin) {;;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
-            <TabsList className="mb-8">;
-          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
-            <TabsList className="mb-8">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  }
-  return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-              <TabsTrigger value="tenants">Tenants</TabsTrigger>;
-              <TabsTrigger value="create">Create New</TabsTrigger>;
-=======
-
-
-  }
-  return (
-"
-              <TabsTrigger value="tenants">Tenants</TabsTrigger>;"
-              <TabsTrigger value="create">Create New</TabsTrigger>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-              <TabsTrigger value="docs">Documentation</TabsTrigger>;
-            </TabsList>;
-
-
-<<<<<<< HEAD
-=======
-            ;
-            <TabsContent value="tenants" className="space-y-6">;
-              <TenantsList />;
-            </TabsContent>;
-            ;
-            <TabsContent value="create" className="flex justify-center">;
-              <WhitelabelRequestForm />;
-            </TabsContent>;
-            ;
-            <TabsContent value="tenants" className="space-y-6">;
-              <TenantsList />;
-            </TabsContent>;
-            <TabsContent value="create" className="flex justify-center">;
-              <WhitelabelRequestForm />;
-            </TabsContent>;
-            <TabsContent value="docs" className="space-y-6">;
-              <div className="prose dark:prose-invert max-w-none">;
-                <h2>White-Label Documentation</h2>;
-                <h3>DNS Configuration</h3>;
-                <p>;
-                  To use a custom domain with your white-label instance, you need to configure the DNS records.;
-                  Add a CNAME record pointing to <code>ziontechmarketplace.com</code>.;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  }
-  return (
-              <TabsTrigger value="tenants">Tenants</TabsTrigger>;
-              <TabsTrigger value="create">Create New</TabsTrigger>;
-              <TabsTrigger value="docs">Documentation</TabsTrigger>;
-            </TabsList>;
-}"
-
-    <>;
-        title="White - Label Management - Zion AI Marketplace";""
-        description="Create and manage white - label instances of the Zion AI Marketplace platform.";"
-      />;
-
-      <Header />;
-      <main className="flex - 1 container max - w-7xl mx - auto py - 10 px - 4 sm:px - 6 lg:px - 8">;"
-        <div className="flex flex - col space - y-6">;"
-          <div>;
-            <h1 className="text - 3xl font - bold tracking - tight">White - Label Management</h1>;""
-            <p className="text - muted - foreground mt - 2">;"
-            </p>;
-          </div>;"
-          <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;"
-            <TabsList className="mb - 8">;"
-          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;"
-            <TabsList className="mb-8">;"
-              <TabsTrigger value="tenants">Tenants;""
-              <TabsTrigger value="create">Create New;""
-              <TabsTrigger value="docs">Documentation;"
-            ;"
-            <TabsContent value="tenants" className="space - y-6">;"
-
-              <TenantsList />;
-
-            <TabsContent value="create" className="flex justify - center">;"
-
-              <WhitelabelRequestForm />;
-
-            <TabsContent value="docs" className="space - y-6">;"
-              <div className="prose dark:prose - invert max - w-none">;"
-                <h2 > White - Label Documentation</h2>;
-                <h3 > DNS Configuration</h3>;
-                <p>;
-                  Add a CNAME record pointing to <code > ziontechmarketplace.com</code>.;
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-;
-            <TabsContent value="tenants" className="space-y-6">;
-              <TenantsList />;
-            </TabsContent>;
-            ;
-            <TabsContent value="create" className="flex justify-center">;
-              <WhitelabelRequestForm />;
-            </TabsContent>;
-            ;
-            <TabsContent value="tenants" className="space-y-6">;
-              <TenantsList />;
-            </TabsContent>;
-            <TabsContent value="create" className="flex justify-center">;
-              <WhitelabelRequestForm />;
-            </TabsContent>;
-            <TabsContent value="docs" className="space-y-6">;
-              <div className="prose dark:prose-invert max-w-none">;
-                <h2>White-Label Documentation</h2>;
-                <h3>DNS Configuration</h3>;
-                <p>;
-                  To use a custom domain with your white-label instance, you need to configure the DNS records.;
-                  Add a CNAME record pointing to <code>ziontechmarketplace.com</code>.;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                </p>;
-                <table>;
-                  <thead>;
-                    <tr>;
-pr-12325
-                <table>;
-                  <thead>;
-                    <tr>;
-</tr>
-
-<<<<<<< HEAD
-                      <th > Record Type</th>;
-                      <th > Name</th>;
-                      <th > Value</th>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      <th > TTL</th>;                  including content, users, and analytics. Tenant admins cannot access data from other tenants.;
-=======
-
-=======
-=======
-                      <th > TTL</th>;                  including content, users, and analytics. Tenant admins cannot access data from other tenants.;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                      <th > TTL</th>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-<th>Record Type</th>;
-                      <th>Name</th>;
-                      <th>Value</th>;
-                      <th>TTL</th>;
-                    </tr>;
-                  </thead>;
-                  <tbody>;
-</tbody>
-                    <tr>;
-</tr>
-
-<<<<<<< HEAD
-
-
-                  including content, users, and analytics. Tenant admins cannot access data from other tenants.;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                      <td > CNAME</td>;
-                      <td > marketplace</td>;
-                      <td > ziontechmarketplace.com</td>;
-                      <td > 3600</td>;
-                    </tr>;
-                  </tbody>;
-                </table>;
-                <h3 > Email Templates</h3>;
-                <p>;
-</p>
-                </p>;
-                <ul>;
-</ul>
-                  <li > Welcome Email</li>;
-                  <li > Password Reset</li>;
-                  <li > Quote Request</li>;
-                  <li > Invoice</li>;
-                  <li > Receipt</li>;
-                </ul>;
-                <h3 > Admin Access</h3>;
-                <p>;
-</p>
-
-<td>CNAME</td>;
-                      <td>marketplace</td>;
-                      <td>ziontechmarketplace.com</td>;
-                      <td>3600</td>;
-                    </tr>;
-                  </tbody>;
-                </table>;
-                <h3>Email Templates</h3>;
-                <p>;
-                  White-label instances can use customized email templates. You can upload HTML templates;
-                  for the following emails:;
-                </p>;
-                <ul>;
-                  <li>Welcome Email</li>;
-                  <li>Password Reset</li>;
-                  <li>Quote Request</li>;
-                  <li>Invoice</li>;
-                  <li>Receipt</li>;
-                </ul>;
-                <h3>Admin Access</h3>;
-                <p>;
-                  You can assign tenant administrators who will have access to manage their white-label instance;
-                  including content, users, and analytics. Tenant admins cannot access data from other tenants.;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                </p>;
-              </div>;
-            </TabsContent>;
-          </Tabs>;
-        </div>;
-      </main>;
-      <Footer />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </>;
-  );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-}
-</>);
-}
-</Footer>
-    </>);
-}
-
-}
-    </>);
-}
-                      <th > TTL</th>;
-                    </tr>;
-                  </thead>;
-                  <tbody>;
-
-                      <td > CNAME</td>;
-                      <td > marketplace</td>;
-                      <td > ziontechmarketplace.com</td>;
-                      <td > 3600</td>;
-                  </tbody>;
-                </table>;
-                <h3 > Email Templates</h3>;
-                <ul>;
-                  <li > Welcome Email</li>;
-                  <li > Password Reset</li>;
-                  <li > Quote Request</li>;
-                  <li > Invoice</li>;
-                  <li > Receipt</li>;
-                </ul>;
-                <h3 > Admin Access</h3>;
-              </div>;
-            ;
-      </main>;
-      <Footer />;
-
-pr-12325
-    </>);
-}
-    </>;
-  ),;}
-<<<<<<< HEAD
- "
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-}White-Label Management - Zion AI Marketplace"description=" Create and manage white-label instances of the Zion AI Marketplace platform."/> <Header /> <main className=" flex-1 container max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8"> <div className=" flex flex-col space-y-6"> <div> <h1 className=" text-3xl font-bold tracking-tight">White-Label Management</h1> <p className=" text-muted-foreground mt-2"> Create and manage branded versions of the platform for agencies, startups, and enterprise clients. </p> </div> </TabsList> <TabsContent value=" tenants"className=" space-y-6"> <TenantsList /> </TabsContent> <TabsContent value=" create"className=" flex justify-center"> <WhitelabelRequestForm /> </TabsContent> <TabsContent value=" docs"className=" space-y-6"> <div className=" prose dark:prose-invert max-w-none" > <h2>White-Label Documentation</h2> <h3>DNS Configuration</h3> <p> To use a custom domain with your white-label instance, you need to configure the DNS records. Add a CNAME record pointing to <code>ziontechmarketplace.com</code>. </p> <table> <thead> <tr> <th>Record Type</th> <th>Name</th> <th>Value</th> <th>TTL</th> </tr> </thead> <tbody> <tr> <td>CNAME</td> <td>marketplace</td> <td>ziontechmarketplace.com</td> <td>3600</td> </tr> </tbody> </table> <h3>Email Templates</h3> <p> White-label instances can use customized email templates. You can upload HTML templates for the following emails: </p> <ul> <li>Welcome Email</li> <li>Password Reset</li> <li>Quote Request</li> <li>Invoice</li> <li>Receipt</li> </ul> <h3>Admin Access</h3> <p> You can assign tenant administrators who will have access to manage their white-label instance;
-including content, users, and analytics. Tenant admins cannot access data from other tenants. </p> </div> </TabsContent> </Tabs> </div> </main> <Footer /> </>) 
-}
-    </>;
-  );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-}
-;
-<<<<<<< HEAD
-    </>);
-}
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-}
-;
-    </>);
-}
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-}White-Label Management - Zion AI Marketplace"description=" Create and manage white-label instances of the Zion AI Marketplace platform."/> <Header /> <main className=" flex-1 container max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8"> <div className=" flex flex-col space-y-6"> <div> <h1 className=" text-3xl font-bold tracking-tight">White-Label Management</h1> <p className=" text-muted-foreground mt-2"> Create and manage branded versions of the platform for agencies, startups, and enterprise clients. </p> </div>  <TabsContent value=" tenants"className=" space-y-6"> <TenantsList />  <TabsContent value=" create"className=" flex justify-center"> <WhitelabelRequestForm />  <TabsContent value=" docs"className=" space-y-6"> <div className=" prose dark:prose-invert max-w-none" > <h2>White-Label Documentation</h2> <h3>DNS Configuration</h3> <p> To use a custom domain with your white-label instance, you need to configure the DNS records. Add a CNAME record pointing to <code>ziontechmarketplace.com</code>. </p> <table> <thead> <tr> <th>Record Type</th> <th>Name</th> <th>Value</th> <th>TTL</th> </tr> </thead> <tbody> <tr> <td>CNAME</td> <td>marketplace</td> <td>ziontechmarketplace.com</td> <td>3600</td> </tr> </tbody> </table> <h3>Email Templates</h3> <p> White-label instances can use customized email templates. You can upload HTML templates for the following emails: </p> <ul> <li>Welcome Email</li> <li>Password Reset</li> <li>Quote Request</li> <li>Invoice</li> <li>Receipt</li> </ul> <h3>Admin Access</h3> <p> You can assign tenant administrators who will have access to manage their white-label instance;"
-
-including content, users, and analytics. Tenant admins cannot access data from other tenants. </p> </div>   </div> </main> <Footer /> </>) 
-pr-12325
-
- "
-}White-Label Management - Zion AI Marketplace"description=" Create and manage white-label instances of the Zion AI Marketplace platform."/> <Header /> <main className=" flex-1 container max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8"> <div className=" flex flex-col space-y-6"> <div> <h1 className=" text-3xl font-bold tracking-tight">White-Label Management</h1> <p className=" text-muted-foreground mt-2"> Create and manage branded versions of the platform for agencies, startups, and enterprise clients. </p> </div> </TabsList> <TabsContent value=" tenants"className=" space-y-6"> <TenantsList /> </TabsContent> <TabsContent value=" create"className=" flex justify-center"> <WhitelabelRequestForm /> </TabsContent> <TabsContent value=" docs"className=" space-y-6"> <div className=" prose dark:prose-invert max-w-none" > <h2>White-Label Documentation</h2> <h3>DNS Configuration</h3> <p> To use a custom domain with your white-label instance, you need to configure the DNS records. Add a CNAME record pointing to <code>ziontechmarketplace.com</code>. </p> <table> <thead> <tr> <th>Record Type</th> <th>Name</th> <th>Value</th> <th>TTL</th> </tr> </thead> <tbody> <tr> <td>CNAME</td> <td>marketplace</td> <td>ziontechmarketplace.com</td> <td>3600</td> </tr> </tbody> </table> <h3>Email Templates</h3> <p> White-label instances can use customized email templates. You can upload HTML templates for the following emails: </p> <ul> <li>Welcome Email</li> <li>Password Reset</li> <li>Quote Request</li> <li>Invoice</li> <li>Receipt</li> </ul> <h3>Admin Access</h3> <p> You can assign tenant administrators who will have access to manage their white-label instance;"
-</Header>
-
-including content, users, and analytics. Tenant admins cannot access data from other tenants. </p> </div> </TabsContent> </Tabs> </div> </main> <Footer /> </>) 
-</Footer>
-    </>;
-  );
-}
-;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    <>,
+      <SEO
+        title="White - Label Management - Zion AI Marketplace",
+        description="Create and manage white - label instances of the Zion AI Marketplace platform.",
+      />,
+      <Header />,
+      <main className="flex - 1 container max - w-7xl mx - auto py - 10 px - 4 sm: px - 6 lg:px - 8">,
+        <div className="flex flex - col space - y-6">,
+          <div>,
+            <h1 className="text - 3xl font - bold tracking - tight">White - Label Management</h1>,
+            <p className="text - muted - foreground mt - 2">,
+              Create and manage branded versions of the platform for agencies, startups, and enterprise clients.,
+            </p>,
+          </div>,
+          <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">,
+            <TabsList className="mb - 8">,
+              <TabsTrigger value="tenants">Tenants</TabsTrigger>,
+              <TabsTrigger value="create">Create New</TabsTrigger>,
+              <TabsTrigger value="docs">Documentation</TabsTrigger>,
+            </TabsList>,
+            <TabsContent value="tenants" className="space - y-6">,
+              <TenantsList />,
+            </TabsContent>,
+            <TabsContent value="create" className="flex justify - center">,
+              <WhitelabelRequestForm />,
+            </TabsContent>,
+            <TabsContent value="docs" className="space - y-6">,
+              <div className="prose dark: prose - invert max - w-none">,
+                <h2 > White - Label Documentation</h2>,
+                <h3 > DNS Configuration</h3>,
+                <p>,
+                  To use a custom domain with your white - label instance, you need to configure the DNS records.,
+                  Add a CNAME record pointing to <code > ziontechmarketplace.com</code>.,
+                </p>,
+                <table>,
+                  <thead>,
+                    <tr>,
+                      <th > Record Type</th>,
+                      <th > Name</th>,
+                      <th > Value</th>,
+                      <th > TTL</th>,
+                    </tr>,
+                  </thead>,
+                  <tbody>,
+                    <tr>,
+                      <td > CNAME</td>,
+                      <td > marketplace</td>,
+                      <td > ziontechmarketplace.com</td>,
+                      <td > 3600</td>,
+                    </tr>,
+                  </tbody>,
+                </table>,
+                <h3 > Email Templates</h3>,
+                <p>,
+                  White - label instances can use customized email templates. You can upload HTML templates,
+                  for the following emails: ,
+                </p>,
+                <ul>,
+                  <li > Welcome Email</li>,
+                  <li > Password Reset</li>,
+                  <li > Quote Request</li>,
+                  <li > Invoice</li>,
+                  <li > Receipt</li>,
+                </ul>,
+                <h3 > Admin Access</h3>,
+                <p>,
+                  You can assign tenant administrators who will have access to manage their white - label instance;
+                  including content, users, and analytics. Tenant admins cannot access data from other tenants.,
+                </p>,
+              </div>,
+            </TabsContent>,
+          </Tabs>,
+        </div>,
+      </main>,
+      <Footer />}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}))

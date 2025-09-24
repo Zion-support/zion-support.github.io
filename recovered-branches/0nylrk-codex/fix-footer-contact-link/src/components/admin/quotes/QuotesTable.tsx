@@ -1,2106 +1,361 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-import {formatDate} from "@/utils/dateUtils";
-interface QuotesTableProps {;
-  quotes: QuoteRequest[],;
-  isArchived?: boolean;
-  isLoading: boolean,;
-  updateStatus: (id: string, status: QuoteStatus) => void,;
-  toggleArchive: (id: string, isArchived: boolean) => void,;
-  deleteQuote: (id: string) => void,;
-  onViewDetails: (quote: QuoteRequest) => void;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-}
-
-
-export const QuotesTable: React.FC<QuotesTableProps> = ({;
-
-  quotes;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  isArchived = false;
-  isLoading;
-  updateStatus;
-  toggleArchive;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {formatDate} from "@/utils/dateUtils";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import {formatDate} from "@/utils/dateUtils";
-
 import React from "react";
-import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react";
-import { 
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow 
-} from "@/components/ui/table",
-import { Button } from "@/components/ui/button";
-import { 
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger 
-} from "@/components/ui/dropdown-menu",
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-import { formatDate } from "@/utils/dateUtils";
-interface QuotesTableProps {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import React from "react";
-import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react";
-import { 
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow 
-} from "@/components/ui/table",
-import { Button } from "@/components/ui/button";
-import { 
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger 
-} from "@/components/ui/dropdown-menu",
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-import { formatDate } from "@/utils/dateUtils";
-interface QuotesTableProps {}
-  quotes: QuoteRequest[]
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  isArchived?: boolean;
-<<<<<<< HEAD
-  isLoading: boolean
-  updateStatus: (id: string, status: QuoteStatus) => void
-  toggleArchive: (id: string, isArchived: boolean) => void
-  deleteQuote: (id: string) => void
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {formatDate} from "@/utils/dateUtils";
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import React from "react",
-=======
-  isLoading: boolean;
-  updateStatus: (id: string, status: QuoteStatus) => void;
-  toggleArchive: (id: string, isArchived: boolean) => void;
-  deleteQuote: (id: string) => void;
-"
-import React from "react","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
-import {}
-=======
-
-import {formatDate} from "@/utils/dateUtils";
-import React from "react",
-import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
-import { 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  Table,
-  TableBody, 
-  TableCell, 
-  TableHead, 
-  TableHeader, 
-<<<<<<< HEAD
-  TableRow "
-} from "@/components/ui/table","
+import {
 import { Button } from "@/components/ui/button",
-import {}
-  DropdownMenu,
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuTrigger "
-} from "@/components/ui/dropdown-menu","
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge","
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes","
-import { formatDate } from "@/utils/dateUtils",
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  TableRow 
-} from "@/components/ui/table",
-import { Button } from "@/components/ui/button",
-import { 
-  DropdownMenu,
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuTrigger 
-} from "@/components/ui/dropdown-menu",
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 import { formatDate } from "@/utils/dateUtils",
-
-<<<<<<< HEAD
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import {formatDate} from "@/utils/dateUtils",
+import React from "react";;
+import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+import { formatDate } from "@/utils/dateUtils";
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 interface QuotesTableProps {
-=======
-interface QuotesTableProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  quotes: QuoteRequest[],
   isArchived?: boolean,
   isLoading: boolean,
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-  onViewDetails: (quote: QuoteRequest) => void
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  onViewDetails: (quote: QuoteRequest) => void
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-export const QuotesTable: React.FC<QuotesTableProps> = ({;
-  quotes;
-  isArchived = false;
-  isLoading;
-  updateStatus;
-  toggleArchive;
-export const QuotesTable: React.FC<QuotesTableProps> = ({};
-  quotes;
-
-  isArchived = false;
-  isLoading;
-  updateStatus;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  toggleArchive;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  toggleArchive;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  deleteQuote
-  quotes,
-  isArchived = false,
-  isLoading,
-  updateStatus,
-  toggleArchive,
-  deleteQuote,
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  onViewDetails
-}) => {
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table";
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+interface QuotesTableProps {
+  quotes: QuoteRequest[];
+  isArchived?: boolean;
+  isLoading: boolean;
+  updateStatus: (id: string, status: QuoteStatus) => void;
+  toggleArchive: (id: string, isArchived: boolean) => void;
+  deleteQuote: (id: string) => void;
+  onViewDetails: (quote: QuoteRequest) => void}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
+  onViewDetails}) => {
   return (
-=======
-
-  onViewDetails;
-}) => {}
-  return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    <div className="overflow-x-auto">
-      <Table>
-        <TableHeader>"
-          <TableRow className="border-zion-blue-light hover:bg-zion-blue">"
-            <TableHead className="text-zion-slate-light">Talent</TableHead>"
-            <TableHead className="text-zion-slate-light">Requester</TableHead>"
-            <TableHead className="text-zion-slate-light">Project</TableHead>"
-            <TableHead className="text-zion-slate-light">Budget</TableHead>"
-            <TableHead className="text-zion-slate-light">Date</TableHead>"
-            <TableHead className="text-zion-slate-light">Status</TableHead>"
-=======
-  onViewDetails
-}) => {
-  return (
-    <div className="overflow-x-auto">
-      <Table>
-        <TableHeader>
-          <TableRow className="border-zion-blue-light hover:bg-zion-blue">
-            <TableHead className="text-zion-slate-light">Talent</TableHead>
-            <TableHead className="text-zion-slate-light">Requester</TableHead>
-            <TableHead className="text-zion-slate-light">Project</TableHead>
-            <TableHead className="text-zion-slate-light">Budget</TableHead>
-            <TableHead className="text-zion-slate-light">Date</TableHead>
-            <TableHead className="text-zion-slate-light">Status</TableHead>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-            <TableHead className="text-zion-slate-light">Actions</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
+    <div className="overflow-x-auto">,
+      <Table>,
+        <TableHeader>,
+          <TableRow className="border-zion-blue-light hover: bg-zion-blue">,
+            <TableHead className="text-zion-slate-light">Talent</TableHead>,
+            <TableHead className="text-zion-slate-light">Requester</TableHead>,
+            <TableHead className="text-zion-slate-light">Project</TableHead>,
+            <TableHead className="text-zion-slate-light">Budget</TableHead>,
+            <TableHead className="text-zion-slate-light">Date</TableHead>,
+            <TableHead className="text-zion-slate-light">Status</TableHead>,
+            <TableHead className="text-zion-slate-light">Actions</TableHead>,
+          </TableRow>,
+        </TableHeader>,
+        <TableBody>,
           {isLoading ? (
-<<<<<<< HEAD
-            <TableRow>"
-=======
-            <TableRow>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
-                Loading quote requests...
-              </TableCell>
-            </TableRow>
-          ) : quotes.length === 0 ? (
-<<<<<<< HEAD
-            <TableRow>"
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
-                {isArchived"
-                  ? "No archived quote requests found.""
-=======
-            <TableRow>
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
-                {isArchived
-                  ? "No archived quote requests found."
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+            <TableRow>,
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">,
+                Loading quote requests...,
+              </TableCell>,
+            </TableRow>) : quotes.length === 0 ? (
+            <TableRow>,
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">,
+                {isArchived,
+                  ? "No archived quote requests found.",
                   : "No quote requests found."}
-              </TableCell>
-            </TableRow>
-          ) : (
+              </TableCell>,
+            </TableRow>) : (
             quotes.map(quote => (
-<<<<<<< HEAD
-              <TableRow;
-                key={quote.id}"
-                className="border-zion-blue-light hover:bg-zion-blue"
-              >"
-                <TableCell className="text-white">
-                  {quote.talent_name |'Unknown Talent'}
-                </TableCell>"
-                <TableCell className="text-white">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React from './react';
-=======
-  toggleArchive;import React from './react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  toggleArchive;import React from './react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               <TableRow
                 key={quote.id}
-                className="border-zion-blue-light hover:bg-zion-blue"
-              >
-                <TableCell className="text-white">
+                className="border-zion-blue-light hover: bg-zion-blue">,
+                <TableCell className="text-white">,
                   {quote.talent_name |'Unknown Talent'}
-                </TableCell>
-                <TableCell className="text-white">
-import React from './react';
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  toggleArchive;import React from './react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import { Eye, MoreHorizontal, Archive, Trash2 } from './lucide-react';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
-import { Button } from '@/components / ui / button';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components / ui / dropdown - menu';
-import { QuoteStatusBadge } from '@/components / quotes / QuoteStatusBadge';
-import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
-=======
-
-
-'
-import React from './react';'
-import { Eye, MoreHorizontal, Archive, Trash2 } from './lucide-react';'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';'
-import { Button } from '@/components / ui / button';'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components / ui / dropdown - menu';'
-import { QuoteStatusBadge } from '@/components / quotes / QuoteStatusBadge';"
-import type { QuoteRequest, QuoteStatus } from "@/types / quotes";'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-import { format_date } from '@/utils / date_utils';
-interface QuotesTableProps {}
-  quotes: QuoteRequest[],
-  is_archived?: boolean;
-  is_loading: boolean,
-  update_status: (id: string, status: QuoteStatus) => void,
-  toggle_archive: (id: string, is_archived: boolean) => void,
-  delete_quote: (id: string) => void,
-  onViewDetails: (quote: QuoteRequest) => void;
-}
-<<<<<<< HEAD
-export const QuotesTable: React.FC < QuotesTableProps> = ({};
-=======
-
-</QuotesTableProps>
-export const QuotesTable: React.FC<QuotesTableProps> = ({;
-</QuotesTableProps>
-export const QuotesTable: React.FC<QuotesTableProps> = ({
-"
-    <div className="overflow-x-auto">"
-</div>
-      <Table>
-
-        <TableHeader>
-          <TableRow className="border-zion-blue-light hover:bg-zion-blue">"
-            <TableHead className="text-zion-slate-light">Talent""
-            <TableHead className="text-zion-slate-light">Requester""
-            <TableHead className="text-zion-slate-light">Project""
-            <TableHead className="text-zion-slate-light">Budget""
-            <TableHead className="text-zion-slate-light">Date""
-            <TableHead className="text-zion-slate-light">Status""
-            <TableHead className="text-zion-slate-light">Actions"
-        <TableBody>
-
-            <TableRow>
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">"
-
-
-              <TableRow;
-                key={quote.id}"
-                className="border-zion-blue-light hover:bg-zion-blue""
-              >
-                <TableCell className="text-white">"
-
-
-pr-12325
-</TableCell>
-                </TableCell>"
-                <TableCell className="text-white">"
-</TableCell>
-
-export const QuotesTable: React.FC < QuotesTableProps> = ({
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  quotes;
-  is_archived = false;
-  is_loading;
-  update_status;
-  toggle_archive;
-
-  delete_quote,
-  onViewDetails;
-<<<<<<< HEAD
-}) => {
+                </TableCell>,
+                <TableCell className="text-white">,
+                  {quote.requester_name}
+                </TableCell>,
+                <TableCell className="text - white">,
+                  <div className="font - medium">{quote.project_name}</div>,
+                  <div className="text - sm text - zion - slate - light truncate max - w-[200px]">,
+                    {quote.project_summary}
+,
+  deleteQuote;
+  onViewDetails}) => {
   return (
-    <div className="overflow-x-auto">;
-      <Table>;
-        <TableHeader>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-          <TableRow className="border - zion - blue - light hover:bg - zion-blue">;
-            <TableHead className="text - zion - slate-light">Talent</TableHead>;
-            <TableHead className="text - zion - slate-light">Requester</TableHead>;
-            <TableHead className="text - zion - slate-light">Project</TableHead>;
-            <TableHead className="text - zion - slate-light">Budget</TableHead>;
-            <TableHead className="text - zion - slate-light">Date</TableHead>;
-            <TableHead className="text - zion - slate-light">Status</TableHead>;
-            <TableHead className="text - zion - slate-light">Actions</TableHead>;
-<<<<<<< HEAD
-=======
-}) => {}
-  return ("
-    <div className="overflow - x-auto">;
-      <Table>;
-        <TableHeader>;"
-          <TableRow className="border - zion - blue - light hover:bg - zion - blue">;"
-            <TableHead className="text - zion - slate - light">Talent</TableHead>;"
-            <TableHead className="text - zion - slate - light">Requester</TableHead>;"
-            <TableHead className="text - zion - slate - light">Project</TableHead>;"
-            <TableHead className="text - zion - slate - light">Budget</TableHead>;"
-            <TableHead className="text - zion - slate - light">Date</TableHead>;"
-            <TableHead className="text - zion - slate - light">Status</TableHead>;"
-            <TableHead className="text - zion - slate - light">Actions</TableHead>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-          <TableRow className="border - zion - blue - light hover:bg - zion - blue">;
-            <TableHead className="text - zion - slate - light">Talent</TableHead>;
-            <TableHead className="text - zion - slate - light">Requester</TableHead>;
-            <TableHead className="text - zion - slate - light">Project</TableHead>;
-            <TableHead className="text - zion - slate - light">Budget</TableHead>;
-            <TableHead className="text - zion - slate - light">Date</TableHead>;
-            <TableHead className="text - zion - slate - light">Status</TableHead>;
-            <TableHead className="text - zion - slate - light">Actions</TableHead>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-          </TableRow>;
-        </TableHeader>;
-        <TableBody>;
-          {is_loading ? (
-<<<<<<< HEAD
-            <TableRow>;
-              <TableCell col_span={7} className="text - center py - 10 text - zion - slate-light">;
-                Loading quote requests...;
-              </TableCell>;
-            </TableRow>) : quotes.length === 0 ? (
-            <TableRow>;
-              <TableCell col_span={7} className="text - center py - 10 text - zion - slate-light">;
-                {is_archived;
-                  ? "No archived quote requests found.";
-=======
-            <TableRow>;"
-              <TableCell col_span={7} className="text - center py - 10 text - zion - slate - light">;
-                Loading quote requests...;
-              </TableCell>;
-            </TableRow>) : quotes.length === 0 ? (
-            <TableRow>;"
-              <TableCell col_span={7} className="text - center py - 10 text - zion - slate - light">;
-                {is_archived;"
-                  ? "No archived quote requests found.";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    <div className="overflow-x-auto">,
+      <Table>,
+        <TableHeader>,
+          <TableRow className="border-zion-blue-light hover: bg-zion-blue">,
+            <TableHead className="text-zion-slate-light">Talent</TableHead>,
+            <TableHead className="text-zion-slate-light">Requester</TableHead>,
+            <TableHead className="text-zion-slate-light">Project</TableHead>,
+            <TableHead className="text-zion-slate-light">Budget</TableHead>,
+            <TableHead className="text-zion-slate-light">Date</TableHead>,
+            <TableHead className="text-zion-slate-light">Status</TableHead>,
+            <TableHead className="text-zion-slate-light">Actions</TableHead>,
+          </TableRow>,
+        </TableHeader>,
+        <TableBody>,
+          {isLoading ? (
+            <TableRow>,
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">,
+                Loading quote requests...,
+              </TableCell>,
+            </TableRow>) : quotes && quotes.length === 0 ? (
+            <TableRow>,
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">,
+                {isArchived ,
+                  ? "No archived quote requests found." ,
                   : "No quote requests found."}
-              </TableCell>;
+              </TableCell>,
             </TableRow>) : (
-            quotes.map (quote => (
-              <TableRow;
-<<<<<<< HEAD
-                key={quote.id}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                key={quote.id}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                className="border - zion - blue - light hover:bg - zion - blue";
-              >;"
-                <TableCell className="text - white">;'
-                  {quote.talent_name || 'Unknown Talent'}
-                </TableCell>;"
-                <TableCell className="text - white">;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                  {quote.requester_name}
-                </TableCell>;"
-                <TableCell className="text - white">;"
-                  <div className="font - medium">{quote.project_name}</div>;"
-                  <div className="text - sm text - zion - slate - light truncate max - w-[200px]">;
-                    {quote.project_summary}
-
-  deleteQuote,;
-  onViewDetails;
-}) => {;
-  return ("
-    <div className="overflow-x-auto">;
-      <Table>;
-        <TableHeader>;"
-          <TableRow className="border-zion-blue-light hover:bg-zion-blue">;"
-            <TableHead className="text-zion-slate-light">Talent</TableHead>;"
-            <TableHead className="text-zion-slate-light">Requester</TableHead>;"
-            <TableHead className="text-zion-slate-light">Project</TableHead>;"
-            <TableHead className="text-zion-slate-light">Budget</TableHead>;"
-            <TableHead className="text-zion-slate-light">Date</TableHead>;"
-            <TableHead className="text-zion-slate-light">Status</TableHead>;"
-            <TableHead className="text-zion-slate-light">Actions</TableHead>;
-          </TableRow>;
-        </TableHeader>;
-        <TableBody>;
-          {isLoading ? (;
-            <TableRow>;"
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;
-                Loading quote requests...;
-              </TableCell>;
-            </TableRow>;
-          ) : quotes && quotes.length === 0 ? (;
-            <TableRow>;"
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;
-                {isArchived ;"
-                  ? "No archived quote requests found." ;"
-                  : "No quote requests found."}
-              </TableCell>;
-            </TableRow>;
-          ) : (;
-            quotes && quotes.map(quote => (;
-              <TableRow;
-                key={quote && quote.id}"
-                className="border-zion-blue-light hover:bg-zion-blue">;"
-                <TableCell className="text-white">;'
-                  {quote && quote.talent_name || 'Unknown Talent'}
-                </TableCell>;"
-                <TableCell className="text-white">;
-                  {quote && quote.requester_name}
-                </TableCell>;"
-                <TableCell className="text-white">;"
-                  <div className="font-medium">{quote && quote.project_name}</div>;"
-                  <div className="text-sm text-zion-slate-light truncate max-w-[200px]">;
-                    {quote && quote.project_summary}
-                  </div>;
-                </TableCell>;"
-                <TableCell className="text-white">;
-                  {quote && quote.budget_display || ;
-                  (quote && quote.budget_min && quote && quote.budget_max ;
-                   ? `$${quote && quote.budget_min} - $${quote && quote.budget_max}` ;
-                   : quote && quote.budget_min ;`
-                     ? `$${quote && quote.budget_min}` ;'
-                     : 'Not specified')}
-                </TableCell>;"
-                <TableCell className="text-white">;
-                  {formatDate(quote && quote.created_at)}
-                </TableCell>;
-                <TableCell>;
-                  <QuoteStatusBadge status={quote && quote.status} />;
-                </TableCell>;
-                <TableCell>;"
-                  <div className="flex items-center gap-2">;
-                    <Button"
-                      variant="ghost" "
-                      size="icon" 
-
-<<<<<<< HEAD
-import React from "react",;
-import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",;
-import { ;
-  Table,;
-  TableBody, ;
-  TableCell, ;
-  TableHead, ;
-  TableHeader, ;
-  TableRow ;
-} from "@/components/ui/table",;
-import { Button } from "@/components/ui/button",;
-import { ;
-  DropdownMenu,;
-  DropdownMenuContent, ;
-  DropdownMenuItem, ;
-  DropdownMenuTrigger ;
-} from "@/components/ui/dropdown-menu",;
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",;
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
-import { formatDate } from "@/utils/dateUtils",;
-;
-interface QuotesTableProps {;
-  quotes:QuoteRequest[],;
-  isArchived?:boolean,;
-  isLoading:boolean,;
-  updateStatus:(id:string, status:QuoteStatus) => void,;
-  toggleArchive:(id:string, isArchived:boolean) => void,;
-  deleteQuote:(id:string) => void,;
-  onViewDetails:(quote:QuoteRequest) => void;
-}
-;
-export const QuotesTable:React.FC<QuotesTableProps> = ({;
-  quotes,;
-  isArchived = false,;
-  isLoading,;
-  updateStatus,;
-  toggleArchive,;
-  deleteQuote,;
-  onViewDetails;
-}) => {;
-  return (;
-    <div className="overflow-x-auto">;
-      <Table>;
-        <TableHeader>;
-          <TableRow className="border-zion-blue-light hover:bg-zion-blue">;
-            <TableHead className="text-zion-slate-light">Talent</TableHead>;
-            <TableHead className="text-zion-slate-light">Requester</TableHead>;
-            <TableHead className="text-zion-slate-light">Project</TableHead>;
-            <TableHead className="text-zion-slate-light">Budget</TableHead>;
-            <TableHead className="text-zion-slate-light">Date</TableHead>;
-            <TableHead className="text-zion-slate-light">Status</TableHead>;
-            <TableHead className="text-zion-slate-light">Actions</TableHead>;
-          </TableRow>;
-        </TableHeader>;
-        <TableBody>;
-          {isLoading ? (;
-            <TableRow>;
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;
-                Loading quote requests...;
-              </TableCell>;
-            </TableRow>;
-          ) :quotes.length === 0 ? (;
-            <TableRow>;
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;
-                {isArchived ;
-                  ? "No archived quote requests found." ;
-                  :"No quote requests found."}
-              </TableCell>;
-            </TableRow>;
-          ) :(;
-            quotes.map(quote => (;
-              <TableRow ;
-                key={quote.id}
-                className="border-zion-blue-light hover:bg-zion-blue";
-=======
-                className="border - zion - blue - light hover:bg - zion-blue";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                className="border - zion - blue - light hover:bg - zion-blue";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                className="border - zion - blue - light hover:bg - zion - blue";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-              >;
-                <TableCell className="text - white">;
-                  {quote.talent_name || 'Unknown Talent'}
-                </TableCell>;
-                <TableCell className="text - white">;
-                  {quote.requester_name}
-                </TableCell>;
-                <TableCell className="text - white">;
-                  <div className="font - medium">{quote.project_name}</div>;
-                  <div className="text - sm text - zion - slate - light truncate max - w-[200px]">;
-                    {quote.project_summary}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-  deleteQuote,;
-  onViewDetails;
-}) => {;
-  return (
-    <div className="overflow-x-auto">;
-      <Table>;
-        <TableHeader>;
-          <TableRow className="border-zion-blue-light hover:bg-zion-blue">;
-            <TableHead className="text-zion-slate-light">Talent</TableHead>;
-            <TableHead className="text-zion-slate-light">Requester</TableHead>;
-            <TableHead className="text-zion-slate-light">Project</TableHead>;
-            <TableHead className="text-zion-slate-light">Budget</TableHead>;
-            <TableHead className="text-zion-slate-light">Date</TableHead>;
-            <TableHead className="text-zion-slate-light">Status</TableHead>;
-            <TableHead className="text-zion-slate-light">Actions</TableHead>;
-          </TableRow>;
-        </TableHeader>;
-        <TableBody>;
-          {isLoading ? (;
-            <TableRow>;
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;
-                Loading quote requests...;
-              </TableCell>;
-            </TableRow>;
-          ) : quotes && quotes.length === 0 ? (;
-            <TableRow>;
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;
-                {isArchived ;
-                  ? "No archived quote requests found." ;
-                  : "No quote requests found."}
-              </TableCell>;
-            </TableRow>;
-          ) : (;
-            quotes && quotes.map(quote => (;
+            quotes && quotes.map(quote => (
               <TableRow
                 key={quote && quote.id}
-                className="border-zion-blue-light hover:bg-zion-blue">;
-                <TableCell className="text-white">;
+                className="border-zion-blue-light hover: bg-zion-blue">,
+                <TableCell className="text-white">,
                   {quote && quote.talent_name || 'Unknown Talent'}
-                </TableCell>;
-                <TableCell className="text-white">;
+                </TableCell>,
+                <TableCell className="text-white">,
                   {quote && quote.requester_name}
-                </TableCell>;
-                <TableCell className="text-white">;
-                  <div className="font-medium">{quote && quote.project_name}</div>;
-                  <div className="text-sm text-zion-slate-light truncate max-w-[200px]">;
+                </TableCell>,
+                <TableCell className="text-white">,
+                  <div className="font-medium">{quote && quote.project_name}</div>,
+                  <div className="text-sm text-zion-slate-light truncate max-w-[200px]">,
                     {quote && quote.project_summary}
-                  </div>;
-                </TableCell>;
-                <TableCell className="text-white">;
-                  {quote && quote.budget_display || ;
-                  (quote && quote.budget_min && quote && quote.budget_max ;
-                   ? `$${quote && quote.budget_min} - $${quote && quote.budget_max}` ;
-                   : quote && quote.budget_min ;
-                     ? `$${quote && quote.budget_min}` ;
+                  </div>,
+                </TableCell>,
+                <TableCell className="text-white">,
+                  {quote && quote.budget_display || ,
+                  (quote && quote.budget_min && quote && quote.budget_max ,
+                   ? `$${quote && quote.budget_min} - $${quote && quote.budget_max}` ,
+                   : quote && quote.budget_min ,
+                     ? `$${quote && quote.budget_min}` ,
                      : 'Not specified')}
-                </TableCell>;
-                <TableCell className="text-white">;
+                </TableCell>,
+                <TableCell className="text-white">,
                   {formatDate(quote && quote.created_at)}
-                </TableCell>;
-                <TableCell>;
-                  <QuoteStatusBadge status={quote && quote.status} />;
-                </TableCell>;
-                <TableCell>;
-                  <div className="flex items-center gap-2">;
+                </TableCell>,
+                <TableCell>,
+                  <QuoteStatusBadge status={quote && quote.status} />,
+                </TableCell>,
+                <TableCell>,
+                  <div className="flex items-center gap-2">,
                     <Button
-                      variant="ghost" 
-                      size="icon" 
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-import React from "react",;
-import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",;
-import { ;
-  Table,;
-  TableBody, ;
-  TableCell, ;
-  TableHead, ;
-  TableHeader, ;
-  TableRow ;
-} from "@/components/ui/table",;
-import { Button } from "@/components/ui/button",;
-import { ;
-  DropdownMenu,;
-  DropdownMenuContent, ;
-  DropdownMenuItem, ;
-  DropdownMenuTrigger ;
-} from "@/components/ui/dropdown-menu",;
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",;
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
-import { formatDate } from "@/utils/dateUtils",;
-;
-interface QuotesTableProps {;
-  quotes:QuoteRequest[],;
-  isArchived?:boolean,;
-  isLoading:boolean,;
-  updateStatus:(id:string, status:QuoteStatus) => void,;
-  toggleArchive:(id:string, isArchived:boolean) => void,;
-  deleteQuote:(id:string) => void,;
-  onViewDetails:(quote:QuoteRequest) => void;
-}
-;
-export const QuotesTable:React.FC<QuotesTableProps> = ({;
-  quotes,;
-  isArchived = false,;
-  isLoading,;
-  updateStatus,;
-  toggleArchive,;
-  deleteQuote,;
-  onViewDetails;
-}) => {;
-  return (;
-    <div className="overflow-x-auto">;
-      <Table>;
-        <TableHeader>;
-          <TableRow className="border-zion-blue-light hover:bg-zion-blue">;
-            <TableHead className="text-zion-slate-light">Talent</TableHead>;
-            <TableHead className="text-zion-slate-light">Requester</TableHead>;
-            <TableHead className="text-zion-slate-light">Project</TableHead>;
-            <TableHead className="text-zion-slate-light">Budget</TableHead>;
-            <TableHead className="text-zion-slate-light">Date</TableHead>;
-            <TableHead className="text-zion-slate-light">Status</TableHead>;
-            <TableHead className="text-zion-slate-light">Actions</TableHead>;
-          </TableRow>;
-        </TableHeader>;
-        <TableBody>;
-          {isLoading ? (;
-            <TableRow>;
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;
-                Loading quote requests...;
-              </TableCell>;
-            </TableRow>;
-          ) :quotes.length === 0 ? (;
-            <TableRow>;
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;
-                {isArchived ;
-                  ? "No archived quote requests found." ;
-                  :"No quote requests found."}
-              </TableCell>;
-            </TableRow>;
-          ) :(;
-            quotes.map(quote => (;
-              <TableRow ;
-                key={quote.id}
-                className="border-zion-blue-light hover:bg-zion-blue";
-                className="border - zion - blue - light hover:bg - zion-blue";
-              >;
-                <TableCell className="text-white">;
-                  {quote.talent_name || 'Unknown Talent'}
-                </TableCell>;
-                <TableCell className="text-white">;
-                  {quote.requester_name}
-                </TableCell>;
-                <TableCell className="text-white">;
-                  <div className="font-medium">{quote.project_name}</div>;
-                  <div className="text - sm text - zion - slate - light truncate max-w-[200px]">;
-                    {quote.project_summary}
-                  </div>;
-                </TableCell>;
-                <TableCell className="text-white">;
-                  {quote.budget_display || ;
-                  (quote.budget_min && quote.budget_max ;
-                   ? `$${quote.budget_min} - $${quote.budget_max}` ;
-                   :quote.budget_min ;
-                     ? `$${quote.budget_min}` ;
-                     :'Not specified')}
-                </TableCell>;
-                <TableCell className="text-white">;
-                  {formatDate(quote.created_at)}
-                </TableCell>;
-                <TableCell>;
-                  <QuoteStatusBadge status={quote.status} />;
-                </TableCell>;
-                <TableCell>;
-                  <div className="flex items-center gap-2">;
-                    <Button ;
-                      variant="ghost" ;
-                      size="icon" ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                      variant="ghost",
+                      size="icon",
                       onClick={() => onViewDetails(quote)}
-                    >;"
-                      <Eye className="h-4 w-4" />;"
-                      <span className="sr-only">View Details</span>;
-                    </Button>;
-
-<<<<<<< HEAD
-                    {isArchived ? (;
-                      <>;
-                        <Button
-                          variant="ghost" 
-                          size="icon"
-                          onClick={() => toggleArchive(quote && quote.id, false)}
-;
-                    {isArchived ? (;
-                      <>;
-                        <Button ;
-                          variant="ghost" ;
-                          size="icon";
-                          onClick={() => toggleArchive(quote.id, false)}
-                        >;
-                          onClick={() => toggleArchive(quote && quote.id, false)}                        >;
-                          <Archive className="h-4 w-4" />;
-                          <span className="sr-only">Unarchive</span>;
-                        </Button>;
-                        <Button
-                          variant="ghost" 
-
-                          size="icon"
-=======
-                        >;"
-                          <Archive className="h-4 w-4" />;"
-                          <span className="sr-only">Unarchive</span>;
-                        </Button>;
-
-
-"
-                          size="icon""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                          className="text-red-500"
-                          onClick={() => {;'
-                            if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
-                              deleteQuote(quote && quote.id);
-<<<<<<< HEAD
-                            }
-                          }}
-
-<Button ;
-                          variant="ghost" ;
-                          size="icon";
-                          className="text-red-500";
-                          onClick={() => {;
-                            if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
-                              deleteQuote(quote.id),;
-                            }
-                          }}
-                  {quote.requester_name}
-                </TableCell>
-                <TableCell className="text-white">
-                  <div className="font-medium">{quote.project_name}</div>
-                  <div className="text-sm text-zion-slate-light truncate max-w-[200px]">
-                    {quote.project_summary}
-                  </div>
-                </TableCell>
-                <TableCell className="text-white">
-                  {quote.budget_display |
-                  (quote.budget_min && quote.budget_max
-                   ? `$${quote.budget_min} - $${quote.budget_max}`
-                   : quote.budget_min
-                     ? `$${quote.budget_min}`
-                     : 'Not specified')}
-                </TableCell>
-                <TableCell className="text-white">
-                  {formatDate(quote.created_at)}
-                </TableCell>
-                <TableCell>
-                  <QuoteStatusBadge status={quote.status} />
-                </TableCell>
-                <TableCell>
-                  <div className="flex items-center gap-2">
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => onViewDetails(quote)}
-                    >
-                      <Eye className="h-4 w-4" />
-                      <span className="sr-only">View Details</span>
-                    </Button>
+                    >,
+                      <Eye className="h-4 w-4" />,
+                      <span className="sr-only">View Details</span>,
+                    </Button>,
                     {isArchived ? (
-                      <>
+                      <>,
                         <Button
-                          variant="ghost"
-                          size="icon"
+                          variant="ghost",
+                          size="icon",
+                          onClick={() => toggleArchive(quote && quote.id, false)}
+                        >,
+                          <Archive className="h-4 w-4" />,
+                          <span className="sr-only">Unarchive</span>,
+                        </Button>,
+                        <Button
+                          variant="ghost",
+                          size="icon",
+                          className="text-red-500",
+                          onClick={() => {
+                            if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
+                              deleteQuote(quote && quote.id)}
+                          }}
+}
+                            }}
+                            className="text-red-500">,
+                            <Trash2 className="h-4 w-4 mr-2" />,
+                            Delete,
+                          </DropdownMenuItem>,
+                        </DropdownMenuContent>,
+                      </DropdownMenu>,
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table";
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+interface QuotesTableProps {
+  quotes: QuoteRequest[];
+  isArchived?: boolean;
+  isLoading: boolean;
+  updateStatus: (id: string, status: QuoteStatus) => void;
+  toggleArchive: (id: string, isArchived: boolean) => void;
+  deleteQuote: (id: string) => void;
+  onViewDetails: (quote: QuoteRequest) => void}
+,
+export const QuotesTable: React.FC<QuotesTableProps> = ({
+  quotes;
+  isArchived = false;
+  isLoading;
+  updateStatus;
+  toggleArchive;
+  deleteQuote,
+  onViewDetails}) => {
+  return (
+    <div className="overflow-x-auto">,
+      <Table>,
+        <TableHeader>,
+          <TableRow className="border-zion-blue-light hover: bg-zion-blue">,
+            <TableHead className="text-zion-slate-light">Talent</TableHead>,
+            <TableHead className="text-zion-slate-light">Requester</TableHead>,
+            <TableHead className="text-zion-slate-light">Project</TableHead>,
+            <TableHead className="text-zion-slate-light">Budget</TableHead>,
+            <TableHead className="text-zion-slate-light">Date</TableHead>,
+            <TableHead className="text-zion-slate-light">Status</TableHead>,
+            <TableHead className="text-zion-slate-light">Actions</TableHead>,
+          </TableRow>,
+        </TableHeader>,
+        <TableBody>,
+          {isLoading ? (
+            <TableRow>,
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">,
+                Loading quote requests...,
+              </TableCell>,
+            </TableRow>) : quotes.length === 0 ? (
+            <TableRow>,
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">,
+                {isArchived,
+                  ? "No archived quote requests found.",
+                  : "No quote requests found."}
+              </TableCell>,
+            </TableRow>) : (
+            quotes.map(quote => (
+              <TableRow
+                key={quote.id}
+                className="border-zion-blue-light hover: bg-zion-blue">,
+                <TableCell className="text-white">,
+                  {quote.talent_name || 'Unknown Talent'}
+                </TableCell>,
+                <TableCell className="text-white">,
+                  {quote.requester_name}
+                </TableCell>,
+                <TableCell className="text-white">,
+                  <div className="font-medium">{quote.project_name}</div>,
+                  <div className="text-sm text-zion-slate-light truncate max-w-[200px]">,
+                    {quote.project_summary}
+                  </div>,
+                </TableCell>,
+                <TableCell className="text-white">,
+                  {quote.budget_display ||,
+                  (quote.budget_min && quote.budget_max,
+                   ? `$${quote.budget_min} - $${quote.budget_max}`,
+                   : quote.budget_min,
+                     ? `$${quote.budget_min}`,
+                     : 'Not specified')}
+                </TableCell>,
+                <TableCell className="text-white">,
+                  {formatDate(quote.created_at)}
+                </TableCell>,
+                <TableCell>,
+                  <QuoteStatusBadge status={quote.status} />,
+                </TableCell>,
+                <TableCell>,
+                  <div className="flex items-center gap-2">,
+                    <Button
+                      variant="ghost",
+                      size="icon",
+                      onClick={() => onViewDetails(quote)}
+                    >,
+                      <Eye className="h-4 w-4" />,
+                      <span className="sr-only">View Details</span>,
+                    </Button>,
+                    {isArchived ? (
+                      <>,
+                        <Button
+                          variant="ghost",
+                          size="icon",
                           onClick={() => toggleArchive(quote.id, false)}
-                        >
-                          <Archive className="h-4 w-4" />
-                          <span className="sr-only">Unarchive</span>
-                        </Button>
+                        >,
+                          <Archive className="h-4 w-4" />,
+                          <span className="sr-only">Unarchive</span>,
+                        </Button>,
                         <Button
-                          variant="ghost"
-                          size="icon"
-                          className="text-red-500"
+                          variant="ghost",
+                          size="icon",
+                          className="text-red-500",
                           onClick={() => {
                             if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
-                              deleteQuote(quote.id)
-                            }
+                              deleteQuote(quote.id)}
                           }}
-                        >
-                          <Trash2 className="h-4 w-4" />
-                          <span className="sr-only">Delete</span>
-                        </Button>
-                      </>
-                    ) : (
-                      <DropdownMenu>
-                        <DropdownMenuTrigger asChild>
-                          <Button variant="ghost" size="icon">
-                            <MoreHorizontal className="h-4 w-4" />
-                            <span className="sr-only">Actions</span>
-                          </Button>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent align="end">
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'new')}>
-                            Mark as New
-                          </DropdownMenuItem>
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'in_review')}>
-                            Mark as In Review
-                          </DropdownMenuItem>
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'responded')}>
-                            Mark as Responded
-                          </DropdownMenuItem>
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'accepted')}>
-                            Mark as Accepted
-                          </DropdownMenuItem>
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'closed')}>
-                            Mark as Closed
-                          </DropdownMenuItem>
-                          <DropdownMenuItem onClick={() => toggleArchive(quote.id, true)}>
-                            <Archive className="h-4 w-4 mr-2" />
-                            Archive
-                          </DropdownMenuItem>
+>,
+                          <Trash2 className="h-4 w-4" />,
+                          <span className="sr-only">Delete</span>,
+                        </Button>,
+                      </>) : (
+                      <DropdownMenu>,
+                        <DropdownMenuTrigger asChild>,
+                          <Button variant="ghost" size="icon">,
+                            <MoreHorizontal className="h-4 w-4" />,
+                            <span className="sr-only">Actions</span>,
+                          </Button>,
+                        </DropdownMenuTrigger>,
+                        <DropdownMenuContent align="end">,
+                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'new')}>,
+                            Mark as New,
+                          </DropdownMenuItem>,
+                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'in_review')}>,
+                            Mark as In Review,
+                          </DropdownMenuItem>,
+                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'responded')}>,
+                            Mark as Responded,
+                          </DropdownMenuItem>,
+                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'accepted')}>,
+                            Mark as Accepted,
+                          </DropdownMenuItem>,
+                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'closed')}>,
+                            Mark as Closed,
+                          </DropdownMenuItem>,
+                          <DropdownMenuItem onClick={() => toggleArchive(quote && quote.id, true)}>,
+                            <Archive className="h-4 w-4 mr-2" />,
+                            Archive,
+                          </DropdownMenuItem>,
                           <DropdownMenuItem
                             onClick={() => {
-                              if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
-                                deleteQuote(quote.id)
-                              }
+                              if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
+                                deleteQuote(quote && quote.id)}
                             }}
-=======
-
-                              }
-                            }}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                            className="text-red-500"
-                          >"
-                            <Trash2 className="h-4 w-4 mr-2" />
-                            Delete;
-                          </DropdownMenuItem>
-                        </DropdownMenuContent>
-                      </DropdownMenu>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                    )}
-                  </div>
-                </TableCell>
-              </TableRow>
-            ))
-          )}
-
-};
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import React from "react",;
-=======
-"
-import React from "react",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-import React from "react",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",;
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-<<<<<<< HEAD
-  TableRow;"
-} from "@/components/ui/table",;"
-=======
-  TableRow;
-} from "@/components/ui/table",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import { Button } from "@/components/ui/button",;
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-<<<<<<< HEAD
-  DropdownMenuTrigger;"
-} from "@/components/ui/dropdown-menu",;"
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",;"
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;"
-=======
-  DropdownMenuTrigger;
-} from "@/components/ui/dropdown-menu",;
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",;
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import { formatDate } from "@/utils/dateUtils",;
-interface QuotesTableProps {;
-  quotes: QuoteRequest[],;
-  isArchived?: boolean,;
-  isLoading: boolean,;
-  updateStatus: (id: string, status: QuoteStatus) => void,;
-  toggleArchive: (id: string, isArchived: boolean) => void,;
-  deleteQuote: (id: string) => void,;
-  onViewDetails: (quote: QuoteRequest) => void;
-}
-;
-export const QuotesTable: React.FC<QuotesTableProps> = ({;
-  quotes,;
-  isArchived = false,;
-  isLoading,;
-  updateStatus,;
-  toggleArchive,;
-  deleteQuote;
-  onViewDetails;
-}) => {;
-<<<<<<< HEAD
-  return (;"
-    <div className="overflow-x-auto">;
-      <Table>;
-        <TableHeader>;"
-          <TableRow className="border-zion-blue-light hover:bg-zion-blue">;"
-            <TableHead className="text-zion-slate-light">Talent</TableHead>;"
-            <TableHead className="text-zion-slate-light">Requester</TableHead>;"
-            <TableHead className="text-zion-slate-light">Project</TableHead>;"
-            <TableHead className="text-zion-slate-light">Budget</TableHead>;"
-            <TableHead className="text-zion-slate-light">Date</TableHead>;"
-            <TableHead className="text-zion-slate-light">Status</TableHead>;"
-=======
-  return (;
-    <div className="overflow-x-auto">;
-      <Table>;
-        <TableHeader>;
-          <TableRow className="border-zion-blue-light hover:bg-zion-blue">;
-            <TableHead className="text-zion-slate-light">Talent</TableHead>;
-            <TableHead className="text-zion-slate-light">Requester</TableHead>;
-            <TableHead className="text-zion-slate-light">Project</TableHead>;
-            <TableHead className="text-zion-slate-light">Budget</TableHead>;
-            <TableHead className="text-zion-slate-light">Date</TableHead>;
-            <TableHead className="text-zion-slate-light">Status</TableHead>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-            <TableHead className="text-zion-slate-light">Actions</TableHead>;
-          </TableRow>;
-        </TableHeader>;
-        <TableBody>;
-          {isLoading ? (;
-<<<<<<< HEAD
-            <TableRow>;"
-=======
-            <TableRow>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;
-                Loading quote requests...;
-              </TableCell>;
-            </TableRow>;
-          ) : quotes.length === 0 ? (;
-<<<<<<< HEAD
-            <TableRow>;"
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;
-                {isArchived;"
-                  ? "No archived quote requests found.";"
-=======
-            <TableRow>;
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;
-                {isArchived;
-                  ? "No archived quote requests found.";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                  : "No quote requests found."}
-              </TableCell>;
-            </TableRow>;
-          ) : (;
-            quotes.map(quote => (;
-              <TableRow;
-<<<<<<< HEAD
-                key={quote.id}"
-                className="border-zion-blue-light hover:bg-zion-blue"
-              >"
-                <TableCell className="text-white">'
-                  {quote.talent_name || 'Unknown Talent'}
-                </TableCell>"
-                <TableCell className="text-white">
-                  {quote.requester_name}
-                </TableCell>"
-                <TableCell className="text-white">"
-                  <div className="font-medium">{quote.project_name}</div>"
-                  <div className="text-sm text-zion-slate-light truncate max-w-[200px]">
-                    {quote.project_summary}
-                  </div>;
-                </TableCell>;"
-                <TableCell className="text-white">;
-                  {quote.budget_display ||;
-                  (quote.budget_min && quote.budget_max;`
-                   ? `$${quote.budget_min} - $${quote.budget_max}`;
-                   : quote.budget_min;`
-                     ? `$${quote.budget_min}`;'
-                     : 'Not specified')}
-                </TableCell>;"
-=======
-                key={quote.id}
-                className="border-zion-blue-light hover:bg-zion-blue"
-              >
-                <TableCell className="text-white">
-                  {quote.talent_name || 'Unknown Talent'}
-                </TableCell>
-                <TableCell className="text-white">
-                  {quote.requester_name}
-                </TableCell>
-                <TableCell className="text-white">
-                  <div className="font-medium">{quote.project_name}</div>
-                  <div className="text-sm text-zion-slate-light truncate max-w-[200px]">
-                    {quote.project_summary}
-                  </div>;
-                </TableCell>;
-                <TableCell className="text-white">;
-                  {quote.budget_display ||;
-                  (quote.budget_min && quote.budget_max;
-                   ? `$${quote.budget_min} - $${quote.budget_max}`;
-                   : quote.budget_min;
-                     ? `$${quote.budget_min}`;
-                     : 'Not specified')}
-                </TableCell>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                <TableCell className="text-white">;
-                  {formatDate(quote.created_at)}
-                </TableCell>;
-                <TableCell>;
-                  <QuoteStatusBadge status={quote.status} />;
-                </TableCell>;
-<<<<<<< HEAD
-                <TableCell>;"
-                  <div className="flex items-center gap-2">;
-                    <Button;"
-                      variant="ghost";"
-                      size="icon";
-                      onClick={() => onViewDetails(quote)}
-                    >;"
-                      <Eye className="h-4 w-4" />;"
-=======
-                <TableCell>;
-                  <div className="flex items-center gap-2">;
-                    <Button;
-                      variant="ghost";
-                      size="icon";
-                      onClick={() => onViewDetails(quote)}
-                    >;
-                      <Eye className="h-4 w-4" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                      <span className="sr-only">View Details</span>;
-                    </Button>;
-                    {isArchived ? (;
-                      <>;
-<<<<<<< HEAD
-                        <Button;"
-                          variant="ghost";"
-                          size="icon";
-                          onClick={() => toggleArchive(quote.id, false)}
-                        >;"
-                          <Archive className="h-4 w-4" />;"
-                          <span className="sr-only">Unarchive</span>;
-                        </Button>;
-                        <Button;"
-                          variant="ghost";"
-                          size="icon";"
-                          className="text-red-500";
-                          onClick={() => {;'
-=======
-                        <Button;
-                          variant="ghost";
-                          size="icon";
-                          onClick={() => toggleArchive(quote.id, false)}
-                        >;
-                          <Archive className="h-4 w-4" />;
-                          <span className="sr-only">Unarchive</span>;
-                        </Button>;
-                        <Button;
-                          variant="ghost";
-                          size="icon";
-                          className="text-red-500";
-                          onClick={() => {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                            if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
-                              deleteQuote(quote.id);
-                            }
-                          }}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                        >;
-                          <Trash2 className="h-4 w-4" />;
-=======
-                        >;"
-                          <Trash2 className="h-4 w-4" />;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                          <span className="sr-only">Delete</span>;
-                        </Button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      </>;
-
-                    ) : (;
-                      <DropdownMenu>;
-                        <DropdownMenuTrigger asChild>;"
-                          <Button variant="ghost" size="icon">;"
-                            <MoreHorizontal className="h-4 w-4" />;"
-                            <span className="sr-only">Actions</span>;
-                          </Button>;
-                        </DropdownMenuTrigger>;"
-                        <DropdownMenuContent align="end">;
-
-
-                            }
-                          }}
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                              }
-                            }}"
-                            className="text-red-500";
-                          >;"
-=======
-                      </>;
-) :(;
-                    ) : (;
-                      <DropdownMenu>;
-                        <DropdownMenuTrigger asChild>;
-                          <Button variant="ghost" size="icon">;
-                            <MoreHorizontal className="h-4 w-4" />;
-                            <span className="sr-only">Actions</span>;
-                          </Button>;
-                        </DropdownMenuTrigger>;
-                        <DropdownMenuContent align="end">;
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'new')}>;
-                            Mark as New;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'in_review')}>;
-                            Mark as In Review;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'responded')}>;
-                            Mark as Responded;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'accepted')}>;
-                            Mark as Accepted;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'closed')}>;
-                            Mark as Closed;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => toggleArchive(quote && quote.id, true)}>;
-                            <Archive className="h-4 w-4 mr-2" />;
-                            Archive;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem
-                            onClick={() => {;
-                              if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
-                                deleteQuote(quote && quote.id);
-<DropdownMenuItem onClick={() => updateStatus(quote.id, 'new')}>;
-                            Mark as New;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'in_review')}>;
-                            Mark as In Review;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'responded')}>;
-                            Mark as Responded;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'accepted')}>;
-                            Mark as Accepted;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'closed')}>;
-                            Mark as Closed;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem onClick={() => toggleArchive(quote.id, true)}>;
-                            <Archive className="h-4 w-4 mr-2" />;
-                            Archive;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem;
-                            onClick={() => {;
-                              if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
-                                deleteQuote(quote.id);
-                            }
-                          }}
-                              }
-                            }}
-                            className="text-red-500";
-                          >;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                            <Trash2 className="h-4 w-4 mr-2" />;
-                            Delete;
-                          </DropdownMenuItem>;
-                        </DropdownMenuContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      </DropdownMenu>;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                      </DropdownMenu>;
-
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                    )}
-=======
-                      </DropdownMenu>;                    )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                    )}
-=======
-                      </>;                    )}                    )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                      </>;                    )}                    )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                    )}
-</DropdownMenu>;                    )}
-                    )}
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                      </>;                    )}                    )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                  </div>
-                </TableCell>
-              </TableRow>
-            ))
-          )}
-        </TableBody>
-      </Table>
-    </div>
-  )
-}
-
-                    )}
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                  </div>;
-                </TableCell>;
-              </TableRow>;
-            ));
-<<<<<<< HEAD
-<<<<<<< HEAD
-          )}        </TableBody>;
-      </Table>;
-    </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-=======
-        </TableBody>;
-      </Table>;
-    </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
-          )}
-
-        </TableBody>;
-      </Table>;
-    </div>;
-  );
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-=======
-          )}
-
-        </TableBody>;
-      </Table>;
-    </div>;
-  );
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-</TableBody>;
-      </Table>;
-    </div>;
-          )}        </TableBody>;
-      </Table>;
-    </div>;
-  );
-  onViewDetails;)
-}) => {
-  return ("
-    <div className="overflow - x-auto">;"
-      <Table>;
-
-        <TableHeader>;
-          <TableRow className="border - zion - blue - light hover:bg - zion - blue">;"
-            <TableHead className="text - zion - slate - light">Talent;""
-            <TableHead className="text - zion - slate - light">Requester;""
-            <TableHead className="text - zion - slate - light">Project;""
-            <TableHead className="text - zion - slate - light">Budget;""
-            <TableHead className="text - zion - slate - light">Date;""
-            <TableHead className="text - zion - slate - light">Status;""
-            <TableHead className="text - zion - slate - light">Actions;"
-          ;
-        <TableBody>;
-
-            <TableRow>;
-              <TableCell col_span={7} className="text - center py - 10 text - zion - slate - light">;"
-
-              ;)
-            ) : quotes.length === 0 ? (
-
-            ) : (
-</TableCell>
-              </TableCell>;)
-            </TableRow>) : quotes.length === 0 ? (
-            <TableRow>;
-</TableRow>"
-              <TableCell col_span={7} className="text - center py - 10 text - zion - slate - light">;"
-</TableCell>
-              </TableCell>;)
-
-            </TableRow>) : (
-              <TableRow;
-
-                key={quote.id}"
-                className="border - zion - blue - light hover:bg - zion - blue";"
-              >;
-                <TableCell className="text - white">;"
-
-                ;"
-
-                  <div className="font - medium">{quote.project_name}</div>;""
-                  <div className="text - sm text - zion - slate - light truncate max - w-[200px]">;"
-</div>"
-    <div className="overflow-x-auto">;"
-
-          <TableRow className="border-zion-blue-light hover:bg-zion-blue">;"
-            <TableHead className="text-zion-slate-light">Talent;""
-            <TableHead className="text-zion-slate-light">Requester;""
-            <TableHead className="text-zion-slate-light">Project;""
-            <TableHead className="text-zion-slate-light">Budget;""
-            <TableHead className="text-zion-slate-light">Date;""
-            <TableHead className="text-zion-slate-light">Status;""
-            <TableHead className="text-zion-slate-light">Actions;"
-
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
-                key={quote && quote.id}"
-                className="border-zion-blue-light hover:bg-zion-blue">;"
-                <TableCell className="text-white">;"
-
-
-<<<<<<< HEAD
-};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-                  </div>;
-                </TableCell>;"
-                <TableCell className="text - white">;
-                  {quote.budget_display ||;
-                  (quote.budget_min && quote.budget_max;`
-                  ? `$${quote.budget_min} - $${quote.budget_max}`;
-                  : quote.budget_min;`
-                    ? `$${quote.budget_min}`;'
-                    : 'Not specified')}
-                </TableCell>;"
-=======
-                  </div>;
-                </TableCell>;
-                <TableCell className="text - white">;
-                  {quote.budget_display ||;
-                  (quote.budget_min && quote.budget_max;
-                  ? `$${quote.budget_min} - $${quote.budget_max}`;
-                  : quote.budget_min;
-                    ? `$${quote.budget_min}`;
-                    : 'Not specified')}
-                </TableCell>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                <TableCell className="text - white">;
-                  {format_date (quote.created_at)}
-                </TableCell>;
-                <TableCell>;
-                  <QuoteStatusBadge status={quote.status} />;
-                </TableCell>;
-<<<<<<< HEAD
-                <TableCell>;"
-                  <div className="flex items - center gap - 2">;
-                    <Button;"
-                      variant="ghost";"
-                      size="icon";
-                      on_click={() => onViewDetails (quote)}
-                    >;"
-                      <Eye className="h - 4 w - 4" />;"
-=======
-                <TableCell>;
-                  <div className="flex items - center gap - 2">;
-                    <Button;
-                      variant="ghost";
-                      size="icon";
-                      on_click={() => onViewDetails (quote)}
-                    >;
-                      <Eye className="h - 4 w - 4" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                      <span className="sr - only">View Details</span>;
-                    </Button>;
-                    {is_archived ? (
-                      <>;
-<<<<<<< HEAD
-                        <Button;"
-                          variant="ghost";"
-                          size="icon";
-                          on_click={() => toggle_archive (quote.id, false)}
-                        >;"
-                          <Archive className="h - 4 w - 4" />;"
-                          <span className="sr - only">Unarchive</span>;
-                        </Button>;
-                        <Button;"
-                          variant="ghost";"
-                          size="icon";"
-                          className="text - red - 500";
-                          on_click={() => {}
-                            if () {) {}
-  $2;
-=======
-                        <Button;
-                          variant="ghost";
-                          size="icon";
-                          on_click={() => toggle_archive (quote.id, false)}
-                        >;
-                          <Archive className="h - 4 w - 4" />;
-                          <span className="sr - only">Unarchive</span>;
-                        </Button>;
-                        <Button;
-                          variant="ghost";
-                          size="icon";
-                          className="text - red - 500";
-                          on_click={() => {
-                            if () {) {
-  $2
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-}
-                              delete_quote (quote.id);
-                            }
-                          }}
-<<<<<<< HEAD
-                        >;"
-                          <Trash2 className="h - 4 w - 4" />;"
-=======
-                        >;
-                          <Trash2 className="h - 4 w - 4" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                          <span className="sr - only">Delete</span>;
-                        </Button>;
-                      </>) : (
-                      <DropdownMenu>;
-<<<<<<< HEAD
-                        <DropdownMenuTrigger as_child>;"
-                          <Button variant="ghost" size="icon">;"
-                            <MoreHorizontal className="h - 4 w - 4" />;"
-                            <span className="sr - only">Actions</span>;
-                          </Button>;
-                        </DropdownMenuTrigger>;"
-                        <DropdownMenuContent align="end">;'
-                          <DropdownMenuItem on_click={() => update_status (quote.id, 'new')}>;
-                            Mark as New;
-                          </DropdownMenuItem>;'
-                          <DropdownMenuItem on_click={() => update_status (quote.id, 'in_review')}>;
-                            Mark as In Review;
-                          </DropdownMenuItem>;'
-                          <DropdownMenuItem on_click={() => update_status (quote.id, 'responded')}>;
-                            Mark as Responded;
-                          </DropdownMenuItem>;'
-                          <DropdownMenuItem on_click={() => update_status (quote.id, 'accepted')}>;
-                            Mark as Accepted;
-                          </DropdownMenuItem>;'
-                          <DropdownMenuItem on_click={() => update_status (quote.id, 'closed')}>;
-                            Mark as Closed;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem on_click={() => toggle_archive (quote.id, true)}>;"
-=======
-                        <DropdownMenuTrigger as_child>;
-                          <Button variant="ghost" size="icon">;
-                            <MoreHorizontal className="h - 4 w - 4" />;
-                            <span className="sr - only">Actions</span>;
-                          </Button>;
-                        </DropdownMenuTrigger>;
-                        <DropdownMenuContent align="end">;
-                          <DropdownMenuItem on_click={() => update_status (quote.id, 'new')}>;
-                            Mark as New;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem on_click={() => update_status (quote.id, 'in_review')}>;
-                            Mark as In Review;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem on_click={() => update_status (quote.id, 'responded')}>;
-                            Mark as Responded;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem on_click={() => update_status (quote.id, 'accepted')}>;
-                            Mark as Accepted;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem on_click={() => update_status (quote.id, 'closed')}>;
-                            Mark as Closed;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem on_click={() => toggle_archive (quote.id, true)}>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                            <Archive className="h - 4 w - 4 mr - 2" />;
-                            Archive;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem;
-<<<<<<< HEAD
-                            on_click={() => {}
-                              if () {) {}
-  $2;
-}
-                                delete_quote (quote.id);
-                              }
-                            }}"
-                            className="text - red - 500";
-                          >;"
-=======
-                            on_click={() => {
-                              if () {) {
-  $2
-}
-                                delete_quote (quote.id);
-                              }
-                            }}
-                            className="text - red - 500";
-                          >;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                            <Trash2 className="h - 4 w - 4 mr - 2" />;
-                            Delete;
-=======
-                  <div className="font-medium">{quote && quote.project_name}</div>;""
-                  <div className="text-sm text-zion-slate-light truncate max-w-[200px]">;"
-                  </div>;
-
-
-                <TableCell>;
-
-                  <QuoteStatusBadge status={quote && quote.status} />;
-
-                  <div className="flex items-center gap-2">;"
-                    <Button;"
-                      variant="ghost"""
-                      size="icon"")
-                      onClick={() => onViewDetails(quote)}
-                      <Eye className="h-4 w-4" />;"
-                      <span className="sr-only">View Details</span>;"
-                      <>;
-                          size="icon""
-                          onClick={() => toggleArchive(quote && quote.id, false)}
-                          <Archive className="h-4 w-4" />;"
-                          <span className="sr-only">Unarchive</span>;"
-                          size="icon"""
-                          className="text-red-500""
-                          onClick={() => {;
-                            <Trash2 className="h-4 w-4 mr-2" />"
-</Trash2>
-
-
-
-
-
-
-                  <div className="font-medium">{quote.project_name}</div>""
-                  <div className="text-sm text-zion-slate-light truncate max-w-[200px]">"
-
-
-
-                  <QuoteStatusBadge status={quote.status} />;
-
-                      variant="ghost";""
-                      size="icon";")
-                          size="icon";"
-                          onClick={() => toggleArchive(quote.id, false)}
-                          size="icon";""
-                          className="text-red-500";"
-                          <Trash2 className="h-4 w-4" />;"
-</Trash2>"
-                          <span className="sr-only">Delete</span>;"
-                      </>;
-                    ) : (;
-                      <DropdownMenu>;
-
-                        <DropdownMenuTrigger asChild>;
-                          <Button variant="ghost" size="icon">;"
-                            <MoreHorizontal className="h-4 w-4" />;"
-                            <span className="sr-only">Actions</span>;"
-                        <DropdownMenuContent align="end">;"
-)"
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'new')}>;
-
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'in_review')}>;
-
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'responded')}>;
-
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'accepted')}>;
-
-                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'closed')}>;
-
-                          <DropdownMenuItem onClick={() => toggleArchive(quote && quote.id, true)}>;
-
-                            <Archive className="h-4 w-4 mr-2" />;"
-
-                          <DropdownMenuItem;
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'new')}>;
-
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'in_review')}>;
-
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'responded')}>;
-
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'accepted')}>;
-
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'closed')}>;
-
-                          <DropdownMenuItem onClick={() => toggleArchive(quote.id, true)}>;
-
-
-                            <Trash2 className="h-4 w-4 mr-2" />;"
-                      ;                    )}
-
-
-
-
-</Trash2>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                          </DropdownMenuItem>;
-                        </DropdownMenuContent>;
+                            className="text-red-500">,
+                            <Trash2 className="h-4 w-4 mr-2" />,
+                            Delete,
+                          </DropdownMenuItem>,
+                        </DropdownMenuContent>,
                       </DropdownMenu>)}
-                  </div>;
-                </TableCell>;
+                  </div>,
+                </TableCell>,
               </TableRow>)))}
-        </TableBody>;
-      </Table>;
-    </div>);
-}
-;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-  ),;
-},; import {
-  Table;
-TableBody;
-TableCell;
-TableHead;
-TableHeader;
-TableRow import {
-  DropdownMenu;
-DropdownMenuContent;
-DropdownMenuItem;
-DropdownMenuTrigger interface QuotesTableProps {
-  quotes: QuoteRequest[];
-isArchived?: boolean;
-isLoading: boolean;
-updateStatus: (id: string, status: QuoteStatus) => void;
-toggleArchive: (id: string, isArchived: boolean) => void;
-deleteQuote: (id: string) => void;
-onViewDetails: (quote: QuoteRequest) => void 
-}export const QuotesTable: React.FC<QuotesTableProps> = ({
-  quotes;
-isArchived = false;
-isLoading;
-updateStatus;
-toggleArchive;
-deleteQuote;
-onViewDetails 
-}) => {
-  return (<div className="overflow-x-auto" > border-zion-blue-light hover:bg-zion-blue"> <TableHead className=" text-zion-slate-light">Talent</TableHead> <TableHead className=" text-zion-slate-light">Requester</TableHead> <TableHead className=" text-zion-slate-light">Project</TableHead> <TableHead className=" text-zion-slate-light">Budget</TableHead> <TableHead className=" text-zion-slate-light">Date</TableHead> <TableHead className=" text-zion-slate-light">Status</TableHead> <TableHead className=" text-zion-slate-light">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
-  isLoading ? (<TableRow> <TableCell colSpan= {
-  7 
-}className=" text-center py-10 text-zion-slate-light"> Loading quote requests... </TableCell> </TableRow>) : quotes.length === 0 ? (<TableRow> </TableCell> </TableRow>) : (quotes.map (quote => (<TableRow (quote.budget min && quote.budget max ? `$$ {
-  quote.budget min 
-}- $$ {
-  quote.budget max 
-}` : quote.budget min ? `$$ {
-  quote.budget min 
-}` : 'Not specified') 
-}</TableCell> </TableCell> <TableCell> <QuoteStatusBadge status= {
-  quote.status 
-}/> </TableCell> <TableCell> <div className=" flex items-center gap-2"> <Button > <Eye className=" h-4 w-4"/> <span className=" sr-only">View Details</span> </Button> {
-  isArchived ? (<> <Button > <Archive className=" h-4 w-4"/> <span className=" sr-only">Unarchive</span> </Button> <Button 
-}
-}> <Trash2 className=" h-4 w-4"/> <span className=" sr-only">Delete</span> </Button> </>) : (<DropdownMenu> <DropdownMenuTrigger asChild> <Button variant=" ghost"size=" icon"> <MoreHorizontal className=" h-4 w-4"/> <span className=" sr-only">Actions</span> </Button> </DropdownMenuTrigger> Mark as New </DropdownMenuItem> <DropdownMenuItem onClick= {
-  () => updateStatus (quote.id, 'in review') 
-}> Mark as In Review </DropdownMenuItem> <DropdownMenuItem onClick= {
-  () => updateStatus (quote.id, 'responded') 
-}> Mark as Responded </DropdownMenuItem> <DropdownMenuItem onClick= {
-  () => updateStatus (quote.id, 'accepted') 
-}> Mark as Accepted </DropdownMenuItem> <DropdownMenuItem onClick= {
-  () => updateStatus (quote.id, 'closed') 
-}> Mark as Closed </DropdownMenuItem> Archive </DropdownMenuItem> <DropdownMenuItem onClick= {
-  () => {
-  if (window.confirm ('Are you sure you want to delete this quote request? This action cannot be undone.') ) {
-}
-}className=" text-red-500"> <Trash2 className=" h-4 w-4 mr-2" /> Delete </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu>) 
-}</div> </TableCell> </TableRow>) ) ) 
-}</TableBody> </Table> </div>) 
-};
-                      </DropdownMenu>;
-                      </DropdownMenu>;                    )}
-
-                  </div>
-                </TableCell>
-              </TableRow>
-        </TableBody>
-      </Table>
-    </div>
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                  </div>;
-                </TableCell>;
-              </TableRow>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        </TableBody>;
-      </Table>;
-    </div>;
-  );
-};
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                  </div>;
-                </TableCell>;"
-                <TableCell className="text - white">;"
-</TableCell>
-                </TableCell>;"
-                <TableCell className="text - white">;"
-</TableCell>
-                </TableCell>;
-                <TableCell>;
-</TableCell>
-                  <QuoteStatusBadge status={quote.status} />;
-</QuoteStatusBadge>
-                </TableCell>;
-                <TableCell>;
-</TableCell>"
-                  <div className="flex items - center gap - 2">;"
-                      on_click={() => onViewDetails (quote)}
-                      <Eye className="h - 4 w - 4" />;"
-                      <span className="sr - only">View Details</span>;"
-                          on_click={() => toggle_archive (quote.id, false)}
-                          <Archive className="h - 4 w - 4" />;"
-                          <span className="sr - only">Unarchive</span>;"
-                          className="text - red - 500";"
-                          on_click={() => {
-                          <Trash2 className="h - 4 w - 4" />;"
-                          <span className="sr - only">Delete</span>;"
-                      </>) : (
-
-                        <DropdownMenuTrigger as_child>;
-                            <MoreHorizontal className="h - 4 w - 4" />;"
-                            <span className="sr - only">Actions</span>;"
-                          <DropdownMenuItem on_click={() => update_status (quote.id, 'new')}>;
-
-                          <DropdownMenuItem on_click={() => update_status (quote.id, 'in_review')}>;
-
-                          <DropdownMenuItem on_click={() => update_status (quote.id, 'responded')}>;
-
-                          <DropdownMenuItem on_click={() => update_status (quote.id, 'accepted')}>;
-
-                          <DropdownMenuItem on_click={() => update_status (quote.id, 'closed')}>;
-
-                          <DropdownMenuItem on_click={() => toggle_archive (quote.id, true)}>;
-
-                            <Archive className="h - 4 w - 4 mr - 2" />;"
-
-                            <Trash2 className="h - 4 w - 4 mr - 2" />;"
-                      )}
-              )))}
-    </div>);
-}export const QuotesTable: React.FC<QuotesTableProps> = ({
-  return (<div className="overflow-x-auto" > border-zion-blue-light hover:bg-zion-blue"> <TableHead className=" text-zion-slate-light">Talent <TableHead className=" text-zion-slate-light">Requester <TableHead className=" text-zion-slate-light">Project <TableHead className=" text-zion-slate-light">Budget <TableHead className=" text-zion-slate-light">Date <TableHead className=" text-zion-slate-light">Status <TableHead className=" text-zion-slate-light">Actions   <TableBody> {"
-  isLoading ? (<TableRow> <TableCell colSpan= {
-}className=" text-center py-10 text-zion-slate-light"> Loading quote requests...  ) : quotes.length === 0 ? (<TableRow>  ) : (quotes.map (quote => (<TableRow (quote.budget min && quote.budget max ? `$$ {"
-  quote.budget min;
-}- $$ {
-  quote.budget max;`;
-}` : quote.budget min ? `$$ {
-  quote.budget min;)"`;
-}` : 'Not specified')
-}  <TableCell> <QuoteStatusBadge status= {
-
-}/>  <TableCell> <div className=" flex items-center gap-2"> <Button > <Eye className=" h-4 w-4"/> <span className=" sr-only">View Details</span>  {"
-  isArchived ? (<> <Button > <Archive className=" h-4 w-4"/> <span className=" sr-only">Unarchive</span>  <Button;"
-})"
-}> <Trash2 className=" h-4 w-4"/> <span className=" sr-only">Delete</span>  </>) : (<DropdownMenu> <DropdownMenuTrigger asChild> <Button variant=" ghost"size=" icon"> <MoreHorizontal className=" h-4 w-4"/> <span className=" sr-only">Actions</span>   Mark as New  <DropdownMenuItem onClick= {"
-}> Mark as In Review  <DropdownMenuItem onClick= {)"
-  () => updateStatus (quote.id, 'responded')
-
-}> Mark as Responded  <DropdownMenuItem onClick= {
-  () => updateStatus (quote.id, 'accepted')
-
-}> Mark as Accepted  <DropdownMenuItem onClick= {
-  () => updateStatus (quote.id, 'closed')
-
-}> Mark as Closed  Archive  <DropdownMenuItem onClick= {
-  () => {
-
-}className=" text-red-500"> <Trash2 className=" h-4 w-4 mr-2" /> Delete   )"
-}</div>  ) ) ) 
-}  </div>) 
-    </div>;"`;
-pr-12325
-</DropdownMenuItem>'
-}className=" text-red-500"> <Trash2 className=" h-4 w-4 mr-2" /> Delete </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu>)"
-</Trash2>
-}</div> </TableCell> </TableRow>) ) ) 
-}</TableBody> </Table> </div>) 
-                      </DropdownMenu>;
-                  </div>
-                </TableCell>
-              </TableRow>
-        </TableBody>
-      </Table>
-    </div>
-        </TableBody>;
-      </Table>;
-    </div>;"
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+,
+        </TableBody>,
+      </Table>,
+    </div>)}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4)}
+                  </div>,
+                </TableCell>,
+              </TableRow>)))}
+,
+        </TableBody>,
+      </Table>,
+    </div>)>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))))

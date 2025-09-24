@@ -1,23 +1,9 @@
 {
   "summary": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "results": [],
-  "buildBreakingFiles": [],
-  "generatedAt": "2025-08-19T17:23:22.064Z"
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
   "results": [],
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-19T17:23:22.064Z"
     "totalFiles": 0,
-  "results": [],
-  "buildBreakingFiles": [],
-  "generatedAt": "2025-08-19T17:23:22.064Z"    "totalFiles": 0,
-  "results": [],
-  "buildBreakingFiles": [],
-  "generatedAt": "2025-08-19T17:23:22.064Z"    "totalFiles": 0,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     "filesWithIssues": 0,
     "totalIssues": 0,
     "totalWarnings": 0,
@@ -26,22 +12,8 @@
   },
   "results": [],
   "buildBreakingFiles": [],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  "generatedAt": "2025-08-19T15:46:17.458Z"
   "generatedAt": "2025-08-19T16:26:24.267Z"
-  "generatedAt": "2025-08-19T18:52:46.253Z"
-  "generatedAt": "2025-08-19T15:46:17.458Z"  "generatedAt": "2025-08-19T16:26:24.267Z"
-  "generatedAt": "2025-08-19T18:52:46.253Z"
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
-  "generatedAt": "2025-08-19T15:46:17.458Z"  "generatedAt": "2025-08-19T16:26:24.267Z"
   "generatedAt": "2025-08-19T18:52:46.253Z"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
 }
