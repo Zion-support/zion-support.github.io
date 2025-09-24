@@ -8,9 +8,7 @@
     "components/**/*.ts",
     "components/**/*.tsx",
     "pages/**/*.ts",
-    "pages/**/*.tsx",
-    "src/**/*.ts",
-    "src/**/*.tsx"
+    "pages/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
@@ -31,6 +29,8 @@
     "data/**",
     "providers/**",
     "hooks/**",
+    "lib/**",
+    "src/**",
     "**/*conflict*",
     "**/*temp*",
     "apps.backup/**",
