@@ -1,0 +1,127 @@
+import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
+import { safeStorage } from '@/utils/safeStorage';
+=======
+const LanguageContext = createContext(defaultLanguageContext);
+;
+export const useLanguage = (): "LanguageContextType => useContext(LanguageContext);
+;
+interface LanguageProviderProps {;
+  "children": ReactNod e;
+  authState?: {;
+    "isAuthenticated": boolean;
+    "user": { id?: string;
+"} | null;
+  };
+}
+;
+export const "LanguageProvider": "React.FC<LanguageProviderProps> = ({;
+  children",;
+  authState = { "isAuthenticated": "fals e", "user": "nul l "} ;
+}) => {;
+export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
+interface LanguageProviderProps {
+  children: ReactNod e;
+  authState?: { 
+    isAuthenticated: boolean;
+    user: { id?: string 
+} | null;
+  };
+}
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
+  children, 
+  authState = { isAuthenticated: fals e, user: nul l } 
+}) => {
+  const { i18n, t } = useTranslation();
+=======
+  };';
+}, []);, []);';';
+  };
+}, []);, []);
+    const savedLang = safeStorage.getItem('i18n_lang') as SupportedLanguage;
+    if(savedLang && supportedLanguages.some(lang => lang.code === savedLang)) {
+      if(i18n.language !== savedLang) { // Only change if different
+        i18n.changeLanguage(savedLang);
+      }
+      setCurrentLanguage(savedLang);
+    }
+  }, [i18n]); // i18n is a dependency here
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+  return () => {
+    // Cleanup function
+  };';
+}, []);, []);';';
+    setIsRTL(i18n.dir() === 'rtl');
+    document.documentElement.dir = i18n.dir();
+    document.documentElement.lang = currentLanguage;';
+    ';';
+    if(i18n.dir() === 'rtl') {';';
+      document.documentElement.classList.add('rtl');';
+    } else {';';
+  }, [i18n]); // i18n is a dependency here;
+  useEffect(() => {;
+  // TODO: Add dependencies if needed;
+  return () => {;
+    // Cleanup function;
+=======
+  };
+}, []);, []);
+    setIsRTL(i18n.dir() === 'rtl');
+    document.documentElement.dir = i18n.dir();
+    document.documentElement.lang = currentLanguage;
+    if(i18n.dir() === 'rtl') {
+      document.documentElement.classList.add('rtl');
+=======
+=======
+    } else {;
+    } else {;
+    } else {
+      document.documentElement.classList.remove('rtl');
+    }
+    const syncLanguageWithProfile = async () => {;
+      if(isAuthenticated && user?.id && currentLanguage) { // ensure currentLanguage is also checked;
+        try {;
+          const { error } = await supabase;
+            .from('profiles');
+            .update({ "preferred_language": "currentLanguag e "});
+            .eq('id', user.id);
+;
+          if(error) {;
+            console.error('Error updating language "preference":', error);
+          }
+        } catch(err) {;
+          console.error('Error syncing language with "profile":', err);
+  }, [currentLanguage, i18n]); // Correct: i18n and currentLanguage
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+    const syncLanguageWithProfile = async () => {
+      if(isAuthenticated && user?.id && currentLanguage) { // ensure currentLanguage is also checked
+        try {
+          const { error } = await supabase
+            .from('profiles')
+            .update({ preferred_language: currentLanguag e })
+            .eq('id', user.id);
+          if(error) {
+            console.error('Error updating language preference:', error);
+          }
+        } catch(err) {
+          console.error('Error syncing language with profile:', err);
+        }
+      }
+    };
+    syncLanguageWithProfile();
+=======
+  }, [currentLanguage, isAuthenticated, user]); // Correct dependencies;
+  const changeLanguage = async("lang": "SupportedLanguag e) => {;
+  }, [currentLanguage, isAuthenticated, user]); // Correct dependencies
+  const changeLanguage = async(lang: SupportedLanguag e) => {
+    if(lang === currentLanguage) return;
+=======
+</LanguageContext>
+</any>
+</SupportedLanguage>
+</LanguageProviderProps>
